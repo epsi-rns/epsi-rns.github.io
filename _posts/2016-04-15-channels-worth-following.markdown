@@ -14,9 +14,12 @@ Does anybody know what channel are worth following ?<br/>
 I currently only follow phoronix channel.<br/><br/>
 Thank you<br/><br/>
 
+![Phoronix Mix]({{ site.url }}/assets/2016/04/phoronix-mix.png)
+
+<br/><br/>
+
 * * *
 
-![Phoronix Mix]({{ site.url }}/assets/2016/04/phoronix-mix.png)
 
 After few comments. Now I have these channels.<br/><br/>
 
