@@ -30,7 +30,7 @@ tags: [docker, package manager]
 ![Manjaro Docker]({{ site.url }}/assets/2016/03/manjaro-docker-gs.png)
 <br/>
 
-Note: just another nix's porn. :-\ <br/>1
+Note: just another nix's porn. :-\ <br/>
 
 **Reference**:<br/>
 
