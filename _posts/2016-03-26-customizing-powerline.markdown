@@ -24,6 +24,7 @@ I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/
 <br/>
 
 ![Powerline Light]({{ site.url }}/assets/2016/03/powerline-light.png)
+<br/><br/>
 ![Powerline Dark]({{ site.url }}/assets/2016/03/powerline-dark.png)
 
 
