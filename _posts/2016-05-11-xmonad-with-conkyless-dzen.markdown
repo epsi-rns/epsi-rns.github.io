@@ -33,7 +33,7 @@ csbdTopBackground = "echo '^fg("++dcColor++")^p(;-10)^r("++screenWidth++"x5)' |"
 So here we are, the result os porting bunch of conkys and bash-scripts,
 and bundle it inside just one haskell script.
 
-**Source**:
+**Source**:<br/>
 * [github.com/epsi-rns/dotfiles/.../MyStatusBar.hs][dotfiles-statusbar]
 
 * * *
@@ -47,7 +47,7 @@ OS: Arch<br/>
 
 ![Conkyless XMonad]({{ site.url }}/assets/2016/05/xmonad-with-conkyless-dzen.png)
 
-Let's compare this code
+Let's compare this code, and see how our code transformation.
 
 * That one right side console box contain haskell script for conkyless statusbar.
 
