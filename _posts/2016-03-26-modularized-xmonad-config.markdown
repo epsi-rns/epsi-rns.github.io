@@ -18,11 +18,6 @@ Use the source Luke
 <br>
 * [github.com/epsi-rns/dotfiles/.../lib][dotfiles-lib]
 
-
-![Modularized XMonad]({{ site.url }}/assets/2016/03/modularized-xmonad-1.png)
-![Modularized XMonad]({{ site.url }}/assets/2016/03/modularized-xmonad-2.png)
-
-
 * * *
 
 OS: Arch/Manjaro<br>
@@ -33,6 +28,9 @@ OS: Arch/Manjaro<br>
 + Wallpaper: 3D Bar<br>
 + File Manager: Ranger<br>
 + Viewer: VIM (Vi IMproved)<br>
+
+![Modularized XMonad]({{ site.url }}/assets/2016/03/modularized-xmonad-1.png)
+![Modularized XMonad]({{ site.url }}/assets/2016/03/modularized-xmonad-2.png)
 
 * * *
 
