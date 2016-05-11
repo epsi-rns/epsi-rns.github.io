@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "XMonad with Conkyless Dzen"
+date:   2016-05-11 21:02:15 +0700
+categories: desktop customization
+tags: [screenshot, xmonad, dotfiles]
+---
+
+# Removing Conky Dependency between XMonad and Dzen2
+
+One thing that I do not like everytime I look at XMonad dotfiles is
+extensive use of conky as a feed to dzen2 in statusbar. 
+
+Conky is completely unnecessary,
+and you can replace conky with simple while-sleep-do bash script.
+
+{% highlight bash %}
+ $ while sleep 1; do date +'%a %b %d %H:%M:%S'; done | \
+   dzen2 -ta r -h 25 -y -30 -w 200 -x -200
+{% endhighlight %}
+
+The second issue with conky is total control of color for theming.
+There is no way that xmonad configuration could alter colors inside conky.
+All colors should be in haskell s variables, 
+not as a constant inside the conky, nor inside bash script.
+
+{% highlight haskell %}
+csbdTopBackground = "echo '^fg("++dcColor++")^p(;-10)^r("++screenWidth++"x5)' |"
+    ++ " dzen2 -ta c -h 35 -w "++screenWidth++" "
+    ++ dzenArgs ++ dzenColors
+{% endhighlight %} 
+
+So here we are, the result os porting bunch of conkys and bash-scripts,
+and bundle it inside just one haskell script.
+
+**Source**:
+* [github.com/epsi-rns/dotfiles/.../MyStatusBar.hs][dotfiles-statusbar]
+
+* * *
+
+OS: Arch<br/>
++ WM: XMonad<br/>
++ Compositor: Compton<br/>
++ Statusbar: Dzen2 without Conky<br/>
++ Terminal: Termite<br/>
++ Viewer: VIM (Vi IMproved)<br/>
+
+![Conkyless XMonad]({{ site.url }}/assets/2016/05/xmonad-with-conkyless-dzen1.png)
+
+* * *
+
+There always a challenge. 
+If you think that the script above is not easy to be read. 
+<br/><br/>
+Yes, It is.
+<br/>
+
+{% highlight haskell %}
+scriptMem = "\
+ \  echo -n '^fg("++spColor++"):: ^fg()\
+    \^i(.xmonad/assets/monitor/mem.xbm) ';\
+ \  mem_total=$(free | awk 'FNR == 2 {print $2}');\
+ \  mem_used=$(free | awk 'FNR == 2 {print $3}');\
+ \  echo -n $[$mem_used * 100 / $mem_total];"
+{% endhighlight %} 
+
+<br/>
+As you can see, each line is a bash command inside haskell.
+So the next step is to make the sleep loop as a native haskell script.
+<br/><br/>
+
+And pipe the native IO process to dzen2.
+<br><br><br/>
+
+Well. As a haskell n00b. I must admit still don't know how to do it.
+
+[dotfiles-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs

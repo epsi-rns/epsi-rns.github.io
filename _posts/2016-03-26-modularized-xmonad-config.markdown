@@ -10,7 +10,7 @@ tags: [screenshot, xmonad, dotfiles]
 Haskell Operator is easy.
 Anyone with IQ over 90 can write custom XMonad Configuration.
 <br><br>
-However, decomposition even make it more comfortable to read.<br>
+However, **decomposition** even make it more comfortable to read.<br>
 Simple journey to be a masochicst-desktoper.
 <br><br>
 Again, talk is cheap.
