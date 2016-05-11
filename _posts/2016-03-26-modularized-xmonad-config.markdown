@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Modularized XMonad Config "
+title:  "Modularized XMonad Config"
 date:   2016-03-26 14:58:15 +0700
 categories: desktop customization
 tags: [screenshot, xmonad, dotfiles]
