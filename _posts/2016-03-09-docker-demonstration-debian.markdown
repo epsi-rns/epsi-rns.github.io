@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Running Guest OS via Docker on top of Debian for the first time."
+title:  "Running Guest OS via Docker on top of Debian for the first time"
 date:   2016-03-09 23:00:15 +0700
 categories: cloud
 tags: [docker, package manager]

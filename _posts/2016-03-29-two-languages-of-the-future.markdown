@@ -2,7 +2,7 @@
 layout: post
 title:  "Two Languages of The Future"
 date:   2016-03-29 09:02:15 +0700
-categories: Development
+categories: thought
 tags: [coding, language, go, rust]
 ---
 
