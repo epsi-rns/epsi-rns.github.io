@@ -3,7 +3,7 @@ layout: post
 title:  "Learn Different Package Management Using LXC"
 date:   2016-02-28 23:00:15 +0700
 categories: cloud
-tags: [docker, package manager]
+tags: [lxc, package manager]
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Linux Container.
