@@ -64,15 +64,15 @@ Here is my screenshot.
 2: (LXC) Gentoo + Emerge<br/>
 3: (LXC) CentOS + YUM<br/>
 4: (LXC) Debian + APT<br/>
-<br/>
 
-![LXC Package]({{ site.url }}/assets/2016/02/lxc-package.png)
+
+![LXC Screenfetch]({{ site.url }}/assets/2016/02/lxc-screenfetch.png)
 <br/>
 
 **Screenshot 2**: Screenfetch
 <br/>
 
-![LXC Screenfetch]({{ site.url }}/assets/2016/02/lxc-screenfetch.png)
+![LXC Package]({{ site.url }}/assets/2016/02/lxc-package.png)
 <br/>
 
 * * *
