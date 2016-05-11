@@ -45,7 +45,7 @@ OS: Arch<br/>
 + Terminal: Termite<br/>
 + Viewer: VIM (Vi IMproved)<br/>
 
-![Conkyless XMonad]({{ site.url }}/assets/2016/05/xmonad-with-conkyless-dzen1.png)
+![Conkyless XMonad]({{ site.url }}/assets/2016/05/xmonad-with-conkyless-dzen.png)
 
 * * *
 
