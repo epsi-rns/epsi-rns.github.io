@@ -19,3 +19,6 @@ github_username: epsi-rns
 
 # Build settings
 markdown: kramdown
+
+#gems:
+#  - jemoji
