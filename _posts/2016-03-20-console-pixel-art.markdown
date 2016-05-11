@@ -25,9 +25,9 @@ For those who likes to play console pixel-art in terminal to create a desktop sc
 + WM: XMonad + XMobar<br/>
 + Terminal: A few sample script<br/>
 
-![ANSI Color Light]({{ site.url }}/assets/2016/03/ansicolor-light.png)
+![ANSI Color Light]({{ site.url }}/assets/2016/03/ansicolor1.png)
 <br/><br/>
-![ANSI Color Dark]({{ site.url }}/assets/2016/03/ansicolor-dark.png)
+![ANSI Color Dark]({{ site.url }}/assets/2016/03/ansicolor2.png)
 
 
 Me myself I got nothing to prove<br/>
