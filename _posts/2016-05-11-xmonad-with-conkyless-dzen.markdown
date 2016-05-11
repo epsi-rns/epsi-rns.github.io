@@ -47,6 +47,14 @@ OS: Arch<br/>
 
 ![Conkyless XMonad]({{ site.url }}/assets/2016/05/xmonad-with-conkyless-dzen.png)
 
+Let's compare this code
+
+* That one right side console box contain haskell script for conkyless statusbar.
+
+* Those two left side console boxes contain conky and bash script.
+
+<br/>
+
 * * *
 
 There always a challenge. 
