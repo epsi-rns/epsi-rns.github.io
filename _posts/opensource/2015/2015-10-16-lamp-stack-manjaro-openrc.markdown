@@ -26,6 +26,8 @@ With special customization
 <br/>
 Have Fun
 
+![LAMP Open-RC]({{ site.url }}/assets/opensource/2015/10/lamp-manjaro-openrc-terminal.png)
+
 Install
 ----------
 
@@ -299,6 +301,8 @@ open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc
 $ sudo rc-service httpd restart
 $ httpd -S
 {% endhighlight %}
+
+![LAMP Open-RC]({{ site.url }}/assets/opensource/2015/10/lamp-manjaro-openrc-browser.png)
 
 Finalization
 --------------------
