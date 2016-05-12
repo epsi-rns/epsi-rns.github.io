@@ -2,8 +2,8 @@
 layout: post
 title:  "Channels Worth Following"
 date:   2016-04-15 23:07:15 +0700
-categories: inkscape
-tags: [inkscape, miscellanous]
+categories: opensource
+tags: [inkscape, design, news]
 ---
 
 This is actualy my question in a forum.<br/><br/>
@@ -14,7 +14,7 @@ Does anybody know what channel are worth following ?<br/>
 I currently only follow phoronix channel.<br/><br/>
 Thank you<br/><br/>
 
-![Phoronix Mix]({{ site.url }}/assets/2016/04/phoronix-mix.png)
+![Phoronix Mix]({{ site.url }}/assets/opensource/2016/04/phoronix-mix.png)
 
 <br/><br/>
 
@@ -65,4 +65,4 @@ OS: Debian<br/>
 
 Note: illustration made with inkscape.
 
-![Phoronix Mix]({{ site.url }}/assets/2016/04/inkscape+phoronix.png)
+![Phoronix Mix]({{ site.url }}/assets/opensource/2016/04/inkscape+phoronix.png)

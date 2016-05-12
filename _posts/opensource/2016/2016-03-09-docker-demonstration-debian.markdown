@@ -2,8 +2,8 @@
 layout: post
 title:  "Running Guest OS via Docker on top of Debian for the first time"
 date:   2016-03-09 23:00:15 +0700
-categories: cloud
-tags: [docker, package manager]
+categories: opensource
+tags: [cloud, docker, package manager]
 ---
 
 **Disclaimer**: I'm a beginner in cloud area.
@@ -22,7 +22,7 @@ tags: [docker, package manager]
 <br/>
 **DE**: Plasma 5 (KDE)<br/>
 <br/>
-![Debian Docker]({{ site.url }}/assets/2016/03/debian-docker-ogs.png)
+![Debian Docker]({{ site.url }}/assets/opensource/2016/03/debian-docker-ogs.png)
 <br/><br/>
 
 **Reference**:<br/>

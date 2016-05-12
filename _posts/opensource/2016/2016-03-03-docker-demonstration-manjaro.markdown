@@ -2,8 +2,8 @@
 layout: post
 title:  "Docker Demonstration (Manjaro)"
 date:   2016-03-03 13:01:15 +0700
-categories: cloud
-tags: [docker, package manager]
+categories: opensource
+tags: [cloud, docker, package manager]
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Docker. No need Virtual Machine nor Multiboot. Easy to setup.
@@ -25,9 +25,9 @@ tags: [docker, package manager]
 <br/>
 
 
-![Manjaro Docker]({{ site.url }}/assets/2016/03/manjaro-docker-fki.png)
+![Manjaro Docker]({{ site.url }}/assets/opensource/2016/03/manjaro-docker-fki.png)
 <br/><br/>
-![Manjaro Docker]({{ site.url }}/assets/2016/03/manjaro-docker-gs.png)
+![Manjaro Docker]({{ site.url }}/assets/opensource/2016/03/manjaro-docker-gs.png)
 <br/>
 
 Note: just another nix's porn. :-\ <br/>

@@ -2,7 +2,7 @@
 layout: post
 title:  "Introducing FatRat and Cantata"
 date:   2016-04-21 21:39:15 +0700
-categories: desktop application
+categories: opensource
 tags: [app, kde]
 ---
 
@@ -19,7 +19,7 @@ tags: [app, kde]
 **DE**: Plasma<br>
 **WM**: XMonad<br>
 
-![Introducing FatRat Cantata]({{ site.url }}/assets/2016/04/introducing-fatrat-cantata.png)
+![Introducing FatRat Cantata]({{ site.url }}/assets/opensource/2016/04/introducing-fatrat-cantata.png)
 
 * * *
 

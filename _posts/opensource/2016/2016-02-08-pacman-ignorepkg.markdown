@@ -2,7 +2,7 @@
 layout: post
 title:  "Update Arch Linux without Unnecessary Bloated Package"
 date:   2016-02-08 04:03:15 +0700
-categories: package manager
+categories: opensource
 tags: [arch, pacman, package manager]
 ---
 
@@ -64,7 +64,7 @@ XferCommand = /usr/bin/curl --limit-rate 33k -C - -f %u > %o
 XferCommand = /usr/bin/wget --limit-rate 33K --passive-ftp -c -O %o %u
 {% endhighlight %}
 
-![Pacman IgnorePkg]({{ site.url }}/assets/2016/02/pacman-ignorepkg.png)
+![Pacman IgnorePkg]({{ site.url }}/assets/opensource/2016/02/pacman-ignorepkg.png)
 
 Happy Sync.
 

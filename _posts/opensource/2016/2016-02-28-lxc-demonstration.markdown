@@ -2,8 +2,8 @@
 layout: post
 title:  "Learn Different Package Management Using LXC"
 date:   2016-02-28 23:00:15 +0700
-categories: cloud
-tags: [lxc, package manager]
+categories: opensource
+tags: [cloud, lxc, package manager]
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Linux Container.
@@ -66,13 +66,13 @@ Here is my screenshot.
 4: (LXC) Debian + APT<br/>
 
 
-![LXC Screenfetch]({{ site.url }}/assets/2016/02/lxc-screenfetch.png)
+![LXC Screenfetch]({{ site.url }}/assets/opensource/2016/02/lxc-screenfetch.png)
 <br/>
 
 **Screenshot 2**: Screenfetch
 <br/>
 
-![LXC Package]({{ site.url }}/assets/2016/02/lxc-package.png)
+![LXC Package]({{ site.url }}/assets/opensource/2016/02/lxc-package.png)
 <br/>
 
 * * *

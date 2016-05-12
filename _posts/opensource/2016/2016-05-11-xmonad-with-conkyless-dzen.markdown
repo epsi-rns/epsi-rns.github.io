@@ -2,14 +2,14 @@
 layout: post
 title:  "XMonad with Conkyless Dzen"
 date:   2016-05-11 21:02:15 +0700
-categories: desktop customization
+categories: opensource
 tags: [screenshot, xmonad, dotfiles]
 ---
 
 # Removing Conky Dependency between XMonad and Dzen2
 
-One thing that I do not like everytime I look at XMonad dotfiles is
-extensive use of conky as a feed to dzen2 in statusbar. 
+One thing that I do not like, is extensive use of conky. 
+Everytime I look at XMonad dotfiles, conky is used as a feed to dzen2 in statusbar. 
 
 Conky is completely unnecessary,
 and you can replace conky with simple while-sleep-do bash script.
@@ -45,7 +45,7 @@ OS: Arch<br/>
 + Terminal: Termite<br/>
 + Viewer: VIM (Vi IMproved)<br/>
 
-![Conkyless XMonad]({{ site.url }}/assets/2016/05/xmonad-with-conkyless-dzen.png)
+![Conkyless XMonad]({{ site.url }}/assets/opensource/2016/05/xmonad-with-conkyless-dzen.png)
 
 Let's compare this code, and see how our code transformation.
 

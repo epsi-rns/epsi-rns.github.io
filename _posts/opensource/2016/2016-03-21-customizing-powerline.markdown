@@ -2,7 +2,7 @@
 layout: post
 title:  "Customizing Shell Prompt with Powerline"
 date:   2016-03-21 19:17:15 +0700
-categories: desktop customization
+categories: opensource
 tags: [screenshot, powerline, dotfiles]
 ---
 
@@ -23,9 +23,9 @@ I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/
 + **Shell**: Fish<br/>
 <br/>
 
-![Powerline Light]({{ site.url }}/assets/2016/03/powerline-light.png)
+![Powerline Light]({{ site.url }}/assets/opensource/2016/03/powerline-light.png)
 <br/><br/>
-![Powerline Dark]({{ site.url }}/assets/2016/03/powerline-dark.png)
+![Powerline Dark]({{ site.url }}/assets/opensource/2016/03/powerline-dark.png)
 
 
 Happy terminal customizing

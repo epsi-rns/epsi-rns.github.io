@@ -2,7 +2,7 @@
 layout: post
 title:  "Modularized XMonad Config"
 date:   2016-03-26 14:58:15 +0700
-categories: desktop customization
+categories: opensource
 tags: [screenshot, xmonad, dotfiles]
 ---
 
@@ -29,8 +29,8 @@ OS: Arch/Manjaro<br>
 + File Manager: Ranger<br>
 + Viewer: VIM (Vi IMproved)<br>
 
-![Modularized XMonad]({{ site.url }}/assets/2016/03/modularized-xmonad-1.png)
-![Modularized XMonad]({{ site.url }}/assets/2016/03/modularized-xmonad-2.png)
+![Modularized XMonad]({{ site.url }}/assets/opensource/2016/03/modularized-xmonad-1.png)
+![Modularized XMonad]({{ site.url }}/assets/opensource/2016/03/modularized-xmonad-2.png)
 
 * * *
 

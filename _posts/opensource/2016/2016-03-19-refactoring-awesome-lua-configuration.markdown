@@ -2,7 +2,7 @@
 layout: post
 title:  "Refactoring Awesome WM's Lua Configuration Script"
 date:   2016-03-19 16:41:15 +0700
-categories: desktop customization
+categories: opensource
 tags: [screenshot, awesome, dotfiles]
 ---
 
@@ -22,9 +22,9 @@ Talk is cheap. Here is the code on github account:
 * <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
 
-![Refactoring Awesome Light]({{ site.url }}/assets/2016/03/refactoring-awesome-light.png)
+![Refactoring Awesome Light]({{ site.url }}/assets/opensource/2016/03/refactoring-awesome-light.png)
 <br/><br/>
-![Refactoring Awesome Dark]({{ site.url }}/assets/2016/03/refactoring-awesome-dark.png)
+![Refactoring Awesome Dark]({{ site.url }}/assets/opensource/2016/03/refactoring-awesome-dark.png)
 
 Awesome is a Dynamic Tiling Window Manager. For whatever that means.
 <br/><br/>
