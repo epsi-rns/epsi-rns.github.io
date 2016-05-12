@@ -6,31 +6,32 @@ date:   2015-10-16 12:49:15 +0700
 tags: [lamp, openrc]
 ---
 
-https://www.facebook.com/epsi.r.nurwijayadi/posts/764433263702686
+Preface
+----------
 
-Setup LAMP stack with Manjaro OpenRC
-
-[] Preface
--- -- -- -- --
-
-Hello all.
+Hello all.<br/>
 I hope everyone that is reading this, is having a really good day.
 
-I decide to share my ordinary log, 
+I decide to share my ordinary log, <br/>
 about setting up LAMP stack which is very common.
 
 With special customization
+
 * OpenRC instead of systemd
+
 * MariaDB instead of MySQL
+
 * Manjaro 'pacman' instead of debian-based 'apt-get'.
 
+<br/>
 Have Fun
 
-[] Install
--- -- -- -- --
+Install
+----------
 
-[terminal]
+### [terminal]
 
+{% highlight bash %}
 $ sudo pacman -S apache mariadb php php-apache phpmyadmin apache-openrc mysql-openrc
 
 $ sudo apachectl start
@@ -40,17 +41,18 @@ $ sudo rc-update add httpd default
 
 $ sudo rc-update add mysql default
  * service mysql added to runlevel default
- 
+{% endhighlight %} 
 
-[browser: test]
+### [browser: test]
 
-¤ http://localhost/
+> http://localhost/
 
-[] Basic Apache Configuration
--- -- -- -- -- -- -- -- -- --
+Basic Apache Configuration
+--------------------
 
-[editor: /etc/httpd/conf/httpd.conf]
+### [editor: /etc/httpd/conf/httpd.conf]
 
+{% highlight conf %}
 # epsi!
 LoadModule mpm_prefork_module modules/mod_mpm_prefork.so
 LoadModule php5_module modules/libphp5.so
@@ -75,37 +77,47 @@ ServerName localhost
 
 # epsi!
 Include conf/extra/php5_module.conf
+{% endhighlight %} 
 
-[editor: /usr/lib/tmpfiles.d/]
+### [editor: /usr/lib/tmpfiles.d/]
 
+{% highlight conf %}
 d /run/httpd 0755 http http -
+{% endhighlight %}
 
-[terminal]
+### [terminal]
 
+{% highlight bash %}
 $ sudo rc-service httpd restart
+{% endhighlight %}
 
-[] Localhost Test
--- -- -- -- -- -- -- -- -- --
+Localhost Test
+--------------------
 
-[terminal]
+### [terminal]
 
+{% highlight bash %}
 $ sudo sh -c 'echo "<html><body>miauw</body><html>" > /srv/http/hello.html'
 $ sudo sh -c 'echo "<html><body>miauw</body><html>" > /srv/http/hello.php'
 $ sudo sh -c 'echo "<?php phpinfo(); ?>" > /srv/http/phpinfo.php'
+{% endhighlight %}
 
-[browser: test]
+### [browser: test]
 
-¤ http://localhost/hello.html
-¤ http://localhost/hello.php
-¤ http://localhost/phpinfo.php
+> http://localhost/hello.html
+> http://localhost/hello.php
+> http://localhost/phpinfo.php
 
-[] mariadb
--- -- -- -- -- -- -- -- -- --
+mariadb
+--------------------
 
+{% highlight bash %}
 $ sudo /usr/bin/mysqld_safe --datadir='/var/lib/mysql'
+{% endhighlight %}
 
-[editor: /etc/mysql/my.cnf]
+### [editor: /etc/mysql/my.cnf]
 
+{% highlight conf %}
 # The MariaDB server
 port = 3306
 socket = /run/mysqld/mysqld.sock
@@ -115,7 +127,9 @@ user        = mysql
 basedir     = /usr
 datadir     = /var/lib/mysql
 pid-file    = /run/mysql/mysql.pid
+{% endhighlight %}
 
+{% highlight bash %}
 $ sudo rc-service mysql restart
  * Checking mysqld configuration for mysql ...                                                                                       [ ok ]
  * Starting mysql ...
@@ -125,20 +139,24 @@ $ sudo rc-service mysql restart
 $ cd /media/Works/Backup.Temp/
 $ mysql -u root < sf_book2.sql
 $ mysql -u root < joomla30.sql
+{% endhighlight %}
  
-[] phpmyadmin
--- -- -- -- -- -- -- -- -- --
+phpmyadmin
+--------------------
 
-[reading]
+### [reading]
 
-¤ https://wiki.archlinux.org/index.php/PhpMyAdmin
+> <https://wiki.archlinux.org/index.php/PhpMyAdmin>
 
-[terminal]
+### [terminal]
 
-* sudo touch ls /etc/httpd/conf/extra/phpmyadmin.conf
+{% highlight bash %}
+$ sudo touch ls /etc/httpd/conf/extra/phpmyadmin.conf
+{% endhighlight %}
 
-[editor: /etc/httpd/conf/extra/phpmyadmin.conf]
+### [editor: /etc/httpd/conf/extra/phpmyadmin.conf]
 
+{% highlight conf %}
 Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
 <Directory "/usr/share/webapps/phpMyAdmin">
     DirectoryIndex index.php
@@ -146,15 +164,19 @@ Alias /phpmyadmin "/usr/share/webapps/phpMyAdmin"
     Options FollowSymlinks
     Require all granted
 </Directory>
+{% endhighlight %}
 
-[editor: /etc/httpd/conf/httpd.conf]
+### [editor: /etc/httpd/conf/httpd.conf]
 
+{% highlight conf %}
 # epsi!
 # phpMyAdmin configuration
 Include conf/extra/phpmyadmin.conf
+{% endhighlight %}
 
-[editor: /etc/php/php.ini]
+### [editor: /etc/php/php.ini]
 
+{% highlight ini %}
 # set
 date.timezone = "Asia/Jakarta"
 
@@ -164,63 +186,77 @@ extension=mcrypt.so
 
 # add directory
 open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/
+{% endhighlight %}
 
-[terminal]
+### [terminal]
 
+{% highlight conf %}
 $ cat /etc/webapps/phpmyadmin/config.inc.php | less
 
 $ sudo rc-service httpd restart
+{% endhighlight %}
 
-[browser: test]
+### [browser: test]
 
-¤ http://localhost/phpmyadmin
+> http://localhost/phpmyadmin
 
-[] Local Host
--- -- -- -- -- -- -- -- -- --
+Local Host
+--------------------
 
-[editor: /etc/httpd/conf/httpd.conf]
+### [editor: /etc/httpd/conf/httpd.conf]
 
+{% highlight conf %}
 <Directory "/srv/http">
     # change
     AllowOverride All
 </Directory>
+{% endhighlight %}
 
-[terminal]
+### [terminal]
 
+{% highlight bash %}
 $ cd /srv/http
 $ sudo ln -s /media/Works/Development/www/symfony2/book2/ book2
 $ sudo ln -s /media/Works/Development/www/drupal/ drupal
 $ sudo ln -s /media/Works/Development/www/sites/ sites
 
 $ sudo rc-service httpd restart
+{% endhighlight %}
 
-[] Virtual Host
--- -- -- -- -- -- -- -- -- --
+Virtual Host
+--------------------
 
-[terminal]
+### [terminal]
 
+{% highlight bash %}
 $ sudo mkdir /etc/httpd/conf/vhosts
 $ sudo touch /etc/httpd/conf/vhosts/localhost.conf
 $ sudo touch /etc/httpd/conf/vhosts/book2.conf
+{% endhighlight %}
 
-[editor: /etc/hosts]
+### [editor: /etc/hosts]
 
+{% highlight conf %}
 #<ip-address>   <hostname.domain.org>   <hostname>
 127.0.0.1       localhost
 127.0.1.1       axioo
 127.0.0.1       book2
 127.0.0.1       localhost.localdomain   localhost
 ::1             localhost.localdomain   localhost
+{% endhighlight %}
 
-[editor: /etc/httpd/conf/vhosts/localhost.conf]
+### [editor: /etc/httpd/conf/vhosts/localhost.conf]
 
+{% highlight conf %}
 <VirtualHost *:80>
     ServerName localhost
     DocumentRoot /srv/http
 </VirtualHost>
+{% endhighlight %}
 
-[editor: /etc/httpd/conf/vhosts/book2.conf]
+### [editor: /etc/httpd/conf/vhosts/book2.conf]
 
+{% highlight conf %}
 <VirtualHost *:80>
 
     ServerName book2
@@ -235,64 +271,39 @@ $ sudo touch /etc/httpd/conf/vhosts/book2.conf
     </Directory>
     
 </VirtualHost>
+{% endhighlight %}
 
-[editor: /etc/httpd/conf/httpd.conf]
+### [editor: /etc/httpd/conf/httpd.conf]
 
+{% highlight conf %}
 # epsi!
 # Enabled Vhosts:
 Include conf/vhosts/localhost.conf
 Include conf/vhosts/book2.conf
+{% endhighlight %}
 
-[editor: /etc/php/php.ini]
+### [editor: /etc/php/php.ini]
 
+{% highlight ini %}
 # uncomment
 extension=mysql.so
 extension=pdo_mysql.so
 
 # add folder
 open_basedir = /srv/http/:/home/:/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/:/media/Works/Development/www/
+{% endhighlight %}
 
-[terminal]
+### [terminal]
 
+{% highlight bash %}
 $ sudo rc-service httpd restart
 $ httpd -S
+{% endhighlight %}
 
-[] Finalization
--- -- -- -- -- -- -- -- -- --
+Finalization
+--------------------
 
 Sleep
 
 Have a nice dream.
-
-
-
-
-
-
-
-
-
-
-**Disclaimer**: I'm a beginner in cloud area.
-<br/><br/>
-
-**Description**: A cheap way to learn different package management from major linux distribution using Docker. No need Virtual Machine nor Multiboot. Easy to setup.
-<br/><br/>
-
-**Host OS**: Debian<br/>
-**Container Service**: Docker<br/>
-+ Terminal: Debian screenfetch<br/>
-+ Guest OS: OpenSUSE (screenfetch)<br/>
-+ Guest OS: Gentoo (emerge)<br/>
-+ Guest OS: Slackware (screenfetch)<br/>
-+ Terminal: iftop<br/>
-<br/>
-**DE**: Plasma 5 (KDE)<br/>
-<br/>
-![Debian Docker]({{ site.url }}/assets/2016/03/debian-docker-ogs.png)
-<br/><br/>
-
-**Reference**:<br/>
-
-* <https://docs.docker.com/engine/quickstart/>
 
