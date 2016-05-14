@@ -10,7 +10,7 @@ tags: [screenshot, xmonad, dotfiles]
 
 We can improve XMonad configuration, by removing extensive use of conky.
 Everytime I look at XMonad dotfiles, conky is used as a feed to dzen2 in statusbar. 
-I can understand the of using conky-dzen tier from portability between WM perpective.
+I can understand the need of using conky-dzen tier from portability between WM perpective.
 But portability have its drawback.
 
 Conky is completely unnecessary,
