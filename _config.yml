@@ -10,7 +10,7 @@ title: Yet Another Open Source Blog
 email: epsi.nurwijayadi@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Learn and Discover Open Source with Daily Genuine Experience.
-  From Coding, Package Management Tweak to Desktop Customization.
+  From Coding, Design, Package Management Tweak to Desktop Customization.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://epsi-rns.github.io" # the base hostname & protocol for your site
 twitter_username: nurwijayadi
