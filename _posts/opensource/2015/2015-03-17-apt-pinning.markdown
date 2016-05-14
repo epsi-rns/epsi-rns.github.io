@@ -3,7 +3,7 @@ layout: post
 title:  "Debian APT Pinning"
 date:   2015-03-17 12:49:15 +0700
 # categories: opensource
-tags: [lamp, openrc]
+tags: [debian, apt, package management]
 ---
 
 
@@ -15,7 +15,7 @@ Silly me, I didn't have enough time to troubleshoot this /var/log/Xorg.0.log. Bu
 
 So here we are, apt-pinning xorg, purge xorg, and re-install xorg.
 
-![APT Pinning]({{ site.url }}/assets/opensource/2016/05/apt-pinning.png)
+![APT Pinning]({{ site.url }}/assets/opensource/2015/03/apt-pinning.png)
 
 **Reading**:<br/>
 * <https://debian-handbook.info/browse/stable/sect.apt-get.html#sect.apt.priorities>
