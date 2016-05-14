@@ -8,8 +8,10 @@ tags: [screenshot, xmonad, dotfiles]
 
 # Removing Conky Dependency between XMonad and Dzen2
 
-One thing that I do not like, is extensive use of conky. 
+We can improve XMonad configuration, by removing extensive use of conky.
 Everytime I look at XMonad dotfiles, conky is used as a feed to dzen2 in statusbar. 
+I can understand the of using conky-dzen tier from portability between WM perpective.
+But portability have its drawback.
 
 Conky is completely unnecessary,
 and you can replace conky with simple while-sleep-do bash script.
@@ -21,7 +23,7 @@ and you can replace conky with simple while-sleep-do bash script.
 
 The second issue with conky is total control of color for theming.
 There is no way that xmonad configuration could alter colors inside conky.
-All colors should be in haskell s variables, 
+All colors should be in haskell variables, 
 not as a constant inside the conky, nor inside bash script.
 
 {% highlight haskell %}
@@ -47,7 +49,7 @@ OS: Arch<br/>
 
 ![Conkyless XMonad]({{ site.url }}/assets/opensource/2016/05/xmonad-with-conkyless-dzen.png)
 
-Let's compare this code, and see how our code transformation.
+Let's compare this code, and see how our code transformed.
 
 * That one right side console box contain haskell script for conkyless statusbar.
 
