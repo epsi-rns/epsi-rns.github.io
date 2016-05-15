@@ -13,8 +13,6 @@ body {
     font-kerning: normal;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -97,6 +95,24 @@ pre {
  * Epsi
  */
 
-ul#tags a { display: inline; }
+body {
+    background-image: url("../images/dark-tile.jpg");
+}
 
 .center-block {float: none !important}
+
+
+.navbar-inverse {
+  background-color: #2980b9;
+ }
+ 
+ .navbar-inverse .navbar-nav li a,
+ .navbar-inverse .navbar-brand { color: #000000; }
+
+.well {
+  background-color: #393939;
+}
+
+.navbar-form .form-control { border: 1px solid $background-color; }
+
+ul#tags a { display: inline; }
