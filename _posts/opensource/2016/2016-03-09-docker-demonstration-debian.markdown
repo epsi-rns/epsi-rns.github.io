@@ -22,7 +22,7 @@ tags: [cloud, docker, package manager]
 <br/>
 **DE**: Plasma 5 (KDE)<br/>
 <br/>
-![Debian Docker]({{ site.url }}/assets/opensource/2016/03/debian-docker-ogs.png)
+![Debian Docker]({{ site.url }}/assets/posts/opensource/2016/03/debian-docker-ogs.png)
 <br/><br/>
 
 **Reference**:<br/>

@@ -47,7 +47,7 @@ OS: Arch<br/>
 + Terminal: Termite<br/>
 + Viewer: VIM (Vi IMproved)<br/>
 
-![Conkyless XMonad]({{ site.url }}/assets/opensource/2016/05/xmonad-with-conkyless-dzen.png)
+![Conkyless XMonad]({{ site.url }}/assets/posts/opensource/2016/05/xmonad-with-conkyless-dzen.png)
 
 Let's compare this code, and see how our code transformed.
 

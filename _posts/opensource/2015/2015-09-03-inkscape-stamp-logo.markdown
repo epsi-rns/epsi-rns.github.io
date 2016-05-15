@@ -2,7 +2,7 @@
 layout: post
 title:  "Inkscape: Logo with Stamp Ornament"
 date:   2015-09-03 08:48:15 +0700
-# categories: opensource
+categories: opensource
 tags: [inkscape, design, logo]
 ---
 
@@ -15,17 +15,17 @@ I also add shadow with envelope path effects under the logo.
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-pink-padz.svg.gz][dotfiles-pink-padz]
 
-![Pink Padz]({{ site.url }}/assets/opensource/2015/09/logo-stamp-pink-padz.png)
+![Pink Padz]({{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-pink-padz.png)
 
 ## ILUNI FTUI
 
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-iluni-ftui.svg.gz][dotfiles-iluni-ftui]
 
-![ILUNI Teknik]({{ site.url }}/assets/opensource/2015/09/logo-stamp-iluni-ftui.png)
+![ILUNI Teknik]({{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-iluni-ftui.png)
 
 
 
 
-[dotfiles-pink-padz]: {{ site.url }}/assets/opensource/2015/09/logo-stamp-pink-padz.svg.gz
-[dotfiles-iluni-ftui]: {{ site.url }}/assets/opensource/2015/09/logo-stamp-iluni-ftui.svg.gz
+[dotfiles-pink-padz]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-pink-padz.svg.gz
+[dotfiles-iluni-ftui]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-iluni-ftui.svg.gz

@@ -11,7 +11,7 @@ Before you read. You can examine a neat $ coding style in my old screenshot. It 
 **Source**:<br/>
 * [github.com/epsi-rns/dotfiles/.../MyLayoutHook.hs][dotfiles-layout]
 
-![Haskell Dollar]({{ site.url }}/assets/opensource/2016/05/haskell-dollar.png)
+![Haskell Dollar]({{ site.url }}/assets/posts/opensource/2016/05/haskell-dollar.png)
 
 * * *
 

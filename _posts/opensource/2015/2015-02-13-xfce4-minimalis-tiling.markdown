@@ -2,7 +2,7 @@
 layout: post
 title:  "Minimalist XFCE4 with Limited Tiling Support"
 date:   2015-02-13 08:48:15 +0700
-# categories: opensource
+categories: opensource
 tags: [screenshot, xfce4]
 ---
 
@@ -25,6 +25,6 @@ Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an e
 <br/>
 
 
-![XFWM4 Tiling]({{ site.url }}/assets/opensource/2015/02/xfwm4-tiling.png)
+![XFWM4 Tiling]({{ site.url }}/assets/posts/opensource/2015/02/xfwm4-tiling.png)
 
 Note on SS : user vs root.

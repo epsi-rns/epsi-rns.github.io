@@ -29,8 +29,8 @@ OS: Arch/Manjaro<br>
 + File Manager: Ranger<br>
 + Viewer: VIM (Vi IMproved)<br>
 
-![Modularized XMonad]({{ site.url }}/assets/opensource/2016/03/modularized-xmonad-1.png)
-![Modularized XMonad]({{ site.url }}/assets/opensource/2016/03/modularized-xmonad-2.png)
+![Modularized XMonad]({{ site.url }}/assets/posts/opensource/2016/03/modularized-xmonad-1.png)
+![Modularized XMonad]({{ site.url }}/assets/posts/opensource/2016/03/modularized-xmonad-2.png)
 
 * * *
 

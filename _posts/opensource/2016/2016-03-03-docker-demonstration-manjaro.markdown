@@ -25,9 +25,9 @@ tags: [cloud, docker, package manager]
 <br/>
 
 
-![Manjaro Docker]({{ site.url }}/assets/opensource/2016/03/manjaro-docker-fki.png)
+![Manjaro Docker]({{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-fki.png)
 <br/><br/>
-![Manjaro Docker]({{ site.url }}/assets/opensource/2016/03/manjaro-docker-gs.png)
+![Manjaro Docker]({{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-gs.png)
 <br/>
 
 Note: just another nix's porn. :-\ <br/>

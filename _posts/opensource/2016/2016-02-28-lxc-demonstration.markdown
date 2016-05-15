@@ -66,13 +66,13 @@ Here is my screenshot.
 4: (LXC) Debian + APT<br/>
 
 
-![LXC Screenfetch]({{ site.url }}/assets/opensource/2016/02/lxc-screenfetch.png)
+![LXC Screenfetch]({{ site.url }}/assets/posts/opensource/2016/02/lxc-screenfetch.png)
 <br/>
 
 **Screenshot 2**: Screenfetch
 <br/>
 
-![LXC Package]({{ site.url }}/assets/opensource/2016/02/lxc-package.png)
+![LXC Package]({{ site.url }}/assets/posts/opensource/2016/02/lxc-package.png)
 <br/>
 
 * * *

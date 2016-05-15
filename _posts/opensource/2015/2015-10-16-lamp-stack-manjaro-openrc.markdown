@@ -2,7 +2,7 @@
 layout: post
 title:  "Setup LAMP stack with Manjaro OpenRC"
 date:   2015-10-16 12:49:15 +0700
-# categories: opensource
+categories: opensource
 tags: [lamp, openrc]
 ---
 
@@ -26,7 +26,7 @@ With special customization
 <br/>
 Have Fun
 
-![LAMP Open-RC]({{ site.url }}/assets/opensource/2015/10/lamp-manjaro-openrc-terminal.png)
+![LAMP Open-RC]({{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-terminal.png)
 
 Install
 ----------
@@ -302,7 +302,7 @@ $ sudo rc-service httpd restart
 $ httpd -S
 {% endhighlight %}
 
-![LAMP Open-RC]({{ site.url }}/assets/opensource/2015/10/lamp-manjaro-openrc-browser.png)
+![LAMP Open-RC]({{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-browser.png)
 
 Finalization
 --------------------

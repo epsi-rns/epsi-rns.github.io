@@ -19,7 +19,7 @@ tags: [app, kde]
 **DE**: Plasma<br>
 **WM**: XMonad<br>
 
-![Introducing FatRat Cantata]({{ site.url }}/assets/opensource/2016/04/introducing-fatrat-cantata.png)
+![Introducing FatRat Cantata]({{ site.url }}/assets/posts/opensource/2016/04/introducing-fatrat-cantata.png)
 
 * * *
 
