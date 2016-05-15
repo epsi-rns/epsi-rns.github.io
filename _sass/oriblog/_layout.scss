@@ -1,0 +1,35 @@
+body {
+    /* 100px is double the height of the navbar - */
+    /* I made it a big larger for some more space - */
+    /* keep it at 50px at least if you want to use the fixed top nav */
+    margin-top: 100px; 
+}
+
+
+/**
+ * Site footer
+ */
+ 
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit 0;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $grey-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}

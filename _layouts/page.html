@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<article class="post">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+
+<article class="post well">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -12,3 +17,36 @@ layout: default
   </div>
 
 </article>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="well">
+
+  <h2>Recent Posts</h2>
+  <ul class="list-unstyled">
+    {% for post in site.posts limit:5 %}
+    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+                </div>
+                <div class="well">
+
+  <h2>Tags</h2>
+  <div id="tags">
+    {% for tag in site.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag[0] }}"><span class="badge">{{ tag[0] }}</span></a>
+    {% endfor %}
+  </div>
+
+                </div>
+                <!-- /well -->
+            </div>
+        </div>
+
+
+        <hr>
+
+    </div>
+    <!-- /.container -->
+                
