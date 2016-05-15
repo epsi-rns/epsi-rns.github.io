@@ -6,17 +6,26 @@ layout: page
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
+  <div class="post-list">
     {% for post in site.posts %}
-      <li class="list-unstyled well">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+    <div>
+      <h3>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      <div class="post-meta container-fluid">
+        <div class="post-time pull-left">
+          <i class="fa fa-calendar"></i>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %-d, %Y" }}</time>
+        </div>      
+        <div class="post-tags pull-right" id="tags">
+          {% for tag in post.tags %}
+            <a href="{{ site.url | append:site.baseurl }}/tag/{{ tag }}"><span class="badge">{{ tag }}</span></a>
+          {% endfor %}
+        </div>
+      </div>           
+    </div>
     {% endfor %}
-  </ul>
+  </div>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
