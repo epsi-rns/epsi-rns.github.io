@@ -53,7 +53,7 @@ OS: Arch<br/>
 + Terminal: Termite<br/>
 + Viewer: VIM (Vi IMproved)<br/>
 
-![Conkyless XMonad]({{ site.url }}/assets/posts/opensource/2016/05/xmonad-with-conkyless-dzen.png)
+[![Conkyless XMonad][image-ss-xmonad]][picasa-ss-xmonad]
 
 Let's compare this code, and see how our code transformed.
 
@@ -91,3 +91,5 @@ And pipe the native IO process to dzen2.
 Well. As a haskell n00b. I must admit still don't know how to do it.
 
 [dotfiles-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs
+[image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/05/xmonad-with-conkyless-dzen.png
+[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-IaiuuSzgdMI/VzmdPYfRF-I/AAAAAAAAAMQ/BEnRnFrCFsw0CnK0oosnfrxRL975EZB4QCCo/s0/xmonad-with-conkyless-dzen.png

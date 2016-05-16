@@ -32,7 +32,7 @@ With special customization
 <br/>
 Have Fun
 
-![LAMP Open-RC]({{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-terminal.png)
+[![LAMP OpenRC][image-ss-openrc]][picasa-ss-openrc]
 
 Install
 ----------
@@ -308,7 +308,7 @@ $ sudo rc-service httpd restart
 $ httpd -S
 {% endhighlight %}
 
-![LAMP Open-RC]({{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-browser.png)
+[![LAMP Browser][image-ss-browser]][picasa-ss-browser]
 
 Finalization
 --------------------
@@ -317,3 +317,7 @@ Sleep
 
 Have a nice dream.
 
+[image-ss-openrc]: {{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-terminal.png
+[picasa-ss-openrc]: https://lh3.googleusercontent.com/-_PY0Lzv5T54/VznBHsesgSI/AAAAAAAAANc/sDZnyz6OQWse-cw5xm4NK5MhTw4uKz3eACCo/s0/lamp-manjaro-openrc-terminal.png
+[image-ss-browser]: {{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-browser.png
+[picasa-ss-browser]: https://lh3.googleusercontent.com/-drXcnPrzSik/VznBH5IFulI/AAAAAAAAANc/IBELce83SXA7CPW5WSSkl3GNMSTRhaLowCCo/s0/lamp-manjaro-openrc-browser.png

@@ -27,10 +27,12 @@ excerpt:
 <br/>
 **DE**: Plasma 5 (KDE)<br/>
 <br/>
-![Debian Docker]({{ site.url }}/assets/posts/opensource/2016/03/debian-docker-ogs.png)
+[![Debian Docker][image-ss]][picasa-ss]
 <br/><br/>
 
 **Reference**:<br/>
 
 * <https://docs.docker.com/engine/quickstart/>
 
+[image-ss]: {{ site.url }}/assets/posts/opensource/2016/03/debian-docker-ogs.png
+[picasa-ss]: https://lh3.googleusercontent.com/-9pzAp7TS8ag/VzmdeUrMz9I/AAAAAAAAAMk/GfQI72Rmdz8t-9CEjWI9-E2Y-jFUvVwfQCCo/s0/debian-docker-ogs.png

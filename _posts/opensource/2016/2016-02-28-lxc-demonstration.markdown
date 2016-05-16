@@ -72,13 +72,13 @@ Here is my screenshot.
 4: (LXC) Debian + APT<br/>
 
 
-![LXC Screenfetch]({{ site.url }}/assets/posts/opensource/2016/02/lxc-screenfetch.png)
+[![LXC Screenfetch][image-ss-lxc-screenfetch]][picasa-ss-lxc-screenfetch]
 <br/>
 
 **Screenshot 2**: Screenfetch
 <br/>
 
-![LXC Package]({{ site.url }}/assets/posts/opensource/2016/02/lxc-package.png)
+[![LXC Package][image-ss-lxc-package]][picasa-ss-lxc-package]
 <br/>
 
 * * *
@@ -87,3 +87,10 @@ Between VM, LXC, Docker, Multiboot.
 What do you think of LXC as cheap way to learn about other distribution ?
 
 Thank you for reading.
+
+
+[image-ss-lxc-screenfetch]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-screenfetch.png
+[picasa-ss-lxc-screenfetch]: https://lh3.googleusercontent.com/-3P3Mo-dD3BM/Vzmd1cgqRbI/AAAAAAAAAMk/Eve6CDNrio4Lu6IWV1VO-33XzJyl3LXLwCCo/s0/lxc-screenfetch.png
+[image-ss-lxc-package]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-package.png
+[picasa-ss-lxc-package]: https://lh3.googleusercontent.com/-ymDyCDSEAtM/Vzmd1xbH2sI/AAAAAAAAAMk/48SelNtqDcIR0aFNvfSfluICHUG_lp7YQCCo/s0/lxc-package.png
+

@@ -19,12 +19,15 @@ Silly me, I didn't have enough time to troubleshoot this /var/log/Xorg.0.log. Bu
 
 So here we are, apt-pinning xorg, purge xorg, and re-install xorg.
 
-![APT Pinning]({{ site.url }}/assets/posts/opensource/2015/03/apt-pinning.png)
+[![APT Pinning][image-ss]][picasa-ss]
 
 **Reading**:<br/>
 * <https://debian-handbook.info/browse/stable/sect.apt-get.html#sect.apt.priorities>
 
 
 All is good now
+
+[image-ss]: {{ site.url }}/assets/posts/opensource/2015/03/apt-pinning.png
+[picasa-ss]: https://lh3.googleusercontent.com/-LKk0TT15FqM/VznBcvueHjI/AAAAAAAAANg/qET1zVBOm5I5Fn2kHo3EgkwSIRjH-AN-wCCo/s0/apt-pinning.png
 
 

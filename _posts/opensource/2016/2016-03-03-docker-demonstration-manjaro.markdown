@@ -28,11 +28,9 @@ excerpt:
 + Script: Screenfetch<br/>
 + Wallpaper: Self Vexel (inkscape) with 3D background<br/>
 <br/>
-
-
-![Manjaro Docker]({{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-fki.png)
+[![Manjaro Docker Light][image-ss-fki]][picasa-ss-fki]
 <br/><br/>
-![Manjaro Docker]({{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-gs.png)
+[![Manjaro Docker Dark][image-ss-gs]][picasa-ss-gs]
 <br/>
 
 Note: just another nix's porn. :-\ <br/>
@@ -41,4 +39,8 @@ Note: just another nix's porn. :-\ <br/>
 
 * <https://docs.docker.com/engine/quickstart/>
 
+[image-ss-fki]: {{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-fki.png
+[picasa-ss-fki]: https://lh3.googleusercontent.com/-j_6ANwMOhoo/VzmdhK000OI/AAAAAAAAAMk/F4HfQ71QX3w5fJUyDfQcNo2ZEUhKPa9OwCCo/s0/manjaro-docker-fki.png
+[image-ss-gs]: {{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-gs.png
+[picasa-ss-gs]: https://lh3.googleusercontent.com/-ZPn9TJf78Gw/VzmdkuxR7SI/AAAAAAAAAMk/IZi4ITsH8JUwKw3b77i5EEux39-krfXSgCCo/s0/manjaro-docker-gs.png
 

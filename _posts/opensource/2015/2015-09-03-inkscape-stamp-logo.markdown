@@ -20,17 +20,19 @@ I also add shadow with envelope path effects under the logo.
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-pink-padz.svg.gz][dotfiles-pink-padz]
 
-![Pink Padz]({{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-pink-padz.png)
+[![Pink Padz][image-ss-pink-padz]][picasa-ss-pink-padz]
 
 ## ILUNI FTUI
 
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-iluni-ftui.svg.gz][dotfiles-iluni-ftui]
 
-![ILUNI Teknik]({{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-iluni-ftui.png)
+[![ILUNI Teknik][image-ss-iluni-ftui]][picasa-ss-iluni-ftui]
 
 
 
+[image-ss-pink-padz]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-pink-padz.png
+[picasa-ss-pink-padz]: https://lh3.googleusercontent.com/--LrrAKXV0kk/VznBU1phg_I/AAAAAAAAANg/UcWcJ0-p4w0ltqBiNa51r767qeKMgedpwCCo/s0/logo-stamp-pink-padz.png
+[image-ss-iluni-ftui]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-iluni-ftui.png
+[picasa-ss-iluni-ftui]: https://lh3.googleusercontent.com/-Xruv7VPTq60/VznBURBVsYI/AAAAAAAAANg/PLtGPUu4ezYpN93V-9TWZuNPkBO4RtQYgCCo/s0/logo-stamp-iluni-ftui.png
 
-[dotfiles-pink-padz]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-pink-padz.svg.gz
-[dotfiles-iluni-ftui]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-iluni-ftui.svg.gz

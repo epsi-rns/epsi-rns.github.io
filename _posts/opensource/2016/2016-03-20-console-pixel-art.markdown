@@ -31,10 +31,10 @@ you can download a collection of shell script here<br/>
 + OS: Arch<br/>
 + WM: XMonad + XMobar<br/>
 + Terminal: A few sample script<br/>
-
-![ANSI Color Light]({{ site.url }}/assets/posts/opensource/2016/03/ansicolor-light.png)
+<br/>
+[![ANSI Color Light][image-ss-xmonad-light]][picasa-ss-xmonad-light]
 <br/><br/>
-![ANSI Color Dark]({{ site.url }}/assets/posts/opensource/2016/03/ansicolor-dark.png)
+[![ANSI Color Dark][image-ss-xmonad-dark]][picasa-ss-xmonad-dark]
 
 
 Me myself I got nothing to prove<br/>
@@ -55,3 +55,7 @@ Bagi yang suka bermain console pixel art di terminal. Silahkan unduh shell scrip
 Semoga bermanfaat, tidak sia-sia.<br/>
 Selamat membuat screenshot.<br/>
 
+[image-ss-xmonad-light]: {{ site.url }}/assets/posts/opensource/2016/03/ansicolor-light.png
+[picasa-ss-xmonad-light]: https://lh3.googleusercontent.com/-fo8myDUqSKc/Vzmdc5CAk6I/AAAAAAAAAMg/Zdndvz5dEkoFBrcgEHBiyoo00lA-poflQCCo/s0/ansicolor-light.png
+[image-ss-xmonad-dark]: {{ site.url }}/assets/posts/opensource/2016/03/ansicolor-dark.png
+[picasa-ss-xmonad-dark]: https://lh3.googleusercontent.com/-YgBfUykOzRk/VzmdhpMioeI/AAAAAAAAAMk/a_B6wmY9f_cYVxg0V9z1zAnyHOqsgAsrwCCo/s0/ansicolor-dark.png

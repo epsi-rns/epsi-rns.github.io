@@ -16,7 +16,7 @@ Before you read. You can examine a neat $ coding style in my old screenshot. It 
 **Source**:<br/>
 * [github.com/epsi-rns/dotfiles/.../MyLayoutHook.hs][dotfiles-layout]
 
-![Haskell Dollar]({{ site.url }}/assets/posts/opensource/2016/05/haskell-dollar.png)
+[![Haskell Dollar][image-ss-xmonad]][picasa-ss-xmonad]
 
 * * *
 
@@ -145,4 +145,6 @@ After all, it is never to late to learn Math.
 Happy Coding.
 
 [dotfiles-layout]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyLayoutHook.hs
+[image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/05/haskell-dollar.png
+[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-aKNNyl5pysQ/VzmdO9cFZGI/AAAAAAAAAMQ/2kwKWNeF6iQ1mLyyvJpr1ylb5ncAtSGlgCCo/s0/haskell-dollar.png
 

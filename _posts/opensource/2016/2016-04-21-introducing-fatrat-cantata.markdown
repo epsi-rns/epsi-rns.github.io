@@ -25,7 +25,7 @@ excerpt:
 **DE**: Plasma<br>
 **WM**: XMonad<br>
 
-![Introducing FatRat Cantata]({{ site.url }}/assets/posts/opensource/2016/04/introducing-fatrat-cantata.png)
+[![Introducing FatRat Cantata][image-ss-xmonad]][picasa-ss-xmonad]
 
 * * *
 
@@ -70,3 +70,6 @@ excerpt:
 [site-fatrat]: http://fatrat.dolezel.info/
 [mpd-fatrat]: http://mpd.wikia.com/wiki/Client:Cantata
 [github-fatrat]: https://github.com/cdrummond/cantata
+[image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/04/introducing-fatrat-cantata.png
+[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-zzlpA_0blio/VzmdWMGIWwI/AAAAAAAAAMg/mC4uMoJdlWYJV376Nk3AT8CVFYOOnNeywCCo/s0/introducing-fatrat-cantata.png
+

@@ -27,10 +27,11 @@ Talk is cheap. Here is the code on github account:
 
 * <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
-
-![Refactoring Awesome Light]({{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-light.png)
+<br/>
+[![Refactoring Awesome Light][image-ss-awesome-light]][picasa-ss-awesome-light]
 <br/><br/>
-![Refactoring Awesome Dark]({{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-dark.png)
+[![Refactoring Awesome Dark][image-ss-awesome-dark]][picasa-ss-awesome-dark]
+<br/>
 
 Awesome is a Dynamic Tiling Window Manager. For whatever that means.
 <br/><br/>
@@ -52,3 +53,9 @@ Thank you for reading.
 
 Sorry for my english<br/>
 I know how terrible it is.
+
+[image-ss-awesome-light]: {{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-light.png
+[picasa-ss-awesome-light]: https://lh3.googleusercontent.com/-HSziviMzatY/VzmdsAkfKNI/AAAAAAAAAMk/7rFDLvZUp_MqC--shJyPTB5MB894dnyMACCo/s0/refactoring-awesome-light.png
+[image-ss-awesome-dark]: {{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-dark.png
+[picasa-ss-awesome-dark]: https://lh3.googleusercontent.com/-Ag5vRw54Fdk/VzmdrJ2x1GI/AAAAAAAAAMk/5nUQb2JZbkUH-xFYg0FP0f41ME2Uh5VIACCo/s0/refactoring-awesome-dark.png
+
