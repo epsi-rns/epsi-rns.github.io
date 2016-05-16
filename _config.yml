@@ -16,8 +16,10 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # the base hostname & protocol for your site
 url: "http://epsi-rns.github.io" 
 
-# twitter_username: nurwijayadi
-# github_username: epsi-rns
+#opengraph
+locale: en_US
+logo: assets/images/authors/epsi-vexel.png
+
 
 paginate: 7
 paginate_path: "blog/page:num"
