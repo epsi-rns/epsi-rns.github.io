@@ -5,11 +5,17 @@ date:   2016-03-20 22:38:15 +0700
 categories: opensource
 tags: [screenshot, console, script]
 author: epsi
+excerpt: 
+  This github repository is dedicated to crunchbang fellow
+  who does a really great job of collecting ANSI Colorschemes scripts.
+  Keep the good work buddy !!
 ---
 
 Dear Ladies and Gentlemen, Good day.<br/>
 
-For those who likes to play console pixel-art in terminal to create a desktop screenshot, you can download a collection of shell script here<br/>
+For those who likes to play console pixel-art in terminal
+to create a desktop screenshot, 
+you can download a collection of shell script here<br/>
 
 * <https://github.com/epsi-rns/ansi-color>
 

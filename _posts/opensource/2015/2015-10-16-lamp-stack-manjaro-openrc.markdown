@@ -5,6 +5,11 @@ date:   2015-10-16 12:49:15 +0700
 categories: opensource
 tags: [lamp, openrc]
 author: epsi
+excerpt:
+  This is a serious guidance for those setting LAMP
+  in a not so very common environment.
+  While most blog using systemd, MySQL and apt-get.
+  This guidance show OpenRC, MariaDB and Pacman.
 ---
 
 Preface

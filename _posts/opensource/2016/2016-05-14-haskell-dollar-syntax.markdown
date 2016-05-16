@@ -5,6 +5,10 @@ date:   2016-05-14 10:03:15 +0700
 categories: opensource
 tags: [xmonad, dotfiles, haskell, language]
 author: epsi
+excerpt:
+  Haskell syntatic sugar is somehow weird.
+  But once you get the idea, you are going to love it.
+  Dollar $ infix operator can might be your favorite one.
 ---
 
 Before you read. You can examine a neat $ coding style in my old screenshot. It is somehow weird, and it is probably, not something avaliable in other programming language.

@@ -5,6 +5,10 @@ date:   2016-02-08 04:03:15 +0700
 categories: opensource
 tags: [arch, pacman, package manager]
 author: epsi
+excerpt:
+   There is no need to sync all updated packages. 
+   Pacman has IgnorePkg directive to filter unnecessary update of big size package.
+   Thus reduce bandwith required significantly.
 ---
 
 Update Arch Linux without unnecessary bloated package.

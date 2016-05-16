@@ -5,6 +5,9 @@ date:   2015-09-06 04:58:15 +0700
 categories: opensource
 tags: [inkscape, design, vexel]
 author: epsi
+excerpt:
+  Curious about doing Vexel in Inkscape? Yes, it can be done!
+  Although as an amateur I can't make it smoother yet.
 ---
 
 # Humanity in Progress.

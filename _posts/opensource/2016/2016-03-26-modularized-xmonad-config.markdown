@@ -5,6 +5,12 @@ date:   2016-03-26 14:58:15 +0700
 categories: opensource
 tags: [screenshot, xmonad, dotfiles]
 author: epsi
+excerpt: 
+  A show case of who to separate XMonad configuration
+  to make your configuration tidy, and easier to read..
+  From xmonad.hs to six libraries [MyColor.hs, MyStatusBar.hs
+  MyLogHookWS.hs, MyLogHookLT.hs, MyLayoutHook.hs, MyManageHook.hs]
+  plus xmonad.hs itself.
 ---
 
 

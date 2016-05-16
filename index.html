@@ -9,7 +9,7 @@ layout: page
   <div class="post-list">
     {% for post in site.posts %}
     <div class="post-item">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       <div class="post-meta container-fluid">
         <div class="post-time pull-left">
           <i class="fa fa-calendar"></i>
@@ -22,7 +22,8 @@ layout: page
               <span class="badge"><span class="fa fa-tag"></span> {{ tag }}</span></a>
           {% endfor %}
         </div>
-      </div>           
+      </div> 
+      {{ post.excerpt }}          
     </div>
     {% endfor %}
   </div>

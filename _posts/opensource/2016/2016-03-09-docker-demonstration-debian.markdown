@@ -5,6 +5,10 @@ date:   2016-03-09 23:00:15 +0700
 categories: opensource
 tags: [cloud, docker, package manager]
 author: epsi
+excerpt:
+  Yet another Docker showcase. Now using Debian.
+  Docker is supposed to do one special thing.
+  But this is not a limit. Just use your imagination.
 ---
 
 **Disclaimer**: I'm a beginner in cloud area.

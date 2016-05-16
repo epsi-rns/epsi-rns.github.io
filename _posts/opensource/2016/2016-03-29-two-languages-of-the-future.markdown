@@ -5,6 +5,10 @@ date:   2016-03-29 09:02:15 +0700
 categories: opensource
 tags: [thought, coding, language, go, rust]
 author: epsi
+excerpt:
+  This two products, Docker (go-based) and Servo (rust-based), is a compelling reason.
+  We have to take a peek on the language thare based on. 
+  Both are still bleeding edge technology. So we still have to make a bet on it.
 ---
 
 Two language of the future beside C and C++.<br/>

@@ -5,6 +5,10 @@ date:   2015-09-03 08:48:15 +0700
 categories: opensource
 tags: [inkscape, design, logo]
 author: epsi
+excerpt:
+  An inkscape vector artwork. That anybody can use it freely.
+  Nice to have it as avatar background,
+  or put it as a stamp in your picture while travelling.
 ---
 
 Logo with manual stamp ornament border would make an accent to your flyer.

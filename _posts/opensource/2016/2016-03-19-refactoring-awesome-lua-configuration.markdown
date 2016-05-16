@@ -5,6 +5,11 @@ date:   2016-03-19 16:41:15 +0700
 categories: opensource
 tags: [screenshot, awesome, dotfiles]
 author: epsi
+excerpt: 
+  A show case of who to separate Awesome WM configuration
+  to make your configuration tidy, and easier to read..
+  From rx.lua script to six libraries [rc, my.keys, my.menu, my.volume, my.wibox]. 
+  And separate my.wibox.lua to four smaller scripts.
 ---
 
 Have a nice weekend everbody,

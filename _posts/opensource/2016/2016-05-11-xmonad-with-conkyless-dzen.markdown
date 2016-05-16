@@ -5,6 +5,11 @@ date:   2016-05-11 21:02:15 +0700
 categories: opensource
 tags: [screenshot, xmonad, dotfiles]
 author: epsi
+excerpt:
+  Tidier code by removing conky in any dzen statusbar.
+  Create a thematic XMonad configuration by controlling 
+  of theme color and screen size, only from Haskell itself.
+  And See how far we can make port BASH script to native Haskell.
 ---
 
 # Removing Conky Dependency between XMonad and Dzen2
