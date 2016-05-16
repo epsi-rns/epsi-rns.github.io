@@ -24,7 +24,7 @@ layout: default
                 <div class="well">
 
   <h2>Recent Posts</h2>
-  <ul class="list-unstyled">
+  <ul class="recent-post list-unstyled">
     {% for post in site.posts limit:5 %}
     <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
@@ -46,8 +46,6 @@ layout: default
             </div>
         </div>
 
-
-        <hr>
 
     </div>
     <!-- /.container -->

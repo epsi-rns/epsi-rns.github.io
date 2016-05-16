@@ -16,8 +16,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # the base hostname & protocol for your site
 url: "http://epsi-rns.github.io" 
 
-twitter_username: nurwijayadi
-github_username: epsi-rns
+# twitter_username: nurwijayadi
+# github_username: epsi-rns
 
 # Build settings
 markdown: kramdown
