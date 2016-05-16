@@ -4,6 +4,7 @@ title:  "Two Languages of The Future"
 date:   2016-03-29 09:02:15 +0700
 categories: opensource
 tags: [thought, coding, language, go, rust]
+author: epsi
 ---
 
 Two language of the future beside C and C++.<br/>

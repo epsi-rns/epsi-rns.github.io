@@ -4,6 +4,7 @@ title:  "Learn Different Package Management Using LXC"
 date:   2016-02-28 23:00:15 +0700
 categories: opensource
 tags: [cloud, lxc, package manager]
+author: epsi
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Linux Container.

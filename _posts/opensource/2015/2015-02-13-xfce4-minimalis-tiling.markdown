@@ -4,6 +4,7 @@ title:  "Minimalist XFCE4 with Limited Tiling Support"
 date:   2015-02-13 08:48:15 +0700
 categories: opensource
 tags: [screenshot, xfce4]
+author: epsi
 ---
 
 Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an edge of the screen. It does so by resizing it to fit the top half of the screen. "

@@ -4,6 +4,7 @@ title:  "Customizing Shell Prompt with Powerline"
 date:   2016-03-21 19:17:15 +0700
 categories: opensource
 tags: [screenshot, powerline, dotfiles]
+author: epsi
 ---
 
 Dear command line fans, here is my 2 cents, powerline configuration.<br/>

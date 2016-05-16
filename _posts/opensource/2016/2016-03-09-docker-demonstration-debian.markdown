@@ -4,6 +4,7 @@ title:  "Running Guest OS via Docker on top of Debian for the first time"
 date:   2016-03-09 23:00:15 +0700
 categories: opensource
 tags: [cloud, docker, package manager]
+author: epsi
 ---
 
 **Disclaimer**: I'm a beginner in cloud area.

@@ -4,6 +4,7 @@ title:  "Update Arch Linux without Unnecessary Bloated Package"
 date:   2016-02-08 04:03:15 +0700
 categories: opensource
 tags: [arch, pacman, package manager]
+author: epsi
 ---
 
 Update Arch Linux without unnecessary bloated package.

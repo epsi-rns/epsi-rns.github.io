@@ -4,6 +4,7 @@ title:  "Setup LAMP stack with Manjaro OpenRC"
 date:   2015-10-16 12:49:15 +0700
 categories: opensource
 tags: [lamp, openrc]
+author: epsi
 ---
 
 Preface

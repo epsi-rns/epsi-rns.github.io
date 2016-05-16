@@ -4,6 +4,7 @@ title:  "Docker Demonstration (Manjaro)"
 date:   2016-03-03 13:01:15 +0700
 categories: opensource
 tags: [cloud, docker, package manager]
+author: epsi
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Docker. No need Virtual Machine nor Multiboot. Easy to setup.

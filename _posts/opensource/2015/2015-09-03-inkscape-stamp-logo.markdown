@@ -4,6 +4,7 @@ title:  "Inkscape: Logo with Stamp Ornament"
 date:   2015-09-03 08:48:15 +0700
 categories: opensource
 tags: [inkscape, design, logo]
+author: epsi
 ---
 
 Logo with manual stamp ornament border would make an accent to your flyer.

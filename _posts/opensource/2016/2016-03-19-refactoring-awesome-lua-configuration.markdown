@@ -4,6 +4,7 @@ title:  "Refactoring Awesome WM's Lua Configuration Script"
 date:   2016-03-19 16:41:15 +0700
 categories: opensource
 tags: [screenshot, awesome, dotfiles]
+author: epsi
 ---
 
 Have a nice weekend everbody,

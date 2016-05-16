@@ -4,6 +4,7 @@ title:  "Inkscape: Vexel Face Tracing"
 date:   2015-09-06 04:58:15 +0700
 categories: opensource
 tags: [inkscape, design, vexel]
+author: epsi
 ---
 
 # Humanity in Progress.

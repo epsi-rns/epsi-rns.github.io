@@ -4,6 +4,7 @@ title:  "XMonad with Conkyless Dzen"
 date:   2016-05-11 21:02:15 +0700
 categories: opensource
 tags: [screenshot, xmonad, dotfiles]
+author: epsi
 ---
 
 # Removing Conky Dependency between XMonad and Dzen2

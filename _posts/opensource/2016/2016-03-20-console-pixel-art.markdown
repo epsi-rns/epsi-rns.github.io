@@ -4,6 +4,7 @@ title:  "Console Pixel Art"
 date:   2016-03-20 22:38:15 +0700
 categories: opensource
 tags: [screenshot, console, script]
+author: epsi
 ---
 
 Dear Ladies and Gentlemen, Good day.<br/>
