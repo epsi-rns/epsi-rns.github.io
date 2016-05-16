@@ -22,7 +22,8 @@ layout: default
         </div>      
         <div class="post-tags pull-right" id="tags">
           {% for tag in page.tags %}
-            <a href="{{ site.url | append:site.baseurl }}/tag/{{ tag }}"><span class="badge">{{ tag }}</span></a>
+            <a href="{{ site.url | append:site.baseurl }}/pages/tag#{{ tag }}">
+              <span class="badge"><span class="fa fa-tag"></span> {{ tag }}</span></a>
           {% endfor %}
         </div>
       </div>    
@@ -62,7 +63,9 @@ layout: default
   <h2>Tags</h2>
   <div id="tags">
     {% for tag in site.tags %}
-      <a href="{{ site.baseurl }}/pages/tag#{{ tag[0] }}"><span class="badge">{{ tag[0] }}</span></a>
+      <a href="{{ site.baseurl }}/pages/tag#{{ tag[0] }}">
+          <span class="badge"><span class="fa fa-tag"></span> {{ tag[0] }}</span>
+      </a>
     {% endfor %}
   </div>
 

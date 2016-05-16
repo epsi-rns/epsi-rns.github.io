@@ -24,10 +24,15 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 $yellow-makara:    #f7d316;
 
+
+// Overriden variables
+$fa-font-path:        "/assets/vendors/font-awesome";
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "bootstrap",
-        "oriblog/base",
-        "oriblog/layout",
-        "oriblog/syntax-highlighting"
+        "vendors/bootstrap",
+        "vendors/font-awesome/font-awesome",
+        "themes/oriblog/base",
+        "themes/oriblog/layout",
+        "themes/oriblog/syntax-highlighting"
 ;
