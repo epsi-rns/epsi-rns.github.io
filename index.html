@@ -8,9 +8,8 @@ layout: page
 
   <div class="post-list">
     {% for post in site.posts %}
-    <div>
-      <h3>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+    <div class="post-item">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       <div class="post-meta container-fluid">
         <div class="post-time pull-left">
           <i class="fa fa-calendar"></i>

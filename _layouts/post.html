@@ -32,6 +32,16 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
+  
+    <nav class="pagination" role="navigation">
+      {% if page.previous %}
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
+      {% endif %}
+    </nav><!-- /.pagination -->
+  
 
 </article>
 
@@ -52,7 +62,7 @@ layout: default
   <h2>Tags</h2>
   <div id="tags">
     {% for tag in site.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag[0] }}"><span class="badge">{{ tag[0] }}</span></a>
+      <a href="{{ site.baseurl }}/pages/tag#{{ tag[0] }}"><span class="badge">{{ tag[0] }}</span></a>
     {% endfor %}
   </div>
 
@@ -60,9 +70,6 @@ layout: default
                 <!-- /well -->
             </div>
         </div>
-
-
-        <hr>
 
     </div>
     <!-- /.container -->

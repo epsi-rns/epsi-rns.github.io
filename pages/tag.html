@@ -1,0 +1,32 @@
+---
+layout: page
+title: Tag Index
+excerpt: "An archive of posts sorted by tag."
+search_omit: true
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+
+<div class="tag-box inline">
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+    <a href="#{{ this_word }}"><span class="badge">{{ this_word }} <span class="tag-count">{{ site.tags[this_word].size }}</span></span></a>
+  {% endunless %}{% endfor %}
+</div>
+
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+  <span class ="anchor-target" id="{{ this_word }}">{{ this_word }}</span>
+  {% for post in site.tags[this_word] %}{% if post.title != null %}
+      <div class="tag-post-item container-fluid">      
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <div class="post-time pull-right">
+          <i class="fa fa-calendar"></i>
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %-d, %Y" }}</time>
+        </div>      
+      </div>           
+  
+  {% endif %}{% endfor %}
+{% endunless %}{% endfor %}

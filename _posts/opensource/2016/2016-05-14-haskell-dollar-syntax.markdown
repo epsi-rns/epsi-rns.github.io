@@ -3,7 +3,7 @@ layout: post
 title:  "How Haskell Syntax can Make Your Code Cleaner"
 date:   2016-05-14 10:03:15 +0700
 categories: opensource
-tags: [xmonad, dotfiles, haskell]
+tags: [xmonad, dotfiles, haskell, language]
 ---
 
 Before you read. You can examine a neat $ coding style in my old screenshot. It is somehow weird, and it is probably, not something avaliable in other programming language.

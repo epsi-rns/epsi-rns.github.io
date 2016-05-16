@@ -106,10 +106,14 @@ a {
   color: #f7d316;
 }
 
+.btn:hover,
+.btn:focus {
+  color: #2980b9;
+}
+
 .navbar-inverse {
   background-color: $yellow-makara;
-/*  background-color: #2980b9;*/
- }
+}
  
  .navbar-inverse .navbar-nav li a,
  .navbar-inverse .navbar-brand { color: #000000; }
@@ -132,6 +136,23 @@ div.post-tags {
   text-align: right;
 }  
 
+.tag-post-item,
+.post-item,
 .post-header {
     @extend %vertical-rhythm;
+}
+
+.tag-post-item {
+  border-bottom: 1px solid #666666;
+}
+
+.anchor-target {
+  padding-top: 70px; 
+  margin-top: -70px;
+}  
+
+span.tag-count {
+    color: $yellow-makara;
+    vertical-align: super;
+    font-size: smaller;  
 }
