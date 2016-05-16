@@ -19,7 +19,7 @@ url: "http://epsi-rns.github.io"
 # twitter_username: nurwijayadi
 # github_username: epsi-rns
 
-paginate: 10
+paginate: 7
 paginate_path: "blog/page:num"
 
 # Build settings
