@@ -18,7 +18,7 @@ Back to Mageia
 
 ![Mageia Welcome Screen][image-ss-mageia-welcome]
 
-I spent my early days of linux using redhat, 
+I spent my early days of linux using Red Hat, 
 followed by Mandrake three years later in 2003.
 Returned to Windows. Then Debian in 2007
 which was my longest years of linux distro,
