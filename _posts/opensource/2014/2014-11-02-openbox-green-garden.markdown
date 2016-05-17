@@ -74,8 +74,9 @@ bunsenlabs linux distribution. So I clone theme in my arch.
 <hr/>
 
 One of the most common component in Openbox is the famous tint2 panel.
+You can see how the taskbar has different tint2 looks form those screenshot above.
 
-You can pick one of my collection here 
+You can pick tint2 configuration from my collection here 
 
 * <https://github.com/epsi-rns/dotfiles/tree/master/openbox.arch/tint2>
 
