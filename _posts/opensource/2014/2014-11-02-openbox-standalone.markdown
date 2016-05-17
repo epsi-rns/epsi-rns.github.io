@@ -25,7 +25,7 @@ $ openbox --replace
 As a standalone Stacking Window manager.
 Openbox is the only Stacking WM that I use daily.
 
-**OS**: Debian<br/>
+**OS**: Arch<br/>
 **WM**: Openbox<br/>
 + Kali Menu in openbox<br/>
 + Tint2 (custom color)<br/>
