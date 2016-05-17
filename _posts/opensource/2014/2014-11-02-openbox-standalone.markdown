@@ -16,7 +16,7 @@ I recommend beginner to learn Openbox.
 Openbox can be used as a standalone WM,
 or as a WM inside a DE (Desktop Environment). 
 
-In LXQT or XFWM you can simply type
+In LXQT or XFCE4 you can simply type
 
 {% highlight bash %}
 $ openbox --replace
