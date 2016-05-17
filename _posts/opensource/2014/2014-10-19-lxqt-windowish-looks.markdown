@@ -6,11 +6,14 @@ categories: opensource
 tags: [screenshot, lxqt]
 author: epsi
 excerpt:
-
+  This is not a prank.
+  You can have this Windowish looks with Arch LXQT.
+  And be happy with it.
 ---
 
 This is not a prank.
 You can have this Windowish looks with Arch LXQT.
+And be happy with it.
 
 'qterminal', is my new comfort in the shell.
 
