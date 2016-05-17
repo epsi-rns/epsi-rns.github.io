@@ -3,7 +3,7 @@ layout: post
 title:  "Selfieshoot of Hilarious Desktop Customization"
 date:   2014-05-14 12:35:15 +0700
 categories: opensource
-tags: [screenshot,xfce4]
+tags: [screenshot, xfce4]
 author: epsi
 excerpt:
   A show case of how customizable XFCE4 is.

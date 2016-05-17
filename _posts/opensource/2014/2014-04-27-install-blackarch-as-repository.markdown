@@ -3,8 +3,8 @@ layout: post
 title:  "Install BlackArch as Repository"
 date:   2014-04-27 14:50:15 +0700
 categories: opensource
-tags: [security,blackarch,package manager]
-author: epsi
+tags: [security, blackarch,package manager]
+author: epsi 
 excerpt:
   There is no need to install BlackArch or ArchAssault as a full distribution.
   With any distribution utilized pacman, any of these can be instaled as a repository. 

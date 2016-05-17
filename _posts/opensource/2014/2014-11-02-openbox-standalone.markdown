@@ -7,14 +7,14 @@ tags: [screenshot, openbox, tint2, ricing]
 author: epsi
 excerpt:
   I recommend beginner to learn Openbox.
-  Openbox can be used as a standalone WM,
-  or as a WM inside a DE (Desktop Environment). 
+  Openbox can be used as a standalone Window Manager,
+  or as a Window Manager that holds a DE (Desktop Environment). 
   In fact, Openbox is the only Stacking WM that I use daily.  
 ---
 
 I recommend beginner to learn Openbox.
-Openbox can be used as a standalone WM,
-or as a WM inside a DE (Desktop Environment). 
+Openbox can be used as a standalone Window Manager,
+or as a Window Manager inside a DE (Desktop Environment). 
 
 In LXQT or XFCE4 you can simply type
 

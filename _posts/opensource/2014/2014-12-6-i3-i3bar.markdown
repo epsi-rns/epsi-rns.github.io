@@ -3,7 +3,7 @@ layout: post
 title:  "i3 Window manager with i3 Bar"
 date:   2014-12-06 18:46:15 +0700
 categories: opensource
-tags: [screenshot, i3]
+tags: [screenshot, i3, conky]
 author: epsi
 excerpt:
   I love Dekstop Art.

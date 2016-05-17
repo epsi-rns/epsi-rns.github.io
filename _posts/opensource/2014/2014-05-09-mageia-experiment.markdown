@@ -3,7 +3,7 @@ layout: post
 title:  "My Mageia Experiment"
 date:   2014-05-09 19:34:15 +0700
 categories: opensource
-tags: [screenshot,mageia,kwin]
+tags: [screenshot, mageia, kwin]
 author: epsi
 excerpt:
   I'm curious about Mageia. Because there is something that 
