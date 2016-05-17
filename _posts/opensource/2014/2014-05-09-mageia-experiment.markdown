@@ -31,8 +31,8 @@ Learning is my never ending hobby.
 
 Magiea is a successor of Mandriva,
 while Mandriva itself is successor of Mandrake.
-After changing its name from Mandrake to Mandriva to Mageia,
-The future of Mageia Development is unclear,
+After changed its name from Mandrake to Mandriva to Mageia,
+The latest of Mageia Development is unclear,
 and it is not a linux distro that I recommend.
 
 My only reason to use Mageia is for a sentimental nostalgic reason.
@@ -40,7 +40,6 @@ There is something that I haven't learned in the past.
 I'm curious, and I don't want to live in regrets,
 before this distro vanished for ever.
 That's why I'm back to Mandrake aka Mandriva aka Mageia.
-
 
 ![Mageia Control Center][image-ss-mageia-controlcenter]
 <br/><br/>
