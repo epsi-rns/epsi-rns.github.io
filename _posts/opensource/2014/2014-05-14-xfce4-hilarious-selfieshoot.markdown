@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Selfieshoot of Hilarious Desktop Customization "
+title:  "Selfieshoot of Hilarious Desktop Customization"
 date:   2014-05-14 12:35:15 +0700
 categories: opensource
 tags: [screenshot,xfce4]
