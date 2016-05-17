@@ -7,7 +7,7 @@ tags: [screenshot, gnome-shell, conky]
 author: epsi
 excerpt:
   I'm glad that linux has a modern desktop interface.
-  While others is still using conventional approach.
+  While others are still using conventional approach.
 ---
 
 A very common Desktop Customization.
@@ -19,7 +19,7 @@ A very common Desktop Customization.
 + background<br/>
 
 I'm glad that linux has a modern desktop interface.
-While others is still using conventional approach.
+While others are still using conventional approach.
 
 It can be customized further using
 gnome-shell has extensions to make you far from bored

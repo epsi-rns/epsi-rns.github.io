@@ -9,7 +9,7 @@ excerpt:
   If you got bored with popular application,
   compiling and installing this two can be fun.
   FatRat is almost as cool as Transmission.
-  And this Cantata MPD Client is actually have a very nice looks.
+  And this Cantata MPD Client have a very nice looks.
 ---
 
 # Introducing 2 KDE Applications
@@ -56,9 +56,15 @@ excerpt:
 
 ## Installing Cantata in Debian
 
+Surprisingly Cantata have a very nice looks.
+
+![Cantata][image-ss-cantata]
+
+
 {% highlight bash %}
 ># apt instal cantata
 {% endhighlight %}
+
 
 **Reading**:<br>
 * [mpd.wikia.com/wiki/Client:Cantata][mpd-fatrat]
@@ -67,9 +73,13 @@ excerpt:
 * [github.com/cdrummond/cantata][github-fatrat]
 
 
+
+
+
+
 [site-fatrat]: http://fatrat.dolezel.info/
 [mpd-fatrat]: http://mpd.wikia.com/wiki/Client:Cantata
 [github-fatrat]: https://github.com/cdrummond/cantata
 [image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/04/introducing-fatrat-cantata.png
 [picasa-ss-xmonad]: https://lh3.googleusercontent.com/-zzlpA_0blio/VzmdWMGIWwI/AAAAAAAAAMg/mC4uMoJdlWYJV376Nk3AT8CVFYOOnNeywCCo/s0/introducing-fatrat-cantata.png
-
+[image-ss-cantata]: {{ site.url }}/assets/posts/opensource/2016/04/cantata.png
