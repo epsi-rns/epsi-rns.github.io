@@ -6,7 +6,7 @@ categories: opensource
 tags: [inkscape, design, logo]
 author: epsi
 excerpt:
-  An inkscape vector artwork. That anybody can use it freely.
+  An inkscape vector artwork. That anybody can download and use it freely.
   Nice to have it as avatar background,
   or put it as a stamp in your picture while travelling.
 ---

@@ -9,7 +9,7 @@ excerpt:
   Tidier code by removing conky in any dzen statusbar.
   Create a thematic XMonad configuration by controlling 
   of theme color and screen size, only from Haskell itself.
-  And See how far we can make port BASH script to native Haskell.
+  And See how far we can make a port from BASH script to native Haskell.
 ---
 
 # Removing Conky Dependency between XMonad and Dzen2

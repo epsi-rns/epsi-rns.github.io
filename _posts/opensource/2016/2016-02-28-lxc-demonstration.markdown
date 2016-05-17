@@ -6,8 +6,8 @@ categories: opensource
 tags: [cloud, lxc, package manager]
 author: epsi
 excerpt:
-  There are interesting difference between major distribution,
-  it is how they manage their packages.
+  There are interesting differences between major distribution.
+  One interest most is how they manage their packages.
   This is a cheap way to learn different package management 
   from major linux distribution using Linux Container.
 ---

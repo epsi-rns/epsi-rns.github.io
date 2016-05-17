@@ -7,8 +7,8 @@ tags: [thought, coding, language, go, rust]
 author: epsi
 excerpt:
   This two products, Docker (go-based) and Servo (rust-based), is a compelling reason.
-  We have to take a peek on the language thare based on. 
-  Both are still bleeding edge technology. So we still have to make a bet on it.
+  We have to take a peek on the language they are based on. 
+  Both are still bleeding edge technologies. So we still have to make a bet on it.
 ---
 
 Two language of the future beside C and C++.<br/>
@@ -16,7 +16,7 @@ Two language of the future beside C and C++.<br/>
 1. Go
 2. Rust
 
-Both are still bleeding edge technology. Even though they already have proven product e.g. Docker (go-based) and Servo (rust-based). You still have to make a bet on it. Nobody says that it would be easy.
+Both are still bleeding edge technologies. Even though they already have proven product e.g. Docker (go-based) and Servo (rust-based). You still have to make a bet on it. Nobody says that it would be easy.
 <br/><br/>
 
 After Sun acquisition by Oracle, and legal dispute with Oracle over Android's use of Java in Dalvik. Google has secretly developed Go-language. But Java will not be, just fading away. Java is too big to fail.

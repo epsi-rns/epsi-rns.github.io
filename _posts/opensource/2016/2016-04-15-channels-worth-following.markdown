@@ -8,7 +8,7 @@ author: epsi
 excerpt: >
   Let's get smarter by following this worth Channel: 
   Phoronix, The Hacker News, OpenSouce, FOSS Bytes, Linux Today, and TecMint.
-  Please add if you know any cools channels. 
+  Please add if you know any cool channels. 
 ---
 
 This is actualy my question in a forum.<br/><br/>
