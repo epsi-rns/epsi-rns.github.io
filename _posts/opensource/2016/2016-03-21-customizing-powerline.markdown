@@ -3,7 +3,7 @@ layout: post
 title:  "Customizing Shell Prompt with Powerline"
 date:   2016-03-21 19:17:15 +0700
 categories: opensource
-tags: [screenshot, powerline, dotfiles]
+tags: [ricing, powerline, dotfiles]
 author: epsi
 excerpt: 
   For those who wants to looks cool with their console screenshot.

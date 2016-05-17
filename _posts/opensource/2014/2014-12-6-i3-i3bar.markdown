@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "i3 Window manager with i3 Bar"
+date:   2014-12-06 18:46:15 +0700
+categories: opensource
+tags: [screenshot, i3]
+author: epsi
+excerpt:
+  I love Dekstop Art.
+  Especially with network monitoring.
+---
+
+I love Dekstop Art.
+Especially with network monitoring.
+
+**OS**: Arch<br/>
+**WM**: i3<br/>
+i3bar: conky<br/>
+Terminal: vnstat, nethogs, nload<br/>
+
+<br/>
+![i3 Black][image-ss-i3-black]
+<br/><br/>
+![i3 Green][image-ss-i3-green]
+<br/>
+
+Sample i3 config (nubi)
+
+* <http://pastebin.com/162mZPwP>
+
+Sample i3bar/conkyrc config (nubi)
+
+* <http://pastebin.com/YbypRQZB>
+
+<br/>
+
+Hey... I took that photograph of my own garden by myself.
+
+[image-ss-i3-black]: {{ site.url }}/assets/posts/opensource/2014/12/i3-black.png
+[image-ss-i3-green]: {{ site.url }}/assets/posts/opensource/2014/12/i3-green.png
