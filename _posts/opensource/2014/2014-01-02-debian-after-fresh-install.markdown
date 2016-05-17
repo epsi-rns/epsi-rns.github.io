@@ -200,5 +200,5 @@ Do you want to continue? [Y/n/?]
 last step: go to the refigerator find myself something to eat
 
 
-[image-ss-debian-install]: {{ site.url }}/assets/posts/opensource/2014/01/debian-install.png
+[image-ss-debian-install]: {{ site.url }}/assets/posts/opensource/2014/01/debian-install.jpg
 
