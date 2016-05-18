@@ -18,12 +18,13 @@ Back to Mageia
 
 ![Mageia Welcome Screen][image-ss-mageia-welcome]
 
-I spent my early days of linux using Red Hat, 
-followed by Mandrake three years later in 2003.
-Returned to Windows. Then Debian in 2007
+I spent my early days of linux using Red Hat in 1999, 
+followed by Mandrake one year later.
+Returned to Windows. Then Debian in 2004
 which was my longest years of linux distro,
 dual booting with Windows.
-In the mean time I tried Mageia, Ubuntu, kFreeBSD, and Kali.
+In the mean time I was also a distro hopper with
+Mageia, Ubuntu, kFreeBSD, and Kali.
 Until all of a sudden in 2014 I decided
 to migrate completely to Arch Linux.
 My journey is not complete yet. 
