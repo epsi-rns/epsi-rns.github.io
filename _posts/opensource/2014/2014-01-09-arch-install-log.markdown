@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Debian Wheezy - Post Install Log"
-date:   2014-01-02 12:46:15 +0700
+date:   2014-01-09 12:46:15 +0700
 categories: opensource
 tags: [debian, package manager]
 author: epsi
