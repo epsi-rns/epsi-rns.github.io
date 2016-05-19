@@ -16,7 +16,7 @@ This is my temporary about page.
 I haven't got time to decorate it yet.
 I'm still busy of something else.
 
-You can read a glance about me here
+You can read a glance about my journey here
 
 * <http://epsi-rns.github.io/2016/05/18/becoming-geek.html>
 

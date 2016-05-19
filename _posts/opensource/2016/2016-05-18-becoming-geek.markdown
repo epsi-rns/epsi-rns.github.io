@@ -28,7 +28,7 @@ or type  alt^205+alt^25+ctrl^C (CD19).
 
 I forced myself to learn Pascal/Delphi in my college day,
 to get pressure-volume-diagram from a diesel engine.
-Utilized cool devices, e.g. oscillator, I finally made it.
+Utilized cool devices, e.g. oscilloscope, I finally made it.
 The difficulties to find source code,
 got me realized of how important open-source is.
 
@@ -64,11 +64,11 @@ For about a decade, I don't have any real job related with IT.
 I did my linux passion by learning something else.
 From Samba, OpenRC, Inkscape to LXC/Docker.
 Experience different distribution,
-e.g. Ubuntu, Blankon, KaOS, Kali, Mageia, Arch, Manjaro.
+e.g. Ubuntu, Blankon, kFreeBSD, KaOS, Kali, Mageia, Arch, Manjaro.
 Until one day I realized I have no need for Microsoft Windows in my Office.
 
 For the past two years I have become a masochist Desktoper.
-Using Window Manager, instead o Desktop Environment.
+Using Window Manager, instead of Desktop Environment.
 You can see my dotfile containing Openbox, Awesome, or XMonad.
 Ricing it with powerline, pixel art, listening music with MPD, and so on.
 
