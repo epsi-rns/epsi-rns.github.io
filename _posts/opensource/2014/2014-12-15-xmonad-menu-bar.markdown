@@ -3,7 +3,7 @@ layout: post
 title:  "XMonad Menu Bar"
 date:   2014-12-15 11:58:15 +0700
 categories: opensource
-tags: [ricing]
+tags: [ricing, xmonad]
 author: epsi
 excerpt:
   XMonad itself comes with nothing but black intimidating screen.
