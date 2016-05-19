@@ -41,6 +41,7 @@ No gaps by default.
 **OS**: Debian<br>
 **WM**: XMonad<br>
 + Statusbar: XMobar<br>
++ Terminal: Transparency: 85%<br>
 + Run: nload, nethogs, httpry<br>
 
 ![XMobar: No Gap][image-ss-xmobar-nogap]
