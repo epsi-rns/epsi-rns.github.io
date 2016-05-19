@@ -14,6 +14,9 @@ excerpt:
 
 This show case show you the looks of Tiling Window Manager with XMonad.
 
+I like the way Tiling Window Manager remove all window decoration.
+It makes the screenshot looks cooler.
+
 XMonad is an amazing Tiling Window Manager. 
 Its configuration written in Haskell,
 so you can make a very flexible configuration.
