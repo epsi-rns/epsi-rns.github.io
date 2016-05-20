@@ -50,11 +50,12 @@ This article contain two parts.
 
 ## Arch :: Install Log
 
-Prepare Partition
+Prepare Partition<br/>
+I'm using /dev/sda9. Im sure that you might use diferent partition.
 
 {% highlight bash %}
 ># cfdisk
-># mkswap /def/sda9
+># mkswap /dev/sda9
 ># mkfs.ext4 /dev/sda10
 ># swapon /dev/sda9
 ># mount /dev/sda10 /mnt

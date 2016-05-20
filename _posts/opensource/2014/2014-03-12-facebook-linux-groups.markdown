@@ -6,7 +6,7 @@ categories: opensource
 tags: [thought]
 author: epsi
 excerpt:
-
+  A collection of facebook linux groups.
 ---
 
 This is a remake of my facebook note with the same title.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Becoming a Geek"
+categories: opensource
 tags: [thought, about]
 author: epsi
 opengraph:

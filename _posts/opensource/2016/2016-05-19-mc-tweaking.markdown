@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Midnight Commander Tweaking"
+categories: opensource
 tags: [ricing, dotfiles]
 author: epsi
 excerpt:
