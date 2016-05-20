@@ -23,8 +23,8 @@ My first encounter with computer was, in my teenage days.
 I like to prank my friend with two bytes reboot.com,
 executing coldboot (int 18h) or warmboot (int 19h).
 "By typing copy con reboot.com",
-and type alt^205+alt^24+ctrl^C (CD18)
-or type  alt^205+alt^25+ctrl^C (CD19).
+and type alt^205+alt^24+ctrl^D (CD18)
+or type  alt^205+alt^25+ctrl^D (CD19).
 
 I forced myself to learn Pascal/Delphi in my college day,
 to get pressure-volume-diagram from a diesel engine.

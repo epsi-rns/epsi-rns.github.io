@@ -2,7 +2,7 @@
 layout: post
 title:  "Inkscape: Vexel Face Tracing"
 date:   2015-09-06 04:58:15 +0700
-categories: opensource
+categories: design
 tags: [inkscape, design, vexel]
 author: epsi
 excerpt:

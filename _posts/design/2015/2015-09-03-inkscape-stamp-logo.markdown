@@ -2,7 +2,7 @@
 layout: post
 title:  "Inkscape: Logo with Stamp Ornament"
 date:   2015-09-03 08:48:15 +0700
-categories: opensource
+categories: design
 tags: [inkscape, design, logo]
 author: epsi
 excerpt:
