@@ -19,9 +19,9 @@ i3bar: conky<br/>
 Terminal: vnstat, nethogs, nload<br/>
 
 <br/>
-![i3 Black][image-ss-i3-black]
+[![i3 Black][image-ss-i3-black]][picasa-ss-i3-black]
 <br/><br/>
-![i3 Green][image-ss-i3-green]
+[![i3 Green][image-ss-i3-green]][picasa-ss-i3-green]
 <br/>
 
 Sample i3 config (nubi)
@@ -37,4 +37,7 @@ Sample i3bar/conkyrc config (nubi)
 Hey... I took that photograph of my own garden by myself.
 
 [image-ss-i3-black]: {{ site.url }}/assets/posts/opensource/2014/12/i3-black.png
+[picasa-ss-i3-black]: https://lh3.googleusercontent.com/-mUkKN8nfGUM/Vz2mP34hESI/AAAAAAAAAO8/pQ61naXO1ywAMARvUez0iLNVxWdpoXBkgCCo/s0/i3-black.png
 [image-ss-i3-green]: {{ site.url }}/assets/posts/opensource/2014/12/i3-green.png
+[picasa-ss-i3-green]: https://lh3.googleusercontent.com/-01BLZbKZrEY/Vz2mUtSw4JI/AAAAAAAAAO8/3EtGNN6e8EkTGl1mLAYMwJnzl_tm-vM9gCCo/s0/i3-green.png
+

@@ -58,7 +58,7 @@ excerpt:
 
 Surprisingly Cantata have a very nice looks.
 
-![Cantata][image-ss-cantata]
+[![Cantata][image-ss-cantata]][picasa-ss-cantata]
 
 
 {% highlight bash %}
@@ -83,3 +83,4 @@ Surprisingly Cantata have a very nice looks.
 [image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/04/introducing-fatrat-cantata.png
 [picasa-ss-xmonad]: https://lh3.googleusercontent.com/-zzlpA_0blio/VzmdWMGIWwI/AAAAAAAAAMg/mC4uMoJdlWYJV376Nk3AT8CVFYOOnNeywCCo/s0/introducing-fatrat-cantata.png
 [image-ss-cantata]: {{ site.url }}/assets/posts/opensource/2016/04/cantata.png
+[picasa-ss-cantata]: https://lh3.googleusercontent.com/-QfrI67uJqiY/Vz2ld9Ok5-I/AAAAAAAAAN0/lfvvVx1ynq0W4P7heU-WY5x4LJu75MoDQCCo/s0/cantata.png

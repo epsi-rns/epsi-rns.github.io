@@ -28,10 +28,11 @@ gnome-shell has extensions to make you far from bored
 
 And user themes, though I rarely need it.
 
-![gnome shell][image-ss-gnome-shell]
+[![gnome shell][image-ss-gnome-shell]][picasa-ss-gnome-shell]
 <br/><br/>
 
 
 
 [image-ss-gnome-shell]: {{ site.url }}/assets/posts/opensource/2014/04/gnomeshell.png
+[picasa-ss-gnome-shell]: https://lh3.googleusercontent.com/-cv5oZWXGhkY/Vz2onQ-gStI/AAAAAAAAARs/xxG_MYs8S0gwZtoWvlzNk_ZLUIYp5VnfwCCo/s0/gnomeshell.png
 

@@ -26,9 +26,9 @@ This article contain two parts.
 
 * Using apt-get and,
 
-*  Using aptitude.
+* Using aptitude.
 
-![Debian Install][image-ss-debian-install]
+[![Debian Install][image-ss-debian-install]][picasa-ss-debian-install]
 <br/><br/>
 
 -- -- -- 
@@ -201,4 +201,5 @@ last step: go to the refigerator find myself something to eat
 
 
 [image-ss-debian-install]: {{ site.url }}/assets/posts/opensource/2014/01/debian-install.jpg
+[picasa-ss-debian-install]: https://lh3.googleusercontent.com/-j65GwnT_z3g/Vz2o4lw6y5I/AAAAAAAAAR0/zJnk7wzO4-EXuqkyoyNwuLptfuKT7HpygCCo/s0/debian-install.jpg
 

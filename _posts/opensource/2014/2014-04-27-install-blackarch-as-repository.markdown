@@ -36,7 +36,7 @@ Official Site
 * <https://blackarch.org/>
 
 
-![BlackArch Keyring][image-ss-blackarch-keyring]
+[![BlackArch Keyring][image-ss-blackarch-keyring]][picasa-ss-blackarch-keyring]
 <br/><br/>
 
 -- -- --
@@ -51,11 +51,13 @@ I'm still having a hard time while doing blackman.
 [-] CRITICAL: Package not found in repository 'README' 
 {% endhighlight %}
 
-![BlackMan issue][image-ss-blackman-issue]
+[![BlackMan Issue][image-ss-blackman-issue]][picasa-ss-blackman-issue]
 
 This one has not been solved yet.
 
 
 [image-ss-blackarch-keyring]: {{ site.url }}/assets/posts/opensource/2014/04/blackarch-keyring.png
+[picasa-ss-blackarch-keyring]: https://lh3.googleusercontent.com/-vxylPl4aXfY/Vz2okEH1u_I/AAAAAAAAARs/oowH1cKidiIWOqz8_Fm1sL-J2Gk7PFQSwCCo/s0/blackarch-keyring-full.png
 [image-ss-blackman-issue]: {{ site.url }}/assets/posts/opensource/2014/04/blackman-issue.png
+[picasa-ss-blackman-issue]: https://lh3.googleusercontent.com/-mlwqCRJBFxQ/Vz2oluHQN6I/AAAAAAAAARs/LZnq4igNeX4V7E3LyY7e7miSs5yeWDV5ACCo/s0/blackman-issue.png
 

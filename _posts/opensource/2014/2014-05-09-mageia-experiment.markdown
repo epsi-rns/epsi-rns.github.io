@@ -16,7 +16,7 @@ Back to Mageia
 ># urpmi task-kde
 {% endhighlight %}
 
-![Mageia Welcome Screen][image-ss-mageia-welcome]
+[![Mageia Welcome Screen][image-ss-mageia-welcome]][picasa-ss-mageia-welcome]
 
 I spent my early days of linux using Red Hat in 1999, 
 followed by Mandrake one year later.
@@ -42,7 +42,7 @@ I'm curious, and I don't want to live in regrets,
 before this distro vanished for ever.
 That's why I'm back to Mandrake aka Mandriva aka Mageia.
 
-![Mageia Control Center][image-ss-mageia-controlcenter]
+[![Mageia Control Center][image-ss-mageia-controlcenter]][picasa-ss-mageia-controlcenter]
 <br/><br/>
 
 Well. It has a very nice Control Panel.
@@ -94,7 +94,7 @@ $ drakconf
 
 {% endhighlight %}
 
-![Mageia Upgrade][image-ss-mageia-upgrade]
+[![Mageia Upgrade][image-ss-mageia-upgrade]][picasa-ss-mageia-upgrade]
 
 <hr/>
 
@@ -296,7 +296,7 @@ because I can't afford it in my Notebook.
 + Cube Effect<br/>
 <br/>
 
-![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]
+[![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]][picasa-ss-mageia-xfce4-kwin]
 <br/>
 
 And go further with RazorQT.
@@ -307,7 +307,7 @@ And go further with RazorQT.
 + Cube Effect<br/>
 <br/>
 
-![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]
+[![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]][picasa-ss-mageia-razorqt-kwin]
 <br/><br/>
 
 
@@ -317,8 +317,12 @@ At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rare
 
 
 [image-ss-mageia-welcome]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-welcome.png
+[picasa-ss-mageia-welcome]: https://lh3.googleusercontent.com/-k6WRjfFM2lg/Vz2oaDzsFCI/AAAAAAAAARk/hlaqABuIODozZSSdRI22dyJatQJB5N5IACCo/s0/mageia-welcome.png
 [image-ss-mageia-controlcenter]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-controlcenter.png
+[picasa-ss-mageia-controlcenter]: https://lh3.googleusercontent.com/-k13r-0cS-VE/Vz2oYnpJ-QI/AAAAAAAAARk/Wc1QakGlrKkYu9_Jugsba2O5_tuIatHYgCCo/s0/mageia-controlcenter.png
 [image-ss-mageia-upgrade]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-upgrade.png
+[picasa-ss-mageia-upgrade]: https://lh3.googleusercontent.com/-WfroOgCn-PI/Vz2oXcsNIYI/AAAAAAAAARk/pJ7SlzzBbJ8U_76f55lMU3OqTkGAJVDbwCCo/s0/mageia-upgrade.png
 [image-ss-mageia-xfce4-kwin]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-xfce4-kwin.png
+[picasa-ss-mageia-xfce4-kwin]: https://lh3.googleusercontent.com/-utAVSadUfw8/Vz2odL-wS0I/AAAAAAAAARk/lr90iKwBXMcfQqoNpKednUOSyG5vNDK-wCCo/s0/mageia-xfce4-kwin.png
 [image-ss-mageia-razorqt-kwin]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-razorqt-kwin.png
-
+[picasa-ss-mageia-razorqt-kwin]: https://lh3.googleusercontent.com/-E9CIA0Lv0pc/Vz2oakhiJII/AAAAAAAAARk/g407bDQc_scCxk75HWAhkzCXzoyxcC6CgCCo/s0/mageia-razorqt-kwin.png

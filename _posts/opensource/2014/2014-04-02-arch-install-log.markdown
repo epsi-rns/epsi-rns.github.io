@@ -6,7 +6,8 @@ categories: opensource
 tags: [arch, pacman, package manager]
 author: epsi
 excerpt:
-  Many beginners asking for guidance to install Arch. 
+  Many beginners asked for guidance to install Arch. 
+  So I put this two logs.
   There is actualy two steps.
   First step is Install Vanilla Arch itself. Until you get your first login after boot.
   Then second step is Post Install. e.g. setup Wireless, or setup esktop Environment.
@@ -17,7 +18,15 @@ In fact you have to do it all manually with command line without installer.
 Before you step in, you have to be brave to walk with command line.
 And be sure you have read the manual.
 
-It is worth the risk. Your few days installing Arch
+Reading
+
+* <https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation>
+
+Video
+
+* <http://www.youtube.com/watch?v=BMgGUBDxCjo>
+
+It is worth the risk. Your few days of installing Arch
 give you more knowledge than a year with Kali.
 After you get the knowledge for a while,
 you can install it again in just a few minutes.
@@ -133,13 +142,7 @@ Done
 
 Reading
 
-* <https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation>
-
 * <https://wiki.archlinux.org/index.php/Wireless_network_configuration#Installing_driver.2Ffirmware>
-
-Video
-
-* <http://www.youtube.com/watch?v=BMgGUBDxCjo>
 
 -- -- --
 

@@ -24,7 +24,7 @@ But if you need config or just curious about, you can check this out.
 ::.. Glowing Flux  ..::<br/>
 <br/>
 
-![fluxbox][image-ss-fluxbox]
+[![fluxbox][image-ss-fluxbox]][picasa-ss-fluxbox]
 <br/><br/>
 
 This Fluxbox utilised a modified version of Axonkolor theme that I found in Deviantart.
@@ -40,10 +40,6 @@ This Fluxbox utilised a modified version of Axonkolor theme that I found in Devi
 
 
 
-
-
-
-
-
 [image-ss-fluxbox]: {{ site.url }}/assets/posts/opensource/2014/11/fluxbox-glow.png
+[picasa-ss-fluxbox]: https://lh3.googleusercontent.com/-U6rIIOLyMLg/Vz2oBSAABUI/AAAAAAAAARM/WXU-K0lwXyAJ9PC-mgky7vOO0LV23STYQCCo/s0/fluxbox-glow.png
 

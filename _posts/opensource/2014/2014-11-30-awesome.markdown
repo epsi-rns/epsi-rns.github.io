@@ -40,7 +40,7 @@ Awesome has floating option to make you feel like you are in stacking WM.
 : ncmpcpp playlist<br/>
 <br/>
 
-![awesome][image-ss-awesome]
+[![awesome][image-ss-awesome]][picasa-ss-awesome]
 <br/><br/>
 
 
@@ -64,4 +64,5 @@ The Wallpaper from Awesome theme is stunningly beautiful.
 
 
 [image-ss-awesome]: {{ site.url }}/assets/posts/opensource/2014/11/awesome.png
+[picasa-ss-awesome]: https://lh3.googleusercontent.com/-NgcARBSpJEc/Vz2oASMylYI/AAAAAAAAARM/3IssneEeNb8JDV6NUZoS2rPNz5FHp3CQQCCo/s0/awesome.png
 

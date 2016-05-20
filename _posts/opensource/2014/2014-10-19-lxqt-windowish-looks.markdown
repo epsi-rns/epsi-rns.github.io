@@ -21,13 +21,13 @@ And be happy with it.
 **DE**: LXQT 0.8<br/>
 <br/>
 
-![LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]
+[![LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]][picasa-ss-lxqt-windowish-qterminal]
 <br/><br/>
 
 LXQT's File Manager, PC Man FM also give me stunning nostalgic looks,
 remind me of my happy childhood day.
 
-![LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]
+[![LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]][picasa-ss-lxqt-windowish-pcmanfm]
 <br/>
 
 <hr/>
@@ -44,7 +44,7 @@ Let's see how it can be combined with KWin instead of Openbox.
 + Ghost Theme<br/>
 <br/>
 
-![LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]
+[![LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]][picasa-ss-lxqt-kwin-ghost]
 <br/>
 
 <hr/>
@@ -63,6 +63,9 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 
 
 [image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-windowish-qterminal.jpg
+[picasa-ss-lxqt-windowish-qterminal]: https://lh3.googleusercontent.com/-IPO0PJsixLA/Vz2oPpdtlZI/AAAAAAAAARk/8ULYS4s6VZQZCTkmPREfriLVOUVoEwa1QCCo/s0/lxqt-windowish-qterminal.jpg
 [image-ss-lxqt-windowish-pcmanfm]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-windowish-pcmanfm.jpg
+[picasa-ss-lxqt-windowish-pcmanfm]: https://lh3.googleusercontent.com/-pqSo498Nyao/Vz2oO1HCQwI/AAAAAAAAARc/FKvMWDI1aPsYYvrPxtp3j8zSir9IZunBACCo/s0/lxqt-windowish-pcmanfm.jpg
 [image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-kwin-ghost.png
+[picasa-ss-lxqt-kwin-ghost]: https://lh3.googleusercontent.com/-O1lrxW7hG0s/Vz2oP_WHnPI/AAAAAAAAARk/jPtqGovDKk8Q_aSMa6Yae6n311AY2GCNQCCo/s0/lxqt-kwin-ghost.png
 

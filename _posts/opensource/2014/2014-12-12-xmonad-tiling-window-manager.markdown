@@ -33,7 +33,7 @@ and manual page.
 + Statusbar: Dzen2<br>
 + Run: xmonad.hs, man xmonad<br>
 
-![Self Explanatory][image-ss-self-explanatory]
+[![Self Explanatory][image-ss-self-explanatory]][picasa-ss-self-explanatory]
 
 -- -- --
 
@@ -47,7 +47,7 @@ No gaps by default.
 + Terminal: Transparency: 85%<br>
 + Run: nload, nethogs, httpry<br>
 
-![XMobar: No Gap][image-ss-xmobar-nogap]
+[![XMobar: No Gap][image-ss-xmobar-nogap]][picasa-ss-xmobar-nogap]
 
 <br/>
 
@@ -58,7 +58,7 @@ Three columns with gaps.
 + Statusbar: XMobar<br>
 + Run: nload, newsbeuter, tmux[glances,vim], mutt)<br>
 
-![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]
+[![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]][picasa-ss-xmobar-threecolumns-gap]
 
 
 Source
@@ -76,7 +76,7 @@ Running six terminals.
 + Statusbar: Dzen<br>
 + Run: mutt, irssi, newsbeuter, vim)<br>
 
-![Dzen2 symmetric][image-ss-dzen2]
+[![Dzen2 symmetric][image-ss-dzen2]][picasa-ss-dzen2]
 
 <br/>
 
@@ -87,7 +87,7 @@ Running five terminals.
 + Statusbar: Dzen<br>
 + Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline<br>
 
-![Dzen2 on symmetric][image-ss-dzen2-five-terms]
+[![Dzen2 on symmetric][image-ss-dzen2-five-terms]][picasa-ss-dzen2-five-terms]
 
 
 Source
@@ -106,8 +106,13 @@ Five selfieshoot are worth five thousand words
 
 
 [image-ss-self-explanatory]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-self-explanatory.png
+[picasa-ss-self-explanatory]: https://lh3.googleusercontent.com/-VDWvJwgHlL4/Vz2mh_HDNkI/AAAAAAAAAO8/lZ-OnxAfSDwvrYoYZeoBPl_bdKVS06S5wCCo/s0/xmonad-self-explanatory.png
 [image-ss-xmobar-nogap]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-xmobar-nogap.png
+[picasa-ss-xmobar-nogap]: https://lh3.googleusercontent.com/-1bcBUJihphI/Vz2mlHnK4BI/AAAAAAAAAO8/2e_49iMs8kwSn-pqhSAcpge5LLmBeSajQCCo/s0/xmonad-xmobar-nogaps.png
 [image-ss-xmobar-threecolumns-gap]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-xmobar-threecolumns.png
+[picasa-ss-xmobar-threecolumns-gap]: https://lh3.googleusercontent.com/-2IkVXzKSn3Q/Vz2mpPdfJiI/AAAAAAAAAPg/-oDI1U8y-DEGrl9UK51udhjF18Nel2WSwCCo/s0/xmonad-xmobar-threecolumn.png
 [image-ss-dzen2]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-dzen2.png
+[picasa-ss-dzen2]: https://lh3.googleusercontent.com/-gG9fubXyTpI/Vz2m_RPgSEI/AAAAAAAAAP8/ZNXGlGJrb3YTKH5jFDAcFj5sGBxBWGVywCCo/s0/xmonad-dzen2.png
 [image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-dzen2-five-terms.png
+[picasa-ss-dzen2-five-terms]: https://lh3.googleusercontent.com/-sAfgbEpNTAs/Vz2mYpQ_MpI/AAAAAAAAAO8/E9gCAtDPoIgjnsMKNoGnY94v2QhSLOSVACCo/s0/xmonad-five-terms.png
 
