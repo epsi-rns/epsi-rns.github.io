@@ -28,6 +28,6 @@ At least I have something for my avatar.
 
 
 
-[image-ss-pp]: {{ site.url }}/assets/posts/opensource/2015/09/vexel-profile-picture.png
-[image-ss-pair]: {{ site.url }}/assets/posts/opensource/2015/09/vexel-compare.png
+[image-ss-pp]: {{ site.url }}/assets/posts/design/2015/09/vexel-profile-picture.png
+[image-ss-pair]: {{ site.url }}/assets/posts/design/2015/09/vexel-compare.png
 [picasa-ss-pair]: https://lh3.googleusercontent.com/-r44NihtUHVM/VznBXPm8kkI/AAAAAAAAANg/q9_8EZGGrOoghmuYDBD7BplANmdw6OUlQCCo/s0/vexel-compare.png

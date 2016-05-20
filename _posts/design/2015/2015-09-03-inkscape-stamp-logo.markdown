@@ -31,8 +31,10 @@ I also add shadow with envelope path effects under the logo.
 
 
 
-[image-ss-pink-padz]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-pink-padz.png
+[image-ss-pink-padz]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.png
 [picasa-ss-pink-padz]: https://lh3.googleusercontent.com/--LrrAKXV0kk/VznBU1phg_I/AAAAAAAAANg/UcWcJ0-p4w0ltqBiNa51r767qeKMgedpwCCo/s0/logo-stamp-pink-padz.png
-[image-ss-iluni-ftui]: {{ site.url }}/assets/posts/opensource/2015/09/logo-stamp-iluni-ftui.png
+[image-ss-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-iluni-ftui.png
 [picasa-ss-iluni-ftui]: https://lh3.googleusercontent.com/-Xruv7VPTq60/VznBURBVsYI/AAAAAAAAANg/PLtGPUu4ezYpN93V-9TWZuNPkBO4RtQYgCCo/s0/logo-stamp-iluni-ftui.png
 
+[dotfiles-pink-padz]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.svg.gz
+[dotfiles-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-iluni-ftui.svg.gz
