@@ -36,6 +36,11 @@ There is actualy two steps.
 First step is Install Vanilla Arch itself. Until you get your first root login after boot.
 The second step is Post Install. e.g. setup Wireless, or setup WM/DE (Desktop Environment).
 
+If you feel that you are not ready for Arch,
+you can still improve your skill with other distro.
+
+* [Learning Stages][link-learning-stages]
+
 <br/>
 This article contain two parts.
 
@@ -51,6 +56,11 @@ This article contain two parts.
 ## Arch :: Install Log
 
 Prepare Partition<br/>
+
+For more detail partitioning guidance you can read.
+
+* [Multiboot][link-multiboot]
+
 I'm using /dev/sda9. Im sure that you might use diferent partition.
 
 {% highlight bash %}
@@ -207,5 +217,9 @@ Reading
 
 * <https://bbs.archlinux.org/viewtopic.php?pid=1385771>
 
+
+
+[link-learning-stages]: http://epsi-rns.github.io/opensource/2016/03/17/learning-stages.html
+[link-multiboot]: http://epsi-rns.github.io/opensource/2014/03/13/linux-multiboot.html
 [image-ss-arch-install]: {{ site.url }}/assets/posts/opensource/2014/04/arch-wifi-menu.png
 
