@@ -20,7 +20,7 @@ And be sure you have read the manual.
 
 Reading
 
-* <https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation>
+* [Arch Wiki: Beginners's Guide: Installation][link-archwiki]
 
 Video
 
@@ -39,7 +39,7 @@ The second step is Post Install. e.g. setup Wireless, or setup WM/DE (Desktop En
 If you feel that you are not ready for Arch,
 you can still improve your skill with other distro.
 
-* [Learning Stages][link-learning-stages]
+* [Learning Stages][local-learning-stages]
 
 <br/>
 This article contain two parts.
@@ -57,9 +57,9 @@ This article contain two parts.
 
 Prepare Partition<br/>
 
-For more detail partitioning guidance you can read.
+For more details, about partitioning guidance you can read.
 
-* [Multiboot][link-multiboot]
+* [Multiboot][local-multiboot]
 
 I'm using /dev/sda9. Im sure that you might use diferent partition.
 
@@ -161,6 +161,8 @@ Reading
 
 Wireless Connexion
 
+You can find a more comprehensive topic about [wireless command line here][local-wireless]
+
 {% highlight bash %}
 ># iw dev
 ># # ip link set wlp0s3f3u2 up
@@ -217,9 +219,12 @@ Reading
 
 * <https://bbs.archlinux.org/viewtopic.php?pid=1385771>
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
-
-[link-learning-stages]: http://epsi-rns.github.io/opensource/2016/03/17/learning-stages.html
-[link-multiboot]: http://epsi-rns.github.io/opensource/2014/03/13/linux-multiboot.html
 [image-ss-arch-install]: {{ site.url }}/assets/posts/opensource/2014/04/arch-wifi-menu.png
 
+[local-learning-stages]: {{ site.url }}/opensource/2016/03/17/learning-stages.html
+[local-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
+[local-wireless]: {{ site.url }}/opensource/2014/03/13/wireless-command-line.html
+
+[link-archwiki]: https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation

@@ -34,9 +34,9 @@ Tell me if there is more thing to be done!
 
 	+ FHS, fstab,
 
-	+ ubuntu-manual (GUI)
+	+ [ubuntu-manual][link-ubuntu-manual] (GUI)
 
-	+ debian-handbook (hertzog)
+	+ [debian-handbook][link-debian-handbook] (hertzog)
 
 * Package Manager
 
@@ -72,7 +72,7 @@ Tell me if there is more thing to be done!
 
 	+ nmcli, ncdu, ntop, cfdisk, fish
 	
-	+ lspci, lsusb, lsmod
+	+ lspci, lsusb, lsmod, dmesg, ip ,iw
 	
 	+ ascii art: screenfetch, archey, figlet, ansi color.
 
@@ -113,7 +113,9 @@ Note: Go with one distro that matches your desired path: Casual user, Enthusiast
 
 "*Know your system*"
 
-* multiboot form previous linux
+* [learn arch install log][local-arch-log].
+
+* [multiboot][local-multiboot] form previous linux
 
 	+ prepare your partition with cfdisk
 
@@ -159,3 +161,9 @@ Note: Go with one distro that matches your desired path: Casual user, Enthusiast
 
 I think one month is not enough for both.
 
+[//]: <> ( -- -- -- links below -- -- -- )
+
+[link-ubuntu-manual]: https://ubuntu-manual.org/
+[link-debian-handbook]: https://debian-handbook.info/browse/stable/
+[local-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
+[local-arch-log]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html

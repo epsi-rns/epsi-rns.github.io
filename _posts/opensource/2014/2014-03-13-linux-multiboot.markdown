@@ -20,7 +20,7 @@ In this example I'm using four OS
 
 	Win7 + Debian + Kali + Arch
 
-![Cover Multiboot][image-cover]
+![Multiboot Cover][image-cover]
 
 
 
@@ -185,20 +185,19 @@ For more information you can
 {% endhighlight %}
 
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
-
-
-
+{% assign asset_path = site.url | append: '/assets/posts/opensource/2014/03' %}
 
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/linux-multiboot/426339144178768
-[image-cover]: {{ site.url }}/assets/posts/opensource/2014/03/multiboot-cover.png
-[image-easeus]: {{ site.url }}/assets/posts/opensource/2014/03/multiboot-ease-us-partition.png
+[image-cover]: {{ asset_path }}/multiboot-cover.png
+[image-easeus]: {{ asset_path }}/multiboot-ease-us-partition.png
 [picasa-easeus]: https://lh3.googleusercontent.com/-vh_MUuw8NGw/Vz8xo4FioBI/AAAAAAAAASQ/ATbgWFHLNkQ-h9xZW-jVXeTM8ZKOgqxxACCo/s0/multiboot-ease-us-partition-full.png
-[image-gparted]: {{ site.url }}/assets/posts/opensource/2014/03/multiboot-gparted-sda.jpg
+[image-gparted]: {{ asset_path }}/multiboot-gparted-sda.jpg
 [picasa-gparted]: https://lh3.googleusercontent.com/-Q3CXBVFF2e8/Vz8xpVklhiI/AAAAAAAAASU/Y8Gq3aTN1RgEjRZH2GaXo9LTGpcUv6iLwCCo/s0/multiboot-gparted-sda.png
-[image-fstab]: {{ site.url }}/assets/posts/opensource/2014/03/multiboot-fstab-sample.png
+[image-fstab]: {{ asset_path }}/multiboot-fstab-sample.png
 [picasa-fstab]: https://lh3.googleusercontent.com/-mAKigVFD_jQ/Vz8xonY3EoI/AAAAAAAAASM/Vaaevax_L8EiXgOHf941gl-xhZ2IVZAtACCo/s0/multiboot-fstab-sample.png
-[image-cfdisk]: {{ site.url }}/assets/posts/opensource/2014/03/multiboot-cfdisk.png
+[image-cfdisk]: {{ asset_path }}/multiboot-cfdisk.png
 [picasa-cfdisk]: https://lh3.googleusercontent.com/-b7Rq9Em3r0U/Vz8xoaAfTSI/AAAAAAAAASI/3OSTznOKhxkVdX-npq3zwpW-WPRMgH96ACCo/s0/multiboot-cfdisk.png
 
 
