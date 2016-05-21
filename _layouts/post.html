@@ -51,6 +51,9 @@ layout: default
 
 {% include chunk-post-footer.html %}
 
+{% if site.comments %}
+{% include disqus-comments.html %}
+{% endif %}
 
             </div>
             <!-- /.col-lg-8 -->

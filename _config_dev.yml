@@ -3,5 +3,9 @@
 
 url: "http://localhost:4000" 
 
+comments: false
+
 google_analytics_key: false
 yandex_metrica: false
+
+
