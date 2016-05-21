@@ -36,6 +36,8 @@ google_analytics_key: true
 # Yandex metrika (https://metrica.yandex.com/) leave blank to ignore or put true to use
 yandex_metrica: true
 
+google_adsense: true
+
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
