@@ -1,3 +1,6 @@
+// Breakpoint variables
+$monad-blue: #2980b9 !default;
+
 /**
  * Basic styling
  */
@@ -108,7 +111,7 @@ a {
 
 .btn:hover,
 .btn:focus {
-    color: #2980b9;
+    color: $monad-blue;
 }
 
 .navbar-inverse {
@@ -122,7 +125,7 @@ a {
 
 .navbar-inverse ul.navbar-nav li:hover,
 .navbar-inverse div.navbar-header :hover {
-    background-color: #2980b9;
+    background-color: $monad-blue;
 }
 
 .well {
