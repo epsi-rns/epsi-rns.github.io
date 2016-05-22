@@ -53,7 +53,7 @@ OS: Arch<br/>
 + Terminal: Termite<br/>
 + Viewer: VIM (Vi IMproved)<br/>
 
-[![Conkyless XMonad][image-ss-xmonad]][picasa-ss-xmonad]
+[![Conkyless XMonad][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 Let's compare this code, and see how our code transformed.
 

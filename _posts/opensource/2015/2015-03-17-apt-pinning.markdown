@@ -19,7 +19,7 @@ Silly me, I didn't have enough time to troubleshoot this /var/log/Xorg.0.log. Bu
 
 So here we are, apt-pinning xorg, purge xorg, and re-install xorg.
 
-[![APT Pinning][image-ss]][picasa-ss]
+[![APT Pinning][image-ss]{: .img-responsive }][picasa-ss]
 
 **Reading**:<br/>
 * <https://debian-handbook.info/browse/stable/sect.apt-get.html#sect.apt.priorities>

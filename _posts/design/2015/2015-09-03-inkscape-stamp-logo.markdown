@@ -20,14 +20,14 @@ I also add shadow with envelope path effects under the logo.
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-pink-padz.svg.gz][dotfiles-pink-padz]
 
-[![Pink Padz][image-ss-pink-padz]][picasa-ss-pink-padz]
+[![Pink Padz][image-ss-pink-padz]{: .img-responsive }][picasa-ss-pink-padz]
 
 ## ILUNI FTUI
 
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-iluni-ftui.svg.gz][dotfiles-iluni-ftui]
 
-[![ILUNI Teknik][image-ss-iluni-ftui]][picasa-ss-iluni-ftui]
+[![ILUNI Teknik][image-ss-iluni-ftui]{: .img-responsive }][picasa-ss-iluni-ftui]
 
 
 

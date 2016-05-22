@@ -27,9 +27,9 @@ I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/
 + **Shell**: Fish<br/>
 <br/>
 
-![Powerline Light]({{ site.url }}/assets/posts/opensource/2016/03/powerline-light.png)
+![Powerline Light][image-ss-powerline-light]{: .img-responsive }
 <br/><br/>
-![Powerline Dark]({{ site.url }}/assets/posts/opensource/2016/03/powerline-dark.png)
+![Powerline Dark][image-ss-powerline-dark]{: .img-responsive }
 
 
 Happy terminal customizing
@@ -43,3 +43,6 @@ Happy terminal customizing
 
 [docs-powerline]: http://powerline.readthedocs.org/en/master/configuration/segments/common.html
 [dotfiles-powerline]: https://github.com/epsi-rns/dotfiles/tree/master/config/powerline
+
+[image-ss-powerline-light]: {{ site.url }}/assets/posts/opensource/2016/03/powerline-light.png
+[image-ss-powerline-dark]: {{ site.url }}/assets/posts/opensource/2016/03/powerline-dark.png

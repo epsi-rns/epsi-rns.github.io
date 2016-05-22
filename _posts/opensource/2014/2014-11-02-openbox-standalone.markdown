@@ -45,7 +45,7 @@ Openbox is the only Stacking WM that I use daily.
 This screenshot use a lot of transparency.
 <br/>
 
-[![openbox][image-ss-openbox]][picasa-ss-openbox]
+[![openbox][image-ss-openbox]{: .img-responsive }][picasa-ss-openbox]
 <br/>
 
 <hr/>
@@ -69,7 +69,7 @@ bunsenlabs linux distribution. So I clone theme in my arch.
 **WM**: Openbox<br/>
 <br/>
 
-[![openbox clone][image-ss-openbox-clone]][picasa-ss-openbox-clone]
+[![openbox clone][image-ss-openbox-clone]{: .img-responsive }][picasa-ss-openbox-clone]
 
 <hr/>
 

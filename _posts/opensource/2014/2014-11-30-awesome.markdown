@@ -40,7 +40,7 @@ Awesome has floating option to make you feel like you are in stacking WM.
 : ncmpcpp playlist<br/>
 <br/>
 
-[![awesome][image-ss-awesome]][picasa-ss-awesome]
+[![awesome][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
 <br/><br/>
 
 

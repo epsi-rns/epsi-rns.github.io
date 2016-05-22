@@ -28,9 +28,9 @@ excerpt:
 + Script: Screenfetch<br/>
 + Wallpaper: Self Vexel (inkscape) with 3D background<br/>
 <br/>
-[![Manjaro Docker Light][image-ss-fki]][picasa-ss-fki]
+[![Manjaro Docker Light][image-ss-fki]{: .img-responsive }][picasa-ss-fki]
 <br/><br/>
-[![Manjaro Docker Dark][image-ss-gs]][picasa-ss-gs]
+[![Manjaro Docker Dark][image-ss-gs]{: .img-responsive }][picasa-ss-gs]
 <br/>
 
 Note: just another nix's porn. :-\ <br/>

@@ -27,7 +27,7 @@ excerpt:
 <br/>
 **DE**: Plasma 5 (KDE)<br/>
 <br/>
-[![Debian Docker][image-ss]][picasa-ss]
+[![Debian Docker][image-ss]{: .img-responsive }][picasa-ss]
 <br/><br/>
 
 **Reference**:<br/>

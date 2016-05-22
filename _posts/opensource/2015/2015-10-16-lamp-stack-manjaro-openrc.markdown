@@ -32,7 +32,7 @@ With special customization
 <br/>
 Have Fun
 
-[![LAMP OpenRC][image-ss-openrc]][picasa-ss-openrc]
+[![LAMP OpenRC][image-ss-openrc]{: .img-responsive }][picasa-ss-openrc]
 
 Install
 ----------
@@ -308,7 +308,7 @@ $ sudo rc-service httpd restart
 $ httpd -S
 {% endhighlight %}
 
-[![LAMP Browser][image-ss-browser]][picasa-ss-browser]
+[![LAMP Browser][image-ss-browser]{: .img-responsive }][picasa-ss-browser]
 
 Finalization
 --------------------

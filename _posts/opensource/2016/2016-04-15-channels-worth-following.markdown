@@ -19,7 +19,7 @@ Does anybody know what channel are worth following ?<br/>
 I currently only follow phoronix channel.<br/><br/>
 Thank you<br/><br/>
 
-[![Phoronix Mix][image-flyer]][picasa-flyer]
+[![Phoronix Mix][image-flyer]{: .img-responsive }][picasa-flyer]
 <br/><br/>
 
 * * *
@@ -67,7 +67,7 @@ OS: Debian<br/>
 + Compositor: Compton<br/>
 + Statusbar: Dzen-Conky<br/>
 
-[![Phoronix Inskcape][image-ss-xmonad]][picasa-ss-xmonad]
+[![Phoronix Inskcape][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 Note: illustration made with inkscape.
 

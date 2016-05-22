@@ -28,7 +28,7 @@ gnome-shell has extensions to make you far from bored
 
 And user themes, though I rarely need it.
 
-[![gnome shell][image-ss-gnome-shell]][picasa-ss-gnome-shell]
+[![gnome shell][image-ss-gnome-shell]{: .img-responsive }][picasa-ss-gnome-shell]
 <br/><br/>
 
 

@@ -24,7 +24,7 @@ But if you need config or just curious about, you can check this out.
 ::.. Glowing Flux  ..::<br/>
 <br/>
 
-[![fluxbox][image-ss-fluxbox]][picasa-ss-fluxbox]
+[![fluxbox][image-ss-fluxbox]{: .img-responsive }][picasa-ss-fluxbox]
 <br/><br/>
 
 This Fluxbox utilised a modified version of Axonkolor theme that I found in Deviantart.

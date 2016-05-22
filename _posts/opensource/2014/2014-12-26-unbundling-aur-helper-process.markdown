@@ -18,17 +18,17 @@ For those who are really tired of how easy yaourt (or packer) is.
 You may consider "cower" to download  PKGBUILD from AUR manually. 
 So you can "makepkg" manually.
 
-[![AUR Cower][image-aur-cower]][picasa-aur-cower]
+[![AUR Cower][image-aur-cower]{: .img-responsive }][picasa-aur-cower]
 
 If you are not familiar with yaourt. 
 I Edited this article in 2016 and give a screenshot of yaourt..
 
-[![AUR Yaourt][image-aur-yaourt]][picasa-aur-yaourt]
+[![AUR Yaourt][image-aur-yaourt]{: .img-responsive }][picasa-aur-yaourt]
 
 Instead of yaourt, therea are other cool AUR helper.
 e.g. thi Haskell based AURA.
 
-[![AUR AURA][image-aur-aura]][picasa-aur-aura]
+[![AUR AURA][image-aur-aura]{: .img-responsive }][picasa-aur-aura]
 
 Note: I apologize for my english,
 and also my boring desktop customization.
@@ -37,7 +37,7 @@ and also my boring desktop customization.
 
 
 
-![BlackArch All Category][image-ss-blackarch-all-categories]
+![BlackArch All Category][image-ss-blackarch-all-categories]{: .img-responsive }
 
 [image-aur-cower]: {{ site.url }}/assets/posts/opensource/2014/12/aur-cower.png
 [picasa-aur-cower]: https://lh3.googleusercontent.com/-hUfSxrPxvaA/Vz2mKT5QdbI/AAAAAAAAAOs/vP_na7AbrFEzeWdhlkSXJ3VUd0Op8snSQCCo/s0/aur-cower.png

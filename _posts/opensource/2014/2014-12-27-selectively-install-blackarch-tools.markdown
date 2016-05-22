@@ -35,7 +35,7 @@ How about getting serious with BlackArch. Well, there's no way, a student downlo
 
 **sigh**
 
-[![BlackArch Category][image-ss-blackarch-categories]][picasa-ss-blackarch-categories]
+[![BlackArch Category][image-ss-blackarch-categories]{: .img-responsive }][picasa-ss-blackarch-categories]
 
 I can't give them a good solution. But at least I can give option for those who are willing to learn.
 
@@ -53,7 +53,7 @@ To see the blackarch categories, run
 ># pacman -Sg | grep blackarch
 {% endhighlight %}
 
-![BlackArch All Category][image-ss-blackarch-all-categories]
+![BlackArch All Category][image-ss-blackarch-all-categories]{: .img-responsive }
 
 But first you need Arch (or maybe Manjaro) installed first on your system.
 

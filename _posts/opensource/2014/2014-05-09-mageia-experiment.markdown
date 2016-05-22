@@ -16,7 +16,7 @@ Back to Mageia
 ># urpmi task-kde
 {% endhighlight %}
 
-[![Mageia Welcome Screen][image-ss-mageia-welcome]][picasa-ss-mageia-welcome]
+[![Mageia Welcome Screen][image-ss-mageia-welcome]{: .img-responsive }][picasa-ss-mageia-welcome]
 
 I spent my early days of linux using Red Hat in 1999, 
 followed by Mandrake one year later.
@@ -42,7 +42,7 @@ I'm curious, and I don't want to live in regrets,
 before this distro vanished for ever.
 That's why I'm back to Mandrake aka Mandriva aka Mageia.
 
-[![Mageia Control Center][image-ss-mageia-controlcenter]][picasa-ss-mageia-controlcenter]
+[![Mageia Control Center][image-ss-mageia-controlcenter]{: .img-responsive }][picasa-ss-mageia-controlcenter]
 <br/><br/>
 
 Well. It has a very nice Control Panel.
@@ -94,7 +94,7 @@ $ drakconf
 
 {% endhighlight %}
 
-[![Mageia Upgrade][image-ss-mageia-upgrade]][picasa-ss-mageia-upgrade]
+[![Mageia Upgrade][image-ss-mageia-upgrade]{: .img-responsive }][picasa-ss-mageia-upgrade]
 
 <hr/>
 
@@ -296,7 +296,7 @@ because I can't afford it in my Notebook.
 + Cube Effect<br/>
 <br/>
 
-[![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]][picasa-ss-mageia-xfce4-kwin]
+[![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]{: .img-responsive }][picasa-ss-mageia-xfce4-kwin]
 <br/>
 
 And go further with RazorQT.
@@ -307,7 +307,7 @@ And go further with RazorQT.
 + Cube Effect<br/>
 <br/>
 
-[![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]][picasa-ss-mageia-razorqt-kwin]
+[![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]{: .img-responsive }][picasa-ss-mageia-razorqt-kwin]
 <br/><br/>
 
 

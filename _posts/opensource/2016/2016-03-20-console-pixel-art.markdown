@@ -32,9 +32,9 @@ you can download a collection of shell script here<br/>
 + WM: XMonad + XMobar<br/>
 + Terminal: A few sample script<br/>
 <br/>
-[![ANSI Color Light][image-ss-xmonad-light]][picasa-ss-xmonad-light]
+[![ANSI Color Light][image-ss-xmonad-light]{: .img-responsive }][picasa-ss-xmonad-light]
 <br/><br/>
-[![ANSI Color Dark][image-ss-xmonad-dark]][picasa-ss-xmonad-dark]
+[![ANSI Color Dark][image-ss-xmonad-dark]{: .img-responsive }][picasa-ss-xmonad-dark]
 
 
 Me myself I got nothing to prove<br/>

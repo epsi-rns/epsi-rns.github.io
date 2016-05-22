@@ -33,7 +33,7 @@ and manual page.
 + Statusbar: Dzen2<br>
 + Run: xmonad.hs, man xmonad<br>
 
-[![Self Explanatory][image-ss-self-explanatory]][picasa-ss-self-explanatory]
+[![Self Explanatory][image-ss-self-explanatory]{: .img-responsive }][picasa-ss-self-explanatory]
 
 -- -- --
 
@@ -47,7 +47,7 @@ No gaps by default.
 + Terminal: Transparency: 85%<br>
 + Run: nload, nethogs, httpry<br>
 
-[![XMobar: No Gap][image-ss-xmobar-nogap]][picasa-ss-xmobar-nogap]
+[![XMobar: No Gap][image-ss-xmobar-nogap]{: .img-responsive }][picasa-ss-xmobar-nogap]
 
 <br/>
 
@@ -58,7 +58,7 @@ Three columns with gaps.
 + Statusbar: XMobar<br>
 + Run: nload, newsbeuter, tmux[glances,vim], mutt)<br>
 
-[![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]][picasa-ss-xmobar-threecolumns-gap]
+[![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]{: .img-responsive }][picasa-ss-xmobar-threecolumns-gap]
 
 
 Source
@@ -76,7 +76,7 @@ Running six terminals.
 + Statusbar: Dzen<br>
 + Run: mutt, irssi, newsbeuter, vim)<br>
 
-[![Dzen2 symmetric][image-ss-dzen2]][picasa-ss-dzen2]
+[![Dzen2 symmetric][image-ss-dzen2]{: .img-responsive }][picasa-ss-dzen2]
 
 <br/>
 
@@ -87,7 +87,7 @@ Running five terminals.
 + Statusbar: Dzen<br>
 + Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline<br>
 
-[![Dzen2 on symmetric][image-ss-dzen2-five-terms]][picasa-ss-dzen2-five-terms]
+[![Dzen2 on symmetric][image-ss-dzen2-five-terms]{: .img-responsive }][picasa-ss-dzen2-five-terms]
 
 
 Source

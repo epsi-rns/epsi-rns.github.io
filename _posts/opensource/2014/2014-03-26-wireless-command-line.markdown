@@ -25,7 +25,7 @@ you still need to know your own hardware.
 This article also useful to debug networking issue, 
 especially for first time linux install.
 
-![Wireless Cover][image-cover]
+![Wireless Cover][image-cover]{: .img-responsive }
 
 -- -- --
 
@@ -39,7 +39,7 @@ It can be done with this simple command
 ># lspci 
 {% endhighlight %}
 
-[![Wireless lspci][image-1-lspci]][picasa-1-lspci]
+[![Wireless lspci][image-1-lspci]{: .img-responsive }][picasa-1-lspci]
 
 This command requires some privileges, so it might be different in other distro.
 
@@ -49,7 +49,7 @@ For Ubuntu, add the word sudo.
  $ sudo lspci 
 {% endhighlight %}
 
-[![Wireless lspci controller][image-1-lspci-controller]][picasa-1-lspci-controller]
+[![Wireless lspci controller][image-1-lspci-controller]{: .img-responsive }][picasa-1-lspci-controller]
 
 If you have no luck with this command, maybe it is plugged-in by usb connexion.
 
@@ -59,7 +59,7 @@ Image below shows a Realtek 8187 in
 ># lsusb 
 {% endhighlight %}
 
-[![Wireless lsusb][image-1-lsusb]][picasa-1-lsusb]
+[![Wireless lsusb][image-1-lsusb]{: .img-responsive }][picasa-1-lsusb]
 
 Le'ts see what related device with 802.11 standard
 
@@ -67,7 +67,7 @@ Le'ts see what related device with 802.11 standard
 ># lsmod | grep 802 
 {% endhighlight %}
 
-[![Wireless lsmod][image-1-lsmod]][picasa-1-lsmod]
+[![Wireless lsmod][image-1-lsmod]{: .img-responsive }][picasa-1-lsmod]
 
 
 Well... it is also nice to know this command.
@@ -77,7 +77,7 @@ It shows what happened to my realtek 8187 device in boot time.
 ># dmesg | grep 8187 
 {% endhighlight %}
 
-[![Wireless dmesg][image-1-dmesg]][picasa-1-dmesg]
+[![Wireless dmesg][image-1-dmesg]{: .img-responsive }][picasa-1-dmesg]
 
 Some wireless card need to be turned on manually. So let's check it out with rfkill command
 
@@ -85,7 +85,7 @@ Some wireless card need to be turned on manually. So let's check it out with rfk
 ># rfkill list 
 {% endhighlight %}
 
-[![Wireless rfkill][image-1-rfkill]][picasa-1-rfkill]
+[![Wireless rfkill][image-1-rfkill]{: .img-responsive }][picasa-1-rfkill]
 
 -- -- --
 
@@ -99,7 +99,7 @@ Since iwconfig has been deprecated, we are using iw.
 ># iw dev 
 {% endhighlight %}
 
-[![Wireless iw][image-2-iw]][picasa-2-iw]
+[![Wireless iw][image-2-iw]{: .img-responsive }][picasa-2-iw]
 
 And scan our available essid for our wireless
 
@@ -107,7 +107,7 @@ And scan our available essid for our wireless
 ># iw dev wlan0 scan | grep -i ssid 
 {% endhighlight %}
 
-[![Wireless iw scan][image-2-iw-scan]][picasa-2-iw-scan]
+[![Wireless iw scan][image-2-iw-scan]{: .img-responsive }][picasa-2-iw-scan]
 
 From this step, we may choose method to connect to your wireless. 
 There are many methods, but you can only chooses one method at a time. 
@@ -149,14 +149,14 @@ Finally, you may disconnect,
 ># nmcli dev disconnect iface wlan0 
 {% endhighlight %}
 
-[![Wireless nmcli connect][image-3-nmcli]][picasa-3-nmcli]
+[![Wireless nmcli connect][image-3-nmcli]{: .img-responsive }][picasa-3-nmcli]
 
 The 'wifi connect' command only supported after Netwok Manager 0.96. 
 Kali Linux 1.x series is still using 0.9.4 series of Netwok Manager. 
 It does not support connect command. 
 So it is a little bit different.
 
-[![Wireless nmcli con up][image-3-nmcli-up]][picasa-3-nmcli-up]
+[![Wireless nmcli con up][image-3-nmcli-up]{: .img-responsive }][picasa-3-nmcli-up]
 
 -- -- --
 
@@ -243,7 +243,7 @@ Now you can ping
 ># ping google.com -c 2 
 {% endhighlight %}
 
-[![Wireless ip][image-4-summary]][picasa-4-summary]
+[![Wireless ip][image-4-summary]{: .img-responsive }][picasa-4-summary]
 
 -- -- --
 

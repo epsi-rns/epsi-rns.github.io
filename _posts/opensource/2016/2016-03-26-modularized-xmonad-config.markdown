@@ -36,9 +36,9 @@ OS: Arch/Manjaro<br>
 + File Manager: Ranger<br>
 + Viewer: VIM (Vi IMproved)<br>
 <br/>
-[![Modularized XMonad 1][image-ss-xmonad-1]][picasa-ss-xmonad-1]
+[![Modularized XMonad 1][image-ss-xmonad-1]{: .img-responsive }][picasa-ss-xmonad-1]
 <br/><br/>
-[![Modularized XMonad 2][image-ss-xmonad-2]][picasa-ss-xmonad-2]
+[![Modularized XMonad 2][image-ss-xmonad-2]{: .img-responsive }][picasa-ss-xmonad-2]
 
 * * *
 

@@ -22,7 +22,7 @@ Begun, The Linux Civil War has.<br/>
 
 	* <https://github.com/devuan>
 
-![versus][image-civil-war]
+![versus][image-civil-war]{: .img-responsive }
 <br/>
 
 -- -- --

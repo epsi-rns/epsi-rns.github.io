@@ -72,13 +72,13 @@ Here is my screenshot.
 4: (LXC) Debian + APT<br/>
 
 
-[![LXC Screenfetch][image-ss-lxc-screenfetch]][picasa-ss-lxc-screenfetch]
+[![LXC Screenfetch][image-ss-lxc-screenfetch]{: .img-responsive }][picasa-ss-lxc-screenfetch]
 <br/>
 
 **Screenshot 2**: Screenfetch
 <br/>
 
-[![LXC Package][image-ss-lxc-package]][picasa-ss-lxc-package]
+[![LXC Package][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
 <br/>
 
 * * *

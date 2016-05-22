@@ -28,9 +28,9 @@ Talk is cheap. Here is the code on github account:
 * <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
 <br/>
-[![Refactoring Awesome Light][image-ss-awesome-light]][picasa-ss-awesome-light]
+[![Refactoring Awesome Light][image-ss-awesome-light]{: .img-responsive }][picasa-ss-awesome-light]
 <br/><br/>
-[![Refactoring Awesome Dark][image-ss-awesome-dark]][picasa-ss-awesome-dark]
+[![Refactoring Awesome Dark][image-ss-awesome-dark]{: .img-responsive }][picasa-ss-awesome-dark]
 <br/>
 
 Awesome is a Dynamic Tiling Window Manager. For whatever that means.

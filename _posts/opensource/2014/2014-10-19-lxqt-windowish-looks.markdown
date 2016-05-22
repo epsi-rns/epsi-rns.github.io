@@ -21,13 +21,13 @@ And be happy with it.
 **DE**: LXQT 0.8<br/>
 <br/>
 
-[![LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]][picasa-ss-lxqt-windowish-qterminal]
+[![LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]{: .img-responsive }][picasa-ss-lxqt-windowish-qterminal]
 <br/><br/>
 
 LXQT's File Manager, PC Man FM also give me stunning nostalgic looks,
 remind me of my happy childhood day.
 
-[![LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]][picasa-ss-lxqt-windowish-pcmanfm]
+[![LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]{: .img-responsive }][picasa-ss-lxqt-windowish-pcmanfm]
 <br/>
 
 <hr/>
@@ -44,7 +44,7 @@ Let's see how it can be combined with KWin instead of Openbox.
 + Ghost Theme<br/>
 <br/>
 
-[![LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]][picasa-ss-lxqt-kwin-ghost]
+[![LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][picasa-ss-lxqt-kwin-ghost]
 <br/>
 
 <hr/>

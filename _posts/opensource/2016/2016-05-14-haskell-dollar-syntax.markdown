@@ -16,7 +16,7 @@ Before you read. You can examine a neat $ coding style in my old screenshot. It 
 **Source**:<br/>
 * [github.com/epsi-rns/dotfiles/.../MyLayoutHook.hs][dotfiles-layout]
 
-[![Haskell Dollar][image-ss-xmonad]][picasa-ss-xmonad]
+[![Haskell Dollar][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 * * *
 

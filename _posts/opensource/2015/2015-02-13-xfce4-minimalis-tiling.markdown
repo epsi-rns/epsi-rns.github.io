@@ -28,7 +28,7 @@ Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an e
 + Tiling: Left + Right<br/>
 <br/>
 
-[![XFWM4 Tiling][image-ss]][picasa-ss]
+[![XFWM4 Tiling][image-ss]{: .img-responsive }][picasa-ss]
 
 Note on SS : user vs root.
 

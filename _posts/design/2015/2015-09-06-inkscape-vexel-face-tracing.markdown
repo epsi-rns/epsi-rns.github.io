@@ -16,11 +16,11 @@ I never have my own photographs, and it give me difficulties everytime I need an
 
 I'm an inkscape n00b. I haven't got time to do low poly tracing. So this is it. Vexel with manual tracing.
 
-![Vexel Avatar][image-ss-pp]
+![Vexel Avatar][image-ss-pp]{: .img-responsive }
 
 And this pair, if you want to see the comparation between manual tracing and the original.
 
-[![Vexel Compare][image-ss-pair]][picasa-ss-pair]
+[![Vexel Compare][image-ss-pair]{: .img-responsive }][picasa-ss-pair]
 
 I currently do not have any plan to modify this vector. e.g. Adding beard, moustache, or long hair.
 

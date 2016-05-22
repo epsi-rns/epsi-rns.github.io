@@ -25,7 +25,7 @@ excerpt:
 **DE**: Plasma<br>
 **WM**: XMonad<br>
 
-[![Introducing FatRat Cantata][image-ss-xmonad]][picasa-ss-xmonad]
+[![Introducing FatRat Cantata][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 * * *
 
@@ -58,7 +58,7 @@ excerpt:
 
 Surprisingly Cantata have a very nice looks.
 
-[![Cantata][image-ss-cantata]][picasa-ss-cantata]
+[![Cantata][image-ss-cantata]{: .img-responsive }][picasa-ss-cantata]
 
 
 {% highlight bash %}
