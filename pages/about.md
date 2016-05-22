@@ -133,8 +133,12 @@ All code, utilized Liquid.
 * Search, using [lunr.js][link-lunrjs] client-side search. 
   Based on [Jekyll Tips Search][link-jekyll-tips-search].
 
-* Sitemap, [David Ensinger][link-sitemap]'s sitemap.xml.
+* Sitemap, [David Ensinger][link-sitemap-david]'s sitemap.xml.
   I found the link from [Jekyll Tips SEO][link-jekyll-tips-seo].
+
+## Source
+
+* GitHub page with [README.md][link-readme-md]
 
 -- -- --
 

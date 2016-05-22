@@ -111,8 +111,12 @@ All code, utilized Liquid.
 * Search, using [lunr.js][link-lunrjs] client-side search. 
   Based on [Jekyll Tips Search][link-jekyll-tips-search].
 
-* Sitemap, [David Ensinger][link-sitemap]'s sitemap.xml.
+* Sitemap, [David Ensinger][link-sitemap-david]'s sitemap.xml.
   I found the link from [Jekyll Tips SEO][link-jekyll-tips-seo].
+
+## Source
+
+* GitHub page with [README.md][link-readme-md]
 
 -- -- --
 
@@ -164,3 +168,6 @@ just give me time to do it.
 [link-sitemap-david]: http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/
 
 [link-ramona]: http://ramonaharrison.github.io/jekyll/pixyll/technical/git/github/2015/03/09/how-i-built-my-blog/
+
+
+[link-readme-md]: https://github.com/epsi-rns/epsi-rns.github.io/blob/master/README.md
