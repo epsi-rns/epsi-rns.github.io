@@ -126,7 +126,7 @@ There are more to come.
 just give me time to do it.
 
 
-[//]: <> ( -- -- -- links below -- -- -- )
+
 
 [link-jekyll-tips]: http://jekyll.tips/
 [link-manjaro]: https://github.com/manjaro/manjaro.github.io?files=1
