@@ -3,6 +3,9 @@ epsi-rns.github.io
 
 A ready to use, Jekyll site customization.
 
+Installing Jekyll is something cool.
+Having an example of working site is something else.
+
 ![epsi-vexel][image-epsi-vexel]
 
 -- -- --

@@ -27,6 +27,9 @@ For a while, this page contain site setup.
 
 -- -- --
 
+	Installing Jekyll is something cool.
+	Having an example of working site is something else.
+
 
 
 Github allow a site hosted directly from a GitHub repository 
@@ -132,6 +135,8 @@ All code, utilized Liquid.
 
 * [Google AdSense][link-google-adsense], 
   media advertisements, that are targeted to site content and audience.
+  Note: That mine in this site is still not working yet.
+  It is still in review by Google team.
 
 * [Disqus Comment][link-disqus], 
   a blog comment hosting service for web sites and online communities.
@@ -150,7 +155,7 @@ All code, utilized Liquid.
 There are more to come.
 just give me time to do it.
 
-![kitten][image-kitten]
+![kitten][image-kitten]{: .img-responsive }
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
