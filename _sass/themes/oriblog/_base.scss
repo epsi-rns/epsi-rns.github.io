@@ -196,6 +196,13 @@ ul.recent-post li:before {
   text-align: center;
 }
 
-form#site_search input {
-  color: black;
-}
+form#site_search {
+  input {
+    color: black;
+    background-color: white;
+  }
+  
+  input[type="button"] {
+    background-color: buttonface;
+  }
+}  

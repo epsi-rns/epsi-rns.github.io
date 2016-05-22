@@ -1,29 +1,7 @@
----
-layout: page
-title: Temporary About
-permalink: /pages/about/
-opengraph:
-  image: assets/images/authors/epsi-vexel.png
----
- 
-	There are so many things to say.
-	I don't want to live in regrets.
-	So I make this blog.
+epsi-rns.github.io
+=====================
 
-Hello, my name is Epsi. I'm an open source enthusiast.
-I have made a ready to use Jekyll site customization.
-
-You can read a glance about my journey here
-
-* <http://epsi-rns.github.io/2016/05/18/becoming-geek.html>
-
-This is my temporary about page. 
-I haven't got time to decorate it yet.
-I'm still busy of something else.
-For a while, this page contain site setup.
-
-	It's not that I need to share.
-	I just want to back it up to cloud.
+A ready to use Jekyll site customization.
 
 -- -- --
 
@@ -186,5 +164,3 @@ just give me time to do it.
 [link-sitemap-david]: http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/
 
 [link-ramona]: http://ramonaharrison.github.io/jekyll/pixyll/technical/git/github/2015/03/09/how-i-built-my-blog/
-
-
