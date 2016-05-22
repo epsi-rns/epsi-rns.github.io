@@ -192,3 +192,4 @@ just give me time to do it.
 [link-ramona]: http://ramonaharrison.github.io/jekyll/pixyll/technical/git/github/2015/03/09/how-i-built-my-blog/
 
 
+[link-readme-md]: https://github.com/epsi-rns/epsi-rns.github.io/blob/master/README.md
