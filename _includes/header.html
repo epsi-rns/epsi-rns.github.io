@@ -38,8 +38,8 @@
           >{{ link.title }}</a></li>
         {% endfor %}        
         
-        <form class="navbar-form navbar-right">
-          <input type="text" class="form-control col-lg-8" placeholder="Search...">
+        <form class="navbar-form navbar-right" action="/pages/search" method="get">
+          <input type="text" name="q" class="form-control col-lg-8" placeholder="Search...">
         </form>
         
       </ul>

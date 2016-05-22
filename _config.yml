@@ -18,7 +18,7 @@ url: "http://epsi-rns.github.io"
 
 #opengraph
 locale: en_US
-logo: assets/images/authors/epsi-vexel.png
+logo: assets/site/images/authors/epsi-vexel.png
 
 
 paginate: 7
