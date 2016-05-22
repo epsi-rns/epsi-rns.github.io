@@ -1,7 +1,9 @@
 epsi-rns.github.io
 =====================
 
-A ready to use Jekyll site customization.
+A ready to use, Jekyll site customization.
+
+![epsi-vexel][image-epsi-vexel]
 
 -- -- --
 
@@ -60,25 +62,8 @@ So there is no need for beginner to reinvent the wheel.
 There's a bunch of [Jekyll theme here][link-jekyll-theme].
 But I'd rather start from simple html and build my own
 using [Bootstrap Tutorial][link-bootstrap-tutorial].
-I found my first layout on [Code Snippet][link-code-snippet]
-
-
-## Example: External Service
-
-* [Yandex Metrica][link-yandex], 
-  A free tool for evaluating site traffic and analyzing user behavior.
-
-* [Google Analytic][link-google-analytic], 
-  a freemium web analytics service offered by Google that tracks and reports website traffic.
-
-* [Google AdSense][link-google-adsense], 
-  media advertisements, that are targeted to site content and audience.
-
-* [Disqus Comment][link-disqus], 
-  a blog comment hosting service for web sites and online communities.
-
-* [Muut Comment][link-muut], 
-  The complete discussion system for your site.
+I found this layout [Code Snippet][link-code-snippet],
+and create my first layout based on this.
 
 ## Example: Site Wide
 
@@ -113,6 +98,25 @@ All code, utilized Liquid.
 
 * Sitemap, [David Ensinger][link-sitemap-david]'s sitemap.xml.
   I found the link from [Jekyll Tips SEO][link-jekyll-tips-seo].
+  
+## Example: External Service
+
+* [Yandex Metrica][link-yandex], 
+  A free tool for evaluating site traffic and analyzing user behavior.
+
+* [Google Analytic][link-google-analytic], 
+  a freemium web analytics service offered by Google that tracks and reports website traffic.
+
+* [Google AdSense][link-google-adsense], 
+  media advertisements, that are targeted to site content and audience.
+
+* [Disqus Comment][link-disqus], 
+  a blog comment hosting service for web sites and online communities.
+
+* [Muut Comment][link-muut], 
+  The complete discussion system for your site.
+
+  
 
 ## Source
 
@@ -126,6 +130,13 @@ There are more to come.
 just give me time to do it.
 
 
+![kitten][image-kitten]
+
+
+
+
+[image-epsi-vexel]: http://epsi-rns.github.io/assets/site/images/authors/epsi-vexel.png
+[image-kitten]: http://epsi-rns.github.io/assets/site/images/kitten.jpg
 
 
 [link-jekyll-tips]: http://jekyll.tips/

@@ -11,7 +11,7 @@ https://github.com/mmistakes/so-simple-theme/blob/master/_includes/open-graph.ht
   <meta name="twitter:image" content="{{ site.url }}/images/{{ page.image.feature }}">
   {% else %}
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/assets/images/{{ page.image.thumb }}{% else %}{{ site.url }}/{{ site.logo }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/assets/images/{{ page.image.thumb }}{% else %}{{ site.url }}{{ site.logo }}{% endif %}">
   {% endif %}
 
   <!-- Open Graph -->
@@ -21,4 +21,4 @@ https://github.com/mmistakes/so-simple-theme/blob/master/_includes/open-graph.ht
   {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
-  {% if page.opengraph.image %}<meta property="og:image" content="{{ page.opengraph.image }}">{% endif %}
+  {% if page.opengraph.image %}<meta property="og:image" content="{{ site.url }}{{ page.opengraph.image }}">{% endif %}
