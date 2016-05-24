@@ -13,6 +13,9 @@ opengraph:
 Hello, my name is Epsi. I'm an open source enthusiast.
 I have made a ready to use, Jekyll site customization.
 
+Although I like command line, I'm not a hacker.
+You won't find any illegal activities in this site.
+
 You can read a glance about my journey here
 
 * <http://epsi-rns.github.io/2016/05/18/becoming-geek.html>
@@ -132,11 +135,6 @@ All code, utilized Liquid.
 
 * [Google Analytic][link-google-analytic], 
   a freemium web analytics service offered by Google that tracks and reports website traffic.
-
-* [Google AdSense][link-google-adsense], 
-  media advertisements, that are targeted to site content and audience.
-  Note: That mine in this site is still not working yet.
-  It is still in review by Google team.
 
 * [Disqus Comment][link-disqus], 
   a blog comment hosting service for web sites and online communities.

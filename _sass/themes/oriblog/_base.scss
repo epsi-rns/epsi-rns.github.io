@@ -206,3 +206,10 @@ form#site_search {
     background-color: buttonface;
   }
 }  
+
+
+.maxwidth {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1390px; /* or 1366px with margin */
+}

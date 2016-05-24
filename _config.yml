@@ -27,6 +27,8 @@ paginate_path: "blog/page:num"
 # Build settings
 markdown: kramdown
 
+future: false
+
 gems:
    - jekyll-paginate
 #  - jemoji

@@ -2,7 +2,7 @@
     
 {% comment %}
 
-<div class="container">
+<div class="container-fluid">
     <div class="col-lg-8 col-lg-offset-2">
     <h4 class="footer-heading">{{ site.title }}</h4>
 
@@ -35,13 +35,12 @@
 
 {% endcomment %}
 
-<div class="container">
-    <div class="col-lg-8 col-lg-offset-2 site-owner">
+<div class="container-fluid maxwidth">
+    <div class="col-md-8 col-md-offset-2 site-owner">
     {% assign owner = site.data.owner %}
 
     <span>{{ owner.name }} &copy; {{ site.time | date: '%Y' }}.
-    Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>.<br/>     
-    Using my original <b>OriBlog</b> theme. Script cloned from many sources.
+    Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>.
     </span>
 
     <div class="social-icons">
