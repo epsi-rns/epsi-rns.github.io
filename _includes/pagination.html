@@ -1,18 +1,31 @@
 
   <!-- Pagination links -->
   <div class="pagination center-block">
+  <ul class="pagination" role="navigation" aria-labelledby="pagination-label">
+
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      <li class="previous">
+      <a class="pagination-item" href="{{ paginator.previous_page_path }}" rel="prev">Previous</a>
+      </li>
     {% else %}
+      <li class="current-page">
       <span class="previous">Previous</span>
+      </li>
     {% endif %}
     
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    <li class="current-page">
+    <span class="pagination-item">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    </li>
     
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      <li class="next">
+      <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next">Next</a>
+      </li>
     {% else %}
+      <li class="current-page">
       <span class="next ">Next</span>
+      </li>
     {% endif %}
+  </ul>  
   </div>
 

@@ -4,10 +4,12 @@
 <header class="site-header">
 </header>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <button type="button" class="navbar-toggle collapsed" 
+        data-toggle="collapse" data-target="#navbar" 
+        aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -17,7 +19,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div  id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav">
         {% comment %}
         {% for my_page in site.pages %}

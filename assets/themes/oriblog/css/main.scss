@@ -14,41 +14,22 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #efefef;
-$background-color: #2d2d2d;
-$brand-color:      #c90c25;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-$yellow-makara:    #f7d316;
-$monad-blue:       #2980b9;
-
+// ---------------------------------------------------------------------
 
 // Overriden variables
 
 // Font Awesome
 $fa-font-path:        "/assets/vendors/font-awesome";
 
-
-// pagination
-$pages-item-background:   $background-color;
-$pages-item-color:        $text-color;
-$pages-item-active:       $yellow-makara;
-$pages-item-active-color: black;
-$pages-item-hover:        $monad-blue;
-$pages-item-link-color:   $yellow-makara;
-
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "vendors/bootstrap",
-        "vendors/font-awesome/font-awesome",
-        "vendors/pagination/_jekyll-pagination",        
-        "themes/oriblog/base",
-        "themes/oriblog/layout",
-        "themes/oriblog/syntax-highlighting"
+    "themes/oriblog/_variables_flaty", // variables before bootstrap
+    "vendors/bootstrap",
+    "vendors/font-awesome/font-awesome",
+    "vendors/pagination/_jekyll-pagination",
+    "themes/oriblog/base",
+    "themes/oriblog/_bootstrap_override",
+    "themes/oriblog/layout",
+    "themes/oriblog/syntax-highlighting"
 ;

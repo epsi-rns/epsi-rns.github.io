@@ -63,10 +63,14 @@ So there is no need for beginner to reinvent the wheel.
 ## Themes
 
 There's a bunch of [Jekyll theme here][link-jekyll-theme].
-But I'd rather start from simple html and build my own
+Starting with Jekyll Theme is inconvenient.
+
+I started from simple html and build my own
 using [Bootstrap Tutorial][link-bootstrap-tutorial].
 I found this layout [Code Snippet][link-code-snippet],
 and create my first layout based on this.
+
+Bootstrap user should start from [Bootstrap Example][link-bootstrap-example]
 
 ## Example: Site Wide
 
@@ -146,6 +150,7 @@ just give me time to do it.
 [link-manjaro]: https://github.com/manjaro/manjaro.github.io?files=1
 [link-smash]: https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
 [link-bootstrap-tutorial]: http://www.tutorialspoint.com/bootstrap/
+[link-bootstrap-example]: http://getbootstrap.com/getting-started/#examples
 
 [link-pages-github]: https://pages.github.com/
 [link-jekyll]: https://jekyllrb.com/

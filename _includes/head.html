@@ -2,17 +2,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  {% comment %}
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  {% endcomment %}  
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% comment %}Let's Fake the Generator{% endcomment %}
+  <meta name="generator" content="Karimata 1.2.3 Media Engine" />
 
   <link rel="stylesheet" href="{{ "/assets/themes/oriblog/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link href="{{ site.url }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 
+  {% comment %}
+  <!-- unused -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="blewah" />
+  <meta name="author" content="">  
+  <link href="{{ site.url }}/?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="{{ site.url }}/?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="{{ site.url }}/component/search/?format=opensearch" rel="search" title="Search ILUNI" type="application/opensearchdescription+xml" />  
+  {% endcomment %}  
+  
   <!-- JavaScript -->
   <script src="{{ "/assets/vendors/jquery/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/assets/vendors/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>   
-{% include opengraph.html %}
+
+  {% include opengraph.html %}
 </head>
+
 

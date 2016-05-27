@@ -1,7 +1,16 @@
 {% comment %}
+
+Source:
 https://github.com/mmistakes/so-simple-theme/blob/master/_includes/open-graph.html
+
+A liquid tuple would be nice,
+but liquid is only a template after all.
+
 {% endcomment %}
-  <!-- Twitter Cards -->
+
+{% comment %}
+<!-- Twitter Cards -->
+{% endcomment %}
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | strip_html }}">{% endif %}
   {% if site.owner.twitter %}<meta name="twitter:site" content="@{{ site.owner.twitter }}">{% endif %}
@@ -13,8 +22,10 @@ https://github.com/mmistakes/so-simple-theme/blob/master/_includes/open-graph.ht
   <meta name="twitter:card" content="summary">
   <meta name="twitter:image" content="{% if page.image.thumb %}{{ site.url }}/assets/images/{{ page.image.thumb }}{% else %}{{ site.url }}{{ site.logo }}{% endif %}">
   {% endif %}
-
-  <!-- Open Graph -->
+  
+{% comment %}
+<!-- Open Graph -->
+{% endcomment %}
   <meta property="og:locale" content="{{ site.locale }}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -22,3 +33,9 @@ https://github.com/mmistakes/so-simple-theme/blob/master/_includes/open-graph.ht
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
   {% if page.opengraph.image %}<meta property="og:image" content="{{ site.url }}{{ page.opengraph.image }}">{% endif %}
+  <meta property="og:latitude" content="-6.193665"/>
+  <meta property="og:longitude" content="106.848558"/>
+  <meta property="og:locality" content="Jakarta"/>
+  <meta property="og:country-name" content="Indonesia"/>
+
+

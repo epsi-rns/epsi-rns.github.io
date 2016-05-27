@@ -1,5 +1,4 @@
 // Breakpoint variables
-$monad-blue: #2980b9 !default;
 
 /**
  * Basic styling
@@ -7,7 +6,7 @@ $monad-blue: #2980b9 !default;
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
-    background-color: $background-color;
+//    background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -36,13 +35,19 @@ code {
     font-size: 15px;
 }
 
-.highlight pre { 
+.highlight {
+  pre {
     background-color: transparent; 
-    color: #f8f8f2;
-    border: 1px solid $yellow-makara;
-    -webkit-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5);    
+    border: 1px solid $brand-primary;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2); 
+  }
+
+  pre:hover {
+    background-color: #eee;
+    border: 1px solid $yellow-makara;    
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);  
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);     
+  }
 }
 
 code {
@@ -89,58 +94,39 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+//            fill: $grey-color;
         }
     }
 }
 
 
-/**
- * Epsi
- */
+// Epsi
+
 
 body {
-    background-image: url("../images/dark-tile.jpg");
+//  http://www.designbolts.com/2012/12/22/50-free-simple-white-seamless-patterns-for-website-backgrounds/
+    background-image: url("../images/subtle-tile.jpg");
 }
 
 .center-block {float: none !important}
 
-a {
-  color: #f7d316;
-}
 
-.btn:hover,
-.btn:focus {
-    color: $monad-blue;
-}
-
-.navbar-inverse {
-    background-color: $yellow-makara;
-}
-
-.navbar-inverse .navbar-nav li a,
-.navbar-inverse .navbar-brand { 
-    color: #000000; 
-}
-
-.navbar-inverse ul.navbar-nav li:hover,
-.navbar-inverse div.navbar-header :hover {
-    background-color: $monad-blue;
-}
-
-.well {
-  background-color: #393939;
-  border: 1px solid $yellow-makara;  
-}
-
-.navbar-form .form-control { border: 1px solid $background-color; }
-
-ul#tags a { display: inline; }
 
 div.post-meta {
   border: 1px solid #666666;
   border-width: 1px 0;
 }  
+
+
+// ---------------------------------------------------------------------
+// components
+
+// ---------------------------------------------------------------------
+// Components: Tags
+
+// Tag label background color
+
+ul#tags a { display: inline; }
 
 div.post-tags {
   text-align: right;
@@ -156,20 +142,84 @@ div.post-tags {
   border-bottom: 1px solid #666666;
 }
 
-.anchor-target {
-  padding-top: 70px; 
-  margin-top: -70px;
-}  
+#tags a:hover {
+  color: white;
+}        
 
-span.tag-count {
-    color: $yellow-makara;
-    vertical-align: super;
-    font-size: smaller;  
+a span.label-tag {
+    background-color: #eee;
+    color: $monad-blue;
+    span.fa-tag,
+    span.tag-count {
+        color: $gray;
+        vertical-align: super;
+        font-size: smaller;  
+    }
 }
 
-span.fa-tag {
-    color: $yellow-makara;
+a:hover span.label-tag {
+    background-color: $monad-blue;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5); 
 }
+
+.post-meta #tags {
+   .label-tag {
+      padding-bottom: .0em;
+    }
+}
+
+.post-list {
+  .post-item {
+    .label-tag {
+      padding-bottom: .1em;
+    }
+  }
+}
+
+
+
+
+
+
+// ---------------------------------------------------------------------
+// _layout
+
+// page.html, post.html
+
+.maxwidth {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1366px; /* or 1360px */
+}
+
+// ---------------------------------------------------------------------
+// _includes
+
+// pagination.html, pagination-better.html
+
+.pagination {
+  text-align: center;
+}
+
+.pagination li a.pagination-item:hover {
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
+}
+
+// post.html
+
+.post-author {
+    margin-left: 20px;
+}
+
+// footer.html
+
+.site-owner {
+    text-align: center;
+}
+
+// chunk-page-sidebar.html, chunk-post-sidebar.html
 
 ul.recent-post {
     margin-left: 20px;
@@ -182,34 +232,42 @@ ul.recent-post li:before {
     color: #ffffff;
 }
 
-.site-owner {
-    text-align: center;
+// ---------------------------------------------------------------------
+// pages
+
+// tags.html
+
+.anchor-target {
+  padding-top: 70px; 
+  margin-top: -70px;
+} 
+
+// blog.html (index.html)
+// using bootstrap color
+
+.post-list {
+  .post-item {
+    a {
+      text-color: $brand-primary;
+    }
+  }
 }
 
+// ---------------------------------------------------------------------
+// 
 
-.post-author {
-    margin-left: 20px;
-}
+.well {
+  blockquote {
+    border-left-color: $monad-blue;
+  }
 
-
-.pagination {
-  text-align: center;
-}
-
-form#site_search {
-  input {
-    color: black;
-    background-color: white;
+  blockquote:hover {
+    border-left-color: $yellow-makara;
+    background-color: $monad-blue;
+    color: white;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);  
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);     
   }
   
-  input[type="button"] {
-    background-color: buttonface;
-  }
-}  
-
-
-.maxwidth {
-   margin-right: auto;
-   margin-left: auto;
-   max-width: 1366px; /* or 1360px */
+  blockquote:hover a { color: $yellow-makara }
 }
