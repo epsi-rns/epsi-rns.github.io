@@ -229,7 +229,11 @@ ul.recent-post li:before {
     font-family: 'FontAwesome';
     content: '\f054';
     margin: 0 5px 0 -20px;
-    color: #ffffff;
+    color: $gray-dark;
+}
+
+ul.recent-post li:hover:before {    
+    color: $gray-base;
 }
 
 // ---------------------------------------------------------------------
