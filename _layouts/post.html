@@ -37,15 +37,32 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-  
-    <nav class="pagination" role="navigation">
-      {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
+      
+
+  <hr/>    
+
+  <ul class="pagination center-block container-fluid" 
+      role="navigation" aria-labelledby="pagination-label">
+
+      {% if page.previous %}    
+      <li class="previous pull-left">
+        <a class="pagination-item" 
+           href="{{ site.url }}{{ page.previous.url }}" 
+           title="{{ page.previous.title }}">Previous</a>
+      </li>
       {% endif %}
-      {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
+
+      {% if page.next %}    
+      <li class="next pull-right">
+        <a class="pagination-item" 
+           href="{{ site.url }}{{ page.next.url }}" 
+           title="{{ page.next.title }}">Next</a>
+      </li>
       {% endif %}
-    </nav><!-- /.pagination -->
+          
+  </ul>  
+   
+
   
 </article>
 

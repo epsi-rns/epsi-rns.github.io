@@ -196,13 +196,13 @@ a:hover span.label-tag {
 // ---------------------------------------------------------------------
 // _includes
 
-// pagination.html, pagination-better.html
+// pagination.html, pagination-better.html, post.html
 
 .pagination {
   text-align: center;
 }
 
-.pagination li a.pagination-item:hover {
+.pagination li:hover a.pagination-item {
     color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
 }
