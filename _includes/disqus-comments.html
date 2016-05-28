@@ -1,4 +1,5 @@
-
+{% if site.comments %}
+{% if site.service.disqus_key %}
                 <div class="well">
 <div id="disqus_thread"></div>
 <script>
@@ -23,7 +24,7 @@
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
         
-        s.src = '//epsirnsgithubio.disqus.com/embed.js';
+        s.src = '//{{ site.service.disqus_key }}.disqus.com/embed.js';
         
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
@@ -34,7 +35,8 @@
 comments powered by Disqus.</a></noscript>
                 </div>                
                 <!-- /well -->
-
+{% endif %}
+{% endif %}
 
 
 

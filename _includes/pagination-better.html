@@ -3,6 +3,8 @@
 * https://github.com/timble/jekyll-pagination/blob/master/template/pagination.html
 {% endcomment %}
 
+{% assign paginate_suffix = '/blog-' %}
+
 {% if page.paginate_root == nil %}
     {% assign paginate_root = "/" %}
 {% else %}    
@@ -96,7 +98,7 @@
                 <span aria-hidden="true">{{ count }}</span></span>
                 {% else %}
                 <a class="pagination-item" 
-                   href="{{ paginate_root | append: '/pages/blog-' | append: count | append: '/' | replace: '//', '/' }}">
+                   href="{{ paginate_root | append: paginate_suffix | append: count | append: '/' | replace: '//', '/' }}">
                    <span class="sr-only">page </span>{{ count }}</a>
                 {% endif %}
             </li>
@@ -109,7 +111,7 @@
         <span aria-hidden="true">...</span><span class="sr-only">Skipped pages indicator</span></li>
     <li class="page last">
         <a class="pagination-item" 
-           href="{{ paginate_root | append: '/pages/blog-' | append: totalpages | append: '/' | replace: '//', '/' }}">
+           href="{{ paginate_root | append: paginate_suffix | append: totalpages | append: '/' | replace: '//', '/' }}">
         <span class="sr-only">page </span>{{ totalpages }}</a>
     </li>
     {% else %}

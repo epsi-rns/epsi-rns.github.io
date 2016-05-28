@@ -27,11 +27,19 @@ you can download a collection of shell script here<br/>
 
 * <http://crunchbang.org/forums/viewtopic.php?id=13645>
 
-**Sample Screenshot**:<br/>
-+ OS: Arch<br/>
-+ WM: XMonad + XMobar<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Sample Screenshot
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
++ <strong>WM</strong>: XMonad + XMobar<br/>
 + Terminal: A few sample script<br/>
-<br/>
+    </div>
+  </div>
+</div>
+
 [![ANSI Color Light][image-ss-xmonad-light]{: .img-responsive }][picasa-ss-xmonad-light]
 <br/><br/>
 [![ANSI Color Dark][image-ss-xmonad-dark]{: .img-responsive }][picasa-ss-xmonad-dark]

@@ -20,25 +20,33 @@ It is even harder to move from Stacking Window Manager
 to Tiling Window Manager. So pick the easiest one, the Awesome WM.
 Awesome has floating option to make you feel like you are in stacking WM.
 
-
-**OS**: Arch<br/> 
-**WM**: Awesome<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/> 
+<strong>WM</strong>: Awesome<br/>
 <br/>
-+ **Theme**:<br/>
++ <strong>Theme</strong>:<br/>
 : Color: blue-black-red theme<br/>
 : Kali Logo<br/>
 : Bar Transparency<br/>
 : Wallpaper: crown theme<br/>
 <br/>
-+ **Widget**:<br/>
++ <strong>Widget</strong>:<br/>
 : Vicious: cpuwidget<br/>
 <br/>
-+ **Terminal**:<br/>
++ <strong>Terminal</strong>:<br/>
 : glances<br/>
 : saidar<br/>
 : ncmpcpp clock<br/>
-: ncmpcpp playlist<br/>
-<br/>
+: ncmpcpp playlist
+    </div>
+  </div>
+</div>
+
 
 [![awesome][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
 <br/><br/>

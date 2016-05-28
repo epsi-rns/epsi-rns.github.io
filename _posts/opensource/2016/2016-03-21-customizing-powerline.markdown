@@ -22,10 +22,20 @@ I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/
 
 **Screenshot**:<br/>
 
-**OS**: Arch<br/>
-+ **WM**: Awesome WM<br/>
-+ **Shell**: Fish<br/>
-<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
++ <strong>WM</strong>: Awesome WM<br/>
++ <strong>Shell</strong>: Fish<br/>
+    </div>
+  </div>
+</div>
+
+
 
 ![Powerline Light][image-ss-powerline-light]{: .img-responsive }
 <br/><br/>

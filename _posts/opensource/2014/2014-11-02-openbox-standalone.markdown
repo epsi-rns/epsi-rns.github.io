@@ -25,8 +25,14 @@ $ openbox --replace
 As a standalone Stacking Window manager.
 Openbox is the only Stacking WM that I use daily.
 
-**OS**: Arch<br/>
-**WM**: Openbox<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
+<strong>WM</strong>: Openbox<br/>
 + Kali Menu in openbox<br/>
 + Tint2 (custom color)<br/>
 + dockbarx<br/>
@@ -39,8 +45,12 @@ Openbox is the only Stacking WM that I use daily.
 + screenfetch<br/>
 + compton transparency for conky and menu<br/>
 <br/>
-::.. Green Garden ..::<br/>
-<br/>
+::.. Green Garden ..::
+    </div>
+  </div>
+</div>
+
+
 
 This screenshot use a lot of transparency.
 <br/>

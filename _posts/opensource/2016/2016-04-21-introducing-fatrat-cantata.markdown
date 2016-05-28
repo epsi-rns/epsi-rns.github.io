@@ -21,9 +21,19 @@ excerpt:
 
 # Screenshot
 
-**OS**: Debian<br>
-**DE**: Plasma<br>
-**WM**: XMonad<br>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Debian<br>
+<strong>DE</strong>: Plasma<br>
+<strong>WM</strong>: XMonad<br>
+    </div>
+  </div>
+</div>
+
 
 [![Introducing FatRat Cantata][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 

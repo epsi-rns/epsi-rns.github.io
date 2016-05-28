@@ -14,10 +14,13 @@ search_omit: true
     <a href="#{{ this_word }}"><span class="label label-tag">{{ this_word }} <span class="tag-count">{{ site.tags[this_word].size }}</span></span></a>
   {% endunless %}{% endfor %}
 </div>
+<br/>
 
+<div>
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-  <span class ="anchor-target" id="{{ this_word }}">{{ this_word }}</span>
+  <div class ="anchor-target tag-word" id="{{ this_word }}">
+    <span class="fa fa-tag"></span> {{ this_word }}</div>
   {% for post in site.tags[this_word] %}{% if post.title != null %}
       <div class="tag-post-item container-fluid">      
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -30,3 +33,4 @@ search_omit: true
   
   {% endif %}{% endfor %}
 {% endunless %}{% endfor %}
+</div>

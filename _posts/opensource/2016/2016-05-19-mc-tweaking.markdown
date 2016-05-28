@@ -20,8 +20,21 @@ It show directories and path, so we can focus on the place better.
 
 MC skin can be set to transparent.
 
-**Source**:<br/>
-* [github.com/epsi-rns/dotfiles/.../skins/trans-light.epsi.ini][dotfiles-skin-mc]
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Source
+  </div>
+  <div class="sectionbox-body">
+    <div>
+    <ul class="list-content">
+      <li>
+        <a href="https://github.com/epsi-rns/dotfiles/blob/master/config/mc/skins/trans-light.epsi.ini"
+        >github.com/epsi-rns/dotfiles/.../skins/trans-light.epsi.ini</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>
 
 MC layout can be changed to vertical or horizontal as shown below.
 

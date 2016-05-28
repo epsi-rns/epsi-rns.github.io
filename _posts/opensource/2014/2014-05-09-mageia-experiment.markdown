@@ -290,22 +290,40 @@ e.g. Cinnamon, XFCE4, RazorQT, and KDE.
 Especially Kwin Effect in this PC,
 because I can't afford it in my Notebook.
 
-**OS**: Mageia<br/>
-**DE**: XFCE4<br/>
-**WM**: KWin<br/>
-+ Cube Effect<br/>
-<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Mageia<br/>
+<strong>DE</strong>: XFCE4<br/>
+<strong>WM</strong>: KWin<br/>
++ Cube Effect
+    </div>
+  </div>
+</div>
 
 [![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]{: .img-responsive }][picasa-ss-mageia-xfce4-kwin]
 <br/>
 
 And go further with RazorQT.
 
-**OS**: Mageia<br/>
-**DE**: RazorQT<br/>
-**WM**: KWin<br/>
-+ Cube Effect<br/>
-<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Mageia<br/>
+<strong>DE</strong>: RazorQT<br/>
+<strong>WM</strong>: KWin<br/>
++ Cube Effect
+    </div>
+  </div>
+</div>
+
+
 
 [![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]{: .img-responsive }][picasa-ss-mageia-razorqt-kwin]
 <br/><br/>

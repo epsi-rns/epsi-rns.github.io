@@ -15,7 +15,13 @@ Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an e
 **Reading**:<br/>
 * <https://forum.xfce.org/viewtopic.php?id=7405>
 
-* **OS**: Debian 8.0 Jessie<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Debian 8.0 Jessie<br/>
 + Kernel: x86_64 Linux 3.16.0-4-amd64<br/>
 + Resolution: 1024x768<br/>
 + WM: Xfwm4<br/>
@@ -26,7 +32,10 @@ Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an e
 + Workspace: No miniature view<br/>
 + Title Font: Capture It<br/>
 + Tiling: Left + Right<br/>
-<br/>
+    </div>
+  </div>
+</div>
+
 
 [![XFWM4 Tiling][image-ss]{: .img-responsive }][picasa-ss]
 

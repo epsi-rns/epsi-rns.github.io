@@ -125,6 +125,11 @@ div.post-meta {
 // ---------------------------------------------------------------------
 // Components: Tags
 
+
+.tag-word {
+    font-weight: bold;
+}
+
 // Tag label background color
 
 ul#tags a { display: inline; }
@@ -159,7 +164,7 @@ a span.label-tag {
 }
 
 a:hover span.label-tag {
-    background-color: $monad-blue;
+    background-color: $brand-primary;
     color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,.5); 
 }
@@ -207,6 +212,14 @@ a:hover span.label-tag {
     border: 1px solid $monad-blue;
 }
 
+.pagination li span.pagination-item {
+    background-color: $yellow-makara;
+    border: 1px solid $brand-primary;     
+}
+
+li.current-page span.pagination-item {
+    border: 1px solid $brand-primary; 
+}
 
 .pagination li:hover a.pagination-item {
     color: white;
@@ -226,13 +239,65 @@ a:hover span.label-tag {
     text-align: center;
 }
 
-// chunk-page-sidebar.html, chunk-post-sidebar.html
-
-ul#search_results,
-ul.recent-post {
-    margin-left: 20px;
+.post-title {
+  a { 
+    color: $brand-primary;
+  }
+  a:hover { 
+    color: $monad-blue;
+  }
+  
 }
 
+
+// section box
+
+.sectionbox {
+  border: 1px solid transparent;
+  border-radius: 7px;  
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+  display: inline-block;
+  margin-bottom: $spacing-unit / 2;  
+}
+
+.sectionbox:hover {
+  @include box-shadow(1px 2px 2px rgba(0,0,0,.2));
+}
+
+.sectionbox-heading {
+  padding: 0px 15px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  background-color: $brand-primary;
+  color: white;
+}
+
+.sectionbox:hover .sectionbox-heading {
+  background-color:  darken($brand-primary, 10%);
+}
+
+.sectionbox-body {
+  padding: 0px 15px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;  
+  background-color: #eee;  
+}
+
+.sectionbox ul {
+  margin-bottom: 0;
+}
+
+// chunk-page-sidebar.html, chunk-post-sidebar.html
+
+
+ul.list-content,
+ul#search_results,
+ul.recent-post {    
+    @include list-unstyled;
+    margin-left: 20px;    
+}
+
+ul.list-content li:before,
 ul#search_results li:before,
 ul.recent-post li:before {    
     font-family: 'FontAwesome';
@@ -241,9 +306,10 @@ ul.recent-post li:before {
     color: $gray-dark;
 }
 
+ul.list-content li:hover:before,
 ul#search_results li:hover:before,
 ul.recent-post li:hover:before {    
-    color: $gray-base;
+    color: $yellow-makara;
 }
 
 // ---------------------------------------------------------------------

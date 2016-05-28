@@ -12,11 +12,21 @@ excerpt:
 
 A very common Desktop Customization.
 
-**OS**: Debian<br/>
-**DE**: gnome-shell<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Debian<br/>
+<strong>DE</strong>: gnome-shell<br/>
 + cairo-dock<br/>
 + conky-infinity<br/>
-+ background<br/>
++ background
+    </div>
+  </div>
+</div>
+
 
 I'm glad that linux has a modern desktop interface.
 While others are still using conventional approach.

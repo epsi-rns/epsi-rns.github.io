@@ -46,12 +46,22 @@ and bundle it inside just one haskell script.
 
 * * *
 
-OS: Arch<br/>
-+ WM: XMonad<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
++ <strong>WM</strong>: XMonad<br/>
 + Compositor: Compton<br/>
 + Statusbar: Dzen2 without Conky<br/>
 + Terminal: Termite<br/>
-+ Viewer: VIM (Vi IMproved)<br/>
++ Viewer: VIM (Vi IMproved)
+    </div>
+  </div>
+</div>
+
 
 [![Conkyless XMonad][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 

@@ -17,9 +17,18 @@ And be happy with it.
 
 'qterminal', is my new comfort in the shell.
 
-**OS**: Arch<br/>
-**DE**: LXQT 0.8<br/>
-<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
+<strong>DE</strong>: LXQT 0.8
+    </div>
+  </div>
+</div>
+
 
 [![LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]{: .img-responsive }][picasa-ss-lxqt-windowish-qterminal]
 <br/><br/>
@@ -37,12 +46,22 @@ The original LXQT has great looks.
 
 Let's see how it can be combined with KWin instead of Openbox.
 
-**OS**: Arch<br/>
-**DE**: LXQT 0.8<br/>
-**WM**: KWin (x11)<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
+<strong>DE</strong>: LXQT 0.8<br/>
+<strong>WM</strong>: KWin (x11)<br/>
 + Conky Manager<br/>
-+ Ghost Theme<br/>
-<br/>
++ Ghost Theme
+    </div>
+  </div>
+</div>
+
+
 
 [![LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][picasa-ss-lxqt-kwin-ghost]
 <br/>

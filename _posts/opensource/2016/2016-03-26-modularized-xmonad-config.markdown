@@ -27,15 +27,25 @@ Use the source Luke
 
 * * *
 
-OS: Arch/Manjaro<br>
-+ WM: XMonad<br>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch/Manjaro<br>
++ <strong>WM</strong>: XMonad<br>
 + Compositor: Compton<br>
 + Statusbar: Dzen-Conky<br>
 + Terminal: Termite<br>
 + Wallpaper: 3D Bar<br>
 + File Manager: Ranger<br>
 + Viewer: VIM (Vi IMproved)<br>
-<br/>
+    </div>
+  </div>
+</div>
+
+
 [![Modularized XMonad 1][image-ss-xmonad-1]{: .img-responsive }][picasa-ss-xmonad-1]
 <br/><br/>
 [![Modularized XMonad 2][image-ss-xmonad-2]{: .img-responsive }][picasa-ss-xmonad-2]

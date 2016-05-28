@@ -13,10 +13,21 @@ excerpt:
 I love Dekstop Art.
 Especially with network monitoring.
 
-**OS**: Arch<br/>
-**WM**: i3<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
+<strong>WM</strong>: i3<br/>
 i3bar: conky<br/>
-Terminal: vnstat, nethogs, nload<br/>
+Terminal: vnstat, nethogs, nload
+    </div>
+  </div>
+</div>
+
+
 
 <br/>
 [![i3 Black][image-ss-i3-black]{: .img-responsive }][picasa-ss-i3-black]

@@ -6,13 +6,6 @@ $monad-blue:       #2980b9;
 $text-only:        #333333;
 
 
-// Pagination Override
-$pages-item-link-color:     $monad-blue;
-$pages-item-hover:          $monad-blue;
-$pages-item-background:     #eee;
-$pages-item-active:         #18BC9C;
-$pages-item-active-color:   $text-only;
-
 $bootstrap-sass-asset-helper: false !default;
 // Flatly 3.3.6
 // Variables
@@ -36,6 +29,12 @@ $brand-info:            #3498DB !default;
 $brand-warning:         #F39C12 !default;
 $brand-danger:          #E74C3C !default;
 
+// Pagination Override
+$pages-item-link-color:     $monad-blue;
+$pages-item-hover:          $brand-primary;
+$pages-item-background:     #eee;
+$pages-item-active:         $yellow-makara;
+$pages-item-active-color:   $text-only;
 
 //== Scaffolding
 //
@@ -49,7 +48,7 @@ $text-color:            $text-only !default;
 //** Global textual link color.
 $link-color:            $monad-blue !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      $yellow-makara !default;
+$link-hover-color:      $brand-primary !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 

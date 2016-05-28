@@ -13,16 +13,26 @@ excerpt:
 Before Openbox, there was Fluxbox. Fluxbox is not as cool as Openbox.
 But if you need config or just curious about, you can check this out.
 
-**OS**: Arch<br/>
-**WM**: Fluxbox<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot Information
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br/>
+<strong>WM</strong>: Fluxbox<br/>
 + blackarch menu in fluxbox<br/>
 + dockbarx<br/>
 + tmux [ncmpcpp play, ncmpcpp viz] in xfce-terminal<br/>
 + fb-theme: axonkolor (manual modification)<br/>
 + conky bar (manual modification)<br/>
 <br/>
-::.. Glowing Flux  ..::<br/>
-<br/>
+::.. Glowing Flux  ..::
+    </div>
+  </div>
+</div>
+
+
 
 [![fluxbox][image-ss-fluxbox]{: .img-responsive }][picasa-ss-fluxbox]
 <br/><br/>

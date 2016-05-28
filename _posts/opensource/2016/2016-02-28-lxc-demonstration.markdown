@@ -60,23 +60,41 @@ Link.
 
 Here is my screenshot.
 
-**OS**: Manjaro<br/>
-+ **WM**: Awesome (floating mode).<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot 1: Terminal
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Manjaro<br/>
++ <strong>WM</strong>: Awesome (floating mode).<br/>
 + Theme: Kali :-)<br/>
 + Wallpaper<br/>
 <br/>
-**Screenshot 1**: Terminal<br/>
+<strong>Screenshot 1</strong>: Terminal<br/>
 1: (host) Manjaro + Pacman<br/>
 2: (LXC) Gentoo + Emerge<br/>
 3: (LXC) CentOS + YUM<br/>
 4: (LXC) Debian + APT<br/>
+    </div>
+  </div>
+</div>
 
 
 [![LXC Screenfetch][image-ss-lxc-screenfetch]{: .img-responsive }][picasa-ss-lxc-screenfetch]
 <br/>
 
-**Screenshot 2**: Screenfetch
-<br/>
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+    Screenshot 2: Screenfetch
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Manjaro<br/>
++ <strong>WM</strong>: Awesome (floating mode).<br/>
+    </div>
+  </div>
+</div>
 
 [![LXC Package][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
 <br/>

@@ -25,13 +25,24 @@ so you can make a very flexible configuration.
 
 ## Self Explanatory
 
+
+
+<div class="sectionbox">
+  <div class="sectionbox-heading">
 Simple configuration in Vim,
 and manual page.
-
-**OS**: Arch<br>
-**WM**: XMonad<br>
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br>
+<strong>WM</strong>: XMonad<br>
 + Statusbar: Dzen2<br>
-+ Run: xmonad.hs, man xmonad<br>
++ Run: xmonad.hs, man xmonad
+    </div>
+  </div>
+</div>
+
+
 
 [![Self Explanatory][image-ss-self-explanatory]{: .img-responsive }][picasa-ss-self-explanatory]
 
@@ -39,24 +50,45 @@ and manual page.
 
 ## XMobar
 
-No gaps by default.
 
-**OS**: Debian<br>
-**WM**: XMonad<br>
+
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+No gaps by default.
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Debian<br>
+<strong>WM</strong>: XMonad<br>
 + Statusbar: XMobar<br>
 + Terminal: Transparency: 85%<br>
-+ Run: nload, nethogs, httpry<br>
++ Run: nload, nethogs, httpry
+    </div>
+  </div>
+</div>
+
+
 
 [![XMobar: No Gap][image-ss-xmobar-nogap]{: .img-responsive }][picasa-ss-xmobar-nogap]
 
 <br/>
 
-Three columns with gaps.
 
-**OS**: Arch<br>
-**WM**: XMonad<br>
+
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+Three columns with gaps.
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br>
+<strong>WM</strong>: XMonad<br>
 + Statusbar: XMobar<br>
-+ Run: nload, newsbeuter, tmux[glances,vim], mutt)<br>
++ Run: nload, newsbeuter, tmux[glances,vim], mutt)
+    </div>
+  </div>
+</div>
+
 
 [![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]{: .img-responsive }][picasa-ss-xmobar-threecolumns-gap]
 
@@ -69,23 +101,43 @@ Source
 
 ## Dzen2
 
-Running six terminals.
 
-**OS**: Arch<br>
-**WM**: XMonad<br>
+
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+Running six terminals.
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br>
+<strong>WM</strong>: XMonad<br>
 + Statusbar: Dzen<br>
-+ Run: mutt, irssi, newsbeuter, vim)<br>
++ Run: mutt, irssi, newsbeuter, vim)
+    </div>
+  </div>
+</div>
+
 
 [![Dzen2 symmetric][image-ss-dzen2]{: .img-responsive }][picasa-ss-dzen2]
 
 <br/>
 
-Running five terminals.
 
-**OS**: Arch<br>
-**WM**: XMonad<br>
+
+<div class="sectionbox">
+  <div class="sectionbox-heading">
+Running five terminals.
+  </div>
+  <div class="sectionbox-body">
+    <div>
+<strong>OS</strong>: Arch<br>
+<strong>WM</strong>: XMonad<br>
 + Statusbar: Dzen<br>
-+ Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline<br>
++ Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline
+    </div>
+  </div>
+</div>
+
 
 [![Dzen2 on symmetric][image-ss-dzen2-five-terms]{: .img-responsive }][picasa-ss-dzen2-five-terms]
 

@@ -67,14 +67,9 @@ layout: default
 </article>
 
 {% include chunk-post-footer.html %}
+{% include disqus-comments.html %}
+{% include muut-comments.html %}
 
-{% if site.comments %}
-    {% include disqus-comments.html %}
-
-    {% comment %}
-        {% include muut-comments.html %}
-    {% endcomment %}
-{% endif %}
 
 
                 
