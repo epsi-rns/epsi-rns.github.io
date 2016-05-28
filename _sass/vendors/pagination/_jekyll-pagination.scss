@@ -54,14 +54,6 @@ $pages-item-active-color:   white !default;
     display: inline-block;
   }
 
-  .previous a:before {
-    content: "« "
-  }
-
-  .next a:after {
-    content: " »"
-  }
-
   // First breakpoint
   @include pages-breakpoint($pages-breakpoint1) {
 
@@ -100,6 +92,14 @@ $pages-item-active-color:   white !default;
     .pages-indicator--offset-2 {
       display: none;
     }
+    
+    .previous a:before {
+      content: "« "
+    }
+
+    .next a:after {
+      content: " »"
+    }    
   }
 
   @include pages-breakpoint($pages-breakpoint3) {

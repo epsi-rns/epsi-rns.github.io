@@ -30,7 +30,13 @@ opengraph:
           {% endfor %}
         </div>
       </div> 
-      {{ post.excerpt }}          
+      <div>
+        {{ post.excerpt }}
+      </div>
+      <div class="read-more">
+        <a href="{{ post.url | prepend: site.baseurl }}" 
+           class="btn btn-primary btn-xs">Read More</a>
+      </div>
     </div>
     {% endfor %}
   </div>

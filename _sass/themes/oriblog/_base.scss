@@ -228,10 +228,12 @@ a:hover span.label-tag {
 
 // chunk-page-sidebar.html, chunk-post-sidebar.html
 
+ul#search_results,
 ul.recent-post {
     margin-left: 20px;
 }
 
+ul#search_results li:before,
 ul.recent-post li:before {    
     font-family: 'FontAwesome';
     content: '\f054';
@@ -239,6 +241,7 @@ ul.recent-post li:before {
     color: $gray-dark;
 }
 
+ul#search_results li:hover:before,
 ul.recent-post li:hover:before {    
     color: $gray-base;
 }
@@ -253,7 +256,7 @@ ul.recent-post li:hover:before {
   margin-top: -70px;
 } 
 
-// blog.html (index.html)
+// pages/index.html
 // using bootstrap color
 
 .post-list {
@@ -264,6 +267,9 @@ ul.recent-post li:hover:before {
   }
 }
 
+.read-more a:after {
+    content: " »"
+} 
 // ---------------------------------------------------------------------
 // 
 
