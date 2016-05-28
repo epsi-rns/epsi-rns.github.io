@@ -36,11 +36,12 @@ $monad-blue:       #2980b9;
 }
 
 .navbar:hover,
+.panel,
 .well {
   box-shadow: 2px 2px 2px rgba(0,0,0,.2);  
 }
 
-
+.panel:hover,
 .well:hover {
   border: 1px solid $yellow-makara;
   @include box-shadow(3px 3px 3px rgba(0,0,0,.5));
