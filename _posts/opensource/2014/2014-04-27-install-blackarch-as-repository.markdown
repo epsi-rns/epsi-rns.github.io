@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Install BlackArch as Repository"
-date:   2114-04-27 14:50:15 +0700
-published: false
+date:   2014-04-27 14:50:15 +0700
+# published: false
 categories: opensource
 tags: [security, blackarch,package manager]
 author: epsi 

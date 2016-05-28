@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Selectively Install BlackArch Tools"
-date:   2114-12-27 11:58:15 +0700
-published: false
+date:   2014-12-27 11:58:15 +0700
+# published: false
 categories: opensource
 tags: [security, blackarch, package manager]
 author: epsi

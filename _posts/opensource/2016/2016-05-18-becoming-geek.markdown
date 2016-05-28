@@ -23,9 +23,9 @@ Hello, my name is Epsi. I'm an open source enthusiast.
 My first encounter with computer was, in my teenage days.
 I like to prank my friend with two bytes reboot.com,
 executing coldboot (int 18h) or warmboot (int 19h).
-"By typing copy con reboot.com",
-and type alt^205+alt^24+ctrl^D (CD18)
-or type  alt^205+alt^25+ctrl^D (CD19).
+By typing "copy con reboot.com",
+and type <kbd>alt^205</kbd>+<kbd>alt^24</kbd>+<kbd>ctrl^D</kbd> (CD18)
+or type  <kbd>alt^205</kbd>+<kbd>alt^25</kbd>+<kbd>ctrl^D</kbd> (CD19).
 
 I forced myself to learn Pascal/Delphi in my college day,
 to get pressure-volume-diagram from a diesel engine.

@@ -110,8 +110,9 @@ body {
 
 .center-block {float: none !important}
 
-
-
+a {
+    word-wrap: break-word;
+}
 div.post-meta {
   border: 1px solid #666666;
   border-width: 1px 0;
