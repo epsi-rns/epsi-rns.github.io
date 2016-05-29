@@ -137,6 +137,19 @@ Yes, you can simplify doing those cumbersome parantheses by replacing it with $ 
 
 That's my XMonad Configuration in Haskell that I've been using since 2014.
 
+-- -- --
+
+**Related Links**
+
+* [XMonad Tiling Window Manager][related-xmonad-twm]
+
+* [XMonad Menu Bar][related-xmonad-bar]
+
+* [Modularized XMonad Config][related-xmonad-modularized]
+
+* [XMonad with Conkyless Dzen][related-xmonad-conkyless]
+
+
 * * *
 
 Remember. Dollar can make your life easier.
@@ -144,7 +157,13 @@ After all, it is never to late to learn Math.
 
 Happy Coding.
 
+[//]: <> ( -- -- -- links below -- -- -- )
+
 [dotfiles-layout]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyLayoutHook.hs
 [image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/05/haskell-dollar.png
 [picasa-ss-xmonad]: https://lh3.googleusercontent.com/-aKNNyl5pysQ/VzmdO9cFZGI/AAAAAAAAAMQ/2kwKWNeF6iQ1mLyyvJpr1ylb5ncAtSGlgCCo/s0/haskell-dollar.png
 
+[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html
+[related-xmonad-bar]: {{ site.url }}/opensource/2014/12/15/xmonad-menu-bar.html
+[related-xmonad-modularized]: {{ site.url }}/opensource/2016/03/26/modularized-xmonad-config.html
+[related-xmonad-conkyless]: {{ site.url }}/opensource/2016/05/11/xmonad-with-conkyless-dzen.html

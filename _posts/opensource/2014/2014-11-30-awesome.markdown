@@ -56,9 +56,9 @@ Awesome has floating option to make you feel like you are in stacking WM.
 
 * <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
-**Awesome** Source:
+**Awesome Source**:
 
-<https://github.com/awesomeWM/awesome>
+* <https://github.com/awesomeWM/awesome>
 
 
 I put some network monitoring tools to make you sense,
@@ -68,9 +68,28 @@ how amazing Awesome is, when it blend with console.
 
 The Wallpaper from Awesome theme is stunningly beautiful.
 
+-- -- --
 
+**Related Links**
 
+* [Refactoring Awesome WM's Lua Configuration Script][related-awesome-refactoring]
+
+* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
+
+* [Fluxbox Stacking Window Manager][related-fluxbox-swm]
+
+* [i3 Window manager with i3 Bar][related-i3-twm]
+
+* [XMonad Tiling Window Manager][related-xmonad-twm]
+
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome]: {{ site.url }}/assets/posts/opensource/2014/11/awesome.png
 [picasa-ss-awesome]: https://lh3.googleusercontent.com/-NgcARBSpJEc/Vz2oASMylYI/AAAAAAAAARM/3IssneEeNb8JDV6NUZoS2rPNz5FHp3CQQCCo/s0/awesome.png
 
+[related-awesome-refactoring]: {{ site.url }}/opensource/2016/03/19/refactoring-awesome-lua-configuration.html
+
+[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html
+[related-fluxbox-swm]: {{ site.url }}/opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
+[related-i3-twm]: {{ site.url }}/opensource/2014/12/06/i3-i3bar.html
+[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html

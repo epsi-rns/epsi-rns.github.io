@@ -37,3 +37,4 @@ IMO: This kind of forward lookin' is what HP people have to do when they started
 Well, that's just my opinion. I do not have any formal IT education. Nor professional IT job. <br/>
 So who am I to speak ?
 
+[//]: <> ( -- -- -- links below -- -- -- )

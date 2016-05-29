@@ -295,7 +295,7 @@ Debian Sid Indonesia (dead group)
 
 * <https://www.facebook.com/groups/272733926117321/>
 
-
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/facebook-groups-resources-for-linux-enthusiast/426282274184455
 [image-bunsenlabs]: {{ site.url }}/assets/posts/opensource/2014/03/bunsenlabs.png

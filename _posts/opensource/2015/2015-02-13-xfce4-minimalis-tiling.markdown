@@ -41,6 +41,8 @@ Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an e
 
 Note on SS : user vs root.
 
+[//]: <> ( -- -- -- links below -- -- -- )
+
 [image-ss]: {{ site.url }}/assets/posts/opensource/2015/02/xfwm4-tiling.png
 [picasa-ss]: https://lh3.googleusercontent.com/-N-UOOX2gpK4/VznBgNgJ2DI/AAAAAAAAANg/PnzKVsjAkbEI2oImmgtxGBd6EXlAYndJgCCo/s0/xfwm4-tiling.png
 

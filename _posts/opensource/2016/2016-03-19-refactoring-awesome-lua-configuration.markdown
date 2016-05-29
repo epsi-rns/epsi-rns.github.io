@@ -45,6 +45,14 @@ Just like any other scripting language, you can separate your script into a few 
 The original Awesome Config is 'rc.lua'. But here, I have separated rc into [rc, my.keys, my.menu, my.volume, my.wibox]. Since I feel that my.wibox.lua is still too long to read. I also separated my.wibox into [my.wibox, my.wibox.list, my.wibox.vicious, my.wibox.multicolor]. Now I feel satisfied..
 <br/><br/>
 
+-- -- --
+
+**Related Links**
+
+* [Modularized XMonad Config][related-xmonad]
+
+* [Awesome WM, Tiling WM for beginner][related-awesome-twm]
+
 * * *
 <br/>
 
@@ -54,8 +62,13 @@ Thank you for reading.
 Sorry for my english<br/>
 I know how terrible it is.
 
+[//]: <> ( -- -- -- links below -- -- -- )
+
+
 [image-ss-awesome-light]: {{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-light.png
 [picasa-ss-awesome-light]: https://lh3.googleusercontent.com/-HSziviMzatY/VzmdsAkfKNI/AAAAAAAAAMk/7rFDLvZUp_MqC--shJyPTB5MB894dnyMACCo/s0/refactoring-awesome-light.png
 [image-ss-awesome-dark]: {{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-dark.png
 [picasa-ss-awesome-dark]: https://lh3.googleusercontent.com/-Ag5vRw54Fdk/VzmdrJ2x1GI/AAAAAAAAAMk/5nUQb2JZbkUH-xFYg0FP0f41ME2Uh5VIACCo/s0/refactoring-awesome-dark.png
 
+[related-awesome-twm]: {{ site.url }}/opensource/2014/11/30/awesome.html
+[related-xmonad]: {{ site.url }}/opensource/2016/03/26/modularized-xmonad-config.html

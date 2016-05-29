@@ -33,11 +33,19 @@ e.g. thi Haskell based AURA.
 Note: I apologize for my english,
 and also my boring desktop customization.
 
+**Related Links**
+
+* [Arch - Install/ Post Install Log][related-arch-install]
+
+* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
+
+* [Install BlackArch as Repository][related-blackarch-repository]
+
+* [Selectively Install BlackArch Tools][related-blackarch-selectively]
 
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
-
-![BlackArch All Category][image-ss-blackarch-all-categories]{: .img-responsive }
 
 [image-aur-cower]: {{ site.url }}/assets/posts/opensource/2014/12/aur-cower.png
 [picasa-aur-cower]: https://lh3.googleusercontent.com/-hUfSxrPxvaA/Vz2mKT5QdbI/AAAAAAAAAOs/vP_na7AbrFEzeWdhlkSXJ3VUd0Op8snSQCCo/s0/aur-cower.png
@@ -45,3 +53,8 @@ and also my boring desktop customization.
 [picasa-aur-yaourt]: https://lh3.googleusercontent.com/-E4oPZQK-Ii4/Vz2mLgOJ9kI/AAAAAAAAAOs/QPxlecb-au0fifWMPnFsa3SUs5J3OcK3QCCo/s0/aur-yaourt.png
 [image-aur-aura]: {{ site.url }}/assets/posts/opensource/2014/12/aur-aura.png
 [picasa-aur-aura]: https://lh3.googleusercontent.com/-sdrokwSygGE/Vz2mLAZG4PI/AAAAAAAAAOs/CgkIuwZQrQUACgvbvUhh1Q975KU2csv5gCCo/s0/aur-aura.png
+
+[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
+[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
+[related-blackarch-repository]: {{ site.url }}/opensource/2014/04/27/install-blackarch-as-repository.html
+[related-blackarch-selectively]: {{ site.url }}/opensource/2014/12/27/selectively-install-blackarch-tools.html

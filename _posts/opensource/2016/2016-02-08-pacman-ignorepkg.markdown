@@ -71,8 +71,29 @@ XferCommand = /usr/bin/wget --limit-rate 33K --passive-ftp -c -O %o %u
 
 [![Pacman IgnorePkg][image-ss]{: .img-responsive }][picasa-ss]
 
+-- -- --
+
+**Related Links**
+
+* [Debian APT Pinning][related-debian-apt-pinning]
+
+* [Arch - Install/ Post Install Log][related-arch-install]
+
+* [Unbundling AUR Helper Process][related-unbundling-aur]
+
+* [Install BlackArch as Repository][related-blackarch-repository]
+
+* [Selectively Install BlackArch Tools][related-blackarch-selectively]
+
 Happy Sync.
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss]: {{ site.url }}/assets/posts/opensource/2016/02/pacman-ignorepkg.png
 [picasa-ss]: https://lh3.googleusercontent.com/-xVBmoAKvB8c/Vzmdz2Gf0rI/AAAAAAAAAMk/r0Jj9aSQIaQ4p2h65k2tts8yEbNanx0RQCCo/s0/pacman-ignorepkg.png
+
+[related-debian-apt-pinning]: {{ site.url }}/opensource/2015/03/17/apt-pinning.html
+[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
+[related-unbundling-aur]: {{ site.url }}/opensource/2014/12/26/unbundling-aur-helper-process.html
+[related-blackarch-repository]: {{ site.url }}/opensource/2014/04/27/install-blackarch-as-repository.html
+[related-blackarch-selectively]: {{ site.url }}/opensource/2014/12/27/selectively-install-blackarch-tools.html

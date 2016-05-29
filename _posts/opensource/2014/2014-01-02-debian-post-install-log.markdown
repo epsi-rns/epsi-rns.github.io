@@ -199,7 +199,23 @@ Do you want to continue? [Y/n/?]
 
 last step: go to the refigerator find myself something to eat
 
+-- -- --
+
+**Related Links**
+
+* [Linux Multiboot][related-linux-multiboot]
+
+* [My Mageia Experiment][related-mageia-experiment]
+
+* [Arch - Install/ Post Install Log][related-arch-install]
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
 
 [image-ss-debian-install]: {{ site.url }}/assets/posts/opensource/2014/01/debian-install.jpg
 [picasa-ss-debian-install]: https://lh3.googleusercontent.com/-j65GwnT_z3g/Vz2o4lw6y5I/AAAAAAAAAR0/zJnk7wzO4-EXuqkyoyNwuLptfuKT7HpygCCo/s0/debian-install.jpg
 
+
+[related-mageia-experiment]: {{ site.url }}/opensource/2014/05/09/mageia-experiment.html
+[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html 
+[related-linux-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html

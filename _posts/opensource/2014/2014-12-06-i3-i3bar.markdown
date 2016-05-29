@@ -47,8 +47,26 @@ Sample i3bar/conkyrc config (nubi)
 
 Hey... I took that photograph of my own garden by myself.
 
+-- -- --
+
+**Related Links**
+
+* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
+
+* [Fluxbox Stacking Window Manager][related-fluxbox-swm]
+
+* [Awesome WM, Tiling WM for beginner][related-awesome-twm]
+
+* [XMonad Tiling Window Manager][related-xmonad-twm]
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
 [image-ss-i3-black]: {{ site.url }}/assets/posts/opensource/2014/12/i3-black.png
 [picasa-ss-i3-black]: https://lh3.googleusercontent.com/-mUkKN8nfGUM/Vz2mP34hESI/AAAAAAAAAO8/pQ61naXO1ywAMARvUez0iLNVxWdpoXBkgCCo/s0/i3-black.png
 [image-ss-i3-green]: {{ site.url }}/assets/posts/opensource/2014/12/i3-green.png
 [picasa-ss-i3-green]: https://lh3.googleusercontent.com/-01BLZbKZrEY/Vz2mUtSw4JI/AAAAAAAAAO8/3EtGNN6e8EkTGl1mLAYMwJnzl_tm-vM9gCCo/s0/i3-green.png
 
+[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html
+[related-fluxbox-swm]: {{ site.url }}/opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
+[related-awesome-twm]: {{ site.url }}/opensource/2014/11/30/awesome.html
+[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html

@@ -75,7 +75,19 @@ A Cruel Angel's Thesis
 <br><br>
 * <https://www.youtube.com/watch?v=rt4zTczforY>
 
+-- -- --
 
+**Related Links**
+
+* [Refactoring Awesome WM's Lua Configuration Script][related-awesome-refactoring]
+
+* [XMonad Tiling Window Manager][related-xmonad-twm]
+
+* [XMonad Menu Bar][related-xmonad-bar]
+
+* [XMonad with Conkyless Dzen][related-xmonad-conkyless]
+
+* [How Haskell Syntax can Make Your Code Cleaner][related-haskell-syntax]
 
 
 [code-haruka]: https://github.com/codeharuka/dotfiles
@@ -85,3 +97,11 @@ A Cruel Angel's Thesis
 [image-ss-xmonad-2]: {{ site.url }}/assets/posts/opensource/2016/03/modularized-xmonad-2.png
 [picasa-ss-xmonad-2]: https://lh3.googleusercontent.com/-q_oRSCjFDUo/Vzmdor9QKPI/AAAAAAAAAMk/0H8i6r-gjbohji9LCSG3ThMrUfS6rgC2QCCo/s0/modularized-xmonad-2.png
 
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+[related-awesome-refactoring]: {{ site.url }}/opensource/2016/03/19/refactoring-awesome-lua-configuration.html
+[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html
+[related-xmonad-bar]: {{ site.url }}/opensource/2014/12/15/xmonad-menu-bar.html
+[related-xmonad-conkyless]: {{ site.url }}/opensource/2016/05/11/xmonad-with-conkyless-dzen.html
+[related-haskell-syntax]: {{ site.url }}/opensource/2016/05/14/haskell-dollar-syntax.html

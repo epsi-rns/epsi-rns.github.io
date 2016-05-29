@@ -219,6 +219,27 @@ Reading
 
 * <https://bbs.archlinux.org/viewtopic.php?pid=1385771>
 
+-- -- --
+
+**Related Links**
+
+* [Debian Wheezy - Post Install Log][related-debian-install]
+
+* [My Mageia Experiment][related-mageia-experiment]
+
+* [Linux Multiboot][related-linux-multiboot]
+
+* [Wireless in Command Line][related-wireless-cli]
+
+* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
+
+* [Unbundling AUR Helper Process][related-unbundling-aur]
+
+* [Install BlackArch as Repository][related-blackarch-repository]
+
+* [Selectively Install BlackArch Tools][related-blackarch-selectively]
+
+
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-arch-install]: {{ site.url }}/assets/posts/opensource/2014/04/arch-wifi-menu.png
@@ -228,3 +249,13 @@ Reading
 [local-wireless]: {{ site.url }}/opensource/2014/03/13/wireless-command-line.html
 
 [link-archwiki]: https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation
+
+[related-debian-install]: {{ site.url }}/opensource/2014/01/02/debian-post-install-log.html
+[related-mageia-experiment]: {{ site.url }}/opensource/2014/05/09/mageia-experiment.html
+[related-wireless-cli]: {{ site.url }}/opensource/2014/03/13/wireless-command-line.html 
+[related-linux-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
+
+[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
+[related-unbundling-aur]: {{ site.url }}/opensource/2014/12/26/unbundling-aur-helper-process.html
+[related-blackarch-repository]: {{ site.url }}/opensource/2014/04/27/install-blackarch-as-repository.html
+[related-blackarch-selectively]: {{ site.url }}/opensource/2014/12/27/selectively-install-blackarch-tools.html

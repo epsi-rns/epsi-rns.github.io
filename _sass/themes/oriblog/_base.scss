@@ -290,14 +290,14 @@ li.current-page span.pagination-item {
 // chunk-page-sidebar.html, chunk-post-sidebar.html
 
 
-ul.list-content,
+ul li.list-content,
 ul#search_results,
 ul.recent-post {    
     @include list-unstyled;
     margin-left: 20px;    
 }
 
-ul.list-content li:before,
+ul li.list-content:before,
 ul#search_results li:before,
 ul.recent-post li:before {    
     font-family: 'FontAwesome';
@@ -306,7 +306,7 @@ ul.recent-post li:before {
     color: $gray-dark;
 }
 
-ul.list-content li:hover:before,
+ul li.list-content:hover:before,
 ul#search_results li:hover:before,
 ul.recent-post li:hover:before {    
     color: $yellow-makara;

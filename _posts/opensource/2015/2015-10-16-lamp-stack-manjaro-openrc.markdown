@@ -317,6 +317,8 @@ Sleep
 
 Have a nice dream.
 
+[//]: <> ( -- -- -- links below -- -- -- )
+
 [image-ss-openrc]: {{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-terminal.png
 [picasa-ss-openrc]: https://lh3.googleusercontent.com/-_PY0Lzv5T54/VznBHsesgSI/AAAAAAAAANc/sDZnyz6OQWse-cw5xm4NK5MhTw4uKz3eACCo/s0/lamp-manjaro-openrc-terminal.png
 [image-ss-browser]: {{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-browser.png

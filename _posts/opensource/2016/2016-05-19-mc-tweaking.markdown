@@ -20,21 +20,10 @@ It show directories and path, so we can focus on the place better.
 
 MC skin can be set to transparent.
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Source
-  </div>
-  <div class="sectionbox-body">
-    <div>
-    <ul class="list-content">
-      <li>
-        <a href="https://github.com/epsi-rns/dotfiles/blob/master/config/mc/skins/trans-light.epsi.ini"
-        >github.com/epsi-rns/dotfiles/.../skins/trans-light.epsi.ini</a>
-      </li>
-    </ul>
-    </div>
-  </div>
-</div>
+**Source**
+
+* {: .list-content} [github.com/epsi-rns/dotfiles/.../skins/trans-light.epsi.ini][dotfiles-skin-mc]
+
 
 MC layout can be changed to vertical or horizontal as shown below.
 
@@ -42,6 +31,8 @@ MC layout can be changed to vertical or horizontal as shown below.
 
 Have fun with Midnight Commander!<br/>
 Have fun with helping people!<br/>
+
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [dotfiles-skin-mc]: https://github.com/epsi-rns/dotfiles/blob/master/config/mc/skins/trans-light.epsi.ini
 [image-ss-mc-etc]: {{ site.url }}/assets/posts/opensource/2016/05/mc-etc.png

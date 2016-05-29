@@ -251,6 +251,10 @@ Now you can ping
 
 [Arch Wiki: Wireless Network Configuration][link-archwiki]
 
+**Related Links**
+
+* [Arch - Install/ Post Install Log][related-arch-install]
+
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
@@ -288,3 +292,6 @@ Now you can ping
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/command-line-wireless/433920080087341
 [link-archwiki]: https://wiki.archlinux.org/index.php/Wireless_network_configuration
 [local-lamp]: {{ site.url }}/opensource/2015/10/16/lamp-stack-manjaro-openrc.html
+
+
+[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html

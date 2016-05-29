@@ -24,10 +24,21 @@ So here we are, apt-pinning xorg, purge xorg, and re-install xorg.
 **Reading**:<br/>
 * <https://debian-handbook.info/browse/stable/sect.apt-get.html#sect.apt.priorities>
 
+-- -- --
+
+**Related Links**
+
+There is a similar method in arch-based pacman.
+
+* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
+
 
 All is good now
+
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss]: {{ site.url }}/assets/posts/opensource/2015/03/apt-pinning.png
 [picasa-ss]: https://lh3.googleusercontent.com/-LKk0TT15FqM/VznBcvueHjI/AAAAAAAAANg/qET1zVBOm5I5Fn2kHo3EgkwSIRjH-AN-wCCo/s0/apt-pinning.png
 
 
+[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html

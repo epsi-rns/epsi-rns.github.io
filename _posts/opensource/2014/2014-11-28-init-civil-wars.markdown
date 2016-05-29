@@ -160,6 +160,7 @@ Begun, The Linux Civil War has.<br/>
 	I'm also using Debian systemd.
 	I just love to read the news.
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-civil-war]: {{ site.url }}/assets/posts/opensource/2014/11/civil-war.jpg
 

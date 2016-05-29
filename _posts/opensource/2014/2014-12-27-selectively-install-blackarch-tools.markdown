@@ -73,12 +73,29 @@ Have a good day everyone :-)
 
 -- -- --
 
+**Related Links**
+
+* [Arch - Install/ Post Install Log][related-arch-install]
+
+* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
+
+* [Unbundling AUR Helper Process][related-unbundling-aur]
+
+* [Install BlackArch as Repository][related-blackarch-repository]
+
+-- -- --
+
 Note: Today is my favorite day.
 
 
-
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-blackarch-categories]: {{ site.url }}/assets/posts/opensource/2014/12/blackarch-categories.png
 [picasa-ss-blackarch-categories]: https://lh3.googleusercontent.com/-uisDp583fFM/Vz2mMzmvGcI/AAAAAAAAAOs/TVZfwXZJOtcGKnoWweLoNXraRD9jW_KnwCCo/s0/blackarch-categories.png
 [image-ss-blackarch-all-categories]: {{ site.url }}/assets/posts/opensource/2014/12/blackarch-all-categories.png
+
+[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
+[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
+[related-unbundling-aur]: {{ site.url }}/opensource/2014/12/26/unbundling-aur-helper-process.html
+[related-blackarch-repository]: {{ site.url }}/opensource/2014/04/27/install-blackarch-as-repository.html
 

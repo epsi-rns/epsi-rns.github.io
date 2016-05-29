@@ -63,6 +63,8 @@ Bagi yang suka bermain console pixel art di terminal. Silahkan unduh shell scrip
 Semoga bermanfaat, tidak sia-sia.<br/>
 Selamat membuat screenshot.<br/>
 
+[//]: <> ( -- -- -- links below -- -- -- )
+
 [image-ss-xmonad-light]: {{ site.url }}/assets/posts/opensource/2016/03/ansicolor-light.png
 [picasa-ss-xmonad-light]: https://lh3.googleusercontent.com/-fo8myDUqSKc/Vzmdc5CAk6I/AAAAAAAAAMg/Zdndvz5dEkoFBrcgEHBiyoo00lA-poflQCCo/s0/ansicolor-light.png
 [image-ss-xmonad-dark]: {{ site.url }}/assets/posts/opensource/2016/03/ansicolor-dark.png

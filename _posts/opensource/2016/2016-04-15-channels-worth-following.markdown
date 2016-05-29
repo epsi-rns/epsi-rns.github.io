@@ -82,6 +82,7 @@ After few comments. Now I have these channels.<br/><br/>
 
 Note: illustration made with inkscape.
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-flyer]: {{ site.url }}/assets/posts/opensource/2016/04/phoronix-mix.png
 [picasa-flyer]: https://lh3.googleusercontent.com/-SzzUdqvYcAQ/VzmdW1EJrII/AAAAAAAAAMg/94dbqYWeTUIww6aL-JivFcsNXGYEqKvWQCCo/s0/phoronix-mix.png

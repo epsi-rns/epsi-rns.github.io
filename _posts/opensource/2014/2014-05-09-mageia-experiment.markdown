@@ -333,6 +333,15 @@ And go further with RazorQT.
 
 At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rarely use it either.
 
+-- -- --
+
+**Related Links**
+
+* [Debian Wheezy - Post Install Log][related-debian-install]
+
+* [Arch - Install/ Post Install Log][related-arch-install]
+
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-mageia-welcome]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-welcome.png
 [picasa-ss-mageia-welcome]: https://lh3.googleusercontent.com/-k6WRjfFM2lg/Vz2oaDzsFCI/AAAAAAAAARk/hlaqABuIODozZSSdRI22dyJatQJB5N5IACCo/s0/mageia-welcome.png
@@ -344,3 +353,6 @@ At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rare
 [picasa-ss-mageia-xfce4-kwin]: https://lh3.googleusercontent.com/-utAVSadUfw8/Vz2odL-wS0I/AAAAAAAAARk/lr90iKwBXMcfQqoNpKednUOSyG5vNDK-wCCo/s0/mageia-xfce4-kwin.png
 [image-ss-mageia-razorqt-kwin]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-razorqt-kwin.png
 [picasa-ss-mageia-razorqt-kwin]: https://lh3.googleusercontent.com/-E9CIA0Lv0pc/Vz2oakhiJII/AAAAAAAAARk/g407bDQc_scCxk75HWAhkzCXzoyxcC6CgCCo/s0/mageia-razorqt-kwin.png
+
+[related-debian-install]: {{ site.url }}/opensource/2014/01/02/debian-post-install-log.html
+[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html

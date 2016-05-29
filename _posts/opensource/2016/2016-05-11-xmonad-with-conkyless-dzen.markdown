@@ -100,6 +100,26 @@ And pipe the native IO process to dzen2.
 
 Well. As a haskell n00b. I must admit still don't know how to do it.
 
+-- -- --
+
+**Related Links**
+
+* [XMonad Tiling Window Manager][related-xmonad-twm]
+
+* [XMonad Menu Bar][related-xmonad-bar]
+
+* [Modularized XMonad Config][related-xmonad-modularized]
+
+* [How Haskell Syntax can Make Your Code Cleaner][related-haskell-syntax]
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
 [dotfiles-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs
 [image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/05/xmonad-with-conkyless-dzen.png
 [picasa-ss-xmonad]: https://lh3.googleusercontent.com/-IaiuuSzgdMI/VzmdPYfRF-I/AAAAAAAAAMQ/BEnRnFrCFsw0CnK0oosnfrxRL975EZB4QCCo/s0/xmonad-with-conkyless-dzen.png
+
+
+[related-xmonad-bar]: {{ site.url }}/opensource/2014/12/15/xmonad-menu-bar.html
+[related-xmonad-modularized]: {{ site.url }}/opensource/2016/03/26/modularized-xmonad-config.html
+[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html
+[related-haskell-syntax]: {{ site.url }}/opensource/2016/05/14/haskell-dollar-syntax.html

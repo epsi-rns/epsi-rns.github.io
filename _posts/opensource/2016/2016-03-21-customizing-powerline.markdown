@@ -50,6 +50,7 @@ Happy terminal customizing
 **Reading**:<br/>
 * [http://powerline.readthedocs.org/.../common.html][docs-powerline]
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [docs-powerline]: http://powerline.readthedocs.org/en/master/configuration/segments/common.html
 [dotfiles-powerline]: https://github.com/epsi-rns/dotfiles/tree/master/config/powerline

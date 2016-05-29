@@ -99,16 +99,29 @@ Here is my screenshot.
 [![LXC Package][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
 <br/>
 
-* * *
+
+-- -- --
+
+**Related Links**
+
+* [Docker Demonstration (Manjaro)][related-docker-manjaro]
+
+* [Running Guest OS via Docker on top of Debian for the first time][related-docker-debian]
+
+-- -- --
 
 Between VM, LXC, Docker, Multiboot.
 What do you think of LXC as cheap way to learn about other distribution ?
 
 Thank you for reading.
 
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-lxc-screenfetch]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-screenfetch.png
 [picasa-ss-lxc-screenfetch]: https://lh3.googleusercontent.com/-3P3Mo-dD3BM/Vzmd1cgqRbI/AAAAAAAAAMk/Eve6CDNrio4Lu6IWV1VO-33XzJyl3LXLwCCo/s0/lxc-screenfetch.png
 [image-ss-lxc-package]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-package.png
 [picasa-ss-lxc-package]: https://lh3.googleusercontent.com/-ymDyCDSEAtM/Vzmd1xbH2sI/AAAAAAAAAMk/48SelNtqDcIR0aFNvfSfluICHUG_lp7YQCCo/s0/lxc-package.png
+
+[related-docker-manjaro]: {{ site.url }}/opensource/2016/03/03/docker-demonstration-manjaro.html
+[related-docker-debian]: {{ site.url }}/opensource/2016/03/09/docker-demonstration-debian.html
 

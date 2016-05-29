@@ -151,7 +151,7 @@ Note: Go with one distro that matches your desired path: Casual user, Enthusiast
 
 * read more about other system
 
-	+ hurd/redox, xfs/btrfs, pulseaudio, wayland/mir, llvm.
+	+ hurd/redox, xfs/btrfs, lxc/docker, pulseaudio, wayland/mir, llvm.
 
 <br/>
 

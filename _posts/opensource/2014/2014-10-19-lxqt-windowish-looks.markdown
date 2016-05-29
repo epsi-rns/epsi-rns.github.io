@@ -78,8 +78,19 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 
 * <http://www.webupd8.org/2014/10/lxqt-080-released-with-full-qt5-support.html>
 
+-- -- --
 
+**Related Links**
 
+* [Gnome Shell Customization][related-gnome-shell]
+
+* [Selfieshoot of Hilarious XFCE4 Customization][related-xfce4-de]
+
+* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
+
+* [My Mageia Experiment][related-mageia-experiment]
+
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-windowish-qterminal.jpg
 [picasa-ss-lxqt-windowish-qterminal]: https://lh3.googleusercontent.com/-IPO0PJsixLA/Vz2oPpdtlZI/AAAAAAAAARk/8ULYS4s6VZQZCTkmPREfriLVOUVoEwa1QCCo/s0/lxqt-windowish-qterminal.jpg
@@ -88,3 +99,7 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 [image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-kwin-ghost.png
 [picasa-ss-lxqt-kwin-ghost]: https://lh3.googleusercontent.com/-O1lrxW7hG0s/Vz2oP_WHnPI/AAAAAAAAARk/jPtqGovDKk8Q_aSMa6Yae6n311AY2GCNQCCo/s0/lxqt-kwin-ghost.png
 
+[related-gnome-shell]: {{ site.url }}/opensource/2014/04/22/gnome-shell-a-very-common.html
+[related-xfce4-de]: {{ site.url }}/opensource/2014/05/14/xfce4-hilarious-selfieshoot.html
+[related-mageia-experiment]: {{ site.url }}/opensource/2014/05/09/mageia-experiment.html
+[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html

@@ -148,10 +148,30 @@ Source
 
 -- -- --
 
+**Related Links**
+
+* [XMonad Menu Bar][related-xmonad-bar]
+
+* [Modularized XMonad Config][related-xmonad-modularized]
+
+* [XMonad with Conkyless Dzen][related-xmonad-conkyless]
+
+* [How Haskell Syntax can Make Your Code Cleaner][related-haskell-syntax]
+
+* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
+
+* [Fluxbox Stacking Window Manager][related-fluxbox-swm]
+
+* [Awesome WM, Tiling WM for beginner][related-awesome-twm]
+
+* [i3 Window manager with i3 Bar][related-i3-twm]
+
+-- -- --
+
 I think that's all.
 Five selfieshoot are worth five thousand words
 
-
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [dotfiles-xmobar]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-xmobar/
 [dotfiles-dzen]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen/
@@ -168,3 +188,13 @@ Five selfieshoot are worth five thousand words
 [image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-dzen2-five-terms.png
 [picasa-ss-dzen2-five-terms]: https://lh3.googleusercontent.com/-sAfgbEpNTAs/Vz2mYpQ_MpI/AAAAAAAAAO8/E9gCAtDPoIgjnsMKNoGnY94v2QhSLOSVACCo/s0/xmonad-five-terms.png
 
+[related-xmonad-bar]: {{ site.url }}/opensource/2014/12/15/xmonad-menu-bar.html
+[related-xmonad-modularized]: {{ site.url }}/opensource/2016/03/26/modularized-xmonad-config.html
+[related-xmonad-conkyless]: {{ site.url }}/opensource/2016/05/11/xmonad-with-conkyless-dzen.html
+[related-haskell-syntax]: {{ site.url }}/opensource/2016/05/14/haskell-dollar-syntax.html
+
+[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html 
+[related-fluxbox-swm]: {{ site.url }}/opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
+[related-awesome-twm]: {{ site.url }}/opensource/2014/11/30/awesome.html
+[related-i3-twm]: {{ site.url }}/opensource/2014/12/06/i3-i3bar.html
+[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html
