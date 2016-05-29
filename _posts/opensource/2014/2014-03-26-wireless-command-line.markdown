@@ -1,15 +1,19 @@
 ---
 layout: post
 title:  "Wireless in Command Line"
-date:   2014-03-13 18:31:15 +0700
+date:   2014-03-13 18:32:15 +0700
 categories: opensource
 tags: [thought, network]
 author: epsi
+
 excerpt:
   Even if you have installed your linux successfully 
   you still need to know your own hardware. 
   This article also useful to debug networking issue, 
   especially for first time linux install.
+
+related_link_ids: 
+  - 14040246  # Arch Install
 
 ---
 
@@ -251,12 +255,6 @@ Now you can ping
 
 [Arch Wiki: Wireless Network Configuration][link-archwiki]
 
-**Related Links**
-
-* [Arch - Install/ Post Install Log][related-arch-install]
-
-
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/opensource/2014/03' %}
@@ -293,5 +291,3 @@ Now you can ping
 [link-archwiki]: https://wiki.archlinux.org/index.php/Wireless_network_configuration
 [local-lamp]: {{ site.url }}/opensource/2015/10/16/lamp-stack-manjaro-openrc.html
 
-
-[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html

@@ -5,9 +5,14 @@ date:   2015-02-13 08:48:15 +0700
 categories: opensource
 tags: [screenshot, xfce4]
 author: epsi
+
 excerpt:
   XFCE4 is great, so simple, but yet it has this cool simple tiling.
   It is a built in feature, that some people forget to explore.
+
+related_link_ids: 
+  - 14051435  # Selfieshoot of XFCE4 Customization
+
 ---
 
 Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an edge of the screen. It does so by resizing it to fit the top half of the screen. "

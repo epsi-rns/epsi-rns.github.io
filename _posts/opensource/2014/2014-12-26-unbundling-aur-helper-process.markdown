@@ -5,10 +5,18 @@ date:   2014-12-26 18:08:15 +0700
 categories: opensource
 tags: [arch, aur, package manager]
 author: epsi
+
 excerpt:
   For those who are really tired of how easy yaourt (or packer) is. 
   You may consider 'cower' to download  PKGBUILD from AUR manually. 
   So you can 'makepkg' manually.
+
+related_link_ids: 
+  - 14040246  # Arch Install
+  - 16020803  # Update Arch no Bloated  
+  - 14042750  # BlackArch as Repository
+  - 14122758  # Selectively BlackArch Tools"  
+
 ---
 
 One advantage of Arch based distrbution is access to AUR (Arch User Repository).

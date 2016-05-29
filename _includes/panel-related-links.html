@@ -1,0 +1,20 @@
+{% unless page.related_link_ids == nil or page.related_link_ids == empty %}
+<div class="panel panel-primary hidden-sm">
+  <div class="panel-heading">
+    <h3 class="panel-title">Related Links</h3>
+  </div>
+  <div class="panel-body">
+  <ul class="recent-post">
+    {% for link_id in page.related_link_ids %}
+    <li>
+      {% for dpost in site.data.all_posts %}
+      {% if dpost.id == link_id %}
+        <a href="{{ site.baseurl}}{{ dpost.url }}">{{ dpost.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>
+{% endunless %}

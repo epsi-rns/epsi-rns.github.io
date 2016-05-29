@@ -5,11 +5,13 @@ date:   2016-04-21 21:39:15 +0700
 categories: opensource
 tags: [app, kde]
 author: epsi
+
 excerpt:
   If you got bored with popular application,
   compiling and installing this two can be fun.
   FatRat is almost as cool as Transmission.
   And this Cantata MPD Client have a very nice looks.
+  
 ---
 
 # Introducing 2 KDE Applications

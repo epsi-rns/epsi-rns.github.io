@@ -5,6 +5,7 @@ date:   2014-11-28 04:19:15 +0700
 categories: opensource
 tags: [init]
 author: epsi
+
 excerpt:
   I don't worry about the controversy. 
   And even with this long list, my judgment could be wrong.

@@ -5,11 +5,19 @@ date:   2014-11-02 03:02:15 +0700
 categories: opensource
 tags: [screenshot, openbox, tint2, ricing]
 author: epsi
+
 excerpt:
   I recommend beginner to learn Openbox.
   Openbox can be used as a standalone Window Manager,
   or as a Window Manager that holds a DE (Desktop Environment). 
   In fact, Openbox is the only Stacking WM that I use daily.  
+
+related_link_ids: 
+  - 14110804  # Fluxbox SWM
+  - 14113019  # Awesome TWM Beginner  
+  - 14120646  # i3 TWM
+  - 14121259  # XMonad Tiling
+
 ---
 
 I recommend beginner to learn Openbox.
@@ -94,19 +102,6 @@ Or make your own cool tint2 taskbar based on this thread.
 
 * <http://crunchbang.org/forums/viewtopic.php?id=3232>
 
--- -- --
-
-**Related Links**
-
-* [Fluxbox Stacking Window Manager][related-fluxbox-swm]
-
-* [i3 Window manager with i3 Bar][related-i3-twm]
-
-* [Awesome WM, Tiling WM for beginner][related-awesome-twm]
-
-* [XMonad Tiling Window Manager][related-xmonad-twm]
-
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
@@ -114,8 +109,3 @@ Or make your own cool tint2 taskbar based on this thread.
 [picasa-ss-openbox]: https://lh3.googleusercontent.com/-IAK0W6hIhVg/Vz2oEHxs41I/AAAAAAAAARc/PioYvuCxLy8Tqy2h2LacXQoP-I4TdC_MgCCo/s0/openbox-green-garden.png
 [image-ss-openbox-clone]: {{ site.url }}/assets/posts/opensource/2014/11/openbox-arch-crunchbang-clone.png
 [picasa-ss-openbox-clone]: https://lh3.googleusercontent.com/-FfVK47gbWnI/Vz2n78YRaXI/AAAAAAAAARM/i2ix7ajBjhYrAk0VXi_EsPxa382GhzZ_ACCo/s0/openbox-arch-crunchbang-clone.png
-
-[related-fluxbox-swm]: {{ site.url }}/opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
-[related-awesome-twm]: {{ site.url }}/opensource/2014/11/30/awesome.html
-[related-i3-twm]: {{ site.url }}/opensource/2014/12/06/i3-i3bar.html
-[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html

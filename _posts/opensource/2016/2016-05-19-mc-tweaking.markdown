@@ -4,11 +4,13 @@ title:  "Midnight Commander Tweaking"
 categories: opensource
 tags: [ricing, dotfiles]
 author: epsi
+
 excerpt:
   Talking about screenshot, MC has one advantage.
   It show directories and path, so we can focus on the place better.
   MC skin can be set to transparent.
   MC layout can be changed to vertical or horizontal.
+
 ---
 
 I like to help user solving their problem in facebook group.

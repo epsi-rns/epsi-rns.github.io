@@ -1,0 +1,13 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+# Helper for related links
+
+{% for post in site.posts %}{% unless post.published == false %}{% if post.date %}
+- id: {{ post.date | date: "%y%m%d%M" }}
+  title: "{{ post.title }}"
+  url: {{ post.url }}
+{% endif %}{% endunless %}{% endfor %}
+

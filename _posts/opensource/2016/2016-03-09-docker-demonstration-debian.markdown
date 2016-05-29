@@ -5,10 +5,16 @@ date:   2016-03-09 23:00:15 +0700
 categories: opensource
 tags: [cloud, docker, package manager]
 author: epsi
+
 excerpt:
   Yet another Docker showcase. Now using Debian.
   Docker is supposed to do one special thing.
   But this is not a limit. Just use your imagination.
+
+related_link_ids: 
+  - 16022800  # Learn LXC
+  - 16030301  # Docker Manjaro
+  
 ---
 
 **Disclaimer**: I'm a beginner in cloud area.
@@ -45,20 +51,9 @@ excerpt:
 * <https://docs.docker.com/engine/quickstart/>
 
 
--- -- --
-
-**Related Links**
-
-* [Learn Different Package Management Using LXC][related-lxc-demo]
-
-* [Docker Demonstration (Manjaro)][related-docker-manjaro]
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
 [image-ss]: {{ site.url }}/assets/posts/opensource/2016/03/debian-docker-ogs.png
 [picasa-ss]: https://lh3.googleusercontent.com/-9pzAp7TS8ag/VzmdeUrMz9I/AAAAAAAAAMk/GfQI72Rmdz8t-9CEjWI9-E2Y-jFUvVwfQCCo/s0/debian-docker-ogs.png
 
-
-[related-docker-manjaro]: {{ site.url }}/opensource/2016/03/03/docker-demonstration-manjaro.html
-[related-lxc-demo]: {{ site.url }}/opensource/2016/02/28/lxc-demonstration.html

@@ -5,11 +5,17 @@ date:   2016-02-28 23:00:15 +0700
 categories: opensource
 tags: [cloud, lxc, package manager]
 author: epsi
+
 excerpt:
   There are interesting differences between major distribution.
   One interest most is how they manage their packages.
   This is a cheap way to learn different package management 
   from major linux distribution using Linux Container.
+
+related_link_ids: 
+  - 16030301  # Docker Manjaro
+  - 16030900  # Docker Debian  
+
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Linux Container.
@@ -99,15 +105,6 @@ Here is my screenshot.
 [![LXC Package][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
 <br/>
 
-
--- -- --
-
-**Related Links**
-
-* [Docker Demonstration (Manjaro)][related-docker-manjaro]
-
-* [Running Guest OS via Docker on top of Debian for the first time][related-docker-debian]
-
 -- -- --
 
 Between VM, LXC, Docker, Multiboot.
@@ -122,6 +119,4 @@ Thank you for reading.
 [image-ss-lxc-package]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-package.png
 [picasa-ss-lxc-package]: https://lh3.googleusercontent.com/-ymDyCDSEAtM/Vzmd1xbH2sI/AAAAAAAAAMk/48SelNtqDcIR0aFNvfSfluICHUG_lp7YQCCo/s0/lxc-package.png
 
-[related-docker-manjaro]: {{ site.url }}/opensource/2016/03/03/docker-demonstration-manjaro.html
-[related-docker-debian]: {{ site.url }}/opensource/2016/03/09/docker-demonstration-debian.html
 

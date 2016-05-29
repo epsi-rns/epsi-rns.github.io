@@ -5,8 +5,14 @@ date:   2014-03-13 18:31:15 +0700
 categories: opensource
 tags: [thought]
 author: epsi
+
 excerpt:
   Based on my experience.
+
+related_link_ids: 
+  - 14010246  # Debian Install
+  - 14040246  # Arch Install
+
 ---
 
 This is a remake of my facebook note with the same title.
@@ -184,14 +190,6 @@ For more information you can
  $ man mount
 {% endhighlight %}
 
--- -- --
-
-**Related Links**
-
-* [Debian Wheezy - Post Install Log][related-debian-install]
-
-* [Arch - Install/ Post Install Log][related-arch-install]
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -207,8 +205,3 @@ For more information you can
 [picasa-fstab]: https://lh3.googleusercontent.com/-mAKigVFD_jQ/Vz8xonY3EoI/AAAAAAAAASM/Vaaevax_L8EiXgOHf941gl-xhZ2IVZAtACCo/s0/multiboot-fstab-sample.png
 [image-cfdisk]: {{ asset_path }}/multiboot-cfdisk.png
 [picasa-cfdisk]: https://lh3.googleusercontent.com/-b7Rq9Em3r0U/Vz8xoaAfTSI/AAAAAAAAASI/3OSTznOKhxkVdX-npq3zwpW-WPRMgH96ACCo/s0/multiboot-cfdisk.png
-
-[related-debian-install]: {{ site.url }}/opensource/2014/01/02/debian-post-install-log.html
-[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
-
-

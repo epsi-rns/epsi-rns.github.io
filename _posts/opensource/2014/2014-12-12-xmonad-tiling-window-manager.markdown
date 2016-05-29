@@ -5,11 +5,23 @@ date:   2014-12-12 22:59:15 +0700
 categories: opensource
 tags: [screenshot, xmonad, dotfiles]
 author: epsi
+
 excerpt: 
   This show case show you the looks of Tiling Window Manager with XMonad.
   XMonad is an amazing Tiling Window Manager. 
   Its configuration written in Haskell,
   so you can make a very flexible configuration.
+
+related_link_ids: 
+  - 14121558  # XMonad Menu Bar
+  - 16032658  # Modularized XMonad Config  
+  - 16051102  # XMonad with Conkyless Dzen
+  - 16051403  # How Haskell Syntax
+  - 14110202  # Openbox SWM
+  - 14110804  # Fluxbox SWM
+  - 14113019  # Awesome TWM Beginner
+  - 14120646  # i3 TWM
+
 ---
 
 This show case show you the looks of Tiling Window Manager with XMonad.
@@ -148,26 +160,6 @@ Source
 
 -- -- --
 
-**Related Links**
-
-* [XMonad Menu Bar][related-xmonad-bar]
-
-* [Modularized XMonad Config][related-xmonad-modularized]
-
-* [XMonad with Conkyless Dzen][related-xmonad-conkyless]
-
-* [How Haskell Syntax can Make Your Code Cleaner][related-haskell-syntax]
-
-* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
-
-* [Fluxbox Stacking Window Manager][related-fluxbox-swm]
-
-* [Awesome WM, Tiling WM for beginner][related-awesome-twm]
-
-* [i3 Window manager with i3 Bar][related-i3-twm]
-
--- -- --
-
 I think that's all.
 Five selfieshoot are worth five thousand words
 
@@ -187,14 +179,3 @@ Five selfieshoot are worth five thousand words
 [picasa-ss-dzen2]: https://lh3.googleusercontent.com/-gG9fubXyTpI/Vz2m_RPgSEI/AAAAAAAAAP8/ZNXGlGJrb3YTKH5jFDAcFj5sGBxBWGVywCCo/s0/xmonad-dzen2.png
 [image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-dzen2-five-terms.png
 [picasa-ss-dzen2-five-terms]: https://lh3.googleusercontent.com/-sAfgbEpNTAs/Vz2mYpQ_MpI/AAAAAAAAAO8/E9gCAtDPoIgjnsMKNoGnY94v2QhSLOSVACCo/s0/xmonad-five-terms.png
-
-[related-xmonad-bar]: {{ site.url }}/opensource/2014/12/15/xmonad-menu-bar.html
-[related-xmonad-modularized]: {{ site.url }}/opensource/2016/03/26/modularized-xmonad-config.html
-[related-xmonad-conkyless]: {{ site.url }}/opensource/2016/05/11/xmonad-with-conkyless-dzen.html
-[related-haskell-syntax]: {{ site.url }}/opensource/2016/05/14/haskell-dollar-syntax.html
-
-[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html 
-[related-fluxbox-swm]: {{ site.url }}/opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
-[related-awesome-twm]: {{ site.url }}/opensource/2014/11/30/awesome.html
-[related-i3-twm]: {{ site.url }}/opensource/2014/12/06/i3-i3bar.html
-[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html

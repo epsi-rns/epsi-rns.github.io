@@ -5,7 +5,11 @@ date:   2014-02-22 21:29:15 +0700
 categories: opensource
 tags: [debian, package manager]
 author: epsi
+
 excerpt:
+  On January 2012, I wrote myself a note.
+  A complain about how slow python3 migration is.
+  And also about gtk3 adoption rate in Debian.
 
 ---
 

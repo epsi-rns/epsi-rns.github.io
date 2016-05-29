@@ -5,10 +5,19 @@ date:   2014-11-30 04:19:15 +0700
 categories: opensource
 tags: [screenshot, awesome]
 author: epsi
+
 excerpt:
   I t needs transition to become a Tiling Window Manager user.
   I recommend Awesome WM for first time Tiling Window Manager.
   It is not intimidating, as it still has built in menu.
+
+related_link_ids: 
+  - 16031941  # Refactoring Awesome
+  - 14110202  # Openbox SWM
+  - 14110804  # Fluxbox SWM
+  - 14120646  # i3 TWM
+  - 14121259  # XMonad Tiling
+
 ---
 
 I recommend Awesome WM for first time Tiling Window Manager.
@@ -68,28 +77,8 @@ how amazing Awesome is, when it blend with console.
 
 The Wallpaper from Awesome theme is stunningly beautiful.
 
--- -- --
-
-**Related Links**
-
-* [Refactoring Awesome WM's Lua Configuration Script][related-awesome-refactoring]
-
-* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
-
-* [Fluxbox Stacking Window Manager][related-fluxbox-swm]
-
-* [i3 Window manager with i3 Bar][related-i3-twm]
-
-* [XMonad Tiling Window Manager][related-xmonad-twm]
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome]: {{ site.url }}/assets/posts/opensource/2014/11/awesome.png
 [picasa-ss-awesome]: https://lh3.googleusercontent.com/-NgcARBSpJEc/Vz2oASMylYI/AAAAAAAAARM/3IssneEeNb8JDV6NUZoS2rPNz5FHp3CQQCCo/s0/awesome.png
-
-[related-awesome-refactoring]: {{ site.url }}/opensource/2016/03/19/refactoring-awesome-lua-configuration.html
-
-[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html
-[related-fluxbox-swm]: {{ site.url }}/opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
-[related-i3-twm]: {{ site.url }}/opensource/2014/12/06/i3-i3bar.html
-[related-xmonad-twm]: {{ site.url }}/opensource/2014/12/12/xmonad-tiling-window-manager.html

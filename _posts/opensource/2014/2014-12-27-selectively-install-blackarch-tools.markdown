@@ -6,10 +6,18 @@ date:   2014-12-27 11:58:15 +0700
 categories: opensource
 tags: [security, blackarch, package manager]
 author: epsi
+
 excerpt:
   With BlackArch you can install tools by category.
   One category today. And other category the day after.
   You can install only what you need. And keep our system clean.
+
+related_link_ids: 
+  - 14040246  # Arch Install
+  - 16020803  # Update Arch no Bloated  
+  - 14122608  # Unbundling AUR
+  - 14042750  # BlackArch as Repository
+
 ---
 
 Today Tips: Selectively install BlackArch tools for those who has limited bandwith.
@@ -73,18 +81,6 @@ Have a good day everyone :-)
 
 -- -- --
 
-**Related Links**
-
-* [Arch - Install/ Post Install Log][related-arch-install]
-
-* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
-
-* [Unbundling AUR Helper Process][related-unbundling-aur]
-
-* [Install BlackArch as Repository][related-blackarch-repository]
-
--- -- --
-
 Note: Today is my favorite day.
 
 
@@ -93,9 +89,3 @@ Note: Today is my favorite day.
 [image-ss-blackarch-categories]: {{ site.url }}/assets/posts/opensource/2014/12/blackarch-categories.png
 [picasa-ss-blackarch-categories]: https://lh3.googleusercontent.com/-uisDp583fFM/Vz2mMzmvGcI/AAAAAAAAAOs/TVZfwXZJOtcGKnoWweLoNXraRD9jW_KnwCCo/s0/blackarch-categories.png
 [image-ss-blackarch-all-categories]: {{ site.url }}/assets/posts/opensource/2014/12/blackarch-all-categories.png
-
-[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
-[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
-[related-unbundling-aur]: {{ site.url }}/opensource/2014/12/26/unbundling-aur-helper-process.html
-[related-blackarch-repository]: {{ site.url }}/opensource/2014/04/27/install-blackarch-as-repository.html
-

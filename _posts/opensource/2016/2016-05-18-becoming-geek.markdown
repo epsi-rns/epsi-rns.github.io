@@ -6,12 +6,14 @@ tags: [thought, about]
 author: epsi
 opengraph:
   image: assets/images/authors/epsi-vexel.png
+  
 excerpt:
   There are so many things to say.
   I don't want to live in regrets.
   So I make this blog.
   It's not that I need to share.
   I just want to back these thought up to cloud.  
+  
 ---
 
 	There are so many things to say.

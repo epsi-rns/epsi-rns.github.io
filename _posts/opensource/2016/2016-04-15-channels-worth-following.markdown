@@ -5,10 +5,12 @@ date:   2016-04-15 23:07:15 +0700
 categories: opensource
 tags: [inkscape, design, news]
 author: epsi
+
 excerpt: >
   Let's get smarter by following this worth Channel: 
   Phoronix, The Hacker News, OpenSouce, FOSS Bytes, Linux Today, and TecMint.
   Please add if you know any cool channels. 
+  
 ---
 
 This is actualy my question in a forum.<br/><br/>

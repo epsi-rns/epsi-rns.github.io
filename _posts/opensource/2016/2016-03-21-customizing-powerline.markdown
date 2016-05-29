@@ -5,9 +5,11 @@ date:   2016-03-21 19:17:15 +0700
 categories: opensource
 tags: [ricing, powerline, dotfiles]
 author: epsi
+
 excerpt: 
   For those who wants to looks cool with their console screenshot.
   Or people who does ricing a lot. Well, Powerline is for you.
+  
 ---
 
 Dear command line fans, here is my 2 cents, powerline configuration.<br/>

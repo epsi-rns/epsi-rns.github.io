@@ -5,11 +5,19 @@ date:   2014-04-27 14:50:15 +0700
 # published: false
 categories: opensource
 tags: [security, blackarch,package manager]
-author: epsi 
+author: epsi
+ 
 excerpt:
   There is no need to install BlackArch or ArchAssault as a full distribution.
   With any distribution utilized pacman, any of these can be instaled as a repository. 
   So you can have BlackArch, or BlackManjaro or ManjaroAssault or BlackAntergos.
+
+related_link_ids: 
+  - 14040246  # Arch Install
+  - 16020803  # Update Arch no Bloated  
+  - 14122608  # Unbundling AUR
+  - 14122758  # Selectively BlackArch Tools"
+  
 ---
 
 There is no need to install BlackArch or ArchAssault as a full distribution.
@@ -56,16 +64,6 @@ I'm still having a hard time while doing blackman.
 
 This one has not been solved yet.
 
-**Related Links**
-
-* [Arch - Install/ Post Install Log][related-arch-install]
-
-* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
-
-* [Unbundling AUR Helper Process][related-unbundling-aur]
-
-* [Selectively Install BlackArch Tools][related-blackarch-selectively]
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
@@ -73,8 +71,3 @@ This one has not been solved yet.
 [picasa-ss-blackarch-keyring]: https://lh3.googleusercontent.com/-vxylPl4aXfY/Vz2okEH1u_I/AAAAAAAAARs/oowH1cKidiIWOqz8_Fm1sL-J2Gk7PFQSwCCo/s0/blackarch-keyring-full.png
 [image-ss-blackman-issue]: {{ site.url }}/assets/posts/opensource/2014/04/blackman-issue.png
 [picasa-ss-blackman-issue]: https://lh3.googleusercontent.com/-mlwqCRJBFxQ/Vz2oluHQN6I/AAAAAAAAARs/LZnq4igNeX4V7E3LyY7e7miSs5yeWDV5ACCo/s0/blackman-issue.png
-
-[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
-[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
-[related-unbundling-aur]: {{ site.url }}/opensource/2014/12/26/unbundling-aur-helper-process.html
-[related-blackarch-selectively]: {{ site.url }}/opensource/2014/12/27/selectively-install-blackarch-tools.html

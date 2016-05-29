@@ -5,10 +5,16 @@ date:   2016-03-03 13:01:15 +0700
 categories: opensource
 tags: [cloud, docker, package manager]
 author: epsi
+
 excerpt: 
   A cheap way to learn different package management 
   from major linux distribution using Docker.
   No need Virtual Machine nor Multiboot. Easy to setup.
+
+related_link_ids: 
+  - 16022800  # Learn LXC
+  - 16030900  # Docker Debian   
+
 ---
 
 **Description**: A cheap way to learn different package management from major linux distribution using Docker. No need Virtual Machine nor Multiboot. Easy to setup.
@@ -48,21 +54,9 @@ Note: just another nix's porn. :-\ <br/>
 
 * <https://docs.docker.com/engine/quickstart/>
 
--- -- --
-
-**Related Links**
-
-* [Learn Different Package Management Using LXC][related-lxc-demo]
-
-* [Running Guest OS via Docker on top of Debian for the first time][related-docker-debian]
-
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-fki]: {{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-fki.png
 [picasa-ss-fki]: https://lh3.googleusercontent.com/-j_6ANwMOhoo/VzmdhK000OI/AAAAAAAAAMk/F4HfQ71QX3w5fJUyDfQcNo2ZEUhKPa9OwCCo/s0/manjaro-docker-fki.png
 [image-ss-gs]: {{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-gs.png
 [picasa-ss-gs]: https://lh3.googleusercontent.com/-ZPn9TJf78Gw/VzmdkuxR7SI/AAAAAAAAAMk/IZi4ITsH8JUwKw3b77i5EEux39-krfXSgCCo/s0/manjaro-docker-gs.png
-
-[related-lxc-demo]: {{ site.url }}/opensource/2016/02/28/lxc-demonstration.html
-[related-docker-debian]: {{ site.url }}/opensource/2016/03/09/docker-demonstration-debian.html

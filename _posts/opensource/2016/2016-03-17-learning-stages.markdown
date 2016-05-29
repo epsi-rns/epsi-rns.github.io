@@ -5,10 +5,12 @@ date:   2016-03-17 23:00:15 +0700
 categories: opensource
 tags: [thought]
 author: epsi
+
 excerpt: 
   This is a most common issue from n00b in a community group.
   Some even don't know what to ask. Don't know where to start.
   So I make a guidance. 
+  
 ---
 
 There are stages. From beginner to enthusiast.

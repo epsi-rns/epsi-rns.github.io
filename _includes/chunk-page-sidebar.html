@@ -1,34 +1,9 @@
 
-<div class="panel panel-primary hidden-sm">
-  <div class="panel-heading">
-    <h3 class="panel-title">Recent Posts</h3>
-  </div>
-  <div class="panel-body">
-  <ul class="recent-post">
-    {% for post in site.posts limit:5 %}
-    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-  </div>
-</div>
 
-{% if site.service.google_adsense %}
-<div class="panel panel-primary">
-  <div class="panel-body">
-  {% include google-adsense.html %}
-  </div>
-</div>
-{% endif %}
+{% include panel-recent-post.html %}
+{% include google-adsense.html %}
 
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Tags</h3>
-  </div>
-  <div class="panel-body">
-    {% for tag in site.tags %}      
-      <a href="{{ site.baseurl }}/pages/tag#{{ tag[0] }}">
-          <span class="label label-tag"><span class="fa fa-tag"></span> {{ tag[0] }}</span>
-      </a>&nbsp;
-    {% endfor %}
-  </div>
-</div> 
+{% assign view_tag_type = 'before' %}
+{% include panel-tags.html %}
+
+

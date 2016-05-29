@@ -30,13 +30,15 @@ sitemap:
     {% endunless %}
   {% endfor %}
 
+  {% assign allowed = "html|md|xml" | split: "|" %}
   {% for page in site.pages %}
     {% assign split_path = page.path | split: "." %}
     {% assign extension = split_path | last %}
 
-    {% if page.sitemap.exclude != "yes" and extension == "html" and page.path != "/404.html" %}
+    {% if page.sitemap.exclude == nil or page.sitemap.exclude != true %}
+    {% if allowed contains extension and page.path != "/404.html" %}
     <url>
-      <loc>{{ site.url }}{{ page.permalink | remove: "index.html" }}</loc>
+      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
       {% if page.sitemap.lastmod %}
         <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% elsif page.date %}
@@ -56,8 +58,10 @@ sitemap:
       {% endif %}
     </url>
     {% endif %}
+    {% endif %}
   {% endfor %}
-
+  
+  {% comment %}
   {% for collection in site.collections %}
     {% if collection[1].output %}
       {% for doc in collection[1].docs %}
@@ -84,4 +88,5 @@ sitemap:
       {% endfor %}
     {% endif %}
   {% endfor %}
+  {% endcomment %}  
 </urlset>

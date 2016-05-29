@@ -5,10 +5,18 @@ date:   2014-10-19 11:49:15 +0700
 categories: opensource
 tags: [screenshot, lxqt]
 author: epsi
+
 excerpt:
   This is not a prank.
   You can have this Windowish looks with Arch LXQT.
   And be happy with it.
+
+related_link_ids: 
+  - 14042218  # Gnome Shell Customization
+  - 14051435  # Selfieshoot of XFCE4 Customization
+  - 14110202  # Openbox SWM
+  - 14050934  # My Mageia Experiment
+
 ---
 
 This is not a prank.
@@ -78,17 +86,6 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 
 * <http://www.webupd8.org/2014/10/lxqt-080-released-with-full-qt5-support.html>
 
--- -- --
-
-**Related Links**
-
-* [Gnome Shell Customization][related-gnome-shell]
-
-* [Selfieshoot of Hilarious XFCE4 Customization][related-xfce4-de]
-
-* [Standalone Openbox WM with Tint2 Panel][related-openbox-swm]
-
-* [My Mageia Experiment][related-mageia-experiment]
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -98,8 +95,3 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 [picasa-ss-lxqt-windowish-pcmanfm]: https://lh3.googleusercontent.com/-pqSo498Nyao/Vz2oO1HCQwI/AAAAAAAAARc/FKvMWDI1aPsYYvrPxtp3j8zSir9IZunBACCo/s0/lxqt-windowish-pcmanfm.jpg
 [image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-kwin-ghost.png
 [picasa-ss-lxqt-kwin-ghost]: https://lh3.googleusercontent.com/-O1lrxW7hG0s/Vz2oP_WHnPI/AAAAAAAAARk/jPtqGovDKk8Q_aSMa6Yae6n311AY2GCNQCCo/s0/lxqt-kwin-ghost.png
-
-[related-gnome-shell]: {{ site.url }}/opensource/2014/04/22/gnome-shell-a-very-common.html
-[related-xfce4-de]: {{ site.url }}/opensource/2014/05/14/xfce4-hilarious-selfieshoot.html
-[related-mageia-experiment]: {{ site.url }}/opensource/2014/05/09/mageia-experiment.html
-[related-openbox-swm]: {{ site.url }}/opensource/2014/11/02/openbox-standalone.html

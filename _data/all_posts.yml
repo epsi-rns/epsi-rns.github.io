@@ -1,0 +1,168 @@
+# Helper for related links
+
+
+- id: 16051900
+  title: "Midnight Commander Tweaking"
+  url: /opensource/2016/05/19/mc-tweaking.html
+
+- id: 16051800
+  title: "Becoming a Geek"
+  url: /opensource/2016/05/18/becoming-geek.html
+
+- id: 16051403
+  title: "How Haskell Syntax can Make Your Code Cleaner"
+  url: /opensource/2016/05/14/haskell-dollar-syntax.html
+
+- id: 16051102
+  title: "XMonad with Conkyless Dzen"
+  url: /opensource/2016/05/11/xmonad-with-conkyless-dzen.html
+
+- id: 16042139
+  title: "Introducing FatRat and Cantata"
+  url: /opensource/2016/04/21/introducing-fatrat-cantata.html
+
+- id: 16041507
+  title: "Channels Worth Following"
+  url: /opensource/2016/04/15/channels-worth-following.html
+
+- id: 16032902
+  title: "Two Languages of The Future"
+  url: /opensource/2016/03/29/two-languages-of-the-future.html
+
+- id: 16032658
+  title: "Modularized XMonad Config"
+  url: /opensource/2016/03/26/modularized-xmonad-config.html
+
+- id: 16032117
+  title: "Customizing Shell Prompt with Powerline"
+  url: /opensource/2016/03/21/customizing-powerline.html
+
+- id: 16032038
+  title: "Console Pixel Art"
+  url: /opensource/2016/03/20/console-pixel-art.html
+
+- id: 16031941
+  title: "Refactoring Awesome WM's Lua Configuration Script"
+  url: /opensource/2016/03/19/refactoring-awesome-lua-configuration.html
+
+- id: 16031700
+  title: "Learning Stages, from Beginner to Enthusiast"
+  url: /opensource/2016/03/17/learning-stages.html
+
+- id: 16030900
+  title: "Running Guest OS via Docker on top of Debian for the first time"
+  url: /opensource/2016/03/09/docker-demonstration-debian.html
+
+- id: 16030301
+  title: "Docker Demonstration (Manjaro)"
+  url: /opensource/2016/03/03/docker-demonstration-manjaro.html
+
+- id: 16022800
+  title: "Learn Different Package Management Using LXC"
+  url: /opensource/2016/02/28/lxc-demonstration.html
+
+- id: 16020803
+  title: "Update Arch Linux without Unnecessary Bloated Package"
+  url: /opensource/2016/02/08/pacman-ignorepkg.html
+
+- id: 15101649
+  title: "Setup LAMP stack with Manjaro OpenRC"
+  url: /opensource/2015/10/16/lamp-stack-manjaro-openrc.html
+
+- id: 15090658
+  title: "Inkscape: Vexel Face Tracing"
+  url: /design/2015/09/06/inkscape-vexel-face-tracing.html
+
+- id: 15090348
+  title: "Inkscape: Logo with Stamp Ornament"
+  url: /design/2015/09/03/inkscape-stamp-logo.html
+
+- id: 15031749
+  title: "Debian APT Pinning"
+  url: /opensource/2015/03/17/apt-pinning.html
+
+- id: 15021348
+  title: "Minimalist XFCE4 with Limited Tiling Support"
+  url: /opensource/2015/02/13/xfce4-minimalis-tiling.html
+
+- id: 14122758
+  title: "Selectively Install BlackArch Tools"
+  url: /opensource/2014/12/27/selectively-install-blackarch-tools.html
+
+- id: 14122608
+  title: "Unbundling AUR Helper Process"
+  url: /opensource/2014/12/26/unbundling-aur-helper-process.html
+
+- id: 14121558
+  title: "XMonad Menu Bar"
+  url: /opensource/2014/12/15/xmonad-menu-bar.html
+
+- id: 14121259
+  title: "XMonad Tiling Window Manager"
+  url: /opensource/2014/12/12/xmonad-tiling-window-manager.html
+
+- id: 14120646
+  title: "i3 Window manager with i3 Bar"
+  url: /opensource/2014/12/06/i3-i3bar.html
+
+- id: 14113019
+  title: "Awesome WM, Tiling WM for beginner"
+  url: /opensource/2014/11/30/awesome.html
+
+- id: 14112819
+  title: "Init Civil War, The systemd Controversy"
+  url: /opensource/2014/11/28/init-civil-wars.html
+
+- id: 14110804
+  title: "Fluxbox Stacking Window Manager"
+  url: /opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
+
+- id: 14110202
+  title: "Standalone Openbox WM with Tint2 Panel"
+  url: /opensource/2014/11/02/openbox-standalone.html
+
+- id: 14101949
+  title: "LXQT with Windowish Looks"
+  url: /opensource/2014/10/19/lxqt-windowish-looks.html
+
+- id: 14051435
+  title: "Selfieshoot of Hilarious XFCE4 Customization"
+  url: /opensource/2014/05/14/xfce4-hilarious-selfieshoot.html
+
+- id: 14050934
+  title: "My Mageia Experiment"
+  url: /opensource/2014/05/09/mageia-experiment.html
+
+- id: 14042750
+  title: "Install BlackArch as Repository"
+  url: /opensource/2014/04/27/install-blackarch-as-repository.html
+
+- id: 14042218
+  title: "Gnome Shell Customization"
+  url: /opensource/2014/04/22/gnome-shell-a-very-common.html
+
+- id: 14040246
+  title: "Arch - Install/ Post Install Log"
+  url: /opensource/2014/04/02/arch-install-log.html
+
+- id: 14031332
+  title: "Wireless in Command Line"
+  url: /opensource/2014/03/13/wireless-command-line.html
+
+- id: 14031331
+  title: "Linux Multiboot"
+  url: /opensource/2014/03/13/linux-multiboot.html
+
+- id: 14031257
+  title: "Facebook Groups, Resources for Linux Enthusiast"
+  url: /opensource/2014/03/12/facebook-linux-groups.html
+
+- id: 14022229
+  title: "Gtk3 Adoption Rate in Debian."
+  url: /opensource/2014/02/22/gtk3-adoption-rate.html
+
+- id: 14010246
+  title: "Debian Wheezy - Post Install Log"
+  url: /opensource/2014/01/02/debian-post-install-log.html
+
+
