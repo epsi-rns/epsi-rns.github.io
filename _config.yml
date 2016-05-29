@@ -16,6 +16,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # the base hostname & protocol for your site
 url: "http://epsi-rns.github.io" 
 
+# Missing timezone in metadata date can lead to wrong date in url
+timezone: Asia/Jakarta
+
 #opengraph
 locale: en_US
 logo: /assets/site/images/authors/epsi-vexel.png
