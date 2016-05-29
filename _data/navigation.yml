@@ -3,6 +3,9 @@
 - title: Blog
   url: /pages/index
 
+- title: Archives
+  url: /pages/archives
+
 - title: Tags
   url: /pages/tag
 
