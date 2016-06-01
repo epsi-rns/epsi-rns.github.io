@@ -69,7 +69,7 @@
         >previous<span class="sr-only"> page</span></a>
         {% else %}
         <a class="pagination-item" href="{{ paginator.previous_page_path }}" rel="prev"
-        >previous<span class="sr-only"> page</span></a>
+        >&laquo<span class="sr-only"> page</span></a>
         {% endif %}
     </li>
     {% endif %}
@@ -124,7 +124,7 @@
     {% if paginator.next_page %}
     <li class="next">
         <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next"
-        >next<span class="sr-only"> page</span></a>
+        >&raquo<span class="sr-only"> page</span></a>
     </li>
     {% endif %}
 </ul>

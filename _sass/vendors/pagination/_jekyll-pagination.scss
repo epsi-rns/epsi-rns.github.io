@@ -93,12 +93,12 @@ $pages-item-active-color:   white !default;
       display: none;
     }
     
-    .previous a:before {
-      content: "« "
+    .previous a:after {
+      content: " previous"
     }
 
-    .next a:after {
-      content: " »"
+    .next a:before {
+      content: "next "
     }    
   }
 
