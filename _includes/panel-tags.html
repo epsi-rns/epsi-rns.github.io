@@ -7,7 +7,7 @@
     <h3 class="panel-title">Tags</h3>
   </div>
   <div class="panel-body">
-    {% if view_tag_type == 'after' %}
+    {% if include.view_tag_type == 'after' %}
       {% for tag in site.tags %}
         <a href="{{ site.baseurl }}/pages/tag#{{ tag[0] }}">
           <span class="label label-tag">{{ tag[0] }} <span class="fa fa-tag"></span></span>
