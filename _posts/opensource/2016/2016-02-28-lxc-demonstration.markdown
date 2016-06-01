@@ -66,41 +66,36 @@ Link.
 
 Here is my screenshot.
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot 1: Terminal
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Manjaro<br/>
-+ <strong>WM</strong>: Awesome (floating mode).<br/>
-+ Theme: Kali :-)<br/>
-+ Wallpaper<br/>
+  + <strong>WM</strong>: Awesome (floating mode).<br/>
+  + Theme: Kali :-)<br/>
+  + Wallpaper<br/>
 <br/>
 <strong>Screenshot 1</strong>: Terminal<br/>
-1: (host) Manjaro + Pacman<br/>
-2: (LXC) Gentoo + Emerge<br/>
-3: (LXC) CentOS + YUM<br/>
-4: (LXC) Debian + APT<br/>
-    </div>
-  </div>
-</div>
+  1: (host) Manjaro + Pacman<br/>
+  2: (LXC) Gentoo + Emerge<br/>
+  3: (LXC) CentOS + YUM<br/>
+  4: (LXC) Debian + APT
+{% endcapture %}
 
+{% include part/screenshot.html 
+   title = 'Screenshot 1: Terminal' 
+   ss_content = ss_content
+%}
 
 [![LXC Screenfetch][image-ss-lxc-screenfetch]{: .img-responsive }][picasa-ss-lxc-screenfetch]
 <br/>
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot 2: Screenfetch
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Manjaro<br/>
-+ <strong>WM</strong>: Awesome (floating mode).<br/>
-    </div>
-  </div>
-</div>
+  + <strong>WM</strong>: Awesome (floating mode).<br/>
+{% endcapture %}
+
+{% include part/screenshot.html 
+   title = 'Screenshot 2: Screenfetch' 
+   ss_content = ss_content
+%}
 
 [![LXC Package][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
 <br/>

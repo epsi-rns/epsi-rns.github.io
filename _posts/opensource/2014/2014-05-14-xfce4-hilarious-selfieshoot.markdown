@@ -20,26 +20,19 @@ related_link_ids:
 
 XFCE is lightweight, but fully customizable.
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch Distribution<br/>
 <strong>DE</strong>: XFCE4<br/>
 <strong>WM</strong>: KWin<br/>
-+ Duck Launcher + Whisker Menu + DockBarX<br/>
-+ Conky Manager + reWalls Wallpaper<br/>
-+ Numix Circle Icon + Ghost Deco (KWin)<br/>
-+ Amor Ghost + XPenguins<br/>
-+ Terminal (ANSI Color) + KWin Transparency Effect<br/>
-+ Nemo Icon on Desktop using Betelguise PNG (Mounted Partition)
-    </div>
-  </div>
-</div>
+  + Duck Launcher + Whisker Menu + DockBarX<br/>
+  + Conky Manager + reWalls Wallpaper<br/>
+  + Numix Circle Icon + Ghost Deco (KWin)<br/>
+  + Amor Ghost + XPenguins<br/>
+  + Terminal (ANSI Color) + KWin Transparency Effect<br/>
+  + Nemo Icon on Desktop using Betelguise PNG (Mounted Partition)
+{% endcapture %}
 
-
+{% include part/screenshot.html ss_content = ss_content %}
 
 
 Note: Those high processor usage comes xpenguins.

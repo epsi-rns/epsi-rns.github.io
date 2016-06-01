@@ -23,19 +23,13 @@ excerpt:
 
 # Screenshot
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Debian<br>
 <strong>DE</strong>: Plasma<br>
 <strong>WM</strong>: XMonad<br>
-    </div>
-  </div>
-</div>
+{% endcapture %}
 
+{% include part/screenshot.html ss_content = ss_content %}
 
 [![Introducing FatRat Cantata][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 

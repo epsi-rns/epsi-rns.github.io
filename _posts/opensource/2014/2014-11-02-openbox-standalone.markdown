@@ -33,32 +33,25 @@ $ openbox --replace
 As a standalone Stacking Window manager.
 Openbox is the only Stacking WM that I use daily.
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
 <strong>WM</strong>: Openbox<br/>
-+ Kali Menu in openbox<br/>
-+ Tint2 (custom color)<br/>
-+ dockbarx<br/>
-+ conky bar (manual modification)<br/>
-+ Font: Capture It, Terminus<br/>
-+ OB3 Theme: [Shiki Wine + Onyx, Modified]<br/>
-+ Wallpaper: my own photo shot from my garden<br/>
-+ tmux in xfce-terminal (no scrollbar)<br/>
-+ cmus<br/>
-+ screenfetch<br/>
-+ compton transparency for conky and menu<br/>
+  + Kali Menu in openbox<br/>
+  + Tint2 (custom color)<br/>
+  + dockbarx<br/>
+  + conky bar (manual modification)<br/>
+  + Font: Capture It, Terminus<br/>
+  + OB3 Theme: [Shiki Wine + Onyx, Modified]<br/>
+  + Wallpaper: my own photo shot from my garden<br/>
+  + tmux in xfce-terminal (no scrollbar)<br/>
+  + cmus<br/>
+  + screenfetch<br/>
+  + compton transparency for conky and menu<br/>
 <br/>
 ::.. Green Garden ..::
-    </div>
-  </div>
-</div>
+{% endcapture %}
 
-
+{% include part/screenshot.html ss_content = ss_content %}
 
 This screenshot use a lot of transparency.
 <br/>

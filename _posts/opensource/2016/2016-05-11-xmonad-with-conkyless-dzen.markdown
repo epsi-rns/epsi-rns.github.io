@@ -54,22 +54,16 @@ and bundle it inside just one haskell script.
 
 * * *
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
-+ <strong>WM</strong>: XMonad<br/>
-+ Compositor: Compton<br/>
-+ Statusbar: Dzen2 without Conky<br/>
-+ Terminal: Termite<br/>
-+ Viewer: VIM (Vi IMproved)
-    </div>
-  </div>
-</div>
+  + <strong>WM</strong>: XMonad<br/>
+  + Compositor: Compton<br/>
+  + Statusbar: Dzen2 without Conky<br/>
+  + Terminal: Termite<br/>
+  + Viewer: VIM (Vi IMproved)
+{% endcapture %}
 
+{% include part/screenshot.html ss_content = ss_content %}
 
 [![Conkyless XMonad][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 

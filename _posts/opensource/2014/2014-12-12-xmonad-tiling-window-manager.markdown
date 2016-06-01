@@ -37,24 +37,17 @@ so you can make a very flexible configuration.
 
 ## Self Explanatory
 
-
-
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-Simple configuration in Vim,
-and manual page.
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br>
 <strong>WM</strong>: XMonad<br>
-+ Statusbar: Dzen2<br>
-+ Run: xmonad.hs, man xmonad
-    </div>
-  </div>
-</div>
+  + Statusbar: Dzen2<br>
+  + Run: xmonad.hs, man xmonad
+{% endcapture %}
 
-
+{% include part/screenshot.html 
+   title = 'Simple configuration in Vim, and manual page.' 
+   ss_content = ss_content
+%}
 
 [![Self Explanatory][image-ss-self-explanatory]{: .img-responsive }][picasa-ss-self-explanatory]
 
@@ -62,45 +55,35 @@ and manual page.
 
 ## XMobar
 
-
-
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-No gaps by default.
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Debian<br>
 <strong>WM</strong>: XMonad<br>
-+ Statusbar: XMobar<br>
-+ Terminal: Transparency: 85%<br>
-+ Run: nload, nethogs, httpry
-    </div>
-  </div>
-</div>
+  + Statusbar: XMobar<br>
+  + Terminal: Transparency: 85%<br>
+  + Run: nload, nethogs, httpry
+{% endcapture %}
 
+{% include part/screenshot.html 
+   title = 'No gaps by default.' 
+   ss_content = ss_content
+%}
 
 
 [![XMobar: No Gap][image-ss-xmobar-nogap]{: .img-responsive }][picasa-ss-xmobar-nogap]
 
 <br/>
 
-
-
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-Three columns with gaps.
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br>
 <strong>WM</strong>: XMonad<br>
-+ Statusbar: XMobar<br>
-+ Run: nload, newsbeuter, tmux[glances,vim], mutt)
-    </div>
-  </div>
-</div>
+  + Statusbar: XMobar<br>
+  + Run: nload, newsbeuter, tmux[glances,vim], mutt)
+{% endcapture %}
 
+{% include part/screenshot.html 
+   title = 'Three columns with gaps.' 
+   ss_content = ss_content
+%}
 
 [![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]{: .img-responsive }][picasa-ss-xmobar-threecolumns-gap]
 
@@ -113,42 +96,34 @@ Source
 
 ## Dzen2
 
-
-
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-Running six terminals.
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br>
 <strong>WM</strong>: XMonad<br>
-+ Statusbar: Dzen<br>
-+ Run: mutt, irssi, newsbeuter, vim)
-    </div>
-  </div>
-</div>
+  + Statusbar: Dzen<br>
+  + Run: mutt, irssi, newsbeuter, vim)
+{% endcapture %}
+
+{% include part/screenshot.html 
+   title = 'Running six terminals.' 
+   ss_content = ss_content
+%}
 
 
 [![Dzen2 symmetric][image-ss-dzen2]{: .img-responsive }][picasa-ss-dzen2]
 
 <br/>
 
-
-
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-Running five terminals.
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br>
 <strong>WM</strong>: XMonad<br>
-+ Statusbar: Dzen<br>
-+ Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline
-    </div>
-  </div>
-</div>
+  + Statusbar: Dzen<br>
+  + Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline
+{% endcapture %}
+
+{% include part/screenshot.html 
+   title = 'Running five terminals.' 
+   ss_content = ss_content
+%}
 
 
 [![Dzen2 on symmetric][image-ss-dzen2-five-terms]{: .img-responsive }][picasa-ss-dzen2-five-terms]

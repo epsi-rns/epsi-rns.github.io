@@ -29,18 +29,13 @@ you can download a collection of shell script here<br/>
 
 * <http://crunchbang.org/forums/viewtopic.php?id=13645>
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Sample Screenshot
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
-+ <strong>WM</strong>: XMonad + XMobar<br/>
-+ Terminal: A few sample script<br/>
-    </div>
-  </div>
-</div>
+  + <strong>WM</strong>: XMonad + XMobar<br/>
+  + Terminal: A few sample script<br/>
+{% endcapture %}
+
+{% include part/screenshot.html ss_content = ss_content %}
 
 [![ANSI Color Light][image-ss-xmonad-light]{: .img-responsive }][picasa-ss-xmonad-light]
 <br/><br/>

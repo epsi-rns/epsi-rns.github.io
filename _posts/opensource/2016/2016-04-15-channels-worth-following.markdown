@@ -64,20 +64,14 @@ After few comments. Now I have these channels.<br/><br/>
 
 * * *
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Debian<br/>
-+ <strong>WM</strong>: XMonad<br/>
-+ Compositor: Compton<br/>
-+ Statusbar: Dzen-Conky<br/>
-    </div>
-  </div>
-</div>
+  + <strong>WM</strong>: XMonad<br/>
+  + Compositor: Compton<br/>
+  + Statusbar: Dzen-Conky<br/>
+{% endcapture %}
 
+{% include part/screenshot.html ss_content = ss_content %}
 
 
 [![Phoronix Inskcape][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]

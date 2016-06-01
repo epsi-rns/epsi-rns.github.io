@@ -23,24 +23,19 @@ related_link_ids:
 **Description**: A cheap way to learn different package management from major linux distribution using Docker. No need Virtual Machine nor Multiboot. Easy to setup.
 <br/><br/>
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>Host OS</strong>: Debian<br/>
 <strong>Container Service</strong>: Docker<br/>
-+ Terminal: Debian screenfetch<br/>
-+ Guest OS: OpenSUSE (screenfetch)<br/>
-+ Guest OS: Gentoo (emerge)<br/>
-+ Guest OS: Slackware (screenfetch)<br/>
-+ Terminal: iftop<br/>
+  + Terminal: Debian screenfetch<br/>
+  + Guest OS: OpenSUSE (screenfetch)<br/>
+  + Guest OS: Gentoo (emerge)<br/>
+  + Guest OS: Slackware (screenfetch)<br/>
+  + Terminal: iftop<br/>
 <br/>
 <strong>DE</strong>: Plasma 5 (KDE)<br/>
-    </div>
-  </div>
-</div>
+{% endcapture %}
+
+{% include part/screenshot.html ss_content = ss_content %}
 
 
 [![Debian Docker][image-ss]{: .img-responsive }][picasa-ss]

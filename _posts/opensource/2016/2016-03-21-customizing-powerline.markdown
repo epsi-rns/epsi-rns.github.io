@@ -22,22 +22,13 @@ I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/
 
 * * *
 
-**Screenshot**:<br/>
-
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
-+ <strong>WM</strong>: Awesome WM<br/>
-+ <strong>Shell</strong>: Fish<br/>
-    </div>
-  </div>
-</div>
+  + <strong>WM</strong>: Awesome WM<br/>
+  + <strong>Shell</strong>: Fish<br/>
+{% endcapture %}
 
-
+{% include part/screenshot.html ss_content = ss_content %}
 
 ![Powerline Light][image-ss-powerline-light]{: .img-responsive }
 <br/><br/>

@@ -36,24 +36,18 @@ Use the source Luke
 
 * * *
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Arch/Manjaro<br>
-+ <strong>WM</strong>: XMonad<br>
-+ Compositor: Compton<br>
-+ Statusbar: Dzen-Conky<br>
-+ Terminal: Termite<br>
-+ Wallpaper: 3D Bar<br>
-+ File Manager: Ranger<br>
-+ Viewer: VIM (Vi IMproved)<br>
-    </div>
-  </div>
-</div>
+  + <strong>WM</strong>: XMonad<br>
+  + Compositor: Compton<br>
+  + Statusbar: Dzen-Conky<br>
+  + Terminal: Termite<br>
+  + Wallpaper: 3D Bar<br>
+  + File Manager: Ranger<br>
+  + Viewer: VIM (Vi IMproved)
+{% endcapture %}
 
+{% include part/screenshot.html ss_content = ss_content %}
 
 [![Modularized XMonad 1][image-ss-xmonad-1]{: .img-responsive }][picasa-ss-xmonad-1]
 <br/><br/>

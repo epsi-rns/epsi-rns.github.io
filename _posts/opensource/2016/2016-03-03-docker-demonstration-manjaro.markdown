@@ -20,28 +20,23 @@ related_link_ids:
 **Description**: A cheap way to learn different package management from major linux distribution using Docker. No need Virtual Machine nor Multiboot. Easy to setup.
 <br/><br/>
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>Host OS</strong>: Manjaro<br/>
 <strong>Container Service</strong>: Docker<br/>
-+ Guest OS: Gentoo<br/>
-+ Guest OS: Slackware<br/>
-+ Guest OS: Fedora<br/>
-+ Guest OS: Kali<br/>
-+ Guest OS: Ubuntu<br/>
+  + Guest OS: Gentoo<br/>
+  + Guest OS: Slackware<br/>
+  + Guest OS: Fedora<br/>
+  + Guest OS: Kali<br/>
+  + Guest OS: Ubuntu<br/>
 <br/>
 <strong>WM</strong>: XMonad<br/>
-+ Bar: Conky + Dzen<br/>
-+ Terminal: XFCE Terminal<br/>
-+ Script: Screenfetch<br/>
-+ Wallpaper: Self Vexel (inkscape) with 3D background<br/>
-    </div>
-  </div>
-</div>
+  + Bar: Conky + Dzen<br/>
+  + Terminal: XFCE Terminal<br/>
+  + Script: Screenfetch<br/>
+  + Wallpaper: Self Vexel (inkscape) with 3D background<br/>
+{% endcapture %}
+
+{% include part/screenshot.html ss_content = ss_content %}
 
 [![Manjaro Docker Light][image-ss-fki]{: .img-responsive }][picasa-ss-fki]
 <br/><br/>

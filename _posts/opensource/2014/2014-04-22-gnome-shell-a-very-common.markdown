@@ -20,21 +20,15 @@ related_link_ids:
 
 A very common Desktop Customization.
 
-<div class="sectionbox">
-  <div class="sectionbox-heading">
-    Screenshot Information
-  </div>
-  <div class="sectionbox-body">
-    <div>
+{% capture ss_content %}
 <strong>OS</strong>: Debian<br/>
 <strong>DE</strong>: gnome-shell<br/>
-+ cairo-dock<br/>
-+ conky-infinity<br/>
-+ background
-    </div>
-  </div>
-</div>
+  + cairo-dock<br/>
+  + conky-infinity<br/>
+  + background
+{% endcapture %}
 
+{% include part/screenshot.html ss_content = ss_content %}
 
 I'm glad that linux has a modern desktop interface.
 While others are still using conventional approach.
