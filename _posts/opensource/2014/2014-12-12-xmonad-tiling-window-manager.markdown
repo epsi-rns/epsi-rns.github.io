@@ -126,7 +126,7 @@ Source
 %}
 
 
-[![Dzen2 on symmetric][image-ss-dzen2-five-terms]{: .img-responsive }][picasa-ss-dzen2-five-terms]
+[![Dzen2 asymmetric][image-ss-dzen2-five-terms]{: .img-responsive }][picasa-ss-dzen2-five-terms]
 
 
 Source

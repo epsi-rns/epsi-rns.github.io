@@ -8,7 +8,7 @@ author: epsi
 
 excerpt:
   I'm curious about Mageia. Because there is something that 
-  I haven't learned in my early days of linux using Mandrake.  
+  I haven't learned in my early days of GNU/Linux using Mandrake.  
 
 related_link_ids: 
   - 14010246  # Debian Install
@@ -24,10 +24,10 @@ Back to Mageia
 
 [![Mageia Welcome Screen][image-ss-mageia-welcome]{: .img-responsive }][picasa-ss-mageia-welcome]
 
-I spent my early days of linux using Red Hat in 1999, 
+I spent my early days of GNU/Linux using Red Hat in 1999, 
 followed by Mandrake one year later.
 Returned to Windows. Then Debian in 2004
-which was my longest years of linux distro,
+which was my longest years of Linux distro,
 dual booting with Windows.
 In the mean time I was also a distro hopper with
 Mageia, Ubuntu, kFreeBSD, and Kali.
@@ -40,7 +40,7 @@ Magiea is a successor of Mandriva,
 while Mandriva itself is successor of Mandrake.
 After changed its name from Mandrake to Mandriva to Mageia,
 The latest of Mageia Development is unclear,
-and it is not a linux distro that I recommend.
+and it is not a Linux distro that I recommend.
 
 My only reason to use Mageia is for a sentimental nostalgic reason.
 There is something that I haven't learned in the past.

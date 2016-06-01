@@ -30,9 +30,9 @@ I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-![Powerline Light][image-ss-powerline-light]{: .img-responsive }
+![Powerline Light: arch+awesome][image-ss-powerline-light]{: .img-responsive }
 <br/><br/>
-![Powerline Dark][image-ss-powerline-dark]{: .img-responsive }
+![Powerline Dark: arch+awesome][image-ss-powerline-dark]{: .img-responsive }
 
 
 Happy terminal customizing

@@ -60,7 +60,7 @@ This article contain two parts.
 
 * Post Install Log
 
-![Arch Install][image-ss-arch-install]
+![Arch Install Wifi Menu][image-ss-arch-install]
 <br/><br/>
 
 -- -- -- 

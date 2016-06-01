@@ -65,7 +65,7 @@ and bundle it inside just one haskell script.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Conkyless XMonad][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Conkyless XMonad: Comparation of Alsa Script][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 Let's compare this code, and see how our code transformed.
 

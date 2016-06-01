@@ -31,7 +31,7 @@ excerpt:
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Introducing FatRat Cantata][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Introducing FatRat Cantata: debian+plasma+xmonad+cmake][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 * * *
 
@@ -64,7 +64,7 @@ excerpt:
 
 Surprisingly Cantata have a very nice looks.
 
-[![Cantata][image-ss-cantata]{: .img-responsive }][picasa-ss-cantata]
+[![Cantata mpd player have a very nice looks][image-ss-cantata]{: .img-responsive }][picasa-ss-cantata]
 
 
 {% highlight bash %}

@@ -31,9 +31,9 @@ Especially with network monitoring.
 {% include part/screenshot.html ss_content = ss_content %}
 
 <br/>
-[![i3 Black][image-ss-i3-black]{: .img-responsive }][picasa-ss-i3-black]
+[![i3 Black: arch+ncmpcpp][image-ss-i3-black]{: .img-responsive }][picasa-ss-i3-black]
 <br/><br/>
-[![i3 Green][image-ss-i3-green]{: .img-responsive }][picasa-ss-i3-green]
+[![i3 Green: arch (vnstat, nethogs, nload) + grass][image-ss-i3-green]{: .img-responsive }][picasa-ss-i3-green]
 <br/>
 
 Sample i3 config (nubi)

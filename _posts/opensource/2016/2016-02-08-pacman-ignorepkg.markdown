@@ -78,7 +78,7 @@ XferCommand = /usr/bin/curl --limit-rate 33k -C - -f %u > %o
 XferCommand = /usr/bin/wget --limit-rate 33K --passive-ftp -c -O %o %u
 {% endhighlight %}
 
-[![Pacman IgnorePkg][image-ss]{: .img-responsive }][picasa-ss]
+[![Pacman IgnorePkg: arch+awesome (unbloated)][image-ss]{: .img-responsive }][picasa-ss]
 
 Happy Sync.
 

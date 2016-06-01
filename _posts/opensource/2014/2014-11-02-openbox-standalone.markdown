@@ -56,7 +56,7 @@ Openbox is the only Stacking WM that I use daily.
 This screenshot use a lot of transparency.
 <br/>
 
-[![openbox][image-ss-openbox]{: .img-responsive }][picasa-ss-openbox]
+[![debian+openbox+tint2+conky+tmux+cmus+screenfetch+font(captureit)][image-ss-openbox]{: .img-responsive }][picasa-ss-openbox]
 <br/>
 
 <hr/>
@@ -73,8 +73,8 @@ I also separate menu files in configuration to make it more modular.
 
 <hr/>
 
-Openbox is the default Window Manager for the lightweight #! crunchbang/ 
-bunsenlabs linux distribution. So I clone theme in my arch.
+Openbox is the default Window Manager for the lightweight #! Crunchbang/ 
+Bunsenlabs Linux distribution. So I clone theme in my arch.
 
 **OS**: Debian<br/>
 **WM**: Openbox<br/>

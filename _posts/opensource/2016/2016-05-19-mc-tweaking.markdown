@@ -29,7 +29,7 @@ MC skin can be set to transparent.
 
 MC layout can be changed to vertical or horizontal as shown below.
 
-![Conkyless XMonad][image-ss-mc-etc]{: .img-responsive }
+![Midnight Commander: debian-etc-network-interfaces][image-ss-mc-etc]{: .img-responsive }
 
 Have fun with Midnight Commander!<br/>
 Have fun with helping people!<br/>

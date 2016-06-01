@@ -38,7 +38,7 @@ related_link_ids:
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-[![Debian Docker][image-ss]{: .img-responsive }][picasa-ss]
+[![Debian Docker: openbox+terminator+(debian, opensuse, htop, emerge gentoo, slackware)][image-ss]{: .img-responsive }][picasa-ss]
 <br/><br/>
 
 **Reference**:<br/>

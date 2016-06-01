@@ -37,9 +37,9 @@ you can download a collection of shell script here<br/>
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![ANSI Color Light][image-ss-xmonad-light]{: .img-responsive }][picasa-ss-xmonad-light]
+[![ANSI Color Light: arch+xmonad][image-ss-xmonad-light]{: .img-responsive }][picasa-ss-xmonad-light]
 <br/><br/>
-[![ANSI Color Dark][image-ss-xmonad-dark]{: .img-responsive }][picasa-ss-xmonad-dark]
+[![ANSI Color Dark: arch+xmonad][image-ss-xmonad-dark]{: .img-responsive }][picasa-ss-xmonad-dark]
 
 
 Me myself I got nothing to prove<br/>

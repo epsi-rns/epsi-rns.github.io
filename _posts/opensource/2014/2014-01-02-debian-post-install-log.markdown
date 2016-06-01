@@ -35,7 +35,7 @@ This article contain two parts.
 
 * Using aptitude.
 
-[![Debian Install][image-ss-debian-install]{: .img-responsive }][picasa-ss-debian-install]
+[![Debian Fresh Install][image-ss-debian-install]{: .img-responsive }][picasa-ss-debian-install]
 <br/><br/>
 
 -- -- -- 

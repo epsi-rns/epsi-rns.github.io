@@ -30,7 +30,7 @@ A very common Desktop Customization.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-I'm glad that linux has a modern desktop interface.
+I'm glad that GNU/Linux has a modern desktop interface.
 While others are still using conventional approach.
 
 It can be customized further using
@@ -40,7 +40,7 @@ gnome-shell has extensions to make you far from bored
 
 And user themes, though I rarely need it.
 
-[![gnome shell][image-ss-gnome-shell]{: .img-responsive }][picasa-ss-gnome-shell]
+[![gnome shell conky infinity][image-ss-gnome-shell]{: .img-responsive }][picasa-ss-gnome-shell]
 <br/><br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )

@@ -38,9 +38,9 @@ related_link_ids:
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Manjaro Docker Light][image-ss-fki]{: .img-responsive }][picasa-ss-fki]
+[![Manjaro Docker Light: xmonad screenfetch (fedora, kali, ubuntu)][image-ss-fki]{: .img-responsive }][picasa-ss-fki]
 <br/><br/>
-[![Manjaro Docker Dark][image-ss-gs]{: .img-responsive }][picasa-ss-gs]
+[![Manjaro Docker Dark: xmonad screenfetch (gentoo, slackware)][image-ss-gs]{: .img-responsive }][picasa-ss-gs]
 <br/>
 
 Note: just another nix's porn. :-\ <br/>

@@ -74,7 +74,7 @@ After few comments. Now I have these channels.<br/><br/>
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-[![Phoronix Inskcape][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Isometric Material Design with Inkscape][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
 Note: illustration made with inkscape.
 

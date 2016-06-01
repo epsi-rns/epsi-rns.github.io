@@ -35,7 +35,7 @@ But if you need config or just curious about, you can check this out.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![fluxbox][image-ss-fluxbox]{: .img-responsive }][picasa-ss-fluxbox]
+[![arch+fluxbox (glow) +tmux+ncmpcpp+root+scrot][image-ss-fluxbox]{: .img-responsive }][picasa-ss-fluxbox]
 <br/><br/>
 
 This Fluxbox utilised a modified version of Axonkolor theme that I found in Deviantart.

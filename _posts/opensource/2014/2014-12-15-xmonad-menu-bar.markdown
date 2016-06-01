@@ -36,11 +36,11 @@ I haven't got time try DWM yet.
 
 2. dmenu_run
 
-	![dzen2][image-dmenu-run]{: .img-responsive }
+	![dmenu-run][image-dmenu-run]{: .img-responsive }
 
 3. j4-dmenu-desktop
 
-	![dzen2][image-j4-dmenu]{: .img-responsive }
+	![j4-dmenu][image-j4-dmenu]{: .img-responsive }
 
 Oh yes. You can set dzen transparency with transset-df.
 

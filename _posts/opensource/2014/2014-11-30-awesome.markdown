@@ -52,7 +52,7 @@ Awesome has floating option to make you feel like you are in stacking WM.
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-[![awesome][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
+[![arch+awesome (kali), (glances, saidar, ncmpcpp)][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
 <br/><br/>
 
 

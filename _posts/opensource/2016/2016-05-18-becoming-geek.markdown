@@ -5,7 +5,7 @@ categories: opensource
 tags: [thought, about]
 author: epsi
 opengraph:
-  image: assets/images/authors/epsi-vexel.png
+  image: /assets/images/authors/epsi-vexel.png
   
 excerpt:
   There are so many things to say.

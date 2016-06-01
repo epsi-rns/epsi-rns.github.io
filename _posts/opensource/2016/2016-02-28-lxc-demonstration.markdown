@@ -84,7 +84,7 @@ Here is my screenshot.
    ss_content = ss_content
 %}
 
-[![LXC Screenfetch][image-ss-lxc-screenfetch]{: .img-responsive }][picasa-ss-lxc-screenfetch]
+[![LXC Package: pacman, emerge, yum, apt][image-ss-lxc-screenfetch]{: .img-responsive }][picasa-ss-lxc-screenfetch]
 <br/>
 
 {% capture ss_content %}
@@ -97,7 +97,7 @@ Here is my screenshot.
    ss_content = ss_content
 %}
 
-[![LXC Package][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
+[![LXC Screenfetch: manjaro, gentoo, centos, debian][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
 <br/>
 
 -- -- --

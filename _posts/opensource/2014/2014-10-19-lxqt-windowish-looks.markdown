@@ -32,13 +32,13 @@ And be happy with it.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]{: .img-responsive }][picasa-ss-lxqt-windowish-qterminal]
+[![Arch LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]{: .img-responsive }][picasa-ss-lxqt-windowish-qterminal]
 <br/><br/>
 
 LXQT's File Manager, PC Man FM also give me stunning nostalgic looks,
 remind me of my happy childhood day.
 
-[![LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]{: .img-responsive }][picasa-ss-lxqt-windowish-pcmanfm]
+[![Arch LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]{: .img-responsive }][picasa-ss-lxqt-windowish-pcmanfm]
 <br/>
 
 <hr/>
@@ -60,7 +60,7 @@ Let's see how it can be combined with KWin instead of Openbox.
 
 
 
-[![LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][picasa-ss-lxqt-kwin-ghost]
+[![Arch LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][picasa-ss-lxqt-kwin-ghost]
 <br/>
 
 <hr/>

@@ -15,7 +15,7 @@ This is a remake of my facebook note with the same title.
 
 * [facebook.com/notes/.../426282274184455][facebook-note]
 
-![Cover Bunsenlabs][image-bunsenlabs]{: .img-responsive }
+![Cover: Bunsenlabs][image-bunsenlabs]{: .img-responsive }
 
 
 

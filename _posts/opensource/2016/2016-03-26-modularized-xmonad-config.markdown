@@ -49,9 +49,9 @@ Use the source Luke
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Modularized XMonad 1][image-ss-xmonad-1]{: .img-responsive }][picasa-ss-xmonad-1]
+[![Modularized Haskell XMonad: arch + dzen + termite + neofetch + powerline (light) (floating)][image-ss-xmonad-1]{: .img-responsive }][picasa-ss-xmonad-1]
 <br/><br/>
-[![Modularized XMonad 2][image-ss-xmonad-2]{: .img-responsive }][picasa-ss-xmonad-2]
+[![Modularized Haskell XMonad: manjaro + dzen + termite + vim + powerline (dark) (ranger)][image-ss-xmonad-2]{: .img-responsive }][picasa-ss-xmonad-2]
 
 * * *
 

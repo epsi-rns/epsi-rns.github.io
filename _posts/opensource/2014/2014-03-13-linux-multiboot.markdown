@@ -26,7 +26,7 @@ In this example I'm using four OS
 
 	Win7 + Debian + Kali + Arch
 
-![Multiboot Cover][image-cover]{: .img-responsive }
+![Multiboot: Cover][image-cover]{: .img-responsive }
 
 
 
@@ -46,7 +46,7 @@ If you are coming from Windows, you might be familiar with this image.
 
 Let's start with this example.
 
-[![Ease-us Partition][image-easeus]{: .img-responsive }][picasa-easeus]
+[![Multiboot: Ease-us Partition][image-easeus]{: .img-responsive }][picasa-easeus]
 
 
 Please prepare before installing linux.
@@ -102,7 +102,7 @@ With Dual boot, Windows + Linux
 This my partition structure in my computer,<br/>
 just in case you need some example.
 
-[![GParted sda][image-gparted]{: .img-responsive }][picasa-gparted]
+[![Multiboot: GParted sda][image-gparted]{: .img-responsive }][picasa-gparted]
 
 Set-up as multi boot system,
 
@@ -130,7 +130,7 @@ The other part contain
 The only primary partition is (/dev/sda1)<br/>
 While others (5-10) belong to extended (/dev/sda2)
 
-[![cfdisk][image-cfdisk]{: .img-responsive }][picasa-cfdisk]
+[![Multiboot: cfdisk][image-cfdisk]{: .img-responsive }][picasa-cfdisk]
 
 # How do I keep my Windows Recovery Partition safely? 
 
@@ -181,7 +181,7 @@ OR
  $ gksu gedit /etc/fstab
 {% endhighlight %}
 
-[![/etc/fstab][image-fstab]{: .img-responsive }][picasa-fstab]
+[![Multiboot: /etc/fstab][image-fstab]{: .img-responsive }][picasa-fstab]
 
 For more information you can
 
