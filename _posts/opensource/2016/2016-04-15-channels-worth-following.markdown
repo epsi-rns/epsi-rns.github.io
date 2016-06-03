@@ -76,7 +76,10 @@ After few comments. Now I have these channels.<br/><br/>
 
 [![Isometric Material Design with Inkscape][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
 
-Note: illustration made with inkscape.
+Illustration made with inkscape, and yoi can have the source code.
+
+**SVG Source**:<br/>
+* [epsi-rns.github.io/.../wally-material-design.svg][dotfiles-material-design]
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -85,3 +88,5 @@ Note: illustration made with inkscape.
 
 [image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/04/inkscape+phoronix.png
 [picasa-ss-xmonad]: https://lh3.googleusercontent.com/-DgQVy3BxkOk/VzmdVzziYrI/AAAAAAAAAMg/8mS642IZvrg2VW8iw-JPbjfmPFK3d6qxQCCo/s0/inkscape%252Bphoronix.png
+
+[dotfiles-material-design]: {{ site.url }}/assets/posts/design/2016/04/wally-material-design.svg
