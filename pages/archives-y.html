@@ -10,19 +10,21 @@ search_omit: true
 
   {%for post in site.posts %}
     {% assign year = post.date | date: '%Y' %}
+    
     {% unless post.next %}
-      <div class ="anchor-target archive-word" id="{{ year }}">
-          This year's posts ({{ year }})</div>
-      <ul class="this">
+      <div class ="anchor-target archive-year" 
+           id="{{ year }}">This year's posts ({{ year }})</div>
+      <ul class="archive-item this">
     {% else %}
       {% assign nyear = post.next.date | date: '%Y' %}
       {% if year != nyear %}
       </ul>
-      <div class ="anchor-target archive-word" id="{{ year }}">
-          {{ post.date | date: '%Y' }}</div>
-      <ul class="past">
+      <div class ="anchor-target archive-year" 
+           id="{{ year }}">{{ year }}</div>
+      <ul class="archive-item past">
       {% endif %}
     {% endunless %}
+    
       <li class="list-content">
         <time>{{ post.date | date:"%d %b" }}</time>        
         <a href="{{ post.url }}">

@@ -1,0 +1,67 @@
+---
+layout: page
+title: Archives
+excerpt: "An archive of posts sorted by date."
+search_omit: true
+# http://reyhan.org/2013/03/jekyll-archive-without-plugins.html
+# http://mikerowecode.com/2010/08/jekyll_archives_grouped_by_year.html
+---
+<section id="archive">
+
+  {%for post in site.posts %}
+    {% assign year = post.date | date: '%Y' %}
+    {% assign month = post.date | date: '%m' %}
+    
+    {% unless post.next %}
+      <div class ="anchor-target archive-year" 
+           id="{{ year }}">
+           {{ year }} (this year's posts)</div>
+
+      <ul class="archive-month this">
+
+        <li class="list-month">
+        <span class ="anchor-target archive-month" 
+              id="{{ year }}-{{ month }}">
+              {{ post.date | date: '%B %Y' }}</span>
+          <ul class="archive-item this">
+    {% else %}
+
+      {% assign nyear = post.next.date | date: '%Y' %}
+      {% assign nmonth = post.next.date | date: '%m' %}
+      
+      {% if year != nyear %}
+          </ul>
+        </li>
+      </ul>
+      <div class ="anchor-target archive-year" 
+           id="{{ year }}">
+           {{ year }}</div>
+      <ul class="archive-month past">
+      {% endif %}
+
+      {% if month != nmonth %}
+        {% if year == nyear %}
+          </ul>
+        </li>  
+        {% endif %}        
+        <li class="list-month">
+        <span class ="anchor-target archive-month" 
+              id="{{ year }}-{{ month }}">
+              {{ post.date | date: '%B %Y' }}</span>
+
+          <ul class="archive-item past">           
+      {% endif %}
+
+    {% endunless %}
+          <li class="list-content">
+            <time>{{ post.date | date:"%d %b" }}</time>        
+            <a href="{{ post.url }}">
+              <span class="fa fa-pencil"></span>
+              {{ post.title }}
+            </a>        
+          </li>
+  {% endfor %}
+          </ul>
+        </li>
+      </ul>
+</section>

@@ -1,0 +1,75 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Archives</h3>
+  </div>
+  <div class="panel-body">
+
+  {% assign pyear  = page.date | date: '%Y' %}
+  {% assign pmonth = page.date | date: '%m' %}
+
+  {%for post in site.posts %}
+    {% assign year  = post.date | date: '%Y' %}
+    {% assign month = post.date | date: '%m' %}
+    
+    {% unless post.next %}
+      <div class ="archive-year">
+        <a href="{{ site.baseurl }}/pages/archives-y/#{{ year }}">
+        {{ year }}</a>
+      </div>
+
+      <ul class="archive-month this">
+
+        <li class="list-month">
+        <span class ="archive-month">
+          <a href="{{ site.baseurl }}/pages/archives-m/#{{ year }}-{{ month }}">
+            {{ post.date | date: '%B %Y' }}
+          </a></span>
+          <ul class="archive-item this">
+    {% else %}
+
+      {% assign nyear  = post.next.date | date: '%Y' %}
+      {% assign nmonth = post.next.date | date: '%m' %}
+      
+      {% if year != nyear %}
+          </ul>
+        </li>
+      </ul>
+      <div class ="archive-year">
+        <a href="{{ site.baseurl }}/pages/archives-y/#{{ year }}">
+        {{ year }}</a>
+      </div>
+      <ul class="archive-month past">
+      {% endif %}
+
+      {% if year == pyear %}
+      {% if month != nmonth %}
+        {% if year == nyear %}
+          </ul>
+        </li>  
+        {% endif %}        
+        <li class="list-month">
+        <span class ="archive-month">
+          <a href="{{ site.baseurl }}/pages/archives-m/#{{ year }}-{{ month }}">
+            {{ post.date | date: '%B %Y' }}
+          </a></span>
+
+          <ul class="archive-item past">           
+      {% endif %}
+      {% endif %}
+
+    {% endunless %}
+    
+    {% if year == pyear %}
+      {% if month == pmonth %}
+          <li class="list-content">    
+            <a href="{{ post.url }}">{{ post.title }}</a>        
+          </li>
+      {% endif %}
+    {% endif %}      
+  {% endfor %}
+          </ul>
+        </li>
+      </ul>
+
+  </div>
+</div> 

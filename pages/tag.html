@@ -10,15 +10,16 @@ search_omit: true
 
 <div class="tag-box inline">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-    <a href="#{{ this_word }}"><span class="label label-tag">{{ this_word }} <span class="tag-count">{{ site.tags[this_word].size }}</span></span></a>
+    {% assign this_word = tags_list[item] | strip_newlines %}
+    <a href="#{{ this_word }}"><span class="label label-tag">{{ this_word }} 
+    <span class="tag-count">{{ site.tags[this_word].size }}</span></span></a>
   {% endunless %}{% endfor %}
 </div>
 <br/>
 
 <div>
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+  {% assign this_word = tags_list[item] | strip_newlines %}
   <div class ="anchor-target tag-word" id="{{ this_word }}">
     <span class="fa fa-tag"></span> {{ this_word }}</div>
   {% for post in site.tags[this_word] %}{% if post.title != null %}

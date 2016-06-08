@@ -4,10 +4,13 @@
   url: /pages/index
 
 - title: Archives
-  url: /pages/archives
-
-- title: Tags
-  url: /pages/tag
+  dropdown:
+  - title: By Tag
+    url: /pages/tag
+  - title: By Year
+    url: /pages/archives-y
+  - title: By Month
+    url: /pages/archives-m
 
 - title: About
   url: /pages/about/

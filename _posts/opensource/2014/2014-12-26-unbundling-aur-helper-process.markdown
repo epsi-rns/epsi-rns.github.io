@@ -41,17 +41,6 @@ e.g. thi Haskell based AURA.
 Note: I apologize for my english,
 and also my boring desktop customization.
 
-**Related Links**
-
-* [Arch - Install/ Post Install Log][related-arch-install]
-
-* [Update Arch Linux without Unnecessary Bloated Package][related-arch-no-bloated]
-
-* [Install BlackArch as Repository][related-blackarch-repository]
-
-* [Selectively Install BlackArch Tools][related-blackarch-selectively]
-
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
