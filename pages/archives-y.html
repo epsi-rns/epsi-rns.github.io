@@ -7,31 +7,49 @@ search_omit: true
 # http://mikerowecode.com/2010/08/jekyll_archives_grouped_by_year.html
 ---
 <section id="archive">
-
   {%for post in site.posts %}
-    {% assign year = post.date | date: '%Y' %}
+    {% capture cache %}
     
-    {% unless post.next %}
-      <div class ="anchor-target archive-year" 
-           id="{{ year }}">This year's posts ({{ year }})</div>
-      <ul class="archive-item this">
-    {% else %}
-      {% assign nyear = post.next.date | date: '%Y' %}
-      {% if year != nyear %}
-      </ul>
-      <div class ="anchor-target archive-year" 
-           id="{{ year }}">{{ year }}</div>
-      <ul class="archive-item past">
+      {% assign year = post.date | date: '%Y' %}
+      {% assign n_year = 2000 %}
+      {% assign p_year = 2025 %}
+    
+      {% if post.next %}
+        {% assign n_year = post.next.date | date: '%Y' %}
       {% endif %}
-    {% endunless %}
+
+      {% if post.previous %}
+        {% assign p_year = post.previous.date | date: '%Y' %}
+      {% endif %}
+      
+      {% assign year_text = nil %}
+      {% if post.next %}
+        {% if year != n_year %}
+          {% assign year_text = year %}
+        {% endif %}
+      {% else %}
+        {% assign year_text = year | prepend: "This year's posts (" | append: ')' %}
+      {% endif %}
+      
+    {% endcapture %} 
     
+    {% if year_text %}        
+      <div class ="anchor-target archive-year" 
+           id="{{ year }}">{{ year_text }}</div>
+    {% endif %}
+    
+    {% if year != n_year %}
+    <ul class="archive-item">
+    {% endif %}
       <li class="list-content">
         <time>{{ post.date | date:"%d %b" }}</time>        
         <a href="{{ post.url }}">
           <span class="fa fa-pencil"></span>
           {{ post.title }}
         </a>        
-      </li>
-  {% endfor %}
+      </li>      
+    {% if year != p_year %}
     </ul>
+    {% endif %}
+  {% endfor %}
 </section>
