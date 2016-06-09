@@ -4,7 +4,13 @@
 $yellow-makara:    #f7d316;
 $monad-blue:       #2980b9;
 
+.panel-heading {
+  @include gradient-striped(rgba(255,255,255,.05), 45deg);
+}
+
 .navbar-default {
+  @include gradient-striped(rgba(255,255,255,.35), 45deg);
+
   ul.navbar-nav li:hover,
   div.navbar-header:hover {
     background-color: $brand-primary;
