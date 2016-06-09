@@ -68,21 +68,25 @@ layout: default
 </article>
 
 {% include chunk-post-footer.html %}
-{% include service/disqus-comments.html %}
-{% include service/muut-comments.html %}
+
 
 
 
                 
-            </div>
-            <!-- /.col-md-8 -->
+            </div><!-- /.col-md-8 -->
             
             <div class="col-md-4">
             {% include chunk-post-sidebar.html %}
-            </div>
-            <!-- /.col-md-4 -->
+            </div><!-- /.col-md-4 -->
             
-        </div>
+        </div><!-- /.row -->
+        
+        <div class="row">
+            <div class="col-md-8">        
+{% include service/disqus-comments.html %}
+{% include service/muut-comments.html %}
+            </div><!-- /.col-md-8 -->
+            
+        </div><!-- /.row -->
 
-    </div>
-    <!-- /.container -->
+    </div><!-- /.container -->
