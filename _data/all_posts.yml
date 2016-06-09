@@ -1,12 +1,16 @@
 # Helper for related links
 
+# just copy the result manually
+# from _site/pages/all_posts.yml 
+# to folder _data/all_posts.yml
+
 
 - id: 16051900
-  title: "Midnight Commander Tweaking"
-  url: /opensource/2016/05/19/mc-tweaking.html
+  title: "Midnight Commander Tweaking, can Help People Better"
+  url: /opensource/2016/05/19/midnight-commander-tweaking.html
 
 - id: 16051800
-  title: "Becoming a Geek"
+  title: "Becoming a Geek, a Weird Story About Nerd"
   url: /opensource/2016/05/18/becoming-geek.html
 
 - id: 16051403
@@ -14,7 +18,7 @@
   url: /opensource/2016/05/14/haskell-dollar-syntax.html
 
 - id: 16051102
-  title: "XMonad with Conkyless Dzen"
+  title: "XMonad with Conkyless Dzen, Total Control of Theme"
   url: /opensource/2016/05/11/xmonad-with-conkyless-dzen.html
 
 - id: 16042139
@@ -35,10 +39,10 @@
 
 - id: 16032117
   title: "Customizing Shell Prompt with Powerline"
-  url: /opensource/2016/03/21/customizing-powerline.html
+  url: /opensource/2016/03/21/powerline-customizing.html
 
 - id: 16032038
-  title: "Console Pixel Art"
+  title: "Console Pixel Art, a Collection of Scripts"
   url: /opensource/2016/03/20/console-pixel-art.html
 
 - id: 16031941
@@ -46,7 +50,7 @@
   url: /opensource/2016/03/19/refactoring-awesome-lua-configuration.html
 
 - id: 16031700
-  title: "Learning Stages, from Beginner to Enthusiast"
+  title: "Learning Stages Guidance, from Beginner to Enthusiast"
   url: /opensource/2016/03/17/learning-stages.html
 
 - id: 16030900
@@ -54,7 +58,7 @@
   url: /opensource/2016/03/09/docker-demonstration-debian.html
 
 - id: 16030301
-  title: "Docker Demonstration (Manjaro)"
+  title: "Docker Demonstration (Manjaro), Running Multiple Guest OS"
   url: /opensource/2016/03/03/docker-demonstration-manjaro.html
 
 - id: 16022800
@@ -78,7 +82,7 @@
   url: /design/2015/09/03/inkscape-stamp-logo.html
 
 - id: 15031749
-  title: "Debian APT Pinning"
+  title: "Control Your Package with APT Pinning"
   url: /opensource/2015/03/17/apt-pinning.html
 
 - id: 15021348
@@ -98,7 +102,7 @@
   url: /opensource/2014/12/15/xmonad-menu-bar.html
 
 - id: 14121259
-  title: "XMonad Tiling Window Manager"
+  title: "XMonad Tiling Window Manager is so Amazing"
   url: /opensource/2014/12/12/xmonad-tiling-window-manager.html
 
 - id: 14120646
@@ -122,7 +126,7 @@
   url: /opensource/2014/11/02/openbox-standalone.html
 
 - id: 14101949
-  title: "LXQT with Windowish Looks"
+  title: "LXQT with Windowish Looks, No Kidding."
   url: /opensource/2014/10/19/lxqt-windowish-looks.html
 
 - id: 14051435
@@ -134,23 +138,23 @@
   url: /opensource/2014/05/09/mageia-experiment.html
 
 - id: 14042750
-  title: "Install BlackArch as Repository"
+  title: "How to Install BlackArch as Repository"
   url: /opensource/2014/04/27/install-blackarch-as-repository.html
 
 - id: 14042218
-  title: "Gnome Shell Customization"
+  title: "Is it a Gnome Shell Customization, or Am I just got bored ?"
   url: /opensource/2014/04/22/gnome-shell-a-very-common.html
 
 - id: 14040246
-  title: "Arch - Install/ Post Install Log"
+  title: "Arch Linux - Install/ Post Install Log"
   url: /opensource/2014/04/02/arch-install-log.html
 
 - id: 14031332
-  title: "Wireless in Command Line"
+  title: "Wireless Command Line, a must have Knowledge"
   url: /opensource/2014/03/13/wireless-command-line.html
 
 - id: 14031331
-  title: "Linux Multiboot"
+  title: "Linux Multiboot, Setting up Partitions"
   url: /opensource/2014/03/13/linux-multiboot.html
 
 - id: 14031257
