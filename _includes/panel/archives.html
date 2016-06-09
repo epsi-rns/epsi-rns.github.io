@@ -35,7 +35,7 @@
     
     {% if year != n_year %}       
       <div class ="archive-year">
-        <a href="{{ site.baseurl }}/pages/archives-y/#{{ year }}">
+        <a href="{{ site.baseurl }}/pages/archives-y#{{ year }}">
         {{ year }}</a>
       </div>
     {% endif %}
@@ -48,7 +48,7 @@
       {% if month != n_month %}
       <li class="list-month">
         <span class ="archive-month">
-          <a href="{{ site.baseurl }}/pages/archives-m/#{{ year }}-{{ month }}">
+          <a href="{{ site.baseurl }}/pages/archives-m#{{ year }}-{{ month }}">
             {{ post.date | date: '%B %Y' }}
           </a></span>
       {% endif %}
