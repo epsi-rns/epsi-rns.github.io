@@ -27,7 +27,16 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
+#sitedesc-image {
+    width: 354px;
+    height: 60px;
+    max-width: 100%; 
+//  max-height: 16.95%;
+    background: transparent url(/assets/site/images/yaosb.png) no-repeat left top;
+    background-size: 100% auto;
+    float: none;
+    margin: 0 auto;  
+}
 
 /**
  * Code formatting
