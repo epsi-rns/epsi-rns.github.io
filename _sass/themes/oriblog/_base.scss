@@ -164,6 +164,10 @@ div.post-tags {
   color: white;
 }        
 
+.panel a span.label-tag {
+  font-weight: normal;
+}
+
 a span.label-tag {
     background-color: #eee;
     color: $monad-blue;
@@ -281,9 +285,15 @@ ul li.list-content {
     margin-left: 20px;
 }
 
-.panel ul li.list-content {
-    margin-left: 0px;
+
+.panel {
+  ul.recent-post,
+  ul li.list-content {
     font-size: ceil(($font-size-base * 0.85)); // ~12px
+  }  
+  ul li.list-content {
+    margin-left: 0px;  
+  }
 }
 
 ul.archive-month,
