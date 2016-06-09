@@ -277,7 +277,12 @@ a:hover span.label-tag {
 ul li.list-month,
 ul li.list-content {    
     @include list-unstyled;
-    margin-left: 20px;    
+    margin-left: 20px;
+}
+
+.panel ul li.list-content {
+    margin-left: 0px;
+    font-size: ceil(($font-size-base * 0.85)); // ~12px
 }
 
 ul.archive-month,
