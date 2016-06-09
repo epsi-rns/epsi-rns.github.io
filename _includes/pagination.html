@@ -4,12 +4,12 @@
   <ul class="pagination" role="navigation" aria-labelledby="pagination-label">
 
     {% if paginator.previous_page %}
-      <li class="previous">
+      <li class="blogprevious">
       <a class="pagination-item" href="{{ paginator.previous_page_path }}" rel="prev">Previous</a>
       </li>
     {% else %}
-      <li class="current-page">
-      <span class="previous">Previous</span>
+      <li class="current-page inactive">
+      <span>Previous</span>
       </li>
     {% endif %}
     
@@ -18,12 +18,12 @@
     </li>
     
     {% if paginator.next_page %}
-      <li class="next">
+      <li class="blognext">
       <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next">Next</a>
       </li>
     {% else %}
-      <li class="current-page">
-      <span class="next ">Next</span>
+      <li class="current-page inactive">
+      <span>Next</span>
       </li>
     {% endif %}
   </ul>  

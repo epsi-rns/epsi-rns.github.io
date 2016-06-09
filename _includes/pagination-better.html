@@ -13,33 +13,35 @@
 
   <!-- Pagination links -->
   <div class="pagination center-block">
-{% assign limit = 7 %}
-{% if site.paginate_limit %}
+{% capture spaceless %}
+  {% assign limit = 7 %}
+  {% if site.paginate_limit %}
     {% assign limit = site.paginate_limit %}
-{% endif %}
-{% assign limitmin = limit | minus: 2 %}
-{% assign offset = limitmin | divided_by: 2 %}
-{% assign limitprev = paginator.page | minus: offset %}
-{% assign limitnext = paginator.page | plus: offset %}
-{% assign totalpages = paginator.total_pages %}
+  {% endif %}
 
-{% if limitprev <= 1 %}
+  {% assign limitmin = limit | minus: 2 %}
+  {% assign offset = limitmin | divided_by: 2 %}
+  {% assign limitprev = paginator.page | minus: offset %}
+  {% assign limitnext = paginator.page | plus: offset %}
+  {% assign totalpages = paginator.total_pages %}
+
+  {% if limitprev <= 1 %}
     {% assign limitprevfix = limitprev | minus: 1 %}
     {% assign limitprev = 0 %}
     {% assign limitnext = limitnext | minus: limitprevfix | plus: 1 %}
-{% endif %}
+  {% endif %}
 
-{% if limitnext >= totalpages %}
+  {% if limitnext >= totalpages %}
     {% assign limitnextfix = totalpages | minus: limitnext | minus: 1 %}
     {% assign limitnext = totalpages %}
     {% assign limitprev = limitprev | plus: limitnextfix %}
-{% endif %}
+  {% endif %}
 
-{% assign dots_prev = limitprev | minus: 1 %}
-{% assign dots_next = totalpages | minus: 1 %}
-{% assign max_next = totalpages | minus: offset | minus: 1 %}
+  {% assign dots_prev = limitprev | minus: 1 %}
+  {% assign dots_next = totalpages | minus: 1 %}
+  {% assign max_next = totalpages | minus: offset | minus: 1 %}
 
-{% if totalpages > limit %}
+  {% if totalpages > limit %}
     {% for count in (2..paginator.total_pages) %}
         {% if count == dots_prev  %}
             {% assign indicator_first = ' pages-indicator--active' %}
@@ -54,8 +56,8 @@
             {% assign relative_last = paginator.page | minus: forloop.index | replace: '-', '' | divided_by: 1 | plus: 1 %}
         {% endif %}
     {% endfor %}
-{% endif %}
-
+  {% endif %}
+{% endcapture %}
 
 
 <p id="pagination-label" class="pagination-label sr-only" aria-hidden="true">Pagination</p>
@@ -65,11 +67,11 @@
     {% if paginator.previous_page %}
     <li class="previous">
         {% if paginator.previous_page == 1 %}
-        <a class="pagination-item" href="{{ paginate_root }}" rel="prev"
-        >previous<span class="sr-only"> page</span></a>
+        <a class="pagination-item" href="{{ paginate_root }}" 
+           rel="prev">&laquo;<span class="sr-only"> page</span></a>
         {% else %}
-        <a class="pagination-item" href="{{ paginator.previous_page_path }}" rel="prev"
-        >&laquo<span class="sr-only"> page</span></a>
+        <a class="pagination-item" href="{{ paginator.previous_page_path }}" 
+           rel="prev">&laquo;<span class="sr-only"> page</span></a>
         {% endif %}
     </li>
     {% endif %}
@@ -123,8 +125,8 @@
 
     {% if paginator.next_page %}
     <li class="next">
-        <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next"
-        >&raquo<span class="sr-only"> page</span></a>
+        <a class="pagination-item" href="{{ paginator.next_page_path }}" 
+           rel="next">&raquo;<span class="sr-only"> page</span></a>
     </li>
     {% endif %}
 </ul>

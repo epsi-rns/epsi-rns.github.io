@@ -1,3 +1,5 @@
+@import "_pagination";
+
 // Breakpoint variables
 
 /**
@@ -199,33 +201,6 @@ a:hover span.label-tag {
    max-width: 1366px; /* or 1360px */
 }
 
-// ---------------------------------------------------------------------
-// _includes
-
-// pagination.html, pagination-better.html, post.html
-
-.pagination {
-  text-align: center;
-}
-
-.pagination li a.pagination-item {
-    border: 1px solid $monad-blue;
-}
-
-.pagination li span.pagination-item {
-    background-color: $yellow-makara;
-    border: 1px solid $brand-primary;     
-}
-
-li.current-page span.pagination-item {
-    border: 1px solid $brand-primary; 
-}
-
-.pagination li:hover a.pagination-item {
-    color: white;
-    border: 1px solid $yellow-makara;    
-    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
-}
 
 // post.html
 

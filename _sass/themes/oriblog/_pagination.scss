@@ -1,0 +1,50 @@
+// ---------------------------------------------------------------------
+// _includes
+
+// pagination.html, pagination-better.html, post.html
+
+.pagination {
+  text-align: center;
+  
+  li a.pagination-item {
+    border: 1px solid $monad-blue;
+  }
+
+  li span.pagination-item {
+    background-color: $yellow-makara;
+    border: 1px solid $brand-primary;     
+  }
+
+  li.current-page span.pagination-item {
+    border: 1px solid $brand-primary; 
+  }
+
+  li:hover a.pagination-item {
+    color: white;
+    border: 1px solid $yellow-makara;    
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
+  }  
+  
+  li.blognext, li.blogprevious {
+    display: inline-block;
+  }
+  
+  li.inactive span {
+    background-color: white;
+    color: $gray;
+    border: 1px solid $monad-blue;
+  }  
+  
+  li.blognext a, li.blogprevious a {
+    background-color: $pages-item-background;
+    color: $monad-blue;
+    border: 1px solid $monad-blue;
+  }
+  
+  li.blognext:hover a, li.blogprevious:hover a {
+    background-color: $brand-primary;
+    color: white;
+    border: 1px solid $yellow-makara;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);    
+  }  
+}
