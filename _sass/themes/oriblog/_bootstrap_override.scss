@@ -8,60 +8,7 @@ $monad-blue:       #2980b9;
   @include gradient-striped(rgba(255,255,255,.05), 45deg);
 }
 
-.navbar-default {
-  @include gradient-striped(rgba(255,255,255,.35), 45deg);
 
-  ul.navbar-nav li:hover,
-  div.navbar-header:hover {
-    background-color: $brand-primary;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
-  }
-
-  ul.navbar-nav li:hover a,
-  div.navbar-header:hover a {
-    color: white;   
-  }  
-
-  ul.navbar-nav li a:focus {
-    background-color: $brand-primary;
-  }
-  
-  ul.navbar-nav li.dropdown li a {
-    background-color: white;
-    color:  black;  
-  }
-
-  ul.navbar-nav li.dropdown li:hover a {
-    background-color: $brand-primary;
-    color: white;
-  }    
-  
-}
-
-.navbar-brand {
-  @media (min-width: $grid-float-breakpoint) {
-    .navbar > .container &,
-    .navbar > .container-fluid & {
-      margin-left: 0;
-    }
-  }
-}
-
-.navbar-form {
-  .form-control { 
-    border: 1px solid $gray-dark; 
-  }
-  
-  .form-control:hover { 
-    border: 1px solid $gray-light; 
-  }  
-}
-
-.navbar:hover,
-.panel,
-.well {
-  box-shadow: 2px 2px 2px rgba(0,0,0,.2);  
-}
 
 .panel:hover,
 .well:hover {
