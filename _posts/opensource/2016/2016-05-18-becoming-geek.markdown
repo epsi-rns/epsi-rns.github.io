@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Becoming a Geek"
+title:  "Becoming a Geek, a Weird Story About Nerd"
 categories: opensource
 tags: [thought, about]
 author: epsi

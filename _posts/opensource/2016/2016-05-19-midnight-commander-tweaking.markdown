@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Midnight Commander Tweaking"
+title:  "Midnight Commander Tweaking, can Help People Better"
 categories: opensource
 tags: [ricing, dotfiles]
 author: epsi

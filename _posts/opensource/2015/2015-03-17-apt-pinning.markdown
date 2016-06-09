@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Debian APT Pinning"
+title:  "Control Your Package with APT Pinning"
 date:   2015-03-17 12:49:15 +0700
 categories: opensource
 tags: [debian, apt, package manager]

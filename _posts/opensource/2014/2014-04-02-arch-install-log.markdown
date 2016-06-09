@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Arch - Install/ Post Install Log"
+title:  "Arch Linux - Install/ Post Install Log"
 date:   2014-04-02 08:46:15 +0700
 categories: opensource
 tags: [arch, pacman, package manager]

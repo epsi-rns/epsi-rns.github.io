@@ -21,6 +21,8 @@ related_link_ids:
 Before Openbox, there was Fluxbox. Fluxbox is not as cool as Openbox.
 But if you need config or just curious about, you can check this out.
 
+I myself, still don't know why I even learn this.
+
 {% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
 <strong>WM</strong>: Fluxbox<br/>

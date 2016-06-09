@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux Multiboot"
+title:  "Linux Multiboot, Setting up Partitions"
 date:   2014-03-13 18:31:15 +0700
 categories: opensource
 tags: [thought]

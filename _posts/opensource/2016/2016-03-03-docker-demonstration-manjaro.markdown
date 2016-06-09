@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Docker Demonstration (Manjaro)"
+title:  "Docker Demonstration (Manjaro), Running Multiple Guest OS"
 date:   2016-03-03 13:01:15 +0700
 categories: opensource
 tags: [cloud, docker, package manager]

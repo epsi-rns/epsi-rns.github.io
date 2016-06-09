@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "XMonad Tiling Window Manager"
+title:  "XMonad Tiling Window Manager is so Amazing"
 date:   2014-12-12 22:59:15 +0700
 categories: opensource
 tags: [screenshot, xmonad, dotfiles]

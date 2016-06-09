@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Wireless in Command Line"
+title:  "Wireless Command Line, a must have Knowledge"
 date:   2014-03-13 18:32:15 +0700
 categories: opensource
 tags: [thought, network]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "XMonad with Conkyless Dzen"
+title:  "XMonad with Conkyless Dzen, Total Control of Theme"
 date:   2016-05-11 21:02:15 +0700
 categories: opensource
 tags: [screenshot, xmonad, dotfiles]
