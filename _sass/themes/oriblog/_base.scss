@@ -1,4 +1,5 @@
 @import "_pagination";
+@import "_stripes";
 
 // Breakpoint variables
 
@@ -365,3 +366,4 @@ ul.recent-post li:hover:before {
   
   blockquote:hover a { color: $yellow-makara }
 }
+
