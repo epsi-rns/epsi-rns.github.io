@@ -5,7 +5,10 @@ epsi:
   web: http://epsi-rns.github.io
   email: epsi.nurwijayadi@gmail.com
   bio: "What do you want, jewels? I am a very extravagant man."
-  avatar: epsi-vexel.png
+  avatar: 
+    image:  epsi-vexel.png
+    height: 110px
+    width:  120px
   twitter: nurwijayadi
   google:
     plus: epsi.nurwijayadi

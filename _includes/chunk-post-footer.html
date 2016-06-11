@@ -5,12 +5,21 @@
           {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.data.owner %}
         {% endif %}
         
+        {% assign avatar = author.avatar %}
+        {% if avatar.image contains 'http' %}
+          {% assign av_img = avatar.image %}
+        {% elsif avatar.image %}
+          {% assign av_img = avatar.image | prepend: '/assets/site/images/authors/' | prepend: site.url %}
+        {% endif %}
+
         <div class="container">
         <div class="col-lg-2">
-          {% if author.avatar contains 'http' %}
-            <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
-          {% elsif author.avatar %}
-            <img src="{{ site.url }}/assets/site/images/authors/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+          {% if av_img %}
+            <img src="{{ av_img }}" 
+                 class="bio-photo" 
+                 height="{{ avatar.height }}"
+                 width="{{ avatar.width }}"
+                 alt="{{ author.name }} bio photo"></a>
           {% endif %}
         </div>
                 
