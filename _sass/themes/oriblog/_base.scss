@@ -379,3 +379,51 @@ ul.recent-post li:hover:before {
   blockquote:hover a { color: $yellow-makara }
 }
 
+// ---------------------------------------------------------------------
+// 
+
+#lay_top {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #lay_top {
+    display: block;
+  }
+}
+
+#lay_top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;  
+  padding-top: 53px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+#lay_top {
+    border-bottom-left-radius:  10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 3px 3px 5px #888;
+    border-top:1px solid #fff;
+    border-bottom: 2px solid #007eae;
+
+    background: #000;
+    color: white;
+    font-size: 12px;    
+    text-align:left;
+    
+    @include gradient-striped(rgba(255,255,255,.15), 45deg);
+}
+
+// Fix div p, unwanted margin 
+div#lay_top p, div#lay_top h3 {
+    margin: 0 .25em;
+    padding: .25em 0;
+}
+
+
