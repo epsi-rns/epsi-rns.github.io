@@ -18,12 +18,12 @@ related_link_ids:
 
 ---
 
-A very common Desktop Customization.
-
 Sometimes in the middle of hard work,
 you have to wait for something that delaying your job.
 Later got bored because of you got too much free time.
 So let's play with coky and stuff.
+
+## A very common Desktop Customization.
 
 {% capture ss_content %}
 <strong>OS</strong>: Debian<br/>

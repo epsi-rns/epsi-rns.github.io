@@ -10,7 +10,7 @@ excerpt:
   Although as an amateur I can't make it smoother yet.
 ---
 
-# Humanity in Progress.
+## Humanity in Progress.
 
 I never have my own photographs, and it give me difficulties everytime I need an avatar. In 2012 somebody took a good picture of me, but it is blurry. So I decided to make a scalable vector version of my photograph that I can use for profile picture.
 

@@ -226,7 +226,8 @@ Avoid Conflict
 ># systemctl stop dhcpcd@.service
 {% endhighlight %}
 
--- -- -- -- -- -- -- --
+-- -- -- 
+
 Reading
 
 * <https://bbs.archlinux.org/viewtopic.php?pid=1385771>

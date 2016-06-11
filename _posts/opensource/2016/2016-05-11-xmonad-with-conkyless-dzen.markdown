@@ -20,12 +20,12 @@ related_link_ids:
   
 ---
 
-# Removing Conky Dependency between XMonad and Dzen2
-
 We can improve XMonad configuration, by removing extensive use of conky.
 Everytime I look at XMonad dotfiles, conky is used as a feed to dzen2 in statusbar. 
 I can understand the need of using conky-dzen tier from portability between WM perpective.
 But portability have its drawback.
+
+## Removing Conky Dependency between XMonad and Dzen2
 
 Conky is completely unnecessary,
 and you can replace conky with simple while-sleep-do bash script.

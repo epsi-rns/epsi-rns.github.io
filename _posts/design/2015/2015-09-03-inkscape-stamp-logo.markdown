@@ -15,14 +15,14 @@ Logo with manual stamp ornament border would make an accent to your flyer.
 
 I also add shadow with envelope path effects under the logo.
 
-## Pink Padz
+### Pink Padz
 
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-pink-padz.svg.gz][dotfiles-pink-padz]
 
 [![Pink Padz][image-ss-pink-padz]{: .img-responsive }][picasa-ss-pink-padz]
 
-## ILUNI FTUI
+### ILUNI FTUI
 
 **SVG Source**:<br/>
 * [epsi-rns.github.io/.../logo-stamp-iluni-ftui.svg.gz][dotfiles-iluni-ftui]

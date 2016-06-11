@@ -59,7 +59,7 @@ This screenshot use a lot of transparency.
 [![debian+openbox+tint2+conky+tmux+cmus+screenfetch+font(captureit)][image-ss-openbox]{: .img-responsive }][picasa-ss-openbox]
 <br/>
 
-<hr/>
+-- -- --
 
 I also separate menu files in configuration to make it more modular.
 
@@ -82,7 +82,7 @@ Bunsenlabs Linux distribution. So I clone theme in my arch.
 
 [![openbox clone][image-ss-openbox-clone]{: .img-responsive }][picasa-ss-openbox-clone]
 
-<hr/>
+-- -- --
 
 One of the most common component in Openbox is the famous tint2 panel.
 You can see how the taskbar has different tint2 looks form those screenshot above.

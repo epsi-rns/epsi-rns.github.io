@@ -23,7 +23,7 @@ But Mageia currently still have a very similar issue.
 
 -- - --
 
-Progress for package migration
+### Progress for package migration
 
 * python-gtk2    : python3-gi,
 
@@ -49,8 +49,9 @@ Note: In Debian, Python2 space is simply called Python, without 2 suffix, while 
 
 -- -- --
 
+### Two years has past.
+
 Now, it's 22 february 2014.<br/>
-Two years has past.
 
 * python-gtk2    : Hard dependency for Gnome package
 

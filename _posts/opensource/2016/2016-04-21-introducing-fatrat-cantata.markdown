@@ -14,14 +14,14 @@ excerpt:
   
 ---
 
-# Introducing 2 KDE Applications
+## Introducing 2 KDE Applications
 
 1. FatRat Downloader.
 2. Cantata Player (MPD Client).
 
 * * *
 
-# Screenshot
+## Screenshot
 
 {% capture ss_content %}
 <strong>OS</strong>: Debian<br>
@@ -35,7 +35,7 @@ excerpt:
 
 * * *
 
-## Installing FatRat in Debian 
+### Installing FatRat in Debian 
 
 {% highlight bash %}
  $ git clone git://git.dolezel.info/fatrat.git
@@ -60,7 +60,7 @@ excerpt:
 
 * * *
 
-## Installing Cantata in Debian
+### Installing Cantata in Debian
 
 Surprisingly Cantata have a very nice looks.
 

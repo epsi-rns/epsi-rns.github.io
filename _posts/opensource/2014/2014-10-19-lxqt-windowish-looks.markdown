@@ -41,7 +41,7 @@ remind me of my happy childhood day.
 [![Arch LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]{: .img-responsive }][picasa-ss-lxqt-windowish-pcmanfm]
 <br/>
 
-<hr/>
+-- -- --
 
 But don't get so depressed.
 The original LXQT has great looks.
@@ -63,7 +63,7 @@ Let's see how it can be combined with KWin instead of Openbox.
 [![Arch LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][picasa-ss-lxqt-kwin-ghost]
 <br/>
 
-<hr/>
+-- -- --
 
 Our long waited lightweight desktop environment is coming.
 

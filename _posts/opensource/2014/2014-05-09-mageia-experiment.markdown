@@ -16,7 +16,7 @@ related_link_ids:
   
 ---
 
-Back to Mageia
+## Back to Mageia
 
 {% highlight bash %}
 ># urpmi task-kde
