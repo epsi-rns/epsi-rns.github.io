@@ -21,9 +21,7 @@ layout: default
         </span>
         {% endif %}  
         <div class="post-time pull-left">
-          <span class="fa fa-calendar"></span>
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {{ page.date | date: "%b %-d, %Y" }}</time>
+          {% include post/time-elapsed.html %}  
         </div>      
         <div class="post-tags pull-right" id="tags">
           {% for tag in page.tags %}
@@ -67,7 +65,7 @@ layout: default
   
 </article>
 
-{% include chunk-post-footer.html %}
+{% include post/chunk-footer.html %}
 
 
 

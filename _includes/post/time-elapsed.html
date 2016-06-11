@@ -1,0 +1,62 @@
+{% comment %}
+http://www.zachstronaut.com/posts/2009/01/20/php-relative-date-time-string.html
+{% endcomment %}
+
+{% capture spaceless %}
+  {% assign now = 'now' | date: '%s' %}
+  {% assign postdate = page.date | date: '%s' %}
+  {% assign epoch_diff = now | minus: postdate %}
+  
+  {% assign a_year = 12 * 30 * 24 * 60 * 60 %}
+  {% assign a_second = 1 %}
+  {% assign a_minute = a_second | times:  60 %}
+  {% assign an_hour  = a_minute | times:  60 %}
+  {% assign a_day    = an_hour  | times:  24 %}
+  {% assign a_week   = a_day    | times:   7 %}
+  {% assign a_month  = a_day    | times:  30 %}
+  {% assign a_year   = a_day    | times: 365 %}
+
+  {% if (epoch_diff > a_year) %}
+     {% assign elapsed_time = epoch_diff | divided_by: a_year %}
+     {% assign elapsed_text = 'year' %}
+  {% elsif (epoch_diff > a_month) %}
+     {% assign elapsed_time = epoch_diff | divided_by: a_month %}
+     {% assign elapsed_text = 'month' %}
+  {% elsif (epoch_diff > a_week) %}
+     {% assign elapsed_time = epoch_diff | divided_by: a_week %}
+     {% assign elapsed_text = 'week' %}
+  {% elsif (epoch_diff > a_day) %}
+     {% assign elapsed_time = epoch_diff | divided_by: a_day %}
+     {% assign elapsed_text = 'day' %}
+  {% elsif (epoch_diff > an_hour) %}
+     {% assign elapsed_time = epoch_diff | divided_by: an_hour %}
+     {% assign elapsed_text = 'hour' %}
+  {% elsif (epoch_diff > a_minute) %}
+     {% assign elapsed_time = epoch_diff | divided_by: a_minute %}
+     {% assign elapsed_text = 'minute' %}     
+  {% elsif (epoch_diff > a_second) %}
+     {% assign elapsed_time = epoch_diff | divided_by: a_second %}
+     {% assign elapsed_text = 'second' %}     
+  {% else %}
+     {% assign elapsed_time = 0 %}
+     {% assign elapsed_text = 'second' %}
+  {% endif %}  
+
+  {% if elapsed_time > 1 %}
+     {% assign elapsed_text = elapsed_text | append: 's' %}  
+  {% endif %}       
+
+  {% if elapsed_time > 0 %}
+     {% assign elapsed_text = elapsed_text | append: ' ago' %}  
+  {% endif %}       
+
+{% endcapture %} 
+ 
+          <span class="fa fa-calendar"></span>
+          &nbsp;
+          <time datetime="{{ page.date | date_to_xmlschema }}" 
+                itemprop="datePublished">
+          <span title="{{ page.date | date: "%b %-d, %Y" }}">
+            {{ elapsed_time }} {{ elapsed_text }}
+          </span></time>
+ 
