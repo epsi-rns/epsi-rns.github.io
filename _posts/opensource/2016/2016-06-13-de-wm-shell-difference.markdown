@@ -15,7 +15,7 @@ excerpt:
 
 ---
 
-The difference between DE, WM and a Shell.
+The difference between DE, WM, Shell and Compositor.
 
 GNU/Linux is very modular,
 you can find a bunch of different distro 
@@ -36,9 +36,10 @@ and I won't give a definition here either.
 There is a standalone WM, and WM tighted to a DE.
 
 If you don't know what is DE and WM are all about,
-here is the abbreviation.
+here is the abbreviations.
 
 * DE: Desktop Environment
+
 * WM: Window Manager
 
 -- -- --
@@ -67,9 +68,7 @@ GTK based
 
 QT based
 
-* KDE is using either kwin_x11 or kwin_wayland
-  KWin here is also a compositor. 
-  Before you asked. I will tell you that I don't understand.
+* KDE is using either kwin_x11 or kwin_wayland.
 
 
 New Contender
@@ -96,6 +95,15 @@ There are many kind of Window Manager
 * Dynamic WM: You can switch from tiling to floating
 
 Note that you should read from wiki for more comprehensive knowledge.
+
+-- -- --
+
+## Compositor
+
+There is one more Category
+
+KWin is also a compositor. 
+Before you asked. I will tell you that I don't understand what it means.
 
 -- -- --
 
