@@ -11,7 +11,6 @@ excerpt:
   Always start with Plain HTML, then HTML+CSS,
   You can learn Client Side or Server Side later.
 ---
-How do a web coder begin ?
 
 Between HTML, Javascript, PHP, CSS?
 Where do I start?

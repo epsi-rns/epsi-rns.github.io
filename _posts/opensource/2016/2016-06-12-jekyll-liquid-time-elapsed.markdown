@@ -20,9 +20,11 @@ Again, let's rewrite. KISS. Keep the code simple and stupid.
 From PHP to Jekyll Liquid.
 
 Original PHP Script:
+
 * [www.zachstronaut.com/.../php-relative-date-time-string.html][link-zach]
 
 Jekyll Liquid Port:
+
 * [github.com/epsi-rns/.../time-elapsed.html][dotfiles-time-elapsed]
 
 You can examine both script, and see how a different approach can be achieved from just one idea. The code looks entirely altered now.

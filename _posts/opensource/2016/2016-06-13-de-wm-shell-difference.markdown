@@ -68,6 +68,8 @@ GTK based
 QT based
 
 * KDE is using either kwin_x11 or kwin_wayland
+  KWin here is also a compositor. 
+  Before you asked. I will tell you that I don't understand.
 
 
 New Contender

@@ -155,7 +155,7 @@ The YAML part
 
 And the header part
 
-> <https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/header.html?
+> <https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/header.html>
 
 {% highlight liquid %}
 {% raw %}
@@ -178,7 +178,7 @@ And the header part
 Sample screenshot here.
 
 
-![Jekyll Liquid Archives Without Plugin][image-archives]{: .img-responsive }
+![Jekyll Liquid Archives Without Plugin][image-jekyll-archives]{: .img-responsive }
 
 Sample complete code here.
 
