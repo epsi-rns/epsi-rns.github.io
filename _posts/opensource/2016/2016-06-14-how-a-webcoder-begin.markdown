@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How Do a Webcoder Begin ?"
+title:  "How do a Webcoder Begin ?"
 date:   2016-06-14 01:09:15 +0700
 categories: opensource
 tags: [thought]
@@ -17,6 +17,8 @@ Where do I start?
 
 This is more like a guidance.
 Coder with different experience might have different answer.
+
+![Illustration: HTML and CSS][image-html-css]{: .img-responsive }
 
 -- -- --
 
@@ -166,3 +168,4 @@ Have Fun with Learning.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+[image-html-css]: {{ site.url }}/assets/posts/opensource/2016/06/illustration-css-html.png
