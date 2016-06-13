@@ -60,6 +60,8 @@ GTK+3 based
 
 * Mate is using Marco
 
+* Unity is using Compiz
+
 
 GTK based
 
@@ -73,7 +75,7 @@ QT based
 
 New Contender
  
-* Deepin is using Deepin-WM
+* Deepin is using Deepin-WM, utilizing HTML5.
 
 * Budgie is using Window-WM
 
@@ -100,10 +102,13 @@ Note that you should read from wiki for more comprehensive knowledge.
 
 ## Compositor
 
-There is one more Category
-
-KWin is also a compositor. 
+There is one more Category, The Compositor
 Before you asked. I will tell you that I don't understand what it means.
+
+* KWin
+
+* Compiz
+
 
 -- -- --
 
