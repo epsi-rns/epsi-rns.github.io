@@ -32,6 +32,11 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
+h1, h2 {
+  font-weight: bold;
+}
+
+
 #sitedesc-image {
     width: 354px;
     height: 60px;
@@ -124,9 +129,6 @@ body {
     background-image: url("../images/subtle-tile.jpg");
 }
 
-.post-title h1 {
-  font-weight: bold;
-}
 
 .post-title {
   padding: 1px 15px;
