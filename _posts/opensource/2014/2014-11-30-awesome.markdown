@@ -12,6 +12,7 @@ excerpt:
   It is not intimidating, as it still has built in menu.
 
 related_link_ids: 
+  - 16061316  # The Difference Between DE and WM
   - 16031941  # Refactoring Awesome
   - 14110202  # Openbox SWM
   - 14110804  # Fluxbox SWM

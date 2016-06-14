@@ -3,7 +3,7 @@ layout: post
 title:  "Meet Our Friend, Regular Expression"
 date:   2016-06-03 16:53:15 +0700
 categories: opensource
-tags: [thought]
+tags: [thought, command line]
 author: epsi
 
 excerpt:
@@ -16,6 +16,7 @@ excerpt:
   Regular Expression is a language
   for string (text) processing.
   Search and replace utilize pattern match.
+
 ---
 
 ## Regular Expression in command line with sed and awk

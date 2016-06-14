@@ -6,6 +6,17 @@ date:   2016-06-12 06:25:15 +0700
 tags: [thought, jekyll, liquid]
 author: epsi
 
+excerpt:
+  It is common in a blog, 
+  not to write the calendar date of the post,
+  but rather elapsed time (e.g some time ago).
+  I'm writing new liquid script for use in Jekyll.
+
+related_link_ids: 
+  - 16061409  # Webcoder Begin
+  - 16060951  # Jekyll Archives
+  - 16061051  # Inkscape Stripes
+    
 ---
 
 

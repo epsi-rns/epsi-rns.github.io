@@ -11,6 +11,7 @@ excerpt:
   But if you need config or just curious about, you can check this out.
 
 related_link_ids: 
+  - 16061316  # The Difference Between DE and WM
   - 14110202  # Openbox SWM
   - 14113019  # Awesome TWM Beginner  
   - 14120646  # i3 TWM

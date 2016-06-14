@@ -11,6 +11,7 @@ excerpt:
   Especially with network monitoring.
 
 related_link_ids: 
+  - 16061316  # The Difference Between DE and WM
   - 14110202  # Openbox SWM
   - 14110804  # Fluxbox SWM
   - 14113019  # Awesome TWM Beginner

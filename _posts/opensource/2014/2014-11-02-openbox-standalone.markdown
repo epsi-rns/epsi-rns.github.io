@@ -13,6 +13,7 @@ excerpt:
   In fact, Openbox is the only Stacking WM that I use daily.  
 
 related_link_ids: 
+  - 16061316  # The Difference Between DE and WM
   - 14110804  # Fluxbox SWM
   - 14113019  # Awesome TWM Beginner  
   - 14120646  # i3 TWM

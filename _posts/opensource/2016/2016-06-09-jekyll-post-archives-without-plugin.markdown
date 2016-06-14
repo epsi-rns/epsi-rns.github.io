@@ -15,6 +15,11 @@ excerpt:
   Here is my custom liquid archives script
   that you can modify for your own.
 
+related_link_ids: 
+  - 16061225  # Elapsed Time
+  - 16061409  # Webcoder Begin
+  - 16061051  # Inkscape Stripes
+
 ---
 
 Blog Archives is very common in Wordpress.

@@ -13,6 +13,13 @@ excerpt:
   XFCE4, gnome-shell, KDE, LXQT, Cinnamon.
   And later WM, Awesome, i3 and XMonad.
 
+related_link_ids: 
+  - 14110202  # Openbox SWM
+  - 14110804  # Fluxbox SWM
+  - 14113019  # Awesome TWM Beginner
+  - 14120646  # i3 TWM
+  - 14121259  # XMonad Tiling
+
 ---
 
 Linux is very modular,

@@ -16,6 +16,11 @@ excerpt:
   or any aesthetic aspects. 
   It simply math.
 
+related_link_ids: 
+  - 16061225  # Elapsed Time
+  - 16061409  # Webcoder Begin
+  - 16060951  # Jekyll Archives  
+
 ---
 
 I'm thinking of giving different color variation for each post.

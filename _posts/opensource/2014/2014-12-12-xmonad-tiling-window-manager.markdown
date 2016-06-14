@@ -13,6 +13,7 @@ excerpt:
   so you can make a very flexible configuration.
 
 related_link_ids: 
+  - 16061316  # The Difference Between DE and WM
   - 14121558  # XMonad Menu Bar
   - 16032658  # Modularized XMonad Config  
   - 16051102  # XMonad with Conkyless Dzen

@@ -5,6 +5,30 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16061409
+  title: "Step by Step Guidance to be a Webcoder"
+  url: /opensource/2016/06/14/how-a-webcoder-begin.html
+
+- id: 16061316
+  title: "The Difference Between DE, Shell, WM and Compositor"
+  url: /opensource/2016/06/13/de-wm-shell-difference.html
+
+- id: 16061225
+  title: "Elapsed Time, Yet Another Jekyll Liquid Port"
+  url: /opensource/2016/06/12/jekyll-liquid-time-elapsed.html
+
+- id: 16061051
+  title: "Create Stripes Using Inkscape to Decorate Blog Post"
+  url: /opensource/2016/06/10/stripes-to-decorate-blog-post.html
+
+- id: 16060951
+  title: "Jekyll Post Archives Without Plugin"
+  url: /opensource/2016/06/09/jekyll-post-archives-without-plugin.html
+
+- id: 16060353
+  title: "Meet Our Friend, Regular Expression"
+  url: /opensource/2016/06/03/regular-expression.html
+
 - id: 16051900
   title: "Midnight Commander Tweaking, can Help People Better"
   url: /opensource/2016/05/19/midnight-commander-tweaking.html
