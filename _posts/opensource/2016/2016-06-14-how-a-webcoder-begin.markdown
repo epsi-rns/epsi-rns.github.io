@@ -20,7 +20,7 @@ Where do I start?
 This is more like a guidance.
 Coder with different experience might have different answer.
 
-![Illustration: HTML and CSS][image-html-css]{: .img-responsive }
+[![Illustration: HTML and CSS][image-html-css]{: .img-responsive }][picasa-html-css]
 
 -- -- --
 
@@ -116,6 +116,13 @@ Framework sometimes utilized ORM, e.g Symfony2 tightly related with Doctrine2 OR
 
 -- -- --
 
+## HTTP Request
+
+Doing test with framework require handling of HTTP error code.
+YOu shuld be familiar with these.
+
+-- -- --
+
 ## Static Site Generator: Jekyll
 
 Build your own site, You dont always need Server Side.
@@ -170,4 +177,5 @@ Have Fun with Learning.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-html-css]: {{ site.url }}/assets/posts/opensource/2016/06/illustration-css-html.png
+[image-html-css]: {{ site.url }}/assets/posts/opensource/2016/06/illustration-css-html-light.png
+[picasa-html-css]: https://lh3.googleusercontent.com/-1gkoz00Hb2o/V1_FNgRzXnI/AAAAAAAAAVk/oqBkiy2yhEs_A_5o_U10-4dcqh8yyFv9QCCo/s0/illustration-css-html-light.png

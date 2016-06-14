@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The difference between DE, WM and a Shell"
+title:  "The Difference Between DE, Shell, WM and Compositor"
 categories: opensource
 date:   2016-06-13 23:16:15 +0700
 tags: [thought]
@@ -15,18 +15,17 @@ excerpt:
 
 ---
 
-The difference between DE, WM, Shell and Compositor.
-
-GNU/Linux is very modular,
+Linux is very modular,
 you can find a bunch of different distro 
 based on GNU/Linux in distrowatch. 
-Even Android is GNU/Linux based.
+Even Android is using Linux kernel.
+Although Android doesn't utilize GNU tools.
 
 I'm not textbook guy, 
 I don't know exactly what is the different
 and I won't give a definition here either.
 
-![Cinnamon 3D Switcher][image-ss-cinnamon-3d]{: .img-responsive }
+[![Cinnamon 3D Switcher][image-ss-cinnamon-3d]{: .img-responsive }][picasa-ss-cinnamon-3d]
 
 
 -- -- --
@@ -103,7 +102,8 @@ Note that you should read from wiki for more comprehensive knowledge.
 ## Compositor
 
 There is one more Category, The Compositor
-Before you asked. I will tell you that I don't understand what it means.
+Before you ask. I will tell you 
+that I don't understand what it means.
 
 * KWin
 
@@ -132,7 +132,8 @@ because it used internal X something.
 
 ### Switch beetwen WM
 
-Note that you can experiment replacing 
+Each DE can use different WMs.
+You can experiment replacing 
 standard WM in a DE with this standalone WM. 
 Prepare for weird result.
 
@@ -190,4 +191,4 @@ Thank you for reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-cinnamon-3d]: {{ site.url }}/assets/posts/opensource/2016/06/cinnamon-3d.png
-
+[picasa-ss-cinnamon-3d]: https://lh3.googleusercontent.com/-kwSInSzWe3Q/V1_FQldQyJI/AAAAAAAAAVU/ikndUryhC-gjf8zJ7O1yQMK975x99m0TACCo/s0/cinnamon-3d.png
