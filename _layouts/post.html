@@ -9,13 +9,21 @@ layout: default
 <div id="sitedesc-image"></div>
 <article class="post well stripe-{{ page.date | date: '%m' }}" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">  
-      <h1 class="post-title" itemprop="name headline">
-        <a href="{{ site.url | append:site.baseurl | append:page.url }}">{{ page.title }}</a></h1>
+  <header class="post-header"> 
+      <div class="post-title"> 
+        <div class="calendar calendar-icon-{{ page.date | date: "%m" }}">
+          <div class="calendar-day">{{ page.date | date: "%d" }}</div>
+        </div>
+        <h1 itemprop="name headline">
+          <a href="{{ site.url | append:site.baseurl | append:page.url }}"
+          >{{ page.title }}</a></h1>
+      </div>
+      <div class="clearfix"></div>
       <div class="post-meta container-fluid">
         {% if page.author %}
         <span class="post-author">
             <span class="fa fa-user"></span>
+            &nbsp;
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">{{ page.author }}</span></span>
         </span>

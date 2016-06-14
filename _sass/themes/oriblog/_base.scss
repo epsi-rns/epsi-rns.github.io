@@ -2,6 +2,7 @@
 @import "_stripes";
 @import "_navbar";
 @import "_list";
+@import "_calendar";
 @import "_bootstrap_override";
 
 // Breakpoint variables
@@ -121,6 +122,18 @@ pre {
 body {
 //  http://www.designbolts.com/2012/12/22/50-free-simple-white-seamless-patterns-for-website-backgrounds/
     background-image: url("../images/subtle-tile.jpg");
+}
+
+.post-title h1 {
+  font-weight: bold;
+}
+
+.post-title {
+  padding: 1px 15px;
+  margin: 0px;
+  border-radius: 10px;  
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+  background: rgba(256, 256, 256, 0.5);
 }
 
 .center-block {float: none !important}
