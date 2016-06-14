@@ -24,16 +24,20 @@ Blog Archives can be achieved without plugin.
 You can make your own custom archives,
 that is more suitable for your project.
 
-Here is my custom liquid archives script
-that you can modify for your own.
+This archive column come from
+my custom liquid archives script,
+not just another auto widget
+as usual at another platform.
 
 * Archives by Year
 
 * Archives by Month
 
-* Sidebar Archives
+* Sidebar Archive Column
 
 * Navigation Menu: Using YAML Data.
+
+You can modify it for your own.
 
 -- -- --
 
