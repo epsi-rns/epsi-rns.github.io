@@ -7,6 +7,7 @@ search_omit: true
 # http://mikerowecode.com/2010/08/jekyll_archives_grouped_by_year.html
 ---
 <section id="archive">
+  {% assign line = 0 %}
   {%for post in site.posts %}
     {% capture cache %}
     
@@ -26,11 +27,20 @@ search_omit: true
       {% if post.next %}
         {% if year != n_year %}
           {% assign year_text = year %}
+          {% assign line = 0 %}
         {% endif %}
       {% else %}
         {% assign year_text = year | prepend: "This year's posts (" | append: ')' %}
       {% endif %}
+
+      {% assign mod = line | modulo: 2 %}
+      {% if mod == 1 %}
+        {% assign li_class='odd' %}
+      {% else %}
+        {% assign li_class='even' %}
+      {% endif %}        
       
+      {% assign line = line | plus: 1 %}
     {% endcapture %} 
     
     {% if year_text %}        
@@ -41,7 +51,7 @@ search_omit: true
     {% if year != n_year %}
     <ul class="archive-item">
     {% endif %}
-      <li class="list-content">
+      <li class="list-content {{ li_class }}">
         <time>{{ post.date | date:"%d %b" }}</time>        
         <a href="{{ post.url }}">
           <span class="fa fa-pencil"></span>

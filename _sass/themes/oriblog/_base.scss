@@ -1,6 +1,7 @@
 @import "_pagination";
 @import "_stripes";
 @import "_navbar";
+@import "_list";
 @import "_bootstrap_override";
 
 // Breakpoint variables
@@ -278,63 +279,6 @@ a:hover span.label-tag {
   margin-bottom: 0;
 }
 
-// chunk-page-sidebar.html, chunk-post-sidebar.html
-
-
-ul li.list-month,
-ul li.list-content {    
-    @include list-unstyled;
-    margin-left: 20px;
-}
-
-
-.panel {
-  ul.recent-post,
-  ul li.list-content {
-    font-size: ceil(($font-size-base * 0.85)); // ~12px
-  }  
-  ul li.list-content {
-    margin-left: 0px;  
-  }
-}
-
-ul.archive-month,
-ul.archive-item,
-ul.recent-post {
-  padding: 0px;
-}
-
-ul#search_results,
-ul.recent-post {    
-    @include list-unstyled;
-    margin-left: 20px;    
-}
-
-ul li.list-month:before,
-ul li.list-content:before,
-ul#search_results li:before,
-ul.recent-post li:before {    
-    font-family: 'FontAwesome';
-    margin: 0 5px 0 -20px;
-}
-
-ul li.list-content:before,
-ul#search_results li:before,
-ul.recent-post li:before {
-    content: '\f054';
-    color: $gray-dark;
-}
-
-ul li.list-month:before {
-    content: '\f073';
-    color: $gray-base;    
-}
-
-ul li.list-content:hover:before,
-ul#search_results li:hover:before,
-ul.recent-post li:hover:before {    
-    color: $yellow-makara;
-}
 
 // ---------------------------------------------------------------------
 // pages
