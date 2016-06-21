@@ -5,12 +5,19 @@ excerpt: "An archive of posts sorted by tag."
 search_omit: true
 ---
 
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tags_list = site_tags | split:',' | sort %}
+{% capture spaceless %}
+  {% assign tag_array = "" | split: "|" %}
+  {% for tag in site.tags %}
+    {% assign tag_first = tag | first %}
+    {% assign tag_array = tag_array | push: tag_first %}
+  {% endfor %}
+  
+  {% assign tag_array = tag_array | sort %}
+{% endcapture %}
 
 <div class="tag-box inline">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% assign this_word = tags_list[item] | strip_newlines %}
+    {% assign this_word = tag_array[item] | strip_newlines %}
     <a href="#{{ this_word }}"><span class="label label-tag">{{ this_word }} 
     <span class="tag-count">{{ site.tags[this_word].size }}</span></span></a>
   {% endunless %}{% endfor %}
@@ -19,7 +26,7 @@ search_omit: true
 
 <div>
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% assign this_word = tags_list[item] | strip_newlines %}
+  {% assign this_word = tag_array[item] | strip_newlines %}
   <div class ="anchor-target tag-word" id="{{ this_word }}">
     <span class="fa fa-tag"></span> {{ this_word }}</div>
   {% for post in site.tags[this_word] %}{% if post.title != null %}

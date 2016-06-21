@@ -9,7 +9,7 @@ search_omit: true
 <section id="archive">
   {% assign line = 0 %}
   {%for post in site.posts %}
-    {% capture cache %}
+    {% capture spaceless %}
     
       {% assign year = post.date | date: '%Y' %}
       {% assign n_year = 2000 %}

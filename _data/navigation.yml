@@ -7,6 +7,8 @@
   dropdown:
   - title: By Tag
     url: /pages/tag
+  - title: By Category
+    url: /pages/category
   - title: By Year
     url: /pages/archives-y
   - title: By Month

@@ -30,12 +30,19 @@ layout: default
         {% endif %}  
         <div class="post-time pull-left">
           {% include post/time-elapsed.html %}  
-        </div>      
+        </div>
         <div class="post-tags pull-right" id="tags">
           {% for tag in page.tags %}
             <a href="{{ site.url | append:site.baseurl }}/pages/tag#{{ tag }}">
               <span class="label label-tag"><span class="fa fa-tag"></span> {{ tag }}</span></a>
           {% endfor %}
+        </div>       
+        <div class="post-tags pull-right" id="cats">
+          {% for cat in page.categories %}
+            <a href="{{ site.url | append:site.baseurl }}/pages/category#{{ cat }}">
+              <span class="label label-cat"><span class="fa fa-folder"></span> {{ cat }}</span></a>
+          {% endfor %}
+          &nbsp;
         </div>
       </div>    
     

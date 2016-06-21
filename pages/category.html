@@ -1,0 +1,46 @@
+---
+layout: page
+title: All Categories
+excerpt: "An archive of posts sorted by tag."
+search_omit: true
+---
+
+{% capture spaceless %}
+  {% assign cat_array = "" | split: "|" %}
+  {% for cat in site.categories %}
+    {% assign cat_first = cat | first %}
+    {% assign cat_array = cat_array | push: cat_first %}
+  {% endfor %}
+  
+  {% assign cat_array = cat_array | sort %}
+{% endcapture %}
+
+<div class="tag-box inline">
+  {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+    {% assign this_word = cat_array[item] | strip_newlines %}
+    <a href="#{{ this_word }}"><span class="label label-tag">{{ this_word }} 
+    <span class="tag-count">{{ site.categories[this_word].size }}</span></span></a>
+  {% endunless %}{% endfor %}
+</div>
+<br/>
+
+<div>
+{% for item in (0..site.categories.size) %}{% unless forloop.last %}
+  {% assign this_word = cat_array[item] | strip_newlines %}
+  <div class ="anchor-target tag-word" id="{{ this_word }}">
+    <span class="fa fa-folder"></span> {{ this_word }}</div>
+  {% assign line = 0 %}  
+  {% for post in site.categories[this_word] %}
+  {% if post.title != null %}
+      <div class="tag-post-item container-fluid">      
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <div class="post-time pull-right">          
+          <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %-d, %Y" }}</time>
+          <span class="fa fa-calendar"></span>
+        </div>      
+      </div>  
+  {% endif %}
+  {% endfor %}
+{% endunless %}{% endfor %}
+</div>

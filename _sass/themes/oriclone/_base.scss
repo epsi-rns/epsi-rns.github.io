@@ -162,7 +162,8 @@ div.post-meta {
 
 // Tag label background color
 
-ul#tags a { display: inline; }
+ul#tags a,
+ul#cats a { display: inline; }
 
 div.post-tags {
   text-align: right;
@@ -178,15 +179,18 @@ div.post-tags {
   border-bottom: 1px solid #666666;
 }
 
-#tags a:hover {
+#tags a:hover,
+#cats a:hover {
   color: white;
-}        
+}
 
-.panel a span.label-tag {
+.panel a span.label-tag,
+.panel a span.label-cat {
   font-weight: normal;
 }
 
-a span.label-tag {
+a span.label-tag,
+a span.label-cat {
     background-color: #eee;
     color: $monad-blue;
     span.fa-tag,
@@ -197,12 +201,23 @@ a span.label-tag {
     }
 }
 
-a:hover span.label-tag {
+.panel .label.label-cat {
+  font-size: 85%;
+}
+
+a:hover span.label-tag,
+a:hover span.label-cat {
     background-color: $brand-primary;
     color: white;
     box-shadow: 2px 2px 2px rgba(0,0,0,.5); 
 }
 
+.post-meta #cats {
+   .label-cat {
+      padding-bottom: .0em;
+    }
+}
+ 
 .post-meta #tags {
    .label-tag {
       padding-bottom: .0em;

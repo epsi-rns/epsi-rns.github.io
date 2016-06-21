@@ -16,7 +16,8 @@ related_link_ids:
   - 16061409  # Webcoder Begin
   - 16060951  # Jekyll Archives
   - 16061051  # Inkscape Stripes
-    
+  - 16052948  # Jekyll Related Posts
+
 ---
 
 
