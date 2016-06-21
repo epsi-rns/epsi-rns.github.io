@@ -69,9 +69,9 @@ search_omit: true
           <ul class="archive-item">
     {% endif %}
           <li class="list-content {{ li_class }}">
-            <time>{{ post.date | date:"%d %b" }}</time>        
-            <a href="{{ post.url }}">
-              <span class="fa fa-pencil"></span>
+            <time class="pull-right">{{ post.date | date:"%d %b" }}&nbsp;
+        <span class="fa fa-calendar"></span></time>        
+            <a href="{{ post.url }}">              
               {{ post.title }}
             </a>        
           </li>
