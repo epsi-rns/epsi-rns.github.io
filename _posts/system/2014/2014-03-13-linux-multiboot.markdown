@@ -193,7 +193,7 @@ For more information you can
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/opensource/2014/03' %}
+{% assign asset_path = site.url | append: '/assets/posts/system/2014/03' %}
 
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/linux-multiboot/426339144178768
 [image-cover]: {{ asset_path }}/multiboot-cover.png

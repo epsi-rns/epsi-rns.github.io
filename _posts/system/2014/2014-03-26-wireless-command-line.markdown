@@ -257,7 +257,7 @@ Now you can ping
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/opensource/2014/03' %}
+{% assign asset_path = site.url | append: '/assets/posts/system/2014/03' %}
 
 [image-cover]: {{ asset_path }}/wireless-cover.png
 
