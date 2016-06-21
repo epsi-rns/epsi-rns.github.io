@@ -55,7 +55,7 @@ layout: default
       <li class="previous pull-left">
         <a class="pagination-item" 
            href="{{ site.url }}{{ page.previous.url }}" 
-           title="{{ page.previous.title }}">&laquo; Previous</a>
+           title="{{ page.previous.title }}">&laquo; </a>
       </li>
       {% endif %}
 
@@ -63,7 +63,7 @@ layout: default
       <li class="next pull-right">
         <a class="pagination-item" 
            href="{{ site.url }}{{ page.next.url }}" 
-           title="{{ page.next.title }}">Next &raquo;</a>
+           title="{{ page.next.title }}"> &raquo;</a>
       </li>
       {% endif %}
           
@@ -82,7 +82,7 @@ layout: default
             </div><!-- /.col-md-8 -->
             
             <div class="col-md-4">
-            {% include chunk-post-sidebar.html %}
+            {% include post/chunk-post-sidebar.html %}
             </div><!-- /.col-md-4 -->
             
         </div><!-- /.row -->
