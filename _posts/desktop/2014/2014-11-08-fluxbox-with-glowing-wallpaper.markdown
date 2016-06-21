@@ -2,7 +2,7 @@
 layout: post
 title:  "Fluxbox Stacking Window Manager"
 date:   2014-11-08 00:04:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, fluxbox]
 author: epsi
 
@@ -54,5 +54,5 @@ This Fluxbox utilised a modified version of Axonkolor theme that I found in Devi
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-fluxbox]: {{ site.url }}/assets/posts/opensource/2014/11/fluxbox-glow.png
+[image-ss-fluxbox]: {{ site.url }}/assets/posts/desktop/2014/11/fluxbox-glow.png
 [picasa-ss-fluxbox]: https://lh3.googleusercontent.com/-U6rIIOLyMLg/Vz2oBSAABUI/AAAAAAAAARM/WXU-K0lwXyAJ9PC-mgky7vOO0LV23STYQCCo/s0/fluxbox-glow.png

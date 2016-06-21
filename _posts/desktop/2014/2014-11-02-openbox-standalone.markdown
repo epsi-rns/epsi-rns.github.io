@@ -2,7 +2,7 @@
 layout: post
 title:  "Standalone Openbox WM with Tint2 Panel"
 date:   2014-11-02 03:02:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, openbox, tint2, ricing]
 author: epsi
 
@@ -99,7 +99,7 @@ Or make your own cool tint2 taskbar based on this thread.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-openbox]: {{ site.url }}/assets/posts/opensource/2014/11/openbox-green-garden.png
+[image-ss-openbox]: {{ site.url }}/assets/posts/desktop/2014/11/openbox-green-garden.png
 [picasa-ss-openbox]: https://lh3.googleusercontent.com/-IAK0W6hIhVg/Vz2oEHxs41I/AAAAAAAAARc/PioYvuCxLy8Tqy2h2LacXQoP-I4TdC_MgCCo/s0/openbox-green-garden.png
-[image-ss-openbox-clone]: {{ site.url }}/assets/posts/opensource/2014/11/openbox-arch-crunchbang-clone.png
+[image-ss-openbox-clone]: {{ site.url }}/assets/posts/desktop/2014/11/openbox-arch-crunchbang-clone.png
 [picasa-ss-openbox-clone]: https://lh3.googleusercontent.com/-FfVK47gbWnI/Vz2n78YRaXI/AAAAAAAAARM/i2ix7ajBjhYrAk0VXi_EsPxa382GhzZ_ACCo/s0/openbox-arch-crunchbang-clone.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Elapsed Time, Yet Another Jekyll Liquid Port"
-categories: opensource
+categories: webdev
 date:   2016-06-12 06:25:15 +0700
 tags: [thought, jekyll, liquid]
 author: epsi
@@ -108,5 +108,5 @@ Done.
 
 [link-zach]: http://www.zachstronaut.com/posts/2009/01/20/php-relative-date-time-string.html
 [dotfiles-time-elapsed]: https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/post/time-elapsed.html
-[image-jekyll-time-elapsed]: {{ site.url }}/assets/posts/opensource/2016/06/jekyll-time-elapsed.png
+[image-jekyll-time-elapsed]: {{ site.url }}/assets/posts/webdev/2016/06/jekyll-time-elapsed.png
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Debian Wheezy - Post Install Log"
 date:   2014-01-02 12:46:15 +0700
-categories: opensource
+categories: system
 tags: [debian, package manager]
 author: epsi
 
@@ -209,6 +209,6 @@ last step: go to the refigerator find myself something to eat
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-debian-install]: {{ site.url }}/assets/posts/opensource/2014/01/debian-install.jpg
+[image-ss-debian-install]: {{ site.url }}/assets/posts/system/2014/01/debian-install.jpg
 [picasa-ss-debian-install]: https://lh3.googleusercontent.com/-j65GwnT_z3g/Vz2o4lw6y5I/AAAAAAAAAR0/zJnk7wzO4-EXuqkyoyNwuLptfuKT7HpygCCo/s0/debian-install.jpg
 

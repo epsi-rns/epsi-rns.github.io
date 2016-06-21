@@ -11,7 +11,7 @@
 
 - id: 16061316
   title: "The Difference Between DE, Shell, WM and Compositor"
-  url: /opensource/2016/06/13/de-wm-shell-difference.html
+  url: /desktop/2016/06/13/de-wm-shell-difference.html
 
 - id: 16061225
   title: "Elapsed Time, Yet Another Jekyll Liquid Port"
@@ -31,7 +31,7 @@
 
 - id: 16051900
   title: "Midnight Commander Tweaking, can Help People Better"
-  url: /opensource/2016/05/19/midnight-commander-tweaking.html
+  url: /desktop/2016/05/19/midnight-commander-tweaking.html
 
 - id: 16051800
   title: "Becoming a Geek, a Weird Story About Nerd"
@@ -43,7 +43,7 @@
 
 - id: 16051102
   title: "XMonad with Conkyless Dzen, Total Control of Theme"
-  url: /opensource/2016/05/11/xmonad-with-conkyless-dzen.html
+  url: /desktop/2016/05/11/xmonad-with-conkyless-dzen.html
 
 - id: 16042139
   title: "Introducing FatRat and Cantata"
@@ -59,19 +59,19 @@
 
 - id: 16032658
   title: "Modularized XMonad Config"
-  url: /opensource/2016/03/26/modularized-xmonad-config.html
+  url: /desktop/2016/03/26/modularized-xmonad-config.html
 
 - id: 16032117
   title: "Customizing Shell Prompt with Powerline"
-  url: /opensource/2016/03/21/powerline-customizing.html
+  url: /desktop/2016/03/21/powerline-customizing.html
 
 - id: 16032038
   title: "Console Pixel Art, a Collection of Scripts"
-  url: /opensource/2016/03/20/console-pixel-art.html
+  url: /desktop/2016/03/20/console-pixel-art.html
 
 - id: 16031941
   title: "Refactoring Awesome WM's Lua Configuration Script"
-  url: /opensource/2016/03/19/refactoring-awesome-lua-configuration.html
+  url: /desktop/2016/03/19/refactoring-awesome-lua-configuration.html
 
 - id: 16031700
   title: "Learning Stages Guidance, from Beginner to Enthusiast"
@@ -111,7 +111,7 @@
 
 - id: 15021348
   title: "Minimalist XFCE4 with Limited Tiling Support"
-  url: /opensource/2015/02/13/xfce4-minimalis-tiling.html
+  url: /desktop/2015/02/13/xfce4-minimalis-tiling.html
 
 - id: 14122758
   title: "Selectively Install BlackArch Tools"
@@ -123,19 +123,19 @@
 
 - id: 14121558
   title: "XMonad Menu Bar"
-  url: /opensource/2014/12/15/xmonad-menu-bar.html
+  url: /desktop/2014/12/15/xmonad-menu-bar.html
 
 - id: 14121259
   title: "XMonad Tiling Window Manager is so Amazing"
-  url: /opensource/2014/12/12/xmonad-tiling-window-manager.html
+  url: /desktop/2014/12/12/xmonad-tiling-window-manager.html
 
 - id: 14120646
   title: "i3 Window manager with i3 Bar"
-  url: /opensource/2014/12/06/i3-i3bar.html
+  url: /desktop/2014/12/06/i3-i3bar.html
 
 - id: 14113019
   title: "Awesome WM, Tiling WM for beginner"
-  url: /opensource/2014/11/30/awesome.html
+  url: /desktop/2014/11/30/awesome.html
 
 - id: 14112819
   title: "Init Civil War, The systemd Controversy"
@@ -143,19 +143,19 @@
 
 - id: 14110804
   title: "Fluxbox Stacking Window Manager"
-  url: /opensource/2014/11/08/fluxbox-with-glowing-wallpaper.html
+  url: /desktop/2014/11/08/fluxbox-with-glowing-wallpaper.html
 
 - id: 14110202
   title: "Standalone Openbox WM with Tint2 Panel"
-  url: /opensource/2014/11/02/openbox-standalone.html
+  url: /desktop/2014/11/02/openbox-standalone.html
 
 - id: 14101949
   title: "LXQT with Windowish Looks, No Kidding."
-  url: /opensource/2014/10/19/lxqt-windowish-looks.html
+  url: /desktop/2014/10/19/lxqt-windowish-looks.html
 
 - id: 14051435
   title: "Selfieshoot of Hilarious XFCE4 Customization"
-  url: /opensource/2014/05/14/xfce4-hilarious-selfieshoot.html
+  url: /desktop/2014/05/14/xfce4-hilarious-selfieshoot.html
 
 - id: 14050934
   title: "My Mageia Experiment"
@@ -167,7 +167,7 @@
 
 - id: 14042218
   title: "Is it a Gnome Shell Customization, or Am I just got bored ?"
-  url: /opensource/2014/04/22/gnome-shell-a-very-common.html
+  url: /desktop/2014/04/22/gnome-shell-a-very-common.html
 
 - id: 14040246
   title: "Arch Linux - Install/ Post Install Log"

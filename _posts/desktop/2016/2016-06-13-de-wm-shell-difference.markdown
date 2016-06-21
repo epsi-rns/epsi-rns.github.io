@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Difference Between DE, Shell, WM and Compositor"
-categories: opensource
+categories: desktop
 date:   2016-06-13 23:16:15 +0700
 tags: [thought]
 author: epsi
@@ -197,5 +197,5 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-cinnamon-3d]: {{ site.url }}/assets/posts/opensource/2016/06/cinnamon-3d.png
+[image-ss-cinnamon-3d]: {{ site.url }}/assets/posts/desktop/2016/06/cinnamon-3d.png
 [picasa-ss-cinnamon-3d]: https://lh3.googleusercontent.com/-kwSInSzWe3Q/V1_FQldQyJI/AAAAAAAAAVU/ikndUryhC-gjf8zJ7O1yQMK975x99m0TACCo/s0/cinnamon-3d.png

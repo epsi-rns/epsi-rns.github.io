@@ -2,7 +2,7 @@
 layout: post
 title:  "Awesome WM, Tiling WM for beginner"
 date:   2014-11-30 04:19:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, awesome]
 author: epsi
 
@@ -76,5 +76,5 @@ The Wallpaper from Awesome theme is stunningly beautiful.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-awesome]: {{ site.url }}/assets/posts/opensource/2014/11/awesome.png
+[image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2014/11/awesome.png
 [picasa-ss-awesome]: https://lh3.googleusercontent.com/-NgcARBSpJEc/Vz2oASMylYI/AAAAAAAAARM/3IssneEeNb8JDV6NUZoS2rPNz5FHp3CQQCCo/s0/awesome.png

@@ -2,7 +2,7 @@
 layout: post
 title:  "XMonad Tiling Window Manager is so Amazing"
 date:   2014-12-12 22:59:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, xmonad, dotfiles]
 author: epsi
 
@@ -145,13 +145,13 @@ Five selfieshoot are worth five thousand words
 [dotfiles-dzen]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen/
 
 
-[image-ss-self-explanatory]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-self-explanatory.png
+[image-ss-self-explanatory]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-self-explanatory.png
 [picasa-ss-self-explanatory]: https://lh3.googleusercontent.com/-VDWvJwgHlL4/Vz2mh_HDNkI/AAAAAAAAAO8/lZ-OnxAfSDwvrYoYZeoBPl_bdKVS06S5wCCo/s0/xmonad-self-explanatory.png
-[image-ss-xmobar-nogap]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-xmobar-nogap.png
+[image-ss-xmobar-nogap]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-xmobar-nogap.png
 [picasa-ss-xmobar-nogap]: https://lh3.googleusercontent.com/-1bcBUJihphI/Vz2mlHnK4BI/AAAAAAAAAO8/2e_49iMs8kwSn-pqhSAcpge5LLmBeSajQCCo/s0/xmonad-xmobar-nogaps.png
-[image-ss-xmobar-threecolumns-gap]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-xmobar-threecolumns.png
+[image-ss-xmobar-threecolumns-gap]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-xmobar-threecolumns.png
 [picasa-ss-xmobar-threecolumns-gap]: https://lh3.googleusercontent.com/-2IkVXzKSn3Q/Vz2mpPdfJiI/AAAAAAAAAPg/-oDI1U8y-DEGrl9UK51udhjF18Nel2WSwCCo/s0/xmonad-xmobar-threecolumn.png
-[image-ss-dzen2]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-dzen2.png
+[image-ss-dzen2]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-dzen2.png
 [picasa-ss-dzen2]: https://lh3.googleusercontent.com/-gG9fubXyTpI/Vz2m_RPgSEI/AAAAAAAAAP8/ZNXGlGJrb3YTKH5jFDAcFj5sGBxBWGVywCCo/s0/xmonad-dzen2.png
-[image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/opensource/2014/12/xmonad-dzen2-five-terms.png
+[image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-dzen2-five-terms.png
 [picasa-ss-dzen2-five-terms]: https://lh3.googleusercontent.com/-sAfgbEpNTAs/Vz2mYpQ_MpI/AAAAAAAAAO8/E9gCAtDPoIgjnsMKNoGnY94v2QhSLOSVACCo/s0/xmonad-five-terms.png

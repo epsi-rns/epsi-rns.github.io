@@ -2,7 +2,7 @@
 layout: post
 title:  "Learn Different Package Management Using LXC"
 date:   2016-02-28 23:00:15 +0700
-categories: opensource
+categories: system
 tags: [cloud, lxc, package manager]
 author: epsi
 
@@ -109,9 +109,9 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-lxc-screenfetch]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-screenfetch.png
+[image-ss-lxc-screenfetch]: {{ site.url }}/assets/posts/system/2016/02/lxc-screenfetch.png
 [picasa-ss-lxc-screenfetch]: https://lh3.googleusercontent.com/-3P3Mo-dD3BM/Vzmd1cgqRbI/AAAAAAAAAMk/Eve6CDNrio4Lu6IWV1VO-33XzJyl3LXLwCCo/s0/lxc-screenfetch.png
-[image-ss-lxc-package]: {{ site.url }}/assets/posts/opensource/2016/02/lxc-package.png
+[image-ss-lxc-package]: {{ site.url }}/assets/posts/system/2016/02/lxc-package.png
 [picasa-ss-lxc-package]: https://lh3.googleusercontent.com/-ymDyCDSEAtM/Vzmd1xbH2sI/AAAAAAAAAMk/48SelNtqDcIR0aFNvfSfluICHUG_lp7YQCCo/s0/lxc-package.png
 
 

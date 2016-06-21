@@ -2,7 +2,7 @@
 layout: post
 title:  "LXQT with Windowish Looks, No Kidding."
 date:   2014-10-19 11:49:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, lxqt]
 author: epsi
 
@@ -78,9 +78,9 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-windowish-qterminal.jpg
+[image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-qterminal.jpg
 [picasa-ss-lxqt-windowish-qterminal]: https://lh3.googleusercontent.com/-IPO0PJsixLA/Vz2oPpdtlZI/AAAAAAAAARk/8ULYS4s6VZQZCTkmPREfriLVOUVoEwa1QCCo/s0/lxqt-windowish-qterminal.jpg
-[image-ss-lxqt-windowish-pcmanfm]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-windowish-pcmanfm.jpg
+[image-ss-lxqt-windowish-pcmanfm]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-pcmanfm.jpg
 [picasa-ss-lxqt-windowish-pcmanfm]: https://lh3.googleusercontent.com/-pqSo498Nyao/Vz2oO1HCQwI/AAAAAAAAARc/FKvMWDI1aPsYYvrPxtp3j8zSir9IZunBACCo/s0/lxqt-windowish-pcmanfm.jpg
-[image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/opensource/2014/10/lxqt-kwin-ghost.png
+[image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-kwin-ghost.png
 [picasa-ss-lxqt-kwin-ghost]: https://lh3.googleusercontent.com/-O1lrxW7hG0s/Vz2oP_WHnPI/AAAAAAAAARk/jPtqGovDKk8Q_aSMa6Yae6n311AY2GCNQCCo/s0/lxqt-kwin-ghost.png

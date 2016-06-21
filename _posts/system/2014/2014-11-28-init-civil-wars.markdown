@@ -2,7 +2,7 @@
 layout: post
 title:  "Init Civil War, The systemd Controversy"
 date:   2014-11-28 04:19:15 +0700
-categories: opensource
+categories: system
 tags: [init]
 author: epsi
 
@@ -163,5 +163,5 @@ Begun, The Linux Civil War has.<br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-civil-war]: {{ site.url }}/assets/posts/opensource/2014/11/civil-war.jpg
+[image-civil-war]: {{ site.url }}/assets/posts/system/2014/11/civil-war.jpg
 

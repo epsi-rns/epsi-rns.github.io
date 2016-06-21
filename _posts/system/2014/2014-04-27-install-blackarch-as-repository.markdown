@@ -3,8 +3,8 @@ layout: post
 title:  "How to Install BlackArch as Repository"
 date:   2014-04-27 14:50:15 +0700
 # published: false
-categories: opensource
-tags: [security, blackarch,package manager]
+categories: system
+tags: [security, blackarch, package manager]
 author: epsi
  
 excerpt:
@@ -67,7 +67,7 @@ This one has not been solved yet.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-blackarch-keyring]: {{ site.url }}/assets/posts/opensource/2014/04/blackarch-keyring.png
+[image-ss-blackarch-keyring]: {{ site.url }}/assets/posts/system/2014/04/blackarch-keyring.png
 [picasa-ss-blackarch-keyring]: https://lh3.googleusercontent.com/-vxylPl4aXfY/Vz2okEH1u_I/AAAAAAAAARs/oowH1cKidiIWOqz8_Fm1sL-J2Gk7PFQSwCCo/s0/blackarch-keyring-full.png
-[image-ss-blackman-issue]: {{ site.url }}/assets/posts/opensource/2014/04/blackman-issue.png
+[image-ss-blackman-issue]: {{ site.url }}/assets/posts/system/2014/04/blackman-issue.png
 [picasa-ss-blackman-issue]: https://lh3.googleusercontent.com/-mlwqCRJBFxQ/Vz2oluHQN6I/AAAAAAAAARs/LZnq4igNeX4V7E3LyY7e7miSs5yeWDV5ACCo/s0/blackman-issue.png

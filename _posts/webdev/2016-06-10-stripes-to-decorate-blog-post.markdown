@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Create Stripes Using Inkscape to Decorate Blog Post"
-categories: opensource
+categories: webdev
 date:   2016-06-10 02:51:15 +0700
 tags: [thought, inkscape, jekyll]
 author: epsi
@@ -148,8 +148,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-inkscape-stripes]: {{ site.url }}/assets/posts/opensource/2016/06/inkscape-stripe-all-colors.png
-[image-inkscape-glossy]: {{ site.url }}/assets/posts/opensource/2016/06/inkscape-glossy-all-colors.png
-[image-jekyll-stripes]: {{ site.url }}/assets/posts/opensource/2016/06/jekyll-stripe-background.png
+[image-inkscape-stripes]: {{ site.url }}/assets/posts/webdev/2016/06/inkscape-stripe-all-colors.png
+[image-inkscape-glossy]: {{ site.url }}/assets/posts/webdev/2016/06/inkscape-glossy-all-colors.png
+[image-jekyll-stripes]: {{ site.url }}/assets/posts/webdev/2016/06/jekyll-stripe-background.png
 
 

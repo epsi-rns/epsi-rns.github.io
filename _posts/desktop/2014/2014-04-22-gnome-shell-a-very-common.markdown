@@ -2,7 +2,7 @@
 layout: post
 title:  "Is it a Gnome Shell Customization, or Am I just got bored ?"
 date:   2014-04-22 12:18:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, gnome-shell, conky]
 author: epsi
 
@@ -50,5 +50,5 @@ And user themes, though I rarely need it.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-gnome-shell]: {{ site.url }}/assets/posts/opensource/2014/04/gnomeshell.png
+[image-ss-gnome-shell]: {{ site.url }}/assets/posts/desktop/2014/04/gnomeshell.png
 [picasa-ss-gnome-shell]: https://lh3.googleusercontent.com/-cv5oZWXGhkY/Vz2onQ-gStI/AAAAAAAAARs/xxG_MYs8S0gwZtoWvlzNk_ZLUIYp5VnfwCCo/s0/gnomeshell.png

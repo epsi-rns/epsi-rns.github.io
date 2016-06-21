@@ -2,7 +2,7 @@
 layout: post
 title:  "Refactoring Awesome WM's Lua Configuration Script"
 date:   2016-03-19 16:41:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, awesome, dotfiles]
 author: epsi
 
@@ -63,7 +63,7 @@ I know how terrible it is.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-awesome-light]: {{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-light.png
+[image-ss-awesome-light]: {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-light.png
 [picasa-ss-awesome-light]: https://lh3.googleusercontent.com/-HSziviMzatY/VzmdsAkfKNI/AAAAAAAAAMk/7rFDLvZUp_MqC--shJyPTB5MB894dnyMACCo/s0/refactoring-awesome-light.png
-[image-ss-awesome-dark]: {{ site.url }}/assets/posts/opensource/2016/03/refactoring-awesome-dark.png
+[image-ss-awesome-dark]: {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-dark.png
 [picasa-ss-awesome-dark]: https://lh3.googleusercontent.com/-Ag5vRw54Fdk/VzmdrJ2x1GI/AAAAAAAAAMk/5nUQb2JZbkUH-xFYg0FP0f41ME2Uh5VIACCo/s0/refactoring-awesome-dark.png

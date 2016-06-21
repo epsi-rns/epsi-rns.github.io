@@ -2,7 +2,7 @@
 layout: post
 title:  "Control Your Package with APT Pinning"
 date:   2015-03-17 12:49:15 +0700
-categories: opensource
+categories: system
 tags: [debian, apt, package manager]
 author: epsi
 
@@ -33,6 +33,6 @@ All is good now
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss]: {{ site.url }}/assets/posts/opensource/2015/03/apt-pinning.png
+[image-ss]: {{ site.url }}/assets/posts/system/2015/03/apt-pinning.png
 [picasa-ss]: https://lh3.googleusercontent.com/-LKk0TT15FqM/VznBcvueHjI/AAAAAAAAANg/qET1zVBOm5I5Fn2kHo3EgkwSIRjH-AN-wCCo/s0/apt-pinning.png
 

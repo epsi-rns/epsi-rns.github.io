@@ -2,7 +2,7 @@
 layout: post
 title:  "My Mageia Experiment"
 date:   2014-05-09 19:34:15 +0700
-categories: opensource
+categories: system
 tags: [screenshot, mageia, kwin]
 author: epsi
 
@@ -329,13 +329,13 @@ At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rare
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-mageia-welcome]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-welcome.png
+[image-ss-mageia-welcome]: {{ site.url }}/assets/posts/system/2014/05/mageia-welcome.png
 [picasa-ss-mageia-welcome]: https://lh3.googleusercontent.com/-k6WRjfFM2lg/Vz2oaDzsFCI/AAAAAAAAARk/hlaqABuIODozZSSdRI22dyJatQJB5N5IACCo/s0/mageia-welcome.png
-[image-ss-mageia-controlcenter]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-controlcenter.png
+[image-ss-mageia-controlcenter]: {{ site.url }}/assets/posts/system/2014/05/mageia-controlcenter.png
 [picasa-ss-mageia-controlcenter]: https://lh3.googleusercontent.com/-k13r-0cS-VE/Vz2oYnpJ-QI/AAAAAAAAARk/Wc1QakGlrKkYu9_Jugsba2O5_tuIatHYgCCo/s0/mageia-controlcenter.png
-[image-ss-mageia-upgrade]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-upgrade.png
+[image-ss-mageia-upgrade]: {{ site.url }}/assets/posts/system/2014/05/mageia-upgrade.png
 [picasa-ss-mageia-upgrade]: https://lh3.googleusercontent.com/-WfroOgCn-PI/Vz2oXcsNIYI/AAAAAAAAARk/pJ7SlzzBbJ8U_76f55lMU3OqTkGAJVDbwCCo/s0/mageia-upgrade.png
-[image-ss-mageia-xfce4-kwin]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-xfce4-kwin.png
+[image-ss-mageia-xfce4-kwin]: {{ site.url }}/assets/posts/system/2014/05/mageia-xfce4-kwin.png
 [picasa-ss-mageia-xfce4-kwin]: https://lh3.googleusercontent.com/-utAVSadUfw8/Vz2odL-wS0I/AAAAAAAAARk/lr90iKwBXMcfQqoNpKednUOSyG5vNDK-wCCo/s0/mageia-xfce4-kwin.png
-[image-ss-mageia-razorqt-kwin]: {{ site.url }}/assets/posts/opensource/2014/05/mageia-razorqt-kwin.png
+[image-ss-mageia-razorqt-kwin]: {{ site.url }}/assets/posts/system/2014/05/mageia-razorqt-kwin.png
 [picasa-ss-mageia-razorqt-kwin]: https://lh3.googleusercontent.com/-E9CIA0Lv0pc/Vz2oakhiJII/AAAAAAAAARk/g407bDQc_scCxk75HWAhkzCXzoyxcC6CgCCo/s0/mageia-razorqt-kwin.png

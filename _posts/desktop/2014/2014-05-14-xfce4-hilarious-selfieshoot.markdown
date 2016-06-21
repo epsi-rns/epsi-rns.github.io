@@ -2,7 +2,7 @@
 layout: post
 title:  "Selfieshoot of Hilarious XFCE4 Customization"
 date:   2014-05-14 12:35:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, xfce4]
 author: epsi
 
@@ -43,5 +43,5 @@ Note: Those high processor usage comes xpenguins.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-selfieshoot]: {{ site.url }}/assets/posts/opensource/2014/05/xfce4-selfieshoot.png
+[image-ss-selfieshoot]: {{ site.url }}/assets/posts/desktop/2014/05/xfce4-selfieshoot.png
 [picasa-ss-selfieshoot]: https://lh3.googleusercontent.com/-uehlxza3YHY/Vz2od-4DCOI/AAAAAAAAARk/7tgKHavRb84cDazwTbC_16G1HQjUq5TgACCo/s0/xfce4-selfieshoot.png

@@ -2,7 +2,7 @@
 layout: post
 title:  "i3 Window manager with i3 Bar"
 date:   2014-12-06 18:46:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, i3, conky]
 author: epsi
 
@@ -51,8 +51,8 @@ Hey... I took that photograph of my own garden by myself.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-i3-black]: {{ site.url }}/assets/posts/opensource/2014/12/i3-black.png
+[image-ss-i3-black]: {{ site.url }}/assets/posts/desktop/2014/12/i3-black.png
 [picasa-ss-i3-black]: https://lh3.googleusercontent.com/-mUkKN8nfGUM/Vz2mP34hESI/AAAAAAAAAO8/pQ61naXO1ywAMARvUez0iLNVxWdpoXBkgCCo/s0/i3-black.png
-[image-ss-i3-green]: {{ site.url }}/assets/posts/opensource/2014/12/i3-green.png
+[image-ss-i3-green]: {{ site.url }}/assets/posts/desktop/2014/12/i3-green.png
 [picasa-ss-i3-green]: https://lh3.googleusercontent.com/-01BLZbKZrEY/Vz2mUtSw4JI/AAAAAAAAAO8/3EtGNN6e8EkTGl1mLAYMwJnzl_tm-vM9gCCo/s0/i3-green.png
 

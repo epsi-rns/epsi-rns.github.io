@@ -2,7 +2,7 @@
 layout: post
 title:  "Arch Linux - Install/ Post Install Log"
 date:   2014-04-02 08:46:15 +0700
-categories: opensource
+categories: system
 tags: [arch, pacman, package manager]
 author: epsi
 
@@ -234,7 +234,7 @@ Reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-arch-install]: {{ site.url }}/assets/posts/opensource/2014/04/arch-wifi-menu.png
+[image-ss-arch-install]: {{ site.url }}/assets/posts/system/2014/04/arch-wifi-menu.png
 
 [local-learning-stages]: {{ site.url }}/opensource/2016/03/17/learning-stages.html
 [local-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html

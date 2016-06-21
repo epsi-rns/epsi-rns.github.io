@@ -2,7 +2,7 @@
 layout: post
 title:  "Setup LAMP stack with Manjaro OpenRC"
 date:   2015-10-16 12:49:15 +0700
-categories: opensource
+categories: system
 tags: [lamp, openrc]
 author: epsi
 
@@ -321,7 +321,7 @@ Have a nice dream.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-openrc]: {{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-terminal.png
+[image-ss-openrc]: {{ site.url }}/assets/posts/system/2015/10/lamp-manjaro-openrc-terminal.png
 [picasa-ss-openrc]: https://lh3.googleusercontent.com/-_PY0Lzv5T54/VznBHsesgSI/AAAAAAAAANc/sDZnyz6OQWse-cw5xm4NK5MhTw4uKz3eACCo/s0/lamp-manjaro-openrc-terminal.png
-[image-ss-browser]: {{ site.url }}/assets/posts/opensource/2015/10/lamp-manjaro-openrc-browser.png
+[image-ss-browser]: {{ site.url }}/assets/posts/system/2015/10/lamp-manjaro-openrc-browser.png
 [picasa-ss-browser]: https://lh3.googleusercontent.com/-drXcnPrzSik/VznBH5IFulI/AAAAAAAAANc/IBELce83SXA7CPW5WSSkl3GNMSTRhaLowCCo/s0/lamp-manjaro-openrc-browser.png

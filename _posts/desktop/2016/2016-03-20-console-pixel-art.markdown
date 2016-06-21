@@ -2,7 +2,7 @@
 layout: post
 title:  "Console Pixel Art, a Collection of Scripts"
 date:   2016-03-20 22:38:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, console, script]
 author: epsi
 
@@ -62,7 +62,7 @@ Selamat membuat screenshot.<br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-xmonad-light]: {{ site.url }}/assets/posts/opensource/2016/03/ansicolor-light.png
+[image-ss-xmonad-light]: {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-light.png
 [picasa-ss-xmonad-light]: https://lh3.googleusercontent.com/-fo8myDUqSKc/Vzmdc5CAk6I/AAAAAAAAAMg/Zdndvz5dEkoFBrcgEHBiyoo00lA-poflQCCo/s0/ansicolor-light.png
-[image-ss-xmonad-dark]: {{ site.url }}/assets/posts/opensource/2016/03/ansicolor-dark.png
+[image-ss-xmonad-dark]: {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-dark.png
 [picasa-ss-xmonad-dark]: https://lh3.googleusercontent.com/-YgBfUykOzRk/VzmdhpMioeI/AAAAAAAAAMk/a_B6wmY9f_cYVxg0V9z1zAnyHOqsgAsrwCCo/s0/ansicolor-dark.png

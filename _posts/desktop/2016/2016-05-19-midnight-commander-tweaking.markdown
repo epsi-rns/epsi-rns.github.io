@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Midnight Commander Tweaking, can Help People Better"
-categories: opensource
+categories: desktop
 tags: [ricing, dotfiles]
 author: epsi
 
@@ -37,4 +37,4 @@ Have fun with helping people!<br/>
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [dotfiles-skin-mc]: https://github.com/epsi-rns/dotfiles/blob/master/config/mc/skins/trans-light.epsi.ini
-[image-ss-mc-etc]: {{ site.url }}/assets/posts/opensource/2016/05/mc-etc.png
+[image-ss-mc-etc]: {{ site.url }}/assets/posts/desktop/2016/05/mc-etc.png

@@ -2,7 +2,7 @@
 layout: post
 title:  "Step by Step Guidance to be a Webcoder"
 date:   2016-06-14 01:09:15 +0700
-categories: opensource
+categories: webdev
 tags: [thought]
 author: epsi
 
@@ -181,5 +181,5 @@ Have Fun with Learning.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-html-css]: {{ site.url }}/assets/posts/opensource/2016/06/illustration-css-html-light.png
+[image-html-css]: {{ site.url }}/assets/posts/webdev/2016/06/illustration-css-html-light.png
 [picasa-html-css]: https://lh3.googleusercontent.com/-1gkoz00Hb2o/V1_FNgRzXnI/AAAAAAAAAVk/oqBkiy2yhEs_A_5o_U10-4dcqh8yyFv9QCCo/s0/illustration-css-html-light.png

@@ -3,7 +3,7 @@ layout: post
 title:  "Selectively Install BlackArch Tools"
 date:   2014-12-27 11:58:15 +0700
 # published: false
-categories: opensource
+categories: system
 tags: [security, blackarch, package manager]
 author: epsi
 
@@ -86,6 +86,6 @@ Note: Today is my favorite day.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-blackarch-categories]: {{ site.url }}/assets/posts/opensource/2014/12/blackarch-categories.png
+[image-ss-blackarch-categories]: {{ site.url }}/assets/posts/system/2014/12/blackarch-categories.png
 [picasa-ss-blackarch-categories]: https://lh3.googleusercontent.com/-uisDp583fFM/Vz2mMzmvGcI/AAAAAAAAAOs/TVZfwXZJOtcGKnoWweLoNXraRD9jW_KnwCCo/s0/blackarch-categories.png
-[image-ss-blackarch-all-categories]: {{ site.url }}/assets/posts/opensource/2014/12/blackarch-all-categories.png
+[image-ss-blackarch-all-categories]: {{ site.url }}/assets/posts/system/2014/12/blackarch-all-categories.png

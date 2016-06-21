@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll Post Archives Without Plugin"
-categories: opensource
+categories: webdev
 date:   2016-06-09 03:51:15 +0700
 tags: [thought, jekyll, liquid]
 author: epsi
@@ -291,5 +291,5 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-jekyll-archives]: {{ site.url }}/assets/posts/opensource/2016/06/jekyll-archives.png
+[image-jekyll-archives]: {{ site.url }}/assets/posts/webdev/2016/06/jekyll-archives.png
 

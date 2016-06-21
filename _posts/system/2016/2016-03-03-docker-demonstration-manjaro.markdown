@@ -2,7 +2,7 @@
 layout: post
 title:  "Docker Demonstration (Manjaro), Running Multiple Guest OS"
 date:   2016-03-03 13:01:15 +0700
-categories: opensource
+categories: system
 tags: [cloud, docker, package manager]
 author: epsi
 
@@ -51,7 +51,7 @@ Note: just another nix's porn. :-\ <br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-fki]: {{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-fki.png
+[image-ss-fki]: {{ site.url }}/assets/posts/system/2016/03/manjaro-docker-fki.png
 [picasa-ss-fki]: https://lh3.googleusercontent.com/-j_6ANwMOhoo/VzmdhK000OI/AAAAAAAAAMk/F4HfQ71QX3w5fJUyDfQcNo2ZEUhKPa9OwCCo/s0/manjaro-docker-fki.png
-[image-ss-gs]: {{ site.url }}/assets/posts/opensource/2016/03/manjaro-docker-gs.png
+[image-ss-gs]: {{ site.url }}/assets/posts/system/2016/03/manjaro-docker-gs.png
 [picasa-ss-gs]: https://lh3.googleusercontent.com/-ZPn9TJf78Gw/VzmdkuxR7SI/AAAAAAAAAMk/IZi4ITsH8JUwKw3b77i5EEux39-krfXSgCCo/s0/manjaro-docker-gs.png

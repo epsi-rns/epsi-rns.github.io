@@ -2,7 +2,7 @@
 layout: post
 title:  "XMonad with Conkyless Dzen, Total Control of Theme"
 date:   2016-05-11 21:02:15 +0700
-categories: opensource
+categories: desktop
 tags: [screenshot, xmonad, dotfiles]
 author: epsi
 
@@ -109,5 +109,5 @@ Well. As a haskell n00b. I must admit still don't know how to do it.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [dotfiles-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs
-[image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/05/xmonad-with-conkyless-dzen.png
+[image-ss-xmonad]: {{ site.url }}/assets/posts/desktop/2016/05/xmonad-with-conkyless-dzen.png
 [picasa-ss-xmonad]: https://lh3.googleusercontent.com/-IaiuuSzgdMI/VzmdPYfRF-I/AAAAAAAAAMQ/BEnRnFrCFsw0CnK0oosnfrxRL975EZB4QCCo/s0/xmonad-with-conkyless-dzen.png

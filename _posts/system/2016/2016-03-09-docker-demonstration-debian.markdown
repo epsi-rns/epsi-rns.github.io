@@ -2,7 +2,7 @@
 layout: post
 title:  "Running Guest OS via Docker on top of Debian for the first time"
 date:   2016-03-09 23:00:15 +0700
-categories: opensource
+categories: system
 tags: [cloud, docker, package manager]
 author: epsi
 
@@ -49,6 +49,6 @@ related_link_ids:
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss]: {{ site.url }}/assets/posts/opensource/2016/03/debian-docker-ogs.png
+[image-ss]: {{ site.url }}/assets/posts/system/2016/03/debian-docker-ogs.png
 [picasa-ss]: https://lh3.googleusercontent.com/-9pzAp7TS8ag/VzmdeUrMz9I/AAAAAAAAAMk/GfQI72Rmdz8t-9CEjWI9-E2Y-jFUvVwfQCCo/s0/debian-docker-ogs.png
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Unbundling AUR Helper Process"
 date:   2014-12-26 18:08:15 +0700
-categories: opensource
+categories: system
 tags: [arch, aur, package manager]
 author: epsi
 
@@ -44,11 +44,11 @@ and also my boring desktop customization.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-aur-cower]: {{ site.url }}/assets/posts/opensource/2014/12/aur-cower.png
+[image-aur-cower]: {{ site.url }}/assets/posts/system/2014/12/aur-cower.png
 [picasa-aur-cower]: https://lh3.googleusercontent.com/-hUfSxrPxvaA/Vz2mKT5QdbI/AAAAAAAAAOs/vP_na7AbrFEzeWdhlkSXJ3VUd0Op8snSQCCo/s0/aur-cower.png
-[image-aur-yaourt]: {{ site.url }}/assets/posts/opensource/2014/12/aur-yaourt.png
+[image-aur-yaourt]: {{ site.url }}/assets/posts/system/2014/12/aur-yaourt.png
 [picasa-aur-yaourt]: https://lh3.googleusercontent.com/-E4oPZQK-Ii4/Vz2mLgOJ9kI/AAAAAAAAAOs/QPxlecb-au0fifWMPnFsa3SUs5J3OcK3QCCo/s0/aur-yaourt.png
-[image-aur-aura]: {{ site.url }}/assets/posts/opensource/2014/12/aur-aura.png
+[image-aur-aura]: {{ site.url }}/assets/posts/system/2014/12/aur-aura.png
 [picasa-aur-aura]: https://lh3.googleusercontent.com/-sdrokwSygGE/Vz2mLAZG4PI/AAAAAAAAAOs/CgkIuwZQrQUACgvbvUhh1Q975KU2csv5gCCo/s0/aur-aura.png
 
 [related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html

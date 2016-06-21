@@ -2,7 +2,7 @@
 layout: post
 title:  "Update Arch Linux without Unnecessary Bloated Package"
 date:   2016-02-08 04:03:15 +0700
-categories: opensource
+categories: system
 tags: [arch, pacman, package manager]
 author: epsi
 
@@ -84,5 +84,5 @@ Happy Sync.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss]: {{ site.url }}/assets/posts/opensource/2016/02/pacman-ignorepkg.png
+[image-ss]: {{ site.url }}/assets/posts/system/2016/02/pacman-ignorepkg.png
 [picasa-ss]: https://lh3.googleusercontent.com/-xVBmoAKvB8c/Vzmdz2Gf0rI/AAAAAAAAAMk/r0Jj9aSQIaQ4p2h65k2tts8yEbNanx0RQCCo/s0/pacman-ignorepkg.png

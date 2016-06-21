@@ -2,7 +2,7 @@
 layout: post
 title:  "XMonad Menu Bar"
 date:   2014-12-15 11:58:15 +0700
-categories: opensource
+categories: desktop
 tags: [ricing, xmonad]
 author: epsi
 
@@ -48,6 +48,6 @@ Oh yes. You can set dzen transparency with transset-df.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-dzen2]: {{ site.url }}/assets/posts/opensource/2014/12/bar-dzen2.png
-[image-dmenu-run]: {{ site.url }}/assets/posts/opensource/2014/12/bar-dmenu-run.png
-[image-j4-dmenu]: {{ site.url }}/assets/posts/opensource/2014/12/bar-j4-dmenu.png
+[image-dzen2]: {{ site.url }}/assets/posts/desktop/2014/12/bar-dzen2.png
+[image-dmenu-run]: {{ site.url }}/assets/posts/desktop/2014/12/bar-dmenu-run.png
+[image-j4-dmenu]: {{ site.url }}/assets/posts/desktop/2014/12/bar-j4-dmenu.png
