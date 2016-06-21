@@ -24,12 +24,12 @@ $fa-font-path:        "/assets/vendors/font-awesome";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    "themes/oriblog/_variables_flaty", // variables before bootstrap
+    "themes/oriclone/_variables_flaty", // variables before bootstrap
     "vendors/bootstrap",
     "vendors/font-awesome/font-awesome",
     "vendors/pagination/_jekyll-pagination",
-    "themes/oriblog/base",
-    "themes/oriblog/layout",
-    "themes/oriblog/_dashboard",    
-    "themes/oriblog/syntax-highlighting"
+    "themes/oriclone/base",
+    "themes/oriclone/layout",
+    "themes/oriclone/_dashboard",    
+    "themes/oriclone/syntax-highlighting"
 ;
