@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16062202
+  title: "Jekyll Installation on Arch"
+  url: /webdev/2016/06/22/jekyll-arch-install.html
+
 - id: 16062127
   title: "Install Yaourt, the AUR Helper"
   url: /system/2016/06/21/install-yaourt.html
