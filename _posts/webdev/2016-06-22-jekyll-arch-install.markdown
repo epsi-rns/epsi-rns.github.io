@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Jekyll Installation on Arch"
+title:  "Jekyll Installation on Arch/Manjaro"
 categories: webdev
 date:   2016-06-22 22:02:15 +0700
 tags: [install, jekyll]
 author: epsi
 
 excerpt:
-  Installing Jekyll on Arch is a little bit tricky.
+  Installing Jekyll on Arch based distribution is a little bit tricky.
   Jekyll built on top of Ruby Gems.
   Ruby gems in Arch Linux can be installed 
   per user or system wide.
@@ -31,15 +31,15 @@ related_link_ids:
   I will put this page to Tutorial section later.
 </div>
 
-Installing Jekyll on Arch is a little bit tricky.
+Installing Jekyll on Arch/Manjaro is a little bit tricky.
 Jekyll built on top of Ruby Gems.
-Ruby gems in Arch Linux can be installed 
+Ruby gems in Arch/Manjaro Linux can be installed 
 per user or system wide.
 
 The official guidance,
-do not apply well in Arch Linux.
+do not apply well in Arch/Manjaro Linux.
 So we need a little more detail,
-on how we suppose todo it in Arch Linux.
+on how we suppose todo it in Arch/Manjaro Linux.
 
 This article choose the system wide gems
 utilized AUR package.
@@ -93,12 +93,23 @@ So I decide to trash my ~/.gem directory
 ### System Wide Gems
 
 We will install ruby-jekyll with all their dependecies using yaourt.
-If you have trouble with yaourt, you can install them separately.
+If you have trouble with yaourt, you can 1install them separately.
 
 This ruby-jekyll package require ruby-sass.
 
+**Arch Linux**
+
 {% highlight bash %}
  $ yaourt ruby-sass
+{% endhighlight %}
+
+
+**Manjaro**
+
+It is in community repository
+
+{% highlight bash %}
+ $ sudo pacman -S ruby-sass
 {% endhighlight %}
 
 [![Installing ruby-sass AUR using yaourt][image-ss-yaourt-ruby-sass]{: .img-responsive }][picasa-ss-yaourt-ruby-sass]
