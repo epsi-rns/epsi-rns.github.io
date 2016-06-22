@@ -12,6 +12,7 @@ excerpt:
   So you can 'makepkg' manually.
 
 related_link_ids: 
+  - 16062127  # Install Yaourt
   - 14040246  # Arch Install
   - 16020803  # Update Arch no Bloated  
   - 14042750  # BlackArch as Repository

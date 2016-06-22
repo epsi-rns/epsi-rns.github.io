@@ -171,7 +171,7 @@ Again, using Liquid.
 
 ## Sample page in action:
 
-![Jekyll Related Posts][image-jekyll-related-posts]
+![Jekyll Related Posts][image-jekyll-related-posts]{: .img-responsive }
 
 I put my 'Related-Posts' in my sidebar layout as shown in this figure.
 

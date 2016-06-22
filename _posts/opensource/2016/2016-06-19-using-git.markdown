@@ -1,0 +1,126 @@
+---
+layout: post
+title:  "Using Git for Daily Repo Updating"
+date:   2016-06-19 12:56:15 +0700
+categories: opensource
+tags: [shell]
+author: epsi
+
+excerpt:
+  A coder should be familiar with git, 
+  git is a must have tool for coder.
+  Git only takes a few commands, hence using git is easy
+  After a while, you have memorized the commands well.
+
+---
+
+
+If you are are coder, 
+git is a must have tool that you should be familiar with, is git.
+
+Git is a source code management tool created by Linus Torvald.
+This distributed version control system, manage your repository.
+It is fast, and also equipped with a lot of flexibility. 
+
+Using git is easy. 
+It only takes a few commands.
+After a while, you have memorized the commands well.
+
+-- -- --
+
+## Installing
+
+In order to use git, you need to install git
+
+In Arch, it is in extra repo.
+
+{% highlight bash %}
+ $ sudo pacman -S git
+{% endhighlight %}
+
+[![Installing Git in Arch Based Distribution][image-git-pacman-half]{: .img-responsive }][picasa-git-pacman-full]
+
+-- -- --
+
+## Github
+
+There is a very popular free git website, github.com.
+Just sign up, and create a new repository.
+
+I'm using git for my github.io site.
+
+* <https://github.com/epsi-rns/epsi-rns.github.io>
+
+After create a new repository,
+github will give a short notification similar to mine below.
+
+Just follow below step in your directory.
+
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/epsi-rns/dotfiles.git
+	git push -u origin master
+	…or push an existing repository from the command line
+
+I have already prepared my local git Directory.
+So every git commands must be within this local directory.
+
+{% highlight bash %}
+ $ cd /media/Works/Development/github/epsi-rns.github.io/
+{% endhighlight %}
+
+-- -- --
+
+## Shell Command
+
+For daily updating, all you need is this command
+
+{% highlight bash %}
+ $ git status
+ $ git add --all
+ $ git commit -m "your messages here"
+ $ git push -u origin master
+{% endhighlight %}
+
+I use it over and over again.
+Exactly in that sequence.
+
+Luckily linux shell can remember the command,
+so you don't need to type it again and again.
+
+For convenience, 
+I like to use powerline to show master repo in my shell.
+You can see in this figure, it shown in right position of the shell.
+
+Unfortunately bash doesn't support this feature,
+so I use fish instead.
+
+You can see git in action in this figure bbelow
+
+[![Git Commands in Shell][image-git-status]{: .img-responsive }][picasa-git-status]
+
+-- -- --
+
+## Read The Fine Manual
+
+RTFM as usual.
+
+{% highlight bash %}
+ $ man git
+ $ man git-add
+ $ man git-mv
+{% endhighlight %}
+
+
+Thank you for reading
+
+
+
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+[image-git-status]: {{ site.url }}/assets/posts/opensource/2016/06/git-status.png
+[image-git-pacman-half]: {{ site.url }}/assets/posts/opensource/2016/06/git-pacman-half.png
+[picasa-git-status]: https://lh3.googleusercontent.com/-yAeuSGwf6a8/V2pLWMbsjUI/AAAAAAAAAW4/K36MSkxmOOQFBOM446O1mfplQVnd6plKgCCo/s0/git-status.png
+[picasa-git-pacman-full]: https://lh3.googleusercontent.com/-FzRXiNaF6gE/V2pLUrlAAdI/AAAAAAAAAW0/_yIX5rsakZ4sDk4aeIgkfHwTXKD73FWJwCCo/s0/git-pacman-full.png

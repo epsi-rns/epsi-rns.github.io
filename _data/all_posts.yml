@@ -5,6 +5,22 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16062127
+  title: "Install Yaourt, the AUR Helper"
+  url: /system/2016/06/21/install-yaourt.html
+
+- id: 16061956
+  title: "Using Git for Daily Repo Updating"
+  url: /opensource/2016/06/19/using-git.html
+
+- id: 16061657
+  title: "Analyze Services in Linux Boot Process"
+  url: /system/2016/06/16/analyze-boot-services.html
+
+- id: 16061553
+  title: "Create Your Own Monitoring Script"
+  url: /opensource/2016/06/15/monitoring-script.html
+
 - id: 16061409
   title: "Step by Step Guidance to be a Webcoder"
   url: /webdev/2016/06/14/how-a-webcoder-begin.html

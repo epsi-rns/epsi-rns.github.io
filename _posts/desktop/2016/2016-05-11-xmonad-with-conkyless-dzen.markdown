@@ -17,7 +17,8 @@ related_link_ids:
   - 14121558  # XMonad Menu Bar
   - 16032658  # Modularized XMonad Config
   - 16051403  # How Haskell Syntax
-  
+  - 16061553  # Monitoring Script
+
 ---
 
 We can improve XMonad configuration, by removing extensive use of conky.
