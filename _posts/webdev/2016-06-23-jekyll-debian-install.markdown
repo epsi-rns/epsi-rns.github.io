@@ -7,7 +7,7 @@ tags: [install, jekyll]
 author: epsi
 
 excerpt:
-  Since Jekyll is available in Debian repository,
+  Since Jekyll is available in Official Debian repository,
   Jekyll Installation on Debian is Easy.
   Just issue this command to install system wide Jekyll gem,
   and Debian will take care of Jekyll's dependencies.
@@ -28,7 +28,7 @@ related_link_ids:
   I will put this page to Tutorial section later.
 </div>
 
-Since Jekyll is available in Debian repository,
+Since Jekyll is available in Official Debian repository,
 Jekyll Installation on Debian is Easy.
 Just issue this command to install system wide Jekyll gem,
 and Debian will take care of Jekyll's dependencies.
@@ -54,7 +54,7 @@ you can issue dpkg command in your shell..
 If you are using ruby* instead of just ruby word,
 there will be bunch of ruby packages coming in the list.
 
-[![Using dpkg to check Ruby Installation][image-ss-debian-dpkg-ruby]][picasa-ss-debian-dpkg-ruby]
+[![Using dpkg to check Ruby Installation][image-ss-debian-dpkg-ruby]{: .img-responsive }][picasa-ss-debian-dpkg-ruby]
 
 -- -- --
 
@@ -68,7 +68,7 @@ You don't need to worry about missing plugin while cloning a blog from github.
  $ apt install jekyll
 {% endhighlight %}
 
-[![Using apt to install Jekyll][image-ss-debian-apt-jekyll]][picasa-ss-debian-apt-jekyll]
+[![Using apt to install Jekyll][image-ss-debian-apt-jekyll]{: .img-responsive }][picasa-ss-debian-apt-jekyll]
 
 -- -- --
 
@@ -104,7 +104,7 @@ required to run a simple Jekyll Blog.
 {% endhighlight %}
 
 
-[![Running Jekyll Server][image-ss-debian-jekyll-nbs]][picasa-ss-debian-jekyll-nbs]
+[![Running Jekyll Server][image-ss-debian-jekyll-nbs]{: .img-responsive }][picasa-ss-debian-jekyll-nbs]
 
 You should see the site in your favorite browser running on port 4000.
 
