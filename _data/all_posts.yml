@@ -5,8 +5,12 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16062329
+  title: "Jekyll Installation on Debian"
+  url: /webdev/2016/06/23/jekyll-debian-install.html
+
 - id: 16062202
-  title: "Jekyll Installation on Arch"
+  title: "Jekyll Installation on Arch/Manjaro"
   url: /webdev/2016/06/22/jekyll-arch-install.html
 
 - id: 16062127

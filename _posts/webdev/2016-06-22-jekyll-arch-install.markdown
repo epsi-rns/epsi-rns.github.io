@@ -17,6 +17,7 @@ excerpt:
   on how we suppose to do it in Arch Linux.
 
 related_link_ids: 
+  - 16062329  # JekyllInstall Debian
   - 16062127  # Install Yaourt
   - 16061409  # Webcoder Begin
   - 16060951  # Jekyll Archives
@@ -41,10 +42,13 @@ do not apply well in Arch/Manjaro Linux.
 So we need a little more detail,
 on how we suppose todo it in Arch/Manjaro Linux.
 
-This article choose the system wide gems
-utilized AUR package.
+This article choose the system wide gems.
+Since Jekyll is not available in the official repository,
+there are a few more steps to utilize AUR package. 
 
 * <https://wiki.archlinux.org/index.php/ruby#Installing_gems_per-user_or_system-wide>
+
+
 
 -- -- --
 
