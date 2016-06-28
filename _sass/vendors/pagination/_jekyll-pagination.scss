@@ -53,15 +53,25 @@ $pages-item-active-color:   white !default;
   .next {
     display: inline-block;
   }
+   
+  .pages-indicator.pages-indicator--active {
+    display: none;
+  }  
+  
+    // Show indicators on smaller screen when other pages are hidden
+    // This way we'll never have "<previous 1 3 4 5 next>"
+    // But we'll have "<previous 1 ... 3 4 5 next>"
+    .pages-indicator--offset-2,
+    .pages-indicator--offset-3,
+    .pages-indicator--offset-4,
+    .pages-indicator--offset-5,
+    .pages-indicator--offset-6,
+    .pages-indicator--offset-7 {
+      display: none;
+    }  
 
   // First breakpoint
   @include pages-breakpoint($pages-breakpoint1) {
-
-    // When there are active indicators show them
-    // Using a double class here to win over future breakpoints
-    .pages-indicator.pages-indicator--active {
-      display: inline-block;
-    }
 
     // The first and last item in the paginator
     .first,
@@ -72,8 +82,8 @@ $pages-item-active-color:   white !default;
     // Show indicators on smaller screen when other pages are hidden
     // This way we'll never have "<previous 1 3 4 5 next>"
     // But we'll have "<previous 1 ... 3 4 5 next>"
-    .pages-indicator--offset-2,
-    .pages-indicator--offset-3,
+//  .pages-indicator--offset-2,
+//  .pages-indicator--offset-3,
     .pages-indicator--offset-4,
     .pages-indicator--offset-5,
     .pages-indicator--offset-6,
@@ -83,6 +93,12 @@ $pages-item-active-color:   white !default;
   }
 
   @include pages-breakpoint($pages-breakpoint2) {
+    // When there are active indicators show them
+    // Using a double class here to win over future breakpoints
+    .pages-indicator.pages-indicator--active {
+      display: inline-block;
+    }  
+  
     // Show items next to active item
     .offset-1 {
       display: inline-block;
@@ -91,15 +107,7 @@ $pages-item-active-color:   white !default;
     // And hide indicator to make room
     .pages-indicator--offset-2 {
       display: none;
-    }
-    
-    .previous a:after {
-      content: " previous"
-    }
-
-    .next a:before {
-      content: "next "
-    }    
+    }      
   }
 
   @include pages-breakpoint($pages-breakpoint3) {
@@ -124,6 +132,13 @@ $pages-item-active-color:   white !default;
     .pages-indicator--offset-4 {
       display: none;
     }
+    .previous a:after {
+      content: " previous"
+    }
+
+    .next a:before {
+      content: "next "
+    }  
   }
 
   @include pages-breakpoint($pages-breakpoint5) {
