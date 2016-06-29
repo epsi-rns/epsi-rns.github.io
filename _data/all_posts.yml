@@ -5,6 +5,14 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16063052
+  title: "Install Awesome WM in Debian"
+  url: /desktop/2016/06/30/awesome-install-debian.html
+
+- id: 16062934
+  title: "Install Awesome WM in Arch Linux based Distribution"
+  url: /desktop/2016/06/29/awesome-install-arch.html
+
 - id: 16062329
   title: "Jekyll Installation on Debian"
   url: /webdev/2016/06/23/jekyll-debian-install.html

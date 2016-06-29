@@ -30,14 +30,6 @@ It is even harder to move from Stacking Window Manager
 to Tiling Window Manager. So pick the easiest one, the Awesome WM.
 Awesome has floating option to make you feel like you are in stacking WM.
 
-Reading
-
-* New: <http://awesomeWM.github.io>, or: <http://new.awesomewm.org/>
-
-* Current: <https://awesomewm.org/>, or: <https://awesome.naquadah.org/>
-
-* Wiki: <https://awesomewm.org/wiki/Main_Page>
-
 -- -- --
 
 {% capture ss_content %}
