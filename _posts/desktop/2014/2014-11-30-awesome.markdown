@@ -32,7 +32,7 @@ Awesome has floating option to make you feel like you are in stacking WM.
 
 Reading
 
-* New: <awesomeWM.github.io>, or: <http://new.awesomewm.org/>
+* New: <http://awesomeWM.github.io>, or: <http://new.awesomewm.org/>
 
 * Current: <https://awesomewm.org/>, or: <https://awesome.naquadah.org/>
 
@@ -75,7 +75,7 @@ Reading
 
 * Lain: <https://awesomewm.org/wiki/Lain>
 
-* Vicious: <>
+* Vicious: <https://awesomewm.org/wiki/Vicious>
 
 **Awesome Source**:
 
