@@ -26,6 +26,10 @@ Using git is easy.
 It only takes a few commands.
 After a while, you have memorized the commands well.
 
+Reading
+
+* <https://git-scm.com/book/en/>
+
 -- -- --
 
 ## Installing
@@ -112,6 +116,23 @@ RTFM as usual.
  $ man git-mv
 {% endhighlight %}
 
+After a while you will get bored with those basic commands,
+then you might want to try a more geeky command.
+Just read git oficial documentation.
+
+-- -- --
+
+## Tagging
+
+You can tag a specific point in your history,
+Here, is our recurring command.
+
+{% highlight bash %}
+ $ git tag -a 0.1 -m "First Tagging: Milestone 0.1"
+ $ git push -u origin 0.1
+{% endhighlight %}
+
+-- -- --
 
 Thank you for reading
 
