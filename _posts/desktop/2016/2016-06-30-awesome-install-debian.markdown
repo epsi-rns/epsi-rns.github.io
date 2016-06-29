@@ -162,6 +162,15 @@ It is a good start to learn Lua programming language.
 
 -- -- --
 
+## What's next ?
+
+There are nice customizations beyond scope of this article.
+This site might worth to look at.
+
+* https://github.com/copycat-killer/awesome-copycats
+
+-- -- --
+
 Thank you for reading
 
 Good night.

@@ -14,6 +14,8 @@ excerpt:
 
 related_link_ids: 
   - 16032658  # Modularized XMonad Config
+  - 16062934  # Install Awesome Arch
+  - 16063052  # Install Awesome Debian  
   - 14113019  # Awesome TWM Beginner
 
 ---

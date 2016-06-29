@@ -40,6 +40,7 @@ It is not intimidating, as it still has built in menu.
 [![Awesome Install Summary Screenshot][image-ss-awesome]][picasa-ss-awesome]
 
 However it needs a little knowledge of Lua Programming to configure Awesome.
+Learning Lua will will give some insight into what the configuration actually does.
 In fact I learnt Lua, by configuring Awesome.
 
 -- -- --
@@ -155,6 +156,15 @@ Even the documentation:
 * http://new.awesomewm.org/apidoc/
 
 It is a good start to learn Lua programming language.
+
+-- -- --
+
+## What's next ?
+
+There are nice customizations beyond scope of this article.
+This site might worth to look at.
+
+* https://github.com/copycat-killer/awesome-copycats
 
 -- -- --
 
