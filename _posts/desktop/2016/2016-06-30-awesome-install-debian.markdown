@@ -39,7 +39,7 @@ But don't worry, this additional module is optional.
 
 * Wiki: <https://awesomewm.org/wiki/Main_Page>
 
-[![Awesome Install Summary Screenshot][image-ss-awesome]][picasa-ss-awesome]
+[![Awesome Install Summary Screenshot][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
 
 To customize Awesome configuration,
 You needs Lua Programming Knowledge.
@@ -57,7 +57,7 @@ This will also install required packages
  $ sudo apt install awesome
 {% endhighlight %}
  
-[![Install Awesome and Lua Dependency][image-awesome-lua]][picasa-awesome-lua]
+[![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][picasa-awesome-lua]
 
 You can see how lightweight Awesome WM from figure above.
 The installation footprint of both Awesome and Lua are less than four megabytes.
@@ -85,7 +85,7 @@ installing awesome-extra package from official repository.
  $ sudo apt install awesome-extra
 {% endhighlight %}
 
-[![Install Awesome Additional Package][image-awesome-vicious]][picasa-awesome-vicious]
+[![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][picasa-awesome-vicious]
 
 -- -- --
 
@@ -132,7 +132,7 @@ and make your awesome WM more awesome
 My configuration dotfiles is here.
 You can copy for your own needs.
 
-* https://github.com/epsi-rns/dotfiles/tree/master/awesome
+* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
 Since this configuration is already modularized,
 it is easier to learn part by part.
@@ -146,17 +146,17 @@ but now I don't have much time to do it.
 
 Surprisingly, Awesome WM is still in an active development
 
-* https://github.com/awesomeWM/awesome
+* <https://github.com/awesomeWM/awesome>
 
 Another website migrate to github, ( but not jekyll )
 
-* https://github.com/awesomeWM/awesomeWM.github.io
+* <https://github.com/awesomeWM/awesomeWM.github.io>
 
 Even the documentation:
 
-* http://new.awesomewm.org/doc/api/
+* <http://new.awesomewm.org/doc/api/>
 
-* http://new.awesomewm.org/apidoc/
+* <http://new.awesomewm.org/apidoc/>
 
 It is a good start to learn Lua programming language.
 
@@ -167,7 +167,7 @@ It is a good start to learn Lua programming language.
 There are nice customizations beyond scope of this article.
 This site might worth to look at.
 
-* https://github.com/copycat-killer/awesome-copycats
+* <https://github.com/copycat-killer/awesome-copycats>
 
 -- -- --
 

@@ -37,7 +37,7 @@ It is not intimidating, as it still has built in menu.
 
 * Wiki: <https://awesomewm.org/wiki/Main_Page>
 
-[![Awesome Install Summary Screenshot][image-ss-awesome]][picasa-ss-awesome]
+[![Awesome Install Summary Screenshot][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
 
 However it needs a little knowledge of Lua Programming to configure Awesome.
 Learning Lua will will give some insight into what the configuration actually does.
@@ -55,7 +55,7 @@ Just issue Pacman command, and it will take care the rest.
  $ sudo pacman -S awesome
 {% endhighlight %}
  
-[![Install Awesome and Lua Dependency][image-awesome-lua]][picasa-awesome-lua]
+[![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][picasa-awesome-lua]
 
 You can see how lightweight Awesome WM from figure above.
 The installation footprint of both Awesome and Lua are less than five megabytes.
@@ -83,7 +83,7 @@ as it is in official repository.
  $ sudo pacman -S vicious
 {% endhighlight %}
 
-[![Install Awesome Additional Package][image-awesome-vicious]][picasa-awesome-vicious]
+[![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][picasa-awesome-vicious]
 
 -- -- --
 
@@ -98,7 +98,7 @@ e.g. yaourt, aura, packer, pacaur, or else.
  $ pacaur -y lain-git
 {% endhighlight %}
 
-[![Install Awesome Lain Module Using AUR][image-awesome-lain-git]][picasa-awesome-lain-git]
+[![Install Awesome Lain Module Using AUR][image-awesome-lain-git]{: .img-responsive }][picasa-awesome-lain-git]
 
 -- -- --
 
@@ -129,7 +129,7 @@ and make your awesome WM more awesome
 My configuration dotfiles is here.
 You can copy for your own needs.
 
-* https://github.com/epsi-rns/dotfiles/tree/master/awesome
+* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
 Since this configuration is already modularized,
 it is easier to learn part by part.
@@ -143,17 +143,17 @@ but now I don't have much time to do it.
 
 Surprisingly, Awesome WM is still in an active development
 
-* https://github.com/awesomeWM/awesome
+* <https://github.com/awesomeWM/awesome>
 
 Another website migrate to github, ( but not jekyll )
 
-* https://github.com/awesomeWM/awesomeWM.github.io
+* <https://github.com/awesomeWM/awesomeWM.github.io>
 
 Even the documentation:
 
-* http://new.awesomewm.org/doc/api/
+* <http://new.awesomewm.org/doc/api/>
 
-* http://new.awesomewm.org/apidoc/
+* <http://new.awesomewm.org/apidoc/>
 
 It is a good start to learn Lua programming language.
 
@@ -164,7 +164,7 @@ It is a good start to learn Lua programming language.
 There are nice customizations beyond scope of this article.
 This site might worth to look at.
 
-* https://github.com/copycat-killer/awesome-copycats
+* <https://github.com/copycat-killer/awesome-copycats>
 
 -- -- --
 
