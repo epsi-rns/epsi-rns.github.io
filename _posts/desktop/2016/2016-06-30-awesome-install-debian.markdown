@@ -101,7 +101,7 @@ In order to install Lain, you must clone the lain manually.
 {% endhighlight %}
 
 
-![Clone Awesome Lain Module Directly from Github][image-awesome-lain-git]
+![Clone Awesome Lain Module Directly from Github][image-awesome-lain-git]{: .img-responsive }
 
 -- -- --
 
