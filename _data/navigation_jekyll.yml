@@ -1,0 +1,13 @@
+# Site navigation links
+
+- title: Test Menu
+  url: #
+  
+- title: Install Jekyll Debian
+  url: /webdev/2016/06/23/jekyll-debian-install.html
+  
+- title: Install Jekyll Arch
+  url: /webdev/2016/06/22/jekyll-arch-install.html
+
+- title: Index
+  url: /
