@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16070105
+  title: "Compile .deb Source with apt-src"
+  url: /system/2016/07/01/apt-compile-source.html
+
 - id: 16063052
   title: "Install Awesome WM in Debian"
   url: /desktop/2016/06/30/awesome-install-debian.html

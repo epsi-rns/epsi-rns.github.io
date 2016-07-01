@@ -11,6 +11,7 @@ excerpt:
   Now my notebook can live longer. By keeping the old driver, and never update it ever.
 
 related_link_ids: 
+  - 16070105  # Debian APT Compile Source
   - 16020803  # Update Arch no Bloated
 
 ---
