@@ -54,7 +54,7 @@ This will also install required packages
 [liblua5.1-0, libxcb-xtest0, lua-lgi, rlwrap]
 
 {% highlight bash %}
- $ sudo apt install awesome
+$ sudo apt install awesome
 {% endhighlight %}
  
 [![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][picasa-awesome-lua]
@@ -62,6 +62,25 @@ This will also install required packages
 You can see how lightweight Awesome WM from figure above.
 The installation footprint of both Awesome and Lua are less than four megabytes.
 A perfect combination between Window Manager and Scripting Language.
+
+-- -- --
+
+## Running Awesome WM
+
+To switch to Awesome WM after installaion completed,
+you can logout your current DE/WM (Desktop Environment or Window Manager).
+In your DM (Display Manager), login with Awesome WM Session.
+
+If you need to make sure, that Awesome is in you DM list.
+You can check xsession directory.
+
+{% highlight bash %}
+$ ls /usr/share/xsessions/
+awesome.desktop                 i3.desktop                plasma.desktop
+gnome-classic.desktop           i3-with-shmlog.desktop    twm.desktop
+gnome.desktop                   lightdm-xsession.desktop  xfce.desktop
+gnome-flashback-xmonad.desktop  openbox.desktop           xmonad.desktop
+{% endhighlight %}
 
 -- -- --
 
@@ -82,7 +101,7 @@ Additional packages can be achieved by
 installing awesome-extra package from official repository.
 
 {% highlight bash %}
- $ sudo apt install awesome-extra
+$ sudo apt install awesome-extra
 {% endhighlight %}
 
 [![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][picasa-awesome-vicious]
@@ -96,8 +115,8 @@ Lain is a fork of Vain Module.
 In order to install Lain, you must clone the lain manually.
 
 {% highlight bash %}
- $ cd ~/.config/awesome/
- $ git clone https://github.com/copycat-killer/lain.git
+$ cd ~/.config/awesome/
+$ git clone https://github.com/copycat-killer/lain.git
 {% endhighlight %}
 
 
@@ -111,13 +130,13 @@ Awesome provide sample rc in their installation package.
 Just copy them to ~/.config/awesome/
 
 {% highlight bash %}
- $ dpkg -L awesome | grep rc.lua
- /etc/xdg/awesome/rc.lua
+$ dpkg -L awesome | grep rc.lua
+/etc/xdg/awesome/rc.lua
 {% endhighlight %}
 
 {% highlight bash %}
- $ mkdir ~/.config/awesome/
- $ cp /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
+$ mkdir ~/.config/awesome/
+$ cp /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
 {% endhighlight %}
  
 Now you can login to your Awesome Window Manager

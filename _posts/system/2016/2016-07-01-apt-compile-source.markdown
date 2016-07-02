@@ -115,7 +115,7 @@ $ cd ~/apt-src
 
 ## Choose Package to Examine
 
-Let's our victim,
+Let's choose our victim,
 see what package is upgradable
 by issuing this command
 
