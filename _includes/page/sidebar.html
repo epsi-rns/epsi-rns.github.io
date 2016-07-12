@@ -1,6 +1,6 @@
-
+{% unless site.url == "http://localhost:4000" %}
 {% include panel/recent-posts.html %}
 {% include panel/tags.html view_tag_type = 'before' %}
-
+{% endunless %}
 
 {% comment %}{% include service/google-adsense.html %}{% endcomment %}

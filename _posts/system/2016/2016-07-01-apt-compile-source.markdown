@@ -90,6 +90,9 @@ $ cat /etc/apt/sources.list
 
 ![Change your /etc/cat/sources.list][image-sources-list]{: .img-responsive }
 
+you can even uncomment deb in sources.list and leave you system with source only repository.
+In this post, we still need deb binary repository to select upgradable package.
+
 Do not forget to update the repository
 when you are done editing sources.list
 by issuing one of this command below

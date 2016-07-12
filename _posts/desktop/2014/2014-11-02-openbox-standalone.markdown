@@ -9,10 +9,10 @@ author: epsi
 excerpt:
   I recommend beginner to learn Openbox.
   Openbox can be used as a standalone Window Manager,
-  or as a Window Manager that holds a DE (Desktop Environment). 
+  or as a Window Manager that holds a DE (Desktop Environment).
   In fact, Openbox is the only Stacking WM that I use daily.  
 
-related_link_ids: 
+related_link_ids:
   - 16061316  # The Difference Between DE and WM
   - 14110804  # Fluxbox SWM
   - 14113019  # Awesome TWM Beginner  
@@ -23,13 +23,13 @@ related_link_ids:
 
 I recommend beginner to learn Openbox.
 Openbox can be used as a standalone Window Manager,
-or as a Window Manager inside a DE (Desktop Environment). 
+or as a Window Manager inside a DE (Desktop Environment).
 
 In LXQT or XFCE4 you can simply type
 
 {% highlight bash %}
 $ openbox --replace
-{% endhighlight %} 
+{% endhighlight %}
 
 As a standalone Stacking Window manager.
 Openbox is the only Stacking WM that I use daily.
@@ -66,15 +66,15 @@ I also separate menu files in configuration to make it more modular.
 
 **Openbox**: Arch Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/openbox.arch>
+* <https://github.com/epsi-rns/dotfiles/tree/master/openbox/arch>
 
 **Openbox**: Debian Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/openbox.debian>
+* <https://github.com/epsi-rns/dotfiles/tree/master/openbox/debian>
 
 <hr/>
 
-Openbox is the default Window Manager for the lightweight #! Crunchbang/ 
+Openbox is the default Window Manager for the lightweight #! Crunchbang/
 Bunsenlabs Linux distribution. So I clone theme in my arch.
 
 **OS**: Debian<br/>
@@ -88,7 +88,7 @@ Bunsenlabs Linux distribution. So I clone theme in my arch.
 One of the most common component in Openbox is the famous tint2 panel.
 You can see how the taskbar has different tint2 looks form those screenshot above.
 
-You can pick tint2 configuration from my collection here 
+You can pick tint2 configuration from my collection here
 
 * <https://github.com/epsi-rns/dotfiles/tree/master/openbox.arch/tint2>
 

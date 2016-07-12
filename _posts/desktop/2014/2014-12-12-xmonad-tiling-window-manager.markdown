@@ -1,18 +1,18 @@
 ---
 layout: post
-title:  "XMonad Tiling Window Manager is so Amazing"
+title:  "XMonad Tiling Window Manager"
 date:   2014-12-12 22:59:15 +0700
 categories: desktop
 tags: [screenshot, xmonad, dotfiles]
 author: epsi
 
-excerpt: 
+excerpt:
   This show case show you the looks of Tiling Window Manager with XMonad.
-  XMonad is an amazing Tiling Window Manager. 
+  XMonad is an amazing Tiling Window Manager.
   Its configuration written in Haskell,
   so you can make a very flexible configuration.
 
-related_link_ids: 
+related_link_ids:
   - 16061316  # The Difference Between DE and WM
   - 14121558  # XMonad Menu Bar
   - 16032658  # Modularized XMonad Config  
@@ -30,7 +30,7 @@ This show case show you the looks of Tiling Window Manager with XMonad.
 I like the way Tiling Window Manager remove all window decoration.
 It makes the screenshot looks cooler.
 
-XMonad is an amazing Tiling Window Manager. 
+XMonad is an amazing Tiling Window Manager.
 Its configuration written in Haskell,
 so you can make a very flexible configuration.
 
@@ -45,8 +45,8 @@ so you can make a very flexible configuration.
   + Run: xmonad.hs, man xmonad
 {% endcapture %}
 
-{% include part/screenshot.html 
-   title = 'Simple configuration in Vim, and manual page.' 
+{% include part/screenshot.html
+   title = 'Simple configuration in Vim, and manual page.'
    ss_content = ss_content
 %}
 
@@ -64,8 +64,8 @@ so you can make a very flexible configuration.
   + Run: nload, nethogs, httpry
 {% endcapture %}
 
-{% include part/screenshot.html 
-   title = 'No gaps by default.' 
+{% include part/screenshot.html
+   title = 'No gaps by default.'
    ss_content = ss_content
 %}
 
@@ -81,8 +81,8 @@ so you can make a very flexible configuration.
   + Run: nload, newsbeuter, tmux[glances,vim], mutt)
 {% endcapture %}
 
-{% include part/screenshot.html 
-   title = 'Three columns with gaps.' 
+{% include part/screenshot.html
+   title = 'Three columns with gaps.'
    ss_content = ss_content
 %}
 
@@ -104,8 +104,8 @@ Source
   + Run: mutt, irssi, newsbeuter, vim)
 {% endcapture %}
 
-{% include part/screenshot.html 
-   title = 'Running six terminals.' 
+{% include part/screenshot.html
+   title = 'Running six terminals.'
    ss_content = ss_content
 %}
 
@@ -121,8 +121,8 @@ Source
   + Run: (vnstat+httpry+pktstat)+(vim+root+hexedit)+powerline
 {% endcapture %}
 
-{% include part/screenshot.html 
-   title = 'Running five terminals.' 
+{% include part/screenshot.html
+   title = 'Running five terminals.'
    ss_content = ss_content
 %}
 

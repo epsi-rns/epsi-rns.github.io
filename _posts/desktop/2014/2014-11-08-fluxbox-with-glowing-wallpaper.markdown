@@ -10,7 +10,7 @@ excerpt:
   Before Openbox, there was Fluxbox. Fluxbox is not as cool as Openbox.
   But if you need config or just curious about, you can check this out.
 
-related_link_ids: 
+related_link_ids:
   - 16061316  # The Difference Between DE and WM
   - 14110202  # Openbox SWM
   - 14113019  # Awesome TWM Beginner  
@@ -46,11 +46,11 @@ This Fluxbox utilised a modified version of Axonkolor theme that I found in Devi
 
 **Fluxbox**: Arch Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/fluxbox.arch>
+* <https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/arch>
 
 **Fluxbox**: Debian Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/fluxbox.debian>
+* <https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/debian>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

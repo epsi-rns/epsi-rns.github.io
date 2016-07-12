@@ -210,12 +210,17 @@ SUDONOVERIF=1      # Avoid multiple sudo checks when timestamp_timeout=0
 # Prompt
 BUILD_NOCONFIRM=1  # Only prompt for editing files
 EDITFILES=0
+
+# Command
+MAKEPKG="makepkg --skippgpcheck"
 {% endhighlight %}
 
 This configuration is very helpful
 if you maintain your AUR upgrade regularly
 with a lot of Syua option in yaourt.
 This command will update all your AUR at once.
+
+Make sure you know what you are doing when skipping PGP Verivication.
 
 {% highlight bash %}
 $ yaourt -Syua
