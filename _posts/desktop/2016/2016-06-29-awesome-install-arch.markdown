@@ -12,6 +12,8 @@ excerpt:
   It is not intimidating, as it still has built in menu.
 
 related_link_ids: 
+  - 16071350  # Preparing Modularized
+  - 16070650  # Modularized Structure  
   - 16063052  # Install Awesome Debian
   - 14113019  # Awesome TWM Beginner
   - 16031941  # Refactoring Awesome

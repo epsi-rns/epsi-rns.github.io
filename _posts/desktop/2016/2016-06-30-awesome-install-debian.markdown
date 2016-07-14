@@ -12,6 +12,8 @@ excerpt:
   the only difference is you have to git-clone Lain module manually.
 
 related_link_ids: 
+  - 16071350  # Preparing Modularized
+  - 16070650  # Modularized Structure
   - 16062934  # Install Awesome Arch
   - 14113019  # Awesome TWM Beginner
   - 16031941  # Refactoring Awesome

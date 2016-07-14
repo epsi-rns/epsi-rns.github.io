@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16071350
+  title: "Preparing Modularized Awesome WM Configuration"
+  url: /desktop/2016/07/13/modularized-awesome-preparing.html
+
 - id: 16070650
   title: "Modularized Awesome WM Configuration Structure"
   url: /desktop/2016/07/06/modularized-awesome-structure.html

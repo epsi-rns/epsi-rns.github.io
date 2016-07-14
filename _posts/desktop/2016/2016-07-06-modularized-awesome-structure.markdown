@@ -7,11 +7,11 @@ tags: [awesome]
 author: epsi
 
 excerpt:
-  My first Tiling Window Manager is Awesome.
-  Installing Awesome WM in Debian is also easy,
-  the only difference is you have to git-clone Lain module manually.
+  This article explain directory structure of 
+  modularized Awesome WM configuration (rc.lua)
 
 related_link_ids:
+  - 16071350  # Preparing Modularized
   - 16063052  # Install Awesome Debian
   - 16062934  # Install Awesome Arch
   - 14113019  # Awesome TWM Beginner
@@ -37,7 +37,7 @@ To make a modular code, I have to make change parts
 from bunch of function and variables, into object and its properties.
 In order to make a modularized theme, I also have to clean up the old theme.
 
-[![Awesome WM Idul Fitri Satu Syawal ][image-ss-awesome-white]{: .img-responsive }][picasa-ss-awesome-white]
+[![Awesome WM Idul Fitri Satu Syawal][image-ss-awesome-white]{: .img-responsive }][picasa-ss-awesome-white]
 
 -- -- --
 
@@ -155,7 +155,7 @@ awesome
 └── modules
 {% endhighlight %}
 
-[![Awesome WM Idul Fitri Satu Syawal ][image-ss-awesome-black]{: .img-responsive }][picasa-ss-awesome-black]
+[![Modularized Awesome WM Dark Background][image-ss-awesome-black]{: .img-responsive }][picasa-ss-awesome-black]
 
 --
 
