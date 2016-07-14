@@ -7,7 +7,7 @@ tags: [awesome]
 author: epsi
 
 excerpt:
-  This article explain coding style approach of 
+  This article explain coding style approach of
   modularized Awesome WM configuration (rc.lua)
   and the process of splitting the codes.
 
@@ -39,12 +39,12 @@ This topic itself is long enough, that I don't want to mix it with another topic
 
 ## Goal
 
-> No long configuration, short enough to be analyzed 
+> No long configuration, short enough to be analyzed
 
 I have refactored rc.lu into some files few month ago,
 but it is not enough.
 I'm a beginner in lua world,
-and I'm not smart enough to read long source code. 
+and I'm not smart enough to read long source code.
 So I decide to make my rc.lua part smaller.
 Each files should be small enough to be analyzed file by file.
 
@@ -55,7 +55,7 @@ Each files should be small enough to be analyzed file by file.
 After a hard time of reading rc.lua,
 I finaly realized that rc.lua consist of these parts
 
-1. Sequence of code, e.g 
+1. Sequence of code, e.g
 
 	* Error Handling
 
@@ -116,7 +116,7 @@ naughty = require('naughty')
 Splitting configuration source code is easy,
 the 'dofile' function can do the horsework.
 
-This 'dofile' simply run another lua file, 
+This 'dofile' simply run another lua file,
 and doesn't do any check like 'require' does.
 
 {% highlight lua %}
@@ -196,7 +196,7 @@ There are some alternative on how to make module in Lua
 {% highlight lua %}
 module(main.myvar)
 
-function get_terminal() 
+function get_terminal()
   return "xfce4-terminal"
 end
 {% endhighlight %}
@@ -369,7 +369,7 @@ WB.multicolor_widgets_top = function (screen) ... end
 ## Module with many containers
 
 The issue goes further when I decorate Wibox.
-It has a bunch of monitoring stuff, 
+It has a bunch of monitoring stuff,
 e.g cpu, mem, netup, netdown, time, battery, diskfree, alsabar, mpd and so on.
 Each widget utilize icon and text.
 For example cpu, it has memicon and memtext.
@@ -478,5 +478,5 @@ Thank you for reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
-[image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
+[image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-module.png
 [picasa-ss-awesome-fullscreen]: https://lh3.googleusercontent.com/-CAGA67-WeQM/V4czfFTC-SI/AAAAAAAAAak/EKzVaqdjiOkKXPPt9ERC8itkJzB51CDVwCCo/s0/awesome-modularized-code.png
