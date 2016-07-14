@@ -478,5 +478,5 @@ Thank you for reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
-[image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-module.png
+[image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-binding.png
 [picasa-ss-awesome-fullscreen]: https://lh3.googleusercontent.com/-CAGA67-WeQM/V4czfFTC-SI/AAAAAAAAAak/EKzVaqdjiOkKXPPt9ERC8itkJzB51CDVwCCo/s0/awesome-modularized-code.png
