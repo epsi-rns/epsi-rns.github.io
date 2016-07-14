@@ -62,23 +62,26 @@ Common config is usually have two main parts
 
 * Theme directory (text and image resources)
   There can be as many theme as needed.
-
-{% highlight bash %}
-awesome
-├── rc.lua
-└── themes
-    ├── error-handling.lua
-    └── and stuff (*.lua)
-{% endhighlight %}
-
-I start this project by slit some code in main rc.lua to main folder.
+  
 {% highlight bash %}
 awesome
 ├── rc.lua
 └── main
     └── themename
         └── theme.lua
+{% endhighlight %}  
+
+I start this project by slit some code in main rc.lua to main folder.
+
+{% highlight bash %}
+awesome
+├── rc.lua
+└── main
+    ├── error-handling.lua
+    └── and stuff (*.lua)
 {% endhighlight %}
+
+
 
 After a while, I begin to realize,
 there are also as many statusbar (wibox) setting as needed.
@@ -280,6 +283,15 @@ Put your creativity here to make eye candy statusbar.
 
 With this complexity, now you know why
 I can't jut put all the code in this post.
+
+-- -- --
+
+## What's next ?
+
+The code of course, what it takes to split, 
+from plain rc.lua to modular table objects.
+
+-- -- --
 
 Thank you for reading
 
