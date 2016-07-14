@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16070650
+  title: "Modularized Awesome WM Configuration Structure"
+  url: /desktop/2016/07/06/modularized-awesome-structure.html
+
 - id: 16070105
   title: "Compile .deb Source with apt-src"
   url: /system/2016/07/01/apt-compile-source.html
@@ -166,7 +170,7 @@
   url: /desktop/2014/12/15/xmonad-menu-bar.html
 
 - id: 14121259
-  title: "XMonad Tiling Window Manager is so Amazing"
+  title: "XMonad Tiling Window Manager"
   url: /desktop/2014/12/12/xmonad-tiling-window-manager.html
 
 - id: 14120646

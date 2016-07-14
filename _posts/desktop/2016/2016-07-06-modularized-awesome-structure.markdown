@@ -1,0 +1,295 @@
+---
+layout: post
+title:  "Modularized Awesome WM Configuration Structure"
+categories: desktop
+date:   2016-07-06 12:50:15 +0700
+tags: [awesome]
+author: epsi
+
+excerpt:
+  My first Tiling Window Manager is Awesome.
+  Installing Awesome WM in Debian is also easy,
+  the only difference is you have to git-clone Lain module manually.
+
+related_link_ids:
+  - 16063052  # Install Awesome Debian
+  - 16062934  # Install Awesome Arch
+  - 14113019  # Awesome TWM Beginner
+  - 16031941  # Refactoring Awesome
+
+---
+
+<div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Information:</strong> This <a href="#" class="alert-link">page is using Temporary URL</a>,
+  I will move this page to Tutorial section later.
+</div>
+
+I finally locked myself in my room for hours, doing Awesome WM refactoring.
+
+After a while, the single rc.lua, has been modularized into chunk parts.
+Nomore copycat kiddies, I have to learn lua,
+and I have to understand every line of code, to configure this WM properly.
+
+The looks is very similar to my previous configuration,
+but the lua code inside has been altered heavily.
+To make a modular code, I have to make change parts
+from bunch of function and variables, into object and its properties.
+In order to make a modularized theme, I also have to clean up the old theme.
+
+[![Awesome WM Idul Fitri Satu Syawal ][image-ss-awesome-white]{: .img-responsive }][picasa-ss-awesome-white]
+
+-- -- --
+
+## Which Parts ?
+
+The original default config only takes one file
+
+{% highlight bash %}
+$ cat /etc/xdg/awesome/rc.lua
+{% endhighlight %}
+
+Your custom awesome is in ~/.config/awesome/rc.lua
+You can check yours by issuing tree command.
+
+{% highlight bash %}
+$ tree -C -L 2 ~/.config/awesome | less -R
+{% endhighlight %}
+
+Common config is usually have two main parts
+
+* rc.lua (text only)
+
+* Theme directory (text and image resources)
+  There can be as many theme as needed.
+
+{% highlight bash %}
+awesome
+├── rc.lua
+└── themes
+    ├── error-handling.lua
+    └── and stuff (*.lua)
+{% endhighlight %}
+
+I start this project by slit some code in main rc.lua to main folder.
+{% highlight bash %}
+awesome
+├── rc.lua
+└── main
+    └── themename
+        └── theme.lua
+{% endhighlight %}
+
+After a while, I begin to realize,
+there are also as many statusbar (wibox) setting as needed.
+And I can also make it switchable.
+Now we can split the statusbar/titlebar directory from the main rc.lua.
+
+{% highlight bash %}
+awesome
+├── rc.lua
+├── themes
+│   └── default
+│   │   └── theme.lua
+│   └── clone
+│       └── theme.lua
+└── anybox
+    └── simple
+    │   └── statusbar.lua
+    ├─ arrow
+    │   └── statusbar.lua
+    └─ titlebar.lua
+{% endhighlight %}
+
+The main rc.lua itself contain one very long parts
+maintaining mouse binding and keys binding.
+Let's put them in binding directory.
+
+{% highlight bash %}
+├── binding
+│   ├── bindtotags.lua
+│   ├── clientbuttons.lua
+│   ├── clientkeys.lua
+│   ├── globalbuttons.lua
+│   ├── globalkeys.lua
+│   ├── taglist.lua
+│   └── tasklist.lua
+{% endhighlight %}
+
+The rest splitted into few files.
+Let's put them in main directory.
+
+{% highlight bash %}
+├── main
+│   ├── error-handling.lua
+│   ├── layouts.lua
+│   ├── menu-blackarch.lua
+│   ├── menu.lua
+│   ├── rules.lua
+│   ├── signals.lua
+│   ├── tags.lua
+│   ├── theme.lua
+│   └── user-variables.lua
+{% endhighlight %}
+
+Finally, there should be a place for third party code
+other than result of this refactoring process.
+Modules directories hold this stuff.
+You can find the source in copycat-killer repository.
+
+{% highlight bash %}
+awesome
+├── rc.lua
+│
+├── main
+├── binding
+├── anybox
+│
+├── themes
+│   └── clone
+│       └── theme.lua
+│
+└── modules
+{% endhighlight %}
+
+[![Awesome WM Idul Fitri Satu Syawal ][image-ss-awesome-black]{: .img-responsive }][picasa-ss-awesome-black]
+
+--
+
+## Real World Result
+
+You can see the sample details below.
+Off course you can make entirely different customization.
+
+### Main Awesome Directory
+
+{% highlight bash %}
+~/.config/awesome
+├── rc.lua
+├── main
+│   ├── error-handling.lua
+│   ├── layouts.lua
+│   ├── menu-blackarch.lua
+│   ├── menu.lua
+│   ├── rules.lua
+│   ├── signals.lua
+│   ├── tags.lua
+│   ├── theme.lua
+│   └── user-variables.lua
+├── binding
+│   ├── bindtotags.lua
+│   ├── clientbuttons.lua
+│   ├── clientkeys.lua
+│   ├── globalbuttons.lua
+│   ├── globalkeys.lua
+│   ├── taglist.lua
+│   └── tasklist.lua
+├── modules
+│   ├── eminent
+│   │   └── init.lua
+│   └── menugen
+│       └── init.lua
+├── anybox
+└── themes
+{% endhighlight %}
+
+### The theme Directory
+
+I named the theme 'clone', because ...
+I shamefully grabbed them from many resources.
+
+{% highlight bash %}
+~/.config/awesome/themes/clone
+├── theme.lua
+├── elements.lua    
+├── titlebar-copycat.lua
+├── icons-copycat.lua
+│
+├── background.jpg
+│
+├── bar
+│   ├── copycat-copland
+│   └── copycat-rainbow
+├── icons     (each contain *.png)
+│   ├── clone
+│   ├── copycat-copland
+│   └── copycat-multicolor
+├── launcher
+│   ├── awesome-icon.png
+│   └── some *.png logo ...
+├── layout-default.lua
+├── layouts     (each contain *.png)
+│   ├── default-black
+│   ├── default-white
+│   ├── default-lain-black
+│   ├── default-lain-white
+│   ├── copycat-multicolor
+│   └── lain-zenburn
+├── misc        (each contain *.png)
+│   ├── copycat-dremora
+│   ├── copycat-holo
+│   ├── copycat-steamburn
+│   └── default
+├── taglist     (each contain *.png)
+│   ├── copycat-blackburn
+│   ├── copycat-copland
+│   ├── copycat-dremora
+│   ├── copycat-steamburn
+│   ├── copycat-zenburn
+│   └── default
+├── titlebar    (each contain *.png)
+│   ├── copycat-copland
+│   └── copycat-zenburn
+│
+└── if necessary, more resources to come ...
+{% endhighlight %}
+
+### The Wibox Statusbar Directory
+
+Put your creativity here to make eye candy statusbar.
+
+{% highlight bash %}
+~/.config/awesome/anybox/
+├── simple
+│   └── statusbar.lua
+├── vicious
+│   ├── helper.lua
+│   ├── statusbar.lua
+│   └── vicious.lua
+├── lain
+│   ├── helper.lua
+│   ├── lain-battery.lua
+│   ├── lain-diskfree.lua
+│   ├── lain.lua
+│   ├── lain-sound.lua
+│   └── statusbar.lua
+└── arrow (clone of lain dir, with customization)
+    ├── helper.lua
+    ├── lain-battery.lua
+    ├── lain-diskfree.lua
+    ├── lain.lua
+    ├── lain-sound.lua
+    └── statusbar.lua
+{% endhighlight %}
+
+-- -- --
+
+## Configuration Source
+
+* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
+
+With this complexity, now you know why
+I can't jut put all the code in this post.
+
+Thank you for reading
+
+Good night.
+
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+[image-ss-awesome-white]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-syawal.png
+[picasa-ss-awesome-white]: https://lh3.googleusercontent.com/-txXSAO0xMZs/V4cem1T_UFI/AAAAAAAAAaQ/2Fw0BRcmbD4T2_woDBOFL0qn0zyVCKYlQCCo/s0/awesome-refactoring-syawal.png
+
+[image-ss-awesome-black]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-manjaro.png
+[picasa-ss-awesome-black]: https://lh3.googleusercontent.com/-86XPvqe8ZeE/V4ceo4ZQrAI/AAAAAAAAAaU/zO_QmSdEhDkUDc-nwc8CxapyP8DbuharwCCo/s0/awesome-refactoring-manjaro.png
