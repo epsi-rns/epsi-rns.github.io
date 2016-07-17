@@ -7,7 +7,7 @@ tags: [awesome]
 author: epsi
 
 excerpt:
-  This article explain directory structure of 
+  This article explain directory structure of
   modularized Awesome WM configuration (rc.lua)
 
 related_link_ids:
@@ -62,16 +62,16 @@ Common config is usually have two main parts
 
 * Theme directory (text and image resources)
   There can be as many theme as needed.
-  
+
 {% highlight bash %}
 awesome
 ├── rc.lua
-└── main
+└── theme
     └── themename
         └── theme.lua
 {% endhighlight %}  
 
-I start this project by slit some code in main rc.lua to main folder.
+I start this project by split some code in main rc.lua to main folder.
 
 {% highlight bash %}
 awesome
@@ -80,7 +80,6 @@ awesome
     ├── error-handling.lua
     └── and stuff (*.lua)
 {% endhighlight %}
-
 
 
 After a while, I begin to realize,
@@ -147,10 +146,7 @@ awesome
 ├── main
 ├── binding
 ├── anybox
-│
 ├── themes
-│   └── clone
-│       └── theme.lua
 │
 └── modules
 {% endhighlight %}
@@ -235,7 +231,6 @@ I shamefully grabbed them from many resources.
 │   └── default
 ├── taglist     (each contain *.png)
 │   ├── copycat-blackburn
-│   ├── copycat-copland
 │   ├── copycat-dremora
 │   ├── copycat-steamburn
 │   ├── copycat-zenburn
@@ -261,18 +256,19 @@ Put your creativity here to make eye candy statusbar.
 │   └── vicious.lua
 ├── lain
 │   ├── helper.lua
+│   ├── statusbar.lua
 │   ├── lain-battery.lua
 │   ├── lain-diskfree.lua
 │   ├── lain.lua
-│   ├── lain-sound.lua
-│   └── statusbar.lua
+│   └── lain-sound.lua
 └── arrow (clone of lain dir, with customization)
     ├── helper.lua
+    ├── statusbar.lua 
     ├── lain-battery.lua
     ├── lain-diskfree.lua
     ├── lain.lua
     ├── lain-sound.lua
-    └── statusbar.lua
+    └── custom.lua 
 {% endhighlight %}
 
 -- -- --
@@ -284,11 +280,13 @@ Put your creativity here to make eye candy statusbar.
 With this complexity, now you know why
 I can't jut put all the code in this post.
 
+[![Awesome WM Stacked Statusbar][image-ss-awesome-stacked]{: .img-responsive }][picasa-ss-awesome-stacked]
+
 -- -- --
 
 ## What's next ?
 
-The code of course, what it takes to split, 
+The code of course, what it takes to split,
 from plain rc.lua to modular table objects.
 
 -- -- --
@@ -305,3 +303,6 @@ Good night.
 
 [image-ss-awesome-black]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-manjaro.png
 [picasa-ss-awesome-black]: https://lh3.googleusercontent.com/-86XPvqe8ZeE/V4ceo4ZQrAI/AAAAAAAAAaU/zO_QmSdEhDkUDc-nwc8CxapyP8DbuharwCCo/s0/awesome-refactoring-manjaro.png
+
+[image-ss-awesome-stacked]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-stacked.png
+[picasa-ss-awesome-stacked]: https://lh3.googleusercontent.com/-Dh5_vrOjU_s/V4uZbgMmeMI/AAAAAAAAAdM/e74eomkUtUsnwVPgIt-0GMGt6CeAHFjFwCCo/s0/awesome-modularized-configuration-red-stacked.png

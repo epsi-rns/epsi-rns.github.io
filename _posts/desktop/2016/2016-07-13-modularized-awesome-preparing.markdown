@@ -132,6 +132,8 @@ from rc.lua to other lua file.
 
 Now let's see what is in this file "main/theme.lua"
 
+Configuration Source Code: [main/theme.lua][source-main-theme]
+
 {% highlight lua %}
 home = os.getenv("HOME")
 
@@ -170,6 +172,8 @@ local beautiful = require("beautiful")
 ## Module Containing Variable
 
 The next steps is move each variables to Lua files.
+
+Sample Configuration Source Code: [main/user-variables.lua][source-user-vars]
 
 Let's say we have terminal variable
 
@@ -279,7 +283,11 @@ root.keys(awful.util.table.join(
 
 To binding/globalbuttons.lua
 
+Configuration Source Code: [binding/globalbuttons.lua][source-globalbuttons]
+
 {% highlight lua %}
+local awful = require("awful")
+
 local _M = {}
 
 function _M.get()
@@ -291,7 +299,6 @@ function _M.get()
 
   return globalbuttons
 end
-
 
 return setmetatable({}, { __call = function(_, ...) return _M.get(...) end })
 {% endhighlight %}
@@ -325,7 +332,9 @@ I also make a WB table that is private, only visible for this module.
 
 Note how I declare global table wibox_package as a bridge between these two Lua file.
 
-in anybox/statusbar.lua
+in anybox/arrow/statusbar.lua
+
+Configuration Source Code: [statusbar.lua][source-statusbar]
 
 {% highlight lua %}
 local _M = {}
@@ -351,7 +360,9 @@ end
 return _M
 {% endhighlight %}
 
-in anybox/helper.lua
+in anybox/arrow/helper.lua
+
+Configuration Source Code: [helper.lua][source-helper]
 
 {% highlight lua %}
 local WB = wibox_package
@@ -379,7 +390,9 @@ I'm using table approach I.mem, and W.mem.
 
 I'm using global table, instead of local _M table.
 
-in anybox/lain.lua
+in anybox/lain/lain.lua
+
+Configuration Source Code: [lain.lua][source-lain]
 
 {% highlight lua %}
 
@@ -401,7 +414,9 @@ W.mem = ...
 
 I also move long chunks, that require a lot of variable.
 
-in anybox/lain-diskfree
+in anybox/lain/lain-diskfree
+
+Configuration Source Code: [lain-diskfree.lua][source-laindiskfree]
 
 {% highlight lua %}
 I.disk = ...
@@ -480,3 +495,11 @@ Thank you for reading
 [image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
 [image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-binding.png
 [picasa-ss-awesome-fullscreen]: https://lh3.googleusercontent.com/-CAGA67-WeQM/V4czfFTC-SI/AAAAAAAAAak/EKzVaqdjiOkKXPPt9ERC8itkJzB51CDVwCCo/s0/awesome-modularized-code.png
+
+[source-main-theme]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/theme.lua
+[source-user-vars]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/user-variables.lua
+[source-globalbuttons]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/binding/globalbuttons.lua
+[source-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/statusbar.lua
+[source-helper]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/helper.lua
+[source-lain]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain.lua
+[source-laindiskfree]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain-diskfree.lua

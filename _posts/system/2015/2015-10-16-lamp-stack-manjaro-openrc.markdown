@@ -36,6 +36,21 @@ Have Fun
 
 [![LAMP OpenRC][image-ss-openrc]{: .img-responsive }][picasa-ss-openrc]
 
+Reading
+----------
+
+Before you read this, you might want to check the holy arch wiki.
+
+* [OpenRC][link-archwiki-openrc]
+
+* [Pacman][link-archwiki-pacman]
+
+* [Apache HTTP Server][link-archwiki-apache]
+
+* [MySQL][link-archwiki-mysql]
+
+* [PHPMyAdmin][link-archwiki-phpmyadmin]
+
 Install
 ----------
 
@@ -325,3 +340,9 @@ Have a nice dream.
 [picasa-ss-openrc]: https://lh3.googleusercontent.com/-_PY0Lzv5T54/VznBHsesgSI/AAAAAAAAANc/sDZnyz6OQWse-cw5xm4NK5MhTw4uKz3eACCo/s0/lamp-manjaro-openrc-terminal.png
 [image-ss-browser]: {{ site.url }}/assets/posts/system/2015/10/lamp-manjaro-openrc-browser.png
 [picasa-ss-browser]: https://lh3.googleusercontent.com/-drXcnPrzSik/VznBH5IFulI/AAAAAAAAANc/IBELce83SXA7CPW5WSSkl3GNMSTRhaLowCCo/s0/lamp-manjaro-openrc-browser.png
+
+[link-archwiki-openrc]: https://wiki.archlinux.org/index.php/OpenRC
+[link-archwiki-apache]: https://wiki.archlinux.org/index.php?title=Apache_HTTP_Server&redirect=no
+[link-archwiki-mysql]: https://wiki.archlinux.org/index.php/MySQL
+[link-archwiki-phpmyadmin]: https://wiki.archlinux.org/index.php/PhpMyAdmin
+[link-archwiki-pacman]: https://wiki.archlinux.org/index.php/pacman
