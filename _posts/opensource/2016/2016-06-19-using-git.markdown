@@ -14,7 +14,6 @@ excerpt:
 
 ---
 
-
 If you are are coder, 
 git is a must have tool that you should be familiar with, is git.
 

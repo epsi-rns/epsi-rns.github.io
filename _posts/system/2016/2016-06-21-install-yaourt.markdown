@@ -52,7 +52,7 @@ Let me quote from link above:
 
 Yaourt do automatic compilation of source code given from AUR.
 Since we are dealing with development here, before you begin,
-make sure you have base-devel installed.
+make sure you have <code>base-devel</code> installed.
 
 $ sudo pacman -S base-devel
 
@@ -61,7 +61,7 @@ $ sudo pacman -S base-devel
 ## The Package Query
 
 AUR Helper need one required package as a dependency.
-It is package-query
+It is <code>package-query</code>
 
 * <https://aur.archlinux.org/packages/package-query/>
 
@@ -171,7 +171,7 @@ $ sudo pacman -S package-query yaourt
 [![Yaourt Install Using Pacman][image-yaourt-pacman]{: .img-responsive }][picasa-yaourt-pacman]
 
 After both package installed,
-you can safely remove the archlinuxfr section from pacman.conf.
+you can safely remove the archlinuxfr section from <code class="code-file">/etc/pacman.conf</code>.
 
 -- -- --
 
@@ -200,7 +200,7 @@ $ cat /etc/yaourtrc
 $ cp /etc/yaourtrc ~/.yaourtrc
 {% endhighlight %}
 
-I left my yauort config as below to avoid
+I left my <code class="code-file">~/.yauortrc</code> config as below to avoid
 too many confirmation question from yaourt.
 
 {% highlight conf %}

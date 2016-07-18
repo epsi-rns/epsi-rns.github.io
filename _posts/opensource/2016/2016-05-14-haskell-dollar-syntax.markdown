@@ -19,7 +19,7 @@ related_link_ids:
 
 ---
 
-Before you read. You can examine a neat $ coding style in my old screenshot. It is somehow weird, and it is probably, not something avaliable in other programming language.
+Before you read. You can examine a neat <code>$</code> coding style in my old screenshot. It is somehow weird, and it is probably, not something avaliable in other programming language.
 
 **Source**:<br/>
 * [github.com/epsi-rns/dotfiles/.../MyLayoutHook.hs][dotfiles-layout]
@@ -141,7 +141,7 @@ They are not always interchangeable.
 
 Enough with math. How about real life coding ?
 
-Yes, you can simplify doing those cumbersome parantheses by replacing it with $ infix operator as shown in my old screenshot below.
+Yes, you can simplify doing those cumbersome parantheses by replacing it with <code>$</code> infix operator as shown in my old screenshot below.
 
 That's my XMonad Configuration in Haskell that I've been using since 2014.
 

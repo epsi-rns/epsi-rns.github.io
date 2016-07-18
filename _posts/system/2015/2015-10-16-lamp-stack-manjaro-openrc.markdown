@@ -29,7 +29,7 @@ With special customization
 
 * MariaDB instead of MySQL
 
-* Manjaro 'pacman' instead of debian-based 'apt-get'.
+* Manjaro <code>pacman</code> instead of debian-based <code>apt-get</code>.
 
 <br/>
 Have Fun

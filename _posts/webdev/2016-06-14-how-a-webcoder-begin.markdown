@@ -159,7 +159,7 @@ and using JQuery only for Navigation Bar.
 
 > http://epsi-rns.github.io
 
-Source code-nya :
+Source code:
 
 > https://github.com/epsi-rns/epsi-rns.github.io
 

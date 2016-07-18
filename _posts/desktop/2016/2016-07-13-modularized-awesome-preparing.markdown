@@ -41,19 +41,19 @@ This topic itself is long enough, that I don't want to mix it with another topic
 
 > No long configuration, short enough to be analyzed
 
-I have refactored rc.lu into some files few month ago,
+I have refactored <code class="code-file">rc.lua</code> into some files few month ago,
 but it is not enough.
 I'm a beginner in lua world,
 and I'm not smart enough to read long source code.
-So I decide to make my rc.lua part smaller.
+So I decide to make my <code class="code-file">rc.lua</code> part smaller.
 Each files should be small enough to be analyzed file by file.
 
 -- -- --
 
 ## Problem Definition
 
-After a hard time of reading rc.lua,
-I finaly realized that rc.lua consist of these parts
+After a hard time of reading <code class="code-file">rc.lua</code>,
+I finaly realized that <code class="code-file">rc.lua</code> consist of these parts
 
 1. Sequence of code, e.g
 
@@ -96,7 +96,7 @@ Table is a container of associative array stored in key/value pairs.
 Since Module in Lua is just container of stuff.
 Then Module in Lua is just a Table.
 
-You can call a module by simply use the 'require' keyword.
+You can call a module by simply use the <code>require</code> keyword.
 
 Optionally, when calling a Module, it can be stored in a variable,
 this variable can be thought as an alias of modules.
@@ -116,8 +116,8 @@ naughty = require('naughty')
 Splitting configuration source code is easy,
 the 'dofile' function can do the horsework.
 
-This 'dofile' simply run another lua file,
-and doesn't do any check like 'require' does.
+This <code>dofile</code> simply run another lua file,
+and doesn't do any check like <code>require</code> does.
 
 {% highlight lua %}
 local config_path = awful.util.getdir("config") .. "/"
@@ -128,9 +128,9 @@ dofile(config_path .. "main/theme.lua")
 {% endhighlight %}
 
 Now I can move-and-paste the lua-code
-from rc.lua to other lua file.
+from <code class="code-file">rc.lua</code> to other lua file.
 
-Now let's see what is in this file "main/theme.lua"
+Now let's see what is in this file <code class="code-file">main/theme.lua</code>.
 
 Configuration Source Code: [main/theme.lua][source-main-theme]
 
@@ -157,7 +157,7 @@ move-and-paste lua-code.
 You should also move the required module.
 
 In that configuration above,
-it needs some 'beautiful' and 'gears'.
+it needs some <code>beautiful</code> and <code>gears</code>.
 
 {% highlight lua %}
 ---- Standard awesome library
@@ -182,7 +182,7 @@ terminal = "xfce4-terminal"
 
 {% endhighlight %}
 
-We can just move-and-paste to a file, e.g myvar.lua
+We can just move-and-paste to a file, e.g <code class="code-file">myvar.lua</code>
 and let the variable be a global variable.
 
 {% highlight lua %}
@@ -209,7 +209,7 @@ This is deprecated.
 
 ### Lua 5.2, using table
 
-We can use any table name, e.g. _M
+We can use any table name, e.g. <code>_M</code>
 
 {% highlight lua %}
 local _M = {}
@@ -221,7 +221,7 @@ end
 return _M
 {% endhighlight %}
 
-And in main rc.lua, we can call
+And in main <code class="code-file">rc.lua</code>, we can call
 
 {% highlight lua %}
 local myvar = require("main.myvar")
@@ -230,7 +230,7 @@ local terminal = myvar.get_terminal()
 
 {% endhighlight %}
 
-I also made the terminal in rc.lua as local.
+I also made the terminal in <code class="code-file">rc.lua</code> as local.
 
 -- -- --
 
@@ -249,7 +249,7 @@ end
 return setmetatable({}, { __call = function(_, ...) return _M.get(...) end })
 {% endhighlight %}
 
-And in main rc.lua, we can call
+And in main <code class="code-file">rc.lua</code>, we can call
 
 {% highlight lua %}
 local myvar = require("main.myvar")
@@ -257,13 +257,13 @@ local myvar = require("main.myvar")
 local terminal = myvar()
 {% endhighlight %}
 
-No need to call get() explicitly.
+No need to call <code>get()</code> explicitly.
 
 -- -- --
 
 ## Real lua.rc Sample
 
-Let's see our globalbutton moved to main/globalbuttons.lua.
+Let's see our globalbutton moved to <code class="code-file">main/globalbuttons.lua</code>.
 Do not confuse the name globalbuttons with global variables.
 It is just a variable name, it could be global or local.
 
@@ -281,7 +281,7 @@ root.keys(awful.util.table.join(
 
 ### Splitted from rc.lua.
 
-To binding/globalbuttons.lua
+To <code class="code-file">binding/globalbuttons.lua</code>
 
 Configuration Source Code: [binding/globalbuttons.lua][source-globalbuttons]
 
@@ -332,7 +332,7 @@ I also make a WB table that is private, only visible for this module.
 
 Note how I declare global table wibox_package as a bridge between these two Lua file.
 
-in anybox/arrow/statusbar.lua
+in <code class="code-file">anybox/arrow/statusbar.lua</code>
 
 Configuration Source Code: [statusbar.lua][source-statusbar]
 
@@ -360,7 +360,7 @@ end
 return _M
 {% endhighlight %}
 
-in anybox/arrow/helper.lua
+in <code class="code-file">anybox/arrow/helper.lua</code>
 
 Configuration Source Code: [helper.lua][source-helper]
 
@@ -386,11 +386,11 @@ Each widget utilize icon and text.
 For example cpu, it has memicon and memtext.
 
 Instead of using namespace as memicon and cmemtext.
-I'm using table approach I.mem, and W.mem.
+I'm using table approach <code>I.mem</code>, and <code>W.mem</code>.
 
-I'm using global table, instead of local _M table.
+I'm using global table, instead of <code>local _M</code> table.
 
-in anybox/lain/lain.lua
+in <code class="code-file">anybox/lain/lain.lua</code>
 
 Configuration Source Code: [lain.lua][source-lain]
 
@@ -414,7 +414,7 @@ W.mem = ...
 
 I also move long chunks, that require a lot of variable.
 
-in anybox/lain/lain-diskfree
+in <code class="code-file">anybox/lain/lain-diskfree</code>
 
 Configuration Source Code: [lain-diskfree.lua][source-laindiskfree]
 

@@ -29,7 +29,7 @@ But portability have its drawback.
 ## Removing Conky Dependency between XMonad and Dzen2
 
 Conky is completely unnecessary,
-and you can replace conky with simple while-sleep-do bash script.
+and you can replace conky with simple <code>while sleep do</code> bash script.
 
 {% highlight bash %}
  $ while sleep 1; do date +'%a %b %d %H:%M:%S'; done | \

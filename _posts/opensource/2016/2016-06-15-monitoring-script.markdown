@@ -53,7 +53,7 @@ I remember two months ago I have found bash script,
 combined with answer from stackoverflow,
 I have rewritten this script for my own purpose.
 
-This script utilize statistic form /sys/class/net/ for dzen2 feed.
+This script utilize statistic form <code class="code-file">/sys/class/net/</code> for dzen2 feed.
 
 Original Source
 

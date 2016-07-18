@@ -30,7 +30,7 @@ related_link_ids:
 My first Tiling Window Manager is Awesome.
 
 Installing Awesome WM in Debian is also easy,
-the only difference is you have to git-clone Lain module manually.
+the only difference is you have to <code class="code-command">$ git clone</code> Lain module manually.
 But don't worry, this additional module is optional.
 
 **Reading**
@@ -51,7 +51,9 @@ You needs Lua Programming Knowledge.
 ## Install Awesome WM
 
 Installing Awesome is straightforward.
-Just issue apt command, or apt-get or aptitude.
+Just issue <code class="code-command">apt</code> command, 
+or <code class="code-command">apt-get</code> 
+or <code class="code-command">aptitude</code>.
 This will also install required packages
 [liblua5.1-0, libxcb-xtest0, lua-lgi, rlwrap]
 
@@ -100,7 +102,7 @@ to make your awesome become more awesome.
 ## Install Vicious
 
 Additional packages can be achieved by 
-installing awesome-extra package from official repository.
+installing <code>awesome-extra</code> package from official repository.
 
 {% highlight bash %}
 $ sudo apt install awesome-extra
@@ -129,7 +131,7 @@ $ git clone https://github.com/copycat-killer/lain.git
 ## Sample Configuration
 
 Awesome provide sample rc in their installation package.
-Just copy them to ~/.config/awesome/
+Just copy them to <code class="code-file">~/.config/awesome/</code>
 
 {% highlight bash %}
 $ dpkg -L awesome | grep rc.lua
@@ -147,7 +149,7 @@ Now you can login to your Awesome Window Manager
 
 ## Modularized Configuration
 
-You can modify your rc.lua,
+You can modify your <code class="code-file">rc.lua</code>,
 and make your awesome WM more awesome
 
 My configuration dotfiles is here.
@@ -169,7 +171,7 @@ Surprisingly, Awesome WM is still in an active development
 
 * <https://github.com/awesomeWM/awesome>
 
-Another website migrate to github, ( but not jekyll )
+Another website migrate to github, (but not jekyll)
 
 * <https://github.com/awesomeWM/awesomeWM.github.io>
 

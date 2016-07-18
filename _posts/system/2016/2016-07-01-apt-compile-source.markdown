@@ -23,13 +23,13 @@ is not challenging enough for beginner,
 maybe you should explore the manual deeper.
 
 Apt command is easy, because it works with
-already bundled .deb packages.
+already bundled <code>.deb</code> packages.
 Compared with gentoo's emerge or arch's yaourt,
 there is no need for apt to compile for source.
 
 But again, for curious newbie who wants to know
 how compilation works in debian, 
-you can use 'apt-src', or 'apt-get source' command.
+you can use <code>apt-src</code>, or <code>apt-get source</code> command.
 
 [![Screenshot Summary of Compiling .deb Source][image-ss-summary]{: .img-responsive }][picasa-ss-summary]
 
@@ -44,7 +44,7 @@ you can use 'apt-src', or 'apt-get source' command.
 * <https://wiki.debian.org/BuildingTutorial>
 
 This post will cover the first article,
-an automatic compilation and bundling of .deb,
+an automatic compilation and bundling of <code>.deb</code>,
 intended for beginner.
 
 It is actually as simple as issuing just this command.
@@ -65,7 +65,8 @@ the second article won't covered here.
 
 Compared with Arch's pacman that is a unified command to do all package things,
 Debian scattered the command into few different command.
-Debian has dpkg, apt-get, apt-cache, aptitude, apt-src.
+Debian has <code>dpkg</code>, <code>apt-get</code>, 
+<code>apt-cache</code>, <code>aptitude</code>, <code>apt-src</code>.
 These day some command has been unified into apt command.
 
 So what you need to read is 
@@ -81,8 +82,8 @@ $ man apt-src
 ## Repository Preparation
 
 Make sure that source repository
-is enabled in your sources.list
-by uncomment the deb-src line.
+is enabled in your <code class="code-file">/etc/apt/sources.list</code>
+by uncomment the <code>deb-src</code> line.
 
 {% highlight bash %}
 $ cat /etc/apt/sources.list
@@ -90,11 +91,11 @@ $ cat /etc/apt/sources.list
 
 ![Change your /etc/cat/sources.list][image-sources-list]{: .img-responsive }
 
-you can even uncomment deb in sources.list and leave you system with source only repository.
+you can even uncomment deb in <code class="code-file">/etc/apt/sources.list</code> and leave you system with source only repository.
 In this post, we still need deb binary repository to select upgradable package.
 
 Do not forget to update the repository
-when you are done editing sources.list
+when you are done editing <code class="code-file">/etc/apt/sources.list</code>
 by issuing one of this command below
 
 {% highlight bash %}
@@ -184,7 +185,7 @@ your apt-1.2.14 .deb package should already be there.
 
 ## Install
 
-Install package using dpkg command
+Install package using <code class="code-command">dpkg</code> command
 
 {% highlight bash %}
 $ sudo dpkg --install apt-1.2.14-amd64.deb
@@ -194,7 +195,7 @@ $ sudo dpkg --install apt-1.2.14-amd64.deb
 
 -- -- --
 
-You can check your apt version now
+You can check your <code>apt</code> version now
 
 {% highlight bash %}
 $ apt --version

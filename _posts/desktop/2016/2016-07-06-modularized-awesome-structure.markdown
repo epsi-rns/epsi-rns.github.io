@@ -49,7 +49,7 @@ The original default config only takes one file
 $ cat /etc/xdg/awesome/rc.lua
 {% endhighlight %}
 
-Your custom awesome is in ~/.config/awesome/rc.lua
+Your custom awesome is in <code class="code-file">~/.config/awesome/rc.lua</code>.
 You can check yours by issuing tree command.
 
 {% highlight bash %}
@@ -58,7 +58,7 @@ $ tree -C -L 2 ~/.config/awesome | less -R
 
 Common config is usually have two main parts
 
-* rc.lua (text only)
+* <code class="code-file">rc.lua</code> (text only)
 
 * Theme directory (text and image resources)
   There can be as many theme as needed.
@@ -85,7 +85,7 @@ awesome
 After a while, I begin to realize,
 there are also as many statusbar (wibox) setting as needed.
 And I can also make it switchable.
-Now we can split the statusbar/titlebar directory from the main rc.lua.
+Now we can split the statusbar/titlebar directory from the main <code class="code-file">rc.lua</code>.
 
 {% highlight bash %}
 awesome
@@ -103,7 +103,7 @@ awesome
     └─ titlebar.lua
 {% endhighlight %}
 
-The main rc.lua itself contain one very long parts
+The main <code class="code-file">rc.lua</code> itself contain one very long parts
 maintaining mouse binding and keys binding.
 Let's put them in binding directory.
 
@@ -194,7 +194,7 @@ Off course you can make entirely different customization.
 
 ### The theme Directory
 
-I named the theme 'clone', because ...
+I named the theme <code>clone</code>, because ...
 I shamefully grabbed them from many resources.
 
 {% highlight bash %}

@@ -20,7 +20,7 @@ Faster boot linux ?
 There are usually these things that make your boot heavy. 
 Your bunch of services. And your choice of Desktop Environment.
 
-Luckily with with systemd, 
+Luckily with with <code>systemd</code>, 
 you can analyze boot process so you can decide what optimization necessary.
 
 {% highlight bash %}

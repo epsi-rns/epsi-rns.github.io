@@ -73,7 +73,7 @@ For more details, about partitioning guidance you can read.
 
 * [Multiboot][local-multiboot]
 
-I'm using /dev/sda9. Im sure that you might use diferent partition.
+I'm using <code class="code-file">/dev/sda9</code>. Im sure that you might use diferent partition.
 
 {% highlight bash %}
 ># cfdisk

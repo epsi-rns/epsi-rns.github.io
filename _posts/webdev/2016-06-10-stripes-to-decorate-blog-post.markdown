@@ -103,7 +103,7 @@ Glossy design has been popularized by Vista a decade ago.
 
 * Select all by mouse, and resized all object's heights from 200px to 80px.
 
-* Create a white ($fff) box on top half of the page (40px x 360px)
+* Create a white (<code>$fff</code>) box on top half of the page (40px x 360px)
   And reduced the transparency to about 4% or 10%.
 
 * Export to each month to png.

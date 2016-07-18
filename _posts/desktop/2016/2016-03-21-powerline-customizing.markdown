@@ -16,9 +16,10 @@ Dear command line fans, here is my 2 cents, powerline configuration.<br/>
 
 * [github.com/epsi-rns/dotfiles/.../powerline][dotfiles-powerline]
 
-All you need is to add these two configuration. They are theme (multiline) and colorscheme. And alter config.json.<br/>
+All you need is to add these two configuration. They are theme (multiline) and colorscheme. 
+And alter <code class="code-file">config.json</code>.<br/>
 
-I haven't done anything yet for tmux, vim, and other powerline capabilities.<br/>
+I haven't done anything yet for tmux, and other powerline capabilities.<br/>
 
 -- -- --
 
@@ -60,7 +61,6 @@ Manjaro
 
 {% highlight bash %}
 $ sudo pacman -S powerline
-$ sudo pacman -S powerline-fonts
 {% endhighlight %}
 
 [![Powerline: Install Arch][image-ss-install-arch]{: .img-responsive }][picasa-ss-install-arch]
@@ -82,7 +82,15 @@ or use package management above.
 
 * <http://powerline.readthedocs.io/en/master/installation.html#fonts-installation>
 
-Manjaro
+Arch/Manjaro
+
+Install Font package
+
+{% highlight bash %}
+$ sudo pacman -S powerline-fonts
+{% endhighlight %}
+
+Let's check.
 
 {% highlight bash %}
 $ pacman -Ql powerline-fonts
@@ -92,18 +100,23 @@ $ pacman -Ql powerline-fonts
 
 Debian
 
+Font Package automaticaly installed as dependency.
+
 {% highlight bash %}
 $ dpkg -L fonts-powerline
 ...
 /usr/share/fonts/opentype/PowerlineSymbols.otf
 {% endhighlight %}
 
+
+Note: Terminus Font also works.
+
 -- -- --
 
 ## Shell Prompt
 
 
-"Where and how can I set the PS1 variable for Powerline bash?"<br/>
+"Where and how can I set the <code>PS1</code> variable for Powerline bash?"<br/>
 A good simple question.
 
 The answer is in powerline manual documentation
@@ -158,7 +171,7 @@ Here is a summary, with nice powerline-in-vim colour-scheme.
 
 Arch/Manjaro
 
-No need to alter .vimrc configuration in Arch/Manjaro
+No need to alter <code class="code-file">.vimrc</code> configuration in Arch/Manjaro
 
 {% highlight bash %}
 $ sudo pacman -S powerline-vim

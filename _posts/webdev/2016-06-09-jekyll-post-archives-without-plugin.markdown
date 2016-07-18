@@ -61,8 +61,8 @@ and found these amazing script.
 > <http://mikerowecode.com/2010/08/jekyll_archives_grouped_by_year.html>
 
 Above script taught me how to use post.next inside the for iteration loop.
-I'm  using his method, post.next to mark opening html tag of list it, 
-and post.previous to mark the closing tag.
+I'm  using his method, <code>post.next</code> to mark opening html tag of list it, 
+and <code>post.previous</code> to mark the closing tag.
 
 {% highlight liquid %}
 {% raw %}

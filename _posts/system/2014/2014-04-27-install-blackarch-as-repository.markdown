@@ -52,7 +52,7 @@ Official Site
 
 ## Using blackman (from source)
 
-I'm still having a hard time while doing blackman.
+I'm still having a hard time while doing <code class="code-command">blackman</code>.
 
 {% highlight bash %}
 ># blackman -g blackarch-unpacker

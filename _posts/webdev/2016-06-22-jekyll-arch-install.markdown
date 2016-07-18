@@ -90,7 +90,7 @@ This will result
 {% endhighlight %}
 
 I will explore this later.
-So I decide to trash my ~/.gem directory
+So I decide to trash my <code class="code-file">~/.gem</code> directory
 
 -- -- --
 
@@ -190,7 +190,7 @@ required to run a simple Jekyll Blog.
 Let's go further.
 My site is using jekyll-paginate.
 
-In _config.yml
+In <code class="code-file">_config.yml</code>
 
 {% highlight yaml %}
 gems:

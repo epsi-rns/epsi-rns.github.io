@@ -23,9 +23,9 @@ related_link_ids:
 One advantage of Arch based distrbution is access to AUR (Arch User Repository).
 You can do automatic compilation of AUR package with yaourt, or yaourt-gui.
 
-For those who are really tired of how easy yaourt (or packer) is. 
-You may consider "cower" to download  PKGBUILD from AUR manually. 
-So you can "makepkg" manually.
+For those who are really tired of how easy <code>yaourt</code> (or <code>packer</code>) is. 
+You may consider <code>cower</code> to download  PKGBUILD from AUR manually. 
+So you can <code>makepkg</code> manually.
 
 [![AUR Cower][image-aur-cower]{: .img-responsive }][picasa-aur-cower]
 
@@ -34,8 +34,8 @@ I Edited this article in 2016 and give a screenshot of yaourt..
 
 [![AUR Yaourt][image-aur-yaourt]{: .img-responsive }][picasa-aur-yaourt]
 
-Instead of yaourt, therea are other cool AUR helper.
-e.g. thi Haskell based AURA.
+Instead of yaourt, there are other cool AUR helper.
+e.g. this Haskell based <code>aura</code>.
 
 [![AUR AURA][image-aur-aura]{: .img-responsive }][picasa-aur-aura]
 

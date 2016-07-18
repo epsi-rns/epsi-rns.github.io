@@ -23,7 +23,9 @@ related_link_ids:
 Have a nice weekend everbody,
 <br/><br/>
 
-I must admit that as an average guy, I don't have so much knowledge. I never have my own personal successful product. No remarkable achievement. I don't even have any formal IT education. 
+I must admit that as an average guy, I don't have so much knowledge. 
+I never have my own personal successful product. No remarkable achievement. 
+I don't even have any formal IT education. 
 <br/><br/>
 
 I just want to share a little, from what I just learn. To speed up learning process, so younger people can be better than me. Before I'm getting too old for this.

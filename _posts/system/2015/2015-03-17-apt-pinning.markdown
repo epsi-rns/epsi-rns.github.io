@@ -21,7 +21,10 @@ Trouble is a Friend, said Lenka.
 
 Yups... Last night my Debian failed to load my notebook screen. 
 
-Silly me, I didn't have enough time to troubleshoot this /var/log/Xorg.0.log. But I can see I've been using Debian Testing since last week. So all I need is to downgrade my xorg to Debian Stable aka Debian 8.0 Jessie.
+Silly me, I didn't have enough time to troubleshoot this 
+<code class="code-file">/var/log/Xorg.0.log</code>. 
+But I can see I've been using Debian Testing since last week. 
+So all I need is to downgrade my xorg to Debian Stable aka Debian 8.0 Jessie.
 
 So here we are, apt-pinning xorg, purge xorg, and re-install xorg.
 

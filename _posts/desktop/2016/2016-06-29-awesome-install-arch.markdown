@@ -125,7 +125,7 @@ $ pacaur -y lain-git
 ## Sample Configuration
 
 Awesome provide sample rc in their installation package.
-Just copy them to ~/.config/awesome/
+Just copy them to <code class="code-file">~/.config/awesome/</code>
 
 {% highlight bash %}
 $ pacman -Ql awesome | grep rc.lua
@@ -143,7 +143,7 @@ Now you can login to your Awesome Window Manager
 
 ## Modularized Configuration
 
-You can modify your rc.lua,
+You can modify your <code class="code-file">rc.lua</code>,
 and make your awesome WM more awesome
 
 My configuration dotfiles is here.
@@ -165,7 +165,7 @@ Surprisingly, Awesome WM is still in an active development
 
 * <https://github.com/awesomeWM/awesome>
 
-Another website migrate to github, ( but not jekyll )
+Another website migrate to github, (but not jekyll)
 
 * <https://github.com/awesomeWM/awesomeWM.github.io>
 

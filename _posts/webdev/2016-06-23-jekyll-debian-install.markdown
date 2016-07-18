@@ -51,7 +51,7 @@ you can issue dpkg command in your shell..
  $ dpkg -l 'ruby*'
 {% endhighlight %}
 
-If you are using ruby* instead of just ruby word,
+If you are using <code>ruby*</code> instead of just <code>ruby</code> word,
 there will be bunch of ruby packages coming in the list.
 
 [![Using dpkg to check Ruby Installation][image-ss-debian-dpkg-ruby]{: .img-responsive }][picasa-ss-debian-dpkg-ruby]

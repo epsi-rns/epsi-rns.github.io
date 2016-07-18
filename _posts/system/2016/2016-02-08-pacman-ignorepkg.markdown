@@ -26,9 +26,11 @@ I'm not sure if this long weekend is really a holiday, because I have so much to
 
 I also have limited bandwith. Actually my broadband connection is quite fast, but shared with my family. I don't want to hog all the bandwith.
  
-But I hey, I'm still a geek, I have no life, and I would like to sync (update and upgrade) my computer regularly. Let's have some fun with /etc/pacman.conf. Open your favorite editor, e.g. nano or vim, and let's have alook at the 'IgnorePkg' option.
+But I hey, I'm still a geek, I have no life, and I would like to sync (update and upgrade) my computer regularly. 
+Let's have some fun with <code class="code-file">/etc/pacman.conf</code>. 
+Open your favorite editor, e.g. <code>nano</code> or <code>vim</code>, and let's have a look at the <code>IgnorePkg</code> option.
 
-Before you do, you might want to know what size of package that your pacman (package manager) need to download with 'VerbosePkgLists' option.
+Before you do, you might want to know what size of package that your pacman (package manager) need to download with <code>VerbosePkgLists</code> option.
 
 {% highlight conf %}
 # Misc options
@@ -46,7 +48,9 @@ Pacman command will show you the size of package like in the first picture below
 
 	Total Download Size:    268.16 MiB
 
-There is no need to sync 'em all right! Since we want to ignore it, add these line to pacman.conf as shown in second picture below. Do not forget to save it.
+There is no need to sync 'em all right! Since we want to ignore it, 
+add these line to <code class="code-file">/etc/pacman.conf</code> 
+as shown in second picture below. Do not forget to save it.
 
 {% highlight conf %}
 IgnorePkg   = linux
@@ -59,7 +63,7 @@ IgnorePkg   = libreoffice-fresh
 IgnorePkg   = libreoffice-fresh-sdk
 {% endhighlight %}
 
-The result of 'pacman -Syu' is shown in the third picture.
+The result of <code class="code-command">pacman -Syu</code> is shown in the third picture.
 
 	community/catfish        0.13 MiB
 	extra/gnucash            4.56 MiB
@@ -71,7 +75,8 @@ The result of 'pacman -Syu' is shown in the third picture.
 
 	Total Download Size:     7.09 MiB
 
-Now, if there still to many package to be synchronized, you can limit pacman with these option in pacman.conf.
+Now, if there still to many package to be synchronized, 
+you can limit pacman with these option in <code class="code-file">/etc/pacman.conf</code>.
 
 {% highlight conf %}
 XferCommand = /usr/bin/curl --limit-rate 33k -C - -f %u > %o

@@ -35,7 +35,7 @@ XFCE is lightweight, but fully customizable.
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-Note: Those high processor usage comes xpenguins.
+Note: Those high processor usage comes <code>xpenguins</code>.
 
 [![XFCE4 Hilarious Selfieshoot: arch+kwin+whisker+dockx+ducklauncher+conkymanager+amor+numix+xpenguin][image-ss-selfieshoot]{: .img-responsive }][picasa-ss-selfieshoot]: 
 <br/><br/>

@@ -48,7 +48,7 @@ one post to many related-links.
 
 1. Table, can be simulated by simple array.
 
-2. Data in Jekyll can be stored in _data folder in yml/json/csv format.
+2. Data in Jekyll can be stored in <code class="code-file">_data</code> folder in yml/json/csv format.
 
 3. Unique ID, can be generated from post date. Or you can use other method that you like.
 

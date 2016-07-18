@@ -83,7 +83,8 @@ It shows what happened to my realtek 8187 device in boot time.
 
 [![Wireless dmesg][image-1-dmesg]{: .img-responsive }][picasa-1-dmesg]
 
-Some wireless card need to be turned on manually. So let's check it out with rfkill command
+Some wireless card need to be turned on manually. 
+So let's check it out with <code class="code-command">rfkill</code> command
 
 {% highlight bash %}
 ># rfkill list 
@@ -115,7 +116,8 @@ And scan our available essid for our wireless
 
 From this step, we may choose method to connect to your wireless. 
 There are many methods, but you can only chooses one method at a time. 
-This will show you NetworkManager using 'nmcli' command, and other method using 'iw' command.
+This will show you NetworkManager using <code class="code-command">nmcli</code> command, 
+and other method using <code class="code-command">iw</code> command.
 
 -- -- --
 
@@ -155,7 +157,8 @@ Finally, you may disconnect,
 
 [![Wireless nmcli connect][image-3-nmcli]{: .img-responsive }][picasa-3-nmcli]
 
-The 'wifi connect' command only supported after Netwok Manager 0.96. 
+The <code class="code-command">wifi connect</code> command 
+only supported after Netwok Manager 0.96. 
 Kali Linux 1.x series is still using 0.9.4 series of Netwok Manager. 
 It does not support connect command. 
 So it is a little bit different.
@@ -212,8 +215,9 @@ Now we can start some experiment with oher method.
 Note: Tested with Debian Jessie, Arch, Mageia 3 and Kali 1.06.  
 But I still got no luck with Ubuntu Trusty beta in my notebook. 
 
-Sometimes you also need to use 'ip link' command to activate your device.
-The ifconfig command has been deprecated and replaced by ip command.
+Sometimes you also need to use 
+<code class="code-command">ip link</code> command to activate your device.
+The <code class="code-command">ifconfig</code> command has been deprecated and replaced by ip command.
 
 {% highlight bash %}
 ># ip link show wlan0 
@@ -235,7 +239,7 @@ Again.. check your connexion.
 ># iw dev wlan0 link 
 {% endhighlight %}
 
-And reserved your IP with dhcpcd
+And reserved your IP with <code>dhcpcd</code>
 
 {% highlight bash %}
 ># dhclient wlan0 

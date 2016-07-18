@@ -24,7 +24,7 @@ you can attach a component, or replace it with other.
 Here are bars that you can use for i3, XMonad, or DWM. 
 XMonad itself comes with nothing but black intimidating screen.
 It can be customized very nicely with dzen2 bar.
-And it can have menu with dmenu_run or j4_dmenu. 
+And it can have menu with <code>dmenu_run</code> or <code>j4_dmenu</code>. 
 I haven't got time try DWM yet.
 
 

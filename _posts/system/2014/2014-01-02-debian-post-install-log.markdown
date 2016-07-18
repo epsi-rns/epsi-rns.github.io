@@ -31,9 +31,9 @@ note: No need to install all. Pick only what you need.
 <br/>
 This article contain two parts.
 
-* Using apt-get and,
+* Using <code class="code-command">apt-get</code> and,
 
-* Using aptitude.
+* Using <code class="code-command">aptitude</code>.
 
 [![Debian Fresh Install][image-ss-debian-install]{: .img-responsive }][picasa-ss-debian-install]
 <br/><br/>

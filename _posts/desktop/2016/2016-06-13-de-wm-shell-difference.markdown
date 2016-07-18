@@ -74,7 +74,7 @@ GTK based
 * XFCE4 is using XFWM4
 
 
-QT based
+QT5 based
 
 * KDE is using either kwin_x11 or kwin_wayland.
 
@@ -182,7 +182,13 @@ And later Window Manager
 
 * XMonad. This one need coding, in Haskell. But once you got it running, you'll love it.
 
+-- -- --
 
+Reading
+
+I found a super duper good cast from Aline Abler in youtube.
+
+* <https://www.youtube.com/watch?v=Api6dFMlxAA>
 
 -- -- --
 

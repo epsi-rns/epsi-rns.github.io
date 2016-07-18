@@ -22,7 +22,7 @@ excerpt:
 ## Regular Expression in command line with sed and awk
 
 Let's remember your Personal Love Song for a while.
-And Replace all "Love" word with "Math" word.
+And Replace all "<code>Love</code>" word with "<code>Math</code>" word.
 
 Then, put your Favorite sentence
 as your comment here.
@@ -49,8 +49,8 @@ Dear Geeks,
 Outside of programming language scope,
 there are two linux commands helper
 utilizing regular expression.
-It is the 'sed'.
-And the more advance one, the 'awk'.
+It is the <code>sed</code>.
+And the more advance one, the <code>awk</code>.
 
 {% highlight bash %}
  $ man sed

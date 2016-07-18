@@ -23,7 +23,7 @@ This is not a prank.
 You can have this Windowish looks with Arch LXQT.
 And be happy with it.
 
-'qterminal', is my new comfort in the shell.
+<code>qterminal</code>, is my new comfort in the shell.
 
 {% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
