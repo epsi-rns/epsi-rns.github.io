@@ -135,7 +135,7 @@ POWERLINE_BASH_SELECT=1
 ### Fish
 
 {% highlight bash %}
-cat ~/.config/fish/config.fish 
+$ cat ~/.config/fish/config.fish 
 powerline-daemon -q
 set POWERLINE_BASH_CONTINUATION 1
 set POWERLINE_BASH_SELECT 1
