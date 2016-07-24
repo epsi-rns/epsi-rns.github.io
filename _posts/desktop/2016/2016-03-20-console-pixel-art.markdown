@@ -21,7 +21,7 @@ you can download a collection of shell script here<br/>
 
 * <https://github.com/epsi-rns/ansi-color>
 
-* * *
+-- -- --
 
 **Original Script**:<br/>
 
@@ -41,6 +41,12 @@ you can download a collection of shell script here<br/>
 <br/><br/>
 [![ANSI Color Dark: arch+xmonad][image-ss-xmonad-dark]{: .img-responsive }][picasa-ss-xmonad-dark]
 
+<br/>
+Update: More scripts on github. I found it from googleplus community
+
+* <https://github.com/stark/Color-Scripts>
+
+<br/><br/>
 
 Me myself I got nothing to prove<br/>
 I hope that their effort would be remembered, and useful.<br/>
@@ -49,7 +55,7 @@ I hope that their effort would be remembered, and useful.<br/>
 Thank you for reading<br/>
 Happy screenshooting. Best of luck.<br/>
 
-* * *
+-- -- --
 <br/>
 Dear kawan-kawan sekalian,
 
