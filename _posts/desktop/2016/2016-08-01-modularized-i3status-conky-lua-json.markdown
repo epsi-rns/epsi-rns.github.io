@@ -50,7 +50,7 @@ Before we get too deep, let's see the old way of configuring i3status with Conky
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![i3-gaps: Conky Lua in i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
+[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
 
 -- -- --
 
@@ -427,11 +427,46 @@ You can check the rest of the file in github
 * [conky/cokyrc.bottom.lua][source-bottom]
 
   [![i3status: Conky Lua Bottom][image-i3status-bottom]{: .img-responsive }][picasa-i3status-bottom]
+  
+-- -- --
+
+## Changing Color
+
+This is a bonus parts.
+For your convenience I put two colorschemes.
+It is for dark and bright wallpaper.
+Of course you can add your own colorscheme.
+
+{% highlight lua %}
+local color_preset_dark = {
+  icon      = '#c9c925',
+  text      = '#5c5dad',
+  separator = '#545454',
+  value     = '#aaaaaa'
+}
+
+local color_preset_bright = {
+  icon      = '#5c5dad',
+  text      = '#606040',
+  separator = '#c9c925',
+  value     = '#000000'
+}
+
+local color_preset = color_preset_bright
+{% endhighlight %}
+
+[![i3-gaps: Conky Lua in bright i3status][image-ss-i3gaps-bright]{: .img-responsive }][picasa-ss-i3gaps-bright]  
+
+-- -- --
+
+After all this is just a config.
+You may modify this config to suit your needs.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
 [image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
+[image-ss-i3gaps-bright]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-bright.png
 
 [image-i3-workspace]: {{ site.url }}/assets/posts/desktop/2016/08/i3-workspace.png
 [image-i3-i3status]: {{ site.url }}/assets/posts/desktop/2016/08/i3-i3status.png
@@ -445,6 +480,7 @@ You can check the rest of the file in github
 [image-i3status-bottom]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-bottom.png
 
 [picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
+[picasa-ss-i3gaps-bright]: https://lh3.googleusercontent.com/-hJsG_VoSktU/V6DGP-pCpYI/AAAAAAAAAto/KhqyjuYpw2wlvqHSWFaClDsUtKYgWtaUgCCo/s0/i3gaps-bright.png
 
 [picasa-i3-i3status]: https://lh3.googleusercontent.com/-rCE8C1AZe8E/V6CmyLvsNHI/AAAAAAAAAtc/sYzQbxCPuSMC_GYnLtBx7zHXidbm1GnkACCo/s0/i3-i3status.png
 [picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-BqXzPSz6fdU/V6CmyPLOKzI/AAAAAAAAAtc/iVJeU9TmRY80CItOLyGkZT3EEw3wpMP-ACCo/s0/i3-i3blocks.png
