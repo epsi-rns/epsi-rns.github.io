@@ -8,7 +8,7 @@ author: epsi
 
 excerpt:
   This article explain conky lua configuration
-  for i3status using json protocol.
+  for i3status using JSON.
 
 related_link_ids:
   - 14120646  # i3 Window manager
@@ -87,6 +87,8 @@ bar {
 }
 {% endhighlight %}
 
+![i3status: workspace][image-workspace]{: .img-responsive }
+
 You can check my dotfiles here
 
 * [i3 config][source-i3]
@@ -99,7 +101,7 @@ $ cat ~/.config/i3/config
 {% endhighlight %}
 
 There are others i3 variant, e.g sway for wayland,
-and airblader with powerline looks.
+and i3bgbar with powerline looks (deprecated).
 I haven't explore the configuration yet.
 
 In order to see change,
@@ -135,6 +137,8 @@ bar {
     }
 {% endhighlight %}
 
+[![i3status][image-i3-i3status]{: .img-responsive }][picasa-i3-i3status]
+
 ### i3blocks
 
 Let's copy the default i3blocks configuration.
@@ -152,6 +156,7 @@ bar {
     }
 {% endhighlight %}
 
+[![i3blocks][image-i3-i3blocks]{: .img-responsive }][picasa-i3-i3blocks]
 
 ### Conky
 
@@ -191,6 +196,8 @@ ${if_mpd_playing}♫  ${mpd_artist} -  ${mpd_title} | ${endif}\
 ${time %H:%M:%S}    
 {% endhighlight %}
 
+![Conky: old][image-i3-conky-1-old]{: .img-responsive }
+
 -- -- --
 
 ## Conky Config as Lua
@@ -220,8 +227,9 @@ conky.text = [[
 ${if_mpd_playing}♫  ${mpd_artist} -  ${mpd_title} | ${endif}\
 ${time %H:%M:%S}    
 ]]
-
 {% endhighlight %}
+
+![Conky: lua][image-i3-conky-2-lua]{: .img-responsive }
 
 Reading:
 
@@ -276,10 +284,11 @@ ${endif}
      "separator":false, "separator_block_width":6 }
 ],
 ]]
-
 {% endhighlight %}
 
-This script is only using two monitoring widget,
+![Conky: JSON][image-i3-conky-3-json]{: .img-responsive }
+
+This script is only using two monitoring widgets,
 it is <code>mpd</code> and <code>time</code>.
 For many monitoring widget, we should reduce the complexity.
 
@@ -355,6 +364,11 @@ You can check the rest of the file in github
 
 * [conky/helper.lua][source-helper]
 
+If you need more icon you can copy-paste from FontAwesome cheatsheet,
+but be aware that it is not always work with other font.
+
+* <http://fontawesome.io/cheatsheet/>
+
 ### The Parts Lua
 
 Now we need another file to define conky parts as functions.
@@ -416,11 +430,25 @@ You can check the rest of the file in github
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+
 [image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
-[image-i3status-top]: {{ site.url }}/assets/posts/desktop/2016/08/conky-lua-json-top.png
-[image-i3status-bottom]: {{ site.url }}/assets/posts/desktop/2016/08/conky-lua-json-bottom.png
+
+[image-i3-workspace]: {{ site.url }}/assets/posts/desktop/2016/08/i3-workspace.png
+[image-i3-i3status]: {{ site.url }}/assets/posts/desktop/2016/08/i3-i3status.png
+[image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-i3blocks.png
+
+[image-i3-conky-1-old]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-1-old.png
+[image-i3-conky-2-lua]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-2-lua.png
+[image-i3-conky-3-json]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-3-json.png
+
+[image-i3status-top]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-top.png
+[image-i3status-bottom]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-bottom.png
 
 [picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
+
+[picasa-i3-i3status]: https://lh3.googleusercontent.com/-rCE8C1AZe8E/V6CmyLvsNHI/AAAAAAAAAtc/sYzQbxCPuSMC_GYnLtBx7zHXidbm1GnkACCo/s0/i3-i3status.png
+[picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-BqXzPSz6fdU/V6CmyPLOKzI/AAAAAAAAAtc/iVJeU9TmRY80CItOLyGkZT3EEw3wpMP-ACCo/s0/i3-i3blocks.png
+
 [picasa-i3status-top]: https://lh3.googleusercontent.com/-rUBIF6prl9M/V59hvuz00JI/AAAAAAAAAsg/_MkrH8oQLko9XY1wF4UWkrxrFV0aEwcVgCCo/s0/conky-lua-json-top.png
 [picasa-i3status-bottom]: https://lh3.googleusercontent.com/-Ob6R5cfkNlE/V59hvg54EoI/AAAAAAAAAsg/IBBJhBRtZ54KljugJopeQCYac3rJwbJlgCCo/s0/conky-lua-json-bottom.png
 
