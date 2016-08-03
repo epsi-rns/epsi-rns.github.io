@@ -116,7 +116,7 @@ $ pacaur -y i3-gaps
 
 [![Install AUR i3-gaps][image-i3-i3gaps]{: .img-responsive }][picasa-i3-i3gaps]
 
-To go back from i3-gaps install i3-wm
+To go back from i3-gaps, install i3-wm.
 
 {% highlight bash %}
 $ sudo pacman -S i3-wm 
@@ -159,6 +159,22 @@ it is easier to learn part by part.
 
 -- -- --
 
+## Additional Package
+
+For your convenience,
+you can choose to use either dmenu or rofi.
+Both provide the same purpose to run command,
+except rofi has more feature.
+
+{% highlight bash %}
+$ sudo pacman -S dmenu
+$ sudo pacman -S rofi
+{% endhighlight %}
+
+[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
+
+-- -- --
+
 ## Source Code
 
 Window Manager
@@ -197,3 +213,5 @@ Thank you for reading and visiting.
 [image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3gaps-half.png
 [picasa-i3-i3gaps]: https://lh3.googleusercontent.com/-HmYhhfjP1dY/V6HYAYhygJI/AAAAAAAAAuI/EpohYgBEk2YzpkgfFZLGKtaWooIqhYOQQCCo/s0/i3-arch-install-i3gaps-full.png
 
+[image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
+[picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
