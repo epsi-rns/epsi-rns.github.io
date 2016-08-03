@@ -67,7 +67,7 @@ What a perfect combination between Window Manager and Scripting Language.
 
 ## Running Awesome WM
 
-To switch to Awesome WM after installaion completed,
+To switch to Awesome WM after installation completed,
 you can logout your current DE/WM (Desktop Environment or Window Manager).
 In your DM (Display Manager), login with Awesome WM Session.
 
