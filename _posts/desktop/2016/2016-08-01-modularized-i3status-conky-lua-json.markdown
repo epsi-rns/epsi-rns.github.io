@@ -430,7 +430,9 @@ You can check the rest of the file in github
   
 -- -- --
 
-## Changing Color
+## Miscellanous
+
+### Changing Color
 
 This is a bonus parts.
 For your convenience I put two colorschemes.
@@ -456,6 +458,15 @@ local color_preset = color_preset_bright
 {% endhighlight %}
 
 [![i3-gaps: Conky Lua in bright i3status][image-ss-i3gaps-bright]{: .img-responsive }][picasa-ss-i3gaps-bright]  
+
+## Font Problem
+
+Do not forget to install font to enable your icons.
+
+{% highlight bash %}
+$ sudo pacman -S ttf-font-icons
+$ yaourt -S awesome-terminal-fonts
+{% endhighlight %}
 
 -- -- --
 

@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Install i3 WM in Arch Linux based Distribution"
+title:  "Install i3 WM in Debian"
 categories: desktop
-date:   2016-08-03 19:25:15 +0700
+date:   2016-08-02 22:24:15 +0700
 tags: [i3wm]
 author: epsi
 
 excerpt:
   i3 is also an easy WM for beginner.
   It doesn't have need complex configuration.
-  i3 is actually a very comfortable Tiling Window Manager,
-  as long as you read the fine manual.
+  Installing official i3wm in Debian is also easy,
+  but if you need i3-gaps, you have to git-clone i3-gaps manually.
 
 related_link_ids:
   - 16080119  # Modularized i3status Conky Lua JSON
@@ -27,10 +27,15 @@ related_link_ids:
 i3 is also an easy WM for beginner.
 It doesn't have need complex configuration.
 You can just install it, and use it, the tiling rule is simple.
-Except that it start with intimidating black screen,
-so you have to read the manual to learn the keystrokes.
-But once you get along with i3,
-i3 is actually a very comfortable Tiling Window Manager.
+It is true that i3 start black screen,
+it is intimidating that you have to read the manual first,
+just to learn the keystrokes.
+Once you get along with i3,
+you can find that i3 is a very comfortable Tiling Window Manager.
+
+Installing official i3wm in Debian is also easy,
+but if you need i3-gaps, you have to git-clone i3-gaps manually.
+Don't worry about it, this unofficial fork is optional.
 
 **Reading**:
 
@@ -45,18 +50,14 @@ Guidance in The Fine Manual is enough.
 ## Install i3 WM
 
 Installing <code>i3</code> will also install three packages,
-it is <code>i3-wm</code>, <code>i3lock</code> and <code>i3status</code>.
+it is <code>i3</code>, <code>i3lock</code> and <code>i3status</code>.
 You can issue either one of this.
 
 {% highlight bash %}
-$ sudo pacman -S i3
-$ sudo pacman -S i3-wm i3lock i3status 
+$ sudo apt install i3
 {% endhighlight %}
  
-[![Install i3 (i3-wm i3lock i3status )][image-i3-i3wm]{: .img-responsive }][picasa-i3-i3wm]
-
-<code>i3status</code> use <code>confuse</code> library.
-It will be installed automatically.
+[![Install i3 (i3 i3lock i3status )][image-i3-i3wm]{: .img-responsive }][picasa-i3-i3wm]
 
 -- -- --
 
@@ -71,9 +72,10 @@ You can check xsession directory.
 
 {% highlight bash %}
 $ ls /usr/share/xsessions/
-awesome.desktop        gnome.desktop  plasma.desktop
-enlightenment.desktop  hidden         xfce.desktop
-gnome-classic.desktop  i3.desktop     xmonad.desktop
+awesome.desktop                 i3.desktop                plasma.desktop
+gnome-classic.desktop           i3-with-shmlog.desktop    twm.desktop
+gnome.desktop                   lightdm-xsession.desktop  xfce.desktop
+gnome-flashback-xmonad.desktop  openbox.desktop           xmonad.desktop
 {% endhighlight %}
 
 On first run, <code>i3-config-wizard</code> will
@@ -84,23 +86,13 @@ create <code class="code-file">~/.config/i3/config</code>.
 ## Install i3 Blocks
 
 There is an i3blocks tool to help you getting pretty i3statusbar.
-It is a useful additional package.
-
-<code>i3blocks</code> is available in AUR (Arch User Repository).
-In order to install i3, you must use AUR Helper,
-e.g. yaourt, aura, packer, pacaur, or else.
+It is a useful additional package and it is available in Debian repository.
 
 {% highlight bash %}
-$ pacaur -y i3blocks
+$ sudo apt install i3blocks
 {% endhighlight %}
 
-or
-
-{% highlight bash %}
-$ yaourt -S i3blocks
-{% endhighlight %}
-
-[![Install AUR i3-blocks][image-i3-i3blocks]{: .img-responsive }][picasa-i3-i3blocks]
+[![Install i3-blocks][image-i3-i3blocks]{: .img-responsive }][picasa-i3-i3blocks]
 
 -- -- --
 
@@ -109,32 +101,40 @@ $ yaourt -S i3blocks
 There is an Unofficial Fork of i3 from AirBlader.
 The most interesting feature is Gaps between window.
 
-<code>i3-gaps</code> is available in AUR (Arch User Repository).
-In order to install i3, you must use AUR Helper,
-e.g. yaourt, aura, packer, pacaur, or else.
+Unfortunately <code>i3-gaps</code> is not available in official repository.
+So you have to compile and install it manually.
 
-Since it is an i3 fork, you can't have both installed.
-This command will install <code>i3-gaps</code>,
-and also uninstall <code>i3-wm</code>.
+Reading
+
+* <https://github.com/Airblader/i3/wiki/Compiling-&-Installing>
+
+### Debian Stretch Dependency
 
 {% highlight bash %}
-$ pacaur -y i3-gaps
+$ sudo apt install libxcb-keysyms1-dev libpango1.0-dev \
+  libxcb-util0-dev xcb libxcb1-dev libxcb-icccm4-dev libyajl-dev \
+  libev-dev libxcb-xkb-dev libxcb-cursor-dev libxkbcommon-dev \
+  libxcb-xinerama0-dev libxkbcommon-x11-dev \
+  libstartup-notification0-dev libxcb-randr0-dev libxcb-xrm-dev
 {% endhighlight %}
 
-or
+### Clone form Github
 
 {% highlight bash %}
-$ yaourt -S i3-gaps
+$ git clone https://www.github.com/Airblader/i3 i3-gaps
+$ cd i3-gaps/
+$ git checkout gaps && git pull
+{% endhighlight %}
+
+### Make and Install
+
+{% highlight bash %}
+$ cd i3-gaps/
+$ make
+$ sudo make install
 {% endhighlight %}
 
 [![Install AUR i3-gaps][image-i3-i3gaps]{: .img-responsive }][picasa-i3-i3gaps]
-
-To go back from <code>i3-gaps</code>,
-install <code>i3-wm</code>.
-
-{% highlight bash %}
-$ sudo pacman -S i3-wm 
-{% endhighlight %}
 
 -- -- --
 
@@ -166,7 +166,7 @@ Since Conky is optional. It is beyond this scope
 to explain conky installation in detail.
 
 {% highlight bash %}
-$ sudo pacman -S lua conky
+$ sudo apt install lua conky
 {% endhighlight %}
 
 -- -- --
@@ -194,8 +194,8 @@ Both provide the same purpose to run command,
 except rofi has more feature.
 
 {% highlight bash %}
-$ sudo pacman -S dmenu
-$ sudo pacman -S rofi
+$ sudo apt install dmenu
+$ sudo apt install rofi
 {% endhighlight %}
 
 [![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
@@ -228,17 +228,17 @@ Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-i3]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-summary.png
-[picasa-ss-i3]: https://lh3.googleusercontent.com/-1rU0U1ffYO4/V6HYA15Q5TI/AAAAAAAAAuI/a14r84TgDaguRESpK5eWVULRhWWPGTL5QCCo/s0/i3-arch-install-fullscreen.png
+[image-ss-i3]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-summary.png
+[picasa-ss-i3]: https://lh3.googleusercontent.com/-w-Lulan3AEI/V6IKgI5K5oI/AAAAAAAAAuo/yKPdrukomZMkZsZOJaVa3vm1734ZPNkDwCCo/s0/i3-debian-install-summary.png
 
-[image-i3-i3wm]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3wm-half.png
-[picasa-i3-i3wm]: https://lh3.googleusercontent.com/-xmEJ0jNXmso/V6HYBFt-InI/AAAAAAAAAuI/yQtOpXbqBV4Z_8CwzyFappNPWQ6ZhanuQCCo/s0/i3-arch-install-i3wm-full.png
+[image-i3-i3wm]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3wm-half.png
+[picasa-i3-i3wm]: https://lh3.googleusercontent.com/-YohfQLQgM08/V6IKl7la0LI/AAAAAAAAAuo/p9Y2xdnnbMcFnagKhGZNcCcMgqZZsaglwCCo/s0/i3-debian-install-i3wm-full.png
 
-[image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3blocks-half.png
-[picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-3f4WBLUMM5g/V6HYA96BUzI/AAAAAAAAAuI/0S7E3Lu3c7MN6Ho0Naa9Pik8D3fvQ6_UwCCo/s0/i3-arch-install-i3blocks-full.png
+[image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3blocks-half.png
+[picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-R43C8kWbB88/V6IKlhyrbEI/AAAAAAAAAuo/7qb2HShmaUUvA_6-nZX_ThW2A6-KerN1ACCo/s0/i3-debian-install-i3blocks-full.png
 
-[image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3gaps-half.png
-[picasa-i3-i3gaps]: https://lh3.googleusercontent.com/-HmYhhfjP1dY/V6HYAYhygJI/AAAAAAAAAuI/EpohYgBEk2YzpkgfFZLGKtaWooIqhYOQQCCo/s0/i3-arch-install-i3gaps-full.png
+[image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3gaps-half.png
+[picasa-i3-i3gaps]: https://lh3.googleusercontent.com/-7AAudqElnBk/V6IKl3XikzI/AAAAAAAAAuo/_Hbotu_UFkkaP3zOfYTpBb23aK_9yEugACCo/s0/i3-debian-install-i3gaps-full.png
 
 [image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
 [picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
