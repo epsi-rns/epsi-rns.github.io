@@ -5,6 +5,14 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16080325
+  title: "Install i3 WM in Arch Linux based Distribution"
+  url: /desktop/2016/08/03/i3-install-arch.html
+
+- id: 16080224
+  title: "Install i3 WM in Debian"
+  url: /desktop/2016/08/02/i3-install-debian.html
+
 - id: 16080119
   title: "Modularized Conky Configuration for i3status"
   url: /desktop/2016/08/01/modularized-i3status-conky-lua-json.html

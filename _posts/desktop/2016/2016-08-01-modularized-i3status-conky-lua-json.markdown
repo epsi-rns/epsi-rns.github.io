@@ -11,6 +11,8 @@ excerpt:
   for i3status using JSON.
 
 related_link_ids:
+  - 16080325  # Install i3 Arch
+  - 16080224  # Install i3 Debian
   - 14120646  # i3 Window manager
 
 ---

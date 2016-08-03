@@ -13,6 +13,7 @@ excerpt:
   as long as you read the fine manual.
 
 related_link_ids:
+  - 16080224  # Install i3 Debian
   - 16080119  # Modularized i3status Conky Lua JSON
   - 14120646  # i3 Window manager
 

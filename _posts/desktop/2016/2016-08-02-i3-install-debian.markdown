@@ -13,6 +13,7 @@ excerpt:
   but if you need i3-gaps, you have to git-clone i3-gaps manually.
 
 related_link_ids:
+  - 16080325  # Install i3 Arch
   - 16080119  # Modularized i3status Conky Lua JSON
   - 14120646  # i3 Window manager
 
