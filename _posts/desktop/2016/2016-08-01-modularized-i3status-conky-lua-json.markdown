@@ -324,7 +324,7 @@ bar {
 ### The Lua Helper
 
 Since we want to reduce complexity,
-we create a functio for each json parts 
+we create a function for each json parts 
 in <code class="code-file">jsonhelper.lua</code>.
 
 {% highlight lua %}

@@ -2,9 +2,16 @@
 layout: default
 ---
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
+      <div id="wrapper">
+        <div class="visible-xs">
+            &nbsp;&nbsp;<a href="#" id="menu-toggle"><i class="fa fa-navicon fa-2x"></i></a>
+        </div>
+        
+      <div class="row row-left">
+        <!-- sidebar -->
+        <div class="column col-xs-4 col-sm-3 col-md-2 hidden-xs" id="sidebar">
+          <!--ul class="nav nav-sidebar"-->
+          <ul class="nav" id="menu">
         {% for link in site.data.navigation_jekyll %}
         
           {% if link.url contains 'http' %}
@@ -14,27 +21,40 @@ layout: default
           {% endif %}
           
           {% if link.url == page.url%}
-          <li class="active">
-            <a class="page-link" href="{{ domain }}{{ link.url }}" 
-              {% if link.url contains 'http' %}target="_blank"{% endif %}
-            >{{ link.title }}
-            <span class="sr-only">(current)</span></a>
-          </li>
-          {% else %}
-          <li>
-            <a class="page-link" href="{{ domain }}{{ link.url }}" 
-              {% if link.url contains 'http' %}target="_blank"{% endif %}
-            >{{ link.title }}</a>
-          </li>
+          <li class="active">{% else %}<li>
           {% endif %}
+            <a class="page-link" href="{{ domain }}{{ link.url }}" 
+              {% if link.url contains 'http' %}target="_blank"{% endif %}>
+              <span class="collapse in">{{ link.title }}</span>
+              {% if link.url == page.url%}
+              <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
         {% endfor %}
           </ul>
         </div>
+        <!-- /sidebar -->
         
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <div id="sitedesc-image"></div>
-        {{ content }}
+        <!-- main right col -->
+        <div class="column col-xs-12 col-sm-9 col-md-10" id="main"> 
+          <div id="sitedesc-image"></div>          
+          {{ content }}
         </div>
+        <!-- /main -->
         
       </div>
+      <!-- /#row -->
+      </div>
+      <!-- /#wrapper -->
     </div>
+    <!-- /#container -->
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $('#menu-toggle').click(function() {
+        $('.row').toggleClass('active');
+        $('#sidebar').toggleClass('hidden-xs');  
+    });
+    </script>
