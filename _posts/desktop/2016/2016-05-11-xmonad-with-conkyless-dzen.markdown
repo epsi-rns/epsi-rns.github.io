@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: sidebar
 title:  "XMonad with Conkyless Dzen, Total Control of Theme"
 date:   2016-05-11 21:02:15 +0700
 categories: desktop

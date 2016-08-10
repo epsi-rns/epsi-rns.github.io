@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: sidebar
 title:  "Modularized Conky Configuration for i3status"
 categories: desktop
 date:   2016-08-01 20:19:15 +0700

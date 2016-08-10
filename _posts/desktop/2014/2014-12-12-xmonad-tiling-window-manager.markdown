@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: sidebar
 title:  "XMonad Tiling Window Manager"
 date:   2014-12-12 22:59:15 +0700
 categories: desktop
