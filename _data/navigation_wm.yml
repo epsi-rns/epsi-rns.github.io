@@ -1,0 +1,53 @@
+# Site navigation links
+
+- title: Tiling WM
+  url: #
+  submenu:
+  - title: Awesome
+    url: #
+    submenu:
+    - title: Modular
+      url: /desktop/2016/07/13/modularized-awesome-preparing.html
+    - title: Directory Structure
+      url: /desktop/2016/07/06/modularized-awesome-structure.html
+    - title: Install Debian
+      url: /desktop/2016/06/30/awesome-install-debian.html
+    - title: Install Arch
+      url: /desktop/2016/06/29/awesome-install-arch.html
+    - title: Old Screenshot
+      url: /desktop/2014/11/30/awesome.html
+  - title: XMonad
+    url: #
+    submenu:
+    - title: Modular
+      url: /desktop/2016/03/26/modularized-xmonad-config.html
+    - title: Conkyless
+      url: /desktop/2016/05/11/xmonad-with-conkyless-dzen.html
+    - title: Menu Bar
+      url: /desktop/2014/12/15/xmonad-menu-bar.html
+    - title: Old Screenshot
+      url: /desktop/2014/12/12/xmonad-tiling-window-manager.html
+  - title: i3
+    url: #
+    submenu:
+    - title: Modular i3status
+      url: /desktop/2016/08/01/modularized-i3status-conky-lua-json.html
+    - title: Install Debian
+      url: /desktop/2016/08/02/i3-install-debian.html
+    - title: Install Arch
+      url: /desktop/2016/08/03/i3-install-arch.html
+    - title: Old Screenshot
+      url: /desktop/2014/12/06/i3-i3bar.html
+
+- title: Stacking WM
+  url: #
+
+  
+- title: Desktop Environment
+  url: #
+  submenu:
+  - title: Difference WM/DE
+    url: /desktop/2016/06/13/de-wm-shell-difference.html
+  
+- title: Ricing
+  url: #

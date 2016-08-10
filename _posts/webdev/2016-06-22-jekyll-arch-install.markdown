@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post
 title:  "Jekyll Installation on Arch/Manjaro"
 categories: webdev
 date:   2016-06-22 22:02:15 +0700

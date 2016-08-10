@@ -19,19 +19,15 @@ ul.nav-sidebar {
 }
 */
 
-.wrapper, .row {
+.row {
    height: 100%;
-   margin-left:0;
-   margin-right:0;
 }
 
-.wrapper:before, .wrapper:after,
 .column:before, .column:after {
     content: "";
     display: table;
 }
 
-.wrapper:after,
 .column:after {
     clear: both;
 }
@@ -75,3 +71,32 @@ ul.nav-sidebar {
 
 }
 
+#sidebar {
+    font-size: 15px;
+}
+
+#sidebar ul > li {
+    @include list-unstyled;
+    margin: 5px 0px 10px 5px;    
+}
+
+#sidebar ul li a {
+    display: inline;
+}  
+
+#sidebar ul > li > ul > li {
+    @include list-unstyled;
+    margin: 5px 0px 10px -20px;    
+}
+
+
+/*
+#sidebar ul li:before {
+    font-family: 'FontAwesome';
+    margin: 0 5px 0 -20px;
+    
+    content: '\f054';
+    color: $gray-base;
+    width: 20px;      
+}  
+*/

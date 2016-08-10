@@ -2,17 +2,17 @@
 layout: default
 ---
     <div class="container-fluid">
-      <div id="wrapper">
-        <div class="visible-xs">
-            &nbsp;&nbsp;<a href="#" id="menu-toggle"><i class="fa fa-navicon fa-2x"></i></a>
-        </div>
+
+      <div class="col-xs-12 visible-xs">
+          &nbsp;&nbsp;<a href="#" id="menu-toggle"><i class="fa fa-navicon fa-2x"></i></a>
+      </div>
         
-      <div class="row row-left">
+      <div class="row">
         <!-- sidebar -->
         <div class="column col-xs-4 col-sm-3 col-md-2 hidden-xs" id="sidebar">
           <!--ul class="nav nav-sidebar"-->
           <ul class="nav" id="menu">
-        {% for link in site.data.navigation_jekyll %}
+        {% for link in site.data.navigation_wm %}
         
           {% if link.url contains 'http' %}
             {% assign domain = '' %}
@@ -23,6 +23,7 @@ layout: default
           {% if link.url == page.url%}
           <li class="active">{% else %}<li>
           {% endif %}
+            <span class="fa fa-list"></span>
             <a class="page-link" href="{{ domain }}{{ link.url }}" 
               {% if link.url contains 'http' %}target="_blank"{% endif %}>
               <span class="collapse in">{{ link.title }}</span>
@@ -30,6 +31,58 @@ layout: default
               <span class="sr-only">(current)</span>
               {% endif %}
             </a>
+            {% if link.submenu %}
+            <ul>
+               {% for sublink in link.submenu %}
+               
+                 {% if sublink.url contains 'http' %}
+                   {% assign domain = '' %}
+                 {% else %}
+                   {% assign domain = site.url %}
+                 {% endif %}
+                 
+                 {% if sublink.url == page.url%}
+                 <li class="active">{% else %}<li>
+                 {% endif %}
+                    <span class="fa fa-chevron-right"></span>
+                    <a class="page-link" href="{{ domain }}{{ sublink.url }}" 
+                      {% if sublink.url contains 'http' %}target="_blank"{% endif %}>
+                      <span class="collapse in">{{ sublink.title }}</span>
+                      {% if sublink.url == page.url%}
+                      <span class="sr-only">(current)</span>
+                      {% endif %}
+                    </a>
+                    {% if sublink.submenu %}
+                    <ul>
+                       {% for subsublink in sublink.submenu %}
+               
+                         {% if subsublink.url contains 'http' %}
+                           {% assign domain = '' %}
+                         {% else %}
+                           {% assign domain = site.url %}
+                         {% endif %}
+                 
+                         {% if subsublink.url == page.url%}
+                         <li class="active">{% else %}<li>
+                         {% endif %}
+                            <span class="fa fa-asterisk"></span>
+                            <a class="page-link" href="{{ domain }}{{ subsublink.url }}" 
+                              {% if subsublink.url contains 'http' %}target="_blank"{% endif %}>
+                              <span class="collapse in">{{ subsublink.title }}</span>
+                              {% if subsublink.url == page.url%}
+                              <span class="sr-only">(current)</span>
+                              {% endif %}
+                            </a>
+                         </li>
+               
+                       {% endfor %}
+                    </ul>
+                    {% endif %}
+                 </li>
+               
+               {% endfor %}
+            </ul>
+            {% endif %}
           </li>
         {% endfor %}
           </ul>
@@ -45,8 +98,7 @@ layout: default
         
       </div>
       <!-- /#row -->
-      </div>
-      <!-- /#wrapper -->
+
     </div>
     <!-- /#container -->
 
