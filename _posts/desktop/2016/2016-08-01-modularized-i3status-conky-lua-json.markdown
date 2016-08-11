@@ -17,12 +17,6 @@ related_link_ids:
 
 ---
 
-<div class="alert alert-dismissible alert-info">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Information:</strong> This <a href="#" class="alert-link">page is using Temporary URL</a>,
-  I will move this page to Tutorial section later.
-</div>
-
 I'm so excited with the release of Conky V1.10.
 The latest conky configuration is actualy a Lua file.
 It is very flexible, compared with the old plain text Conky Configuration.

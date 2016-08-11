@@ -19,12 +19,6 @@ related_link_ids:
 
 ---
 
-<div class="alert alert-dismissible alert-info">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Information:</strong> This <a href="#" class="alert-link">page is using Temporary URL</a>,
-  I will move this page to Tutorial section later.
-</div>
-
 I finally locked myself in my room for hours, doing Awesome WM refactoring.
 
 After a while, the single rc.lua, has been modularized into chunk parts.

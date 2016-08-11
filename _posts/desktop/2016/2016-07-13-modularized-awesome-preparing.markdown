@@ -20,12 +20,6 @@ related_link_ids:
 
 ---
 
-<div class="alert alert-dismissible alert-info">
-  <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Information:</strong> This <a href="#" class="alert-link">page is using Temporary URL</a>,
-  I will move this page to Tutorial section later.
-</div>
-
 This post is about what must be done before modularizing rc.lua.
 It is more about Lua Code style, and the process of splitting the codes.
 And not the configuration itself.

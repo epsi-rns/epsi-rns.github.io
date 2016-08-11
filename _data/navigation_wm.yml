@@ -1,10 +1,10 @@
 # Site navigation links
 
 - title: Tiling WM
-  url: #
+  url: /pages/desktop/twm
   submenu:
   - title: Awesome
-    url: #
+    url: /pages/desktop/awesome
     submenu:
     - title: Modular
       url: /desktop/2016/07/13/modularized-awesome-preparing.html
@@ -16,8 +16,9 @@
       url: /desktop/2016/06/29/awesome-install-arch.html
     - title: Old Screenshot
       url: /desktop/2014/11/30/awesome.html
+      active: 'test'
   - title: XMonad
-    url: #
+    url: /pages/desktop/xmonad
     submenu:
     - title: Modular
       url: /desktop/2016/03/26/modularized-xmonad-config.html
@@ -28,7 +29,7 @@
     - title: Old Screenshot
       url: /desktop/2014/12/12/xmonad-tiling-window-manager.html
   - title: i3
-    url: #
+    url: /pages/desktop/i3
     submenu:
     - title: Modular i3status
       url: /desktop/2016/08/01/modularized-i3status-conky-lua-json.html
@@ -40,11 +41,10 @@
       url: /desktop/2014/12/06/i3-i3bar.html
 
 - title: Stacking WM
-  url: #
-
+  url: /pages/desktop/swm
   
 - title: Desktop Environment
-  url: #
+  url: /pages/desktop/de
   submenu:
   - title: Difference WM/DE
     url: /desktop/2016/06/13/de-wm-shell-difference.html
@@ -52,4 +52,4 @@
     url: https://github.com/epsi-rns/dotfiles/    
   
 - title: Ricing
-  url: #
+  url: /pages/desktop/ricing
