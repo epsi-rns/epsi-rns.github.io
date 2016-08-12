@@ -10,8 +10,12 @@
   url: /webdev/2016/08/13/jekyll-sidemenu-without-javascript.html
 
 - id: 16081215
+  title: "Jekyll Sidemenu Simple Tree"
+  url: /webdev/2016/08/12/jekyll-sidemenu-simpletree.html
+
+- id: 16081115
   title: "Jekyll Responsive Side Menu"
-  url: /webdev/2016/08/12/jekyll-responsive-sidemenu.html
+  url: /webdev/2016/08/11/jekyll-responsive-sidemenu.html
 
 - id: 16080325
   title: "Install i3 WM in Arch Linux based Distribution"

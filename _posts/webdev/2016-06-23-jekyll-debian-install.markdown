@@ -14,7 +14,8 @@ excerpt:
 
 related_link_ids: 
   - 16081315  # Side Menu Without Javascript
-  - 16081215  # Responsive Side Menu
+  - 16081215  # Side Menu Simple Tree
+  - 16081115  # Responsive Side Menu
   - 16062202  # Jekyll Install Arch/Manjaro
   - 16062127  # Install Yaourt
   - 16061409  # Webcoder Begin
