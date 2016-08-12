@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post-sidemenu
 title:  "The Difference Between DE, Shell, WM and Compositor"
 categories: desktop
 date:   2016-06-13 23:16:15 +0700

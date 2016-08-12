@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-sidemenu
 title:  "Fluxbox Stacking Window Manager"
 date:   2014-11-08 00:04:15 +0700
 categories: desktop

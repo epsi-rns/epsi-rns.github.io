@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-sidemenu
 title:  "Customizing Shell Prompt with Powerline"
 date:   2016-03-21 19:17:15 +0700
 categories: desktop

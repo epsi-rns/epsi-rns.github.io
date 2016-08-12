@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-sidemenu
 title:  "Midnight Commander Tweaking, can Help People Better"
 categories: desktop
 tags: [ricing, dotfiles]

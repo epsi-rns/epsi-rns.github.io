@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post-sidemenu
 title:  "Install i3 WM in Arch Linux based Distribution"
 categories: desktop
 date:   2016-08-03 19:25:15 +0700

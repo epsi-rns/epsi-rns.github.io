@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post-sidemenu
 title:  "Install i3 WM in Debian"
 categories: desktop
 date:   2016-08-02 22:24:15 +0700

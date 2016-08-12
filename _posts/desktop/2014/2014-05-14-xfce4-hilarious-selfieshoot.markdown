@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-sidemenu
 title:  "Selfieshoot of Hilarious XFCE4 Customization"
 date:   2014-05-14 12:35:15 +0700
 categories: desktop

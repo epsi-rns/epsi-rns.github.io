@@ -1,5 +1,13 @@
 # Site navigation links
 
+- title: Preface
+  url: /pages/desktop/index
+  submenu:
+  - title: Difference WM/DE
+    url: /desktop/2016/06/13/de-wm-shell-difference.html
+  - title: Dotfiles
+    url: https://github.com/epsi-rns/dotfiles/  
+
 - title: Tiling WM
   url: /pages/desktop/twm
   submenu:
@@ -14,9 +22,10 @@
       url: /desktop/2016/06/30/awesome-install-debian.html
     - title: Install Arch
       url: /desktop/2016/06/29/awesome-install-arch.html
+    - title: Old Refactoring
+      url: /desktop/2016/03/19/refactoring-awesome-lua-configuration.html
     - title: Old Screenshot
       url: /desktop/2014/11/30/awesome.html
-      active: 'test'
   - title: XMonad
     url: /pages/desktop/xmonad
     submenu:
@@ -42,14 +51,33 @@
 
 - title: Stacking WM
   url: /pages/desktop/swm
+  submenu:
+  - title: Openbox (old ss)
+    url: /desktop/2014/11/02/openbox-standalone.html
+  - title: Fluxbox (old ss)
+    url: /desktop/2014/11/08/fluxbox-with-glowing-wallpaper.html
   
 - title: Desktop Environment
   url: /pages/desktop/de
   submenu:
-  - title: Difference WM/DE
-    url: /desktop/2016/06/13/de-wm-shell-difference.html
-  - title: URL Test
-    url: https://github.com/epsi-rns/dotfiles/    
-  
+  - title: XFCE4
+    url: /pages/desktop/xfce4
+    submenu:
+    - title: Minimalist Tiling
+      url: /desktop/2015/02/13/xfce4-minimalis-tiling.html
+    - title: Old Selfieshoot
+      url: /desktop/2014/05/14/xfce4-hilarious-selfieshoot.html
+  - title: Windowish LXQT SS
+    url: /desktop/2014/10/19/lxqt-windowish-looks.html
+  - title: Gnome Shell SS
+    url: /desktop/2014/04/22/gnome-shell-a-very-common.html
+      
 - title: Ricing
   url: /pages/desktop/ricing
+  submenu:
+  - title: Console Art
+    url: /desktop/2016/03/20/console-pixel-art.html
+  - title: Powerline Prompt
+    url: /desktop/2016/03/21/powerline-customizing.html
+  - title: Midnight Commander
+    url: /desktop/2016/05/19/midnight-commander-tweaking.html

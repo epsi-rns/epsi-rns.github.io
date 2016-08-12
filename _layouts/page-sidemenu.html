@@ -13,27 +13,32 @@ layout: default
         {% include layout/sidemenu.html 
            menusource = site.data.navigation_wm
         %}
-        </div>
-        <!-- /sidebar -->
+        </div><!-- /sidebar -->
         
         <!-- main right col -->
         <div class="column col-xs-12 col-sm-8 col-md-9" id="main"> 
-          <div id="sitedesc-image"></div>          
-          {{ content }}
-        </div>
-        <!-- /main -->
-        
-      </div>
-      <!-- /#row -->
+<div id="sitedesc-image"></div>
+<article class="post well">
 
-    </div>
-    <!-- /#container -->
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
+        </div> <!-- /main -->
+        
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
 
 
     <!-- Menu Toggle Script -->
     <script>
     $('#menu-toggle').click(function() {
-        $('.row').toggleClass('active');
         $('#sidebar').toggleClass('hidden-xs');  
     });
     </script>

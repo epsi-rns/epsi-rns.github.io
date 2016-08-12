@@ -1,0 +1,39 @@
+
+  <header class="post-header"> 
+      <div class="post-title"> 
+        <div class="calendar calendar-icon-{{ page.date | date: "%m" }}">
+          <div class="calendar-day">{{ page.date | date: "%d" }}</div>
+        </div>
+        <h1 itemprop="name headline">
+          <a href="{{ site.url | append:site.baseurl | append:page.url }}"
+          >{{ page.title }}</a></h1>
+      </div>
+      <div class="clearfix"></div>
+      <div class="post-meta container-fluid">
+        {% if page.author %}
+        <span class="post-author">
+            <span class="fa fa-user"></span>
+            &nbsp;
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span></span>
+        </span>
+        {% endif %}  
+        <div class="post-time pull-left">
+          {% include post/time-elapsed.html %}  
+        </div>
+        <div class="post-tags pull-right" id="tags">
+          {% for tag in page.tags %}
+            <a href="{{ site.url | append:site.baseurl }}/pages/tag#{{ tag }}">
+              <span class="label label-tag"><span class="fa fa-tag"></span> {{ tag }}</span></a>
+          {% endfor %}
+        </div>       
+        <div class="post-tags pull-right" id="cats">
+          {% for cat in page.categories %}
+            <a href="{{ site.url | append:site.baseurl }}/pages/category#{{ cat }}">
+              <span class="label label-cat"><span class="fa fa-folder"></span> {{ cat }}</span></a>
+          {% endfor %}
+          &nbsp;
+        </div>
+      </div>    
+    
+  </header>

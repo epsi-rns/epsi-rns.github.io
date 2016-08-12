@@ -1,0 +1,56 @@
+---
+layout: default
+---
+    <div class="container-fluid">
+
+      <div class="col-xs-12 visible-xs">
+          &nbsp;&nbsp;<a href="#" id="menu-toggle"><i class="fa fa-navicon fa-2x"></i></a>
+      </div>
+        
+      <div class="row">
+        <!-- sidebar -->
+        <div class="column col-xs-11 col-sm-4 col-md-3 hidden-xs" id="sidebar">
+        {% include layout/sidemenu.html 
+           menusource = site.data.navigation_wm
+        %}
+        </div><!-- /sidebar -->
+        
+        <!-- main right col -->
+        <div class="column col-xs-12 col-sm-8 col-md-9" id="main"> 
+<div id="sitedesc-image"></div>
+<article class="post well stripe-{{ page.date | date: '%m' }}" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {% include post/header.html %}
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+      
+
+  <hr/>
+  {% include post/pagination.html %}
+
+  
+</article>
+
+{% include post/footer.html %}
+        </div><!-- /main -->
+             
+      </div><!-- /.row -->
+        
+      <div class="row">
+          <div class="col-xs12 col-md-8">        
+{% include service/disqus-comments.html %}
+{% include service/muut-comments.html %}
+          </div><!-- /.col-md-8 -->
+            
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $('#menu-toggle').click(function() {
+        $('#sidebar').toggleClass('hidden-xs');  
+    });
+    </script>

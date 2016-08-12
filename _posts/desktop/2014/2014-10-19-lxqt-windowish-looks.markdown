@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "LXQT with Windowish Looks, No Kidding."
+layout: post-sidemenu
+title:  "LXQT with Windowish Looks, No Kidding"
 date:   2014-10-19 11:49:15 +0700
 categories: desktop
 tags: [screenshot, lxqt]

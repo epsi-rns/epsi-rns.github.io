@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post-sidemenu
 title:  "Modularized Awesome WM Configuration Structure"
 categories: desktop
 date:   2016-07-06 12:50:15 +0700

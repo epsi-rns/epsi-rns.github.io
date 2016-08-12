@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-sidemenu
 title:  "Is it a Gnome Shell Customization, or Am I just got bored ?"
 date:   2014-04-22 12:18:15 +0700
 categories: desktop

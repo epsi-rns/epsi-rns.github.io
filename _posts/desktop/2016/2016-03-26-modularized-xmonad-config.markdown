@@ -1,5 +1,5 @@
 ---
-layout: sidebar
+layout: post-sidemenu
 title:  "Modularized XMonad Config"
 date:   2016-03-26 14:58:15 +0700
 categories: desktop

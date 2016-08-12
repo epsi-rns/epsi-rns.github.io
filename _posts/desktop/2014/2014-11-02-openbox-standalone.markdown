@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-sidemenu
 title:  "Standalone Openbox WM with Tint2 Panel"
 date:   2014-11-02 03:02:15 +0700
 categories: desktop
