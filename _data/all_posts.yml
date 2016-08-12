@@ -5,6 +5,14 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16081315
+  title: "Jekyll Collapsed Sidemenu Without Javascript"
+  url: /webdev/2016/08/13/jekyll-sidemenu-without-javascript.html
+
+- id: 16081215
+  title: "Jekyll Responsive Side Menu"
+  url: /webdev/2016/08/12/jekyll-responsive-sidemenu.html
+
 - id: 16080325
   title: "Install i3 WM in Arch Linux based Distribution"
   url: /desktop/2016/08/03/i3-install-arch.html
@@ -210,7 +218,7 @@
   url: /desktop/2014/11/02/openbox-standalone.html
 
 - id: 14101949
-  title: "LXQT with Windowish Looks, No Kidding."
+  title: "LXQT with Windowish Looks, No Kidding"
   url: /desktop/2014/10/19/lxqt-windowish-looks.html
 
 - id: 14051435

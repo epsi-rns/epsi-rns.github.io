@@ -17,6 +17,8 @@ excerpt:
   on how we suppose to do it in Arch Linux.
 
 related_link_ids: 
+  - 16081315  # Side Menu Without Javascript
+  - 16081215  # Responsive Side Menu
   - 16062329  # JekyllInstall Debian
   - 16062127  # Install Yaourt
   - 16061409  # Webcoder Begin

@@ -13,7 +13,9 @@ excerpt:
   and Debian will take care of Jekyll's dependencies.
 
 related_link_ids: 
-  - 16062202  # JekyllInstall Arch/Manjaro
+  - 16081315  # Side Menu Without Javascript
+  - 16081215  # Responsive Side Menu
+  - 16062202  # Jekyll Install Arch/Manjaro
   - 16062127  # Install Yaourt
   - 16061409  # Webcoder Begin
   - 16060951  # Jekyll Archives

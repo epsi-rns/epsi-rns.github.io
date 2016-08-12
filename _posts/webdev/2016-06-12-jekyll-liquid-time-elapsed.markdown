@@ -13,6 +13,8 @@ excerpt:
   I'm writing new liquid script for use in Jekyll.
 
 related_link_ids: 
+  - 16081315  # Side Menu Without Javascript
+  - 16081215  # Responsive Side Menu
   - 16061409  # Webcoder Begin
   - 16060951  # Jekyll Archives
   - 16061051  # Inkscape Stripes

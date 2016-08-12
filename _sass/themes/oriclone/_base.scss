@@ -84,7 +84,8 @@ code.code-file {
   background-color: $brand-warning;
 }
 
-code:hover {
+code.code-command:hover,
+code.code-file:hover {
   color: black;
   background-color: $yellow-makara;
 }

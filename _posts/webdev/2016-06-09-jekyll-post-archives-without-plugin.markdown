@@ -16,6 +16,8 @@ excerpt:
   that you can modify for your own.
 
 related_link_ids: 
+  - 16081315  # Side Menu Without Javascript
+  - 16081215  # Responsive Side Menu
   - 16061225  # Elapsed Time
   - 16061409  # Webcoder Begin
   - 16061051  # Inkscape Stripes
