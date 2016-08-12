@@ -4,6 +4,11 @@ title: Tiling Window Manager
 permalink: /pages/desktop/twm
 ---
 
+If you do not have any idea what Tiling Window Manager is all about,
+you can watch this Aline Abler introduction cast to tiling window manager.
+
+*	<https://www.youtube.com/watch?v=Api6dFMlxAA>
+
 ### Awesome WM
 
 *	[Preparing Modularized Awesome WM Configuration][local-awesome-preparing]

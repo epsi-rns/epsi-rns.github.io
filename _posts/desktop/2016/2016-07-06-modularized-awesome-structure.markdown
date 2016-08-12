@@ -272,7 +272,7 @@ Put your creativity here to make eye candy statusbar.
 * <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
 With this complexity, now you know why
-I can't jut put all the code in this post.
+I can't just put all the code in this post.
 
 [![Awesome WM Stacked Statusbar][image-ss-awesome-stacked]{: .img-responsive }][picasa-ss-awesome-stacked]
 
