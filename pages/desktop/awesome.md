@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: Awesome WM
-permalink: /pages/desktop/awesome
 ---
 
 ### Dotfiles

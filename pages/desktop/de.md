@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: Desktop Environment
-permalink: /pages/desktop/de
 ---
 
 ### XFCE4

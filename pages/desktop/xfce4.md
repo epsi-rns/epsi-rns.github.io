@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: XFCE4
-permalink: /pages/desktop/xfce4
 ---
 
 *	[Minimalist XFCE4 with Limited Tiling Support][local-xfce4-minimalis]

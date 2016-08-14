@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: Ricing
-permalink: /pages/desktop/ricing
 ---
 
 *	[Console Pixel Art, a Collection of Scripts][local-console-pixel-art]

@@ -1,7 +1,7 @@
 # Site navigation links
 
 - title: Preface
-  url: /pages/desktop/index
+  url: /pages/desktop/index.html
   submenu:
   - title: Difference WM/DE
     url: /desktop/2016/06/13/de-wm-shell-difference.html
@@ -9,10 +9,10 @@
     url: https://github.com/epsi-rns/dotfiles/  
 
 - title: Tiling WM
-  url: /pages/desktop/twm
+  url: /pages/desktop/twm.html
   submenu:
   - title: Awesome
-    url: /pages/desktop/awesome
+    url: /pages/desktop/awesome.html
     submenu:
     - title: Modular
       url: /desktop/2016/07/13/modularized-awesome-preparing.html
@@ -27,7 +27,7 @@
     - title: Old Screenshot
       url: /desktop/2014/11/30/awesome.html
   - title: XMonad
-    url: /pages/desktop/xmonad
+    url: /pages/desktop/xmonad.html
     submenu:
     - title: Modular
       url: /desktop/2016/03/26/modularized-xmonad-config.html
@@ -38,7 +38,7 @@
     - title: Old Screenshot
       url: /desktop/2014/12/12/xmonad-tiling-window-manager.html
   - title: i3
-    url: /pages/desktop/i3
+    url: /pages/desktop/i3.html
     submenu:
     - title: Modular i3status
       url: /desktop/2016/08/01/modularized-i3status-conky-lua-json.html
@@ -50,7 +50,7 @@
       url: /desktop/2014/12/06/i3-i3bar.html
 
 - title: Stacking WM
-  url: /pages/desktop/swm
+  url: /pages/desktop/swm.html
   submenu:
   - title: Openbox (old ss)
     url: /desktop/2014/11/02/openbox-standalone.html
@@ -58,10 +58,10 @@
     url: /desktop/2014/11/08/fluxbox-with-glowing-wallpaper.html
   
 - title: Desktop Environment
-  url: /pages/desktop/de
+  url: /pages/desktop/de.html
   submenu:
   - title: XFCE4
-    url: /pages/desktop/xfce4
+    url: /pages/desktop/xfce4.html
     submenu:
     - title: Minimalist Tiling
       url: /desktop/2015/02/13/xfce4-minimalis-tiling.html
@@ -73,7 +73,7 @@
     url: /desktop/2014/04/22/gnome-shell-a-very-common.html
       
 - title: Ricing
-  url: /pages/desktop/ricing
+  url: /pages/desktop/ricing.html
   submenu:
   - title: Console Art
     url: /desktop/2016/03/20/console-pixel-art.html

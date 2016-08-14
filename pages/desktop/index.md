@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: Desktop Customization
-permalink: /pages/desktop/index
 ---
 
 This section contains explanation of each my dotfiles,

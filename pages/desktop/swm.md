@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: Stacking Window Manager
-permalink: /pages/desktop/swm
 ---
 
 *	[Standalone Openbox WM with Tint2 Panel][local-openbox-old-screenshot]

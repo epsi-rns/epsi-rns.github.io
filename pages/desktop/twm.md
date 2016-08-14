@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: Tiling Window Manager
-permalink: /pages/desktop/twm
 ---
 
 If you do not have any idea what Tiling Window Manager is all about,

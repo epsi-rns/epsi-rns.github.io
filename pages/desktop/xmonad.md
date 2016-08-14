@@ -1,7 +1,6 @@
 ---
 layout: page-sidemenu
 title: XMonad
-permalink: /pages/desktop/xmonad
 ---
 
 ### Dotfiles
