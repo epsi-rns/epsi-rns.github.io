@@ -17,6 +17,8 @@ excerpt:
 
 Termite is my latest favorite terminal, it is simple,
 it supports themable text colors in configuration. 
+It is lightweight, looks goo for ricing.
+It is also very suitable in combination with tiling window manager.
 It has mono Dependency, but that's okay for me.
 
 Installing Termite in Arch based distribution
