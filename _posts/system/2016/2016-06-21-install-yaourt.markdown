@@ -48,6 +48,12 @@ Let me quote from link above:
 
 -- -- --
 
+## Manjaro User
+
+Yaourt comes pre-installed with Manjaro so you normally won't have to install it.
+
+-- -- --
+
 ## Base Devel
 
 Yaourt do automatic compilation of source code given from AUR.
