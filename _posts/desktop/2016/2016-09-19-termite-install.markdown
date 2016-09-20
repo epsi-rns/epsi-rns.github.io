@@ -11,13 +11,11 @@ excerpt:
   the thing get tough when installing vte3-ng in Debian based.
   And installing termite require vte-ng as dependency.
 
-# related_link_ids:
-
 ---
 
 Termite is my latest favorite terminal, it is simple,
 it supports themable text colors in configuration. 
-It is lightweight, looks goo for ricing.
+It is lightweight, looks good for ricing.
 It is also very suitable in combination with tiling window manager.
 It has mono Dependency, but that's okay for me.
 
@@ -102,7 +100,7 @@ After this you can safely run
 $ git clone https://github.com/thestinger/vte-ng.git
 {% endhighlight %}
 
-![VTE-NG git clone][image-debian-vte-ng-git-clone]
+![VTE-NG git clone][image-debian-vte-ng-git-clone]{: .img-responsive }
 
 {% highlight bash %}
 $ cd vte-ng
@@ -233,7 +231,7 @@ $ cd ~/git-src
 $ git clone --recursive https://github.com/thestinger/termite.git
 {% endhighlight %}
 
-![Termite git clone][image-debian-termite-git-clone]
+![Termite git clone][image-debian-termite-git-clone]{: .img-responsive }
 
 {% highlight bash %}
 $ cd termite 
@@ -249,7 +247,7 @@ $ make
 $ sudo make install
 {% endhighlight %}
 
-![Termite make][image-debian-termite-make-install]
+![Termite make][image-debian-termite-make-install]{: .img-responsive }
 
 No need to install either libglib3.0-cil-dev or gnutls-bin
 
@@ -260,7 +258,7 @@ $ termite -v
 termite v11-33-g7a7021f
 {% endhighlight %}
 
-![Termite Version][image-debian-termite-version]
+![Termite Version][image-debian-termite-version]{: .img-responsive }
 
 -- -- --
 

@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16091915
+  title: "Install Termite"
+  url: /desktop/2016/09/19/termite-install.html
+
 - id: 16081315
   title: "Jekyll Collapsed Sidemenu Without Javascript"
   url: /webdev/2016/08/13/jekyll-sidemenu-without-javascript.html
