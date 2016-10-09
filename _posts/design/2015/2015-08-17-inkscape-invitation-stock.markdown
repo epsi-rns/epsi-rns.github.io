@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Inkscape: Logo with Stamp Ornament"
+title:  "Inkscape: Event Invitation Stock Image"
 date:   2015-08-17 03:23:15 +0700
 categories: design
 tags: [inkscape, design, logo]
 author: epsi
 
 excerpt:
-  An inkscape vector image stock. That anybody can download and use it freely.
+  An elegant inkscape vector image stock. 
+  That anybody can download and use it freely.
   Nice to have it as an event invitation.
 
 ---
@@ -50,7 +51,6 @@ Please Click for higher resolution.
 
 ### SVG Source
 
-**SVG Source**:<br/>
 * [epsi-rns.github.io/.../event-invitation-sample-alumni.svg.gz][dotfiles-invitation]
 
 
