@@ -20,7 +20,7 @@ for Alumni Gathering for University of Indonesia.
 I have clone her design using inkscape,
 so anyone can use and modify, this vector image stock freely. 
 
-You can use it as 
+You can use this "Contoh Undangan Alumni" for 
 
 * e-flyer, targeting whatsapp and facebook.
 
