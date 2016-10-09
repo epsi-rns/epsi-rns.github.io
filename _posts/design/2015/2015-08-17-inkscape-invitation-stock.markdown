@@ -13,7 +13,7 @@ excerpt:
 
 ---
 
-My alumni friend, Esti,
+My alumni friend, Esti Handayani,
 has created a very nice event invitation,
 for Alumni Gathering for University of Indonesia.
 
