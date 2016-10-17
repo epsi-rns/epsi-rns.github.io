@@ -25,9 +25,12 @@ Special design for your event!
 
 ### Tutorial
 
-If you wonder how to create stamp ornament border, you can read this first.
+If you wonder how to create stamp ornament border,
+you can read this first just in case you need to remake.
 
 * <http://howto.nicubunu.ro/inkscape_postage_stamps/>
+
+Sometimes, changing size required to remake the border.
 
 -- -- -
 
