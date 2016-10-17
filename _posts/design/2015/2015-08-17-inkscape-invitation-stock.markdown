@@ -3,7 +3,7 @@ layout: post
 title:  "Inkscape: Event Invitation Stock Image"
 date:   2015-08-17 03:23:15 +0700
 categories: design
-tags: [inkscape, design, logo]
+tags: [inkscape, design]
 author: epsi
 
 excerpt:
@@ -36,6 +36,10 @@ As usual, I always use free font.
 
 I have already put each stuff in its own layer. So you can change the color and pattern easily.
 
+### Document Properties
+
+**Size**: 1200px width, 1200px height
+
 
 -- -- --
 
@@ -53,6 +57,8 @@ Please Click for higher resolution.
 
 * [epsi-rns.github.io/.../event-invitation-sample-alumni.svg.gz][dotfiles-invitation]
 
+
+[//]: <> ( -- -- -- links below -- -- -- )
 
 [image-yellow-invitation]: {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni-yellow.png
 [picasa-yellow-invitation]: https://lh3.googleusercontent.com/KNqw5M9t9zxZIB6jTp58tNkTnGS2cwqHbNX7mzLynC2JAh6XyD1LaUQA2qoubPOz2IbV_kV8YSqeOb8LIWK8MDGqgCjYlwxY3XeTAn22DU0J8HaYFjkKOTk7OSLLvBM5Nkhx_mPnDgLLXDBbsoUYqC_Vw9Qw93iyieM_mkhU8biuzQ77jYjLv4zVijd0oQtrCHz_7DWkDFm6kxKwIf3tif31F2SLbuGSuylB7QB-8tapv24c75MwJfyu17kWI763nFNlPMpwWCtjQ9M-xHi0zf4cz5gb8sYNTs3itKAt3whKC5TMpyQEsHAm9JJzIp6DO28W08NxmhyUgIzdRFqmEq2NVVRV1fU0ENGX0ubMNcgKJGzUOeF5qXieGDzGlm7-ufiY10BK5F0bBhKik89RVrlbDFYiTlZrJtMIKDnvWZbm4RLOebt_abOAHwA8SqG0r_3JyNfixoPeJ9c9BMV5YZDi7xkYhhaYUTNM69DuqPa9Fldvqs6ZshOlSmIcTNSiyXbkB_oWfb-Ylu-21kJsGgZl84XtJEX-8SUcfuzK2OuGl__Xy-u4S9LyvKERPoey4fVEa4kB6l85tTcP0kILCVg3ar-F5fz3hgtAtnM_ut50iANF=s0

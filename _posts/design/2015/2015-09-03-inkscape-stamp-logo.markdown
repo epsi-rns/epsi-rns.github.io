@@ -5,6 +5,7 @@ date:   2015-09-03 08:48:15 +0700
 categories: design
 tags: [inkscape, design, logo]
 author: epsi
+
 excerpt:
   An inkscape vector artwork. That anybody can download and use it freely.
   Nice to have it as avatar background,
@@ -28,6 +29,10 @@ I also add shadow with envelope path effects under the logo.
 * [epsi-rns.github.io/.../logo-stamp-iluni-ftui.svg.gz][dotfiles-iluni-ftui]
 
 [![ILUNI Teknik][image-ss-iluni-ftui]{: .img-responsive }][picasa-ss-iluni-ftui]
+
+### Document Properties
+
+**Size**: 1200px width, 1200px height
 
 
 
