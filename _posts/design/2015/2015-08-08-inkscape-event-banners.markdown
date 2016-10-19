@@ -119,7 +119,7 @@ Please Click for higher resolution.
 
 ### SVG Source
 
-* [epsi-rns.github.io/.../munas-04-spanduk-5x2.svg.gz][dotfiles-]
+* [epsi-rns.github.io/.../munas-04-spanduk-5x2.svg.gz][dotfiles-spanduk]
 
 -- -- --
 
@@ -133,7 +133,7 @@ Please Click for higher resolution.
 
 ### SVG Source
 
-* [epsi-rns.github.io/.../munas-05-backdrop-10x2.svg.gz][dotfiles-spanduk]
+* [epsi-rns.github.io/.../munas-05-backdrop-10x2.svg.gz][dotfiles-backdrop]
 
 -- -- --
 
