@@ -18,8 +18,8 @@ I like to support my community.
 Sharing become part of my desire.
 These designs below are my original effort.
 
-From basic stamp border, it become multipurpose design.
-Special design for your event!
+From basic stamp border ornament, it become multipurpose design.
+Special inkscape design for your event!
 
 -- -- --
 
