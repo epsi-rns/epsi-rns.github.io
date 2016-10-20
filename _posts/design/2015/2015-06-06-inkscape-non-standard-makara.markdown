@@ -3,7 +3,7 @@ layout: post
 title:  "Inkscape: Non Standard Alumni Logo"
 date:   2015-06-06 06:06:15 +0700
 categories: design
-tags: [inkscape, design]
+tags: [inkscape, design, alumni]
 author: epsi
 
 excerpt:
@@ -74,7 +74,7 @@ Each has five alternatives logo.
 
 * Lintas Alumni: Gerakan Anti Korupsi
 
-**Bonus**: Stamp Logo
+**Bonus**: Logo in Stanp Ornament
 
 * Ikatan Alumni: Perangko Hitam
 
