@@ -50,7 +50,8 @@ I follow this tutorial.
 
 * or Top: Skew Horizontal: -30, Rotate: -30
 
-Note: You need to scale, if you wish to get exact size. 
+Note: You need to scale to 86.062%, if you wish to get exact size. 
+But I always ignore it, since I don't need exact size.
 
 ### Filter Effect
 
