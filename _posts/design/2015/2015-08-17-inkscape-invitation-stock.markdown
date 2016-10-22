@@ -3,7 +3,7 @@ layout: post
 title:  "Inkscape: Event Invitation Stock Image"
 date:   2015-08-17 03:23:15 +0700
 categories: design
-tags: [inkscape, design]
+tags: [inkscape, design, alumni]
 author: epsi
 
 excerpt:

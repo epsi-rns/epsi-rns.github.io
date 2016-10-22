@@ -3,7 +3,7 @@ layout: post
 title:  "Multipurpose Design Based on Stamp Ornament Box"
 date:   2015-09-11 06:26:15 +0700
 categories: design
-tags: [inkscape, design]
+tags: [inkscape, design, alumni]
 author: epsi
 
 excerpt:
