@@ -102,7 +102,7 @@ Please Click for higher resolution.
 
 As aBonus, this is the SVG source of our beloved Anti Corruption Movement.
 
-![Logo GAK][image-logo]{: .img-responsive }]
+![Logo GAK][image-logo]{: .img-responsive }
 
 ### SVG Source
 
