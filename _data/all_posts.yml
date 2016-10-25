@@ -165,9 +165,21 @@
   title: "Learn Different Package Management Using LXC"
   url: /system/2016/02/28/lxc-demonstration.html
 
+- id: 16022348
+  title: "Inkscape: Anti Corruption Movement"
+  url: /design/2016/02/23/inkscape-anti-corruption-movement.html
+
 - id: 16020803
   title: "Update Arch Linux without Unnecessary Bloated Package"
   url: /system/2016/02/08/pacman-ignorepkg.html
+
+- id: 15111111
+  title: "Inkscape: Isometric Infographics"
+  url: /design/2015/11/11/inkscape-isometric-infographics.html
+
+- id: 15102011
+  title: "Inkscape: Another Discussion e-Flyer"
+  url: /design/2015/10/20/inkscape-discussion-flyer.html
 
 - id: 15101649
   title: "Setup LAMP stack with Manjaro OpenRC"
@@ -188,6 +200,18 @@
 - id: 15081723
   title: "Inkscape: Event Invitation Stock Image"
   url: /design/2015/08/17/inkscape-invitation-stock.html
+
+- id: 15080808
+  title: "Inkscape: Event Banner Collection"
+  url: /design/2015/08/08/inkscape-event-banners.html
+
+- id: 15070707
+  title: "Inkscape: Event Schedule Announcement"
+  url: /design/2015/07/07/inkscape-event-schedule.html
+
+- id: 15060606
+  title: "Inkscape: Non Standard Alumni Logo"
+  url: /design/2015/06/06/inkscape-non-standard-makara.html
 
 - id: 15031749
   title: "Control Your Package with APT Pinning"
