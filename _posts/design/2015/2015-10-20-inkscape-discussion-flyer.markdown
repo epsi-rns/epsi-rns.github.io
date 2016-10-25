@@ -68,7 +68,7 @@ Please Click for higher resolution.
 
 -- -- --
 
-## Serial Discussion Result
+## Combining with Photograph
 
 Our final figure, a flyer with thank you message.
 As you can see how hard it is
