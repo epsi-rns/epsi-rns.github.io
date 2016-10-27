@@ -84,7 +84,7 @@ Please Click for higher resolution.
 
 -- -- --
 
-##  ILUNI FTUI: Diskusi Energi Terbarukan
+## ILUNI FTUI: Diskusi Energi Terbarukan
 
 Please Click for higher resolution.
 
