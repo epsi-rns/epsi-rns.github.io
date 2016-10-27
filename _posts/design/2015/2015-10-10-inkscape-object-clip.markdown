@@ -97,6 +97,7 @@ Please Click for higher resolution.
 ### SVG Source
 
 * [epsi-rns.github.io/.../energi-terbarukan-ucapan-terima-kasih.svg.gz][dotfiles-energi-thanks]
+
 -- -- --
 
 That's all. Have Fun with Clipping Object.
