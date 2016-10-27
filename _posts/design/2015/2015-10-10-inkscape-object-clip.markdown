@@ -84,6 +84,21 @@ Please Click for higher resolution.
 
 -- -- --
 
+##  ILUNI FTUI: Diskusi Energi Terbarukan
+
+Please Click for higher resolution.
+
+[![Energi: Ucapan Terimakasih][image-energi-thanks]{: .img-responsive }][hires-energi-thanks]
+
+### Document Properties
+
+**Size**: 1200px width, 1200px height
+
+### SVG Source
+
+* [epsi-rns.github.io/.../energi-terbarukan-ucapan-terima-kasih.svg.gz][dotfiles-energi-thanks]
+-- -- --
+
 That's all. Have Fun with Clipping Object.
 
 
@@ -100,3 +115,7 @@ That's all. Have Fun with Clipping Object.
 [image-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/10/clip-iluni-02.png
 [hires-iluni-ftui]: https://lh3.googleusercontent.com/WDyRiHyC0OO-psq6r-Ge-Nh_IWbB6LC5YIniIpaX5znJIBnc5vzANF01TFYRMXCWOwT8qmsj6ziia8jUED1_jGhLfKQgBdRk6Qr6pxdSibgIsbuSZ7V7vmHSL7u4SLg1jIZdWsyJFVSBMzUcW28nT-0Z6pW_CdeNlIZK44W8xsEo9UvyRfuzDCs3zKBxn5AH45afINHeFFMiBKSZY5HFi-gUUU4wwClgajKjjk9IP1-9Kbb89jD3vOsI1iHWTXDNCvmyODXbNwoVZes4S50fW7oYdPEETP8uoFXazBztJiqsSfwAnXAh68U7_LvkarCuVKqHdKni8Bx3Hye_Gq5_xbnWcmqMG-tlEyNtP5fYc-Kjc0mZaIpCGYI9VKxMPMdIq0hIn_zkNHp_IKS7A2-GUPNFsFTIQxsnEmtwd_U8HaZDfqtiR2QgGSUpB6Z-xrViWY45NCNfzwSl5A4uhyXpA24f29H_Dz5DcAMYKRxTNNPuMSjwP3O0Fk1LyMMlJd4_lP6H_OaVW3ZPxY5dB0ejR4-TEUPsKsEJnNL4i8M6lCn22RkF93MSOdd4bMOUCX7Ir_fM5JWyR4F3D2iA4KY1eUtaM6tjwVmyEOYQeU33ZbH1bQ4u=w0
 [dotfiles-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/10/clip-iluni-02.svg.gz
+
+[image-energi-thanks]:  {{ site.url }}/assets/posts/design/2015/09/energi-terbarukan-ucapan-terima-kasih.png
+[hires-energi-thanks]:  https://lh3.googleusercontent.com/mXYeB9hHFYjH931SNWkR9nzLkE_ncOP1VwxMKTQL_wFGDSBjviKepkshzDC6ZAgT_DblQ5oM2ad1-aescl0911ZrzMxSXJuMNcGPzVUMjcAJcA18Ia-cY585B97VPWoJFKNbSdOSwYjhA-Vkn3oFTr-G1GWf7qO6yh2b7IQQJC-erB5bpHCFLo-dkxn1SBpxbVSy5alEcNdw0uDGeB29ucwkipxCcApXl-h0g7qNdagCG56gQf0GldC-xhgaowgaAN-0zd8vUISNPLMlaK0iHz5fC4bsTyKJbvg7eGnEAUEo6XoeKBk4_79zUNZgkKp7Z2s55H7Wk_Dekp8qbaj98HSWO5ouaGdkdy_Cxeq9BhouFgN62lUjrH5QLFeJ6VDgJf_DO2iAQ9beRexyDHVQdWfkOsR3VG2DlM2kWgAMeAX4eTcovbfELC049pDJHNyxEFv4NaZq2JsFF5P-FTVEQLSqkMa_ya68LRsLkzBs-CFH9AZmf0G5C_IZRs15GkJGeUqrZzDJmWQSL262aqFTpu3qtZI-f3-dGk1E_QYnItRF3WO_IV1kx1VPkysk9gXEqW3a6IqYQLEq7vJPcPu0g57tmnMoOn79-ENSI2v8LprBawm5=s0
+[dotfiles-energi-thanks]:  {{ site.url }}/assets/posts/design/2015/09/energi-terbarukan-ucapan-terima-kasih.svg.gz
