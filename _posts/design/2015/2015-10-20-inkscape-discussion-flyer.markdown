@@ -37,6 +37,10 @@ Each stuff in its layer
 
 **Size**: 1000px width, 800px height
 
+### Filter Effect for Logo
+
+* Shadows and Glows- In and Out
+
 -- -- --
 
 ## Serial Discussion #1
@@ -46,6 +50,10 @@ This is my first e-flyer.
 Please Click for higher resolution.
 
 [![ESBP][image-rimawan]{: .img-responsive }][hires-rimawan]
+
+### Filter Effect
+
+* Distort - Lapping
 
 ### SVG Source
 
@@ -61,6 +69,12 @@ There's no creativity can be put on this design.
 Please Click for higher resolution.
 
 [![ESBP][image-latief]{: .img-responsive }][hires-latief]
+
+### Filter Effect
+
+* Distort - Felt Feather
+
+* Distort - Swirl
 
 ### SVG Source
 
