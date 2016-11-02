@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16110129
+  title: "Inkscape: Text Feature"
+  url: /design/2016/11/01/inkscape-text-feature.html
+
 - id: 16091915
   title: "Install Termite"
   url: /desktop/2016/09/19/termite-install.html
@@ -184,6 +188,10 @@
 - id: 15101649
   title: "Setup LAMP stack with Manjaro OpenRC"
   url: /system/2015/10/16/lamp-stack-manjaro-openrc.html
+
+- id: 15101010
+  title: "Inkscape: Object Clip"
+  url: /design/2015/10/10/inkscape-object-clip.html
 
 - id: 15091126
   title: "Multipurpose Design Based on Stamp Ornament Box"
