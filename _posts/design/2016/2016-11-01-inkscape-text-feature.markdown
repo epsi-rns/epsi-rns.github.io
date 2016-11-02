@@ -147,6 +147,8 @@ I want my small identity text, looks like it below the main text. The blur and o
 
 ### SVG Source
 
+If you click this SVG on browser and the font looks weird, you must download and put the right font to your system.
+
 * [epsi-rns.github.io/.../penegakan-hukum.svg][dotfiles-sample-3]
 
 -- -- --
