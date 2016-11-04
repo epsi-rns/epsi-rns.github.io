@@ -21,7 +21,7 @@ If you don't know what inkscape is, just download it from here
 
 You may consider to skip all this useless tutorial, and go straight to download the SVG. I don't mind at all.
 
-* [epsi-rns.github.io/.../penegakan-hukum.svg][dotfiles-sample-3]
+* [epsi-rns.github.io/.../dukungan-pribadi-01.svg.gz][dotfiles-sample-3]
 
 Or click to look at a higher-resolution .PNG figure.
 
@@ -125,9 +125,15 @@ I was using Google Material Design Pallete to get the red color. But then, I dec
 
 There is also a greyish radial gradient, from center (#ffffffff) to outer (#c8c8c8ff). It looks better than white.
 
+### SVG Source
+
+If you click this SVG on browser and the font looks weird, you must download and put the right font to your system.
+
+* [epsi-rns.github.io/.../penegakan-hukum.svg][dotfiles-sample-2]
+
 -- -- --
 
-## Go Further with Sample 2
+## Sample 3: Go Further with Sample 2
  
 I have promise you, the audience of this article not to go without any downloadble svg template. So let's go further, and add identity. So you can use this template for your current local campus event, or as an identity card in an exhibition, or whatever you like. 
 
@@ -149,7 +155,7 @@ I want my small identity text, looks like it below the main text. The blur and o
 
 If you click this SVG on browser and the font looks weird, you must download and put the right font to your system.
 
-* [epsi-rns.github.io/.../penegakan-hukum.svg][dotfiles-sample-3]
+* [epsi-rns.github.io/.../dukungan-pribadi-01.svg.gz][dotfiles-sample-3]
 
 -- -- --
 
@@ -169,9 +175,11 @@ That's all for now.
 
 [image-sample-1]: {{ site.url }}/assets/posts/design/2016/11/uu-kemaritiman.png
 [image-sample-2]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum-01.png
-[image-sample-3]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum-02.png
+[image-sample-2b]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum-02.png
+[image-sample-3]: {{ site.url }}/assets/posts/design/2016/11/dukungan-pribadi-01.png
 
 [hires-sample-2]: https://lh3.googleusercontent.com/6Pv11pGlwf7CStbWoahAaVTK3Qo-sg6UNfnCG8Fw2ooEZcuNQTYChSyX35dy3DFAKSbvVIYVaanKpEjT3b5mYRchBHrZXI4VDpLpGlCk5PHEqkQqxiIrRci-mmL6_qGCIuFrUUJgMGSKCW792bYDdfz1LnpzVyC3V393-yV044mTwTe_1iz9I8yljZZKS2s9re15QU3ZcmbiRkQJ_xQaHUE_UVTC2BdYfNHmjOxVDEPi0UjXuuGpbeQ0fWkVSKlkLYOMPCvkmeG5PjYVBC9Ge-e0ZHdO-N0luuV7AXx3HGoAZYyhSCtbKKKUOTiTokkPtCL_nEkbO4IpVIjncHI6NjCoinpOJTnoaJ3H6qU1tcTAOhdMJjoe3_XzSE15qcd4hlPW0IkOcGqfYSqVUzh82qkylDpORKhqRTInjIcVYajp_FklxqeGLFWQbFEQohFxdCnNVkHuswsA5TwX8EQDp-BMXilpbSCqEJzqeagcMicI2Wa3zL-bQV_j8vp9xPsVsmSlSIn_9RnRIUqE09F6Ubx7vecCvbj1rInbHUAnKA7f0EFumHBK6Q6bM1pb3HXl0i3heMY5HGzgbexqlo2dj0DI0FcNwrQjDNKnv8J-qd2B2EtK=w0
 
 [dotfiles-sample-0]: {{ site.url }}/assets/posts/design/2016/11/text-feature.svg
-[dotfiles-sample-3]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum.svg
+[dotfiles-sample-2]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum.svg
+[dotfiles-sample-3]: {{ site.url }}/assets/posts/design/2016/11/dukungan-pribadi-01.svg.gz
