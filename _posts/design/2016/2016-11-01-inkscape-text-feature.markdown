@@ -21,7 +21,7 @@ If you don't know what inkscape is, just download it from here
 
 You may consider to skip all this useless tutorial, and go straight to download the SVG. I don't mind at all.
 
-* [epsi-rns.github.io/.../dukungan-pribadi-01.svg.gz][dotfiles-sample-3]
+* [epsi-rns.github.io/.../dukungan-pribadi-01.svg.zip][dotfiles-sample-3]
 
 Or click to look at a higher-resolution .PNG figure.
 
@@ -182,4 +182,4 @@ That's all for now.
 
 [dotfiles-sample-0]: {{ site.url }}/assets/posts/design/2016/11/text-feature.svg
 [dotfiles-sample-2]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum.svg
-[dotfiles-sample-3]: {{ site.url }}/assets/posts/design/2016/11/dukungan-pribadi-01.svg.gz
+[dotfiles-sample-3]: {{ site.url }}/assets/posts/design/2016/11/dukungan-pribadi-01.svg.zip
