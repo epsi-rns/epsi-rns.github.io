@@ -23,10 +23,6 @@ You may consider to skip all this useless tutorial, and go straight to download 
 
 * [epsi-rns.github.io/.../dukungan-pribadi-01.svg.zip][dotfiles-sample-3]
 
-Or click to look at a higher-resolution .PNG figure.
-
-* [Blank Sample][hires-sample-2]
-
 -- -- --
 
 ## Text shift and Rotation
@@ -99,7 +95,7 @@ This one is rather a concept than being useful. I mean despite of above sample, 
 
 Please Click for higher resolution.
 
-[![Penegakan Hukum][image-sample-2]{: .img-responsive }][hires-sample-2]
+![Penegakan Hukum][image-sample-2]{: .img-responsive }]
 
 ### Document Properties
 
@@ -124,12 +120,6 @@ All use free fonts.
 I was using Google Material Design Pallete to get the red color. But then, I decided to make it maroon by modify the Red part of the RGB to half of the original.
 
 There is also a greyish radial gradient, from center (#ffffffff) to outer (#c8c8c8ff). It looks better than white.
-
-### SVG Source
-
-If you click this SVG on browser and the font looks weird, you must download and put the right font to your system.
-
-* [epsi-rns.github.io/.../penegakan-hukum.svg][dotfiles-sample-2]
 
 -- -- --
 
