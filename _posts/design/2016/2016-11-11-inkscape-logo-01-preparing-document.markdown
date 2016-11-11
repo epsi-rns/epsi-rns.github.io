@@ -280,7 +280,7 @@ Click (Center on Vertical Axis). And Click (Center on Horizontal Axis)
 
 ![Part One: Text Alignment on Center Page][image-p01-align]{: .img-responsive }
 
-Our sample logo with File ID preview would be like this.
+Our example of logo preview with File ID would be like this.
 
 ![Part One: File ID Example][image-p01-file-id]{: .img-responsive }
 
