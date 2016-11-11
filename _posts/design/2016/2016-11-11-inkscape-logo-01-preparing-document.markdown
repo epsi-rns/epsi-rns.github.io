@@ -292,7 +292,7 @@ Right now, we are going to hide File ID Layers by turning off its visibility.
 
 Save the Templates. We are going to reuse it.
 
-Ypu can download this very small size template, if you wish.
+You can download this very small size template, if you wish.
 
 * [epsi-rns.github.io/.../logo-template-01.svg.gz][dotfiles-p01]
 
