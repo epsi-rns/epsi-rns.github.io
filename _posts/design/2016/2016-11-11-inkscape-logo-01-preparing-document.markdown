@@ -317,4 +317,4 @@ To be continued.
 [image-p01-align]: {{ site.url }}/assets/posts/design/2016/11/logo-creation-01-align.png
 [image-p01-file-id]: {{ site.url }}/assets/posts/design/2016/11/logo-creation-01-file-id.png
 
-[dotfiles-p01]: {{ site.url }}/assets/posts/design/2016/11/logo-template-01.svg
+[dotfiles-p01]: {{ site.url }}/assets/posts/design/2016/11/logo-template-01.svg.gz
