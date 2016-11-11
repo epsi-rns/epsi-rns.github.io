@@ -38,7 +38,7 @@ Please Click for higher resolution.
 
 Please Click for higher resolution.
 
-[![Ucpan Terimakasih Deklarasi GAK][image-thanks-1]{: .img-responsive }][hires-thanks-1]
+[![Ucapan Terimakasih Deklarasi GAK][image-thanks-1]{: .img-responsive }][hires-thanks-1]
 
 ### Document Properties
 

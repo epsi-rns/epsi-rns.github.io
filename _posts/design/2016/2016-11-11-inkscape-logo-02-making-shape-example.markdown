@@ -8,7 +8,7 @@ author: epsi
 
 excerpt:
   Complete Detail Sample of Logo Creation.
-  Part Two, of Four Article.
+  Middle Part, of Three Articles.
 
 ---
 
@@ -39,8 +39,8 @@ There are other choices, of course.
 
 My choice would be a modification of Telkom Vision Logo
 that is easy enough to implement as an example.
-I'm not a pirate of somebody's hardworl so we have to modify the logo.
-While this originl logo using five corners,
+I'm not a pirate of somebody's hardwork so we have to modify the logo.
+While this original logo using five corners,
 our new logo is going to use seven corners.
 
 * <https://www.youtube.com/watch?v=YtTz430h0RA>
@@ -57,8 +57,8 @@ The final version of this article would be similar to this preview:
 
 The earliest step would be copying our last template,
 and renaming it from 'logo-template (01).svg'
-to 'logo-creation-shape (01).svg' 
-After that. Open the new 'logo-creation-shape (01).svg' file.
+to 'logo-shape (01).svg' 
+After that. Open the new 'logo-shape (01).svg' file.
 
 Let's make a new 'Polygon' layer inside 'Basic Shape' layer. 
 And choose that layer as our current working layer.
@@ -201,7 +201,7 @@ And Rotate 45 degree using Transform Tool.
 * Size: 900px width x 700px height
 
 Select both Star Shape and Ellipse, 
-and click menu (<kbd>Path - Union</kbd>).
+and click menu (<kbd>Path - Intersection</kbd>).
 
 ![Part Two: Star Shape][image-p02-star-ellipse]{: .img-responsive }
 
@@ -218,7 +218,7 @@ You can review our tutorial in this SVG source.
 
 -- -- --
 
-To be continued.
+To be concluded
 
 
 [//]: <> ( -- -- -- links below -- -- -- )

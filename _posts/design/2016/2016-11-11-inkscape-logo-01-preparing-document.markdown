@@ -8,7 +8,7 @@ author: epsi
 
 excerpt:
   Complete Detail Sample of Logo Creation.
-  Part One, of Four Article.
+  First Part, of Three Articles.
 
 ---
 
@@ -49,9 +49,7 @@ There are four parts of this article
 
 * Second part: is containing one sample of shape creation.
 
-* Third part: is containing coloring and pallete.
-
-* Fourth part: is about decoration, e.g. Shadow/ Glow, Glossy Shine, Gradient, Pattern, 3D Effect.
+* Third part: is containing coloring and pallete. And also about decoration, e.g. Shadow/ Glow, Glossy Shine, Gradient, Pattern, 3D Effect.
 
 ### Sub Topic
 
