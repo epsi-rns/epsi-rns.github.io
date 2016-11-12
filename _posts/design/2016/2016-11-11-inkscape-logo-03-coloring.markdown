@@ -52,7 +52,11 @@ as we don't play with shape anymor.
 Click the logo path again, 
 and click menu (<kbd>Path - Break Apart</kbd>).
 
-Remember that we have seven leaves, so we need seven colors.
+I colored them with: only blue from google material [a300 .. a900]. I really love the soft looks.
+
+![Part Three: Using Blue from Google Material][image-p03-only-material]{: .img-responsive }
+
+Remember that we need to mimic Telkom Vision Logo, and we have seven leaves, so we need seven colors.
 Let's pick rainbow color that has seven colors: Red, Orange, Yellow, Green, Blue, Indigo, Violet.
 
 Actually I decide to have a different color than rainbow. 
@@ -277,11 +281,21 @@ Packed Circle from Inkscape also cool.
 
 ## Final Result
 
+### Rainbow
+
 Let's Combine all your hardwork into one cool logo.
 
 Please Click for higher resolution.
 
-[![Part Three: Final Image][image-p03-final]{: .img-responsive }][hires-p03-final]
+[![Part Three: Final Image Rainbow][image-p03-final-rainbow]{: .img-responsive }][hires-p03-final-rainbow]
+
+### Google Material
+
+This one using only blue from google material [a100 .. a900]. 
+
+Please Click for higher resolution.
+
+[![Part Three: Final Image Material][image-p03-final-material]{: .img-responsive }][hires-p03-final-material]
 
 -- -- --
 
@@ -307,6 +321,7 @@ I'll see you again.
 
 [image-p03-pallete-choice]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-pallete-choice.png
 [image-p03-accent-700]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-accent700.png
+[image-p03-only-material]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-only-material.png
 [image-p03-accent-pure]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-pure-accent.png
 [image-p03-layer-shadow]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-layer-shadow.png
 [image-p03-drop-shadow]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-drop-shadow.png
@@ -321,8 +336,10 @@ I'll see you again.
 [image-p03-with-glossy]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-with-glossy.png
 [image-p03-with-cool-effect]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-with-cool-effect.png
 [image-p03-with-pattern]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-with-pattern.png
-[image-p03-final]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-final.png
+[image-p03-final-rainbow]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-final-rainbow.png
+[image-p03-final-material]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-final-material.png
 
-[hires-p03-final]: https://lh3.googleusercontent.com/YzLOyHmXUzuQABatw9gjBcECnrMCGXrdvKEozt8ERGmLJbtlKWW6e98oDbUgrYAx9NypNjCM734GDcYCIdgzQBwrdbipdkmHsnvmgGMotI4qawC4JaoVNKHeFO1qZVghEMqEv58i107zQxj_V0woFEbW84SJ8AaRbUrD4FtdrVoH06KkrqSsMZzFlYXaezfdhFglmnTL1pRe9pDFdXZONeJGFIADaHNmt5NUaDrP15-Ubl7tq4ZuUfj5oB1QmsS8bW_sh88DHvUF4dtBsWIJD5Ihm40Q2VNN65AjqWKCDyHA2I-YQDoEIMbYKYQADUUXUGNOFKLdz7YnWA0g7RqDMPk_Kv7F31p43nyBBmJmX9yaKho8Q7QxV7a0PwdEXfjHddcc1avnoN36UCYp4EpO9iX2ONYCDPHP6uaEXzK2H3eQBqXjq1HUyvZLi_Yz_YX2FJzsV9B-xrAGfWsKFFDDE8H-m1OxdEqhDrMlUlY_4abR7ziM9hJ7g73b5Tx3pzWCNh4NeJ9-Lu2V6aB_Ak2p0kqgXIYQILiloZaGrisFX50Ftr4JeMcL2ZbH6z_sM_A_n2FbvJ4wlAvndtd6ZH6r-jfsa_Rfr6E_4XeAZRRuQ6sStw60=s0
+[hires-p03-final-rainbow]: https://lh3.googleusercontent.com/YzLOyHmXUzuQABatw9gjBcECnrMCGXrdvKEozt8ERGmLJbtlKWW6e98oDbUgrYAx9NypNjCM734GDcYCIdgzQBwrdbipdkmHsnvmgGMotI4qawC4JaoVNKHeFO1qZVghEMqEv58i107zQxj_V0woFEbW84SJ8AaRbUrD4FtdrVoH06KkrqSsMZzFlYXaezfdhFglmnTL1pRe9pDFdXZONeJGFIADaHNmt5NUaDrP15-Ubl7tq4ZuUfj5oB1QmsS8bW_sh88DHvUF4dtBsWIJD5Ihm40Q2VNN65AjqWKCDyHA2I-YQDoEIMbYKYQADUUXUGNOFKLdz7YnWA0g7RqDMPk_Kv7F31p43nyBBmJmX9yaKho8Q7QxV7a0PwdEXfjHddcc1avnoN36UCYp4EpO9iX2ONYCDPHP6uaEXzK2H3eQBqXjq1HUyvZLi_Yz_YX2FJzsV9B-xrAGfWsKFFDDE8H-m1OxdEqhDrMlUlY_4abR7ziM9hJ7g73b5Tx3pzWCNh4NeJ9-Lu2V6aB_Ak2p0kqgXIYQILiloZaGrisFX50Ftr4JeMcL2ZbH6z_sM_A_n2FbvJ4wlAvndtd6ZH6r-jfsa_Rfr6E_4XeAZRRuQ6sStw60=s0
+[hires-p03-final-material]: https://lh3.googleusercontent.com/jrQB9lvgpBNfiwTJZd0HDlI3Yu6L9gb4Lugm3U4cGjvW2Mhxq6IzFX7r97PTdgpHvr6RQrewEUunHLusKTlNiK7KViFYh_c78QVXoMSalNsg4WSht24aYwDcwYlD4KojyeKlJWRdcgNkHx7tZGKwSSyp1Qt3Wq2I9Y2rWSrHJvLbLrjwGGlIRC6d1nXCfizsXkqBwrHXPfEbunziClKdTHuuaijJbM_qqOYH1GZ7ZYO0WL8TM2qmBKVCXiNyNLLs6zyn3yZqCZQGPynDB1Ey4FxBHnzR1GdlRYNnE4TCEFNmER-ffYILqqON69oGLFdcrP5FfPwIPimaVW7CPQgGF9SX-QFenmv6kzFaA93LdWRzRUsbhSgUQjhv5ptMPeyusMnO_rK41nsch9lU6dxF2AxYOyjsfX8BDwzGR9fRtFojLfXANXPUAcOCnMC5qHWtGObNU_UwQ4Cjkzb35SeKQn3NVKzJgXbuWx4sh31O7NZ_36AEBa5esW07JteTnngBkRsfaPKVnAEm6gQyzJFsh2kdsSKMTcHCDgR05Uafl-yWlF8_Uyqh37sKzxlpS2DilQUrml_P1Kf6Y9OdN6lIvGH2JU7A452JPWJIr23Ai2HpqgeA=s0
 
 [dotfiles-p03]: {{ site.url }}/assets/posts/design/2016/11/logo-color-01.svg.gz
