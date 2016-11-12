@@ -305,7 +305,9 @@ For final touch I did intersection from the Umbrella Path Against a Splatter Pat
 You must ungroup each object and union each, before you do both.
 
 I found this Cool Splatter here.
-But it is not mine. So I can't put it in the SVG source.
+It was made by 'Bonang Respati Satmoko'. Using GIMP and later Inkscape.
+Since the spallter is not mine, I can't put it in the SVG source.
+I want to keep the SVG source original.
 
 * <https://archive.org/details/SplatterCat>
 
