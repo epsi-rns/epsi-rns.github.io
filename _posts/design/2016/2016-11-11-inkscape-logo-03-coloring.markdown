@@ -297,6 +297,29 @@ Please Click for higher resolution.
 
 [![Part Three: Final Image Material][image-p03-final-material]{: .img-responsive }][hires-p03-final-material]
 
+### Beyond Logo
+
+After all, there is no limit for creativity.
+
+For final touch I did intersection from the Umbrella Path Against a Splatter Path.
+You must ungroup each object and union each, before you do both.
+
+I found this Cool Splatter here.
+But it is not mine. So I can't put it in the SVG source.
+
+* <https://archive.org/details/SplatterCat>
+
+I also did (<kbd>Filters - Bevels - Button</kbd>).
+
+I'm using the Rainbow Colored Logo.
+The background, I'm using Blue Google Material in Gradient. 
+Duplicate it first, Rotate 90 Degree, and reduce opacity to 50%.
+
+Please Click for higher resolution.
+
+[![Part Three: Final Image Beyond][image-p03-final-beyond]{: .img-responsive }][hires-p03-final-beyond]
+
+
 -- -- --
 
 ### SVG Source
@@ -338,8 +361,10 @@ I'll see you again.
 [image-p03-with-pattern]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-with-pattern.png
 [image-p03-final-rainbow]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-final-rainbow.png
 [image-p03-final-material]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-final-material.png
+[image-p03-final-beyond]: {{ site.url }}/assets/posts/design/2016/11/logo-deco-03-final-beyond.png
 
 [hires-p03-final-rainbow]: https://lh3.googleusercontent.com/YzLOyHmXUzuQABatw9gjBcECnrMCGXrdvKEozt8ERGmLJbtlKWW6e98oDbUgrYAx9NypNjCM734GDcYCIdgzQBwrdbipdkmHsnvmgGMotI4qawC4JaoVNKHeFO1qZVghEMqEv58i107zQxj_V0woFEbW84SJ8AaRbUrD4FtdrVoH06KkrqSsMZzFlYXaezfdhFglmnTL1pRe9pDFdXZONeJGFIADaHNmt5NUaDrP15-Ubl7tq4ZuUfj5oB1QmsS8bW_sh88DHvUF4dtBsWIJD5Ihm40Q2VNN65AjqWKCDyHA2I-YQDoEIMbYKYQADUUXUGNOFKLdz7YnWA0g7RqDMPk_Kv7F31p43nyBBmJmX9yaKho8Q7QxV7a0PwdEXfjHddcc1avnoN36UCYp4EpO9iX2ONYCDPHP6uaEXzK2H3eQBqXjq1HUyvZLi_Yz_YX2FJzsV9B-xrAGfWsKFFDDE8H-m1OxdEqhDrMlUlY_4abR7ziM9hJ7g73b5Tx3pzWCNh4NeJ9-Lu2V6aB_Ak2p0kqgXIYQILiloZaGrisFX50Ftr4JeMcL2ZbH6z_sM_A_n2FbvJ4wlAvndtd6ZH6r-jfsa_Rfr6E_4XeAZRRuQ6sStw60=s0
 [hires-p03-final-material]: https://lh3.googleusercontent.com/jrQB9lvgpBNfiwTJZd0HDlI3Yu6L9gb4Lugm3U4cGjvW2Mhxq6IzFX7r97PTdgpHvr6RQrewEUunHLusKTlNiK7KViFYh_c78QVXoMSalNsg4WSht24aYwDcwYlD4KojyeKlJWRdcgNkHx7tZGKwSSyp1Qt3Wq2I9Y2rWSrHJvLbLrjwGGlIRC6d1nXCfizsXkqBwrHXPfEbunziClKdTHuuaijJbM_qqOYH1GZ7ZYO0WL8TM2qmBKVCXiNyNLLs6zyn3yZqCZQGPynDB1Ey4FxBHnzR1GdlRYNnE4TCEFNmER-ffYILqqON69oGLFdcrP5FfPwIPimaVW7CPQgGF9SX-QFenmv6kzFaA93LdWRzRUsbhSgUQjhv5ptMPeyusMnO_rK41nsch9lU6dxF2AxYOyjsfX8BDwzGR9fRtFojLfXANXPUAcOCnMC5qHWtGObNU_UwQ4Cjkzb35SeKQn3NVKzJgXbuWx4sh31O7NZ_36AEBa5esW07JteTnngBkRsfaPKVnAEm6gQyzJFsh2kdsSKMTcHCDgR05Uafl-yWlF8_Uyqh37sKzxlpS2DilQUrml_P1Kf6Y9OdN6lIvGH2JU7A452JPWJIr23Ai2HpqgeA=s0
+[hires-p03-final-beyond]: https://lh3.googleusercontent.com/WEa5xOPKDjrmegsI8QXUqY0aWGs3DzNFu5kM_d_FRkGCE-t7t5_zD9Mes0cwJfiYT2VFJ92rgsS2WvUR9u-IHF_Yi4pgbJPxvbVjmAkvLnUQK6cmCRR8bCxaDeey4XEgkwFIrHUnLvMYbghkd6hmMqLJTxlMbNMn8xaAhhDvyEaBEIuTrvG_9I3I6xseHq2ruKFswmkzI8k3wrZq8Jj8QTQ7RP1dDlK6ZWMGGTr1IuXI-JfHglFhJ2NuLraV8JSvFpSRPA4BPYTC9VQH3Wgs2whyiLamynTyn9AyL31afef-9p_ol1ANuiQUqFbYlCYeAvpTxLTs_cVs-oj-cy5veXoa2JqYIsJQvPa1WUwCDV5qjSr9KqgEc3JiKgdfNUHbg1LGpfpyWI285Cv704y5ihzgmUsW0_YmNusvvRfGPoJOm8IzIaJhXYwToYKLOSMung5K-M5vsw3A7B1q8Nm74ZhWwRMPhjtLp_CrJZsOTcCfqXvfeLvXpeUar63R9xOAM94qWmDk0coJ-Hu9XxRAKX0uaWeu4i4JJAvsVi5ufXWP0SkwKp4y0D1MD9F8vWd2v5J3b-E78x8mYzLN4Sabi3szJ9XcUrt-lfkCZg-sZoip2945=s0
 
 [dotfiles-p03]: {{ site.url }}/assets/posts/design/2016/11/logo-color-01.svg.gz
