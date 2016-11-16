@@ -185,6 +185,8 @@ However you can find it here.
 
 * [epsi-rns.github.io/.../isometric-infographic-14.svg.gz][dotfiles-ig14]
 
+* [nurwijayadi.deviantart.com/art/...][deviant-ig14]
+
 -- -- --
 
 ## Infograhics #15
@@ -204,6 +206,8 @@ Please Click for higher resolution.
 ### SVG Source
 
 * [epsi-rns.github.io/.../isometric-infographic-15.svg.gz][dotfiles-ig15]
+
+* [nurwijayadi.deviantart.com/art/...][deviant-ig15]
 
 -- -- --
 
@@ -225,6 +229,8 @@ Please Click for higher resolution.
 
 * [epsi-rns.github.io/.../isometric-infographic-16.svg.gz][dotfiles-ig16]
 
+* [nurwijayadi.deviantart.com/art/...][deviant-ig16]
+
 -- -- --
 
 ## Infograhics #17
@@ -245,6 +251,8 @@ Please Click for higher resolution.
 
 * [epsi-rns.github.io/.../isometric-infographic-17.svg.gz][dotfiles-ig17]
 
+* [nurwijayadi.deviantart.com/art/...][deviant-ig17]
+
 -- -- --
 
 ## Infograhics #18
@@ -262,6 +270,8 @@ Please Click for higher resolution.
 ### SVG Source
 
 * [epsi-rns.github.io/.../isometric-infographic-18.svg.gz][dotfiles-ig18]
+
+* [nurwijayadi.deviantart.com/art/...][deviant-ig18]
 
 -- -- --
 
@@ -282,19 +292,24 @@ That's all for now.
 [image-ig14]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-14.png
 [hires-ig14]: https://lh3.googleusercontent.com/bnZgf9Nqc7IUsilG_Stf2de1sdldpbUM_lbmPTksnMqPZBEok5n9CHDIDJgYZXRQ-aGhYbabJCp71fBvtya1W_ijmTxiLfnizZGVg59UEHMVVCV9rvD-Xo8rJiYnV3g1RCXKaHDtj3GFzCIOAqZ3M8twN8hZOIZJ0QA3mjK7EviuNYzUGjmMF6HcxdxAp9uCGIrcIGDwzQ6YuJnppzgGxfEBW5S4uFPKfe89e7fWhSnjYk03AAWEVICwMvgSk4_LmNnbWfqPmo7V0inGIJ6Li4d6YJd_s8r10RZjzYkcfkLtBjSSzEn-MqiINN51Ud31nYWt_xnoqLN84uJSFQyDnPpuQeQB4KrdLeaBIlKi_QIJ4sR_IUW7sHMGRqj8JLfWSPaH2vtABgEX88LDpPSD9Dp14k5L9qdbAkiWAnxCzkla6Bz3fk7zaMZfMAgCFLqJO0k9XngB-Vdh7Q0YWWkjDrVrbdgF7QfWKoE_9sl54OoaUdzzhILbV7-yGjCuTCkN7uNqkEyLa-HyZNxHps-3gvzXvlcT_2qmtfQzYN-KLkSvgfPbUcuC4DUFpAHE0gcyptYk8N-VajbnyrqUYUV5AxeI4JRtzwI4T5nPGeOGJpjbTxtu=s0
 [dotfiles-ig14]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-14.svg.gz
+[deviant-ig14]: http://nurwijayadi.deviantart.com/art/3D-Isometric-Infografik-14-645788454
 
 [image-ig15]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-15.png
 [hires-ig15]: https://lh3.googleusercontent.com/aQMKsRQxprjx09fssYbp7Mf26aD0k7olFAxKBo1e5rZxPqPo0HngW_rG3zwMEAnBEwHS5YxkAHNe0NogdZ2xcmYO8lZFpuDAaWph6ulCi8M1BioHq1lUQgC66OTsScQmJlvWIRqUVeRnmqJov-GbY39KOtAb7l8OpzjhN80lx30azPesaC1yi1izP0MEjy5KKJpJn_WLYindPazjBhXs3a4XfjgHwZH7cra87a_OA3DnhHEopN1JSKgJ5nfhsHJe399DwWs_MShE5Qgsc6H5iZiCk1Eu8IHy8d17gw7hM2bqafuv1eWaJZbhM8WZaGkP-4fw19SnOplOIE6JJrA71RKpO2DxamfjA2MgWOHD6PWJ_jakCuS3TNVbFwEcEcSHMS3aYrB3UlQrlKOvo5yktjB68sCkDzs-onbOr2zU-TXL28Jp_RpSvLFx9E-ea8YLibP3rGRDtEHaDYspff9qW2_kQGJfF8b-C7-rFEl6xmLs4RqJtTh7uxvn_2_7pDCy4V4F1XGf175bC8TsiedOep1h4ZUU1nfrhoVxTkNULwnHlMKqST-CeekUosfPRdfD13vaFsjsWq8FGwJ24clq7xVUofzCKC4qbIzh6-o4ECWEEauh=s0
 [dotfiles-ig15]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-15.svg.gz
+[deviant-ig15]: http://nurwijayadi.deviantart.com/art/3D-Isometric-Infografik-15-645788592
 
 [image-ig16]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-16.png
 [hires-ig16]: https://lh3.googleusercontent.com/MFJbUSFl5UnEiDY8Aebrkaihgv0max2icmzqVk_17giow4y2MB5pabyd_qiz9v_TslmwEZLgab4Jgk2R_1NcdNdyZMNGdtETDcTrAtyr0iasq8x_znC6pzI3p1ZQpawNQx-fd9hUC9v-8k4dBIXFQIh1avdbY8D1-Nh3loVH9CR4p0RQV8a5D8Qap2pl2TpzXIw5b_GxqKXhRCGv5Gie7HZt6TF8oVqqmVOWIPNrNTcQHYkSvweYBxMb_cLJfUDKhxONFFTWTWtHAyM8SPuNApmyUTiDqbwp5wAKVSKWeWvI2WuOaBuiEp8BgpZbtn2F6f24RyeSqlEnNBziT702tfln4hu2Vt4PzlgMdZBs_CzTCdMKO5rAS6sucgYf9hSZsdKYdp4fLxTHq32PlfKwTk5FfOUb7t4u6MbbwSSDVEyZ45FU9u3Gm1Kj1jq1s1W7UNSlD7bUIGb-s1daa8xCsPsXtUpKzKCvAXk-t8iD8au4ZP5KP0F4SDOJVqXWXWHMZAfHUbszLyr-EzsIXnFGWKrpSP8wsGJWnO7AutGgYw9a8JGYTKJO6hSORGwIPDl5AQy-jvWC6QpLYPngFQrkAWg_l0L5E0r0aR_ogFc3zjwiyciK=s0
 [dotfiles-ig16]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-16.svg.gz
+[deviant-ig16]: http://nurwijayadi.deviantart.com/art/3D-Isometrik-Infografik-16-645788690
 
 [image-ig17]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-17.png
 [hires-ig17]: https://lh3.googleusercontent.com/VUp7dRj3HTxsR2CuKvBBfBQpukQx97meFdnqRzldbL_TOiORn--SPOTj3xagAYQZYlg90iCMfe5py_3zFf4dUdnkWVFUvi2zhPZ9ld6s4E2VOTr1Qv3zAoqQLc3K_JCj2zU3bPvCBS4R2v3McuGB5vrv7GGVVO_Uxo8y4ayiBIWUNIjzRbWAwDTxhmiilDrbJ1eYr0hsZWaZpxCwkCUOilUQPJ0dG3yC4ixWU8D64cHRkpgdDYpaOmOj9ibnl3vLDoN-rJvDlOCHrfTGlQjwIKPtSZVZGX9yY5LBBIuFIh1J5qKsjWr-WEmA_WsL9CPi0psOc84fdtszWD3pEENoeFApkUKLtvt-eiDuzUTpIDmUFlW0mOzFcE6fMQAF-fYYhIEh7w5sXxAxvWptxH3LnkVmAPpGqgKiSLaS7bNimwq6GV8LzC9UAc1rVY_ytHjm2vrkMQyxBf8y7rPdqQ01ggwBLThwrfBgrlfQUFW1ruPzNi3r4RcM7UuLVxq8X0WTZgRdBaqb9r_-BQgx7BnXnCLjV1grVc8Ghao0uJMr3MFK2Jv-MlLSDvtDy75jS22YJBClEZjV9cbW61zn_GXP-CrkQUCDHY6bpQYNG3gfqVUGgBX4=s0
 [dotfiles-ig17]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-17.svg.gz
+[deviant-ig17]: http://nurwijayadi.deviantart.com/art/3D-Isometric-Infografik-17-645788794
 
 [image-ig18]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-18.png
 [hires-ig18]: https://lh3.googleusercontent.com/Ushu2kLFyEs1SaSRlWCaFMAO5PHmf7K7E7YGdVI_h-RAlwhOb6-uFi1gvAlUxAIshKCxe2FN0aFfgLXiBaJ_p8QLW1_dG1z0cp3uLeL8lfXp67gey3c4JbhJ8UOn7I5fVNDZxnD8O6QhLYIW8-9gWx-mkmpZFCbMgDQSKQRnVx-rpx4Ubxuo19q9mG65XsJTwMti2hfG7SLAZCd7Qy90Ka84tRxKRAR3uh9jS7yzvk8G6gCsG1H1CFPAlYK1DnUfs25wnWkG6uoN8MCli2zL-p4pwpAUS1HrzO2clznOXCJsEnOfQhjfNtAzaiEBnmTyuzbD7yssXV0d0E9BK6FA77TlCRXkOKUeAKdvqliv464G9zAtAam81Rb9euEzXFKijuRyMtpb4InzLeN_z-lMgYIUBWzl1fs1mvpZaNF-4SGjmYFqyqS1WEu7lMyKx3WLaf-cy9Uzu1T7cAsYm4NelPWvZo8Wxxzv3dTi0K_oyE1E4CrSWzbJ-s9Z6muvH2trDJYc-ganMqVJzgXRRAikN5AwSMd-JwyVO8kqiPCjxNK3nRmVbOwrIjXLsZJLaJWDDBitab_7QA0ap4nZ8zzUBugvNoJfBDjWFlcm-GhpYLSPNiBT=s0
 [dotfiles-ig18]: {{ site.url }}/assets/posts/design/2015/11/isometric-infographic-18.svg.gz
+[deviant-ig18]: http://nurwijayadi.deviantart.com/art/3D-Isometric-Infografik-18-645788904

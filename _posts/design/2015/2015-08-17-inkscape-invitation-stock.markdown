@@ -57,6 +57,10 @@ Please Click for higher resolution.
 
 * [epsi-rns.github.io/.../event-invitation-sample-alumni.svg.gz][dotfiles-invitation]
 
+* [nurwijayadi.deviantart.com/art/...yellow...][deviant-invitation-yellow]
+
+* [nurwijayadi.deviantart.com/art/...blue...][deviant-invitation-blue]
+
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -66,3 +70,5 @@ Please Click for higher resolution.
 [picasa-blue-invitation]: https://lh3.googleusercontent.com/Pil-7XiDfz_wbTVQwtK-Wk4ebKScY0pg7EtmOm1qRPIPITmG_Pg4Qs4JbLz2VbiAJbdmRcM8Hc8-TqabcAbKCIDWKWxVQJlOPcpgD3_u3aNLf2eClKAvgr40ZJdfBtVj8Y1ZuBUJpfQXu1ASsc98YJdwVQf-TOhYjqJBU-ytIcQOParslBgERI0WYT_NUce8LPNYNyrJEFi3lmkpEs_lPif1YXYFZyFQ-l_gacGJWkxsLOmsOYS0C-I7OZmciv0_jKNGktvOVRHJ5aClOsnPMYx7UdDJGBsaCY7VCXt6zezVqUytzJY1z2E7LDUdqCAWE_1X7jpl2Pj49rlpKFqdmYTgnVtExkLo5pCgZKWlHkG2GNrm8YwanYkUfdiz62oVeOOdSjbT5E31xMV9hT5QIIDhULYPV8MStviKe2pcWPCtgPv_yogg7Cbs6dMf6gGQWa3N3LATkthoEOD8d0TqWq_erPV8SRbHwcXIIz0m-qaqq7MjbCwCqdpYMPiv0G-mZI6GEEZtGZrlCEEgx5i599zWnwtq7tjz3nNU6HHO__01t9wlzSG17cCLpeREdY9Z80g1KFlY-FKGqwQOMYFzutQVyERrIDTce-PZ50lAATIkvKiE=s0
 
 [dotfiles-invitation]: {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni.svg.gz
+[deviant-invitation-yellow]: http://nurwijayadi.deviantart.com/art/Undangan-Alumni-645736320
+[deviant-invitation-blue]: http://nurwijayadi.deviantart.com/art/Undangan-Alumni-645736708

@@ -26,8 +26,17 @@ I currently do not have any plan to modify this vector. e.g. Adding beard, moust
 
 At least I have something for my avatar.
 
+### SVG Source at DeviantArt
+
+* [nurwijayadi.deviantart.com/art/...][deviant-ss-pp-1]
+
+* [nurwijayadi.deviantart.com/art/...][deviant-ss-pp-2]
+
 
 
 [image-ss-pp]: {{ site.url }}/assets/posts/design/2015/09/vexel-profile-picture.png
 [image-ss-pair]: {{ site.url }}/assets/posts/design/2015/09/vexel-compare.png
 [picasa-ss-pair]: https://lh3.googleusercontent.com/-r44NihtUHVM/VznBXPm8kkI/AAAAAAAAANg/q9_8EZGGrOoghmuYDBD7BplANmdw6OUlQCCo/s0/vexel-compare.png
+
+[deviant-ss-pp-1]: http://nurwijayadi.deviantart.com/art/Humanity-in-Progress-645792932
+[deviant-ss-pp-2]: http://nurwijayadi.deviantart.com/art/Portrait-645793019

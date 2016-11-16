@@ -87,6 +87,10 @@ This is my old real life e-Flyer in 2014. Too simle to be documented.
 
 ![UU Kemaritiman ?][image-sample-1]{: .img-responsive }
 
+### DeviantArt
+
+* [nurwijayadi.deviantart.com/art/...][deviant-sample-1]
+
 -- -- --
 
 ### Sample 2: Penegakan Hukum
@@ -95,7 +99,7 @@ This one is rather a concept than being useful. I mean despite of above sample, 
 
 Please Click for higher resolution.
 
-![Penegakan Hukum][image-sample-2]{: .img-responsive }]
+![Penegakan Hukum][image-sample-2]{: .img-responsive }
 
 ### Document Properties
 
@@ -121,6 +125,10 @@ I was using Google Material Design Pallete to get the red color. But then, I dec
 
 There is also a greyish radial gradient, from center (#ffffffff) to outer (#c8c8c8ff). It looks better than white.
 
+### DeviantArt
+
+* [nurwijayadi.deviantart.com/art/...][deviant-sample-2]
+
 -- -- --
 
 ## Sample 3: Go Further with Sample 2
@@ -140,6 +148,10 @@ This inkscape document inherit all properties from previous sample.
 I want my small identity text, looks like it below the main text. The blur and offset number, should be fewer than main text
 
 * Drop Down Shadow: Color: black (#000000), Opacity: 0.5, Blur: 3px, Offs.et-X: 5, Offset-Y: 5
+
+### DeviantArt
+
+* [nurwijayadi.deviantart.com/art/...][deviant-sample-3]
 
 ### SVG Source
 
@@ -173,3 +185,7 @@ That's all for now.
 [dotfiles-sample-0]: {{ site.url }}/assets/posts/design/2016/11/text-feature.svg
 [dotfiles-sample-2]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum.svg
 [dotfiles-sample-3]: {{ site.url }}/assets/posts/design/2016/11/dukungan-pribadi-01.svg.zip
+
+[deviant-sample-1]: http://nurwijayadi.deviantart.com/art/Undang-Undang-Kemaritiman-645790906
+[deviant-sample-2]: http://nurwijayadi.deviantart.com/art/Penegakan-Hukum-645722442
+[deviant-sample-3]: http://nurwijayadi.deviantart.com/art/Dukungan-Pribadi-645721708

@@ -18,15 +18,21 @@ I also add shadow with envelope path effects under the logo.
 
 ### Pink Padz
 
-**SVG Source**:<br/>
+**SVG Source**:
+
 * [epsi-rns.github.io/.../logo-stamp-pink-padz.svg.gz][dotfiles-pink-padz]
+
+* [nurwijayadi.deviantart.com/art/...][deviant-pink-padz]
 
 [![Pink Padz][image-ss-pink-padz]{: .img-responsive }][picasa-ss-pink-padz]
 
 ### ILUNI FTUI
 
-**SVG Source**:<br/>
+**SVG Source**:
+
 * [epsi-rns.github.io/.../logo-stamp-iluni-ftui.svg.gz][dotfiles-iluni-ftui]
+
+* [nurwijayadi.deviantart.com/art/...][deviant-iluni-ftui]
 
 [![ILUNI Teknik][image-ss-iluni-ftui]{: .img-responsive }][picasa-ss-iluni-ftui]
 
@@ -41,5 +47,7 @@ I also add shadow with envelope path effects under the logo.
 [image-ss-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-iluni-ftui.png
 [picasa-ss-iluni-ftui]: https://lh3.googleusercontent.com/-Xruv7VPTq60/VznBURBVsYI/AAAAAAAAANg/PLtGPUu4ezYpN93V-9TWZuNPkBO4RtQYgCCo/s0/logo-stamp-iluni-ftui.png
 
-[dotfiles-pink-padz]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.svg.gz
+[dotfiles-pink-padz]:  {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.svg.gz
+[deviant-pink-padz]:   http://nurwijayadi.deviantart.com/art/Logo-Stamp-Ornament-Iluni-FTUI-645792391
 [dotfiles-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-iluni-ftui.svg.gz
+[deviant-iluni-ftui]:  http://nurwijayadi.deviantart.com/art/Logo-Stamp-Ornament-Padmanaba-in-Pink-645792516
