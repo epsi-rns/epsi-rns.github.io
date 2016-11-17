@@ -5,6 +5,18 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16111130
+  title: "Inkscape Logo Creation Part Three"
+  url: /design/2016/11/11/inkscape-logo-03-coloring.html
+
+- id: 16111110
+  title: "Inkscape Logo Creation Part Two"
+  url: /design/2016/11/11/inkscape-logo-02-making-shape-example.html
+
+- id: 16111100
+  title: "Inkscape Logo Creation Part One"
+  url: /design/2016/11/11/inkscape-logo-01-preparing-document.html
+
 - id: 16110129
   title: "Inkscape: Text Feature"
   url: /design/2016/11/01/inkscape-text-feature.html
