@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What to Do, When the System Stuck, at Boot"
+title:  "What to Do, When the System Stuck, on Boot"
 date:   2016-05-19 15:39:15 +0700
 categories: system
 tags: [package manager]
@@ -19,7 +19,7 @@ is when a user stuck on boot after loading GRUB2.
  
 Take a deep breath don't be panic, even when you have kernel panic, you need to calm down. 
 Most of the time it is just something happened in init process,
-sometimes it is just a display driver or else,
+sometimes it is just a display driver or else e.g. mount time,
 so what you need is to have a more verbose error message.
 All you need to do is, removing the quiet option in GRUB2.
 
@@ -32,7 +32,7 @@ You can remove the quiet option in GRUB2 in either way.
 * Temporary, by pressing e-key when booting in GRUB, and edit the entry.
 
 * Change the grub.cfg in /boot/grub/, using Live CD/DVD/USB.
-  It will be wipd to default when you update grub later.
+  It will be wiped to default when you update grub later.
   You can also edit grub.cfg from other partition in multiboot environment.
   
 Well, it doesn't solve your boot problem,
