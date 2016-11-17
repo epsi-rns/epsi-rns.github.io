@@ -205,6 +205,14 @@ and click menu (<kbd>Path - Intersection</kbd>).
 
 ![Part Two: Star Shape][image-p02-star-ellipse]{: .img-responsive }
 
+### Object and Path
+
+The next section require, two kind of logo.
+
+* Logo as Object. Optionally Groupped.
+
+* Logo as one single union Path.
+
 -- -- --
 
 ### SVG Source

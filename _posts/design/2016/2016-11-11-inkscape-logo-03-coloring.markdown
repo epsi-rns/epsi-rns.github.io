@@ -47,7 +47,7 @@ We are still working in current 'umbrella' layer.
 
 Click the logo path, 
 change the opacity to 100%,
-as we don't play with shape anymor.
+as we don't play with shape anymore.
 
 Click the logo path again, 
 and click menu (<kbd>Path - Break Apart</kbd>).
@@ -352,6 +352,13 @@ You can review our tutorial in this SVG source.
 
 * [epsi-rns.github.io/.../logo-color-01.svg.gz][dotfiles-p03]
 
+### DeviantArt
+
+* [Colourful Star Logo][deviant-p03-final-star-simple]
+
+* [Colourful Gear Logo][deviant-p03-final-gear-colour]
+
+* [Red Gear Logo with Text][deviant-p03-final-gear-update]
 
 -- -- --
 
@@ -389,5 +396,9 @@ I'll see you again.
 [hires-p03-final-material]: https://lh3.googleusercontent.com/jrQB9lvgpBNfiwTJZd0HDlI3Yu6L9gb4Lugm3U4cGjvW2Mhxq6IzFX7r97PTdgpHvr6RQrewEUunHLusKTlNiK7KViFYh_c78QVXoMSalNsg4WSht24aYwDcwYlD4KojyeKlJWRdcgNkHx7tZGKwSSyp1Qt3Wq2I9Y2rWSrHJvLbLrjwGGlIRC6d1nXCfizsXkqBwrHXPfEbunziClKdTHuuaijJbM_qqOYH1GZ7ZYO0WL8TM2qmBKVCXiNyNLLs6zyn3yZqCZQGPynDB1Ey4FxBHnzR1GdlRYNnE4TCEFNmER-ffYILqqON69oGLFdcrP5FfPwIPimaVW7CPQgGF9SX-QFenmv6kzFaA93LdWRzRUsbhSgUQjhv5ptMPeyusMnO_rK41nsch9lU6dxF2AxYOyjsfX8BDwzGR9fRtFojLfXANXPUAcOCnMC5qHWtGObNU_UwQ4Cjkzb35SeKQn3NVKzJgXbuWx4sh31O7NZ_36AEBa5esW07JteTnngBkRsfaPKVnAEm6gQyzJFsh2kdsSKMTcHCDgR05Uafl-yWlF8_Uyqh37sKzxlpS2DilQUrml_P1Kf6Y9OdN6lIvGH2JU7A452JPWJIr23Ai2HpqgeA=s0
 [hires-p03-final-beyond]: https://lh3.googleusercontent.com/WEa5xOPKDjrmegsI8QXUqY0aWGs3DzNFu5kM_d_FRkGCE-t7t5_zD9Mes0cwJfiYT2VFJ92rgsS2WvUR9u-IHF_Yi4pgbJPxvbVjmAkvLnUQK6cmCRR8bCxaDeey4XEgkwFIrHUnLvMYbghkd6hmMqLJTxlMbNMn8xaAhhDvyEaBEIuTrvG_9I3I6xseHq2ruKFswmkzI8k3wrZq8Jj8QTQ7RP1dDlK6ZWMGGTr1IuXI-JfHglFhJ2NuLraV8JSvFpSRPA4BPYTC9VQH3Wgs2whyiLamynTyn9AyL31afef-9p_ol1ANuiQUqFbYlCYeAvpTxLTs_cVs-oj-cy5veXoa2JqYIsJQvPa1WUwCDV5qjSr9KqgEc3JiKgdfNUHbg1LGpfpyWI285Cv704y5ihzgmUsW0_YmNusvvRfGPoJOm8IzIaJhXYwToYKLOSMung5K-M5vsw3A7B1q8Nm74ZhWwRMPhjtLp_CrJZsOTcCfqXvfeLvXpeUar63R9xOAM94qWmDk0coJ-Hu9XxRAKX0uaWeu4i4JJAvsVi5ufXWP0SkwKp4y0D1MD9F8vWd2v5J3b-E78x8mYzLN4Sabi3szJ9XcUrt-lfkCZg-sZoip2945=s0
 [hires-p03-final-evolve]: https://lh3.googleusercontent.com/0GpXOyNZaUEXmWKxK0BqYx45GJTejoZhJFIQV3Z1PI_Fjbt0XpzudqK0D9tW1T0W5Nfh91kGDiyUlWSk41wGuKd8OD0__GbVYfxzQGvoc-6YhBogk3pGU6xIFgSk8Wt8i8VsxexWCI49NKIfSTBDszQDGwuGPDwwcustG37DQuFIBboolHdLfm-AqM2gU6pJe366beFxxcdUsdZlkQLoHWSP-IYR6QgJqTo1CTTsNHg3mnjRqjzuHX7JD6sVhS6Kf9kHCsTN5ponHWHEdDwNj6hCLGouhEapcMNs-JeHnjEWH-6Y_UjpX6fFYMS5Tff6u43u1AnB_WLGE17yniL2Ky97j0SpHIhuGC0RWpos2udr8Z-4kjtFGO3sDVIWn28VAJuDRWinEP0eloJ1Kg5-8FOz8L5yzXwCRio703Xb2QIeJIEioZqcaoDBuOLkfQvaaTFGl659urn5z5FUM9YPosg7ZTo-Ff_v48ClIEZIUVbhomB_8-qXg2EszsXEPMOVxFmugQaW-RrNXv9FbE3jEIekgd979I_OcBkDARN6gnT479xv5BK2DXu-bg-9ZvF-5c7N7s7jDzzKVQKWIpY3Z9CzMrhOj0kp1lDDeAKpskAW7Q3W=s0
+
+[deviant-p03-final-star-simple]: http://nurwijayadi.deviantart.com/art/Creating-Vector-Logo-in-Details-Star-01-645707162
+[deviant-p03-final-gear-colour]: http://nurwijayadi.deviantart.com/art/Creating-Vector-Logo-in-Details-Gear-02-645709482
+[deviant-p03-final-gear-update]: http://nurwijayadi.deviantart.com/art/Creating-Vector-Logo-in-Details-Gear-01-645708766 
 
 [dotfiles-p03]: {{ site.url }}/assets/posts/design/2016/11/logo-color-01.svg.gz
