@@ -18,6 +18,7 @@ related_link_ids:
   - 16080325  # Install i3 Arch
   - 16080224  # Install i3 Debian
   - 14120646  # i3 Window manager
+  - 16041507  # Channels Worth Following
 
 ---
 
@@ -56,8 +57,10 @@ So I made a lame wallpaper with inkscape today.
 A wallpaper clone of inpired by Material,
 with Isometric Experiment for myself.
 I know I looks dumb. Like usual.
-This is what i've got so far.
 
+### Preview
+
+This is what I've got so far.
 Please Click for higher resolution.
 
 [![Isometric Wallpaper with Material Design][image-wallpaper]{: .img-responsive }][hires-wallpaper]
@@ -67,6 +70,31 @@ So the svg source has more than just this Grey with Red accent.
 The text is using Oswald Font.
 You can change the text to suite your message.
 
+### Inkscape
+
+Yes, it is an inkscape document.
+I have made an axonometric grid first grid.
+This will create an isometric looks document.
+
+* Spacing Y: 8, and changed later to 2, or 4 or 8
+
+* Angle X: 30
+
+* Angle Z: 30
+
+* Major Grid Every 10px
+
+Please Click for higher resolution.
+
+[![Designing Wallpaper in Inkscape][image-inkscape]{: .img-responsive }][hires-inkscape]
+
+You can examine:
+
+* Left: Layers for some color theme
+
+* Bottom: Google Material Pallete Colors.
+
+* Top: Menu: Just kidding ...
 
 ### SVG Source
 
@@ -121,6 +149,9 @@ What do you think ?
 [hires-wallpaper]:    https://lh3.googleusercontent.com/qTBCZghTkD_blVAMPVBH-u3naEEze3GLsIdstVrgPwIqAITuKmNTmxuK7U1X31XFfEsuCf5zWlJ9fMxd1dS_jQTPckgl4oMHBd39Lb4gI66riyP17uIPlY64Is7yKFQOxbw79RKYUUl6uwCYTIAOGIPxT3ypq40tw-ryeerIndM2mEQFVROfxtvB-QtX2l9ox2NOpTyH31G4l857fFh5M_aEhH9zU1zrtl2fSavKBNnlPxn37JaH94V5Xd4mCFNd1KVLNlsvqGwWeHbGN64va9FyJcWBA4fPTP-jd-YCGBucgPc3GBK3qPW8k6XXNBdH9F7fgAWEQZ1Qah_AVdZWICTFhGqR04n2cKtYVLCsMFTqnSnyMfJh12qJPSRhVq7UAVU49yVMJYEPCo8Xn0Se70hF21LqwHDWFCgdycw9P2lGGGDbYX9hviAiyBsQEYFlRzumLeJnrkxIeL3azsx56SYCaZsJkuWw0bu_nwg3z8zbwQPtBKE2EvOG8AI4usZH-_2wD9SkekwHIuHaqak6FFbYywgVbl-v0sEvLaxhlbbtCj50tHBlUcQWkpNUyj0rvYGLMK5tC2cLJh2EfPta2c6lryn_JVHrtd92T2vWCr3iXbm8=w0
 [dotfiles-wallpaper]: {{ site.url }}/assets/posts/design/2016/10/wally-material-design-06.svg.gz
 [deviant-wallpaper]:  http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-646511906
+
+[image-inkscape]:     {{ site.url }}/assets/posts/design/2016/10/i3-material-inkscape.png
+[hires-inkscape]:     https://lh3.googleusercontent.com/ROuMudvIhaQm8IjHOE72Q_mwDW1UvKNcaoPPNH_Q_yNZ1070NhPrvKcTw5Kzm3jat1oG3tlwTneZDWpCwdEHlxS8lo64GD0hC2KBGkvxfmxrVhEdCfsXKo_6sFaqXZBJalGcU4ky5-DLDEzEF70fsVnxDccf-uhicKELfpa6FVkD4UgoANjyC3mztysYk1HG72aCW5fKCTqXI0XaqoKUXHn3_ZAY8HuMNE38A2H7czawI4KRkBailUUkkx5tZ6BlKlsDQlEN7HxDRmr3VAyd2pFhtZYHBsQ49UrTHr-o5tEuft4IcBA7ipQdz3QUr_LFqgECHResIyPIiS1hCorDV6BIj1_lNpYoCU7wtAZ2zZITfOYv-NVfk8iZtC-SongShvfiXA0YZaTjScY_ci3vfqgSkmcjv2xCVYr5oIQkElu7F0S7J0QPLE16uejyHZDRybRemXe6lJgIqLrjctawyrE4Qs4p1U5DSWf3OrSjx_iKumaLf7vYZkOl0NKvSFxPyXpx-p2n8sK2iZu5tWh8K_CY5dXKzKIapDbxtFh2deE96skXbAquU8sWH5OR75KTPMWiFDU1Jd4WRByDHvm5rFECvtYlZiMzAa4MdZAVj0qR5nJW=w0
 
 [image-bright]:    {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-bright-on-blue.png
 [hires-bright]:    https://lh3.googleusercontent.com/yOnInFY7lH4k4Tpblkbx4pbkYW7ezFerEadscDzMgKurU5_RgeX0nfvPzbrkgZ1C3T7BkYAd6lqFXcvVo6PBEyyJZC0awS1Ylq1Cb2WACW7G0tSW5hFKRXHikE7N3o24v3wpGMpBVuWplhWdca2Q7MyBaoCitBKnQCFQ4-oA9NT75cCAKGa9pp82V94dQKw4-I7lczQIe0HNeh_xaByEnt7lGOZLzcpJxUv7obutVitgWwsleGEvmPg6KAlWfLJwk24moUVNP3tmbnEvE0IgXpV7Z3yFr_Wavm-Q1ptXvDNPpEvzEAVQhHFzCOABhNSrHmFRxWFBI5sc7Pt7xD1ydnEdgtPncYezbsHNRzSKFnjNiByC7yNtH5yE4Sz8YzAJ-sIRIfWLnMtjeF9B42me19uu4qqArfc3Jfh2B9jIhMtsKtrBm7rmPE-TqhJSej18bTkbjKfJWaFWkLJwdftcQguQ2opJv0aJ8JtzsK9-PLBj57zdhMVrQzz7vxTbR65wYnLEqlgZX-RdvXvttY2TyKOmp2e7qsiYn7XCDkoaM3aP9IEqaouOEb-Kx-dsKHBE6mDq8wI7EiU5iRNtglypw9kj3fjTc3ihTa7e-uNaK07qp4-t=w0
