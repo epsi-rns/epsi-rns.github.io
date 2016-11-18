@@ -39,11 +39,11 @@ So simple but, we all n00b once, right!
 
 ## Sitting Here 
 
-I've been sitting here thinking how people working and make a good art.
+I've been sitting here thinking how people working and making achievement.
 
 I'm still sitting here thinking, while people working.
 
-I'm still thinking, while people make a good art.
+I'm still thinking, while people making achievement.
 
 People working, and I'm still thinking.
 
@@ -110,7 +110,7 @@ You can check my dotfiles here. And I also put some i3 related articles in this 
 
 -- -- --
 
-what do you think ?
+What do you think ?
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
