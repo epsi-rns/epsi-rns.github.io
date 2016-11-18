@@ -82,7 +82,7 @@ This will create an isometric looks document.
 
 * Angle Z: 30
 
-* Major Grid Every 10px
+* Major Grid Every 10
 
 Please Click for higher resolution.
 
