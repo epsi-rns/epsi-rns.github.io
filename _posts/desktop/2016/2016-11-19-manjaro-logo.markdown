@@ -110,6 +110,8 @@ You can check my dotfiles here. And I also put some i3 related articles in this 
 
 -- -- --
 
+Desktop Ricing would not be complete without your original wallpaper.
+
 What do you think ?
 
 
