@@ -73,7 +73,12 @@ You can change the text to suite your message.
 ### Inkscape
 
 Yes, it is an inkscape document.
-I have made an axonometric grid first grid.
+
+Additionaly further than Material Design,
+I added an Isometric looks. 
+Just because I can.
+
+First, I have made an axonometric grid.
 This will create an isometric looks document.
 
 * Spacing Y: 8, and changed later to 2, or 4 or 8
