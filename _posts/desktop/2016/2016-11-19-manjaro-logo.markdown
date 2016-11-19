@@ -58,6 +58,14 @@ A wallpaper clone of inpired by Material,
 with Isometric Experiment for myself.
 I know I looks dumb. Like usual.
 
+### Influence
+
+My Works inspired by
+
+* <http://dakoder.deviantart.com/art/MinFlat-Dark-Material-Design-Wallpaper-4K-509845098>
+
+* <https://www.whatswithtech.com/cool-and-best-material-design-wallpaper-hd-for-windows-7-8-and-10/>
+
 ### Preview
 
 This is what I've got so far.
