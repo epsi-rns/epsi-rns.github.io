@@ -33,8 +33,9 @@ I finally found it in accent pallete. In this case a700.
 ### Coloring
 
 Let's open our last project.
-Rename it from 'logo-shape (01).svg' to 'logo-color (01).svg' 
-Then open the new 'logo-color (01).svg' file.
+Rename it from '<code class="code-file">logo-shape (01).svg</code>' 
+to '<code class="code-file">logo-color (01).svg</code>' 
+Then open the new '<code class="code-file">logo-color (01).svg</code>' file.
 
 We are going to save this elliptical star logo to other place,
 because coloring require the path to broken apart.

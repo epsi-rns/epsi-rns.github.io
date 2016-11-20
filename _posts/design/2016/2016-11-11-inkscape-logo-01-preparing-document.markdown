@@ -294,6 +294,13 @@ You can download this very small size template, if you wish.
 
 * [epsi-rns.github.io/.../logo-template-01.svg.gz][dotfiles-p01]
 
+-- -- --
+
+## Template
+
+If you are sure, you can put your template
+in <code class="code-file">~/.config/inkscape/templates/</code> for convenience.
+So you can use it later from menu (<kbd>Open - Templates</kbd>)
 
 -- -- --
 

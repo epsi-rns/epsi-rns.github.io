@@ -56,9 +56,9 @@ The final version of this article would be similar to this preview:
 ## The Polygon Layer
 
 The earliest step would be copying our last template,
-and renaming it from 'logo-template (01).svg'
-to 'logo-shape (01).svg' 
-After that. Open the new 'logo-shape (01).svg' file.
+and renaming it from '<code class="code-file">logo-template (01).svg</code>'
+to '<code class="code-file">logo-shape (01).svg</code>' 
+After that. Open the new '<code class="code-file">logo-shape (01).svg</code>' file.
 
 Let's make a new 'Polygon' layer inside 'Basic Shape' layer. 
 And choose that layer as our current working layer.
