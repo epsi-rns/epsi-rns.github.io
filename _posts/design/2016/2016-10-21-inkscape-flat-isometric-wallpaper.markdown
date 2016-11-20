@@ -26,7 +26,7 @@ But with Isometric you need to Skew, before Rotate the object.
 Skewing has a more realistic looks as its advantage,
 as you can see in this preview.
 
-![Preview Wallpaper][image-preview]{: .img-responsive }]
+![Preview Wallpaper][image-preview]{: .img-responsive }
 
 -- -- --
 
