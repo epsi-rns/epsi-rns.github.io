@@ -14,6 +14,7 @@ excerpt:
   I know I looks dumb. Like usual.
   
 related_link_ids:
+  - 16100339  # Flat Wallpaper with Isometric Looks
   - 16080119  # Modularized Conky i3status
   - 16080325  # Install i3 Arch
   - 16080224  # Install i3 Debian
