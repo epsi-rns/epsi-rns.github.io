@@ -23,7 +23,10 @@ So your final result looks neat.
 
 Without Isometric style, all you need is rotating shape and text.
 But with Isometric you need to Skew, before Rotate the object.
-Skewing has a more realistic looks as its advantage.
+Skewing has a more realistic looks as its advantage,
+as you can see in this preview.
+
+![Preview Wallpaper][image-preview]{: .img-responsive }]
 
 -- -- --
 
@@ -331,6 +334,7 @@ That's all for now.
 [image-bar-shadow]:     {{ site.url }}/assets/posts/design/2016/10/flat-isometric-bar-shadow.png
 [image-bar-color]:      {{ site.url }}/assets/posts/design/2016/10/flat-isometric-bar-color.png
 [image-text-snap]:      {{ site.url }}/assets/posts/design/2016/10/flat-isometric-text-snap.png
+[image-preview]:          {{ site.url }}/assets/posts/design/2016/10/flat-isometric-preview.png
 [image-final]:          {{ site.url }}/assets/posts/design/2016/10/flat-isometric-final.png
 
 [hires-final]: https://lh3.googleusercontent.com/dMbAbaP5pDAiHY1Iszrtul9wrCTce1lpwiR7Y6RCjFvISqJy0pApQ0wd_H0nKo-IQb0JeEQ7SPu2DrOSlwtGd9M-1XvRsQ9uouJjkdkljSWS0hnunfOTgVp3obkn3aKxtiLlHEMFg8KFVDLpUf4Z0crRuDR7XYpvmcPBCRWf_k6I4QV0ULOKNLgPVuPFA_gUF_rDTA86fFBGBy4O1W1PWrk-0gSffwKn9ixjSXoMGNVQlSCVsZj_ON0OL1hKI8HYSQauZI0F6dMURCvIbVEll91OnjByp_anrKyqxcvkuZGCOzqQJEGPoXUSj_H4eWbacLI2tVzGPMs4R_wBqK05kd8KWxSeMlFAfaG3aDRCagEYUnYEIDEd_f1LeikpKudYOVBkJVVLr6_tPne2doFNoXYzkk9l9rvJg_UL0G99kDGgYwduIxLN5Bb5mbbG3iLmNzX0ZXzrpdKLqR6vpU6j-8M3sivn2jmCZa5BLH6Xm-x2OmgZq03DJ5OXMjdqDK_Zf3SUyHxlAb91-wNaZ8NaNpAmNptuGh0-dIcD0t13cVVzPnVFfz8S6gwCcO6MVQS3jhWs5AI1n00l4M7MQpwG3XFaLShCHJB7tFMgSXJfU03V6iNy=w0
