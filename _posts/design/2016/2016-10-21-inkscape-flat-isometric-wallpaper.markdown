@@ -287,7 +287,6 @@ Export to PNG using 90dpi to achieved 1920px width x 1080 px height.
 
 Don't forget to save your document.
 
-
 ### Preview
 
 Please Click for higher resolution.
@@ -300,14 +299,41 @@ You can review our tutorial in this SVG source.
 
 * [epsi-rns.github.io/.../flat-isometric-looks.svg.gz][dotfiles-final]
 
+-- -- --
+
+## Beyond Flat
+
+If you want a more realistic, leaving flat philosophy,
+you can add use filter to create effect,
+this would make the bar looks like ribbon.
+
+You need to create a duplicate for each ribbon,
+so we have bottom and top ribbon.
+
+* Bottom: Filter - Shadows and Glows - Drop Shadow. 
+
+* Top: Morphology - Posterized Blur
+
+You should also darken bottom ribbon color.
+Suppose the ribbon have Red 800 color,
+the bottom color should be rised to Red 900.
+
+Please Click for higher resolution.
+
+[![Ribbon Wallpaper][image-ribbon]{: .img-responsive }][hires-ribbon]
+
+
+
 ### DeviantArt
 
-I also put two link other example ini DeviantArt.
+I also put two links, other examples in DeviantArt.
 Each with downloadable SVGs.
 
 * [White Blue][deviant-sample-1]
 
 * [Black Red][deviant-sample-2]
+
+* [White Multicolor][deviant-sample-3]
 
 -- -- --
 
@@ -336,11 +362,14 @@ Enjoy.
 [image-text-snap]:      {{ site.url }}/assets/posts/design/2016/10/flat-isometric-text-snap.png
 [image-preview]:        {{ site.url }}/assets/posts/design/2016/10/flat-isometric-preview.png
 [image-final]:          {{ site.url }}/assets/posts/design/2016/10/flat-isometric-final.png
+[image-ribbon]:         {{ site.url }}/assets/posts/design/2016/10/flat-isometric-ribbon.png
 
 [hires-preview]: https://lh3.googleusercontent.com/GYPXUpUEFWq8g9Tn9k91wHV5XIWHq5IdcHNmYLWkhyFiybLXNbglpgrp9ut8eQLLNrmMbA_K8hVtlTQJ4bBjvvoMOed5mnoh2eUOiyIOKYBEkdUQJ8mXPXNqi74kspTUncJUhRduBzr_bf3gsFRiwHg-k2DI3Hke_LLHmyJu-NszGaOgDhN2de8iVzgAEkavwWwErT48nrp1FuTnBE3Dl4nUlbtZX83VIOrRRmoXZYK7P8tceHFn1OY4YpZ3eGdusH1fOSnCvBe9SXRlfjuPtJSAZ_b8hRCcBwHhkZibRlw0GQSUycCGq3ss4Gz2E1YuH3CyDvVmVapH0R1Z47p8dkcv-351PBkmlJPmRDjfa_utRThq1eudH32UQfKjT-5CE9_QccXQ33H_uAR33yeZ-BdbUd-3lSXaIjTwOVzt4QbBc7ZpXNnb3PvvTD8C_L852KOx6dCxX5532_UfDDodCXTLHNU02kSX0gYBWo5EofDAE6F5qwVao88ruwoBhFkP71Jmnxci_fiFUwqzMjlTIkskaJbTuLgkBAIC0sNpAPBWR3fVrImPgz8zsPtEoTo1AlJx0Rjc8Q4SRZOCYgE5IV_uuHeQGv65nOGZ3bp0kPWZUzc4=w0
 [hires-final]:   https://lh3.googleusercontent.com/SDi3WfEYcQgAVeYlZrHbXaf8Rso9vhQzxap8ekr3gChLpjRnSAOqWQDRGyNCFUH5FEXGnj4aXo7BwasbGirzPRcNPu84ddck9lnqj0pJ8Tzhx1XgWublM7Zxy1rJCYDSLYxpyukUdPQWNTnIAfWdpl3z50o8u1IL0tlGLIEAiBjcSL-QzSvgUgQlHxmPz6MrJkC06SetQC6-uQCixRCIsxHduEht-u1Fh8YNneIC7VjJ6cqFwHBf_Sek5p49-P_EwNuaS0TXbnp-VdJRBd9Jx9-AkGduHcT2faP3pO13s25VIa-qdIr4antUWqEWe5dhyZMYF7Z5-thHfNIJFqFCmwNG1VuGAU-SnX0Map02x5GQnlysssogoKjVh0xJimKq4Kd-PO9_OiObAwCcrnjaB6upMMN_qETPYc3GhKg57H0Pf8F0PC-82qk2V5aI8dkq_ISEP68_ELvYkubw08eiQM-_noJEVqUcrtNMxV2rH6HwqkEdWQcw8r6FgzFWzB5v0bRbRE-kDoNLClWus2TN3CQIIl4-lWOb5zXvJoZ6b9paMESlrXoemePCp28VfRsjhNULyIBOxKoB92wdrcsN8uh_hoMq6bXIMmyCDFfT1bW1LYQK=w0
+[hires-ribbon]:  https://lh3.googleusercontent.com/PgqjQX65sueEbb1-1Uq2hYDpsNeqAmIRDO5y-ycy0CPJsgbrN2U9SfKuY-27rovjU8fG-OkQN6VzMepbgYh5J57ri5XOZNScU81HGGaOf5feHqgt-0_CbopR8DeIG3R7H7Ejpoc1r3MBk28pjjQlqAPN2kmFJ4XKeWsCHxuq852O07Hl7DX2SHtKATTjC-V24qTrxt5oLezSeSEtaRkJjk3WKkQojWX_pV_FfAeGlGHTzvMx4-bHWh2I_qQgNAgyoNi9cBpQuj5ZgLGx7KZDlWPYN10zUSRO0GpeiXuHgY9pROlnotqKVgOHEDTL3IC74mtEazKTbRDNtznlRdogVmni4g8wLkmjtqzog1I7uNGgd2EQXYuo4LOcYceAFdo2CEPdTDXJVh686itlWIpkAJ9HpwAL1QipWwhDiQOIyiwNMrmremNvZOmUnBRZ7N1feHiRn0Z0kyMO5mQvYbT8ciXlHukQJbJat2-s9-9EpLLwyoWPQnMKxlCZr_SFiS6B768kBgRTaKG4qgnzKUKEAvDgkMLDCKRSBucsvsH_Px2Rz7mYJj8mACneOn5xPeyZVD8cO0zT8_Nip0jyU0wah9XqlzZy7GGGHqB-pWcE13Lid7-e=w0
 
 [dotfiles-final]:       {{ site.url }}/assets/posts/design/2016/10/flat-isometric-looks.svg.gz
 
 [deviant-sample-1]: http://nurwijayadi.deviantart.com/art/Anies-Sandiaga-Hashtag-646646564
 [deviant-sample-2]: http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-646576299
+[deviant-sample-3]: http://nurwijayadi.deviantart.com/art/Flat-Wallpaper-with-Isometric-Looks-646980074
