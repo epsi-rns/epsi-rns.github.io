@@ -311,7 +311,7 @@ Each with downloadable SVGs.
 
 -- -- --
 
-That's all for now.
+Enjoy.
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
