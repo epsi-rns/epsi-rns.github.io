@@ -26,7 +26,7 @@ But with Isometric you need to Skew, before Rotate the object.
 Skewing has a more realistic looks as its advantage,
 as you can see in this preview.
 
-![Preview Wallpaper][image-preview]{: .img-responsive }
+[![Preview Wallpaper][image-preview]{: .img-responsive }][hires-final]
 
 -- -- --
 
@@ -305,9 +305,9 @@ You can review our tutorial in this SVG source.
 I also put two link other example ini DeviantArt.
 Each with downloadable SVGs.
 
-* [White Blue: Pilkada][deviant-sample-1]
+* [White Blue][deviant-sample-1]
 
-* [Black Red: Message][deviant-sample-2]
+* [Black Red][deviant-sample-2]
 
 -- -- --
 
@@ -334,10 +334,11 @@ That's all for now.
 [image-bar-shadow]:     {{ site.url }}/assets/posts/design/2016/10/flat-isometric-bar-shadow.png
 [image-bar-color]:      {{ site.url }}/assets/posts/design/2016/10/flat-isometric-bar-color.png
 [image-text-snap]:      {{ site.url }}/assets/posts/design/2016/10/flat-isometric-text-snap.png
-[image-preview]:          {{ site.url }}/assets/posts/design/2016/10/flat-isometric-preview.png
+[image-preview]:        {{ site.url }}/assets/posts/design/2016/10/flat-isometric-preview.png
 [image-final]:          {{ site.url }}/assets/posts/design/2016/10/flat-isometric-final.png
 
-[hires-final]: https://lh3.googleusercontent.com/dMbAbaP5pDAiHY1Iszrtul9wrCTce1lpwiR7Y6RCjFvISqJy0pApQ0wd_H0nKo-IQb0JeEQ7SPu2DrOSlwtGd9M-1XvRsQ9uouJjkdkljSWS0hnunfOTgVp3obkn3aKxtiLlHEMFg8KFVDLpUf4Z0crRuDR7XYpvmcPBCRWf_k6I4QV0ULOKNLgPVuPFA_gUF_rDTA86fFBGBy4O1W1PWrk-0gSffwKn9ixjSXoMGNVQlSCVsZj_ON0OL1hKI8HYSQauZI0F6dMURCvIbVEll91OnjByp_anrKyqxcvkuZGCOzqQJEGPoXUSj_H4eWbacLI2tVzGPMs4R_wBqK05kd8KWxSeMlFAfaG3aDRCagEYUnYEIDEd_f1LeikpKudYOVBkJVVLr6_tPne2doFNoXYzkk9l9rvJg_UL0G99kDGgYwduIxLN5Bb5mbbG3iLmNzX0ZXzrpdKLqR6vpU6j-8M3sivn2jmCZa5BLH6Xm-x2OmgZq03DJ5OXMjdqDK_Zf3SUyHxlAb91-wNaZ8NaNpAmNptuGh0-dIcD0t13cVVzPnVFfz8S6gwCcO6MVQS3jhWs5AI1n00l4M7MQpwG3XFaLShCHJB7tFMgSXJfU03V6iNy=w0
+[hires-preview]: https://lh3.googleusercontent.com/GYPXUpUEFWq8g9Tn9k91wHV5XIWHq5IdcHNmYLWkhyFiybLXNbglpgrp9ut8eQLLNrmMbA_K8hVtlTQJ4bBjvvoMOed5mnoh2eUOiyIOKYBEkdUQJ8mXPXNqi74kspTUncJUhRduBzr_bf3gsFRiwHg-k2DI3Hke_LLHmyJu-NszGaOgDhN2de8iVzgAEkavwWwErT48nrp1FuTnBE3Dl4nUlbtZX83VIOrRRmoXZYK7P8tceHFn1OY4YpZ3eGdusH1fOSnCvBe9SXRlfjuPtJSAZ_b8hRCcBwHhkZibRlw0GQSUycCGq3ss4Gz2E1YuH3CyDvVmVapH0R1Z47p8dkcv-351PBkmlJPmRDjfa_utRThq1eudH32UQfKjT-5CE9_QccXQ33H_uAR33yeZ-BdbUd-3lSXaIjTwOVzt4QbBc7ZpXNnb3PvvTD8C_L852KOx6dCxX5532_UfDDodCXTLHNU02kSX0gYBWo5EofDAE6F5qwVao88ruwoBhFkP71Jmnxci_fiFUwqzMjlTIkskaJbTuLgkBAIC0sNpAPBWR3fVrImPgz8zsPtEoTo1AlJx0Rjc8Q4SRZOCYgE5IV_uuHeQGv65nOGZ3bp0kPWZUzc4=w0
+[hires-final]:   https://lh3.googleusercontent.com/SDi3WfEYcQgAVeYlZrHbXaf8Rso9vhQzxap8ekr3gChLpjRnSAOqWQDRGyNCFUH5FEXGnj4aXo7BwasbGirzPRcNPu84ddck9lnqj0pJ8Tzhx1XgWublM7Zxy1rJCYDSLYxpyukUdPQWNTnIAfWdpl3z50o8u1IL0tlGLIEAiBjcSL-QzSvgUgQlHxmPz6MrJkC06SetQC6-uQCixRCIsxHduEht-u1Fh8YNneIC7VjJ6cqFwHBf_Sek5p49-P_EwNuaS0TXbnp-VdJRBd9Jx9-AkGduHcT2faP3pO13s25VIa-qdIr4antUWqEWe5dhyZMYF7Z5-thHfNIJFqFCmwNG1VuGAU-SnX0Map02x5GQnlysssogoKjVh0xJimKq4Kd-PO9_OiObAwCcrnjaB6upMMN_qETPYc3GhKg57H0Pf8F0PC-82qk2V5aI8dkq_ISEP68_ELvYkubw08eiQM-_noJEVqUcrtNMxV2rH6HwqkEdWQcw8r6FgzFWzB5v0bRbRE-kDoNLClWus2TN3CQIIl4-lWOb5zXvJoZ6b9paMESlrXoemePCp28VfRsjhNULyIBOxKoB92wdrcsN8uh_hoMq6bXIMmyCDFfT1bW1LYQK=w0
 
 [dotfiles-final]:       {{ site.url }}/assets/posts/design/2016/10/flat-isometric-looks.svg.gz
 
