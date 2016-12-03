@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "Install Awesome WM in Arch Linux based Distribution"
 categories: desktop
 date:   2016-06-29 23:34:15 +0700

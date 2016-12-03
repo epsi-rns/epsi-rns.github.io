@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "LXQT with Windowish Looks, No Kidding"
 date:   2014-10-19 11:49:15 +0700
 categories: desktop

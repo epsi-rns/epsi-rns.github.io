@@ -1,5 +1,5 @@
 ---
-layout: page-sidemenu
+layout: page-sidemenu-wm
 title: XMonad
 ---
 

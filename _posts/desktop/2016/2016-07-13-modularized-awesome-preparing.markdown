@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "Preparing Modularized Awesome WM Configuration"
 categories: desktop
 date:   2016-07-13 12:50:15 +0700

@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "Awesome WM, Tiling WM for beginner"
 date:   2014-11-30 04:19:15 +0700
 categories: desktop

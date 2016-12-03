@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "Refactoring Awesome WM's Lua Configuration Script"
 date:   2016-03-19 16:41:15 +0700
 categories: desktop

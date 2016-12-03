@@ -1,13 +1,25 @@
 # Site navigation links
 
-- title: Test Menu
-  url: #
-  
-- title: Install Jekyll Debian
-  url: /webdev/2016/06/23/jekyll-debian-install.html
-  
-- title: Install Jekyll Arch
-  url: /webdev/2016/06/22/jekyll-arch-install.html
+- title: Jekyll
+  url: /pages/webdev/jekyll.html
+  submenu:
+  - title: Install Debian
+    url: /webdev/2016/06/23/jekyll-debian-install.html
+  - title: Install Arch
+    url: /webdev/2016/06/22/jekyll-arch-install.html
 
-- title: Index
-  url: /
+- title: Liquid
+  url: /pages/webdev/liquid.html
+  submenu:
+  - title: "Post Archives No Plugin"
+    url: /webdev/2016/06/09/jekyll-post-archives-without-plugin.html
+  - title: "Related Posts No Plugin"
+    url: /webdev/2016/05/29/jekyll-related-posts-without-plugin.html
+  - title: "Elapsed Time"
+    url: /webdev/2016/06/12/jekyll-liquid-time-elapsed.html
+  - title: "Sidemenu No Javascript"
+    url: /webdev/2016/08/13/jekyll-sidemenu-without-javascript.html
+  - title: "Sidemenu Simple Tree"
+    url: /webdev/2016/08/12/jekyll-sidemenu-simpletree.html
+  - title: "Responsive Side Menu"
+    url: /webdev/2016/08/11/jekyll-responsive-sidemenu.html

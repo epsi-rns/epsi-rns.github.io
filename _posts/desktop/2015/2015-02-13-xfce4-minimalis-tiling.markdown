@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "Minimalist XFCE4 with Limited Tiling Support"
 date:   2015-02-13 08:48:15 +0700
 categories: desktop

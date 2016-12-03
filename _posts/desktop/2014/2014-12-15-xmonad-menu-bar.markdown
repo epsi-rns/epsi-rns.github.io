@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu
+layout: post-sidemenu-wm
 title:  "XMonad Menu Bar"
 date:   2014-12-15 11:58:15 +0700
 categories: desktop
