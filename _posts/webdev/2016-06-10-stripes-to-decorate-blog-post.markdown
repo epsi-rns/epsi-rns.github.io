@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: post-sidemenu-jekyll
 title:  "Create Stripes Using Inkscape to Decorate Blog Post"
 categories: webdev
 date:   2016-06-10 02:51:15 +0700
-tags: [thought, inkscape, jekyll]
+tags: [inkscape, jekyll]
 author: epsi
 
 excerpt:

@@ -3,7 +3,7 @@ layout: post-sidemenu-jekyll
 title:  "Jekyll Related Posts Without Plugin"
 categories: webdev
 date:   2016-05-29 23:48:15 +0700
-tags: [thought, jekyll, liquid]
+tags: [jekyll, liquid]
 author: epsi
 
 excerpt:

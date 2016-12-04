@@ -3,6 +3,10 @@
 - title: Jekyll
   url: /pages/webdev/jekyll.html
   submenu:
+  - title: Overview
+    url: /webdev/2016/05/14/jekyll-blog-overview.html
+  - title: "Webcoder Guidance"
+    url: /webdev/2016/06/14/how-a-webcoder-begin.html
   - title: Install Debian
     url: /webdev/2016/06/23/jekyll-debian-install.html
   - title: Install Arch
@@ -23,3 +27,9 @@
     url: /webdev/2016/08/12/jekyll-sidemenu-simpletree.html
   - title: "Responsive Side Menu"
     url: /webdev/2016/08/11/jekyll-responsive-sidemenu.html
+
+- title: Stylesheet
+  url: /pages/webdev/stylesheet.html
+  submenu:
+  - title: "Stripes Decoration"
+    url: /webdev/2016/06/10/stripes-to-decorate-blog-post.html

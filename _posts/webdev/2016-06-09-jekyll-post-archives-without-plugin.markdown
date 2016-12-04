@@ -3,7 +3,7 @@ layout: post-sidemenu-jekyll
 title:  "Jekyll Post Archives Without Plugin"
 categories: webdev
 date:   2016-06-09 03:51:15 +0700
-tags: [thought, jekyll, liquid]
+tags: [jekyll, liquid]
 author: epsi
 
 excerpt:

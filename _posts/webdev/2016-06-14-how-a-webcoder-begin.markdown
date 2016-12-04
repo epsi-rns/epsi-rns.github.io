@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: post-sidemenu-jekyll
 title:  "Step by Step Guidance to be a Webcoder"
 date:   2016-06-14 01:09:15 +0700
 categories: webdev
-tags: [thought]
+tags: [thought, jekyll]
 author: epsi
 
 excerpt:

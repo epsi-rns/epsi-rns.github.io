@@ -3,7 +3,7 @@ layout: post-sidemenu-jekyll
 title:  "Elapsed Time, Yet Another Jekyll Liquid Port"
 categories: webdev
 date:   2016-06-12 06:25:15 +0700
-tags: [thought, jekyll, liquid]
+tags: [jekyll, liquid]
 author: epsi
 
 excerpt:
