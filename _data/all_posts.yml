@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 16120452
+  title: "Jekyll Directory Structure"
+  url: /webdev/2016/12/04/jekyll-directory-structure.html
+
 - id: 16111957
   title: "Manjaro Logo on i3WM on Material Wallpaper"
   url: /desktop/2016/11/19/manjaro-logo.html
@@ -140,6 +144,10 @@
 - id: 16051800
   title: "Becoming a Geek, a Weird Story About Nerd"
   url: /opensource/2016/05/18/becoming-geek.html
+
+- id: 16051435
+  title: "Jekyll Blog Overview"
+  url: /webdev/2016/05/14/jekyll-blog-overview.html
 
 - id: 16051403
   title: "How Haskell Syntax can Make Your Code Cleaner"

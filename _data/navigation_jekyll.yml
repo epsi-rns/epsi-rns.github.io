@@ -5,31 +5,33 @@
   submenu:
   - title: Overview
     url: /webdev/2016/05/14/jekyll-blog-overview.html
-  - title: "Webcoder Guidance"
+  - title: Webcoder Guidance
     url: /webdev/2016/06/14/how-a-webcoder-begin.html
   - title: Install Debian
     url: /webdev/2016/06/23/jekyll-debian-install.html
   - title: Install Arch
     url: /webdev/2016/06/22/jekyll-arch-install.html
+  - title: Directory Structure
+    url: /webdev/2016/12/04/jekyll-directory-structure.html    
 
 - title: Liquid
   url: /pages/webdev/liquid.html
   submenu:
-  - title: "Post Archives No Plugin"
+  - title: Post Archives No Plugin
     url: /webdev/2016/06/09/jekyll-post-archives-without-plugin.html
-  - title: "Related Posts No Plugin"
+  - title: Related Posts No Plugin
     url: /webdev/2016/05/29/jekyll-related-posts-without-plugin.html
-  - title: "Elapsed Time"
+  - title: Elapsed Time
     url: /webdev/2016/06/12/jekyll-liquid-time-elapsed.html
-  - title: "Sidemenu No Javascript"
+  - title: Sidemenu No Javascript
     url: /webdev/2016/08/13/jekyll-sidemenu-without-javascript.html
-  - title: "Sidemenu Simple Tree"
+  - title: Sidemenu Simple Tree
     url: /webdev/2016/08/12/jekyll-sidemenu-simpletree.html
-  - title: "Responsive Side Menu"
+  - title: Responsive Side Menu
     url: /webdev/2016/08/11/jekyll-responsive-sidemenu.html
 
 - title: Stylesheet
   url: /pages/webdev/stylesheet.html
   submenu:
-  - title: "Stripes Decoration"
+  - title: Stripes Decoration
     url: /webdev/2016/06/10/stripes-to-decorate-blog-post.html
