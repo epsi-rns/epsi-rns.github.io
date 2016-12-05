@@ -191,6 +191,10 @@ Now let's see what's happened in <code class="code-file">_site</code>.
 
 ![Jekyll Directory: _site][image-ss-site-root]{: .img-responsive }
 
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../_posts][dotfiles-posts]
+
 -- -- --
 
 ## pages Directory
@@ -209,6 +213,10 @@ links in <code class="code-file">pages/index.html</code>
 into some <code class="code-file">_site/pages/blog-n.html</code>
 
 ![Jekyll Directory: _site/pages][image-ss-site-pages]{: .img-responsive }
+
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../pages][dotfiles-pages]
 
 -- -- --
 
@@ -284,6 +292,13 @@ And instantly, those can be called in your favorite web browser.
 * <code class="code-file">http://localhost:4000/desktop/2016/07/13/awesome-preparing.html</code>.
 
 * <code class="code-file">http://localhost:4000/desktop/2016/08/01/i3status-conky-lua-json.html</code>.
+
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../_posts][dotfiles-posts]
+
+Just like that. Very simple. So common for people working with computers.
+But I have seen professionals failed to tidy their own data in their firm.
 
 ## assets Directory
 
@@ -366,10 +381,14 @@ And later, you attach image from any of your markdown post.
 {% endraw %}
 {% endhighlight %}
 
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../assets][dotfiles-assets]
+
 ## _layout Directory
 
 There is not much to talk about layout unless you are a hardcore site designer.
-This directory is containing your most html5 code.
+This directory is containing your most <code>html5</code> code.
 
 {% highlight bash %}
 . _layout
@@ -383,11 +402,15 @@ This directory is containing your most html5 code.
 └── post-sidemenu-wm.html
 {% endhighlight %}
 
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../_layouts][dotfiles-layouts]
+
 ## _include Directory
 
 This one is not too boring as _layout directory, and it deserve its own article.
 But for now, I give you brief explanation.
-This directory is containing your most liquid code as part of your layout.
+This directory is containing your most <code>liquid</code> code as part of your layout.
 
 The idea is basically putting your own code,
 just to be not too crowded in one single directory.
@@ -431,6 +454,11 @@ And here is the details.
 
 {% endhighlight %}
 
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../_includes][dotfiles-includes]
+
+
 ## _sass Directory
 
 This one is interesting, and it also deserve its own article.
@@ -446,6 +474,10 @@ Hypotethically, you can create your own switchable theme, with Jekyll.
 Although I have never seen anyone reach that far.
 
 ![Jekyll Directory: _sass][image-ss-root-sass]{: .img-responsive }
+
+**Source**:
+
+* [github.com/epsi-rns/dotfiles/.../_sass][dotfiles-sass]
 
 -- -- --
 
@@ -463,3 +495,10 @@ Happy Jekylling !
 
 [image-ss-root-include]: {{ asset_path }}/jekyll-dir-03-root-include.png
 [image-ss-root-sass]:    {{ asset_path }}/jekyll-dir-04-root-sass.png
+
+[dotfiles-pages]:    https://github.com/epsi-rns/epsi-rns.github.io/tree/master/pages
+[dotfiles-assets]:   https://github.com/epsi-rns/epsi-rns.github.io/tree/master/assets
+[dotfiles-posts]:    https://github.com/epsi-rns/epsi-rns.github.io/tree/master/_posts
+[dotfiles-layouts]:  https://github.com/epsi-rns/epsi-rns.github.io/tree/master/_layouts
+[dotfiles-includes]: https://github.com/epsi-rns/epsi-rns.github.io/tree/master/_includes
+[dotfiles-sass]:     https://github.com/epsi-rns/epsi-rns.github.io/tree/master/_sass
