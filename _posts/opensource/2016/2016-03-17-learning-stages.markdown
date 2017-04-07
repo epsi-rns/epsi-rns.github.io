@@ -80,7 +80,9 @@ Tell me if there is more thing to be done!
 
 * Scripting Language
 
-	+ bash/awk, perl, python
+	+ [bash][link-bash], sed/awk, ksh, zsh
+	
+	+ Perl, Python, Ruby
 
 <br/>
 Most importantly, have fun with all
@@ -167,5 +169,6 @@ I think one month is not enough for both.
 
 [link-ubuntu-manual]: https://ubuntu-manual.org/
 [link-debian-handbook]: https://debian-handbook.info/browse/stable/
+[link-bash]: https://github.com/awesome-lists/awesome-bash
 [local-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
 [local-arch-log]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html

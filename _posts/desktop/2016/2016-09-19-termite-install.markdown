@@ -262,6 +262,12 @@ termite v11-33-g7a7021f
 
 -- -- --
 
+### Issue with Debian
+
+If you have trouble with xfce4-terminal, simply remove symbolic link, or any vte generated in /usr/local/lib .
+
+-- -- --
+
 I think that's all.
 
 

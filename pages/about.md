@@ -17,7 +17,7 @@ Although I like command line, I'm not a hacker.
 You won't find any illegal activities in this site.
 
 You can read a glance about my journey here
-
+ 
 * [Becoming a Local Geek][local-geek]
 
 This is my temporary about page. 
