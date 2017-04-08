@@ -37,7 +37,7 @@ Dzen2 is easy when you have guidance.
 ### Why Learn Dzen2 ?
 
 As a complement of Tiling Window Manager. 
-People use standalone panel,
+People use standalone panel (or statusbar),
 e.g. Dzen2, Lemonbar, and stuff.
 
 Let us see this preview image to see what can be achieved by Dzen2.
@@ -51,9 +51,8 @@ Just learn some keystrokes, and everything is functional.
 And later you can go deep into configuration if you want.
 
 Further than this, especially for ricing,
-the hardest part is to make a beautiful panel setup.
-Most of the time, the panel part,
-is the longest configuration part.
+the hardest part is to make a beautiful panel/ statusbar setup.
+Most of the time, the panel part, is the longest configuration part.
 
 There are a few consideration in building an acceptable panel.
 
@@ -63,7 +62,11 @@ There are a few consideration in building an acceptable panel.
 
 3.	Make the panel, not resource hungry. Not hogging the CPU proccess.
 
-Here we are going to cover the first part using BASH.
+Here we are going to cover the first and second part using BASH.
+
+With understanding of dzen2 statusbar,
+learning Tiling Window Manager, become easier.
+You can focus on the Window Manager instead of statusbar stuff.
 
 -- -- --
 
@@ -349,23 +352,18 @@ But you can see my unfinished code here for my HerbstluftWM.
 
 -- -- --
 
-### Using Dzen2 with Conky
+### Using Dzen2 with Conky Lua
 
 This is a very interesting topic.
+Conky is less complicated, and Lua can help you more.
 But since we need to leave BASH for Lua.
 This deserve an article of its own.
-
 
 -- -- --
 
 I think that's all.
-
-<br/>
-
 Thank you for reading.
-<br/><br/>
-
-Sorry for my english<br/>
+Sorry for my english.
 I know how terrible it is.
 
 
