@@ -306,6 +306,9 @@ Icon <code>^i()</code> can be used to show
 
 *	Eye Candy Glyph Icons
 
+There are many limitation, on using PowerlineSymbol as decoration.
+If you need a more precise decoration, you might consider icon feature in Dzen2.
+
 Here is a working example:
 <code class="code-file">example-04-main.sh</code> and
 <code class="code-file">example-04-output.sh</code>.
@@ -393,6 +396,46 @@ generated_output() {
 
 -- -- --
 
+### Create Decoration for Your own Suite.
+
+Everybody has different requirement, taste and style.
+Instead of giving <code class="code-file">.xbm</code> files,
+I'd better give the Source Image.
+And explain the creation process.
+
+**Source Image**:<br/>
+
+*	[github.com/.../xbm-source/...][dotfiles-xbm-source]
+
+![Image Source: Diagonal][image-source-diagonal]{: .img-responsive }
+
+Here is the Proces Flow for Each Image.
+
+*	Create Inkscape <code class="code-file">.svg</code> with size 100x100px Page size.
+	And <kbd>Save</kbd> this <code class="code-file">diagonal.svg</code> file.
+
+*	Export Page to <code class="code-file">.png</code> with 96 dpi.
+	e.g. <code class="code-file">diagonal.png</code> file.
+
+*	Open <code class="code-file">.png</code> with GIMP,
+	Transformed it into Black and White.
+	Using <kbd>Image - Mode - Indexed - 1 bit Palette</kbd>.
+	And <kbd>Save</kbd> this <code class="code-file">.png</code> file.
+
+*	<kbd>	Scale Image - Height 24</kbd>.
+	Or the same height as your panel.
+	Do not forget to keep the ratio
+
+*	<kbd>Export As - X Bitmap Image</kbd>.
+	e.g. <code class="code-file">dc-24br-.xbm</code> file.
+	Do not use X10 Format Bitmap.
+
+You may use the same process, or just use GIMP Image Transform,
+e.g. <kbd>Image - Transform - Rotate</kbd>,
+or <kbd>Image - Transform - Flip</kbd>.
+
+-- -- --
+
 ### Monitoring Panel
 
 You can use Dzen2 as monitoring panel.
@@ -474,6 +517,7 @@ I know how terrible it is.
 [image-02-example-02]: {{ asset_path }}/dzen2-02-example-02.png
 [image-02-example-03]: {{ asset_path }}/dzen2-02-example-03.png
 [image-02-example-04]: {{ asset_path }}/dzen2-02-example-04.png
+[image-source-diagonal]: {{ asset_path }}/decoration-source-diagonal.png
 
 [image-03-theme-dark-colorful]: {{ asset_path }}/dzen2-03-theme-dark-colorful.png
 [image-03-theme-bright-colorful]: {{ asset_path }}/dzen2-03-theme-bright-colorful.png
