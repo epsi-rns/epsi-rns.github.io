@@ -410,7 +410,7 @@ And explain the creation process.
 
 *	[github.com/.../xbm-source/...][dotfiles-xbm-source]
 
-![Image Source: Diagonal][image-source-diagonal]{: .img-responsive }
+![Image Source: Diagonal][image-source-shapes]{: .img-responsive }
 
 Here is the Proces Flow for Each Image.
 
@@ -525,7 +525,7 @@ I know how terrible it is.
 [image-02-example-02]: {{ asset_path }}/dzen2-02-example-02.png
 [image-02-example-03]: {{ asset_path }}/dzen2-02-example-03.png
 [image-02-example-04]: {{ asset_path }}/dzen2-02-example-04.png
-[image-source-diagonal]: {{ asset_path }}/decoration-source-diagonal.png
+[image-source-shapes]: {{ asset_path }}/xbm-source-shapes.png
 
 [image-03-theme-dark-colorful]: {{ asset_path }}/dzen2-03-theme-dark-colorful.png
 [image-03-theme-bright-colorful]: {{ asset_path }}/dzen2-03-theme-bright-colorful.png
