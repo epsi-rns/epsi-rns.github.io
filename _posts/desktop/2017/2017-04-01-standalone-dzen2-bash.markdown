@@ -307,7 +307,10 @@ Icon <code>^i()</code> can be used to show
 *	Eye Candy Glyph Icons
 
 There are many limitation, on using PowerlineSymbol as decoration.
-If you need a more precise decoration, you might consider icon feature in Dzen2.
+And it is not portable enough, when the font is not always installed.
+If you need a more precise decoration,
+you might consider icon feature in Dzen2,
+using <code>^i()</code> tag.
 
 Here is a working example:
 <code class="code-file">example-04-main.sh</code> and
@@ -412,10 +415,10 @@ And explain the creation process.
 Here is the Proces Flow for Each Image.
 
 *	Create Inkscape <code class="code-file">.svg</code> with size 100x100px Page size.
-	And <kbd>Save</kbd> this <code class="code-file">diagonal.svg</code> file.
+	And <kbd>Save</kbd> this <code class="code-file">diagonal-corner.svg</code> file.
 
 *	Export Page to <code class="code-file">.png</code> with 96 dpi.
-	e.g. <code class="code-file">diagonal.png</code> file.
+	e.g. <code class="code-file">diagonal-corner.png</code> file.
 
 *	Open <code class="code-file">.png</code> with GIMP,
 	Transformed it into Black and White.
@@ -468,6 +471,10 @@ Let's see how the variation goes
 ![Dzen2 Theme: Dark Arrow][image-03-theme-blue-arrow]{: .img-responsive }
 
 ![Dzen2 Theme: Dark Arrow][image-03-theme-mix-arrow]{: .img-responsive }
+
+![Dzen2 Theme: Bright Arrow][image-03-theme-red-deco]{: .img-responsive }
+
+![Dzen2 Theme: Dark Arrow][image-03-theme-mix-deco]{: .img-responsive }
 
 **Source**:<br/>
 
@@ -524,6 +531,8 @@ I know how terrible it is.
 [image-03-theme-red-arrow]: {{ asset_path }}/dzen2-03-theme-red-arrow.png
 [image-03-theme-blue-arrow]: {{ asset_path }}/dzen2-03-theme-blue-arrow.png
 [image-03-theme-mix-arrow]: {{ asset_path }}/dzen2-03-theme-mix-arrow.png
+[image-03-theme-red-deco]: {{ asset_path }}/dzen2-03-theme-red-deco.png
+[image-03-theme-mix-deco]: {{ asset_path }}/dzen2-03-theme-mix-deco.png
 
 [dotfiles-example-01]: {{ dotfiles_path }}/example-01.sh
 [dotfiles-example-02-main]:   {{ dotfiles_path }}/example-02-main.sh
