@@ -415,6 +415,7 @@ And explain the creation process.
 Here is the Proces Flow for Each Image.
 
 *	Create Inkscape <code class="code-file">.svg</code> with size 100x100px Page size.
+	Create the simple shape as needed, e.g. triangle at bottom right to create a diagonal corner.
 	And <kbd>Save</kbd> this <code class="code-file">diagonal-corner.svg</code> file.
 
 *	Export Page to <code class="code-file">.png</code> with 96 dpi.
