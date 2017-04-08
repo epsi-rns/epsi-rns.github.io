@@ -298,6 +298,101 @@ generated_output() {
 
 -- -- --
 
+### Graphic Decoration in dzen2
+
+Icon <code>^i()</code> can be used to show
+
+*	Graphic Decoration, more than Powerline Style Arrow
+
+*	Eye Candy Glyph Icons
+
+Here is a working example:
+<code class="code-file">example-04-main.sh</code> and
+<code class="code-file">example-04-output.sh</code>.
+
+
+**Source**:<br/>
+
+*	[github.com/.../example-04-main.sh][dotfiles-example-04-main]
+
+*	[github.com/.../example-04-output.sh][dotfiles-example-04-output]
+
+Dzen2 can read <code class="code-file">.xbm</code> image format.
+For your convenience, I have made some eight glyph icons.
+For each has height of 24px, the same height as dzen panel.
+
+**XBM**:<br/>
+
+*	[github.com/.../xbm/...][dotfiles-xbm]
+
+*	[github.com/.../xbm-source/...][dotfiles-xbm-source]
+
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+# color, 
+colWhite='#ffffff'
+colBlack='#000000'
+
+# also using google material
+colRed500='#f44336'
+colYellow500='#ffeb3b'
+colBlue500='#2196f3'
+colGrey500='#9e9e9e'
+
+# http://fontawesome.io/
+FontAwesome="^fn(FontAwesome-9)"
+
+# icon 
+preIcon="^fg($colYellow500)$FontAwesome"
+postIcon="^fn()^fg()"
+
+# Glyph Icon Decoration
+decopath="Documents/standalone/dzen2/assets/xbm"
+
+# diagonal corner
+deco_dc_tl="^i($decopath/dc-024-tl.xbm)"
+deco_dc_tr="^i($decopath/dc-024-tr.xbm)"
+deco_dc_bl="^i($decopath/dc-024-bl.xbm)"
+deco_dc_br="^i($decopath/dc-024-br.xbm)"
+
+# single arrow and double arrow
+deco_sa_l="^i($decopath/sa-024-l.xbm)"
+deco_sa_r="^i($decopath/sa-024-r.xbm)"
+deco_da_l="^i($decopath/da-024-l.xbm)"
+deco_da_r="^i($decopath/da-024-r.xbm)"
+
+generated_output() {
+    local iconDate="$preIcon$postIcon"
+    local iconTime="$preIcon$postIcon"
+
+    # endless loop
+    while :; do   
+        local date=$(date +'%a %b %d')
+        local time=$(date +'%H:%M:%S')
+        
+        local text=""
+        text+="^bg($colBlue500)^fg($colWhite)$deco_dc_tl "
+        text+="^bg($colBlue500) $iconDate ^fg()  $date  "
+        text+="^bg($colWhite)^fg($colBlue500)$deco_da_r"
+        text+="^bg()^fg() "
+        text+="^bg($colWhite)^fg($colRed500)$deco_da_l"
+        text+="^bg($colRed500) $iconTime ^fg() $time  ^bg()"
+        text+="^bg($colWhite)^fg($colRed500)$deco_dc_bl "
+             
+        echo -n $text 
+        echo
+      
+      sleep 1
+    done
+}
+{% endhighlight %}
+
+![Dzen2 Graphics Decoration Icon Example][image-02-example-04]{: .img-responsive }
+
+-- -- --
+
 ### Monitoring Panel
 
 You can use Dzen2 as monitoring panel.
@@ -371,12 +466,14 @@ I know how terrible it is.
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash' %}
+{% assign dotfiles_assets = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/assets' %}
 
 [image-01-preview]: {{ asset_path }}/dzen2-01-preview.png
 [image-02-example-00]: {{ asset_path }}/dzen2-02-example-00.png
 [image-02-example-01]: {{ asset_path }}/dzen2-02-example-01.png
 [image-02-example-02]: {{ asset_path }}/dzen2-02-example-02.png
 [image-02-example-03]: {{ asset_path }}/dzen2-02-example-03.png
+[image-02-example-04]: {{ asset_path }}/dzen2-02-example-04.png
 
 [image-03-theme-dark-colorful]: {{ asset_path }}/dzen2-03-theme-dark-colorful.png
 [image-03-theme-bright-colorful]: {{ asset_path }}/dzen2-03-theme-bright-colorful.png
@@ -389,6 +486,11 @@ I know how terrible it is.
 [dotfiles-example-02-output]: {{ dotfiles_path }}/example-02-output.sh
 [dotfiles-example-03-main]:   {{ dotfiles_path }}/example-03-main.sh
 [dotfiles-example-03-output]: {{ dotfiles_path }}/example-03-output.sh
+[dotfiles-example-04-main]:   {{ dotfiles_path }}/example-04-main.sh
+[dotfiles-example-04-output]: {{ dotfiles_path }}/example-04-output.sh
+
+[dotfiles-xbm]: {{ dotfiles_assets }}/xbm/
+[dotfiles-xbm-source]: {{ dotfiles_assets }}/xbm-source/
 
 [dotfiles-main]: {{ dotfiles_path }}/main.sh
 [dotfiles-segments]: {{ dotfiles_path }}/segments.sh
