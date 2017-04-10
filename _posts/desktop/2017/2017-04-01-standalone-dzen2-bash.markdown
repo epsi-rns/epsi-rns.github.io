@@ -54,6 +54,14 @@ Further than this, especially for ricing,
 the hardest part is to make a beautiful panel/ statusbar setup.
 Most of the time, the panel part, is the longest configuration part.
 
+With understanding of dzen2 statusbar,
+learning Tiling Window Manager, become easier.
+You can focus on the Window Manager instead of statusbar stuff.
+
+-- -- --
+
+### Topics Covered
+
 There are a few consideration in building an acceptable panel.
 
 1.	Make the panel show the shape, as you wish.
@@ -64,9 +72,20 @@ There are a few consideration in building an acceptable panel.
 
 Here we are going to cover the first and second part using BASH.
 
-With understanding of dzen2 statusbar,
-learning Tiling Window Manager, become easier.
-You can focus on the Window Manager instead of statusbar stuff.
+
+In order to make the shape we need to know a few tags.
+
+*	Foregroun Color: <code>^fg()</code>
+
+*	Background Color: <code>^bg()</code>
+
+*	Font: <code>^fn()</code>
+	We are going to use AwesomeFont to show Icons.
+	And PowerlineSymbols to make a Powerline like statusbar.
+
+*	Decoration: <code>^i()</code>
+	This tag is used to show Icon from Image Glyph.
+	But we are going to use it to make a better Powerline like statusbar.
 
 -- -- --
 
@@ -90,7 +109,23 @@ Dzen will be shown at bottom right corner.
 
 {% highlight bash %}
 $ while sleep 1; do date +'%a %b %d %H:%M:%S'; done | \
-  dzen2 -ta r -h 25 -y -30 -w 200 -x -200
+  dzen2 -ta r -h 25 -y -30 -w 200 -x -200 
+{% endhighlight %}
+
+Yu can use Transparency with either transset-df or 
+transset (from xorg-transset), by using -title-name.
+Use <code>&</code> to detach process from the console.
+
+{% highlight bash %}
+$ while sleep 1; do echo "Hello World"; done | dzen2 -w 640  -title-name dzentop &
+
+$ transset .8 -n dzentop
+{% endhighlight %}
+
+You can stop the process later using pkill command.
+
+{% highlight bash %}
+$ pkill dzen2
 {% endhighlight %}
 
 **Reading**:<br/>
@@ -428,7 +463,7 @@ Here is the Proces Flow for Each Image.
 
 *	<kbd>	Scale Image - Height 24</kbd>.
 	Or the same height as your panel.
-	Do not forget to keep the ratio
+	Do not forget to keep the ratio.
 
 *	<kbd>Export As - X Bitmap Image</kbd>.
 	e.g. <code class="code-file">dc-24br-.xbm</code> file.
@@ -460,8 +495,9 @@ I just made a quick and dirty after midnight script, that maybe useful for dzen2
 I do not claim that my script here is a good script, just because it is just works.
 But you should get my point, that with a little tweak, theming is possible.
 In fact, I desire to find a better script, and I wait for you to write it.
+I'm sure you can do better than me.
 
-Let's see how the variation goes
+Let's see how the variation goes. 
 
 ![Dzen2 Theme: Dark Colorful ][image-03-theme-dark-colorful]{: .img-responsive }
 
