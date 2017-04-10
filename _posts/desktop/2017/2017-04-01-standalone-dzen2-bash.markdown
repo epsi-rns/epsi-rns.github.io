@@ -75,7 +75,7 @@ Here we are going to cover the first and second part using BASH.
 
 In order to make the shape we need to know a few tags.
 
-*	Foregroun Color: <code>^fg()</code>
+*	Foreground Color: <code>^fg()</code>
 
 *	Background Color: <code>^bg()</code>
 
