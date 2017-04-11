@@ -21,6 +21,9 @@ Last week I have wrote a basic dzen tutorial using bash.
 And now we are going to continue with conky. 
 It is a lot of easier.
 
+**Reading**:<br/>
+*	<https://github.com/brndnmtthws/conky>
+
 -- -- --
 
 ### Hello World in Command Line
@@ -448,15 +451,57 @@ enabled = ''
 ![Lua Script Structure][image-13-theme-03]{: .img-responsive }
 
 You can create you own theme based on this.
-Now I have to move on to compose the next tutorial.
+And for me, there is a lot of things
+about dzen2 and conky that I haven't covered yet.
+This deserve a specific article focused on each topic.
+I simply do not have time to optimize the theme.
+It is just a quick and dirty solution.
+
+-- -- --
+
+### Issue with Tiling Window Manager
+
+	The only caveat is conky is interval based,
+	and it does not response to desktop event.
+
+From the perspective of Tiling Window Manager,
+we still need a separate dzen panel
+for use with desktop event.
+
+No matter how cool Conky Lua is.
+We can not do it all with conky lua only.
+
+-- -- --
+
+### More thoughts
+
+Yes I read the Source Code in github.
+And it TODO in that repository tells me that
+there is a plan to rewrite in C++ in Conky 2.0.
+Which is great.
+
+**Reading**:
+
+*	<https://github.com/brndnmtthws/conky>
+
+*	<https://github.com/robm/dzen>
+
+I wonder if anyone would do rewrite dzen2 
+in C++ or even Rust just because it can be done.
+It is going to be an interesting project.
+
+But hey... Get a life.
 
 -- -- --
 
 Coding is Fun.
 Especially when it comes to dzen2-conky-lua tiers.
+Now I have to move on to compose the next tutorial.
 
 That is all for now.
 Thank you for reading.
+
+Have Fun
 
 
 
