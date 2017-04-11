@@ -468,12 +468,15 @@ From the perspective of Tiling Window Manager,
 we still need a separate dzen panel
 for use with desktop event.
 
-No matter how cool Conky Lua is.
-We can not do it all with conky lua only.
+No matter how cool Conky Lua is,
+I just realize the issue,
+that we can not do it all, only with conky lua.
 
 -- -- --
 
 ### More thoughts
+
+**First**
 
 Yes I read the Source Code in github.
 And it TODO in that repository tells me that
@@ -489,6 +492,19 @@ Which is great.
 I wonder if anyone would do rewrite dzen2 
 in C++ or even Rust just because it can be done.
 It is going to be an interesting project.
+
+**Second**
+
+Or maybe a decouple system monitor in conky
+to make the output text based only.
+
+1.	A Lua based system monitor framework.
+
+2.	A general desktop output that can get any feed,
+	from any scripting language.
+	Just like dzen2, but for desktop.
+
+**Finally**
 
 But hey... Get a life.
 
