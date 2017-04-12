@@ -388,6 +388,8 @@ conky.text = _h.gototopleft() .. [[\
 -- -- --
 
 Coding is Fun.
+Again, this is just a quick and dirty solution.
+You can do better.
 
 That is all for now.
 Thank you for reading.
