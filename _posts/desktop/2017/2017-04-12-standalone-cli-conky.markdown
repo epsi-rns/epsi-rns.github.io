@@ -2,14 +2,13 @@
 layout: post-sidemenu-wm
 title:  "Standalone CLI System Monitoring Using Conky"
 categories: desktop
-date:   2017-04-13 00:25:15 +0700
+date:   2017-04-12 00:25:15 +0700
 tags: [ricing, cli, conky]
 author: epsi
 
 excerpt:
   System monitoring using Text User Interface turn out to be not so difficult.
   We have three option here, using Watch, Bash, and Conky..
-
 ---
 
 ### Preface
