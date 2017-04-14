@@ -3,7 +3,7 @@ layout: post-sidemenu-wm
 title:  "Standalone Dzen2 Statusbar Using Conky"
 categories: desktop
 date:   2017-04-11 00:05:15 +0700
-tags: [ricing, statusbar, dzen2, conky]
+tags: [ricing, statusbar, conky]
 author: epsi
 
 excerpt:
@@ -315,7 +315,7 @@ with flexible segment monitoring statusbar.
 I have made quick-and dirty-scripts.
 It means you are free to accustomize the script
 for your quick-and-dirty needs.
-It is never intended to be a prefect script.
+It is never intended to be a perfect script.
 It just works.
 
 Le'ts see the file structure. It contains:
