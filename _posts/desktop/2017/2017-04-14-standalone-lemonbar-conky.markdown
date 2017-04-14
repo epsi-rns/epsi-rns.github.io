@@ -280,7 +280,7 @@ And Conky is just the right tools comes for us.
 
 ### Composing Lemonbar in Conky Format
 
-Just like the previous example, I separate lemonbar parameter
+Just like the previous example, I have separated lemonbar parameter
 <code class="code-file">example/03-main.sh</code>  and formatting.
 This time in Lua. <code class="code-file">example/03-output.lua</code>
 
@@ -292,7 +292,7 @@ $ ~/Documents/standalone/lemon/example/03-main.sh
 
 *	[github.com/.../dotfiles/.../03-main.sh][dotfiles-example-03-main-bash]
 
-*	[github.com/.../dotfiles/.../03-output.sh][dotfiles-example-03-output-lua]
+*	[github.com/.../dotfiles/.../03-output.lua][dotfiles-example-03-output-lua]
 
 ![Lemonbar Example: Conky][image-example-03]{: .img-responsive }
 
@@ -401,11 +401,22 @@ $ ~/Documents/standalone/lemon/conky/main.sh
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
+*	[github.com/.../dotfiles/.../main.sh][dotfiles-main]
+
+*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+
+*	[github.com/.../dotfiles/.../gmc.luca][dotfiles-gmc]
+
+*	[github.com/.../dotfiles/.../helper.lua][dotfiles-helper]
+
+*	[github.com/.../dotfiles/.../parts.lua][dotfiles-parts]
+
+*	[github.com/.../dotfiles/.../assembly.lua][dotfiles-assembly]
+
 
 ![Real Life Lemonbar: Conky Lua][image-conky-01]{: .img-responsive }
 
-The entry point conky.lua relatively is simple.
+The entry point <code class="code-file">conky.lua</code> relatively is simple.
 I have put all the stuff in libraries.
 
 {% highlight lua %}
@@ -438,7 +449,7 @@ conky.text = [[\
 
 {% endhighlight %}
 
-Arrrghh... What is this enabled variable?
+Arrrghh... What is this <code>enabled</code> variable?
 Well, this script assembly each segment parts to build a nice statusbar.
 Unneeded segments, I put on disabled variable.
 This is the best parts about using conky as a lua programming language.
@@ -447,6 +458,8 @@ The assemby process looks neat and tidy.
 You can change the color and segment without a lot of effort.
 Just edit the conky.lua, and save.
 The lemonbar statusbar panel will updated automatically
+
+This is the <code class="code-file">assembly.lua</code> code.
 
 {% highlight lua %}
 --[[
@@ -511,9 +524,10 @@ Have Fun
 [dotfiles-example-03-output-lua]:  {{ dotfiles_expath }}/03-output.lua
 [dotfiles-example-02-gmc]:         {{ dotfiles_expath }}/gmc.sh
 
-[dotfiles-main]:   {{ dotfiles_path }}/main.sh
-[dotfiles-conky]:  {{ dotfiles_path }}/conky.lua
-[dotfiles-gmc]:    {{ dotfiles_path }}/gmc.lua
-[dotfiles-helper]: {{ dotfiles_path }}/helper.lua
-[dotfiles-parts]:  {{ dotfiles_path }}/parts.lua
+[dotfiles-main]:     {{ dotfiles_path }}/main.sh
+[dotfiles-conky]:    {{ dotfiles_path }}/conky.lua
+[dotfiles-gmc]:      {{ dotfiles_path }}/gmc.lua
+[dotfiles-helper]:   {{ dotfiles_path }}/helper.lua
+[dotfiles-parts]:    {{ dotfiles_path }}/parts.lua
+[dotfiles-assembly]: {{ dotfiles_path }}/assembly.lua
 
