@@ -71,6 +71,18 @@
     url: /desktop/2014/10/19/lxqt-windowish-looks.html
   - title: Gnome Shell SS
     url: /desktop/2014/04/22/gnome-shell-a-very-common.html
+
+- title: Statusbar
+  url: /pages/desktop/statusbar.html
+  submenu:  
+  - title: Dzen2 Bash
+    url: /desktop/2017/04/01/standalone-dzen2-bash.html  
+  - title: Dzen2 Conky
+    url: /desktop/2017/04/11/standalone-dzen2-conky.html
+  - title: Lemonbar Conky
+    url: /desktop/2017/04/14/standalone-lemonbar-conky.html
+  - title: CLI Conky
+    url: /desktop/2017/04/12/standalone-cli-conky.html
       
 - title: Ricing
   url: /pages/desktop/ricing.html
@@ -83,3 +95,6 @@
     url: /desktop/2016/05/19/midnight-commander-tweaking.html
   - title: Termite
     url: /desktop/2016/09/19/termite-install.html
+  - title: "Getting XLFD Font"
+    url: /desktop/2017/04/13/getting-xlfd-font.html
+

@@ -17,7 +17,7 @@ Jekyll related articles.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-about]: {{ site.url }}/pages/about.html
+[local-about]: {{ site.url }}/webdev/2016/05/14/jekyll-blog-overview.html
 
 [local-install-debian]: {{ site.url }}/webdev/2016/06/23/jekyll-debian-install.html
 [local-install-arch]:   {{ site.url }}/webdev/2016/06/22/jekyll-arch-install.html

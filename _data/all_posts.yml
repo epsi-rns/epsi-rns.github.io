@@ -5,6 +5,26 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17041425
+  title: "Standalone Lemonbar Using Conky"
+  url: /desktop/2017/04/14/standalone-lemonbar-conky.html
+
+- id: 17041320
+  title: "Getting XLFD Font"
+  url: /desktop/2017/04/13/getting-xlfd-font.html
+
+- id: 17041225
+  title: "Standalone CLI System Monitoring Using Conky"
+  url: /desktop/2017/04/12/standalone-cli-conky.html
+
+- id: 17041105
+  title: "Standalone Dzen2 Statusbar Using Conky"
+  url: /desktop/2017/04/11/standalone-dzen2-conky.html
+
+- id: 17040135
+  title: "Standalone Dzen2 Statusbar Using BASH"
+  url: /desktop/2017/04/01/standalone-dzen2-bash.html
+
 - id: 16120452
   title: "Jekyll Directory Structure"
   url: /webdev/2016/12/04/jekyll-directory-structure.html

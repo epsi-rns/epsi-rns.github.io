@@ -306,7 +306,7 @@ And yeah, very simple process.
 
 -- -- --
 
-### Real Life Statusbar
+### Dzen2 with Modularized Lua in Conky
 
 	"Let's be tidy and get organized."
 
@@ -390,7 +390,7 @@ colorPreset = {
 Before we go to far, and got you a headache,
 let's see how the dzen2 output goes.
 
-![Lua Script Structure][image-13-theme-01]{: .img-responsive }
+![Dzen2: Modularized Conky Lua][image-13-theme-01]{: .img-responsive }
 
 
 -- -- --
@@ -456,6 +456,18 @@ about dzen2 and conky that I haven't covered yet.
 This deserve a specific article focused on each topic.
 I simply do not have time to optimize the theme.
 It is just a quick and dirty solution.
+
+-- -- --
+
+### Real Life Dzen2 with Lua in Conky
+
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <span class="fa fa-check pull-right"></span>
+  <strong>Update:</strong> Additional guidance.
+</div>
+
+![Real Life Dzen2: Conky Lua][image-13-theme-03]{: .img-responsive }
 
 -- -- --
 

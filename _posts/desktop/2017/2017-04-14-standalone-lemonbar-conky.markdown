@@ -364,7 +364,7 @@ conky.text = [[\
 
 -- -- --
 
-### Real Life Lemonbar with Lua in Conky
+### Lemonbar with Modularized Lua in Conky
 
 	"Let's be tidy and get organized."
 
@@ -413,8 +413,7 @@ $ ~/Documents/standalone/lemon/conky/main.sh
 
 *	[github.com/.../dotfiles/.../assembly.lua][dotfiles-assembly]
 
-
-![Real Life Lemonbar: Conky Lua][image-conky-01]{: .img-responsive }
+![Lemonbar: Modularized Conky Lua][image-conky-01]{: .img-responsive }
 
 The entry point <code class="code-file">conky.lua</code> relatively is simple.
 I have put all the stuff in libraries.
@@ -493,6 +492,18 @@ There is no need to make this script simpler.
 No need any optimization.
 It is designed to be modified.
 Quick and Dirty.
+
+-- -- --
+
+### Real Life Lemonbar with Lua in Conky
+
+<div class="alert alert-dismissible alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <span class="fa fa-check pull-right"></span>
+  <strong>Update:</strong> Additional guidance.
+</div>
+
+![Real Life Lemonbar: Conky Lua][image-conky-01]{: .img-responsive }
 
 -- -- --
 
