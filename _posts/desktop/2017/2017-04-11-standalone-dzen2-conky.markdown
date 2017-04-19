@@ -19,7 +19,12 @@ This is the continuation of dzen2 guidance.
 I case you have been missed it.
 Last week I have wrote a basic dzen tutorial using bash.
 And now we are going to continue with conky. 
-It is a lot of easier.
+It is much easier.
+
+**Article**:
+
+*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
+
 
 **Reading**:<br/>
 *	<https://github.com/brndnmtthws/conky>
@@ -282,17 +287,19 @@ Just run it, and now you can see the output.
 Not a very pretty decoration. But I guess you get my point.
 Dzen output is amazingly very flexible to be configured.
 
-![Dzen2 Conky Decoration Example][image-11-example-02]{: .img-responsive }
+-- -- --
 
-Dzen2 can read <code class="code-file">.xbm</code> image format.
-For your convenience, I have made some eight glyph icons.
-For each has height of 24px, the same height as dzen panel.
+### Create Decoration for Your own Suite.
+
+Everybody has different requirement, taste and style.
+Instead of giving <code class="code-file">.xbm</code> files,
+I'd better give the Source Image. And explain the creation process.
 
 ![Image Source: Diagonal and Arrow][image-source-shapes]{: .img-responsive }
 
-Instead of giving just a few <code class="code-file">.xbm</code> files,
-I'd also give the Source Image, because everybody
-has different requirement, taste and style.
+**Article**:
+
+*	[Create XBM for your Dzen2][local-xbm-dzen2]
 
 The creation process has been explained in previous chapter.
 I only use use Inkscape and GIMP with very few steps.
@@ -305,6 +312,7 @@ And yeah, very simple process.
 *	[github.com/.../xbm-source/...][dotfiles-xbm-source]
 
 -- -- --
+
 
 ### Dzen2 with Modularized Lua in Conky
 
@@ -467,7 +475,22 @@ It is just a quick and dirty solution.
   <strong>Update:</strong> Additional guidance.
 </div>
 
-![Real Life Dzen2: Conky Lua][image-13-theme-03]{: .img-responsive }
+Now the Final part. The dzen2 statusbar example for your desktop.
+
+{% highlight bash %}
+$ ~/Documents/standalone/dzen2/multi/main.sh
+{% endhighlight %}
+
+Dzen2 need six bars, while lemonbar only need two bars.
+For code comparation you should see both source code yourself.
+
+**Source**:
+
+*	[github.com/.../dotfiles/...dzen2.../main.sh][dotfiles-multi-dzen2]
+
+*	[github.com/.../dotfiles/...lemon.../main.sh][dotfiles-multi-lemon]
+
+[![Real Life Dzen2: Conky Lua][image-ss-real-dzen2]{: .img-responsive }][photo-ss-real-dzen2]
 
 -- -- --
 
@@ -551,6 +574,9 @@ Have Fun
 [image-13-theme-02]: {{ asset_path }}/dzen2-conky-13-theming-02-dark-colorful.png
 [image-13-theme-03]: {{ asset_path }}/dzen2-conky-13-theming-03-bright-arrow.png
 
+[image-ss-real-dzen2]: {{ asset_path }}/ss-dzen2-real-life.png
+[photo-ss-real-dzen2]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPL1k-5g1b9F-RZRl10pXDLzgqhXPJfIO2xvTXA?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
 [dotfiles-example-01-lua]:        {{ dotfiles_expath }}/01.lua
 [dotfiles-example-01-bash]:       {{ dotfiles_expath }}/01.sh
 [dotfiles-example-02-lua]:        {{ dotfiles_expath }}/02.lua
@@ -564,5 +590,8 @@ Have Fun
 [dotfiles-assembly-separator]:  {{ dotfiles_path }}/assemblies/separator.lua
 [dotfiles-assembly-back-arrow]: {{ dotfiles_path }}/assemblies/back-arrow.lua
 
+[dotfiles-multi-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
+[dotfiles-multi-lemon]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
 
-
+[local-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
+[local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html 

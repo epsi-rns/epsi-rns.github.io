@@ -76,7 +76,9 @@
   url: /pages/desktop/statusbar.html
   submenu:  
   - title: Dzen2 Bash
-    url: /desktop/2017/04/01/standalone-dzen2-bash.html  
+    url: /desktop/2017/04/01/standalone-dzen2-bash.html 
+  - title: Dzen2 XBM
+    url: /desktop/2017/04/08/create-xbm-for-dzen2.html 
   - title: Dzen2 Conky
     url: /desktop/2017/04/11/standalone-dzen2-conky.html
   - title: Lemonbar Conky

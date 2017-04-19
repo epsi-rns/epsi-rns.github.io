@@ -80,6 +80,10 @@ Lemonbar has a more different compared to Dzen2.
 Yesterday, I wrote another article about XLFD font.
 I recommend you to read that article before using Lemonbar.
 
+**Article**:
+
+*	[Getting XLFD Font][local-xlfd]
+
 -- -- --
 
 ### Simple Piping to Lemonbar 
@@ -503,7 +507,23 @@ Quick and Dirty.
   <strong>Update:</strong> Additional guidance.
 </div>
 
-![Real Life Lemonbar: Conky Lua][image-conky-01]{: .img-responsive }
+Now the Final part. The lemonbar example for your desktop.
+You should see the source yourself.
+
+{% highlight bash %}
+$ ~/Documents/standalone/lemon/multi/main.sh
+{% endhighlight %}
+
+Lemonbar only need two bars while dzen2 need six bars.
+For code comparation you should see both source code yourself.
+
+**Source**:
+
+*	[github.com/.../dotfiles/...lemon.../main.sh][dotfiles-multi-lemon]
+
+*	[github.com/.../dotfiles/...dzen2.../main.sh][dotfiles-multi-dzen2]
+
+[![Real Life Lemonbar: Conky Lua][image-ss-real-lemon]{: .img-responsive }][photo-ss-real-lemon]
 
 -- -- --
 
@@ -526,7 +546,10 @@ Have Fun
 [image-example-01]: {{ asset_path }}/lemon-01-example-01.png
 [image-example-02]: {{ asset_path }}/lemon-01-example-02.png
 [image-example-03]: {{ asset_path }}/lemon-01-example-03.png
-[image-conky-01]: {{ asset_path }}/lemon-02-conky.png
+[image-conky-01]:   {{ asset_path }}/lemon-02-conky.png
+
+[image-ss-real-lemon]: {{ asset_path }}/ss-lemon-real-life.png
+[photo-ss-real-lemon]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqgyU8p7GgrzGNgOAw6kg06ciLlQUg-rgCsfQS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [dotfiles-example-01-bash]:        {{ dotfiles_expath }}/01.sh
 [dotfiles-example-02-main-bash]:   {{ dotfiles_expath }}/02-main.sh
@@ -542,3 +565,7 @@ Have Fun
 [dotfiles-parts]:    {{ dotfiles_path }}/parts.lua
 [dotfiles-assembly]: {{ dotfiles_path }}/assembly.lua
 
+[dotfiles-multi-lemon]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
+[dotfiles-multi-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
+
+[local-xlfd]:               {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html

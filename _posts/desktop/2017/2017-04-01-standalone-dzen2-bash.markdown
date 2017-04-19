@@ -366,13 +366,6 @@ Dzen2 can read <code class="code-file">.xbm</code> image format.
 For your convenience, I have made some eight glyph icons.
 For each has height of 24px, the same height as dzen panel.
 
-**XBM**:<br/>
-
-*	[github.com/.../xbm/...][dotfiles-xbm]
-
-*	[github.com/.../xbm-source/...][dotfiles-xbm-source]
-
-
 {% highlight bash %}
 #!/usr/bin/env bash
 
@@ -442,40 +435,23 @@ generated_output() {
 
 Everybody has different requirement, taste and style.
 Instead of giving <code class="code-file">.xbm</code> files,
-I'd better give the Source Image.
-And explain the creation process.
-
-**Source Image**:<br/>
-
-*	[github.com/.../xbm-source/...][dotfiles-xbm-source]
+I'd better give the Source Image. And explain the creation process.
 
 ![Image Source: Diagonal and Arrow][image-source-shapes]{: .img-responsive }
 
-Here is the Proces Flow for Each Image.
+**Article**:
 
-*	Create Inkscape <code class="code-file">.svg</code> with size 100x100px Page size.
-	Create the simple shape as needed, e.g. triangle at bottom right to create a diagonal corner.
-	And <kbd>Save</kbd> this <code class="code-file">diagonal-corner.svg</code> file.
+*	[Create XBM for your Dzen2][local-xbm-dzen2]
 
-*	Export Page to <code class="code-file">.png</code> with 96 dpi.
-	e.g. <code class="code-file">diagonal-corner.png</code> file.
+The creation process has been explained in previous chapter.
+I only use use Inkscape and GIMP with very few steps.
+And yeah, very simple process.
 
-*	Open <code class="code-file">.png</code> with GIMP,
-	Transformed it into Black and White.
-	Using <kbd>Image - Mode - Indexed - 1 bit Palette</kbd>.
-	And <kbd>Save</kbd> this <code class="code-file">.png</code> file.
+**XBM**:<br/>
 
-*	<kbd>	Scale Image - Height 24</kbd>.
-	Or the same height as your panel.
-	Do not forget to keep the ratio.
+*	[github.com/.../xbm/...][dotfiles-xbm]
 
-*	<kbd>Export As - X Bitmap Image</kbd>.
-	e.g. <code class="code-file">dc-24br-.xbm</code> file.
-	Do not use X10 Format Bitmap.
-
-You may use the same process, or just use GIMP Image Transform,
-e.g. <kbd>Image - Transform - Rotate</kbd>,
-or <kbd>Image - Transform - Flip</kbd>.
+*	[github.com/.../xbm-source/...][dotfiles-xbm-source]
 
 -- -- --
 
@@ -592,3 +568,5 @@ I know how terrible it is.
 [dotfiles-themes]:     {{ dotfiles_path }}/themes
 
 [dotfiles-hlwm-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm/bash/dzen2/panel.sh
+
+[local-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
