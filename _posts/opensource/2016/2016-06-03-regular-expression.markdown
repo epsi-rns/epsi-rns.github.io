@@ -2,7 +2,7 @@
 layout: post
 title:  "Meet Our Friend, Regular Expression"
 date:   2016-06-03 16:53:15 +0700
-categories: opensource
+categories: code
 tags: [thought, shell]
 author: epsi
 

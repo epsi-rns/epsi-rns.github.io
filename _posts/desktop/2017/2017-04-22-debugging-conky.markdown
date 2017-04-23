@@ -11,7 +11,7 @@ excerpt:
   
 ---
 
-Since utilize a lot of Conky in Tiling WM Tutorial,
+Since we utilize a lot of Conky in Tiling WM Tutorial,
 we need to find a way to debug,
 just in case we encounter undesired result.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Create Your Own Monitoring Script"
 date:   2016-06-15 22:53:15 +0700
-categories: opensource
+categories: code
 tags: [shell]
 author: epsi
 
