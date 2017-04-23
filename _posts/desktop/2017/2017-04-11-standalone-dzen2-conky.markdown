@@ -148,7 +148,7 @@ After all, this is the output.
 You can see the amazingly simple dzen2 statusbar on top of the screen.
 With updated time every one second interval.
 
-![Dzen2 BASH Script Example][image-11-example-01]{: .img-responsive }
+![Dzen2 Simple Conky Dzen2 Example][image-11-example-01]{: .img-responsive }
 
 
 ### Decorating dzen2
@@ -286,6 +286,8 @@ conky.text = [[\
 Just run it, and now you can see the output.
 Not a very pretty decoration. But I guess you get my point.
 Dzen output is amazingly very flexible to be configured.
+
+![Dzen2 Decorated Conky Dzen2 Example][image-11-example-02]{: .img-responsive }
 
 -- -- --
 
