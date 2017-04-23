@@ -3,7 +3,7 @@ layout: post
 title:  "Debian Wheezy - Post Install Log"
 date:   2014-01-02 12:46:15 +0700
 categories: system
-tags: [debian, package manager]
+tags: [debian, distro, package manager]
 author: epsi
 
 excerpt:

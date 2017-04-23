@@ -3,7 +3,7 @@ layout: post
 title:  "Compile .deb Source with apt-src"
 date:   2016-07-01 21:05:15 +0700
 categories: system
-tags: [debian, apt, package manager]
+tags: [debian, package manager]
 author: epsi
 
 excerpt:

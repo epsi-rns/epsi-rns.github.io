@@ -3,7 +3,7 @@ layout: post
 title:  "Update Arch Linux without Unnecessary Bloated Package"
 date:   2016-02-08 04:03:15 +0700
 categories: system
-tags: [arch, pacman, package manager]
+tags: [arch, package manager]
 author: epsi
 
 excerpt:

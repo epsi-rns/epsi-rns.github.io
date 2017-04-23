@@ -3,7 +3,7 @@ layout: post-sidemenu-jekyll
 title:  "Jekyll Responsive Side Menu"
 categories: webdev
 date:   2016-08-11 03:15:15 +0700
-tags: [responsive, bootstrap]
+tags: [responsive, css]
 author: epsi
 
 excerpt:

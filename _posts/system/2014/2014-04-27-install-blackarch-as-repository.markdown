@@ -4,7 +4,7 @@ title:  "How to Install BlackArch as Repository"
 date:   2014-04-27 14:50:15 +0700
 # published: false
 categories: system
-tags: [security, blackarch, package manager]
+tags: [security, arch, package manager]
 author: epsi
  
 excerpt:

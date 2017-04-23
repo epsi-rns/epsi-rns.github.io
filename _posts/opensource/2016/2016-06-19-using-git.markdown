@@ -3,7 +3,7 @@ layout: post
 title:  "Using Git for Daily Repo Updating"
 date:   2016-06-19 12:56:15 +0700
 categories: opensource
-tags: [shell]
+tags: [console]
 author: epsi
 
 excerpt:

@@ -3,7 +3,7 @@ layout: post
 title:  "Arch Linux - Install/ Post Install Log"
 date:   2014-04-02 08:46:15 +0700
 categories: system
-tags: [arch, pacman, package manager]
+tags: [arch, distro, package manager]
 author: epsi
 
 excerpt:

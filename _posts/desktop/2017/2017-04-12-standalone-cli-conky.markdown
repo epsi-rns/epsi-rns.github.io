@@ -3,7 +3,7 @@ layout: post-sidemenu-wm
 title:  "Standalone CLI System Monitoring Using Conky"
 categories: desktop
 date:   2017-04-12 00:25:15 +0700
-tags: [ricing, cli, conky]
+tags: [ricing, console, conky]
 author: epsi
 
 excerpt:

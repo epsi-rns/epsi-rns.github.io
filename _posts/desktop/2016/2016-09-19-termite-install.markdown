@@ -3,7 +3,7 @@ layout: post-sidemenu-wm
 title:  "Install Termite"
 categories: desktop
 date:   2016-09-19 20:15:15 +0700
-tags: [ricing]
+tags: [ricing, install]
 author: epsi
 
 excerpt:

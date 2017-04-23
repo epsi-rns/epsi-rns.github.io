@@ -2,7 +2,7 @@
 layout: post-sidemenu-wm
 title:  "Debugging Conky"
 categories: desktop
-date:   2017-04-14 19:15:15 +0700
+date:   2017-04-22 19:15:15 +0700
 tags: [ricing, statusbar, conky]
 author: epsi
 
@@ -139,7 +139,6 @@ Thank you for reading.
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone' %}
-{% assign dotfiles_expath = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/example' %}
 
 [dotfiles-conky-simple]:     {{ dotfiles_path }}/lang/assets/conky.lua
 [dotfiles-conky-debug]:      {{ dotfiles_path }}/lang/assets/debug.lua

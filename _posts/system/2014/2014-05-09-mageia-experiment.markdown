@@ -3,7 +3,7 @@ layout: post
 title:  "My Mageia Experiment"
 date:   2014-05-09 19:34:15 +0700
 categories: system
-tags: [screenshot, mageia, kwin]
+tags: [screenshot, distro, kwin]
 author: epsi
 
 excerpt:

@@ -4,7 +4,7 @@ title:  "Selectively Install BlackArch Tools"
 date:   2014-12-27 11:58:15 +0700
 # published: false
 categories: system
-tags: [security, blackarch, package manager]
+tags: [security, arch, package manager]
 author: epsi
 
 excerpt:
