@@ -1,0 +1,322 @@
+---
+layout: post-sidemenu-wm
+title:  "Piping and Forking in BASH"
+categories: code
+date:   2017-04-15 17:35:15 +0700
+tags: [coding, conky, bash]
+author: epsi
+
+excerpt:
+  How to be a Bashful Plumber.
+  
+---
+
+### How not to be a Bashful Plumber.
+
+Piping is a powerful concept in Linux and Unix.
+It is very common, and very easy to do it in BASH.
+But we might need a little googling
+when it comes to other language.
+Most common method are using <code>popen</code>,
+but there are other method as well,
+depend on the language you deal with.
+
+	Becoming plumber automagically.
+
+I have made few example of Pipe Port in other language,
+step by step for your convenience.
+So now we have BASH, Perl, Python, Ruby, PHP, and Lua.
+These will give you overview on how
+to flow your stream through pipe conduit.
+
+	Dark art of daemonizing a process.
+
+For each step I also add Fork example,
+so your process can run in the background,
+detached from console.
+
+	Make the script simple, less problem.
+
+Since we want to go for walk step by step,
+I use <code>less</code> for Pipe target,
+and later Dzen2 for Pipe Target.
+And for feed, we are using conky,
+and also function as a pipe source.
+
+-- -- --
+
+### A very bashful start
+
+Welcome to n00berland. Begin with simple script.
+We will use this loop as a source feed to pipe.
+This step won't introduce Pipe nor Fork.
+
+This script only show an infinite loop showing local time.
+Each updated in one second interval.
+We manage this interval by delaying,
+using <code>sleep</code> code.
+
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../bash-01-basic.sh][dotfiles-bash-01-basic]
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+# endless loop
+while true; do 
+    date +'%a %b %d %H:%M:%S'
+    sleep 1
+done
+{% endhighlight %}
+
+I respect the reader, that you are smart.
+You might wondering, why I have to put this very basic script in this tutorial.
+This script may looks simple in BASH,
+and have very similar looks in most popular scripting language.
+But it would have very different approach in other language.
+As you can see in an obscure language below,
+Haskell has no loop, but using <code>forever</code> control.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskel-01-basic]
+
+{% highlight haskell %}
+import Data.Time.LocalTime
+import Data.Time.Format
+
+import Control.Concurrent
+import Control.Monad
+
+-- ----- ----- ----- ----- -----
+-- wrap Funktion
+
+myTimeFormat = "%a %b %d %H:%M:%S"
+
+wFormatTime :: FormatTime t => t -> String
+wFormatTime myUtcTime = formatTime 
+  Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
+
+wSleep :: Int -> IO ()
+wSleep mySecond = threadDelay (div 1000000 mySecond)
+
+printDate = do
+     now <- getZonedTime
+     let nowFmt = wFormatTime now
+     putStrLn nowFmt
+     wSleep 1
+
+-- ----- ----- ----- ----- -----
+-- main
+
+main = forever $ printDate
+{% endhighlight %}
+
+-- -- --
+
+### A Native Pipe Between External Command
+
+This step is overview of Pipe between two external command.
+This is a very simple. Only using <code>|</code> character.
+This very short script. is using <code>conky</code>
+as pipe source feed and <code>less</code> as pipe target.
+
+	This infinite pipe run in time-less fashioned.
+
+I had additional dirname, relative to the BASH source,
+to locate the conky script assets.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../bash-02-native.sh][dotfiles-bash-02-native]
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+dirname=$(dirname $(readlink -f "$0"))
+path="$dirname/../assets"
+
+cmdin="conky -c $path/conky.lua"
+cmdout="less" # or dzen2
+
+$cmdin | $cmdout
+{% endhighlight %}
+
+You can see, how simple it is.
+This would have <code>less</code> output similar to this below.
+
+![Pipe: to Less][image-time-less]{: .img-responsive }
+
+	Your wallpaper might be different than mine.
+
+-- -- --
+
+### A Native Pipe from Internal Function
+
+Using internal function as source feed
+to external command is straight forward.
+This should be self explanatory.
+
+Other language has more complex mechanism for this.
+From this step forward, this would looks different in other language.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../bash-03-pipe.sh][dotfiles-bash-03-pipe]
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+generated_output() {
+    # endless loop
+    while :; do 
+      date +'%a %b %d %H:%M:%S'
+      sleep 1
+    done
+}
+
+cmdout="less" # or dzen2
+
+generated_output | $cmdout
+{% endhighlight %}
+
+-- -- --
+
+### Fork Overview
+
+Fork in bash is also simple.
+All it takes is jus <code>&</code> character.
+
+This step use internal function as source feed,
+as continuation of previous step.
+
+This step use dzen2, with complete parameters. 
+This dzen2 is forked, running in the background.
+Detached from the script,
+no need to wait for dzen2 to finish the script.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../bash-05-fork.sh][dotfiles-bash-05-fork]
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+generated_output() {
+    # endless loop
+    while :; do 
+      date +'%a %b %d %H:%M:%S'
+      sleep 1
+    done
+}
+
+xpos=0
+ypos=0
+width=640
+height=24
+fgcolor="#000000"
+bgcolor="#ffffff"
+font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+
+parameters="  -x $xpos -y $ypos -w $width -h $height" 
+parameters+=" -fn $font"
+parameters+=" -ta c -bg $bgcolor -fg $fgcolor"
+parameters+=" -title-name dzentop"
+
+# ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----
+# main
+
+# remove all dzen2 instance
+pkill dzen2
+
+generated_output | dzen2 $parameters &
+{% endhighlight %}
+
+-- -- --
+
+### Polishing The Script
+
+This step, we use conky again, as a source feed.
+And also parameterized dzen2 as continuation of previous step.
+
+This step add optional transset transparency,
+detached from script. So we two forks, dzen and transset.
+
+This step also add system command that kill
+any previous dzen2 instance. So it will be guaranteed,
+that the dzen2 shown is coming from the latest script.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../bash-07-conky.sh][dotfiles-bash-07-conky]
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+generated_output() {
+    dirname=$(dirname $(readlink -f "$0"))
+    path="$dirname/../assets"
+    conky -c "$path/conky.lua"
+}
+
+# ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----
+# parameters
+
+xpos=0
+ypos=0
+width=640
+height=24
+fgcolor="#000000"
+bgcolor="#ffffff"
+font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+
+parameters="  -x $xpos -y $ypos -w $width -h $height" 
+parameters+=" -fn $font"
+parameters+=" -ta c -bg $bgcolor -fg $fgcolor"
+parameters+=" -title-name dzentop"
+
+# ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----
+# main
+
+# remove all dzen2 instance
+pkill dzen2
+
+# execute dzen
+generated_output | dzen2 $parameters &
+
+# optional transparency
+sleep 1 && exec `(transset .8 -n dzentop >/dev/null 2>&1 &)` & 
+{% endhighlight %}
+
+This would have <code>dzen2</code> output similar to this below.
+
+![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
+
+-- -- --
+
+
+There above are some simple codes I put together. 
+I’m mostly posting codes so I won’t have
+any problems finding it in the future.
+
+Thank you for reading.
+
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lang' %}
+
+[dotfiles-bash-01-basic]:   {{ dotfiles_path }}/bash/bash-01-basic.sh
+[dotfiles-bash-02-native]:  {{ dotfiles_path }}/bash/bash-02-native.sh
+[dotfiles-bash-03-pipe]:    {{ dotfiles_path }}/bash/bash-03-pipe.sh
+[dotfiles-bash-05-fork]:    {{ dotfiles_path }}/bash/bash-05-fork.sh
+[dotfiles-bash-07-conky]:   {{ dotfiles_path }}/bash/bash-07-conky.sh
+[dotfiles-haskel-01-basic]: {{ dotfiles_path }}/haskell/haskell-01-basic.hs
+
+
+[image-time-less]: {{ asset_path }}/pipe-time-less.png
+[image-time-dzen]: {{ asset_path }}/pipe-time-dzen.png
+
