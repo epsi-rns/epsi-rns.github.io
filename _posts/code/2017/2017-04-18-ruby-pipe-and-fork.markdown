@@ -18,6 +18,32 @@ excerpt:
 
 -- -- --
 
+### Piping and Forking in Many Languages
+
+This article is one part of a collection.
+All integrated, on related to another.
+So we can compare each other quickly.
+
+Tutorial/ Guidance/ Article:
+[[ BASH ]][local-BASH]
+[[ Perl ]][local-Perl]
+[[ Python ]][local-python]
+[[ Ruby ]][local-Ruby]
+[[ PHP ]][local-PHP]
+[[ Lua ]][local-Lua]
+[[ Haskell ]][local-Haskell]
+
+Source Code Directory:
+[[ BASH ]][dotfiles-BASH]
+[[ Perl ]][dotfiles-Perl]
+[[ Python ]][dotfiles-python]
+[[ Ruby ]][dotfiles-Ruby]
+[[ PHP ]][dotfiles-PHP]
+[[ Lua ]][dotfiles-Lua]
+[[ Haskell ]][dotfiles-Haskell]
+
+-- -- --
+
 ### Start Simple
 
 Welcome to n00berland. Begin with simple script.
@@ -28,7 +54,6 @@ This script only show an infinite loop showing local time.
 Each updated in one second interval.
 We manage this interval by delaying,
 using <code>sleep</code> code.
-
 
 **Source**:
 
@@ -46,6 +71,37 @@ while true do
 
     sleep(1)
 end
+{% endhighlight %}
+
+Call to this simple code would produce time marching,
+one after another, below the command line prompt.
+
+![Pipe: Basic][image-time-basic]{: .img-responsive }
+
+-- -- --
+
+### External Command as Source Feed
+
+Beside previous simple loop that is used as Internal Command,
+this tutorial also provide Conky as External Command
+in <code class="code-file">asset</code> directory.
+I made it as simple as possible.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+
+{% highlight lua %}
+conky.config = {
+    out_to_x = false,
+    out_to_console = true,
+    short_units = true,
+    update_interval = 1
+}
+
+conky.text = [[\
+${time %a %b %d %H:%M:%S}\
+]]
 {% endhighlight %}
 
 -- -- --
@@ -483,6 +539,8 @@ Thank you for reading.
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lang' %}
 
+[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+
 [dotfiles-ruby-01-basic]:   {{ dotfiles_path }}/ruby/ruby-01-basic.rb
 [dotfiles-ruby-02-shell]:   {{ dotfiles_path }}/ruby/ruby-02-shell.rb
 [dotfiles-ruby-02-spawn]:   {{ dotfiles_path }}/ruby/ruby-02-spawn.rb
@@ -494,6 +552,22 @@ Thank you for reading.
 [dotfiles-ruby-05-fork]:    {{ dotfiles_path }}/ruby/ruby-05-fork-def.rb
 [dotfiles-ruby-07-conky]:   {{ dotfiles_path }}/ruby/ruby-07-fork-conky.rb
 
-[image-time-less]: {{ asset_path }}/pipe-time-less.png
-[image-time-dzen]: {{ asset_path }}/pipe-time-dzen.png
+[image-time-less]:  {{ asset_path }}/pipe-time-less.png
+[image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png
+[image-time-basic]: {{ asset_path }}/pipe-basic-ruby.png
 
+[local-BASH]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-Perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-python]:  {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-Ruby]:    {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-PHP]:     {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-Lua]:     {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-Haskell]: {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
+
+[dotfiles-BASH]:    {{ dotfiles_path }}/bash
+[dotfiles-Perl]:    {{ dotfiles_path }}/perl
+[dotfiles-python]:  {{ dotfiles_path }}/python
+[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-PHP]:     {{ dotfiles_path }}/php
+[dotfiles-Lua]:     {{ dotfiles_path }}/lua
+[dotfiles-Haskell]: {{ dotfiles_path }}/haskell

@@ -52,6 +52,32 @@ and also function as a pipe source.
 
 -- -- --
 
+### Piping and Forking in Many Languages
+
+This article is one part of a collection.
+All integrated, on related to another.
+So we can compare each other quickly.
+
+Tutorial/ Guidance/ Article:
+[[ BASH ]][local-BASH]
+[[ Perl ]][local-Perl]
+[[ Python ]][local-python]
+[[ Ruby ]][local-Ruby]
+[[ PHP ]][local-PHP]
+[[ Lua ]][local-Lua]
+[[ Haskell ]][local-Haskell]
+
+Source Code Directory:
+[[ BASH ]][dotfiles-BASH]
+[[ Perl ]][dotfiles-Perl]
+[[ Python ]][dotfiles-python]
+[[ Ruby ]][dotfiles-Ruby]
+[[ PHP ]][dotfiles-PHP]
+[[ Lua ]][dotfiles-Lua]
+[[ Haskell ]][dotfiles-Haskell]
+
+-- -- --
+
 ### Pipe and Fork in Desktop Ricing
 
 I have seen a lot of configuration in dotfiles.
@@ -112,8 +138,18 @@ while true; do
 done
 {% endhighlight %}
 
+Call to this simple code would produce time marching,
+one after another, below the command line prompt.
+
+![Pipe: Basic][image-time-basic]{: .img-responsive }
+
+-- -- --
+
+### Port to other Language
+
 I respect the reader, that you are smart.
-You might be wondering, why I have to put this very basic script in this tutorial.
+You might be wondering, why I have to put 
+this very basic script in this tutorial.
 This script may looks simple in BASH,
 and have very similar looks in most popular scripting language.
 But it would have very different approach in other language.
@@ -153,6 +189,32 @@ printDate = do
 -- main
 
 main = forever $ printDate
+{% endhighlight %}
+
+-- -- --
+
+### External Command as Source Feed
+
+Beside previous simple loop that is used as Internal Command,
+this tutorial also provide Conky as External Command
+in <code class="code-file">asset</code> directory.
+I made it as simple as possible.
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+
+{% highlight lua %}
+conky.config = {
+    out_to_x = false,
+    out_to_console = true,
+    short_units = true,
+    update_interval = 1
+}
+
+conky.text = [[\
+${time %a %b %d %H:%M:%S}\
+]]
 {% endhighlight %}
 
 -- -- --
@@ -354,6 +416,8 @@ Thank you for reading.
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lang' %}
 
+[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+
 [dotfiles-bash-01-basic]:   {{ dotfiles_path }}/bash/bash-01-basic.sh
 [dotfiles-bash-02-native]:  {{ dotfiles_path }}/bash/bash-02-native.sh
 [dotfiles-bash-03-pipe]:    {{ dotfiles_path }}/bash/bash-03-pipe.sh
@@ -361,7 +425,22 @@ Thank you for reading.
 [dotfiles-bash-07-conky]:   {{ dotfiles_path }}/bash/bash-07-conky.sh
 [dotfiles-haskell-01-basic]: {{ dotfiles_path }}/haskell/haskell-01-basic.hs
 
+[image-time-less]:  {{ asset_path }}/pipe-time-less.png
+[image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png
+[image-time-basic]: {{ asset_path }}/pipe-bash-basic.png
 
-[image-time-less]: {{ asset_path }}/pipe-time-less.png
-[image-time-dzen]: {{ asset_path }}/pipe-time-dzen.png
+[local-BASH]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-Perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-python]:  {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-Ruby]:    {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-PHP]:     {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-Lua]:     {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-Haskell]: {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
+[dotfiles-BASH]:    {{ dotfiles_path }}/bash
+[dotfiles-Perl]:    {{ dotfiles_path }}/perl
+[dotfiles-python]:  {{ dotfiles_path }}/python
+[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-PHP]:     {{ dotfiles_path }}/php
+[dotfiles-Lua]:     {{ dotfiles_path }}/lua
+[dotfiles-Haskell]: {{ dotfiles_path }}/haskell
