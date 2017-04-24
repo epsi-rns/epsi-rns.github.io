@@ -14,18 +14,22 @@ excerpt:
 ### How not to be a Bashful Plumber.
 
 Piping is a powerful concept in Linux and Unix.
-It is very common, and very easy to do it in BASH.
+Concept is deeper than just syntax.
+As meaning is more important than grammar.
+
+Piping is very common, and very easy to do it in BASH.
 But we might need a little googling
 when it comes to other language.
 Most common method are using <code>popen</code>,
-but there are other method as well,
+or <code>subProcess</code>.
+but there are other mechanism as well,
 depend on the language you deal with.
 
 	Becoming plumber automagically.
 
 I have made few example of Pipe Port in other language,
 step by step for your convenience.
-So now we have BASH, Perl, Python, Ruby, PHP, and Lua.
+So now we have BASH, Perl, Python, Ruby, PHP, Lua, and Haskell.
 These will give you overview on how
 to flow your stream through pipe conduit.
 
@@ -39,13 +43,50 @@ detached from console.
 
 Since we want to go for walk step by step,
 I use <code>less</code> for Pipe target,
-and later Dzen2 for Pipe Target.
+and later <code>dzen2</code> for Pipe Target.
 And for feed, we are using conky,
 and also function as a pipe source.
 
+	Goal: A script that continuously show date and time,
+	with Dzen2, and Conky.
+
 -- -- --
 
-### A very bashful start
+### Pipe and Fork in Desktop Ricing
+
+I have seen a lot of configuration in dotfiles.
+Most utilize external tool written in BASH, Perl of Python.
+Between taste and color of your language, it is just about preferences.
+If you want to combine your preferred language to configure
+Dzen2 or Lemonbar,or any tools in need of piping and fork,
+then this tutorial is a good starter kit for you.
+
+For historical reason.
+BASH evolve to Perl, Perl Evolve to PHP and Python.
+And here we are with Ruby. This is why I put these script.
+
+I also add Lua.
+Lua only used as embedded script. But I can see Lua's potential.
+I have never seen anybody utilize Lua as main scripting tools in dotfiles,
+except Conky, and AwesomeWM that use Lua as main scripting configuration.
+I myself utilize a lot of Conky a lot. So why not make a start ?
+
+How about Haskell? 
+This is not a scripting language but compiled.
+The reason is XMonad. Most people is still combined
+the Haskell Configuration, with BASH, conky, even Perl.
+Makes it looks like a Frankestein.
+Once you know Haskell, this language is Sexy.
+
+And of course you have total Control of the script,
+e.g. color across the configuration,
+when you call from just one script, instead of many language.
+
+But again, it is a matter of preferences.
+
+-- -- --
+
+### A Very Bashful Start
 
 Welcome to n00berland. Begin with simple script.
 We will use this loop as a source feed to pipe.
@@ -72,7 +113,7 @@ done
 {% endhighlight %}
 
 I respect the reader, that you are smart.
-You might wondering, why I have to put this very basic script in this tutorial.
+You might be wondering, why I have to put this very basic script in this tutorial.
 This script may looks simple in BASH,
 and have very similar looks in most popular scripting language.
 But it would have very different approach in other language.
@@ -81,7 +122,7 @@ Haskell has no loop, but using <code>forever</code> control.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskel-01-basic]
+*	[github.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskell-01-basic]
 
 {% highlight haskell %}
 import Data.Time.LocalTime
@@ -100,7 +141,7 @@ wFormatTime myUtcTime = formatTime
   Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
 
 wSleep :: Int -> IO ()
-wSleep mySecond = threadDelay (div 1000000 mySecond)
+wSleep mySecond = threadDelay (1000000 * mySecond)
 
 printDate = do
      now <- getZonedTime
@@ -120,12 +161,14 @@ main = forever $ printDate
 
 This step is overview of Pipe between two external command.
 This is a very simple. Only using <code>|</code> character.
-This very short script. is using <code>conky</code>
+This very short script is using <code>conky</code>
 as pipe source feed and <code>less</code> as pipe target.
+Showing time and date forever in the console.
 
 	This infinite pipe run in time-less fashioned.
 
-I had additional dirname, relative to the BASH source,
+I had made additional dirname function,
+relative to the BASH source,
 to locate the conky script assets.
 
 **Source**:
@@ -160,6 +203,7 @@ to external command is straight forward.
 This should be self explanatory.
 
 Other language has more complex mechanism for this.
+Most common is using <code>subProcess</code> or <code>Popen</code>.
 From this step forward, this would looks different in other language.
 
 **Source**:
@@ -234,6 +278,10 @@ pkill dzen2
 generated_output | dzen2 $parameters &
 {% endhighlight %}
 
+This step also add system command that kill
+any previous dzen2 instance. So it will be guaranteed,
+that the dzen2 shown is coming from the latest script.
+
 -- -- --
 
 ### Polishing The Script
@@ -244,9 +292,6 @@ And also parameterized dzen2 as continuation of previous step.
 This step add optional transset transparency,
 detached from script. So we two forks, dzen and transset.
 
-This step also add system command that kill
-any previous dzen2 instance. So it will be guaranteed,
-that the dzen2 shown is coming from the latest script.
 
 **Source**:
 
@@ -314,7 +359,7 @@ Thank you for reading.
 [dotfiles-bash-03-pipe]:    {{ dotfiles_path }}/bash/bash-03-pipe.sh
 [dotfiles-bash-05-fork]:    {{ dotfiles_path }}/bash/bash-05-fork.sh
 [dotfiles-bash-07-conky]:   {{ dotfiles_path }}/bash/bash-07-conky.sh
-[dotfiles-haskel-01-basic]: {{ dotfiles_path }}/haskell/haskell-01-basic.hs
+[dotfiles-haskell-01-basic]: {{ dotfiles_path }}/haskell/haskell-01-basic.hs
 
 
 [image-time-less]: {{ asset_path }}/pipe-time-less.png
