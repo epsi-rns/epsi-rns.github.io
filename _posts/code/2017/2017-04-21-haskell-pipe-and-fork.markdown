@@ -66,6 +66,8 @@ And of course you have total Control of the script,
 e.g. color across the configuration,
 when you call from just one Haskell script, instead of many language.
 
+	Be Lazy, Learn Haskell.
+
 -- -- --
 
 ### Start Simple

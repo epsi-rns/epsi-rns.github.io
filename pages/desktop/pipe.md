@@ -84,7 +84,7 @@ This is not a scripting language but compiled.
 The reason is XMonad. Most people is still combined
 the Haskell Configuration, with BASH, conky, even Perl.
 Makes it looks like a Frankestein.
-Once you know Haskell, this language is Sexy.
+We need a more unified approach.
 
 And of course you have total Control of the script,
 e.g. color across the configuration,
