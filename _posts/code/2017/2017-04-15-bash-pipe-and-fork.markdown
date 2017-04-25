@@ -11,44 +11,17 @@ excerpt:
   
 ---
 
-### How not to be a Bashful Plumber.
-
-Piping is a powerful concept in Linux and Unix.
-Concept is deeper than just syntax.
-As meaning is more important than grammar.
-
-Piping is very common, and very easy to do it in BASH.
-But we might need a little googling
-when it comes to other language.
-Most common method are using <code>popen</code>,
-or <code>subProcess</code>.
-but there are other mechanism as well,
-depend on the language you deal with.
-
-	Becoming plumber automagically.
-
-I have made few example of Pipe Port in other language,
-step by step for your convenience.
-So now we have BASH, Perl, Python, Ruby, PHP, Lua, and Haskell.
-These will give you overview on how
-to flow your stream through pipe conduit.
-
-	Dark art of daemonizing a process.
-
-For each step I also add Fork example,
-so your process can run in the background,
-detached from console.
-
-	Make the script simple, less problem.
-
-Since we want to go for walk step by step,
-I use <code>less</code> for Pipe target,
-and later <code>dzen2</code> for Pipe Target.
-And for feed, we are using conky,
-and also function as a pipe source.
+### Bashful Plumber.
 
 	Goal: A script that continuously show date and time,
 	with Dzen2, and Conky.
+
+Before you dip your toe to scripting,
+you might desire to know the reason by reading this preface.
+
+**Reading**
+
+*	[Piping and Forking in Linux Script][local-overview]
 
 -- -- --
 
@@ -59,6 +32,7 @@ All integrated, on related to another.
 So we can compare each other quickly.
 
 Tutorial/ Guidance/ Article:
+[[ Pipe Overview ]][local-overview]
 [[ BASH ]][local-BASH]
 [[ Perl ]][local-Perl]
 [[ Python ]][local-python]
@@ -75,40 +49,6 @@ Source Code Directory:
 [[ PHP ]][dotfiles-PHP]
 [[ Lua ]][dotfiles-Lua]
 [[ Haskell ]][dotfiles-Haskell]
-
--- -- --
-
-### Pipe and Fork in Desktop Ricing
-
-I have seen a lot of configuration in dotfiles.
-Most utilize external tool written in BASH, Perl of Python.
-Between taste and color of your language, it is just about preferences.
-If you want to combine your preferred language to configure
-Dzen2 or Lemonbar,or any tools in need of piping and fork,
-then this tutorial is a good starter kit for you.
-
-For historical reason.
-BASH evolve to Perl, Perl Evolve to PHP and Python.
-And here we are with Ruby. This is why I put these script.
-
-I also add Lua.
-Lua only used as embedded script. But I can see Lua's potential.
-I have never seen anybody utilize Lua as main scripting tools in dotfiles,
-except Conky, and AwesomeWM that use Lua as main scripting configuration.
-I myself utilize a lot of Conky a lot. So why not make a start ?
-
-How about Haskell? 
-This is not a scripting language but compiled.
-The reason is XMonad. Most people is still combined
-the Haskell Configuration, with BASH, conky, even Perl.
-Makes it looks like a Frankestein.
-Once you know Haskell, this language is Sexy.
-
-And of course you have total Control of the script,
-e.g. color across the configuration,
-when you call from just one script, instead of many language.
-
-But again, it is a matter of preferences.
 
 -- -- --
 
@@ -479,13 +419,14 @@ Thank you for reading.
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png
 [image-time-basic]: {{ asset_path }}/pipe-bash-basic.png
 
-[local-BASH]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
-[local-Perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
-[local-python]:  {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
-[local-Ruby]:    {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
-[local-PHP]:     {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
-[local-Lua]:     {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
-[local-Haskell]: {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
+[local-overview]: {{ site.url }}/pages/desktop/pipe.html
+[local-BASH]:     {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-Perl]:     {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-python]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-Ruby]:     {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-PHP]:      {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-Lua]:      {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-Haskell]:  {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl

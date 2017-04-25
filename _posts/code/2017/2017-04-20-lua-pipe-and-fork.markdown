@@ -13,12 +13,23 @@ excerpt:
 
 ### Lua Plumber.
 
-Lua script version is very similar with PHP script version.
+Lua is a very Popular embedded script.
+The only contender I know is Squirrel.
+
+Lua script version for this Pipe and Fork tutorial 
+is very similar with PHP script version.
 Almost only syntax differences they have.
 It would not be hard to understand between the two.
 
 	Goal: A script that continuously show date and time,
 	with Dzen2, and Conky.
+
+Before you dip your toe to scripting,
+you might desire to know the reason by reading this preface.
+
+**Reading**
+
+*	[Piping and Forking in Linux Script][local-overview]
 
 -- -- --
 
@@ -29,6 +40,7 @@ All integrated, on related to another.
 So we can compare each other quickly.
 
 Tutorial/ Guidance/ Article:
+[[ Pipe Overview ]][local-overview]
 [[ BASH ]][local-BASH]
 [[ Perl ]][local-Perl]
 [[ Python ]][local-python]
@@ -55,7 +67,8 @@ Source Code Directory:
 Lua only used as embedded script. But I can see Lua's potential.
 I have never seen anybody utilize Lua as main scripting tools in dotfiles,
 except Conky, and AwesomeWM that use Lua as main scripting configuration.
-I myself utilize a lot of Conky a lot. So why not make a start ?
+Outside the world of Ricing, Lua also extensively used in Gaming..
+I myself utilize a lot of Conky Lua a lot. So why not make a start ?
 
 -- -- --
 
@@ -609,13 +622,14 @@ Thank you for reading.
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png
 [image-time-basic]: {{ asset_path }}/pipe-basic-lua.png
 
-[local-BASH]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
-[local-Perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
-[local-python]:  {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
-[local-Ruby]:    {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
-[local-PHP]:     {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
-[local-Lua]:     {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
-[local-Haskell]: {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
+[local-overview]: {{ site.url }}/pages/desktop/pipe.html
+[local-BASH]:     {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-Perl]:     {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-python]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-Ruby]:     {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-PHP]:      {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-Lua]:      {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-Haskell]:  {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl

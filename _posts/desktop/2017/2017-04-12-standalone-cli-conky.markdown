@@ -212,7 +212,7 @@ ${time %a %b %d} - ${time %H:%M:%S}\
 The bash part only contain the <code>clear</code>.
 Conky has capability to initialize stuff,
 and run once before rendering text.
-The issue is it use Lua environment,
+The issue is, it use Conky environment,
 and it does not use terminal environment.
 So we still need Bash to clear the terminal.
 

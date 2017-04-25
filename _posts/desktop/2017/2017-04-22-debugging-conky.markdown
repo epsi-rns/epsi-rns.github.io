@@ -7,7 +7,7 @@ tags: [ricing, statusbar, conky]
 author: epsi
 
 excerpt:
-  A simple way of Debugging Conky
+  A simple trick of Debugging Conky
   
 ---
 

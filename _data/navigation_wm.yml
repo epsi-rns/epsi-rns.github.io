@@ -85,7 +85,9 @@
     url: /desktop/2017/04/14/standalone-lemonbar-conky.html
   - title: CLI Conky
     url: /desktop/2017/04/12/standalone-cli-conky.html
-      
+  - title: Debugging Conky
+    url: /desktop/2017/04/22/debugging-conky.html    
+     
 - title: Ricing
   url: /pages/desktop/ricing.html
   submenu:
@@ -100,3 +102,23 @@
   - title: "Getting XLFD Font"
     url: /desktop/2017/04/13/getting-xlfd-font.html
 
+- title: Coding
+  url: /pages/desktop/ricing.html
+  submenu:
+  - title: Piping and Forking
+    url: /pages/desktop/pipe.html
+    submenu:
+    - title: BASH
+      url: /code/2017/04/15/bash-pipe-and-fork.html
+    - title: Perl
+      url: /code/2017/04/16/perl-pipe-and-fork.html
+    - title: Python
+      url: /code/2017/04/17/python-pipe-and-fork.html
+    - title: Ruby
+      url: /code/2017/04/18/ruby-pipe-and-fork.html
+    - title: PHP
+      url: /code/2017/04/19/php-pipe-and-fork.html
+    - title: Lua
+      url: /code/2017/04/20/lua-pipe-and-fork.html
+    - title: Haskell
+      url: /code/2017/04/21/haskell-pipe-and-fork.html

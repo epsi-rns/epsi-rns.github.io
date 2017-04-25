@@ -16,6 +16,13 @@ excerpt:
 	Goal: A script that continuously show date and time,
 	with Dzen2, and Conky.
 
+Before you dip your toe to scripting,
+you might desire to know the reason by reading this preface.
+
+**Reading**
+
+*	[Piping and Forking in Linux Script][local-overview]
+
 -- -- --
 
 ### Piping and Forking in Many Languages
@@ -25,6 +32,7 @@ All integrated, on related to another.
 So we can compare each other quickly.
 
 Tutorial/ Guidance/ Article:
+[[ Pipe Overview ]][local-overview]
 [[ BASH ]][local-BASH]
 [[ Perl ]][local-Perl]
 [[ Python ]][local-python]
@@ -662,13 +670,14 @@ Thank you for reading.
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png
 [image-time-basic]: {{ asset_path }}/pipe-basic-ruby.png
 
-[local-BASH]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
-[local-Perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
-[local-python]:  {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
-[local-Ruby]:    {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
-[local-PHP]:     {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
-[local-Lua]:     {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
-[local-Haskell]: {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
+[local-overview]: {{ site.url }}/pages/desktop/pipe.html
+[local-BASH]:     {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-Perl]:     {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-python]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-Ruby]:     {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-PHP]:      {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-Lua]:      {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-Haskell]:  {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl

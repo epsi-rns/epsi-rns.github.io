@@ -5,6 +5,38 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17042215
+  title: "Debugging Conky"
+  url: /desktop/2017/04/22/debugging-conky.html
+
+- id: 17042135
+  title: "Piping and Forking in Haskell"
+  url: /code/2017/04/21/haskell-pipe-and-fork.html
+
+- id: 17042035
+  title: "Piping and Forking in Lua"
+  url: /code/2017/04/20/lua-pipe-and-fork.html
+
+- id: 17041935
+  title: "Piping and Forking in PHP"
+  url: /code/2017/04/19/php-pipe-and-fork.html
+
+- id: 17041835
+  title: "Piping and Forking in Ruby"
+  url: /code/2017/04/18/ruby-pipe-and-fork.html
+
+- id: 17041735
+  title: "Piping and Forking in Python"
+  url: /code/2017/04/17/python-pipe-and-fork.html
+
+- id: 17041635
+  title: "Piping and Forking in Perl"
+  url: /code/2017/04/16/perl-pipe-and-fork.html
+
+- id: 17041535
+  title: "Piping and Forking in BASH"
+  url: /code/2017/04/15/bash-pipe-and-fork.html
+
 - id: 17041425
   title: "Standalone Lemonbar Using Conky"
   url: /desktop/2017/04/14/standalone-lemonbar-conky.html
@@ -127,7 +159,7 @@
 
 - id: 16061553
   title: "Create Your Own Monitoring Script"
-  url: /opensource/2016/06/15/monitoring-script.html
+  url: /code/2016/06/15/monitoring-script.html
 
 - id: 16061409
   title: "Step by Step Guidance to be a Webcoder"
@@ -151,7 +183,7 @@
 
 - id: 16060353
   title: "Meet Our Friend, Regular Expression"
-  url: /opensource/2016/06/03/regular-expression.html
+  url: /code/2016/06/03/regular-expression.html
 
 - id: 16052948
   title: "Jekyll Related Posts Without Plugin"
@@ -175,7 +207,7 @@
 
 - id: 16051403
   title: "How Haskell Syntax can Make Your Code Cleaner"
-  url: /opensource/2016/05/14/haskell-dollar-syntax.html
+  url: /code/2016/05/14/haskell-dollar-syntax.html
 
 - id: 16051102
   title: "XMonad with Conkyless Dzen, Total Control of Theme"
