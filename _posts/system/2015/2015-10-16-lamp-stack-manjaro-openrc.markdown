@@ -34,7 +34,7 @@ With special customization
 <br/>
 Have Fun
 
-[![LAMP OpenRC][image-ss-openrc]{: .img-responsive }][picasa-ss-openrc]
+[![LAMP OpenRC][image-ss-openrc]{: .img-responsive }][photo-ss-openrc]
 
 Reading
 ----------
@@ -325,7 +325,7 @@ $ sudo rc-service httpd restart
 $ httpd -S
 {% endhighlight %}
 
-[![LAMP Browser][image-ss-browser]{: .img-responsive }][picasa-ss-browser]
+[![LAMP Browser][image-ss-browser]{: .img-responsive }][photo-ss-browser]
 
 Finalization
 --------------------
@@ -337,9 +337,9 @@ Have a nice dream.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-openrc]: {{ site.url }}/assets/posts/system/2015/10/lamp-manjaro-openrc-terminal.png
-[picasa-ss-openrc]: https://lh3.googleusercontent.com/-_PY0Lzv5T54/VznBHsesgSI/AAAAAAAAANc/sDZnyz6OQWse-cw5xm4NK5MhTw4uKz3eACCo/s0/lamp-manjaro-openrc-terminal.png
+[photo-ss-openrc]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipMNA4kSsPrBTD28YziByRo-SxTnvtjY1S5eYUkU
 [image-ss-browser]: {{ site.url }}/assets/posts/system/2015/10/lamp-manjaro-openrc-browser.png
-[picasa-ss-browser]: https://lh3.googleusercontent.com/-drXcnPrzSik/VznBH5IFulI/AAAAAAAAANc/IBELce83SXA7CPW5WSSkl3GNMSTRhaLowCCo/s0/lamp-manjaro-openrc-browser.png
+[photo-ss-browser]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNbd-SbyNbBdGCTq9ft47Iz-UbX8O0faBbLyyT_
 
 [link-archwiki-openrc]: https://wiki.archlinux.org/index.php/OpenRC
 [link-archwiki-apache]: https://wiki.archlinux.org/index.php?title=Apache_HTTP_Server&redirect=no

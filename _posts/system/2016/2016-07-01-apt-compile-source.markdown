@@ -31,7 +31,7 @@ But again, for curious newbie who wants to know
 how compilation works in debian, 
 you can use <code>apt-src</code>, or <code>apt-get source</code> command.
 
-[![Screenshot Summary of Compiling .deb Source][image-ss-summary]{: .img-responsive }][picasa-ss-summary]
+[![Screenshot Summary of Compiling .deb Source][image-ss-summary]{: .img-responsive }][photo-ss-summary]
 
 -- -- --
 
@@ -191,7 +191,7 @@ Install package using <code class="code-command">dpkg</code> command
 $ sudo dpkg --install apt-1.2.14-amd64.deb
 {% endhighlight %}
  
-[![Install .deb Using dpkg][image-dpkg-install]{: .img-responsive }][picasa-build-install]
+[![Install .deb Using dpkg][image-dpkg-install]{: .img-responsive }][photo-build-install]
 
 -- -- --
 
@@ -213,13 +213,13 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2016/07' %}
 
-[image-ss-summary]: {{ asset_path }}/apt-src-summary.png
-[image-sources-list]: {{ asset_path }}/apt-src-sources-list.png
+[image-ss-summary]:      {{ asset_path }}/apt-src-summary.png
+[image-sources-list]:    {{ asset_path }}/apt-src-sources-list.png
 [image-list-upgradable]: {{ asset_path }}/apt-src-list-upgradable.png
-[image-dpkg-list]: {{ asset_path }}/apt-src-dpkg-list.png
-[image-build-install]: {{ asset_path }}/apt-src-install-build-half.png
-[image-ls-directory]: {{ asset_path }}/apt-src-ls.png
-[image-dpkg-install]: {{ asset_path }}/apt-src-dpkg-install.png
+[image-dpkg-list]:       {{ asset_path }}/apt-src-dpkg-list.png
+[image-build-install]:   {{ asset_path }}/apt-src-install-build-half.png
+[image-ls-directory]:    {{ asset_path }}/apt-src-ls.png
+[image-dpkg-install]:    {{ asset_path }}/apt-src-dpkg-install.png
 
-[picasa-ss-summary]: https://lh3.googleusercontent.com/-LRIRIXjKe7s/V3aT9zVSmyI/AAAAAAAAAZ8/xekHZCXEG685HovAmEjEYfAuXqgCJgUCgCCo/s0/apt-src-summary.png
-[picasa-build-install]: https://lh3.googleusercontent.com/-NXssO4XGJQI/V3aT8tc_cKI/AAAAAAAAAZ4/GN7Lk6-0LpwaWoIDyFdK2SkzIN2t-Ib9wCCo/s0/apt-src-install-build-full.png
+[photo-ss-summary]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNdo5-ufbNUoAQo9rfl7uY_tXFDh-NL1ZL_5p6X
+[photo-build-install]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOf1CvlfS4Zq33u37UmRpAVaYjnNaJcVl5JiaIK

@@ -27,7 +27,7 @@ And Replace all "<code>Love</code>" word with "<code>Math</code>" word.
 Then, put your Favorite sentence
 as your comment here.
 
-[![Regular Expression with sed][image-regular-expression]{: .img-responsive }][picasa-regular-expression]
+[![Regular Expression with sed][image-regular-expression]{: .img-responsive }][photo-regular-expression]
 
 -- -- --
 
@@ -92,4 +92,4 @@ Have Fun
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-regular-expression]: {{ site.url }}/assets/posts/opensource/2016/06/regular-expression.png
-[picasa-regular-expression]: https://lh3.googleusercontent.com/-hDo6dt4SQYA/V1_FS4yDhCI/AAAAAAAAAVc/ye6lnmW2G5wZ7eLcqn77UVwvhF0oEpfbwCCo/s0/regular-expression.png
+[photo-regular-expression]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipN3ViqN-C7A9UOGRi8gdgKqe5ucSmm3mevGK9xO

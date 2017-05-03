@@ -35,7 +35,7 @@ This article contain two parts.
 
 * Using <code class="code-command">aptitude</code>.
 
-[![Debian Fresh Install][image-ss-debian-install]{: .img-responsive }][picasa-ss-debian-install]
+[![Debian Fresh Install][image-ss-debian-install]{: .img-responsive }][photo-ss-debian-install]
 <br/><br/>
 
 -- -- -- 
@@ -210,5 +210,5 @@ last step: go to the refigerator find myself something to eat
 
 
 [image-ss-debian-install]: {{ site.url }}/assets/posts/system/2014/01/debian-install.jpg
-[picasa-ss-debian-install]: https://lh3.googleusercontent.com/-j65GwnT_z3g/Vz2o4lw6y5I/AAAAAAAAAR0/zJnk7wzO4-EXuqkyoyNwuLptfuKT7HpygCCo/s0/debian-install.jpg
+[photo-ss-debian-install]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO0xQxOpOaC3ddgv7dJmb2expwG_MqHFkkRqm9C
 

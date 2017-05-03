@@ -83,11 +83,11 @@ XferCommand = /usr/bin/curl --limit-rate 33k -C - -f %u > %o
 XferCommand = /usr/bin/wget --limit-rate 33K --passive-ftp -c -O %o %u
 {% endhighlight %}
 
-[![Pacman IgnorePkg: arch+awesome (unbloated)][image-ss]{: .img-responsive }][picasa-ss]
+[![Pacman IgnorePkg: arch+awesome (unbloated)][image-ss]{: .img-responsive }][photo-ss]
 
 Happy Sync.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss]: {{ site.url }}/assets/posts/system/2016/02/pacman-ignorepkg.png
-[picasa-ss]: https://lh3.googleusercontent.com/-xVBmoAKvB8c/Vzmdz2Gf0rI/AAAAAAAAAMk/r0Jj9aSQIaQ4p2h65k2tts8yEbNanx0RQCCo/s0/pacman-ignorepkg.png
+[photo-ss]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNqmVpHvqA_JNFmN7JtigOhZ_rNI0HL1-APE4lO

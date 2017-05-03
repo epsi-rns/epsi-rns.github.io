@@ -38,7 +38,7 @@ related_link_ids:
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-[![Debian Docker: openbox+terminator+(debian, opensuse, htop, emerge gentoo, slackware)][image-ss]{: .img-responsive }][picasa-ss]
+[![Debian Docker: openbox+terminator+(debian, opensuse, htop, emerge gentoo, slackware)][image-ss]{: .img-responsive }][photo-ss]
 <br/><br/>
 
 **Reference**:<br/>
@@ -50,5 +50,7 @@ related_link_ids:
 
 
 [image-ss]: {{ site.url }}/assets/posts/system/2016/03/debian-docker-ogs.png
-[picasa-ss]: https://lh3.googleusercontent.com/-9pzAp7TS8ag/VzmdeUrMz9I/AAAAAAAAAMk/GfQI72Rmdz8t-9CEjWI9-E2Y-jFUvVwfQCCo/s0/debian-docker-ogs.png
+[photo-ss]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOLrIvqVOO-FD6p0b9ks12xToT65xqwZMpK2DjH
+
+
 

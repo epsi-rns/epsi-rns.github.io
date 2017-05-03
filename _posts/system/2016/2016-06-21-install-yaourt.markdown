@@ -139,7 +139,7 @@ $ makepkg -i
 $ cd ..
 {% endhighlight %}
 
-[![Yaourt Manual Compilation][image-yaourt-makepkg]{: .img-responsive }][picasa-yaourt-makepkg]
+[![Yaourt Manual Compilation][image-yaourt-makepkg]{: .img-responsive }][photo-yaourt-makepkg]
 
 Always RTFM
 
@@ -165,7 +165,7 @@ SigLevel = PackageOptional
 Server = http://repo.archlinux.fr/$arch
 {% endhighlight %}
 
-[![YaourtFr Repository Sync][image-yaourtfr-sync]{: .img-responsive }][picasa-yaourt-sync]
+[![YaourtFr Repository Sync][image-yaourtfr-sync]{: .img-responsive }][photo-yaourt-sync]
 
 Do sync your repo, and install both
 
@@ -174,7 +174,7 @@ $ pacman -Syu
 $ sudo pacman -S package-query yaourt
 {% endhighlight %}
 
-[![Yaourt Install Using Pacman][image-yaourt-pacman]{: .img-responsive }][picasa-yaourt-pacman]
+[![Yaourt Install Using Pacman][image-yaourt-pacman]{: .img-responsive }][photo-yaourt-pacman]
 
 After both package installed,
 you can safely remove the archlinuxfr section from <code class="code-file">/etc/pacman.conf</code>.
@@ -192,7 +192,7 @@ $ yaourt yaourt
 
 You can see the result in image below
 
-[![Yaourt Querying Yaourt Package][image-yaourt-yaourt]{: .img-responsive }][picasa-yaourt-yaourt]
+[![Yaourt Querying Yaourt Package][image-yaourt-yaourt]{: .img-responsive }][photo-yaourt-yaourt]
 
 -- -- --
 
@@ -226,7 +226,7 @@ if you maintain your AUR upgrade regularly
 with a lot of Syua option in yaourt.
 This command will update all your AUR at once.
 
-Make sure you know what you are doing when skipping PGP Verivication.
+Make sure you know what you are doing when skipping PGP Verification.
 
 {% highlight bash %}
 $ yaourt -Syua
@@ -241,12 +241,13 @@ Thank you for reading
 
 [image-yaourt-package-query]: {{ site.url }}/assets/posts/system/2016/06/yaourt-package-query.png
 [image-yaourt-makepkg]: {{ site.url }}/assets/posts/system/2016/06/yaourt-makepkg.png
-[image-yaourt-pacman]: {{ site.url }}/assets/posts/system/2016/06/yaourt-pacman-half.png
-[image-yaourtfr-sync]: {{ site.url }}/assets/posts/system/2016/06/yaourtfr-sync.png
-[image-yaourt-yaourt]: {{ site.url }}/assets/posts/system/2016/06/yaourt-yaourt.png
+[image-yaourt-pacman]:  {{ site.url }}/assets/posts/system/2016/06/yaourt-pacman-half.png
+[image-yaourtfr-sync]:  {{ site.url }}/assets/posts/system/2016/06/yaourtfr-sync.png
+[image-yaourt-yaourt]:  {{ site.url }}/assets/posts/system/2016/06/yaourt-yaourt.png
 
-[picasa-yaourt-makepkg]: https://lh3.googleusercontent.com/-25HANVvRrqY/V2pLjzeDxHI/AAAAAAAAAW4/1_WsdVmXzUoXq6dJGZb-Hy-fk4aiSIG2gCCo/s0/yaourt-makepkg.png
-[picasa-yaourt-pacman]: https://lh3.googleusercontent.com/-rJzch1p332w/V2pLjiN1eVI/AAAAAAAAAW4/99NGo2q-XZEfeawaRPebkmG3pQ9PhbFmACCo/s0/yaourt-pacman-full.png
-[picasa-yaourt-sync]: https://lh3.googleusercontent.com/-kQEz48z02J4/V2pLlZ6MVVI/AAAAAAAAAW4/HSbsQ7OWAi8r053LdBQmcg9t2-3w1mH7QCCo/s0/yaourtfr-sync.png
-[picasa-yaourt-yaourt]: https://lh3.googleusercontent.com/-mz3zNQtpRkw/V2pLkwdriqI/AAAAAAAAAW4/42xPu4hEauMS43wtWpscnjL49yID-7nTwCCo/s0/yaourt-yaourt.png
+[photo-yaourt-makepkg]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOVqc1s0UzjD3vCFTQsH60Ixy2Wuqv0imn9G-My
+[photo-yaourt-pacman]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMtI5c045Eo7JdxrLeT_V6f4I_OL7QuCPp9Fj1G
+[photo-yaourt-sync]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMcfesFCPt3TXMTVR9ga0gmh7K0YWYnOwG_9Q-k
+[photo-yaourt-yaourt]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOS04CSeZ8i6hibmsqeaObz7O-sveNtsiolkbe1
+
 

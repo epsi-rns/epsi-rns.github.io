@@ -38,9 +38,9 @@ related_link_ids:
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Manjaro Docker Light: xmonad screenfetch (fedora, kali, ubuntu)][image-ss-fki]{: .img-responsive }][picasa-ss-fki]
+[![Manjaro Docker Light: xmonad screenfetch (fedora, kali, ubuntu)][image-ss-fki]{: .img-responsive }][photo-ss-fki]
 <br/><br/>
-[![Manjaro Docker Dark: xmonad screenfetch (gentoo, slackware)][image-ss-gs]{: .img-responsive }][picasa-ss-gs]
+[![Manjaro Docker Dark: xmonad screenfetch (gentoo, slackware)][image-ss-gs]{: .img-responsive }][photo-ss-gs]
 <br/>
 
 Note: just another nix's porn. :-\ <br/>
@@ -52,6 +52,6 @@ Note: just another nix's porn. :-\ <br/>
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-fki]: {{ site.url }}/assets/posts/system/2016/03/manjaro-docker-fki.png
-[picasa-ss-fki]: https://lh3.googleusercontent.com/-j_6ANwMOhoo/VzmdhK000OI/AAAAAAAAAMk/F4HfQ71QX3w5fJUyDfQcNo2ZEUhKPa9OwCCo/s0/manjaro-docker-fki.png
+[photo-ss-fki]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNsM4yvZme4-07XgB4_JI1HMrdVtz5uYJeAZS4b
 [image-ss-gs]: {{ site.url }}/assets/posts/system/2016/03/manjaro-docker-gs.png
-[picasa-ss-gs]: https://lh3.googleusercontent.com/-ZPn9TJf78Gw/VzmdkuxR7SI/AAAAAAAAAMk/IZi4ITsH8JUwKw3b77i5EEux39-krfXSgCCo/s0/manjaro-docker-gs.png
+[photo-ss-gs]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMFzGFcdbyslKMvTYPGXjQ700NOyFuPh-nnm81Y

@@ -22,7 +22,7 @@ related_link_ids:
 ># urpmi task-kde
 {% endhighlight %}
 
-[![Mageia Welcome Screen][image-ss-mageia-welcome]{: .img-responsive }][picasa-ss-mageia-welcome]
+[![Mageia Welcome Screen][image-ss-mageia-welcome]{: .img-responsive }][photo-ss-mageia-welcome]
 
 I spent my early days of GNU/Linux using Red Hat in 1999, 
 followed by Mandrake one year later.
@@ -48,7 +48,7 @@ I'm curious, and I don't want to live in regrets,
 before this distro vanished for ever.
 That's why I'm back to Mandrake aka Mandriva aka Mageia.
 
-[![Mageia Control Center][image-ss-mageia-controlcenter]{: .img-responsive }][picasa-ss-mageia-controlcenter]
+[![Mageia Control Center][image-ss-mageia-controlcenter]{: .img-responsive }][photo-ss-mageia-controlcenter]
 <br/><br/>
 
 Well. It has a very nice Control Panel.
@@ -100,7 +100,7 @@ $ drakconf
 
 {% endhighlight %}
 
-[![Mageia Upgrade][image-ss-mageia-upgrade]{: .img-responsive }][picasa-ss-mageia-upgrade]
+[![Mageia Upgrade][image-ss-mageia-upgrade]{: .img-responsive }][photo-ss-mageia-upgrade]
 
 <hr/>
 
@@ -305,7 +305,7 @@ because I can't afford it in my Notebook.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]{: .img-responsive }][picasa-ss-mageia-xfce4-kwin]
+[![Mageia XFCE4 Kwin Cube Effect][image-ss-mageia-xfce4-kwin]{: .img-responsive }][photo-ss-mageia-xfce4-kwin]
 <br/>
 
 And go further with RazorQT.
@@ -319,7 +319,7 @@ And go further with RazorQT.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]{: .img-responsive }][picasa-ss-mageia-razorqt-kwin]
+[![Mageia RazorQT Kwin Cube Effect][image-ss-mageia-razorqt-kwin]{: .img-responsive }][photo-ss-mageia-razorqt-kwin]
 <br/><br/>
 
 
@@ -330,12 +330,12 @@ At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rare
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-mageia-welcome]: {{ site.url }}/assets/posts/system/2014/05/mageia-welcome.png
-[picasa-ss-mageia-welcome]: https://lh3.googleusercontent.com/-k6WRjfFM2lg/Vz2oaDzsFCI/AAAAAAAAARk/hlaqABuIODozZSSdRI22dyJatQJB5N5IACCo/s0/mageia-welcome.png
+[photo-ss-mageia-welcome]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPl_Ulmlw5AyMz78K-FR-jMm4b6eXeQ40qvwNns
 [image-ss-mageia-controlcenter]: {{ site.url }}/assets/posts/system/2014/05/mageia-controlcenter.png
-[picasa-ss-mageia-controlcenter]: https://lh3.googleusercontent.com/-k13r-0cS-VE/Vz2oYnpJ-QI/AAAAAAAAARk/Wc1QakGlrKkYu9_Jugsba2O5_tuIatHYgCCo/s0/mageia-controlcenter.png
+[photo-ss-mageia-controlcenter]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOJ6z79zCBgRCGVbrGUCZKqNwUnK2SWsD-5TLeO
 [image-ss-mageia-upgrade]: {{ site.url }}/assets/posts/system/2014/05/mageia-upgrade.png
-[picasa-ss-mageia-upgrade]: https://lh3.googleusercontent.com/-WfroOgCn-PI/Vz2oXcsNIYI/AAAAAAAAARk/pJ7SlzzBbJ8U_76f55lMU3OqTkGAJVDbwCCo/s0/mageia-upgrade.png
+[photo-ss-mageia-upgrade]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNugSK6iVFEh7Yp2wBcYA_Cfun3s2oyILFNS_O6
 [image-ss-mageia-xfce4-kwin]: {{ site.url }}/assets/posts/system/2014/05/mageia-xfce4-kwin.png
-[picasa-ss-mageia-xfce4-kwin]: https://lh3.googleusercontent.com/-utAVSadUfw8/Vz2odL-wS0I/AAAAAAAAARk/lr90iKwBXMcfQqoNpKednUOSyG5vNDK-wCCo/s0/mageia-xfce4-kwin.png
+[photo-ss-mageia-xfce4-kwin]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOrNP__XGve5aka9FLGx6vFiKHpfQ7IxStCvBzI
 [image-ss-mageia-razorqt-kwin]: {{ site.url }}/assets/posts/system/2014/05/mageia-razorqt-kwin.png
-[picasa-ss-mageia-razorqt-kwin]: https://lh3.googleusercontent.com/-E9CIA0Lv0pc/Vz2oakhiJII/AAAAAAAAARk/g407bDQc_scCxk75HWAhkzCXzoyxcC6CgCCo/s0/mageia-razorqt-kwin.png
+[photo-ss-mageia-razorqt-kwin]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOW0log4zFnDJgZ9tMwIQJKVxBc4QTKMEbNsMr7

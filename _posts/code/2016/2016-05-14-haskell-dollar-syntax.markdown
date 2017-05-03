@@ -24,7 +24,7 @@ Before you read. You can examine a neat <code>$</code> coding style in my old sc
 **Source**:<br/>
 * [github.com/epsi-rns/dotfiles/.../MyLayoutHook.hs][dotfiles-layout]
 
-[![Haskell Dollar Syntax with Minion in XMonad][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Haskell Dollar Syntax with Minion in XMonad][image-ss-xmonad-dollar]{: .img-responsive }][photo-ss-xmonad-dollar]
 
 * * *
 
@@ -143,6 +143,8 @@ Enough with math. How about real life coding ?
 
 Yes, you can simplify doing those cumbersome parantheses by replacing it with <code>$</code> infix operator as shown in my old screenshot below.
 
+[![Haskell Dollar Syntax in XMonad Layout][image-ss-xmonad-layout]{: .img-responsive }][photo-ss-xmonad-layout]
+
 That's my XMonad Configuration in Haskell that I've been using since 2014.
 
 * * *
@@ -155,5 +157,9 @@ Happy Coding.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [dotfiles-layout]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyLayoutHook.hs
-[image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/05/haskell-dollar.png
-[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-aKNNyl5pysQ/VzmdO9cFZGI/AAAAAAAAAMQ/2kwKWNeF6iQ1mLyyvJpr1ylb5ncAtSGlgCCo/s0/haskell-dollar.png
+[image-ss-xmonad-dollar]: {{ site.url }}/assets/posts/code/2016/05/haskell-dollar.png
+[photo-ss-xmonad-dollar]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOsazbKB0CKjB1fbBIs1pD9bLhbZoDbfIOc8Uo4
+
+
+[image-ss-xmonad-layout]: {{ site.url }}/assets/posts/code/2016/05/haskell-layout.png
+[photo-ss-xmonad-layout]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPkC85qB-0XNSzPm683dbSdzwgAEq9Y6N0-0vxu

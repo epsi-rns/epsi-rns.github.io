@@ -21,7 +21,7 @@ Does anybody know what channel are worth following ?<br/>
 I currently only follow phoronix channel.<br/><br/>
 Thank you<br/><br/>
 
-[![Phoronix Mix][image-flyer]{: .img-responsive }][picasa-flyer]
+[![Phoronix Mix][image-flyer]{: .img-responsive }][photo-flyer]
 <br/><br/>
 
 * * *
@@ -73,7 +73,7 @@ After few comments. Now I have these channels.<br/><br/>
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-[![Isometric Material Design with Inkscape][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Isometric Material Design with Inkscape][image-ss-material]{: .img-responsive }][photo-ss-material]
 
 Illustration made with inkscape, and yoi can have the source code.
 
@@ -83,9 +83,9 @@ Illustration made with inkscape, and yoi can have the source code.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-flyer]: {{ site.url }}/assets/posts/opensource/2016/04/phoronix-mix.png
-[picasa-flyer]: https://lh3.googleusercontent.com/-SzzUdqvYcAQ/VzmdW1EJrII/AAAAAAAAAMg/94dbqYWeTUIww6aL-JivFcsNXGYEqKvWQCCo/s0/phoronix-mix.png
+[photo-flyer]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPUYFC3n0KqdTUMNMPslcaNfIAjpaZaic6kFWPO
 
-[image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/04/inkscape+phoronix.png
-[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-DgQVy3BxkOk/VzmdVzziYrI/AAAAAAAAAMg/8mS642IZvrg2VW8iw-JPbjfmPFK3d6qxQCCo/s0/inkscape%252Bphoronix.png
+[image-ss-material]: {{ site.url }}/assets/posts/opensource/2016/04/inkscape+phoronix.png
+[photo-ss-material]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMrFmLjOLTBwwRc5MalAM-vFtwu52NpuG-e4lN1
 
 [dotfiles-material-design]: {{ site.url }}/assets/posts/design/2016/04/wally-material-design.svg

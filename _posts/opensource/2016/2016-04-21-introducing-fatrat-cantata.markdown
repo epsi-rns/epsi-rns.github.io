@@ -31,7 +31,7 @@ excerpt:
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Introducing FatRat Cantata: debian+plasma+xmonad+cmake][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Introducing FatRat Cantata: debian+plasma+xmonad+cmake][image-ss-xmonad]{: .img-responsive }][photo-ss-xmonad]
 
 * * *
 
@@ -64,7 +64,7 @@ excerpt:
 
 Surprisingly Cantata have a very nice looks.
 
-[![Cantata mpd player have a very nice looks][image-ss-cantata]{: .img-responsive }][picasa-ss-cantata]
+[![Cantata mpd player have a very nice looks][image-ss-cantata]{: .img-responsive }][photo-ss-cantata]
 
 
 {% highlight bash %}
@@ -87,6 +87,6 @@ Surprisingly Cantata have a very nice looks.
 [mpd-fatrat]: http://mpd.wikia.com/wiki/Client:Cantata
 [github-fatrat]: https://github.com/cdrummond/cantata
 [image-ss-xmonad]: {{ site.url }}/assets/posts/opensource/2016/04/introducing-fatrat-cantata.png
-[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-zzlpA_0blio/VzmdWMGIWwI/AAAAAAAAAMg/mC4uMoJdlWYJV376Nk3AT8CVFYOOnNeywCCo/s0/introducing-fatrat-cantata.png
+[photo-ss-xmonad]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMuzaI_fAd5cqbp4Xsb1Sgcj8m97fcTu5Mz-vRC
 [image-ss-cantata]: {{ site.url }}/assets/posts/opensource/2016/04/cantata.png
-[picasa-ss-cantata]: https://lh3.googleusercontent.com/-QfrI67uJqiY/Vz2ld9Ok5-I/AAAAAAAAAN0/lfvvVx1ynq0W4P7heU-WY5x4LJu75MoDQCCo/s0/cantata.png
+[photo-ss-cantata]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipN67dDllxbRB2X3tEsao5CWm1VzpiXk0qbWwECk

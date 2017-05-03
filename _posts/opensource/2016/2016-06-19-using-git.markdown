@@ -41,7 +41,7 @@ In Arch, it is in extra repo.
  $ sudo pacman -S git
 {% endhighlight %}
 
-[![Installing Git in Arch Based Distribution][image-git-pacman-half]{: .img-responsive }][picasa-git-pacman-full]
+[![Installing Git in Arch Based Distribution][image-git-pacman-half]{: .img-responsive }][photo-git-pacman-full]
 
 -- -- --
 
@@ -101,7 +101,7 @@ so I use fish instead.
 
 You can see git in action in this figure bbelow
 
-[![Git Commands in Shell][image-git-status]{: .img-responsive }][picasa-git-status]
+[![Git Commands in Shell][image-git-status]{: .img-responsive }][photo-git-status]
 
 -- -- --
 
@@ -142,5 +142,5 @@ Thank you for reading
 
 [image-git-status]: {{ site.url }}/assets/posts/opensource/2016/06/git-status.png
 [image-git-pacman-half]: {{ site.url }}/assets/posts/opensource/2016/06/git-pacman-half.png
-[picasa-git-status]: https://lh3.googleusercontent.com/-yAeuSGwf6a8/V2pLWMbsjUI/AAAAAAAAAW4/K36MSkxmOOQFBOM446O1mfplQVnd6plKgCCo/s0/git-status.png
-[picasa-git-pacman-full]: https://lh3.googleusercontent.com/-FzRXiNaF6gE/V2pLUrlAAdI/AAAAAAAAAW0/_yIX5rsakZ4sDk4aeIgkfHwTXKD73FWJwCCo/s0/git-pacman-full.png
+[photo-git-status]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOeiSSvmfKYYN7gbckPOlIjcroJ59RKM-qtGWq9
+[photo-git-pacman-full]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNXqnq6TjjaVRWjQ3YPkVK3QhrRrr4zEp8yz6dp

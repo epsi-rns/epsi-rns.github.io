@@ -84,7 +84,7 @@ Here is my screenshot.
    ss_content = ss_content
 %}
 
-[![LXC Package: pacman, emerge, yum, apt][image-ss-lxc-screenfetch]{: .img-responsive }][picasa-ss-lxc-screenfetch]
+[![LXC Screenfetch: manjaro, gentoo, centos, debian][image-ss-lxc-package]{: .img-responsive }][photo-ss-lxc-package]
 <br/>
 
 {% capture ss_content %}
@@ -97,7 +97,7 @@ Here is my screenshot.
    ss_content = ss_content
 %}
 
-[![LXC Screenfetch: manjaro, gentoo, centos, debian][image-ss-lxc-package]{: .img-responsive }][picasa-ss-lxc-package]
+[![LXC Package: pacman, emerge, yum, apt][image-ss-lxc-screenfetch]{: .img-responsive }][photo-ss-lxc-screenfetch]
 <br/>
 
 -- -- --
@@ -109,9 +109,10 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-lxc-screenfetch]: {{ site.url }}/assets/posts/system/2016/02/lxc-screenfetch.png
-[picasa-ss-lxc-screenfetch]: https://lh3.googleusercontent.com/-3P3Mo-dD3BM/Vzmd1cgqRbI/AAAAAAAAAMk/Eve6CDNrio4Lu6IWV1VO-33XzJyl3LXLwCCo/s0/lxc-screenfetch.png
-[image-ss-lxc-package]: {{ site.url }}/assets/posts/system/2016/02/lxc-package.png
-[picasa-ss-lxc-package]: https://lh3.googleusercontent.com/-ymDyCDSEAtM/Vzmd1xbH2sI/AAAAAAAAAMk/48SelNtqDcIR0aFNvfSfluICHUG_lp7YQCCo/s0/lxc-package.png
+[image-ss-lxc-package]: {{ site.url }}/assets/posts/system/2016/02/lxc-screenfetch.png
+[photo-ss-lxc-package]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOIV-PL-MJDcC2TxUi8xKUBFNz419Cnrxi9FBWy
+[image-ss-lxc-screenfetch]: {{ site.url }}/assets/posts/system/2016/02/lxc-package.png
+[photo-ss-lxc-screenfetch]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOytPeGreF98b0YutShuQ7YVKkxeSdUkAcVJUkS
+
 
 

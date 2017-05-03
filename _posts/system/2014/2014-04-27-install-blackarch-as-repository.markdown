@@ -45,7 +45,7 @@ Official Site
 * <https://blackarch.org/>
 
 
-[![BlackArch Keyring][image-ss-blackarch-keyring]{: .img-responsive }][picasa-ss-blackarch-keyring]
+[![BlackArch Keyring][image-ss-blackarch-keyring]{: .img-responsive }][photo-ss-blackarch-keyring]
 <br/><br/>
 
 -- -- --
@@ -60,7 +60,7 @@ I'm still having a hard time while doing <code class="code-command">blackman</co
 [-] CRITICAL: Package not found in repository 'README' 
 {% endhighlight %}
 
-[![BlackMan Issue][image-ss-blackman-issue]{: .img-responsive }][picasa-ss-blackman-issue]
+[![BlackMan Issue][image-ss-blackman-issue]{: .img-responsive }][photo-ss-blackman-issue]
 
 This one has not been solved yet.
 
@@ -68,6 +68,6 @@ This one has not been solved yet.
 
 
 [image-ss-blackarch-keyring]: {{ site.url }}/assets/posts/system/2014/04/blackarch-keyring.png
-[picasa-ss-blackarch-keyring]: https://lh3.googleusercontent.com/-vxylPl4aXfY/Vz2okEH1u_I/AAAAAAAAARs/oowH1cKidiIWOqz8_Fm1sL-J2Gk7PFQSwCCo/s0/blackarch-keyring-full.png
+[photo-ss-blackarch-keyring]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP6OfE4IPS3HkwH5T_g5MYxm4j1o1-99DujKeWp
 [image-ss-blackman-issue]: {{ site.url }}/assets/posts/system/2014/04/blackman-issue.png
-[picasa-ss-blackman-issue]: https://lh3.googleusercontent.com/-mlwqCRJBFxQ/Vz2oluHQN6I/AAAAAAAAARs/LZnq4igNeX4V7E3LyY7e7miSs5yeWDV5ACCo/s0/blackman-issue.png
+[photo-ss-blackman-issue]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMJQL9JAeZpIao4RJYSLTJLxjvrjevTrDPe5Riw

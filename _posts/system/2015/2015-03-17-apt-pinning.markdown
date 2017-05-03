@@ -28,7 +28,7 @@ So all I need is to downgrade my xorg to Debian Stable aka Debian 8.0 Jessie.
 
 So here we are, apt-pinning xorg, purge xorg, and re-install xorg.
 
-[![APT Pinning][image-ss]{: .img-responsive }][picasa-ss]
+[![APT Pinning][image-ss]{: .img-responsive }][photo-ss]
 
 **Reading**:<br/>
 * <https://debian-handbook.info/browse/stable/sect.apt-get.html#sect.apt.priorities>
@@ -38,5 +38,5 @@ All is good now
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss]: {{ site.url }}/assets/posts/system/2015/03/apt-pinning.png
-[picasa-ss]: https://lh3.googleusercontent.com/-LKk0TT15FqM/VznBcvueHjI/AAAAAAAAANg/qET1zVBOm5I5Fn2kHo3EgkwSIRjH-AN-wCCo/s0/apt-pinning.png
+[photo-ss]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNc0clGcljaA-B72q79GtLG-9RV7gBg10xCsEo1
 

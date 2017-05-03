@@ -44,7 +44,7 @@ How about getting serious with BlackArch. Well, there's no way, a student downlo
 
 **sigh**
 
-[![BlackArch XMonad: Category][image-ss-blackarch-categories]{: .img-responsive }][picasa-ss-blackarch-categories]
+[![BlackArch XMonad: Category][image-ss-blackarch-categories]{: .img-responsive }][photo-ss-blackarch-categories]
 
 I can't give them a good solution. But at least I can give option for those who are willing to learn.
 
@@ -87,5 +87,5 @@ Note: Today is my favorite day.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-blackarch-categories]: {{ site.url }}/assets/posts/system/2014/12/blackarch-categories.png
-[picasa-ss-blackarch-categories]: https://lh3.googleusercontent.com/-uisDp583fFM/Vz2mMzmvGcI/AAAAAAAAAOs/TVZfwXZJOtcGKnoWweLoNXraRD9jW_KnwCCo/s0/blackarch-categories.png
+[photo-ss-blackarch-categories]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNfE6VynnLVLAZQFncSnGgydNF0q8W2Vgn07XM7
 [image-ss-blackarch-all-categories]: {{ site.url }}/assets/posts/system/2014/12/blackarch-all-categories.png

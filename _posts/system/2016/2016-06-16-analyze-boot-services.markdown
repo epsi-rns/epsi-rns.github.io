@@ -37,12 +37,12 @@ when you have many services loaded at boot.
 
 **arch**
 
-[![Arch Boot systemd][image-boot-arch]{: .img-responsive }][picasa-boot-arch]
+[![Arch Boot systemd][image-boot-arch]{: .img-responsive }][photo-boot-arch]
 &nbsp;
 
 **debian**
 
-[![Debian Boot systemd][image-boot-debian]{: .img-responsive }][picasa-boot-debian]
+[![Debian Boot systemd][image-boot-debian]{: .img-responsive }][photo-boot-debian]
 
 This is not an Arch versus Debian comparison.
 I put a lot of services in Debian
@@ -58,8 +58,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-boot-arch]: {{ site.url }}/assets/posts/system/2016/06/arch-boot.png
+[image-boot-arch]:   {{ site.url }}/assets/posts/system/2016/06/arch-boot.png
 [image-boot-debian]: {{ site.url }}/assets/posts/system/2016/06/debian-boot.png
 
-[picasa-boot-arch]: https://lh3.googleusercontent.com/-muNb_RiDcdA/V2pLe5WGPGI/AAAAAAAAAWE/AGAd1jPm77sBumyZxoXP-LDHrRlgiZ2AgCCo/s0/arch-boot.png
-[picasa-boot-debian]: https://lh3.googleusercontent.com/-knGXkDnMaFQ/V2pLhS1W5pI/AAAAAAAAAWM/HOSNVyPBdwUkSvVaxRoaAN6-qdgejQMrACCo/s0/debian-boot.png
+[photo-boot-arch]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMpJyvPdwv396veW0xxUUiQwaUkW9k0uKWyBCfV
+[photo-boot-debian]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMBBkisgbw-6sZS5ckq_6jjIfzqX9sbyfL-b6EJ

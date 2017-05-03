@@ -46,7 +46,7 @@ If you are coming from Windows, you might be familiar with this image.
 
 Let's start with this example.
 
-[![Multiboot: Ease-us Partition][image-easeus]{: .img-responsive }][picasa-easeus]
+[![Multiboot: Ease-us Partition][image-easeus]{: .img-responsive }][photo-easeus]
 
 
 Please prepare before installing linux.
@@ -102,7 +102,7 @@ With Dual boot, Windows + Linux
 This my partition structure in my computer,<br/>
 just in case you need some example.
 
-[![Multiboot: GParted sda][image-gparted]{: .img-responsive }][picasa-gparted]
+[![Multiboot: GParted sda][image-gparted]{: .img-responsive }][photo-gparted]
 
 Set-up as multi boot system,
 
@@ -130,7 +130,7 @@ The other part contain
 The only primary partition is (/dev/sda1)<br/>
 While others (5-10) belong to extended (/dev/sda2)
 
-[![Multiboot: cfdisk][image-cfdisk]{: .img-responsive }][picasa-cfdisk]
+[![Multiboot: cfdisk][image-cfdisk]{: .img-responsive }][photo-cfdisk]
 
 ## How do I keep my Windows Recovery Partition safely? 
 
@@ -181,7 +181,7 @@ OR
  $ gksu gedit /etc/fstab
 {% endhighlight %}
 
-[![Multiboot: /etc/fstab][image-fstab]{: .img-responsive }][picasa-fstab]
+[![Multiboot: /etc/fstab][image-fstab]{: .img-responsive }][photo-fstab]
 
 For more information you can
 
@@ -198,10 +198,10 @@ For more information you can
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/linux-multiboot/426339144178768
 [image-cover]: {{ asset_path }}/multiboot-cover.png
 [image-easeus]: {{ asset_path }}/multiboot-ease-us-partition.png
-[picasa-easeus]: https://lh3.googleusercontent.com/-vh_MUuw8NGw/Vz8xo4FioBI/AAAAAAAAASQ/ATbgWFHLNkQ-h9xZW-jVXeTM8ZKOgqxxACCo/s0/multiboot-ease-us-partition-full.png
+[photo-easeus]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNhgwwtuUixyQh2Nm1Xbfwhk6H7poVmapwG24Us
 [image-gparted]: {{ asset_path }}/multiboot-gparted-sda.jpg
-[picasa-gparted]: https://lh3.googleusercontent.com/-Q3CXBVFF2e8/Vz8xpVklhiI/AAAAAAAAASU/Y8Gq3aTN1RgEjRZH2GaXo9LTGpcUv6iLwCCo/s0/multiboot-gparted-sda.png
+[photo-gparted]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO3VgkrKAO7a3lEa4TldF5lvI7Chc3psTbuIH6B
 [image-fstab]: {{ asset_path }}/multiboot-fstab-sample.png
-[picasa-fstab]: https://lh3.googleusercontent.com/-mAKigVFD_jQ/Vz8xonY3EoI/AAAAAAAAASM/Vaaevax_L8EiXgOHf941gl-xhZ2IVZAtACCo/s0/multiboot-fstab-sample.png
+[photo-fstab]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOHu3kTAX60inCasXq_TcoKnUlV6cTD7Gmjsi5c
 [image-cfdisk]: {{ asset_path }}/multiboot-cfdisk.png
-[picasa-cfdisk]: https://lh3.googleusercontent.com/-b7Rq9Em3r0U/Vz8xoaAfTSI/AAAAAAAAASI/3OSTznOKhxkVdX-npq3zwpW-WPRMgH96ACCo/s0/multiboot-cfdisk.png
+[photo-cfdisk]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPEpYu-6gI2ewKHRxOG0FQc5WQRajUfnCDc_sly

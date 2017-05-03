@@ -114,7 +114,7 @@ exit 0
 
 You can see the result in figure below
 
-[![BASH Monitoring Script][image-monitoring-script]{: .img-responsive }][picasa-monitoring-script]
+[![BASH Monitoring Script][image-monitoring-script]{: .img-responsive }][photo-monitoring-script]
 
 -- -- --
 
@@ -134,4 +134,4 @@ Thank you for reading
 [dotfiles-net-speed]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/assets/bin/chunk_net_speed.sh
 
 [image-monitoring-script]: {{ site.url }}/assets/posts/opensource/2016/06/monitoring-script.png
-[picasa-monitoring-script]: https://lh3.googleusercontent.com/-onz8jZY_IKM/V2pLU0tMP8I/AAAAAAAAAW0/ayjKc6CrqiItMQM-9YBVbAeod0cmrqxmQCCo/s0/monitoring-script.png
+[photo-monitoring-script]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOVlmzVIqONsL04Gm3BISrMYLk7fY-vGK3wdROV

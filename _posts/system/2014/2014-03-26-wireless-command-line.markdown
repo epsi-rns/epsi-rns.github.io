@@ -43,7 +43,7 @@ It can be done with this simple command
 ># lspci 
 {% endhighlight %}
 
-[![Wireless lspci][image-1-lspci]{: .img-responsive }][picasa-1-lspci]
+[![Wireless lspci][image-1-lspci]{: .img-responsive }][photo-1-lspci]
 
 This command requires some privileges, so it might be different in other distro.
 
@@ -53,7 +53,7 @@ For Ubuntu, add the word sudo.
  $ sudo lspci 
 {% endhighlight %}
 
-[![Wireless lspci controller][image-1-lspci-controller]{: .img-responsive }][picasa-1-lspci-controller]
+[![Wireless lspci controller][image-1-lspci-controller]{: .img-responsive }][photo-1-lspci-controller]
 
 If you have no luck with this command, maybe it is plugged-in by usb connexion.
 
@@ -63,7 +63,7 @@ Image below shows a Realtek 8187 in
 ># lsusb 
 {% endhighlight %}
 
-[![Wireless lsusb][image-1-lsusb]{: .img-responsive }][picasa-1-lsusb]
+[![Wireless lsusb][image-1-lsusb]{: .img-responsive }][photo-1-lsusb]
 
 Le'ts see what related device with 802.11 standard
 
@@ -71,7 +71,7 @@ Le'ts see what related device with 802.11 standard
 ># lsmod | grep 802 
 {% endhighlight %}
 
-[![Wireless lsmod][image-1-lsmod]{: .img-responsive }][picasa-1-lsmod]
+[![Wireless lsmod][image-1-lsmod]{: .img-responsive }][photo-1-lsmod]
 
 
 Well... it is also nice to know this command.
@@ -81,7 +81,7 @@ It shows what happened to my realtek 8187 device in boot time.
 ># dmesg | grep 8187 
 {% endhighlight %}
 
-[![Wireless dmesg][image-1-dmesg]{: .img-responsive }][picasa-1-dmesg]
+[![Wireless dmesg][image-1-dmesg]{: .img-responsive }][photo-1-dmesg]
 
 Some wireless card need to be turned on manually. 
 So let's check it out with <code class="code-command">rfkill</code> command
@@ -90,7 +90,7 @@ So let's check it out with <code class="code-command">rfkill</code> command
 ># rfkill list 
 {% endhighlight %}
 
-[![Wireless rfkill][image-1-rfkill]{: .img-responsive }][picasa-1-rfkill]
+[![Wireless rfkill][image-1-rfkill]{: .img-responsive }][photo-1-rfkill]
 
 -- -- --
 
@@ -104,7 +104,7 @@ Since iwconfig has been deprecated, we are using iw.
 ># iw dev 
 {% endhighlight %}
 
-[![Wireless iw][image-2-iw]{: .img-responsive }][picasa-2-iw]
+[![Wireless iw][image-2-iw]{: .img-responsive }][photo-2-iw]
 
 And scan our available essid for our wireless
 
@@ -112,7 +112,7 @@ And scan our available essid for our wireless
 ># iw dev wlan0 scan | grep -i ssid 
 {% endhighlight %}
 
-[![Wireless iw scan][image-2-iw-scan]{: .img-responsive }][picasa-2-iw-scan]
+[![Wireless iw scan][image-2-iw-scan]{: .img-responsive }][photo-2-iw-scan]
 
 From this step, we may choose method to connect to your wireless. 
 There are many methods, but you can only chooses one method at a time. 
@@ -155,7 +155,7 @@ Finally, you may disconnect,
 ># nmcli dev disconnect iface wlan0 
 {% endhighlight %}
 
-[![Wireless nmcli connect][image-3-nmcli]{: .img-responsive }][picasa-3-nmcli]
+[![Wireless nmcli connect][image-3-nmcli]{: .img-responsive }][photo-3-nmcli]
 
 The <code class="code-command">wifi connect</code> command 
 only supported after Netwok Manager 0.96. 
@@ -163,7 +163,7 @@ Kali Linux 1.x series is still using 0.9.4 series of Netwok Manager.
 It does not support connect command. 
 So it is a little bit different.
 
-[![Wireless nmcli con up][image-3-nmcli-up]{: .img-responsive }][picasa-3-nmcli-up]
+[![Wireless nmcli con up][image-3-nmcli-up]{: .img-responsive }][photo-3-nmcli-up]
 
 -- -- --
 
@@ -251,7 +251,7 @@ Now you can ping
 ># ping google.com -c 2 
 {% endhighlight %}
 
-[![Wireless ip][image-4-summary]{: .img-responsive }][picasa-4-summary]
+[![Wireless ip][image-4-summary]{: .img-responsive }][photo-4-summary]
 
 -- -- --
 
@@ -266,30 +266,30 @@ Now you can ping
 [image-cover]: {{ asset_path }}/wireless-cover.png
 
 [image-1-lspci]: {{ asset_path }}/wireless-1-lspci.png
-[picasa-1-lspci]: https://lh3.googleusercontent.com/-zzHixWPiXGA/Vz_gqW3HakI/AAAAAAAAATQ/y6klqF6UcLElnbdlKZ2cut1NoJzsyhv0gCCo/s0/wireless-1-lspci.png
+[photo-1-lspci]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMxKL1R60tjBiY0YSQ9MNIMljRRpcrOLP5eheTN
 [image-1-lspci-controller]: {{ asset_path }}/wireless-1-lspci-controller.png
-[picasa-1-lspci-controller]: https://lh3.googleusercontent.com/-gP8xmBTq0os/Vz_gpzBWA1I/AAAAAAAAATQ/4dirqdOLBPEPZ3dMeHpBCQDopMafWdiZQCCo/s0/wireless-1-lspci-controller.png
+[photo-1-lspci-controller]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOTEMmuVbVw23bD19Le_bF_jgDDTFKwix2zW3MR
 [image-1-lsusb]: {{ asset_path }}/wireless-1-lsusb.png
-[picasa-1-lsusb]: https://lh3.googleusercontent.com/-9pXeWEdT6gY/Vz_gqh1pRvI/AAAAAAAAATQ/9Ekxayme46Qx-GjmjKgIWq14ZznFPLh4ACCo/s0/wireless-1-lsusb.png
+[photo-1-lsusb]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNOclJzB3GCGO8TMiWfshduoJVbBcsKa-ssiQYH
 [image-1-lsmod]: {{ asset_path }}/wireless-1-lsmod.png
-[picasa-1-lsmod]: https://lh3.googleusercontent.com/-9hThNUzx5dA/Vz_gpomwzsI/AAAAAAAAASk/MraFatPPLGgVQgel8DZUy_9TBRgZp_hKgCCo/s0/wireless-1-lsmod.png
+[photo-1-lsmod]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPMsAD1Mof3dgfRcFY7Rvft-wJUACQa8aezaSr5
 [image-1-dmesg]: {{ asset_path }}/wireless-1-dmesg.png
-[picasa-1-dmesg]: https://lh3.googleusercontent.com/-7ydgeiqmZUU/Vz_gp9cmCoI/AAAAAAAAASo/syFJcxrjo38ahTOh7UBqg7dVVk3APnZiQCCo/s0/wireless-1-dmesg.png
+[photo-1-dmesg]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOvy4CUR8GnZpBIR_FL9Y0WYlEQOC6CyWKBcuKL
 [image-1-rfkill]: {{ asset_path }}/wireless-1-rfkill.png
-[picasa-1-rfkill]: https://lh3.googleusercontent.com/-LcKNiBOKb-w/Vz_gqkv9g7I/AAAAAAAAATQ/6SuOi3dz2gIrRHfeLhgV7b9a9DZrGQnowCCo/s0/wireless-1-rfkill.png
+[photo-1-rfkill]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMFOrJMMfH15l4gp5ct-tP_LWk2Qw2bN5zrW1bp
 
 [image-2-iw]: {{ asset_path }}/wireless-2-iw.png
-[picasa-2-iw]: https://lh3.googleusercontent.com/-7YaoFOSsKDg/Vz_grNbKA8I/AAAAAAAAATQ/kQON8ydLg3MVKDuGteVw0AMULVe6a-3HwCCo/s0/wireless-2-iw.png
+[photo-2-iw]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMrLGZ4puUBJpAEb3UvHtnnQgLclrfYxdUpDhTR
 [image-2-iw-scan]: {{ asset_path }}/wireless-2-iw-scan.png
-[picasa-2-iw-scan]: https://lh3.googleusercontent.com/-tGKVWVhRF0c/Vz_gq3SOkUI/AAAAAAAAATQ/XqmwWRQCZyQelsfSjCO_1_EcUxklwEuJwCCo/s0/wireless-2-iw-scan.png
+[photo-2-iw-scan]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPTV2HWWtpowaukjhmEfekak--ddK7mKgQyGw6V
 
 [image-3-nmcli]: {{ asset_path }}/wireless-3-nmcli-connect.png
-[picasa-3-nmcli]: https://lh3.googleusercontent.com/-Dra9B0_7Y_g/Vz_grmk1lOI/AAAAAAAAATQ/VxB5tuwUFF8RQxiiZjey8FsBsJXuLsBQgCCo/s0/wireless-3-nmcli-connect.png
+[photo-3-nmcli]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNr3Su0WM1fkDqniyMp2_K8SqK14aveSVQLGAHp
 [image-3-nmcli-up]: {{ asset_path }}/wireless-3-nmcli-con-up.png
-[picasa-3-nmcli-up]: https://lh3.googleusercontent.com/-MCk7_XD4_8w/Vz_grd5wqKI/AAAAAAAAATQ/3H7y8XcvcCMB7zBw7EElXgnIYrdWsUH7ACCo/s0/wireless-3-nmcli-con-up.png
+[photo-3-nmcli-up]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP-uHUMT1NA6uqi3zaynaNXiLxbIC5iOpehs7_O
 
 [image-4-summary]: {{ asset_path }}/wireless-4-summary.png
-[picasa-4-summary]: https://lh3.googleusercontent.com/-CC7dh4vI_oI/Vz_grwKIj6I/AAAAAAAAATQ/SVmIokkX5Qwa4eyaOjrDQegDHrvSlZ-oACCo/s0/wireless-4-summary.png
+[photo-4-summary]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOvGRF_yM0P_iPwWRZqF8vRmDM_Ag4Q67MmKjVP
 
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/command-line-wireless/433920080087341
 [link-archwiki]: https://wiki.archlinux.org/index.php/Wireless_network_configuration
