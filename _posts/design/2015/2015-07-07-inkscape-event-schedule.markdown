@@ -62,11 +62,11 @@ That's all for now.
 
 
 [image-sched-1]: {{ site.url }}/assets/posts/design/2015/07/50th-ftui-schedule.png
-[hires-sched-1]: https://lh3.googleusercontent.com/jUS57M57_KstlwuEbk9Mef61o4BEKL9LZSOkru73DBjfHEKv_Zaw9DAuxy-83ARnPxhMfsGOlz09J6vD1LgkxI2K5ZqfnQUF246d9NAJI2I5ybG1tBv7btcWB2eW6ZwlVQvjvzD860KOUGh1yTdUDERyXEefba7qsaedXX3PFR1h-BfWJQFPT9FPRVE7jwiRNqV1Z0O3POfZQuGPTxIt-LLrMPx_ZrMpFZnkeUTIhycqtdT8vm9nt947-fvYehLBmpzpIplM7WSjIUcIAmSVL9tomhcIPrmfShcmMDRt9QQJbO8I0oU8pe5OWrtA50xH_OD46blRirM8fAjDE3JkfK6iNxzsrLRnAPR9AcDfdtCX65WJIjdS5zWcgJTBYfWcuyks68xZpBWQpLCXB3Rya9CmztF_RFqzyG4OFebpUmC0q4VFA2XlZ3FKrifVHwKLJuiIy8h_m1ZYeCmSdIQ9mKInohOoc1QxnDFTfL0Cdukbvc-UqlgzHEiSzSxu1kl6LF0oYaMHZJqtrQjL0mInl55AFU-b5h2aVNBAvC0a99PK_ua14zLERqZmum05qYxVa3OWe2Q_ySzBFf_cb-ib8Ozt3IC0ccwKn5C_CpToQi5tRfuB=w0
+[hires-sched-1]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipMI_kjPzmQ7lFbrojRgMGG0SLX7polCVgsuYY4c
 [dotfiles-sched-1]: {{ site.url }}/assets/posts/design/2015/07/50th-ftui-schedule.svg.gz
 [deviant-sched-1]:  http://nurwijayadi.deviantart.com/art/50th-FTUI-schedule-01-645783014
 
 [image-sched-2]: {{ site.url }}/assets/posts/design/2015/07/munas-ftui-schedule.png
-[hires-sched-2]: https://lh3.googleusercontent.com/I6Ev6peefFrpmdvfq8mKhZ4z-4x1agqNGMYXJ9LsSpcONhi3nCTCpC6y9MLIJCZ-AEwRVJIQLtZIlqL5O7QGJedwmaTee0DklAJlhiwTLTzhcLzDFg6YTD-GZC8Po7OdT8x98qIanOHYKvW4XDJl96TZ9pFj36XG-dal5JKnVuwX6_apM9sRtQNW3XCg8R-PiwBxITy-STYHH0p0WhQxjVWSp9__0f2_-MY6SaO4vbCRhOFGNTQgMmaknsoK4Gmh8vuU4yNhP-3OkI0zI7SlNRAUDWD9a7mt1KlGveI079bWVMXRwjB5QFhJJQYwEfMtmqoQwip5UvgRBrt6iZEqjzosZrOPVKnIHTIEEw1V_3XrufVqMz-nSUpLkJ87eSnUOpq7lAZPQRxPQhb4hunaUHar2rR2vlgvi78d6bl-Ho8O7l5OtvPhzMFD1nopagEvZqRODjjAOjX6dKFv4x-05F9EuWRppqzyZKlRCNSzwaTBhO7Ej5WTt9HXn9j934AMeMRqzc8NKOAYMO-Pm8jjCOWSsOUZwKIC72R__SsYVHZyEiYJm5DddoEsXWt_c7D1e3s12SyY84fQ7Odfbfk9DOB6tDrjS9zzIEMi-TUqag4u15M_=s0
+[hires-sched-2]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipPHAAetXRwy5DhF44TxvR-7y3D21KaR5A_F1DtC
 [dotfiles-sched-2]: {{ site.url }}/assets/posts/design/2015/07/munas-ftui-schedule.svg.gz
 [deviant-sched-2]:  http://nurwijayadi.deviantart.com/art/Munas-FTUI-schedule-02-645783181

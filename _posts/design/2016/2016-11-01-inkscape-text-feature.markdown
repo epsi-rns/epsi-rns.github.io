@@ -180,7 +180,7 @@ That's all for now.
 [image-sample-2b]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum-02.png
 [image-sample-3]: {{ site.url }}/assets/posts/design/2016/11/dukungan-pribadi-01.png
 
-[hires-sample-2]: https://lh3.googleusercontent.com/6Pv11pGlwf7CStbWoahAaVTK3Qo-sg6UNfnCG8Fw2ooEZcuNQTYChSyX35dy3DFAKSbvVIYVaanKpEjT3b5mYRchBHrZXI4VDpLpGlCk5PHEqkQqxiIrRci-mmL6_qGCIuFrUUJgMGSKCW792bYDdfz1LnpzVyC3V393-yV044mTwTe_1iz9I8yljZZKS2s9re15QU3ZcmbiRkQJ_xQaHUE_UVTC2BdYfNHmjOxVDEPi0UjXuuGpbeQ0fWkVSKlkLYOMPCvkmeG5PjYVBC9Ge-e0ZHdO-N0luuV7AXx3HGoAZYyhSCtbKKKUOTiTokkPtCL_nEkbO4IpVIjncHI6NjCoinpOJTnoaJ3H6qU1tcTAOhdMJjoe3_XzSE15qcd4hlPW0IkOcGqfYSqVUzh82qkylDpORKhqRTInjIcVYajp_FklxqeGLFWQbFEQohFxdCnNVkHuswsA5TwX8EQDp-BMXilpbSCqEJzqeagcMicI2Wa3zL-bQV_j8vp9xPsVsmSlSIn_9RnRIUqE09F6Ubx7vecCvbj1rInbHUAnKA7f0EFumHBK6Q6bM1pb3HXl0i3heMY5HGzgbexqlo2dj0DI0FcNwrQjDNKnv8J-qd2B2EtK=w0
+[hires-sample-2]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPDSnT7Jbd7u0nPb1Zt5kNw1kveVCWTxhJXtBl0
 
 [dotfiles-sample-0]: {{ site.url }}/assets/posts/design/2016/11/text-feature.svg
 [dotfiles-sample-2]: {{ site.url }}/assets/posts/design/2016/11/penegakan-hukum.svg

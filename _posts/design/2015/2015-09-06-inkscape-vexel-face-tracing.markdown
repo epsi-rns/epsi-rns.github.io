@@ -20,7 +20,7 @@ I'm an inkscape n00b. I haven't got time to do low poly tracing. So this is it. 
 
 And this pair, if you want to see the comparation between manual tracing and the original.
 
-[![Vexel Compare][image-ss-pair]{: .img-responsive }][picasa-ss-pair]
+[![Vexel Compare][image-ss-pair]{: .img-responsive }][photo-ss-pair]
 
 I currently do not have any plan to modify this vector. e.g. Adding beard, moustache, or long hair.
 
@@ -36,7 +36,7 @@ At least I have something for my avatar.
 
 [image-ss-pp]: {{ site.url }}/assets/posts/design/2015/09/vexel-profile-picture.png
 [image-ss-pair]: {{ site.url }}/assets/posts/design/2015/09/vexel-compare.png
-[picasa-ss-pair]: https://lh3.googleusercontent.com/-r44NihtUHVM/VznBXPm8kkI/AAAAAAAAANg/q9_8EZGGrOoghmuYDBD7BplANmdw6OUlQCCo/s0/vexel-compare.png
+[photo-ss-pair]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNi84uZaaFTp4_F1xeXpUZRG9rYGr0WuPk0wKbU
 
 [deviant-ss-pp-1]: http://nurwijayadi.deviantart.com/art/Humanity-in-Progress-645792932
 [deviant-ss-pp-2]: http://nurwijayadi.deviantart.com/art/Portrait-645793019

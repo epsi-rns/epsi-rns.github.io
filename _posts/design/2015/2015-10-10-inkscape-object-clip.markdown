@@ -115,17 +115,17 @@ That's all. Have Fun with Clipping Object.
 [image-step-text]:  {{ site.url }}/assets/posts/design/2015/10/clip-step-02.png
 [image-step-clip]:  {{ site.url }}/assets/posts/design/2015/10/clip-step-03.png
 
-[image-iluni-ui]: {{ site.url }}/assets/posts/design/2015/10/clip-iluni-01.png
-[hires-iluni-ui]: https://lh3.googleusercontent.com/Uz2pt_D3ewpw8oY-kRp6q7zpEnJCiO3WIjM6RRwQ1sQx0YcIFT0PG4dT3nqz98DHuyBCFe_XQDh0-LTDzKF8fyOTl3nATSUhPyWN9ADj_s7e_KGVTnHG8Hr9HT3VbeLZvV6zDLD32wni_iUrVV9Km4HsfN0NA1SejQq9gyCd1V_7Bkha-nTuYEbOjhlFyVmDJqojzb_aPOspjmx5QcRdwUB7JcmOzuxsf8tzwGTwT8zdiOInQ1vN3hb6gJn7O0Hvd9UAbE_qn-OANpoFmEopz_2TgBjkezydO8x_eXo6xbXvw2Ex8w9qVsumFfgO55dDasSxJzLkIliETkVsuWZcjN0EpALWKkWyQojIEz7q_lrcN2N5Z-1h5xBv1sikkJKrhoO-stnuLuoJePNKdVYIXaJxu4nwu6wxJ15g7xdcP62KfqCCzSqjMSovJaUDdcDY8-c0FMdLza1zXCn3wo-t0bnyPYcXTdBiBOIAdwcPf6GW-qgy0YgowzK-3HxqbImvgsOgIz33KZg8dkIrnuLGHtNJI_U9dPu3qgX72j7IiRRWUpXBiXro9w4xPe57ev2fnvmA_HTlIktACy0EKQROTdorgLR-DE_3NKXaXWfphtrLqHtm=w0
+[image-iluni-ui]:    {{ site.url }}/assets/posts/design/2015/10/clip-iluni-01.png
+[hires-iluni-ui]:    https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipMd6rsf7mkN3PYCiIOQv2ndj_m8tQwSZIiv-b5g
 [dotfiles-iluni-ui]: {{ site.url }}/assets/posts/design/2015/10/clip-iluni-01.svg.gz
 [deviant-iluni-ui]:  http://nurwijayadi.deviantart.com/art/Ucapan-Terimakasih-clip-01-645782174
 
-[image-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/10/clip-iluni-02.png
-[hires-iluni-ftui]: https://lh3.googleusercontent.com/WDyRiHyC0OO-psq6r-Ge-Nh_IWbB6LC5YIniIpaX5znJIBnc5vzANF01TFYRMXCWOwT8qmsj6ziia8jUED1_jGhLfKQgBdRk6Qr6pxdSibgIsbuSZ7V7vmHSL7u4SLg1jIZdWsyJFVSBMzUcW28nT-0Z6pW_CdeNlIZK44W8xsEo9UvyRfuzDCs3zKBxn5AH45afINHeFFMiBKSZY5HFi-gUUU4wwClgajKjjk9IP1-9Kbb89jD3vOsI1iHWTXDNCvmyODXbNwoVZes4S50fW7oYdPEETP8uoFXazBztJiqsSfwAnXAh68U7_LvkarCuVKqHdKni8Bx3Hye_Gq5_xbnWcmqMG-tlEyNtP5fYc-Kjc0mZaIpCGYI9VKxMPMdIq0hIn_zkNHp_IKS7A2-GUPNFsFTIQxsnEmtwd_U8HaZDfqtiR2QgGSUpB6Z-xrViWY45NCNfzwSl5A4uhyXpA24f29H_Dz5DcAMYKRxTNNPuMSjwP3O0Fk1LyMMlJd4_lP6H_OaVW3ZPxY5dB0ejR4-TEUPsKsEJnNL4i8M6lCn22RkF93MSOdd4bMOUCX7Ir_fM5JWyR4F3D2iA4KY1eUtaM6tjwVmyEOYQeU33ZbH1bQ4u=w0
+[image-iluni-ftui]:    {{ site.url }}/assets/posts/design/2015/10/clip-iluni-02.png
+[hires-iluni-ftui]:    https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipPzTaUga94dCYQFIpFxCfMyHIhY5OOwDl8aUU5S
 [dotfiles-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/10/clip-iluni-02.svg.gz
 [deviant-iluni-ftui]:  http://nurwijayadi.deviantart.com/art/Laporan-Pertanggungjawaban-Clip-02-645782381
 
-[image-energi-thanks]:  {{ site.url }}/assets/posts/design/2015/09/energi-terbarukan-ucapan-terima-kasih.png
-[hires-energi-thanks]:  https://lh3.googleusercontent.com/mXYeB9hHFYjH931SNWkR9nzLkE_ncOP1VwxMKTQL_wFGDSBjviKepkshzDC6ZAgT_DblQ5oM2ad1-aescl0911ZrzMxSXJuMNcGPzVUMjcAJcA18Ia-cY585B97VPWoJFKNbSdOSwYjhA-Vkn3oFTr-G1GWf7qO6yh2b7IQQJC-erB5bpHCFLo-dkxn1SBpxbVSy5alEcNdw0uDGeB29ucwkipxCcApXl-h0g7qNdagCG56gQf0GldC-xhgaowgaAN-0zd8vUISNPLMlaK0iHz5fC4bsTyKJbvg7eGnEAUEo6XoeKBk4_79zUNZgkKp7Z2s55H7Wk_Dekp8qbaj98HSWO5ouaGdkdy_Cxeq9BhouFgN62lUjrH5QLFeJ6VDgJf_DO2iAQ9beRexyDHVQdWfkOsR3VG2DlM2kWgAMeAX4eTcovbfELC049pDJHNyxEFv4NaZq2JsFF5P-FTVEQLSqkMa_ya68LRsLkzBs-CFH9AZmf0G5C_IZRs15GkJGeUqrZzDJmWQSL262aqFTpu3qtZI-f3-dGk1E_QYnItRF3WO_IV1kx1VPkysk9gXEqW3a6IqYQLEq7vJPcPu0g57tmnMoOn79-ENSI2v8LprBawm5=s0
+[image-energi-thanks]:    {{ site.url }}/assets/posts/design/2015/09/energi-terbarukan-ucapan-terima-kasih.png
+[hires-energi-thanks]:    https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipO1s9jWFfB5u8XjfMs6ODUarl8ppTJcmRiu79Sn
 [dotfiles-energi-thanks]: {{ site.url }}/assets/posts/design/2015/09/energi-terbarukan-ucapan-terima-kasih.svg.gz
 [deviant-energi-thanks]:  http://nurwijayadi.deviantart.com/art/Ucapan-Terimakasih-clip-03-645782639

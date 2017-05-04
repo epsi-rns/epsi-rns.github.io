@@ -64,7 +64,7 @@ there are a few more steps to utilize AUR package.
  $ gem list
 {% endhighlight %}
 
-[![Installing Ruby using Pacman][image-ss-ruby-install]{: .img-responsive }][picasa-ss-ruby-install]
+[![Installing Ruby using Pacman][image-ss-ruby-install]{: .img-responsive }][photo-ss-ruby-install]
 
 -- -- --
 
@@ -83,7 +83,7 @@ The official site
 {% endhighlight %}
 
 
-[![Installing Jekyll per USer Using Gem][image-ss-gem-jekyll]{: .img-responsive }][picasa-ss-gem-jekyll]
+[![Installing Jekyll per USer Using Gem][image-ss-gem-jekyll]{: .img-responsive }][photo-ss-gem-jekyll]
 
 This will result
 
@@ -119,13 +119,13 @@ It is in community repository
  $ sudo pacman -S ruby-sass
 {% endhighlight %}
 
-[![Installing ruby-sass AUR using yaourt][image-ss-yaourt-ruby-sass]{: .img-responsive }][picasa-ss-yaourt-ruby-sass]
+[![Installing ruby-sass AUR using yaourt][image-ss-yaourt-ruby-sass]{: .img-responsive }][photo-ss-yaourt-ruby-sass]
 
 {% highlight bash %}
  $ yaourt ruby-jekyll
 {% endhighlight %}
 
-[![Installing ruby-jekyll AUR using yaourt][image-ss-yaourt-ruby-jekyll]{: .img-responsive }][picasa-ss-yaourt-ruby-jekyll]
+[![Installing ruby-jekyll AUR using yaourt][image-ss-yaourt-ruby-jekyll]{: .img-responsive }][photo-ss-yaourt-ruby-jekyll]
 
 -- -- --
 
@@ -162,7 +162,7 @@ And run Jekyll in your directory.
  $ jekyll serve
 {% endhighlight %}
 
-[![Jekyll Build on Empty Directory][image-ss-jekyll-build]{: .img-responsive }][picasa-ss-jekyll-build]
+[![Jekyll Build on Empty Directory][image-ss-jekyll-build]{: .img-responsive }][photo-ss-jekyll-build]
 
 Since your diretory is currently empty.
 This will run empty site.
@@ -181,7 +181,7 @@ and let's generate site skeleton.
  $ ls -l
 {% endhighlight %}
 
-[![Jekyll Scaffolding Generate Web Skeleton][image-ss-jekyll-new]{: .img-responsive }][picasa-ss-jekyll-new]
+[![Jekyll Scaffolding Generate Web Skeleton][image-ss-jekyll-new]{: .img-responsive }][photo-ss-jekyll-new]
 
 You will see, some new directory and files
 required to run a simple Jekyll Blog.
@@ -203,7 +203,7 @@ gems:
 If you run Jekyll serve on it,
 it will complain about dependency error.
 
-[![Jekyll Plugin Dependency Problem][image-ss-jekyll-serve-error]{: .img-responsive }][picasa-ss-jekyll-serve-error]
+[![Jekyll Plugin Dependency Problem][image-ss-jekyll-serve-error]{: .img-responsive }][photo-ss-jekyll-serve-error]
 
 All we need is to install standard plugin using yaourt.
 
@@ -211,11 +211,11 @@ All we need is to install standard plugin using yaourt.
  $ yaourt jekyll-paginate
 {% endhighlight %}
 
-[![Installing ruby-jekyll-paginate plugin AUR using yaourt][image-ss-yaourt-jekyll-paginate]{: .img-responsive }][picasa-ss-yaourt-jekyll-paginate]
+[![Installing ruby-jekyll-paginate plugin AUR using yaourt][image-ss-yaourt-jekyll-paginate]{: .img-responsive }][photo-ss-yaourt-jekyll-paginate]
 
 Now you can have your Jekyll Site running smoothly.
 
-[![Successfully Running Jekyll][image-ss-jekyll-serve-succeed]{: .img-responsive }][picasa-ss-jekyll-serve-succeed]
+[![Successfully Running Jekyll][image-ss-jekyll-serve-succeed]{: .img-responsive }][photo-ss-jekyll-serve-succeed]
 
 You can check on port 4000.
 
@@ -232,28 +232,28 @@ Thank you for reading.
 {% assign asset_path = site.url | append: '/assets/posts/webdev/2016/06' %}
 
 [image-ss-ruby-install]: {{ asset_path }}/jekyll-install-ruby-install-half.png
-[picasa-ss-ruby-install]: https://lh3.googleusercontent.com/-rUGms8MFJiE/V2rOfFnIOBI/AAAAAAAAAYI/kJMC2iRGGwEz8QJivS8OaITUQfzZsvFdQCCo/s0/jekyll-install-ruby-install-full.png
+[photo-ss-ruby-install]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMfcH_gOoxKl-TjwPbsrr9LlY5oSZUZ4hsj4CDF
 
 [image-ss-gem-jekyll]: {{ asset_path }}/jekyll-unused-gem-install-half.png
-[picasa-ss-gem-jekyll]: https://picasaweb.google.com/114746802090569033213/6285227631791370225#6299074128896865410
+[photo-ss-gem-jekyll]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNIPXL_ZCefy0dn6o-nc-gn25Wf22gxqceER8xe
 
 [image-ss-yaourt-ruby-sass]: {{ asset_path }}/jekyll-yaourt-ruby-sass-half.png
-[picasa-ss-yaourt-ruby-sass]: https://lh3.googleusercontent.com/-VxLOPmbBnqQ/V2rOmPA8XxI/AAAAAAAAAYM/hQJendh42Z4c3Dw4aD-kvd5NNlItePfogCCo/s0/jekyll-yaourt-ruby-sass-full.png
+[photo-ss-yaourt-ruby-sass]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNhBhtu2yyvcoCpf64uDlymuIbWQkLE59ppKYui
 
 [image-ss-yaourt-ruby-jekyll]: {{ asset_path }}/jekyll-yaourt-ruby-jekyll-half.png
-[picasa-ss-yaourt-ruby-jekyll]: https://lh3.googleusercontent.com/-z8F3xW5297s/V2rOkk0fZ0I/AAAAAAAAAYM/YVWP8AuocRoQsgbmHWx7hxGJ1pkI1aixwCCo/s0/jekyll-yaourt-ruby-jekyll-full.png
+[photo-ss-yaourt-ruby-jekyll]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOHCEImph9yIk2aC8vvwac4j-_gQHTSU7psH4ba
 
 [image-ss-jekyll-build]: {{ asset_path }}/jekyll-build-half.png
-[picasa-ss-jekyll-build]: https://lh3.googleusercontent.com/-_kAxaq48hxc/V2rOeibSOYI/AAAAAAAAAYI/rXr92MV9PGM30W0uJWBVbFL7uj8nB67-gCCo/s0/jekyll-build-full.png
+[photo-ss-jekyll-build]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOk_bb_fOtjBszffx9Q4h73ZDn2jKDjBzxdswvt
 
 [image-ss-jekyll-new]: {{ asset_path }}/jekyll-new.png
-[picasa-ss-jekyll-new]: https://lh3.googleusercontent.com/-DbsA94EDAbA/V2rOfhHEb1I/AAAAAAAAAYI/eyvw8v4EsD8PW8wElZyqvJ6XKPe9g6L8gCCo/s0/jekyll-new.png
+[photo-ss-jekyll-new]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPUC8BH3DTlBiRGDy5GrQCOXmIieoDSayK3x7WU 
 
 [image-ss-jekyll-serve-error]: {{ asset_path }}/jekyll-serve-error-paginate.png
-[picasa-ss-jekyll-serve-error]: https://lh3.googleusercontent.com/-D57DEK-bOcw/V2rOgc1b9fI/AAAAAAAAAYI/sWcu_YFHQ0Eumkp_stGgaKB8e_Y8dIOlQCCo/s0/jekyll-serve-error-paginate.png
+[photo-ss-jekyll-serve-error]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNk5T5AXwMBYaeMzJb_CGgTS4Zc5hejiQpFWEfD
 
 [image-ss-yaourt-jekyll-paginate]: {{ asset_path }}/jekyll-yaourt-paginate-half.png
-[picasa-ss-yaourt-jekyll-paginate]: https://lh3.googleusercontent.com/-RceT5EcMYjI/V2rOkvRgNMI/AAAAAAAAAYM/r63Rx8Z-mH8EH52WUEb0lD6tkZcO6HwOACCo/s0/jekyll-yaourt-paginate-full.png
+[photo-ss-yaourt-jekyll-paginate]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipM3tBOdSsfYS3JVgC0A60d9RqakS9MBtFlnjMWY
 
 [image-ss-jekyll-serve-succeed]: {{ asset_path }}/jekyll-serve-succeed.png
-[picasa-ss-jekyll-serve-succeed]: https://lh3.googleusercontent.com/-5cvRHrYnunc/V2rOg9E_l-I/AAAAAAAAAYI/Mlmsswb0Ji4ccwVI5lNPxR36lMZ4ak4BgCCo/s0/jekyll-serve-succeed.png
+[photo-ss-jekyll-serve-succeed]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMZ4hGuZ3VqWHEBwIRKRJOTSBhQGK6xAqlX9sCq

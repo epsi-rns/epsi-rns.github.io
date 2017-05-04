@@ -24,7 +24,7 @@ Where do I start?
 This is more like a guidance.
 Coder with different experience might have different answer.
 
-[![Illustration: HTML and CSS][image-html-css]{: .img-responsive }][picasa-html-css]
+[![Illustration: HTML and CSS][image-html-css]{: .img-responsive }][photo-html-css]
 
 -- -- --
 
@@ -182,4 +182,4 @@ Have Fun with Learning.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-html-css]: {{ site.url }}/assets/posts/webdev/2016/06/illustration-css-html-light.png
-[picasa-html-css]: https://lh3.googleusercontent.com/-1gkoz00Hb2o/V1_FNgRzXnI/AAAAAAAAAVk/oqBkiy2yhEs_A_5o_U10-4dcqh8yyFv9QCCo/s0/illustration-css-html-light.png
+[photo-html-css]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNF3kFy-hPj3SONSlQHMOVuFATN1JS92_B3_LeV

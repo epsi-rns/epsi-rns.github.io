@@ -24,7 +24,7 @@ I also add shadow with envelope path effects under the logo.
 
 * [nurwijayadi.deviantart.com/art/...][deviant-pink-padz]
 
-[![Pink Padz][image-ss-pink-padz]{: .img-responsive }][picasa-ss-pink-padz]
+[![Pink Padz][image-ss-pink-padz]{: .img-responsive }][photo-ss-pink-padz]
 
 ### ILUNI FTUI
 
@@ -34,7 +34,7 @@ I also add shadow with envelope path effects under the logo.
 
 * [nurwijayadi.deviantart.com/art/...][deviant-iluni-ftui]
 
-[![ILUNI Teknik][image-ss-iluni-ftui]{: .img-responsive }][picasa-ss-iluni-ftui]
+[![ILUNI Teknik][image-ss-iluni-ftui]{: .img-responsive }][photo-ss-iluni-ftui]
 
 ### Document Properties
 
@@ -42,10 +42,10 @@ I also add shadow with envelope path effects under the logo.
 
 
 
-[image-ss-pink-padz]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.png
-[picasa-ss-pink-padz]: https://lh3.googleusercontent.com/--LrrAKXV0kk/VznBU1phg_I/AAAAAAAAANg/UcWcJ0-p4w0ltqBiNa51r767qeKMgedpwCCo/s0/logo-stamp-pink-padz.png
+[image-ss-pink-padz]:  {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.png
+[photo-ss-pink-padz]:  https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNRIaZe4nRF9LNCuVHZdL3Wo8IA9ZMAi2gpHd7Q
 [image-ss-iluni-ftui]: {{ site.url }}/assets/posts/design/2015/09/logo-stamp-iluni-ftui.png
-[picasa-ss-iluni-ftui]: https://lh3.googleusercontent.com/-Xruv7VPTq60/VznBURBVsYI/AAAAAAAAANg/PLtGPUu4ezYpN93V-9TWZuNPkBO4RtQYgCCo/s0/logo-stamp-iluni-ftui.png
+[photo-ss-iluni-ftui]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNdW7RoYAoiXXrwg72lGE1lak-iNRQ3XfBEaQd2
 
 [dotfiles-pink-padz]:  {{ site.url }}/assets/posts/design/2015/09/logo-stamp-pink-padz.svg.gz
 [deviant-pink-padz]:   http://nurwijayadi.deviantart.com/art/Logo-Stamp-Ornament-Iluni-FTUI-645792391

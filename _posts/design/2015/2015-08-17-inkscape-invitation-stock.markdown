@@ -64,11 +64,11 @@ Please Click for higher resolution.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-yellow-invitation]: {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni-yellow.png
-[picasa-yellow-invitation]: https://lh3.googleusercontent.com/KNqw5M9t9zxZIB6jTp58tNkTnGS2cwqHbNX7mzLynC2JAh6XyD1LaUQA2qoubPOz2IbV_kV8YSqeOb8LIWK8MDGqgCjYlwxY3XeTAn22DU0J8HaYFjkKOTk7OSLLvBM5Nkhx_mPnDgLLXDBbsoUYqC_Vw9Qw93iyieM_mkhU8biuzQ77jYjLv4zVijd0oQtrCHz_7DWkDFm6kxKwIf3tif31F2SLbuGSuylB7QB-8tapv24c75MwJfyu17kWI763nFNlPMpwWCtjQ9M-xHi0zf4cz5gb8sYNTs3itKAt3whKC5TMpyQEsHAm9JJzIp6DO28W08NxmhyUgIzdRFqmEq2NVVRV1fU0ENGX0ubMNcgKJGzUOeF5qXieGDzGlm7-ufiY10BK5F0bBhKik89RVrlbDFYiTlZrJtMIKDnvWZbm4RLOebt_abOAHwA8SqG0r_3JyNfixoPeJ9c9BMV5YZDi7xkYhhaYUTNM69DuqPa9Fldvqs6ZshOlSmIcTNSiyXbkB_oWfb-Ylu-21kJsGgZl84XtJEX-8SUcfuzK2OuGl__Xy-u4S9LyvKERPoey4fVEa4kB6l85tTcP0kILCVg3ar-F5fz3hgtAtnM_ut50iANF=s0
-[image-blue-invitation]: {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni-blue.png
-[picasa-blue-invitation]: https://lh3.googleusercontent.com/Pil-7XiDfz_wbTVQwtK-Wk4ebKScY0pg7EtmOm1qRPIPITmG_Pg4Qs4JbLz2VbiAJbdmRcM8Hc8-TqabcAbKCIDWKWxVQJlOPcpgD3_u3aNLf2eClKAvgr40ZJdfBtVj8Y1ZuBUJpfQXu1ASsc98YJdwVQf-TOhYjqJBU-ytIcQOParslBgERI0WYT_NUce8LPNYNyrJEFi3lmkpEs_lPif1YXYFZyFQ-l_gacGJWkxsLOmsOYS0C-I7OZmciv0_jKNGktvOVRHJ5aClOsnPMYx7UdDJGBsaCY7VCXt6zezVqUytzJY1z2E7LDUdqCAWE_1X7jpl2Pj49rlpKFqdmYTgnVtExkLo5pCgZKWlHkG2GNrm8YwanYkUfdiz62oVeOOdSjbT5E31xMV9hT5QIIDhULYPV8MStviKe2pcWPCtgPv_yogg7Cbs6dMf6gGQWa3N3LATkthoEOD8d0TqWq_erPV8SRbHwcXIIz0m-qaqq7MjbCwCqdpYMPiv0G-mZI6GEEZtGZrlCEEgx5i599zWnwtq7tjz3nNU6HHO__01t9wlzSG17cCLpeREdY9Z80g1KFlY-FKGqwQOMYFzutQVyERrIDTce-PZ50lAATIkvKiE=s0
+[image-yellow-invitation]:   {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni-yellow.png
+[picasa-yellow-invitation]:  https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipPVtkUmnKbthSVSHpHmwHCl13WeRSmf4U_TlK4x
+[image-blue-invitation]:     {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni-blue.png
+[picasa-blue-invitation]:    https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNUNbnjO20F9sxLmHrC2MDuQsYhK7L99wiuCHje
 
-[dotfiles-invitation]: {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni.svg.gz
+[dotfiles-invitation]:       {{ site.url }}/assets/posts/design/2015/08/event-invitation-sample-alumni.svg.gz
 [deviant-invitation-yellow]: http://nurwijayadi.deviantart.com/art/Undangan-Alumni-645736320
-[deviant-invitation-blue]: http://nurwijayadi.deviantart.com/art/Undangan-Alumni-645736708
+[deviant-invitation-blue]:   http://nurwijayadi.deviantart.com/art/Undangan-Alumni-645736708
