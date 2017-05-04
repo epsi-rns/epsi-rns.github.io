@@ -32,7 +32,7 @@ I'm not textbook guy,
 I don't know exactly what is the different
 and I won't give a definition here either.
 
-[![Cinnamon 3D Switcher][image-ss-cinnamon-3d]{: .img-responsive }][picasa-ss-cinnamon-3d]
+[![Cinnamon 3D Switcher][image-ss-cinnamon-3d]{: .img-responsive }][photo-ss-cinnamon-3d]
 
 
 -- -- --
@@ -204,4 +204,4 @@ Thank you for reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-cinnamon-3d]: {{ site.url }}/assets/posts/desktop/2016/06/cinnamon-3d.png
-[picasa-ss-cinnamon-3d]: https://lh3.googleusercontent.com/-kwSInSzWe3Q/V1_FQldQyJI/AAAAAAAAAVU/ikndUryhC-gjf8zJ7O1yQMK975x99m0TACCo/s0/cinnamon-3d.png
+[photo-ss-cinnamon-3d]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMxkI2MO3-Uamt4onaDbVI1KNW2yxR2E6QtKF-r

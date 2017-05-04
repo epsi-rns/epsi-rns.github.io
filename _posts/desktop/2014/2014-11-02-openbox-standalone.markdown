@@ -57,7 +57,7 @@ Openbox is the only Stacking WM that I use daily.
 This screenshot use a lot of transparency.
 <br/>
 
-[![debian+openbox+tint2+conky+tmux+cmus+screenfetch+font(captureit)][image-ss-openbox]{: .img-responsive }][picasa-ss-openbox]
+[![debian+openbox+tint2+conky+tmux+cmus+screenfetch+font(captureit)][image-ss-openbox]{: .img-responsive }][photo-ss-openbox]
 <br/>
 
 -- -- --
@@ -81,7 +81,7 @@ Bunsenlabs Linux distribution. So I clone theme in my arch.
 **WM**: Openbox<br/>
 <br/>
 
-[![openbox clone][image-ss-openbox-clone]{: .img-responsive }][picasa-ss-openbox-clone]
+[![openbox clone][image-ss-openbox-clone]{: .img-responsive }][photo-ss-openbox-clone]
 
 -- -- --
 
@@ -100,6 +100,6 @@ Or make your own cool tint2 taskbar based on this thread.
 
 
 [image-ss-openbox]: {{ site.url }}/assets/posts/desktop/2014/11/openbox-green-garden.png
-[picasa-ss-openbox]: https://lh3.googleusercontent.com/-IAK0W6hIhVg/Vz2oEHxs41I/AAAAAAAAARc/PioYvuCxLy8Tqy2h2LacXQoP-I4TdC_MgCCo/s0/openbox-green-garden.png
+[photo-ss-openbox]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNggBdzYid-9w2oKBHjgerSDakdOrwrFD8QnOwO
 [image-ss-openbox-clone]: {{ site.url }}/assets/posts/desktop/2014/11/openbox-arch-crunchbang-clone.png
-[picasa-ss-openbox-clone]: https://lh3.googleusercontent.com/-FfVK47gbWnI/Vz2n78YRaXI/AAAAAAAAARM/i2ix7ajBjhYrAk0VXi_EsPxa382GhzZ_ACCo/s0/openbox-arch-crunchbang-clone.png
+[photo-ss-openbox-clone]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMDfHbGl3yQuVUC55L0h-WWkn-raIkNlyxAE6Dj

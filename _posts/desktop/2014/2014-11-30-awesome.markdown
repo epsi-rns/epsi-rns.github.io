@@ -57,7 +57,7 @@ Awesome has floating option to make you feel like you are in stacking WM.
 {% include part/screenshot.html ss_content = ss_content %}
 
 
-[![arch+awesome (kali), (glances, saidar, ncmpcpp)][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
+[![arch+awesome (kali), (glances, saidar, ncmpcpp)][image-ss-awesome]{: .img-responsive }][photo-ss-awesome]
 <br/><br/>
 
 
@@ -87,4 +87,4 @@ The Wallpaper from Awesome theme is stunningly beautiful.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2014/11/awesome.png
-[picasa-ss-awesome]: https://lh3.googleusercontent.com/-NgcARBSpJEc/Vz2oASMylYI/AAAAAAAAARM/3IssneEeNb8JDV6NUZoS2rPNz5FHp3CQQCCo/s0/awesome.png
+[photo-ss-awesome]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOPRe1GgmSaA8hKMfw4ulF7SA5V0zje-yFFddH8

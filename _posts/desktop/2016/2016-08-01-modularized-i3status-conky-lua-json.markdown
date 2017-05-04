@@ -46,7 +46,7 @@ Before we get too deep, let's see the old way of configuring i3status with Conky
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
+[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][photo-ss-i3gaps-dark]
 
 -- -- --
 
@@ -133,7 +133,7 @@ bar {
     }
 {% endhighlight %}
 
-[![i3status][image-i3-i3status]{: .img-responsive }][picasa-i3-i3status]
+[![i3status][image-i3-i3status]{: .img-responsive }][photo-i3-i3status]
 
 ### i3blocks
 
@@ -152,7 +152,7 @@ bar {
     }
 {% endhighlight %}
 
-[![i3blocks][image-i3-i3blocks]{: .img-responsive }][picasa-i3-i3blocks]
+[![i3blocks][image-i3-i3blocks]{: .img-responsive }][photo-i3-i3blocks]
 
 ### Conky
 
@@ -418,11 +418,11 @@ You can check the rest of the file in github
 
 * [conky/cokyrc.top.lua][source-top]
 
-  [![i3status: Conky Lua Top][image-i3status-top]{: .img-responsive }][picasa-i3status-top]
+  [![i3status: Conky Lua Top][image-i3status-top]{: .img-responsive }][photo-i3status-top]
 
 * [conky/cokyrc.bottom.lua][source-bottom]
 
-  [![i3status: Conky Lua Bottom][image-i3status-bottom]{: .img-responsive }][picasa-i3status-bottom]
+  [![i3status: Conky Lua Bottom][image-i3status-bottom]{: .img-responsive }][photo-i3status-bottom]
   
 -- -- --
 
@@ -453,7 +453,7 @@ local color_preset_bright = {
 local color_preset = color_preset_bright
 {% endhighlight %}
 
-[![i3-gaps: Conky Lua in bright i3status][image-ss-i3gaps-bright]{: .img-responsive }][picasa-ss-i3gaps-bright]  
+[![i3-gaps: Conky Lua in bright i3status][image-ss-i3gaps-bright]{: .img-responsive }][photo-ss-i3gaps-bright]  
 
 ## Font Problem
 
@@ -472,32 +472,32 @@ You may modify this config to suit your needs.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
+[image-ss-i3gaps-dark]:   {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
 [image-ss-i3gaps-bright]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-bright.png
 
-[image-i3-workspace]: {{ site.url }}/assets/posts/desktop/2016/08/i3-workspace.png
-[image-i3-i3status]: {{ site.url }}/assets/posts/desktop/2016/08/i3-i3status.png
-[image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-i3blocks.png
+[image-i3-workspace]:     {{ site.url }}/assets/posts/desktop/2016/08/i3-workspace.png
+[image-i3-i3status]:      {{ site.url }}/assets/posts/desktop/2016/08/i3-i3status.png
+[image-i3-i3blocks]:      {{ site.url }}/assets/posts/desktop/2016/08/i3-i3blocks.png
 
-[image-i3-conky-1-old]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-1-old.png
-[image-i3-conky-2-lua]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-2-lua.png
-[image-i3-conky-3-json]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-3-json.png
+[image-i3-conky-1-old]:   {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-1-old.png
+[image-i3-conky-2-lua]:   {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-2-lua.png
+[image-i3-conky-3-json]:  {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-3-json.png
 
-[image-i3status-top]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-top.png
-[image-i3status-bottom]: {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-bottom.png
+[image-i3status-top]:     {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-top.png
+[image-i3status-bottom]:  {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-bottom.png
 
-[picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
-[picasa-ss-i3gaps-bright]: https://lh3.googleusercontent.com/-hJsG_VoSktU/V6DGP-pCpYI/AAAAAAAAAto/KhqyjuYpw2wlvqHSWFaClDsUtKYgWtaUgCCo/s0/i3gaps-bright.png
+[photo-ss-i3gaps-dark]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMXY1ouG45kbjW_OBvrgcDyVecU1Cz55flj0wnr
+[photo-ss-i3gaps-bright]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMrVos0mLsbcSZR49ZkXZwWKFSkKfmTRJ5ar6Hf
 
-[picasa-i3-i3status]: https://lh3.googleusercontent.com/-rCE8C1AZe8E/V6CmyLvsNHI/AAAAAAAAAtc/sYzQbxCPuSMC_GYnLtBx7zHXidbm1GnkACCo/s0/i3-i3status.png
-[picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-BqXzPSz6fdU/V6CmyPLOKzI/AAAAAAAAAtc/iVJeU9TmRY80CItOLyGkZT3EEw3wpMP-ACCo/s0/i3-i3blocks.png
+[photo-i3-i3status]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPuF-zmeePj4kYj84O0OJnYyQ5xqQlNEGiWJBMV
+[photo-i3-i3blocks]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPZ0TTZtgQfxoD0Mms5sURoAsLqZekKfYKxQJQf
 
-[picasa-i3status-top]: https://lh3.googleusercontent.com/-rUBIF6prl9M/V59hvuz00JI/AAAAAAAAAsg/_MkrH8oQLko9XY1wF4UWkrxrFV0aEwcVgCCo/s0/conky-lua-json-top.png
-[picasa-i3status-bottom]: https://lh3.googleusercontent.com/-Ob6R5cfkNlE/V59hvg54EoI/AAAAAAAAAsg/IBBJhBRtZ54KljugJopeQCYac3rJwbJlgCCo/s0/conky-lua-json-bottom.png
+[photo-i3status-top]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipN89O6K1_nEO7RMlR2NQ00xT2FGLmLU1HUFJCrT
+[photo-i3status-bottom]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP_wqTnm_iRFFL28-nJ-lAiExnzeWz2jWTs7CvP
 
-[source-i3]: https://github.com/epsi-rns/dotfiles/tree/master/i3
+[source-i3]:     https://github.com/epsi-rns/dotfiles/tree/master/i3
 [source-helper]: https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonhelper.lua
-[source-parts]: https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonparts.lua
-[source-top]: https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.top.lua
+[source-parts]:  https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonparts.lua
+[source-top]:    https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.top.lua
 [source-bottom]: https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.bottom.lua
 

@@ -34,7 +34,7 @@ But don't worry, this additional module is optional.
 
 * Wiki: <https://awesomewm.org/wiki/Main_Page>
 
-[![Awesome Install Summary Screenshot][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
+[![Awesome Install Summary Screenshot][image-ss-awesome]{: .img-responsive }][photo-ss-awesome]
 
 To customize Awesome configuration,
 You needs Lua Programming Knowledge.
@@ -54,7 +54,7 @@ This will also install required packages
 $ sudo apt install awesome
 {% endhighlight %}
  
-[![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][picasa-awesome-lua]
+[![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][photo-awesome-lua]
 
 You can see how lightweight Awesome WM from figure above.
 The installation footprint of both Awesome and Lua are less than four megabytes.
@@ -101,7 +101,7 @@ installing <code>awesome-extra</code> package from official repository.
 $ sudo apt install awesome-extra
 {% endhighlight %}
 
-[![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][picasa-awesome-vicious]
+[![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][photo-awesome-vicious]
 
 -- -- --
 
@@ -115,9 +115,6 @@ In order to install Lain, you must clone the lain manually.
 $ cd ~/.config/awesome/
 $ git clone https://github.com/copycat-killer/lain.git
 {% endhighlight %}
-
-
-![Clone Awesome Lain Module Directly from Github][image-awesome-lain-git]{: .img-responsive }
 
 -- -- --
 
@@ -195,12 +192,12 @@ Good night.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-screenshot-summary.png
-[picasa-ss-awesome]: https://lh3.googleusercontent.com/-378BeBMqzeo/V3RJasTzbqI/AAAAAAAAAZk/1K_3AaGRFHEHr1Lf9CmJuG3XoqgwVTCDgCCo/s0/debian-awesome-screenshot-summary.png
+[photo-ss-awesome]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipM3UJqH6y1Prb9uLk4deBhem1ZPRlNZG9nKWDZ3
 
 [image-awesome-lua]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-lua-half.png
-[picasa-awesome-lua]: https://lh3.googleusercontent.com/-JAouz6UbATs/V3RJZ2cLzDI/AAAAAAAAAZs/oXJ19GTbX6wIGIzx41joKgILHROoSickQCCo/s0/debian-awesome-lua-full.png
+[photo-awesome-lua]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipM7zWCTwSIai_s-PwY70egytzU0Ru_tYQH3Dem4
 
 [image-awesome-vicious]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-extra-half.png
-[picasa-awesome-vicious]: https://lh3.googleusercontent.com/-HgElJifNMBE/V3RJX140i0I/AAAAAAAAAZs/l6rFuXCnGD08zz5wOxM0l5_s4nKd3zZRQCCo/s0/debian-awesome-extra-full.png
+[photo-awesome-vicious]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOEJB_mE2kvcmHO-oBpWbepU_ynL7gBrDJTC6g7
 
 [image-awesome-lain-git]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-extra-half.png

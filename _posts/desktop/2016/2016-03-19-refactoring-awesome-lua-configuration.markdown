@@ -38,9 +38,9 @@ Talk is cheap. Here is the code on github account:
 * <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
 
 <br/>
-[![Refactoring Awesome Light with Midnight Commander][image-ss-awesome-light]{: .img-responsive }][picasa-ss-awesome-light]
+[![Refactoring Awesome Light with Midnight Commander][image-ss-awesome-light]{: .img-responsive }][photo-ss-awesome-light]
 <br/><br/>
-[![Refactoring Awesome Dark with Midnight Commander][image-ss-awesome-dark]{: .img-responsive }][picasa-ss-awesome-dark]
+[![Refactoring Awesome Dark with Midnight Commander][image-ss-awesome-dark]{: .img-responsive }][photo-ss-awesome-dark]
 <br/>
 
 Awesome is a Dynamic Tiling Window Manager. For whatever that means.
@@ -68,6 +68,6 @@ I know how terrible it is.
 
 
 [image-ss-awesome-light]: {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-light.png
-[picasa-ss-awesome-light]: https://lh3.googleusercontent.com/-HSziviMzatY/VzmdsAkfKNI/AAAAAAAAAMk/7rFDLvZUp_MqC--shJyPTB5MB894dnyMACCo/s0/refactoring-awesome-light.png
-[image-ss-awesome-dark]: {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-dark.png
-[picasa-ss-awesome-dark]: https://lh3.googleusercontent.com/-Ag5vRw54Fdk/VzmdrJ2x1GI/AAAAAAAAAMk/5nUQb2JZbkUH-xFYg0FP0f41ME2Uh5VIACCo/s0/refactoring-awesome-dark.png
+[photo-ss-awesome-light]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNCFvyl03d1gCrOg3HspYPF3K-W9Z9wdSxHoN0M
+[image-ss-awesome-dark]:  {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-dark.png
+[photo-ss-awesome-dark]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMg3vsE81GPuWinJOCe7CnAcTSdQnnw-anBEuXX

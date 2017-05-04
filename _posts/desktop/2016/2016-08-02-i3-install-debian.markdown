@@ -38,7 +38,7 @@ Guidance in The Fine Manual is enough.
 
 * User Guide: <https://i3wm.org/docs/userguide.html>
 
-[![i3 Install Summary Screenshot][image-ss-i3]{: .img-responsive }][picasa-ss-i3]
+[![i3 Install Summary Screenshot][image-ss-i3]{: .img-responsive }][photo-ss-i3]
 
 -- -- --
 
@@ -52,7 +52,7 @@ You can issue either one of this.
 $ sudo apt install i3
 {% endhighlight %}
  
-[![Install i3 (i3 i3lock i3status )][image-i3-i3wm]{: .img-responsive }][picasa-i3-i3wm]
+[![Install i3 (i3 i3lock i3status )][image-i3-i3wm]{: .img-responsive }][photo-i3-i3wm]
 
 -- -- --
 
@@ -87,7 +87,7 @@ It is a useful additional package and it is available in Debian repository.
 $ sudo apt install i3blocks
 {% endhighlight %}
 
-[![Install i3-blocks][image-i3-i3blocks]{: .img-responsive }][picasa-i3-i3blocks]
+[![Install i3-blocks][image-i3-i3blocks]{: .img-responsive }][photo-i3-i3blocks]
 
 -- -- --
 
@@ -129,7 +129,7 @@ $ make
 $ sudo make install
 {% endhighlight %}
 
-[![Install AUR i3-gaps][image-i3-i3gaps]{: .img-responsive }][picasa-i3-i3gaps]
+[![Install AUR i3-gaps][image-i3-i3gaps]{: .img-responsive }][photo-i3-i3gaps]
 
 -- -- --
 
@@ -193,7 +193,7 @@ $ sudo apt install dmenu
 $ sudo apt install rofi
 {% endhighlight %}
 
-[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
+[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][photo-ss-i3gaps-dark]
 
 -- -- --
 
@@ -224,16 +224,16 @@ Thank you for reading and visiting.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-i3]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-summary.png
-[picasa-ss-i3]: https://lh3.googleusercontent.com/-w-Lulan3AEI/V6IKgI5K5oI/AAAAAAAAAuo/yKPdrukomZMkZsZOJaVa3vm1734ZPNkDwCCo/s0/i3-debian-install-summary.png
+[photo-ss-i3]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPO_DmfWQ3-tBM-Cssg8GPRS_AwlkKs3fGPz8it
 
 [image-i3-i3wm]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3wm-half.png
-[picasa-i3-i3wm]: https://lh3.googleusercontent.com/-YohfQLQgM08/V6IKl7la0LI/AAAAAAAAAuo/p9Y2xdnnbMcFnagKhGZNcCcMgqZZsaglwCCo/s0/i3-debian-install-i3wm-full.png
+[photo-i3-i3wm]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNwFXb62llEMlyTF6EeHXv-y2YTcTXFR8TLTpQP
 
 [image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3blocks-half.png
-[picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-R43C8kWbB88/V6IKlhyrbEI/AAAAAAAAAuo/7qb2HShmaUUvA_6-nZX_ThW2A6-KerN1ACCo/s0/i3-debian-install-i3blocks-full.png
+[photo-i3-i3blocks]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMJF7NZpwn8SLpOj2wAGBfOBCjYYUhVG2ZCu2nE
 
 [image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3gaps-half.png
-[picasa-i3-i3gaps]: https://lh3.googleusercontent.com/-7AAudqElnBk/V6IKl3XikzI/AAAAAAAAAuo/_Hbotu_UFkkaP3zOfYTpBb23aK_9yEugACCo/s0/i3-debian-install-i3gaps-full.png
+[photo-i3-i3gaps]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOzGH5eGVSr7YXWOlTDovmFVfrnvr_umDXL9emI
 
 [image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
-[picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
+[photo-ss-i3gaps-dark]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMXY1ouG45kbjW_OBvrgcDyVecU1Cz55flj0wnr

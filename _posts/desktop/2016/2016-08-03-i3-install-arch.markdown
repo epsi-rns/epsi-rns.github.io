@@ -33,7 +33,7 @@ Guidance in The Fine Manual is enough.
 
 * User Guide: <https://i3wm.org/docs/userguide.html>
 
-[![i3 Install Summary Screenshot][image-ss-i3]{: .img-responsive }][picasa-ss-i3]
+[![i3 Install Summary Screenshot][image-ss-i3]{: .img-responsive }][photo-ss-i3]
 
 -- -- --
 
@@ -48,7 +48,7 @@ $ sudo pacman -S i3
 $ sudo pacman -S i3-wm i3lock i3status 
 {% endhighlight %}
  
-[![Install i3 (i3-wm i3lock i3status )][image-i3-i3wm]{: .img-responsive }][picasa-i3-i3wm]
+[![Install i3 (i3-wm i3lock i3status )][image-i3-i3wm]{: .img-responsive }][photo-i3-i3wm]
 
 <code>i3status</code> use <code>confuse</code> library.
 It will be installed automatically.
@@ -95,7 +95,7 @@ or
 $ yaourt -S i3blocks
 {% endhighlight %}
 
-[![Install AUR i3-blocks][image-i3-i3blocks]{: .img-responsive }][picasa-i3-i3blocks]
+[![Install AUR i3-blocks][image-i3-i3blocks]{: .img-responsive }][photo-i3-i3blocks]
 
 -- -- --
 
@@ -122,7 +122,7 @@ or
 $ yaourt -S i3-gaps
 {% endhighlight %}
 
-[![Install AUR i3-gaps][image-i3-i3gaps]{: .img-responsive }][picasa-i3-i3gaps]
+[![Install AUR i3-gaps][image-i3-i3gaps]{: .img-responsive }][photo-i3-i3gaps]
 
 To go back from <code>i3-gaps</code>,
 install <code>i3-wm</code>.
@@ -193,7 +193,7 @@ $ sudo pacman -S dmenu
 $ sudo pacman -S rofi
 {% endhighlight %}
 
-[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][picasa-ss-i3gaps-dark]
+[![i3-gaps: Conky Lua in dark i3status][image-ss-i3gaps-dark]{: .img-responsive }][photo-ss-i3gaps-dark]
 
 -- -- --
 
@@ -224,16 +224,16 @@ Thank you for reading and visiting.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-i3]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-summary.png
-[picasa-ss-i3]: https://lh3.googleusercontent.com/-1rU0U1ffYO4/V6HYA15Q5TI/AAAAAAAAAuI/a14r84TgDaguRESpK5eWVULRhWWPGTL5QCCo/s0/i3-arch-install-fullscreen.png
+[photo-ss-i3]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP4x8DBep9URZHKJl7rrpaE9b8GvXXz9_RPH56J
 
 [image-i3-i3wm]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3wm-half.png
-[picasa-i3-i3wm]: https://lh3.googleusercontent.com/-xmEJ0jNXmso/V6HYBFt-InI/AAAAAAAAAuI/yQtOpXbqBV4Z_8CwzyFappNPWQ6ZhanuQCCo/s0/i3-arch-install-i3wm-full.png
+[photo-i3-i3wm]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMy7qxBD_jR-En1LVmEO2pa_M4K2uNfC-kt5xjv
 
 [image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3blocks-half.png
-[picasa-i3-i3blocks]: https://lh3.googleusercontent.com/-3f4WBLUMM5g/V6HYA96BUzI/AAAAAAAAAuI/0S7E3Lu3c7MN6Ho0Naa9Pik8D3fvQ6_UwCCo/s0/i3-arch-install-i3blocks-full.png
+[photo-i3-i3blocks]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPgQWe8icQgf3XQ7Rrtb56aUPqWyEZ02TSb9u8K
 
 [image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3gaps-half.png
-[picasa-i3-i3gaps]: https://lh3.googleusercontent.com/-HmYhhfjP1dY/V6HYAYhygJI/AAAAAAAAAuI/EpohYgBEk2YzpkgfFZLGKtaWooIqhYOQQCCo/s0/i3-arch-install-i3gaps-full.png
+[photo-i3-i3gaps]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPsf9GBtpYyOd6pRAWaUj0j7x_H1mqCn59_U8SV
 
 [image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
-[picasa-ss-i3gaps-dark]: https://lh3.googleusercontent.com/-z2h94mqwszU/V59JN7KCTyI/AAAAAAAAAsI/Dj76UEcWbnkhowZUobnrj8uwC6aA-VcuwCCo/s0/i3gaps-dark.png
+[photo-ss-i3gaps-dark]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMXY1ouG45kbjW_OBvrgcDyVecU1Cz55flj0wnr

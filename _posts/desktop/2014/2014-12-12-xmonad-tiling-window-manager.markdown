@@ -50,7 +50,7 @@ so you can make a very flexible configuration.
    ss_content = ss_content
 %}
 
-[![Self Explanatory][image-ss-self-explanatory]{: .img-responsive }][picasa-ss-self-explanatory]
+[![Self Explanatory][image-ss-self-explanatory]{: .img-responsive }][photo-ss-self-explanatory]
 
 -- -- --
 
@@ -70,7 +70,7 @@ so you can make a very flexible configuration.
 %}
 
 
-[![XMobar: No Gap][image-ss-xmobar-nogap]{: .img-responsive }][picasa-ss-xmobar-nogap]
+[![XMobar: No Gap][image-ss-xmobar-nogap]{: .img-responsive }][photo-ss-xmobar-nogap]
 
 <br/>
 
@@ -86,7 +86,7 @@ so you can make a very flexible configuration.
    ss_content = ss_content
 %}
 
-[![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]{: .img-responsive }][picasa-ss-xmobar-threecolumns-gap]
+[![XMobar: Three Column with Gap][image-ss-xmobar-threecolumns-gap]{: .img-responsive }][photo-ss-xmobar-threecolumns-gap]
 
 
 Source
@@ -110,7 +110,7 @@ Source
 %}
 
 
-[![Dzen2 symmetric][image-ss-dzen2]{: .img-responsive }][picasa-ss-dzen2]
+[![Dzen2 symmetric][image-ss-dzen2]{: .img-responsive }][photo-ss-dzen2]
 
 <br/>
 
@@ -127,7 +127,7 @@ Source
 %}
 
 
-[![Dzen2 asymmetric][image-ss-dzen2-five-terms]{: .img-responsive }][picasa-ss-dzen2-five-terms]
+[![Dzen2 asymmetric][image-ss-dzen2-five-terms]{: .img-responsive }][photo-ss-dzen2-five-terms]
 
 
 Source
@@ -146,12 +146,13 @@ Five selfieshoot are worth five thousand words
 
 
 [image-ss-self-explanatory]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-self-explanatory.png
-[picasa-ss-self-explanatory]: https://lh3.googleusercontent.com/-VDWvJwgHlL4/Vz2mh_HDNkI/AAAAAAAAAO8/lZ-OnxAfSDwvrYoYZeoBPl_bdKVS06S5wCCo/s0/xmonad-self-explanatory.png
+[photo-ss-self-explanatory]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPL60aooDDHmvjL4x-Uge_L19JoK0B5_Y5zaMRX
 [image-ss-xmobar-nogap]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-xmobar-nogap.png
-[picasa-ss-xmobar-nogap]: https://lh3.googleusercontent.com/-1bcBUJihphI/Vz2mlHnK4BI/AAAAAAAAAO8/2e_49iMs8kwSn-pqhSAcpge5LLmBeSajQCCo/s0/xmonad-xmobar-nogaps.png
+[photo-ss-xmobar-nogap]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPdOCZNYmmh4PsvdDrve9LtQY8WdyEWzjVJrcep
 [image-ss-xmobar-threecolumns-gap]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-xmobar-threecolumns.png
-[picasa-ss-xmobar-threecolumns-gap]: https://lh3.googleusercontent.com/-2IkVXzKSn3Q/Vz2mpPdfJiI/AAAAAAAAAPg/-oDI1U8y-DEGrl9UK51udhjF18Nel2WSwCCo/s0/xmonad-xmobar-threecolumn.png
+[photo-ss-xmobar-threecolumns-gap]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPtamGAwMDJ51aL1-RkvuBwZZ57aiRm6A04_0yk
 [image-ss-dzen2]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-dzen2.png
-[picasa-ss-dzen2]: https://lh3.googleusercontent.com/-gG9fubXyTpI/Vz2m_RPgSEI/AAAAAAAAAP8/ZNXGlGJrb3YTKH5jFDAcFj5sGBxBWGVywCCo/s0/xmonad-dzen2.png
+[photo-ss-dzen2]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPwrSBh_z0F3XFb8LusEcaDFRzu1O0I2lv7Dtvz
 [image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-dzen2-five-terms.png
-[picasa-ss-dzen2-five-terms]: https://lh3.googleusercontent.com/-sAfgbEpNTAs/Vz2mYpQ_MpI/AAAAAAAAAO8/E9gCAtDPoIgjnsMKNoGnY94v2QhSLOSVACCo/s0/xmonad-five-terms.png
+[photo-ss-dzen2-five-terms]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNZrGXQjKC8DwMLaCS44BOtpRVTsm2k-G77XPvl
+

@@ -33,9 +33,9 @@ Especially with network monitoring.
 {% include part/screenshot.html ss_content = ss_content %}
 
 <br/>
-[![i3 Black: arch+ncmpcpp][image-ss-i3-black]{: .img-responsive }][picasa-ss-i3-black]
+[![i3 Black: arch+ncmpcpp][image-ss-i3-black]{: .img-responsive }][photo-ss-i3-black]
 <br/><br/>
-[![i3 Green: arch (vnstat, nethogs, nload) + grass][image-ss-i3-green]{: .img-responsive }][picasa-ss-i3-green]
+[![i3 Green: arch (vnstat, nethogs, nload) + grass][image-ss-i3-green]{: .img-responsive }][photo-ss-i3-green]
 <br/>
 
 Sample i3 config (nubi)
@@ -53,7 +53,7 @@ Hey... I took that photograph of my own garden by myself.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-i3-black]: {{ site.url }}/assets/posts/desktop/2014/12/i3-black.png
-[picasa-ss-i3-black]: https://lh3.googleusercontent.com/-mUkKN8nfGUM/Vz2mP34hESI/AAAAAAAAAO8/pQ61naXO1ywAMARvUez0iLNVxWdpoXBkgCCo/s0/i3-black.png
+[photo-ss-i3-black]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO4RXpeU88quh2Dee9Vp8jQCx9uqXUkgi8sLfP6
 [image-ss-i3-green]: {{ site.url }}/assets/posts/desktop/2014/12/i3-green.png
-[picasa-ss-i3-green]: https://lh3.googleusercontent.com/-01BLZbKZrEY/Vz2mUtSw4JI/AAAAAAAAAO8/3EtGNN6e8EkTGl1mLAYMwJnzl_tm-vM9gCCo/s0/i3-green.png
+[photo-ss-i3-green]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipN_fCSQqKyaAjpAVotMNKY9vp2pGyxUYjfKwkgh
 

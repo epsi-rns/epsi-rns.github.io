@@ -37,9 +37,9 @@ you can download a collection of shell script here<br/>
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![ANSI Color Light: arch+xmonad][image-ss-xmonad-light]{: .img-responsive }][picasa-ss-xmonad-light]
+[![ANSI Color Light: arch+xmonad][image-ss-xmonad-light]{: .img-responsive }][photo-ss-xmonad-light]
 <br/><br/>
-[![ANSI Color Dark: arch+xmonad][image-ss-xmonad-dark]{: .img-responsive }][picasa-ss-xmonad-dark]
+[![ANSI Color Dark: arch+xmonad][image-ss-xmonad-dark]{: .img-responsive }][photo-ss-xmonad-dark]
 
 <br/>
 Update: More scripts on github. I found it from googleplus community
@@ -69,6 +69,6 @@ Selamat membuat screenshot.<br/>
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-xmonad-light]: {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-light.png
-[picasa-ss-xmonad-light]: https://lh3.googleusercontent.com/-fo8myDUqSKc/Vzmdc5CAk6I/AAAAAAAAAMg/Zdndvz5dEkoFBrcgEHBiyoo00lA-poflQCCo/s0/ansicolor-light.png
-[image-ss-xmonad-dark]: {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-dark.png
-[picasa-ss-xmonad-dark]: https://lh3.googleusercontent.com/-YgBfUykOzRk/VzmdhpMioeI/AAAAAAAAAMk/a_B6wmY9f_cYVxg0V9z1zAnyHOqsgAsrwCCo/s0/ansicolor-dark.png
+[photo-ss-xmonad-light]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPzPUDIpJm-3c_2ED-DG6MOVLExaJub4dWG8CA7
+[image-ss-xmonad-dark]:  {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-dark.png
+[photo-ss-xmonad-dark]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNut34mW9SH9xths4u4IexFD759xF3IrbYnlS4T

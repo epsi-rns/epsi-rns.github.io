@@ -63,7 +63,7 @@ Manjaro
 $ sudo pacman -S powerline
 {% endhighlight %}
 
-[![Powerline: Install Arch][image-ss-install-arch]{: .img-responsive }][picasa-ss-install-arch]
+[![Powerline: Install Arch][image-ss-install-arch]{: .img-responsive }][photo-ss-install-arch]
 
 Debian
 
@@ -71,7 +71,7 @@ Debian
 $ sudo apt install powerline
 {% endhighlight %}
 
-[![Powerline: Install Debian][image-ss-install-debian]{: .img-responsive }][picasa-ss-install-debian]
+[![Powerline: Install Debian][image-ss-install-debian]{: .img-responsive }][photo-ss-install-debian]
 
 -- -- --
 
@@ -163,7 +163,7 @@ Here is a summary, with nice powerline-in-vim colour-scheme.
 
 * Terminal Below: .bashrc with powerline
 
-[![Powerline: .bashrc ViM][image-ss-bashrc]{: .img-responsive }][picasa-ss-bashrc]
+[![Powerline: .bashrc ViM][image-ss-bashrc]{: .img-responsive }][photo-ss-bashrc]
 
 -- -- --
 
@@ -279,6 +279,6 @@ Happy terminal customizing
 [image-ss-install-debian]: {{ site.url }}/assets/posts/desktop/2016/03/debian-powerline-install-half.png
 [image-ss-bashrc]: {{ site.url }}/assets/posts/desktop/2016/03/powerline-vim-nice-color.png
 
-[picasa-ss-install-arch]: https://lh3.googleusercontent.com/-5HDOFeX7rTk/V4yhgH5wXKI/AAAAAAAAAdg/FMQ856Zp2pccQGy2EmkQdtgJKML2YXu_ACCo/s0/arch-powerline-install-full.png
-[picasa-ss-install-debian]: https://lh3.googleusercontent.com/-HsS_CbVRPyk/V4yhfisf3HI/AAAAAAAAAdc/wkJg8Z8VC7oMUZLk0-oqNRSLOPDdGV-JwCCo/s0/debian-powerline-install-full.png
-[picasa-ss-bashrc]: https://lh3.googleusercontent.com/-HeHkJxR-uF0/V4ykY0LGR3I/AAAAAAAAAds/K9lF82OGFZ09DzTptgh6fmxDXVsk0AjNACCo/s0/powerline-vim-nice-color.png
+[photo-ss-install-arch]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMdqYD48qXWiJKw-ljQJBXxAtpkMaVIx3RdTUnw
+[photo-ss-install-debian]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPSIJxwaHZg4lbzkhMF6sSRnDbqjbEUkVLd2giw
+[photo-ss-bashrc]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMnzf6HS-eW6J0NRDcYNattXydVIOR4inswGPUX

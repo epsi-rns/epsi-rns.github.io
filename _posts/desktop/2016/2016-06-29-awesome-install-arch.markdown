@@ -32,7 +32,7 @@ It is not intimidating, as it still has built in menu.
 
 * Wiki: <https://awesomewm.org/wiki/Main_Page>
 
-[![Awesome Install Summary Screenshot][image-ss-awesome]{: .img-responsive }][picasa-ss-awesome]
+[![Awesome Install Summary Screenshot][image-ss-awesome]{: .img-responsive }][photo-ss-awesome]
 
 However it needs a little knowledge of Lua Programming to configure Awesome.
 Learning Lua will will give some insight into what the configuration actually does.
@@ -50,7 +50,7 @@ Just issue Pacman command, and it will take care the rest.
 $ sudo pacman -S awesome
 {% endhighlight %}
  
-[![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][picasa-awesome-lua]
+[![Install Awesome and Lua Dependency][image-awesome-lua]{: .img-responsive }][photo-awesome-lua]
 
 You can see how lightweight Awesome WM from figure above.
 The installation footprint of both Awesome and Lua are less than five megabytes.
@@ -96,7 +96,7 @@ as it is in official repository.
 $ sudo pacman -S vicious
 {% endhighlight %}
 
-[![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][picasa-awesome-vicious]
+[![Install Awesome Additional Package][image-awesome-vicious]{: .img-responsive }][photo-awesome-vicious]
 
 -- -- --
 
@@ -111,7 +111,7 @@ e.g. yaourt, aura, packer, pacaur, or else.
 $ pacaur -y lain-git
 {% endhighlight %}
 
-[![Install Awesome Lain Module Using AUR][image-awesome-lain-git]{: .img-responsive }][picasa-awesome-lain-git]
+[![Install Awesome Lain Module Using AUR][image-awesome-lain-git]{: .img-responsive }][photo-awesome-lain-git]
 
 -- -- --
 
@@ -188,13 +188,14 @@ Good night.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-screenshot-summary.png
-[picasa-ss-awesome]: https://lh3.googleusercontent.com/-sUwJbvvEsY4/V3RJXRX_wlI/AAAAAAAAAZE/OZnEcDHkRF4bwx29fBnRHnrC8m34vi4FwCCo/s0/arch-awesome-screenshot-summary.png
+[photo-ss-awesome]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNAAts6ck3-Zsza0A2ha_zN0xtLWqByOdEo5gOg
 
 [image-awesome-lua]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-awesome-lua-half.png
-[picasa-awesome-lua]: https://lh3.googleusercontent.com/-TX8Fx2qZqzI/V3RJVvv4I4I/AAAAAAAAAZs/1gNa9VHvdNIwMpkaGxrZ2goEwKaQ-bGGwCCo/s0/arch-awesome-awesome-lua-full.png
+[photo-awesome-lua]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOJod_w5oRsR4ekEUM34oOkcZSK0Q6kG2ASlF5u
 
 [image-awesome-vicious]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-vicious-half.png
-[picasa-awesome-vicious]: https://lh3.googleusercontent.com/-nZx_DEaqb5A/V3RJYLDmEhI/AAAAAAAAAZs/s9u2wEHGKtsZwt3yKH7knt6hgj4H0NT7ACCo/s0/arch-awesome-vicious-full.png
+[photo-awesome-vicious]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOuxKFNrl357TARUZoV6QIc0guG1xMhiPjBKesV
 
 [image-awesome-lain-git]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-lain-git-half.png
-[picasa-awesome-lain-git]: https://lh3.googleusercontent.com/-UCEfbDePM54/V3RJVPQscII/AAAAAAAAAZs/wmRPEDChTRcj_P_3A9SLm2XjfFxcW74dACCo/s0/arch-awesome-lain-git-full.png.png
+[photo-awesome-lain-git]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNmztpdX8svy21B1fXtPlyhXjEeF05p-oPrMelo
+ 

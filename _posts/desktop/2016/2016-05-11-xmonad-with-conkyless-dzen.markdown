@@ -66,7 +66,7 @@ and bundle it inside just one haskell script.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Conkyless XMonad: Comparation of Alsa Script][image-ss-xmonad]{: .img-responsive }][picasa-ss-xmonad]
+[![Conkyless XMonad: Comparation of Alsa Script][image-ss-xmonad]{: .img-responsive }][photo-ss-xmonad]
 
 Let's compare this code, and see how our code transformed.
 
@@ -111,4 +111,4 @@ Well. As a haskell n00b. I must admit still don't know how to do it.
 
 [dotfiles-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs
 [image-ss-xmonad]: {{ site.url }}/assets/posts/desktop/2016/05/xmonad-with-conkyless-dzen.png
-[picasa-ss-xmonad]: https://lh3.googleusercontent.com/-IaiuuSzgdMI/VzmdPYfRF-I/AAAAAAAAAMQ/BEnRnFrCFsw0CnK0oosnfrxRL975EZB4QCCo/s0/xmonad-with-conkyless-dzen.png
+[photo-ss-xmonad]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOEIyDFTTWBIDPPauWwcqkgW9rglIrV5gR8xZaT

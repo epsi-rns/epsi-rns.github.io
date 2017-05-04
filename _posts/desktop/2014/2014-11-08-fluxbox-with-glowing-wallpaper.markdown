@@ -38,7 +38,7 @@ I myself, still don't know why I even learn this.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![arch+fluxbox (glow) +tmux+ncmpcpp+root+scrot][image-ss-fluxbox]{: .img-responsive }][picasa-ss-fluxbox]
+[![arch+fluxbox (glow) +tmux+ncmpcpp+root+scrot][image-ss-fluxbox]{: .img-responsive }][photo-ss-fluxbox]
 <br/><br/>
 
 This Fluxbox utilised a modified version of Axonkolor theme that I found in Deviantart.
@@ -55,4 +55,4 @@ This Fluxbox utilised a modified version of Axonkolor theme that I found in Devi
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-fluxbox]: {{ site.url }}/assets/posts/desktop/2014/11/fluxbox-glow.png
-[picasa-ss-fluxbox]: https://lh3.googleusercontent.com/-U6rIIOLyMLg/Vz2oBSAABUI/AAAAAAAAARM/WXU-K0lwXyAJ9PC-mgky7vOO0LV23STYQCCo/s0/fluxbox-glow.png
+[photo-ss-fluxbox]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOmqpLaqtcKNzOcOSSZQL57-Hy-38HpNcJo2Ezv

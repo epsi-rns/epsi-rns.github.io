@@ -160,18 +160,18 @@ What do you think ?
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-wallpaper]:    {{ site.url }}/assets/posts/design/2016/10/wally-material-design-06.png
-[hires-wallpaper]:    https://lh3.googleusercontent.com/qTBCZghTkD_blVAMPVBH-u3naEEze3GLsIdstVrgPwIqAITuKmNTmxuK7U1X31XFfEsuCf5zWlJ9fMxd1dS_jQTPckgl4oMHBd39Lb4gI66riyP17uIPlY64Is7yKFQOxbw79RKYUUl6uwCYTIAOGIPxT3ypq40tw-ryeerIndM2mEQFVROfxtvB-QtX2l9ox2NOpTyH31G4l857fFh5M_aEhH9zU1zrtl2fSavKBNnlPxn37JaH94V5Xd4mCFNd1KVLNlsvqGwWeHbGN64va9FyJcWBA4fPTP-jd-YCGBucgPc3GBK3qPW8k6XXNBdH9F7fgAWEQZ1Qah_AVdZWICTFhGqR04n2cKtYVLCsMFTqnSnyMfJh12qJPSRhVq7UAVU49yVMJYEPCo8Xn0Se70hF21LqwHDWFCgdycw9P2lGGGDbYX9hviAiyBsQEYFlRzumLeJnrkxIeL3azsx56SYCaZsJkuWw0bu_nwg3z8zbwQPtBKE2EvOG8AI4usZH-_2wD9SkekwHIuHaqak6FFbYywgVbl-v0sEvLaxhlbbtCj50tHBlUcQWkpNUyj0rvYGLMK5tC2cLJh2EfPta2c6lryn_JVHrtd92T2vWCr3iXbm8=w0
+[hires-wallpaper]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP8Al5kHEy9Gc6n-F6xnCQSvTJVk90T-R4Nu_TD
 [dotfiles-wallpaper]: {{ site.url }}/assets/posts/design/2016/10/wally-material-design-06.svg.gz
 [deviant-wallpaper]:  http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-646511906
 
-[image-inkscape]:     {{ site.url }}/assets/posts/design/2016/10/i3-material-inkscape.png
-[hires-inkscape]:     https://lh3.googleusercontent.com/ROuMudvIhaQm8IjHOE72Q_mwDW1UvKNcaoPPNH_Q_yNZ1070NhPrvKcTw5Kzm3jat1oG3tlwTneZDWpCwdEHlxS8lo64GD0hC2KBGkvxfmxrVhEdCfsXKo_6sFaqXZBJalGcU4ky5-DLDEzEF70fsVnxDccf-uhicKELfpa6FVkD4UgoANjyC3mztysYk1HG72aCW5fKCTqXI0XaqoKUXHn3_ZAY8HuMNE38A2H7czawI4KRkBailUUkkx5tZ6BlKlsDQlEN7HxDRmr3VAyd2pFhtZYHBsQ49UrTHr-o5tEuft4IcBA7ipQdz3QUr_LFqgECHResIyPIiS1hCorDV6BIj1_lNpYoCU7wtAZ2zZITfOYv-NVfk8iZtC-SongShvfiXA0YZaTjScY_ci3vfqgSkmcjv2xCVYr5oIQkElu7F0S7J0QPLE16uejyHZDRybRemXe6lJgIqLrjctawyrE4Qs4p1U5DSWf3OrSjx_iKumaLf7vYZkOl0NKvSFxPyXpx-p2n8sK2iZu5tWh8K_CY5dXKzKIapDbxtFh2deE96skXbAquU8sWH5OR75KTPMWiFDU1Jd4WRByDHvm5rFECvtYlZiMzAa4MdZAVj0qR5nJW=w0
+[image-inkscape]: {{ site.url }}/assets/posts/design/2016/10/i3-material-inkscape.png
+[hires-inkscape]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipO1Z7TyZHf8jfn45hcHDwJptu58gD6_0bs4rcf5
 
-[image-bright]:    {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-bright-on-blue.png
-[hires-bright]:    https://lh3.googleusercontent.com/yOnInFY7lH4k4Tpblkbx4pbkYW7ezFerEadscDzMgKurU5_RgeX0nfvPzbrkgZ1C3T7BkYAd6lqFXcvVo6PBEyyJZC0awS1Ylq1Cb2WACW7G0tSW5hFKRXHikE7N3o24v3wpGMpBVuWplhWdca2Q7MyBaoCitBKnQCFQ4-oA9NT75cCAKGa9pp82V94dQKw4-I7lczQIe0HNeh_xaByEnt7lGOZLzcpJxUv7obutVitgWwsleGEvmPg6KAlWfLJwk24moUVNP3tmbnEvE0IgXpV7Z3yFr_Wavm-Q1ptXvDNPpEvzEAVQhHFzCOABhNSrHmFRxWFBI5sc7Pt7xD1ydnEdgtPncYezbsHNRzSKFnjNiByC7yNtH5yE4Sz8YzAJ-sIRIfWLnMtjeF9B42me19uu4qqArfc3Jfh2B9jIhMtsKtrBm7rmPE-TqhJSej18bTkbjKfJWaFWkLJwdftcQguQ2opJv0aJ8JtzsK9-PLBj57zdhMVrQzz7vxTbR65wYnLEqlgZX-RdvXvttY2TyKOmp2e7qsiYn7XCDkoaM3aP9IEqaouOEb-Kx-dsKHBE6mDq8wI7EiU5iRNtglypw9kj3fjTc3ihTa7e-uNaK07qp4-t=w0
-[deviant-bright]:  http://nurwijayadi.deviantart.com/art/Manjaro-Logo-using-Terminal-in-i3-646512583
+[image-bright]:   {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-bright-on-blue.png
+[hires-bright]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOfyOq9XTmSoNc1ykSpmzG1-vOhApuXzxzup44y
+[deviant-bright]: http://nurwijayadi.deviantart.com/art/Manjaro-Logo-using-Terminal-in-i3-646512583
 
 [image-dark]:     {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-dark-on-grey.png
-[hires-dark]:     https://lh3.googleusercontent.com/ABy1f5V42EPeh1_djqIPfHXLk1xKK8VaqEqg1XRg4-36AckW1lxr40SqBDZjH_PJl8mvcHzobYUT8aScl7Kwe0Vo-v4n6iuhQWs29TrMYxUONsbZ4WCKLeLrLIIVVS2zhmmRv2lYGwWsAyTDte0Q3LoUsuVSnxPJ8jLwD30ETYFTkE5pQpXT3xvYsVyvnumz9gSzguu5EEGoaSRqB4Dw-QF14-K9mzuwQO8fWFPuiOEv4qwKxIkr_u-Xax1NuGvMuFTypMbsMyyWhJYhyfiBASSzlqGFgZjCZWMvCn7-v6rQI-mfbTLs1Bqf1rpkjSAVG-QsvvMx5UY3TgiVY4xpKw6JP7S6TsoyxoyMKLL_k_sRnrqHypsbr8fsfc3_rAuqld4IZ0KDRO9U7EfDQD739NZc9axDtPQtNb37PfPdpl6vChrbOU_W39dFtZ__guZHJAEEsuH10N2NHSaEkSr9wuSl03biEmrsGTaOP0rRUYNHbOHocwdTODkclvS-cjJmgJR16gPANVkObgw0vPlks9mj38RZMWYVoG7a9nnEyw00NsL4Tcsb0hH12aVPseUPOrgNnXdiAFAq7T0bwFJ4PVCbcCCM3VTmRcyzIM3cFFjpkZs1=w0
+[hires-dark]:     https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNS74SpNlGH0hjKXDtpro_pJFv4GPdSOH2U9tam
 
 [source-i3]: https://github.com/epsi-rns/dotfiles/tree/master/i3

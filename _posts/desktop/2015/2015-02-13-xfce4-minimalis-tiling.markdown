@@ -36,12 +36,12 @@ Archwiki said: "XFWM4 can 'tile' a window automatically when it is moved to an e
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![debian+xfwm+tiling+minimalist][image-ss]{: .img-responsive }][picasa-ss]
+[![debian+xfwm+tiling+minimalist][image-ss]{: .img-responsive }][photo-ss]
 
 Note on SS : user vs root.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss]: {{ site.url }}/assets/posts/desktop/2015/02/xfwm4-tiling.png
-[picasa-ss]: https://lh3.googleusercontent.com/-N-UOOX2gpK4/VznBgNgJ2DI/AAAAAAAAANg/PnzKVsjAkbEI2oImmgtxGBd6EXlAYndJgCCo/s0/xfwm4-tiling.png
+[photo-ss]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNWl3ZWlN18YmA1-A6KN5LTnL2truY3ZKBSTk8K
 

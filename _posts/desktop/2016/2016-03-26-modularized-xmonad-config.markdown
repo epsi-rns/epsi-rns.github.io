@@ -49,9 +49,9 @@ Use the source Luke
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Modularized Haskell XMonad: arch + dzen + termite + neofetch + powerline (light) (floating)][image-ss-xmonad-1]{: .img-responsive }][picasa-ss-xmonad-1]
+[![Modularized Haskell XMonad: arch + dzen + termite + neofetch + powerline (light) (floating)][image-ss-xmonad-1]{: .img-responsive }][photo-ss-xmonad-1]
 <br/><br/>
-[![Modularized Haskell XMonad: manjaro + dzen + termite + vim + powerline (dark) (ranger)][image-ss-xmonad-2]{: .img-responsive }][picasa-ss-xmonad-2]
+[![Modularized Haskell XMonad: manjaro + dzen + termite + vim + powerline (dark) (ranger)][image-ss-xmonad-2]{: .img-responsive }][photo-ss-xmonad-2]
 
 * * *
 
@@ -80,10 +80,10 @@ A Cruel Angel's Thesis
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[code-haruka]: https://github.com/codeharuka/dotfiles
+[code-haruka]:  https://github.com/codeharuka/dotfiles
 [dotfiles-lib]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen-2/lib
 [image-ss-xmonad-1]: {{ site.url }}/assets/posts/desktop/2016/03/modularized-xmonad-1.png
-[picasa-ss-xmonad-1]: https://lh3.googleusercontent.com/-wvBpvtxgRoM/Vzmdogxu8DI/AAAAAAAAAMk/MJHotl2DFJsIOLPMODDehnAQD_IR581uwCCo/s0/modularized-xmonad-1.png
+[photo-ss-xmonad-1]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOKT57PCBcojHBHxvol8dl_brt0PdPtckpNTniu
 [image-ss-xmonad-2]: {{ site.url }}/assets/posts/desktop/2016/03/modularized-xmonad-2.png
-[picasa-ss-xmonad-2]: https://lh3.googleusercontent.com/-q_oRSCjFDUo/Vzmdor9QKPI/AAAAAAAAAMk/0H8i6r-gjbohji9LCSG3ThMrUfS6rgC2QCCo/s0/modularized-xmonad-2.png
+[photo-ss-xmonad-2]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOGhDEo1AyQ7dIJUzl67KGj0THvLO7G2sw72fHs
 

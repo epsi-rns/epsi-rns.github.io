@@ -45,10 +45,10 @@ gnome-shell has extensions to make you far from bored
 
 And user themes, though I rarely need it.
 
-[![gnome shell conky infinity][image-ss-gnome-shell]{: .img-responsive }][picasa-ss-gnome-shell]
+[![gnome shell conky infinity][image-ss-gnome-shell]{: .img-responsive }][photo-ss-gnome-shell]
 <br/><br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-gnome-shell]: {{ site.url }}/assets/posts/desktop/2014/04/gnomeshell.png
-[picasa-ss-gnome-shell]: https://lh3.googleusercontent.com/-cv5oZWXGhkY/Vz2onQ-gStI/AAAAAAAAARs/xxG_MYs8S0gwZtoWvlzNk_ZLUIYp5VnfwCCo/s0/gnomeshell.png
+[photo-ss-gnome-shell]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPWayiX0jpL_JBeanjvQussohpQ7cXzDhXpvy3b

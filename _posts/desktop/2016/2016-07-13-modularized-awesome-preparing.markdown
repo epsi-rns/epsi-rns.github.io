@@ -79,7 +79,7 @@ I finaly realized that <code class="code-file">rc.lua</code> consist of these pa
 
 > It takes Lua knowledge to split lua-based configuration
 
-[![Modularized Awesome WM Code Main][image-ss-awesome-main]{: .img-responsive }][picasa-ss-awesome-fullscreen]
+[![Modularized Awesome WM Code Main][image-ss-awesome-main]{: .img-responsive }][photo-ss-awesome-fullscreen]
 
 -- -- --
 
@@ -261,7 +261,7 @@ Let's see our globalbutton moved to <code class="code-file">main/globalbuttons.l
 Do not confuse the name globalbuttons with global variables.
 It is just a variable name, it could be global or local.
 
-[![Modularized Awesome WM Code Module][image-ss-awesome-module]{: .img-responsive }][picasa-ss-awesome-fullscreen]
+[![Modularized Awesome WM Code Module][image-ss-awesome-module]{: .img-responsive }][photo-ss-awesome-fullscreen]
 
 ### Original in rc.lua.
 
@@ -488,12 +488,12 @@ Thank you for reading
 
 [image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
 [image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-binding.png
-[picasa-ss-awesome-fullscreen]: https://lh3.googleusercontent.com/-CAGA67-WeQM/V4czfFTC-SI/AAAAAAAAAak/EKzVaqdjiOkKXPPt9ERC8itkJzB51CDVwCCo/s0/awesome-modularized-code.png
+[photo-ss-awesome-fullscreen]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPPFTkZLKgqQVrvGwBn4nYJo74xIf-IATzz7YlG
 
-[source-main-theme]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/theme.lua
-[source-user-vars]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/user-variables.lua
+[source-main-theme]:    https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/theme.lua
+[source-user-vars]:     https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/user-variables.lua
 [source-globalbuttons]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/binding/globalbuttons.lua
-[source-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/statusbar.lua
-[source-helper]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/helper.lua
-[source-lain]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain.lua
-[source-laindiskfree]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain-diskfree.lua
+[source-statusbar]:     https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/statusbar.lua
+[source-helper]:        https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/helper.lua
+[source-lain]:          https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain.lua
+[source-laindiskfree]:  https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain-diskfree.lua

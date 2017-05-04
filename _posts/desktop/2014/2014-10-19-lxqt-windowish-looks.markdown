@@ -32,13 +32,13 @@ And be happy with it.
 
 {% include part/screenshot.html ss_content = ss_content %}
 
-[![Arch LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]{: .img-responsive }][picasa-ss-lxqt-windowish-qterminal]
+[![Arch LXQT Windowish QTerminal][image-ss-lxqt-windowish-qterminal]{: .img-responsive }][photo-ss-lxqt-windowish-qterminal]
 <br/><br/>
 
 LXQT's File Manager, PC Man FM also give me stunning nostalgic looks,
 remind me of my happy childhood day.
 
-[![Arch LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]{: .img-responsive }][picasa-ss-lxqt-windowish-pcmanfm]
+[![Arch LXQT Windowish PCManFM][image-ss-lxqt-windowish-pcmanfm]{: .img-responsive }][photo-ss-lxqt-windowish-pcmanfm]
 <br/>
 
 -- -- --
@@ -60,7 +60,7 @@ Let's see how it can be combined with KWin instead of Openbox.
 
 
 
-[![Arch LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][picasa-ss-lxqt-kwin-ghost]
+[![Arch LXQT KWin Ghost][image-ss-lxqt-kwin-ghost]{: .img-responsive }][photo-ss-lxqt-kwin-ghost]
 <br/>
 
 -- -- --
@@ -79,8 +79,8 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-qterminal.jpg
-[picasa-ss-lxqt-windowish-qterminal]: https://lh3.googleusercontent.com/-IPO0PJsixLA/Vz2oPpdtlZI/AAAAAAAAARk/8ULYS4s6VZQZCTkmPREfriLVOUVoEwa1QCCo/s0/lxqt-windowish-qterminal.jpg
-[image-ss-lxqt-windowish-pcmanfm]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-pcmanfm.jpg
-[picasa-ss-lxqt-windowish-pcmanfm]: https://lh3.googleusercontent.com/-pqSo498Nyao/Vz2oO1HCQwI/AAAAAAAAARc/FKvMWDI1aPsYYvrPxtp3j8zSir9IZunBACCo/s0/lxqt-windowish-pcmanfm.jpg
+[photo-ss-lxqt-windowish-qterminal]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOzUHmqh4X2KfLPNsWaC-VCfQVKNTdWUKhYdvPY
+[image-ss-lxqt-windowish-pcmanfm]:   {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-pcmanfm.jpg
+[photo-ss-lxqt-windowish-pcmanfm]:   https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOyqOxqRhvO6qc57_wy3DXLTj093u5cfFIc9VwL
 [image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-kwin-ghost.png
-[picasa-ss-lxqt-kwin-ghost]: https://lh3.googleusercontent.com/-O1lrxW7hG0s/Vz2oP_WHnPI/AAAAAAAAARk/jPtqGovDKk8Q_aSMa6Yae6n311AY2GCNQCCo/s0/lxqt-kwin-ghost.png
+[photo-ss-lxqt-kwin-ghost]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP12YCYpdpTfK_XceVIWkUR8D9XHyD1VUKJ1y2F

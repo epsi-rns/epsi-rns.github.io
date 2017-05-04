@@ -31,7 +31,7 @@ To make a modular code, I have to make change parts
 from bunch of function and variables, into object and its properties.
 In order to make a modularized theme, I also have to clean up the old theme.
 
-[![Awesome WM Idul Fitri Satu Syawal][image-ss-awesome-white]{: .img-responsive }][picasa-ss-awesome-white]
+[![Awesome WM Idul Fitri Satu Syawal][image-ss-awesome-white]{: .img-responsive }][photo-ss-awesome-white]
 
 -- -- --
 
@@ -145,7 +145,7 @@ awesome
 └── modules
 {% endhighlight %}
 
-[![Modularized Awesome WM Dark Background][image-ss-awesome-black]{: .img-responsive }][picasa-ss-awesome-black]
+[![Modularized Awesome WM Dark Background][image-ss-awesome-black]{: .img-responsive }][photo-ss-awesome-black]
 
 --
 
@@ -274,7 +274,7 @@ Put your creativity here to make eye candy statusbar.
 With this complexity, now you know why
 I can't just put all the code in this post.
 
-[![Awesome WM Stacked Statusbar][image-ss-awesome-stacked]{: .img-responsive }][picasa-ss-awesome-stacked]
+[![Awesome WM Stacked Statusbar][image-ss-awesome-stacked]{: .img-responsive }][photo-ss-awesome-stacked]
 
 -- -- --
 
@@ -293,10 +293,10 @@ Good night.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-ss-awesome-white]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-syawal.png
-[picasa-ss-awesome-white]: https://lh3.googleusercontent.com/-txXSAO0xMZs/V4cem1T_UFI/AAAAAAAAAaQ/2Fw0BRcmbD4T2_woDBOFL0qn0zyVCKYlQCCo/s0/awesome-refactoring-syawal.png
+[photo-ss-awesome-white]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPB2dhgJov_v0PA8bBGtZbiDV4F2lea67M6BCU4
 
 [image-ss-awesome-black]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-manjaro.png
-[picasa-ss-awesome-black]: https://lh3.googleusercontent.com/-86XPvqe8ZeE/V4ceo4ZQrAI/AAAAAAAAAaU/zO_QmSdEhDkUDc-nwc8CxapyP8DbuharwCCo/s0/awesome-refactoring-manjaro.png
+[photo-ss-awesome-black]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOyDYD12IuC4fOwV-7B8R8kh0g2_el2PeXAHh62
 
 [image-ss-awesome-stacked]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-stacked.png
-[picasa-ss-awesome-stacked]: https://lh3.googleusercontent.com/-Dh5_vrOjU_s/V4uZbgMmeMI/AAAAAAAAAdM/e74eomkUtUsnwVPgIt-0GMGt6CeAHFjFwCCo/s0/awesome-modularized-configuration-red-stacked.png
+[photo-ss-awesome-stacked]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOoDYrrGAtGpM4vcmdRtlQRQyuILy8lq7M6lMR_
