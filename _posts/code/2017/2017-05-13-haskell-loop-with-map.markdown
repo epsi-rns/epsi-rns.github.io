@@ -713,7 +713,7 @@ Happy Coding.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
+{% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
@@ -721,12 +721,3 @@ Happy Coding.
 [dotfiles-03-dictionary]:       {{ dotfiles_path }}/03-dictionary.hs
 [dotfiles-04-data-type]:        {{ dotfiles_path }}/04-data-type.hs
 [dotfiles-05-passing-argument]: {{ dotfiles_path }}/05-passing-argument.hs
-
-[dotfiles-layout]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyLayoutHook.hs
-[image-ss-xmonad-dollar]: {{ site.url }}/assets/posts/code/2016/05/haskell-dollar.png
-[photo-ss-xmonad-dollar]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOsazbKB0CKjB1fbBIs1pD9bLhbZoDbfIOc8Uo4
-
-[image-ss-xmonad-layout]: {{ site.url }}/assets/posts/code/2016/05/haskell-layout.png
-[photo-ss-xmonad-layout]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPkC85qB-0XNSzPm683dbSdzwgAEq9Y6N0-0vxu
-
-[local-Haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html

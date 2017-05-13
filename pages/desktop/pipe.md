@@ -3,7 +3,10 @@ layout: page-sidemenu-wm
 title: Piping and Forking in Linux Script
 ---
 
-This is just a complementary topic for Dzen, Lemonbar and Conky. Where they are also just tools in Desktop Ricing, especially Tiling Winodw Manager. Dive deeper, from decoration, to fundamental code.
+This is just a complementary topic for Dzen, Lemonbar and Conky. 
+Where they are also just tools in Desktop Ricing, 
+especially Tiling Winodw Manager. 
+Dive deeper, from decoration, to fundamental code.
 
 	Goal: A script that continuously show date and time,
 	with Dzen2, and Conky.
@@ -111,7 +114,7 @@ But again, it is a matter of preferences.
 
 ### Dotfiles (Source Code)
 
-*	[lang/bash/][dotfiles-BASH]
+*	[lang/bash][dotfiles-BASH]
 
 *	[lang/perl][dotfiles-Perl]
 
