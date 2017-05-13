@@ -601,7 +601,7 @@ Or just comment out to disable it.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../04-passing-arguments.hs][dotfiles-04-passing-arguments]
+*	[github.com/.../dotfiles/.../04-passing-argument.hs][dotfiles-04-passing-argument]
 
 -- -- --
 
