@@ -30,15 +30,6 @@ Impatient coder like me, like to open many tab on browser.
 
 *	[github.com/.../dotfiles/.../python/][dotfiles-python-directory]
 
-#### Influence
-
-For a more sophisticated HerbstluftWM configuration in Python.
-You may also take a look at this script.
-I am also inspired by this configuration script.
-This give influence to my script.
-
-*	<https://github.com/ypnos/hlwm/blob/master/autostart>
-
 -- -- --
 
 ### Directory Structure
@@ -59,7 +50,7 @@ in <code>Python script</code> directory.
 
 No need to explicitly define what to export.
 
-Here we export hc function variable from helper module.
+Here we export <code>hc</code> function variable from helper module.
 
 	Nothing to write in Python Module
 
@@ -137,6 +128,9 @@ Both are similar, they use **key-value pairs**.
 color = {
     'white' : '#ffffff', 
     'black' : '#000000',
+
+    'grey50'      : '#fafafa',
+    'grey100'     : '#f5f5f5'
 }
 {% endhighlight %}
 
@@ -175,7 +169,7 @@ keybinds = {
   # session
     m+'-'+s+'-q' : 'quit',
     m+'-'+s+'-r' : 'reload',
-    m+'-'+s+'-c' : 'close',
+    m+'-'+s+'-c' : 'close'
 }
 {% endhighlight %}
 
@@ -239,10 +233,14 @@ You can see the debugging result in figure below.
 
 ### Setting the Tags
 
-Nothing special here,
-Python read all exported variable from modules.
+Python use <code>from import</code> mechanism.
 
 <code class="code-file">helper.py</code>
+
+{% highlight python %}
+import config
+from config import tag_names, tag_keys
+{% endhighlight %}
 
 {% highlight python %}
 def set_tags_with_name():

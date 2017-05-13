@@ -62,7 +62,7 @@ We have to explicitly define what to export.
 Anything exported become public in caller script.
 And the rest is private to module.
 
-Here we export hc function variable from helper module.
+Here we export <code>hc</code> function variable from helper module.
 
 {% highlight perl %}
 package helper;
@@ -153,7 +153,7 @@ our %color = (
     'black' => '#000000',
 
     'grey50'  => '#fafafa',
-    'grey100' => '#f5f5f5',
+    'grey100' => '#f5f5f5'
 );
 {% endhighlight %}
 
@@ -192,7 +192,7 @@ our %keybinds = (
   # session
     "$m-$s-q" => 'quit',
     "$m-$s-r" => 'reload',
-    "$m-$s-c" => 'close',
+    "$m-$s-c" => 'close'
 );
 {% endhighlight %}
 
@@ -261,7 +261,6 @@ You can see the debugging result in figure below.
 
 ### Setting the Tags
 
-Nothing special here,
 Perl read all exported variable from modules.
 
 <code class="code-file">helper.pm</code>
