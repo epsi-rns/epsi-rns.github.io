@@ -1,7 +1,7 @@
 ---
 layout: post-sidemenu-wm
 title:  "Modularized HerbstluftWM in BASH"
-date:   2017-05-01 17:35:15 +0700
+date:   2017-05-02 17:35:15 +0700
 categories: desktop
 tags: [coding, bash, herbstluftwm]
 author: epsi
@@ -24,7 +24,7 @@ you might desire to know read this overview.
 
 *	[Modularized HerbstluftWM Script][local-overview]
 
-### All The Source Code:
+#### All The Source Code:
 
 Impatient coder like me, like to open many tab on browser.
 
@@ -35,7 +35,8 @@ Impatient coder like me, like to open many tab on browser.
 ### Directory Structure
 
 Directory Structure has been explained in preface. 
-This figure will explain how it looks in <code>BASH</code> directory.
+This figure will explain how it looks
+in <code>BASH script</code> directory.
 
 ![HerbstluftWM: Directory Structure][image-bash-01-tree]{: .img-responsive }
 
@@ -48,6 +49,9 @@ It is very straightforward in BASH. No dark magic required.
 
 #### Declare a module
 
+Nothing to declare, just do not forget the shebang <code>#!</code>
+and executable permission.
+
 {% highlight bash %}
 #!/usr/bin/env bash
 {% endhighlight %}
@@ -55,7 +59,7 @@ It is very straightforward in BASH. No dark magic required.
 #### Call a module
 
 {% highlight bash %}
-. ~/.config/herbstluftwm/bash/assets/gmc.sh
+. ~/.config/herbstluftwm/bash/helper.sh
 {% endhighlight %}
 
 -- -- --
@@ -65,6 +69,9 @@ It is very straightforward in BASH. No dark magic required.
 There is no such thing as system calls in bash.
 Everything in bash is command called in system environment.
 That is the most advantage of using BASH to configure HLWM.
+
+Here we wrap <code>herbstclient</code> system call
+in a function named <code>hc</code>.
 
 <code class="code-file">helper.sh</code>
 
@@ -287,7 +294,7 @@ and <code>startup_run</code>.
 Again, I did **copy-paste** part of the original configuration,
 turn the code into function, and make just a few modification.
 
-This two should be very easy to do in .BASH.
+This two should be very easy to do in BASH.
 Nothing special in BASH.
 But this could be complex task, in other language, such as Lua.
 
@@ -411,7 +418,8 @@ Happy Configuring.
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
-[local-overview]: {{ site.url }}/pages/desktop/hlwm-modular.html
+[local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
+[local-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
 
 [image-hlwm-02-tag-status]:  {{ asset_path }}/hlwm-02-tag-status.png
 [image-hlwm-03-debug-config]:  {{ asset_path }}/hlwm-03-debug-config.png

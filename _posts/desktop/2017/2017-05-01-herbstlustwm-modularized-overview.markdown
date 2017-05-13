@@ -1,6 +1,14 @@
 ---
-layout: page-sidemenu-wm
-title: Modularized HerbstluftWM Script
+layout: post-sidemenu-wm
+title:  "Modularized HerbstluftWM Overview"
+date:   2017-05-01 17:35:15 +0700
+categories: desktop
+tags: [coding, herbstluftwm]
+author: epsi
+
+excerpt:
+  Preface of Doing Hersbtluft WM Config
+  
 ---
 
 ### Preface
@@ -26,13 +34,13 @@ One liner is not so bad after all.
 
 ### Meanwhile
 
-Last couple of months in the real world,
-I had a few weeks of badassery.
-Now I decide to take time for myself.
-Relax, lock myself in my room, doing HersbtluftWM configuration, 
-get it online,and pour the result in a blog.
-I still have to be a little badass outside.
-I just need to share this HLWM config, before I go back.
+	Last couple of months in the real world,
+	I had a few weeks of badassery.
+	Now I decide to take time for myself.
+	Relax, lock myself in my room, doing HersbtluftWM configuration, 
+	get it online,and pour the result in a blog.
+	I still have to be a little badass outside.
+	I just need to share this HLWM config, before I go back.
 
 -- -- --
 
@@ -89,6 +97,8 @@ It is applied to every other language.
 #~/.config/herbstluftwm/lua/autostart.lua
 #~/.config/herbstluftwm/haskell/autostart
 {% endhighlight %}
+
+Each must have exectubale permission.
 
 ### Directory Structure
 
@@ -203,8 +213,8 @@ Thank you for Reading.
 [image-hlwm-01-cli]:  {{ asset_path }}/hlwm-01-cli.png
 [image-hlwm-02-tag-status]:  {{ asset_path }}/hlwm-02-tag-status.png
 
-[local-bash]:    http://epsi-rns.github.io/code/2017/05/01/herbstlustwm-modularized-bash.html
-
+[local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
+[local-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl
