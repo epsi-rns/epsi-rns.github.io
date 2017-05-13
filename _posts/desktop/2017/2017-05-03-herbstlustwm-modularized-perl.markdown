@@ -22,7 +22,7 @@ excerpt:
 Before you jump off to scripting,
 you might desire to know read this overview.
 
-*	[Modularized HerbstluftWM Script][local-overview]
+*	[Modularized HerbstluftWM Overview][local-overview]
 
 #### All The Source Code:
 
@@ -387,7 +387,6 @@ system("echo 35 > /tmp/herbstluftwm-gap");
 hc("lock");
 
 # standard
-# remove all existing keybindings
 hc('keyunbind --all');
 hc("mouseunbind --all");
 hc("unrule -F");
@@ -395,7 +394,6 @@ hc("unrule -F");
 helper::set_tags_with_name();
 
 # do hash config
-
 helper::do_config("keybind",   %config::keybinds);
 helper::do_config("keybind",   %config::tagskeybinds);
 helper::do_config("mousebind", %config::mousebinds);
@@ -411,7 +409,6 @@ helper::do_panel();
 
 # load on startup
 startup::run();
-
 {% endhighlight %}
 
 #### View Source File:
@@ -436,7 +433,7 @@ Happy Configuring.
 
 [image-perl-01-tree]:  {{ asset_path }}/hlwm-perl-01-tree.png
 
-[dotfiles--directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
+[dotfiles-perl-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
 [dotfiles-perl-autostart]: {{ dotfiles_path }}/perl/autostart.pl
 [dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/assets/gmc.pm
 [dotfiles-perl-config]:    {{ dotfiles_path }}/perl/config.pm

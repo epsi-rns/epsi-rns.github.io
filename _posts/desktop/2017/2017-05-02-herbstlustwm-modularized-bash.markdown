@@ -22,7 +22,7 @@ excerpt:
 Before you jump off to scripting,
 you might desire to know read this overview.
 
-*	[Modularized HerbstluftWM Script][local-overview]
+*	[Modularized HerbstluftWM Overview][local-overview]
 
 #### All The Source Code:
 
@@ -378,7 +378,6 @@ echo 35 > /tmp/herbstluftwm-gap
 hc lock
 
 # standard
-# remove all existing keybindings
 hc keyunbind --all
 hc mouseunbind --all
 hc unrule -F
@@ -386,7 +385,6 @@ hc unrule -F
 set_tags_with_name
 
 # do hash config
-
 do_config "keybind"   "$(declare -p keybinds)"
 do_config "keybind"   "$(declare -p tagskeybinds)"
 do_config "mousebind" "$(declare -p mousebinds)"
