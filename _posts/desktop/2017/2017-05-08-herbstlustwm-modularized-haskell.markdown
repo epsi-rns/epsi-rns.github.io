@@ -586,6 +586,8 @@ Happy Configuring.
 [local-lua]:      {{ site.url }}/desktop/2017/05/07/herbstlustwm-modularized-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
+[local-haskell-loop]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl
 [dotfiles-python]:  {{ dotfiles_path }}/python
