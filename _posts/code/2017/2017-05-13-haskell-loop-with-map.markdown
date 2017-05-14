@@ -47,7 +47,9 @@ Let's walk step by step
 
 *	Passing Argument
 
-*	Real World and Comparation
+*	Real World Application
+
+*	Comparation with other Languages.
 
 It is going to be a long article.
 So I won't speak too much.
@@ -607,15 +609,22 @@ Or just comment out to disable it.
 
 ### Real World Application
 
-Really ? Does above function scary ?
-We should compare with other languages.
-In fact, we will find out,
-that Haskell Syntax is clear enough.
-
 Allright, I must admit,
 that I'm doing this tutorial guidance step by step,
 because I have difficulties in doing HerbstluftWM config.
 Not just Haskell, every language has their own challenge.
+This long explanation above is a supporting article for what I wrote here.
+
+*	[Modularized HerbstluftWM in Haskell][local-hlwm-haskell]
+
+-- -- --
+
+### Comparation with Other Languages
+
+Really ? Does above function scary ?
+We should compare with other languages.
+In fact, we will find out,
+that Haskell Syntax is clear enough.
 
 This is what I got in Haskell, very similar to our final example above.
 It takes hash arguments from a config module,
@@ -717,6 +726,7 @@ Happy Coding.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
 [local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
+[local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs
