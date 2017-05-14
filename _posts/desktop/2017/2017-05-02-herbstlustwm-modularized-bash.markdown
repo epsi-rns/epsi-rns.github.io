@@ -125,7 +125,7 @@ Everytime I try new language, I need to test the data structure.
 	Changing color won't harm system, nor window manager.
 
 After it is proven does well,
-I can use it as a model to herbstluft config.
+I can use it as a model for herbstluft config.
 Both are similar, they use **key-value pairs**.
 
 <code class="code-file">assets/gmc.sh</code>
@@ -175,17 +175,6 @@ declare -A keybinds=(
 )
 {% endhighlight %}
 
-Be aware of this one. Specific BASH only issue.
-Since BASH directly interpret the interpolation in system environment.
-Changing double quote to single quote prevent the terminal spawning,
-even when you double quote it later.
-
-{% highlight bash %}
-declare -A keybinds=(
-    ["$m-Return"]="spawn ${TERMINAL:-xfce4-terminal}"
-)
-{% endhighlight %}
-
 This config will be utilized in main script
 
 <code class="code-file">autostart.sh</code>
@@ -197,6 +186,19 @@ do_config "mousebind" "$(declare -p mousebinds)"
 do_config "attr"      "$(declare -p attributes)"
 do_config "set"       "$(declare -p sets)"
 do_config "rule"      "$(declare -p rules)"
+{% endhighlight %}
+
+#### Specific BASH Issue
+
+Be aware of this one. Specific BASH only issue.
+Since BASH directly interpret the interpolation in system environment.
+Changing double quote to single quote prevent the terminal spawning,
+even when you double quote it later.
+
+{% highlight bash %}
+declare -A keybinds=(
+    ["$m-Return"]="spawn ${TERMINAL:-xfce4-terminal}"
+)
 {% endhighlight %}
 
 #### View Source File:
@@ -352,6 +354,8 @@ startup_run() {
 
 The last part is going to main script
 and putting it all back together.
+
+	Now the flow is clear
 
 <code class="code-file">Header Part: autostart.sh</code>
 

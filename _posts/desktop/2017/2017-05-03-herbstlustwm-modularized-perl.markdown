@@ -142,7 +142,7 @@ Everytime I try new language, I need to test the data structure.
 	Changing color won't harm system, nor window manager.
 
 After it is proven does well,
-I can use it as a model to herbstluft config.
+I can use it as a model for herbstluft config.
 Both are similar, they use **key-value pairs**.
 
 <code class="code-file">assets/gmc.pm</code>
@@ -183,10 +183,6 @@ my $s = 'Shift';
 my $c = 'Control';
 my $m = 'Mod4';
 my $a = 'Mod1';
-
-
-# resizing frames
-my $resizestep = 0.05;
 
 our %keybinds = (
   # session
@@ -354,6 +350,8 @@ sub run() {
 
 The last part is going to main script
 and putting it all back together.
+
+	Now the flow is clear
 
 <code class="code-file">Header Part: autostart.pl</code>
 

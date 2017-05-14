@@ -119,7 +119,7 @@ Everytime I try new language, I need to test the data structure.
 	Changing color won't harm system, nor window manager.
 
 After it is proven does well,
-I can use it as a model to herbstluft config.
+I can use it as a model for herbstluft config.
 Both are similar, they use **key-value pairs**.
 
 <code class="code-file">assets/gmc.py</code>
@@ -160,10 +160,6 @@ s = 'Shift'
 c = 'Control'
 m = 'Mod4'
 a = 'Mod1'
-
-
-# resizing frames
-resizestep = "0.05";
 
 keybinds = {
   # session
@@ -325,6 +321,8 @@ def run():
 
 The last part is going to main script
 and putting it all back together.
+
+	Now the flow is clear
 
 <code class="code-file">Header Part: autostart.py</code>
 

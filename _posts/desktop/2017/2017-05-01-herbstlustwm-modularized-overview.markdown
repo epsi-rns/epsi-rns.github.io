@@ -19,7 +19,7 @@ Herbstluft WM is unique in way that
 the configuration set from command line interface.
 So basically the config is just a bunch of 
 separated <code>herbstclient</code> command.
-It means, the configurtion can be bundled using any script
+It means, the configuration can be bundled using any script
 that has access to system command.
 
 {% highlight bash %}
@@ -39,14 +39,22 @@ One liner is not so bad after all.
 	Now I decide to take time for myself.
 	Relax, lock myself in my room, doing HersbtluftWM configuration, 
 	get it online,and pour the result in a blog.
-	I still have to be a little badass outside.
-	I just need to share this HLWM config, before I go back.
+
+I still have to be a little badass outside.
+I just need to share this HLWM config, before I go back.
+
+I put most relevant code in this tutorial.
+It matters for me to journal what I did.
+Although it might not important for most reader.
+And maybe, small thing I wrote here, 
+important for lest reader, who just in need of this.
+That is why I need to pour large amount of code in blog.
 
 -- -- --
 
 ### What is not in this Guidance
 
-We don't do any statusbar in this tutorial.
+No statusbar in this tutorial.
 
 	Separate Window Manager Tutorial, and Statusbar Tutorial.
 
@@ -62,6 +70,9 @@ After this, we still need two more article.
 Some people don't even bother with aestethic aspect of Window Manager.
 No need any statusbar, not even gap between windows.
 The lesser gap, the more information.
+
+No algorithm. No math. It is just a simple configuration.
+There is no need to make this complex.
 
 This will only discuss about the HLWM configuration.
 
@@ -177,6 +188,18 @@ The rest is in their respective article.
 
 *	[Modularized HerbstluftWM in BASH][local-bash]
 
+*	[Modularized HerbstluftWM in Perl][local-perl]
+
+*	[Modularized HerbstluftWM in Python][local-python]
+
+*	[Modularized HerbstluftWM in Ruby][local-ruby]
+
+*	[Modularized HerbstluftWM in PHP][local-php]
+
+*	[Modularized HerbstluftWM in Lua][local-lua]
+
+*	[Modularized HerbstluftWM in Haskell][local-haskell]
+
 
 ### Dotfiles (Source Code)
 
@@ -215,6 +238,12 @@ Thank you for Reading.
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
+[local-perl]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
+[local-python]:   {{ site.url }}/desktop/2017/05/04/herbstlustwm-modularized-python.html
+[local-ruby]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-ruby.html
+[local-php]:      {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-php.html
+[local-lua]:      {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-lua.html
+[local-haskell]:  {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-haskell.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl
