@@ -13,7 +13,7 @@ excerpt:
 
 ### Preface
 
-Every Window Manager as its challenge.
+Every Window Manager has their own challenge.
 That is where the fun come from.
 Herbstluft WM is unique in way that 
 the configuration set from command line interface.
