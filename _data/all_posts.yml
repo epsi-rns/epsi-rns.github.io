@@ -5,6 +5,42 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17051335
+  title: "Example of Doing Loop in Haskell With Map"
+  url: /code/2017/05/13/haskell-loop-with-map.html
+
+- id: 17050835
+  title: "Modularized HerbstluftWM in Haskell"
+  url: /desktop/2017/05/08/herbstlustwm-modularized-haskell.html
+
+- id: 17050735
+  title: "Modularized HerbstluftWM in Lua"
+  url: /desktop/2017/05/07/herbstlustwm-modularized-lua.html
+
+- id: 17050635
+  title: "Modularized HerbstluftWM in PHP"
+  url: /desktop/2017/05/06/herbstlustwm-modularized-php.html
+
+- id: 17050535
+  title: "Modularized HerbstluftWM in Ruby"
+  url: /desktop/2017/05/05/herbstlustwm-modularized-ruby.html
+
+- id: 17050435
+  title: "Modularized HerbstluftWM in Python"
+  url: /desktop/2017/05/04/herbstlustwm-modularized-python.html
+
+- id: 17050335
+  title: "Modularized HerbstluftWM in Perl"
+  url: /desktop/2017/05/03/herbstlustwm-modularized-perl.html
+
+- id: 17050235
+  title: "Modularized HerbstluftWM in BASH"
+  url: /desktop/2017/05/02/herbstlustwm-modularized-bash.html
+
+- id: 17050135
+  title: "Modularized HerbstluftWM Overview"
+  url: /desktop/2017/05/01/herbstlustwm-modularized-overview.html
+
 - id: 17042215
   title: "Debugging Conky"
   url: /desktop/2017/04/22/debugging-conky.html
