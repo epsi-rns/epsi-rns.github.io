@@ -686,7 +686,7 @@ Thank you for reading.
 [local-Lua]:      {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
 [local-Haskell]:  {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
-[local-Haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
+[local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl

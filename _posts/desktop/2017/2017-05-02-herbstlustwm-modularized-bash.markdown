@@ -21,7 +21,7 @@ without changing the whole stuff.
 #### Reading
 
 Before you jump off to scripting,
-you might desire to know read this overview.
+you might desire to read this overview.
 
 *	[Modularized HerbstluftWM Overview][local-overview]
 
@@ -159,6 +159,7 @@ declare -A keybinds=(
 {% endhighlight %}
 
 This config will be utilized in main script
+as shown in the following code.
 
 <code class="code-file">autostart.sh</code>
 
@@ -220,6 +221,8 @@ function do_config()
     done
 }
 {% endhighlight %}
+
+#### Debug Herbstclient Command
 
 I do not remove line where I do debug when I made this script,
 so anyone can use it later, avoid examining blindly.

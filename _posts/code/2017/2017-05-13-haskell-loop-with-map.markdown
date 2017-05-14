@@ -601,7 +601,7 @@ Or just comment out to disable it.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../04-passing-argument.hs][dotfiles-04-passing-argument]
+*	[github.com/.../dotfiles/.../05-passing-argument.hs][dotfiles-05-passing-argument]
 
 -- -- --
 
@@ -715,6 +715,8 @@ Happy Coding.
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
+
+[local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs

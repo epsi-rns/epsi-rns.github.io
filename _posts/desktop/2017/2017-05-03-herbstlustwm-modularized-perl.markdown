@@ -21,7 +21,7 @@ without changing the whole stuff.
 #### Reading
 
 Before you jump off to scripting,
-you might desire to know read this overview.
+you might desire to read this overview.
 
 *	[Modularized HerbstluftWM Overview][local-overview]
 
@@ -59,7 +59,7 @@ module use <code>.pm</code>. extension (perl module).
 
 #### Declare a module
 
-We have to explicitly define what to export.
+Perl module have to explicitly define what to export.
 Anything exported become public in caller script.
 And the rest is private to module.
 
@@ -176,6 +176,7 @@ our %keybinds = (
 {% endhighlight %}
 
 This config will be utilized in main script
+as shown in the following code.
 
 <code class="code-file">autostart.pl</code>
 
@@ -218,6 +219,8 @@ sub do_config($\%) {
     }
 }
 {% endhighlight %}
+
+#### Debug Herbstclient Command
 
 I do not remove line where I do debug when I made this script,
 so anyone can use it later, avoid examining blindly.
