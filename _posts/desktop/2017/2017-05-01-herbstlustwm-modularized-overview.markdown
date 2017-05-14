@@ -180,6 +180,32 @@ Three different things in here
 
 -- -- --
 
+### Color Schemes Modules
+
+We do not need many colors in Tiling Window Manager.
+So this color module is not mandatory required.
+I like google Material Color to create custom Wallpaper in Inkscape.
+I also use it in Dzen2 Statusbar, or Lemonbar.
+It is nice to reuse the same resources for Window Manager.
+
+But why do exactly that I have to put it here ?
+
+	The reason is testing new data structure
+
+The reason why I put this is Data Structure.
+Everytime I try new language, I need to test the data structure.
+
+*	It is simple, no need any string interpolation.
+
+*	It is easy to test color, and dump in terminal.
+	Changing color won't harm system, nor window manager.
+
+After it does proven well,
+The data structure can be used as a model for herbstluft config.
+Both are similar, they both use **key-value pairs**.
+
+-- -- --
+
 ### Blog Post
 
 The rest is in their respective article.
@@ -240,10 +266,10 @@ Thank you for Reading.
 [local-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
 [local-perl]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
 [local-python]:   {{ site.url }}/desktop/2017/05/04/herbstlustwm-modularized-python.html
-[local-ruby]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-ruby.html
-[local-php]:      {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-php.html
-[local-lua]:      {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-lua.html
-[local-haskell]:  {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-haskell.html
+[local-ruby]:     {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-ruby.html
+[local-php]:      {{ site.url }}/desktop/2017/05/06/herbstlustwm-modularized-php.html
+[local-lua]:      {{ site.url }}/desktop/2017/05/07/herbstlustwm-modularized-lua.html
+[local-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl

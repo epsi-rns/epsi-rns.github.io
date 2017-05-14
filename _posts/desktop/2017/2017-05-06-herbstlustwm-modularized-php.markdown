@@ -14,8 +14,9 @@ excerpt:
 ### Preface
 
 	Goal: Separate Main Flow, Code, and Data.
-	So anyone can focus to alter special customization in Main Script,
-	without changing the whole stuff.
+
+So anyone can focus to alter special customization in Main Script,
+without changing the whole stuff.
 
 #### Reading
 
@@ -100,25 +101,7 @@ $tag_keys  = array_merge(range(1, 9), [0]);
 
 ### Hash: Color Schemes
 
-We do not need many colors in Tiling Window Manager.
-So this module is not mandatory required.
-I like google Material Color to create custom Wallpaper in Inkscape.
-I also use it in Dzen2 Statusbar, or Lemonbar.
-It is nice to reuse the same resources for Window Manager.
-
-	The reason is testing new data structure
-
-The reason why I put this is Data Structure.
-Everytime I try new language, I need to test the data structure.
-
-*	It is simple, no need any string interpolation.
-
-*	It is easy to test color, and dump in terminal.
-	Changing color won't harm system, nor window manager.
-
-After it is proven does well,
-I can use it as a model for herbstluft config.
-Both are similar, they use **key-value pairs**.
+Using **key-value pairs**, a simple data structure.
 
 <code class="code-file">assets/gmc.php</code>
 
@@ -164,7 +147,7 @@ $keybinds = array(
     "$m-$s-q" => 'quit',
     "$m-$s-r" => 'reload',
     "$m-$s-c" => 'close'
- )
+)
 {% endhighlight %}
 
 This config will be utilized in main script
@@ -172,7 +155,6 @@ This config will be utilized in main script
 <code class="code-file">autostart.php</code>
 
 {% highlight php %}
-helper::do_config("keybind",   %config::keybinds);
 do_config("keybind",   $keybinds);
 do_config("keybind",   $tagskeybinds);
 do_config("mousebind", $mousebinds);
@@ -244,9 +226,6 @@ function set_tags_with_name($tag_names, $tag_keys) {
     foreach($tag_names as $index=>$value) {
         hc("add '$value'");
         
-        # uncomment to debug in terminal
-        # echo $index."\n";
-
         $key = $tag_keys[$index];
         if (!empty($key)) {
             hc("keybind Mod4-$key use_index '$index'");
@@ -400,7 +379,6 @@ Happy Configuring.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
-[local-php]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-php.html
 
 [image-hlwm-02-tag-status]:  {{ asset_path }}/hlwm-02-tag-status.png
 [image-hlwm-03-debug-config]:  {{ asset_path }}/hlwm-03-debug-config.png

@@ -14,8 +14,9 @@ excerpt:
 ### Preface
 
 	Goal: Separate Main Flow, Code, and Data.
-	So anyone can focus to alter special customization in Main Script,
-	without changing the whole stuff.
+
+So anyone can focus to alter special customization in Main Script,
+without changing the whole stuff.
 
 #### Reading
 
@@ -112,25 +113,7 @@ system("echo 35 > /tmp/herbstluftwm-gap");
 
 ### Hash: Color Schemes
 
-We do not need many colors in Tiling Window Manager.
-So this module is not mandatory required.
-I like google Material Color to create custom Wallpaper in Inkscape.
-I also use it in Dzen2 Statusbar, or Lemonbar.
-It is nice to reuse the same resources for Window Manager.
-
-	The reason is testing new data structure
-
-The reason why I put this is Data Structure.
-Everytime I try new language, I need to test the data structure.
-
-*	It is simple, no need any string interpolation.
-
-*	It is easy to test color, and dump in terminal.
-	Changing color won't harm system, nor window manager.
-
-After it is proven does well,
-I can use it as a model for herbstluft config.
-Both are similar, they use **key-value pairs**.
+Using **key-value pairs**, a simple data structure.
 
 <code class="code-file">assets/gmc.rb</code>
 
@@ -248,7 +231,7 @@ You can see the debugging result in figure below.
 
 Nothing special here,
 Ruby read all exported variable from modules.
-And we defined local <code>tag_names</code> to avoid long namespace.
+And I define local <code>tag_names</code> to avoid long namespace.
 
 <code class="code-file">helper.rb</code>
 
@@ -262,9 +245,6 @@ def set_tags_with_name()
     tag_names.each_with_index do |tag_name, index|
         hc("add '#{tag_names[index]}'")
         
-        # uncomment to debug in terminal
-        # puts i
-
         key = tag_keys[index]                
         unless key.to_s.empty?
             hc("keybind Mod4-#{key} use_index '#{index}'");
@@ -411,7 +391,6 @@ Happy Configuring.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
-[local-ruby]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-ruby.html
 
 [image-hlwm-02-tag-status]:  {{ asset_path }}/hlwm-02-tag-status.png
 [image-hlwm-03-debug-config]:  {{ asset_path }}/hlwm-03-debug-config.png

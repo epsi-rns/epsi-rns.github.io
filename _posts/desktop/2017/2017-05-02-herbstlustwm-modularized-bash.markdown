@@ -14,8 +14,9 @@ excerpt:
 ### Preface
 
 	Goal: Separate Main Flow, Code, and Data.
-	So anyone can focus to alter special customization in Main Script,
-	without changing the whole stuff.
+
+So anyone can focus to alter special customization in Main Script,
+without changing the whole stuff.
 
 #### Reading
 
@@ -108,25 +109,7 @@ tag_keys=( {1..9} 0 )
 
 ### Hash: Color Schemes
 
-We do not need many colors in Tiling Window Manager.
-So this module is not mandatory required.
-I like google Material Color to create custom Wallpaper in Inkscape.
-I also use it in Dzen2 Statusbar, or Lemonbar.
-It is nice to reuse the same resources for Window Manager.
-
-	The reason is testing new data structure
-
-The reason why I put this is Data Structure.
-Everytime I try new language, I need to test the data structure.
-
-*	It is simple, no need any string interpolation.
-
-*	It is easy to test color, and dump in terminal.
-	Changing color won't harm system, nor window manager.
-
-After it is proven does well,
-I can use it as a model for herbstluft config.
-Both are similar, they use **key-value pairs**.
+Using **key-value pairs**, a simple data structure.
 
 <code class="code-file">assets/gmc.sh</code>
 
@@ -275,9 +258,6 @@ function set_tags_with_name() {
     for index in ${!tag_names[@]} ; do
         hc add "${tag_names[$index]}"
         
-        # uncomment to debug in terminal
-        # echo $index
-
         local key="${tag_keys[$index]}"
         if ! [ -z "$key" ] ; then
             hc keybind "$m-$key" use_index "$index"
