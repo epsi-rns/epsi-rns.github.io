@@ -208,7 +208,13 @@ This will show.
 : 1: 2: 3: 4: 5: 6: 7: 8: 9: 0
 {% endhighlight %}
 
-Or even better one liner using <code>concatMap</code>.
+Or even better one liner using <code>map</code>.
+
+{% highlight haskell %}
+main = do putStrLn (concat (map ((": " ++) . show ) ([1..9] ++ [0])))
+{% endhighlight %}
+
+Or <code>concatMap</code>.
 
 {% highlight haskell %}
 main = do putStrLn (concatMap ((": " ++) . show ) ([1..9] ++ [0]) )
