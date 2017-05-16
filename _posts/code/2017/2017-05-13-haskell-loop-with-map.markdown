@@ -192,6 +192,28 @@ and too confused about Haskell notation,
 you may consider this perspective:
 <code>mapM_(callback_function, array)</code>.
 
+#### Iterate with Another Map
+
+If you wish for another challenge you can make this more complex.
+
+{% highlight haskell %}
+main = do
+    mapM_ (putStr . (": " ++) . show ) ([1..9] ++ [0])
+    putStrLn ""
+{% endhighlight %}
+
+This will show.
+
+{% highlight conf %}
+: 1: 2: 3: 4: 5: 6: 7: 8: 9: 0
+{% endhighlight %}
+
+Or even better one liner using <code>concatMap</code>.
+
+{% highlight haskell %}
+main = do putStrLn (concatMap ((": " ++) . show ) ([1..9] ++ [0]) )
+{% endhighlight %}
+
 #### View Source File:
 
 *	[github.com/.../dotfiles/.../01-list.hs][dotfiles-01-list]
