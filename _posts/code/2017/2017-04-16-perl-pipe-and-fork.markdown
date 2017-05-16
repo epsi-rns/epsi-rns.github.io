@@ -17,7 +17,7 @@ excerpt:
 	with Dzen2, and Conky.
 
 Before you dip your toe to scripting,
-you might desire to know the reason by reading this preface.
+you might desire to know the reason by reading this overview.
 
 **Reading**
 
@@ -655,7 +655,7 @@ Thank you for reading.
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png
 [image-time-basic]: {{ asset_path }}/pipe-basic-perl.png
 
-[local-overview]: {{ site.url }}/pages/desktop/pipe.html
+[local-overview]: {{ site.url }}/code/2017/04/23/overview-pipe-and-fork.html
 [local-BASH]:     {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
 [local-Perl]:     {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
 [local-python]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html

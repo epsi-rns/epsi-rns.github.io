@@ -11,7 +11,7 @@
 - title: Tiling WM
   url: /pages/desktop/twm.html
   submenu:
-  - title: Awesome
+  - title: Awesome WM
     url: /pages/desktop/awesome.html
     submenu:
     - title: Modular
@@ -37,7 +37,7 @@
       url: /desktop/2014/12/15/xmonad-menu-bar.html
     - title: Old Screenshot
       url: /desktop/2014/12/12/xmonad-tiling-window-manager.html
-  - title: i3
+  - title: i3 WM
     url: /pages/desktop/i3.html
     submenu:
     - title: Modular i3status
@@ -48,6 +48,25 @@
       url: /desktop/2016/08/03/i3-install-arch.html
     - title: Old Screenshot
       url: /desktop/2014/12/06/i3-i3bar.html
+  - title: Herbstluft WM
+    url: /pages/desktop/hlwm.html
+    submenu:
+    - title: Modular Overview
+      url: /desktop/2017/05/01/herbstlustwm-modularized-overview.html   
+    - title: Modular BASH
+      url: /desktop/2017/05/02/herbstlustwm-modularized-bash.html
+    - title: Modular Perl
+      url: /desktop/2017/05/03/herbstlustwm-modularized-perl.html
+    - title: Modular Python
+      url: /desktop/2017/05/04/herbstlustwm-modularized-python.html
+    - title: Modular Ruby
+      url: /desktop/2017/05/05/herbstlustwm-modularized-ruby.html
+    - title: Modular PHP
+      url: /desktop/2017/05/06/herbstlustwm-modularized-php.html
+    - title: Modular Lua
+      url: /desktop/2017/05/07/herbstlustwm-modularized-lua.html
+    - title: Modular Haskell
+      url: /desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
 - title: Stacking WM
   url: /pages/desktop/swm.html
@@ -99,14 +118,14 @@
     url: /desktop/2016/05/19/midnight-commander-tweaking.html
   - title: Termite
     url: /desktop/2016/09/19/termite-install.html
-  - title: "Getting XLFD Font"
+  - title: XLFD Font
     url: /desktop/2017/04/13/getting-xlfd-font.html
 
 - title: Coding
   url: /pages/desktop/ricing.html
   submenu:
   - title: Piping and Forking
-    url: /pages/desktop/pipe.html
+    url: /code/2017/04/23/overview-pipe-and-fork.html
     submenu:
     - title: BASH
       url: /code/2017/04/15/bash-pipe-and-fork.html

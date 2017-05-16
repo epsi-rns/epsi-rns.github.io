@@ -1,6 +1,14 @@
 ---
-layout: page-sidemenu-wm
-title: Piping and Forking in Linux Script
+layout: post-sidemenu-wm
+title:  "Piping and Forking Overwiew"
+categories: code
+date:   2017-04-23 17:35:15 +0700
+tags: [coding, conky, dotfiles]
+author: epsi
+
+excerpt:
+  Overview on how to be a Plumber.
+  
 ---
 
 This is just a complementary topic for Dzen, Lemonbar and Conky. 

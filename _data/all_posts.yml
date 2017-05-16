@@ -41,6 +41,10 @@
   title: "Modularized HerbstluftWM Overview"
   url: /desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
+- id: 17042335
+  title: "Piping and Forking Overwiew"
+  url: /code/2017/04/23/overview-pipe-and-fork.html
+
 - id: 17042215
   title: "Debugging Conky"
   url: /desktop/2017/04/22/debugging-conky.html

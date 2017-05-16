@@ -3,7 +3,7 @@ layout: post
 title:  "How Haskell Syntax can Make Your Code Cleaner"
 date:   2016-05-14 10:03:15 +0700
 categories: code
-tags: [xmonad, dotfiles, haskell, language]
+tags: [xmonad, dotfiles, haskell]
 author: epsi
 
 excerpt:
