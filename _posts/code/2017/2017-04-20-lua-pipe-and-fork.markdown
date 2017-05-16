@@ -325,10 +325,6 @@ This dzen2 is forked, running in the background.
 Detached from the script,
 no need to wait for dzen2 to finish the script.
 
-The third issue with Lua is,
-it does not have native <code>exec</code> system command.
-that's why also emulate it .
-
 
 **Source**:
 
@@ -348,18 +344,6 @@ function sleep (n)
     while os.clock() - t <= n do
         -- nothing
     end
-end
-
-function exec (command)
-    local file = assert(io.popen(command, 'r'))
-    local s = file:read('*all')
-    file:close()
-
-    s = string.gsub(s, '^%s+', '') 
-    s = string.gsub(s, '%s+$', '') 
-    s = string.gsub(s, '[\n\r]+', ' ')
-
-    return s
 end
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ---
@@ -420,7 +404,7 @@ end
 -- main
 
 -- remove all dzen2 instance
-exec('pkill dzen2')
+os.execute('pkill dzen2')
 
 -- run process in the background
 detach_dzen2()
@@ -491,18 +475,6 @@ function sleep (n)
     end
 end
 
-function exec (command)
-    local file = assert(io.popen(command, 'r'))
-    local s = file:read('*all')
-    file:close()
-
-    s = string.gsub(s, '^%s+', '') 
-    s = string.gsub(s, '%s+$', '') 
-    s = string.gsub(s, '[\n\r]+', ' ')
-
-    return s
-end
-
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ---
 -- application related function
 
@@ -565,7 +537,7 @@ function detach_transset()
 
     if pid == 0 then -- this is the child process
         sleep(1)
-        exec('transset .8 -n dzentop >/dev/null 2')        
+        os.execute('transset .8 -n dzentop >/dev/null 2')        
     else             -- this is the parent process
         -- nothing
     end
@@ -576,7 +548,7 @@ end
 -- main
 
 -- remove all dzen2 instance
-exec('pkill dzen2')
+os.execute('pkill dzen2')
 
 -- run process in the background
 detach_dzen2()
