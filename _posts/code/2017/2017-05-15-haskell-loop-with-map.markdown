@@ -1,4 +1,4 @@
-E---
+---
 layout: post
 title:  "Loop in Haskell With Map, Part Three"
 date:   2017-05-15 05:35:15 +0700
