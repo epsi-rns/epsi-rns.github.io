@@ -25,7 +25,7 @@ I'm so excited, that I could finished this loop article, a year after.
 
 ### Preface
 
-I always thought that learning Haskell
+I used to think that learning Haskell
 could hurt my brain, and cause brain damage.
 Such as the scary myth of no loop in Haskell.
 It is partially true, iteration is enough to mimic loop,
