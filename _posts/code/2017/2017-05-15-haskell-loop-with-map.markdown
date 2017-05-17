@@ -69,7 +69,7 @@ pair = ("key", "value")
 
 ### Passing Arguments to Action
 
-	Think Function in Haskell as Sequence of Procedure
+	Think Action in Haskell as Procedure, Sequence of Command
 
 Now we can apply our <code>Pair</code> to new function.
 This function has two arguments.
