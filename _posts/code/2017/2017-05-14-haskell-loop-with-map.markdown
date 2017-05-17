@@ -24,6 +24,27 @@ This is the topic after previous section about Array (list).
 
 -- -- --
 
+### Example of Doing Loop in Haskell With Map
+
+This tutorial/ guidance/ article is one of three parts.
+These three combined is going to be a long article.
+So I won't speak too much. More on codes, than just words.
+
+*	[Part One][local-part-01]: List
+
+*	[Part Two][local-part-02]: Tuple and Dictionary
+
+*	[Part Three][local-part-03]: Mapping with Function
+
+The first two parts discuss the most common loop,
+array in part one and hash in part two.
+Considering that combining map with function is tricky,
+This deserve this an article of its own in part three.
+Part three also contains comparation 
+with other Languages, using Real World Function.
+
+-- -- --
+
 ### Using Tuplets as a Pair of Key and Value
 
 Tuplets can contain many elements.
@@ -101,8 +122,6 @@ you can wrap these two function <code>putStrLn $ key</code>,
 and leave the argument outside.
 
 {% highlight haskell %}
-import System.Process
-
 pair :: (String, String)
 pair = ("key", "value")
 
@@ -113,9 +132,6 @@ putKeyLn (k, _) = do
 main = do
     putKeyLn pair
 {% endhighlight %}
-
-We require to import <code>System.Process</code>,
-because we declare <code>IO ()</code> in function.
 
 This will produce:
 
@@ -349,6 +365,10 @@ Happy Coding.
 
 [local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
 [local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
+
+[local-part-01]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+[local-part-02]: {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
+[local-part-03]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs

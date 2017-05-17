@@ -21,10 +21,6 @@ I'm so excited, that I could finished this loop article, a year after.
 
 *	[How Haskell Syntax can Make Your Code Cleaner][local-haskell-dollar]
 
-### Goal of Part One
-
-	Process Array Loop by Iterating on List
-
 As a pure functional language, Haskell has been designed,
 in a way that, it does not have any loop clause.
 Moving perspective from **how** the code do, to **what** the code does.
@@ -33,26 +29,37 @@ compared with imperative programming.
 
 This is an example, from beginner, to another beginner.
 Using <code>map</code>, <code>mapM_</code>
-and <code>forM_</code> to mimic <code>foreach</code>,
-applied for array, and hash with key and value.
+and <code>forM_</code> to mimic loop.
 
-Let's walk step by step
+-- -- --
 
-*	List
+### Goal of Part One
 
-*	Tuple
+	Process Array Loop by Iterating on List
 
-*	Dictionary
+This is the basic of loop using iteration,
+with simple array like data structure, the list.
 
-*	Passing Argument
+-- -- --
 
-*	Real World Application
+### Example of Doing Loop in Haskell With Map
 
-*	Comparation with other Languages.
+This tutorial/ guidance/ article is one of three parts.
+These three combined is going to be a long article.
+So I won't speak too much. More on codes, than just words.
 
-It is going to be a long article.
-So I won't speak too much.
-More on codes, than just words.
+*	[Part One][local-part-01]: List
+
+*	[Part Two][local-part-02]: Tuple and Dictionary
+
+*	[Part Three][local-part-03]: Mapping with Function
+
+The first two parts discuss the most common loop,
+array in part one and hash in part two.
+Considering that combining map with function is tricky,
+This deserve this an article of its own in part three.
+Part three also contains comparation 
+with other Languages, using Real World Function.
 
 -- -- --
 
@@ -299,8 +306,8 @@ This will show.
 {% endhighlight %}
 
 How does it works ?
-What is this <code>.<code> 
-in <code>(putStr . (": " ++) . show)<code> anyway.
+What is this <code>.</code> 
+in <code>(putStr . (": " ++) . show)</code> anyway.
 
 As our need grow, you might desire to use more than one function.
 The issue is <code>mapM_</code> only accept one function.
@@ -380,7 +387,11 @@ Happy Coding.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
 [local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
-[local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
+[local-hlwm-haskell]:   {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
+
+[local-part-01]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+[local-part-02]: {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
+[local-part-03]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs

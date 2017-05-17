@@ -23,8 +23,29 @@ related_link_ids:
 We have seen an introduction of 
 handling map with function in the previous lesson.
 Since combining map with function is tricky,
-and contain many forms of syntatic sugar.
+and also contain many forms of syntatic sugar.
 This deserve this long explanation article.
+
+-- -- --
+
+### Example of Doing Loop in Haskell With Map
+
+This tutorial/ guidance/ article is one of three parts.
+These three combined is going to be a long article.
+So I won't speak too much. More on codes, than just words.
+
+*	[Part One][local-part-01]: List
+
+*	[Part Two][local-part-02]: Tuple and Dictionary
+
+*	[Part Three][local-part-03]: Mapping with Function
+
+The first two parts discuss the most common loop,
+array in part one and hash in part two.
+Considering that combining map with function is tricky,
+This deserve this an article of its own in part three.
+Part three also contains comparation 
+with other Languages, using Real World Function.
 
 -- -- --
 
@@ -253,8 +274,9 @@ This will show display:
 Test: Key | Value
 {% endhighlight %}
 
-The difference with the function <code>dumpPair</code>,
-is in we place IO operation such <code>putStr</code>
+The difference betwwen <code>pairMessage</code>
+with the function <code>dumpPair</code> is,
+we place IO operation such <code>putStr</code>
 outside the function.
 
 -- -- --
@@ -282,7 +304,7 @@ main = do
     putStrLn ""
 {% endhighlight %}
 
-you should not be surprised with
+You should not be surprised with
 the curry function <code>pairMessage text</code>.
 This wil produce as below:
 
@@ -331,21 +353,28 @@ hashMessage3 :: String -> [Pair] -> [String]
 hashMessage3 text dictionary = 
     map ( \(key, value) ->
           text ++ ": " ++ key ++ " | " ++ value    
-        ) dictionary   
+        ) dictionary 
+
+main = do
+    mapM_ putStrLn (hashMessage3 "Name" colorSchemes)
+    putStrLn ""
 {% endhighlight %}
 
 It looks exactly like <code>foreach</code> loop,
 with different syntax. Once we get it, it is more flexible.
-**my-repetitious-paragraph**.
 
 -- -- --
 
-### Simplify Main
+### Go Further with Action
 
-Considering mking the main clause simpler.
+Considering of simpliying the main clause.
 How about moving <code>mapM_ putStrLn</code> inside an action?
-Going back to IO action procedure,
-we can keep the value of list by using <code>let</code> inside do clause.
+We should go back using IO action procedure,
+because main clause only accept IO sequence.
+
+First we need to capture the value of newly produced list.
+Do block, contain only sequence of IO.
+We assign a variable in do block by using <code>let</code> clause.
 
 {% highlight haskell %}
 -- function
@@ -365,11 +394,7 @@ main = do
 How about the output ?
 The same as previous sir.
 
--- -- --
-
-### Where Clause
-
-Well, using <code>where</code> first as usual.
+We can go further using <code>where</code> as usual.
 No need to covert into lambda.
 We can have another form of this function.
 
@@ -387,11 +412,10 @@ dumpHash6 text dictionary = do
 
 ### Debugging
 
-Really ? This tutorial is getting repetitious.
-We almost finished.
-
 Again, how if I want **multiple** IO operation inside ?
 Such as debugging capability, after applying config.
+We can do it by changing from standard IO <code>putStrLn</code>
+to custom IO action <code>debugStrLn</code> inside where clause.
 
 {% highlight haskell %}
 dumpHash7 :: String -> [Pair] -> IO ()
@@ -539,6 +563,10 @@ Happy Coding.
 
 [local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
 [local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
+
+[local-part-01]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+[local-part-02]: {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
+[local-part-03]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs
