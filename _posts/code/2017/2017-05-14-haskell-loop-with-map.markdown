@@ -30,6 +30,8 @@ This tutorial/ guidance/ article is one of three parts.
 These three combined is going to be a long article.
 So I won't speak too much. More on codes, than just words.
 
+*	[Overview][local-overview]: Preface
+
 *	[Part One][local-part-01]: List
 
 *	[Part Two][local-part-02]: Tuple and Dictionary
@@ -72,7 +74,7 @@ I just feel that Haskell syntax is sophisticatedly clearer.
 
 And the result is:
 
-{% highlight haskell %}
+{% highlight conf %}
 "key"
 "value"
 {% endhighlight %}
@@ -225,7 +227,7 @@ This will produce:
 
 -- -- --
 
-### Iterate with mapM
+### Iterate with map
 
 How about producing new list with <code>map</code>?
     
@@ -290,7 +292,7 @@ and later unquoted values (second element):
 
 -- -- --
 
-### Iterating mapM_ with Custom Function
+### Iterate Custom Function with mapM_
 
 Furthermore as the code growing in need of more action,
 it is more clear to create new function.
@@ -322,7 +324,7 @@ blue900 | #0d47a1
 
 -- -- --
 
-### Iterating mapM with Custom Function
+### Iterate Custom Function with map
 
 And here it is, mapping function counterpart.
 Producing new list first as a feed to output.
@@ -342,6 +344,55 @@ While doing <code>mapM_</code>
 after <code>map</code> seems redundant.
 It is just an example required in this tutorial,
 not everything have to be printed out.
+
+-- -- --
+
+### Returning as IO
+
+Many times we need to return value to IO,
+we just need to <code>return</code> in action
+and <code><-<code> operator to call that action.
+
+{% highlight haskell %}
+pairStrIO :: (String, String) -> IO String
+pairStrIO (key, value) = do return (key ++ " | " ++ value)
+
+main = do
+    myPair <- pairStrIO ("myKey", "myValue")
+    putStrLn myPair
+{% endhighlight %}
+
+Note that you can omit <code>do</code> notation for one liner in action.
+
+This will show:
+
+{% highlight conf %}
+myKey | myValue
+{% endhighlight %}
+
+-- -- --
+
+### Iterate Custom Function with mapM
+
+In  case we need both IO side effect and list result,
+we can use <code>mapM</code>
+
+{% highlight haskell %}
+main = do
+    myMapResult <- mapM pairStrIO colorSchemes
+    putStrLn $ show myMapResult
+    putStrLn "" 
+{% endhighlight %}
+
+This will produce text as below:
+
+{% highlight conf %}
+["blue50 | #e3f2fd","blue100 | #bbdefb","blue200 | #90caf9","blue300 | #64b5f6","blue400 | #42a5f5","blue500 | #2196f3","blue600 | #1e88e5","blue700 | #1976d2","blue800 | #1565c0","blue900 | #0d47a1"]
+{% endhighlight %}
+
+Of course, this is just a simple example on how to use <code>mapM</code>.
+
+-- -- --
 
 ### View Source File:
 
@@ -366,12 +417,10 @@ Happy Coding.
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
-[local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
-[local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
-
-[local-part-01]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
-[local-part-02]: {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
-[local-part-03]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
+[local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
+[local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+[local-part-02]:  {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
+[local-part-03]:  {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs

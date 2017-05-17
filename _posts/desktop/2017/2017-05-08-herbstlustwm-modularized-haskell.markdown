@@ -373,11 +373,11 @@ set_tags_with_name = do
 ### Launch the Panel
 
 The panel code is short, but the detail is long.
-We have to find extract value from IO action
+We have to extract value from IO action
 
-*	<code>panelFilename</code>.
+*	<code>panelFilename</code>: IO String.
 
-*	<code>listMonitors</code>.
+*	<code>listMonitors</code>: IO [String].
 
 
 {% highlight haskell %}

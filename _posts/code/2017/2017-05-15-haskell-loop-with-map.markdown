@@ -34,6 +34,8 @@ This tutorial/ guidance/ article is one of three parts.
 These three combined is going to be a long article.
 So I won't speak too much. More on codes, than just words.
 
+*	[Overview][local-overview]: Preface
+
 *	[Part One][local-part-01]: List
 
 *	[Part Two][local-part-02]: Tuple and Dictionary
@@ -301,7 +303,7 @@ outside the function.
 
 -- -- --
 
-### Iterate with mapM using Curry Function
+### Iterate with map using Curry Function
 
 Now we can do iterate our latest function.
 Doing <code>map</code> inside a function.
@@ -581,12 +583,12 @@ Happy Coding.
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
-[local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
 [local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
-[local-part-01]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
-[local-part-02]: {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
-[local-part-03]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
+[local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
+[local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+[local-part-02]:  {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
+[local-part-03]:  {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs

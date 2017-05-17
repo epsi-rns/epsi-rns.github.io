@@ -16,23 +16,6 @@ related_link_ids:
 
 ---
 
-This day is exactly 364 days, since my first Haskell article.
-I'm so excited, that I could finished this loop article, a year after.
-
-*	[How Haskell Syntax can Make Your Code Cleaner][local-haskell-dollar]
-
-As a pure functional language, Haskell has been designed,
-in a way that, it does not have any loop clause.
-Moving perspective from **how** the code do, to **what** the code does.
-This obscure Haskell language has different approach,
-compared with imperative programming.
-
-This is an example, from beginner, to another beginner.
-Using <code>map</code>, <code>mapM_</code>
-and <code>forM_</code> to mimic loop.
-
--- -- --
-
 ### Goal of Part One
 
 	Process Array Loop by Iterating on List
@@ -48,6 +31,8 @@ This tutorial/ guidance/ article is one of three parts.
 These three combined is going to be a long article.
 So I won't speak too much. More on codes, than just words.
 
+*	[Overview][local-overview]: Preface
+
 *	[Part One][local-part-01]: List
 
 *	[Part Two][local-part-02]: Tuple and Dictionary
@@ -60,28 +45,6 @@ Considering that combining map with function is tricky,
 This deserve this an article of its own in part three.
 Part three also contains comparation 
 with other Languages, using Real World Function.
-
--- -- --
-
-### Preparation
-
-	In Haskell we have to be ready to deal with operators.
-
-A least, we are using these operators.
-Not to mention function declaration.
-
-*	dollar <code>$</code> (function application),
-
-*	dot <code>.</code> (function composition),
-
-*	index <code>||</code>,
-
-*	IO  <code><-</code>, and  
-
-*	lambda <code>\</code>.
-
-Do not let it intimidate you,
-we are going to use it step by step.
 
 -- -- --
 
@@ -424,12 +387,10 @@ Happy Coding.
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
-[local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
-[local-hlwm-haskell]:   {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
-
-[local-part-01]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
-[local-part-02]: {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
-[local-part-03]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
+[local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
+[local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
+[local-part-02]:  {{ site.url }}/code/2017/05/14/haskell-loop-with-map.html
+[local-part-03]:  {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 
 [dotfiles-01-list]:             {{ dotfiles_path }}/01-list.hs
 [dotfiles-02-tuples]:           {{ dotfiles_path }}/02-tuples.hs
