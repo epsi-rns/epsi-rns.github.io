@@ -85,7 +85,7 @@ Haskell module have to explicitly define what to export.
 Anything exported become public in caller script.
 And the rest is private to module.
 
-{% highlight lua %}
+{% highlight haskell %}
 module MyHelper
 ( hc
 , do_config
@@ -96,7 +96,7 @@ module MyHelper
 
 #### Call a module
 
-{% highlight lua %}
+{% highlight haskell %}
 import MyHelper
 {% endhighlight %}
 
@@ -109,14 +109,14 @@ in a function named <code>hc</code>.
 
 <code class="code-file">helper.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 hc :: String -> IO ExitCode
 hc arguments = system $ "herbstclient " ++ arguments
 {% endhighlight %}
 
 <code class="code-file">autostart.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 main = do
     -- Read the manual in $ man herbstluftwm
     hc "emit_hook reload"
@@ -134,7 +134,7 @@ I cannot find a way to define array by range in just one line.
 
 <code class="code-file">config.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 tag_names = [1..9]
 tag_keys  = [1..9] ++ [0]
 {% endhighlight %}
@@ -149,7 +149,7 @@ Using **key-value pairs**, a simple data structure.
 
 <code class="code-file">assets/gmc.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 colorSchemes :: [(String, String)]
 colorSchemes =
     [("white",     "#ffffff")
@@ -165,7 +165,7 @@ myColor key = M.findWithDefault "#ffffff" key (fromList colorSchemes)
 
 <code class="code-file">autostart.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 main = do
     -- background before wallpaper
     system $ "xsetroot -solid '" ++ myColor "blue500" ++ "'"
@@ -193,7 +193,7 @@ Except that it has string concatenation all over the place.
 
 <code class="code-file">config.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 -- Modifier variables
 s = "Shift"
 c = "Control"
@@ -214,7 +214,7 @@ as shown in the following code.
 
 <code class="code-file">autostart.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 main = do
     do_config "keybind"   keybinds
     do_config "keybind"   tagskeybinds
@@ -249,7 +249,7 @@ the herbstclient command i.e "keybind", and hash from config.
 
 <code class="code-file">helper.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 do_config :: String -> [Pair] -> IO ()
 do_config command pairs = do
     -- loop over a hash dictionary of tuples
@@ -279,7 +279,7 @@ so anyone can use it later, avoid examining blindly.
 Sometimes strange things happen.
 Just uncomment the line to see what happened.
 
-{% highlight lua %}
+{% highlight haskell %}
             putStrLn(command ++ " " ++ key ++ " " ++ value)
 {% endhighlight %}
 
@@ -305,11 +305,8 @@ Similar Code:
 ### Setting the Tags
 
 For clarity, I break down the process into some function.
-This approach works. But you should read **coder issue** below.
 
-<code class="code-file">helper.hs</code>
-
-{% highlight lua %}
+{% highlight haskell %}
 get_indices :: [Int] -> [Int]
 get_indices l = [0 .. (length l) - 1]
 
@@ -342,37 +339,71 @@ set_tags_with_name = do
     return ()
 {% endhighlight %}
 
-#### Specific Coder Issue
+Using lambda syntatic sugar and pattern matching.
 
-	Instead of wrote some function,
-	I wrote everything in IO action.
+<code class="code-file">helper.hs</code>
 
-It was poorly designed, thus took a so many lines.
-I will give an update, as soon as I got this right.
+{% highlight haskell %}
+set_tags_with_name :: IO ()
+set_tags_with_name = do
+    hc("rename default '" 
+        ++ show (tag_names !! 0) ++ "' 2>/dev/null || true")
 
-Please consider it, as a coder issue, not a Haskell issue.
-I'm a n00b in Haskell, and I still need time 
-to understand how to write it right in Haskell.
-I need to switch my imperative thinking to functional thinking.
+    mapM_ (\index -> do
+            hc("add '" ++ show(tag_names !! index) ++ "'")
+    
+            -- uncomment to debug in terminal
+            -- putStrLn $ show index
 
-	Please accept my apology
+            let key = tag_keys !! index
+            case (Just key) of
+                Nothing   -> do return()
+                Just akey -> do
+                    hc("keybind Mod4-" ++ show(akey) 
+                        ++ " use_index '" ++ show(index) ++ "'")
+                    hc("keybind Mod4-Shift-" ++ show(akey) 
+                        ++ " move_index '" ++ show(index) ++ "'")
+                    return ()
+
+        ) ([0 .. (length tag_names) - 1]) -- indices
+{% endhighlight %}
 
 -- -- --
 
 ### Launch the Panel
 
-Whoaaaa... This is long.
-This approach works. But you should read **coder issue** below.
+The panel code is short, but the detail is long.
+We have to find extract value from IO action
 
-{% highlight lua %}
+*	<code>panelFilename</code>.
+
+*	<code>listMonitors</code>.
+
+
+{% highlight haskell %}
 do_panel :: IO ()
 do_panel = do
-    -- Source directory is irrelevant in Haskell
-    -- So hardcoded, for the sake of learning
-    let path = "/.config/herbstluftwm/bash/dzen2/panel.sh"
+    panel <- panelFilename
+    monitors <- listMonitors
     
+    mapM_ (\monitor -> do
+            system(panel ++ " " ++ show(monitor) ++ " &")
+          ) monitors
+
+    return ()
+{% endhighlight %}
+
+<code>panelFilename</code> IO action:
+
+{% highlight haskell %}
+customFilename :: String -> String
+customFilename home = home ++ path 
+    where path = "/.config/herbstluftwm/bash/dzen2/panel.sh"
+    
+panelFilename :: IO String
+panelFilename = do
     home <- getHomeDirectory
-    let file = home ++ path
+    let file = customFilename home
 
     isExist <- doesFileExist file
     permission <- getPermissions file
@@ -385,7 +416,15 @@ do_panel = do
     
     -- uncomment to debug in terminal
     -- putStrLn panel
-     
+    
+    return panel
+{% endhighlight %}
+
+<code>listMonitors</code> IO action:
+
+{% highlight haskell %}
+listMonitors :: IO [String]
+listMonitors = do
     (_, Just pipeout, _, _) <- 
         createProcess (proc "herbstclient" ["list_monitors"])
         { std_out = CreatePipe } 
@@ -397,33 +436,14 @@ do_panel = do
     raw <- hGetContents cutout   
     _ <- waitForProcess ph
 
-    -- uncomment to debug in terminal       
+    -- uncomment to debug in terminal     
     -- putStrLn raw
-    let monitors = lines raw
-    
-    mapM_ (\monitor -> do
-            system(panel ++ " " ++ show(monitor) ++ " &")
-          ) monitors
+    let monitors = lines raw  -- or splitOn instead
 
-    return ()
+    return monitors
 {% endhighlight %}
 
-#### Specific Coder Issue
-
-	Instead of wrote some function,
-	I wrote everything in IO action.
-
-It was poorly designed, thus took a so many lines.
-I will give an update, as soon as I got this right.
-
-	This code also need some refactoring
-
-Please consider it, as a coder issue, not a Haskell issue.
-I'm just a beginner in Haskell, and I still need time 
-to understand how to write it right in Haskell.
-I need to switch my imperative thinking to functional thinking.
-
-	Again, Please accept my apology
+Yes it is very long compared with BASH/Perl/Python counterpart.
 
 -- -- --
 
@@ -435,7 +455,7 @@ Everyone has their own personal preferences.
 
 <code class="code-file">startup.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 startup_run :: IO ()
 startup_run = do
     -- no need to use silent, as the std_err redirected
@@ -496,7 +516,7 @@ and putting it all back together.
 
 <code class="code-file">Header Part: autostart.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 import System.Process
 
 import Assets.MyGMC
@@ -507,7 +527,7 @@ import MyStartup
 
 <code class="code-file">Procedural Part: autostart.hs</code>
 
-{% highlight lua %}
+{% highlight haskell %}
 main = do
     -- background before wallpaper
     system $ "xsetroot -solid '" ++ myColor "blue500" ++ "'"
