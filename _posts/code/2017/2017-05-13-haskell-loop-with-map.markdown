@@ -85,13 +85,31 @@ we are going to use it step by step.
 
 -- -- --
 
-### Loop Over List
+### Defining List
 
 Haskell has a few Array implementation.
 One that is very common is List.
 It is actually a linked list that behaves like an Array.
 
 Let's consider a list construct, contain sequence number from 1 to 9.
+
+{% highlight haskell %}
+list :: [Int]
+list = [1..9]
+{% endhighlight %}
+
+It is not mandatory to write function declaration.
+Sometime I put function declaration, just for clarity reason,
+Also for my personal exercise. It won't harm anyone.
+Now we can omit any function declaration for this list.
+
+{% highlight haskell %}
+list = [1..9]
+{% endhighlight %}
+
+-- -- --
+
+### Printing List
 
 {% highlight haskell %}
 list = [1..9]
@@ -107,14 +125,34 @@ This will show:
 [1,2,3,4,5,6,7,8,9]
 {% endhighlight %}
 
-Not everything in Haskell is function.
-And it is not mandatory to write function declaration.
-For clarity reason, I put function declaration.
-Also for my personal exercise. It won't harm anyone.
+-- -- --
+
+### More about Printing
+
+We can ignore <code>do</code> clause.
+<code>do</code> is just a special syntax for sequencing monad.
+The type of <code>main</code>main is <code>IO ()</code>.
+IO is a monad, hence omitting do.
+
+Relax, forget about Monad, and just go on.
+Omitting <code>do</code> notatin is useful
+when creating oneliner example.
+Consider this example of the same code rewritten
+without do clause.
+
+<code>print</code> is just <code>putStrLn $ show</code>.
+And <code>$</code> is just an operator to avoid closing bracket.
+Now we can decompose it as below.
+
+{% highlight haskell %}
+main = putStrLn (show [1..9]) >> putStrLn ""
+{% endhighlight %}
+
+-- -- --
+
+### List Variation
 
 Let's add other element to this list.
-Since <code>print</code> is just <code>putStrLn $ show</code>,
-we can write decompose it as below.
 
 {% highlight haskell %}
 list :: [Int]
@@ -377,7 +415,7 @@ This will produce exactly the same result.
 
 -- -- --
 
-In the next section we will discuss about Hash (dictionary).
+In "[Part Two][local-part-02]" we will discuss about Hash (dictionary).
 
 Happy Coding.
 

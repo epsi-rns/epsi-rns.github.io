@@ -90,12 +90,15 @@ the code below to examine the possibility.
 
 -- -- --
 
-### Accessing Using Custom Function
+### Accessing Using Pattern Matching
 
 We can recreate our very own special function
 that behave like those two standard method above.
 And also get rid of the double tick quotation mark in output
 by using <code>putStrLn</code>.
+
+In pattern matching <code>_</code>, means any value.
+Or just don't care about it.
 
 {% highlight haskell %}
 key   :: (String, String) -> String
@@ -353,7 +356,7 @@ However, combining map with function is tricky.
 This topic deserve an article of its own.
 
 
-In the next section we will discuss on writing function beyond loop.
+In "[Part Three][local-part-03]" we will discuss on writing function beyond loop.
 
 Happy Coding.
 

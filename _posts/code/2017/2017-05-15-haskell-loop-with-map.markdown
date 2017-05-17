@@ -1,4 +1,4 @@
----
+E---
 layout: post
 title:  "Loop in Haskell With Map, Part Three"
 date:   2017-05-15 05:35:15 +0700
@@ -67,7 +67,9 @@ pair = ("key", "value")
 
 -- -- --
 
-### Passing Arguments to Action Procedure
+### Passing Arguments to Action
+
+	Think Function in Haskell as Sequence of Procedure
 
 Now we can apply our <code>Pair</code> to new function.
 This function has two arguments.
@@ -101,7 +103,7 @@ Test: Key | Value
 ### Reintroduce Data Structure
 
 Considering our material color again,
-just in case we forget, or too lazy to scroll.
+just in case we forget, or too lazy to scroll to previous part.
 
 {% highlight haskell %}
 colorSchemes :: [Pair]
@@ -176,8 +178,8 @@ in any Haskell source code we meet.
 It is because lambda oftenly used as a wrapper of building block.
 
 We can move above function <code>dumpPair</code> 
-inside <code>dumpHash2</code> function,
-using where clause.
+inside <code>dumpHash2</code> function, using where clause.
+This way <code>dumpPair</code> won't pollute global namespace.
 
 {% highlight haskell %}
 dumpHash2 :: String -> [Pair] -> IO ()
@@ -204,22 +206,38 @@ dumpHash3 text dictionary = do
 It looks exactly like <code>foreach</code> loop,
 with different syntax. Once we get it, it is more flexible.
 
+### Eta Reduction
+
+And Hey, there is always a place for improvement.
+How about <code>Eta Reduction</code>. Ough.. Yeah...
+
+{% highlight haskell %}
+dumpHash3 :: String -> [Pair] -> IO ()
+dumpHash3 text = do
+    mapM_ (\(key, value) -> do 
+            putStrLn(text ++ ": " ++ key ++ " | " ++ value)
+        )   
+{% endhighlight %}
+
 Does it look literally cryptic, with operator marching,
 scattered all over the place ?
 Not really, the most cryptic part is the function declaration.
 This function declaration part is not mandatory.
 You can safely remove in this situation.
-Or just comment out to disable it.
+Or just comment it out to disable.
 
-### Debugging
+### Side Effects: Debugging
 
 I actually use this function as a based model,
 to read key-value pairs from config.
 Sometimes strange thing happen in my application,
 and I need too see what happened in the process of applying config.
 
-So how if I want some kind IO operation inside, like debug for example.
-Well, here it is.
+So what if I want some kind IO operation inside,
+such debug debug for example.
+Well, here it is, how to do it.
+No need to worry about side efect,
+we are already in IO action mode.
 
 {% highlight haskell %}
 dumpHash4 :: String -> [Pair] -> IO ()
@@ -249,8 +267,10 @@ with my own IO action.
 
 ### Passing Arguments to Function
 
+	Think Function in Haskell as Math Equation
+
 Now we can apply our <code>Pair</code> to new function.
-This function has two arguments, and one returning value
+This function has two arguments, and one returning value.
 
 *	First, a text argument, with String type.
 
@@ -410,7 +430,7 @@ dumpHash6 text dictionary = do
 
 -- -- --
 
-### Debugging
+### Side Effects: Debugging
 
 Again, how if I want **multiple** IO operation inside ?
 Such as debugging capability, after applying config.
@@ -419,7 +439,7 @@ to custom IO action <code>debugStrLn</code> inside where clause.
 
 {% highlight haskell %}
 dumpHash7 :: String -> [Pair] -> IO ()
-dumpHash7 text dictionary = do
+dumpHash7 text = do
     -- loop over a hash dictionary of tuples    
     forM_ messages debugStrLn
     where 
