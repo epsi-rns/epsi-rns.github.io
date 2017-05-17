@@ -1,20 +1,18 @@
 ---
 layout: post
-title:  "Example of Doing Loop in Haskell With Map"
+title:  "Loop in Haskell With Map, Part One"
 date:   2017-05-13 05:35:15 +0700
 categories: code
-tags: [coding, haskell, language]
+tags: [coding, haskell]
 author: epsi
 
 excerpt:
   There is no loop in Haskell. Haskell designed that way.  
-  This is an example for beginner on how to iterate
-  over hash or array using mapM_.
+  This is an example for beginner
+  on how to iterate over array (list).
 
 related_link_ids: 
   - 16051403  # How Haskell Syntax
-  - 16051102  # XMonad with Conkyless Dzen
-  - 16032658  # Modularized XMonad Config
 
 ---
 
@@ -23,19 +21,20 @@ I'm so excited, that I could finished this loop article, a year after.
 
 *	[How Haskell Syntax can Make Your Code Cleaner][local-haskell-dollar]
 
+### Goal of Part One
+
+	Process Array Loop by Iterating on List
+
 As a pure functional language, Haskell has been designed,
 in a way that, it does not have any loop clause.
 Moving perspective from **how** the code do, to **what** the code does.
+This obscure Haskell language has different approach,
+compared with imperative programming.
 
 This is an example, from beginner, to another beginner.
-Using <code>mapM_</code> to mimic <code>foreach</code>,
+Using <code>map</code>, <code>mapM_</code>
+and <code>forM_</code> to mimic <code>foreach</code>,
 applied for array, and hash with key and value.
-There are other method as well, but this is enough for beginner.
-
-This obscure Haskell language has different approach,
-compared with imperative programming,
-and this <code>mapM_</code> does affect codes beyond the loop.
-So this example must go further. 
 
 Let's walk step by step
 
@@ -64,7 +63,7 @@ More on codes, than just words.
 A least, we are using these operators.
 Not to mention function declaration.
 
-*	dollar <code>$</code>,
+*	dollar <code>$</code> (function application),
 
 *	dot <code>.</code> (function composition),
 
@@ -89,6 +88,16 @@ Let's consider a list construct, contain sequence number from 1 to 9.
 
 {% highlight haskell %}
 list = [1..9]
+
+main = do
+    print list
+    putStrLn ""
+{% endhighlight %}
+
+This will show:
+
+{% highlight conf %}
+[1,2,3,4,5,6,7,8,9]
 {% endhighlight %}
 
 Not everything in Haskell is function.
@@ -97,6 +106,8 @@ For clarity reason, I put function declaration.
 Also for my personal exercise. It won't harm anyone.
 
 Let's add other element to this list.
+Since <code>print</code> is just <code>putStrLn $ show</code>,
+we can write decompose it as below.
 
 {% highlight haskell %}
 list :: [Int]
@@ -104,16 +115,18 @@ list = [1..9] ++ [0]
 
 main = do
     putStr "list    : "
-    print list
+    putStrLn $ show list
 {% endhighlight %}
 
-Run this code, and this will have output as below.
+Run this code, and this list will be interpreted as output below.
 
 {% highlight conf %}
 list    : [1,2,3,4,5,6,7,8,9,0]
 {% endhighlight %}
 
-#### Accessing Index
+-- -- --
+
+### Accessing Index
 
 Operator <code>||</code> can be used to accessing element by index.
 
@@ -143,25 +156,33 @@ main = do
     putStr "list    : "
     print list
     putStr "indices : "
-    print $ indices' list
+    putStrLn $ show $ indices' list    
     putStrLn ""
 {% endhighlight %}
+
+Do not worry about the dollar <code>$</code> operator.
+It is just a Haskell operator to avoid paranthese.
+It could be written as <code>putStrLn(show(indices'(list)))</code>
 
 Note that I intentionally using,
 apostrophe <code>indices'</code> punctuation mark,
 to differ from <code>indices</code>
 in <code>Control.Lens</code> library.
 
-This will show:
+This will display:
 
 {% highlight conf %}
 list    : [1,2,3,4,5,6,7,8,9,0]
 indices : [0,1,2,3,4,5,6,7,8,9]
 {% endhighlight %}
 
-#### Iterate with mapM_
+-- -- --
 
-Looping over array in Haskell is this simple.
+### Iterate with mapM_
+
+Looping over array in Haskell is this simple. 
+<code>mapM_</code> discard newly produced list,
+and use side effect only, in this case print using IO.
 
 {% highlight haskell %}
 main = do
@@ -187,19 +208,88 @@ Let's see the output
 0
 {% endhighlight %}
 
-If you come from other language,
-and too confused about Haskell notation,
-you may consider this perspective:
-<code>mapM_(callback_function, array)</code>.
+-- -- --
 
-#### Iterate with Another Map
+### Iterate with Map
 
-If you wish for another challenge you can make this more complex.
+If you care about tor produce new list,
+<code>map</code> is for you.
 
 {% highlight haskell %}
 main = do
-    mapM_ (putStr . (": " ++) . show ) ([1..9] ++ [0])
+    print $ map show list
+{% endhighlight %}
+
+This show will convert each element to string,
+and boxed it into new list of string.
+
+{% highlight conf %}
+["1","2","3","4","5","6","7","8","9","0"]
+{% endhighlight %}
+
+If you come from other language,
+and too confused about Haskell notation,
+you may consider this perspective:
+<code>map(callback_function, array)</code>.
+
+<code>map</code> is very useful
+for transforming one list to another list.
+However we still need <code>mapM_</code> or <code>forM_</code>
+whenever we need side effect such as display each element using IO.
+
+{% highlight haskell %}
+main = do
+    mapM_ putStrLn (map show list)
     putStrLn ""
+{% endhighlight %}
+
+<code>forM_</code> is just like a <code>mapM_</code>,
+with reverse aguments. It is available in <code>Data.Foldable</code>.
+
+{% highlight haskell %}
+main = do
+    forM_ (map show list) putStrLn
+    putStrLn ""
+{% endhighlight %}
+
+Both codes have output as shown below.
+They are using side effect of
+newly produced <code>(map show list)</code>.
+
+{% highlight conf %}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+{% endhighlight %}
+
+While doing <code>mapM_</code> or <code>forM_</code>
+after <code>map</code>seems redundant.
+It is just an example required in this tutorial,
+not everything have to be printed out.
+
+-- -- --
+
+### Chaining Function
+
+If you wish for another challenge you can make a complex one liner.
+
+{% highlight haskell %}
+main = mapM_ (putStr . (": " ++) . show) ([1..9] ++ [0]) >> putStrLn ""
+{% endhighlight %}
+
+Or using reverse argument <code>forM_</code>
+to make it looks like regular loop.
+With the same result.
+
+{% highlight haskell %}
+main = forM_ ([1..9] ++ [0]) (putStr . (": " ++) . show) >> putStrLn ""
 {% endhighlight %}
 
 This will show.
@@ -208,543 +298,79 @@ This will show.
 : 1: 2: 3: 4: 5: 6: 7: 8: 9: 0
 {% endhighlight %}
 
-Or even better one liner using <code>map</code>.
+How does it works ?
+What is this <code>.<code> 
+in <code>(putStr . (": " ++) . show)<code> anyway.
+
+As our need grow, you might desire to use more than one function.
+The issue is <code>mapM_</code> only accept one function.
+The solution is to chain functions
+with the dot <code>.</code> infix operator.
+This will accept the sequence of function
+as a whole compound operation.
+
+-- -- --
+
+### Alternative Loop Form
+
+We can rewrite above loop, even better using <code>map</code>.
+Also with the same result.
 
 {% highlight haskell %}
-main = do putStrLn (concat (map ((": " ++) . show ) ([1..9] ++ [0])))
+main = putStrLn $ concat  $ map ((": " ++) . show) ([1..9] ++ [0])
 {% endhighlight %}
 
 Or <code>concatMap</code>.
+Still with the same result.
 
 {% highlight haskell %}
-main = do putStrLn (concatMap ((": " ++) . show ) ([1..9] ++ [0]) )
+main = putStrLn $ concatMap ((": " ++) . show) ([1..9] ++ [0])
 {% endhighlight %}
 
-#### View Source File:
+-- -- --
+
+### Building Block
+
+If you do not like oneliner, you can decompose this complex line
+using let clause in do block, or where clause in function.
+
+{% highlight haskell %}
+main = do
+    let
+        myFunctionComposition = (putStr . (": " ++) . show)
+        myList = ([1..9] ++ [0])
+        in mapM_ myFunctionComposition myList
+    
+    putStrLn "" 
+{% endhighlight %}
+
+{% highlight haskell %}
+putList :: [Int] -> IO ()
+putList myList =
+    mapM_ myFunctionComposition myList
+    where
+        myFunctionComposition = (putStr . (": " ++) . show)
+
+main = do
+    putList ([1..9] ++ [0])    
+    putStrLn ""  
+{% endhighlight %}
+
+This will produce exactly the same result.
+
+{% highlight conf %}
+: 1: 2: 3: 4: 5: 6: 7: 8: 9: 0
+{% endhighlight %}
+
+-- -- --
+
+### View Source File:
 
 *	[github.com/.../dotfiles/.../01-list.hs][dotfiles-01-list]
 
 -- -- --
 
-### Using Tuplets as a Pair of Key and Value
-
-Tuplets can contain many elements.
-Let's consider tuples contain two element below.
-We are going to use it as a base for our hash later.
-
-{% highlight haskell %}
-pair :: (String, String)
-pair = ("key", "value")
-{% endhighlight %}
-
-We can use standar method <code>fst</code> to access first element.
-And <code>snd</code> to access second element.
-
-{% highlight haskell %}
-main = do
-    print $ fst pair
-    print $ snd pair
-{% endhighlight %}
-
-The use <code>$</code> infix operator is used
-to avoid parantheses (round bracket).
-It is actually just <code>print(fst(pair))</code>.
-I just feel that Haskell syntax is sophisticatedly clearer.
-
-And the result is:
-
-{% highlight haskell %}
-"key"
-"value"
-{% endhighlight %}
-
-#### Accessing Using Custom Function
-
-We can recreate our very own special function
-that behave like those two standard method above.
-And also get rid of the double tick quotation mark in output
-by using <code>putStrLn</code>.
-
-{% highlight haskell %}
-key   :: (String, String) -> String
-key   (k, _) = k
-
-value :: (String, String) -> String
-value (_, v) = v
-
-main = do
-    putStrLn $ key pair
-    putStrLn $ value pair
-    putStrLn ""
-{% endhighlight %}
-
-And the result is slightly different:
-
-{% highlight haskell %}
-key
-value
-{% endhighlight %}
-
-If you do not like the complexity, 
-you can wrap these two function <code>putStrLn $ key</code>,
-and leave the argument outside.
-
-{% highlight haskell %}
-import System.Process
-
-pair :: (String, String)
-pair = ("key", "value")
-
-putKeyLn :: (String, String) -> IO ()
-putKeyLn (k, _) = do
-    putStrLn k
-    
-main = do
-    putKeyLn pair
-{% endhighlight %}
-
-We require to import <code>System.Process</code>,
-because we declare <code>IO ()</code> in function.
-
-This will produce:
-
-{% highlight haskell %}
-key
-{% endhighlight %}
-
-#### View Source File:
-
-*	[github.com/.../dotfiles/.../02-tuples.hs][dotfiles-02-tuples]
-
--- -- --
-
-### Loop Over Dictionary
-
-Let's turn our pair of associative key-value,
-into a more useful row of pairs.
-There many terminology for this, you can call it 
-associative array, or hash, or dictionary. 
-Consider this color scheme,
-that I borrow from google material color.
-
-{% highlight haskell %}
-colorSchemes :: [(String, String)]
-colorSchemes =
-    [("blue50",     "#e3f2fd")
-    ,("blue100",    "#bbdefb")
-    ,("blue200",    "#90caf9")
-    ,("blue300",    "#64b5f6")
-    ,("blue400",    "#42a5f5")
-    ,("blue500",    "#2196f3")
-    ,("blue600",    "#1e88e5")
-    ,("blue700",    "#1976d2")
-    ,("blue800",    "#1565c0")
-    ,("blue900",    "#0d47a1")
-    ]
-{% endhighlight %}
-
-#### Accessing Element
-
-Accessing element of hash using index,
-has the same syntax.
-After all it is just list of pairs.
-
-{% highlight haskell %}
-main = do
-    print (colorSchemes !! 2)
-{% endhighlight %}
-
-This will produce:
-
-{% highlight haskell %}
-("blue200","#90caf9")
-{% endhighlight %}
-
-#### Iterate with mapM_
-
-So is using <code>mapM_M</code>,
-it is as simple as the previous example.
-
-{% highlight haskell %}
-    mapM_ print colorSchemes
-{% endhighlight %}
-
-This will produce:
-
-{% highlight haskell %}
-("blue50","#e3f2fd")
-("blue100","#bbdefb")
-("blue200","#90caf9")
-("blue300","#64b5f6")
-("blue400","#42a5f5")
-("blue500","#2196f3")
-("blue600","#1e88e5")
-("blue700","#1976d2")
-("blue800","#1565c0")
-("blue900","#0d47a1")
-{% endhighlight %}
-
-### Chain Function
-
-As our need grow, we might desire to use more than one function.
-The issue is <code>mapM_M</code> only accept one function.
-The solution is to chain functions
-with the dot <code>.</code> infix operator.
-This will accept the chained function as one compound operation.
-
-{% highlight haskell %}
-main = do
-    mapM_ (print . fst) colorSchemes
-    putStrLn ""
-    
-    mapM_ (putStrLn . snd) colorSchemes
-    putStrLn ""
-{% endhighlight %}
-
-These both map will show,
-row keys, and later unquoted values:
-
-{% highlight haskell %}
-"blue50"
-"blue100"
-"blue200"
-"blue300"
-"blue400"
-"blue500"
-"blue600"
-"blue700"
-"blue800"
-"blue900"
-
-#e3f2fd
-#bbdefb
-#90caf9
-#64b5f6
-#42a5f5
-#2196f3
-#1e88e5
-#1976d2
-#1565c0
-#0d47a1
-{% endhighlight %}
-
-#### Custom Function
-
-Furthermore as the code growing in need of more action,
-it is more clear to create new function.
-Here we have an example of an IO procedure.
-
-{% highlight haskell %}
-putPairLn :: (String, String) -> IO ()
-putPairLn (key, value) = do
-    putStrLn(key ++ " | " ++ value)
-
-main = do    
-    mapM_ putPairLn colorSchemes
-{% endhighlight %}
-
-This will display:
-
-{% highlight haskell %}
-blue50 | #e3f2fd
-blue100 | #bbdefb
-blue200 | #90caf9
-blue300 | #64b5f6
-blue400 | #42a5f5
-blue500 | #2196f3
-blue600 | #1e88e5
-blue700 | #1976d2
-blue800 | #1565c0
-blue900 | #0d47a1
-{% endhighlight %}
-
-I hope it is clear, on how simple <code>mapM_</code> is,
-compare to <code>for loop</code> counterpart.
-
-#### View Source File:
-
-*	[github.com/.../dotfiles/.../03-dictionary.hs][dotfiles-03-dictionary]
-
--- -- --
-
-### Data Type Naming
-
-Since we might use a lot <code>(String, String)</code> in our code.
-It is a good idea to use synonim, to avoid repetitive typing.
-This <code>Pair</code> type define tuples with two elements.
-
-{% highlight haskell %}
-type Pair = (String, String)
-
-pair :: Pair
-pair = ("key", "value")
-{% endhighlight %}
-
-#### Alternative Data Structure
-
-There are other tricks to build hash dictionary,
-rather than use standard tuples.
-I suggest you to take a look at 
-the code below to examine the possibility.
-
-*	[github.com/.../dotfiles/.../04-data-type.hs][dotfiles-04-data-type]
-
--- -- --
-
-### Passing Arguments
-
-Now we can apply our <code>Pair</code> to new function.
-This function has two arguments.
-
-*	First, a text argument, with String type.
-
-*	Second, a tuples, with Pair type.
-
-Since it is an IO action procedure,
-it must return <code>IO ()</code>.
-This action looks like a void function,
-but it is actually not.
-
-{% highlight haskell %}
-dumpPair :: String -> Pair -> IO ()
-dumpPair text (key, value) = do
-    putStrLn(text ++ ": " ++ key ++ " | " ++ value)
-
-main = do
-    dumpPair "Test" ("Key", "Value")
-{% endhighlight %}
-
-This will do display:
-
-{% highlight haskell %}
-Test: Key | Value
-{% endhighlight %}
-
-#### Iterate with mapM_ using Curry Function
-
-Let's consider our material color again,
-just in case we forget, or too lazy to scroll.
-
-{% highlight haskell %}
-colorSchemes :: [Pair]
-colorSchemes =
-    [("blue50",     "#e3f2fd")
-    ,("blue100",    "#bbdefb")
-    ,("blue200",    "#90caf9")
-    ,("blue300",    "#64b5f6")
-    ,("blue400",    "#42a5f5")
-    ,("blue500",    "#2196f3")
-    ,("blue600",    "#1e88e5")
-    ,("blue700",    "#1976d2")
-    ,("blue800",    "#1565c0")
-    ,("blue900",    "#0d47a1")
-    ]
-{% endhighlight %}
-
-Now we can do iterate our latest function.
-Doing <code>mapM_</code> inside a function.
-
-This function has two arguments.
-
-*	First, a text argument, with String type.
-
-*	Second, a dictionary, with Pair type.
-
-{% highlight haskell %}
-dumpHash1 :: String -> [Pair] -> IO ()
-dumpHash1 text dictionary = do
-    mapM_ (dumpPair text) dictionary
-    
-main = do
-    dumpHash1 "Name" colorSchemes
-{% endhighlight %}
-
-Wait ... !??*@...??
-Doesn't it defined earlier,
-that <code>dumpPair</code> has two arguments ?
-
-The trick in passing argument rely in the closing bracket.
-<code>(dumpPair text)</code>. It is called Curry Function.
-Since I'm a just another beginner, I suggest you to read about 
-Haskell Curry Function somewhere else.
-
-However, the result will echo as below:
-
-{% highlight haskell %}
-Name: blue50 | #e3f2fd
-Name: blue100 | #bbdefb
-Name: blue200 | #90caf9
-Name: blue300 | #64b5f6
-Name: blue400 | #42a5f5
-Name: blue500 | #2196f3
-Name: blue600 | #1e88e5
-Name: blue700 | #1976d2
-Name: blue800 | #1565c0
-Name: blue900 | #0d47a1
-{% endhighlight %}
-
-It works. And plain simple.
-
-#### Using Lambda with mapM_
-
-This is the trickiest part for beginner.
-But I must go on, because we will likely to see,
-a bunch of lambda everywhere, randomly marching,
-in any Haskell source code we meet.
-It is because lambda oftenly used as a wrapper of building block.
-
-We can move above function <code>dumpPair</code> 
-inside <code>dumpHash2</code> function,
-using where clause.
-
-{% highlight haskell %}
-dumpHash2 :: String -> [Pair] -> IO ()
-dumpHash2 text dictionary = do
-    mapM_ (dumpPair' text) dictionary
-    where
-        dumpPair' text (key, value) = do
-            putStrLn(text ++ ": " ++ key ++ " | " ++ value)
-{% endhighlight %}
-
-And convert it to lambda later on.
-Merge both above function 
-<code>dumpPair</code> and <code>dumpHash1</code>
-into one <code>dumpHash3</code>.
-
-{% highlight haskell %}
-dumpHash3 :: String -> [Pair] -> IO ()
-dumpHash3 text dictionary = do
-    mapM_ (\(key, value) -> do 
-            putStrLn(text ++ ": " ++ key ++ " | " ++ value)
-        ) dictionary   
-{% endhighlight %}
-
-It looks exactly like <code>foreach</code> loop,
-with different syntax. Once we get it, it is more flexible.
-
-Does it look literally cryptic, with operator marching,
-scattered all over the place ?
-Not really, the most cryptic part is the function declaration.
-This function declaration part is not mandatory.
-You can safely remove in this situation.
-Or just comment out to disable it.
-
-#### View Source File:
-
-*	[github.com/.../dotfiles/.../05-passing-argument.hs][dotfiles-05-passing-argument]
-
--- -- --
-
-### Real World Application
-
-Allright, I must admit,
-that I'm doing this tutorial guidance step by step,
-because I have difficulties in doing HerbstluftWM config.
-Not just Haskell, every language has their own challenge.
-This long explanation above is a supporting article for what I wrote here.
-
-*	[Modularized HerbstluftWM in Haskell][local-hlwm-haskell]
-
--- -- --
-
-### Comparation with Other Languages
-
-Really ? Does above function scary ?
-We should compare with other languages.
-In fact, we will find out,
-that Haskell Syntax is clear enough.
-
-This is what I got in Haskell, very similar to our final example above.
-It takes hash arguments from a config module,
-and run a <code>herbstclient</code> for each key-value pair in config.
-
-{% highlight haskell %}
-do_config :: String -> [Pair] -> IO ()
-do_config command pairs = do
-    mapM_ (\(key, value) -> do 
-            hc(command ++ " " ++ key ++ " " ++ value)
-        ) pairs   
-{% endhighlight %}
-
-And this is how it looks in bash.
-Of course it cryptic, we need a hack to pass hash as argument in bash.
-
-{% highlight bash %}
-function do_config()
-{
-    local command="${1}"
-    shift
-    eval "declare -A hash="${1#*=}
-   
-    for key in "${!hash[@]}"; do
-        local value=${hash[$key]}        
-        hc $command $key $value
-    done
-}
-{% endhighlight %}
-
-And this is how I do it in Perl.
-Another cryptic notation.
-
-{% highlight perl %}
-sub do_config($\%) {
-    my ($command, $ref2hash) = @_;
-    my %hash = %$ref2hash;
-
-    while(my ($key, $value) = each %hash) { 
-        hc("$command $key $value");
-    }
-}
-{% endhighlight %}
-
-How about python ?
-Clear !
-Self explanatory.
-
-{% highlight python %}
-def do_config(command, dictionary):
-    for key, value in dictionary.items():
-        hc(command+' '+key+' '+value)
-{% endhighlight %}
-
-And so is Ruby.
-
-{% highlight ruby %}
-def do_config(command, hash)  
-    hash.each do |key, value|
-        hc(command+' '+key+' '+value)
-    end
-end
-{% endhighlight %}
-
-PHP is also for human being.
-
-{% highlight php %}
-function do_config($command, $hash) {
-    foreach ($hash as $key => $value) {
-        hc($command.' '.$key.' '.$value);
-    }
-}
-{% endhighlight %}
-
-And later Lua. Also simple.
-
-{% highlight lua %}
-function _M.do_config(command, hash)
-    for key, value in pairs(hash) do 
-        _M.hc(command .. ' ' .. key .. ' ' .. value)
-    end
-end
-{% endhighlight %}
-
--- -- --
-
-### Conclusion
-
-Coding in Haskell is fun.
-I love it.
-
--- -- --
+In the next section we will discuss about Hash (dictionary).
 
 Happy Coding.
 
@@ -761,3 +387,4 @@ Happy Coding.
 [dotfiles-03-dictionary]:       {{ dotfiles_path }}/03-dictionary.hs
 [dotfiles-04-data-type]:        {{ dotfiles_path }}/04-data-type.hs
 [dotfiles-05-passing-argument]: {{ dotfiles_path }}/05-passing-argument.hs
+[dotfiles-06-passing-argument]: {{ dotfiles_path }}/06-passing-argument.hs
