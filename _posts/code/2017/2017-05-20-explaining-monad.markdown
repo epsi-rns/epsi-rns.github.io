@@ -40,18 +40,8 @@ People come from imperative would haunt by this question.
 	How do we make a sequence command,
 	called line by line, in such order ?
 
-Here comes <code>do</code> notation as the rescue.
-<code>do</code> itself is just a notation,
-while Monads take all the horseworks.
-Of course this conclusion is oversimplistic.
-Monad is an abstraction, more than just for sequencing purpose.
-But for now this understanding is enough.
-So beginner do not need to worry too much about Monad.
-
-	Do notation allows you to write monadic computations
-	using a pseudo-imperative.
-
-Here is how Monad works in binding pattern:
+Here comes Monad in rescue.
+And here is how Monad works in binding pattern:
 Monad solve sequencing issue in functional programming,
 by treat each sequence command as function,
 and wrapped each input and output returned from the function,
@@ -62,6 +52,17 @@ running as the order written.
 
 	Monad make, different functions composable,
 	by boxing both input and output.
+
+In Haskell, <code>do</code> notation make Monad more simple.
+<code>do</code> itself is just a notation,
+while Monads take all the horseworks.
+Of course this conclusion is oversimplistic.
+Monad is an abstraction, more than just for sequencing purpose.
+But for now this understanding is enough.
+So beginner do not need to worry too much about Monad.
+
+	Do notation allows you to write monadic computations
+	using a pseudo-imperative.
 
 If you ever need a bigger picture of Monad,
 you can watch this Douglas Crockford in YUIConf Evening Keynote
@@ -83,8 +84,7 @@ to write in a blog, explaining about Monad.
 
 It was stated by **Douglas Crockford** that **Monad are Cursed**.
 
-	The moment that it clicks and you understand what it means,
-	You are suddenly incapable of explaining it anyone else.
+	The moment that it clicks and you understand what it means, you are suddenly incapable of explaining it anyone else.
 
 This curse is made worse by the fact that
 after you understand it, you’ll begin to see it everywhere
@@ -105,9 +105,7 @@ But how do exactly a beginner implement a code is still unclear.
 
 #### Mike Vanier
 
-	A monad is a purely abstract concept,
-	with no fundamental relationship 
-	to anything you've probably ever heard of before.
+	A monad is a purely abstract concept, with no fundamental relationship to anything you've probably ever heard of before.
 
 *	<http://reg.dorogaved.ru/old/smallfish/haskell/haskell2/YAMT/YAMT0.html>
 
@@ -119,10 +117,7 @@ to be described by a single descriptive analogy.
 
 #### Jeff Newbern
 
-	Monad is a type constructor, a function called return, 
-	and a combinator function called bind or >>=. 
-	These three elements work together to encapsulate a strategy 
-	for combining computations to produce more complex computations.
+	Monad is a type constructor, a function called return, and a combinator function called bind or >>=. These three elements work together to encapsulate a strategy for combining computations to produce more complex computations.
 
 *	<https://wiki.haskell.org/All_About_Monads>
 
@@ -141,7 +136,7 @@ Good explanation for Monad, the most dreaded Topic. Very nice slide.
 
 	A monad is just a monoid in the category of endofunctors.
 
-*	[A monad is just ...][ref-slide]
+*	[... monoid in the category of endofunctors][ref-slide]
 
 You can find a hieroglyphic math explanation,
 for this quote, in wiki, easily.
