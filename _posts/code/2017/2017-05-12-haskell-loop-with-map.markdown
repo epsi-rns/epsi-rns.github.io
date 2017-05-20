@@ -7,9 +7,7 @@ tags: [coding, haskell]
 author: epsi
 
 excerpt:
-  There is no loop in Haskell. Haskell designed that way.  
-  This is an example for beginner
-  on how to iterate over array (list).
+  Overview of doing loop in Haskell.   
 
 related_link_ids: 
   - 16051403  # How Haskell Syntax
@@ -20,6 +18,29 @@ This day is exactly 363 days, since my first Haskell article.
 I'm so excited, that I could finished this loop article, a year after.
 
 *	[How Haskell Syntax can Make Your Code Cleaner][local-haskell-dollar]
+
+-- -- --
+
+### Example of Doing Loop in Haskell With Map
+
+This tutorial/ guidance/ article is one of three parts.
+These three combined is going to be a long article.
+So I won't speak too much. More on codes, than just words.
+
+*	[Overview][local-overview]: Preface
+
+*	[Part One][local-part-01]: List
+
+*	[Part Two][local-part-02]: Tuple and Dictionary
+
+*	[Part Three][local-part-03]: Mapping with Function
+
+The first two parts discuss the most common loop,
+array in part one and hash in part two.
+Considering that combining map with function is tricky,
+This deserve this an article of its own in part three.
+Part three also contains comparation 
+with other Languages, using Real World Function.
 
 -- -- --
 
@@ -62,7 +83,7 @@ But rather give example of something common,
 that you can apply directly,
 i.e. array, hash, map, function, and action.
 As additional, it also, give example of curry function,
-lambda function, eta reduction, and side effect, 
+lambda anonymous function, eta reduction, and side effect, 
 which is common in daily Haskell scripting.
 
 This is an example, from beginner, to another beginner.
@@ -93,36 +114,128 @@ we are going to use it step by step.
 
 -- -- --
 
-### Example of Doing Loop in Haskell With Map
+### Real World Application
 
-This tutorial/ guidance/ article is one of three parts.
-These three combined is going to be a long article.
-So I won't speak too much. More on codes, than just words.
+Before you begin.
 
-*	[Overview][local-overview]: Preface
+	A snippet on how it looks in Haskell
 
-*	[Part One][local-part-01]: List
+Allright, I must admit,
+that I'm doing this tutorial guidance step by step,
+because I have difficulties in doing HerbstluftWM config.
+Not just Haskell, every language has their own challenge.
 
-*	[Part Two][local-part-02]: Tuple and Dictionary
+This long explanation in this artcle is
+a supporting article for what I wrote here.
+Let me pick this code here.
 
-*	[Part Three][local-part-03]: Mapping with Function
+*	[Modularized HerbstluftWM in Haskell][local-hlwm-haskell]
 
-The first two parts discuss the most common loop,
-array in part one and hash in part two.
-Considering that combining map with function is tricky,
-This deserve this an article of its own in part three.
-Part three also contains comparation 
-with other Languages, using Real World Function.
+{% highlight haskell %}
+do_config :: String -> [Pair] -> IO ()
+do_config command pairs = do
+    mapM_ (\(key, value) -> do 
+            hc(command ++ " " ++ key ++ " " ++ value)
+        ) pairs   
+{% endhighlight %}
+
+This is what I got in Haskell,
+very similar to one of our final example in the end of this article.
+It takes hash arguments from a config module,
+and run a <code>herbstclient</code> for each key-value pair in config.
 
 -- -- --
 
-And from me as a Haskell beginner.
+### Comparation with Other Languages
 
+Really ? Does above function scary ?
+We should compare with other languages.
+In fact, we will find out,
+that Haskell Syntax is clear enough.
+
+This is how it looks in bash.
+Of course it cryptic, we need a hack to pass hash as argument in bash.
+
+{% highlight bash %}
+function do_config()
+{
+    local command="${1}"
+    shift
+    eval "declare -A hash="${1#*=}
+   
+    for key in "${!hash[@]}"; do
+        local value=${hash[$key]}        
+        hc $command $key $value
+    done
+}
+{% endhighlight %}
+
+And this is how I do it in Perl.
+Another cryptic notation.
+
+{% highlight perl %}
+sub do_config($\%) {
+    my ($command, $ref2hash) = @_;
+    my %hash = %$ref2hash;
+
+    while(my ($key, $value) = each %hash) { 
+        hc("$command $key $value");
+    }
+}
+{% endhighlight %}
+
+How about python ?
+Clear !
+Self explanatory.
+
+{% highlight python %}
+def do_config(command, dictionary):
+    for key, value in dictionary.items():
+        hc(command+' '+key+' '+value)
+{% endhighlight %}
+
+And so is Ruby.
+
+{% highlight ruby %}
+def do_config(command, hash)  
+    hash.each do |key, value|
+        hc(command+' '+key+' '+value)
+    end
+end
+{% endhighlight %}
+
+PHP is also for human being.
+
+{% highlight php %}
+function do_config($command, $hash) {
+    foreach ($hash as $key => $value) {
+        hc($command.' '.$key.' '.$value);
+    }
+}
+{% endhighlight %}
+
+And later Lua. Also simple.
+
+{% highlight lua %}
+function _M.do_config(command, hash)
+    for key, value in pairs(hash) do 
+        _M.hc(command .. ' ' .. key .. ' ' .. value)
+    end
+end
+{% endhighlight %}
+
+-- -- --
+
+Let's begin the tutorial.
+In "[Part One][local-part-01]" we will discuss about List (array).
+
+And from me as a Haskell beginner.
 Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
+[local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
 [local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
 [local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html

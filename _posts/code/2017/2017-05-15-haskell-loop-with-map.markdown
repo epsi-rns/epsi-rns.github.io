@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Goal of Part Three
 
-	Process Hash (Key-Value Pair) with Haskell Function
+> Process Hash (Key-Value Pair) with Haskell Function
 
 We have seen an introduction of 
 handling map with function in the previous lesson.
@@ -466,111 +466,6 @@ You can try it yourself in your terminal.
 
 -- -- --
 
-### Real World Application
-
-Allright, I must admit,
-that I'm doing this tutorial guidance step by step,
-because I have difficulties in doing HerbstluftWM config.
-Not just Haskell, every language has their own challenge.
-This long explanation above is a supporting article for what I wrote here.
-
-*	[Modularized HerbstluftWM in Haskell][local-hlwm-haskell]
-
--- -- --
-
-### Comparation with Other Languages
-
-Really ? Does above function scary ?
-We should compare with other languages.
-In fact, we will find out,
-that Haskell Syntax is clear enough.
-
-This is what I got in Haskell,
-very similar to one of our final example above.
-It takes hash arguments from a config module,
-and run a <code>herbstclient</code> for each key-value pair in config.
-
-{% highlight haskell %}
-do_config :: String -> [Pair] -> IO ()
-do_config command pairs = do
-    mapM_ (\(key, value) -> do 
-            hc(command ++ " " ++ key ++ " " ++ value)
-        ) pairs   
-{% endhighlight %}
-
-And this is how it looks in bash.
-Of course it cryptic, we need a hack to pass hash as argument in bash.
-
-{% highlight bash %}
-function do_config()
-{
-    local command="${1}"
-    shift
-    eval "declare -A hash="${1#*=}
-   
-    for key in "${!hash[@]}"; do
-        local value=${hash[$key]}        
-        hc $command $key $value
-    done
-}
-{% endhighlight %}
-
-And this is how I do it in Perl.
-Another cryptic notation.
-
-{% highlight perl %}
-sub do_config($\%) {
-    my ($command, $ref2hash) = @_;
-    my %hash = %$ref2hash;
-
-    while(my ($key, $value) = each %hash) { 
-        hc("$command $key $value");
-    }
-}
-{% endhighlight %}
-
-How about python ?
-Clear !
-Self explanatory.
-
-{% highlight python %}
-def do_config(command, dictionary):
-    for key, value in dictionary.items():
-        hc(command+' '+key+' '+value)
-{% endhighlight %}
-
-And so is Ruby.
-
-{% highlight ruby %}
-def do_config(command, hash)  
-    hash.each do |key, value|
-        hc(command+' '+key+' '+value)
-    end
-end
-{% endhighlight %}
-
-PHP is also for human being.
-
-{% highlight php %}
-function do_config($command, $hash) {
-    foreach ($hash as $key => $value) {
-        hc($command.' '.$key.' '.$value);
-    }
-}
-{% endhighlight %}
-
-And later Lua. Also simple.
-
-{% highlight lua %}
-function _M.do_config(command, hash)
-    for key, value in pairs(hash) do 
-        _M.hc(command .. ' ' .. key .. ' ' .. value)
-    end
-end
-{% endhighlight %}
-
--- -- --
-
 ### Conclusion
 
 Coding in Haskell is fun.
@@ -582,8 +477,6 @@ Happy Coding.
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
-
-[local-hlwm-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
 
 [local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
 [local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html

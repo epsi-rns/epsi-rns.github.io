@@ -23,8 +23,8 @@ it would not be so difficult to include PHP in this Tutorial group.
 
 In fact this PHP script version is very similar with Lua script version.
 
-	Goal: A script that continuously show date and time,
-	with Dzen2, and Conky.
+> Goal: A script that continuously show date and time,
+> with Dzen2, and Conky.
 
 Before you dip your toe to scripting,
 you might desire to know the reason by reading this overview.

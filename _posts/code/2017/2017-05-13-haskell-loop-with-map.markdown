@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Goal of Part One
 
-	Process Array Loop by Iterating on List
+> Process Array Loop by Iterating on List
 
 This is the basic of loop using iteration,
 with simple array like data structure, the list.
@@ -100,8 +100,8 @@ IO is a monad, hence omitting do.
 Relax, forget about Monad, and just go on.
 Omitting <code>do</code> notatin is useful
 when creating oneliner example.
-Consider this example of the same code rewritten
-without do clause.
+Consider this example of the same code rewritten without do clause.
+But using <code>then >></code> operator.
 
 <code>print</code> is just <code>putStrLn $ show</code>.
 And <code>$</code> is just an operator to avoid closing bracket.
@@ -109,6 +109,13 @@ Now we can decompose it as below.
 
 {% highlight haskell %}
 main = putStrLn (show [1..9]) >> putStrLn ""
+{% endhighlight %}
+
+Or using reverse application operator <code>&</code>.
+
+{% highlight haskell %}
+import Data.Function
+main = show [1..9] & putStrLn >> putStrLn ""
 {% endhighlight %}
 
 -- -- --

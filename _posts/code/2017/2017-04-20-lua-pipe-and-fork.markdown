@@ -21,8 +21,8 @@ is very similar with PHP script version.
 Almost only syntax differences they have.
 It would not be hard to understand between the two.
 
-	Goal: A script that continuously show date and time,
-	with Dzen2, and Conky.
+> Goal: A script that continuously show date and time,
+> with Dzen2, and Conky.
 
 Before you dip your toe to scripting,
 you might desire to know the reason by reading this overview.

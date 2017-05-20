@@ -13,7 +13,7 @@ excerpt:
 
 ### Preface
 
-	Goal: Separate Main Flow, Code, and Data.
+> Goal: Separate Main Flow, Code, and Data.
 
 So anyone can focus to alter special customization in Main Script,
 without changing the whole stuff.

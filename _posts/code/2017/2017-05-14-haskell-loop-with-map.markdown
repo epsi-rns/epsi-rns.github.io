@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Goal of Part Two
 
-	Process Hash (Key-Value Pair) Loop by Iterating on List
+> Process Hash (Key-Value Pair) Loop by Iterating on List
 
 This is the topic after previous section about Array (list).
 
@@ -370,6 +370,13 @@ This will show:
 myKey | myValue
 {% endhighlight %}
 
+You can use Monad directly.
+If you are curious about <code>bind >>=</code>.
+
+{% highlight haskell %}
+main = pairStrIO ("myKey", "myValue") >>= putStrLn
+{% endhighlight %}
+
 -- -- --
 
 ### Iterate Custom Function with mapM
@@ -388,6 +395,12 @@ This will produce text as below:
 
 {% highlight conf %}
 ["blue50 | #e3f2fd","blue100 | #bbdefb","blue200 | #90caf9","blue300 | #64b5f6","blue400 | #42a5f5","blue500 | #2196f3","blue600 | #1e88e5","blue700 | #1976d2","blue800 | #1565c0","blue900 | #0d47a1"]
+{% endhighlight %}
+
+You might also consider using bind operator directly.
+
+{% highlight haskell %}
+main = (mapM pairStrIO colorSchemes) >>= (putStrLn . show)
 {% endhighlight %}
 
 Of course, this is just a simple example on how to use <code>mapM</code>.

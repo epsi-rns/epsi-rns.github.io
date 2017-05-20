@@ -13,8 +13,8 @@ excerpt:
 
 ### Haskell Plumber.
 
-	Goal: A script that continuously show date and time,
-	with Dzen2, and Conky.
+> Goal: A script that continuously show date and time,
+> with Dzen2, and Conky.
 
 Before you dip your toe to scripting,
 you might desire to know the reason by reading this overview.
