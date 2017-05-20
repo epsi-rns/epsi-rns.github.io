@@ -132,6 +132,12 @@ Two sentence from the Intro.
 
 Good explanation for Monad, the most dreaded Topic. Very nice slide.
 
+#### Some Helpful People
+
+*	<http://stackoverflow.com/questions/44965/what-is-a-monad>
+
+Long discussion here.
+
 #### Saunders Mac Lane 
 
 	A monad is just a monoid in the category of endofunctors.
@@ -252,17 +258,47 @@ Or you can make it oneliner vanilla monadic code.
 greetingStr = Just "Hello " >>= \str1 ->  Just "World" >>= \str2 ->  Just (str1 ++ str2)
 {% endhighlight %}
 
-Consider run in GHCI
+Here is another IO example, showing you home directory.
 
 {% highlight haskell %}
-Prelude> import System.Directory
-Prelude System.Directory> getHomeDirectory >>= putStrLn
-/home/epsi
+import System.Directory
+main = getHomeDirectory >>= putStrLn
 {% endhighlight %}
 
 There is also good example here 
 
 *	<http://www.idryman.org/blog/2014/01/23/yet-another-monad-tutorial/>
+
+-- -- --
+
+### Operation inside Bind
+
+Monads is way to unwrap stuff, do something about it, and wrap the result.
+Or better, Monad give access for method to inside wrapped stuff, without unwrapping it.
+
+This list, will show Monad is overloaded for different types.
+Every monad has its own implementation.
+
+{% highlight haskell %}
+intList :: [Int]
+intList = do 
+   x <- [3..5]
+   [x*2]
+
+main = putStrLn $ show intList
+{% endhighlight %}
+
+This will display
+
+{% highlight conf %}
+[6,8,10]
+{% endhighlight %}
+
+It can be rewritten oneliner vanilla monadic code.
+
+{% highlight haskell %}
+intList = [3..5] >>= \x -> [x*2]
+{% endhighlight %}
 
 #### The Monad Class
 
@@ -463,6 +499,10 @@ Bear in mind
 
 *	(<*>) :: f (a > b) -> f a -> f b 
 
+More in this blog.
+
+*	<http://www.holger-peters.de/haskell-by-types.html>
+
 -- -- --
 
 ### Bare unwrapped
@@ -641,7 +681,7 @@ Prelude> min <$> Just (3) <*> (Just 5)
 Just 3
 {% endhighlight %}
 
---
+-- -- --
 
 ### Monad
 
@@ -707,6 +747,15 @@ And some books to read.
 Meanwhile. Consider go back to <code>adit</code>
 
 *	<http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html>
+
+-- -- --
+
+### Practical Application
+
+We have been doing it in <code>do block</code>.
+Everytime.
+
+	Don't be Panic
 
 -- -- --
 
