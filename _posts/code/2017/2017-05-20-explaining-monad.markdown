@@ -16,11 +16,17 @@ related_link_ids:
 
 ---
 
+> This is my personal note.
+> This article needs remake.
+> It needs an overhaul to be useful.
+
 <div class="alert alert-dismissible alert-info">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
-  <strong>Information:</strong> This article need a lot of inkscape diagram.
-  I'm busy on something else right now.
+  <strong>Information:</strong> This article need a lot of inkscape diagram.  
 </div>
+
+I'm busy on something else right now.
+Sleeping in my office. I'll be back someday.
 
 ### The Riddle
 
@@ -40,7 +46,7 @@ People come from imperative would haunt by this question.
 	How do we make a sequence command,
 	called line by line, in such order ?
 
-Here comes Monad in rescue.
+Here comes Monad in rescue, force a structure to a flow.
 And here is how Monad works in binding pattern:
 Monad solve sequencing issue in functional programming,
 by treat each sequence command as function,
@@ -159,6 +165,12 @@ Maybe the author did not write for beginner audience.
 Should I get dual degree in Computer Science and Math
 just to get along with these People ?
 
+Allright. I respect the writer. I just need a little patient.
+After locking myself all alone in my office in saturday night,
+reading his explanation. It make sense.
+In fact his guide explaining in a gentle way.
+I found many important properties, not covered by other blog.
+
 -- -- --
 
 ### Monadic Action
@@ -210,7 +222,7 @@ greetingAction :: IO ()
 greetingAction = 
     putStr "Hello " >>
     putStr "World" >>
-    putStrLn """
+    putStrLn ""
 {% endhighlight %}
 
 Writing it oneliner, would make this action looks exactly
@@ -224,6 +236,9 @@ greetingAction = putStr "Hello " >> putStr "World" >> putStrLn ""
 just like <code>bind >>=</code> operator,
 except it ignore input. 
 We need other example containing input.
+
+<code>do</code> notation does avoid coding horror,
+but sooner or later we need to know what is inside.
 
 #### Bind Operator
 
@@ -294,7 +309,7 @@ This will display
 [6,8,10]
 {% endhighlight %}
 
-It can be rewritten oneliner vanilla monadic code.
+It can be rewritten oneliner in vanilla monadic code.
 
 {% highlight haskell %}
 intList = [3..5] >>= \x -> [x*2]
@@ -674,10 +689,10 @@ Prelude> Nothing <$> Just 5
 Go further with both.
 
 {% highlight haskell %}
-Prelude> (*) <$> Just (3) <*> (Just 5)
+Prelude> (*) <$> (Just 3) <*> (Just 5)
 Just 15
 
-Prelude> min <$> Just (3) <*> (Just 5)
+Prelude> min <$> (Just 3) <*> (Just 5)
 Just 3
 {% endhighlight %}
 
@@ -686,6 +701,8 @@ Just 3
 ### Monad
 
 Here comes the most interesting part.
+Monad get it feed from output of sequence.
+This is what applicative and functor cannot do.
 
 Bear in mind.
 
@@ -747,6 +764,14 @@ And some books to read.
 Meanwhile. Consider go back to <code>adit</code>
 
 *	<http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html>
+
+-- -- --
+
+### Specific Application
+
+If you insist, and love operator marching.
+
+*	<https://github.com/xmonad/xmonad/blob/master/src/XMonad/ManageHook.hs>
 
 -- -- --
 
