@@ -273,7 +273,7 @@ Source Code can be found here.
 
 -- -- --
 
-### Bind >>= Introduction
+### Bind Introduction
 
 Consider our last simple function.
 
