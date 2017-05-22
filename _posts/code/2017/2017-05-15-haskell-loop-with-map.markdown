@@ -151,6 +151,7 @@ that <code>dumpPair</code> has two arguments ?
 
 The trick in passing argument rely in the closing bracket.
 <code>(dumpPair text)</code>. It is called Curry Function.
+Based on mathematical Lambda Calculus.
 Since I'm a just another beginner, I suggest you to read about 
 Haskell Curry Function somewhere else.
 

@@ -29,6 +29,10 @@ And also this <code>MapM_</code> tutorial.
 
 *	[Example of Doing Loop in Haskell With Map][local-haskell-loop]
 
+It seems to be I'm not the only person who used Haskell with HerbsluftWM.
+
+*	https://hackage.haskell.org/package/hlwm#readme
+
 #### All The Source Code:
 
 Impatient coder like me, like to open many tab on browser.

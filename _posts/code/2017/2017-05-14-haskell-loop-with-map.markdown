@@ -377,6 +377,12 @@ If you are curious about <code>bind >>=</code>.
 main = pairStrIO ("myKey", "myValue") >>= putStrLn
 {% endhighlight %}
 
+Or the flipped version <code>=<<</code>.
+
+{% highlight haskell %}
+main = putStrLn =<< pairStrIO ("myKey", "myValue")  
+{% endhighlight %}
+
 -- -- --
 
 ### Iterate Custom Function with mapM
@@ -397,10 +403,17 @@ This will produce text as below:
 ["blue50 | #e3f2fd","blue100 | #bbdefb","blue200 | #90caf9","blue300 | #64b5f6","blue400 | #42a5f5","blue500 | #2196f3","blue600 | #1e88e5","blue700 | #1976d2","blue800 | #1565c0","blue900 | #0d47a1"]
 {% endhighlight %}
 
-You might also consider using bind operator directly.
+You might also consider using bind operator directly,
+as a oneliner vanilla monadic code..
 
 {% highlight haskell %}
 main = (mapM pairStrIO colorSchemes) >>= (putStrLn . show)
+{% endhighlight %}
+
+Or the flipped version.
+
+{% highlight haskell %}
+main = (putStrLn . show) =<< (mapM pairStrIO colorSchemes)
 {% endhighlight %}
 
 Of course, this is just a simple example on how to use <code>mapM</code>.

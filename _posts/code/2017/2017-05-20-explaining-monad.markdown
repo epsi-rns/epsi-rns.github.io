@@ -52,8 +52,8 @@ Monad solve sequencing issue in functional programming,
 by treat each sequence command as function,
 and wrapped each input and output returned from the function,
 into box of special monadic type, in a consistent manner,
-so that the function can be chained together.
-Thus making sequence function possible,
+so that the sequence function can be chained together.
+Thus making evaluation control possible,
 running as the order written.
 
 	Monad make, different functions composable,
@@ -142,7 +142,12 @@ Good explanation for Monad, the most dreaded Topic. Very nice slide.
 
 *	<http://stackoverflow.com/questions/44965/what-is-a-monad>
 
-Long discussion here.
+Long discussion here. 
+Get an answer from stackoverflow is 
+instantly faster than reading a book.
+Just don't forget the get the understanding
+by keep reading the concept from holy book.
+If you can afford to buy printed one.
 
 #### Saunders Mac Lane 
 
@@ -214,7 +219,7 @@ main = do
 #### Then Operator
 
 Removing the <code>do</code> special notation,
-we can rewrite <code>greetingAction</code>
+we can desugar the <code>greetingAction</code>
 using <code>then >></code> operator as below.
 
 {% highlight haskell %}
@@ -256,7 +261,7 @@ greetingStr = do
 main = putStrLn $ fromMaybe "Nothing" greetingStr
 {% endhighlight %}
 
-We can rewrite in action above
+We can desugar the action above
 into vanilla monadic code without <code>do</code>:
 
 {% highlight haskell %}
@@ -309,7 +314,7 @@ This will display
 [6,8,10]
 {% endhighlight %}
 
-It can be rewritten oneliner in vanilla monadic code.
+It can be desugared into oneliner vanilla monadic code.
 
 {% highlight haskell %}
 intList = [3..5] >>= \x -> [x*2]
