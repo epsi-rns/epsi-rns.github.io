@@ -110,6 +110,64 @@ But you are going to need this when you do compile in command line.
 
 -- -- --
 
+### Simple Data Type: One Argument
+
+Consider a <code>String -> String</code> function.
+Start with simple.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+say1 :: String -> String
+say1 str = "Hello " ++ str
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+{% highlight haskell %}
+> say1 "World"
+"Hello World"
+{% endhighlight %}
+
+<code>In GHCI: with Functor <$></code>
+
+Functor takes any function that can be mapped.
+Whether Maybe context or a list can be mapped.
+
+Here the data <code>(Just "World")</code> unwrapped
+into <code>"World"</code>. And the result wrapped back.
+
+{% highlight haskell %}
+> say1 <$> (Just "World")
+Just "Hello World"
+{% endhighlight %}
+
+We can see that from another perspective.
+Functor operate inside the list.
+
+{% highlight haskell %}
+> say1 <$> ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+<code>In GHCI: with Applicative <*></code>
+
+ApplicativeFunctor also wrapped the function.
+So both function and data are wrapped.
+And the result also wrapped.
+Here we have two wrapper example,
+Maybe context as wrapper, and list as wrapper.
+
+{% highlight haskell %}
+> (Just say1) <*> (Just "World")
+Just "Hello World"
+> [say1] <*> ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+	I love girl. Treat a girl like a lady.
+
+-- -- --
 
 -- -- --
 
