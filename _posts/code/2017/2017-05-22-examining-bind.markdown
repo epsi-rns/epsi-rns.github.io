@@ -261,6 +261,98 @@ Just "Hello World"
 
 -- -- --
 
+### Summary of Functor and Applicative
+
+I hope that you see these patterns clearly.
+However, these above are just an example of wrapping and unwrapping.
+There is a more complex pattern, that is <code>bind >>=</code> operator.
+
+Source Code can be found here.
+
+*	[01-functor.hs][dotfiles-01]
+
+-- -- --
+
+### Bind >>= Introduction
+
+Consider our last simple function.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+say1 :: String -> String
+say1 str = "Hello " ++ str
+{% endhighlight %}
+
+We can add a failsafe feature using Maybe context as an output.
+
+{% highlight haskell %}
+say3 :: String -> Maybe String
+say3 str = 
+    if (length str) /= 0
+        then Just ("Hello " ++ str)
+        else Nothing
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+Now the output already wrapped.
+Even with plain call.
+
+{% highlight haskell %}
+> say3 "World"
+Just "Hello World"
+{% endhighlight %}
+
+Before thinking about chaining,
+we can rewrite as below.
+
+{% highlight haskell %}
+> (Just "World") >>= say3
+Just "Hello World"
+{% endhighlight %}
+
+You can imagine how the bind operator works.
+Just like ApplicativeFunctor,
+bind does unwrapping and wrapping operation.
+
+-- -- --
+
+### Chaining
+
+Consider rewrite the function with two arguments,
+and with Maybe context feature as an output.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+say4 :: String -> String -> Maybe String
+say4 text greet = 
+    if ((length text) /= 0) && ((length greet) /= 0) 
+        then Just (greet ++ text)
+        else Nothing
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+Here we can chain each function using <code>bind >>=</code> operator.
+
+{% highlight haskell %}
+> Just "Hello " >>= say4 "world," >>= say4 " How are you ?"
+Just "Hello world, How are you ?"
+{% endhighlight %}
+
+Or using the flip version, <code>reverse bind =<<</code> operator
+for convenience.
+
+{% highlight haskell %}
+say4 " How are you ?" =<< say4 "world," =<< Just "Hello "
+{% endhighlight %}
+
+-- -- --
+
+-- -- --
+
 Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
