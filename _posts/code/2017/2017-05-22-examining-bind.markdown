@@ -169,6 +169,96 @@ Just "Hello World"
 
 -- -- --
 
+### Simple Data Type with Two Argument
+
+We need this two argument to show
+how to combine Functor and ApplicativeFunctor.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+say2 :: String -> String -> String
+say2 str1 str2 = str1 ++ " " ++ str2
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+We can greet plainly.
+
+{% highlight haskell %}
+> say2 "Hello" "World"
+"Hello World"
+{% endhighlight %}
+
+Or Curry the function.
+
+{% highlight haskell %}
+> (say2 "Hello") "World"
+"Hello World"
+{% endhighlight %}
+
+Or even using function application
+
+{% highlight haskell %}
+> (say2 "Hello") $ "World"
+"Hello World"
+{% endhighlight %}
+
+<code>In GHCI: using functor <$></code>
+
+And get the wrapped result.
+
+{% highlight haskell %}
+> (say2 "Hello") <$> (Just "World")
+Just "Hello World"
+{% endhighlight %}
+
+{% highlight haskell %}
+> (say2 "Hello") <$> ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+<code>fmap</code> is just another name
+for infix <code><*></code> operator.
+
+{% highlight haskell %}
+> fmap (say2 "Hello") (Just "World")
+Just "Hello World"
+{% endhighlight %}
+
+{% highlight haskell %}
+> fmap (say2 "Hello") ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+<code>In GHCI: with Applicative <*></code>
+
+Get wrapped, both function and input argument.
+
+{% highlight haskell %}
+> Just (say2 "Hello") <*> (Just "World")
+Just "Hello World"
+{% endhighlight %}
+
+{% highlight haskell %}
+> [say2 "Hello"] <*> ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+<code>In GHCI: with Functor <$> for both arguments</code>
+
+Now the function have a way to operate inside each wrapped argument.
+
+{% highlight haskell %}
+> say2 <$> (Just "Hello") <*> (Just "World")
+Just "Hello World"
+{% endhighlight %}
+
+{% highlight haskell %}
+> say2 <$> ["Hello"] <*> ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
 -- -- --
 
 Thank you for Reading.
