@@ -284,6 +284,306 @@ say1 :: String -> String
 say1 str = "Hello " ++ str
 {% endhighlight %}
 
+
+
+We can add a failsafe feature using Maybe context as an output.
+
+{% highlight haskell %}
+say3 :: String -> Maybe String
+say3 str = 
+    if (length str) /= 0
+        then Just ("Hello " ++ str)
+        else Nothing
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+Now the output already wrapped.
+Even with plain call.
+
+{% highlight haskell %}
+> say3 "World"
+Just "Hello World"
+{% endhighlight %}
+
+Before thinking about chaining,
+we can rewrite as below.
+
+{% highlight haskell %}
+> (Just "World") >>= say3
+Just "Hello World"
+{% endhighlight %}
+
+You can imagine how the bind operator works.
+Just like ApplicativeFunctor,
+bind does unwrapping and wrapping operation.
+
+-- -- --
+
+### Chaining
+
+Consider rewrite the function with two arguments,
+and with Maybe context feature as an output.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+say4 :: String -> String -> Maybe String
+say4 text greet = 
+    if ((length text) /= 0) && ((length greet) /= 0) 
+        then Just (greet ++ text)
+        else Nothing
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+Here we can chain each function using <code>bind >>=</code> operator.
+
+{% highlight haskell %}
+> Just "Hello " >>= say4 "world," >>= say4 " How are you ?"
+Just "Hello world, How are you ?"
+{% endhighlight %}
+
+Or using the flip version, <code>reverse bind =<<</code> operator
+for convenience.
+
+{% highlight haskell %}
+say4 " How are you ?" =<< say4 "world," =<< Just "Hello "
+{% endhighlight %}
+
+-- -- --
+
+### Binding List
+
+<code>In module:</code>
+
+Now consider the Functor version that we already have.
+
+{% highlight haskell %}
+say1 :: String -> String
+say1 str = "Hello " ++ str
+{% endhighlight %}
+
+Please pay attention to the function declaration.
+
+{% highlight haskell %}
+say1 :: String -> String
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+{% highlight haskell %}
+> ["World"] >>= say1
+"Hello World"
+{% endhighlight %}
+
+{% highlight haskell %}
+> say1 =<< ["Lady"]
+"Hello Lady"
+{% endhighlight %}
+
+{% highlight haskell %}
+> ["World, ", "Lady"] >>= say1
+"Hello World, Hello Lady"
+{% endhighlight %}
+
+{% highlight haskell %}
+> ["World"] >>= say2 "Hello" 
+"Hello World"
+{% endhighlight %}
+
+-- -- --
+
+### Bind Example Using Simple List
+
+Now you can have the idea on
+how the list binded with the Monad operator.
+By examining the data type in function declaration.
+
+Consider this simple function example.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+list1 :: [String] -> [String]
+list1 str = map ("Hello " ++) str
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+We can map each element in this list easily.
+
+{% highlight haskell %}
+> list1 ["World", "Lady"]
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+Please pay attention to the function declaration.
+
+{% highlight haskell %}
+list1 :: [String] -> [String]
+{% endhighlight %}
+
+Now consider a list function made for bind.
+We can rewrite it without <code>map</code> function.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+list3 :: String -> [String]
+list3 str = 
+    if (length str) /= 0
+        then ["Hello " ++ str]
+        else []
+{% endhighlight %}
+
+Please pay attention to the function declaration.
+
+{% highlight haskell %}
+list3 :: String -> [String]
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+We can map each element in this list easily.
+
+{% highlight haskell %}
+> ["World", "Lady"] >>= list3
+["Hello World","Hello Lady"]
+{% endhighlight %}
+
+How about empty list ?
+
+{% highlight haskell %}
+> [] >>= list3
+[]
+{% endhighlight %}
+
+The <code>if then else</code> for empty list looks pretty useless in this function.
+We are going to have the need for it in the next function.
+Or you can just **skip** it.
+
+-- -- --
+
+### List with Two Argument
+
+Consider these two functions with list output.
+
+<code>In module:</code>
+
+{% highlight haskell %}
+list4 :: String -> String -> [String]
+list4 greet text = 
+    if ((length text) /= 0) && ((length greet) /= 0) 
+        then [greet ++ " " ++ text]
+        else []
+{% endhighlight %}
+
+{% highlight haskell %}
+list5 :: String -> String -> [String]
+list5 greet text = 
+    if ((length text) /= 0) && ((length greet) /= 0) 
+        then [text ++ " " ++ greet]
+        else []
+{% endhighlight %}
+
+Please pay attention to the function declaration.
+
+{% highlight haskell %}
+list4 :: String -> String -> [String]
+list5 :: String -> String -> [String]
+{% endhighlight %}
+
+<code>In GHCI:</code>
+
+We can bind different function together.
+
+{% highlight haskell %}
+> ["World", "Lady"] >>= list4 "Hello" >>= list5 "Good Morning"
+["Hello World Good Morning","Hello Lady Good Morning"]
+{% endhighlight %}
+
+Or using flip version operator,
+as needed, for conveninence,
+with about the same result.
+
+{% highlight haskell %}
+> (list4 "Hello" =<< ["World", "Lady"]) >>= list5 "Good Morning"
+["Hello World Good Morning","Hello Lady Good Morning"]
+{% endhighlight %}
+
+-- -- --
+
+### Summary for Bind
+
+We can examine how <code>bind >>=</code> can
+chain different functions together in such order.
+The real world may have more complex case,
+not just different functions,
+but also functions with different input and output.
+
+Source Code can be found here.
+
+*	[02-bind.hs][dotfiles-02]
+
+-- -- --
+
+### Sequencing
+
+By chaining different function together in such order,
+we have already make a sequence.
+One step closer to have sequence of command.
+
+Consider our last chain, using vanilla monadic code.
+
+{% highlight haskell %}
+> ["World", "Lady"] >>= list4 "Hello" >>= list5 "Good Morning"
+{% endhighlight %}
+
+We can rewrite in a function, still with vanilla monadic code as below
+
+{% highlight haskell %}
+sequ1 :: [String]
+sequ1 = 
+    ["World", "Lady"] 
+    >>= list4 "Hello" 
+    >>= list5 "Good Morning"
+{% endhighlight %}
+
+Run this in command line, we will have the same result.
+
+{% highlight haskell %}
+main = print $ sequ2
+{% endhighlight %}
+
+Now we can convert it, for use with <code>do</code> notation.
+
+{% highlight haskell %}
+sequ2 :: [String]
+sequ2 = do
+    x <- ["World", "Lady"]
+    y <- list4 "Hello" x
+    list5 "Good Morning" y
+{% endhighlight %}
+
+In every command inside <code>do</code> notation,
+each must have the same data type with the function output.
+It is the list, <code>[String]</code>.
+
+-- -- --
+
+### Summary for Do notation
+
+<code>do</code> notation, make sequence of command possible.
+Well, I'm still not sure that I have understand <code>Monad</code>.
+But I'm sure that many times I greet the World and Lady.
+
+	I like the World. I like a Girl.
+
+Source Code can be found here.
+
+*	[03-do.hs][dotfiles-03]
+
 -- -- --
 
 Thank you for Reading.
