@@ -13,9 +13,11 @@ layout: default
       <div class="row">
         <!-- sidebar -->
         <div class="column col-xs-11 col-sm-4 col-md-3 hidden-xs" id="sidebar">
+{% comment %}
         {% include layout/sidemenu.html 
            menusource = site.data.navigation_wm
         %}
+{% endcomment %}
         </div><!-- /sidebar -->
         
         <!-- main right col -->

@@ -20,9 +20,10 @@ I'm staying away from dark arts.
 Instead I'm examining behaviour of this almost magic 
 <code>bind >>=</code> operator.
 Gentle, step by step.
-
 Reference about <code>then >></code> operator
 and <code>bind >>=</code> operator can be found here.
+
+*	<https://en.wikibooks.org/wiki/Haskell/do_notation>
 
 -- -- --
 
