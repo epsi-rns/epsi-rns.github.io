@@ -15,13 +15,57 @@ related_link_ids:
 
 ---
 
+<div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Information:</strong> This article need some inkscape diagram.  
+</div>
+
+### Appetite
+
+How do I suppose to understand this short code?
+
+{% highlight haskell %}
+sequ2 :: [String]
+sequ2 = do
+    x <- ["World", "Lady"]
+    y <- list4 "Hello" x
+    list5 "Good Morning" y
+{% endhighlight %}
+
+This tutorial will guide you step by step,
+from <code>Functor <$></code>, <code>Applicative <*></code>,
+<code>Bind >>=</code>, until <code>do</code> notation.
+
+-- -- --
+
+### Explaining Monad
+
+This tutorial/ guidance/ article is one of some parts.
+
+*	[Overview][local-overview]: Overview.
+
+*	[References][local-part-01]: About Monad.
+
+*	[Examining Bind][local-part-02]: Bind <code>>>=</code> operator.
+
+*	[Functor and Applicative][local-part-03]: Personal Notes.
+	<code><*></code> and <code><$></code> operators.
+
+*	[Monadic Operator][local-part-04]: Fish <code>>=></code> operator.
+
+The first one is overview, then some references.
+The last three parts is all about Example Code.
+
+-- -- --
+
+### Preface
+
 I'm not pretending that I know Monad.
 I'm staying away from dark arts.
 Instead I'm examining behaviour of this almost magic 
 <code>bind >>=</code> operator.
 Gentle, step by step.
-Reference about <code>then >></code> operator
-and <code>bind >>=</code> operator can be found here.
+Reference about <code>bind >>=</code> operator can be found here.
 
 *	<https://en.wikibooks.org/wiki/Haskell/do_notation>
 
@@ -284,8 +328,6 @@ say1 :: String -> String
 say1 str = "Hello " ++ str
 {% endhighlight %}
 
-
-
 We can add a failsafe feature using Maybe context as an output.
 
 {% highlight haskell %}
@@ -322,6 +364,10 @@ bind does unwrapping and wrapping operation.
 
 ### Chaining
 
+Here comes the most interesting part.
+Monad get it feed from output of sequence.
+This is what applicative and functor cannot do.
+
 Consider rewrite the function with two arguments,
 and with Maybe context feature as an output.
 
@@ -350,6 +396,15 @@ for convenience.
 {% highlight haskell %}
 say4 " How are you ?" =<< say4 "world," =<< Just "Hello "
 {% endhighlight %}
+
+-- -- --
+
+### How does it works ?
+
+The <code>Just "Hello"</code> unwrapped 
+into plain String <code>"Hello"</code>.
+And the rest follow.
+We have already make the output wrapped in box.
 
 -- -- --
 
@@ -591,6 +646,12 @@ Thank you for Reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/bind' %}
+
+[local-overview]: {{ site.url }}/code/2017/05/20/explaining-monad.html
+[local-part-01]:  {{ site.url }}/code/2017/05/21/monad-references.html
+[local-part-02]:  {{ site.url }}/code/2017/05/22/examining-bind.html
+[local-part-03]:  {{ site.url }}/code/2017/05/22/functor-applicative.html
+[local-part-04]:  {{ site.url }}/code/2017/05/23/monadic-operator.html
 
 [dotfiles-func]: {{ dotfiles_path }}/MyFunc.hs
 [dotfiles-01]:   {{ dotfiles_path }}/01-functor.hs
