@@ -12,6 +12,34 @@ excerpt:
 
 ---
 
+### Statusbar Tutorial
+
+This tutorial/ guidance/ article is one of some parts.
+
+**Statusbar**
+
+*	[Standalone Statusbar Overview][local-overview]
+
+*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
+
+*	[Standalone Dzen2 Statusbar Using Conky][local-dzen2-conky]
+
+*	[Standalone Lemonbar Using Conky][local-lemon-conky]
+
+**Conky**
+
+*	[Standalone CLI System Monitoring Using Conky][local-cli-conky]
+
+*	[Debugging Conky][local-debug-conky]
+
+**Complementary**
+
+*	[Create XBM for your Dzen2][local-xbm-dzen2]
+
+*	[Getting XLFD Font][local-xlfd-font]
+
+-- -- --
+
 Dzen2 can read <code class="code-file">.xbm</code> image format.
 For your convenience, I have made some eight glyph icons.
 For each has height of 24px, the same height as dzen panel example in this blog.
@@ -121,3 +149,11 @@ Thank you for reading.
 [image-xbm-gimp-scale]:      {{ asset_path }}/xbm-gimp-scale.png
 [image-xbm-nautilus]:        {{ asset_path }}/xbm-nautilus.png
 
+[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
+[local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
+[local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html
+[local-cli-conky]:   {{ site.url }}/desktop/2017/04/12/standalone-cli-conky.html
+[local-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
+[local-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
+[local-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html

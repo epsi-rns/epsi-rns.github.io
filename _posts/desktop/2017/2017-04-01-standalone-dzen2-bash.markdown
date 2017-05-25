@@ -12,52 +12,31 @@ excerpt:
 
 ---
 
-### Preface
+### Statusbar Tutorial
 
-It was first April 2017 when I configure my dzen setup,
-and I'll speak the truth about dzen2.
-Dzen is actually simple, the issue is, there was nobody to help me.
-I could not find any good tutorial, sufficient to ease my troubled mind.
-There was nothing I could do, but read as many dotshare sample as I could.
+This tutorial/ guidance/ article is one of some parts.
 
-I can give you an illustration, a story you can imagine
+**Statusbar**
 
-	"It was a frozen winter in cold war era.
-	We are two men, a boy, two women, a husky, and two shotguns.
-	After three weeks, we finally configure dzen2.
-	But we lost our beloved husky before we finally made it.
-	Now, every january, we remember our husky,
-	that helped all of us to survive."
+*	[Standalone Statusbar Overview][local-overview]
 
-Now that the hard day was over,
-this tutorial is for you.
-Dzen2 is easy when you have guidance.
+*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
 
--- -- --
+*	[Standalone Dzen2 Statusbar Using Conky][local-dzen2-conky]
 
-### Why Learn Dzen2 ?
+*	[Standalone Lemonbar Using Conky][local-lemon-conky]
 
-As a complement of Tiling Window Manager. 
-People use standalone panel (or statusbar),
-e.g. Dzen2, Lemonbar, and stuff.
+**Conky**
 
-Let us see this preview image to see what can be achieved by Dzen2.
+*	[Standalone CLI System Monitoring Using Conky][local-cli-conky]
 
-![Dzen2 Preview][image-01-preview]{: .img-responsive }
+*	[Debugging Conky][local-debug-conky]
 
-The thing is, Tiling Window Manager itself is also not complicated.
-Once you get the idea of one Tiling Window Manager,
-it is going to be easy to switch beetwen any of them.
-Just learn some keystrokes, and everything is functional.
-And later you can go deep into configuration if you want.
+**Complementary**
 
-Further than this, especially for ricing,
-the hardest part is to make a beautiful panel/ statusbar setup.
-Most of the time, the panel part, is the longest configuration part.
+*	[Create XBM for your Dzen2][local-xbm-dzen2]
 
-With understanding of dzen2 statusbar,
-learning Tiling Window Manager, become easier.
-You can focus on the Window Manager instead of statusbar stuff.
+*	[Getting XLFD Font][local-xlfd-font]
 
 -- -- --
 
@@ -569,4 +548,11 @@ I know how terrible it is.
 
 [dotfiles-hlwm-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm/bash/dzen2/panel.sh
 
+[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
+[local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
+[local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html
+[local-cli-conky]:   {{ site.url }}/desktop/2017/04/12/standalone-cli-conky.html
 [local-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
+[local-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
+[local-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html

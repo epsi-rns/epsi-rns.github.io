@@ -13,6 +13,34 @@ excerpt:
 
 ---
 
+### Statusbar Tutorial
+
+This tutorial/ guidance/ article is one of some parts.
+
+**Statusbar**
+
+*	[Standalone Statusbar Overview][local-overview]
+
+*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
+
+*	[Standalone Dzen2 Statusbar Using Conky][local-dzen2-conky]
+
+*	[Standalone Lemonbar Using Conky][local-lemon-conky]
+
+**Conky**
+
+*	[Standalone CLI System Monitoring Using Conky][local-cli-conky]
+
+*	[Debugging Conky][local-debug-conky]
+
+**Complementary**
+
+*	[Create XBM for your Dzen2][local-xbm-dzen2]
+
+*	[Getting XLFD Font][local-xlfd-font]
+
+-- -- --
+
 ### Preface
 
 This is the continuation of dzen2 guidance.
@@ -27,6 +55,7 @@ It is much easier.
 
 
 **Reading**:<br/>
+
 *	<https://github.com/brndnmtthws/conky>
 
 -- -- --
@@ -496,57 +525,6 @@ For code comparation you should see both source code yourself.
 
 -- -- --
 
-### Issue with Tiling Window Manager
-
-	The only caveat is conky is interval based,
-	and it does not response to desktop event.
-
-From the perspective of Tiling Window Manager,
-we still need a separate dzen panel
-for use with desktop event.
-
-No matter how cool Conky Lua is,
-I just realize the issue,
-that we can not do it all, only with conky lua.
-
--- -- --
-
-### More thoughts
-
-**First**
-
-Yes I read the Source Code in github.
-And it TODO in that repository tells me that
-there is a plan to rewrite in C++ in Conky 2.0.
-Which is great.
-
-**Reading**:
-
-*	<https://github.com/brndnmtthws/conky>
-
-*	<https://github.com/robm/dzen>
-
-I wonder if anyone would do rewrite dzen2 
-in C++ or even Rust just because it can be done.
-It is going to be an interesting project.
-
-**Second**
-
-Or maybe a decouple system monitor in conky
-to make the output text based only.
-
-1.	A Lua based system monitor framework.
-
-2.	A general desktop output that can get any feed,
-	from any scripting language.
-	Just like dzen2, but for desktop.
-
-**Finally**
-
-But hey... Get a life.
-
--- -- --
-
 Coding is Fun.
 Especially when it comes to dzen2-conky-lua tiers.
 Now I have to move on to compose the next tutorial.
@@ -595,5 +573,11 @@ Have Fun
 [dotfiles-multi-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
 [dotfiles-multi-lemon]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
 
+[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
+[local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
+[local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html
+[local-cli-conky]:   {{ site.url }}/desktop/2017/04/12/standalone-cli-conky.html
 [local-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
-[local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html 
+[local-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
+[local-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html
