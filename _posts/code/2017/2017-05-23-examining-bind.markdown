@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Functor and Applicative in Haskell"
+title:  "Examining Bind in Haskell: Example using Number"
 date:   2017-05-22 07:10:15 +0700
 categories: code
 tags: [coding, haskell]
@@ -29,16 +29,21 @@ related_link_ids:
 
 This tutorial/ guidance/ article is one of some parts.
 
-*	[Overview][local-overview]: Overview.
+*	[Overview][local-overview]: Summary.
 
-*	[References][local-part-01]: About Monad.
+*	[References][local-part-01]:
+	About Monad.
 
-*	[Examining Bind][local-part-02]: Bind <code>>>=</code> operator.
+*	[Examining Bind][local-part-02]: 
+	Bind <code>>>=</code> operator.
+	Hello World Example.
 
-*	[Functor and Applicative][local-part-03]: Personal Notes.
+*	[Examining Bind][local-part-03]: 
 	<code><*></code> and <code><$></code> operators.
+	Personal Notes. Example using Number.
 
-*	[Monadic Operator][local-part-04]: Fish <code>>=></code> operator.
+*	[Monadic Operator][local-part-04]:
+	Fish <code>>=></code> operator.
 
 The first one is overview, then some references.
 The last three parts is all about Example Code.
@@ -291,6 +296,66 @@ Just 3
 
 -- -- --
 
+### Bind
+
+Apply it to bind.
+
+{% highlight haskell %}
+> add3 int = [int + 3]
+
+> [1, 3] >>= add3
+[4,6]
+{% endhighlight %}
+
+And chain 'em.
+
+{% highlight haskell %}
+> addme int2 int1 = [int1 + int2]
+
+> subme int2 int1 = [int1 - int2]
+
+> [1, 3] >>= addme 3 >>= subme 2
+[2,4]
+
+> [1, 3] >>= subme 2 >>= addme 3
+[2,4]
+{% endhighlight %}
+
+Rewrite the last sentence in multiline GHCI.
+
+{% highlight haskell %}
+> :{
+| addme int2 int1 = [int1 + int2]
+| subme int2 int1 = [int1 - int2]
+| 
+| sequ3 :: [Int]
+| sequ3 = 
+|     [1, 3] 
+|     >>= subme 2 
+|     >>= addme 3
+| :}
+
+> print sequ3
+[2,4]
+{% endhighlight %}
+
+And finally in <code>do</code> block.
+
+{% highlight haskell %}
+> :{
+| sequ4 :: [Int]
+| sequ4 = do
+|     x <- [1, 3] 
+|     y <- subme 2 x
+|     addme 3 y
+| :}
+
+> sequ4 
+[2,4]
+{% endhighlight %}
+
+-- -- --
+
 ### Operator Cheat Sheet
 
 Bear in mind
@@ -345,9 +410,9 @@ Thank you for Reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [local-overview]: {{ site.url }}/code/2017/05/20/explaining-monad.html
-[local-part-01]:  {{ site.url }}/code/2017/05/21/monad-references.html
+[local-part-01]:  {{ site.url }}/code/2017/05/21/explaining-monad.html
 [local-part-02]:  {{ site.url }}/code/2017/05/22/examining-bind.html
-[local-part-03]:  {{ site.url }}/code/2017/05/22/functor-applicative.html
-[local-part-04]:  {{ site.url }}/code/2017/05/23/monadic-operator.html
+[local-part-03]:  {{ site.url }}/code/2017/05/23/examining-bind.html
+[local-part-04]:  {{ site.url }}/code/2017/05/24/examining-bind.html
 
 [ref-adit]: http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html

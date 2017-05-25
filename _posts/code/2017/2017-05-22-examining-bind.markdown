@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Examining Bind in Haskell"
+title:  "Examining Bind in Haskell: Hello World"
 date:   2017-05-22 01:10:15 +0700
 categories: code
 tags: [coding, haskell]
 author: epsi
 
 excerpt:
-  Uncover the mysterious bind >>= operator in Haskell
-  without dark magic.
+  Uncover the mysterious bind >>= operator
+  in Haskell without dark magic.
 
 related_link_ids: 
   - 16051403  # How Haskell Syntax
@@ -42,16 +42,21 @@ from <code>Functor <$></code>, <code>Applicative <*></code>,
 
 This tutorial/ guidance/ article is one of some parts.
 
-*	[Overview][local-overview]: Overview.
+*	[Overview][local-overview]: Summary.
 
-*	[References][local-part-01]: About Monad.
+*	[References][local-part-01]:
+	About Monad.
 
-*	[Examining Bind][local-part-02]: Bind <code>>>=</code> operator.
+*	[Examining Bind][local-part-02]: 
+	Bind <code>>>=</code> operator.
+	Hello World Example.
 
-*	[Functor and Applicative][local-part-03]: Personal Notes.
+*	[Examining Bind][local-part-03]: 
 	<code><*></code> and <code><$></code> operators.
+	Personal Notes. Example using Number.
 
-*	[Monadic Operator][local-part-04]: Fish <code>>=></code> operator.
+*	[Monadic Operator][local-part-04]:
+	Fish <code>>=></code> operator.
 
 The first one is overview, then some references.
 The last three parts is all about Example Code.
@@ -108,7 +113,7 @@ Ok, modules loaded: MyFunc.
 ### Wrapping and unwrapping
 
 Functor, Applicative and Monad, can be seen as
-a concept of wrapping and wrapping data.
+a concept of unwrapping and wrapping data.
 The box that wrap the data could be 
 IO, list or the simple Maybe context.
 
@@ -447,6 +452,10 @@ say1 :: String -> String
 "Hello World"
 {% endhighlight %}
 
+This is not a good example,
+since it does not apply to numeric.
+We should move on to the next example.
+
 -- -- --
 
 ### Bind Example Using Simple List
@@ -648,10 +657,10 @@ Thank you for Reading.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/bind' %}
 
 [local-overview]: {{ site.url }}/code/2017/05/20/explaining-monad.html
-[local-part-01]:  {{ site.url }}/code/2017/05/21/monad-references.html
+[local-part-01]:  {{ site.url }}/code/2017/05/21/explaining-monad.html
 [local-part-02]:  {{ site.url }}/code/2017/05/22/examining-bind.html
-[local-part-03]:  {{ site.url }}/code/2017/05/22/functor-applicative.html
-[local-part-04]:  {{ site.url }}/code/2017/05/23/monadic-operator.html
+[local-part-03]:  {{ site.url }}/code/2017/05/23/examining-bind.html
+[local-part-04]:  {{ site.url }}/code/2017/05/24/examining-bind.html
 
 [dotfiles-func]: {{ dotfiles_path }}/MyFunc.hs
 [dotfiles-01]:   {{ dotfiles_path }}/01-functor.hs
