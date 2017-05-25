@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Examining Bind in Haskell: Do Notation"
-date:   2017-05-23 05:10:15 +0700
+date:   2017-05-23 09:10:15 +0700
 categories: code
 tags: [coding, haskell]
 author: epsi
