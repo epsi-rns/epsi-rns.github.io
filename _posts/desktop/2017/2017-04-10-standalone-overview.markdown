@@ -2,7 +2,7 @@
 layout: post-sidemenu-wm
 title:  "Standalone Statusbar Overview"
 categories: desktop
-date:   2017-04-15 13:35:15 +0700
+date:   2017-04-10 13:35:15 +0700
 tags: [ricing, statusbar, bash]
 author: epsi
 
@@ -205,7 +205,7 @@ Thank you for Reading.
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
 
-[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
 [local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
 [local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html

@@ -149,7 +149,7 @@ Thank you for reading.
 [image-xbm-gimp-scale]:      {{ asset_path }}/xbm-gimp-scale.png
 [image-xbm-nautilus]:        {{ asset_path }}/xbm-nautilus.png
 
-[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
 [local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
 [local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html

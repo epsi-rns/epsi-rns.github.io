@@ -206,7 +206,7 @@ Have Fun with Font.
 [image-font-05-xlfd]: {{ asset_path }}/font-05-awesome-home-xlfd.png
 [image-font-05-xft]:  {{ asset_path }}/font-05-awesome-home-xlft.png
 
-[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
 [local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
 [local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html

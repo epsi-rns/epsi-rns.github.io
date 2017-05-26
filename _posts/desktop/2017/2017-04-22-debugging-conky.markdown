@@ -178,7 +178,7 @@ Thank you for reading.
 [image-11-example-02]: {{ asset_path }}/dzen2-conky-11-example-02-deco.png
 [image-conky-debug]:   {{ asset_path }}/conky-debug.png
 
-[local-overview]:    {{ site.url }}/desktop/2017/04/15/standalone-overview.html
+[local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
 [local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
 [local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html
