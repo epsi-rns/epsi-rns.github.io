@@ -52,11 +52,18 @@ How a monad behaves ?
 
 	What Monads are good for?
 
-Imagine, there is a programming language
+Imagine, you have a paper, solving some math equations.
+You can write down those equations anywhere in that paper freely,
+and substitute each equation until it solved.
+Consider mimic these situation for programming language.
+Equation subtitution can be done by function call, until it solved.
+Every function called by dependency.
+
+Now imagine, there is a programming language
 that everything is function (as mathematical equation),
 and every function called only by dependency,
 not by order as it is written.
-People come from imperative would haunt by this question.
+People come from imperative would haunt by this question below.
 
 	How do we make a sequence command,
 	called line by line, in such order ?

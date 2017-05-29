@@ -383,6 +383,8 @@ This would have <code>dzen2</code> output similar to this below.
 
 ![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
 
+	You may use transset-df instead of transset.
+
 Similar Code: 
 [[ BASH conky ]][dotfiles-bash-07-conky]
 [[ Perl conky ]][dotfiles-perl-07-conky]
