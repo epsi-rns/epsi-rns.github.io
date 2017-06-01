@@ -598,7 +598,7 @@ sub detach_transset {
     return if $pid;     # in the parent process
     
     sleep 1;
-    system('transset .8 -n dzentop >/dev/null 2');
+    system('transset .8 -n dzentop >/dev/null');
     
     exit; 
 }
@@ -649,7 +649,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lang' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 

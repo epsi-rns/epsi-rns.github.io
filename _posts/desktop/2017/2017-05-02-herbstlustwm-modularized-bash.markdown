@@ -96,7 +96,9 @@ and executable permission.
 #### Call a module
 
 {% highlight bash %}
-. ~/.config/herbstluftwm/bash/helper.sh
+DIR=$(dirname "$0")
+
+. ${DIR}/helper.sh
 {% endhighlight %}
 
 -- -- --
@@ -415,10 +417,12 @@ and putting it all back together.
 <code class="code-file">Header Part: autostart.sh</code>
 
 {% highlight bash %}
-. ~/.config/herbstluftwm/bash/assets/gmc.sh
-. ~/.config/herbstluftwm/bash/config.sh
-. ~/.config/herbstluftwm/bash/helper.sh
-. ~/.config/herbstluftwm/bash/startup.sh
+DIR=$(dirname "$0")
+
+. ${DIR}/assets/gmc.sh
+. ${DIR}/config.sh
+. ${DIR}/helper.sh
+. ${DIR}/startup.sh
 {% endhighlight %}
 
 <code class="code-file">Procedural Part: autostart.sh</code>

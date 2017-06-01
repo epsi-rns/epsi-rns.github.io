@@ -592,7 +592,7 @@ def detach_transset():
     if pid == 0:
         try:
             time.sleep(1)
-            os.system('transset .8 -n dzentop >/dev/null 2')
+            os.system('transset .8 -n dzentop >/dev/null')
             os._exit(1)
         finally:
             os.kill(pid, signal.SIGTERM)
@@ -643,7 +643,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lang' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 
