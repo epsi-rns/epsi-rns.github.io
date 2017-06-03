@@ -110,16 +110,16 @@ myTimeFormat = "%a %b %d %H:%M:%S"
 
 wFormatTime :: FormatTime t => t -> String
 wFormatTime myUtcTime = formatTime 
-  Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
+    Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
 
 wSleep :: Int -> IO ()
 wSleep mySecond = threadDelay (1000000 * mySecond)
 
 printDate = do
-     now <- getZonedTime
-     let nowFmt = wFormatTime now
-     putStrLn nowFmt
-     wSleep 1
+    now <- getZonedTime
+    let nowFmt = wFormatTime now
+    putStrLn nowFmt
+    wSleep 1
 
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ---
 -- main
@@ -357,8 +357,8 @@ import Control.Monad
 
 wFormatTime :: FormatTime t => t -> String
 wFormatTime myUtcTime = formatTime 
-        Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
-    where myTimeFormat = "%a %b %d %H:%M:%S"
+    Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
+  where myTimeFormat = "%a %b %d %H:%M:%S"
 
 wSleep :: Int -> IO ()
 wSleep mySecond = threadDelay (1000000 * mySecond)
@@ -452,28 +452,29 @@ import Control.Monad
 cmdout = "dzen2"
 
 getDzen2Parameters = [
-        "-x", xpos,  "-y", ypos,
-        "-w", width, "-h", height,
-        "-fn", font,
-        "-ta", "c",
-        "-bg", bgcolor,
-        "-fg", fgcolor,
-        "-title-name", "dzentop"
-     ]
-    where    
-        xpos    = "0"
-        ypos    = "0"
-        width   = "640"
-        height  = "24"
-        fgcolor = "#000000"
-        bgcolor = "#ffffff"
-        font    = "-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+      "-x", xpos,  "-y", ypos,
+      "-w", width, "-h", height,
+      "-fn", font,
+      "-ta", "c",
+      "-bg", bgcolor,
+      "-fg", fgcolor,
+      "-title-name", "dzentop"
+    ]
+  where    
+    xpos    = "0"
+    ypos    = "0"
+    width   = "640"
+    height  = "24"
+    fgcolor = "#000000"
+    bgcolor = "#ffffff"
+    font    = "-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
 
 
 wFormatTime :: FormatTime t => t -> String
 wFormatTime myUtcTime = formatTime 
-        Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
-    where myTimeFormat = "%a %b %d %H:%M:%S"
+    Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
+  where myTimeFormat = "%a %b %d %H:%M:%S"
+
 
 
 wSleep :: Int -> IO ()
@@ -571,22 +572,22 @@ wConkyFileName :: String -> String
 wConkyFileName dirName = dirName ++ "/../assets" ++ "/conky.lua"
 
 getDzen2Parameters = [
-        "-x", xpos,  "-y", ypos,
-        "-w", width, "-h", height,
-        "-fn", font,
-        "-ta", "c",
-        "-bg", bgcolor,
-        "-fg", fgcolor,
-        "-title-name", "dzentop"
-     ]
-    where    
-        xpos    = "0"
-        ypos    = "0"
-        width   = "640"
-        height  = "24"
-        fgcolor = "#000000"
-        bgcolor = "#ffffff"
-        font    = "-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+      "-x", xpos,  "-y", ypos,
+      "-w", width, "-h", height,
+      "-fn", font,
+      "-ta", "c",
+      "-bg", bgcolor,
+      "-fg", fgcolor,
+      "-title-name", "dzentop"
+    ]
+  where    
+    xpos    = "0"
+    ypos    = "0"
+    width   = "640"
+    height  = "24"
+    fgcolor = "#000000"
+    bgcolor = "#ffffff"
+    font    = "-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
 
 wSleep :: Int -> IO ()
 wSleep mySecond = threadDelay (1000000 * mySecond)

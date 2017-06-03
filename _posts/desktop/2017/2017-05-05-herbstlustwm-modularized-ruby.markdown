@@ -86,8 +86,8 @@ You can wrap the script in module.
 
 {% highlight ruby %}
 module Config
-    Tag_names = Array (1..9)
-    Tag_keys  = (Array (1..9)) << 0
+  Tag_names = Array (1..9)
+  Tag_keys  = (Array (1..9)) << 0
 end
 {% endhighlight %}
 
@@ -109,7 +109,7 @@ in a function named <code>hc</code>.
 
 {% highlight ruby %}
 def hc(arguments)
-    system("herbstclient #{arguments}");
+  system("herbstclient #{arguments}")
 end
 {% endhighlight %}
 
@@ -120,7 +120,7 @@ end
 hc('emit_hook reload')
 
 # gap counter
-system("echo 35 > /tmp/herbstluftwm-gap");
+system("echo 35 > /tmp/herbstluftwm-gap")
 {% endhighlight %}
 
 -- -- --
@@ -130,8 +130,8 @@ system("echo 35 > /tmp/herbstluftwm-gap");
 <code class="code-file">config.rb</code>
 
 {% highlight ruby %}
-    Tag_names = Array (1..9)
-    Tag_keys  = (Array (1..9)) << 0
+  Tag_names = Array (1..9)
+  Tag_keys  = (Array (1..9)) << 0
 {% endhighlight %}
 
 ![HerbstluftWM: Tag Status][image-hlwm-02-tag-status]{: .img-responsive }
@@ -146,13 +146,13 @@ Using **key-value pairs**, a simple data structure.
 
 {% highlight ruby %}
 module GMC
-    Color = {
-        'white' => '#ffffff',
-        'black' => '#000000',
+  Color = {
+    'white' => '#ffffff',
+    'black' => '#000000',
 
-        'grey50'  => '#fafafa',
-        'grey100' => '#f5f5f5',
-    }
+    'grey50'  => '#fafafa',
+    'grey100' => '#f5f5f5',
+  }
 end
 {% endhighlight %}
 
@@ -187,18 +187,18 @@ Except that it has string interpolation all over the place.
 
 {% highlight ruby %}
 module Config
-    # Modifier variables
-    s = 'Shift'
-    c = 'Control'
-    m = 'Mod4'
-    a = 'Mod1'
+  # Modifier variables
+  s = 'Shift'
+  c = 'Control'
+  m = 'Mod4'
+  a = 'Mod1'
 
-    Keybinds = {
-      # session
-        "#{m}-#{s}-q" => 'quit',
-        "#{m}-#{s}-r" => 'reload',
-        "#{m}-#{s}-c" => 'close'
-    }
+  Keybinds = {
+  # session
+    "#{m}-#{s}-q" => 'quit',
+    "#{m}-#{s}-r" => 'reload',
+    "#{m}-#{s}-c" => 'close'
+  }
 end
 {% endhighlight %}
 
@@ -244,13 +244,13 @@ I can see how simple and clean, Ruby is.
 
 {% highlight ruby %}
 def do_config(command, hash)
-    # loop over hash   
-    hash.each do |key, value|
-        hc(command+' '+key+' '+value)
+  # loop over hash   
+  hash.each do |key, value|
+    hc(command+' '+key+' '+value)
 
-        # uncomment to debug in terminal
-        # puts(command+' '+key+' '+value)
-    end
+    # uncomment to debug in terminal
+    # puts(command+' '+key+' '+value)
+  end
 end
 {% endhighlight %}
 
@@ -262,7 +262,7 @@ Sometimes strange things happen.
 Just uncomment this line to see what happened.
 
 {% highlight ruby %}
-        puts(command+' '+key+' '+value)
+    puts(command+' '+key+' '+value)
 {% endhighlight %}
 
 You can see the debugging result in figure below.
@@ -294,20 +294,20 @@ And I define local <code>tag_names</code> to avoid long namespace.
 
 {% highlight ruby %}
 def set_tags_with_name()
-    tag_names = Config::Tag_names
-    tag_keys = Config::Tag_keys
+  tag_names = Config::Tag_names
+  tag_keys = Config::Tag_keys
 
-    hc("rename default '#{tag_names[0]}' 2>/dev/null || true")
+  hc("rename default '#{tag_names[0]}' 2>/dev/null || true")
     
-    tag_names.each_with_index do |tag_name, index|
-        hc("add '#{tag_names[index]}'")
+  tag_names.each_with_index do |tag_name, index|
+    hc("add '#{tag_names[index]}'")
         
-        key = tag_keys[index]                
-        unless key.to_s.empty?
-            hc("keybind Mod4-#{key} use_index '#{index}'");
-            hc("keybind Mod4-Shift-#{key} move_index '#{index}'");
-        end
+    key = tag_keys[index]                
+    unless key.to_s.empty?
+      hc("keybind Mod4-#{key} use_index '#{index}'");
+      hc("keybind Mod4-Shift-#{key} move_index '#{index}'");
     end
+  end
 end
 {% endhighlight %}
 
@@ -323,18 +323,18 @@ This two also be easy to do in Ruby.
 
 {% highlight ruby %}
 def do_panel()
-    panel = __dir__ + "/../bash/dzen2/panel.sh"
+  panel = __dir__ + "/../bash/dzen2/panel.sh"
 
-    if not File.exist?(panel) and File.executable?(panel)
-        panel = "/etc/xdg/herbstluftwm/panel.sh"
-    end
+  if not File.exist?(panel) and File.executable?(panel)
+    panel = "/etc/xdg/herbstluftwm/panel.sh"
+  end
    
-    raw = IO.popen('herbstclient list_monitors | cut -d: -f1').read()
-    monitors = raw.split("\n")
+  raw = IO.popen('herbstclient list_monitors | cut -d: -f1').read()
+  monitors = raw.split("\n")
 
-    for monitor in (monitors)
-        system("#{panel} #{monitor} &");
-    end
+  for monitor in (monitors)
+    system("#{panel} #{monitor} &");
+  end
 end
 {% endhighlight %}
 
@@ -350,24 +350,24 @@ Everyone has their own personal preferences.
 
 {% highlight ruby %}
 def startup_run()
-    command = 'silent new_attr bool my_not_first_autostart'
-    system("herbstclient #{command}")
-    exitcode = $?.exitstatus
+  command = 'silent new_attr bool my_not_first_autostart'
+  system("herbstclient #{command}")
+  exitcode = $?.exitstatus
 
-    if (exitcode == 0)
-      # non windowed app
-        system("compton &")
-        system("dunst &")
-        system("parcellite &")
-        system("nitrogen --restore &")
-        system("mpd &")
+  if (exitcode == 0)
+  # non windowed app
+    system("compton &")
+    system("dunst &")
+    system("parcellite &")
+    system("nitrogen --restore &")
+    system("mpd &")
 
-      # windowed app
-        system("xfce4-terminal &")
-        system("sleep 1 && firefox &")
-        system("sleep 2 && geany &")
-        system("sleep 2 && thunar &")
-    end
+  # windowed app
+    system("xfce4-terminal &")
+    system("sleep 1 && firefox &")
+    system("sleep 2 && geany &")
+    system("sleep 2 && thunar &")
+  end
 end
 {% endhighlight %}
 
@@ -538,4 +538,3 @@ Happy Configuring.
 [dotfiles-haskell-config]:    {{ dotfiles_path }}/haskell/MyConfig.hs
 [dotfiles-haskell-helper]:    {{ dotfiles_path }}/haskell/MyHelper.hs
 [dotfiles-haskell-startup]:   {{ dotfiles_path }}/haskell/MyStartup.hs
-

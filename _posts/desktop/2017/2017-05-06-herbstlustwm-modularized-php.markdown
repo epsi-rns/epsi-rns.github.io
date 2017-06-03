@@ -96,7 +96,8 @@ in a function named <code>hc</code>.
 <code class="code-file">helper.php</code>
 
 {% highlight php %}
-function hc($arguments) {
+function hc($arguments) 
+{
     system("herbstclient $arguments");
 }
 {% endhighlight %}
@@ -226,7 +227,8 @@ I can see how simple and clean, PHP is.
 <code class="code-file">helper.php</code>
 
 {% highlight php %}
-function do_config($command, $hash) {
+function do_config($command, $hash) 
+{
     # loop over hash
     foreach ($hash as $key => $value) {
         hc($command.' '.$key.' '.$value);
@@ -277,7 +279,8 @@ The only workaround I found is by passing it as function arguments.
 <code class="code-file">helper.php</code>
 
 {% highlight php %}
-function set_tags_with_name($tag_names, $tag_keys) {
+function set_tags_with_name($tag_names, $tag_keys) 
+{
     hc("rename default '$tag_names[0]' 2>/dev/null || true");
     
     foreach($tag_names as $index=>$value) {
@@ -303,7 +306,8 @@ This two also be easy to do in PHP.
 <code class="code-file">helper.php</code>
 
 {% highlight php %}
-function do_panel() {
+function do_panel() 
+{
     $panel   = __dir__."/../bash/dzen2/panel.sh";
     if (!is_executable($panel))
         $panel = "/etc/xdg/herbstluftwm/panel.sh";
@@ -329,7 +333,8 @@ Everyone has their own personal preferences.
 <code class="code-file">startup.php</code>
 
 {% highlight php %}
-function startup_run() {
+function startup_run() 
+{
     $command = 'silent new_attr bool my_not_first_autostart';
     system("herbstclient $command", $exitcode);
 
