@@ -18,6 +18,13 @@ excerpt:
 So anyone can focus to alter special customization in Main Script,
 without changing the whole stuff.
 
+### Which PHP
+
+Since there many PHP version.
+I should say that I use PHP7.
+But don't worry, it is portable.
+I do not use any sophisticated code.
+
 #### Reading
 
 Before you jump off to scripting,

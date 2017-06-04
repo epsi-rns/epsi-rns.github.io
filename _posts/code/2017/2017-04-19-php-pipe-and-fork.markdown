@@ -66,7 +66,8 @@ Source Code Directory:
 
 For accounting reason in my company.
 I'm still using PHP56 in my notebook.
-You are free to switch the <code>#shebang</code> to PHP7.
+But for the reader, I moved on to PHP7.
+You are free to switch the <code>#shebang</code>.
 
 Do not worry, I do not use any sophisticated code.
 
@@ -164,8 +165,8 @@ to locate the conky script assets.
 *	[github.com/.../dotfiles/.../php-02-popen.php][dotfiles-php-02-popen]
 
 {% highlight php %}
-#!/usr/bin/php56  
-<?php 
+#!/usr/bin/php
+<?php # using PHP7
 
 # http://php.net/manual/en/function.popen.php
 
@@ -236,8 +237,7 @@ And <code>pipeout</code> to external command.
 *	[github.com/.../dotfiles/.../php-03-popen.php][dotfiles-php-03-popen]
 
 {% highlight php %}
-#!/usr/bin/php56  
-<?php 
+<?php # using PHP7
 
 $timeformat = '%a %b %d %H:%M:%S';
 
@@ -297,8 +297,7 @@ no need to wait for dzen2 to finish the script.
 *	[github.com/.../dotfiles/.../php-05-fork.php][dotfiles-php-05-fork]
 
 {% highlight php %}
-#!/usr/bin/php56  
-<?php 
+<?php # using PHP7
 
 function get_dzen2_parameters() 
 { 
@@ -411,8 +410,7 @@ detached from script. So we two forks, dzen and transset.
 *	[github.com/.../dotfiles/.../php-07-conky.php][dotfiles-php-07-conky]
 
 {% highlight php %}
-#!/usr/bin/php56  
-<?php 
+<?php # using PHP7
 
 function get_dzen2_parameters() 
 { 

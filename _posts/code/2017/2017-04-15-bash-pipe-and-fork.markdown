@@ -266,7 +266,7 @@ Similar Code:
 ### Fork Overview
 
 Fork in bash is also simple.
-All it takes is jus <code>&</code> character.
+All it takes is just <code>&</code> character.
 
 This step use internal function as source feed,
 as continuation of previous step.
@@ -278,7 +278,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-05-fork.sh][dotfiles-bash-05-fork]
+*	[github.com/.../dotfiles/.../bash-05-fork-simple.sh][dotfiles-bash-05-fork-simple]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -317,6 +317,72 @@ This step also add system command that kill
 any previous dzen2 instance. So it will be guaranteed,
 that the dzen2 shown is coming from the latest script.
 
+### Fork Code in Function
+
+Let's have a look again at the line below.
+It is the heart above script.
+
+{% highlight bash %}
+generated_output | dzen2 $parameters &
+{% endhighlight %}
+
+In more complex situation that need more flexibility,
+we can separate the pipe <code>|</code> in different function.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+function get_dzen2_parameters() { 
+    xpos=0
+    ypos=0
+    width=640
+    height=24
+
+    fgcolor="#000000"
+    bgcolor="#ffffff"
+    font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+
+    parameters="  -x $xpos -y $ypos -w $width -h $height" 
+    parameters+=" -fn $font"
+    parameters+=" -ta c -bg $bgcolor -fg $fgcolor"
+    parameters+=" -title-name dzentop"
+}
+
+function generated_output() {
+    # endless loop
+    while :; do 
+      date +'%a %b %d %H:%M:%S'
+      sleep 1
+    done
+}
+
+function run_dzen2() {
+    get_dzen2_parameters    
+    command_out="dzen2 $parameters"
+    
+    {
+        generated_output 
+    } | $command_out
+}
+
+function detach_dzen2() {    
+    run_dzen2 &
+}
+
+# ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----
+# main
+
+# remove all dzen2 instance
+pkill dzen2
+
+# run process in the background
+detach_dzen2
+{% endhighlight %}
+
+**Source**:
+
+*	[github.com/.../dotfiles/.../bash-05-fork.sh][dotfiles-bash-05-fork]
+
 Similar Code: 
 [[ BASH fork ]][dotfiles-bash-05-fork]
 [[ Perl fork ]][dotfiles-perl-05-fork]
@@ -334,37 +400,66 @@ This step, we use conky again, as a source feed.
 And also parameterized dzen2 as continuation of previous step.
 
 This step add optional transset transparency,
-detached from script. So we two forks, dzen and transset.
+detached from script. So we have two forks, dzen and transset.
 
+{% highlight bash %}
+# optional transparency
+sleep 1 && exec `(transset .8 -n dzentop >/dev/null 2>&1 &)` & 
+{% endhighlight %}
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-07-conky.sh][dotfiles-bash-07-conky]
+*	[github.com/.../dotfiles/.../bash-07-conky-simple.sh][dotfiles-bash-07-conky-simple]
+
+Finally, we have this complete script.
 
 {% highlight bash %}
 #!/usr/bin/env bash
 
-generated_output() {
+function get_dzen2_parameters() { 
+    xpos=0
+    ypos=0
+    width=640
+    height=24
+
+    fgcolor="#000000"
+    bgcolor="#ffffff"
+    font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+
+    parameters="  -x $xpos -y $ypos -w $width -h $height" 
+    parameters+=" -fn $font"
+    parameters+=" -ta c -bg $bgcolor -fg $fgcolor"
+    parameters+=" -title-name dzentop"
+}
+
+function generated_output() {
     dirname=$(dirname $(readlink -f "$0"))
     path="$dirname/../assets"
     conky -c "$path/conky.lua"
 }
 
-# ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----
-# parameters
+function run_dzen2() {
+    get_dzen2_parameters    
+    command_out="dzen2 $parameters"
+    
+    {
+        generated_output 
+    } | $command_out
+}
 
-xpos=0
-ypos=0
-width=640
-height=24
-fgcolor="#000000"
-bgcolor="#ffffff"
-font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+function detach_dzen2() {    
+    run_dzen2 &
+}
 
-parameters="  -x $xpos -y $ypos -w $width -h $height" 
-parameters+=" -fn $font"
-parameters+=" -ta c -bg $bgcolor -fg $fgcolor"
-parameters+=" -title-name dzentop"
+function detach_transset() { 
+    {
+        sleep 1
+    
+        # you may use either xorg-transset or transset-df
+        # https://github.com/wildefyr/transset-df    
+        exec `(transset .8 -n dzentop >/dev/null)`
+    } &
+}
 
 # ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----
 # main
@@ -372,12 +467,16 @@ parameters+=" -title-name dzentop"
 # remove all dzen2 instance
 pkill dzen2
 
-# execute dzen
-generated_output | dzen2 $parameters &
+# run process in the background
+detach_dzen2
 
 # optional transparency
-sleep 1 && exec `(transset .8 -n dzentop >/dev/null 2>&1 &)` & 
+detach_transset
 {% endhighlight %}
+
+**Source**:
+*	[github.com/.../dotfiles/.../bash-07-conky.sh][dotfiles-bash-07-conky]
+
 
 This would have <code>dzen2</code> output similar to this below.
 
@@ -483,3 +582,6 @@ Thank you for reading.
 [dotfiles-php-07-conky]:     {{ dotfiles_path }}/php/php-07-fork-conky.php
 [dotfiles-lua-07-conky]:     {{ dotfiles_path }}/lua/lua-07-fork-function.lua
 [dotfiles-haskell-07-conky]: {{ dotfiles_path }}/haskell/haskell-07-fork.hs
+
+[dotfiles-bash-05-fork-simple]:  {{ dotfiles_path }}/bash/bash-05-fork-simple.sh
+[dotfiles-bash-07-conky-simple]: {{ dotfiles_path }}/bash/bash-07-conky-simple.sh

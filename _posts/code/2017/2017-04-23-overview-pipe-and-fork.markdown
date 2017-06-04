@@ -13,7 +13,7 @@ excerpt:
 
 This is just a complementary topic for Dzen, Lemonbar and Conky. 
 Where they are also just tools in Desktop Ricing, 
-especially Tiling Winodw Manager. 
+especially Tiling Windww Manager. 
 Dive deeper, from decoration, to fundamental code.
 
 	Goal: A script that continuously show date and time,
@@ -82,7 +82,7 @@ then this tutorial is a good starter kit for you.
 
 For historical reason.
 BASH evolve to Perl, Perl Evolve to PHP and Python.
-And here we are with Ruby. This is why I put these script.
+And here we are with Ruby. This is why I put these scripts.
 
 I also add Lua.
 Lua only used as embedded script. But I can see Lua's potential.
