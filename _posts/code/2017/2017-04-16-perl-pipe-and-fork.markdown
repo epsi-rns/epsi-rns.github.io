@@ -190,15 +190,18 @@ Showing time and date forever in the console.
 I add <code>$dirname</code>, relative to the Perl source,
 to locate the conky script assets.
 
-At least, there are two mechanism to pipe in Perl.
-First using native <code>open</code>,
-and the second by using object oriented <code>IO::Pipe</code.
+At least, there are four mechanism to pipe in Perl.
+First three using native <code>open</code>,
+<code>IPC::Open2</code> and <code>IPC::Open3</code>,
+and the last, using object oriented <code>IO::Pipe</code.
 
 **Source**:
 
 *	[github.com/.../dotfiles/.../perl-02-uni-io.pl][dotfiles-perl-02-uni-io]
 
 *	[github.com/.../dotfiles/.../perl-02-uni-open.pl][dotfiles-perl-02-uni-open]
+
+*	[github.com/.../dotfiles/.../perl-02-uni-open2.pl][dotfiles-perl-02-uni-open2]
 
 Using <code>open</code>:
 
@@ -259,6 +262,40 @@ $pipein->close();
 $pipeout->close();
 {% endhighlight %}
 
+Using <code>IPC::Open2</code>:
+
+{% highlight perl %}
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+use File::Basename;
+use IPC::Open2;
+
+my $dirname = dirname(__FILE__);
+my $path    = "$dirname/../assets";
+my $cmdin   = "conky -c $path/conky.lua";
+my $cmdout  = "dzen2";
+
+my ($rhin, $whin);
+my $pidin  = open2 ($rhin,  $whin,  $cmdin)  
+    or die "can't pipein: $!";
+
+my ($rhout, $whout);
+my $pidout = open2 ($rhout, $whout, $cmdout) 
+    or die "can't pipeout: $!";
+
+my $line = '';
+while ($line = <$rhin>) {
+    print $whout $line;
+}
+
+waitpid( $pidin,  0 );
+waitpid( $pidout, 0 );
+
+{% endhighlight %}
+
 You can see, how simple it is.
 This would have <code>less</code> output similar to this below.
 
@@ -270,9 +307,11 @@ Similar Code:
 [[ BASH native ]][dotfiles-bash-02-native]
 [[ Perl uni IO ]][dotfiles-perl-02-uni-io]
 [[ Perl uni open ]][dotfiles-perl-02-uni-open]
+[[ Perl IPC open2 ]][dotfiles-perl-02-uni-open2]
 [[ Python subProcess]][dotfiles-python-02-subprocess]
 [[ Ruby popen ]][dotfiles-ruby-02-popen]
 [[ PHP popen ]][dotfiles-php-02-popen]
+[[ PHP proc open ]][dotfiles-php-02-proc-open]
 [[ Lua popen ]][dotfiles-lua-02-popen]
 [[ Haskell createProcess ]][dotfiles-haskell-02-process]
 
@@ -305,14 +344,19 @@ This should be self explanatory.
 
 	Do not forget to flush.
 
-As previous example, we are using two mechanism,
-<code>open</code> and <code>IO::Pipe</code>
+As previous example, we are using three mechanism,
+<code>open</code>, <code>IPC:Open2</code> and <code>IO::Pipe</code>.
+Note that <code>IPC:Open2</code> has bidirectional capability
+that we need in next guidance.
+Bidirectional means, a process can read and write at the same time.
 
 **Source**:
 
 *	[github.com/.../dotfiles/.../perl-03-pipe-io.pl][dotfiles-perl-03-pipe-io]
 
 *	[github.com/.../dotfiles/.../perl-03-pipe-open.pl][dotfiles-perl-03-pipe-open]
+
+*	[github.com/.../dotfiles/.../perl-03-pipe-open2.pl][dotfiles-perl-03-pipe-open2]
 
 Using <code>open</code>:
 
@@ -372,16 +416,49 @@ while(1) {
 $pipeout->close();
 {% endhighlight %}
 
+Using <code>IPC::Open2</code>:
+
+{% highlight perl %}
+#!/usr/bin/perl
+# https://docstore.mik.ua/orelly/perl3/prog/ch16_03.htm
+
+use warnings;
+use strict;
+
+use Time::Piece;
+use IPC::Open2;
+
+my $cmdout  = "dzen2";
+
+my ($rhout, $whout);
+my $pidout = open2 ($rhout, $whout, $cmdout) 
+    or die "can't pipeout: $!";
+    
+my $datestr;
+my $timeformat = '%a %b %d %H:%M:%S';
+
+while(1) {
+    $datestr = localtime->strftime($timeformat);
+    print $whout "$datestr \n";
+    
+    sleep 1;
+}
+
+waitpid( $pidout, 0 );
+{% endhighlight %}
+
 Similar Code: 
 [[ BASH pipe ]][dotfiles-bash-03-pipe]
 [[ Perl pipe open ]][dotfiles-perl-03-pipe-open]
 [[ Perl pipe IO ]][dotfiles-perl-03-pipe-io]
+[[ Perl IPC Open2 ]][dotfiles-perl-03-pipe-open2]
 [[ Python subProcess ]][dotfiles-python-03-subprocess]
 [[ Ruby pipe IO ]][dotfiles-ruby-03-pipe-io]
 [[ Ruby popen ]][dotfiles-ruby-03-popen]
 [[ Ruby open3 ]][dotfiles-ruby-03-open3]
 [[ Ruby PTY ]][dotfiles-ruby-03-pty]
 [[ PHP popen ]][dotfiles-php-03-popen]
+[[ PHP proc open ]][dotfiles-php-03-proc-open]
 [[ Lua popen ]][dotfiles-lua-03-popen]
 [[ Haskell createProcess ]][dotfiles-haskell-03-process]
 
@@ -703,21 +780,25 @@ Thank you for reading.
 [dotfiles-bash-02-native]:       {{ dotfiles_path }}/bash/bash-02-native.sh
 [dotfiles-perl-02-uni-io]:       {{ dotfiles_path }}/perl/perl-02-uni-io.pl
 [dotfiles-perl-02-uni-open]:     {{ dotfiles_path }}/perl/perl-02-uni-open.pl
+[dotfiles-perl-02-uni-open2]:    {{ dotfiles_path }}/perl/perl-02-uni-open2.pl
 [dotfiles-python-02-subprocess]: {{ dotfiles_path }}/python/python-02-subprocess-open.py
 [dotfiles-ruby-02-popen]:        {{ dotfiles_path }}/ruby/ruby-02-popen.rb
 [dotfiles-php-02-popen]:         {{ dotfiles_path }}/php/php-02-popen.php
+[dotfiles-php-02-proc-open]:     {{ dotfiles_path }}/php/php-02-proc-open.php
 [dotfiles-lua-02-popen]:         {{ dotfiles_path }}/lua/lua-02-popen.lua
 [dotfiles-haskell-02-process]:   {{ dotfiles_path }}/haskell/haskell-02-process.hs
 
 [dotfiles-bash-03-pipe]:         {{ dotfiles_path }}/bash/bash-03-pipe.sh
 [dotfiles-perl-03-pipe-io]:      {{ dotfiles_path }}/perl/perl-03-pipe-io.pl
 [dotfiles-perl-03-pipe-open]:    {{ dotfiles_path }}/perl/perl-03-pipe-open.pl
+[dotfiles-perl-03-pipe-open2]:   {{ dotfiles_path }}/perl/perl-03-pipe-open2.pl
 [dotfiles-python-03-subprocess]: {{ dotfiles_path }}/python/python-03-subprocess-simple.py
 [dotfiles-ruby-03-open3]:        {{ dotfiles_path }}/ruby/ruby-03-open3.rb
 [dotfiles-ruby-03-pipe-io]:      {{ dotfiles_path }}/ruby/ruby-03-pipe-io.rb
 [dotfiles-ruby-03-popen]:        {{ dotfiles_path }}/ruby/ruby-03-popen.rb
 [dotfiles-ruby-03-pty]:          {{ dotfiles_path }}/ruby/ruby-03-pty.rb
 [dotfiles-php-03-popen]:         {{ dotfiles_path }}/php/php-03-popen.php
+[dotfiles-php-03-proc-open]:     {{ dotfiles_path }}/php/php-03-proc-open.php
 [dotfiles-lua-03-popen]:         {{ dotfiles_path }}/lua/lua-03-popen.lua
 [dotfiles-haskell-03-process]:   {{ dotfiles_path }}/haskell/haskell-03-process.hs
 

@@ -221,7 +221,7 @@ do_config "rule"      "$(declare -p rules)"
 
 #### Specific BASH Issue
 
-Be aware of this one. Specific BASH only issue.
+Be aware of these two. Specific BASH only issue.
 Since BASH directly interpret the interpolation in system environment.
 Changing double quote to single quote prevent the terminal spawning,
 even when you double quote it later.
@@ -230,6 +230,18 @@ even when you double quote it later.
 declare -A keybinds=(
     ["$m-Return"]="spawn ${TERMINAL:-xfce4-terminal}"
 )
+{% endhighlight %}
+
+I also have unsolved issue with tilde <code>~</code>
+expansion inside double quote.v 
+I have still have to use some config without helper.
+
+{% highlight bash %}
+do_config 'rule'      "$(declare -p rules)"
+
+# avoid tilde problem, not using helper
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 {% endhighlight %}
 
 #### View Source File:
