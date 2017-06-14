@@ -281,13 +281,13 @@ Similar Code:
 Nothing special here,
 PHP read all exported variable from modules,
 but PHP function do not read the varable unless it defined global.
-The only workaround I found is by passing it as function arguments.
 
 <code class="code-file">helper.php</code>
 
 {% highlight php %}
-function set_tags_with_name($tag_names, $tag_keys) 
+function set_tags_with_name()
 {
+    global $tag_names, $tag_keys;
     hc("rename default '$tag_names[0]' 2>/dev/null || true");
     
     foreach($tag_names as $index=>$value) {
@@ -422,7 +422,7 @@ hc('keyunbind --all');
 hc("mouseunbind --all");
 hc("unrule -F");
 
-set_tags_with_name($tag_names, $tag_keys);
+set_tags_with_name();
 
 # do hash config
 do_config("keybind",   $keybinds);

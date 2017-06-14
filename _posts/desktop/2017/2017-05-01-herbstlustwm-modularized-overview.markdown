@@ -131,7 +131,7 @@ With these ideas. For each language, script separated into
 *	**helper**: It contain action procedure. All the code horse work.
 
 *	**startup**: Everyone has their own startup application,
-	So yeah, separate it, so anyone can freely modifytheir startup.
+	So yeah, separate it, so anyone can freely modify their startup.
 
 *	**gmc**: Google Material Color. Just a long Color Schemes.
 	Separate it, so it won't ruin Main script.
