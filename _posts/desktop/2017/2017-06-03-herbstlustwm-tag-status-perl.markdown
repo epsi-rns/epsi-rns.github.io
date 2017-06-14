@@ -106,7 +106,7 @@ Let's have a look at <code class="code-file">helper.pm</code> in github.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/helper.pm][dotfiles-perl-helper]
+*	[github.com/.../dotfiles/.../perl/helper.pm][dotfiles-perl-helper]
 
 #### Get Script Argument
 
@@ -285,7 +285,7 @@ sub get_lemon_parameters {
 
 ### Testing The Parameters
 
-Consider this code <code class="code-file">01-testparams.sh</code>.
+Consider this code <code class="code-file">01-testparams.pl</code>.
 The script call the above function to get lemon parameters.
 
 {% highlight perl %}
@@ -319,7 +319,7 @@ something similar to this result
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-perl-testparams]
+*	[github.com/.../dotfiles/.../perl/01-testparams.pl][dotfiles-perl-testparams]
 
 -- -- --
 
@@ -357,7 +357,7 @@ we need to define two things that live in output module:
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/output.sh][dotfiles-perl-output]
+*	[github.com/.../dotfiles/.../perl/output.pm][dotfiles-perl-output]
 
 #### Mutable State: Segment Variable
 
@@ -459,8 +459,7 @@ We will call these two functions later.
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
-And put the result in <code>$buffer</code>
-because BASH can't return a string.
+Ans then returning string as result.
 
 {% highlight perl %}
 sub output_by_title {
@@ -583,7 +582,7 @@ sub get_statusbar_text {
 
 ### Testing The Output
 
-Consider this code <code class="code-file">02-testoutput.sh</code>.
+Consider this code <code class="code-file">02-testoutput.pl</code>.
 The script using pipe as feed to lemonbar.
 
 We append <code>-p</code> parameter to make the panel persistent.
@@ -653,7 +652,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-perl-testoutput]
+*	[github.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-perl-testoutput]
 
 -- -- --
 

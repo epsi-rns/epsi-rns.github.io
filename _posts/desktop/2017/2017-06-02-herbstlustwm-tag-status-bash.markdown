@@ -122,7 +122,7 @@ $ ./panel.sh 0
 I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
 
-The original herbstluftwm example handle this in oneliner fashion.
+The original herbstluftwm example, handle this in oneliner fashion.
 
 {% highlight bash %}
 monitor=${1:-0}
