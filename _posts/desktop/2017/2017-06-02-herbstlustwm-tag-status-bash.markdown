@@ -14,7 +14,7 @@ excerpt:
 
 ### Preface
 
-> Goal: From Statusbar Parameters, until the Herbstclient Tag shown.
+> Goal: Show the Herbstclient Tag.
 
 	Focusing in "herbstclient tag_status". 
 
