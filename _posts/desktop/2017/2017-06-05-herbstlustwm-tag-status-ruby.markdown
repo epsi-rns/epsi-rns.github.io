@@ -1,14 +1,14 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Python"
-date:   2017-06-04 17:35:15 +0700
+title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Ruby"
+date:   2017-06-05 17:35:15 +0700
 categories: desktop
 tags: [coding, bash, herbstluftwm]
 author: epsi
 
 excerpt:
   HersbtluftWM Tag Status using Dzen2 or Lemonbar.
-  Modularized implementation in Python script.
+  Modularized implementation in Ruby script.
 
 ---
 
@@ -32,15 +32,15 @@ you might desire to read this overview.
 
 *	[HerbstluftWM Tag Status Overview][local-overview]
 
-*	[Modularized HerbstluftWM in Python][local-python-config]
+*	[Modularized HerbstluftWM in Ruby][local-ruby-config]
 
-*	[Piping and Forking in Python][local-python-pipe]
+*	[Piping and Forking in Ruby][local-ruby-pipe]
 
 #### All The Source Code:
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../python/][dotfiles-python-directory]
+*	[github.com/.../dotfiles/.../ruby/][dotfiles-ruby-directory]
 
 -- -- --
 
@@ -91,9 +91,9 @@ I present **only panel** HerbstluftWM screenshot.
 Directory Structure has been explained in preface. 
 For both Dzen2 and Lemonbar, the structure are the same.
 This figure will explain how it looks
-in <code>Python script</code> directory.
+in <code>Ruby script</code> directory.
 
-![Statusbar: Directory Structure][image-01-tree-python]{: .img-responsive }
+![Statusbar: Directory Structure][image-01-tree-ruby]{: .img-responsive }
 
 Special customization can be done in output script,
 without changing the whole stuff.
@@ -102,11 +102,11 @@ without changing the whole stuff.
 
 ### Get Geometry
 
-Let's have a look at <code class="code-file">helper.py</code> in github.
+Let's have a look at <code class="code-file">helper.rb</code> in github.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/helper.py][dotfiles-python-helper]
+*	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-ruby-helper]
 
 #### Get Script Argument
 
@@ -115,28 +115,30 @@ contain statusbar for each monitor.
 The default is using monitor 0,
 although you can use other monitor as well.
 
-{% highlight python %}
-$ ./panel.py 0
+{% highlight ruby %}
+$ ./panel.rb 0
 {% endhighlight %}
 
 I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
-Here it is our code in Python.
 
-{% highlight python %}
+Here it is our code in Ruby.
+We do not need to call return in Ruby,
+the value o the last line will be a function return.
+
+{% highlight ruby %}
 # script arguments
-def get_monitor(arguments):
-    # ternary operator
-    monitor = int(arguments[1]) if (len(arguments) > 1) else 0
-
-    return monitor
+def get_monitor(arguments)
+  # ternary operator
+  arguments.length > 0 ? arguments[0].to_i : 0
+end
 {% endhighlight %}
 
 And in main code we can call
 
-{% highlight python %}
-monitor  = helper.get_monitor(sys.argv)
-print(monitor)
+{% highlight ruby %}
+monitor = get_monitor(ARGV)
+puts(monitor)
 {% endhighlight %}
 
 This will display <code>0</code> or else such as <code>1</code>,
@@ -166,27 +168,27 @@ This will show something similar to this.
 Consider wrap the code into function.
 And use <code>$geometry</code> as global variable.
 
-{% highlight python %}
-def get_geometry(monitor):
-    raw = os.popen('herbstclient monitor_rect '+ str(monitor)).read()
+{% highlight ruby %}
+def get_geometry(monitor)
+  raw = IO.popen('herbstclient monitor_rect '+ monitor.to_s).read()
 
-    if not raw: 
-        print('Invalid monitor ' + str(monitor))
-        exit(1)
+  if raw.to_s.empty?
+    print('Invalid monitor ' + monitor.to_s)
+    exit(1)
+  end
     
-    geometry = raw.rstrip().split(' ')
-    
-    return geometry
+  raw.split(' ')
+end
 {% endhighlight %}
 
 Consider call this function from script later.
-To print array in Python,
-we just have to wrap it in <code>' '.join(geometry)</code>.
+To print array in Ruby,
+we just have to wrap it in <code>geometry.join(' ')</code>.
 
-{% highlight python %}
-monitor  = helper.get_monitor(sys.argv)
-geometry = helper.get_geometry(monitor)
-print(' '.join(geometry))
+{% highlight ruby %}
+monitor = get_monitor(ARGV)
+geometry = get_geometry(monitor)
+puts(geometry.join(' '))
 {% endhighlight %}
 
 This will produce
@@ -203,25 +205,26 @@ You can create gap on both left and right.
 
 Consider this example:
 
-{% highlight python %}
-def get_bottom_panel_geometry(height, geometry):
-    # geometry has the format X Y W H
-    return (int(geometry[0]) + 24, int(geometry[3])-height, 
-            int(geometry[2]) - 48, height )
+{% highlight ruby %}
+def get_bottom_panel_geometry(height, geometry)
+  # geometry has the format X Y W H
+  return geometry[0].to_i + 24, (geometry[3].to_i - height), 
+         geometry[2].to_i - 48, height
+end
 {% endhighlight %}
 
 We are going to use this <code>X Y W H</code>,
 to get lemonbar parameter.
 
-{% highlight python %}
+{% highlight ruby %}
 panel_height = 24
-monitor  = helper.get_monitor(sys.argv)
-geometry = helper.get_geometry(monitor)
-xpos, ypos, width, height = helper.get_bottom_panel_geometry(
-       panel_height, geometry)
+monitor = get_monitor(ARGV)
+geometry = get_geometry(monitor)
+xpos, ypos, width, height = get_bottom_panel_geometry(
+    panel_height, geometry)
 
-print('Lemonbar geometry: ' + 
-    str(width)+'x'+str(height)+'+'+str(xpos)+'+'+str(ypos) )
+puts('Lemonbar geometry: ' \
+      + "#{width}x#{height}+#{xpos}+#{ypos}")
 {% endhighlight %}
 
 This will show something similar to this result,
@@ -237,67 +240,62 @@ We almost done.
 This is the last step.
 We wrap it all inside this function below.
 
-{% highlight python %}
-def get_lemon_parameters(monitor, panel_height):  
-    # calculate geometry
-    geometry = get_geometry(monitor)
-    xpos, ypos, width, height = get_top_panel_geometry(
-       panel_height, geometry)
+{% highlight ruby %}
+def get_lemon_parameters(monitor, panel_height)
+  # calculate geometry
+  geometry = get_geometry(monitor)
+  xpos, ypos, width, height = get_top_panel_geometry(
+    panel_height, geometry)
 
-    # geometry: -g widthxheight+x+y
-    geom_res = str(width)+'x'+str(height)+'+'+str(xpos)+'+'+str(ypos)
+  # geometry: -g widthxheight+x+y
+  geom_res = "#{width}x#{height}+#{xpos}+#{ypos}"
 
-    # color, with transparency    
-    bgcolor = "'#aa000000'"
-    fgcolor = "'#ffffff'"
-    
-    # XFT: require lemonbar_xft_git 
-    font_takaop  = "takaopgothic-9"
-    font_bottom  = "monospace-9"
-    font_symbol  = "PowerlineSymbols-11"
-    font_awesome = "FontAwesome-9"
+  # color, with transparency    
+  bgcolor = "'#aa000000'"
+  fgcolor = "'#ffffff'"
 
-    # finally
-    parameters  = '  -g '+geom_res+' -u 2 ' \
-                + ' -B '+bgcolor+' -F '+fgcolor \
-                + ' -f '+font_takaop+' -f '+font_awesome+' -f '+font_symbol
+  # XFT: require lemonbar_xft_git 
+  font_takaop  = "takaopgothic-9"
+  font_bottom  = "monospace-9"
+  font_symbol  = "PowerlineSymbols-11"
+  font_awesome = "FontAwesome-9"
 
-    return parameters
+  parameters  = "  -g #{geom_res} -u 2" \
+                   " -B #{bgcolor} -F #{fgcolor}" \
+                   " -f #{font_takaop} -f #{font_awesome} -f #{font_symbol}"
+end
 {% endhighlight %}
 
 -- -- --
 
 ### Testing The Parameters
 
-Consider this code <code class="code-file">01-testparams.py</code>.
+Consider this code <code class="code-file">01-testparams.rb</code>.
 The script call the above function to get lemon parameters.
 
-{% highlight python %}
-#!/usr/bin/env python3
-
-import os
-import sys
-import helper
+{% highlight ruby %}
+#!/usr/bin/ruby
+require_relative 'helper'
 
 # initialize
 panel_height = 24
-monitor = helper.get_monitor(sys.argv)
+monitor = get_monitor(ARGV)
 
-lemon_parameters = helper.get_lemon_parameters(monitor, panel_height)
-print(lemon_parameters)
+lemon_parameters = get_lemon_parameters(monitor, panel_height)
+puts(lemon_parameters)
 {% endhighlight %}
 
 This will produce output
 something similar to this result
 
 {% highlight conf %}
--g 1280x24+0+0 -u 2  -B '#aa000000' -F '#ffffff' 
+-g 1280x24+0+0 -u 2 -B '#aa000000' -F '#ffffff' 
 -f takaopgothic-9 -f FontAwesome-9 -f PowerlineSymbols-11
 {% endhighlight %}
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/01-testparams.py][dotfiles-python-testparams]
+*	[github.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-ruby-testparams]
 
 -- -- --
 
@@ -315,9 +313,8 @@ and type <code>\pad</code> to search what it means.
 
 In script, it looks like this below.
 
-{% highlight python %}
-os.system('herbstclient pad ' + str(monitor) + ' ' 
-    + str(panel_height) + ' 0 ' + str(panel_height) + ' 0'
+{% highlight ruby %}
+system("herbstclient pad #{monitor} #{panel_height} 0 #{panel_height} 0")
 {% endhighlight %}
 
 -- -- --
@@ -334,12 +331,11 @@ we need to define two things that live in output module:
 	except that, the value won't be altered during script execution.
 	The value is defined at the beginning of program.
 
-Python does not differ between these two,
-for that reason we distinguish global constant with capital case.
+Contsant in Ruby start with capital case.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/output.py][dotfiles-python-output]
+*	[github.com/.../dotfiles/.../ruby/output.rb][dotfiles-ruby-output]
 
 #### Mutable State: Segment Variable
 
@@ -355,7 +351,7 @@ In this case, we only have two segment in panel.
 
 In script, we initialize the variable as below
 
-{% highlight python %}
+{% highlight ruby %}
 segment_windowtitle = '' # empty string
 tags_status = []         # empty array
 {% endhighlight %}
@@ -377,27 +373,27 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
-{% highlight python %}
-TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi', 
-    '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū']
+{% highlight ruby %}
+@TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi', 
+  '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū']
 {% endhighlight %}
 
 #### Global Constant: Decoration
 
 Decoration consist lemonbar formatting tag.
 
-{% highlight python %}
-SEPARATOR = '%{B-}%{F' + color['yellow500'] + '}|%{B-}%{F-}'
+{% highlight ruby %}
+@SEPARATOR = "%{B-}%{F#{COLOR['yellow500']}}|%{B-}%{F-}"
 
 # Powerline Symbol
-RIGHT_HARD_ARROW = ""
-RIGHT_SOFT_ARROW = ""
-LEFT_HARD_ARROW  = ""
-LEFT_SOFT_ARROW  = ""
+@RIGHT_HARD_ARROW = ""
+@RIGHT_SOFT_ARROW = ""
+@LEFT_HARD_ARROW  = ""
+@LEFT_SOFT_ARROW  = ""
 
 # theme
-PRE_ICON    = '%{F' + color['yellow500'] + '}'
-POST_ICON   = '%{F-}'
+@PRE_ICON    = "%{F#{COLOR['yellow500']}}"
+@POST_ICON   = "%{F-}"
 {% endhighlight %}
 
 -- -- --
@@ -407,27 +403,25 @@ POST_ICON   = '%{F-}'
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
-{% highlight python %}
-def set_tag_value(monitor):
-    global tags_status
-
-    raw = os.popen('herbstclient tag_status ' + str(monitor)).read()
-    raw = raw.strip()
-    tags_status = raw.split("\t")
+{% highlight ruby %}
+def set_tag_value(monitor)
+  raw = IO.popen('herbstclient tag_status ' + monitor.to_s).read()
+  @tags_status = raw.strip.split("\t")
+end
 {% endhighlight %}
 
 This function above turn the tag status string
 into array of tags for later use.
 
-{% highlight python %}
-def set_windowtitle(windowtitle):
-    global segment_windowtitle
-    icon = PRE_ICON + '' + POST_ICON
-    
-    windowtitle = windowtitle.strip()
+{% highlight ruby %}
+def set_windowtitle(windowtitle)
+  icon = @PRE_ICON  + '' + @POST_ICON 
+
+  windowtitle = windowtitle.strip
       
-    segment_windowtitle = ' ' + icon + \
-        ' %{B-}%{F' + color['grey700'] + '} ' + windowtitle
+  @segment_windowtitle = " #{icon} %{B-}" \
+    + "%{F#{COLOR['grey700']}} #{windowtitle}"
+end
 {% endhighlight %}
 
 We will call these two functions later.
@@ -440,11 +434,10 @@ This is self explanatory.
 I put separator, just in case you want to add other segment.
 Ans then returning string as result.
 
-{% highlight python %}
-def output_by_title():
-    text = segment_windowtitle + ' ' + SEPARATOR + '  '
-
-    return text
+{% highlight ruby %}
+def output_by_title()
+  text = "#{@segment_windowtitle} #{@SEPARATOR}  ";
+end
 {% endhighlight %}
 
 -- -- --
@@ -475,58 +468,55 @@ This has some parts:
 	(Background, Foreground, Underline).
 
 
-{% highlight python %}
-def output_by_tag(monitor, tag_status):
-    tag_index  = tag_status[1:2]
-    tag_mark   = tag_status[0:1]
-    tag_name   = TAG_SHOWS[int(tag_index) - 1] # zero based
+{% highlight ruby %}
+def output_by_tag(monitor, tag_status)
+  tag_index  = tag_status[1..1]
+  tag_mark   = tag_status[0..0]
+  tag_name   = @TAG_SHOWS[tag_index.to_i - 1] # zero based
 
-    # ----- pre tag
-
-    if tag_mark == '#':
-        text_pre = '%{B' + color['blue500'] + '}' \
-                   '%{F' + color['black'] + '}' \
-                   '%{U' + color['white'] + '}%{+u}' \
-                 + RIGHT_HARD_ARROW \
-                 + '%{B' + color['blue500'] + '}' \
-                   '%{F' + color['white'] + '}' \
-                   '%{U' + color['white'] + '}%{+u}'
-    elif tag_mark == '+':
-        text_pre = '%{B' + color['yellow500'] + '}' \
-                   '%{F' + color['grey400'] + '}'
-    elif tag_mark == ':':
-        text_pre = '%{B-}%{F' + color['white'] + '}' \
-                   '%{U' + color['red500'] + '}%{+u}'
-    elif tag_mark == '!':
-        text_pre = '%{B' + color['red500'] + '}' \
-                   '%{F' + color['white'] + '}' \
-                   '%{U' + color['white'] + '}%{+u}'
-    else:
-        text_pre = '%{B-}%{F' + color['grey600'] + '}%{-u}'
-
-    # ----- tag by number
+  # ----- pre tag
     
-    # clickable tags
-    text_name = '%{A:herbstclient focus_monitor "' \
-              + str(monitor) + '" && ' + 'herbstclient use "' \
-              + tag_index + '":} ' + tag_name + ' %{A} '
+  case tag_mark
+  when '#'
+    text_pre = "%{B#{COLOR['blue500']}}%{F#{COLOR['black']}}" \
+             + "%{U#{COLOR['white']}}%{+u}#{@RIGHT_HARD_ARROW}" \
+             + "%{B#{COLOR['blue500']}}%{F#{COLOR['white']}}" \
+             + "%{U#{COLOR['white']}}%{+u}"
+  when '+'
+    text_pre = "%{B#{COLOR['yellow500']}}%{F#{COLOR['grey400']}}"
+  when ':'
+    text_pre = "%{B-}%{F#{COLOR['white']}}" \
+             + "%{U#{COLOR['red500']}}%{+u}"
+  when '!'
+    text_pre = "%{B#{COLOR['red500']}}%{F#{COLOR['white']}}" \
+             + "%{U#{COLOR['white']}}%{+u}"
+  else
+    text_pre = "%{B-}%{F#{COLOR['grey600']}}%{-u}"
+  end
 
-    # non clickable tags
-    # text_name = ' ' + tag_name + ' '
-    
-    # ----- post tag
+  # ----- tag by number
 
-    if tag_mark == '#':
-        text_post = '%{B-}' \
-                    '%{F' + color['blue500'] + '}' \
-                    '%{U' + color['red500'] + '}%{+u}' \
-                  + RIGHT_HARD_ARROW
-    else: 
-        text_post = ''
+  # clickable tags
+  text_name = "%{A:herbstclient focus_monitor \"#{monitor}\" && " \
+            + "herbstclient use \"#{tag_index}\":} #{tag_name} %{A} "
     
-    text_clear = '%{B-}%{F-}%{-u}';
+  # non clickable tags
+  # text_name = " #{tag_name} "
+    
+  # ----- post tag
+
+  if tag_mark == '#'
+    text_post = "%{B-}%{F#{COLOR['blue500']}}" \
+              + "%{U#{COLOR['red500']}}%{+u}" \
+              + @RIGHT_HARD_ARROW;
+  else
+    text_post = ""        
+  end
+  
+  text_clear = '%{B-}%{F-}%{-u}'
      
-    return (text_pre + text_name + text_post + text_clear)
+  text_pre + text_name + text_post + text_clear
+end
 {% endhighlight %}
 
 -- -- --
@@ -538,73 +528,60 @@ Lemonbar using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
 
-{% highlight python %}
-def get_statusbar_text(monitor):
-    text = ''
+{% highlight ruby %}
+def get_statusbar_text(monitor)
+  text = ''
 
-    # draw tags
-    text += '%{l}'
-    for tag_status in tags_status:
-        text += output_by_tag(monitor, tag_status)
+  # draw tags
+  #text << '%{l}'
+  @tags_status.each { |tag_status| 
+    text << output_by_tag(monitor, tag_status) }
     
-    # draw window title    
-    text += '%{r}'
-    text += output_by_title()
-    
-    return text
+  # draw window title
+  text << '%{r}'
+  text << output_by_title()
+end
 {% endhighlight %}
 
 -- -- --
 
 ### Testing The Output
 
-Consider this code <code class="code-file">02-testoutput.py</code>.
+Consider this code <code class="code-file">02-testoutput.rb</code>.
 The script using pipe as feed to lemonbar.
 
 We append <code>-p</code> parameter to make the panel persistent.
 
-{% highlight python %}
-#!/usr/bin/env python3
-
-import os
-import sys
-import helper
+{% highlight ruby %}
+#!/usr/bin/ruby
+require_relative 'helper'
 
 # process handler
-def test_lemon(monitor, parameters): 
-    import subprocess
-    import output
- 
-    command_out  = 'lemonbar ' + parameters + ' -p'
+def test_lemon(monitor, parameters)
+  require_relative 'output'
 
-    pipe_out = subprocess.Popen(
-            [command_out], 
-            stdin  = subprocess.PIPE,
-            shell  = True,
-            universal_newlines=True
-        )
-
+  command_out  = 'lemonbar ' + parameters + ' -p'
+  IO.popen(command_out, 'w') do |f|   
     # initialize statusbar
-    output.set_tag_value(monitor)
-    output.set_windowtitle('test')
+    set_tag_value(monitor)
+    set_windowtitle('test')
+      
+    text = get_statusbar_text(monitor)
+    f.puts(text)
         
-    text = output.get_statusbar_text(monitor)
-    pipe_out.stdin.write(text + '\n')
-    pipe_out.stdin.flush()
-
-    pipe_out.stdin.close()
+    f.close()    
+  end
+end
 
 # initialize
 panel_height = 24
-monitor = helper.get_monitor(sys.argv)
+monitor = get_monitor(ARGV)
 
-os.system('herbstclient pad ' + str(monitor) + ' ' 
-    + str(panel_height) + ' 0 ' + str(panel_height) + ' 0')
+system("herbstclient pad #{monitor} #{panel_height} 0 #{panel_height} 0")
 
-lemon_parameters = helper.get_lemon_parameters(monitor, panel_height)
+lemon_parameters = get_lemon_parameters(monitor, panel_height)
 
 # test
-# run process
 test_lemon(monitor, lemon_parameters)
 {% endhighlight %}
 
@@ -626,7 +603,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/01-testoutput.py][dotfiles-python-testoutput]
+*	[github.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-ruby-testoutput]
 
 -- -- --
 
@@ -654,10 +631,10 @@ Enjoy the statusbar !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 
-[image-01-tree-python]:  {{ asset_path }}/hlwm-statusbar-01-tree-python.png
+[image-01-tree-ruby]:  {{ asset_path }}/hlwm-statusbar-01-tree-ruby.png
 
-[local-python-config]: {{ site.url }}/desktop/2017/05/04/herbstlustwm-modularized-python.html
-[local-python-pipe]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-ruby-config]: {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-ruby.html
+[local-ruby-pipe]:   {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
@@ -671,17 +648,17 @@ Enjoy the statusbar !
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-perl]:    {{ dotfiles_path }}/perl
 [dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-ruby]:    {{ dotfiles_path }}/ruby
 [dotfiles-PHP]:     {{ dotfiles_path }}/php
 [dotfiles-Lua]:     {{ dotfiles_path }}/lua
 [dotfiles-Haskell]: {{ dotfiles_path }}/haskell
 
-[dotfiles-python-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
-[dotfiles-python-testparams]:  {{ dotfiles_path }}/python/01-testparams.py
-[dotfiles-python-testoutput]:  {{ dotfiles_path }}/python/02-testoutput.py
-[dotfiles-python-panel]:       {{ dotfiles_path }}/python/panel.py
-[dotfiles-python-gmc]:         {{ dotfiles_path }}/python/assets/gmc.py
-[dotfiles-python-helper]:      {{ dotfiles_path }}/python/helper.py
-[dotfiles-python-output]:      {{ dotfiles_path }}/python/output.py
-[dotfiles-python-pipehandler]: {{ dotfiles_path }}/python/pipehandler.py
+[dotfiles-ruby-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/ruby
+[dotfiles-ruby-testparams]:  {{ dotfiles_path }}/ruby/01-testparams.rb
+[dotfiles-ruby-testoutput]:  {{ dotfiles_path }}/ruby/02-testoutput.rb
+[dotfiles-ruby-panel]:       {{ dotfiles_path }}/ruby/panel.rb
+[dotfiles-ruby-gmc]:         {{ dotfiles_path }}/ruby/assets/gmc.rb
+[dotfiles-ruby-helper]:      {{ dotfiles_path }}/ruby/helper.rb
+[dotfiles-ruby-output]:      {{ dotfiles_path }}/ruby/output.rb
+[dotfiles-ruby-pipehandler]: {{ dotfiles_path }}/ruby/pipehandler.rb
 
