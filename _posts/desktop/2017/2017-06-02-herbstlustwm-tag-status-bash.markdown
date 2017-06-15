@@ -358,6 +358,9 @@ we need to define two things that live in output module:
 	except that, the value won't be altered during script execution.
 	The value is defined at the beginning of program.
 
+There are ways to define constant in BASH.
+Constant in PHP may begin with the word <code>readonly</code>.
+
 #### View Source File:
 
 *	[github.com/.../dotfiles/.../bash/output.sh][dotfiles-bash-output]
@@ -623,9 +626,8 @@ panel_height=24
 get_monitor ${@}
 get_lemon_parameters $monitor $panel_height
 
-herbstclient pad $monitor $panel_height 0 $panel_height 0
-
 # test
+herbstclient pad $monitor $panel_height 0 $panel_height 0
 test_lemon $monitor $lemon_parameters
 {% endhighlight %}
 
@@ -634,7 +636,7 @@ This will produce a panel on top.
 ![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 The panel only contain the initialized version of the text.
-It does not really interact with the Herbstluft event.
+It does not really interact with the HerbstluftWM event.
 
 You can also click the clickable area to see it's result.
 It only show text, not executed yet.
@@ -654,7 +656,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 ### Continue on Next Tutorial
 
 It is already a long tutorial.
-It is time to take a break.
+It is time to take a break for a while.
 
 We are going to continue on next tutorial
 to cover interaction between the script process
@@ -705,4 +707,3 @@ Enjoy the statusbar !
 [dotfiles-bash-helper]:      {{ dotfiles_path }}/bash/helper.sh
 [dotfiles-bash-output]:      {{ dotfiles_path }}/bash/output.sh
 [dotfiles-bash-pipehandler]: {{ dotfiles_path }}/bash/pipehandler.sh
-

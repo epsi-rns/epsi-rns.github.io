@@ -166,7 +166,7 @@ This will show something similar to this.
 ![HerbstluftWM: Monitor Rectangle][image-hlwm-02-monitor-rect]{: .img-responsive }
 
 Consider wrap the code into function.
-And use <code>$geometry</code> as global variable.
+And get an array as function return.
 
 {% highlight ruby %}
 def get_geometry(monitor)
@@ -321,7 +321,7 @@ system("herbstclient pad #{monitor} #{panel_height} 0 #{panel_height} 0")
 
 ### Preparing Output
 
-Let's have a look at <code class="code-file">output.sh</code> in github.
+Let's have a look at <code class="code-file">output.rb</code> in github.
 Before explain deep about Function,
 we need to define two things that live in output module:
 
@@ -331,7 +331,8 @@ we need to define two things that live in output module:
 	except that, the value won't be altered during script execution.
 	The value is defined at the beginning of program.
 
-Contsant in Ruby start with capital case.
+Constant in Ruby start with capital case.
+The <code>@</code> before the variable means it is an instance variable.
 
 #### View Source File:
 
@@ -576,12 +577,10 @@ end
 # initialize
 panel_height = 24
 monitor = get_monitor(ARGV)
-
-system("herbstclient pad #{monitor} #{panel_height} 0 #{panel_height} 0")
-
 lemon_parameters = get_lemon_parameters(monitor, panel_height)
 
 # test
+system("herbstclient pad #{monitor} #{panel_height} 0 #{panel_height} 0")
 test_lemon(monitor, lemon_parameters)
 {% endhighlight %}
 
@@ -590,7 +589,7 @@ This will produce a panel on top.
 ![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 The panel only contain the initialized version of the text.
-It does not really interact with the Herbstluft event.
+It does not really interact with the HerbstluftWM event.
 
 You can also click the clickable area to see it's result.
 It only show text, not executed yet.
@@ -610,7 +609,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 ### Continue on Next Tutorial
 
 It is already a long tutorial.
-It is time to take a break.
+It is time to take a break for a while.
 
 We are going to continue on next tutorial
 to cover interaction between the script process
@@ -646,9 +645,9 @@ Enjoy the statusbar !
 [local-haskell]:  {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
-[dotfiles-perl]:    {{ dotfiles_path }}/perl
-[dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-Perl]:    {{ dotfiles_path }}/perl
+[dotfiles-Python]:  {{ dotfiles_path }}/python
+[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
 [dotfiles-PHP]:     {{ dotfiles_path }}/php
 [dotfiles-Lua]:     {{ dotfiles_path }}/lua
 [dotfiles-Haskell]: {{ dotfiles_path }}/haskell
@@ -661,4 +660,3 @@ Enjoy the statusbar !
 [dotfiles-ruby-helper]:      {{ dotfiles_path }}/ruby/helper.rb
 [dotfiles-ruby-output]:      {{ dotfiles_path }}/ruby/output.rb
 [dotfiles-ruby-pipehandler]: {{ dotfiles_path }}/ruby/pipehandler.rb
-

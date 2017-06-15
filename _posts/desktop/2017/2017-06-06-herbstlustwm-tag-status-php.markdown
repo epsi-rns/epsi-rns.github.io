@@ -1,14 +1,14 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Perl"
-date:   2017-06-03 17:35:15 +0700
+title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in PHP"
+date:   2017-06-06 17:35:15 +0700
 categories: desktop
 tags: [coding, bash, herbstluftwm]
 author: epsi
 
 excerpt:
   HersbtluftWM Tag Status using Dzen2 or Lemonbar.
-  Modularized implementation in Perl script.
+  Modularized implementation in PHP script.
 
 ---
 
@@ -32,15 +32,15 @@ you might desire to read this overview.
 
 *	[HerbstluftWM Tag Status Overview][local-overview]
 
-*	[Modularized HerbstluftWM in Perl][local-perl-config]
+*	[Modularized HerbstluftWM in PHP][local-php-config]
 
-*	[Piping and Forking in Perl][local-perl-pipe]
+*	[Piping and Forking in PHP][local-php-pipe]
 
 #### All The Source Code:
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../perl/][dotfiles-perl-directory]
+*	[github.com/.../dotfiles/.../php/][dotfiles-php-directory]
 
 -- -- --
 
@@ -55,7 +55,7 @@ Tutorial/ Guidance/ Article:
 [[ BASH ][local-BASH]]
 [[ Perl ][local-Perl]]
 [[ Python ][local-python]]
-[[ Ruby ][local-Ruby]]
+[[ PHP ][local-PHP]]
 [[ PHP ][local-PHP]]
 [[ Lua ][local-Lua]]
 [[ Haskell ][local-Haskell]]
@@ -64,7 +64,7 @@ Source Code Directory:
 [[ BASH ][dotfiles-BASH]]
 [[ Perl ][dotfiles-Perl]]
 [[ Python ][dotfiles-python]]
-[[ Ruby ][dotfiles-Ruby]]
+[[ PHP ][dotfiles-PHP]]
 [[ PHP ][dotfiles-PHP]]
 [[ Lua ][dotfiles-Lua]]
 [[ Haskell ][dotfiles-Haskell]]
@@ -91,9 +91,9 @@ I present **only panel** HerbstluftWM screenshot.
 Directory Structure has been explained in preface. 
 For both Dzen2 and Lemonbar, the structure are the same.
 This figure will explain how it looks
-in <code>Perl script</code> directory.
+in <code>PHP script</code> directory.
 
-![Statusbar: Directory Structure][image-01-tree-perl]{: .img-responsive }
+![Statusbar: Directory Structure][image-01-tree-php]{: .img-responsive }
 
 Special customization can be done in output script,
 without changing the whole stuff.
@@ -102,11 +102,11 @@ without changing the whole stuff.
 
 ### Get Geometry
 
-Let's have a look at <code class="code-file">helper.pm</code> in github.
+Let's have a look at <code class="code-file">helper.php</code> in github.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/helper.pm][dotfiles-perl-helper]
+*	[github.com/.../dotfiles/.../php/helper.php][dotfiles-php-helper]
 
 #### Get Script Argument
 
@@ -115,32 +115,31 @@ contain statusbar for each monitor.
 The default is using monitor 0,
 although you can use other monitor as well.
 
-{% highlight perl %}
-$ ./panel.pm 0
+{% highlight php %}
+$ ./panel.php 0
 {% endhighlight %}
 
 I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
-Here it is our code in Perl.
 
-{% highlight perl %}
-# script arguments
-sub get_monitor {
-    my @arguments = @_; 
-    my $num_args  = $#arguments;
-   
-    # ternary operator
-    my $monitor = ($num_args > 0) ? $arguments[0] : 0;
-    
-    return $monitor;
+Here it is our code in PHP.
+We do not need to call return in PHP,
+the value o the last line will be a function return.
+
+{% highlight php %}
+function get_monitor($arguments)
+{
+    // ternary operator
+    return count($arguments) > 0 ? (int)$arguments[0] : 0;
 }
 {% endhighlight %}
 
 And in main code we can call
 
-{% highlight perl %}
-my $monitor = helper::get_monitor(@ARGV);
-print $monitor."\n";
+{% highlight php %}
+$panel_height = 24;
+$monitor = get_monitor($argv);
+echo $monitor;
 {% endhighlight %}
 
 This will display <code>0</code> or else such as <code>1</code>,
@@ -170,31 +169,28 @@ This will show something similar to this.
 Consider wrap the code into function.
 And get an array as function return.
 
-{% highlight perl %}
-sub get_geometry {
-    my $monitor = shift;
+{% highlight php %}
+function get_geometry($monitor)
+{
+    $raw = shell_exec('herbstclient monitor_rect '.$monitor);
 
-    my $geometry_qx = qx(herbstclient monitor_rect "$monitor");
-    if ($geometry_qx eq "") { 
-        print "Invalid monitor $monitor\n";
-        exit 1
+    if (empty($raw)) {
+        print('Invalid monitor '.$monitors);
+        exit(1);
     }
     
-    my @geometry = split / /, $geometry_qx;
-    
-    return @geometry;
+    return explode(' ', trim($raw));
 }
 {% endhighlight %}
 
 Consider call this function from script later.
-To print array in Perl,
-we just have to wrap it in <code>"@geometry"</code>.
+To print array in PHP,
+we just have to wrap it in <code>implode(' ', $geometry)</code>.
 
-{% highlight perl %}
-my $panel_height = 24;
-my $monitor  = helper::get_monitor(@ARGV);
-my @geometry = helper::get_geometry($monitor);
-print "@geometry";
+{% highlight php %}
+$monitor  = get_monitor($argv);
+$geometry = get_geometry($monitor);
+echo implode(' ', $geometry)."\n";
 {% endhighlight %}
 
 This will produce
@@ -211,28 +207,27 @@ You can create gap on both left and right.
 
 Consider this example:
 
-{% highlight perl %}
-sub get_bottom_panel_geometry {
-    my $height = shift;
-    my @geometry = @_;
-
-    # geometry has the format X Y W H
-    return ($geometry[0] + 24, $geometry[3] - $height, 
-            $geometry[2] - 48, $height);
+{% highlight php %}
+function get_bottom_panel_geometry($height, $geometry)
+{
+    // geometry has the format X Y W H
+    return array(
+        $geometry[0] + 24, ($geometry[3]-$height), 
+        $geometry[2] - 48, $height);
 }
 {% endhighlight %}
 
 We are going to use this <code>X Y W H</code>,
 to get lemonbar parameter.
 
-{% highlight perl %}
-my $panel_height = 24;
-my $monitor  = helper::get_monitor(@ARGV);
-my @geometry = helper::get_geometry($monitor);
-my ($xpos, $ypos, $width, $height) = 
-        helper::get_bottom_panel_geometry($panel_height, @geometry);
+{% highlight php %}
+$panel_height = 24;
+$monitor  = get_monitor($argv);
+$geometry = get_geometry($monitor);
+list($xpos, $ypos, $width, $height) = get_bottom_panel_geometry(
+    $panel_height, $geometry);
 
-print "Lemonbar geometry: ${width}x${height}+${xpos}+${ypos}\n";
+echo "Lemonbar geometry: ${width}x${height}+${xpos}+${ypos}\n"
 {% endhighlight %}
 
 This will show something similar to this result,
@@ -248,34 +243,32 @@ We almost done.
 This is the last step.
 We wrap it all inside this function below.
 
-{% highlight perl %}
-sub get_lemon_parameters {   
-    # parameter: function argument
-    my $monitor = shift;
-    my $panel_height = shift;
-
+{% highlight php %}
+function get_lemon_parameters($monitor, $panel_height)
+{
     # calculate geometry
-    my @geometry = get_geometry($monitor);
-    my ($xpos, $ypos, $width, $height) = 
-       get_top_panel_geometry($panel_height, @geometry); 
+    $geometry = get_geometry($monitor);
+    list($xpos, $ypos, $width, $height) = get_top_panel_geometry(
+        $panel_height, $geometry);
+
 
     # geometry: -g widthxheight+x+y
-    my $geom_res = "${width}x${height}+${xpos}+${ypos}";
+    $geom_res = "${width}x${height}+${xpos}+${ypos}";
     
-    # color, with transparency
-    my $bgcolor = '#aa000000';
-    my $fgcolor = '#ffffff';
-    
-    # XFT: require lemonbar_xft_git 
-    my $font_takaop  = "takaopgothic-9";
-    my $font_bottom  = "monospace-9";
-    my $font_symbol  = "PowerlineSymbols-11";
-    my $font_awesome = "FontAwesome-9";
+    # color, with transparency    
+    $bgcolor = "'#aa000000'";
+    $fgcolor = "'#ffffff'";
 
-    # finally
-    my $parameters = "  -g $geom_res -u 2"
-                   . " -B $bgcolor -F $fgcolor"
-                   . " -f $font_takaop -f $font_awesome -f $font_symbol";
+    # XFT: require lemonbar_xft_git 
+    $font_takaop  = "takaopgothic-9";
+    $font_bottom  = "monospace-9";
+    $font_symbol  = "PowerlineSymbols-11";
+    $font_awesome = "FontAwesome-9";
+
+    # finally  
+    $parameters  =  "  -g $geom_res -u 2"
+                 . " -B $bgcolor -F $fgcolor"
+                 . " -f $font_takaop -f $font_awesome -f $font_symbol"; 
 
     return $parameters;
 }
@@ -285,41 +278,34 @@ sub get_lemon_parameters {
 
 ### Testing The Parameters
 
-Consider this code <code class="code-file">01-testparams.pl</code>.
+Consider this code <code class="code-file">01-testparams.php</code>.
 The script call the above function to get lemon parameters.
 
-{% highlight perl %}
-#!/usr/bin/perl
+{% highlight php %}
+#!/usr/bin/php 
+<?php # using PHP7
 
-use warnings;
-use strict;
-
-use File::Basename;
-use lib dirname(__FILE__);
-
-use helper;
+require_once(__DIR__.'/helper.php');
 
 # initialize
-my $panel_height = 24;
-my $monitor = helper::get_monitor(@ARGV);
+$panel_height = 24;
+$monitor = get_monitor($argv);
 
-my $lemon_parameters = helper::get_lemon_parameters(
-    $monitor, $panel_height);
-
-print $lemon_parameters."\n";
+$lemon_parameters = get_lemon_parameters($monitor, $panel_height);
+echo $lemon_parameters."\n";
 {% endhighlight %}
 
 This will produce output
 something similar to this result
 
 {% highlight conf %}
--g 1280x24+0+0 -u 2 -B #aa000000 -F #ffffff 
+-g 1280x24+0+0 -u 2 -B '#aa000000' -F '#ffffff' 
 -f takaopgothic-9 -f FontAwesome-9 -f PowerlineSymbols-11
 {% endhighlight %}
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/01-testparams.pl][dotfiles-perl-testparams]
+*	[github.com/.../dotfiles/.../php/01-testparams.php][dotfiles-php-testparams]
 
 -- -- --
 
@@ -337,7 +323,7 @@ and type <code>\pad</code> to search what it means.
 
 In script, it looks like this below.
 
-{% highlight perl %}
+{% highlight php %}
 system("herbstclient pad $monitor $panel_height 0 $panel_height 0");
 {% endhighlight %}
 
@@ -345,7 +331,7 @@ system("herbstclient pad $monitor $panel_height 0 $panel_height 0");
 
 ### Preparing Output
 
-Let's have a look at <code class="code-file">output.sh</code> in github.
+Let's have a look at <code class="code-file">output.php</code> in github.
 Before explain deep about Function,
 we need to define two things that live in output module:
 
@@ -355,12 +341,11 @@ we need to define two things that live in output module:
 	except that, the value won't be altered during script execution.
 	The value is defined at the beginning of program.
 
-There are a several ways to define constant in Perl.
-Constant in Perl may begin with the word <code>use const</code>.
+Constant in PHP begin with the word <code>const</code>.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/output.pm][dotfiles-perl-output]
+*	[github.com/.../dotfiles/.../php/output.php][dotfiles-php-output]
 
 #### Mutable State: Segment Variable
 
@@ -376,9 +361,9 @@ In this case, we only have two segment in panel.
 
 In script, we initialize the variable as below
 
-{% highlight perl %}
-my $segment_windowtitle = ''; # empty string
-my @tags_status = [];         # empty array
+{% highlight php %}
+$segment_windowtitle = ''; # empty string
+$tags_status = [];         # empty array
 {% endhighlight %}
 
 Each segment buffered.
@@ -398,27 +383,27 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
-{% highlight perl %}
-use constant TAG_SHOWS => ['一 ichi', '二 ni', '三 san', '四 shi', 
-    '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū'];
+{% highlight php %}
+const TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi', 
+  '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū'];
 {% endhighlight %}
 
 #### Global Constant: Decoration
 
 Decoration consist lemonbar formatting tag.
 
-{% highlight perl %}
-use constant SEPARATOR => "%{B-}%{F$color{'yellow500'}}|%{B-}%{F-}";
+{% highlight php %}
+const SEPARATOR = "%{B-}%{F".COLOR['yellow500']."}|%{B-}%{F-}";
 
-# Powerline Symbol
-use constant RIGHT_HARD_ARROW => "";
-use constant RIGHT_SOFT_ARROW => "";
-use constant LEFT_HARD_ARROW  => "";
-use constant LEFT_SOFT_ARROW  => "";
+// Powerline Symbol
+const RIGHT_HARD_ARROW = "";
+const RIGHT_SOFT_ARROW = "";
+const LEFT_HARD_ARROW  = "";
+const LEFT_SOFT_ARROW  = "";
 
-# theme
-use constant PRE_ICON  => "%{F$color{'yellow500'}}";
-use constant POST_ICON => "%{F-}";
+// theme
+const PRE_ICON    = "%{F".COLOR['yellow500']."}";
+const POST_ICON   = "%{F-}";
 {% endhighlight %}
 
 -- -- --
@@ -428,29 +413,30 @@ use constant POST_ICON => "%{F-}";
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
-{% highlight perl %}
-sub set_tag_value {
-    my $monitor = shift;
-    
-    my $tag_status_qx = qx(herbstclient tag_status $monitor);
-       $tag_status_qx =~ s/^\s+|\s+$//g;
-    @tags_status = split(/\t/, $tag_status_qx);
+{% highlight php %}
+function set_tag_value($monitor)
+{
+    global $tags_status;
+
+    $raw = shell_exec("herbstclient tag_status $monitor");
+    $tags_status = explode("\t", trim($raw));
 }
 {% endhighlight %}
 
 This function above turn the tag status string
- into array of tags for later use.
+into array of tags for later use.
 
-{% highlight perl %}
-sub set_windowtitle {
-    my $windowtitle = shift;  
-    my $icon = PRE_ICON."".POST_ICON;
+{% highlight php %}
+function set_windowtitle($windowtitle)
+{
+    global $segment_windowtitle;
 
-    # trim both ends
-    $windowtitle =~ s/^\s+|\s+$//g;
+    $icon = PRE_ICON."".POST_ICON;
+    
+    $windowtitle = trim($windowtitle);
       
-    $segment_windowtitle = " $icon "
-                         . "%{B-}%{F$color{'grey700'}} $windowtitle";
+    $segment_windowtitle = " ${icon} %{B-}"
+        . "%{F".COLOR['grey700']."} ${windowtitle}";
 }
 {% endhighlight %}
 
@@ -464,10 +450,12 @@ This is self explanatory.
 I put separator, just in case you want to add other segment.
 Ans then returning string as result.
 
-{% highlight perl %}
-sub output_by_title {
-    my $text = "$segment_windowtitle ".SEPARATOR."  ";
-
+{% highlight php %}
+function output_by_title()
+{
+    global $segment_windowtitle;    
+    $text  = "$segment_windowtitle ".SEPARATOR."  ";
+    
     return $text;
 }
 {% endhighlight %}
@@ -500,54 +488,56 @@ This has some parts:
 	(Background, Foreground, Underline).
 
 
-{% highlight perl %}
-sub output_by_tag {
-    my $monitor = shift;    
-    
-    my $tag_status = shift;
-    my $tag_index  = substr($tag_status, 1, 1);
-    my $tag_mark   = substr($tag_status, 0, 1);
-    my $tag_name   = TAG_SHOWS->[$tag_index - 1]; # zero based
+{% highlight php %}
+function output_by_tag($monitor, $tag_status)
+{
+    $tag_index  = substr($tag_status, 1, 1);
+    $tag_mark   = substr($tag_status, 0, 1);
+    $tag_name   = TAG_SHOWS[(int)$tag_index - 1]; # zero based
 
     # ----- pre tag
 
-    my $text_pre = '';
-    if ($tag_mark eq '#') {
-        $text_pre = "%{B$color{'blue500'}}%{F$color{'black'}}"
-                  . "%{U$color{'white'}}%{+u}".RIGHT_HARD_ARROW
-                  . "%{B$color{'blue500'}}%{F$color{'white'}}"
-                  . "%{U$color{'white'}}%{+u}";
-    } elsif ($tag_mark eq '+') {
-        $text_pre = "%{B$color{'yellow500'}}%{F$color{'grey400'}}";
-    } elsif ($tag_mark eq ':') {
-        $text_pre = "%{B-}%{F$color{'white'}}"
-                  . "%{U$color{'red500'}}%{+u}";
-    } elsif ($tag_mark eq '!') {
-        $text_pre = "%{B$color{'red500'}}%{F$color{'white'}}"
-                  . "%{U$color{'white'}}%{+u}";
-    } else {
-        $text_pre = "%{B-}%{F$color{'grey600'}}%{-u}";
+    switch ($tag_mark) {
+    case "#":
+        $text_pre = "%{B".COLOR['blue500']."}%{F".COLOR['black']."}"
+                  . "%{U".COLOR['white']."}%{+u}".RIGHT_HARD_ARROW
+                  . "%{B".COLOR['blue500']."}%{F".COLOR['white']."}"
+                  . "%{U".COLOR['white']."}%{+u}";
+        break;
+    case "+":
+        $text_pre = "%{B".COLOR['yellow500']."}%{F".COLOR['grey400']."}";
+        break;
+    case ":":
+        $text_pre = $text_pre = "%{B-}%{F".COLOR['white']."}"
+                  . "%{U".COLOR['red500']."}%{+u}";
+        break;
+    case "!":
+        $text_pre = "%{B".COLOR['red500']."}%{F".COLOR['white']."}"
+                  . "%{U".COLOR['white']."}%{+u}";
+        break;
+    default:
+        $text_pre = "%{B-}%{F".COLOR['grey600']."}%{-u}";
     }
 
     # ----- tag by number
-
-    # clickable tags
-    my $text_name = "%{A:herbstclient focus_monitor \"$monitor\" && "
-                  . "herbstclient use \"$tag_index\":} $tag_name %{A} ";
-                  
+    
+    // clickable tags
+    $text_name = "%{A:herbstclient focus_monitor \"${monitor}\" && " 
+               . "herbstclient use \"${tag_index}\":} ${tag_name} %{A}";
+    
     # non clickable tags
-    # my $text_name = " $tag_name ";
+    #$text_name = " $tag_name ";
 
     # ----- post tag
-    
-    my $text_post = "";
-    if ($tag_mark eq '#') {
-        $text_post = "%{B-}%{F$color{'blue500'}}"
-                   . "%{U$color{'red500'}}%{+u}"
+
+    if ($tag_mark == '#')
+        $text_post = "%{B-}%{F".COLOR['blue500']."}"
+                   . "%{U".COLOR['red500']."}%{+u}"
                    . RIGHT_HARD_ARROW;
-    }
-    
-    my $text_clear = '%{B-}%{F-}%{-u}';
+    else
+        $text_post = "";
+
+    $text_clear = '%{B-}%{F-}%{-u}';
      
     return $text_pre . $text_name . $text_post . $text_clear;
 }
@@ -562,21 +552,22 @@ Lemonbar using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
 
-{% highlight perl %}
-sub get_statusbar_text {
-    my $monitor = shift;   
-    my $text = '';
-
-    # draw tags
-    $text .= '%{l}';
-    foreach my $tag_status (@tags_status) {
-        $text .= output_by_tag($monitor, $tag_status);
-    }
+{% highlight php %}
+function get_statusbar_text($monitor)
+{
+    global $tags_status;
+    $text = '';
     
-    # draw window title
+    // draw tags
+    $text .= '%{l}';
+    foreach ($tags_status as $tag_status) {
+        $text .= output_by_tag($monitor, $tag_status);
+     }
+    
+    // draw window title
     $text .= '%{r}';
     $text .= output_by_title();
-    
+
     return $text;
 }
 {% endhighlight %}
@@ -585,50 +576,39 @@ sub get_statusbar_text {
 
 ### Testing The Output
 
-Consider this code <code class="code-file">02-testoutput.pl</code>.
+Consider this code <code class="code-file">02-testoutput.php</code>.
 The script using pipe as feed to lemonbar.
 
 We append <code>-p</code> parameter to make the panel persistent.
 
-{% highlight perl %}
-#!/usr/bin/perl
+{% highlight php %}
+#!/usr/bin/php 
+<?php # using PHP7
 
-use warnings;
-use strict;
-
-use File::Basename;
-use lib dirname(__FILE__);
-
-use helper;
+require_once(__DIR__.'/helper.php');
+require_once(__DIR__.'/output.php');
 
 # process handler
-sub test_lemon { 
-    use IO::Pipe;
-    use output;
+function test_lemon($monitor, $parameters) 
+{
+    $command_out  = "lemonbar $parameters -p";
+    $pipe_out = popen($command_out, 'w');
 
-    my $monitor = shift;
-    my $parameters = shift;
-    
-    my $pipe_out = IO::Pipe->new();
-    my $command = "lemonbar $parameters -p";
-    my $handle = $pipe_out->writer($command);
+    // initialize statusbar
+    set_tag_value($monitor);
+    set_windowtitle('test');
+        
+    $text = get_statusbar_text($monitor);
+    fwrite($pipe_out, $text."\n");
+    flush();
 
-    # initialize statusbar
-    output::set_tag_value($monitor);
-    output::set_windowtitle('test');
-
-    my $text = output::get_statusbar_text($monitor);
-    print $pipe_out $text."\n";
-    flush $pipe_out;
-
-    $pipe_out->close();
+    pclose($pipe_out);
 }
 
 # initialize
-my $panel_height = 24;
-my $monitor = helper::get_monitor(@ARGV);
-my $lemon_parameters = helper::get_lemon_parameters(
-    $monitor, $panel_height);
+$panel_height = 24;
+$monitor = get_monitor($argv);
+$lemon_parameters = get_lemon_parameters($monitor, $panel_height);
 
 # test
 system("herbstclient pad $monitor $panel_height 0 $panel_height 0");
@@ -653,7 +633,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-perl-testoutput]
+*	[github.com/.../dotfiles/.../php/01-testoutput.php][dotfiles-php-testoutput]
 
 -- -- --
 
@@ -681,10 +661,10 @@ Enjoy the statusbar !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 
-[image-01-tree-perl]:  {{ asset_path }}/hlwm-statusbar-01-tree-perl.png
+[image-01-tree-php]:  {{ asset_path }}/hlwm-statusbar-01-tree-php.png
 
-[local-perl-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
-[local-perl-pipe]:   {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-php-config]: {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-php.html
+[local-php-pipe]:   {{ site.url }}/code/2017/04/18/php-pipe-and-fork.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
@@ -697,17 +677,17 @@ Enjoy the statusbar !
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl
-[dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-Python]:  {{ dotfiles_path }}/python
+[dotfiles-Ruby]:    {{ dotfiles_path }}/php
 [dotfiles-PHP]:     {{ dotfiles_path }}/php
 [dotfiles-Lua]:     {{ dotfiles_path }}/lua
 [dotfiles-Haskell]: {{ dotfiles_path }}/haskell
 
-[dotfiles-perl-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
-[dotfiles-perl-testparams]:  {{ dotfiles_path }}/perl/01-testparams.pl
-[dotfiles-perl-testoutput]:  {{ dotfiles_path }}/perl/02-testoutput.pl
-[dotfiles-perl-panel]:       {{ dotfiles_path }}/perl/panel.pl
-[dotfiles-perl-gmc]:         {{ dotfiles_path }}/perl/assets/gmc.pm
-[dotfiles-perl-helper]:      {{ dotfiles_path }}/perl/helper.pm
-[dotfiles-perl-output]:      {{ dotfiles_path }}/perl/output.pm
-[dotfiles-perl-pipehandler]: {{ dotfiles_path }}/perl/pipehandler.pm
+[dotfiles-php-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/php
+[dotfiles-php-testparams]:  {{ dotfiles_path }}/php/01-testparams.php
+[dotfiles-php-testoutput]:  {{ dotfiles_path }}/php/02-testoutput.php
+[dotfiles-php-panel]:       {{ dotfiles_path }}/php/panel.php
+[dotfiles-php-gmc]:         {{ dotfiles_path }}/php/assets/gmc.php
+[dotfiles-php-helper]:      {{ dotfiles_path }}/php/helper.php
+[dotfiles-php-output]:      {{ dotfiles_path }}/php/output.php
+[dotfiles-php-pipehandler]: {{ dotfiles_path }}/php/pipehandler.php
