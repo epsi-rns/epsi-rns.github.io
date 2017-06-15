@@ -780,7 +780,7 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png
@@ -813,7 +813,7 @@ Enjoy the statusbar !
 [dotfiles-haskell-testparams]:  {{ dotfiles_path }}/haskell/01-testparams.hs
 [dotfiles-haskell-testoutput]:  {{ dotfiles_path }}/haskell/02-testoutput.hs
 [dotfiles-haskell-panel]:       {{ dotfiles_path }}/haskell/panel.hs
-[dotfiles-haskell-gmc]:         {{ dotfiles_path }}/haskell/assets/gmc.hs
-[dotfiles-haskell-helper]:      {{ dotfiles_path }}/haskell/helper.hs
-[dotfiles-haskell-output]:      {{ dotfiles_path }}/haskell/output.hs
-[dotfiles-haskell-pipehandler]: {{ dotfiles_path }}/haskell/pipehandler.hs
+[dotfiles-haskell-gmc]:         {{ dotfiles_path }}/haskell/assets/MyGMC.hs
+[dotfiles-haskell-helper]:      {{ dotfiles_path }}/haskell/MyHelper.hs
+[dotfiles-haskell-output]:      {{ dotfiles_path }}/haskell/MyOutput.hs
+[dotfiles-haskell-pipehandler]: {{ dotfiles_path }}/haskell/MyPipeHandler.hs
