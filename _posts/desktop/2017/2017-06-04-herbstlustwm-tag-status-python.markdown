@@ -123,6 +123,8 @@ I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
 Here it is our code in Python.
 
+<code class="code-file">helper.py</code>
+
 {% highlight python %}
 # script arguments
 def get_monitor(arguments):
@@ -135,6 +137,9 @@ def get_monitor(arguments):
 And in main code we can call
 
 {% highlight python %}
+import sys
+import helper
+
 monitor  = helper.get_monitor(sys.argv)
 print(monitor)
 {% endhighlight %}
@@ -165,6 +170,8 @@ This will show something similar to this.
 
 Consider wrap the code into function.
 And get an array as function return.
+
+<code class="code-file">helper.py</code>
 
 {% highlight python %}
 def get_geometry(monitor):
@@ -202,6 +209,7 @@ You can put it, on top, or bottom, or hanging somewhere.
 You can create gap on both left and right.
 
 Consider this example:
+<code class="code-file">helper.py</code>
 
 {% highlight python %}
 def get_bottom_panel_geometry(height, geometry):
@@ -236,6 +244,8 @@ Lemonbar geometry: 1280x24+24+776
 We almost done. 
 This is the last step.
 We wrap it all inside this function below.
+
+<code class="code-file">helper.py</code>
 
 {% highlight python %}
 def get_lemon_parameters(monitor, panel_height):  
@@ -355,11 +365,12 @@ In this case, we only have two segment in panel.
 
 *	Title
 
+<code class="code-file">output.py</code>
 In script, we initialize the variable as below
 
 {% highlight python %}
 segment_windowtitle = '' # empty string
-tags_status = []         # empty array
+tags_status = []         # empty list
 {% endhighlight %}
 
 Each segment buffered.
@@ -379,6 +390,8 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
+<code class="code-file">output.py</code>
+
 {% highlight python %}
 TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi', 
     '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū']
@@ -386,9 +399,13 @@ TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi',
 
 #### Global Constant: Decoration
 
+<code class="code-file">output.py</code>
 Decoration consist lemonbar formatting tag.
 
 {% highlight python %}
+from gmc import color
+
+# decoration
 SEPARATOR = '%{B-}%{F' + color['yellow500'] + '}|%{B-}%{F-}'
 
 # Powerline Symbol
@@ -409,6 +426,8 @@ POST_ICON   = '%{F-}'
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
+<code class="code-file">output.py</code>
+
 {% highlight python %}
 def set_tag_value(monitor):
     global tags_status
@@ -420,6 +439,8 @@ def set_tag_value(monitor):
 
 This function above turn the tag status string
 into array of tags for later use.
+
+<code class="code-file">output.py</code>
 
 {% highlight python %}
 def set_windowtitle(windowtitle):
@@ -440,7 +461,9 @@ We will call these two functions later.
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
-Ans then returning string as result.
+And then returning string as result.
+
+<code class="code-file">output.py</code>
 
 {% highlight python %}
 def output_by_title():
@@ -476,6 +499,7 @@ This has some parts:
 	<code>%{F-}</code>, <code>%{-u}</code>
 	(Background, Foreground, Underline).
 
+<code class="code-file">output.py</code>
 
 {% highlight python %}
 def output_by_tag(monitor, tag_status):
@@ -536,9 +560,11 @@ def output_by_tag(monitor, tag_status):
 ### Combine The Segments
 
 Now it is time to combine all segments to compose one panel.
-Lemonbar using <code>%{l}</code> to align left segment,
+Lemonbar is using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
+
+<code class="code-file">output.py</code>
 
 {% highlight python %}
 def get_statusbar_text(monitor):

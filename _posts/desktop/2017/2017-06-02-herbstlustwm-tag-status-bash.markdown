@@ -136,6 +136,8 @@ I know BASH is cryptic. But we have good  manual in TLDP.
 BASH do not have a variable return capability, 
 so we have to use global variable <code>$monitor</code>.
 
+<code class="code-file">helper.sh</code>
+
 {% highlight bash %}
 # script arguments
 function get_monitor() {
@@ -150,6 +152,9 @@ function get_monitor() {
 And in main code we can call
 
 {% highlight bash %}
+DIR=$(dirname "$0")
+. ${DIR}/helper.sh
+
 get_monitor ${@}
 echo $monitor
 {% endhighlight %}
@@ -180,6 +185,8 @@ This will show something similar to this.
 
 Consider wrap the code into function.
 And use <code>$geometry</code> as global variable.
+
+<code class="code-file">helper.sh</code>
 
 {% highlight bash %}
 function get_geometry() {
@@ -216,6 +223,7 @@ You can put it, on top, or bottom, or hanging somewhere.
 You can create gap on both left and right.
 
 Consider this example:
+<code class="code-file">helper.sh</code>
 
 {% highlight bash %}
 function get_bottom_panel_geometry() {
@@ -255,6 +263,8 @@ Lemonbar geometry: 1280x24+24+776
 We almost done. 
 This is the last step.
 We wrap it all inside this function below.
+
+<code class="code-file">helper.sh</code>
 
 {% highlight bash %}
 function get_lemon_parameters() {  
@@ -298,13 +308,9 @@ The script call the above function to get lemon parameters.
 
 # libraries
 DIR=$(dirname "$0")
-
-. ${DIR}/gmc.sh
 . ${DIR}/helper.sh
-. ${DIR}/output.sh
 
 # initialize
-
 panel_height=24
 get_monitor ${@}
 
@@ -377,6 +383,7 @@ In this case, we only have two segment in panel.
 
 *	Title
 
+<code class="code-file">output.sh</code>
 In script, we initialize the variable as below
 
 {% highlight bash %}
@@ -401,6 +408,8 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
+<code class="code-file">output.sh</code>
+
 {% highlight bash %}
 readonly tag_shows=( "一 ichi" "二 ni" "三 san" "四 shi" 
   "五 go" "六 roku" "七 shichi" "八 hachi" "九 kyū" "十 jū")
@@ -408,6 +417,7 @@ readonly tag_shows=( "一 ichi" "二 ni" "三 san" "四 shi"
 
 #### Global Constant: Decoration
 
+<code class="code-file">output.sh</code>
 Decoration consist lemonbar formatting tag.
 
 {% highlight bash %}
@@ -431,6 +441,8 @@ readonly post_icon="%{F-}
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
+<code class="code-file">output.sh</code>
+
 {% highlight bash %}
 function set_tag_value() {
   IFS=$'\t' read -ra tags_status <<< "$(herbstclient tag_status $monitor)"
@@ -439,6 +451,8 @@ function set_tag_value() {
 
 This IFS above turn the tag status string
 into array of tags for later use.
+
+<code class="code-file">output.sh</code>
 
 {% highlight bash %}
 function set_windowtitle() {
@@ -459,6 +473,8 @@ This is self explanatory.
 I put separator, just in case you want to add other segment.
 And put the result in <code>$buffer</code>
 because BASH can't return a string.
+
+<code class="code-file">output.sh</code>
 
 {% highlight bash %}
 function output_by_title() {
@@ -494,6 +510,7 @@ This has some parts:
 	<code>%{F-}</code>, <code>%{-u}</code>
 	(Background, Foreground, Underline).
 
+<code class="code-file">output.sh</code>
 
 {% highlight bash %}
 function output_by_tag() {
@@ -555,9 +572,11 @@ function output_by_tag() {
 ### Combine The Segments
 
 Now it is time to combine all segments to compose one panel.
-Lemonbar using <code>%{l}</code> to align left segment,
+Lemonbar is using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
+
+<code class="code-file">output.sh</code>
 
 {% highlight bash %}
 function get_statusbar_text() {

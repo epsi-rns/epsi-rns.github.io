@@ -123,6 +123,8 @@ I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
 Here it is our code in Perl.
 
+<code class="code-file">helper.pm</code>
+
 {% highlight perl %}
 # script arguments
 sub get_monitor {
@@ -139,6 +141,10 @@ sub get_monitor {
 And in main code we can call
 
 {% highlight perl %}
+use File::Basename;
+use lib dirname(__FILE__);
+use helper;
+
 my $monitor = helper::get_monitor(@ARGV);
 print $monitor."\n";
 {% endhighlight %}
@@ -169,6 +175,8 @@ This will show something similar to this.
 
 Consider wrap the code into function.
 And get an array as function return.
+
+<code class="code-file">helper.pm</code>
 
 {% highlight perl %}
 sub get_geometry {
@@ -210,6 +218,7 @@ You can put it, on top, or bottom, or hanging somewhere.
 You can create gap on both left and right.
 
 Consider this example:
+<code class="code-file">helper.pm</code>
 
 {% highlight perl %}
 sub get_bottom_panel_geometry {
@@ -247,6 +256,8 @@ Lemonbar geometry: 1280x24+24+776
 We almost done. 
 This is the last step.
 We wrap it all inside this function below.
+
+<code class="code-file">helper.pm</code>
 
 {% highlight perl %}
 sub get_lemon_parameters {   
@@ -374,6 +385,7 @@ In this case, we only have two segment in panel.
 
 *	Title
 
+<code class="code-file">output.pm</code>
 In script, we initialize the variable as below
 
 {% highlight perl %}
@@ -398,6 +410,8 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
+<code class="code-file">output.pm</code>
+
 {% highlight perl %}
 use constant TAG_SHOWS => ['一 ichi', '二 ni', '三 san', '四 shi', 
     '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū'];
@@ -405,9 +419,13 @@ use constant TAG_SHOWS => ['一 ichi', '二 ni', '三 san', '四 shi',
 
 #### Global Constant: Decoration
 
+<code class="code-file">output.pm</code>
 Decoration consist lemonbar formatting tag.
 
 {% highlight perl %}
+use gmc;
+
+# decoration
 use constant SEPARATOR => "%{B-}%{F$color{'yellow500'}}|%{B-}%{F-}";
 
 # Powerline Symbol
@@ -428,6 +446,8 @@ use constant POST_ICON => "%{F-}";
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
+<code class="code-file">output.pm</code>
+
 {% highlight perl %}
 sub set_tag_value {
     my $monitor = shift;
@@ -439,7 +459,9 @@ sub set_tag_value {
 {% endhighlight %}
 
 This function above turn the tag status string
- into array of tags for later use.
+into array of tags for later use.
+
+<code class="code-file">output.pm</code>
 
 {% highlight perl %}
 sub set_windowtitle {
@@ -462,7 +484,9 @@ We will call these two functions later.
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
-Ans then returning string as result.
+And then returning string as result.
+
+<code class="code-file">output.pm</code>
 
 {% highlight perl %}
 sub output_by_title {
@@ -499,6 +523,7 @@ This has some parts:
 	<code>%{F-}</code>, <code>%{-u}</code>
 	(Background, Foreground, Underline).
 
+<code class="code-file">output.pm</code>
 
 {% highlight perl %}
 sub output_by_tag {
@@ -558,9 +583,11 @@ sub output_by_tag {
 ### Combine The Segments
 
 Now it is time to combine all segments to compose one panel.
-Lemonbar using <code>%{l}</code> to align left segment,
+Lemonbar is using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
+
+<code class="code-file">output.pm</code>
 
 {% highlight perl %}
 sub get_statusbar_text {

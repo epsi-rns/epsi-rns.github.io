@@ -55,7 +55,7 @@ Tutorial/ Guidance/ Article:
 [[ BASH ][local-BASH]]
 [[ Perl ][local-Perl]]
 [[ Python ][local-python]]
-[[ PHP ][local-PHP]]
+[[ Ruby ][local-Ruby]]
 [[ PHP ][local-PHP]]
 [[ Lua ][local-Lua]]
 [[ Haskell ][local-Haskell]]
@@ -64,7 +64,7 @@ Source Code Directory:
 [[ BASH ][dotfiles-BASH]]
 [[ Perl ][dotfiles-Perl]]
 [[ Python ][dotfiles-python]]
-[[ PHP ][dotfiles-PHP]]
+[[ Ruby ][dotfiles-Ruby]]
 [[ PHP ][dotfiles-PHP]]
 [[ Lua ][dotfiles-Lua]]
 [[ Haskell ][dotfiles-Haskell]]
@@ -121,10 +121,9 @@ $ ./panel.php 0
 
 I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
-
 Here it is our code in PHP.
-We do not need to call return in PHP,
-the value o the last line will be a function return.
+
+<code class="code-file">helper.php</code>
 
 {% highlight php %}
 function get_monitor($arguments)
@@ -137,7 +136,8 @@ function get_monitor($arguments)
 And in main code we can call
 
 {% highlight php %}
-$panel_height = 24;
+require_once(__DIR__.'/helper.php');
+
 $monitor = get_monitor($argv);
 echo $monitor;
 {% endhighlight %}
@@ -168,6 +168,8 @@ This will show something similar to this.
 
 Consider wrap the code into function.
 And get an array as function return.
+
+<code class="code-file">helper.php</code>
 
 {% highlight php %}
 function get_geometry($monitor)
@@ -206,6 +208,7 @@ You can put it, on top, or bottom, or hanging somewhere.
 You can create gap on both left and right.
 
 Consider this example:
+<code class="code-file">helper.php</code>
 
 {% highlight php %}
 function get_bottom_panel_geometry($height, $geometry)
@@ -242,6 +245,8 @@ Lemonbar geometry: 1280x24+24+776
 We almost done. 
 This is the last step.
 We wrap it all inside this function below.
+
+<code class="code-file">helper.php</code>
 
 {% highlight php %}
 function get_lemon_parameters($monitor, $panel_height)
@@ -359,6 +364,7 @@ In this case, we only have two segment in panel.
 
 *	Title
 
+<code class="code-file">output.php</code>
 In script, we initialize the variable as below
 
 {% highlight php %}
@@ -383,6 +389,7 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
+<code class="code-file">output.php</code>
 {% highlight php %}
 const TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi', 
   '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū'];
@@ -390,9 +397,13 @@ const TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi',
 
 #### Global Constant: Decoration
 
+<code class="code-file">output.php</code>
 Decoration consist lemonbar formatting tag.
 
 {% highlight php %}
+require_once(__DIR__.'/gmc.php');
+
+// decoration
 const SEPARATOR = "%{B-}%{F".COLOR['yellow500']."}|%{B-}%{F-}";
 
 // Powerline Symbol
@@ -413,6 +424,8 @@ const POST_ICON   = "%{F-}";
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
+<code class="code-file">output.php</code>
+
 {% highlight php %}
 function set_tag_value($monitor)
 {
@@ -425,6 +438,8 @@ function set_tag_value($monitor)
 
 This function above turn the tag status string
 into array of tags for later use.
+
+<code class="code-file">output.php</code>
 
 {% highlight php %}
 function set_windowtitle($windowtitle)
@@ -448,7 +463,9 @@ We will call these two functions later.
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
-Ans then returning string as result.
+And then returning string as result.
+
+<code class="code-file">output.php</code>
 
 {% highlight php %}
 function output_by_title()
@@ -487,6 +504,7 @@ This has some parts:
 	<code>%{F-}</code>, <code>%{-u}</code>
 	(Background, Foreground, Underline).
 
+<code class="code-file">output.php</code>
 
 {% highlight php %}
 function output_by_tag($monitor, $tag_status)
@@ -552,6 +570,8 @@ Lemonbar using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
 
+<code class="code-file">output.php</code>
+
 {% highlight php %}
 function get_statusbar_text($monitor)
 {
@@ -577,7 +597,7 @@ function get_statusbar_text($monitor)
 ### Testing The Output
 
 Consider this code <code class="code-file">02-testoutput.php</code>.
-The script using pipe as feed to lemonbar.
+The script is using pipe as feed to lemonbar.
 
 We append <code>-p</code> parameter to make the panel persistent.
 
@@ -678,7 +698,7 @@ Enjoy the statusbar !
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl
 [dotfiles-Python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/php
+[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
 [dotfiles-PHP]:     {{ dotfiles_path }}/php
 [dotfiles-Lua]:     {{ dotfiles_path }}/lua
 [dotfiles-Haskell]: {{ dotfiles_path }}/haskell
