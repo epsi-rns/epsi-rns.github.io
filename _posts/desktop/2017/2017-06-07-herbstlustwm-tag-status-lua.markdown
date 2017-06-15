@@ -3,7 +3,7 @@ layout: post-sidemenu-wm
 title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Lua"
 date:   2017-06-07 17:35:15 +0700
 categories: desktop
-tags: [coding, bash, herbstluftwm]
+tags: [coding, lua, herbstluftwm, statusbar]
 author: epsi
 
 excerpt:
@@ -52,22 +52,22 @@ So we can compare each other quickly.
 
 Tutorial/ Guidance/ Article:
 [[ Tag Status Overview ][local-overview]]
-[[ BASH ][local-BASH]]
-[[ Perl ][local-Perl]]
+[[ BASH ][local-bash]]
+[[ Perl ][local-perl]]
 [[ Python ][local-python]]
-[[ Ruby ][local-Ruby]]
-[[ PHP ][local-PHP]]
-[[ Lua ][local-Lua]]
-[[ Haskell ][local-Haskell]]
+[[ Ruby ][local-ruby]]
+[[ PHP ][local-php]]
+[[ Lua ][local-lua]]
+[[ Haskell ][local-haskell]]
 
 Source Code Directory:
-[[ BASH ][dotfiles-BASH]]
-[[ Perl ][dotfiles-Perl]]
+[[ BASH ][dotfiles-bash]]
+[[ Perl ][dotfiles-perl]]
 [[ Python ][dotfiles-python]]
-[[ Ruby ][dotfiles-Ruby]]
-[[ PHP ][dotfiles-PHP]]
-[[ Lua ][dotfiles-Lua]]
-[[ Haskell ][dotfiles-Haskell]]
+[[ Ruby ][dotfiles-ruby]]
+[[ PHP ][dotfiles-php]]
+[[ Lua ][dotfiles-lua]]
+[[ Haskell ][dotfiles-haskell]]
 
 -- -- --
 
@@ -711,8 +711,8 @@ Enjoy the statusbar !
 
 [image-01-tree-lua]:  {{ asset_path }}/hlwm-statusbar-01-tree-lua.png
 
-[local-lua-config]: {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-lua.html
-[local-lua-pipe]:   {{ site.url }}/code/2017/04/18/lua-pipe-and-fork.html
+[local-lua-config]: {{ site.url }}/desktop/2017/05/07/herbstlustwm-modularized-lua.html
+[local-lua-pipe]:   {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
@@ -723,13 +723,13 @@ Enjoy the statusbar !
 [local-lua]:      {{ site.url }}/desktop/2017/06/07/herbstlustwm-tag-status-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 
-[dotfiles-BASH]:    {{ dotfiles_path }}/bash
-[dotfiles-Perl]:    {{ dotfiles_path }}/perl
-[dotfiles-Python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
-[dotfiles-PHP]:     {{ dotfiles_path }}/php
-[dotfiles-Lua]:     {{ dotfiles_path }}/lua
-[dotfiles-Haskell]: {{ dotfiles_path }}/haskell
+[dotfiles-bash]:    {{ dotfiles_path }}/bash
+[dotfiles-perl]:    {{ dotfiles_path }}/perl
+[dotfiles-python]:  {{ dotfiles_path }}/python
+[dotfiles-ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-php]:     {{ dotfiles_path }}/php
+[dotfiles-lua]:     {{ dotfiles_path }}/lua
+[dotfiles-haskell]: {{ dotfiles_path }}/haskell
 
 [dotfiles-lua-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
 [dotfiles-lua-testparams]:  {{ dotfiles_path }}/lua/01-testparams.lua

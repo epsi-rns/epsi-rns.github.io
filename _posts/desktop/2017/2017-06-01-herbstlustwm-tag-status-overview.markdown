@@ -211,19 +211,19 @@ The rest is in their respective article.
 
 ### Dotfiles (Source Code)
 
-*	[lang/bash][dotfiles-BASH]
+*	[lang/bash][dotfiles-bash]
 
-*	[lang/perl][dotfiles-Perl]
+*	[lang/perl][dotfiles-perl]
 
 *	[lang/python][dotfiles-python]
 
-*	[lang/ruby][dotfiles-Ruby]
+*	[lang/ruby][dotfiles-ruby]
 
-*	[lang/php][dotfiles-PHP]
+*	[lang/php][dotfiles-php]
 
-*	[lang/lua][dotfiles-Lua]
+*	[lang/lua][dotfiles-lua]
 
-*	[lang/haskell][dotfiles-Haskell]
+*	[lang/haskell][dotfiles-haskell]
 
 -- -- --
 
@@ -245,10 +245,10 @@ Thank you for Reading.
 [local-lua]:      {{ site.url }}/desktop/2017/06/07/herbstlustwm-tag-status-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 
-[dotfiles-BASH]:    {{ dotfiles_path }}/bash
-[dotfiles-Perl]:    {{ dotfiles_path }}/perl
+[dotfiles-bash]:    {{ dotfiles_path }}/bash
+[dotfiles-perl]:    {{ dotfiles_path }}/perl
 [dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
-[dotfiles-PHP]:     {{ dotfiles_path }}/php
-[dotfiles-Lua]:     {{ dotfiles_path }}/lua
-[dotfiles-Haskell]: {{ dotfiles_path }}/haskell
+[dotfiles-ruby]:    {{ dotfiles_path }}/ruby
+[dotfiles-php]:     {{ dotfiles_path }}/php
+[dotfiles-lua]:     {{ dotfiles_path }}/lua
+[dotfiles-haskell]: {{ dotfiles_path }}/haskell
