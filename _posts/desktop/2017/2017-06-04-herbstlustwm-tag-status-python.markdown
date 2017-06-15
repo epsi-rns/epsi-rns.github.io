@@ -1,14 +1,14 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in BASH "
-date:   2017-06-02 17:35:15 +0700
+title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Python"
+date:   2017-06-04 17:35:15 +0700
 categories: desktop
 tags: [coding, bash, herbstluftwm]
 author: epsi
 
 excerpt:
   HersbtluftWM Tag Status using Dzen2 or Lemonbar.
-  Modularized implementation in BASH script.
+  Modularized implementation in Python script.
 
 ---
 
@@ -32,15 +32,15 @@ you might desire to read this overview.
 
 *	[HerbstluftWM Tag Status Overview][local-overview]
 
-*	[Modularized HerbstluftWM in BASH][local-bash-config]
+*	[Modularized HerbstluftWM in Python][local-python-config]
 
-*	[Piping and Forking in BASH][local-bash-pipe]
+*	[Piping and Forking in Python][local-python-pipe]
 
 #### All The Source Code:
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../bash/][dotfiles-bash-directory]
+*	[github.com/.../dotfiles/.../python/][dotfiles-python-directory]
 
 -- -- --
 
@@ -53,7 +53,7 @@ So we can compare each other quickly.
 Tutorial/ Guidance/ Article:
 [[ Tag Status Overview ][local-overview]]
 [[ BASH ][local-BASH]]
-[[ Perl ][local-Perl]]
+[[ Python ][local-Python]]
 [[ Python ][local-python]]
 [[ Ruby ][local-Ruby]]
 [[ PHP ][local-PHP]]
@@ -62,7 +62,7 @@ Tutorial/ Guidance/ Article:
 
 Source Code Directory:
 [[ BASH ][dotfiles-BASH]]
-[[ Perl ][dotfiles-Perl]]
+[[ Python ][dotfiles-Python]]
 [[ Python ][dotfiles-python]]
 [[ Ruby ][dotfiles-Ruby]]
 [[ PHP ][dotfiles-PHP]]
@@ -91,9 +91,9 @@ I present **only panel** HerbstluftWM screenshot.
 Directory Structure has been explained in preface. 
 For both Dzen2 and Lemonbar, the structure are the same.
 This figure will explain how it looks
-in <code>BASH script</code> directory.
+in <code>Python script</code> directory.
 
-![Statusbar: Directory Structure][image-01-tree-bash]{: .img-responsive }
+![Statusbar: Directory Structure][image-01-tree-python]{: .img-responsive }
 
 Special customization can be done in output script,
 without changing the whole stuff.
@@ -102,11 +102,11 @@ without changing the whole stuff.
 
 ### Get Geometry
 
-Let's have a look at <code class="code-file">helper.sh</code> in github.
+Let's have a look at <code class="code-file">helper.py</code> in github.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/helper.sh][dotfiles-bash-helper]
+*	[github.com/.../dotfiles/.../python/helper.py][dotfiles-python-helper]
 
 #### Get Script Argument
 
@@ -115,43 +115,28 @@ contain statusbar for each monitor.
 The default is using monitor 0,
 although you can use other monitor as well.
 
-{% highlight bash %}
-$ ./panel.sh 0
+{% highlight python %}
+$ ./panel.py 0
 {% endhighlight %}
 
 I do not implement statusbar in multi monitor since I only have my notebook.
 But I'll pass the argument anyway for learning purpose.
+Here it is our code in Python.
 
-The original herbstluftwm example, handle this in oneliner fashion.
-
-{% highlight bash %}
-monitor=${1:-0}
-{% endhighlight %}
-
-Since we want to port to other language, we need a more clear code.
-And for that reason, we wrapped them in function in module.
-
-Here it is our code, with similar result.
-I know BASH is cryptic. But we have good  manual in TLDP.
-BASH do not have a variable return capability, 
-so we have to use global variable <code>$monitor</code>.
-
-{% highlight bash %}
+{% highlight python %}
 # script arguments
-function get_monitor() {
-    local argument=("$@")
-    local num_args=${#argument[@]}
-
+def get_monitor(arguments):
     # ternary operator
-    [[ $num_args > 0 ]] && monitor=${argument[0]} || monitor=0
-}
+    monitor = int(arguments[1]) if (len(arguments) > 1) else 0
+
+    return monitor
 {% endhighlight %}
 
 And in main code we can call
 
-{% highlight bash %}
-get_monitor ${@}
-echo $monitor
+{% highlight python %}
+monitor  = helper.get_monitor(sys.argv)
+print(monitor)
 {% endhighlight %}
 
 This will display <code>0</code> or else such as <code>1</code>,
@@ -181,26 +166,27 @@ This will show something similar to this.
 Consider wrap the code into function.
 And use <code>$geometry</code> as global variable.
 
-{% highlight bash %}
-function get_geometry() {
-    local monitor=$1;
-    geometry=( $(herbstclient monitor_rect "$monitor") )
-    if [ -z "$geometry" ] ;then
-        echo "Invalid monitor $monitor"
-        exit 1
-    fi
-}
+{% highlight python %}
+def get_geometry(monitor):
+    raw = os.popen('herbstclient monitor_rect '+ str(monitor)).read()
+
+    if not raw: 
+        print('Invalid monitor ' + str(monitor))
+        exit(1)
+    
+    geometry = raw.rstrip().split(' ')
+    
+    return geometry
 {% endhighlight %}
 
 Consider call this function from script later.
-It is a little bit tricky,
-because the variable <code>$geometry"</code> has space in it,
-we have to wrap it in <code>"${geometry[@]}"</code>.
+To print array in Python,
+we just have to wrap it in <code>"@geometry"</code>.
 
-{% highlight bash %}
-get_monitor ${@}
-get_geometry $monitor
-echo ${geometry[@]}
+{% highlight python %}
+monitor  = helper.get_monitor(sys.argv)
+geometry = helper.get_geometry(monitor)
+print(' '.join(geometry))
 {% endhighlight %}
 
 This will produce
@@ -217,30 +203,25 @@ You can create gap on both left and right.
 
 Consider this example:
 
-{% highlight bash %}
-function get_bottom_panel_geometry() {
-   local panel_height=$1
-   shift
-   local geometry=("$@")
-   
-   # geometry has the format X Y W H
-     xpos=$(( ${geometry[0]} + 24 ))
-     ypos=$(( ${geometry[3]} - $panel_height ))
-    width=$(( ${geometry[2]} - 48 ))
-   height=$panel_height
-}
+{% highlight python %}
+def get_bottom_panel_geometry(height, geometry):
+    # geometry has the format X Y W H
+    return (int(geometry[0]) + 24, int(geometry[3])-height, 
+            int(geometry[2]) - 48, height )
 {% endhighlight %}
 
 We are going to use this <code>X Y W H</code>,
 to get lemonbar parameter.
 
-{% highlight bash %}
-panel_height=24
-get_monitor ${@}
-get_geometry $monitor
-get_bottom_panel_geometry $panel_height "${geometry[@]}"
+{% highlight python %}
+panel_height = 24
+monitor  = helper.get_monitor(sys.argv)
+geometry = helper.get_geometry(monitor)
+xpos, ypos, width, height = helper.get_bottom_panel_geometry(
+       panel_height, geometry)
 
-echo "Lemonbar geometry: ${width}x${height}+${xpos}+${ypos}"
+print('Lemonbar geometry: ' + 
+    str(width)+'x'+str(height)+'+'+str(xpos)+'+'+str(ypos) )
 {% endhighlight %}
 
 This will show something similar to this result,
@@ -256,73 +237,67 @@ We almost done.
 This is the last step.
 We wrap it all inside this function below.
 
-{% highlight bash %}
-function get_lemon_parameters() {  
-    # parameter: function argument
-    local monitor=$1
-    local panel_height=$2
-
+{% highlight python %}
+def get_lemon_parameters(monitor, panel_height):  
     # calculate geometry
-    get_geometry $monitor
-    get_top_panel_geometry $panel_height "${geometry[@]}"
-    
+    geometry = get_geometry(monitor)
+    xpos, ypos, width, height = get_top_panel_geometry(
+       panel_height, geometry)
+
     # geometry: -g widthxheight+x+y
-    geom_res="${width}x${height}+${xpos}+${ypos}"
-    
-    # color, with transparency
-    local bgcolor="#aa000000"
-    local fgcolor="#ffffff"
+    geom_res = str(width)+'x'+str(height)+'+'+str(xpos)+'+'+str(ypos)
+
+    # color, with transparency    
+    bgcolor = "'#aa000000'"
+    fgcolor = "'#ffffff'"
     
     # XFT: require lemonbar_xft_git 
-    local font_takaop="takaopgothic-9"
-    local font_bottom="monospace-9"
-    local font_symbol="PowerlineSymbols-11"
-    local font_awesome="FontAwesome-9"
+    font_takaop  = "takaopgothic-9"
+    font_bottom  = "monospace-9"
+    font_symbol  = "PowerlineSymbols-11"
+    font_awesome = "FontAwesome-9"
 
     # finally
-    lemon_parameters="  -g $geom_res -u 2"
-    lemon_parameters+=" -B $bgcolor -F $fgcolor" 
-    lemon_parameters+=" -f $font_takaop -f $font_awesome -f $font_symbol" 
-}
+    parameters  = '  -g '+geom_res+' -u 2 ' \
+                + ' -B '+bgcolor+' -F '+fgcolor \
+                + ' -f '+font_takaop+' -f '+font_awesome+' -f '+font_symbol
+
+    return parameters
 {% endhighlight %}
 
 -- -- --
 
 ### Testing The Parameters
 
-Consider this code <code class="code-file">01-testparams.sh</code>.
+Consider this code <code class="code-file">01-testparams.py</code>.
 The script call the above function to get lemon parameters.
 
-{% highlight bash %}
-#!/usr/bin/env bash
+{% highlight python %}
+#!/usr/bin/env python3
 
-# libraries
-DIR=$(dirname "$0")
-
-. ${DIR}/gmc.sh
-. ${DIR}/helper.sh
-. ${DIR}/output.sh
+import os
+import sys
+import helper
 
 # initialize
+panel_height = 24
+monitor = helper.get_monitor(sys.argv)
 
-panel_height=24
-get_monitor ${@}
-
-get_lemon_parameters $monitor $panel_height
-echo $lemon_parameters 
+lemon_parameters = helper.get_lemon_parameters(monitor, panel_height)
+print(lemon_parameters)
 {% endhighlight %}
 
 This will produce output
 something similar to this result
 
 {% highlight conf %}
--g 1280x24+0+0 -u 2 -B #aa000000 -F #ffffff 
+-g 1280x24+0+0 -u 2  -B '#aa000000' -F '#ffffff' 
 -f takaopgothic-9 -f FontAwesome-9 -f PowerlineSymbols-11
 {% endhighlight %}
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-bash-testparams]
+*	[github.com/.../dotfiles/.../python/01-testparams.py][dotfiles-python-testparams]
 
 -- -- --
 
@@ -340,8 +315,9 @@ and type <code>\pad</code> to search what it means.
 
 In script, it looks like this below.
 
-{% highlight bash %}
-herbstclient pad $monitor $panel_height 0 $panel_height 0
+{% highlight python %}
+os.system('herbstclient pad ' + str(monitor) + ' ' 
+    + str(panel_height) + ' 0 ' + str(panel_height) + ' 0'
 {% endhighlight %}
 
 -- -- --
@@ -358,9 +334,12 @@ we need to define two things that live in output module:
 	except that, the value won't be altered during script execution.
 	The value is defined at the beginning of program.
 
+Python does not differ between these two,
+for that reason we distinguish global constant with capital case.
+
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/output.sh][dotfiles-bash-output]
+*	[github.com/.../dotfiles/.../python/output.py][dotfiles-python-output]
 
 #### Mutable State: Segment Variable
 
@@ -376,9 +355,9 @@ In this case, we only have two segment in panel.
 
 In script, we initialize the variable as below
 
-{% highlight bash %}
-segment_windowtitle=''; # empty string
-tags_status=();         # empty array
+{% highlight python %}
+segment_windowtitle = '' # empty string
+tags_status = []         # empty array
 {% endhighlight %}
 
 Each segment buffered.
@@ -398,27 +377,27 @@ We can manage custom tag names,
 consist of nine string element.
 We can also freely using *unicode* string instead of plain one.
 
-{% highlight bash %}
-readonly tag_shows=( "一 ichi" "二 ni" "三 san" "四 shi" 
-  "五 go" "六 roku" "七 shichi" "八 hachi" "九 kyū" "十 jū")
+{% highlight python %}
+TAG_SHOWS = ['一 ichi', '二 ni', '三 san', '四 shi', 
+    '五 go', '六 roku', '七 shichi', '八 hachi', '九 kyū', '十 jū']
 {% endhighlight %}
 
 #### Global Constant: Decoration
 
 Decoration consist lemonbar formatting tag.
 
-{% highlight bash %}
-readonly separator="%{B-}%{F${color['yellow500']}}|%{B-}%{F-}"
+{% highlight python %}
+SEPARATOR = '%{B-}%{F' + color['yellow500'] + '}|%{B-}%{F-}'
 
-# powerline symbol
-readonly right_hard_arrow=""
-readonly right_soft_arrow=""
-readonly  left_hard_arrow=""
-readonly  left_soft_arrow=""
+# Powerline Symbol
+RIGHT_HARD_ARROW = ""
+RIGHT_SOFT_ARROW = ""
+LEFT_HARD_ARROW  = ""
+LEFT_SOFT_ARROW  = ""
 
 # theme
-readonly  pre_icon="%{F${color['yellow500']}}"
-readonly post_icon="%{F-}
+PRE_ICON    = '%{F' + color['yellow500'] + '}'
+POST_ICON   = '%{F-}'
 {% endhighlight %}
 
 -- -- --
@@ -428,22 +407,27 @@ readonly post_icon="%{F-}
 As response to herbstclient event idle,
 these two function set the state of segment variable.
 
-{% highlight bash %}
-function set_tag_value() {
-  IFS=$'\t' read -ra tags_status <<< "$(herbstclient tag_status $monitor)"
-}
+{% highlight python %}
+def set_tag_value(monitor):
+    global tags_status
+
+    raw = os.popen('herbstclient tag_status ' + str(monitor)).read()
+    raw = raw.strip()
+    tags_status = raw.split("\t")
 {% endhighlight %}
 
-This IFS above turn the tag status string
-into array of tags for later use.
+This function above turn the tag status string
+ into array of tags for later use.
 
-{% highlight bash %}
-function set_windowtitle() {
-    local windowtitle=$1
-    local icon="$pre_icon$post_icon"
+{% highlight python %}
+def set_windowtitle(windowtitle):
+    global segment_windowtitle
+    icon = PRE_ICON + '' + POST_ICON
     
-    segment_windowtitle=" $icon %{B-}%{F${color['grey700']}} $windowtitle"
-}
+    windowtitle = windowtitle.strip()
+      
+    segment_windowtitle = ' ' + icon + \
+        ' %{B-}%{F' + color['grey700'] + '} ' + windowtitle
 {% endhighlight %}
 
 We will call these two functions later.
@@ -454,14 +438,13 @@ We will call these two functions later.
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
-And put the result in <code>$buffer</code>
-because BASH can't return a string.
+Ans then returning string as result.
 
-{% highlight bash %}
-function output_by_title() {
-    local text="$segment_windowtitle $separator  "
-    buffer=$text
-}
+{% highlight python %}
+def output_by_title():
+    text = segment_windowtitle + ' ' + SEPARATOR + '  '
+
+    return text
 {% endhighlight %}
 
 -- -- --
@@ -492,59 +475,58 @@ This has some parts:
 	(Background, Foreground, Underline).
 
 
-{% highlight bash %}
-function output_by_tag() {
-    local    monitor=$1    
-    local tag_status=$2    
-        
-    local  tag_index=${tag_status:1:1}
-    local   tag_mark=${tag_status:0:1}
-    local   tag_name=${tag_shows[$tag_index - 1]}; # zero based
+{% highlight python %}
+def output_by_tag(monitor, tag_status):
+    tag_index  = tag_status[1:2]
+    tag_mark   = tag_status[0:1]
+    tag_name   = TAG_SHOWS[int(tag_index) - 1] # zero based
 
     # ----- pre tag
 
-    local text_pre=''
-    case $tag_mark in
-        '#') text_pre+="%{B${color['blue500']}}%{F${color['black']}}"
-             text_pre+="%{U${color['white']}}%{+u}$right_hard_arrow"
-             text_pre+="%{B${color['blue500']}}%{F${color['white']}}"
-             text_pre+="%{U${color['white']}}%{+u}"
-        ;;
-        '+') text_pre+="%{B${color['yellow500']}}%{F${color['grey400']}}"
-        ;;
-        ':') text_pre+="%{B-}%{F${color['white']}}"
-             text_pre+="%{U${color['red500']}}%{+u}"
-        ;;
-        '!') text_pre+="%{B${color['red500']}}%{F${color['white']}}"
-             text_pre+="%{U${color['white']}}%{+u}"
-        ;;
-        *)   text_pre+="%{B-}%{F${color['grey600']}}%{-u}"
-        ;;
-    esac
+    if tag_mark == '#':
+        text_pre = '%{B' + color['blue500'] + '}' \
+                   '%{F' + color['black'] + '}' \
+                   '%{U' + color['white'] + '}%{+u}' \
+                 + RIGHT_HARD_ARROW \
+                 + '%{B' + color['blue500'] + '}' \
+                   '%{F' + color['white'] + '}' \
+                   '%{U' + color['white'] + '}%{+u}'
+    elif tag_mark == '+':
+        text_pre = '%{B' + color['yellow500'] + '}' \
+                   '%{F' + color['grey400'] + '}'
+    elif tag_mark == ':':
+        text_pre = '%{B-}%{F' + color['white'] + '}' \
+                   '%{U' + color['red500'] + '}%{+u}'
+    elif tag_mark == '!':
+        text_pre = '%{B' + color['red500'] + '}' \
+                   '%{F' + color['white'] + '}' \
+                   '%{U' + color['white'] + '}%{+u}'
+    else:
+        text_pre = '%{B-}%{F' + color['grey600'] + '}%{-u}'
 
     # ----- tag by number
     
     # clickable tags
-    local text_name=''
-    text_name+="%{A:herbstclient focus_monitor \"$monitor\" && "
-    text_name+="herbstclient use \"$tag_index\":} $tag_name %{A} "
-  
+    text_name = '%{A:herbstclient focus_monitor "' \
+              + str(monitor) + '" && ' + 'herbstclient use "' \
+              + tag_index + '":} ' + tag_name + ' %{A} '
+
     # non clickable tags
-    # local text_name=" $tag_name "
+    # text_name = ' ' + tag_name + ' '
     
     # ----- post tag
 
-    local text_post=''
-    if [ $tag_mark = '#' ]
-    then        
-        text_post+="%{B-}%{F${color['blue500']}}"
-        text_post+="%{U${color['red500']}}%{+u}${right_hard_arrow}";
-    fi
+    if tag_mark == '#':
+        text_post = '%{B-}' \
+                    '%{F' + color['blue500'] + '}' \
+                    '%{U' + color['red500'] + '}%{+u}' \
+                  + RIGHT_HARD_ARROW
+    else: 
+        text_post = ''
     
-    text_clear='%{B-}%{F-}%{-u}'
+    text_clear = '%{B-}%{F-}%{-u}';
      
-    buffer="$text_pre$text_name$text_post$text_clear"
-}
+    return (text_pre + text_name + text_post + text_clear)
 {% endhighlight %}
 
 -- -- --
@@ -556,77 +538,75 @@ Lemonbar using <code>%{l}</code> to align left segment,
 and <code>%{r}</code> to align right segment.
 All tags processed in a loop.
 
-{% highlight bash %}
-function get_statusbar_text() {
-    local monitor=$1
-    local text=''
+{% highlight python %}
+def get_statusbar_text(monitor):
+    text = ''
 
     # draw tags
-    text+='%{l}'
-    for tag_status in "${tags_status[@]}"
-    do
-        output_by_tag $monitor $tag_status
-        text+=$buffer
-    done
+    text += '%{l}'
+    for tag_status in tags_status:
+        text += output_by_tag(monitor, tag_status)
     
-    # draw window title
-    text+='%{r}'
-    output_by_title    
-    text+=$buffer
+    # draw window title    
+    text += '%{r}'
+    text += output_by_title()
     
-    buffer=$text
-}
+    return text
 {% endhighlight %}
 
 -- -- --
 
 ### Testing The Output
 
-Consider this code <code class="code-file">02-testoutput.sh</code>.
+Consider this code <code class="code-file">02-testoutput.py</code>.
 The script using pipe as feed to lemonbar.
 
 We append <code>-p</code> parameter to make the panel persistent.
 
-{% highlight bash %}
-#!/usr/bin/env bash
+{% highlight python %}
+#!/usr/bin/env python3
 
-# libraries
-DIR=$(dirname "$0")
-
-. ${DIR}/gmc.sh
-. ${DIR}/helper.sh
-. ${DIR}/output.sh
+import os
+import sys
+import helper
 
 # process handler
+def test_lemon(monitor, parameters): 
+    import subprocess
+    import output
+ 
+    command_out  = 'lemonbar ' + parameters + ' -p'
 
-function test_lemon() { 
-    monitor=$1
-    shift
-    parameters=$@
-    
-    command_out="lemonbar $parameters -p"
-    
-    {
-      # initialize statusbar
-      set_tag_value $monitor
-      set_windowtitle 'test'
+    pipe_out = subprocess.Popen(
+            [command_out], 
+            stdin  = subprocess.PIPE,
+            shell  = True,
+            universal_newlines=True
+        )
 
-      get_statusbar_text $monitor
-      echo $buffer
-    } | $command_out
+    # initialize statusbar
+    output.set_tag_value(monitor)
+    output.set_windowtitle('test')
+        
+    text = output.get_statusbar_text(monitor)
+    pipe_out.stdin.write(text + '\n')
+    pipe_out.stdin.flush()
 
-}
+    pipe_out.stdin.close()
 
 # initialize
+panel_height = 24
+monitor = helper.get_monitor(sys.argv)
 
-panel_height=24
-get_monitor ${@}
-get_lemon_parameters $monitor $panel_height
+# do `man herbsluftclient`, and type \pad to search what it means
+os.system('herbstclient pad ' + str(monitor) + ' ' 
+    + str(panel_height) + ' 0 ' + str(panel_height) + ' 0')
 
-herbstclient pad $monitor $panel_height 0 $panel_height 0
+lemon_parameters = helper.get_lemon_parameters(monitor, panel_height)
 
 # test
-test_lemon $monitor $lemon_parameters
+# run process
+test_lemon(monitor, lemon_parameters)
 {% endhighlight %}
 
 This will produce a panel on top.
@@ -647,7 +627,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-bash-testoutput]
+*	[github.com/.../dotfiles/.../python/01-testoutput.py][dotfiles-python-testoutput]
 
 -- -- --
 
@@ -675,10 +655,10 @@ Enjoy the statusbar !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 
-[image-01-tree-bash]:  {{ asset_path }}/hlwm-statusbar-01-tree-bash.png
+[image-01-tree-python]:  {{ asset_path }}/hlwm-statusbar-01-tree-python.png
 
-[local-bash-config]: {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
-[local-bash-pipe]:   {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-python-config]: {{ site.url }}/desktop/2017/05/04/herbstlustwm-modularized-python.html
+[local-python-pipe]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
@@ -690,19 +670,19 @@ Enjoy the statusbar !
 [local-haskell]:  {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
-[dotfiles-Perl]:    {{ dotfiles_path }}/perl
+[dotfiles-perl]:    {{ dotfiles_path }}/perl
 [dotfiles-python]:  {{ dotfiles_path }}/python
 [dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
 [dotfiles-PHP]:     {{ dotfiles_path }}/php
 [dotfiles-Lua]:     {{ dotfiles_path }}/lua
 [dotfiles-Haskell]: {{ dotfiles_path }}/haskell
 
-[dotfiles-bash-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/bash
-[dotfiles-bash-testparams]:  {{ dotfiles_path }}/bash/01-testparams.sh
-[dotfiles-bash-testoutput]:  {{ dotfiles_path }}/bash/02-testoutput.sh
-[dotfiles-bash-panel]:       {{ dotfiles_path }}/bash/panel.sh
-[dotfiles-bash-gmc]:         {{ dotfiles_path }}/bash/assets/gmc.sh
-[dotfiles-bash-helper]:      {{ dotfiles_path }}/bash/helper.sh
-[dotfiles-bash-output]:      {{ dotfiles_path }}/bash/output.sh
-[dotfiles-bash-pipehandler]: {{ dotfiles_path }}/bash/pipehandler.sh
+[dotfiles-python-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
+[dotfiles-python-testparams]:  {{ dotfiles_path }}/python/01-testparams.py
+[dotfiles-python-testoutput]:  {{ dotfiles_path }}/python/02-testoutput.py
+[dotfiles-python-panel]:       {{ dotfiles_path }}/python/panel.py
+[dotfiles-python-gmc]:         {{ dotfiles_path }}/python/assets/gmc.py
+[dotfiles-python-helper]:      {{ dotfiles_path }}/python/helper.py
+[dotfiles-python-output]:      {{ dotfiles_path }}/python/output.py
+[dotfiles-python-pipehandler]: {{ dotfiles_path }}/python/pipehandler.py
 

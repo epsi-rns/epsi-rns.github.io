@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status in Perl using Dzen2 or Lemonbar"
+title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Perl"
 date:   2017-06-03 17:35:15 +0700
 categories: desktop
 tags: [coding, bash, herbstluftwm]
@@ -682,8 +682,8 @@ Enjoy the statusbar !
 
 [image-01-tree-perl]:  {{ asset_path }}/hlwm-statusbar-01-tree-perl.png
 
-[local-perl-config]: {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-perl.html
-[local-perl-pipe]:   {{ site.url }}/code/2017/04/15/perl-pipe-and-fork.html
+[local-perl-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
+[local-perl-pipe]:   {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html

@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status Overview"
+title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar Overview"
 date:   2017-06-01 17:35:15 +0700
 categories: desktop
 tags: [coding, herbstluftwm, dotfiles]
