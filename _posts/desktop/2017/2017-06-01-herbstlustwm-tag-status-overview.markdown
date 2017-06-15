@@ -110,6 +110,9 @@ This blog already have Dzen2 tutorial in *Pipe and Fork* section.
 Hence, lemonbar deserve to be in this tutorial.
 And since lemonbar clickable areas needs more pipe,
 lemonbar also have more challenge compared to dzen2.
+But hey don't worry, both are very similar.
+
+	Source code is available for both Dzen2 and Lemonbar.
 
 -- -- --
 
@@ -141,6 +144,10 @@ With this idea. For each language, script separated into
 {% highlight conf %}
 .
 ├── panel
+|
+├── 01-testparams
+├── 02-testoutput
+|
 ├── pipehandler
 ├── helper
 ├── output
@@ -178,13 +185,77 @@ Before you start, you might consider to use proper HLWM config.
 
 	Proper Tag Names is a requirement.
 
-#### View Source File:  HerbstluftWM Configuration:
+-- -- --
 
-*	[github.com/.../dotfiles/.../herbstluftwm][dotfiles-hlwm-config]
+### Global Variable and Constant
 
-#### View Blog Article: HerbstluftWM Configuration:
+This <code>output module</code> require a variable
+that can be called from function,
+without passing them as a parameter argument.
+So we have to make scope of these variable global.
+But since these variables live only in output module,
+these are not so global after all.
 
-*	[Modularized HerbstluftWM Overview ][dotfiles-hlwm-config]
+	Global variable is requirement in this project
+
+Some say that global variable are bad.
+But there are quick and dirty condition,
+where global variable looks more suitable.
+The other way is change the entire logic design.
+
+Before getting deep, we need to distinct
+between global variable and global constant.
+
+*	global variable: mutable state, must be initialized.
+
+*	global constant: it is usually defined as a global variable,
+	except that, the value won't be altered during script execution.
+	The value is defined at the beginning of program.
+
+#### Global Variable
+
+Accessing a global variable from within function
+need different trick for each language.
+
+*	BASH: Variable is global by default.
+
+*	Perl: Variable defined using <code>my</code>
+	can be accessed within function in the same module.
+
+*	Python: Access within function using <code>global</code>
+
+*	Ruby: In Module scope, variable defined using <code>@</code>
+	can be accesed within function.
+
+*	PHP: Access within function using <code>global</code>
+
+*	Lua: Variable scope using table module such as <code>_M.</code>
+
+*	Haskell: Officialy there is a no way to define global variable Haskell.
+	But Haskell provide a few workaround to simulate mutable state.
+	The easiest one is using <code>unsafePerformIO</code>.
+
+#### Global Constant
+
+Each language maintain global constant differently
+
+*	BASH: There are ways to define constant in BASH.
+	Constant in PHP may begin with the word <code>readonly</code>.
+
+*	Perl: There are a several ways to define constant in Perl.
+	Constant in Perl may begin with the word <code>use const</code>.
+
+*	Python: Officialy there is a no way to define constant in Python.
+	Python does not differ between these two.
+
+*	Ruby: Constant in Ruby start with capital case.
+
+*	PHP: Constant in PHP begin with the word <code>const</code>.
+
+*	Lua: Officialy there is a no way to define constant in Lua.
+	Lua does not differ between these two.
+
+*	Haskell: Every variables in Haskell are immutable.
 
 -- -- --
 
@@ -193,6 +264,8 @@ Before you start, you might consider to use proper HLWM config.
 The rest is in their respective article.
 
 	Let's get it started.
+
+*	[HerbstluftWM Tag Status iOverview][local-overview]
 
 *	[HerbstluftWM Tag Status in BASH][local-bash]
 

@@ -108,6 +108,15 @@ Let's have a look at <code class="code-file">helper.hs</code> in github.
 
 *	[github.com/.../dotfiles/.../haskell/helper.hs][dotfiles-haskell-helper]
 
+Similar Code: 
+[[ BASH Helper ][dotfiles-bash-helper]]
+[[ Perl Helper ][dotfiles-perl-helper]]
+[[ Python Helper ][dotfiles-python-helper]]
+[[ Ruby Helper ][dotfiles-ruby-helper]]
+[[ PHP Helper ][dotfiles-php-helper]]
+[[ Lua Helper ][dotfiles-lua-helper]]
+[[ Haskell Helper ][dotfiles-haskell-helper]]
+
 #### Get Script Argument
 
 The original herbstluftwm  panel example,
@@ -115,7 +124,7 @@ contain statusbar for each monitor.
 The default is using monitor 0,
 although you can use other monitor as well.
 
-{% highlight haskell %}
+{% highlight bash %}
 $ ./panel.hs 0
 {% endhighlight %}
 
@@ -234,7 +243,6 @@ To print array in Haskell, we just have to wrap it in
 <code>intercalate " " $ map show geometry</code>.
 In order to use <code>intercalate</code>,
 we need to import <code>Data.List</code> module.
-
 
 {% highlight haskell %}
 import System.Environment
@@ -414,32 +422,87 @@ main = do
 
 -- -- --
 
+### Color Schemes
+
+Using a simple data structure **key-value pairs**,
+we have access to google material color
+for use with dzen2 or lemonbar.
+Having a nice pallete to work with,
+makes our panel more fun.
+
+<code class="code-file">gmc.hs</code>
+
+{% highlight haskell %}
+colorSchemes :: [(String, String)]
+colorSchemes =
+    [("white",     "#ffffff")
+    ,("black",     "#000000")
+
+    ,("grey50",     "#fafafa")
+    ,("grey100",    "#f5f5f5")
+    ]
+
+myColor :: String -> String
+myColor key = M.findWithDefault "#ffffff" key (fromList colorSchemes)
+{% endhighlight %}
+
+#### View Source File:
+
+*	[github.com/.../dotfiles/.../haskell/gmc.sh][dotfiles-haskell-gmc]
+
+Similar Code: 
+[[ BASH Color ][dotfiles-bash-gmc]]
+[[ Perl Color ][dotfiles-perl-gmc]]
+[[ Python Color ][dotfiles-python-gmc]]
+[[ Ruby Color ][dotfiles-ruby-gmc]]
+[[ PHP Color ][dotfiles-php-gmc]]
+[[ Lua Color ][dotfiles-lua-gmc]]
+[[ Haskell Color ][dotfiles-haskell-gmc]]
+
+-- -- --
+
 ### Preparing Output
 
 Let's have a look at <code class="code-file">output.hs</code> in github.
-Before explain deep about Function,
-we need to define two things that live in output module:
 
-*	global variable: mutable state, must be initialized.
+#### View Source File:
 
-*	global constant: it is usually defined as a global variable,
-	except that, the value won't be altered during script execution.
-	The value is defined at the beginning of program.
+*	[github.com/.../dotfiles/.../haskell/output.hs][dotfiles-haskell-output]
+
+Similar Code: 
+[[ BASH Output ][dotfiles-bash-output]]
+[[ Perl Output ][dotfiles-perl-output]]
+[[ Python Output ][dotfiles-python-output]]
+[[ Ruby Output ][dotfiles-ruby-output]]
+[[ PHP Output ][dotfiles-php-output]]
+[[ Lua Output ][dotfiles-lua-output]]
+[[ Haskell Output ][dotfiles-haskell-output]]
+
+-- -- --
+
+### Global Variable and Constant
+
+Haskell designed not to have a global variable.
+
+#### Simulate Mutable State
 
 Officialy there is a no way to define global variable Haskell.
 But Haskell provide a few workaround to simulate mutable state.
 The easiest one is using <code>unsafePerformIO</code>,
 and currently that also the only method I understand.
+
+Haskell distinct clearly between global constant (immutable)
+and global variable (mutable).
+While with immutable global constant we can make function easily,
+with mutable global variable, action is unavoidable.
+
 The issue with using <code>unsafePerformIO</code> is,
 "it is an IO action".
-Therefore we need <code><$></code> operator
+Therefore we need <code>Functor <$> operator</code>
 to make the action works with function.
 
-	We need Functor to make the action works with function.
+	By using global variable, IO action is unavoidable
 
-#### View Source File:
-
-*	[github.com/.../dotfiles/.../haskell/output.hs][dotfiles-haskell-output]
 
 #### Mutable State: Segment Variable
 
@@ -809,11 +872,66 @@ Enjoy the statusbar !
 [dotfiles-lua]:     {{ dotfiles_path }}/lua
 [dotfiles-haskell]: {{ dotfiles_path }}/haskell
 
-[dotfiles-haskell-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/haskell
+[dotfiles-bash-directory]:   {{ dotfiles_path }}/bash
+[dotfiles-bash-testparams]:  {{ dotfiles_path }}/bash/01-testparams.sh
+[dotfiles-bash-testoutput]:  {{ dotfiles_path }}/bash/02-testoutput.sh
+[dotfiles-bash-panel]:       {{ dotfiles_path }}/bash/panel.sh
+[dotfiles-bash-gmc]:         {{ dotfiles_path }}/bash/gmc.sh
+[dotfiles-bash-helper]:      {{ dotfiles_path }}/bash/helper.sh
+[dotfiles-bash-output]:      {{ dotfiles_path }}/bash/output.sh
+[dotfiles-bash-pipehandler]: {{ dotfiles_path }}/bash/pipehandler.sh
+
+[dotfiles-perl-directory]:   {{ dotfiles_path }}/perl
+[dotfiles-perl-testparams]:  {{ dotfiles_path }}/perl/01-testparams.pl
+[dotfiles-perl-testoutput]:  {{ dotfiles_path }}/perl/02-testoutput.pl
+[dotfiles-perl-panel]:       {{ dotfiles_path }}/perl/panel.pl
+[dotfiles-perl-gmc]:         {{ dotfiles_path }}/perl/gmc.pm
+[dotfiles-perl-helper]:      {{ dotfiles_path }}/perl/helper.pm
+[dotfiles-perl-output]:      {{ dotfiles_path }}/perl/output.pm
+[dotfiles-perl-pipehandler]: {{ dotfiles_path }}/perl/pipehandler.pm
+
+[dotfiles-python-directory]:   {{ dotfiles_path }}/python
+[dotfiles-python-testparams]:  {{ dotfiles_path }}/python/01-testparams.py
+[dotfiles-python-testoutput]:  {{ dotfiles_path }}/python/02-testoutput.py
+[dotfiles-python-panel]:       {{ dotfiles_path }}/python/panel.py
+[dotfiles-python-gmc]:         {{ dotfiles_path }}/python/gmc.py
+[dotfiles-python-helper]:      {{ dotfiles_path }}/python/helper.py
+[dotfiles-python-output]:      {{ dotfiles_path }}/python/output.py
+[dotfiles-python-pipehandler]: {{ dotfiles_path }}/python/pipehandler.py
+
+[dotfiles-ruby-directory]:   {{ dotfiles_path }}/ruby
+[dotfiles-ruby-testparams]:  {{ dotfiles_path }}/ruby/01-testparams.rb
+[dotfiles-ruby-testoutput]:  {{ dotfiles_path }}/ruby/02-testoutput.rb
+[dotfiles-ruby-panel]:       {{ dotfiles_path }}/ruby/panel.rb
+[dotfiles-ruby-gmc]:         {{ dotfiles_path }}/ruby/gmc.rb
+[dotfiles-ruby-helper]:      {{ dotfiles_path }}/ruby/helper.rb
+[dotfiles-ruby-output]:      {{ dotfiles_path }}/ruby/output.rb
+[dotfiles-ruby-pipehandler]: {{ dotfiles_path }}/ruby/pipehandler.rb
+
+[dotfiles-php-directory]:   {{ dotfiles_path }}/php
+[dotfiles-php-testparams]:  {{ dotfiles_path }}/php/01-testparams.php
+[dotfiles-php-testoutput]:  {{ dotfiles_path }}/php/02-testoutput.php
+[dotfiles-php-panel]:       {{ dotfiles_path }}/php/panel.php
+[dotfiles-php-gmc]:         {{ dotfiles_path }}/php/gmc.php
+[dotfiles-php-helper]:      {{ dotfiles_path }}/php/helper.php
+[dotfiles-php-output]:      {{ dotfiles_path }}/php/output.php
+[dotfiles-php-pipehandler]: {{ dotfiles_path }}/php/pipehandler.php
+
+[dotfiles-lua-directory]:   {{ dotfiles_path }}/lua
+[dotfiles-lua-testparams]:  {{ dotfiles_path }}/lua/01-testparams.lua
+[dotfiles-lua-testoutput]:  {{ dotfiles_path }}/lua/02-testoutput.lua
+[dotfiles-lua-panel]:       {{ dotfiles_path }}/lua/panel.lua
+[dotfiles-lua-gmc]:         {{ dotfiles_path }}/lua/gmc.lua
+[dotfiles-lua-common]:      {{ dotfiles_path }}/lua/common.lua
+[dotfiles-lua-helper]:      {{ dotfiles_path }}/lua/helper.lua
+[dotfiles-lua-output]:      {{ dotfiles_path }}/lua/output.lua
+[dotfiles-lua-pipehandler]: {{ dotfiles_path }}/lua/pipehandler.lua
+
+[dotfiles-haskell-directory]:   {{ dotfiles_path }}/lua
 [dotfiles-haskell-testparams]:  {{ dotfiles_path }}/haskell/01-testparams.hs
 [dotfiles-haskell-testoutput]:  {{ dotfiles_path }}/haskell/02-testoutput.hs
 [dotfiles-haskell-panel]:       {{ dotfiles_path }}/haskell/panel.hs
-[dotfiles-haskell-gmc]:         {{ dotfiles_path }}/haskell/assets/MyGMC.hs
+[dotfiles-haskell-gmc]:         {{ dotfiles_path }}/haskell/MyGMC.hs
 [dotfiles-haskell-helper]:      {{ dotfiles_path }}/haskell/MyHelper.hs
 [dotfiles-haskell-output]:      {{ dotfiles_path }}/haskell/MyOutput.hs
 [dotfiles-haskell-pipehandler]: {{ dotfiles_path }}/haskell/MyPipeHandler.hs

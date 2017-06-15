@@ -100,6 +100,61 @@ without changing the whole stuff.
 
 -- -- --
 
+### Common Module
+
+Lua is an embedding language. It is suppose to be light.
+No wonder it lacks of standard function for daily coding,
+such as <code>split</code>, <code>trim</code>, <code>sleep</code>,
+that we are going to use in this project.
+
+I don't like to grumble.
+I'd better collect from some resurces in the internet.
+
+<code class="code-file">common.lua</code>
+
+{% highlight lua %}
+local _M = {}
+
+function _M.sleep (n)
+    local t = os.clock()
+    while os.clock() - t <= n do
+        -- nothing
+    end
+end
+
+function _M.split(inputstr, sep)
+        if sep == nil then
+                sep = "%s"
+        end
+        local t={} ; i=1 -- non zero based
+        for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+                t[i] = str
+                i = i + 1
+        end
+        return t
+end
+
+function _M.trim1(s)
+  return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+function _M.has_value (tab, val)
+    for index, value in ipairs(tab) do
+        if value == val then
+            return true
+        end
+    end
+
+    return false
+end
+{% endhighlight %}
+
+#### View Source File:
+
+*	[github.com/.../dotfiles/.../lua/common.lua][dotfiles-lua-common]
+
+-- -- --
+
 ### Get Geometry
 
 Let's have a look at <code class="code-file">helper.lua</code> in github.
@@ -108,6 +163,15 @@ Let's have a look at <code class="code-file">helper.lua</code> in github.
 
 *	[github.com/.../dotfiles/.../lua/helper.lua][dotfiles-lua-helper]
 
+Similar Code: 
+[[ BASH Helper ][dotfiles-bash-helper]]
+[[ Perl Helper ][dotfiles-perl-helper]]
+[[ Python Helper ][dotfiles-python-helper]]
+[[ Ruby Helper ][dotfiles-ruby-helper]]
+[[ PHP Helper ][dotfiles-php-helper]]
+[[ Lua Helper ][dotfiles-lua-helper]]
+[[ Haskell Helper ][dotfiles-haskell-helper]]
+
 #### Get Script Argument
 
 The original herbstluftwm  panel example,
@@ -115,7 +179,7 @@ contain statusbar for each monitor.
 The default is using monitor 0,
 although you can use other monitor as well.
 
-{% highlight lua %}
+{% highlight bash %}
 $ ./panel.lua 0
 {% endhighlight %}
 
@@ -353,24 +417,64 @@ os.execute('herbstclient pad ' .. monitor .. ' '
 
 -- -- --
 
+### Color Schemes
+
+Using a simple data structure **key-value pairs**,
+we have access to google material color
+for use with dzen2 or lemonbar.
+Having a nice pallete to work with,
+makes our panel more fun.
+
+<code class="code-file">gmc.lua</code>
+
+{% highlight lua %}
+_M.color = {
+    ['white'] = '#ffffff',
+    ['black'] = '#000000',
+
+    ['grey50']  = '#fafafa',
+    ['grey100'] = '#f5f5f5'
+}
+{% endhighlight %}
+
+#### View Source File:
+
+*	[github.com/.../dotfiles/.../lua/gmc.sh][dotfiles-lua-gmc]
+
+Similar Code: 
+[[ BASH Color ][dotfiles-bash-gmc]]
+[[ Perl Color ][dotfiles-perl-gmc]]
+[[ Python Color ][dotfiles-python-gmc]]
+[[ Ruby Color ][dotfiles-ruby-gmc]]
+[[ PHP Color ][dotfiles-php-gmc]]
+[[ Lua Color ][dotfiles-lua-gmc]]
+[[ Haskell Color ][dotfiles-haskell-gmc]]
+
+-- -- --
+
 ### Preparing Output
 
 Let's have a look at <code class="code-file">output.lua</code> in github.
-Before explain deep about Function,
-we need to define two things that live in output module:
-
-*	global variable: mutable state, must be initialized.
-
-*	global constant: it is usually defined as a global variable,
-	except that, the value won't be altered during script execution.
-	The value is defined at the beginning of program.
-
-Officialy there is a no way to define constant in Lua.
-Lua does not differ between these two.
 
 #### View Source File:
 
 *	[github.com/.../dotfiles/.../lua/output.lua][dotfiles-lua-output]
+
+Similar Code: 
+[[ BASH Output ][dotfiles-bash-output]]
+[[ Perl Output ][dotfiles-perl-output]]
+[[ Python Output ][dotfiles-python-output]]
+[[ Ruby Output ][dotfiles-ruby-output]]
+[[ PHP Output ][dotfiles-php-output]]
+[[ Lua Output ][dotfiles-lua-output]]
+[[ Haskell Output ][dotfiles-haskell-output]]
+
+-- -- --
+
+### Global Variable and Constant
+
+Officialy there is a no way to define constant in Lua.
+Lua does not differ between these two.
 
 #### Mutable State: Segment Variable
 
@@ -731,11 +835,66 @@ Enjoy the statusbar !
 [dotfiles-lua]:     {{ dotfiles_path }}/lua
 [dotfiles-haskell]: {{ dotfiles_path }}/haskell
 
-[dotfiles-lua-directory]:   https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
+[dotfiles-bash-directory]:   {{ dotfiles_path }}/bash
+[dotfiles-bash-testparams]:  {{ dotfiles_path }}/bash/01-testparams.sh
+[dotfiles-bash-testoutput]:  {{ dotfiles_path }}/bash/02-testoutput.sh
+[dotfiles-bash-panel]:       {{ dotfiles_path }}/bash/panel.sh
+[dotfiles-bash-gmc]:         {{ dotfiles_path }}/bash/gmc.sh
+[dotfiles-bash-helper]:      {{ dotfiles_path }}/bash/helper.sh
+[dotfiles-bash-output]:      {{ dotfiles_path }}/bash/output.sh
+[dotfiles-bash-pipehandler]: {{ dotfiles_path }}/bash/pipehandler.sh
+
+[dotfiles-perl-directory]:   {{ dotfiles_path }}/perl
+[dotfiles-perl-testparams]:  {{ dotfiles_path }}/perl/01-testparams.pl
+[dotfiles-perl-testoutput]:  {{ dotfiles_path }}/perl/02-testoutput.pl
+[dotfiles-perl-panel]:       {{ dotfiles_path }}/perl/panel.pl
+[dotfiles-perl-gmc]:         {{ dotfiles_path }}/perl/gmc.pm
+[dotfiles-perl-helper]:      {{ dotfiles_path }}/perl/helper.pm
+[dotfiles-perl-output]:      {{ dotfiles_path }}/perl/output.pm
+[dotfiles-perl-pipehandler]: {{ dotfiles_path }}/perl/pipehandler.pm
+
+[dotfiles-python-directory]:   {{ dotfiles_path }}/python
+[dotfiles-python-testparams]:  {{ dotfiles_path }}/python/01-testparams.py
+[dotfiles-python-testoutput]:  {{ dotfiles_path }}/python/02-testoutput.py
+[dotfiles-python-panel]:       {{ dotfiles_path }}/python/panel.py
+[dotfiles-python-gmc]:         {{ dotfiles_path }}/python/gmc.py
+[dotfiles-python-helper]:      {{ dotfiles_path }}/python/helper.py
+[dotfiles-python-output]:      {{ dotfiles_path }}/python/output.py
+[dotfiles-python-pipehandler]: {{ dotfiles_path }}/python/pipehandler.py
+
+[dotfiles-ruby-directory]:   {{ dotfiles_path }}/ruby
+[dotfiles-ruby-testparams]:  {{ dotfiles_path }}/ruby/01-testparams.rb
+[dotfiles-ruby-testoutput]:  {{ dotfiles_path }}/ruby/02-testoutput.rb
+[dotfiles-ruby-panel]:       {{ dotfiles_path }}/ruby/panel.rb
+[dotfiles-ruby-gmc]:         {{ dotfiles_path }}/ruby/gmc.rb
+[dotfiles-ruby-helper]:      {{ dotfiles_path }}/ruby/helper.rb
+[dotfiles-ruby-output]:      {{ dotfiles_path }}/ruby/output.rb
+[dotfiles-ruby-pipehandler]: {{ dotfiles_path }}/ruby/pipehandler.rb
+
+[dotfiles-php-directory]:   {{ dotfiles_path }}/php
+[dotfiles-php-testparams]:  {{ dotfiles_path }}/php/01-testparams.php
+[dotfiles-php-testoutput]:  {{ dotfiles_path }}/php/02-testoutput.php
+[dotfiles-php-panel]:       {{ dotfiles_path }}/php/panel.php
+[dotfiles-php-gmc]:         {{ dotfiles_path }}/php/gmc.php
+[dotfiles-php-helper]:      {{ dotfiles_path }}/php/helper.php
+[dotfiles-php-output]:      {{ dotfiles_path }}/php/output.php
+[dotfiles-php-pipehandler]: {{ dotfiles_path }}/php/pipehandler.php
+
+[dotfiles-lua-directory]:   {{ dotfiles_path }}/lua
 [dotfiles-lua-testparams]:  {{ dotfiles_path }}/lua/01-testparams.lua
 [dotfiles-lua-testoutput]:  {{ dotfiles_path }}/lua/02-testoutput.lua
 [dotfiles-lua-panel]:       {{ dotfiles_path }}/lua/panel.lua
-[dotfiles-lua-gmc]:         {{ dotfiles_path }}/lua/assets/gmc.lua
+[dotfiles-lua-gmc]:         {{ dotfiles_path }}/lua/gmc.lua
+[dotfiles-lua-common]:      {{ dotfiles_path }}/lua/common.lua
 [dotfiles-lua-helper]:      {{ dotfiles_path }}/lua/helper.lua
 [dotfiles-lua-output]:      {{ dotfiles_path }}/lua/output.lua
 [dotfiles-lua-pipehandler]: {{ dotfiles_path }}/lua/pipehandler.lua
+
+[dotfiles-haskell-directory]:   {{ dotfiles_path }}/lua
+[dotfiles-haskell-testparams]:  {{ dotfiles_path }}/haskell/01-testparams.hs
+[dotfiles-haskell-testoutput]:  {{ dotfiles_path }}/haskell/02-testoutput.hs
+[dotfiles-haskell-panel]:       {{ dotfiles_path }}/haskell/panel.hs
+[dotfiles-haskell-gmc]:         {{ dotfiles_path }}/haskell/MyGMC.hs
+[dotfiles-haskell-helper]:      {{ dotfiles_path }}/haskell/MyHelper.hs
+[dotfiles-haskell-output]:      {{ dotfiles_path }}/haskell/MyOutput.hs
+[dotfiles-haskell-pipehandler]: {{ dotfiles_path }}/haskell/MyPipeHandler.hs
