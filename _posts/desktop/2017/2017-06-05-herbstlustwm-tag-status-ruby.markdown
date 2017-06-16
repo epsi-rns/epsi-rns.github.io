@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar in Ruby"
+title:  "HerbstluftWM Tag Status in Ruby"
 date:   2017-06-05 17:35:15 +0700
 categories: desktop
 tags: [coding, ruby, herbstluftwm, statusbar]
@@ -40,7 +40,11 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../ruby/][dotfiles-ruby-directory]
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
 
 -- -- --
 
@@ -60,14 +64,24 @@ Tutorial/ Guidance/ Article:
 [[ Lua ][local-lua]]
 [[ Haskell ][local-haskell]]
 
-Source Code Directory:
-[[ BASH ][dotfiles-bash]]
-[[ Perl ][dotfiles-perl]]
-[[ Python ][dotfiles-python]]
-[[ Ruby ][dotfiles-ruby]]
-[[ PHP ][dotfiles-php]]
-[[ Lua ][dotfiles-lua]]
-[[ Haskell ][dotfiles-haskell]]
+Dzen2 Source Code Directory:
+[[ BASH ][dotfiles-dzen2-bash]]
+[[ Perl ][dotfiles-dzen2-perl]]
+[[ Python ][dotfiles-dzen2-python]]
+[[ Ruby ][dotfiles-dzen2-ruby]]
+[[ PHP ][dotfiles-dzen2-php]]
+[[ Lua ][dotfiles-dzen2-lua]]
+[[ Haskell ][dotfiles-dzen2-haskell]]
+
+Lemonbar Source Code Directory:
+[[ BASH ][dotfiles-lemon-bash]]
+[[ Perl ][dotfiles-lemon-perl]]
+[[ Python ][dotfiles-lemon-python]]
+[[ Ruby ][dotfiles-lemon-ruby]]
+[[ PHP ][dotfiles-lemon-php]]
+[[ Lua ][dotfiles-lemon-lua]]
+[[ Haskell ][dotfiles-lemon-haskell]]
+
 -- -- --
 
 ### Screenshot
@@ -105,16 +119,29 @@ Let's have a look at <code class="code-file">helper.rb</code> in github.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-ruby-helper]
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-dzen2-ruby-helper]
 
-Similar Code: 
-[[ BASH Helper ][dotfiles-bash-helper]]
-[[ Perl Helper ][dotfiles-perl-helper]]
-[[ Python Helper ][dotfiles-python-helper]]
-[[ Ruby Helper ][dotfiles-ruby-helper]]
-[[ PHP Helper ][dotfiles-php-helper]]
-[[ Lua Helper ][dotfiles-lua-helper]]
-[[ Haskell Helper ][dotfiles-haskell-helper]]
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-lemon-ruby-helper]
+
+Similar Code (Dzen2): 
+[[ BASH Helper ][dotfiles-dzen2-bash-helper]]
+[[ Perl Helper ][dotfiles-dzen2-perl-helper]]
+[[ Python Helper ][dotfiles-dzen2-python-helper]]
+[[ Ruby Helper ][dotfiles-dzen2-ruby-helper]]
+[[ PHP Helper ][dotfiles-dzen2-php-helper]]
+[[ Lua Helper ][dotfiles-dzen2-lua-helper]]
+[[ Haskell Helper ][dotfiles-dzen2-haskell-helper]]
+
+Similar Code (Lemonbar): 
+[[ BASH Helper ][dotfiles-lemon-bash-helper]]
+[[ Perl Helper ][dotfiles-lemon-perl-helper]]
+[[ Python Helper ][dotfiles-lemon-python-helper]]
+[[ Ruby Helper ][dotfiles-lemon-ruby-helper]]
+[[ PHP Helper ][dotfiles-lemon-php-helper]]
+[[ Lua Helper ][dotfiles-lemon-lua-helper]]
+[[ Haskell Helper ][dotfiles-lemon-haskell-helper]]
 
 #### Get Script Argument
 
@@ -310,9 +337,21 @@ something similar to this result
 -f takaopgothic-9 -f FontAwesome-9 -f PowerlineSymbols-11
 {% endhighlight %}
 
+Or in Dzen2 version:
+
+{% highlight conf %}
+-x 0 -y 0 -w 1280 -h 24 -ta l 
+-bg '#000000' -fg '#ffffff' -title-name dzentop 
+-fn '-*-takaopgothic-medium-*-*-*-12-*-*-*-*-*-*-*'
+{% endhighlight %}
+
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-ruby-testparams]
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-dzen2-ruby-testparams]
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-lemon-ruby-testparams]
 
 -- -- --
 
@@ -360,16 +399,29 @@ end
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/gmc.sh][dotfiles-ruby-gmc]
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-dzen2-ruby-gmc]
 
-Similar Code: 
-[[ BASH Color ][dotfiles-bash-gmc]]
-[[ Perl Color ][dotfiles-perl-gmc]]
-[[ Python Color ][dotfiles-python-gmc]]
-[[ Ruby Color ][dotfiles-ruby-gmc]]
-[[ PHP Color ][dotfiles-php-gmc]]
-[[ Lua Color ][dotfiles-lua-gmc]]
-[[ Haskell Color ][dotfiles-haskell-gmc]]
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-lemon-ruby-gmc]
+
+Similar Code (Dzen2): 
+[[ BASH Color ][dotfiles-dzen2-bash-gmc]]
+[[ Perl Color ][dotfiles-dzen2-perl-gmc]]
+[[ Python Color ][dotfiles-dzen2-python-gmc]]
+[[ Ruby Color ][dotfiles-dzen2-ruby-gmc]]
+[[ PHP Color ][dotfiles-dzen2-php-gmc]]
+[[ Lua Color ][dotfiles-dzen2-lua-gmc]]
+[[ Haskell Color ][dotfiles-dzen2-haskell-gmc]]
+
+Similar Code (Lemon): 
+[[ BASH Color ][dotfiles-lemon-bash-gmc]]
+[[ Perl Color ][dotfiles-lemon-perl-gmc]]
+[[ Python Color ][dotfiles-lemon-python-gmc]]
+[[ Ruby Color ][dotfiles-lemon-ruby-gmc]]
+[[ PHP Color ][dotfiles-lemon-php-gmc]]
+[[ Lua Color ][dotfiles-lemon-lua-gmc]]
+[[ Haskell Color ][dotfiles-lemon-haskell-gmc]]
 
 -- -- --
 
@@ -379,16 +431,30 @@ Let's have a look at <code class="code-file">output.rb</code> in github.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/output.rb][dotfiles-ruby-output]
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../ruby/output.rb][dotfiles-dzen2-ruby-output]
 
-Similar Code: 
-[[ BASH Output ][dotfiles-bash-output]]
-[[ Perl Output ][dotfiles-perl-output]]
-[[ Python Output ][dotfiles-python-output]]
-[[ Ruby Output ][dotfiles-ruby-output]]
-[[ PHP Output ][dotfiles-php-output]]
-[[ Lua Output ][dotfiles-lua-output]]
-[[ Haskell Output ][dotfiles-haskell-output]]
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/output.rb][dotfiles-lemon-ruby-output]
+
+Similar Code (Dzen2): 
+[[ BASH Output ][dotfiles-dzen2-bash-output]]
+[[ Perl Output ][dotfiles-dzen2-perl-output]]
+[[ Python Output ][dotfiles-dzen2-python-output]]
+[[ Ruby Output ][dotfiles-dzen2-ruby-output]]
+[[ PHP Output ][dotfiles-dzen2-php-output]]
+[[ Lua Output ][dotfiles-dzen2-lua-output]]
+[[ Haskell Output ][dotfiles-dzen2-haskell-output]]
+
+Similar Code (Lemonbar): 
+[[ BASH Output ][dotfiles-lemon-bash-output]]
+[[ Perl Output ][dotfiles-lemon-perl-output]]
+[[ Python Output ][dotfiles-lemon-python-output]]
+[[ Ruby Output ][dotfiles-lemon-ruby-output]]
+[[ PHP Output ][dotfiles-lemon-php-output]]
+[[ Lua Output ][dotfiles-lemon-lua-output]]
+[[ Haskell Output ][dotfiles-lemon-haskell-output]]
+
 
 -- -- --
 
@@ -675,10 +741,13 @@ herbstclient focus_monitor "0" && herbstclient use "2"
 herbstclient focus_monitor "0" && herbstclient use "3"
 {% endhighlight %}
 
-
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-ruby-testoutput]
+*	**dzen2**: 
+	[github.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-dzen2-ruby-testoutput]
+
+*	**lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-lemon-ruby-testoutput]
 
 -- -- --
 
@@ -699,7 +768,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png
@@ -720,74 +790,132 @@ Enjoy the statusbar !
 [local-lua]:      {{ site.url }}/desktop/2017/06/07/herbstlustwm-tag-status-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 
-[dotfiles-bash]:    {{ dotfiles_path }}/bash
-[dotfiles-perl]:    {{ dotfiles_path }}/perl
-[dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-ruby]:    {{ dotfiles_path }}/ruby
-[dotfiles-php]:     {{ dotfiles_path }}/php
-[dotfiles-lua]:     {{ dotfiles_path }}/lua
-[dotfiles-haskell]: {{ dotfiles_path }}/haskell
+[dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
+[dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl
+[dotfiles-dzen2-python]:  {{ dotfiles_dzen2 }}/python
+[dotfiles-dzen2-ruby]:    {{ dotfiles_dzen2 }}/ruby
+[dotfiles-dzen2-php]:     {{ dotfiles_dzen2 }}/php
+[dotfiles-dzen2-lua]:     {{ dotfiles_dzen2 }}/lua
+[dotfiles-dzen2-haskell]: {{ dotfiles_dzen2 }}/haskell
 
-[dotfiles-bash-directory]:   {{ dotfiles_path }}/bash
-[dotfiles-bash-testparams]:  {{ dotfiles_path }}/bash/01-testparams.sh
-[dotfiles-bash-testoutput]:  {{ dotfiles_path }}/bash/02-testoutput.sh
-[dotfiles-bash-panel]:       {{ dotfiles_path }}/bash/panel.sh
-[dotfiles-bash-gmc]:         {{ dotfiles_path }}/bash/gmc.sh
-[dotfiles-bash-helper]:      {{ dotfiles_path }}/bash/helper.sh
-[dotfiles-bash-output]:      {{ dotfiles_path }}/bash/output.sh
-[dotfiles-bash-pipehandler]: {{ dotfiles_path }}/bash/pipehandler.sh
+[dotfiles-lemon-bash]:    {{ dotfiles_lemon }}/bash
+[dotfiles-lemon-perl]:    {{ dotfiles_lemon }}/perl
+[dotfiles-lemon-python]:  {{ dotfiles_lemon }}/python
+[dotfiles-lemon-ruby]:    {{ dotfiles_lemon }}/ruby
+[dotfiles-lemon-php]:     {{ dotfiles_lemon }}/php
+[dotfiles-lemon-lua]:     {{ dotfiles_lemon }}/lua
+[dotfiles-lemon-haskell]: {{ dotfiles_lemon }}/haskell
 
-[dotfiles-perl-directory]:   {{ dotfiles_path }}/perl
-[dotfiles-perl-testparams]:  {{ dotfiles_path }}/perl/01-testparams.pl
-[dotfiles-perl-testoutput]:  {{ dotfiles_path }}/perl/02-testoutput.pl
-[dotfiles-perl-panel]:       {{ dotfiles_path }}/perl/panel.pl
-[dotfiles-perl-gmc]:         {{ dotfiles_path }}/perl/gmc.pm
-[dotfiles-perl-helper]:      {{ dotfiles_path }}/perl/helper.pm
-[dotfiles-perl-output]:      {{ dotfiles_path }}/perl/output.pm
-[dotfiles-perl-pipehandler]: {{ dotfiles_path }}/perl/pipehandler.pm
+[dotfiles-dzen2-bash-testparams]:  {{ dotfiles_dzen2 }}/bash/01-testparams.sh
+[dotfiles-dzen2-bash-testoutput]:  {{ dotfiles_dzen2 }}/bash/02-testoutput.sh
+[dotfiles-dzen2-bash-panel]:       {{ dotfiles_dzen2 }}/bash/panel.sh
+[dotfiles-dzen2-bash-gmc]:         {{ dotfiles_dzen2 }}/bash/gmc.sh
+[dotfiles-dzen2-bash-helper]:      {{ dotfiles_dzen2 }}/bash/helper.sh
+[dotfiles-dzen2-bash-output]:      {{ dotfiles_dzen2 }}/bash/output.sh
+[dotfiles-dzen2-bash-pipehandler]: {{ dotfiles_dzen2 }}/bash/pipehandler.sh
 
-[dotfiles-python-directory]:   {{ dotfiles_path }}/python
-[dotfiles-python-testparams]:  {{ dotfiles_path }}/python/01-testparams.py
-[dotfiles-python-testoutput]:  {{ dotfiles_path }}/python/02-testoutput.py
-[dotfiles-python-panel]:       {{ dotfiles_path }}/python/panel.py
-[dotfiles-python-gmc]:         {{ dotfiles_path }}/python/gmc.py
-[dotfiles-python-helper]:      {{ dotfiles_path }}/python/helper.py
-[dotfiles-python-output]:      {{ dotfiles_path }}/python/output.py
-[dotfiles-python-pipehandler]: {{ dotfiles_path }}/python/pipehandler.py
+[dotfiles-dzen2-perl-testparams]:  {{ dotfiles_dzen2 }}/perl/01-testparams.pl
+[dotfiles-dzen2-perl-testoutput]:  {{ dotfiles_dzen2 }}/perl/02-testoutput.pl
+[dotfiles-dzen2-perl-panel]:       {{ dotfiles_dzen2 }}/perl/panel.pl
+[dotfiles-dzen2-perl-gmc]:         {{ dotfiles_dzen2 }}/perl/gmc.pm
+[dotfiles-dzen2-perl-helper]:      {{ dotfiles_dzen2 }}/perl/helper.pm
+[dotfiles-dzen2-perl-output]:      {{ dotfiles_dzen2 }}/perl/output.pm
+[dotfiles-dzen2-perl-pipehandler]: {{ dotfiles_dzen2 }}/perl/pipehandler.pm
 
-[dotfiles-ruby-directory]:   {{ dotfiles_path }}/ruby
-[dotfiles-ruby-testparams]:  {{ dotfiles_path }}/ruby/01-testparams.rb
-[dotfiles-ruby-testoutput]:  {{ dotfiles_path }}/ruby/02-testoutput.rb
-[dotfiles-ruby-panel]:       {{ dotfiles_path }}/ruby/panel.rb
-[dotfiles-ruby-gmc]:         {{ dotfiles_path }}/ruby/gmc.rb
-[dotfiles-ruby-helper]:      {{ dotfiles_path }}/ruby/helper.rb
-[dotfiles-ruby-output]:      {{ dotfiles_path }}/ruby/output.rb
-[dotfiles-ruby-pipehandler]: {{ dotfiles_path }}/ruby/pipehandler.rb
+[dotfiles-dzen2-python-testparams]:  {{ dotfiles_dzen2 }}/python/01-testparams.py
+[dotfiles-dzen2-python-testoutput]:  {{ dotfiles_dzen2 }}/python/02-testoutput.py
+[dotfiles-dzen2-python-panel]:       {{ dotfiles_dzen2 }}/python/panel.py
+[dotfiles-dzen2-python-gmc]:         {{ dotfiles_dzen2 }}/python/gmc.py
+[dotfiles-dzen2-python-helper]:      {{ dotfiles_dzen2 }}/python/helper.py
+[dotfiles-dzen2-python-output]:      {{ dotfiles_dzen2 }}/python/output.py
+[dotfiles-dzen2-python-pipehandler]: {{ dotfiles_dzen2 }}/python/pipehandler.py
 
-[dotfiles-php-directory]:   {{ dotfiles_path }}/php
-[dotfiles-php-testparams]:  {{ dotfiles_path }}/php/01-testparams.php
-[dotfiles-php-testoutput]:  {{ dotfiles_path }}/php/02-testoutput.php
-[dotfiles-php-panel]:       {{ dotfiles_path }}/php/panel.php
-[dotfiles-php-gmc]:         {{ dotfiles_path }}/php/gmc.php
-[dotfiles-php-helper]:      {{ dotfiles_path }}/php/helper.php
-[dotfiles-php-output]:      {{ dotfiles_path }}/php/output.php
-[dotfiles-php-pipehandler]: {{ dotfiles_path }}/php/pipehandler.php
+[dotfiles-dzen2-ruby-testparams]:  {{ dotfiles_dzen2 }}/ruby/01-testparams.rb
+[dotfiles-dzen2-ruby-testoutput]:  {{ dotfiles_dzen2 }}/ruby/02-testoutput.rb
+[dotfiles-dzen2-ruby-panel]:       {{ dotfiles_dzen2 }}/ruby/panel.rb
+[dotfiles-dzen2-ruby-gmc]:         {{ dotfiles_dzen2 }}/ruby/gmc.rb
+[dotfiles-dzen2-ruby-helper]:      {{ dotfiles_dzen2 }}/ruby/helper.rb
+[dotfiles-dzen2-ruby-output]:      {{ dotfiles_dzen2 }}/ruby/output.rb
+[dotfiles-dzen2-ruby-pipehandler]: {{ dotfiles_dzen2 }}/ruby/pipehandler.rb
 
-[dotfiles-lua-directory]:   {{ dotfiles_path }}/lua
-[dotfiles-lua-testparams]:  {{ dotfiles_path }}/lua/01-testparams.lua
-[dotfiles-lua-testoutput]:  {{ dotfiles_path }}/lua/02-testoutput.lua
-[dotfiles-lua-panel]:       {{ dotfiles_path }}/lua/panel.lua
-[dotfiles-lua-gmc]:         {{ dotfiles_path }}/lua/gmc.lua
-[dotfiles-lua-common]:      {{ dotfiles_path }}/lua/common.lua
-[dotfiles-lua-helper]:      {{ dotfiles_path }}/lua/helper.lua
-[dotfiles-lua-output]:      {{ dotfiles_path }}/lua/output.lua
-[dotfiles-lua-pipehandler]: {{ dotfiles_path }}/lua/pipehandler.lua
+[dotfiles-dzen2-php-testparams]:  {{ dotfiles_dzen2 }}/php/01-testparams.php
+[dotfiles-dzen2-php-testoutput]:  {{ dotfiles_dzen2 }}/php/02-testoutput.php
+[dotfiles-dzen2-php-panel]:       {{ dotfiles_dzen2 }}/php/panel.php
+[dotfiles-dzen2-php-gmc]:         {{ dotfiles_dzen2 }}/php/gmc.php
+[dotfiles-dzen2-php-helper]:      {{ dotfiles_dzen2 }}/php/helper.php
+[dotfiles-dzen2-php-output]:      {{ dotfiles_dzen2 }}/php/output.php
+[dotfiles-dzen2-php-pipehandler]: {{ dotfiles_dzen2 }}/php/pipehandler.php
 
-[dotfiles-haskell-directory]:   {{ dotfiles_path }}/lua
-[dotfiles-haskell-testparams]:  {{ dotfiles_path }}/haskell/01-testparams.hs
-[dotfiles-haskell-testoutput]:  {{ dotfiles_path }}/haskell/02-testoutput.hs
-[dotfiles-haskell-panel]:       {{ dotfiles_path }}/haskell/panel.hs
-[dotfiles-haskell-gmc]:         {{ dotfiles_path }}/haskell/MyGMC.hs
-[dotfiles-haskell-helper]:      {{ dotfiles_path }}/haskell/MyHelper.hs
-[dotfiles-haskell-output]:      {{ dotfiles_path }}/haskell/MyOutput.hs
-[dotfiles-haskell-pipehandler]: {{ dotfiles_path }}/haskell/MyPipeHandler.hs
+[dotfiles-dzen2-lua-testparams]:  {{ dotfiles_dzen2 }}/lua/01-testparams.lua
+[dotfiles-dzen2-lua-testoutput]:  {{ dotfiles_dzen2 }}/lua/02-testoutput.lua
+[dotfiles-dzen2-lua-panel]:       {{ dotfiles_dzen2 }}/lua/panel.lua
+[dotfiles-dzen2-lua-gmc]:         {{ dotfiles_dzen2 }}/lua/gmc.lua
+[dotfiles-dzen2-lua-common]:      {{ dotfiles_dzen2 }}/lua/common.lua
+[dotfiles-dzen2-lua-helper]:      {{ dotfiles_dzen2 }}/lua/helper.lua
+[dotfiles-dzen2-lua-output]:      {{ dotfiles_dzen2 }}/lua/output.lua
+[dotfiles-dzen2-lua-pipehandler]: {{ dotfiles_dzen2 }}/lua/pipehandler.lua
+
+[dotfiles-dzen2-haskell-testparams]:  {{ dotfiles_dzen2 }}/haskell/01-testparams.hs
+[dotfiles-dzen2-haskell-testoutput]:  {{ dotfiles_dzen2 }}/haskell/02-testoutput.hs
+[dotfiles-dzen2-haskell-panel]:       {{ dotfiles_dzen2 }}/haskell/panel.hs
+[dotfiles-dzen2-haskell-gmc]:         {{ dotfiles_dzen2 }}/haskell/MyGMC.hs
+[dotfiles-dzen2-haskell-helper]:      {{ dotfiles_dzen2 }}/haskell/MyHelper.hs
+[dotfiles-dzen2-haskell-output]:      {{ dotfiles_dzen2 }}/haskell/MyOutput.hs
+[dotfiles-dzen2-haskell-pipehandler]: {{ dotfiles_dzen2 }}/haskell/MyPipeHandler.hs
+
+[dotfiles-lemon-bash-testparams]:  {{ dotfiles_lemon }}/bash/01-testparams.sh
+[dotfiles-lemon-bash-testoutput]:  {{ dotfiles_lemon }}/bash/02-testoutput.sh
+[dotfiles-lemon-bash-panel]:       {{ dotfiles_lemon }}/bash/panel.sh
+[dotfiles-lemon-bash-gmc]:         {{ dotfiles_lemon }}/bash/gmc.sh
+[dotfiles-lemon-bash-helper]:      {{ dotfiles_lemon }}/bash/helper.sh
+[dotfiles-lemon-bash-output]:      {{ dotfiles_lemon }}/bash/output.sh
+[dotfiles-lemon-bash-pipehandler]: {{ dotfiles_lemon }}/bash/pipehandler.sh
+
+[dotfiles-lemon-perl-testparams]:  {{ dotfiles_lemon }}/perl/01-testparams.pl
+[dotfiles-lemon-perl-testoutput]:  {{ dotfiles_lemon }}/perl/02-testoutput.pl
+[dotfiles-lemon-perl-panel]:       {{ dotfiles_lemon }}/perl/panel.pl
+[dotfiles-lemon-perl-gmc]:         {{ dotfiles_lemon }}/perl/gmc.pm
+[dotfiles-lemon-perl-helper]:      {{ dotfiles_lemon }}/perl/helper.pm
+[dotfiles-lemon-perl-output]:      {{ dotfiles_lemon }}/perl/output.pm
+[dotfiles-lemon-perl-pipehandler]: {{ dotfiles_lemon }}/perl/pipehandler.pm
+
+[dotfiles-lemon-python-testparams]:  {{ dotfiles_lemon }}/python/01-testparams.py
+[dotfiles-lemon-python-testoutput]:  {{ dotfiles_lemon }}/python/02-testoutput.py
+[dotfiles-lemon-python-panel]:       {{ dotfiles_lemon }}/python/panel.py
+[dotfiles-lemon-python-gmc]:         {{ dotfiles_lemon }}/python/gmc.py
+[dotfiles-lemon-python-helper]:      {{ dotfiles_lemon }}/python/helper.py
+[dotfiles-lemon-python-output]:      {{ dotfiles_lemon }}/python/output.py
+[dotfiles-lemon-python-pipehandler]: {{ dotfiles_lemon }}/python/pipehandler.py
+
+[dotfiles-lemon-ruby-testparams]:  {{ dotfiles_lemon }}/ruby/01-testparams.rb
+[dotfiles-lemon-ruby-testoutput]:  {{ dotfiles_lemon }}/ruby/02-testoutput.rb
+[dotfiles-lemon-ruby-panel]:       {{ dotfiles_lemon }}/ruby/panel.rb
+[dotfiles-lemon-ruby-gmc]:         {{ dotfiles_lemon }}/ruby/gmc.rb
+[dotfiles-lemon-ruby-helper]:      {{ dotfiles_lemon }}/ruby/helper.rb
+[dotfiles-lemon-ruby-output]:      {{ dotfiles_lemon }}/ruby/output.rb
+[dotfiles-lemon-ruby-pipehandler]: {{ dotfiles_lemon }}/ruby/pipehandler.rb
+
+[dotfiles-lemon-php-testparams]:  {{ dotfiles_lemon }}/php/01-testparams.php
+[dotfiles-lemon-php-testoutput]:  {{ dotfiles_lemon }}/php/02-testoutput.php
+[dotfiles-lemon-php-panel]:       {{ dotfiles_lemon }}/php/panel.php
+[dotfiles-lemon-php-gmc]:         {{ dotfiles_lemon }}/php/gmc.php
+[dotfiles-lemon-php-helper]:      {{ dotfiles_lemon }}/php/helper.php
+[dotfiles-lemon-php-output]:      {{ dotfiles_lemon }}/php/output.php
+[dotfiles-lemon-php-pipehandler]: {{ dotfiles_lemon }}/php/pipehandler.php
+
+[dotfiles-lemon-lua-testparams]:  {{ dotfiles_lemon }}/lua/01-testparams.lua
+[dotfiles-lemon-lua-testoutput]:  {{ dotfiles_lemon }}/lua/02-testoutput.lua
+[dotfiles-lemon-lua-panel]:       {{ dotfiles_lemon }}/lua/panel.lua
+[dotfiles-lemon-lua-gmc]:         {{ dotfiles_lemon }}/lua/gmc.lua
+[dotfiles-lemon-lua-common]:      {{ dotfiles_lemon }}/lua/common.lua
+[dotfiles-lemon-lua-helper]:      {{ dotfiles_lemon }}/lua/helper.lua
+[dotfiles-lemon-lua-output]:      {{ dotfiles_lemon }}/lua/output.lua
+[dotfiles-lemon-lua-pipehandler]: {{ dotfiles_lemon }}/lua/pipehandler.lua
+
+[dotfiles-lemon-haskell-testparams]:  {{ dotfiles_lemon }}/haskell/01-testparams.hs
+[dotfiles-lemon-haskell-testoutput]:  {{ dotfiles_lemon }}/haskell/02-testoutput.hs
+[dotfiles-lemon-haskell-panel]:       {{ dotfiles_lemon }}/haskell/panel.hs
+[dotfiles-lemon-haskell-gmc]:         {{ dotfiles_lemon }}/haskell/MyGMC.hs
+[dotfiles-lemon-haskell-helper]:      {{ dotfiles_lemon }}/haskell/MyHelper.hs
+[dotfiles-lemon-haskell-output]:      {{ dotfiles_lemon }}/haskell/MyOutput.hs
+[dotfiles-lemon-haskell-pipehandler]: {{ dotfiles_lemon }}/haskell/MyPipeHandler.hs

@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status using Dzen2 or Lemonbar Overview"
+title:  "HerbstluftWM Tag Status Overview"
 date:   2017-06-01 17:35:15 +0700
 categories: desktop
 tags: [coding, herbstluftwm, dotfiles]
@@ -265,7 +265,7 @@ The rest is in their respective article.
 
 	Let's get it started.
 
-*	[HerbstluftWM Tag Status iOverview][local-overview]
+*	[HerbstluftWM Tag Status Overview][local-overview]
 
 *	[HerbstluftWM Tag Status in BASH][local-bash]
 
@@ -282,28 +282,45 @@ The rest is in their respective article.
 *	[HerbstluftWM Tag Status in Haskell][local-haskell]
 
 
-### Dotfiles (Source Code)
+### Dotfiles (Dzen2 Source Code)
 
-*	[lang/bash][dotfiles-bash]
+*	[dzen2/bash][dotfiles-dzen2-bash]
 
-*	[lang/perl][dotfiles-perl]
+*	[dzen2/perl][dotfiles-dzen2-perl]
 
-*	[lang/python][dotfiles-python]
+*	[dzen2/python][dotfiles-dzen2-python]
 
-*	[lang/ruby][dotfiles-ruby]
+*	[dzen2/ruby][dotfiles-dzen2-ruby]
 
-*	[lang/php][dotfiles-php]
+*	[dzen2/php][dotfiles-dzen2-php]
 
-*	[lang/lua][dotfiles-lua]
+*	[dzen2/lua][dotfiles-dzen2-lua]
 
-*	[lang/haskell][dotfiles-haskell]
+*	[dzen2/haskell][dotfiles-dzen2-haskell]
+
+### Dotfiles (Lemonbar Source Code)
+
+*	[lemonbar/bash][dotfiles-lemon-bash]
+
+*	[lemonbar/perl][dotfiles-lemon-perl]
+
+*	[lemonbar/python][dotfiles-lemon-python]
+
+*	[lemonbar/ruby][dotfiles-lemon-ruby]
+
+*	[lemonbar/php][dotfiles-lemon-php]
+
+*	[lemonbar/lua][dotfiles-lemon-lua]
+
+*	[lemonbar/haskell][dotfiles-lemon-haskell]
 
 -- -- --
 
 Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 
 [image-hlwm-01-event-idle]:  {{ asset_path }}/herbstclient-01-event-idle.png
@@ -318,10 +335,18 @@ Thank you for Reading.
 [local-lua]:      {{ site.url }}/desktop/2017/06/07/herbstlustwm-tag-status-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 
-[dotfiles-bash]:    {{ dotfiles_path }}/bash
-[dotfiles-perl]:    {{ dotfiles_path }}/perl
-[dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-ruby]:    {{ dotfiles_path }}/ruby
-[dotfiles-php]:     {{ dotfiles_path }}/php
-[dotfiles-lua]:     {{ dotfiles_path }}/lua
-[dotfiles-haskell]: {{ dotfiles_path }}/haskell
+[dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
+[dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl
+[dotfiles-dzen2-python]:  {{ dotfiles_dzen2 }}/python
+[dotfiles-dzen2-ruby]:    {{ dotfiles_dzen2 }}/ruby
+[dotfiles-dzen2-php]:     {{ dotfiles_dzen2 }}/php
+[dotfiles-dzen2-lua]:     {{ dotfiles_dzen2 }}/lua
+[dotfiles-dzen2-haskell]: {{ dotfiles_dzen2 }}/haskell
+
+[dotfiles-lemon-bash]:    {{ dotfiles_lemon }}/bash
+[dotfiles-lemon-perl]:    {{ dotfiles_lemon }}/perl
+[dotfiles-lemon-python]:  {{ dotfiles_lemon }}/python
+[dotfiles-lemon-ruby]:    {{ dotfiles_lemon }}/ruby
+[dotfiles-lemon-php]:     {{ dotfiles_lemon }}/php
+[dotfiles-lemon-lua]:     {{ dotfiles_lemon }}/lua
+[dotfiles-lemon-haskell]: {{ dotfiles_lemon }}/haskell

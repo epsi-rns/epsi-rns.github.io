@@ -122,19 +122,19 @@ But again, it is a matter of preferences.
 
 ### Dotfiles (Source Code)
 
-*	[lang/bash][dotfiles-BASH]
+*	[pipe/bash][dotfiles-BASH]
 
-*	[lang/perl][dotfiles-Perl]
+*	[pipe/perl][dotfiles-Perl]
 
-*	[lang/python][dotfiles-python]
+*	[pipe/python][dotfiles-python]
 
-*	[lang/ruby][dotfiles-Ruby]
+*	[pipe/ruby][dotfiles-Ruby]
 
-*	[lang/php][dotfiles-PHP]
+*	[pipe/php][dotfiles-PHP]
 
-*	[lang/lua][dotfiles-Lua]
+*	[pipe/lua][dotfiles-Lua]
 
-*	[lang/haskell][dotfiles-Haskell]
+*	[pipe/haskell][dotfiles-Haskell]
 
 Thank you for Reading.
 
