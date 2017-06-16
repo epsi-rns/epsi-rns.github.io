@@ -81,18 +81,22 @@ since most pipe only support unidirectional.
 
 #### Content Process
 
-Content process live in an infinite loop. 
+Content process live in an infinite loop
+which write to statusbar whether it is Dzen2 or Lemonbar. 
 This has no issue with unidirectional loops
 But this create an issue in a application logic
 for bidirectional Lemonbar, 
 which has another loop to write to shell.
 
 Both loops live at the same time.
-There is no loop notation sufficient to implement this complex logic.
+There is no loop notation sufficient,
+to implement this complex logic, without blocking each other.
 The solution is to fork the infinite loop as a new process,
-inside the shell loop.
+outside the shell loop.
 
-#### Combined Event
+#### Combined Event 
+
+**TBD**
 
 Consider this combined event, consist of idle event and interval event.
 
@@ -100,8 +104,8 @@ Consider this combined event, consist of idle event and interval event.
 combined_event | content_processing | statusbar
 {% endhighlight %}
 
-Since the both event also a loop that live in the same time.
-The solution is to fork one loop process inside another.
+Since both event also a loop that live in the same time.
+The solution is to fork one loop process outside another.
 
 -- -- --
 
@@ -117,7 +121,8 @@ Here are what I need to do.
 
 	* custom interval based.
 
-*	Putting it all together with other statusbar
+*	Putting it all together with other statusbar,
+	and main HerbstluftWM configuration.
 
 -- -- --
 
@@ -130,7 +135,8 @@ and finally the compiled Haskell.
 	Why Port ?
 
 Because Piping and Forking is a very interesting topic.
-Challenging, and no sufficient tutorial in internet.
+Challenging, and no sufficient tutorial in internet,
+especially for real life example.
 That is why I'm eager to pour them down in a blog.
 
 **Reading**
