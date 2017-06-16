@@ -716,8 +716,27 @@ Similar Code:
 
 -- -- --
 
+### Lemonbar
+
+I also provide Lemonbar, instead of Dzen2.
+The code is very similar.
+
+**Source**:
+*	[github.com/.../dotfiles/.../perl-17-conky.pl][dotfiles-perl-17-conky]
+
+Similar Code: 
+[[ BASH lemon ]][dotfiles-bash-17-conky]
+[[ Perl lemon ]][dotfiles-perl-17-conky]
+[[ Python lemon ]][dotfiles-python-17-conky]
+[[ Ruby lemon ]][dotfiles-ruby-17-conky]
+[[ PHP lemon ]][dotfiles-php-17-conky]
+[[ Lua lemon ]][dotfiles-lua-17-conky]
+[[ Haskell lemon ]][dotfiles-haskell-17-conky]
+
+-- -- --
+
 There above are some simple codes I put together. 
-I’m mostly posting codes so I won’t have
+I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
 Thank you for reading.
@@ -817,3 +836,11 @@ Thank you for reading.
 [dotfiles-php-07-conky]:     {{ dotfiles_path }}/php/php-07-fork-conky.php
 [dotfiles-lua-07-conky]:     {{ dotfiles_path }}/lua/lua-07-fork-function.lua
 [dotfiles-haskell-07-conky]: {{ dotfiles_path }}/haskell/haskell-07-fork.hs
+
+[dotfiles-bash-17-conky]:    {{ dotfiles_path }}/bash/bash-17-conky.sh
+[dotfiles-perl-17-conky]:    {{ dotfiles_path }}/perl/perl-17-fork-conky.pl
+[dotfiles-python-17-conky]:  {{ dotfiles_path }}/python/python-17-fork-conky.py
+[dotfiles-ruby-17-conky]:    {{ dotfiles_path }}/ruby/ruby-17-fork-conky.rb
+[dotfiles-php-17-conky]:     {{ dotfiles_path }}/php/php-17-fork-conky.php
+[dotfiles-lua-17-conky]:     {{ dotfiles_path }}/lua/lua-17-fork-function.lua
+[dotfiles-haskell-17-conky]: {{ dotfiles_path }}/haskell/haskell-17-fork.hs

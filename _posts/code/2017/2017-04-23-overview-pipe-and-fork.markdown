@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "Piping and Forking Overwiew"
+title:  "Piping and Forking Overview"
 categories: code
 date:   2017-04-23 17:35:15 +0700
 tags: [coding, conky, dotfiles]
@@ -103,6 +103,10 @@ when you call from just one script, instead of many language.
 
 But again, it is a matter of preferences.
 
+### Dzen2 or Lemonbar ?
+
+Both ! I'm using Dzen2 during tutorial.
+And also give Lemonbar in source code.
 
 ### Blog Post
 

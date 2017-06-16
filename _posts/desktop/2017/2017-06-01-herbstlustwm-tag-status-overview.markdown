@@ -16,9 +16,9 @@ excerpt:
 
 	Why not Conky ?
 
-HerbstluftWM is event based.
+HerbstluftWM is **event based**.
 Herbstclient sent its notification based on Window Event.
-Conky is interval based, and because of that,
+Conky is **interval based**, and because of that,
 it cannot read HLWM event properly.
 For that reason, we cannot use conky for this situation.
 
@@ -40,6 +40,8 @@ $ herbstclient tag_status
 
 ![HerbstluftWM: Tag Status][image-hlwm-02-tag-status]{: .img-responsive }
 
+	The challenge is, to process Hersbtclient Idle Event
+
 Dzen2 and Lemonbar is very similar,
 in which they render anything feed to them.
 No matter the input is, event based or interval based.
@@ -49,13 +51,15 @@ on how to transform the plain tag status text,
 into nice statusbar, whether it is Dzen2 or Lemonbar.
 From getting the statusbar geometry right, to aestethic aspect.
 
+	But first, knowing how to show the Herbstclient Tag
+
 -- -- --
 
 ### Multi Language Implementation
 
 	Why Port ?
 
-The original Herbsluft WM equipped with one example of
+The original HerbsluftWM equipped with one example of
 <code class="code-file">panel</code> script in BASH .
 It is a single long file and plain. We are going to make it modular.
 My script is a heavy customization of the original.
@@ -189,12 +193,10 @@ Before you start, you might consider to use proper HLWM config.
 
 ### Global Variable and Constant
 
-This <code>output module</code> require a variable
-that can be called from function,
-without passing them as a parameter argument.
-So we have to make scope of these variable global.
-But since these variables live only in output module,
-these are not so global after all.
+	Why discuss about Coding here ?
+
+Because I also include Haskell.
+And Haskell distinct clearly between global constant and mutable state.
 
 	Global variable is requirement in this project
 
@@ -202,6 +204,13 @@ Some say that global variable are bad.
 But there are quick and dirty condition,
 where global variable looks more suitable.
 The other way is change the entire logic design.
+
+This <code>output module</code> require a variable
+that can be called from function,
+without passing them as a parameter argument.
+So we have to make scope of these variable global.
+But since these variables live only in output module,
+these are not so global after all.
 
 Before getting deep, we need to distinct
 between global variable and global constant.
@@ -256,6 +265,11 @@ Each language maintain global constant differently
 	Lua does not differ between these two.
 
 *	Haskell: Every variables in Haskell are immutable.
+
+#### Global Conclusion
+
+There is no specil need to worry about global variable,
+except with Haskell.
 
 -- -- --
 
