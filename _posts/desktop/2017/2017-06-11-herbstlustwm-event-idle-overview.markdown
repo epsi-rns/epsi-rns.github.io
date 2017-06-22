@@ -40,7 +40,12 @@ $ herbstclient --idle
 
 In shell it is basically just a pipe:
 
-**Dzen2**
+#### Dzen2
+
+This is a two tier pipes,
+since content processing happened between pipe. 
+The content processing itself is a complex part. 
+And there are some pipe and fork combinations as well.
 
 {% highlight bash %}
 herbstclient --idle | content_processing | dzen2
@@ -48,14 +53,13 @@ herbstclient --idle | content_processing | dzen2
 
 **Lemonbar**
 
+This is a three tier pipes,
+just like Dzen2, except Lemonbar pipe clickable areas to a shell.
+
 {% highlight bash %}
 herbstclient --idle | content_processing | lemonbar | sh
 {% endhighlight %}
 
-This is a two or three tier pipes,
-since content processing happened between pipe. 
-The content processing itself is a complex part. 
-And there are some pipe and fork combinations as well.
 
 #### Unidirectional
 
@@ -98,7 +102,18 @@ outside the shell loop.
 
 **TBD**
 
-Consider this combined event, consist of idle event and interval event.
+What if we want to put other stuff in our lovely panel, such as date?
+Or any system monitoring information such as CPU, Memory, HDD,
+temperature, uname or even MPD?
+
+These system monitoring is usually called in interval based.
+Date can be based on one second interval.
+And other stuff can be groupped in longer interval.
+And uname called only once, or one hour interval if you wish.
+
+Luckily we can treat these interval as event.
+Consider this combined event,
+consist of idle event and interval event.
 
 {% highlight bash %}
 combined_event | content_processing | statusbar
@@ -110,6 +125,8 @@ The solution is to fork one loop process outside another.
 -- -- --
 
 ### To Be Done
+
+**TBD**
 
 This article is, still unfinished.
 Here are what I need to do.
