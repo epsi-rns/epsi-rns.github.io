@@ -60,7 +60,7 @@ I recommend you to read that article before using Lemonbar.
 
 **Article**:
 
-*	[Getting XLFD Font][local-xlfd]
+*	[Getting XLFD Font][local-xlfd-font]
 
 -- -- --
 
