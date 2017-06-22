@@ -694,6 +694,15 @@ Similar Code:
 
 -- -- --
 
+### Coming up Next
+
+There already an advance case of Pipe and Fork.
+Multitier, and bidirectional.
+
+*	[HerbstluftWM Event Idle in Haskell][local-haskell-idle]
+
+-- -- --
+
 There above are some simple codes I put together. 
 I'm mostly posting codes so I won't have
 any problems finding it in the future.
@@ -707,6 +716,7 @@ Thank you for reading.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+[local-haskell-idle]:   {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
 [dotfiles-haskell-01-basic]:   {{ dotfiles_path }}/haskell/haskell-01-basic.hs
 [dotfiles-haskell-02-system]:  {{ dotfiles_path }}/haskell/haskell-02-system.hs

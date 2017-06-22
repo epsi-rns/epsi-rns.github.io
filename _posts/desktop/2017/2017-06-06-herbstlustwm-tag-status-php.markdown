@@ -773,7 +773,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 -- -- --
 
-### Continue on Next Tutorial
+### Coming up Next
 
 It is already a long tutorial.
 It is time to take a break for a while.
@@ -781,6 +781,8 @@ It is time to take a break for a while.
 We are going to continue on next tutorial
 to cover interaction between the script process
 and HerbstluftWM idle event.
+
+*	[HerbstluftWM Event Idle in Haskell][local-php-idle]
 
 -- -- --
 
@@ -802,6 +804,7 @@ Enjoy the statusbar !
 
 [local-php-config]: {{ site.url }}/desktop/2017/05/06/herbstlustwm-modularized-php.html
 [local-php-pipe]:   {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-php-idle]:   {{ site.url }}/desktop/2017/06/16/herbstlustwm-event-idle-php.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html

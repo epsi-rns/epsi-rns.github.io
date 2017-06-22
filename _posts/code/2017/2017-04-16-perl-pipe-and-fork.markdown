@@ -735,6 +735,15 @@ Similar Code:
 
 -- -- --
 
+### Coming up Next
+
+There already an advance case of Pipe and Fork.
+Multitier, and bidirectional.
+
+*	[HerbstluftWM Event Idle in Perl][local-perl-idle]
+
+-- -- --
+
 There above are some simple codes I put together. 
 I'm mostly posting codes so I won't have
 any problems finding it in the future.
@@ -748,6 +757,7 @@ Thank you for reading.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+[local-perl-idle]:   {{ site.url }}/desktop/2017/06/13/herbstlustwm-event-idle-perl.html
 
 [dotfiles-perl-01-basic]:     {{ dotfiles_path }}/perl/perl-01-basic.pl
 [dotfiles-perl-02-system]:    {{ dotfiles_path }}/perl/perl-02-system-shell.pl

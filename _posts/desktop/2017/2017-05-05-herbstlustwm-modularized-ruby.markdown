@@ -457,6 +457,16 @@ Similar Code:
 
 -- -- --
 
+### Coming up Next
+
+After the Window Manager, comes the Panel.
+
+*	[HerbstluftWM Tag Status in Ruby][local-ruby-tag-status]
+
+*	[HerbstluftWM Event Idle in Ruby][local-ruby-event-idle]
+
+-- -- --
+
 Happy Configuring.
 
 
@@ -464,6 +474,9 @@ Happy Configuring.
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+
+[local-ruby-tag-status]:   {{ site.url }}/desktop/2017/06/05/herbstlustwm-tag-status-ruby.html
+[local-ruby-event-idle]:   {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
 
 [image-ss-hlwm-nopanel]: {{ asset_path }}/herbstluftwm-nopanel.png
 [photo-ss-hlwm-nopanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM5QN3sl9KsZs3xlb87UivcHZeLGbSuk2Z8Jx0W?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

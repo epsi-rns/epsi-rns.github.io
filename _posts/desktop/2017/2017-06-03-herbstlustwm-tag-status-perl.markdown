@@ -801,7 +801,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 -- -- --
 
-### Continue on Next Tutorial
+### Coming up Next
 
 It is already a long tutorial.
 It is time to take a break for a while.
@@ -809,6 +809,8 @@ It is time to take a break for a while.
 We are going to continue on next tutorial
 to cover interaction between the script process
 and HerbstluftWM idle event.
+
+*	[HerbstluftWM Event Idle in Haskell][local-perl-idle]
 
 -- -- --
 
@@ -830,6 +832,7 @@ Enjoy the statusbar !
 
 [local-perl-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
 [local-perl-pipe]:   {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-perl-idle]:   {{ site.url }}/desktop/2017/06/13/herbstlustwm-event-idle-perl.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html

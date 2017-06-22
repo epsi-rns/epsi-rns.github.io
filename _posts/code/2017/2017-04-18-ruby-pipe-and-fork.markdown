@@ -676,6 +676,15 @@ Similar Code:
 
 -- -- --
 
+### Coming up Next
+
+There already an advance case of Pipe and Fork.
+Multitier, and bidirectional.
+
+*	[HerbstluftWM Event Idle in Ruby][local-ruby-idle]
+
+-- -- --
+
 There above are some simple codes I put together. 
 I'm mostly posting codes so I won't have
 any problems finding it in the future.
@@ -689,6 +698,7 @@ Thank you for reading.
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+[local-ruby-idle]:   {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
 
 [dotfiles-ruby-01-basic]:   {{ dotfiles_path }}/ruby/ruby-01-basic.rb
 [dotfiles-ruby-02-shell]:   {{ dotfiles_path }}/ruby/ruby-02-shell.rb

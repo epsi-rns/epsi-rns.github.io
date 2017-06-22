@@ -751,7 +751,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 -- -- --
 
-### Continue on Next Tutorial
+### Coming up Next
 
 It is already a long tutorial.
 It is time to take a break for a while.
@@ -759,6 +759,8 @@ It is time to take a break for a while.
 We are going to continue on next tutorial
 to cover interaction between the script process
 and HerbstluftWM idle event.
+
+*	[HerbstluftWM Event Idle in Haskell][local-ruby-idle]
 
 -- -- --
 
@@ -780,6 +782,7 @@ Enjoy the statusbar !
 
 [local-ruby-config]: {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-ruby.html
 [local-ruby-pipe]:   {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-ruby-idle]:   {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html

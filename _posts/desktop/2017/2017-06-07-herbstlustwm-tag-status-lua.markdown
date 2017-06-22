@@ -860,7 +860,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 -- -- --
 
-### Continue on Next Tutorial
+### Coming up Next
 
 It is already a long tutorial.
 It is time to take a break for a while.
@@ -868,6 +868,8 @@ It is time to take a break for a while.
 We are going to continue on next tutorial
 to cover interaction between the script process
 and HerbstluftWM idle event.
+
+*	[HerbstluftWM Event Idle in Haskell][local-lua-idle]
 
 -- -- --
 
@@ -889,6 +891,7 @@ Enjoy the statusbar !
 
 [local-lua-config]: {{ site.url }}/desktop/2017/05/07/herbstlustwm-modularized-lua.html
 [local-lua-pipe]:   {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-lua-idle]:   {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
