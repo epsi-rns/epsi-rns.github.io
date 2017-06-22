@@ -130,18 +130,23 @@ won't be bloated by huge of unnecessary new lines.
 You can see the complete result in this archive page displayed by year.
 It is just an archive of posts sorted by date.
 
-> <https://github.com/epsi-rns/epsi-rns.github.io/blob/master/pages/archives-y.html>
+> <https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/archives-m.html>
 
 -- -- --
 
 Let's go further, archive page displayed by month.
 With the same logic, It won't go that complicated.
 
-* https://github.com/epsi-rns/epsi-rns.github.io/blob/master/pages/archives-m.html
+*	<https://github.com/epsi-rns/epsi-rns.github.io/blob/master/pages/archives-m.html>
+
+I put the logic in _includes section,
+because I want to reuse the code.
+
+*	<https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/archives-m.html>
 
 And finally, let's make it a sidebar as below figure.
 
-* https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/panel/archives.html
+*	<https://github.com/epsi-rns/epsi-rns.github.io/blob/master/_includes/panel/archives.html>
 
 It is a little bit longer,
 because I only show archives with the same month with the current post.
@@ -287,11 +292,7 @@ I hope that, this script is useful.
 
 Thank you for reading.
 
-
 ---
-
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
