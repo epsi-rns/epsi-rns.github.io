@@ -119,8 +119,14 @@ consist of idle event and interval event.
 combined_event | content_processing | statusbar
 {% endhighlight %}
 
-Since both event also a loop that live in the same time.
-The solution is to fork one loop process outside another.
+Since we need to alter the original event,
+to create new combined event, we need an intermediate process.
+As an intermediate process, 
+we need to pipe both loop, into <code>cat</code>.
+ 
+Since both event also loops that write in the same time,
+as the intermediate process being read.
+We need to fork both loop.
 
 -- -- --
 
@@ -178,10 +184,10 @@ And I did wrote a specific article exploring statusbar.
 
 The code given is complete, but I breakdown the tutorial into two parts.
 
-1	HerbstluftWM Tag Status: Statusbar (not this article)
+1.	HerbstluftWM Tag Status: Statusbar (not this article)
 	Focusing on tags: <code>herbstclient tag_status</code>
 
-2	HerbstluftWM Event Idle: Advance Pipe and Fork (this article)
+2.	HerbstluftWM Event Idle: Advance Pipe and Fork (this article)
 	Focusing on event: <code>herbstclient --idle</code>
 
 This will only discuss about Piping and Forking.

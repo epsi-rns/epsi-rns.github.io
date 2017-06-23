@@ -157,10 +157,10 @@ You must be familiar with this <code>io.popen</code>.
 {% highlight lua %}
 function _M.run_lemon(monitor, parameters) 
     local command_out  = 'lemonbar ' .. parameters .. ' -p'
-    local pipe_out = assert(io.popen(command_out, 'w'))
+    local pipe_lemon_out = assert(io.popen(command_out, 'w'))
     
-    _M.init_content(monitor, pipe_out)
-    pipe_out:close()
+    _M.content_init(monitor, pipe_lemon_out)       
+    pipe_lemon_out:close()
 end
 {% endhighlight %}
 
@@ -170,20 +170,20 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>content_init</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight lua %}
-function _M.init_content(monitor, process)
+function _M.content_init(monitor, pipe_lemon_out)
     -- initialize statusbar before loop
     output.set_tag_value(monitor)
     output.set_windowtitle('')
 
     local text = output.get_statusbar_text(monitor)
-    process:write(text .. "\n")
-    process:flush()
+    pipe_lemon_out:write(text .. "\n")
+    pipe_lemon_out:flush()
 end
 {% endhighlight %}
 
@@ -194,34 +194,34 @@ and <code>set_windowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.simple.lua][dotfiles-lemon-lua-pipehandler-simple]
+	[github.com/.../dotfiles/.../lua/pipehandler.01-init.lua][dotfiles-lemon-lua-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
+Consider this <code>content_walk</code> call,
+after <code>content_init</code> call,
 inside the <code>run_lemon</code>.
 
 {% highlight lua %}
 function _M.run_lemon(monitor, parameters) 
     local command_out  = 'lemonbar ' .. parameters
-    local pipe_out = assert(io.popen(command_out, 'w'))
+    local pipe_lemon_out = assert(io.popen(command_out, 'w'))
     
-    _M.init_content(monitor, pipe_out)
-    _M.walk_content(monitor, pipe_out) -- loop for each event
+    _M.content_init(monitor, pipe_lemon_out)
+    _M.content_walk(monitor, pipe_lemon_out) -- loop for each event
         
-    pipe_out:close()
+    pipe_lemon_out:close()
 end
 {% endhighlight %}
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>content_walk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -229,10 +229,10 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
 
 {% highlight lua %}
-function _M.walk_content(monitor, process)    
+function _M.content_walk(monitor, pipe_lemon_out)    
     -- start a pipe
     command_in = 'herbstclient --idle'
     local pipe_in  = assert(io.popen(command_in,  'r'))
@@ -243,8 +243,8 @@ function _M.walk_content(monitor, process)
         _M.handle_command_event(monitor, event)    
     
         text = output.get_statusbar_text(monitor)
-        process:write(text .. "\n")
-        process:flush()
+        pipe_lemon_out:write(text .. "\n")
+        pipe_lemon_out:flush()
     end -- for loop
    
     pipein:close()
@@ -298,6 +298,13 @@ Be aware, that Lua is using non zero based array.
     origin = column[1]
 {% endhighlight %}
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../lua/pipehandler.02-idle.lua][dotfiles-lemon-lua-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -332,12 +339,12 @@ But the real issue is Lua does not support bidirectional pipe.
 function _M.run_lemon(monitor, parameters) 
     -- no bidirectional in Lua, using shell pipe instead
     local command_out  = 'lemonbar ' .. parameters .. ' | sh'
-    local pipe_out = assert(io.popen(command_out, 'w'))
+    local pipe_lemon_out = assert(io.popen(command_out, 'w'))
     
-    _M.init_content(monitor, pipe_out)
-    _M.walk_content(monitor, pipe_out) -- loop for each event
+    _M.content_init(monitor, pipe_lemon_out)
+    _M.content_walk(monitor, pipe_lemon_out) -- loop for each event
         
-    pipe_out:close()
+    pipe_lemon_out:close()
 end
 {% endhighlight %}
 
@@ -354,10 +361,10 @@ But it does works. So why bother ?
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.shell.lua][dotfiles-lemon-lua-pipehandler-shell]
+	[github.com/.../dotfiles/.../lua/pipehandler.03-clickable.lua][dotfiles-lemon-lua-pipehandler-clickable]
 
 -- -- --
 
@@ -420,8 +427,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-lua-pipehandler-shell]:  {{ dotfiles_lemon }}/lua/pipehandler.shell.lua
-[dotfiles-lemon-lua-pipehandler-simple]: {{ dotfiles_lemon }}/lua/pipehandler.simple.lua
+[dotfiles-lemon-lua-pipehandler-init]:      {{ dotfiles_lemon }}/lua/pipehandler.01-init.lua
+[dotfiles-lemon-lua-pipehandler-idle]:      {{ dotfiles_lemon }}/lua/pipehandler.02-idle.lua
+[dotfiles-lemon-lua-pipehandler-clickable]: {{ dotfiles_lemon }}/lua/pipehandler.03-clickable.lua
+[dotfiles-lemon-lua-pipehandler-interval]:  {{ dotfiles_lemon }}/lua/pipehandler.04-interval.lua
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

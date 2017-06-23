@@ -160,16 +160,15 @@ It is very flexible, and support bidirectional pipe that we need later.
 def run_lemon(monitor, parameters):  
     command_out  = 'lemonbar ' + parameters + ' -p'
 
-    pipe_out = subprocess.Popen(
+    pipe_lemon_out = subprocess.Popen(
             [command_out], 
             stdin  = subprocess.PIPE, # for use with content processing
             shell  = True,
             universal_newlines=True
         )
 
-    init_content(monitor, pipe_out)
-
-    pipe_out.stdin.close()
+    content_init(monitor, pipe_lemon_out)
+    pipe_lemon_out.stdin.close()
 {% endhighlight %}
 
 Note: that we want to ignore idle event for a while.
@@ -178,20 +177,20 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>content_init</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight python %}
-def init_content(monitor, pipe_out):
+def content_init(monitor, pipe_lemon_out):
     # initialize statusbar before loop
     output.set_tag_value(monitor)
     output.set_windowtitle('')
         
     text = output.get_statusbar_text(monitor)
-    pipe_out.stdin.write(text + '\n')
-    pipe_out.stdin.flush()
+    pipe_lemon_out.stdin.write(text + '\n')
+    pipe_lemon_out.stdin.flush()
 {% endhighlight %}
 
 Now is time to try the panel, on your terminal.
@@ -201,39 +200,39 @@ and <code>set_windowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../python/pipehandler.simple.py][dotfiles-lemon-python-pipehandler-simple]
+	[github.com/.../dotfiles/.../python/pipehandler.01-init.py][dotfiles-lemon-python-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
+Consider this <code>content_walk</code> call,
+after <code>content_init</code> call,
 inside the <code>run_lemon</code>.
 
 {% highlight python %}
 def run_lemon(monitor, parameters):  
     command_out  = 'lemonbar ' + parameters
 
-    pipe_out = subprocess.Popen(
+    pipe_lemon_out = subprocess.Popen(
             [command_out], 
             stdin  = subprocess.PIPE, # for use with content processing
             shell  = True,
             universal_newlines=True
         )
 
-    init_content(monitor, pipe_out)
-    walk_content(monitor, pipe_out) # loop for each event
+    content_init(monitor, pipe_lemon_out)
+    content_walk(monitor, pipe_lemon_out) # loop for each event
 
-    pipe_out.stdin.close()
+    pipe_lemon_out.stdin.close()
 {% endhighlight %}
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>content_walk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -241,13 +240,13 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
 
 {% highlight python %}
-def walk_content(monitor, pipe_out):    
+def content_walk(monitor, pipe_lemon_out):    
     # start a pipe
     command_in = 'herbstclient --idle'  
-    pipe_in = subprocess.Popen(
+    pipe_idle_in = subprocess.Popen(
             [command_in], 
             stdout = subprocess.PIPE,
             stderr = subprocess.STDOUT,
@@ -256,14 +255,14 @@ def walk_content(monitor, pipe_out):
         )
     
     # wait for each event  
-    for event in pipe_in.stdout:  
+    for event in pipe_idle_in.stdout:  
         handle_command_event(monitor, event)
         
         text = output.get_statusbar_text(monitor)
-        pipe_out.stdin.write(text + '\n')
-        pipe_out.stdin.flush()
+        pipe_lemon_out.stdin.write(text + '\n')
+        pipe_lemon_out.stdin.flush()
     
-    pipe_in.stdout.close()
+    pipe_idle_in.stdout.close()
 {% endhighlight %}
 
 -- -- --
@@ -306,6 +305,13 @@ def handle_command_event(monitor, event):
 Actually that's all we need to have a functional lemonbar.
 This is the minimum version.
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**py
+	[github.com/.../dotfiles/.../python/pipehandler.02-idle.sh][dotfiles-lemon-python-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -338,36 +344,36 @@ It means Lemonbar read input and write output at the same time.
 def run_lemon(monitor, parameters):  
     command_out  = 'lemonbar ' + parameters
 
-    pipe_out = subprocess.Popen(
+    pipe_lemon_out = subprocess.Popen(
             [command_out], 
             stdout = subprocess.PIPE, # for use with shell, note this
             stdin  = subprocess.PIPE, # for use with content processing
             shell  = True,
             universal_newlines=True
         )
-
+    
     pipe_sh = subprocess.Popen(
             ['sh'], 
-            stdin  = pipe_out.stdout,
+            stdin  = pipe_lemon_out.stdout,
             shell  = True,
             universal_newlines=True
         )
 
-    init_content(monitor, pipe_out)
-    walk_content(monitor, pipe_out) # loop for each event
+    content_init(monitor, pipe_lemon_out)
+    content_walk(monitor, pipe_lemon_out) # loop for each event
 
-    pipe_out.stdin.close()
+    pipe_lemon_out.stdin.close()
     pipe_sh.stdin.close()
 {% endhighlight %}
 
 #### How does it work ?
 
 Just pay attention to these lines.
-We are using <code>pipe_out.stdout</code>
+We are using <code>pipe_lemon_out.stdout</code>
 as a feed to <code>pipe_sh.stdin</code>.
 
 {% highlight python %}
-    pipe_out = subprocess.Popen(
+    pipe_lemon_out = subprocess.Popen(
             stdout = subprocess.PIPE, # for use with shell, note this
             stdin  = subprocess.PIPE, # for use with content processing
         )
@@ -379,10 +385,10 @@ as a feed to <code>pipe_sh.stdin</code>.
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../python/pipehandler.shell.py][dotfiles-lemon-python-pipehandler-shell]
+	[github.com/.../dotfiles/.../python/pipehandler.03-clickable.py][dotfiles-lemon-python-pipehandler-clickable]
 
 -- -- --
 
@@ -445,8 +451,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-python-pipehandler-shell]:  {{ dotfiles_lemon }}/python/pipehandler.shell.py
-[dotfiles-lemon-python-pipehandler-simple]: {{ dotfiles_lemon }}/python/pipehandler.simple.py
+[dotfiles-lemon-python-pipehandler-init]:      {{ dotfiles_lemon }}/python/pipehandler.01-init.py
+[dotfiles-lemon-python-pipehandler-idle]:      {{ dotfiles_lemon }}/python/pipehandler.02-idle.py
+[dotfiles-lemon-python-pipehandler-clickable]: {{ dotfiles_lemon }}/python/pipehandler.03-clickable.py
+[dotfiles-lemon-python-pipehandler-interval]:  {{ dotfiles_lemon }}/python/pipehandler.04-interval.py
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

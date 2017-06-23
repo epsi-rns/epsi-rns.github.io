@@ -113,7 +113,7 @@ Lemonbar Source Code Directory:
 Let's have a look at our main 
 <code class="code-file">panel.hs</code> in github.
 At the end of the script, we finally call lemonbar
-with <code>detach_lemon</code> function.
+with <code>detachLemon</code> function.
 
 {% highlight haskell %}
 main = do
@@ -137,7 +137,7 @@ main = do
 
 #### Run Lemon, Run !
 
-This <code>detach_lemon</code> function.
+This <code>detachLemon</code> function.
 is just a function that enable 
 the lemonbar running process to be detached,
 using <code>forkProcess()</code>.
@@ -148,7 +148,7 @@ detachLemon monitor parameters = forkProcess
     $ runLemon monitor parameters
 {% endhighlight %}
 
-The real function is <code>run_lemon</code>.
+The real function is <code>runLemon</code>.
 You must be familiar with this <code>createProcess</code>.
 
 {% highlight haskell %}
@@ -156,14 +156,12 @@ runLemon :: Int -> [String] -> IO ()
 runLemon monitor parameters = do
     let command_out = "lemonbar"
 
-    (Just pipe_in, _, _, ph)  <- 
+    (Just pipe_lemon_in, _, _, ph) <- 
         createProcess (proc command_out (parameters ++ ["-p"])) 
         { std_in = CreatePipe }
 
-    initContent monitor pipe_in
-    --walkContent monitor pipe_in  -- loop for each event
-    
-    hClose pipe_in
+    contentInit monitor pipe_lemon_in    
+    hClose pipe_lemon_in
 {% endhighlight %}
 
 Note: that we want to ignore idle event for a while.
@@ -172,62 +170,62 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>contentInit</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight haskell %}
-initContent :: Int -> Handle -> IO ()
-initContent monitor pipe_in = do
+contentInit :: Int -> Handle -> IO ()
+contentInit monitor pipe_lemon_in = do
     -- initialize statusbar before loop
     setTagValue monitor 
     setWindowtitle ""
     
     text <- getStatusbarText monitor
 
-    hPutStrLn pipe_in text
-    hFlush pipe_in
+    hPutStrLn pipe_lemon_in text
+    hFlush pipe_lemon_in
 {% endhighlight %}
 
 Now is time to try the panel, on your terminal.
 **Note**: that we already reach this stage in our previous article.
-These two functions, <code>set_tag_value</code>
-and <code>set_windowtitle</code>, have already been discussed.
+These two functions, <code>setTagValue</code>
+and <code>setWindowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.simple.hs][dotfiles-lemon-haskell-pipehandler-simple]
+	[github.com/.../dotfiles/.../haskell/MyPipeHandler.01-init.hs][dotfiles-lemon-haskell-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
-inside the <code>run_lemon</code>.
+Consider this <code>contentWalk</code> call,
+after <code>contentInit</code> call,
+inside the <code>runLemon</code>.
 
 {% highlight haskell %}
 runLemon :: Int -> [String] -> IO ()
 runLemon monitor parameters = do
     let command_out = "lemonbar"
 
-    (Just pipe_in, _, _, ph)  <- 
+    (Just pipe_lemon_in, _, _, ph) <- 
         createProcess (proc command_out parameters) 
         { std_in = CreatePipe }
 
-    initContent monitor pipe_in
-    walkContent monitor pipe_in  -- loop for each event
+    contentInit monitor pipe_lemon_in
+    contentWalk monitor pipe_lemon_in  -- loop for each event
     
-    hClose pipe_in
+    hClose pipe_lemon_in
 {% endhighlight %}
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>contentWalk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -235,28 +233,28 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
 
 {% highlight haskell %}
-walkContent :: Int -> Handle -> IO ()
-walkContent monitor pipe_in = do
+contentWalk :: Int -> Handle -> IO ()
+contentWalk monitor pipe_lemon_in = do
     let command_in = "herbstclient"
 
-    (_, Just pipe_out, _, ph)  <- 
+    (_, Just pipe_idle_out, _, ph) <- 
         createProcess (proc command_in ["--idle"]) 
         { std_out = CreatePipe }
 
     forever $ do
         -- wait for next event 
-        event <- hGetLine pipe_out 
+        event <- hGetLine pipe_idle_out 
         handleCommandEvent monitor event
  
         text <- getStatusbarText monitor
 
-        hPutStrLn pipe_in text
-        hFlush pipe_in
+        hPutStrLn pipe_lemon_in text
+        hFlush pipe_lemon_in
 
-    hClose pipe_out
+    hClose pipe_idle_out
 {% endhighlight %}
 
 -- -- --
@@ -296,6 +294,13 @@ handleCommandEvent monitor event
 Actually that's all we need to have a functional lemonbar.
 This is the minimum version.
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../haskell/MyPipeHandler.02-idle.hs][dotfiles-lemon-haskell-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -330,19 +335,19 @@ runLemon :: Int -> [String] -> IO ()
 runLemon monitor parameters = do
     let command_out = "lemonbar"
 
-    (Just pipe_in, Just pipe_out, _, ph)  <- 
+    (Just pipe_lemon_in, Just pipe_lemon_out, _, ph) <- 
         createProcess (proc command_out parameters) 
         { std_in = CreatePipe, std_out = CreatePipe }
 
-    (_, _, _, ph)  <- 
+    (_, _, _, ph) <- 
         createProcess (proc "sh" []) 
-        { std_in = UseHandle pipe_out }
+        { std_in = UseHandle pipe_lemon_out }
 
-    initContent monitor pipe_in
-    walkContent monitor pipe_in  -- loop for each event
+    contentInit monitor pipe_lemon_in
+    contentWalk monitor pipe_lemon_in  -- loop for each event
     
-    hClose pipe_in
-    hClose pipe_out
+    hClose pipe_lemon_in
+    hClose pipe_lemon_out
 {% endhighlight %}
 
 #### How does it work ?
@@ -355,10 +360,10 @@ runLemon monitor parameters = do
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.shell.hs][dotfiles-lemon-haskell-pipehandler-shell]
+	[github.com/.../dotfiles/.../haskell/MyPipeHandler.03-clickable.hs][dotfiles-lemon-haskell-pipehandler-clickable]
 
 -- -- --
 
@@ -421,8 +426,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-haskell-pipehandler-shell]:  {{ dotfiles_lemon }}/haskell/MyPipeHandler.shell.hs
-[dotfiles-lemon-haskell-pipehandler-simple]: {{ dotfiles_lemon }}/haskell/MyPipeHandler.simple.hs
+[dotfiles-lemon-haskell-pipehandler-init]:      {{ dotfiles_lemon }}/haskell/pipehandler.01-init.hs
+[dotfiles-lemon-haskell-pipehandler-idle]:      {{ dotfiles_lemon }}/haskell/pipehandler.02-idle.hs
+[dotfiles-lemon-haskell-pipehandler-clickable]: {{ dotfiles_lemon }}/haskell/pipehandler.03-clickable.hs
+[dotfiles-lemon-haskell-pipehandler-interval]:  {{ dotfiles_lemon }}/haskell/pipehandler.04-interval.hs
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

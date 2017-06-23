@@ -170,11 +170,11 @@ function run_lemon($monitor, $parameters)
         2 => array('pipe', 'w',)  // stderr
     );
     
-    $command_out  = "lemonbar $parameters -p";
-    $proc_out = proc_open($command_out, $descriptorspec, $pipe_lemon);
+    $command_out = "lemonbar $parameters -p";
+    $proc_lemon = proc_open($command_out, $descriptorspec, $pipe_lemon);
     
-    init_content($monitor, $pipe_lemon[0]);
-    pclose($pipe_lemon);
+    content_init($monitor, $pipe_lemon[0]);
+    pclose($pipe_lemon[0]);
 }
 {% endhighlight %}
 
@@ -184,20 +184,20 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>content_init</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight php %}
-function init_content($monitor, $lemon_stdin)
+function content_init($monitor, $pipe_lemon_stdin)
 {   
     // initialize statusbar before loop
     set_tag_value($monitor);
     set_windowtitle('');
         
     $text = get_statusbar_text($monitor);
-    fwrite($lemon_stdin, $text."\n");
+    fwrite($pipe_lemon_stdin, $text."\n");
     flush();
 }
 {% endhighlight %}
@@ -209,17 +209,17 @@ and <code>set_windowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/pipehandler.simple.php][dotfiles-lemon-php-pipehandler-simple]
+	[github.com/.../dotfiles/.../php/pipehandler.01-init.php][dotfiles-lemon-php-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
+Consider this <code>content_walk</code> call,
+after <code>content_init</code> call,
 inside the <code>run_lemon</code>.
 
 {% highlight php %}
@@ -231,19 +231,19 @@ function run_lemon($monitor, $parameters)
         2 => array('pipe', 'w',)  // stderr
     );
     
-    $command_out  = "lemonbar $parameters";
-    $proc_out = proc_open($command_out, $descriptorspec, $pipe_lemon);
+    $command_out = "lemonbar $parameters";
+    $proc_lemon = proc_open($command_out, $descriptorspec, $pipe_lemon);
     
-    init_content($monitor, $pipe_lemon[0]);
-    walk_content($monitor, $pipe_lemon[0]); // loop for each event
+    content_init($monitor, $pipe_lemon[0]);
+    content_walk($monitor, $pipe_lemon[0]); // loop for each event
 
-    pclose($pipe_lemon);
+    pclose($pipe_lemon[0]);
 }
 {% endhighlight %}
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>content_walk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -251,36 +251,31 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
+<code>popen</code> is sufficient for unidirectional pipe.
 
 {% highlight php %}
-function walk_content($monitor, $lemon_stdin)
+function content_walk($monitor, $pipe_lemon_stdin)
 {       
     // start a pipe
-    $descriptorspec = array(
-        0 => array('pipe', 'r'),  // stdin
-        1 => array('pipe', 'w'),  // stdout
-        2 => array('pipe', 'w',)  // stderr
-    );
-
-    $command_in = 'herbstclient --idle';
-    $proc_in  = proc_open($command_in,  $descriptorspec, $pipe_in);
+    $command_in    = 'herbstclient --idle';
+    $pipe_idle_in  = popen($command_in,  'r'); // handle
     
-    while(!feof($pipe_in[1])) {
+    while(!feof($pipe_idle_in)) {
         # read next event
-        $event = fgets($pipe_in[1]);
+        $event = fgets($pipe_idle_in);
         handle_command_event($monitor, $event);
         
         $text = get_statusbar_text($monitor);
-        fwrite($lemon_stdin, $text."\n");
+        fwrite($pipe_lemon_stdin, $text."\n");
         flush();
     }
     
-    pclose($pipe_in);
+    pclose($pipe_idle_in);
 }
 {% endhighlight %}
 
-Oouuch... <code>$descriptorspec</code> everywhere.
+We do not need to use <code>proc_open</code> for unidirectional pipe.
 
 -- -- --
 
@@ -330,6 +325,13 @@ function handle_command_event($monitor, $event)
 Actually that's all we need to have a functional lemonbar.
 This is the minimum version.
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../php/pipehandler.02-idle.php][dotfiles-lemon-php-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -367,8 +369,8 @@ function run_lemon($monitor, $parameters)
     );
     
     $command_out  = "lemonbar $parameters";
-    $proc_out = proc_open($command_out, $descriptorspec, $pipe_lemon);
-    $proc_sh  = proc_open('sh', $descriptorspec, $pipe_sh);
+    $proc_lemon = proc_open($command_out, $descriptorspec, $pipe_lemon);
+    $proc_sh    = proc_open('sh', $descriptorspec, $pipe_sh);
     
     $pid = pcntl_fork();
     
@@ -376,8 +378,8 @@ function run_lemon($monitor, $parameters)
     case -1 : // fork errror         
         die('could not fork');
     case 0  : // we are the child
-        init_content($monitor, $pipe_lemon[0]);
-        walk_content($monitor, $pipe_lemon[0]); // loop for each event
+        content_init($monitor, $pipe_lemon[0]);
+        content_walk($monitor, $pipe_lemon[0]); // loop for each event
         break;
     default : // we are the parent
         while(!feof($pipe_lemon[1])) {
@@ -387,7 +389,7 @@ function run_lemon($monitor, $parameters)
         return $pid;
     } 
 
-    pclose($pipe_lemon);
+    pclose($pipe_lemon[0]);
 }
 {% endhighlight %}
 
@@ -396,14 +398,14 @@ function run_lemon($monitor, $parameters)
 	Forking solve this issue.
 
 Seriously, we have to take care on where to put the loop,
-without interfering the original loop in <code>walk_content</code>.
+without interfering the original loop in <code>content_walk</code>.
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/pipehandler.shell.php][dotfiles-lemon-php-pipehandler-shell]
+	[github.com/.../dotfiles/.../php/pipehandler.03-clickable.php][dotfiles-lemon-php-pipehandler-clickable]
 
 -- -- --
 
@@ -466,8 +468,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-php-pipehandler-shell]:  {{ dotfiles_lemon }}/php/pipehandler.shell.php
-[dotfiles-lemon-php-pipehandler-simple]: {{ dotfiles_lemon }}/php/pipehandler.simple.php
+[dotfiles-lemon-php-pipehandler-init]:      {{ dotfiles_lemon }}/php/pipehandler.01-init.php
+[dotfiles-lemon-php-pipehandler-idle]:      {{ dotfiles_lemon }}/php/pipehandler.02-idle.php
+[dotfiles-lemon-php-pipehandler-clickable]: {{ dotfiles_lemon }}/php/pipehandler.03-clickable.php
+[dotfiles-lemon-php-pipehandler-interval]:  {{ dotfiles_lemon }}/php/pipehandler.04-interval.php
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

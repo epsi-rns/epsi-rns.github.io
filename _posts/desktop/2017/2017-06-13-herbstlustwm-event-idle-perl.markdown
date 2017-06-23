@@ -154,7 +154,7 @@ sub detach_lemon {
 
 The real function is <code>run_lemon</code>.
 Note that we are using <code>IPC::Open2</code>
-instead of <code>IO::Popen</code>,
+instead of <code>IO::Pipe</code>,
 to enable bidirectional pipe later.
 
 {% highlight perl %}
@@ -163,13 +163,13 @@ sub run_lemon {
     my $parameters = shift;
 
     my $command_out = "lemonbar $parameters -p";
-    my ($rh_out, $wh_out);
-    my $pid_out = open2 ($rh_out, $wh_out, $command_out) 
-        or die "can't pipe out: $!";
+    my ($rh_lemon_out, $wh_lemon_out);
+    my $pid_lemon_out = open2 (
+            $rh_lemon_out, $wh_lemon_out, $command_out) 
+        or die "can't pipe lemon out: $!";
 
-    init_content($monitor, $wh_out);
-
-     waitpid( $pid_out, 0 );
+    content_init($monitor, $wh_lemon_out);
+    waitpid( $pid_lemon_out, 0 );
 }
 {% endhighlight %}
 
@@ -179,23 +179,23 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>content_init</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight perl %}
-sub init_content {
+sub content_init {
     my $monitor = shift;
-    my $pipe_out = shift;
+    my $pipe_lemon_out = shift;
 
     # initialize statusbar before loop
     output::set_tag_value($monitor);
     output::set_windowtitle('');
 
     my $text = output::get_statusbar_text($monitor);
-    print $pipe_out $text."\n";
-    flush $pipe_out;
+    print $pipe_lemon_out $text."\n";
+    flush $pipe_lemon_out;
 }
 {% endhighlight %}
 
@@ -206,17 +206,17 @@ and <code>set_windowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/pipehandler.simple.pl][dotfiles-lemon-perl-pipehandler-simple]
+	[github.com/.../dotfiles/.../perl/pipehandler.01-init.pm][dotfiles-lemon-perl-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
+Consider this <code>content_walk</code> call,
+after <code>content_init</code> call,
 inside the <code>run_lemon</code>.
 
 {% highlight perl %}
@@ -225,20 +225,21 @@ sub run_lemon {
     my $parameters = shift;
 
     my $command_out = "lemonbar $parameters";
-    my ($rh_out, $wh_out);
-    my $pid_out = open2 ($rh_out, $wh_out, $command_out) 
-        or die "can't pipe out: $!";
+    my ($rh_lemon_out, $wh_lemon_out);
+    my $pid_lemon_out = open2 (
+            $rh_lemon_out, $wh_lemon_out, $command_out) 
+        or die "can't pipe lemon out: $!";
 
-    init_content($monitor, $wh_out);
-    walk_content($monitor, $wh_out); # loop for each event
+    content_init($monitor, $wh_lemon_out);
+    content_walk($monitor, $wh_lemon_out); # loop for each event
 
-     waitpid( $pid_out, 0 );
+    waitpid( $pid_lemon_out, 0 );
 }
 {% endhighlight %}
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>content_walk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -246,33 +247,32 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
+<code>IO::Pipe</code> is sufficient for unidirectional pipe.
 
 {% highlight perl %}
-sub walk_content {
+sub content_walk {
     my $monitor = shift;
-    my $wh_out = shift;
+    my $pipe_lemon_out = shift; 
     
     # start a pipe
-    my $command_in = 'herbstclient --idle';
-    
-    my ($rh_in, $wh_in);
-    my $pid_in  = open2 ($rh_in,  $wh_in,  $command_in)
-        or die "can't pipe in: $!";
+    my $pipe_idle_in = IO::Pipe->new();
+    my $command = 'herbstclient --idle';
+    my $handle  = $pipe_idle_in->reader($command);
 
     my $text = '';
     my $event = '';
 
-    while($event = <$rh_in>) {
-        # wait for next event
+    # wait for each event
+    while($event = <$pipe_idle_in>) {     
         handle_command_event($monitor, $event);
         
         $text = output::get_statusbar_text($monitor);     
-        print $wh_out $text."\n";
-        flush $wh_out;
+        print $pipe_lemon_out $text."\n";
+        flush $pipe_lemon_out;
     }
     
-    waitpid( $pid_in,  0 );
+    $pipe_idle_in->close();
 }
 {% endhighlight %}
 
@@ -325,6 +325,13 @@ sub handle_command_event {
 Actually that's all we need to have a functional lemonbar.
 This is the minimum version.
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../perl/pipehandler.02-idle.pm][dotfiles-lemon-perl-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -358,10 +365,11 @@ sub run_lemon {
     my $parameters = shift;
 
     my $command_out = "lemonbar $parameters";
-    my ($rh_out, $wh_out);
-    my $pid_out = open2 ($rh_out, $wh_out, $command_out) 
-        or die "can't pipe out: $!";
-
+    my ($rh_lemon_out, $wh_lemon_out);
+    my $pid_lemon_out = open2 (
+            $rh_lemon_out, $wh_lemon_out, $command_out) 
+        or die "can't pipe lemon out: $!";
+        
     my ($rh_sh, $wh_sh);
     my $pid_sh = open2 ($rh_sh, $wh_sh, 'sh') 
         or die "can't pipe sh: $!";
@@ -369,19 +377,19 @@ sub run_lemon {
     my $pid = fork;
     if ($pid) {
         # in the parent process
-        my $lines = '';
-        while($lines = <$rh_out>) {
-            print $wh_sh $lines;
+        my $line_clickable = '';
+        while($line_clickable = <$rh_lemon_out>) {
+            print $wh_sh $line_clickable;
             flush $wh_sh;
         }        
     } else {
         # in the child process
-        init_content($monitor, $wh_out);
-        walk_content($monitor, $wh_out); # loop for each event
+        content_init($monitor, $wh_lemon_out);
+        content_walk($monitor, $wh_lemon_out); # loop for each event
     }
 
-     waitpid( $pid_out, 0 );
-     waitpid( $pid_sh, 0 );
+    waitpid( $pid_lemon_out, 0 );
+    waitpid( $pid_sh, 0 );
 }
 {% endhighlight %}
 
@@ -390,14 +398,14 @@ sub run_lemon {
 	Forking solve this issue.
 
 Seriously, we have to take care on where to put the loop,
-without interfering the original loop in <code>walk_content</code>.
+without interfering the original loop in <code>content_walk</code>.
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/pipehandler.shell.pm][dotfiles-lemon-perl-pipehandler-shell]
+	[github.com/.../dotfiles/.../perl/pipehandler.03-clickable.pm][dotfiles-lemon-perl-pipehandler-clickable]
 
 -- -- --
 
@@ -457,8 +465,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-perl-pipehandler-shell]:  {{ dotfiles_lemon }}/perl/pipehandler.shell.pl
-[dotfiles-lemon-perl-pipehandler-simple]: {{ dotfiles_lemon }}/perl/pipehandler.simple.pl
+[dotfiles-lemon-perl-pipehandler-init]:      {{ dotfiles_lemon }}/perl/pipehandler.01-init.pm
+[dotfiles-lemon-perl-pipehandler-idle]:      {{ dotfiles_lemon }}/perl/pipehandler.02-idle.pm
+[dotfiles-lemon-perl-pipehandler-clickable]: {{ dotfiles_lemon }}/perl/pipehandler.03-clickable.pm
+[dotfiles-lemon-perl-pipehandler-interval]:  {{ dotfiles_lemon }}/perl/pipehandler.04-interval.pm
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

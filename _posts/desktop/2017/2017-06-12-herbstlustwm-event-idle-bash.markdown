@@ -160,7 +160,7 @@ function run_lemon() {
     command_out="lemonbar $parameters -p"
     
     {
-       init_content $monitor
+       content_init $monitor
     } | $command_out
 }
 {% endhighlight %}
@@ -171,13 +171,13 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>content_init</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight bash %}
-function init_content() {
+function content_init() {
     monitor=$1
 
     # initialize statusbar before loop
@@ -196,17 +196,17 @@ and <code>set_windowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/pipehandler.simple.sh][dotfiles-lemon-bash-pipehandler-simple]
+	[github.com/.../dotfiles/.../bash/pipehandler.01-init.sh][dotfiles-lemon-bash-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
+Consider this <code>content_walk</code> call,
+after <code>content_init</code> call,
 inside the <code>run_lemon</code>.
 
 {% highlight bash %}
@@ -218,15 +218,15 @@ function run_lemon() {
     command_out="lemonbar $parameters"
     
     {
-       init_content $monitor
-       walk_content $monitor # loop for each event
+       content_init $monitor
+       content_walk $monitor # loop for each event
     } | $command_out
 }
 {% endhighlight %}
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>content_walk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -234,10 +234,10 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
 
 {% highlight bash %}
-function walk_content() {
+function content_walk() {
     monitor=$1
 
     # start a pipe
@@ -302,6 +302,13 @@ function handle_command_event() {
 Actually that's all we need to have a functional lemonbar.
 This is the minimum version.
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../bash/pipehandler.02-idle.sh][dotfiles-lemon-bash-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -339,8 +346,8 @@ function run_lemon() {
     command_out="lemonbar $parameters"
     
     {
-       init_content $monitor
-       walk_content $monitor # loop for each event
+       content_init $monitor
+       content_walk $monitor # loop for each event
     } | $command_out | sh
 }
 {% endhighlight %}
@@ -353,10 +360,10 @@ Now we have real clickable areas.
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/pipehandler.shell.sh][dotfiles-lemon-bash-pipehandler-shell]
+	[github.com/.../dotfiles/.../bash/pipehandler.03-clickable.sh][dotfiles-lemon-bash-pipehandler-clickable]
 
 -- -- --
 
@@ -416,8 +423,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-perl-pipehandler-shell]:  {{ dotfiles_lemon }}/perl/pipehandler.shell.pl
-[dotfiles-lemon-bash-pipehandler-simple]: {{ dotfiles_lemon }}/bash/pipehandler.simple.sh
+[dotfiles-lemon-bash-pipehandler-init]:      {{ dotfiles_lemon }}/bash/pipehandler.01-init.sh
+[dotfiles-lemon-bash-pipehandler-idle]:      {{ dotfiles_lemon }}/bash/pipehandler.02-idle.sh
+[dotfiles-lemon-bash-pipehandler-clickable]: {{ dotfiles_lemon }}/bash/pipehandler.03-clickable.sh
+[dotfiles-lemon-bash-pipehandler-interval]:  {{ dotfiles_lemon }}/bash/pipehandler.04-interval.sh
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

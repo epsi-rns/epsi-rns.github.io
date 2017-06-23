@@ -156,9 +156,9 @@ You must be familiar with this <code>IO.popen</code>.
 def run_lemon(monitor, parameters)
   command_out  = 'lemonbar ' + parameters + ' -p'
 
-  IO.popen(command_out, 'w') do |f| 
-    init_content(monitor, f)        
-    f.close()    
+  IO.popen(command_out, 'w') do |io_lemon|  
+    content_init(monitor, io_lemon)        
+    io_lemon.close()
   end
 end
 {% endhighlight %}
@@ -169,19 +169,19 @@ to make the statusbar persistent.
 
 #### Statusbar Initialization
 
-Here we have the <code>init_content</code>.
+Here we have the <code>content_init</code>.
 It is just an initialization of global variable.
 We are going to have some loop later in different function,
 to do the real works.
 
 {% highlight ruby %}
-def init_content(monitor, stdin)
+def content_init(monitor, lemon_stdin)
   # initialize statusbar before loop
   set_tag_value(monitor)
   set_windowtitle('')
       
   text = get_statusbar_text(monitor)
-  stdin.puts(text)
+  lemon_stdin.puts(text)
 end
 {% endhighlight %}
 
@@ -192,29 +192,30 @@ and <code>set_windowtitle</code>, have already been discussed.
 
 #### View Source File:
 
-Simple Version, No Idle event.
+Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
 	[github.com/.../dotfiles/.../ruby/pipehandler.simple.rb][dotfiles-lemon-ruby-pipehandler-simple]
+	[github.com/.../dotfiles/.../ruby/pipehandler.01-init.rb][dotfiles-lemon-ruby-pipehandler-init]
 
 -- -- --
 
 ### With Idle event
 
-Consider this <code>walk_content</code> call,
-after <code>init_content</code> call,
+Consider this <code>content_walk</code> call,
+after <code>content_init</code> call,
 inside the <code>run_lemon</code>.
 
 {% highlight ruby %}
 def run_lemon(monitor, parameters)
   command_out  = 'lemonbar ' + parameters
 
-  IO.popen(command_out, 'w') do |f| 
+  IO.popen(command_out, 'w') do |io_lemon| 
   
-    init_content(monitor, f)
-    walk_content(monitor, f) # loop for each event
+    content_init(monitor, io_lemon)
+    content_walk(monitor, io_lemon) # loop for each event
         
-    f.close()    
+    io_lemon.close()
   end
 end
 {% endhighlight %}
@@ -224,7 +225,7 @@ using write mode <code>w</code>.
 
 #### Wrapping Idle Event into Code
 
-<code>walk_content</code> is the **heart** of this script.
+<code>content_walk</code> is the **heart** of this script.
 We have to capture every event,
 and process the event in event handler.
 
@@ -232,23 +233,23 @@ and process the event in event handler.
 
 After the event handler,
 we will get the statusbar text, in the same way,
-we did in <code>init_content</code>.
+we did in <code>content_init</code>.
 
 {% highlight ruby %}
-def walk_content(monitor, stdin)    
-  # start a pipe
+def content_walk(monitor, lemon_stdin)
+  # start a io
   command_in = 'herbstclient --idle'
   
-  IO.popen(command_in, "r") do |f|     
-    while f do 
+  IO.popen(command_in, "r") do |io_idle|
+    while io_idle do 
       # read next event
-      event = f.gets
+      event = io_idle.gets
       handle_command_event(monitor, event)
         
       text = get_statusbar_text(monitor)
-      stdin.puts(text)
+      lemon_stdin.puts(text)
     end
-    f.close()    
+    io_idle.close()
   end
 end
 {% endhighlight %}
@@ -296,6 +297,13 @@ end
 Actually that's all we need to have a functional lemonbar.
 This is the minimum version.
 
+#### View Source File:
+
+With idle event. The **heart** of the script.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/pipehandler.02-idle.rb][dotfiles-lemon-ruby-pipehandler-idle]
+
 -- -- --
 
 ### Lemonbar Clickable Areas
@@ -326,25 +334,25 @@ It means Lemonbar read input and write output at the same time.
 {% highlight ruby %}
 def run_lemon(monitor, parameters)
   command_out  = 'lemonbar ' + parameters
-  
+
   # note the r+ mode
-  IO.popen(command_out, 'r+') do |f| 
-  
+  IO.popen(command_out, 'r+') do |io_lemon| 
+
     pid = fork do 
-      init_content(monitor, f)
-      walk_content(monitor, f) # loop for each event
+      content_init(monitor, io_lemon)
+      content_walk(monitor, io_lemon) # loop for each event
     end
     Process.detach(pid)  
 
-    IO.popen('sh', 'w') do |sh|
-      while f do
-        sh.puts f.gets
+    IO.popen('sh', 'w') do |io_sh|
+      while io_lemon do
+        io_sh.puts io_lemon.gets
       end
         
-      sh.close()
+      io_sh.close()
     end
-        
-    f.close()    
+ 
+    io_lemon.close()
   end
 end
 {% endhighlight %}
@@ -354,23 +362,23 @@ end
 	Forking solve this issue.
 
 Seriously, we have to take care on where to put the loop,
-without interfering the original loop in <code>walk_content</code>.
+without interfering the original loop in <code>content_walk</code>.
 
 In order to enable bidirectional pipe,
 we open the IO in read and write mode <code>r+</code>.
 
 {% highlight ruby %}
-  IO.popen(command_out, 'r+') do |f| 
+  IO.popen(command_out, 'r+') do |io_lemon|
     ...
   end
 {% endhighlight %}
 
 #### View Source File:
 
-Shell Version, also with Idle event.
+Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.shell.rb][dotfiles-lemon-ruby-pipehandler-shell]
+	[github.com/.../dotfiles/.../ruby/pipehandler.03-clickable.rb][dotfiles-lemon-ruby-pipehandler-clickable]
 
 -- -- --
 
@@ -433,8 +441,10 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-ruby-pipehandler-shell]:  {{ dotfiles_lemon }}/ruby/pipehandler.shell.rb
-[dotfiles-lemon-ruby-pipehandler-simple]: {{ dotfiles_lemon }}/ruby/pipehandler.simple.rb
+[dotfiles-lemon-ruby-pipehandler-init]:      {{ dotfiles_lemon }}/ruby/pipehandler.01-init.rb
+[dotfiles-lemon-ruby-pipehandler-idle]:      {{ dotfiles_lemon }}/ruby/pipehandler.02-idle.rb
+[dotfiles-lemon-ruby-pipehandler-clickable]: {{ dotfiles_lemon }}/ruby/pipehandler.03-clickable.rb
+[dotfiles-lemon-ruby-pipehandler-interval]:  {{ dotfiles_lemon }}/ruby/pipehandler.04-interval.rb
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl
