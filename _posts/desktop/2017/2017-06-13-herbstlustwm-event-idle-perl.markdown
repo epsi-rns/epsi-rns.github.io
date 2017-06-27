@@ -100,11 +100,11 @@ Lemonbar Source Code Directory:
 
 #### Dzen2
 
-![Statusbar: Dzen2 Screenpmot][image-hlwm-ss-dzen2]{: .img-responsive }
+![Statusbar: Dzen2 Screenshot][image-hlwm-ss-dzen2]{: .img-responsive }
 
 #### Lemonbar
 
-![Statusbar: Lemonbar Screenpmot][image-hlwm-ss-lemon]{: .img-responsive }
+![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 -- -- --
 
@@ -434,13 +434,154 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.pm</code>.
+
+{% highlight perl %}
+use Time::Piece;
+
+my $segment_datetime    = ''; # empty string
+
+sub get_statusbar_text {
+    ...
+
+    # draw date and time
+    $text .= '%{c}';
+    $text .= output_by_datetime();
+    
+    ...
+}
+
+sub output_by_datetime {
+    return $segment_datetime;
+}
+
+sub set_datetime {    ...
+
+    $segment_datetime = "$date_text  $time_text";
+}
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+sub handle_command_event {
+    ...
+
+    if ($origin eq 'reload') {
+    ...
+    } elsif ($origin eq 'interval') {
+        output::set_datetime();
+    }   
+}
+
+sub content_init {
+    ...
+    output::set_windowtitle('');
+    output::set_datetime();
+
+    ...
+}
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event,
+	with the help of <code>cat</code> process.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight perl %}
+sub content_event_idle {
+    my $pipe_cat_out = shift;
+ 
+    my $pid_idle = fork;
+    return if $pid_idle;     # in the parent process
+
+    # start a pipe
+    my $pipe_idle_in = IO::Pipe->new();
+    my $command = 'herbstclient --idle';
+    my $handle  = $pipe_idle_in->reader($command);
+
+    # wait for each event
+    my $event = '';
+    while ($event = <$pipe_idle_in>) {
+        print $pipe_cat_out $event;
+        flush $pipe_cat_out;
+    }
+    
+    $pipe_idle_in->close();
+}
+{% endhighlight %}
+
+{% highlight perl %}
+sub content_event_interval {
+    my $pipe_cat_out = shift;
+
+    my $pid_interval = fork;
+    return if $pid_interval;     # in the parent process
+    
+    while(1) {         
+        print $pipe_cat_out "interval\n";
+        flush $pipe_cat_out;
+        
+        sleep 1;
+    }
+}
+{% endhighlight %}
+
+{% highlight perl %}
+sub content_walk {
+    my $monitor = shift;
+    my $pipe_lemon_out = shift; 
+
+    my ($rh_cat, $wh_cat);
+    my $pid_cat = open2 ($rh_cat, $wh_cat, 'cat') 
+        or die "can't pipe sh: $!";
+
+    content_event_idle($wh_cat);
+    content_event_interval($wh_cat);
+
+    my $text  = '';
+    my $event = '';
+
+    # wait for each event, trim newline
+    while (chomp($event = <$rh_cat>)) {
+        handle_command_event($monitor, $event);
+        
+        $text = output::get_statusbar_text($monitor);     
+        print $pipe_lemon_out $text."\n";
+        flush $pipe_lemon_out;
+    }
+
+    waitpid( $pid_cat, 0 );
+}
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight perl %}
+{% endhighlight %}
 
 -- -- --
 
@@ -468,6 +609,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-perl-testevents]:  {{ dotfiles_lemon }}/perl/11-testevents.pl
 

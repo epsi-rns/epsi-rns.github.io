@@ -100,11 +100,11 @@ Lemonbar Source Code Directory:
 
 #### Dzen2
 
-![Statusbar: Dzen2 Screenpmot][image-hlwm-ss-dzen2]{: .img-responsive }
+![Statusbar: Dzen2 Screenshot][image-hlwm-ss-dzen2]{: .img-responsive }
 
 #### Lemonbar
 
-![Statusbar: Lemonbar Screenpmot][image-hlwm-ss-lemon]{: .img-responsive }
+![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 -- -- --
 
@@ -392,13 +392,151 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.hs</code>.
+
+{% highlight haskell %}
+module MyOutput ( ..., setDatetime, ...) where
+
+segmentDatetime :: IORef String
+segmentDatetime = unsafePerformIO $ newIORef ""    -- empty string
+ 
+wFormatTime :: FormatTime t => t -> String -> String
+wFormatTime myUtcTime myTimeFormat = formatTime 
+    Data.Time.Format.defaultTimeLocale myTimeFormat myUtcTime
+
+getStatusbarText :: Int -> IO String
+getStatusbarText monitor = do
+    tags <- readIORef tagsStatus
+    
+    let tagText = "%{l}" ++ (join $ map (outputByTag monitor) tags)
+    timeText  <- ("%{c}" ++) <$> outputByDatetime
+    titleText <- ("%{r}" ++) <$> outputByTitle
+
+    let text = tagText ++ timeText ++ titleText
+    return text
+
+outputByDatetime :: IO String
+outputByDatetime = do
+    segment <- readIORef segmentDatetime
+    return segment
+
+formatDatetime :: ZonedTime -> String
+formatDatetime now = dateText ++ "  " ++ timeText
+  where
+    ...
+
+setDatetime :: IO ()
+setDatetime = do
+    now <- getZonedTime     
+    writeIORef segmentDatetime $ formatDatetime now
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">MyPipeHandler.hs</code>.
+
+{% highlight haskell %}
+wSleep :: Int -> IO ()
+wSleep mySecond = threadDelay (1000000 * mySecond)
+
+handleCommandEvent :: Int -> String -> IO ()
+handleCommandEvent monitor event
+  ...
+  | origin == "interval"    = do setDatetime
+  where
+    ...
+
+contentInit :: Int -> Handle -> IO ()
+contentInit monitor pipe_lemon_in = do
+    ... 
+    setWindowtitle ""
+    setDatetime
+
+    ...
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event,
+	with the help of <code>cat</code> process.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight haskell %}
+contentEventIdle :: Handle -> IO ()
+contentEventIdle pipe_cat_in = do
+    let command_in = "herbstclient"
+
+    (_, Just pipe_idle_out, _, ph) <- 
+        createProcess (proc command_in ["--idle"]) 
+        { std_out = CreatePipe }
+
+    forever $ do
+        -- wait for next event 
+        event <- hGetLine pipe_idle_out
+
+        hPutStrLn pipe_cat_in event
+        hFlush pipe_cat_in
+
+    hClose pipe_idle_out
+{% endhighlight %}
+
+{% highlight haskell %}
+contentEventInterval :: Handle -> IO ()
+contentEventInterval pipe_cat_in = forever $ do
+     hPutStrLn pipe_cat_in "interval"
+     hFlush pipe_cat_in
+
+     wSleep 1
+{% endhighlight %}
+
+{% highlight haskell %}
+contentWalk :: Int -> Handle -> IO ()
+contentWalk monitor pipe_lemon_in = do
+    (Just pipe_cat_in, Just pipe_cat_out, _, ph) <- 
+        createProcess (proc "cat" []) 
+        { std_in = CreatePipe, std_out = CreatePipe }
+
+    forkProcess $ contentEventIdle(pipe_cat_in)
+    forkProcess $ contentEventInterval(pipe_cat_in)
+    
+    forever $ do
+        -- wait for next event 
+        event <- hGetLine pipe_cat_out
+        handleCommandEvent monitor event
+ 
+        text <- getStatusbarText monitor
+
+        hPutStrLn pipe_lemon_in text
+        hFlush pipe_lemon_in
+
+    hClose pipe_cat_out
+    hClose pipe_cat_in
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight haskell %}
+{% endhighlight %}
 
 -- -- --
 
@@ -426,6 +564,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-haskell-testevents]:  {{ dotfiles_lemon }}/haskell/11-testevents.hs
 

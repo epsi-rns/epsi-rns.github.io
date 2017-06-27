@@ -100,11 +100,11 @@ Lemonbar Source Code Directory:
 
 #### Dzen2
 
-![Statusbar: Dzen2 Screenpmot][image-hlwm-ss-dzen2]{: .img-responsive }
+![Statusbar: Dzen2 Screenshot][image-hlwm-ss-dzen2]{: .img-responsive }
 
 #### Lemonbar
 
-![Statusbar: Lemonbar Screenpmot][image-hlwm-ss-lemon]{: .img-responsive }
+![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 -- -- --
 
@@ -395,13 +395,152 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.py</code>.
+
+{% highlight lua %}
+_M.segment_datetime    = '' -- empty string
+
+function _M.get_statusbar_text(monitor)
+    ...
+
+    -- draw date and time
+    text = text .. '%{c}'
+    text = text .. _M.output_by_datetime()
+
+    ...
+end
+
+function _M.output_by_datetime()
+    return _M.segment_datetime
+end
+
+function _M.set_datetime()
+    ...
+
+    _M.segment_datetime = date_text .. '  ' .. time_text
+end
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">pipehandler.lua</code>.
+
+{% highlight lua %}
+function _M.handle_command_event(monitor, event)
+    ...
+
+    if origin == 'reload' then
+    ...
+    elseif origin == 'interval' then
+        output.set_datetime()
+    end
+end
+
+function _M.content_init(monitor, pipe_lemon_out)
+    ...
+    output.set_windowtitle('')
+    output.set_datetime()
+
+    ...
+end
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event,
+	with the help of <code>posix.pipe()</code>.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight lua %}
+function _M.content_event_idle(pipe_cat_out)
+    local pid_idle = posix.fork()
+
+    if pid_idle == 0 then -- this is the child process
+        -- start a pipe
+        command_in = 'herbstclient --idle'
+        local pipe_in  = assert(io.popen(command_in,  'r'))
+  
+        -- wait for each event 
+        for event in pipe_in:lines() do
+            posix.write(pipe_cat_out, event)
+            io.flush()
+        end -- for loop
+   
+        pipein:close()
+    else             -- this is the parent process
+        -- nothing
+    end
+end
+{% endhighlight %}
+
+{% highlight lua %}
+function _M.content_event_interval(pipe_cat_out) 
+    local pid_interval = posix.fork()
+
+    if pid_interval == 0 then -- this is the child process
+        while true do
+            posix.write(pipe_cat_out, "interval\n")
+            io.flush() 
+
+            _M.os_sleep(1)
+        end
+    else             -- this is the parent process
+        -- nothing
+    end
+end
+{% endhighlight %}
+
+{% highlight lua %}
+function _M.content_walk(monitor, pipe_lemon_out)  
+    rd, wr = posix.pipe()
+
+    _M.content_event_idle(wr)
+    _M.content_event_interval(wr)
+
+    local bufsize = 4096
+    local event = ''
+
+    while true do
+        -- wait for next event, trim newline
+        event = common.trim1(posix.read(rd, bufsize))
+        if event == nil or #event == 0 then break end
+    
+        _M.handle_command_event(monitor, event)    
+    
+        text = output.get_statusbar_text(monitor)
+        pipe_lemon_out:write(text .. "\n")
+        pipe_lemon_out:flush()
+    end -- not using for loop
+
+    posix.close(rd)
+    posix.close(wr)
+end
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight lua %}
+{% endhighlight %}
 
 -- -- --
 
@@ -429,6 +568,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-lua-testevents]:  {{ dotfiles_lemon }}/lua/11-testevents.lua
 

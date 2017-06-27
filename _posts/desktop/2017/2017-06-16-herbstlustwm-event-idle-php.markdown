@@ -100,11 +100,11 @@ Lemonbar Source Code Directory:
 
 #### Dzen2
 
-![Statusbar: Dzen2 Screenpmot][image-hlwm-ss-dzen2]{: .img-responsive }
+![Statusbar: Dzen2 Screenshot][image-hlwm-ss-dzen2]{: .img-responsive }
 
 #### Lemonbar
 
-![Statusbar: Lemonbar Screenpmot][image-hlwm-ss-lemon]{: .img-responsive }
+![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 -- -- --
 
@@ -432,13 +432,172 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.php</code>.
+
+{% highlight php %}
+$segment_datetime    = ''; # empty string
+
+function get_statusbar_text($monitor)
+{
+    ...
+
+    # draw date time
+    $text .= '%{c}';
+    $text .= output_by_datetime();
+
+    ...
+}
+
+function output_by_datetime()
+{
+    global $segment_datetime; 
+    return $segment_datetime;
+}
+
+function set_datetime() {
+    ...
+
+    $segment_datetime = "$date_text  $time_text";
+}
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">pipehandler.php</code>.
+
+{% highlight php %}
+function handle_command_event($monitor, $event)
+{
+    ...
+
+    switch($origin) {
+    ...
+    case 'interval':
+        set_datetime();
+    }
+}
+
+function content_init($monitor, $pipe_lemon_stdin)
+{   
+    ...
+    set_windowtitle('');
+    set_datetime();
+
+    ...
+}
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event,
+	with the help of <code>cat</code> process.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight php %}
+function content_event_idle($pipe_cat_stdin) 
+{
+    $pid_idle = pcntl_fork();
+
+    switch($pid_idle) {         
+    case -1 : // fork errror         
+        die('could not fork');
+    case 0  : // we are the child
+        // start a pipe
+        $command_in    = 'herbstclient --idle';
+        $pipe_idle_in  = popen($command_in,  'r'); // handle
+    
+        while(!feof($pipe_idle_in)) {
+            # read next event
+            $event = fgets($pipe_idle_in);
+            fwrite($pipe_cat_stdin, $event);
+            flush();
+        }
+    
+        pclose($pipe_idle_in);
+
+        break;
+    default : // we are the parent
+        // do nothing
+        return $pid_idle;
+    } 
+}
+{% endhighlight %}
+
+{% highlight php %}
+function content_event_interval($pipe_cat_stdin) 
+{
+    date_default_timezone_set("Asia/Jakarta");
+    $pid_interval = pcntl_fork();
+
+    switch($pid_interval) {         
+    case -1 : // fork errror         
+        die('could not fork');
+    case 0  : // we are the child
+        do {
+            fwrite($pipe_cat_stdin, "interval\n");
+            flush();
+            sleep(1);
+        } while (true);
+        
+        break;
+    default : // we are the parent
+        // do nothing
+        return $pid_interval;
+    } 
+}
+{% endhighlight %}
+
+{% highlight php %}
+function content_walk($monitor, $pipe_lemon_stdin)
+{       
+    $descriptorspec = array(
+        0 => array('pipe', 'r'),  // stdin
+        1 => array('pipe', 'w'),  // stdout
+        2 => array('pipe', 'w',)  // stderr
+    );
+    
+    $proc_cat = proc_open('cat', $descriptorspec, $pipe_cat);
+
+    content_event_idle($pipe_cat[0]);
+    content_event_interval($pipe_cat[0]);
+
+    while(!feof($pipe_cat[1])) {
+        $event = trim(fgets($pipe_cat[1]));
+        handle_command_event($monitor, $event);
+        
+        $text = get_statusbar_text($monitor);
+        fwrite($pipe_lemon_stdin, $text."\n");
+        flush();
+    }
+
+    pclose($pipe_cat[1]);
+}
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight php %}
+{% endhighlight %}
 
 -- -- --
 
@@ -466,6 +625,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-php-testevents]:  {{ dotfiles_lemon }}/php/11-testevents.php
 

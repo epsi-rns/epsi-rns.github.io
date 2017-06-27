@@ -100,11 +100,11 @@ Lemonbar Source Code Directory:
 
 #### Dzen2
 
-![Statusbar: Dzen2 Screenpmot][image-hlwm-ss-dzen2]{: .img-responsive }
+![Statusbar: Dzen2 Screenshot][image-hlwm-ss-dzen2]{: .img-responsive }
 
 #### Lemonbar
 
-![Statusbar: Lemonbar Screenpmot][image-hlwm-ss-lemon]{: .img-responsive }
+![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 -- -- --
 
@@ -417,13 +417,147 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.py</code>.
+
+{% highlight python %}
+segment_datetime    = '' # empty string
+
+def get_statusbar_text(monitor):
+    ...
+
+    # draw date and time
+    text += '%{c}'
+    text += output_by_datetime()
+
+    ...
+
+def output_by_datetime():
+    return segment_datetime
+
+def set_datetime():
+    ...
+    segment_datetime = date_text + '  ' + time_text
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">pipehandler.py</code>.
+
+{% highlight python %}
+def handle_command_event(monitor, event):  
+    ...
+
+    if origin == 'reload':
+    ...
+    elif origin == 'interval':
+        output.set_datetime()
+
+def content_init(monitor, pipe_lemon_out):
+    ...
+    output.set_windowtitle('')
+    output.set_datetime()
+        
+    ...
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event,
+	with the help of <code>cat</code> process.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight python %}
+def content_event_idle(pipe_cat_out):
+    pid_idle = os.fork()
+        
+    if pid_idle == 0:
+        try:
+            # start a pipe
+            command_in = 'herbstclient --idle'  
+            pipe_idle_in = subprocess.Popen(
+                    [command_in], 
+                    stdout = subprocess.PIPE,
+                    stderr = subprocess.STDOUT,
+                    shell  = True,
+                    universal_newlines = True
+            )
+            
+            # wait for each event  
+            for event in pipe_idle_in.stdout: 
+                pipe_cat_out.stdin.write(event)
+                pipe_cat_out.stdin.flush()
+    
+            pipe_idle_in.stdout.close()
+        finally:
+            import signal
+            os.kill(pid_idle, signal.SIGTERM)
+{% endhighlight %}
+
+{% highlight python %}
+def content_event_interval(pipe_cat_out):
+    pid_interval = os.fork()
+
+    if pid_interval == 0:
+        try:
+            while True:
+                pipe_cat_out.stdin.write("interval\n")
+                pipe_cat_out.stdin.flush()
+    
+                time.sleep(1)
+        finally:
+            import signal
+            os.kill(pid_interval, signal.SIGTERM)
+{% endhighlight %}
+
+{% highlight python %}
+def content_walk(monitor, pipe_lemon_out): 
+    pipe_cat = subprocess.Popen(
+            ['cat'], 
+            stdin  = subprocess.PIPE,
+            stdout = subprocess.PIPE,
+            shell  = True,
+            universal_newlines=True
+        )
+
+    content_event_idle(pipe_cat)
+    content_event_interval(pipe_cat)
+
+    # wait for each event, trim newline
+    for event in pipe_cat.stdout:
+        handle_command_event(monitor, event.strip())
+
+        text = output.get_statusbar_text(monitor)
+        pipe_lemon_out.stdin.write(text + '\n')
+        pipe_lemon_out.stdin.flush()
+
+    pipe_cat.stdin.close()
+    pipe_cat.stdout.close()
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight python %}
+{% endhighlight %}
 
 -- -- --
 
@@ -451,6 +585,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-python-testevents]:  {{ dotfiles_lemon }}/python/11-testevents.py
 

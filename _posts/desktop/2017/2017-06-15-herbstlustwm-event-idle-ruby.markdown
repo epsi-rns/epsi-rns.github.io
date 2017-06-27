@@ -100,11 +100,11 @@ Lemonbar Source Code Directory:
 
 #### Dzen2
 
-![Statusbar: Dzen2 Screenpmot][image-hlwm-ss-dzen2]{: .img-responsive }
+![Statusbar: Dzen2 Screenshot][image-hlwm-ss-dzen2]{: .img-responsive }
 
 #### Lemonbar
 
-![Statusbar: Lemonbar Screenpmot][image-hlwm-ss-lemon]{: .img-responsive }
+![Statusbar: Lemonbar Screenshot][image-hlwm-ss-lemon]{: .img-responsive }
 
 -- -- --
 
@@ -405,13 +405,141 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.py</code>.
+
+{% highlight ruby %}
+@segment_datetime    = '' # empty string
+
+def get_statusbar_text(monitor)
+  ...
+
+  # draw date and time
+  text << '%{c}'
+  text << output_by_datetime()
+ 
+  ...
+end
+
+def output_by_datetime()
+  @segment_datetime
+end
+
+def set_datetime()
+    ...
+
+    @segment_datetime = "#{date_text}  #{time_text}"
+end
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">pipehandler.rb</code>.
+
+{% highlight ruby %}
+def handle_command_event(monitor, event) 
+  ...
+
+  case origin
+  ...
+  when 'interval'
+    set_datetime()
+  end
+end
+
+def content_init(monitor, lemon_stdin)
+  ...
+  set_windowtitle('')
+  set_datetime()
+      
+  ...
+end
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event,
+	with the help of <code>cat</code> process.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight ruby %}
+def content_event_idle(cat_stdin)
+  pid_idle = fork do 
+    # start an io
+    command_in = 'herbstclient --idle'
+  
+    IO.popen(command_in, "r") do |io_idle|
+      while io_idle do 
+         # read next event
+        event = io_idle.gets
+        cat_stdin.print(event)
+      end
+      io_idle.close()
+    end
+  end
+
+  Process.detach(pid_idle)  
+end
+{% endhighlight %}
+
+{% highlight ruby %}
+def content_event_interval(cat_stdin)
+  pid_interval = fork do 
+    while true do
+      cat_stdin.print "interval\n"
+      sleep(1)
+    end
+  end
+
+  Process.detach(pid_interval)  
+end
+{% endhighlight %}
+
+{% highlight ruby %}
+def content_walk(monitor, lemon_stdin)
+  # note the r+ mode for bidirectional
+  IO.popen('cat', 'r+') do |io_cat| 
+
+    content_event_idle(io_cat)
+    content_event_interval(io_cat)
+
+    while io_cat do 
+      # read next event, trim newline
+      event = (io_cat.gets).strip
+      handle_command_event(monitor, event)
+        
+      text = get_statusbar_text(monitor)
+      lemon_stdin.puts(text)
+    end
+  
+  io_cat.close()
+  end
+end
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight ruby %}
+{% endhighlight %}
 
 -- -- --
 
@@ -439,6 +567,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-ruby-testevents]:  {{ dotfiles_lemon }}/ruby/11-testevents.ruby
 

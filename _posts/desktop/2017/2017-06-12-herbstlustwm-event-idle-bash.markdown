@@ -392,13 +392,125 @@ consider this test in an isolated fashion.
 
 ### Combined Event
 
-**TBD**
+#### Preparing The View
+
+This is what it looks like, an overview of what we want to achieve.
+
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
+
+Consider make a progress in 
+<code class="code-file">output.sh</code>.
+
+{% highlight bash %}
+segment_datetime='';    # empty string
+
+function get_statusbar_text() {
+    ...
+
+    # draw date and time
+    text+='%{c}'
+    output_by_datetime
+    text+=$buffer
+
+    ...
+}
+
+
+function output_by_datetime() {
+    buffer=$segment_datetime
+}
+
+function set_datetime() {
+    ...
+
+    segment_datetime="$date_text  $time_text"
+}
+{% endhighlight %}
+
+And a few enhancement in 
+<code class="code-file">pipehandler.sh</code>.
+
+{% highlight bash %}
+function handle_command_event() {
+    ...
+
+    case $origin in
+        ...
+        interval)
+            set_datetime
+            ;;
+    esac 
+}
+
+function content_init() {
+    ...
+    set_windowtitle ''
+    set_datetime
+
+    ...
+}
+{% endhighlight %}
+
+#### Expanding The Event Controller
+
+All we need to do is to split out <code>content_walk</code> into
+
+*	<code>content_walk</code>: combined event.
+
+*	<code>content_event_idle</code>: HerbstluftWM idle event. 
+	Forked, as background processing.
+
+*	<code>content_event_interval</code> : Custom date time event. 
+	Forked, as background processing.
+
+{% highlight bash %}
+function content_event_idle() {
+    # wait for each event     
+    herbstclient --idle
+}
+{% endhighlight %}
+
+{% highlight bash %}
+function content_event_interval() {
+    # endless loop
+    while :; do 
+      echo "interval"
+      sleep 1
+    done
+}
+{% endhighlight %}
+
+{% highlight bash %}
+function content_walk() {
+    monitor=$1
+    
+    {
+        content_event_idle &
+        pid_idle=$!
+    
+        content_event_interval &
+        pid_interval=$!
+    
+    }  | while read event; do
+            handle_command_event $monitor "$event"
+        
+            get_statusbar_text $monitor
+            echo $buffer
+        done
+}
+{% endhighlight %}
+
+This above is the most complex part.
+We are almost done.
 
 -- -- --
 
 ### Putting Them All Together
 
 **TBD**
+
+{% highlight bash %}
+{% endhighlight %}
 
 -- -- --
 
@@ -426,6 +538,7 @@ Enjoy the window manager !
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [dotfiles-lemon-bash-testevents]:  {{ dotfiles_lemon }}/bash/11-testevents.sh
 
