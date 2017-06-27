@@ -315,8 +315,8 @@ function handle_command_event($monitor, $event)
         break;
     case 'window_title_changed':
     case 'focus_changed':
-        set_windowtitle($column[2]);
-        break;
+        $title = count($column) > 2 ? $column[2] : '';
+        set_windowtitle($title);
     }
 }
 {% endhighlight %}
@@ -410,9 +410,11 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 We can put custom event other than idle event in statusbar panel.
 This event, such as date event, called based on time interval in second.
-Luckily we can treat interval as event.
-It is a little bit tricky, because we have to make,
-a combined event, that consist of idle event and interval event.
+
+It is a little bit tricky, because we have to make, 
+a combined event that consist of,
+idle event (asynchronous) and interval event (synchronous).
+Merging two different paralel process into one.
 
 This is an overview of what we want to achieve.
 

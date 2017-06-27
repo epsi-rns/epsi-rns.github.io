@@ -271,11 +271,12 @@ All we need is to pay attention to this two function.
 {% highlight lua %}
 function _M.handle_command_event(monitor, event)
     -- find out event origin
-    column = common.split(event, "\t")
-    origin = column[1] -- non zero based
+    local column = common.split(event, "\t")
+    local origin = column[1] -- non zero based
 
-    tag_cmds = {'tag_changed', 'tag_flags', 'tag_added', 'tag_removed'}
-    title_cmds = {'window_title_changed', 'focus_changed'}
+    local tag_cmds = {'tag_changed', 
+         'tag_flags', 'tag_added', 'tag_removed'}
+    local title_cmds = {'window_title_changed', 'focus_changed'}
 
     if origin == 'reload' then
         os.execute('pkill lemonbar')
@@ -284,7 +285,8 @@ function _M.handle_command_event(monitor, event)
     elseif common.has_value(tag_cmds, origin) then
         output.set_tag_value(monitor)
     elseif common.has_value(title_cmds, origin) then
-        output.set_windowtitle(column[3])
+        local title = (#column > 2) and (column[3]) or ''
+        output.set_windowtitle(title)
     end
 end
 {% endhighlight %}
@@ -373,9 +375,11 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 We can put custom event other than idle event in statusbar panel.
 This event, such as date event, called based on time interval in second.
-Luckily we can treat interval as event.
-It is a little bit tricky, because we have to make,
-a combined event, that consist of idle event and interval event.
+
+It is a little bit tricky, because we have to make, 
+a combined event that consist of,
+idle event (asynchronous) and interval event (synchronous).
+Merging two different paralel process into one.
 
 This is an overview of what we want to achieve.
 

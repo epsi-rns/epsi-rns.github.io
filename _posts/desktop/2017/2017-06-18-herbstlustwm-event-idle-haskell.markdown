@@ -275,12 +275,17 @@ All we need is to pay attention to this two function.
 <code>set_tag_value</code> and <code>set_windowtitle</code>.
 
 {% highlight haskell %}
+getColumnTitle :: [String] -> String
+getColumnTitle column
+  | length(column) > 2 = column !! 2
+  | otherwise          = ""
+
 handleCommandEvent :: Int -> String -> IO ()
 handleCommandEvent monitor event
   | origin == "reload"      = do system("pkill lemonbar"); return ()
   | origin == "quit_panel"  = do exitSuccess; return ()
   | elem origin tagCmds     = do setTagValue monitor
-  | elem origin titleCmds   = do setWindowtitle (column !! 2)
+  | elem origin titleCmds   = do setWindowtitle $ getColumnTitle column
   where
     tagCmds   = ["tag_changed", "tag_flags", "tag_added", "tag_removed"]
     titleCmds = ["window_title_changed", "focus_changed"]
@@ -370,9 +375,11 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 We can put custom event other than idle event in statusbar panel.
 This event, such as date event, called based on time interval in second.
-Luckily we can treat interval as event.
-It is a little bit tricky, because we have to make,
-a combined event, that consist of idle event and interval event.
+
+It is a little bit tricky, because we have to make, 
+a combined event that consist of,
+idle event (asynchronous) and interval event (synchronous).
+Merging two different paralel process into one.
 
 This is an overview of what we want to achieve.
 

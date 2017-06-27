@@ -100,11 +100,11 @@ outside the shell loop.
 
 #### Combined Event 
 
-**TBD**
-
 What if we want to put other stuff in our lovely panel, such as date?
 Or any system monitoring information such as CPU, Memory, HDD,
 temperature, uname or even MPD?
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
 
 These system monitoring is usually called in interval based.
 Date can be based on one second interval.
@@ -113,16 +113,21 @@ And uname called only once, or one hour interval if you wish.
 
 Luckily we can treat these interval as event.
 Consider this combined event,
-consist of idle event and interval event.
+consist of idle event (asynchronous) and interval event (synchronous).
 
 {% highlight bash %}
 combined_event | content_processing | statusbar
 {% endhighlight %}
 
 Since we need to alter the original event,
-to create new combined event, we need an intermediate process.
-As an intermediate process, 
+to create new combined event, 
+sometimes we need an intermediate process.
+As an intermediate process in Perl, PHP, Ruby, and Haskell, 
 we need to pipe both loop, into <code>cat</code>.
+
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
  
 Since both event also loops that write in the same time,
 as the intermediate process being read.
@@ -299,6 +304,9 @@ Thank you for Reading.
 
 [image-hlwm-01-event-idle]:  {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:  {{ asset_path }}/herbstclient-02-tag-status.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
+
+[image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 
 [local-overview]: {{ site.url }}/desktop/2017/06/11/herbstlustwm-event-idle-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html
