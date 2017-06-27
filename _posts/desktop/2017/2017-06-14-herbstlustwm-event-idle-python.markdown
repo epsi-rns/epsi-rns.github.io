@@ -141,15 +141,15 @@ using <code>pid = os.fork()</code>.
 
 {% highlight python %}
 def detach_lemon(monitor, parameters):
-    pid = os.fork()
+    pid_lemon = os.fork()
     
-    if pid == 0:
+    if pid_lemon == 0:
         try:
             run_lemon(monitor, parameters)
             os._exit(1)
         finally:
             import signal
-            os.kill(pid, signal.SIGTERM)
+            os.kill(pid_lemon, signal.SIGTERM)
 {% endhighlight %}
 
 The real function is <code>run_lemon</code>.
@@ -184,7 +184,6 @@ to do the real works.
 
 {% highlight python %}
 def content_init(monitor, pipe_lemon_out):
-    # initialize statusbar before loop
     output.set_tag_value(monitor)
     output.set_windowtitle('')
         
@@ -254,9 +253,9 @@ def content_walk(monitor, pipe_lemon_out):
             universal_newlines = True
         )
     
-    # wait for each event  
-    for event in pipe_idle_in.stdout:  
-        handle_command_event(monitor, event)
+    # wait for each event, trim newline
+    for event in pipe_cat.stdout:
+        handle_command_event(monitor, event.strip())
         
         text = output.get_statusbar_text(monitor)
         pipe_lemon_out.stdin.write(text + '\n')
@@ -363,7 +362,7 @@ def run_lemon(monitor, parameters):
     content_walk(monitor, pipe_lemon_out) # loop for each event
 
     pipe_lemon_out.stdin.close()
-    pipe_sh.stdin.close()
+    pipe_lemon_out.stdout.close()
 {% endhighlight %}
 
 #### How does it work ?
@@ -394,13 +393,29 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 ### Interval Based Event
 
-We can put other stuff other than idle event in statusbar panel.
-This event, such as date event,
-called based on interval, such as one second interval.
+We can put custom event other than idle event in statusbar panel.
+This event, such as date event, called based on time interval in second.
 Luckily we can treat interval as event.
 It is a little bit tricky, because we have to make,
 a combined event, that consist of idle event and interval event.
 
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
+In real code later, we do not need the timestamp.
+<code>interval</code> string is enough to trigger interval event.
+
+#### View Testbed Source File:
+
+Before merging combined event into main code,
+consider this test in an isolated fashion.
+
+*	[github.com/.../dotfiles/.../python/11-testevents.py][dotfiles-lemon-python-testevents]
+
+-- -- --
+
+### Combined Event
 
 **TBD**
 
@@ -432,9 +447,12 @@ Enjoy the window manager !
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-04-event-origin]: {{ asset_path }}/herbstclient-04-event-origin.png
 [image-hlwm-05-clickable]:    {{ asset_path }}/herbstclient-05-lemonbar-clickable-areas.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+
+[dotfiles-lemon-python-testevents]:  {{ dotfiles_lemon }}/python/11-testevents.py
 
 [local-python-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-python.html
 [local-python-pipe]:   {{ site.url }}/code/2017/04/16/python-pipe-and-fork.html

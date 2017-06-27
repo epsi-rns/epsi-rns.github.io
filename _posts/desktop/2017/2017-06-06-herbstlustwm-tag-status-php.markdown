@@ -558,13 +558,10 @@ into array of tags for later use.
 function set_windowtitle($windowtitle)
 {
     global $segment_windowtitle;
-
     $icon = PRE_ICON."".POST_ICON;
-    
-    $windowtitle = trim($windowtitle);
       
     $segment_windowtitle = " ${icon} %{B-}"
-        . "%{F".COLOR['grey700']."} ${windowtitle}";
+        . "%{F".COLOR['grey700']."} $windowtitle";
 }
 {% endhighlight %}
 

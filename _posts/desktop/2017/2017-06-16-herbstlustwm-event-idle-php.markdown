@@ -142,16 +142,16 @@ using <code>$pid = pcntl_fork();</code>.
 {% highlight php %}
 function detach_lemon($monitor, $parameters)
 { 
-    $pid = pcntl_fork();
+    $pid_lemon = pcntl_fork();
     
-    switch($pid) {         
+    switch($pid_lemon) {         
     case -1 : // fork errror         
         die('could not fork');
     case 0  : // we are the child
         run_lemon($monitor, $parameters); 
         break;
     default : // we are the parent             
-        return $pid;
+        return $pid_lemon;
     }    
 }
 {% endhighlight %}
@@ -191,8 +191,7 @@ to do the real works.
 
 {% highlight php %}
 function content_init($monitor, $pipe_lemon_stdin)
-{   
-    // initialize statusbar before loop
+{
     set_tag_value($monitor);
     set_windowtitle('');
         
@@ -263,7 +262,7 @@ function content_walk($monitor, $pipe_lemon_stdin)
     
     while(!feof($pipe_idle_in)) {
         # read next event
-        $event = fgets($pipe_idle_in);
+        $event = trim(fgets($pipe_idle_in));
         handle_command_event($monitor, $event);
         
         $text = get_statusbar_text($monitor);
@@ -372,9 +371,9 @@ function run_lemon($monitor, $parameters)
     $proc_lemon = proc_open($command_out, $descriptorspec, $pipe_lemon);
     $proc_sh    = proc_open('sh', $descriptorspec, $pipe_sh);
     
-    $pid = pcntl_fork();
+    $pid_content = pcntl_fork();
     
-    switch($pid) {         
+    switch($pid_content) {         
     case -1 : // fork errror         
         die('could not fork');
     case 0  : // we are the child
@@ -386,7 +385,7 @@ function run_lemon($monitor, $parameters)
             $buffer = fgets($pipe_lemon[1]);
             fwrite($pipe_sh[0], $buffer);
         }
-        return $pid;
+        return $pid_content;
     } 
 
     pclose($pipe_lemon[0]);
@@ -407,17 +406,31 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 *	**Lemonbar**: 
 	[github.com/.../dotfiles/.../php/pipehandler.03-clickable.php][dotfiles-lemon-php-pipehandler-clickable]
 
--- -- --
-
 ### Interval Based Event
 
-We can put other stuff other than idle event in statusbar panel.
-This event, such as date event,
-called based on interval, such as one second interval.
+We can put custom event other than idle event in statusbar panel.
+This event, such as date event, called based on time interval in second.
 Luckily we can treat interval as event.
 It is a little bit tricky, because we have to make,
 a combined event, that consist of idle event and interval event.
 
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
+In real code later, we do not need the timestamp.
+<code>interval</code> string is enough to trigger interval event.
+
+#### View Testbed Source File:
+
+Before merging combined event into main code,
+consider this test in an isolated fashion.
+
+*	[github.com/.../dotfiles/.../php/11-testevents.php][dotfiles-lemon-php-testevents]
+
+-- -- --
+
+### Combined Event
 
 **TBD**
 
@@ -449,9 +462,12 @@ Enjoy the window manager !
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-04-event-origin]: {{ asset_path }}/herbstclient-04-event-origin.png
 [image-hlwm-05-clickable]:    {{ asset_path }}/herbstclient-05-lemonbar-clickable-areas.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+
+[dotfiles-lemon-php-testevents]:  {{ dotfiles_lemon }}/php/11-testevents.php
 
 [local-php-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-php.html
 [local-php-pipe]:   {{ site.url }}/code/2017/04/16/php-pipe-and-fork.html

@@ -180,7 +180,6 @@ to do the real works.
 function content_init() {
     monitor=$1
 
-    # initialize statusbar before loop
     set_tag_value $monitor
     set_windowtitle ''
 
@@ -369,13 +368,29 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 ### Interval Based Event
 
-We can put other stuff other than idle event in statusbar panel.
-This event, such as date event,
-called based on interval, such as one second interval.
+We can put custom event other than idle event in statusbar panel.
+This event, such as date event, called based on time interval in second.
 Luckily we can treat interval as event.
 It is a little bit tricky, because we have to make,
 a combined event, that consist of idle event and interval event.
 
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
+In real code later, we do not need the timestamp.
+<code>interval</code> string is enough to trigger interval event.
+
+#### View Testbed Source File:
+
+Before merging combined event into main code,
+consider this test in an isolated fashion.
+
+*	[github.com/.../dotfiles/.../bash/11-testevents.sh][dotfiles-lemon-bash-testevents]
+
+-- -- --
+
+### Combined Event
 
 **TBD**
 
@@ -407,9 +422,12 @@ Enjoy the window manager !
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-04-event-origin]: {{ asset_path }}/herbstclient-04-event-origin.png
 [image-hlwm-05-clickable]:    {{ asset_path }}/herbstclient-05-lemonbar-clickable-areas.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+
+[dotfiles-lemon-bash-testevents]:  {{ dotfiles_lemon }}/bash/11-testevents.sh
 
 [local-bash-config]: {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
 [local-bash-pipe]:   {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html

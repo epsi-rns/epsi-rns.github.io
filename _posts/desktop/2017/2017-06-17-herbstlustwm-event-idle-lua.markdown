@@ -141,11 +141,11 @@ using <code>posix.fork()</code>.
 
 {% highlight lua %}
 function _M.detach_lemon(monitor, parameters)
-    local pid = posix.fork()
+    local pid_lemon = posix.fork()
 
-    if pid == 0 then -- this is the child process
+    if pid_lemon == 0 then -- this is the child process
         _M.run_lemon(monitor, parameters)
-    else             -- this is the parent process
+    else                   -- this is the parent process
         -- nothing
     end
 end
@@ -177,7 +177,6 @@ to do the real works.
 
 {% highlight lua %}
 function _M.content_init(monitor, pipe_lemon_out)
-    -- initialize statusbar before loop
     output.set_tag_value(monitor)
     output.set_windowtitle('')
 
@@ -238,9 +237,9 @@ function _M.content_walk(monitor, pipe_lemon_out)
     local pipe_in  = assert(io.popen(command_in,  'r'))
     local text = ''
   
-    -- wait for each event 
+    -- wait for each event, trim newline
     for event in pipe_in:lines() do
-        _M.handle_command_event(monitor, event)    
+        _M.handle_command_event(monitor, common.trim1(event))
     
         text = output.get_statusbar_text(monitor)
         pipe_lemon_out:write(text .. "\n")
@@ -348,6 +347,10 @@ function _M.run_lemon(monitor, parameters)
 end
 {% endhighlight %}
 
+There is complex solution using <code>posix.pipe</code>.
+We are going to use <code>posix.pipe</code> for a simple case later,
+the combined event case.
+
 #### How does it work ?
 
 	Using shell pipe.
@@ -366,17 +369,31 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 *	**Lemonbar**: 
 	[github.com/.../dotfiles/.../lua/pipehandler.03-clickable.lua][dotfiles-lemon-lua-pipehandler-clickable]
 
--- -- --
-
 ### Interval Based Event
 
-We can put other stuff other than idle event in statusbar panel.
-This event, such as date event,
-called based on interval, such as one second interval.
+We can put custom event other than idle event in statusbar panel.
+This event, such as date event, called based on time interval in second.
 Luckily we can treat interval as event.
 It is a little bit tricky, because we have to make,
 a combined event, that consist of idle event and interval event.
 
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
+In real code later, we do not need the timestamp.
+<code>interval</code> string is enough to trigger interval event.
+
+#### View Testbed Source File:
+
+Before merging combined event into main code,
+consider this test in an isolated fashion.
+
+*	[github.com/.../dotfiles/.../lua/11-testevents.lua][dotfiles-lemon-lua-testevents]
+
+-- -- --
+
+### Combined Event
 
 **TBD**
 
@@ -408,9 +425,12 @@ Enjoy the window manager !
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-04-event-origin]: {{ asset_path }}/herbstclient-04-event-origin.png
 [image-hlwm-05-clickable]:    {{ asset_path }}/herbstclient-05-lemonbar-clickable-areas.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+
+[dotfiles-lemon-lua-testevents]:  {{ dotfiles_lemon }}/lua/11-testevents.lua
 
 [local-lua-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-lua.html
 [local-lua-pipe]:   {{ site.url }}/code/2017/04/16/lua-pipe-and-fork.html

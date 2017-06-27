@@ -144,8 +144,8 @@ def detach_lemon(monitor, parameters)
   # warning: Signal.trap is application wide
   Signal.trap("PIPE", "EXIT")
     
-  pid = fork { run_lemon(monitor, parameters) }
-  Process.detach(pid)
+  pid_lemon = fork { run_lemon(monitor, parameters) }
+  Process.detach(pid_lemon)
 end
 {% endhighlight %}
 
@@ -176,7 +176,6 @@ to do the real works.
 
 {% highlight ruby %}
 def content_init(monitor, lemon_stdin)
-  # initialize statusbar before loop
   set_tag_value(monitor)
   set_windowtitle('')
       
@@ -237,13 +236,13 @@ we did in <code>content_init</code>.
 
 {% highlight ruby %}
 def content_walk(monitor, lemon_stdin)
-  # start a io
+  # start an io
   command_in = 'herbstclient --idle'
   
   IO.popen(command_in, "r") do |io_idle|
     while io_idle do 
-      # read next event
-      event = io_idle.gets
+      # read next event, trim newline
+      event = (io_idle.gets).strip
       handle_command_event(monitor, event)
         
       text = get_statusbar_text(monitor)
@@ -338,11 +337,11 @@ def run_lemon(monitor, parameters)
   # note the r+ mode
   IO.popen(command_out, 'r+') do |io_lemon| 
 
-    pid = fork do 
+    pid_content = fork do 
       content_init(monitor, io_lemon)
       content_walk(monitor, io_lemon) # loop for each event
     end
-    Process.detach(pid)  
+    Process.detach(pid_content)  
 
     IO.popen('sh', 'w') do |io_sh|
       while io_lemon do
@@ -380,17 +379,31 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 *	**Lemonbar**: 
 	[github.com/.../dotfiles/.../ruby/pipehandler.03-clickable.rb][dotfiles-lemon-ruby-pipehandler-clickable]
 
--- -- --
-
 ### Interval Based Event
 
-We can put other stuff other than idle event in statusbar panel.
-This event, such as date event,
-called based on interval, such as one second interval.
+We can put custom event other than idle event in statusbar panel.
+This event, such as date event, called based on time interval in second.
 Luckily we can treat interval as event.
 It is a little bit tricky, because we have to make,
 a combined event, that consist of idle event and interval event.
 
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
+In real code later, we do not need the timestamp.
+<code>interval</code> string is enough to trigger interval event.
+
+#### View Testbed Source File:
+
+Before merging combined event into main code,
+consider this test in an isolated fashion.
+
+*	[github.com/.../dotfiles/.../ruby/11-testevents.rb][dotfiles-lemon-ruby-testevents]
+
+-- -- --
+
+### Combined Event
 
 **TBD**
 
@@ -422,9 +435,12 @@ Enjoy the window manager !
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-04-event-origin]: {{ asset_path }}/herbstclient-04-event-origin.png
 [image-hlwm-05-clickable]:    {{ asset_path }}/herbstclient-05-lemonbar-clickable-areas.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+
+[dotfiles-lemon-ruby-testevents]:  {{ dotfiles_lemon }}/ruby/11-testevents.ruby
 
 [local-ruby-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-ruby.html
 [local-ruby-pipe]:   {{ site.url }}/code/2017/04/16/ruby-pipe-and-fork.html

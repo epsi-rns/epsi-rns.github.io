@@ -581,9 +581,6 @@ into array of tags for later use.
 sub set_windowtitle {
     my $windowtitle = shift;  
     my $icon = PRE_ICON."".POST_ICON;
-
-    # trim both ends
-    $windowtitle =~ s/^\s+|\s+$//g;
       
     $segment_windowtitle = " $icon "
                          . "%{B-}%{F$color{'grey700'}} $windowtitle";

@@ -642,8 +642,6 @@ function _M.set_windowtitle(windowtitle)
     local icon = _M.pre_icon .. '' .. _M.post_icon
 
     if (windowtitle == nil) then windowtitle = '' end
-    
-    windowtitle = common.trim1(windowtitle)
       
     _M.segment_windowtitle = ' ' .. icon ..
         ' %{B-}%{F' .. gmc.color['grey700'] .. '} ' .. windowtitle

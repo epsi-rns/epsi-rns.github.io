@@ -144,8 +144,8 @@ sub detach_lemon {
     my $monitor = shift;
     my $parameters = shift;
 
-    my $pid = fork;
-    return if $pid;     # in the parent process
+    my $pid_lemon = fork;
+    return if $pid_lemon;     # in the parent process
     
     run_lemon($monitor, $parameters);
     exit; 
@@ -189,7 +189,6 @@ sub content_init {
     my $monitor = shift;
     my $pipe_lemon_out = shift;
 
-    # initialize statusbar before loop
     output::set_tag_value($monitor);
     output::set_windowtitle('');
 
@@ -263,8 +262,8 @@ sub content_walk {
     my $text = '';
     my $event = '';
 
-    # wait for each event
-    while($event = <$pipe_idle_in>) {     
+    # wait for each event, trim newline
+    while (chomp($event = <$pipe_idle_in>)) {
         handle_command_event($monitor, $event);
         
         $text = output::get_statusbar_text($monitor);     
@@ -374,8 +373,8 @@ sub run_lemon {
     my $pid_sh = open2 ($rh_sh, $wh_sh, 'sh') 
         or die "can't pipe sh: $!";
 
-    my $pid = fork;
-    if ($pid) {
+    my $pid_content = fork;
+    if ($pid_content) {
         # in the parent process
         my $line_clickable = '';
         while($line_clickable = <$rh_lemon_out>) {
@@ -411,13 +410,29 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 ### Interval Based Event
 
-We can put other stuff other than idle event in statusbar panel.
-This event, such as date event,
-called based on interval, such as one second interval.
+We can put custom event other than idle event in statusbar panel.
+This event, such as date event, called based on time interval in second.
 Luckily we can treat interval as event.
 It is a little bit tricky, because we have to make,
 a combined event, that consist of idle event and interval event.
 
+This is an overview of what we want to achieve.
+
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
+In real code later, we do not need the timestamp.
+<code>interval</code> string is enough to trigger interval event.
+
+#### View Testbed Source File:
+
+Before merging combined event into main code,
+consider this test in an isolated fashion.
+
+*	[github.com/.../dotfiles/.../perl/11-testevents.pl][dotfiles-lemon-perl-testevents]
+
+-- -- --
+
+### Combined Event
 
 **TBD**
 
@@ -449,9 +464,12 @@ Enjoy the window manager !
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-04-event-origin]: {{ asset_path }}/herbstclient-04-event-origin.png
 [image-hlwm-05-clickable]:    {{ asset_path }}/herbstclient-05-lemonbar-clickable-areas.png
+[image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
+
+[dotfiles-lemon-perl-testevents]:  {{ dotfiles_lemon }}/perl/11-testevents.pl
 
 [local-perl-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
 [local-perl-pipe]:   {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html

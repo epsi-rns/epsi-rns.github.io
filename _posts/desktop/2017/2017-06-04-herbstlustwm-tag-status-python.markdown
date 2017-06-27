@@ -559,9 +559,7 @@ into array of tags for later use.
 def set_windowtitle(windowtitle):
     global segment_windowtitle
     icon = PRE_ICON + '' + POST_ICON
-    
-    windowtitle = windowtitle.strip()
-      
+
     segment_windowtitle = ' ' + icon + \
         ' %{B-}%{F' + color['grey700'] + '} ' + windowtitle
 {% endhighlight %}
