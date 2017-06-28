@@ -210,7 +210,7 @@ Both are similar, they both use **key-value pairs**.
 
 Zero Gap, No Panel.
 
-[![HerbstluftWM: Screenshot][image-ss-hlwm-nopanel]{: .img-responsive }][photo-ss-hlwm-nopanel]
+[![HerbstluftWM: Screenshot No Panel][image-ss-hlwm-nopanel]{: .img-responsive }][photo-ss-hlwm-nopanel]
 
 -- -- --
 

@@ -627,6 +627,31 @@ Dual Bar, <code>detach_lemon_conky</code> function.
 
 -- -- --
 
+### Avoid Zombie Apocalypse
+
+Zombie are scary, and fork does have a tendecy to become a zombie.
+Application that utilize several forks should be aware of this threat.
+The reason why I use fork instead of thread is,
+because the original herbstluftwm configuration coming from bash,
+and this bash script is using fork.
+
+However, you can use this short script to reduce zombie population.
+It won't kill all zombie, but works for most case.
+You might still need <code>htop</code>,
+and <code>kill -9</code> manually.
+
+{% highlight lua %}
+function _M.kill_zombie()
+    os.execute('pkill dzen2')
+    os.execute('pkill lemonbar')
+    os.execute('pkill cat')
+    os.execute('pkill conky')
+    os.execute('pkill herbstclient')
+end
+{% endhighlight %}
+
+-- -- --
+
 ### Putting Them All Together
 
 **TBD**
@@ -636,9 +661,11 @@ Dual Bar, <code>detach_lemon_conky</code> function.
 
 -- -- --
 
-### Desktop Screenshot
+#### Desktop Screenshot
 
-**TBD**
+Fullscreen, Dual Panel, Zero Gap.
+
+[![HerbstluftWM: Screenshot Dual Panel][image-ss-hlwm-dualpanel]{: .img-responsive }][photo-ss-hlwm-dualpanel]
 
 -- -- --
 
@@ -663,6 +690,9 @@ Enjoy the window manager !
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 [image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
 [image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
+
+[image-ss-hlwm-dualpanel]: {{ asset_path }}/herbstluftwm-dualpanel.png
+[photo-ss-hlwm-dualpanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [dotfiles-lemon-lua-testevents]:  {{ dotfiles_lemon }}/lua/11-testevents.lua
 

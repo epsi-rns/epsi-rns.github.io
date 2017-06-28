@@ -239,6 +239,14 @@ The project itself separated into **panel**,
 
 -- -- --
 
+### Screenshot
+
+Zero Gap, Dual Panel.
+
+[![HerbstluftWM: Screenshot Dual Panel][image-ss-hlwm-dualpanel]{: .img-responsive }][photo-ss-hlwm-dualpanel]
+
+-- -- --
+
 ### Blog Post
 
 The rest is in their respective article.
@@ -313,6 +321,9 @@ Thank you for Reading.
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
 [image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
 [image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
+
+[image-ss-hlwm-dualpanel]: {{ asset_path }}/herbstluftwm-dualpanel.png
+[photo-ss-hlwm-dualpanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [local-overview]: {{ site.url }}/desktop/2017/06/11/herbstlustwm-event-idle-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html
