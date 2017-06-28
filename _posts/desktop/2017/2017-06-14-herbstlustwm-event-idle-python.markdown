@@ -554,6 +554,107 @@ def content_walk(monitor, pipe_lemon_out):
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../python/pipehandler.04-event.py][dotfiles-lemon-python-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code> instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+def detach_lemon_conky(parameters):
+    pid_conky = os.fork()
+    
+    if pid_conky == 0:
+        try:
+            dirname  = os.path.dirname(os.path.abspath(__file__))
+            path     = dirname + "/../conky"
+            cmd_in   = 'conky -c ' + path + '/conky.lua'
+
+            cmd_out  = 'lemonbar ' + parameters
+
+            pipe_out = subprocess.Popen(
+                    [cmd_out], 
+                    stdin  = subprocess.PIPE,
+                    shell  = True,
+                    universal_newlines=True
+                )
+
+            pipe_in  = subprocess.Popen(
+                    [cmd_in], 
+                    stdout = pipe_out.stdin,
+                    stderr = subprocess.STDOUT,
+                    shell  = True,
+                    universal_newlines = True
+                )
+
+            pipe_out.stdin.close()
+            outputs, errors = pipe_out.communicate()
+    
+            # avoid zombie apocalypse
+            pipe_out.wait()
+
+            os._exit(1)
+        finally:
+            import signal
+            os.kill(pid_conky, signal.SIGTERM)
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+#!/usr/bin/env python3
+
+import os
+import sys
+
+import helper
+import pipehandler
+
+# main
+
+panel_height = 24
+monitor = helper.get_monitor(sys.argv)
+
+os.system('pkill lemonbar')
+os.system('herbstclient pad ' + str(monitor) + ' ' 
+    + str(panel_height) + ' 0 ' + str(panel_height) + ' 0')
+
+# run process in the background
+
+params_top    = helper.get_params_top(monitor, panel_height)
+pipehandler.detach_lemon(monitor, params_top)
+
+params_bottom = helper.get_params_bottom(monitor, panel_height)
+pipehandler.detach_lemon_conky(params_bottom)
+{% endhighlight %}
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../python/pipehandler.05-conky.py][dotfiles-lemon-python-pipehandler-conky]
+
 -- -- --
 
 ### Putting Them All Together
@@ -590,6 +691,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-python-testevents]:  {{ dotfiles_lemon }}/python/11-testevents.py
 
@@ -611,7 +714,8 @@ Enjoy the window manager !
 [dotfiles-lemon-python-pipehandler-init]:      {{ dotfiles_lemon }}/python/pipehandler.01-init.py
 [dotfiles-lemon-python-pipehandler-idle]:      {{ dotfiles_lemon }}/python/pipehandler.02-idle.py
 [dotfiles-lemon-python-pipehandler-clickable]: {{ dotfiles_lemon }}/python/pipehandler.03-clickable.py
-[dotfiles-lemon-python-pipehandler-interval]:  {{ dotfiles_lemon }}/python/pipehandler.04-interval.py
+[dotfiles-lemon-python-pipehandler-event]:     {{ dotfiles_lemon }}/python/pipehandler.04-event.py
+[dotfiles-lemon-python-pipehandler-conky]:     {{ dotfiles_lemon }}/python/pipehandler.05-conky.py
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

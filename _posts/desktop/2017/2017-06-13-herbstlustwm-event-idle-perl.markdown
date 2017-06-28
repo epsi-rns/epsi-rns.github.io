@@ -578,6 +578,99 @@ sub content_walk {
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../perl/pipehandler.04-event.pm][dotfiles-lemon-perl-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code> instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+sub detach_lemon_conky { 
+    my $parameters = shift;
+
+    my $pid_conky = fork;
+    return if $pid_conky;     # in the parent process
+
+    my $pipe_out = IO::Pipe->new();
+    my $cmd_in   = "lemonbar " . $parameters;
+    my $hnd_in   = $pipe_out->writer($cmd_in);
+
+    my $pipe_in  = IO::Pipe->new();
+    my $dirname  = dirname(__FILE__);
+    my $path     = "$dirname/../conky";       
+    my $cmd_out  = "conky -c $path/conky.lua";
+    my $hnd_out  = $pipe_in->reader($cmd_out);
+
+    while(<$pipe_in>) {
+        print $pipe_out $_;
+        flush $pipe_out;
+    }
+
+    $pipe_in->close();
+    $pipe_out->close();
+    exit; 
+}
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+#!/usr/bin/perl
+
+use warnings;
+use strict;
+
+use File::Basename;
+use lib dirname(__FILE__);
+
+use helper;
+use pipehandler;
+
+# main
+
+my $panel_height = 24;
+my $monitor = helper::get_monitor(@ARGV);
+
+system('pkill lemonbar');
+system("herbstclient pad $monitor $panel_height 0 $panel_height 0");
+
+# run process in the background
+
+my $params_top = helper::get_params_top($monitor, $panel_height);
+pipehandler::detach_lemon($monitor, $params_top);
+
+my $params_bottom = helper::get_params_bottom($monitor, $panel_height);
+pipehandler::detach_lemon_conky($params_bottom);
+{% endhighlight %}
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../perl/pipehandler.05-conky.pm][dotfiles-lemon-perl-pipehandler-conky]
+
+
 -- -- --
 
 ### Putting Them All Together
@@ -614,6 +707,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-perl-testevents]:  {{ dotfiles_lemon }}/perl/11-testevents.pl
 
@@ -632,7 +727,8 @@ Enjoy the window manager !
 [dotfiles-lemon-perl-pipehandler-init]:      {{ dotfiles_lemon }}/perl/pipehandler.01-init.pm
 [dotfiles-lemon-perl-pipehandler-idle]:      {{ dotfiles_lemon }}/perl/pipehandler.02-idle.pm
 [dotfiles-lemon-perl-pipehandler-clickable]: {{ dotfiles_lemon }}/perl/pipehandler.03-clickable.pm
-[dotfiles-lemon-perl-pipehandler-interval]:  {{ dotfiles_lemon }}/perl/pipehandler.04-interval.pm
+[dotfiles-lemon-perl-pipehandler-event]:     {{ dotfiles_lemon }}/perl/pipehandler.04-event.pm
+[dotfiles-lemon-perl-pipehandler-conky]:     {{ dotfiles_lemon }}/perl/pipehandler.05-conky.pm
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

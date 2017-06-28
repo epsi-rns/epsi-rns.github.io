@@ -535,6 +535,92 @@ end
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/pipehandler.04-event.rb][dotfiles-lemon-ruby-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code> instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+def detach_lemon_conky(parameters)
+  # warning: Signal.trap is application wide
+  Signal.trap("PIPE", "EXIT")
+    
+  pid_conky = fork do
+    path    = __dir__+ "/../conky"
+    cmd_in  = 'conky -c ' + path + '/conky.lua'
+    cmd_out = 'lemonbar ' + parameters
+  
+    IO.popen(cmd_out, "w") do |io_lemon|
+    IO.popen(cmd_in,  "r") do |io_conky| 
+      while io_conky do
+        io_lemon.puts io_conky.gets
+      end
+
+      io_conky.close()    
+      io_lemon.close()
+    end
+    end
+  end
+
+  Process.detach(pid_conky)
+end
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+#!/usr/bin/ruby
+
+require_relative 'helper'
+require_relative 'pipehandler'
+
+# main
+
+panel_height = 24
+monitor = get_monitor(ARGV)
+
+system('pkill lemonbar')
+system("herbstclient pad #{monitor} #{panel_height} 0 #{panel_height} 0")
+
+# run process in the background
+
+params_top = get_params_top(monitor, panel_height)
+detach_lemon(monitor, params_top)
+
+params_bottom = get_params_bottom(monitor, panel_height)
+detach_lemon_conky(params_bottom)
+{% endhighlight %}
+
+	Relative in context of directory, not family.
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/pipehandler.05-conky.rb][dotfiles-lemon-ruby-pipehandler-conky]
+
 -- -- --
 
 ### Putting Them All Together
@@ -571,6 +657,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-ruby-testevents]:  {{ dotfiles_lemon }}/ruby/11-testevents.ruby
 
@@ -592,7 +680,8 @@ Enjoy the window manager !
 [dotfiles-lemon-ruby-pipehandler-init]:      {{ dotfiles_lemon }}/ruby/pipehandler.01-init.rb
 [dotfiles-lemon-ruby-pipehandler-idle]:      {{ dotfiles_lemon }}/ruby/pipehandler.02-idle.rb
 [dotfiles-lemon-ruby-pipehandler-clickable]: {{ dotfiles_lemon }}/ruby/pipehandler.03-clickable.rb
-[dotfiles-lemon-ruby-pipehandler-interval]:  {{ dotfiles_lemon }}/ruby/pipehandler.04-interval.rb
+[dotfiles-lemon-ruby-pipehandler-event]:     {{ dotfiles_lemon }}/ruby/pipehandler.04-event.rb
+[dotfiles-lemon-ruby-pipehandler-conky]:     {{ dotfiles_lemon }}/ruby/pipehandler.05-conky.rb
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

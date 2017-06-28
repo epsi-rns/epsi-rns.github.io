@@ -537,6 +537,94 @@ end
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../lua/pipehandler.04-event.lua][dotfiles-lemon-lua-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code> instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+function _M.detach_lemon_conky(parameters)
+    local pid_conky = posix.fork()
+
+    if pid_conky == 0 then -- this is the child process
+        local cmd_out  = 'lemonbar ' .. parameters
+        local pipe_out = assert(io.popen(cmd_out, 'w'))
+
+        local dirname  = debug.getinfo(1).source:match("@?(.*/)")
+        local path     = dirname .. "../conky"
+        local cmd_in   = 'conky -c ' .. path .. '/conky.lua'
+        local pipe_in  = assert(io.popen(cmd_in,  'r'))
+
+        for line in pipe_in:lines() do
+            pipe_out:write(line.."\n")
+            pipe_out:flush()
+        end -- for loop
+   
+        pipe_in:close()    
+        pipe_out:close()
+    else                   -- this is the parent process
+        -- nothing
+    end
+end
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+#!/usr/bin/lua
+
+local dirname  = debug.getinfo(1).source:match("@?(.*/)")
+package.path   = package.path .. ';' .. dirname .. '?.lua;'
+  
+local helper      = require('.helper')
+local pipehandler = require('.pipehandler')
+
+-- main
+
+local panel_height = 24
+local monitor = helper.get_monitor(arg)
+
+os.execute('pkill lemonbar')
+os.execute('herbstclient pad ' .. monitor .. ' ' 
+    .. panel_height .. ' 0 ' .. panel_height .. ' 0')
+
+-- run process in the background
+
+local params_top = helper.get_params_top(monitor, panel_height)
+pipehandler.detach_lemon(monitor, params_top)
+
+local params_bottom = helper.get_params_bottom(monitor, panel_height)
+pipehandler.detach_lemon_conky(params_bottom)
+{% endhighlight %}
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../lua/pipehandler.05-conky.lua][dotfiles-lemon-lua-pipehandler-conky]
+
 -- -- --
 
 ### Putting Them All Together
@@ -573,6 +661,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-lua-testevents]:  {{ dotfiles_lemon }}/lua/11-testevents.lua
 
@@ -594,7 +684,8 @@ Enjoy the window manager !
 [dotfiles-lemon-lua-pipehandler-init]:      {{ dotfiles_lemon }}/lua/pipehandler.01-init.lua
 [dotfiles-lemon-lua-pipehandler-idle]:      {{ dotfiles_lemon }}/lua/pipehandler.02-idle.lua
 [dotfiles-lemon-lua-pipehandler-clickable]: {{ dotfiles_lemon }}/lua/pipehandler.03-clickable.lua
-[dotfiles-lemon-lua-pipehandler-interval]:  {{ dotfiles_lemon }}/lua/pipehandler.04-interval.lua
+[dotfiles-lemon-lua-pipehandler-event]:     {{ dotfiles_lemon }}/lua/pipehandler.04-event.lua
+[dotfiles-lemon-lua-pipehandler-conky]:     {{ dotfiles_lemon }}/lua/pipehandler.05-conky.lua
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

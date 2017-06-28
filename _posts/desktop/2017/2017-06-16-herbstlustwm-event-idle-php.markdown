@@ -592,6 +592,97 @@ function content_walk($monitor, $pipe_lemon_stdin)
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../php/pipehandler.04-event.php][dotfiles-lemon-php-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code> instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+function detach_lemon_conky($parameters)
+{ 
+    $pid_conky = pcntl_fork();
+
+    switch($pid_conky) {         
+    case -1 : // fork errror         
+        die('could not fork');
+    case 0  : // we are the child
+        $cmd_out  = 'lemonbar '.$parameters;
+        $pipe_out = popen($cmd_out, "w");
+
+        $path     = __dir__."/../conky";
+        $cmd_in   = 'conky -c '.$path.'/conky.lua';
+        $pipe_in  = popen($cmd_in,  "r");
+    
+        while(!feof($pipe_in)) {
+            $buffer = fgets($pipe_in);
+            fwrite($pipe_out, $buffer);
+            flush();
+        }
+    
+        pclose($pipe_in);
+        pclose($pipe_out);
+
+        break;
+    default : // we are the parent             
+        return $pid_conky;
+    }  
+}
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+#!/usr/bin/php 
+<?php # using PHP7
+
+require_once(__DIR__.'/helper.php');
+require_once(__DIR__.'/pipehandler.php');
+
+// main
+
+$panel_height = 24;
+$monitor = get_monitor($argv);
+
+system('pkill lemonbar');
+system("herbstclient pad $monitor $panel_height 0 $panel_height 0");
+
+// run process in the background
+
+$params_top = get_params_top($monitor, $panel_height);
+detach_lemon($monitor, $params_top);
+
+$params_bottom = get_params_bottom($monitor, $panel_height);
+detach_lemon_conky($params_bottom);
+{% endhighlight %}
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../php/pipehandler.05-conky.php][dotfiles-lemon-php-pipehandler-conky]
+
 -- -- --
 
 ### Putting Them All Together
@@ -628,6 +719,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-php-testevents]:  {{ dotfiles_lemon }}/php/11-testevents.php
 
@@ -649,7 +742,8 @@ Enjoy the window manager !
 [dotfiles-lemon-php-pipehandler-init]:      {{ dotfiles_lemon }}/php/pipehandler.01-init.php
 [dotfiles-lemon-php-pipehandler-idle]:      {{ dotfiles_lemon }}/php/pipehandler.02-idle.php
 [dotfiles-lemon-php-pipehandler-clickable]: {{ dotfiles_lemon }}/php/pipehandler.03-clickable.php
-[dotfiles-lemon-php-pipehandler-interval]:  {{ dotfiles_lemon }}/php/pipehandler.04-interval.php
+[dotfiles-lemon-php-pipehandler-event]:     {{ dotfiles_lemon }}/php/pipehandler.04-event.php
+[dotfiles-lemon-php-pipehandler-conky]:     {{ dotfiles_lemon }}/php/pipehandler.05-conky.php
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

@@ -103,8 +103,9 @@ outside the shell loop.
 What if we want to put other stuff in our lovely panel, such as date?
 Or any system monitoring information such as CPU, Memory, HDD,
 temperature, uname or even MPD?
+This is an overview of what we want to achieve.
 
-![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+![Statusbar: Event Screenshot][image-hlwm-ss-event]{: .img-responsive }
 
 These system monitoring is usually called in interval based.
 Date can be based on one second interval.
@@ -119,15 +120,13 @@ consist of idle event (asynchronous) and interval event (synchronous).
 combined_event | content_processing | statusbar
 {% endhighlight %}
 
+![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
+
 Since we need to alter the original event,
 to create new combined event, 
 sometimes we need an intermediate process.
 As an intermediate process in Perl, PHP, Ruby, and Haskell, 
 we need to pipe both loop, into <code>cat</code>.
-
-This is an overview of what we want to achieve.
-
-![HerbstluftWM: Custom Event][image-hlwm-06-event-custom]{: .img-responsive }
  
 Since both event also loops that write in the same time,
 as the intermediate process being read.
@@ -141,13 +140,6 @@ We need to fork both loop.
 
 This article is, still unfinished.
 Here are what I need to do.
-
-*	The source code is still missing one main feature
-	about combining these two:
-
-	* herbsclient idle event based, and
-
-	* custom interval based.
 
 *	Putting it all together with other statusbar,
 	and main HerbstluftWM configuration.
@@ -206,6 +198,18 @@ This will only discuss about Piping and Forking.
 Lemonbar, as it is a continuation of previous part using Lemonbar.
 
 	Source code is available for both Dzen2 and Lemonbar.
+
+### Performance
+
+I accidentaly find a surprising performance,
+between using dual lemonbar and dual dzen2bar.
+Just see the CPU performance in percentage.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
 
 -- -- --
 
@@ -307,6 +311,8 @@ Thank you for Reading.
 [image-hlwm-06-event-custom]: {{ asset_path }}/herbstclient-06-event-custom.png
 
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [local-overview]: {{ site.url }}/desktop/2017/06/11/herbstlustwm-event-idle-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html

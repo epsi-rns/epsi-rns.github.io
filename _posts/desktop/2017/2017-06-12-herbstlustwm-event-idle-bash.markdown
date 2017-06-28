@@ -507,6 +507,84 @@ function content_walk() {
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../bash/pipehandler.04-event.sh][dotfiles-lemon-bash-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code>  instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+function detach_lemon_conky() {    
+    parameters=$@
+
+    command_out="lemonbar $parameters"
+    
+    {
+        dirname=$(dirname $(readlink -f "$0"))
+        path="$dirname/../conky"
+        conky -c "$path/conky.lua"
+    } | $command_out &
+}
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+#!/usr/bin/env bash
+
+# libraries
+
+DIR=$(dirname "$0")
+
+. ${DIR}/gmc.sh
+. ${DIR}/helper.sh
+. ${DIR}/output.sh
+. ${DIR}/pipehandler.sh
+
+# main
+
+panel_height=24
+get_monitor ${@}
+
+pkill lemonbar
+herbstclient pad $monitor $panel_height 0 $panel_height 0
+
+# run process in the background
+
+get_params_top $monitor $panel_height
+detach_lemon $monitor $lemon_parameters
+
+get_params_bottom $monitor $panel_height
+detach_lemon_conky $lemon_parameters
+{% endhighlight %}
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../bash/pipehandler.05-conky.sh][dotfiles-lemon-bash-pipehandler-conky]
+
 -- -- --
 
 ### Putting Them All Together
@@ -543,6 +621,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-bash-testevents]:  {{ dotfiles_lemon }}/bash/11-testevents.sh
 
@@ -561,7 +641,8 @@ Enjoy the window manager !
 [dotfiles-lemon-bash-pipehandler-init]:      {{ dotfiles_lemon }}/bash/pipehandler.01-init.sh
 [dotfiles-lemon-bash-pipehandler-idle]:      {{ dotfiles_lemon }}/bash/pipehandler.02-idle.sh
 [dotfiles-lemon-bash-pipehandler-clickable]: {{ dotfiles_lemon }}/bash/pipehandler.03-clickable.sh
-[dotfiles-lemon-bash-pipehandler-interval]:  {{ dotfiles_lemon }}/bash/pipehandler.04-interval.sh
+[dotfiles-lemon-bash-pipehandler-event]:     {{ dotfiles_lemon }}/bash/pipehandler.04-event.sh
+[dotfiles-lemon-bash-pipehandler-conky]:     {{ dotfiles_lemon }}/bash/pipehandler.05-conky.sh
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl

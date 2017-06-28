@@ -536,6 +536,98 @@ contentWalk monitor pipe_lemon_in = do
 This above is the most complex part.
 We are almost done.
 
+#### View Source File:
+
+Combined event consist of both,
+synchronous interval event and asynchronous idle event.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../haskell/MyPipeHandler.04-event.hs][dotfiles-lemon-haskell-pipehandler-event]
+
+-- -- --
+
+### Dual Bar
+
+The idea of this article comes from the fact
+that <code>herbsclient --idle</code> is asynchronous event.
+If you need another bar, just simply use <code>Conky</code> instead.
+
+*	**Dzen2**: 
+	![HerbstluftWM: Dzen2 Conky][image-hlwm-ss-dzen2-conky]{: .img-responsive }
+
+*	**Lemonbar**: 
+	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+We only need one function to do this in
+<code class="code-file">pipehandler.pm</code>.
+
+{% highlight perl %}
+detachLemonConky :: [String] -> IO ()
+detachLemonConky parameters = do
+    -- Source directory is irrelevant in Haskell
+    -- but we'll do it anyway for the sake of learning
+    dirName <- getCurrentDirectory
+    let conkyFileName = dirName ++ "/../conky" ++ "/conky.lua" 
+
+    (_, Just pipeout, _, _) <- 
+        createProcess (proc "conky" ["-c", conkyFileName])
+        { std_out = CreatePipe } 
+
+    (_, _, _, ph)  <- 
+        createProcess (proc "lemonbar" parameters) 
+        { std_in = UseHandle pipeout }
+      
+    hClose pipeout
+{% endhighlight %}
+
+And execute the function main script in
+<code class="code-file">panel.pl</code>.
+
+{% highlight perl %}
+-- This is a modularized config for herbstluftwm tags in lemonbar
+
+import System.Environment
+import System.Process
+
+import MyHelper
+import MyPipeHandler
+
+-- initialize
+
+panelHeight = 24
+
+-- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+-- main
+
+main = do
+    args <- getArgs
+    let monitor = getMonitor args
+
+    geometry <- getGeometry monitor
+
+    system "pkill lemonbar"
+    system $ "herbstclient pad " ++ show(monitor) ++ " "
+        ++ show(panelHeight) ++ " 0 " ++ show(panelHeight) ++ " 0"
+
+    -- run process in the background
+
+    let paramsTop = getParamsTop panelHeight geometry
+    detachLemon monitor paramsTop
+
+    let paramsBottom = getParamsBottom panelHeight geometry
+    detachLemonConky paramsBottom
+
+    -- end of IO
+    return ()
+{% endhighlight %}
+
+#### View Source File:
+
+Dual Bar, <code>detach_lemon_conky</code> function.
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../haskell/MyPipeHandler.05-conky.hs][dotfiles-lemon-haskell-pipehandler-conky]
+
 -- -- --
 
 ### Putting Them All Together
@@ -572,6 +664,8 @@ Enjoy the window manager !
 [image-hlwm-ss-dzen2]: {{ asset_path }}/hlwm-dzen2-ss.png
 [image-hlwm-ss-lemon]: {{ asset_path }}/hlwm-lemon-ss.png
 [image-hlwm-ss-event]: {{ asset_path }}/hlwm-event-ss.png
+[image-hlwm-ss-dzen2-conky]: {{ asset_path }}/hlwm-dzen2-conky-ss.png
+[image-hlwm-ss-lemon-conky]: {{ asset_path }}/hlwm-lemon-conky-ss.png
 
 [dotfiles-lemon-haskell-testevents]:  {{ dotfiles_lemon }}/haskell/11-testevents.hs
 
@@ -590,10 +684,11 @@ Enjoy the window manager !
 [local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
 [local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
-[dotfiles-lemon-haskell-pipehandler-init]:      {{ dotfiles_lemon }}/haskell/pipehandler.01-init.hs
-[dotfiles-lemon-haskell-pipehandler-idle]:      {{ dotfiles_lemon }}/haskell/pipehandler.02-idle.hs
-[dotfiles-lemon-haskell-pipehandler-clickable]: {{ dotfiles_lemon }}/haskell/pipehandler.03-clickable.hs
-[dotfiles-lemon-haskell-pipehandler-interval]:  {{ dotfiles_lemon }}/haskell/pipehandler.04-interval.hs
+[dotfiles-lemon-haskell-pipehandler-init]:      {{ dotfiles_lemon }}/haskell/MyPipeHandler.01-init.hs
+[dotfiles-lemon-haskell-pipehandler-idle]:      {{ dotfiles_lemon }}/haskell/MyPipeHandler.02-idle.hs
+[dotfiles-lemon-haskell-pipehandler-clickable]: {{ dotfiles_lemon }}/haskell/MyPipeHandler.03-clickable.hs
+[dotfiles-lemon-haskell-pipehandler-event]:     {{ dotfiles_lemon }}/haskell/MyPipeHandler.04-event.hs
+[dotfiles-lemon-haskell-pipehandler-conky]:     {{ dotfiles_lemon }}/haskell/MyPipeHandler.05-conky.hs
 
 [dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
 [dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl
