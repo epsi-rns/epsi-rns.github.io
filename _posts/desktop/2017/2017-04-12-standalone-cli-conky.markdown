@@ -350,11 +350,11 @@ conky.config = {
 }
 
 -- load subroutine
-home = os.getenv("HOME")
-path = '/Documents/standalone/cli/conky/'
-dofile(home .. path .. 'ansi.lua')
-dofile(home .. path .. 'helper.lua')
-dofile(home .. path .. 'parts.lua')
+local dirname  = debug.getinfo(1).source:match("@?(.*/)")
+
+dofile(dirname .. 'ansi.lua')
+dofile(dirname .. 'helper.lua')
+dofile(dirname .. 'parts.lua')
 
 -- shortcut
 local _h = helper

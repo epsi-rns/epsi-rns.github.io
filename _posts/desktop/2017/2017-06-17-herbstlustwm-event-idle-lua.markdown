@@ -483,7 +483,7 @@ function _M.content_event_idle(pipe_cat_out)
             io.flush()
         end -- for loop
    
-        pipein:close()
+        pipe_in:close()
     else             -- this is the parent process
         -- nothing
     end
@@ -642,9 +642,9 @@ and <code>kill -9</code> manually.
 
 {% highlight lua %}
 function _M.kill_zombie()
-    os.execute('pkill dzen2')
-    os.execute('pkill lemonbar')
-    os.execute('pkill cat')
+    os.execute('pkill -x dzen2')
+    os.execute('pkill -x lemonbar')
+    os.execute('pkill -x cat')
     os.execute('pkill conky')
     os.execute('pkill herbstclient')
 end

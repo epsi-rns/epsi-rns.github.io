@@ -398,13 +398,13 @@ conky.config = {
 presetName  = 'bright-background'
 assemblyName = 'back-arrow'
 
-home = os.getenv("HOME")
-path = '/Documents/standalone/dzen2/conky/'
-dofile(home .. path .. 'gmc.lua')
-dofile(home .. path .. 'presets/' .. presetName .. '.lua')
-dofile(home .. path .. 'helper.lua')
-dofile(home .. path .. 'parts.lua')
-dofile(home .. path .. 'assemblies/' .. assemblyName .. '.lua')
+local dirname  = debug.getinfo(1).source:match("@?(.*/)")
+
+dofile(dirname .. 'gmc.lua')
+dofile(dirname .. 'presets/' .. presetName .. '.lua')
+dofile(dirname .. 'helper.lua')
+dofile(dirname .. 'parts.lua')
+dofile(dirname .. 'assemblies/' .. assemblyName .. '.lua')
 
 conky.text = [[\
 ]] .. enabled .. [[\

@@ -151,7 +151,7 @@ tag_keys  = [1..9] ++ [0]
 
 Using **key-value pairs**, a simple data structure.
 
-<code class="code-file">assets/gmc.hs</code>
+<code class="code-file">gmc.hs</code>
 
 {% highlight haskell %}
 colorSchemes :: [(String, String)]
@@ -177,7 +177,7 @@ main = do
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../haskell/assets/gmc.hs][dotfiles-haskell-gmc]
+*	[github.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-haskell-gmc]
 
 Similar Code: 
 [[ BASH Color ][dotfiles-bash-gmc]]
@@ -401,7 +401,7 @@ do_panel = do
 
 {% highlight haskell %}
 customFilename :: String -> String
-customFilename home = home ++ path 
+customFilename home = home ++ path     where path = "/.config/herbstluftwm/haskell/panel-lemonbar"
     where path = "/.config/herbstluftwm/bash/dzen2/panel.sh"
     
 panelFilename :: IO String
@@ -523,7 +523,7 @@ and putting it all back together.
 {% highlight haskell %}
 import System.Process
 
-import Assets.MyGMC
+import MyGMC
 import MyConfig
 import MyHelper
 import MyStartup
@@ -635,49 +635,49 @@ Happy Configuring.
 
 [dotfiles-bash-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/bash
 [dotfiles-bash-autostart]: {{ dotfiles_path }}/bash/autostart.sh
-[dotfiles-bash-gmc]:       {{ dotfiles_path }}/bash/assets/gmc.sh
+[dotfiles-bash-gmc]:       {{ dotfiles_path }}/bash/gmc.sh
 [dotfiles-bash-config]:    {{ dotfiles_path }}/bash/config.sh
 [dotfiles-bash-helper]:    {{ dotfiles_path }}/bash/helper.sh
 [dotfiles-bash-startup]:   {{ dotfiles_path }}/bash/startup.sh
 
 [dotfiles-perl-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
 [dotfiles-perl-autostart]: {{ dotfiles_path }}/perl/autostart.pl
-[dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/assets/gmc.pm
+[dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/gmc.pm
 [dotfiles-perl-config]:    {{ dotfiles_path }}/perl/config.pm
 [dotfiles-perl-helper]:    {{ dotfiles_path }}/perl/helper.pm
 [dotfiles-perl-startup]:   {{ dotfiles_path }}/perl/startup.pm
 
 [dotfiles-python-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
 [dotfiles-python-autostart]: {{ dotfiles_path }}/python/autostart.py
-[dotfiles-python-gmc]:       {{ dotfiles_path }}/python/assets/gmc.py
+[dotfiles-python-gmc]:       {{ dotfiles_path }}/python/gmc.py
 [dotfiles-python-config]:    {{ dotfiles_path }}/python/config.py
 [dotfiles-python-helper]:    {{ dotfiles_path }}/python/helper.py
 [dotfiles-python-startup]:   {{ dotfiles_path }}/python/startup.py
 
 [dotfiles-ruby-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/ruby
 [dotfiles-ruby-autostart]: {{ dotfiles_path }}/ruby/autostart.rb
-[dotfiles-ruby-gmc]:       {{ dotfiles_path }}/ruby/assets/gmc.rb
+[dotfiles-ruby-gmc]:       {{ dotfiles_path }}/ruby/gmc.rb
 [dotfiles-ruby-config]:    {{ dotfiles_path }}/ruby/config.rb
 [dotfiles-ruby-helper]:    {{ dotfiles_path }}/ruby/helper.rb
 [dotfiles-ruby-startup]:   {{ dotfiles_path }}/ruby/startup.rb
 
 [dotfiles-php-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/php
 [dotfiles-php-autostart]: {{ dotfiles_path }}/php/autostart.php
-[dotfiles-php-gmc]:       {{ dotfiles_path }}/php/assets/gmc.php
+[dotfiles-php-gmc]:       {{ dotfiles_path }}/php/gmc.php
 [dotfiles-php-config]:    {{ dotfiles_path }}/php/config.php
 [dotfiles-php-helper]:    {{ dotfiles_path }}/php/helper.php
 [dotfiles-php-startup]:   {{ dotfiles_path }}/php/startup.php
 
 [dotfiles-lua-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
 [dotfiles-lua-autostart]: {{ dotfiles_path }}/lua/autostart.lua
-[dotfiles-lua-gmc]:       {{ dotfiles_path }}/lua/assets/gmc.lua
+[dotfiles-lua-gmc]:       {{ dotfiles_path }}/lua/gmc.lua
 [dotfiles-lua-config]:    {{ dotfiles_path }}/lua/config.lua
 [dotfiles-lua-helper]:    {{ dotfiles_path }}/lua/helper.lua
 [dotfiles-lua-startup]:   {{ dotfiles_path }}/lua/startup.lua
 
 [dotfiles-haskell-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/haskell
 [dotfiles-haskell-autostart]: {{ dotfiles_path }}/haskell/autostart.hs
-[dotfiles-haskell-gmc]:       {{ dotfiles_path }}/haskell/Assets/MyGMC.hs
+[dotfiles-haskell-gmc]:       {{ dotfiles_path }}/haskell/MyGMC.hs
 [dotfiles-haskell-config]:    {{ dotfiles_path }}/haskell/MyConfig.hs
 [dotfiles-haskell-helper]:    {{ dotfiles_path }}/haskell/MyHelper.hs
 [dotfiles-haskell-startup]:   {{ dotfiles_path }}/haskell/MyStartup.hs

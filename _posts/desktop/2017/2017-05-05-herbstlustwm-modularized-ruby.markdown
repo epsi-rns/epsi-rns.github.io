@@ -142,11 +142,11 @@ system("echo 35 > /tmp/herbstluftwm-gap")
 
 Using **key-value pairs**, a simple data structure.
 
-<code class="code-file">assets/gmc.rb</code>
+<code class="code-file">gmc.rb</code>
 
 {% highlight ruby %}
 module GMC
-  Color = {
+  COLOR = {
     'white' => '#ffffff',
     'black' => '#000000',
 
@@ -160,12 +160,12 @@ end
 
 {% highlight ruby %}
 # background before wallpaper
-system("xsetroot -solid '#{GMC::Color['blue500']}'")
+system("xsetroot -solid '#{GMC::COLOR['blue500']}'")
 {% endhighlight %}
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/assets/gmc.rb][dotfiles-ruby-gmc]
+*	[github.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-ruby-gmc]
 
 Similar Code: 
 [[ BASH Color ][dotfiles-bash-gmc]]
@@ -323,7 +323,7 @@ This two also be easy to do in Ruby.
 
 {% highlight ruby %}
 def do_panel()
-  panel = __dir__ + "/../bash/dzen2/panel.sh"
+  panel = __dir__ + "/panel-lemonbar.rb"
 
   if not File.exist?(panel) and File.executable?(panel)
     panel = "/etc/xdg/herbstluftwm/panel.sh"
@@ -396,7 +396,7 @@ and putting it all back together.
 <code class="code-file">Header Part: autostart.rb</code>
 
 {% highlight ruby %}
-require_relative 'assets/gmc'
+require_relative 'gmc'
 require_relative 'helper'
 require_relative 'config'
 require_relative 'startup'
@@ -406,7 +406,7 @@ require_relative 'startup'
 
 {% highlight ruby %}
 # background before wallpaper
-system("xsetroot -solid '#{GMC::Color['blue500']}'")
+system("xsetroot -solid '#{GMC::COLOR['blue500']}'")
 
 # Read the manual in $ man herbstluftwm
 hc('emit_hook reload')
@@ -505,49 +505,49 @@ Happy Configuring.
 
 [dotfiles-bash-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/bash
 [dotfiles-bash-autostart]: {{ dotfiles_path }}/bash/autostart.sh
-[dotfiles-bash-gmc]:       {{ dotfiles_path }}/bash/assets/gmc.sh
+[dotfiles-bash-gmc]:       {{ dotfiles_path }}/bash/gmc.sh
 [dotfiles-bash-config]:    {{ dotfiles_path }}/bash/config.sh
 [dotfiles-bash-helper]:    {{ dotfiles_path }}/bash/helper.sh
 [dotfiles-bash-startup]:   {{ dotfiles_path }}/bash/startup.sh
 
 [dotfiles-perl-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
 [dotfiles-perl-autostart]: {{ dotfiles_path }}/perl/autostart.pl
-[dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/assets/gmc.pm
+[dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/gmc.pm
 [dotfiles-perl-config]:    {{ dotfiles_path }}/perl/config.pm
 [dotfiles-perl-helper]:    {{ dotfiles_path }}/perl/helper.pm
 [dotfiles-perl-startup]:   {{ dotfiles_path }}/perl/startup.pm
 
 [dotfiles-python-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
 [dotfiles-python-autostart]: {{ dotfiles_path }}/python/autostart.py
-[dotfiles-python-gmc]:       {{ dotfiles_path }}/python/assets/gmc.py
+[dotfiles-python-gmc]:       {{ dotfiles_path }}/python/gmc.py
 [dotfiles-python-config]:    {{ dotfiles_path }}/python/config.py
 [dotfiles-python-helper]:    {{ dotfiles_path }}/python/helper.py
 [dotfiles-python-startup]:   {{ dotfiles_path }}/python/startup.py
 
 [dotfiles-ruby-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/ruby
 [dotfiles-ruby-autostart]: {{ dotfiles_path }}/ruby/autostart.rb
-[dotfiles-ruby-gmc]:       {{ dotfiles_path }}/ruby/assets/gmc.rb
+[dotfiles-ruby-gmc]:       {{ dotfiles_path }}/ruby/gmc.rb
 [dotfiles-ruby-config]:    {{ dotfiles_path }}/ruby/config.rb
 [dotfiles-ruby-helper]:    {{ dotfiles_path }}/ruby/helper.rb
 [dotfiles-ruby-startup]:   {{ dotfiles_path }}/ruby/startup.rb
 
 [dotfiles-php-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/php
 [dotfiles-php-autostart]: {{ dotfiles_path }}/php/autostart.php
-[dotfiles-php-gmc]:       {{ dotfiles_path }}/php/assets/gmc.php
+[dotfiles-php-gmc]:       {{ dotfiles_path }}/php/gmc.php
 [dotfiles-php-config]:    {{ dotfiles_path }}/php/config.php
 [dotfiles-php-helper]:    {{ dotfiles_path }}/php/helper.php
 [dotfiles-php-startup]:   {{ dotfiles_path }}/php/startup.php
 
 [dotfiles-lua-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
 [dotfiles-lua-autostart]: {{ dotfiles_path }}/lua/autostart.lua
-[dotfiles-lua-gmc]:       {{ dotfiles_path }}/lua/assets/gmc.lua
+[dotfiles-lua-gmc]:       {{ dotfiles_path }}/lua/gmc.lua
 [dotfiles-lua-config]:    {{ dotfiles_path }}/lua/config.lua
 [dotfiles-lua-helper]:    {{ dotfiles_path }}/lua/helper.lua
 [dotfiles-lua-startup]:   {{ dotfiles_path }}/lua/startup.lua
 
 [dotfiles-haskell-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/haskell
 [dotfiles-haskell-autostart]: {{ dotfiles_path }}/haskell/autostart.hs
-[dotfiles-haskell-gmc]:       {{ dotfiles_path }}/haskell/Assets/MyGMC.hs
+[dotfiles-haskell-gmc]:       {{ dotfiles_path }}/haskell/MyGMC.hs
 [dotfiles-haskell-config]:    {{ dotfiles_path }}/haskell/MyConfig.hs
 [dotfiles-haskell-helper]:    {{ dotfiles_path }}/haskell/MyHelper.hs
 [dotfiles-haskell-startup]:   {{ dotfiles_path }}/haskell/MyStartup.hs

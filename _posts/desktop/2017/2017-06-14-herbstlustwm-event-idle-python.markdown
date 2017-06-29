@@ -672,9 +672,9 @@ and <code>kill -9</code> manually.
 
 {% highlight python %}
 def kill_zombie():
-    os.system('pkill dzen2')
-    os.system('pkill lemonbar')
-    os.system('pkill cat')
+    os.system('pkill -x dzen2')
+    os.system('pkill -x lemonbar')
+    os.system('pkill -x cat')
     os.system('pkill conky')
     os.system('pkill herbstclient')
 {% endhighlight %}

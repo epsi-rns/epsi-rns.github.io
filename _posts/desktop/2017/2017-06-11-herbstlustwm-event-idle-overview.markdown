@@ -199,8 +199,8 @@ Lemonbar, as it is a continuation of previous part using Lemonbar.
 
 	Source code is available for both Dzen2 and Lemonbar.
 
-### Performance
-
+#### Performance
+.
 I accidentaly find a surprising performance,
 between using dual lemonbar and dual dzen2bar.
 Just see the CPU performance in percentage.
@@ -210,6 +210,10 @@ Just see the CPU performance in percentage.
 
 *	**Lemonbar**: 
 	![HerbstluftWM: Lemonbar Conky][image-hlwm-ss-lemon-conky]{: .img-responsive }
+
+#### Caveat
+
+I currently do not have multiple monitor to test yet.
 
 -- -- --
 
