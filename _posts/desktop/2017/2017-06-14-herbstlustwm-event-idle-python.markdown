@@ -683,10 +683,16 @@ def kill_zombie():
 
 ### Putting Them All Together
 
-**TBD**
+I also created compact for version,
+for use with main HerbstluftWM configuration,
+in <code class="code-file">~/.config/herbstluftwm/</code> directory.
+After reunification, they are not very long scripts after all.
 
-{% highlight python %}
-{% endhighlight %}
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../python/panel-dzen2.py][dotfiles-hlwm-python-dzen2-compact]
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../python/panel-lemonbar.py][dotfiles-hlwm-python-lemon-compact]
 
 -- -- --
 
@@ -707,6 +713,7 @@ Enjoy the window manager !
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 {% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
@@ -724,6 +731,8 @@ Enjoy the window manager !
 [photo-ss-hlwm-dualpanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [dotfiles-lemon-python-testevents]:  {{ dotfiles_lemon }}/python/11-testevents.py
+[dotfiles-hlwm-python-dzen2-compact]: {{ dotfiles_hlwm }}/python/panel-dzen2.py
+[dotfiles-hlwm-python-lemon-compact]: {{ dotfiles_hlwm }}/python/panel-lemonbar.py
 
 [local-python-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-python.html
 [local-python-pipe]:   {{ site.url }}/code/2017/04/16/python-pipe-and-fork.html

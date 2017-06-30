@@ -650,10 +650,16 @@ end
 
 ### Putting Them All Together
 
-**TBD**
+I also created compact for version,
+for use with main HerbstluftWM configuration,
+in <code class="code-file">~/.config/herbstluftwm/</code> directory.
+After reunification, they are not very long scripts after all.
 
-{% highlight ruby %}
-{% endhighlight %}
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../ruby/panel-dzen2.rb][dotfiles-hlwm-ruby-dzen2-compact]
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../ruby/panel-lemonbar.rb][dotfiles-hlwm-ruby-lemon-compact]
 
 -- -- --
 
@@ -674,6 +680,7 @@ Enjoy the window manager !
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 {% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
@@ -690,7 +697,9 @@ Enjoy the window manager !
 [image-ss-hlwm-dualpanel]: {{ asset_path }}/herbstluftwm-dualpanel.png
 [photo-ss-hlwm-dualpanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[dotfiles-lemon-ruby-testevents]:  {{ dotfiles_lemon }}/ruby/11-testevents.ruby
+[dotfiles-lemon-ruby-testevents]:  {{ dotfiles_lemon }}/ruby/11-testevents.rb
+[dotfiles-hlwm-ruby-dzen2-compact]: {{ dotfiles_hlwm }}/ruby/panel-dzen2.rb
+[dotfiles-hlwm-ruby-lemon-compact]: {{ dotfiles_hlwm }}/ruby/panel-lemonbar.rb
 
 [local-ruby-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-ruby.html
 [local-ruby-pipe]:   {{ site.url }}/code/2017/04/16/ruby-pipe-and-fork.html

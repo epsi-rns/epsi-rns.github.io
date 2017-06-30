@@ -659,10 +659,16 @@ killZombie = do
 
 ### Putting Them All Together
 
-**TBD**
+I also created compact for version,
+for use with main HerbstluftWM configuration,
+in <code class="code-file">~/.config/herbstluftwm/</code> directory.
+After reunification, they are not very long scripts after all.
 
-{% highlight haskell %}
-{% endhighlight %}
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../haskell/panel-dzen2.hs][dotfiles-hlwm-haskell-dzen2-compact]
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../haskell/panel-lemonbar.hs][dotfiles-hlwm-haskell-lemon-compact]
 
 -- -- --
 
@@ -683,6 +689,7 @@ Enjoy the window manager !
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 {% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
@@ -700,6 +707,8 @@ Enjoy the window manager !
 [photo-ss-hlwm-dualpanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [dotfiles-lemon-haskell-testevents]:  {{ dotfiles_lemon }}/haskell/11-testevents.hs
+[dotfiles-hlwm-haskell-dzen2-compact]: {{ dotfiles_hlwm }}/haskell/panel-dzen2.hs
+[dotfiles-hlwm-haskell-lemon-compact]: {{ dotfiles_hlwm }}/haskell/panel-lemonbar.hs
 
 [local-haskell-config]: {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-haskell.html
 [local-haskell-pipe]:   {{ site.url }}/code/2017/04/16/haskell-pipe-and-fork.html

@@ -134,18 +134,6 @@ We need to fork both loop.
 
 -- -- --
 
-### To Be Done
-
-**TBD**
-
-This article is, still unfinished.
-Here are what I need to do.
-
-*	Putting it all together with other statusbar,
-	and main HerbstluftWM configuration.
-
--- -- --
-
 ### Multi Language Implementation
 
 The original script has beenported
@@ -214,6 +202,11 @@ Just see the CPU performance in percentage.
 #### Caveat
 
 I currently do not have multiple monitor to test yet.
+
+#### Puting it all together.
+
+I also created compact for version,
+for use with main HerbstluftWM configuration.
 
 -- -- --
 

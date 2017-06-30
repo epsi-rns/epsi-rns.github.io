@@ -614,10 +614,16 @@ function kill_zombie() {
 
 ### Putting Them All Together
 
-**TBD**
+I also created compact for version,
+for use with main HerbstluftWM configuration,
+in <code class="code-file">~/.config/herbstluftwm/</code> directory.
+After reunification, they are not very long scripts after all.
 
-{% highlight bash %}
-{% endhighlight %}
+*	**Dzen2**: 
+	[github.com/.../dotfiles/.../bash/panel-dzen2.sh][dotfiles-hlwm-bash-dzen2-compact]
+
+*	**Lemonbar**: 
+	[github.com/.../dotfiles/.../bash/panel-lemonbar.sh][dotfiles-hlwm-bash-lemon-compact]
 
 -- -- --
 
@@ -638,6 +644,7 @@ Enjoy the window manager !
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 {% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
@@ -655,6 +662,8 @@ Enjoy the window manager !
 [photo-ss-hlwm-dualpanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [dotfiles-lemon-bash-testevents]:  {{ dotfiles_lemon }}/bash/11-testevents.sh
+[dotfiles-hlwm-bash-dzen2-compact]: {{ dotfiles_hlwm }}/bash/panel-dzen2.sh
+[dotfiles-hlwm-bash-lemon-compact]: {{ dotfiles_hlwm }}/bash/panel-lemonbar.sh
 
 [local-bash-config]: {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
 [local-bash-pipe]:   {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
