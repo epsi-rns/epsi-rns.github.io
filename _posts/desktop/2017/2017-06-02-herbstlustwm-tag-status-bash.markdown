@@ -19,6 +19,7 @@ related_link_ids:
   - 17060635  # Tag Status PHP
   - 17060735  # Tag Status Lua
   - 17060835  # Tag Status Haskell
+  - 17060935  # Tag Status Global Notes
 
 ---
 

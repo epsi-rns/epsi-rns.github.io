@@ -12,14 +12,15 @@ excerpt:
 
 related_link_ids: 
   - 17060135  # Tag Status Overview
-  - 17060135  # Tag Status BASH
-  - 17060135  # Tag Status Perl
-  - 17060135  # Tag Status Python
-  - 17060135  # Tag Status Ruby
-  - 17060135  # Tag Status PHP
-  - 17060135  # Tag Status Lua
-  - 17060135  # Tag Status Haskell
-
+  - 17060235  # Tag Status BASH
+  - 17060335  # Tag Status Perl
+  - 17060435  # Tag Status Python
+  - 17060535  # Tag Status Ruby
+  - 17060635  # Tag Status PHP
+  - 17060735  # Tag Status Lua
+  - 17060835  # Tag Status Haskell
+  - 17060935  # Tag Status Global Notes
+  
 ---
 
 ### Preface
