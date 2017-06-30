@@ -5,9 +5,105 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17061835
+  title: "HerbstluftWM Idle Event in Haskell"
+  url: /desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
+
+- id: 17061735
+  title: "HerbstluftWM Idle Event in Lua"
+  url: /desktop/2017/06/17/herbstlustwm-event-idle-lua.html
+
+- id: 17061635
+  title: "HerbstluftWM Idle Event in PHP"
+  url: /desktop/2017/06/16/herbstlustwm-event-idle-php.html
+
+- id: 17061535
+  title: "HerbstluftWM Idle Event in Ruby"
+  url: /desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
+
+- id: 17061435
+  title: "HerbstluftWM Idle Event in Python"
+  url: /desktop/2017/06/14/herbstlustwm-event-idle-python.html
+
+- id: 17061335
+  title: "HerbstluftWM Idle Event in Perl"
+  url: /desktop/2017/06/13/herbstlustwm-event-idle-perl.html
+
+- id: 17061235
+  title: "HerbstluftWM Idle Event in BASH"
+  url: /desktop/2017/06/12/herbstlustwm-event-idle-bash.html
+
+- id: 17061135
+  title: "HerbstluftWM Idle Event Overview"
+  url: /desktop/2017/06/11/herbstlustwm-event-idle-overview.html
+
+- id: 17060835
+  title: "HerbstluftWM Tag Status in Haskell"
+  url: /desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
+
+- id: 17060735
+  title: "HerbstluftWM Tag Status in Lua"
+  url: /desktop/2017/06/07/herbstlustwm-tag-status-lua.html
+
+- id: 17060635
+  title: "HerbstluftWM Tag Status in PHP"
+  url: /desktop/2017/06/06/herbstlustwm-tag-status-php.html
+
+- id: 17060535
+  title: "HerbstluftWM Tag Status in Ruby"
+  url: /desktop/2017/06/05/herbstlustwm-tag-status-ruby.html
+
+- id: 17060435
+  title: "HerbstluftWM Tag Status in Python"
+  url: /desktop/2017/06/04/herbstlustwm-tag-status-python.html
+
+- id: 17060335
+  title: "HerbstluftWM Tag Status in Perl"
+  url: /desktop/2017/06/03/herbstlustwm-tag-status-perl.html
+
+- id: 17060235
+  title: "HerbstluftWM Tag Status in BASH"
+  url: /desktop/2017/06/02/herbstlustwm-tag-status-bash.html
+
+- id: 17060135
+  title: "HerbstluftWM Tag Status Overview"
+  url: /desktop/2017/06/01/herbstlustwm-tag-status-overview.html
+
+- id: 17052410
+  title: "Examining Bind in Haskell: Do Notation"
+  url: /code/2017/05/24/examining-bind.html
+
+- id: 17052310
+  title: "Examining Bind in Haskell: Example using Number"
+  url: /code/2017/05/23/examining-bind.html
+
+- id: 17052210
+  title: "Examining Bind in Haskell: Hello World"
+  url: /code/2017/05/22/examining-bind.html
+
+- id: 17052135
+  title: "Explaining Monad: References"
+  url: /code/2017/05/21/explaining-monad.html
+
+- id: 17052035
+  title: "Explaining Monad: Overview"
+  url: /code/2017/05/20/explaining-monad.html
+
+- id: 17051535
+  title: "Loop in Haskell With Map, Part Three"
+  url: /code/2017/05/15/haskell-loop-with-map.html
+
+- id: 17051435
+  title: "Loop in Haskell With Map, Part Two"
+  url: /code/2017/05/14/haskell-loop-with-map.html
+
 - id: 17051335
-  title: "Example of Doing Loop in Haskell With Map"
+  title: "Loop in Haskell With Map, Part One"
   url: /code/2017/05/13/haskell-loop-with-map.html
+
+- id: 17051235
+  title: "Loop in Haskell With Map, Overview"
+  url: /code/2017/05/12/haskell-loop-with-map.html
 
 - id: 17050835
   title: "Modularized HerbstluftWM in Haskell"
@@ -42,7 +138,7 @@
   url: /desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
 - id: 17042335
-  title: "Piping and Forking Overwiew"
+  title: "Piping and Forking Overview"
   url: /code/2017/04/23/overview-pipe-and-fork.html
 
 - id: 17042215
@@ -92,6 +188,10 @@
 - id: 17041105
   title: "Standalone Dzen2 Statusbar Using Conky"
   url: /desktop/2017/04/11/standalone-dzen2-conky.html
+
+- id: 17041035
+  title: "Standalone Statusbar Overview"
+  url: /desktop/2017/04/10/standalone-overview.html
 
 - id: 17040835
   title: "Create XBM for your Dzen2"

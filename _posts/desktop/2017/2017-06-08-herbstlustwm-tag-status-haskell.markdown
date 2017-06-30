@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu-wm
+layout: post
 title:  "HerbstluftWM Tag Status in Haskell"
 date:   2017-06-08 17:35:15 +0700
 categories: desktop
@@ -9,6 +9,16 @@ author: epsi
 excerpt:
   HersbtluftWM Tag Status using Dzen2 or Lemonbar.
   Modularized implementation in Haskell script.
+
+related_link_ids: 
+  - 17060135  # Tag Status Overview
+  - 17060135  # Tag Status BASH
+  - 17060135  # Tag Status Perl
+  - 17060135  # Tag Status Python
+  - 17060135  # Tag Status Ruby
+  - 17060135  # Tag Status PHP
+  - 17060135  # Tag Status Lua
+  - 17060135  # Tag Status Haskell
 
 ---
 

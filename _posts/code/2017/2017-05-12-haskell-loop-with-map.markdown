@@ -10,6 +10,11 @@ excerpt:
   Overview of doing loop in Haskell.   
 
 related_link_ids: 
+  - 17051235  # Haskell Loop Overview
+  - 17051335  # Haskell Loop Part One
+  - 17051435  # Haskell Loop Part Two
+  - 17051535  # Haskell Loop Part Three
+  - 17052035  # Explaining Monad: Overview
   - 16051403  # How Haskell Syntax
 
 ---

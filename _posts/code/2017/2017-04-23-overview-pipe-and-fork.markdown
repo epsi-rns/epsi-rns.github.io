@@ -9,6 +9,16 @@ author: epsi
 excerpt:
   Overview on how to be a Plumber.
   
+related_link_ids: 
+  - 17042335  # Pipe and Fork Overview
+  - 17041535  # Pipe and Fork BASH
+  - 17041635  # Pipe and Fork Perl
+  - 17041735  # Pipe and Fork Python
+  - 17041835  # Pipe and Fork Ruby
+  - 17041935  # Pipe and Fork PHP
+  - 17042035  # Pipe and Fork Lua
+  - 17042135  # Pipe and Fork Haskell
+
 ---
 
 This is just a complementary topic for Dzen, Lemonbar and Conky. 

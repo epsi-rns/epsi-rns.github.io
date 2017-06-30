@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu-wm
+layout: post
 title:  "HerbstluftWM Idle Event in PHP"
 date:   2017-06-16 17:35:15 +0700
 categories: desktop
@@ -10,6 +10,16 @@ excerpt:
   HersbtluftWM Event Idle using Dzen2 or Lemonbar.
   Modularized implementation in PHP script.
   An advance case of Pipe and Fork.
+
+related_link_ids: 
+  - 17061135  # Event Idle Overview
+  - 17061235  # Event Idle BASH
+  - 17061335  # Event Idle Perl
+  - 17061435  # Event Idle Python
+  - 17061535  # Event Idle Ruby
+  - 17061635  # Event Idle PHP
+  - 17061735  # Event Idle Lua
+  - 17061835  # Event Idle Haskell
 
 ---
 

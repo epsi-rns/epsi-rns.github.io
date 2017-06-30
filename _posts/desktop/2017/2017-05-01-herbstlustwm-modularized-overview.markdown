@@ -9,6 +9,16 @@ author: epsi
 excerpt:
   Preface of Doing Hersbtluft WM Config
   
+related_link_ids: 
+  - 17050135  # HerbstluftWM Overview
+  - 17050235  # HerbstluftWM BASH
+  - 17050335  # HerbstluftWM Perl
+  - 17050435  # HerbstluftWM Python
+  - 17050535  # HerbstluftWM Ruby
+  - 17050635  # HerbstluftWM PHP
+  - 17050735  # HerbstluftWM Lua
+  - 17050835  # HerbstluftWM Haskell
+
 ---
 
 ### Preface

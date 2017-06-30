@@ -10,6 +10,12 @@ excerpt:
   Some Book of Witch written by Wizards.
 
 related_link_ids: 
+  - 17052035  # Explaining Monad: Overview
+  - 17052135  # Explaining Monad: References
+  - 17052235  # Examining Bind: Hello World
+  - 17052335  # Examining Bind: Using Number
+  - 17052435  # Examining Bind: Do Notation
+  - 17051235  # Haskell Loop Overview
   - 16051403  # How Haskell Syntax
 
 ---
