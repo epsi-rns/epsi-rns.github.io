@@ -156,13 +156,13 @@ Thank you for Reading.
 
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
-[local-bash]:    http://epsi-rns.github.io/code/2017/04/15/bash-pipe-and-fork.html
-[local-perl]:    http://epsi-rns.github.io/code/2017/04/16/perl-pipe-and-fork.html
-[local-python]:  http://epsi-rns.github.io/code/2017/04/17/python-pipe-and-fork.html
-[local-ruby]:    http://epsi-rns.github.io/code/2017/04/18/ruby-pipe-and-fork.html
-[local-php]:     http://epsi-rns.github.io/code/2017/04/19/php-pipe-and-fork.html
-[local-lua]:     http://epsi-rns.github.io/code/2017/04/20/lua-pipe-and-fork.html
-[local-haskell]: http://epsi-rns.github.io/code/2017/04/21/haskell-pipe-and-fork.html
+[local-bash]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
+[local-perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
+[local-python]:  {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
+[local-ruby]:    {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
+[local-php]:     {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
+[local-lua]:     {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
+[local-haskell]: {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
 [dotfiles-BASH]:    {{ dotfiles_path }}/bash
 [dotfiles-Perl]:    {{ dotfiles_path }}/perl
