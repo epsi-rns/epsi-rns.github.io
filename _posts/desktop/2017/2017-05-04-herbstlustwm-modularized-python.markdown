@@ -322,7 +322,7 @@ def do_panel():
         panel = "/etc/xdg/herbstluftwm/panel.sh"
     
     raw = os.popen('herbstclient list_monitors | cut -d: -f1').read()
-    monitors = raw.split("\n")
+    monitors = raw.strip().split("\n")
 
     for monitor in (monitors):
         os.system(panel + ' ' + str(monitor) + ' &');
