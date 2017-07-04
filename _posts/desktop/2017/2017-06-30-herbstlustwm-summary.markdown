@@ -20,6 +20,8 @@ related_link_ids:
 
 Good day dear coder, hello again.
 
+![Giphy Screencast][giphy-img]
+
 HerbstluftWM has been stealing my attention for the past three months. [Primary] topic is **Modularized HerbstluftWM Configuration**. 
 
 And there are also complementary topics. I have done, implementing herbstluftWM statusbar, 
@@ -83,6 +85,10 @@ Red Screenshot
 Blue Screenshot
 
 *	[photos.google.com Blue][photos-ss-hlwm-blue1]
+
+GIF using byzanz and gifsicle.
+
+*	[Giphy Screencast][giphy-512]
 
 Original Material Design Wallpaper, with SVG Source (inkscape) Available.
 
@@ -268,6 +274,8 @@ Thank you for reading.
 
 [photos-ss-hlwm-red1]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPqMNt9e3_UypKHqASPs_njHBQPX7Kn8X_O9aTp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
+[giphy-512]: https://giphy.com/gifs/modular-standalone-herbstluftwm-l4FGmHTcdl3R4jGxi
+[giphy-img]: https://media.giphy.com/media/l4FGmHTcdl3R4jGxi/giphy.gif
 
 [local-standalone-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-standalone-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
