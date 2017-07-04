@@ -20,9 +20,11 @@ related_link_ids:
 
 Good day dear coder, hello again.
 
-![Giphy Screencast][giphy-img]
-
 HerbstluftWM has been stealing my attention for the past three months. [Primary] topic is **Modularized HerbstluftWM Configuration**. 
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/erWOZpi8uWU">
+</iframe> 
 
 And there are also complementary topics. I have done, implementing herbstluftWM statusbar, 
 
@@ -89,6 +91,10 @@ Blue Screenshot
 GIF using byzanz and gifsicle.
 
 *	[Giphy Screencast][giphy-512]
+
+YouTube Video: MP4 using simplescreenrecorder
+
+*	https://youtu.be/erWOZpi8uWU
 
 Original Material Design Wallpaper, with SVG Source (inkscape) Available.
 
@@ -208,6 +214,8 @@ Haskell Coding
 ### Finally Finished
 
 	"No Bridge is Too Far"
+
+![Giphy Screencast][giphy-img]
 
 So what's next? I think I'm going to enjoy my HLWM setup for one or a couple of months, then I will moved on to BSPWM. There are still about 20 articles that I have to write. There are so much knowledge that I wish learn. But I'd rather decouple the topics from HerbstluftWM, and write them later on. 
 
