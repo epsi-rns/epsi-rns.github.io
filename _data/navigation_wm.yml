@@ -48,25 +48,17 @@
       url: /desktop/2016/08/03/i3-install-arch.html
     - title: Old Screenshot
       url: /desktop/2014/12/06/i3-i3bar.html
-  - title: Herbstluft WM
-    url: /pages/desktop/hlwm.html
+  - title: HerbstluftWM
+    url: /desktop/2017/06/30/herbstlustwm-summary.html
     submenu:
-    - title: Modular Overview
+    - title: Modularized
       url: /desktop/2017/05/01/herbstlustwm-modularized-overview.html   
-    - title: Modular BASH
-      url: /desktop/2017/05/02/herbstlustwm-modularized-bash.html
-    - title: Modular Perl
-      url: /desktop/2017/05/03/herbstlustwm-modularized-perl.html
-    - title: Modular Python
-      url: /desktop/2017/05/04/herbstlustwm-modularized-python.html
-    - title: Modular Ruby
-      url: /desktop/2017/05/05/herbstlustwm-modularized-ruby.html
-    - title: Modular PHP
-      url: /desktop/2017/05/06/herbstlustwm-modularized-php.html
-    - title: Modular Lua
-      url: /desktop/2017/05/07/herbstlustwm-modularized-lua.html
-    - title: Modular Haskell
-      url: /desktop/2017/05/08/herbstlustwm-modularized-haskell.html
+    - title: Tag Status
+      url: /desktop/2017/06/01/herbstlustwm-tag-status-overview.html 
+    - title: Event Idle
+      url: /desktop/2017/06/11/herbstlustwm-event-idle-overview.html
+    - title: Pipe and Fork
+      url: /code/2017/04/23/overview-pipe-and-fork.html
 
 - title: Stacking WM
   url: /pages/desktop/swm.html
@@ -92,7 +84,7 @@
     url: /desktop/2014/04/22/gnome-shell-a-very-common.html
 
 - title: Statusbar
-  url: /pages/desktop/statusbar.html
+  url: /desktop/2017/04/10/standalone-overview.html
   submenu:  
   - title: Dzen2 Bash
     url: /desktop/2017/04/01/standalone-dzen2-bash.html 
