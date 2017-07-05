@@ -59,6 +59,8 @@ Now is 2017. Most distribution has changed the default database, from MySQL to M
 
 	Most adful guidance looks the same, lack of details.
 
+	This is not an awful misstypo.
+
 There are already hundreds of LAMP installation tutorial out there in the internet. But they all looks the same.
 
 Almost all tutorial only cover a particular distribution, especially Debian Based, or more specifically Ubuntu. It means almost installation tutorial is using apt-get. Which is some people has switch over to pacman. And other scattered to Fedora DNF, or emerge.
