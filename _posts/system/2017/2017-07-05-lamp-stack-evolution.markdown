@@ -77,9 +77,9 @@ Now about the L word from the acronym, the Linux world.
 
 1.	Linux is not the only OS using this stack, there are already BSD for decades. Something I do not know.
 
-2.	There are different distribution, package management affect installation, and policy affect /etc preconfigured stuff.
+2.	There are different distributions, package management affect installation, and policy affect /etc preconfigured stuff.
 
-3.	There are different init system, affect maintenance. Such as conservative SysV, systemd, openRC, Ubuntu upstart. And there is also runit that I never heard of.
+3.	There are different init systems, affect maintenance. Such as conservative SysV, systemd, openRC, Ubuntu upstart. And there is also runit that I never heard of.
 
 
 The stack is actually more like this
@@ -89,11 +89,11 @@ The stack is actually more like this
 
 You can also add your own tier such as
 
-Distribution >+> Package Manager
+*	Distribution >+> Package Manager
 
-Distribution >+> Preconfigured /etc Policy
+*	Distribution >+> Preconfigured /etc Policy
 
-Scripting Language >+> Framework
+*	Scripting Language >+> Framework
 
 -- -- --
 
