@@ -105,7 +105,7 @@ Next time you guyz make a guidance/ tutorial, please consider these.
 
 *	Not everyone is using systemd. If you want niche tutorial, you can use this differentiation to make your blog looks more than just an ordinary.
 
-*	The combination of the stack. You can have a bunch of article if you want. Let's do the math.
+*	The combination of the stack. You can have a bunch of articles if you want. Let's do the math.
 
 2 Package Manager <+> 3 Init <+> 3 Web Server <+> 2 Database Server <+> 3 Scripting Language 
 
@@ -115,11 +115,11 @@ Don not worry, no need to use permutation. Combination is sufficient.
 
 Phew, that a lot of knowledge. It is going to be a busy research for your tutorial.
 
-To reduce the complexity, you can merge to reduce all of it, into fewer article or even one big article. The issue is Testing, there are combination that cannot be merge in testing context.
+To reduce the complexity, you can merge to reduce all of it, into fewer article or even one big article. The issue is **testing**, there are combinations that cannot be merge in testing context.
+
+	Do not worry. 108 is just a number.
 
 	42 is the answer of life.
-
-Do not worry. 108 is just a number.
 
 -- -- --
 
@@ -135,7 +135,7 @@ Bootstrap and AngularJS is just a framework. I mean there are other framewrok as
 
 And hey, do not forget about design. From font, to application such as GIMP and Inkscape.
 
-Do not be panic. You just have to go through it.
+	Do not be panic. You just have to go through it.
 
 -- -- --
 
@@ -143,7 +143,7 @@ Do not be panic. You just have to go through it.
 
 Have a nice overtime overnight with LAMP stack evolution.
 
-Do not cry !
+	Do not cry !
 
 
 
