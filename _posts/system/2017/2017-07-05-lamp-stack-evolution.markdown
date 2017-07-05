@@ -23,7 +23,7 @@ I'm thinking about most LAMP guidance. And realized that my own is too specific.
 
 [![LAMP OpenRC][image-ss-openrc]{: .img-responsive }][photo-ss-openrc]
 
-It got me thinking of a bigger picture. There more about this stack than the acronym.
+It got me thinking of a bigger picture. There are more about this stack than the acronym.
 
 -- -- --
 
@@ -67,15 +67,15 @@ Almost all tutorial only cover a particular distribution, especially Debian Base
 
 There are also other consideration such as Ubuntu Snappy and Flatpak. And more advance cloud technology such as Docker.
 
-The user is more scattered now. But I can say that 8apt* is still a major package manager, beside *pacman*.
+The user is more scattered now. But I can say that *apt* is still a major package manager, beside *pacman*.
 
-	Do not be mistaken, between awful site and adful site.
+	Do not be mistaken, or confused, between awful site and adful site.
 
 -- -- --
 
 ### Hidden Tier
 
-Now about the L word from the acronym, the Linux world. 
+Now about the *L* word from the acronym, the Linux world. 
 
 	No, I'm not talking about the Love Word. Nor Scott Pilgrim.
 
@@ -135,11 +135,12 @@ To reduce the complexity, you can merge to reduce all of it, into fewer article 
 ### Testing The Combination
 
 After that cheap talk above, here comes the implementation part.
-Running all the combination above in enviroment suitable for testing.
+Running all the combination above in environment suitable for testing.
 
 	No multiboot required
 
-How do I, a blogger can do such combination ? Do I need to install them all ?
+How do I, a blogger can do such combination ?
+Do I need to install them all ?
 
 > Distribution <+> Package Manager <+> Init
 
@@ -148,6 +149,7 @@ I do not recommend multiboot for this situation.
 
 It takes long time to analyze problem.
 Therefore I do not recommend Live OS either.
+Once you reboot, al your setting will be gone using Live OS.
 
 I bet you all thinking about virtualization, such as VMWare.
 Yes it is possible.
