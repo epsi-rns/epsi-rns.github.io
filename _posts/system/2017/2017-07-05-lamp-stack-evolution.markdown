@@ -63,13 +63,13 @@ Now is 2017. Most distribution has changed the default database, from MySQL to M
 
 There are already hundreds of LAMP installation tutorial out there in the internet. But they all looks the same.
 
-	This is not an awful misstypo.
-
 Almost all tutorial only cover a particular distribution, especially Debian Based, or more specifically Ubuntu. It means almost installation tutorial is using apt-get. Which is some people has switch over to pacman. And other scattered to Fedora DNF, or emerge.
 
 There are also other consideration such as Ubuntu Snappy and Flatpak. And more advance cloud technology such as Docker.
 
 The user is more scattered now. But I can say that 8apt* is still a major package manager, beside *pacman*.
+
+	Do not be mistaken, between awful site and adful site.
 
 -- -- --
 
