@@ -107,9 +107,9 @@ Next time you guyz make a guidance/ tutorial, please consider these.
 
 *	The combination of the stack. You can have a bunch of articles if you want. Let's do the math.
 
-2 Package Manager <+> 3 Init <+> 3 Web Server <+> 2 Database Server <+> 3 Scripting Language 
+(2) Package Manager <+> (3) Init <+> (3) Web Server <+> (2) Database Server <+> (3) Scripting Language 
 
-Don not worry, no need to use permutation. Combination is sufficient.
+No need to use permutation. Combination is sufficient.
 
 > 2 x 3 x 3 x 2 x 3 = 108 articles
 
