@@ -157,9 +157,10 @@ I also put a more complete ANSI escaping code in separate bash script.
 {% highlight bash %}
 #!/usr/bin/env bash
 
-. ~/Documents/standalone/cli/example/ansi.sh
-. ~/Documents/standalone/cli/example/helpercpu.sh
-. ~/Documents/standalone/cli/example/progressbar.sh
+DIR=$(dirname "$0")
+. ${DIR}/ansi.sh
+. ${DIR}/helpercpu.sh
+. ${DIR}/progressbar.sh
 
 initializeANSI
 
@@ -265,7 +266,8 @@ tput civis  -- invisible
 
 clear
 
-conky -c ~/Documents/standalone/cli/example/03.lua 
+DIR=$(dirname "$0")
+conky -c ${DIR}/03.lua 
 {% endhighlight %}
 
 {% highlight lua %}

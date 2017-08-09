@@ -173,7 +173,8 @@ And let's also refactor between the panel and output,
 #!/usr/bin/env bash
 
 # include
-. ~/Documents/standalone/dzen2/bash-example/02-output.sh
+DIR=$(dirname "$0")
+. ${DIR}/02-output.sh
 
 # dzen2
 

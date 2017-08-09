@@ -74,36 +74,6 @@ Lemonbar
 
 -- -- --
 
-### Micellanous Links
-
-Dotshare
-
-*	<http://dotshare.it/dots/1498/>
-
-Red Screenshot
-
-*	[photos.google.com Red][photos-ss-hlwm-red1]
-
-Blue Screenshot
-
-*	[photos.google.com Blue][photos-ss-hlwm-blue1]
-
-GIF using byzanz and gifsicle.
-
-*	[Giphy Screencast][giphy-512]
-
-YouTube Video: MP4 using simplescreenrecorder
-
-*	https://youtu.be/erWOZpi8uWU
-
-Original Material Design Wallpaper, with SVG Source (inkscape) Available.
-
-*	<http://nurwijayadi.deviantart.com/art/Flat-Wallpaper-with-Isometric-Looks-646980074>
-
-*	<http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-654721928>
-
--- -- --
-
 ### Blog
 
 Overview
@@ -211,6 +181,40 @@ Haskell Coding
 
 -- -- --
 
+### Micellanous Links
+
+Dotshare
+
+*	<http://dotshare.it/dots/1498/>
+
+Red Screenshot
+
+*	[photos.google.com Red][photos-ss-hlwm-red1]
+
+Blue Screenshot
+
+*	[photos.google.com Blue][photos-ss-hlwm-blue1]
+
+GIF using byzanz and gifsicle.
+
+*	[Giphy Screencast][giphy-512]
+
+YouTube Video: MP4 using simplescreenrecorder
+
+*	https://youtu.be/erWOZpi8uWU
+
+DeviantArt
+
+*	[HerbstluftWM in Seven Languages][deviant-hlwm]
+
+Original Material Design Wallpaper, with SVG Source (inkscape) Available.
+
+*	<http://nurwijayadi.deviantart.com/art/Flat-Wallpaper-with-Isometric-Looks-646980074>
+
+*	<http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-654721928>
+
+-- -- --
+
 ### Finally Finished
 
 	"No Bridge is Too Far"
@@ -285,6 +289,8 @@ Thank you for reading.
 [giphy-512]: https://giphy.com/gifs/modular-standalone-herbstluftwm-l4FGmHTcdl3R4jGxi
 [giphy-img]: https://media.giphy.com/media/l4FGmHTcdl3R4jGxi/giphy.gif
 
+[deviant-hlwm]: http://nurwijayadi.deviantart.com/art/HerbstluftWM-in-Seven-Languages-690831034
+
 [local-standalone-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-standalone-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
 [local-standalone-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
@@ -296,3 +302,4 @@ Thank you for reading.
 
 [local-haskell-loop]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
 [local-haskell-bind]: {{ site.url }}/code/2017/05/22/examining-bind.html
+
