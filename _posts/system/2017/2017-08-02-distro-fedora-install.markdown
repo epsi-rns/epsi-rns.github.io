@@ -3,7 +3,7 @@ layout: post
 title: "Distribution - Fedora First Time Install"
 date: 2017-08-02 09:45:15 +0700
 categories: system
-tags: [lamp]
+tags: [fedora, distro, package manager]
 author: epsi
 
 excerpt:
