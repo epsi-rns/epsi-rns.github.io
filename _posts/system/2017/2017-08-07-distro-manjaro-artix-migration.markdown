@@ -29,16 +29,6 @@ Not just OpenRC but other init as well such as runit and sheperd.
 After migation, Artix works well.
 Just like Manjaro-OpenRC. I see no difference.
 
-Except for these two things
-
-*	Some package lagged behind upstream, such as Perl. 
-	This normally fixed within few days.
-
-*	Docker has not work yet. This is a kernel issue.
-	I don't know when this will be fixed. This state is unknown. 
-	But it is okay, I can wait.
-	Note that other cloud such as LXC works well.
-
 -- -- --
 
 ### Follow The Development
@@ -130,6 +120,8 @@ And this is from bash history.
 With little differences.
 This is my personal note.
 
+#### Setup Repository, Mirror, and Keyring
+
 {% highlight bash %}
 # rmdir /etc/pacman.d/mirrorlist
 # touch /etc/pacman.d/mirrorlist
@@ -150,6 +142,9 @@ This is my personal note.
 
 [![Artix Keyring][image-ss-artix-keyring]{: .img-responsive }][photo-ss-artix-keyring]
 
+
+#### Migrating from Manjaro
+
 {% highlight bash %}
 # pacman -Rdd manjaro-system
 # pacman -Rsc manjaro-tools-base manjaro-system mhwd mhwd-db manjaro-firmware manjaro-settings-manager intel-ucode lsb-release rpcbind-openrc
@@ -157,6 +152,9 @@ This is my personal note.
 {% endhighlight %}
 
 [![Remove Manjaro][image-ss-manjaro-remove]{: .img-responsive }][photo-ss-manjaro-remove]
+
+
+#### Setup base
 
 {% highlight bash %}
 # pacman -Rdd sysvinit udev-openrc consolekit consolekit-openrc
@@ -166,19 +164,16 @@ This is my personal note.
 
 [![systemd Dummy][image-ss-systemd-dummy]{: .img-responsive }][photo-ss-systemd-dummy]
 
-I have Perl dependency problem, different with guidance.
+I have Perl dependency problem while doing this below,
+different with guidance.
+I have to remove some packages manually.
+And added later after installation completed.
 
 {% highlight bash %}
 # pacman -Su base base-devel openrc-system grub linux-lts linux-lts-headers
-# pacman -R udisks2 gvfs kdelibs solid udiskie
-# pacman -R mariadb net-snmp
-# pacman -R mariadb net-snmp mysql-openrc hplip akonadi-qt4
-# pacman -R perl-clone perl-dbi perl-net-dbus perl-text-iconv perl-xml-libxml perl-xml-parser perl-xml-twig intltool foomatic-db-engine python-distutils-extra python2-distutils-extra oblogout
-# pacman -R imagemagick lvm2-nosystemd dhcpcd-nosystemd cups-filters inkscape lvm2-openrc dhcpcd-openrc cups-nosystemd cups-openrc
-# pacman -Su base base-devel openrc-system grub linux-lts linux-lts-headers
 {% endhighlight %}
 
-Continue using the guidance.
+After manual removal, continue using the guidance.
 
 {% highlight bash %}
 # pacman -Qg base base-devel | awk '{print $2}' | sort | uniq > installed
@@ -210,11 +205,15 @@ Continue using the guidance.
 # rc-update add dbus default
 {% endhighlight %}
 
+#### Reinstall GRUB
+
 {% highlight bash %}
 # mkinitcpio -p linux-lts
 # mkinitcpio -p linux314
 # update-grub
 {% endhighlight %}
+
+#### My Personal Preferences
 
 {% highlight bash %}
 # pacman -S sddm-elogind sddm-qt-manjaro-theme sddm-kcm sddm-andromeda-qt-theme plasma-meta
@@ -244,39 +243,62 @@ Container: LXC
 
 -- -- --
 
-### Docker OpenRC Crash
+### Some Issues
 
-Seems to be Kernel Issue.
-Thank you for any suggestion.
+As I said, I did migration to Artix Linux
+just five days after the announcement.
+Most of the problems fixed in just days.
+
+Everything works well.
+Except for these two things
+
+*	Some package lagged behind upstream, such as Perl. 
+	This normally fixed within few days.
+
+*	Docker has not work yet. This is a kernel issue.
+
+(1)	Dependency problem
+
+Most are part of Perl dependency problem (perl < 5.25).
 
 {% highlight bash %}
-$ cat  /var/log/docker.log 
-time="2017-08-08T06:57:35.815197432+07:00" level=info msg="libcontainerd: new containerd process, pid: 4693" 
-time="2017-08-08T06:57:36.840372103+07:00" level=error msg="'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded." 
-time="2017-08-08T06:57:36.842205914+07:00" level=error msg="'overlay' not found as a supported filesystem on this host. Please ensure kernel is new enough and has overlay support loaded." 
-time="2017-08-08T06:57:36.908660908+07:00" level=info msg="Graph migration to content-addressability took 0.00 seconds" 
-time="2017-08-08T06:57:36.909620837+07:00" level=warning msg="Your kernel does not support cgroup rt period" 
-time="2017-08-08T06:57:36.909672801+07:00" level=warning msg="Your kernel does not support cgroup rt runtime" 
-time="2017-08-08T06:57:36.910338270+07:00" level=info msg="Loading containers: start." 
-time="2017-08-08T06:57:36.917103872+07:00" level=warning msg="Running modprobe bridge br_netfilter failed with message: modprobe: WARNING: Module bridge not found in directory /lib/modules/4.9.40-2-lts\nmodprobe: WARNING: Module br_netfilter not found in directory /lib/modules/4.9.40-2-lts\n, error: exit status 1" 
-time="2017-08-08T06:57:36.919252538+07:00" level=warning msg="Running modprobe nf_nat failed with message: `modprobe: WARNING: Module nf_nat not found in directory /lib/modules/4.9.40-2-lts`, error: exit status 1" 
-time="2017-08-08T06:57:36.921144739+07:00" level=warning msg="Running modprobe xt_conntrack failed with message: `modprobe: WARNING: Module xt_conntrack not found in directory /lib/modules/4.9.40-2-lts`, error: exit status 1" 
-Error starting daemon: Error initializing network controller: error obtaining controller instance: failed to create NAT chain: iptables failed: iptables -t nat -N DOCKER: modprobe: FATAL: Module ip_tables not found in directory /lib/modules/4.9.40-2-lts
-iptables v1.6.1: can't initialize iptables table 'nat': Table does not exist (do you need to insmod?)
-Perhaps iptables or your kernel needs to be upgraded.
- (exit status 3)
+# pacman -Su base base-devel openrc-system grub linux-lts linux-lts-headers
+# pacman -R udisks2 gvfs kdelibs solid udiskie
+# pacman -R mariadb net-snmp
+# pacman -R mariadb net-snmp mysql-openrc hplip akonadi-qt4
+# pacman -R perl-clone perl-dbi perl-net-dbus perl-text-iconv perl-xml-libxml perl-xml-parser perl-xml-twig intltool foomatic-db-engine python-distutils-extra python2-distutils-extra oblogout
+# pacman -R imagemagick lvm2-nosystemd dhcpcd-nosystemd cups-filters inkscape lvm2-openrc dhcpcd-openrc cups-nosystemd cups-openrc
+# pacman -Su base base-devel openrc-system grub linux-lts linux-lts-headers
 {% endhighlight %}
 
-[![Artix Docker: Error][image-ss-artix-docker]{: .img-responsive }][photo-ss-artix-docker]
+This solved after waiting for three days.
 
+{% highlight bash %}
+# pacman -S perl
+# pacman -S perl-clone perl-dbi perl-net-dbus perl-text-iconv perl-xml-libxml perl-xml-parser perl-xml-twig intltool foomatic-db-engine python-distutils-extra python2-distutils-extra oblogout
+# pacman -S imagemagick  cups-filters inkscape  
+# pacman -S dhcpcd lvm2 cups
+# pacman -S mariadb net-snmp mysql-openrc hplip akonadi-qt4
+# pacman -S udisks2 gvfs kdelibs solid udiskie
+{% endhighlight %}
+
+(2) Docker OpenRC Crash
+
+After waiting for three days.
+It finally works normally.
+
+-- -- --
+
+### Conclusion
+
+I haven't found other bug yet with Artix Linux.
+Everything seems to be allright.
+If there is a bug, it is okay.
 Relax... this is a new distro.
 
 	I can wait. Just be Patient.
 
-I haven't found other bug yet with Artix Linux.
-Everything seems to be allright except this Docker thing.
 
--- -- --
 
 Thank you for Reading
 
@@ -296,5 +318,3 @@ Thank you for Reading
 [image-ss-artix-lxc]:     {{ asset_path }}/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-artix-docker]:  {{ asset_path }}/artix-docker-openrc-error.png
-[photo-ss-artix-docker]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMRzUrJTpvJnpBKKYgDfS6y_MhW3FjvUP98om_b?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

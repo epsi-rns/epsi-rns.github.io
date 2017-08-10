@@ -31,9 +31,9 @@ I did these
 
 *	installed KaOSX (XFS),
 
-*	and later switch my Debian (Systemd) to Devuan (OpenRC),
+*	and later migrate my Debian (Systemd) to Devuan (OpenRC),
 
-*	and switch my Manjaro (OpenRC) to pure OpenRC distribution named Artix.
+*	and migrate my Manjaro (OpenRC) to pure OpenRC distribution named Artix.
 
 [![Fullscreen Fedora Core 6 Screenshot][image-ss-fedora-gnome]{: .img-responsive }][photo-ss-fedora-gnome]
 
