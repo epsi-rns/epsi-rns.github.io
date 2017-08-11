@@ -243,11 +243,16 @@ Container: LXC
 
 -- -- --
 
-### Some Issues
+### Troubleshooting Examples
+
+This is how I managed my own issues.
+Troubleshooting helps you understand your system.
+
+	Do not be afraid of issues.
 
 As I said, I did migration to Artix Linux
 just five days after the announcement.
-Most of the problems fixed in just days.
+Most of the problems fixed in just few days.
 
 Everything works well.
 Except for these two things
@@ -271,7 +276,19 @@ Most are part of Perl dependency problem (perl < 5.25).
 # pacman -Su base base-devel openrc-system grub linux-lts linux-lts-headers
 {% endhighlight %}
 
-This solved after waiting for three days.
+This has been solved after waiting for three days.
+Perl upgraded to 5.26.
+
+{% highlight bash %}
+$ pacman -Qi perl
+Name            : perl
+Version         : 5.26.0-1
+Description     : A highly capable, feature-rich programming language
+Architecture    : x86_64
+URL             : http://www.perl.org
+Licenses        : GPL  PerlArtistic
+Groups          : base
+{% endhighlight %}
 
 {% highlight bash %}
 # pacman -S perl
@@ -284,8 +301,29 @@ This solved after waiting for three days.
 
 (2) Docker OpenRC Crash
 
+There is a kernel issue.
 After waiting for three days.
 It finally works normally.
+
+[![Artix Docker: Slackware Slackpkg][image-ss-artix-docker]{: .img-responsive }][photo-ss-artix-docker]
+
+(3) No official Jekyll packages yet.
+
+Takes time to propagate all packages to repository.
+Meanwhile, there are AUR's packages.
+
+{% highlight conf %}
+jekyll-sass-converter jekyll-watch 
+rb-fsevent rb-inotify
+ruby-listen ruby-colorator ruby-kramdown
+ruby-liquid ruby-mercenary ruby-pathutil
+ruby-forwardable-extended ruby-safe_yaml 
+ruby-jekyll ruby-jekyll-paginate
+{% endhighlight %}
+
+[![Artix: Using AUR Jekyll][image-ss-artix-jekyll]{: .img-responsive }][photo-ss-artix-jekyll]
+
+Jekyll works well in Artix.
 
 -- -- --
 
@@ -318,3 +356,8 @@ Thank you for Reading
 [image-ss-artix-lxc]:     {{ asset_path }}/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
+[image-ss-artix-docker]:  {{ asset_path }}/artix-docker-slackware.png
+[photo-ss-artix-docker]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM_M5Tj36VL_H-RD1i_JniyJUKFOHy58MVmzTyq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-artix-jekyll]:  {{ asset_path }}/artix-jekyll.png
+[photo-ss-artix-jekyll]:  https://photos.google.com/photo/AF1QipMbJISXgyLHcNPGex9EWqYapRgB8CjTHEuqqyO_
