@@ -17,7 +17,7 @@ After almost a half year abandoning this Manjaro OpenRC in my partition.
 I finally have time to face a few issues with my Manjaro OpenRC setup.
 This issue are scattered, I mean there is no particular topic.
 I just want to clean up bugs on my systems.
-All are solved.
+All are solved, except SDDM avatar.
 
 These are just my personal notes. 
 I mostly documenting note so I can find the solution later
@@ -101,7 +101,7 @@ This note is also for any non-systemd user.
 
 ### 4. SDDM Avatar not shown
 
-<code>[solved]</code>
+<code>[not solved]</code>
 
 Manjaro OpenRC is still using 0.14.
 

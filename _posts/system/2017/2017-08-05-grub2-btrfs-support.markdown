@@ -140,7 +140,7 @@ Three workarounds, two responses from Fedora Community, and the third is mine.
 1.	Using systemd-boot, forget about GRUB.
 	Require GPT and EFI. Which is I use MBR without EFI.
 
-2.	Create a special /boot partition using ext4 for openSUSE BTRFS
+2.	Create a special /boot partition using ext4 for openSUSE BTRFS.
 	I finally use this method.
 
 3.	Install GRUB2 from openSUSE. 
