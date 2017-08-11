@@ -3,7 +3,7 @@ layout: post
 title: "Distribution - Debian to Devuan Migration"
 date: 2017-08-08 09:45:15 +0700
 categories: system
-tags: [debin, devuan, sysvinit, distro, package manager]
+tags: [debian, devuan, sysvinit, distro, package manager]
 author: epsi
 
 excerpt:
