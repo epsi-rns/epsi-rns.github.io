@@ -47,7 +47,7 @@ OS: Devuan
 
 -- -- --
 
-### And Go Further
+### Consider Going Further
 
 Then, I decided to go further, remove libsystemd0 and prevent it to be installed.
 
@@ -75,6 +75,14 @@ Please click for more complete investigation using uncropped figure.
 [![Devuan Keyring][image-ss-devuan-nosystemd]{: .img-responsive }][photo-ss-devuan-nosystemd]
 
 Note that Devuan works well if you keep <code>libsystemd0</code>.
+
+-- -- --
+
+### Other Issues
+
+I haven't got time to have deeper exploration on Devuan yet.
+There are some issues such as slim that has no reboot option.
+Maybe next time.
 
 -- -- --
 
