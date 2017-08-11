@@ -14,9 +14,12 @@ excerpt:
 
 ### Preface
 
-People see Diversity in Linux, as Distribution,
-or how a system can use many Desktop Environment.
+People see Diversity in Linux, as Distribution.
+Beginner can see how a system can use many Desktop Environment.
+And coder can see that they can rewrite from one scripting language to another.
 This is true, but inaccurate.
+There are other frontier, that is actually fundamental,
+from the perspective of Operating System.
 
 I do think that we need more focus on other main diversity as well such as
 
