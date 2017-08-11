@@ -15,10 +15,10 @@ excerpt:
 ### Preface
 
 People see Diversity in Linux, as Distribution,
-or how a system can use many Desktop environment.
+or how a system can use many Desktop Environment.
 This is true, but inaccurate.
 
-I do think that we need more focus on such diversity
+I do think that we need more focus on other main diversity as well such as
 
 *	Package Manager
 
@@ -42,7 +42,8 @@ An enthusiast user should experience
 package management diversity in linux. 
 And try each.
 Otherwise, most beginner would stuck,
-in the mainstream APT-based distribution.
+in the mainstream APT-based distribution,
+as you can see the fact in distrowatch top list.
 
 	Do not forget to read the manual first.
 
@@ -50,10 +51,10 @@ in the mainstream APT-based distribution.
 
 ### Testing Tools
 
-The issue with package management is,
+The issue with package management learning is,
 you have to live with it.
 
-The other downside of learning package manager is,
+The downside of learning package manager is,
 the need of good internet connection.
 
 There are a few methods.
