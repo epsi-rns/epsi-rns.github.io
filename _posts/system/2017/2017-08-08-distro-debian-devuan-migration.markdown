@@ -35,6 +35,18 @@ The rest works as a charm.
 
 -- -- --
 
+### Screenshot
+
+OS: Devuan
+
+*	Window Manager: HerbstluftWM
+
+*	Panel: Dzen2
+
+[![Devuan Screenshot][image-ss-devuan-hlwm-dzen2]{: .img-responsive }][photo-ss-devuan-hlwm-dzen2]
+
+-- -- --
+
 ### And Go Further
 
 Then, I decided to go further, remove libsystemd0 and prevent it to be installed.
@@ -77,3 +89,6 @@ Thank you for Reading
 
 [image-ss-devuan-nosystemd]:  {{ asset_path }}/devuan-no-libsystemd0.png
 [photo-ss-devuan-nosystemd]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPl9Prff4wrSj-I77e-qZpirHYYlPUxR1_1L-iB?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-devuan-hlwm-dzen2]: {{ asset_path }}/devuan-hlwm-dzen2.png
+[photo-ss-devuan-hlwm-dzen2]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipORZB9aEXv-lA1OgQpa_FDT5hA7r9jr5Ehi7p88?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
