@@ -24,7 +24,7 @@ and morphing into new distro called Artix Linux.
 Artix Linux has stronger focus on init.
 Not just OpenRC but other init as well such as runit and sheperd.
 
-	The switch goes smoothly
+	The migration done smoothly
 
 After migation, Artix works well.
 Just like Manjaro-OpenRC. I see no difference.
