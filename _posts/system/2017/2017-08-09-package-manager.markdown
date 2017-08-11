@@ -201,6 +201,8 @@ Yaourt: BASH/C
 	
 	*	/var/cache/abs/local/yaourtbuild/*-x86_64.pkg.tar.xz
 
+[![Arch: NCDU][image-ss-arch-ncdu]{: .img-responsive }][photo-ss-arch-ncdu]
+
 -- -- -- 
 
 #### RPM Frontend
@@ -277,6 +279,8 @@ Emerge
 	
 	*	/usr/portage/app-misc/mc/*
 
+![Gentoo: NCDU][image-ss-gentoo-ncdu]{: .img-responsive }
+
 -- -- --
 
 #### SlackPkg
@@ -352,6 +356,11 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+
+[image-ss-arch-ncdu]:      {{ asset_path }}/arch-ncdu.png
+[photo-ss-arch-ncdu]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNJWgfTnwYdOcMq56Eg8fMhEsiM4Ki8ZaHLE1vv?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-gentoo-ncdu]:    {{ asset_path }}/gentoo-ncdu.png
 
 [image-ss-artix-lxc]:      {{ asset_path }}/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
