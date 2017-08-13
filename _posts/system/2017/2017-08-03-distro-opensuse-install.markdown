@@ -129,7 +129,7 @@ $ man zypper
 {% endhighlight %}
 
 I'm doing <code>zypper dup</code> in tumbleweed as suggested from the community.
-it seems interesting that zypper ask user about license.
+It seems interesting that zypper ask user about license.
 I respect license, so I type yes.
 
 {% highlight bash %}
@@ -153,13 +153,11 @@ The following 653 packages are going to be upgraded:
   ...
 {% endhighlight %}
 
+This is a screenshot for other member here who curious about openSUSE. 
+After about a week leaving tumbleweed installation in peace
+and suddenly running <code>zypper dup</code>.
+
 ![Zypper Distribution Upgrade][image-ss-zypper-dup]{: .img-responsive }
-
-Unfortunately I'm using PC on my Office.
-I currently do not have time to complete the download.
-I have works to do.
-
-	I'll be back.
 
 -- -- -- 
 
