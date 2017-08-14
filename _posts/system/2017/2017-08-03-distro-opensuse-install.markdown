@@ -153,7 +153,7 @@ The following 653 packages are going to be upgraded:
   ...
 {% endhighlight %}
 
-This is a screenshot for other member here who curious about openSUSE. 
+This is a screenshot for anyone who curious about openSUSE. 
 After about a week leaving tumbleweed installation in peace
 and suddenly running <code>zypper dup</code>.
 
