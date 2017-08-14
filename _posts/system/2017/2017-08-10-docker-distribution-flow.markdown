@@ -88,10 +88,15 @@ I add the size, so you can monitor how the process grow as you work with your co
 #### (3) Terminal 3: Run an image to create process
 
 Do use interactive.
-And do not forget to detach from terminal.
 
 {% highlight bash %}
-$ sudo docker run -it vbatts/slackware &
+$ sudo docker run -it vbatts/slackware
+{% endhighlight %}
+
+And exit from process. You can start later.
+
+{% highlight bash %}
+sh-4.3# exit
 {% endhighlight %}
 
 ![Terminal 3][image-ss-term-3]{: .img-responsive }
@@ -126,7 +131,7 @@ After you exit, you need to start the process again.
 
 *	WM: Herbstluftwm
 
-[![Docker All Screenshot][image-ss-term-full]{: .img-responsive }][photo-ss-term-full]: 
+[![Docker All Screenshot][image-ss-term-all]{: .img-responsive }][photo-ss-term-all]: 
 
 -- -- --
 
@@ -141,5 +146,5 @@ Thank you for Reading
 [image-ss-term-3]:    {{ asset_path }}/docker-flow-terminal-3.png
 [image-ss-term-4]:    {{ asset_path }}/docker-flow-terminal-4.png
 
-[image-ss-term-full]: {{ asset_path }}/docker-flow-full.png
-[photo-ss-term-full]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOViBJ7lY6YgTauYIWkB0kBp7_dDpyhIqto5nw9?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-term-all]: {{ asset_path }}/docker-flow-all.png
+[photo-ss-term-all]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOGBr5RBUPtwBBJw14l1otPZZYR0WIur16lolb-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
