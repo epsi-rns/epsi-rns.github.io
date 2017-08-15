@@ -19,7 +19,17 @@ related_link_ids:
 
 ### Preface
 
-You can use Docker to learn package management such as 
+	Heaven does exist !
+
+I have been dreaming of having my own lab,
+eaxmining variety of package manager, using my own notebook.
+Five years has past, yet still broken dreams I have. 
+I cannot afford high end machine with virtual machine performance.
+Like *dream come true*, docker allow me to install,
+other distribution without CPU burden.
+I finally fulfill my destiny.
+
+I can use Docker to learn package management such as 
 
 *	Gentoo Portage
 
@@ -28,6 +38,10 @@ You can use Docker to learn package management such as
 *	Void Linux XBPS
 
 *	LFS Compilation/ Toolchain
+
+-- -- --
+
+### Persistence Docker Process
 
 With LXC, the state changed as we exit each image.
 With Docker, each time we run image, docker spawn a new process.
@@ -160,6 +174,8 @@ docker:x:1000:epsi
 {% endhighlight %}
 
 Do not forget to logout, and relogin.
+
+	Dream come true
 
 -- -- --
 
