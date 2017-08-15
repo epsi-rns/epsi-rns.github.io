@@ -22,10 +22,10 @@ related_link_ids:
 	Heaven does exist !
 
 I have been dreaming of having my own lab,
-eaxmining variety of package manager, using my own notebook.
+examining variety of package manager, using my own notebook.
 Five years has past, yet still broken dreams I have. 
 I cannot afford high end machine with virtual machine performance.
-Like *dream come true*, docker allow me to install,
+Like a **dream come true**, docker allow me to install,
 other distribution without CPU burden.
 I finally fulfill my destiny.
 

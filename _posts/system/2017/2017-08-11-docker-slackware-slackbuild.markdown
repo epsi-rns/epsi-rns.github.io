@@ -16,6 +16,16 @@ related_link_ids:
 
 ---
 
+### Preface
+
+I am so glad that finally I can learn Slackware Package Management using Docker.
+
+You can read a common overview here.
+
+*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+
+-- -- --
+
 ### Getting Started With Docker
 
 Our first move is, of course attach docker process, as usual.
@@ -369,6 +379,8 @@ Thank you for Reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
+
+[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
 [image-ss-slack-docker]:     {{ asset_path }}/docker-slackware-0-start.png
 [image-ss-slackware64]:      {{ asset_path }}/docker-slackware-1-install-slackware64.png
