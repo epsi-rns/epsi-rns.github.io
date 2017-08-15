@@ -10,6 +10,11 @@ excerpt:
   Docker flow for learning linux distribution,
   whether package management, or init.
 
+related_link_ids: 
+  - 16022800  # Learn LXC
+  - 16030301  # Docker Manjaro
+  - 16030900  # Docker Debian 
+
 ---
 
 ### Preface
@@ -83,7 +88,9 @@ $ sudo watch "docker ps -a --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}\t
 
 ![Terminal 2][image-ss-term-2]{: .img-responsive }
 
-I add the size, so you can monitor how the process grow as you work with your container.
+You can add the size, so you can monitor how the process grow
+as you work with your container.
+But size take a longer calculation as a drawback.
 
 #### (3) Terminal 3: Run an image to create process
 
@@ -133,6 +140,27 @@ After you exit, you need to start the process again.
 
 [![Docker All Screenshot][image-ss-term-all]{: .img-responsive }][photo-ss-term-all]: 
 
+#### Related Screenshot
+
+*	[Learn Different Package Management Using LXC][local-manjaro-lxc]
+
+*	[Docker Demonstration (Manjaro), Running Multiple Guest OS][local-manjaro-docker]
+
+*	[Running Guest OS via Docker on top of Debian for the first time][local-debian-lxc]
+
+-- -- --
+
+### Without sudo
+
+To avoid typing sudo all the time,
+add user in <code>/etc/group<code>.
+
+{% highlight conf %}
+docker:x:1000:epsi
+{% endhighlight %}
+
+Do not forget to logout, and relogin.
+
 -- -- --
 
 Thank you for Reading
@@ -148,3 +176,7 @@ Thank you for Reading
 
 [image-ss-term-all]: {{ asset_path }}/docker-flow-all.png
 [photo-ss-term-all]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOGBr5RBUPtwBBJw14l1otPZZYR0WIur16lolb-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[local-manjaro-lxc]:    http://epsi-rns.github.io/system/2016/02/28/lxc-demonstration.html
+[local-manjaro-docker]: http://epsi-rns.github.io/system/2016/03/03/docker-demonstration-manjaro.html
+[local-debian-docker]:  http://epsi-rns.github.io/system/2016/03/09/docker-demonstration-debian.html

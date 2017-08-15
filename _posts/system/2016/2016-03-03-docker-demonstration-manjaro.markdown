@@ -11,7 +11,8 @@ excerpt:
   from major linux distribution using Docker.
   No need Virtual Machine nor Multiboot. Easy to setup.
 
-related_link_ids: 
+related_link_ids:
+  - 17081045  # Docker Flow 
   - 16022800  # Learn LXC
   - 16030900  # Docker Debian   
 

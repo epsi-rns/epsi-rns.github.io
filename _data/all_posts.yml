@@ -5,6 +5,50 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17081045
+  title: "Docker - Flow for Learning Linux Distribution"
+  url: /system/2017/08/10/docker-distribution-flow.html
+
+- id: 17080945
+  title: "Package Manager - Diversity in Linux"
+  url: /system/2017/08/09/package-manager.html
+
+- id: 17080845
+  title: "Distribution - Debian to Devuan Migration"
+  url: /system/2017/08/08/distro-debian-devuan-migration.html
+
+- id: 17080745
+  title: "Distribution - Manjaro OpenRC to Artix Migration"
+  url: /system/2017/08/07/distro-manjaro-artix-migration.html
+
+- id: 17080645
+  title: "Distribution - Mageia 6 Upgrade"
+  url: /system/2017/08/06/distro-mageia6-upgrade.html
+
+- id: 17080545
+  title: "File System - GRUB2 support for BTRFS"
+  url: /system/2017/08/05/grub2-btrfs-support.html
+
+- id: 17080345
+  title: "Distribution - openSUSE First Time Install"
+  url: /system/2017/08/03/distro-opensuse-install.html
+
+- id: 17080245
+  title: "Distribution - Fedora First Time Install"
+  url: /system/2017/08/02/distro-fedora-install.html
+
+- id: 17080145
+  title: "Distribution - Manjaro OpenRC Issues"
+  url: /system/2017/08/01/distro-manjaro-openrc.html
+
+- id: 17070525
+  title: "The LAMP Stack Evolution"
+  url: /system/2017/07/05/lamp-stack-evolution.html
+
+- id: 17063035
+  title: "HerbstluftWM in Seven Languages Summary"
+  url: /desktop/2017/06/30/herbstlustwm-summary.html
+
 - id: 17061835
   title: "HerbstluftWM Idle Event in Haskell"
   url: /desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
@@ -36,6 +80,10 @@
 - id: 17061135
   title: "HerbstluftWM Idle Event Overview"
   url: /desktop/2017/06/11/herbstlustwm-event-idle-overview.html
+
+- id: 17060935
+  title: "HerbstluftWM Tag Status Global Notes"
+  url: /desktop/2017/06/09/herbstlustwm-tag-status-global.html
 
 - id: 17060835
   title: "HerbstluftWM Tag Status in Haskell"

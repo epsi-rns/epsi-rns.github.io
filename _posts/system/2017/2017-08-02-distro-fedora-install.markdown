@@ -9,6 +9,16 @@ author: epsi
 excerpt:
   Fedora Install Log.
 
+related_link_ids: 
+  - 17081045  # Docker Flow Distribution
+  - 17080945  # Package Manager Diversity
+  - 17080845  # Debian Devuan Migration
+  - 17080745  # Manjaro Artix Migration
+  - 17080645  # Mageia 6 Upgrade
+  - 17080545  # GRUB2 BTRFS Support
+  - 17080345  # openSUSE Tumbleweed Install
+  - 17080145  # Manjaro OpenRC Issues
+
 ---
 
 ### Preface
