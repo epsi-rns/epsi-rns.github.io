@@ -3,12 +3,13 @@ layout: post
 title: "Docker - Slackware Package Management"
 date: 2017-08-11 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager]
+tags: [docker, distro, package manager, slackware]
 author: epsi
 
 excerpt:
   Docker flow for Slackware Package Management,
   from slackpkg binary to slackbuild compilation.
+  First time using Slackware experience.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
@@ -52,7 +53,7 @@ Slackware 14.2
 sh-4.3# 
 {% endhighlight %}
 
-![Getting Started][image-ss-slack-docker]
+![Getting Started][image-ss-slack-docker]{: .img-responsive }
 
 -- -- --
 
@@ -106,7 +107,7 @@ groff-1.22.3-x86_64-2.txz
 
 And voila! Nomore encounter with error.
 
-![Search file belonging][image-ss-file-search]
+![Search file belonging][image-ss-file-search]{: .img-responsive }
 
 -- -- --
 
@@ -133,7 +134,7 @@ $ slackpkg update
 $ slackpkg install slackware64
 {% endhighlight %}
 
-![Populate Slackware64][image-ss-slackware64]
+![Populate Slackware64][image-ss-slackware64]{: .img-responsive }
 
 The issue with slackware64 is 
 my docker container grown from 86.7 MB to 8.64 GB.
@@ -142,7 +143,7 @@ For that reason I decice to scrap the container.
 I can't afford huge container,
 as I intent to play with other docker container as well.
 
-![Huge Container Slackware64][image-ss-slackware64-huge]
+![Huge Container Slackware64][image-ss-slackware64-huge]{: .img-responsive }
 
 I will do that when I have my own computer.
 But I would never do that again with my docker.
@@ -260,7 +261,7 @@ Executing install script for fish-2.6.0-x86_64-1_SBo.tgz.
 Package fish-2.6.0-x86_64-1_SBo.tgz installed.
 {% endhighlight %}
 
-![Build Fish using Slackbuild][image-ss-slackbuild-fish]
+![Build Fish using Slackbuild][image-ss-slackbuild-fish]{: .img-responsive }
 
 #### Tracking Error
 
@@ -294,7 +295,7 @@ You should take a look at the config log for more verbose message.
 $ less /tmp/SBo/fish-2.6.0/config.log
 {% endhighlight %}
 
-![Take a look at config.log][image-ss-fish-config-log]
+![Take a look at config.log][image-ss-fish-config-log]{: .img-responsive }
 
 You can see in that figure above that 
 we need to install <code>as</code> the Portable GNU Assembly.
@@ -346,7 +347,7 @@ $ sbopkg -r
 $ sbopkg -i fish
 {% endhighlight %}
 
-![Install Fish with sbopkg][image-ss-sbopkg-install]
+![Install Fish with sbopkg][image-ss-sbopkg-install]{: .img-responsive }
 
 As long as you prepare toolchain well,
 <code>sbopkg</code> is helpful.
