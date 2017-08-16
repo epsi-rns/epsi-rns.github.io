@@ -89,6 +89,59 @@ Note that Devuan works well if you keep <code>libsystemd0</code>.
 
 -- -- --
 
+### Checking GRUB
+
+Debian is somewhat interesting that 
+Debian allow user to choose different init at boot.
+A Debian system can be installed with two different init,
+although you can only have one init running at a time.
+Debian configure this kernel parameter in GRUB2.
+
+{% highlight bash %}
+init=/lib/sysvinit/init
+{% endhighlight %}
+
+Or maybe
+
+{% highlight bash %}
+init=/lib/systemd/systemd
+{% endhighlight %}
+
+	Now, I know.
+
+This kernel parameter that handle <code>init</code>,
+used to be a mystery to me. Now, nomore secret.
+
+#### Devuan
+
+Here is what I found in Devuan.
+
+{% highlight bash %}
+menuentry 'Debian GNU/Linux, with Linux 4.9.0-3-amd64' ... {
+	...
+	echo	'Loading Linux 4.9.0-3-amd64 ...'
+	linux	/boot/vmlinuz-4.9.0-3-amd64 root=/dev/sda10 ro  init=/lib/systemd/systemd
+	echo	'Loading initial ramdisk ...'
+	initrd	/boot/initrd.img-4.9.0-3-amd64
+}
+{% endhighlight %}
+
+#### Debian
+
+Here is what I found in Debian.
+
+{% highlight bash %}
+menuentry 'Debian GNU/Linux, with Linux 4.9.0-3-amd64' ... {
+	...
+	echo	'Loading Linux 4.9.0-3-amd64 ...'
+	linux	/boot/vmlinuz-4.9.0-3-amd64 root=/dev/sda7 ro  init=/lib/sysvinit/init
+	echo	'Loading initial ramdisk ...'
+	initrd	/boot/initrd.img-4.9.0-3-amd64
+}
+{% endhighlight %}
+
+-- -- --
+
 ### Other Issues
 
 I haven't got time to have deeper exploration on Devuan yet.
