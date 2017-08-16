@@ -117,9 +117,11 @@ APT: Advanced Package Tool
 
 *	<https://en.wikipedia.org/wiki/APT_(Debian)>
 
-ALPM (ABS+AUR): Arch Linux Package Management
+ALPM: Arch Linux Package Management
 
 *	<https://wiki.archlinux.org/index.php/pacman>
+
+*	<https://wiki.archlinux.org/index.php/Pacman/Rosetta>
 
 RPM: RPM Package Manager
 
@@ -128,6 +130,12 @@ RPM: RPM Package Manager
 Portage:
 
 *	<https://wiki.gentoo.org/wiki/Portage>
+
+XBPS: X Binary Package System
+
+*	<https://wiki.voidlinux.eu/XBPS>
+
+*	<https://wiki.voidlinux.eu/Rosetta_stone>
 
 As for enthusiast user I give each source code.
 I am sure you all love manual.
@@ -164,7 +172,7 @@ aptitude
 
 -- -- --
 
-#### ALPM Frontend and AUR Helper"
+#### ALPM Frontend, ASP and AUR Helper"
 
 ALPM = "Arch Linux Package Management"
 
@@ -181,6 +189,10 @@ Pacman: C
 	*	/var/cache/abs/local/yaourtbuild/*-x86_64.pkg.tar.xz
 	
 	*	/var/cache/pacman/pkg/*-x86_64.pkg.tar.xz
+	
+ASP: BASH
+
+*	<https://github.com/falconindy/asp>
 
 Cower: C
 
@@ -308,11 +320,16 @@ Emerge
 
 -- -- --
 
-#### Other Frontend
+#### XBPS
 
 XBPS: C
 
 *	<https://github.com/voidlinux/xbps>
+
+
+-- -- --
+
+#### Other Frontend
 
 Sol (eopkg replacement in Solus): C
 

@@ -50,7 +50,7 @@ ca9efc06241d / # exit
 {% highlight bash %}
 $ docker ps -a 
 {% raw %}
-  --format 'table {{.Image}}\t{{.Naes}}\t{{.Status}}'
+  --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
 IMAGE                 NAMES               STATUS
 gentoo/stage3-amd64   amazing_shirley     Exited (0) 24 seconds ago
 vbatts/slackware      cranky_keller       Exited (0) 37 minutes ago
