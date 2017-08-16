@@ -169,6 +169,15 @@ and suddenly running <code>zypper dup</code>.
 
 ![Zypper Distribution Upgrade][image-ss-zypper-dup]{: .img-responsive }
 
+I found something interesting that zypper have. 
+I have nerver seen this in APT nor ALPM nor DNF nor Portage nor Slackpkg.
+
+{% highlight bash %}
+$ zypper ps - s
+{% endhighlight %}
+
+[![Zypper Process][image-ss-zypper-ps]{: .img-responsive }][photo-ss-zypper-ps]
+
 -- -- -- 
 
 ### Conclusion
@@ -191,3 +200,6 @@ Thank you for Reading
 [photo-ss-yast-install]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNQ6K8rEv1WPht6zwJhInaGEifO_TC-eAJV3Fyk?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-zypper-dup]:      {{ asset_path }}/opensuse-zypper-dup.png
+
+[image-ss-zypper-ps]:       {{ asset_path }}/opensuse-zypper-ps-narrow.png
+[photo-ss-zypper-ps]:       https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOKr8Czn6fxqgrCQuVqs8qaRals97xHRlqlkHS-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
