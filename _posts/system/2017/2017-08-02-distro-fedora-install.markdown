@@ -558,6 +558,8 @@ I think we are good.
 This step should be easier after first and second upgrade.
 And the upgrade work flawlessly.
 
+[![Fullscreen Fedora Core 6 DNF Update][image-ss-fedora-dnf]{: .img-responsive }][photo-ss-fedora-dnf]
+
 {% highlight bash %}
 $ sudo dnf system-upgrade download --releasever=26
 $ sudo dnf system-upgrade reboot
@@ -712,14 +714,47 @@ $ sudo dnf install mplayer
 	I know, this will bloat my system. I'm just curious.
 
 {% highlight bash %}
-$ dnf group list
+$ dnf grouplist
+{% endhighlight %}
+
+[![Fedora DNF Group List][image-ss-dnf-grouplist]{: .img-responsive }][photo-ss-dnf-grouplist]
+
+{% highlight bash %}
 $ dnf group info "Fedora Workstation"
 $ sudo dnf group install "Fedora Workstation"
 $ sudo dnf group install "KDE Plasma Workspaces"
 $ dnf group info "Window Managers"
 {% endhighlight %}
 
-[![Bloating my PC][image-ss-dnf-grouplist]{: .img-responsive }][photo-ss-dnf-grouplist]
+[![Bloating my PC][image-ss-dnf-group-install]{: .img-responsive }][photo-ss-dnf-group-install]
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+
+### DNF Update
+
+Since we focus to command line package manager,
+I would like to show what DNF do, for anyone who never seen DNF.
+This is is what happened after about two weeks without update.
+
+{% highlight bash %}
+$ sudo dnf update
+{% endhighlight %}
+
+[![DNF Update: Package ][image-ss-dnf-update-1]{: .img-responsive }][photo-ss-dnf-update-1]
+
+Downloading
+
+[![DNF Update: Download][image-ss-dnf-update-2]{: .img-responsive }][photo-ss-dnf-update-2]
+
+This time, DNF is upgrading instead of installing.
+
+[![DNF Update: Upgrade ][image-ss-dnf-update-3]{: .img-responsive }][photo-ss-dnf-update-3]
+
+#### Shorter Example
+
+And you can update again to get shorter example.
+
+[![DNF Update: Shorter Example][image-ss-dnf-update-7]{: .img-responsive }][photo-ss-dnf-update-7]
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
 
@@ -741,9 +776,26 @@ Thank you for Reading
 [image-ss-dnf-core-dump]: {{ asset_path }}/fedora-dnf-core-dump.png
 [photo-ss-dnf-core-dump]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNLisEUnOre57ZHVYTm0MYJX2u29PKfLEcO1ZTV?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-dnf-grouplist]: {{ asset_path }}/fedora-dnf-grouplist.png
-[photo-ss-dnf-grouplist]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM8XVX0j0t3lwipCFP52jd-U9Gp0LDbaTEA5qu5?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-dnf-grouplist]: {{ asset_path }}/fedora-dnf-grouplist-half-gnome.png
+[photo-ss-dnf-grouplist]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipO22ZLLQSZybd1Vipnzpi1XTJSiB5rYFy-I0kLY?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-dnf-group-install]: {{ asset_path }}/fedora-dnf-group-install.png
+[photo-ss-dnf-group-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM8XVX0j0t3lwipCFP52jd-U9Gp0LDbaTEA5qu5?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-fedora-gnome]:  {{ asset_path }}/fedora-gnome.png
 [photo-ss-fedora-gnome]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOvzXOlxlMKIYYNaoqBG704hrrHvG8eFjCby8uq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
+[image-ss-fedora-dnf]:    {{ asset_path }}/fedora-dnf-update-0-screen.png
+[photo-ss-fedora-dnf]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNjJm0AatbIGRj_bwW0Na8Cavf7CVRE1iQzo7ca?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-dnf-update-1]: {{ asset_path }}/fedora-dnf-update-1-half-gnome.png
+[photo-ss-dnf-update-1]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPBVBFV9qi45AS5cnUqTy9ZOk7vC4kUFbjz9a3G?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-dnf-update-2]: {{ asset_path }}/fedora-dnf-update-2-half-gnome.png
+[photo-ss-dnf-update-2]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPndh9-ayozMIzTDPjVFwv4FkZ_5r0KIMP9NkMl?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-dnf-update-3]: {{ asset_path }}/fedora-dnf-update-3-half-gnome.png
+[photo-ss-dnf-update-3]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOe7bMNS54Pn4Y9JcocrX20eXLbh4dw6Kz3iKlm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-dnf-update-7]: {{ asset_path }}/fedora-dnf-update-7-gnome.png
+[photo-ss-dnf-update-7]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZHKmxD4JNJMDHRIf1bGqZsohv3XnJT8Z9SqzF?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

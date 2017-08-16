@@ -199,6 +199,7 @@ $ emerge app-misc/mc
 ### Conclusion
 
 No comment yet.
+Just like everything else I have to go deeper to comprehend.
 
 	I am a n00bs !
 

@@ -178,6 +178,39 @@ $ zypper ps - s
 
 [![Zypper Process][image-ss-zypper-ps]{: .img-responsive }][photo-ss-zypper-ps]
 
+-- -- --
+
+### BTRFS
+
+I have never used BTRFS.
+For that reason, this <code>/etc/fstab</code> looks interesting.
+
+{% highlight conf %}
+UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0 /boot                ext4       errors=remount-ro     0 1
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /                    btrfs      defaults              0 0
+UUID=0095473d-ae63-4722-8350-f5716e5df333 /home                xfs        defaults              1 2
+UUID=b623e30b-c7a5-4f99-a250-45372da4c5b4 swap                 swap       defaults              0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /boot/grub2/i386-pc  btrfs      subvol=@/boot/grub2/i386-pc 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /boot/grub2/x86_64-efi btrfs      subvol=@/boot/grub2/x86_64-efi 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /opt                 btrfs      subvol=@/opt          0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /srv                 btrfs      subvol=@/srv          0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /tmp                 btrfs      subvol=@/tmp          0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /usr/local           btrfs      subvol=@/usr/local    0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/cache           btrfs      subvol=@/var/cache    0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/crash           btrfs      subvol=@/var/crash    0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/libvirt/images btrfs      subvol=@/var/lib/libvirt/images 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/machines    btrfs      subvol=@/var/lib/machines 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/mailman     btrfs      subvol=@/var/lib/mailman 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/mariadb     btrfs      subvol=@/var/lib/mariadb 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/mysql       btrfs      subvol=@/var/lib/mysql 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/named       btrfs      subvol=@/var/lib/named 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/lib/pgsql       btrfs      subvol=@/var/lib/pgsql 0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/log             btrfs      subvol=@/var/log      0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/opt             btrfs      subvol=@/var/opt      0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/spool           btrfs      subvol=@/var/spool    0 0
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/tmp             btrfs      subvol=@/var/tmp      0 0
+{% endhighlight %}
+
 -- -- -- 
 
 ### Conclusion
