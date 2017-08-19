@@ -31,6 +31,10 @@ You can read a common overview here.
 Our first move is, of course attach docker process, as usual.
 
 {% highlight bash %}
+$ docker pull vbatts/slackware
+{% endhighlight %}
+
+{% highlight bash %}
 $ docker image list 
 {% raw %}
   --format 'table {{.Repository}}\t{{.Size}}'
@@ -40,6 +44,10 @@ gentoo/stage3-amd64     873MB
 vbatts/slackware        86.7MB
 voidlinux/voidlinux     202MB
 kevinleptons/lfs-auto   753MB
+{% endhighlight %}
+
+{% highlight bash %}
+$ docker run -it vbatts/slackware
 {% endhighlight %}
 
 {% highlight bash %}
@@ -63,7 +71,24 @@ Slackware 14.2
 sh-4.3# 
 {% endhighlight %}
 
-![Getting Started][image-ss-slack-docker]{: .img-responsive }
+![Docker Slackware: Getting Started][image-ss-slack-docker]{: .img-responsive }
+
+-- -- --
+
+### Package Management
+
+Slackware does really have a sophisticated package management,
+but there are special tools to manage your packages.
+
+slackpkg
+	
+	Package Cache
+	
+	*	/var/adm/packages/*-x86_64-?
+
+slapt-get
+
+*	<https://github.com/jaos/slapt-get>
 
 -- -- --
 
@@ -117,7 +142,7 @@ groff-1.22.3-x86_64-2.txz
 
 And voila! Nomore encounter with error.
 
-![Search file belonging][image-ss-file-search]{: .img-responsive }
+![Docker Slackware: Search file belonging][image-ss-file-search]{: .img-responsive }
 
 -- -- --
 
@@ -144,7 +169,7 @@ $ slackpkg update
 $ slackpkg install slackware64
 {% endhighlight %}
 
-![Populate Slackware64][image-ss-slackware64]{: .img-responsive }
+![Docker Slackware: Populate Slackware64][image-ss-slackware64]{: .img-responsive }
 
 The issue with slackware64 is 
 my docker container grown from 86.7 MB to 8.64 GB.
@@ -153,7 +178,7 @@ For that reason I decice to scrap the container.
 I can't afford huge container,
 as I intent to play with other docker container as well.
 
-![Huge Container Slackware64][image-ss-slackware64-huge]{: .img-responsive }
+![Docker Slackware: Huge Container Slackware64][image-ss-slackware64-huge]{: .img-responsive }
 
 I will do that when I have my own computer.
 But I would never do that again with my docker.
@@ -271,7 +296,7 @@ Executing install script for fish-2.6.0-x86_64-1_SBo.tgz.
 Package fish-2.6.0-x86_64-1_SBo.tgz installed.
 {% endhighlight %}
 
-![Build Fish using Slackbuild][image-ss-slackbuild-fish]{: .img-responsive }
+![Docker Slackware: Build Fish using Slackbuild][image-ss-slackbuild-fish]{: .img-responsive }
 
 #### Tracking Error
 
@@ -305,7 +330,7 @@ You should take a look at the config log for more verbose message.
 $ less /tmp/SBo/fish-2.6.0/config.log
 {% endhighlight %}
 
-![Take a look at config.log][image-ss-fish-config-log]{: .img-responsive }
+![Docker Slackware: Take a look at config.log][image-ss-fish-config-log]{: .img-responsive }
 
 You can see in that figure above that 
 we need to install <code>as</code> the Portable GNU Assembly.
@@ -357,7 +382,7 @@ $ sbopkg -r
 $ sbopkg -i fish
 {% endhighlight %}
 
-![Install Fish with sbopkg][image-ss-sbopkg-install]{: .img-responsive }
+![Docker Slackware: Install Fish with sbopkg][image-ss-sbopkg-install]{: .img-responsive }
 
 As long as you prepare toolchain well,
 <code>sbopkg</code> is helpful.

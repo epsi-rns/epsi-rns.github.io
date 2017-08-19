@@ -32,6 +32,25 @@ but the Mageia Linux at home needed to upgraded. Therefore I did.
 
 *sigh* I need to postpone my genealogy project.
 
+For a more complete Mageia review,
+can be found in my old Mageia 4 article.
+This article contain some cool screenshots.
+
+*	[Mageia 4 Experiment][local-mageia-4]
+
+-- -- --
+
+### Repository
+
+Mageia packages can be found in
+
+*	<http://svnweb.mageia.org/packages/cauldron/>
+
+No official git yet, only project stage
+
+*	<http://gitweb.mageia.org/>
+
+
 -- -- --
 
 ### Just a few command line
@@ -107,6 +126,8 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+
+[local-mageia-4]: {{ site.url }}/system/2014/05/09/mageia-experiment.html
 
 [image-ss-mageia]: {{ asset_path }}/mageia-6-upgrade.png
 [photo-ss-mageia]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNj2Y-cqsOhW3IrV5C_uaCOQQ6tSiXaTJYSOwNI?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

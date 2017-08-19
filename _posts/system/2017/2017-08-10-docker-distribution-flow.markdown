@@ -39,6 +39,8 @@ I can use Docker to learn package management such as
 
 *	LFS Compilation/ Toolchain
 
+*	And five other, in this blog.
+
 -- -- --
 
 ### Persistence Docker Process
@@ -175,9 +177,83 @@ docker:x:1000:epsi
 
 Do not forget to logout, and relogin.
 
-	Dream come true
+-- -- --
+
+### Docker Collection
+
+These are some docker containers, that I utilize in this blog.
+For each I provide the command.
+In addition the default <code>latest</code> tag,
+you can use other tag such as <code>tumbleweed</code>, 
+<code>rawhide</code>, <code>stretch</code>.
+
+{% highlight conf %}
+$ docker pull vbatts/slackware
+$ docker run -it vbatts/slackware
+{% endhighlight %}
+
+{% highlight conf %}
+$ docker pull gentoo/stage3-amd64
+$ docker run -it gentoo/stage3-amd64
+{% endhighlight %}
+
+{% highlight conf %}
+$ docker pull voidlinux/voidlinux
+$ docker run -it voidlinux/voidlinux bash
+{% endhighlight %}
+
+{% highlight conf %}
+$ docker pull kevinleptons/lfs-auto
+$ docker run -it voidlinux/voidlinux bash
+{% endhighlight %}
+
+{% highlight conf %}
+$ docker pull crux
+$ docker run -it crux
+{% endhighlight %}
+
+![Docker Pull Crux Linux][image-ss-pull-crux]{: .img-responsive }
+
+{% highlight conf %}
+$ docker pull dock0/arch
+$ docker run -it dock0/arch
+{% endhighlight %}
+
+![Docker Pull Arch Linux][image-ss-pull-arch]{: .img-responsive }
+
+{% highlight conf %}
+$ docker pull fedora:rawhide
+$ docker run -it fedora:rawhide bash
+{% endhighlight %}
+
+![Docker Pull Fedora Rawhide][image-ss-pull-fedora]{: .img-responsive }
+
+{% highlight conf %}
+$ docker pull opensuse/amd64:tumbleweed
+$ docker run -it opensuse/amd64:tumbleweed bash
+{% endhighlight %}
+
+![Docker Pull openSUSE Tumbleweed][image-ss-pull-opensuse]{: .img-responsive }
+
+{% highlight conf %}
+$ docker pull debian:stretch
+$ docker run -it debian:stretch
+{% endhighlight %}
+
+![Docker Pull Debian Stretch][image-ss-pull-debian]{: .img-responsive }
+
+{% highlight conf %}
+$ docker pull busybox
+$ docker run -it busybox
+{% endhighlight %}
+
+![Docker Pull BusyBox][image-ss-pull-busybox]{: .img-responsive }
 
 -- -- --
+
+#### Conclusion
+
+	Dream come true
 
 Thank you for Reading
 
@@ -193,6 +269,13 @@ Thank you for Reading
 [image-ss-term-all]: {{ asset_path }}/docker-flow-all.png
 [photo-ss-term-all]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOGBr5RBUPtwBBJw14l1otPZZYR0WIur16lolb-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[local-manjaro-lxc]:    http://epsi-rns.github.io/system/2016/02/28/lxc-demonstration.html
-[local-manjaro-docker]: http://epsi-rns.github.io/system/2016/03/03/docker-demonstration-manjaro.html
-[local-debian-docker]:  http://epsi-rns.github.io/system/2016/03/09/docker-demonstration-debian.html
+[local-manjaro-lxc]:    {{ site.url }}/system/2016/02/28/lxc-demonstration.html
+[local-manjaro-docker]: {{ site.url }}/system/2016/03/03/docker-demonstration-manjaro.html
+[local-debian-docker]:  {{ site.url }}/system/2016/03/09/docker-demonstration-debian.html
+
+[image-ss-pull-arch]:     {{ asset_path }}/docker-pull-arch.png
+[image-ss-pull-crux]:     {{ asset_path }}/docker-pull-crux.png
+[image-ss-pull-debian]:   {{ asset_path }}/docker-pull-debian-stretch.png
+[image-ss-pull-fedora]:   {{ asset_path }}/docker-pull-fedora-rawhide.png
+[image-ss-pull-opensuse]: {{ asset_path }}/docker-pull-opensuse-tumbleweed.png
+[image-ss-pull-busybox]:  {{ asset_path }}/docker-pull-busybox.png

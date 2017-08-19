@@ -45,6 +45,81 @@ you can read a common overview here.
 
 -- -- --
 
+### Getting Started With Docker
+
+As usual, first, we do attach docker process.
+
+{% highlight bash %}
+$ docker pull kevinleptons/lfs-auto
+{% endhighlight %}
+
+{% highlight bash %}
+$ docker image list 
+{% raw %}
+  --format 'table {{.Repository}}\t{{.Size}}'
+{% endraw %}
+REPOSITORY              SIZE
+gentoo/stage3-amd64     873MB
+vbatts/slackware        86.7MB
+voidlinux/voidlinux     202MB
+kevinleptons/lfs-auto   753MB
+{% endhighlight %}
+
+{% highlight bash %}
+$ docker run -it voidlinux/voidlinux bash
+bash-4.4# exit
+{% endhighlight %}
+
+{% highlight bash %}
+$ docker ps -a 
+{% raw %}
+  --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
+{% endraw %}
+IMAGE                   NAMES               STATUS
+kevinleptons/lfs-auto   wonderful_nobel     Exited (127) 31 minutes ago
+voidlinux/voidlinux     awesome_davinci     Exited (0) 12 hours ago
+gentoo/stage3-amd64     amazing_shirley     Exited (0) 36 hours ago
+vbatts/slackware        cranky_keller       Exited (0) 38 hours ago
+{% endhighlight %}
+
+{% highlight bash %}
+$ docker start wonderful_nobel
+wonderful_nobel
+{% endhighlight %}
+
+{% highlight bash %}
+$ docker attach wonderful_nobel
+bash-4.4#
+{% endhighlight %}
+
+![Docker LFS: Getting Started][image-ss-lfs-docker]{: .img-responsive }
+
+-- -- --
+
+### Package Management
+
+LFS use no Package Manager.
+You have to download manually and compile by yourself,
+sometimes with feeling of being stupid in the corner.
+But hey... you are going to feel closer to each package,
+and feel the intimacy too, which is good for learning
+
+-- -- --
+
+### Requirement Check
+
+Using guidance from LFS chapter 2.
+
+*	<http://www.linuxfromscratch.org/lfs/view/stable/chapter02/hostreqs.html>
+
+{% highlight bash %}
+$ bash version-check.sh
+{% endhighlight %}
+
+![Docker LFS: Requirement Check][image-ss-lfs-version]{: .img-responsive }
+
+-- -- --
+
 ### Dependency Tree
 
 The fact that LFS has no package management,
@@ -87,63 +162,6 @@ Here is the steps, by trial and error.
 
 Nomore fear now. I realized that I can do it by examining each error.
 In fact, I can cheat, by using other distro to identify the dependency.
-
--- -- --
-
-### Getting Started With Docker
-
-As usual, first, we do attach docker process.
-
-{% highlight bash %}
-$ docker image list 
-{% raw %}
-  --format 'table {{.Repository}}\t{{.Size}}'
-{% endraw %}
-REPOSITORY              SIZE
-gentoo/stage3-amd64     873MB
-vbatts/slackware        86.7MB
-voidlinux/voidlinux     202MB
-kevinleptons/lfs-auto   753MB
-{% endhighlight %}
-
-{% highlight bash %}
-$ docker run -it voidlinux/voidlinux bash
-bash-4.4# exit
-{% endhighlight %}
-
-{% highlight bash %}
-$ docker ps -a 
-{% raw %}
-  --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
-IMAGE                   NAMES               STATUS
-kevinleptons/lfs-auto   wonderful_nobel     Exited (127) 31 minutes ago
-voidlinux/voidlinux     awesome_davinci     Exited (0) 12 hours ago
-gentoo/stage3-amd64     amazing_shirley     Exited (0) 36 hours ago
-vbatts/slackware        cranky_keller       Exited (0) 38 hours ago
-{% endraw %}
-{% endhighlight %}
-
-{% highlight bash %}
-$ docker start wonderful_nobel
-
-$ docker attach wonderful_nobel
-{% endhighlight %}
-
-![Getting Started][image-ss-lfs-docker]{: .img-responsive }
-
--- -- --
-
-### Requirement Check
-
-Using guidance from LFS chapter 2.
-
-*	<http://www.linuxfromscratch.org/lfs/view/stable/chapter02/hostreqs.html>
-
-{% highlight bash %}
-$ bash version-check.sh
-{% endhighlight %}
-
-![Requirement Check][image-ss-lfs-version]{: .img-responsive }
 
 -- -- --
 
@@ -202,7 +220,7 @@ $ make install
 /usr/bin/install -c -m 644 ./lessecho.nro /usr/share/man/man1/lessecho.1
 {% endhighlight %}
 
-![less: make install][image-ss-lfs-less-install]{: .img-responsive }
+![Docker LFS: less: make install][image-ss-lfs-less-install]{: .img-responsive }
 
 Commonly the steps are 
 
@@ -227,6 +245,10 @@ This package should be installed first:
 <code>gdbm</code>,
 <code>groff</code>,
 <code>man</code>.
+
+Basic package dependency can be found here.
+
+*	<http://www.linuxfromscratch.org/lfs/view/stable/chapter03/packages.html>
 
 #### Detail
 
@@ -272,7 +294,7 @@ config.status: creating gnulib/po/POTFILES
 config.status: creating gnulib/po/Makefile
 {% endhighlight %}
 
-[![man: configure][image-ss-lfs-man-conf]{: .img-responsive }][photo-ss-lfs-man-conf]
+[![Docker LFS: man: configure][image-ss-lfs-man-conf]{: .img-responsive }][photo-ss-lfs-man-conf]
 
 {% highlight bash %}
 $ make 
@@ -297,7 +319,7 @@ make[1]: Entering directory '/root/man-db-2.7.6.1'
 make[1]: Leaving directory '/root/man-db-2.7.6.1'
 {% endhighlight %}
 
-[![man: make][image-ss-lfs-man-make]{: .img-responsive }][photo-ss-lfs-man-make]
+[![Docker LFS: man: make][image-ss-lfs-man-make]{: .img-responsive }][photo-ss-lfs-man-make]
 
 {% highlight bash %}
 $ make install
@@ -317,7 +339,7 @@ make[2]: Leaving directory '/root/man-db-2.7.6.1'
 make[1]: Leaving directory '/root/man-db-2.7.6.1'
 {% endhighlight %}
 
-[![man: install][image-ss-lfs-man-install]{: .img-responsive }][photo-ss-lfs-man-install]
+[![Docker LFS: man: install][image-ss-lfs-man-install]{: .img-responsive }][photo-ss-lfs-man-install]
 
 -- -- --
 
@@ -331,14 +353,24 @@ You can use <code>pactree</code> using arch based distribution (ALPM).
 $ pactree man-db
 {% endhighlight %}
 
-Your package manager, might have similar tool.
-I know there is similar tool in APT based. 
-I also been a Debian user for long time.
-
 Here is my screenshot using Artix Linux,
 the host of my docker.
 
-[![man: install][image-ss-artix-pactree]{: .img-responsive }][photo-ss-artix-pactree]
+[![Docker LFS: man: install][image-ss-artix-pactree]{: .img-responsive }][photo-ss-artix-pactree]
+
+Your package manager, might have similar tool.
+
+*	<code>zypper info --requires man</code>
+
+*	<code>pacman -[S|Q]i man-db</code>
+
+*	<code>xbps-query -R -x man-db</code>
+
+*	<code>emerge -ep man-db</code>
+
+*	<code>apt-cache showpkg man-db</code>
+
+*	<code>dnf repoquery --requires man-db</code>
 
 Next time, I'll check the dependency first before building my LFS package.
 
@@ -350,6 +382,7 @@ Next time, I'll check the dependency first before building my LFS package.
 
 This is just building LFS at a glance.
 Of course there are more than my limited knowledge.
+There is also more advance topic such as BLFS, ALFS, and CLFS.
 
 Thank you for Reading
 

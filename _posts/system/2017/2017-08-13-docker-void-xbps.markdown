@@ -35,6 +35,10 @@ you can read a common overview here.
 As usual, first, we do attach docker process.
 
 {% highlight bash %}
+$ docker pull voidlinux/voidlinux
+{% endhighlight %}
+
+{% highlight bash %}
 $ docker image list 
 {% raw %}
   --format 'table {{.Repository}}\t{{.Size}}'
@@ -55,28 +59,41 @@ bash-4.4# exit
 $ docker ps -a 
 {% raw %}
   --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
+{% endraw %}
 IMAGE                 NAMES               STATUS
 voidlinux/voidlinux   awesome_davinci     Up About an hour
 gentoo/stage3-amd64   amazing_shirley     Exited (0) 23 hours ago
 vbatts/slackware      cranky_keller       Exited (0) 26 hours ago
-{% endraw %}
+
 {% endhighlight %}
 
 {% highlight bash %}
 $ docker start awesome_davinci
-
-$ docker attach awesome_davinci
+awesome_davinci
 {% endhighlight %}
 
-![Getting Started][image-ss-void-docker]{: .img-responsive }
+{% highlight bash %}
+$ docker attach awesome_davinci
+bash-4.4#
+{% endhighlight %}
+
+![Docker Void: Getting Started][image-ss-void-docker]{: .img-responsive }
 
 -- -- --
 
-### Reading
+### Package Management
+
+Void Linux use The X Binary Package System (XBPS) as package management.
+
+#### Reading
 
 *	<https://www.voidlinux.eu/usage/xbps/>
 
 *	<https://wiki.voidlinux.eu/Rosetta_stone>
+
+#### Source Code
+
+*	<https://github.com/voidlinux/xbps>
 
 -- -- --
 
@@ -88,9 +105,9 @@ $ xbps-install -Su
 [*] Updating `https://repo.voidlinux.eu/current/x86_64-repodata' ...
 {% endhighlight %}
 
-[![XBPS System Upgrade: Start][image-ss-xbps-su-top]{: .img-responsive }][photo-ss-xbps-su-top]
+[![Docker Void: XBPS System Upgrade: Start][image-ss-xbps-su-top]{: .img-responsive }][photo-ss-xbps-su-top]
 
-[![XBPS System Upgrade: End][image-ss-xbps-su-bottom]{: .img-responsive }][photo-ss-xbps-su-bottom]
+[![Docker Void: XBPS System Upgrade: End][image-ss-xbps-su-bottom]{: .img-responsive }][photo-ss-xbps-su-bottom]
 
 -- -- --
 
@@ -120,9 +137,9 @@ Free space on disk:             27GB
 Do you want to continue? [Y/n] 
 {% endhighlight %}
 
-[![XBPS Package Install: Start][image-ss-xbps-fav-top]{: .img-responsive }][photo-ss-xbps-fav-top]
+[![Docker Void:  XBPS Package Install: Start][image-ss-xbps-fav-top]{: .img-responsive }][photo-ss-xbps-fav-top]
 
-[![XBPS Package Install: End][image-ss-xbps-fav-bottom]{: .img-responsive }][photo-ss-xbps-fav-bottom]
+[![Docker Void: XBPS Package Install: End][image-ss-xbps-fav-bottom]{: .img-responsive }][photo-ss-xbps-fav-bottom]
 
 -- -- --
 
@@ -134,7 +151,7 @@ Unable to locate 'fish' in repository pool.
 {% endhighlight %}
 
 {% highlight bash %}
-$ xbps-query -R -s fish
+$ xbps-query -Rs fish
 [-] bluefish-2.2.10_1               A powerful HTML editor for e...
 [-] fish-shell-2.6.0_1              User friendly shell intended...
 [-] perl-Crypt-Blowfish-2.14_5      Crypt::Blowfish - Blowfish c...
@@ -161,7 +178,7 @@ Free space on disk:             27GB
 Do you want to continue? [Y/n] y
 {% endhighlight %}
 
-[![XBPS Search Query][image-ss-xbps-query]{: .img-responsive }][photo-ss-xbps-query]
+[![Docker Void: XBPS Search Query][image-ss-xbps-query]{: .img-responsive }][photo-ss-xbps-query]
 
 -- -- --
 
@@ -190,7 +207,7 @@ Free space on disk:             27GB
 Do you want to continue? [Y/n]
 {% endhighlight %}
 
-[![XBPS Package Removal][image-ss-xbps-remove]{: .img-responsive }][photo-ss-xbps-remove]
+[![Docker Void: XBPS Package Removal][image-ss-xbps-remove]{: .img-responsive }][photo-ss-xbps-remove]
 
 -- -- --
 

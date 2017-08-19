@@ -31,6 +31,10 @@ You can read a common overview here.
 Our first move is, of course attach docker process, as usual.
 
 {% highlight bash %}
+$ docker pull gentoo/stage3-amd64
+{% endhighlight %}
+
+{% highlight bash %}
 $ docker image list 
 {% raw %}
   --format 'table {{.Repository}}\t{{.Size}}'
@@ -51,21 +55,47 @@ ca9efc06241d / # exit
 $ docker ps -a 
 {% raw %}
   --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
+{% endraw %}
 IMAGE                 NAMES               STATUS
 gentoo/stage3-amd64   amazing_shirley     Exited (0) 24 seconds ago
 vbatts/slackware      cranky_keller       Exited (0) 37 minutes ago
-{% endraw %}
 {% endhighlight %}
 
 {% highlight bash %}
 $ docker start amazing_shirley
 amazing_shirley
+{% endhighlight %}
 
+{% highlight bash %}
 $ docker attach amazing_shirley
 ca9efc06241d / #
 {% endhighlight %}
 
-![Getting Started][image-ss-gentoo-docker]{: .img-responsive }
+![Docker Gentoo: Getting Started][image-ss-gentoo-docker]{: .img-responsive }
+
+-- -- --
+
+### Package Management
+
+Gentoo use Portage to manage their packages.
+
+*	<https://wiki.gentoo.org/wiki/Portage>
+
+#### Portage Frontend
+
+Emerge
+
+*	<https://github.com/gentoo/portage>
+	
+	Package Cache
+	
+	*	/var/db/pkg/*/*.ebuild
+	
+	Package Tree
+	
+	*	/usr/portage/metadata/md5-cache/*/*
+	
+	*	/usr/portage/app-misc/mc/*
 
 -- -- --
 
@@ -89,7 +119,7 @@ Fetching most recent snapshot ...
  * '/usr/portage/metadata/timestamp.x'.
 {% endhighlight %}
 
-[![Docker emerge-webrsync][image-ss-emerge-webrsync]{: .img-responsive }][photo-ss-emerge-webrsync]
+[![Docker Gentoo: emerge-webrsync][image-ss-emerge-webrsync]{: .img-responsive }][photo-ss-emerge-webrsync]
 
 {% highlight bash %}
 ca9efc06241d / # emerge -u system
@@ -112,7 +142,7 @@ ca9efc06241d / # eselect news read
 No news is good news.
 {% endhighlight %}
 
-![Docker emerge --update][image-ss-emerge-update]{: .img-responsive }
+![Docker Gentoo: emerge --update][image-ss-emerge-update]{: .img-responsive }
 
 -- -- --
 
@@ -176,7 +206,7 @@ these packages will be compiled, built and installed.
 <code>emerge</code> has a very nice looks, 
 many colors while building package.
 
-[![Docker emerge Install Package][image-ss-emerge-install]{: .img-responsive }][photo-ss-emerge-install]
+[![Docker Gentoo: emerge Install Package][image-ss-emerge-install]{: .img-responsive }][photo-ss-emerge-install]
 
 #### Ambiguous Package
 
@@ -186,7 +216,7 @@ How about this ?
 $ emerge mc
 {% endhighlight %}
 
-![ebuild name is ambiguous][image-ss-emerge-ambigous]{: .img-responsive }
+![Docker Gentoo: ebuild name is ambiguous][image-ss-emerge-ambigous]{: .img-responsive }
 
 Use fully qualified ebuild name instead.
 

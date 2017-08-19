@@ -326,6 +326,20 @@ XBPS: C
 
 *	<https://github.com/voidlinux/xbps>
 
+-- -- --
+
+#### Crux Ports
+
+Pkgutils: Crux: C
+
+*	<http://www.fukt.bsnet.se/~per/pkgutils/>
+
+*	<https://github.com/nipuL/pkgutils>
+
+Frontend
+
+*	<https://github.com/winkj/prt-get>
+
 
 -- -- --
 
