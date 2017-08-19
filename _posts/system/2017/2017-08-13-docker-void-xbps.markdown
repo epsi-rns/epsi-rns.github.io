@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Void XBPS"
-date: 2017-08-12 09:45:15 +0700
+date: 2017-08-13 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager, gentoo]
 author: epsi

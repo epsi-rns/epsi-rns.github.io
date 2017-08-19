@@ -60,7 +60,7 @@ crux                    342MB
 {% endhighlight %}
 
 {% highlight bash %}
-$ docker run -it voidlinux/voidlinux bash
+$ docker run -it crux
 bash-4.3# exit
 {% endhighlight %}
 
@@ -142,12 +142,17 @@ Finished successfully
 
 [![Docker Crux: Ports Update][image-ss-ports-update]{: .img-responsive }][photo-ss-ports-update]
 
-And system update using <code>prt-get</code>,
+Now is time to use <code>prt-get</code>,
 an advanced package management tool for CRUX.
+If you are helpless, just add this <code>help | less</code> argument.
 
 {% highlight bash %}
 $ prt-get help | less
+{% endhighlight %}
 
+Consider system update using <code>prt-get</code>.
+
+{% highlight bash %}
 $ prt-get sysup
 prt-get: updating /usr/ports/core/openssl
 =======> Building '/usr/ports/core/openssl/openssl#1.0.2g-1.pkg.tar.gz'.
@@ -162,8 +167,35 @@ cp mksslcert.sh /usr/ports/core/openssl/work/src
 
 [![Docker Crux: Update System][image-ss-prtget-sysup]{: .img-responsive }][photo-ss-prtget-sysup]
 
-And check the ports difference later.
 As you can see above, openssl has been failed to compile.
+Which we will solve later.
+
+-- -- --
+
+### Install
+
+You can use <code>prt-get install</code>
+to install new package,
+or <code>prt-get update</code> 
+to upgrade package currently installed package.
+
+{% highlight bash %}
+$ prt-get install man nano htop mc ncdu fish
+prt-get: installing /usr/ports/opt/mc
+=======> Building '/usr/ports/opt/mc/mc#4.8.15-1.pkg.tar.gz'.
+bsdtar -p -o -C /usr/ports/opt/mc/work/src -xf /usr/ports/opt/mc/mc-4.8.15.tar.xz
++ build
++ cd mc-4.8.15
+...
+{% endhighlight %}
+
+[![Docker Crux: prt-get Install][image-ss-prtget-install]{: .img-responsive }][photo-ss-prtget-install]
+
+-- -- --
+
+### Ports Difference
+
+You check the ports difference.
 
 {% highlight bash %}
 $ ports -d
@@ -183,19 +215,103 @@ bash-4.3#
 
 -- -- --
 
-### Install
+### pkgadd
+
+Sometimes <code>prt-get</code> does not work, as you can see below.
+We have to face <code>openssl</code> install issue.
 
 {% highlight bash %}
-$ prt-get install nano htop mc ncdu fish
-prt-get: installing /usr/ports/opt/mc
-=======> Building '/usr/ports/opt/mc/mc#4.8.15-1.pkg.tar.gz'.
-bsdtar -p -o -C /usr/ports/opt/mc/work/src -xf /usr/ports/opt/mc/mc-4.8.15.tar.xz
-+ build
-+ cd mc-4.8.15
+$ prt-get update openssl
 ...
+=======> ERROR: Building '/usr/ports/core/openssl/openssl#1.0.2g-1.pkg.tar.gz' failed.
+
+-- Packages where update failed
+openssl
 {% endhighlight %}
 
-[![Docker Crux: prt-get Install][image-ss-prtget-install]{: .img-responsive }][photo-ss-prtget-install]
+![Docker Crux: prt-get Update][image-ss-prtget-update]{: .img-responsive }
+
+I was lucky, the package is there in <code>openssl</code> directory.
+Therefore I can install using lower level <code>pkg</code> command directly.
+
+{% highlight bash %}
+$ ls /usr/ports/core/openssl/
+Pkgfile       openssl#1.0.2g-1.pkg.tar.gz
+mksslcert.sh  openssl-1.0.2g.tar.gz
+
+$ pkgadd -u /usr/ports/core/openssl/openssl#1.0.2g-1.pkg.tar.gz 
+
+$ prt-get diff
+No differences found
+{% endhighlight %}
+
+![Docker Crux: pkgadd Update][image-ss-pkgadd-update]{: .img-responsive }
+
+-- -- --
+
+### Dependency Build Issue with Unmaintained Docker Container
+
+{% highlight bash %}
+$ prt-get install mc
+...
+configure: WARNING: 'Check' utility not found. Check your environment
+checking for GLIB... no
+configure: error: glib-2.0 not found or version too old (must be >= 2.26)
+=======> ERROR: Building '/usr/ports/opt/mc/mc#4.8.15-1.pkg.tar.gz' failed.
+
+-- Packages where install failed
+mc
+{% endhighlight %}
+
+![Docker Crux: mc error][image-ss-mc-error]{: .img-responsive }
+
+{% highlight bash %}
+$ prt-get search glib
+dbus-glib
+glib
+glibc
+glibc-32
+poppler-glib
+taglib
+{% endhighlight %}
+
+![Docker Crux: mc error][image-ss-search-glib]{: .img-responsive }
+
+It turned out that <code>glibc</code> version is 
+<code>2.19</code>, which is less than <code>2.26</code>.
+
+{% highlight bash %}
+$ prt-get info glibc
+Name:         glibc
+Path:         /usr/ports/core
+Version:      2.19
+Release:      5
+Description:  The C library used in the GNU system
+URL:          http://www.gnu.org/software/libc/
+Maintainer:   CRUX System Team, core-ports at crux dot nu
+Files:        post-install
+{% endhighlight %}
+
+![Docker Crux: info glibc][image-ss-info-glibc]{: .img-responsive }
+
+Unfortunately, update command, not uprading the <code>glibc</code> version.
+
+{% highlight bash %}
+$ prt-get update glibc
+prt-get: updating /usr/ports/core/glibc
+=======> Package '/usr/ports/core/glibc/glibc#2.19-5.pkg.tar.gz' is up to date.
+prt-get: reinstalling glibc 2.19-5
+pkgadd: rejecting etc/ld.so.cache, keeping existing version
+pkgadd: rejecting etc/resolv.conf, keeping existing version
+pkgadd: rejecting etc/hosts, keeping existing version
+
+-- Packages updated
+glibc
+
+prt-get: updated successfully
+{% endhighlight %}
+
+![Docker Crux: update glibc][image-ss-update-glibc]{: .img-responsive }
 
 -- -- --
 
@@ -225,3 +341,13 @@ Thank you for Reading
 
 [image-ss-prtget-install]: {{ asset_path }}/docker-crux-2-prtget-install-half.png
 [photo-ss-prtget-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQaSQgPAmbhyfZwXjkhT46X8JPTWJ5035-5Mhm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-prtget-update]:  {{ asset_path }}/docker-crux-2-prtget-update.png
+[image-ss-pkgadd-update]:  {{ asset_path }}/docker-crux-3-pkgadd-update.png
+
+[image-ss-mc-error]:       {{ asset_path }}/docker-crux-4-prtget-install-mc-error.png
+[image-ss-search-glib]:    {{ asset_path }}/docker-crux-4-prtget-search-glib.png
+[image-ss-info-glibc]:     {{ asset_path }}/docker-crux-4-prtget-info-glibc.png
+[image-ss-update-glibc]:   {{ asset_path }}/docker-crux-4-prtget-update-glibc.png
+
+

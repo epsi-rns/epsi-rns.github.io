@@ -77,8 +77,8 @@ sh-4.3#
 
 ### Package Management
 
-Slackware does really have a sophisticated package management,
-but there are special tools to manage your packages.
+Slackware does not really have a sophisticated official package management,
+but there are special unoffical tools to manage your packages such as <code>slapt-get</code>.
 
 slackpkg
 	
@@ -389,6 +389,220 @@ As long as you prepare toolchain well,
 
 -- -- --
 
+### Using slapt-get
+
+There also unofficial package manager for slackware that emulate Debian apt-get.
+<code>slapt-get</code> for binary,
+and <code>slapt-src</code> for source such as slackbuild.
+
+#### Reading
+
+*	<https://software.jaos.org/>
+
+*	<https://www.slackwiki.com/Slapt-get>
+
+#### Installing slapt-get
+
+{% highlight bash %}
+$ wget -c  --no-check-certificate https://software.jaos.org/slackpacks/14.2-x86_64/slapt-get/slapt-get-0.10.2t-x86_64-1.tgz
+
+$ tar -xvf slapt-get-0.10.2t-x86_64-1.tgz
+{% endhighlight %}
+
+{% highlight bash %}
+$ installpkg slapt-get-0.10.2t-x86_64-1.tgz 
+Verifying package slapt-get-0.10.2t-x86_64-1.tgz.
+Installing package slapt-get-0.10.2t-x86_64-1.tgz:
+...
+Executing install script for slapt-get-0.10.2t-x86_64-1.tgz.
+Package slapt-get-0.10.2t-x86_64-1.tgz installed.
+{% endhighlight %}
+
+![Docker slapt-get: Installing][image-ss-install-slaptget]{: .img-responsive }
+
+#### Dependencies of slapt-get
+
+These packages are required to run <code>slapt-get</code>
+
+{% highlight bash %}
+$ slackpkg install gpgme
+
+$ slackpkg install libassuan
+
+$ slackpkg install libgpg
+
+$ slackpkg install cyrus-sasl
+{% endhighlight %}
+
+#### Update
+
+{% highlight bash %}
+$ slapt-get --update
+Retrieving package data [ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/]...Cached
+Retrieving patch list [ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/]...Cached
+Retrieving checksum list [ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/]...Cached
+Retrieving checksum signature [ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/]...Cached
+Verifying checksum signature [ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/]...Verified
+Retrieving ChangeLog.txt [ftp://ftp.slackware.com/pub/slackware/slackware64-14.2/]...Cached
+Reading Package Lists...Done
+Retrieving package data [http://software.jaos.org/slackpacks/14.2-x86_64/]...Cached
+Retrieving patch list [http://software.jaos.org/slackpacks/14.2-x86_64/]...Cached
+Retrieving checksum list [http://software.jaos.org/slackpacks/14.2-x86_64/]...Cached
+Retrieving checksum signature [http://software.jaos.org/slackpacks/14.2-x86_64/]...Cached
+Verifying checksum signature [http://software.jaos.org/slackpacks/14.2-x86_64/]...No key for verification
+Retrieving ChangeLog.txt [http://software.jaos.org/slackpacks/14.2-x86_64/]...Cached
+Reading Package Lists...Done
+{% endhighlight %}
+
+[![Docker slapt-get: Update][image-ss-slaptget-update]{: .img-responsive }][photo-ss-slaptget-update]
+
+#### Upgrade
+
+{% highlight bash %}
+$ slapt-get --upgrade
+Reading Package Lists...Done
+The following packages have been EXCLUDED:
+  glibc-solibs 
+0 upgraded, 0 reinstalled, 0 newly installed, 0 to remove, 1 not upgraded.
+
+Done
+{% endhighlight %}
+
+[![Docker slapt-get: Upgrade][image-ss-slaptget-upgrade-half]{: .img-responsive }][photo-ss-slaptget-upgrade-full]
+
+#### Install
+
+This <code>htop</code> install succeed.
+
+{% highlight bash %}
+$ slapt-get --install htop
+Reading Package Lists...Done
+htop is up to date.
+0 upgraded, 0 reinstalled, 0 newly installed, 0 to remove, 0 not upgraded.
+
+Done
+{% endhighlight %}
+
+![Docker slapt-get: Install htop][image-ss-slaptget-htop]{: .img-responsive }
+
+But this <code>ncdu</code> install failed,
+because <code>ncdu</code> comes from slackbuild.
+
+{% highlight bash %}
+slapt-get --install ncdu
+Reading Package Lists...Done
+No such package: ncdu
+{% endhighlight %}
+
+![Docker slapt-get: Install ncdu][image-ss-slaptget-ncdu]{: .img-responsive }
+
+#### Show Info
+
+{% highlight bash %}
+slapt-get --show ncdu
+Package Name: ncdu
+Package Mirror: 
+Package Priority: Default
+Package Location: 
+Package Version: 1.8-x86_64-1_SBo
+Package Size: 28 K
+Package Installed Size: 80 K
+Package Required: 
+Package Conflicts: 
+Package Suggests: 
+Package MD5 Sum:  
+Package Description:
+ ncdu (NCurses Disk Usage)
+
+ As the name already suggests, ncdu is an NCurses version of the famous
+ old 'du' unix command. It provides a fast and easy interface to your
+ harddrive. Where is your disk space going? Why is your home directory
+ that large? ncdu can answer those questions for you in just a matter
+ of seconds!
+
+ http://dev.yorhel.nl/ncdu/
+
+
+Package Installed: yes
+{% endhighlight %}
+
+![Docker slapt-get: Show Info ncdu][image-ss-slaptget-show-ncdu]{: .img-responsive }
+
+Since ncdu come from slackbuild repository that needed to be compiled first.
+We need another tool to manage.
+
+-- -- --
+
+### slapt-src
+
+In order to use slackbuild form source,
+we can utilize <code>slapt-src</code>.
+This time no need to wget,
+since we already have <code>slapt-get</code>.
+
+{% highlight bash %}
+$ slapt-get --install slapt-src
+Reading Package Lists...Done
+The following NEW packages will be installed:
+  slapt-src 
+0 upgraded, 0 reinstalled, 1 newly installed, 0 to remove, 0 not upgraded.
+Need to get 48.0kB of archives.
+After unpacking 220.0kB of additional disk space will be used.
+1/1 Get http://software.jaos.org/slackpacks/14.2-x86_64/ slapt-src 0.3.2i-x86_64-1 [48.0kB]...Done
+
+Preparing to install slapt-src-0.3.2i-x86_64-1
+Verifying package slapt-src-0.3.2i-x86_64-1.tgz.
+Installing package slapt-src-0.3.2i-x86_64-1.tgz:
+PACKAGE DESCRIPTION:
+# slapt-src (slapt slackbuild utility)
+# slapt-src is a utility to make querying, retrieving, and building
+# slackbuilds as easy as working with binary packages with slapt-get.
+# 
+#
+Executing install script for slapt-src-0.3.2i-x86_64-1.tgz.
+Package slapt-src-0.3.2i-x86_64-1.tgz installed.
+
+Done
+{% endhighlight %}
+
+![Docker slapt-src: Installing][image-ss-slaptget-slaptsrc]{: .img-responsive }
+
+#### Update
+
+Do update first before doing nay task with any command.
+
+{% highlight bash %}
+$ slapt-src -u
+Fetching slackbuild list from http://www.slackware.org.uk/slackbuilds.org/14.0/...Cached
+{% endhighlight %}
+
+![Docker slapt-src: Update][image-ss-slaptsrc-update]{: .img-responsive }
+
+#### Install
+
+Now we can install <code>ncdu</code> from slackbuild.
+
+{% highlight bash %}
+sh-4.3# slapt-src --install ncdu
+The following packages will be installed:
+ ncdu 
+Do you want to continue? [y/N] y
+Fetching README...Done
+Fetching ncdu.SlackBuild...Done
+Fetching ncdu.info...Done
+Fetching slack-desc...Done
+ncdu-1.8/
+ncdu-1.8/doc/
+ncdu-1.8/doc/Makefile.am
+ncdu-1.8/doc/Makefile.in
+ncdu-1.8/doc/ncdu.1
+ncdu-1.8/src/
+{% endhighlight %}
+
+[![Docker slapt-src: Install ncdu][image-ss-slaptsrc-ncdu-half]{: .img-responsive }][photo-ss-slaptsrc-ncdu-full]
+
+-- -- --
+
 ### Conclusion
 
 It is said that "_Slackware does not resolve dependency_".
@@ -414,3 +628,16 @@ Thank you for Reading
 [image-ss-slackbuild-fish]:  {{ asset_path }}/docker-slackware-2-slackbuild-fish.png
 [image-ss-fish-config-log]:  {{ asset_path }}/docker-slackware-2-fish-config-log.png
 [image-ss-sbopkg-install]:   {{ asset_path }}/docker-slackware-2-sbopkg-fish.png
+
+[image-ss-install-slaptget]:      {{ asset_path }}/docker-slackware-4-install-slaptget.png
+[image-ss-slaptget-update]:       {{ asset_path }}/docker-slackware-4-slaptget-update.png
+[photo-ss-slaptget-update]:       https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNqu4dS9aQFxUQhNUZYBaynXouzDmhv2vjmO1ms?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-slaptget-upgrade-half]: {{ asset_path }}/docker-slackware-4-slaptget-upgrade-half.png
+[photo-ss-slaptget-upgrade-full]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMC8TaVP2h4_9ptQHL0pGZ1axhn9GtdQ_9BuYP7?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-slaptget-htop]:         {{ asset_path }}/docker-slackware-4-slaptget-install-htop.png
+[image-ss-slaptget-show-ncdu]:    {{ asset_path }}/docker-slackware-4-slaptget-show-ncdu.png
+[image-ss-slaptget-ncdu]:         {{ asset_path }}/docker-slackware-4-slaptget-install-ncdu.png
+[image-ss-slaptget-slaptsrc]:     {{ asset_path }}/docker-slackware-5-slaptget-install-slaptsrc.png
+[image-ss-slaptsrc-update]:       {{ asset_path }}/docker-slackware-5-slaptsrc-update.png
+[image-ss-slaptsrc-ncdu-half]:    {{ asset_path }}/docker-slackware-5-slaptsrc-install-ncdu-half.png
+[photo-ss-slaptsrc-ncdu-full]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQeESVsylBl5qU3t9C-l6fy0BsdAwezYvjhTjq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
