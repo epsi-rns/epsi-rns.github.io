@@ -18,11 +18,31 @@ related_link_ids:
 
 ### Preface
 
-I am so glad that finally I can learn Slackware Package Management using Docker.
+I am so glad that finally 
+I can learn Slackware Package Management using Docker.
 
-You can read a common overview here.
+You can read a common overview about docker here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+
+There are few topics here.
+
+*	Preparing Docker
+
+*	Using slackpkg
+
+*	Using slackbuild the hard way
+
+*	Using sbopkg
+
+*	Using slapt-get and slapt-src
+
+There are still other topic uncovered here
+
+*	slackpkgplus
+
+*	adding non official repo such as alien and slacky
+
 
 -- -- --
 
