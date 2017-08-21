@@ -211,6 +211,20 @@ UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/spool           btrfs      subvol
 UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/tmp             btrfs      subvol=@/var/tmp      0 0
 {% endhighlight %}
 
+#### Update
+
+	First Thing First
+
+{% highlight bash %}
+$ sudo zypper up
+{% endhighlight %}
+
+or
+
+{% highlight bash %}
+$ sudo zypper dup
+{% endhighlight %}
+
 -- -- -- 
 
 ### Conclusion

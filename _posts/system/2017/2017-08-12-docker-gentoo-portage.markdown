@@ -101,6 +101,8 @@ Emerge
 
 ### Updating System with Webrsync
 
+	First Thing First
+
 First thing to do in my mind is updating my system.
 
 You can use <code>emerge -u</code> command.
@@ -171,6 +173,7 @@ $ emerge
 {% endhighlight %}
 
 You can manually populate portage tree.
+It is about only 70 megabytes download.
 
 {% highlight bash %}
 $ cd /usr/

@@ -18,12 +18,39 @@ related_link_ids:
 
 ### Preface
 
-I am so glad that finally 
+I am so glad that finally, for the first time,
 I can learn Slackware Package Management using Docker.
+Here is my report as a _new slacker_ who just landed in slackware land,
+my journey using minimal install.
 
 You can read a common overview about docker here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+
+
+#### Package Management
+
+Slackware does not really have a sophisticated official package management.
+Beside <code>slackpkg</code> there are special unoffical tools 
+to manage your packages such as <code>sbopkg</code>,
+<code>slapt-get</code>, <code>slapt-src</code>,
+<code>sllpkg</code> and <code>slackpkgplus</code>.
+
+slackpkg
+	
+	Package Cache
+	
+	*	/var/cache/packages/*/*/.txz
+
+slapt-get
+
+*	<https://github.com/jaos/slapt-get>
+
+slpkg
+
+*	<https://github.com/dslackw/slpkg>
+
+#### Topics
 
 There are few topics here.
 
@@ -31,11 +58,13 @@ There are few topics here.
 
 *	Using slackpkg
 
-*	Using slackbuild the hard way
+*	Using slackbuild, manual compilation, and installpkg
 
-*	Using sbopkg
+*	Using sbopkg, automatic compilation
 
 *	Using slapt-get and slapt-src
+
+*	Using slpkg
 
 There are still other topic uncovered here
 
@@ -95,33 +124,24 @@ sh-4.3#
 
 -- -- --
 
-### Package Management
+### slackpkg
 
-Slackware does not really have a sophisticated official package management,
-but there are special unoffical tools to manage your packages such as <code>slapt-get</code>.
+#### Update
 
-slackpkg
-	
-	Package Cache
-	
-	*	/var/adm/packages/*-x86_64-?
-
-slapt-get
-
-*	<https://github.com/jaos/slapt-get>
-
--- -- --
-
-### First Thing First
-
-My first attempt is to install package I cannot live with.
-These package might be different with your favorites.
+	First Thing First
 
 Remember to run <code>slackpkg update</code> first.
 
 {% highlight bash %}
 $ slackpkg update
+{% endhighlight %}
 
+#### Solve Dependency Issue
+
+My first attempt is to install package I cannot live with.
+These package might be different with your favorites.
+
+{% highlight bash %}
 $ slackpkg install man nano htop mc curl 
 {% endhighlight %}
 
@@ -160,18 +180,42 @@ Looking for groff in package list. Please wait... DONE
 groff-1.22.3-x86_64-2.txz
 {% endhighlight %}
 
-And voila! Nomore encounter with error.
+And voila! No more encounter with error.
 
 ![Docker Slackware: Search file belonging][image-ss-file-search]{: .img-responsive }
 
+#### Official Documentation
+
+	More command please ...
+
+**Reading**:
+
+*	<https://docs.slackware.com/slackware:slackpkg>
+
+There are still, other cool command though.
+However, I choose not to bloat my minimal install.
+
+{% highlight bash %}
+$ slackpkg upgrade patches
+{% endhighlight %}
+
+![Docker Slackware: Upgrade Patches][image-ss-slackpkg-patches]{: .img-responsive }
+
+{% highlight bash %}
+$ slackpkg check-updates
+
+No news is good news
+{% endhighlight %}
+
 -- -- --
 
-### Two Kind of Toy
+### Minimal or Full Install ?
 
 	What should I do with this Container ?
 
 How you play with your toy is up to you.
 At least we have two choice.
+Two kind of toy.
 
 *	Populate Using Slackware64
 
@@ -233,6 +277,15 @@ by make when I compile <code>fish</code>
 $ slackpkg install libffi libcroco libxml2
 {% endhighlight %}
 
+Or for the impatient, you can install <code>D Package Series</code>
+as mentioned in installation help:
+
+*	<http://www.slackware.com/install/softwaresets.php>
+
+{% highlight bash %}
+$ slackpkg install d
+{% endhighlight %}
+
 It is not a big deal.
 Just be brave to identify what each build need.
 
@@ -244,7 +297,9 @@ There are few options to have slackbuild compiled.
 
 *	Manual Compilation
 
-*	Using sbopkg
+*	Using <code>sbopkg</code>
+
+*	Other tools such as <code>slapt-src</code>, and <code>slpkg</code>
 
 Here we I use <code>fish</code> as an experiment.
 You can use other Slackbuild as well such as <code>ncdu</code>.
@@ -318,10 +373,11 @@ Package fish-2.6.0-x86_64-1_SBo.tgz installed.
 
 ![Docker Slackware: Build Fish using Slackbuild][image-ss-slackbuild-fish]{: .img-responsive }
 
-#### Tracking Error
+#### Tracking Dependency
 
 Sometimes (or usually for beginner),
 error happened while building from source.
+This step give me better understanding of my system.
 
 {% highlight bash %}
 $ ./fish.SlackBuild
@@ -371,14 +427,18 @@ Actually searching for these files is fun if you have time.
 
 	All you need is patience, and passion.
 
+-- -- --
 
-#### Using sbopkg
+### sbopkg
+
+After manual compilation, we can continue to automatic compilation.
+There is this <code>sbopkg</code> tool to make your life easier.
 
 **Reading**
 
 *	Official Site: [Building and Installing Packages with sbopkg][slackware-sbopkg]
 
-There is this tool to make your life easier.
+#### Install
 
 {% highlight bash %}
 $ cd ~
@@ -391,6 +451,10 @@ $ installpkg sbopkg-0.38.1-noarch-1_wsr.tgz
 Now you are ready to use <code>sbopkg</code>.
 But however you need to install <code>rsync</code> first,
 to populate repository data to local.
+
+#### Update
+
+	First Thing First
 
 {% highlight bash %}
 $ sbopkg
@@ -455,6 +519,8 @@ $ slackpkg install cyrus-sasl
 {% endhighlight %}
 
 #### Update
+
+	First Thing First
 
 {% highlight bash %}
 $ slapt-get --update
@@ -589,6 +655,8 @@ Done
 
 #### Update
 
+	First Thing First
+
 Do update first before doing nay task with any command.
 
 {% highlight bash %}
@@ -623,6 +691,173 @@ ncdu-1.8/src/
 
 -- -- --
 
+### Installing slpkg
+
+I have been wondering how to add other repository,
+such as <code>alien</code> and <code>slacky</code>.
+And I find this <code>slpkg</code>. 
+
+#### Dependency
+
+{% highlight bash %}
+$ slackpkg install python
+{% endhighlight %}
+
+![Docker slackpkg: Install Python][image-ss-slackpkg-python]{: .img-responsive }
+
+#### Install
+
+Now you can install <code>slpkg</code> using any method you like.
+
+{% highlight bash %}
+$ sbopkg -i slpkg
+{% endhighlight %}
+
+#### No certificate
+
+My first attempt, is always falure as usual.
+
+{% highlight bash %}
+$ slpkg update 
+
+To connect to mirrors.slackware.com insecurely, use --no-check-certificate.
+{% endhighlight %}
+
+![Docker slpkg: Update Certificate Error][image-ss-slpkg-update-err]{: .img-responsive }
+
+If you encounter this error, you need to install <code>ca-certificates</code>.
+
+{% highlight bash %}
+$ slackpkg install ca-certificates
+{% endhighlight %}
+
+![Docker slackpkg: CA Certificates][image-ss-slackpkg-ca-cert]{: .img-responsive }
+
+Now you should be ready.
+
+-- -- --
+
+### Using slpkg
+
+#### Update
+
+	First Thing First
+
+{% highlight bash %}
+Check and update repositories:
+
+Check repository [slack] ... Done
+Check repository [sbo] ... Done
+{% endhighlight %}
+
+![Docker slpkg: Update Succeed][image-ss-slpkg-update]{: .img-responsive }
+
+#### Repository 
+
+{% highlight bash %}
+$ slpkg repo-list
+
++==============================================================================
+| Repo id  Repo URL                                            Default   Status
++==============================================================================
+  alien    http://bear.alienbase.nl/mirrors/people/alien/sb~   yes     disabled
+  connos   https://connochaetos.org/slack-n-free/              yes     disabled
+  conrad   http://slack.conraid.net/repository/slackware64-~   yes     disabled
+  csb      http://slackware.uk/csb/                            yes     disabled
+  ktown    http://alien.slackbook.org/ktown/                   yes     disabled
+  mles     http://slackware.uk/microlinux/                     yes     disabled
+  msb      http://slackware.org.uk/msb/                        yes     disabled
+  multi    http://bear.alienbase.nl/mirrors/people/alien/mu~   yes     disabled
+  rested   http://bear.alienbase.nl/mirrors/people/alien/re~   yes     disabled
+  rlw      http://slackware.uk/people/rlworkman/               yes     disabled
+  salix    http://download.salixos.org/                        yes     disabled
+  sbo      http://slackbuilds.org/slackbuilds/                 yes      enabled
+  slack    http://mirrors.slackware.com/slackware/             yes      enabled
+  slacke   http://ngc891.blogdns.net/pub/                      yes     disabled
+  slackl   http://www.slackel.gr/repo/                         yes     disabled
+  slacky   http://repository.slacky.eu/                        yes     disabled
+  slonly   https://slackonly.com/pub/packages/                 yes     disabled
+
+Repositories summary
+===============================================================================
+2/17 enabled default repositories and 0 custom.
+For enable or disable default repositories edit '/etc/slpkg/repositories.conf'
+file or run 'slpkg repo-enable' command.
+{% endhighlight %}
+
+![Docker slpkg: Repo List][image-ss-slpkg-repo-list]{: .img-responsive }
+
+You can edit directly.
+
+{% highlight bash %}
+$ cat /etc/slpkg/repositories.conf
+[REPOSITORIES]
+slack
+sbo
+# alien
+# rlw
+...
+{% endhighlight %}
+
+![Docker slpkg: repositories.conf][image-ss-slpkg-etc-repo]{: .img-responsive }
+
+#### Install:
+
+{% highlight bash %}
+$ slpkg -s sbo fish
+Reading package lists... Done
+Resolving dependencies... Done
+
+The following packages will be automatically installed or upgraded 
+with new version:
+
++==============================================================================
+| Package                 New version        Arch    Build  Repos          Size
++==============================================================================
+Installing:
+  fish                    2.6.0              x86_64         SBo
+Installing for dependencies:
+  man-db                  2.7.6.1            x86_64         SBo
+
+Installing summary
+===============================================================================
+Total 2 packages.
+2 packages will be installed, 0 already installed and 0 package
+will be upgraded.
+
+Would you like to continue [y/N]? 
+{% endhighlight %}
+
+Unfortunately installation failed, we need to solve some dependency first.
+
+{% highlight bash %}
+$ slackpkg install gdbm
+{% highlight bash %}
+
+And install again. Do the installation command over again.
+
+{% endhighlight %}
+$ slpkg -s sbo fish
+{% endhighlight %}
+
+[![Docker slpkg: Install sbo fish][image-ss-slpkg-sbo-fish]{: .img-responsive }][photo-ss-slpkg-sbo-fish]
+
+Mission accomplished, Now I can <code>fish</code>.
+
+{% highlight bash %}
+$ fish
+Welcome to fish, the friendly interactive shell
+root@662f86a36b6d ~# 
+{% endhighlight %}
+
+You are freely to try other package other than <code>fish</code>.
+
+{% highlight bash %}
+$ slpkg -s sbo ncdu
+{% endhighlight %}
+
+-- -- --
+
 ### Conclusion
 
 It is said that "_Slackware does not resolve dependency_".
@@ -648,6 +883,7 @@ Thank you for Reading
 [image-ss-slackbuild-fish]:  {{ asset_path }}/docker-slackware-2-slackbuild-fish.png
 [image-ss-fish-config-log]:  {{ asset_path }}/docker-slackware-2-fish-config-log.png
 [image-ss-sbopkg-install]:   {{ asset_path }}/docker-slackware-2-sbopkg-fish.png
+[image-ss-slackpkg-patches]: {{ asset_path }}/docker-slackware-1-slackpkg-upgrade-patches.png
 
 [image-ss-install-slaptget]:      {{ asset_path }}/docker-slackware-4-install-slaptget.png
 [image-ss-slaptget-update]:       {{ asset_path }}/docker-slackware-4-slaptget-update.png
@@ -661,3 +897,13 @@ Thank you for Reading
 [image-ss-slaptsrc-update]:       {{ asset_path }}/docker-slackware-5-slaptsrc-update.png
 [image-ss-slaptsrc-ncdu-half]:    {{ asset_path }}/docker-slackware-5-slaptsrc-install-ncdu-half.png
 [photo-ss-slaptsrc-ncdu-full]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQeESVsylBl5qU3t9C-l6fy0BsdAwezYvjhTjq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-slackpkg-python]:  {{ asset_path }}/docker-slackware-7-slackpkg-install-python.png
+[image-ss-slpkg-update-err]: {{ asset_path }}/docker-slackware-7-slpkg-update-certificate-error.png
+[image-ss-slackpkg-ca-cert]: {{ asset_path }}/docker-slackware-7-slackpkg-install-ca-certificates.png
+[image-ss-slpkg-update]:     {{ asset_path }}/docker-slackware-7-slpkg-update.png
+
+[image-ss-slpkg-repo-list]:  {{ asset_path }}/docker-slackware-8-slpkg-repo-list.png
+[image-ss-slpkg-etc-repo]:   {{ asset_path }}/docker-slackware-8-slpkg-etc-repositories.png
+[image-ss-slpkg-sbo-fish]:   {{ asset_path }}/docker-slackware-8-slpkg-sbo-fish-half.png
+[photo-ss-slpkg-sbo-fish]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP8DnPxKw_sjsW2jlR_LAjIBJiP2BcMjsDmHSyv?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

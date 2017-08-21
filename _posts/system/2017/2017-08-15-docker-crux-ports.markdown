@@ -122,6 +122,8 @@ prt-get
 
 ### Updating System
 
+	First Thing First
+
 First thing to do is updating my system as usual.
 
 You can use <code>ports -u</code> command.

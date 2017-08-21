@@ -121,6 +121,16 @@ $ sudo urpmi task-plasma5
 
 -- -- --
 
+### Update
+
+	First Thing First
+
+{% highlight bash %}
+$ sudo urmi --auto-update
+{% endhighlight %}
+
+-- -- --
+
 Thank you for Reading
 
 [//]: <> ( -- -- -- links below -- -- -- )

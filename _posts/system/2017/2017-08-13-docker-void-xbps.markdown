@@ -99,10 +99,12 @@ Void Linux use The X Binary Package System (XBPS) as package management.
 
 ### Update
 
+	First Thing First
+
 {% highlight bash %}
 $ xbps-install -Su
 
-[*] Updating `https://repo.voidlinux.eu/current/x86_64-repodata' ...
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
 {% endhighlight %}
 
 [![Docker Void: XBPS System Upgrade: Start][image-ss-xbps-su-top]{: .img-responsive }][photo-ss-xbps-su-top]
@@ -115,7 +117,7 @@ $ xbps-install -Su
 
 {% highlight bash %}
 $ xbps-install -S nano htop mc ncdu curl
-[*] Updating `https://repo.voidlinux.eu/current/x86_64-repodata' ...
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
 
 Name    Action    Version           New version            Download size
 nano    install   -                 2.8.6_1                - 

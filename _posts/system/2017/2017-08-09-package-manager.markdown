@@ -312,11 +312,17 @@ Emerge
 
 : Slackware: C
 
+*	Package Cache (slackpkg)
+	
+	*	/var/cache/packages/*/*/.txz
+	
+slapt-get
+
 *	<https://github.com/jaos/slapt-get>
-	
-	Package Cache (slackpkg)
-	
-	*	/var/adm/packages/*-x86_64-?
+
+slpkg
+
+*	<https://github.com/dslackw/slpkg>
 
 -- -- --
 

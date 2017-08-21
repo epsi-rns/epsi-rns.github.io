@@ -732,6 +732,8 @@ $ dnf group info "Window Managers"
 
 ### DNF Update
 
+	First Thing First
+
 Since we focus to command line package manager,
 I would like to show what DNF do, for anyone who never seen DNF.
 This is is what happened after about two weeks without update.
