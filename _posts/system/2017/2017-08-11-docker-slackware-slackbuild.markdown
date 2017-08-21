@@ -277,7 +277,12 @@ by make when I compile <code>fish</code>
 $ slackpkg install libffi libcroco libxml2
 {% endhighlight %}
 
-Or for the impatient, you can install <code>D Package Series</code>
+It is not a big deal.
+Just be brave to identify what each build need.
+
+#### D Package Series
+
+You can install <code>D Package Series</code>
 as mentioned in installation help:
 
 *	<http://www.slackware.com/install/softwaresets.php>
@@ -286,8 +291,11 @@ as mentioned in installation help:
 $ slackpkg install d
 {% endhighlight %}
 
-It is not a big deal.
-Just be brave to identify what each build need.
+I remind that I keep my minimal install for learning purpose.
+So do nothave any plan to install <code>D Package Series</code>.
+If storage is not a problem for you,
+you can install <code>D Package Series</code>,
+or even use full <code>Slackware64</code> install.
 
 -- -- --
 
