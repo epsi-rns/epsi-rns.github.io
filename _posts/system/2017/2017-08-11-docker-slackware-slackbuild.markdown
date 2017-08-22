@@ -18,6 +18,8 @@ related_link_ids:
 
 ### Preface
 
+> Goal: Learning Package Manager, Focus on Command Line Interface
+
 I am so glad that finally, for the first time,
 I can learn Slackware Package Management using Docker.
 Here is my report as a _new slacker_ who just landed in slackware land,

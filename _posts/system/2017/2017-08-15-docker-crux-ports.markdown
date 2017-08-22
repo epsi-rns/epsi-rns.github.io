@@ -17,6 +17,8 @@ related_link_ids:
 
 ### Preface
 
+> Goal: Learning Package Manager, Focus on Command Line Interface
+
 This Crux is even easier with docker container, no need to set up system.
 Therefore we can dive right away to compilation.
 

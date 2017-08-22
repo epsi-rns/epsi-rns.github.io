@@ -17,6 +17,8 @@ related_link_ids:
 
 ### Preface
 
+> Goal: Learning Package Manager, Focus on Command Line Interface
+
 Void Linux is so interesting
 
 *	Void has their own package manager, named XBPS.

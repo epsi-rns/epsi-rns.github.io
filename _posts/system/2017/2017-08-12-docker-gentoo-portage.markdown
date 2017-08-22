@@ -18,6 +18,8 @@ related_link_ids:
 
 ### Preface
 
+> Goal: Learning Package Manager, Focus on Command Line Interface
+
 I am so glad that finally I can learn Gentoo Portage using Docker.
 
 You can read a common overview here.
@@ -195,10 +197,21 @@ $ man emerge
 
 -- -- --
 
-### Install Package
+
+-- -- --
+
+### Package IRSI
+
+	Install, Remove, Search, Info
+
+Read the fine manual.
+
+#### Package Install
 
 What good is it life without our favorites packages ?
 Consider install it at the first place after system update.
+
+	Merge
 
 {% highlight bash %}
 $ emerge htop fish ncdu
@@ -209,7 +222,17 @@ these packages will be compiled, built and installed.
 <code>emerge</code> has a very nice looks, 
 many colors while building package.
 
-[![Docker Gentoo: emerge Install Package][image-ss-emerge-install]{: .img-responsive }][photo-ss-emerge-install]
+[![Docker Emerge: Install Package][image-ss-emerge-install2]{: .img-responsive }][photo-ss-emerge-install2]
+
+#### Ask for Confirmation
+
+	Ask
+
+{% highlight bash %}
+$ emerge -a htop fish ncdu
+{% endhighlight %}
+
+![Docker Emerge: Install][image-ss-emerge-install-ask]{: .img-responsive }
 
 #### Ambiguous Package
 
@@ -219,13 +242,123 @@ How about this ?
 $ emerge mc
 {% endhighlight %}
 
-![Docker Gentoo: ebuild name is ambiguous][image-ss-emerge-ambigous]{: .img-responsive }
+![Docker Emerge: ebuild name is ambiguous][image-ss-emerge-ambigous]{: .img-responsive }
 
 Use fully qualified ebuild name instead.
 
 {% highlight bash %}
 $ emerge app-misc/mc 
 {% endhighlight %}
+
+#### Package Remove
+
+	Depclean
+
+{% highlight bash %}
+$ emerge -d htop
+{% endhighlight %}
+
+	Unmerge
+
+{% highlight bash %}
+$ emerge -C htop
+{% endhighlight %}
+
+![Docker Emerge: Remove][image-ss-emerge-remove]{: .img-responsive }
+
+#### Package Search
+
+	Search
+
+{% highlight bash %}
+$ emerge -s htop
+{% endhighlight %}
+
+	Search Description
+
+{% highlight bash %}
+$ emerge -S htop
+{% endhighlight %}
+
+![Docker Emerge: Search][image-ss-emerge-search]{: .img-responsive }
+
+#### Package Info
+
+{% highlight bash %}
+$ emerge -pv htop
+{% endhighlight %}
+
+{% highlight bash %}
+$ emerge -S htop
+{% endhighlight %}
+
+-- -- --
+
+### Interesting Tools
+
+I do think that these tools are what I need.
+
+*	<code>Equery</code>
+
+*	<code>Layman</code>
+
+*	<code>Eix</code>
+
+#### Equery
+
+There are a lot of interesting stuff in package site.
+
+*	<https://wiki.gentoo.org/wiki/Equery>
+
+{% highlight bash %}
+$ emerge --ask app-portage/gentoolkit
+{% endhighlight %}
+
+{% highlight bash %}
+$ equery depgraph ncdu
+{% endhighlight %}
+
+![Docker Equery: Dependency in Graph][image-ss-equery-depgraph]{: .img-responsive }
+
+#### Layman
+
+Managing Repository
+
+*	<https://wiki.gentoo.org/wiki/Layman>
+
+{% highlight bash %}
+$ layman-updater -R
+{% endhighlight %}
+
+{% highlight bash %}
+$ layman -L
+{% endhighlight %}
+
+![Docker Layman: List Repository][image-ss-layman-list]{: .img-responsive }
+
+#### Eix
+
+Diffing local ebuild.
+
+*	<https://wiki.gentoo.org/wiki/Eix>
+
+{% highlight bash %}
+$ emerge --ask app-portage/eix
+{% endhighlight %}
+
+First Thing First, as usual.
+
+{% highlight bash %}
+$ eix-update
+{% endhighlight %}
+
+![Docker Eix: Update][image-ss-eix-update]{: .img-responsive }
+
+{% highlight bash %}
+$ eix-sync
+{% endhighlight %}
+
+![Docker Eix: Sync][image-ss-eix-sync]{: .img-responsive }
 
 -- -- --
 
@@ -257,7 +390,23 @@ Thank you for Reading
 
 [image-ss-emerge-update]:    {{ asset_post }}/01-emerge-update.png
 
-[image-ss-emerge-install]:   {{ asset_post }}/02-emerge-htop-half.png
+[image-ss-emerge-install]:   {{ asset_post }}/13-emerge-01-install-half.png
 [photo-ss-emerge-install]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-ambigous]:  {{ asset_post }}/02-emerge-mc.png
+[image-ss-emerge-ambigous]:  {{ asset_post }}/13-emerge-01-install-mc.png
+
+[image-ss-emerge-install]:   {{ asset_post }}/13-emerge-01-install-ask.png
+[image-ss-emerge-remove]:    {{ asset_post }}/13-emerge-02-remove-depclean.png
+[image-ss-emerge-search]:    {{ asset_post }}/13-emerge-03-search-search.png
+
+
+[image-ss-equery-depgraph]:  {{ asset_post }}/21-equery-depgraph.png
+
+[image-ss-layman-list]:  {{ asset_post }}/23-layman-list.png
+
+[image-ss-eix-sync]:     {{ asset_post }}/25-eix-sync-half.png
+[photo-ss-eix-sync]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM0XeXwWZOJK2dUO-hl8DvUWfUVb3Sn5WfwebdJ?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-eix-update]:   {{ asset_post }}/25-eix-update.png
+
+

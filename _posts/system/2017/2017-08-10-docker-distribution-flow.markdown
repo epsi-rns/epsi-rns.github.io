@@ -19,6 +19,8 @@ related_link_ids:
 
 ### Preface
 
+> Goal: Learning Package Manager, Focus on Command Line Interface
+
 	Heaven does exist !
 
 I have been dreaming of having my own lab,
