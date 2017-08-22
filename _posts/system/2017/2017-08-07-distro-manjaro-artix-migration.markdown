@@ -355,21 +355,22 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-artix' %}
 
-[image-ss-artix-keyring]:  {{ asset_path }}/artix-keyring.png
+[image-ss-artix-keyring]:  {{ asset_post }}/keyring.png
 [photo-ss-artix-keyring]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP8bgFwybhoBa-4DdHaE0hG2Two6POd-43sIVRI?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-manjaro-remove]: {{ asset_path }}/artix-remove-manjaro.png
+[image-ss-manjaro-remove]: {{ asset_post }}/remove-manjaro.png
 [photo-ss-manjaro-remove]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNePVhvKc8dn-_Ge4VaFvkD9yvBBB3-luPRo_Ec?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn 
 
-[image-ss-systemd-dummy]:  {{ asset_path }}/artix-systemd-dummy.png
+[image-ss-systemd-dummy]:  {{ asset_post }}/systemd-dummy.png
 [photo-ss-systemd-dummy]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPFMKW1rFxXOfA6S6-rwnTDwXv_LVGDUP3C8reD?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-artix-lxc]:     {{ asset_path }}/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-artix-docker]:  {{ asset_path }}/artix-docker-slackware.png
+[image-ss-artix-docker]:  {{ asset_post }}/docker-slackware.png
 [photo-ss-artix-docker]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM_M5Tj36VL_H-RD1i_JniyJUKFOHy58MVmzTyq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-artix-jekyll]:  {{ asset_path }}/artix-jekyll.png
+[image-ss-artix-jekyll]:  {{ asset_post }}/jekyll.png
 [photo-ss-artix-jekyll]:  https://photos.google.com/photo/AF1QipMbJISXgyLHcNPGex9EWqYapRgB8CjTHEuqqyO_

@@ -224,25 +224,26 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-void' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-void-docker]:     {{ asset_path }}/docker-void-0-start.png
+[image-ss-void-docker]:     {{ asset_post }}/00-start.png
 
-[image-ss-xbps-su-top]:     {{ asset_path }}/docker-void-1-xbps-install-su-1-half.png
+[image-ss-xbps-su-top]:     {{ asset_post }}/01-xbps-install-su-1-half.png
 [photo-ss-xbps-su-top]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN7yNgtq3tLkiTAAwArqzRtIjtdFEdHjEoHYp-_?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-su-bottom]:  {{ asset_path }}/docker-void-1-xbps-install-su-2-half.png
+[image-ss-xbps-su-bottom]:  {{ asset_post }}/01-xbps-install-su-2-half.png
 [photo-ss-xbps-su-bottom]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOAAatxsZJD9QdtiJeYv4gZdjrY4-Z1gzOcUkdk?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-fav-top]:    {{ asset_path }}/docker-void-2-xbps-install-favorites-1-half.png
+[image-ss-xbps-fav-top]:    {{ asset_post }}/02-xbps-install-favorites-1-half.png
 [photo-ss-xbps-fav-top]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMhv4nG5EBx7QOcBVxLhNxwinyMV3SnAwjKifN2?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-fav-bottom]: {{ asset_path }}/docker-void-2-xbps-install-favorites-2-half.png
+[image-ss-xbps-fav-bottom]: {{ asset_post }}/02-xbps-install-favorites-2-half.png
 [photo-ss-xbps-fav-bottom]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNYFTqIMX7qwej3iG01pnf0NoApP_ILFFpwsuZX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-query]:      {{ asset_path }}/docker-void-3-xbps-query-half.png
+[image-ss-xbps-query]:      {{ asset_post }}/03-xbps-query-half.png
 [photo-ss-xbps-query]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNqZ1HtZh9xjxFEIV5S7AH7F6x26oogQA8m1XEg?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-remove]:     {{ asset_path }}/docker-void-4-xbps-remove-half.png
+[image-ss-xbps-remove]:     {{ asset_post }}/04-xbps-remove-half.png
 [photo-ss-xbps-remove]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP_ea-U8XItnqBn0FV8XfB7JbDGUpjcUZMAd3LO?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

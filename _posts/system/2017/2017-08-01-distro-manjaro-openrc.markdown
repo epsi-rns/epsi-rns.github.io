@@ -203,7 +203,8 @@ Thank you for Reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}\
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-manjaro' %}
 
-[image-ss-manjaro-sddm]: {{ asset_path }}/manjaro-sddm-no-face.png
+[image-ss-manjaro-sddm]: {{ asset_post }}/sddm-no-face.png
 [photo-ss-manjaro-sddm]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM9ac3IrRfSiuq6nC7-kO-ogWYSUynaqPIA4iCD?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

@@ -881,39 +881,41 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-slack-docker]:     {{ asset_path }}/docker-slackware-0-start.png
-[image-ss-slackware64]:      {{ asset_path }}/docker-slackware-1-install-slackware64.png
-[image-ss-file-search]:      {{ asset_path }}/docker-slackware-1-file-search-groff.png
-[image-ss-slackware64-huge]: {{ asset_path }}/docker-flow-terminal-2.png
-[image-ss-slackbuild-fish]:  {{ asset_path }}/docker-slackware-2-slackbuild-fish.png
-[image-ss-fish-config-log]:  {{ asset_path }}/docker-slackware-2-fish-config-log.png
-[image-ss-sbopkg-install]:   {{ asset_path }}/docker-slackware-2-sbopkg-fish.png
-[image-ss-slackpkg-patches]: {{ asset_path }}/docker-slackware-1-slackpkg-upgrade-patches.png
+[image-ss-slack-docker]:     {{ asset_post }}/00-start.png
+[image-ss-slackware64]:      {{ asset_post }}/01-install-slackware64.png
+[image-ss-file-search]:      {{ asset_post }}/01-file-search-groff.png
+[image-ss-slackware64-huge]: {{ asset_flow }}/terminal-2.png
+[image-ss-slackbuild-fish]:  {{ asset_post }}/02-slackbuild-fish.png
+[image-ss-fish-config-log]:  {{ asset_post }}/02-fish-config-log.png
+[image-ss-sbopkg-install]:   {{ asset_post }}/02-sbopkg-fish.png
+[image-ss-slackpkg-patches]: {{ asset_post }}/01-slackpkg-upgrade-patches.png
 
-[image-ss-install-slaptget]:      {{ asset_path }}/docker-slackware-4-install-slaptget.png
-[image-ss-slaptget-update]:       {{ asset_path }}/docker-slackware-4-slaptget-update.png
+[image-ss-install-slaptget]:      {{ asset_post }}/04-install-slaptget.png
+[image-ss-slaptget-update]:       {{ asset_post }}/04-slaptget-update.png
 [photo-ss-slaptget-update]:       https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNqu4dS9aQFxUQhNUZYBaynXouzDmhv2vjmO1ms?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-[image-ss-slaptget-upgrade-half]: {{ asset_path }}/docker-slackware-4-slaptget-upgrade-half.png
+[image-ss-slaptget-upgrade-half]: {{ asset_post }}/04-slaptget-upgrade-half.png
 [photo-ss-slaptget-upgrade-full]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMC8TaVP2h4_9ptQHL0pGZ1axhn9GtdQ_9BuYP7?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-[image-ss-slaptget-htop]:         {{ asset_path }}/docker-slackware-4-slaptget-install-htop.png
-[image-ss-slaptget-show-ncdu]:    {{ asset_path }}/docker-slackware-4-slaptget-show-ncdu.png
-[image-ss-slaptget-ncdu]:         {{ asset_path }}/docker-slackware-4-slaptget-install-ncdu.png
-[image-ss-slaptget-slaptsrc]:     {{ asset_path }}/docker-slackware-5-slaptget-install-slaptsrc.png
-[image-ss-slaptsrc-update]:       {{ asset_path }}/docker-slackware-5-slaptsrc-update.png
-[image-ss-slaptsrc-ncdu-half]:    {{ asset_path }}/docker-slackware-5-slaptsrc-install-ncdu-half.png
+[image-ss-slaptget-htop]:         {{ asset_post }}/04-slaptget-install-htop.png
+[image-ss-slaptget-show-ncdu]:    {{ asset_post }}/04-slaptget-show-ncdu.png
+[image-ss-slaptget-ncdu]:         {{ asset_post }}/04-slaptget-install-ncdu.png
+[image-ss-slaptget-slaptsrc]:     {{ asset_post }}/05-slaptget-install-slaptsrc.png
+[image-ss-slaptsrc-update]:       {{ asset_post }}/05-slaptsrc-update.png
+[image-ss-slaptsrc-ncdu-half]:    {{ asset_post }}/05-slaptsrc-install-ncdu-half.png
 [photo-ss-slaptsrc-ncdu-full]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQeESVsylBl5qU3t9C-l6fy0BsdAwezYvjhTjq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-slackpkg-python]:  {{ asset_path }}/docker-slackware-7-slackpkg-install-python.png
-[image-ss-slpkg-update-err]: {{ asset_path }}/docker-slackware-7-slpkg-update-certificate-error.png
-[image-ss-slackpkg-ca-cert]: {{ asset_path }}/docker-slackware-7-slackpkg-install-ca-certificates.png
-[image-ss-slpkg-update]:     {{ asset_path }}/docker-slackware-7-slpkg-update.png
+[image-ss-slackpkg-python]:  {{ asset_post }}/07-slackpkg-install-python.png
+[image-ss-slpkg-update-err]: {{ asset_post }}/07-slpkg-update-certificate-error.png
+[image-ss-slackpkg-ca-cert]: {{ asset_post }}/07-slackpkg-install-ca-certificates.png
+[image-ss-slpkg-update]:     {{ asset_post }}/07-slpkg-update.png
 
-[image-ss-slpkg-repo-list]:  {{ asset_path }}/docker-slackware-8-slpkg-repo-list.png
-[image-ss-slpkg-etc-repo]:   {{ asset_path }}/docker-slackware-8-slpkg-etc-repositories.png
-[image-ss-slpkg-sbo-fish]:   {{ asset_path }}/docker-slackware-8-slpkg-sbo-fish-half.png
+[image-ss-slpkg-repo-list]:  {{ asset_post }}/08-slpkg-repo-list.png
+[image-ss-slpkg-etc-repo]:   {{ asset_post }}/08-slpkg-etc-repositories.png
+[image-ss-slpkg-sbo-fish]:   {{ asset_post }}/08-slpkg-sbo-fish-half.png
 [photo-ss-slpkg-sbo-fish]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP8DnPxKw_sjsW2jlR_LAjIBJiP2BcMjsDmHSyv?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

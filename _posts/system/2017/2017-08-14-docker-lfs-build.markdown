@@ -389,22 +389,23 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-lfs' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-lfs-docker]:       {{ asset_path }}/docker-lfs-0-start.png
-[image-ss-lfs-version]:      {{ asset_path }}/docker-lfs-bash-version.png
+[image-ss-lfs-docker]:       {{ asset_post }}/00-start.png
+[image-ss-lfs-version]:      {{ asset_post }}/01-bash-version.png
 
-[image-ss-lfs-less-install]: {{ asset_path }}/docker-lfs-less-make-install.png
+[image-ss-lfs-less-install]: {{ asset_post }}/02-less-make-install.png
 
-[image-ss-lfs-man-conf]:    {{ asset_path }}/docker-lfs-man-configure-half.png
+[image-ss-lfs-man-conf]:    {{ asset_post }}/02-man-configure-half.png
 [photo-ss-lfs-man-conf]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNAY08WmXWjBas2LKuL7Youj7oaKUYOiG0QLlYe?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-lfs-man-make]:    {{ asset_path }}/docker-lfs-man-make-half.png
+[image-ss-lfs-man-make]:    {{ asset_post }}/02-man-make-half.png
 [photo-ss-lfs-man-make]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMMyskHqXSsNX-mEdciEbqmBEML1Xvu64H1ZIY2?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-lfs-man-install]: {{ asset_path }}/docker-lfs-man-make-install-half.png
+[image-ss-lfs-man-install]: {{ asset_post }}/02-man-make-install-half.png
 [photo-ss-lfs-man-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP0Z6AvDlEG_MdmlNzCzpUt86uyKTQ7gGnZSBNU?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-artix-pactree]:   {{ asset_path }}/artix-pactree-man.png
+[image-ss-artix-pactree]:   {{ asset_post }}/artix-pactree-man.png
 [photo-ss-artix-pactree]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPYsJbSP0SyZEAebz4NPfNMDdKb6BHnv7ZbL6UD?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

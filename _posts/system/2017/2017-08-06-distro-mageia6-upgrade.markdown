@@ -136,11 +136,12 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-mageia' %}
 
 [local-mageia-4]: {{ site.url }}/system/2014/05/09/mageia-experiment.html
 
-[image-ss-mageia]: {{ asset_path }}/mageia-6-upgrade.png
+[image-ss-mageia]: {{ asset_post }}/release-6-upgrade.png
 [photo-ss-mageia]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNj2Y-cqsOhW3IrV5C_uaCOQQ6tSiXaTJYSOwNI?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-mageia-dnf]: {{ asset_path }}/mageia-dnf.png
+[image-ss-mageia-dnf]: {{ asset_post }}/dnf.png
 [photo-ss-mageia-dnf]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN_L4dszGn4GGFS4B7_cVkr1GLy5tpbD5AAAFbd?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

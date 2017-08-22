@@ -246,17 +246,18 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-gentoo-docker]:    {{ asset_path }}/docker-gentoo-0-start.png
+[image-ss-gentoo-docker]:    {{ asset_post }}/00-start.png
 
-[image-ss-emerge-webrsync]:  {{ asset_path }}/docker-gentoo-1-webrsync-half.png
+[image-ss-emerge-webrsync]:  {{ asset_post }}/01-webrsync-half.png
 [photo-ss-emerge-webrsync]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN4az7eFD30LhWON67bxjIl07QM5l2DlmxjGSGX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-update]:    {{ asset_path }}/docker-gentoo-1-emerge-update.png
+[image-ss-emerge-update]:    {{ asset_post }}/01-emerge-update.png
 
-[image-ss-emerge-install]:   {{ asset_path }}/docker-gentoo-2-emerge-htop-half.png
+[image-ss-emerge-install]:   {{ asset_post }}/02-emerge-htop-half.png
 [photo-ss-emerge-install]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-ambigous]:  {{ asset_path }}/docker-gentoo-2-emerge-mc.png
+[image-ss-emerge-ambigous]:  {{ asset_post }}/02-emerge-mc.png

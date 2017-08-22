@@ -260,22 +260,24 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
+{% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
-[image-ss-term-1]:    {{ asset_path }}/docker-flow-terminal-1.png
-[image-ss-term-2]:    {{ asset_path }}/docker-flow-terminal-2.png
-[image-ss-term-3]:    {{ asset_path }}/docker-flow-terminal-3.png
-[image-ss-term-4]:    {{ asset_path }}/docker-flow-terminal-4.png
+[image-ss-term-1]:    {{ asset_flow }}/terminal-1.png
+[image-ss-term-2]:    {{ asset_flow }}/terminal-2.png
+[image-ss-term-3]:    {{ asset_flow }}/terminal-3.png
+[image-ss-term-4]:    {{ asset_flow }}/terminal-4.png
 
-[image-ss-term-all]: {{ asset_path }}/docker-flow-all.png
+[image-ss-term-all]: {{ asset_flow }}/all.png
 [photo-ss-term-all]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOGBr5RBUPtwBBJw14l1otPZZYR0WIur16lolb-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [local-manjaro-lxc]:    {{ site.url }}/system/2016/02/28/lxc-demonstration.html
 [local-manjaro-docker]: {{ site.url }}/system/2016/03/03/docker-demonstration-manjaro.html
 [local-debian-docker]:  {{ site.url }}/system/2016/03/09/docker-demonstration-debian.html
 
-[image-ss-pull-arch]:     {{ asset_path }}/docker-pull-arch.png
-[image-ss-pull-crux]:     {{ asset_path }}/docker-pull-crux.png
-[image-ss-pull-debian]:   {{ asset_path }}/docker-pull-debian-stretch.png
-[image-ss-pull-fedora]:   {{ asset_path }}/docker-pull-fedora-rawhide.png
-[image-ss-pull-opensuse]: {{ asset_path }}/docker-pull-opensuse-tumbleweed.png
-[image-ss-pull-busybox]:  {{ asset_path }}/docker-pull-busybox.png
+[image-ss-pull-arch]:     {{ asset_pull }}/arch.png
+[image-ss-pull-crux]:     {{ asset_pull }}/crux.png
+[image-ss-pull-debian]:   {{ asset_pull }}/debian-stretch.png
+[image-ss-pull-fedora]:   {{ asset_pull }}/fedora-rawhide.png
+[image-ss-pull-opensuse]: {{ asset_pull }}/opensuse-tumbleweed.png
+[image-ss-pull-busybox]:  {{ asset_pull }}/busybox.png

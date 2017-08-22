@@ -406,11 +406,12 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/package-manager' %}
 
-[image-ss-arch-ncdu]:      {{ asset_path }}/arch-ncdu.png
+[image-ss-arch-ncdu]:      {{ asset_post }}/arch-ncdu.png
 [photo-ss-arch-ncdu]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNJWgfTnwYdOcMq56Eg8fMhEsiM4Ki8ZaHLE1vv?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-gentoo-ncdu]:    {{ asset_path }}/gentoo-ncdu.png
+[image-ss-gentoo-ncdu]:    {{ asset_post }}/gentoo-ncdu.png
 
 [image-ss-artix-lxc]:      {{ asset_path }}/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
@@ -418,5 +419,5 @@ Thank you for Reading
 [image-ss-lxc-package]:    {{ site.url }}/assets/posts/system/2016/02/lxc-screenfetch.png
 [photo-ss-lxc-package]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOIV-PL-MJDcC2TxUi8xKUBFNz419Cnrxi9FBWy
 
-[image-ss-arch-query-aur]: {{ asset_path }}/arch-hlwm-aur-no-rofi.png
+[image-ss-arch-query-aur]: {{ asset_post }}/arch-hlwm-aur-no-rofi.png
 [photo-ss-arch-query-aur]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNE2B9cj-nGL6eUIr08vN3MLe1h78NVPglm6LKW?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

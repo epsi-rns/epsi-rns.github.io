@@ -327,29 +327,31 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-crux' %}
+{% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-crux-docker]:    {{ asset_path }}/docker-crux-0-start.png
-[image-ss-pull-crux]:      {{ asset_path }}/docker-pull-crux.png
+[image-ss-crux-docker]:    {{ asset_post }}/00-start.png
+[image-ss-pull-crux]:      {{ asset_pull }}/crux.png
 
-[image-ss-ports-update]:   {{ asset_path }}/docker-crux-1-ports-update-half.png
+[image-ss-ports-update]:   {{ asset_post }}/01-ports-update-half.png
 [photo-ss-ports-update]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNlVnnQZaB1hUzsq5627jq4kQvfTiKv6K2FZz1U?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-prtget-sysup]:   {{ asset_path }}/docker-crux-1-prtget-sysup-half.png
+[image-ss-prtget-sysup]:   {{ asset_post }}/01-prtget-sysup-half.png
 [photo-ss-prtget-sysup]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNgbQz6ZW3fjABCjtcUaLZNlOcs03-_XckXl_63?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-prtget-diff]:    {{ asset_path }}/docker-crux-1-ports-difference.png
+[image-ss-prtget-diff]:    {{ asset_post }}/01-ports-difference.png
 
-[image-ss-prtget-install]: {{ asset_path }}/docker-crux-2-prtget-install-half.png
+[image-ss-prtget-install]: {{ asset_post }}/02-prtget-install-half.png
 [photo-ss-prtget-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQaSQgPAmbhyfZwXjkhT46X8JPTWJ5035-5Mhm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-prtget-update]:  {{ asset_path }}/docker-crux-2-prtget-update.png
-[image-ss-pkgadd-update]:  {{ asset_path }}/docker-crux-3-pkgadd-update.png
+[image-ss-prtget-update]:  {{ asset_post }}/02-prtget-update.png
+[image-ss-pkgadd-update]:  {{ asset_post }}/03-pkgadd-update.png
 
-[image-ss-mc-error]:       {{ asset_path }}/docker-crux-4-prtget-install-mc-error.png
-[image-ss-search-glib]:    {{ asset_path }}/docker-crux-4-prtget-search-glib.png
-[image-ss-info-glibc]:     {{ asset_path }}/docker-crux-4-prtget-info-glibc.png
-[image-ss-update-glibc]:   {{ asset_path }}/docker-crux-4-prtget-update-glibc.png
+[image-ss-mc-error]:       {{ asset_post }}/04-prtget-install-mc-error.png
+[image-ss-search-glib]:    {{ asset_post }}/04-prtget-search-glib.png
+[image-ss-info-glibc]:     {{ asset_post }}/04-prtget-info-glibc.png
+[image-ss-update-glibc]:   {{ asset_post }}/04-prtget-update-glibc.png
 
 

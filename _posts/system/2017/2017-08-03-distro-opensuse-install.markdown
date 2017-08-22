@@ -245,19 +245,26 @@ I need time to experience these interesting stuff.
 
 Thank you for Reading
 
+-- -- -- 
+
+### Post Scriptum
+
+I have decide to make be a separate article about zypper using docker.
+Focusing on package manager in command line rather than installation in GUI.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-opensuse' %}
 
-[image-ss-yast-install]:    {{ asset_path }}/opensuse-yast-install-i586.png
+[image-ss-yast-install]:    {{ asset_post }}/yast-install-i586.png
 [photo-ss-yast-install]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNQ6K8rEv1WPht6zwJhInaGEifO_TC-eAJV3Fyk?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-zypper-dup]:      {{ asset_path }}/opensuse-zypper-dup.png
+[image-ss-zypper-dup]:      {{ asset_post }}/zypper-dup.png
 [photo-ss-zypper-dup]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMjKKoThrBZPC64w6dKm3qKZedQnSRLz5KhcHHj?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-zypper-ps]:       {{ asset_path }}/opensuse-zypper-ps-narrow.png
+[image-ss-zypper-ps]:       {{ asset_post }}/zypper-ps-narrow.png
 [photo-ss-zypper-ps]:       https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOKr8Czn6fxqgrCQuVqs8qaRals97xHRlqlkHS-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-zypper-up-dup]:   {{ asset_path }}/zypper-up-dup-difference.png
+[image-ss-zypper-up-dup]:   {{ asset_post }}/zypper-up-dup-difference.png
 [photo-ss-zypper-up-dup]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP3zbkffQJopJj2Y7I2GaTZuuxjZNKou3qJss2t?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

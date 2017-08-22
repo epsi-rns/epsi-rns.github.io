@@ -171,7 +171,8 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/filesystem-btrfs' %}
 
-[image-ss-partitioner]:      {{ asset_path }}/kaosx-kde-partitioner-manager.png
-[image-ss-fedora-grub]:      {{ asset_path }}/fedora-grub-btrfs-issue.png
-[image-ss-debian-grub]:      {{ asset_path }}/debian-grub-btrfs-support.png
+[image-ss-partitioner]:      {{ asset_post }}/kaosx-kde-partitioner-manager.png
+[image-ss-fedora-grub]:      {{ asset_post }}/fedora-grub-btrfs-issue.png
+[image-ss-debian-grub]:      {{ asset_post }}/debian-grub-btrfs-support.png

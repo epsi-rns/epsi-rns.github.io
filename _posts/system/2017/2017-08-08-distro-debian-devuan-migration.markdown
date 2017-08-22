@@ -155,12 +155,13 @@ Thank you for Reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-devuan' %}
 
-[image-ss-devuan-keyring]:    {{ asset_path }}/devuan-keyring.png
-[image-ss-devuan-mirror]:     {{ asset_path }}/devuan-mirror.png
+[image-ss-devuan-keyring]:    {{ asset_post }}/keyring.png
+[image-ss-devuan-mirror]:     {{ asset_post }}/mirror.png
 
-[image-ss-devuan-nosystemd]:  {{ asset_path }}/devuan-no-libsystemd0.png
+[image-ss-devuan-nosystemd]:  {{ asset_post }}/no-libsystemd0.png
 [photo-ss-devuan-nosystemd]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPl9Prff4wrSj-I77e-qZpirHYYlPUxR1_1L-iB?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-devuan-hlwm-dzen2]: {{ asset_path }}/devuan-hlwm-dzen2.png
+[image-ss-devuan-hlwm-dzen2]: {{ asset_post }}/hlwm-dzen2.png
 [photo-ss-devuan-hlwm-dzen2]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipORZB9aEXv-lA1OgQpa_FDT5hA7r9jr5Ehi7p88?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
