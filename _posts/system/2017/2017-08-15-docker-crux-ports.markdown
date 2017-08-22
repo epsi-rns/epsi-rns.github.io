@@ -324,7 +324,7 @@ prt-get: updated successfully
 
 
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

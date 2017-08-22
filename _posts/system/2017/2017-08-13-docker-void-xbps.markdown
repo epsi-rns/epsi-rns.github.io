@@ -221,7 +221,7 @@ There are still things that I do not understand,
 such as <code>xbps-src</code>and
 install from git source.
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

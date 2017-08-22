@@ -386,7 +386,7 @@ This is just building LFS at a glance.
 Of course there are more than my limited knowledge.
 There is also more advance topic such as BLFS, ALFS, and CLFS.
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

@@ -765,7 +765,7 @@ And you can update again to get shorter example.
 I finally happy using Fedora.
 Better late than never.
 
-Thank you for Reading
+Thank you for reading
 
 
 [//]: <> ( -- -- -- links below -- -- -- )

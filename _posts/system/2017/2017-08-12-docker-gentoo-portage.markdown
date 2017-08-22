@@ -374,7 +374,7 @@ Portage is not scary at all.
 
 -- -- --
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -395,12 +395,12 @@ Thank you for Reading
 
 [image-ss-emerge-ambigous]:  {{ asset_post }}/13-emerge-01-install-mc.png
 
-[image-ss-emerge-install]:   {{ asset_post }}/13-emerge-01-install-ask.png
-[image-ss-emerge-remove]:    {{ asset_post }}/13-emerge-02-remove-depclean.png
-[image-ss-emerge-search]:    {{ asset_post }}/13-emerge-03-search-search.png
+[image-ss-emerge-install-ask]: {{ asset_post }}/13-emerge-01-install-ask.png
+[image-ss-emerge-remove]:      {{ asset_post }}/13-emerge-02-remove-depclean.png
+[image-ss-emerge-search]:      {{ asset_post }}/13-emerge-03-search-search.png
 
 
-[image-ss-equery-depgraph]:  {{ asset_post }}/21-equery-depgraph.png
+[image-ss-equery-depgraph]:    {{ asset_post }}/21-equery-depgraph.png
 
 [image-ss-layman-list]:  {{ asset_post }}/23-layman-list.png
 

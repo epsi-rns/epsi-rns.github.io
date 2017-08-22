@@ -131,7 +131,7 @@ $ sudo urmi --auto-update
 
 -- -- --
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

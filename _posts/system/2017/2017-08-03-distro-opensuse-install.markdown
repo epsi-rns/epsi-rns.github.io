@@ -243,7 +243,7 @@ I must admit I know nothing about
 <code>YaST</code> nor <code>zypper</code> nor <code>BTRFS</code>.
 I need time to experience these interesting stuff.
 
-Thank you for Reading
+Thank you for reading
 
 -- -- -- 
 

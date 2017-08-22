@@ -350,7 +350,7 @@ Relax... this is a new distro.
 
 
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

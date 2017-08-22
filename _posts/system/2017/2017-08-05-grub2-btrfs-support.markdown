@@ -166,7 +166,7 @@ But I still wonder, whether there is GRUB2 support for BTRFS, or not.
 
 -- -- --
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

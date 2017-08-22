@@ -58,7 +58,7 @@ There are few topics here.
 
 *	Preparing Docker
 
-*	Using slackpkg
+*	IRSI: slackpkg install, removepkg, search, info
 
 *	Using slackbuild, manual compilation, and installpkg
 
@@ -208,6 +208,51 @@ $ slackpkg check-updates
 
 No news is good news
 {% endhighlight %}
+
+-- -- --
+
+### Package IRSI
+
+	Install, Remove, Search, Info
+
+#### Package Install
+
+We have seen Install in previous example.
+How about reinstall ?
+
+{% highlight bash %}
+$ slackpkg reinstall man nano htop
+{% endhighlight %}
+
+![Docker Slackpkg: Reinstall][image-ss-slackpkg-reinstall]{: .img-responsive }
+
+#### Package Remove
+
+{% highlight bash %}
+$ removepkg htop
+{% endhighlight %}
+
+![Docker Removepkg][image-ss-removepkg]{: .img-responsive }
+
+#### Package Search
+
+We have seen search in action in previous section.
+
+{% highlight bash %}
+$ slackpkg file-search htop
+{% endhighlight %}
+
+{% highlight bash %}
+$ slackpkg search htop
+{% endhighlight %}
+
+#### Package Info
+
+{% highlight bash %}
+$ slackpkg info htop
+{% endhighlight %}
+
+![Docker Slackpkg: Info][image-ss-slackpkg-info]{: .img-responsive }
 
 -- -- --
 
@@ -878,7 +923,7 @@ I simply do not understand what it means.
 
 	I guess I have to learn slackware more.
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -893,31 +938,39 @@ Thank you for Reading
 [image-ss-slack-docker]:     {{ asset_post }}/00-start.png
 [image-ss-slackware64]:      {{ asset_post }}/01-install-slackware64.png
 [image-ss-file-search]:      {{ asset_post }}/01-file-search-groff.png
-[image-ss-slackware64-huge]: {{ asset_flow }}/terminal-2.png
-[image-ss-slackbuild-fish]:  {{ asset_post }}/02-slackbuild-fish.png
-[image-ss-fish-config-log]:  {{ asset_post }}/02-fish-config-log.png
-[image-ss-sbopkg-install]:   {{ asset_post }}/02-sbopkg-fish.png
 [image-ss-slackpkg-patches]: {{ asset_post }}/01-slackpkg-upgrade-patches.png
+[image-ss-slackware64-huge]: {{ asset_flow }}/terminal-2.png
 
-[image-ss-install-slaptget]:      {{ asset_post }}/04-install-slaptget.png
-[image-ss-slaptget-update]:       {{ asset_post }}/04-slaptget-update.png
+[image-ss-removepkg]:          {{ asset_post }}/13-removepkg.png
+[image-ss-slackpkg-info]:      {{ asset_post }}/13-slackpkg-info.png
+[image-ss-slackpkg-reinstall]: {{ asset_post }}/13-slackpkg-reinstall.png
+
+
+[image-ss-slackbuild-fish]:  {{ asset_post }}/22-slackbuild-fish.png
+[image-ss-fish-config-log]:  {{ asset_post }}/22-fish-config-log.png
+[image-ss-sbopkg-install]:   {{ asset_post }}/22-sbopkg-fish.png
+
+
+[image-ss-install-slaptget]:      {{ asset_post }}/24-install-slaptget.png
+[image-ss-slaptget-update]:       {{ asset_post }}/24-slaptget-update.png
 [photo-ss-slaptget-update]:       https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNqu4dS9aQFxUQhNUZYBaynXouzDmhv2vjmO1ms?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-[image-ss-slaptget-upgrade-half]: {{ asset_post }}/04-slaptget-upgrade-half.png
+[image-ss-slaptget-upgrade-half]: {{ asset_post }}/24-slaptget-upgrade-half.png
 [photo-ss-slaptget-upgrade-full]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMC8TaVP2h4_9ptQHL0pGZ1axhn9GtdQ_9BuYP7?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-[image-ss-slaptget-htop]:         {{ asset_post }}/04-slaptget-install-htop.png
-[image-ss-slaptget-show-ncdu]:    {{ asset_post }}/04-slaptget-show-ncdu.png
-[image-ss-slaptget-ncdu]:         {{ asset_post }}/04-slaptget-install-ncdu.png
-[image-ss-slaptget-slaptsrc]:     {{ asset_post }}/05-slaptget-install-slaptsrc.png
-[image-ss-slaptsrc-update]:       {{ asset_post }}/05-slaptsrc-update.png
-[image-ss-slaptsrc-ncdu-half]:    {{ asset_post }}/05-slaptsrc-install-ncdu-half.png
+[image-ss-slaptget-htop]:         {{ asset_post }}/24-slaptget-install-htop.png
+[image-ss-slaptget-show-ncdu]:    {{ asset_post }}/24-slaptget-show-ncdu.png
+[image-ss-slaptget-ncdu]:         {{ asset_post }}/24-slaptget-install-ncdu.png
+[image-ss-slaptget-slaptsrc]:     {{ asset_post }}/25-slaptget-install-slaptsrc.png
+[image-ss-slaptsrc-update]:       {{ asset_post }}/25-slaptsrc-update.png
+[image-ss-slaptsrc-ncdu-half]:    {{ asset_post }}/25-slaptsrc-install-ncdu-half.png
 [photo-ss-slaptsrc-ncdu-full]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQeESVsylBl5qU3t9C-l6fy0BsdAwezYvjhTjq?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-slackpkg-python]:  {{ asset_post }}/07-slackpkg-install-python.png
-[image-ss-slpkg-update-err]: {{ asset_post }}/07-slpkg-update-certificate-error.png
-[image-ss-slackpkg-ca-cert]: {{ asset_post }}/07-slackpkg-install-ca-certificates.png
-[image-ss-slpkg-update]:     {{ asset_post }}/07-slpkg-update.png
+[image-ss-slackpkg-python]:  {{ asset_post }}/27-slackpkg-install-python.png
+[image-ss-slpkg-update-err]: {{ asset_post }}/27-slpkg-update-certificate-error.png
+[image-ss-slackpkg-ca-cert]: {{ asset_post }}/27-slackpkg-install-ca-certificates.png
+[image-ss-slpkg-update]:     {{ asset_post }}/27-slpkg-update.png
 
-[image-ss-slpkg-repo-list]:  {{ asset_post }}/08-slpkg-repo-list.png
-[image-ss-slpkg-etc-repo]:   {{ asset_post }}/08-slpkg-etc-repositories.png
-[image-ss-slpkg-sbo-fish]:   {{ asset_post }}/08-slpkg-sbo-fish-half.png
+[image-ss-slpkg-repo-list]:  {{ asset_post }}/28-slpkg-repo-list.png
+[image-ss-slpkg-etc-repo]:   {{ asset_post }}/28-slpkg-etc-repositories.png
+[image-ss-slpkg-sbo-fish]:   {{ asset_post }}/28-slpkg-sbo-fish-half.png
 [photo-ss-slpkg-sbo-fish]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP8DnPxKw_sjsW2jlR_LAjIBJiP2BcMjsDmHSyv?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+

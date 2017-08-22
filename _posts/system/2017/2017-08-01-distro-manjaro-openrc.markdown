@@ -199,7 +199,7 @@ Solution: install xf86-video-fbdev
 
 -- -- --
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

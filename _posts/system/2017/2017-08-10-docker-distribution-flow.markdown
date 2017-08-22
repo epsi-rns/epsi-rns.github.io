@@ -257,7 +257,7 @@ $ docker run -it busybox
 
 	Dream come true
 
-Thank you for Reading
+Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
