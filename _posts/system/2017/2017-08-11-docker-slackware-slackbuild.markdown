@@ -34,13 +34,7 @@ Slackware does not really have a sophisticated official package management.
 Beside <code>slackpkg</code> there are special unoffical tools 
 to manage your packages such as <code>sbopkg</code>,
 <code>slapt-get</code>, <code>slapt-src</code>,
-<code>sllpkg</code> and <code>slackpkgplus</code>.
-
-slackpkg
-	
-	Package Cache
-	
-	*	/var/cache/packages/*/*/.txz
+<code>slapkg</code> and <code>slackpkgplus</code>.
 
 slapt-get
 
@@ -49,6 +43,12 @@ slapt-get
 slpkg
 
 *	<https://github.com/dslackw/slpkg>
+
+slackpkg
+	
+	Package Cache
+	
+	*	/var/cache/packages/*/*/.txz
 
 #### Topics
 
@@ -703,7 +703,7 @@ ncdu-1.8/src/
 
 I have been wondering how to add other repository,
 such as <code>alien</code> and <code>slacky</code>.
-And I find this <code>slpkg</code>. 
+And I found this <code>slpkg</code>. 
 
 #### Dependency
 
@@ -723,7 +723,7 @@ $ sbopkg -i slpkg
 
 #### No certificate
 
-My first attempt, is always falure as usual.
+My first attempt, is always failure as usual.
 
 {% highlight bash %}
 $ slpkg update 
@@ -752,6 +752,8 @@ Now you should be ready.
 	First Thing First
 
 {% highlight bash %}
+$ slpkg update 
+
 Check and update repositories:
 
 Check repository [slack] ... Done
@@ -840,11 +842,11 @@ Unfortunately installation failed, we need to solve some dependency first.
 
 {% highlight bash %}
 $ slackpkg install gdbm
-{% highlight bash %}
+{% endhighlight %}
 
 And install again. Do the installation command over again.
 
-{% endhighlight %}
+{% highlight bash %}
 $ slpkg -s sbo fish
 {% endhighlight %}
 
