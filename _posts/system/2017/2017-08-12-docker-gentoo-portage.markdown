@@ -222,7 +222,7 @@ these packages will be compiled, built and installed.
 <code>emerge</code> has a very nice looks, 
 many colors while building package.
 
-[![Docker Emerge: Install Package][image-ss-emerge-install2]{: .img-responsive }][photo-ss-emerge-install2]
+[![Docker Emerge: Install Package][image-ss-emerge-install]{: .img-responsive }][photo-ss-emerge-install]
 
 #### Ask for Confirmation
 
