@@ -197,9 +197,6 @@ $ man emerge
 
 -- -- --
 
-
--- -- --
-
 ### Package IRSI
 
 	Install, Remove, Search, Info

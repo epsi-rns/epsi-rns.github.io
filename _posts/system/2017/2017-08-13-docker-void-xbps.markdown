@@ -115,7 +115,13 @@ $ xbps-install -Su
 
 -- -- --
 
-### Install
+### Package IRSI
+
+	Install, Remove, Search, Info
+
+Read the fine manual.
+
+#### Package Install
 
 {% highlight bash %}
 $ xbps-install -S nano htop mc ncdu curl
@@ -145,9 +151,34 @@ Do you want to continue? [Y/n]
 
 [![Docker Void: XBPS Package Install: End][image-ss-xbps-fav-bottom]{: .img-responsive }][photo-ss-xbps-fav-bottom]
 
--- -- --
+#### Package Remove
 
-### Query
+{% highlight bash %}
+$ xbps-remove -R nano htop mc ncdu curl
+
+Name    Action    Version           New version            Download size
+nano    remove    2.8.6_1           -                      - 
+htop    remove    2.0.2_2           -                      - 
+mc      remove    4.8.19_1          -                      - 
+glib    remove    2.52.3_1          -                      - 
+libgpm  remove    1.20.7_8          -                      - 
+libffi  remove    3.2.1_2           -                      - 
+libelf  remove    0.170_1           -                      - 
+ncdu    remove    1.12_1            -                      - 
+curl    remove    7.55.1_1          -                      - 
+libcurl remove    7.55.1_1          -                      - 
+nghttp2 remove    1.24.0_1          -                      - 
+jansson remove    2.10_1            -                      - 
+
+Size freed on disk:             22MB
+Free space on disk:             27GB
+
+Do you want to continue? [Y/n]
+{% endhighlight %}
+
+[![Docker Void: XBPS Package Removal][image-ss-xbps-remove]{: .img-responsive }][photo-ss-xbps-remove]
+
+#### Package Query Search
 
 {% highlight bash %}
 $ xbps-install fish
@@ -184,41 +215,20 @@ Do you want to continue? [Y/n] y
 
 [![Docker Void: XBPS Search Query][image-ss-xbps-query]{: .img-responsive }][photo-ss-xbps-query]
 
--- -- --
-
-### Remove
+#### Package Show Info
 
 {% highlight bash %}
-$ xbps-remove -R nano htop mc ncdu curl
-
-Name    Action    Version           New version            Download size
-nano    remove    2.8.6_1           -                      - 
-htop    remove    2.0.2_2           -                      - 
-mc      remove    4.8.19_1          -                      - 
-glib    remove    2.52.3_1          -                      - 
-libgpm  remove    1.20.7_8          -                      - 
-libffi  remove    3.2.1_2           -                      - 
-libelf  remove    0.170_1           -                      - 
-ncdu    remove    1.12_1            -                      - 
-curl    remove    7.55.1_1          -                      - 
-libcurl remove    7.55.1_1          -                      - 
-nghttp2 remove    1.24.0_1          -                      - 
-jansson remove    2.10_1            -                      - 
-
-Size freed on disk:             22MB
-Free space on disk:             27GB
-
-Do you want to continue? [Y/n]
+xbps-query -RS htop
 {% endhighlight %}
 
-[![Docker Void: XBPS Package Removal][image-ss-xbps-remove]{: .img-responsive }][photo-ss-xbps-remove]
+![Docker Void: XBPS Show Info][image-ss-xbps-info]{: .img-responsive }
 
 -- -- --
 
 ### Conclusion
 
 There are still things that I do not understand,
-such as <code>xbps-src</code>and
+such as <code>xbps-src</code> and
 install from git source.
 
 Thank you for reading
@@ -238,14 +248,16 @@ Thank you for reading
 [image-ss-xbps-su-bottom]:  {{ asset_post }}/01-xbps-install-su-2-half.png
 [photo-ss-xbps-su-bottom]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOAAatxsZJD9QdtiJeYv4gZdjrY4-Z1gzOcUkdk?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-fav-top]:    {{ asset_post }}/02-xbps-install-favorites-1-half.png
+[image-ss-xbps-fav-top]:    {{ asset_post }}/13-xbps-install-1-half.png
 [photo-ss-xbps-fav-top]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMhv4nG5EBx7QOcBVxLhNxwinyMV3SnAwjKifN2?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-fav-bottom]: {{ asset_post }}/02-xbps-install-favorites-2-half.png
+[image-ss-xbps-fav-bottom]: {{ asset_post }}/13-xbps-install-2-half.png
 [photo-ss-xbps-fav-bottom]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNYFTqIMX7qwej3iG01pnf0NoApP_ILFFpwsuZX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-query]:      {{ asset_post }}/03-xbps-query-half.png
+[image-ss-xbps-query]:      {{ asset_post }}/13-xbps-query-half.png
 [photo-ss-xbps-query]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNqZ1HtZh9xjxFEIV5S7AH7F6x26oogQA8m1XEg?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-xbps-remove]:     {{ asset_post }}/04-xbps-remove-half.png
+[image-ss-xbps-remove]:     {{ asset_post }}/13-xbps-remove-half.png
 [photo-ss-xbps-remove]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP_ea-U8XItnqBn0FV8XfB7JbDGUpjcUZMAd3LO?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-xbps-info]:       {{ asset_post }}/13-xbps-info.png

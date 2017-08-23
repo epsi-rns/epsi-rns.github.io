@@ -176,7 +176,17 @@ Which we will solve later.
 
 -- -- --
 
-### Install
+### Package IRSI
+
+	Install, Remove, Search, Info
+
+Read the fine manual.
+
+{% highlight bash %}
+$ prt-get help | less
+{% endhighlight %}
+
+#### Package Install
 
 You can use <code>prt-get install</code>
 to install new package,
@@ -194,6 +204,45 @@ bsdtar -p -o -C /usr/ports/opt/mc/work/src -xf /usr/ports/opt/mc/mc-4.8.15.tar.x
 {% endhighlight %}
 
 [![Docker Crux: prt-get Install][image-ss-prtget-install]{: .img-responsive }][photo-ss-prtget-install]
+
+#### Package Remove
+
+{% highlight bash %}
+$ prt-get remove htop
+{% endhighlight %}
+
+![Docker Crux: prt-get Remove][image-ss-prtget-remove]{: .img-responsive }
+
+#### Package Search
+
+{% highlight bash %}
+$ prt-get search htop
+htop
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get dsearch htop
+htop
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get fsearch htop
+Found in /usr/ports/opt/bash-completion:
+  /usr/share/bash-completion/completions/htop
+
+Found in /usr/ports/opt/htop:
+  /usr/bin/htop
+{% endhighlight %}
+
+![Docker Crux: prt-get Search][image-ss-prtget-search]{: .img-responsive } 
+
+#### Package Info
+
+{% highlight bash %}
+$ prt-get info htop
+{% endhighlight %}
+
+![Docker Crux: prt-get Info][image-ss-prtget-info]{: .img-responsive }
 
 -- -- --
 
@@ -319,10 +368,22 @@ prt-get: updated successfully
 
 -- -- --
 
+### Distribution Upgrade
+
+Distribution upgrade from <code>3.1</code> to <code>3.2</code>
+can be done using live DVD. 
+But cannot be done directly due to ncurse break.
+Distribution upgrade from <code>3.2</code> to <code>3.3</code>
+also can be done using live DVD. 
+Since we are using Docker, it can't be done with external boot.
+
+	I should stay with 3.1 instead
+
+-- -- --
+
 ### Conclusion
 
-
-
+	There are things unsolved
 
 Thank you for reading
 
@@ -345,15 +406,19 @@ Thank you for reading
 
 [image-ss-prtget-diff]:    {{ asset_post }}/01-ports-difference.png
 
-[image-ss-prtget-install]: {{ asset_post }}/02-prtget-install-half.png
+[image-ss-prtget-install]: {{ asset_post }}/13-prtget-install-half.png
 [photo-ss-prtget-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQaSQgPAmbhyfZwXjkhT46X8JPTWJ5035-5Mhm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-prtget-update]:  {{ asset_post }}/02-prtget-update.png
-[image-ss-pkgadd-update]:  {{ asset_post }}/03-pkgadd-update.png
+[image-ss-prtget-info]:    {{ asset_post }}/13-prtget-info.png
+[image-ss-prtget-remove]:  {{ asset_post }}/13-prtget-remove.png
+[image-ss-prtget-search]:  {{ asset_post }}/13-prtget-search.png
 
-[image-ss-mc-error]:       {{ asset_post }}/04-prtget-install-mc-error.png
-[image-ss-search-glib]:    {{ asset_post }}/04-prtget-search-glib.png
-[image-ss-info-glibc]:     {{ asset_post }}/04-prtget-info-glibc.png
-[image-ss-update-glibc]:   {{ asset_post }}/04-prtget-update-glibc.png
+[image-ss-prtget-update]:  {{ asset_post }}/22-prtget-update.png
+[image-ss-pkgadd-update]:  {{ asset_post }}/23-pkgadd-update.png
+
+[image-ss-mc-error]:       {{ asset_post }}/24-prtget-install-mc-error.png
+[image-ss-search-glib]:    {{ asset_post }}/24-prtget-search-glib.png
+[image-ss-info-glibc]:     {{ asset_post }}/24-prtget-info-glibc.png
+[image-ss-update-glibc]:   {{ asset_post }}/24-prtget-update-glibc.png
 
 
