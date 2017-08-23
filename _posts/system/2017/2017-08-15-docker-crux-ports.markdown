@@ -17,7 +17,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Learning Package Manager, Focus on Command Line Interface
+> Goal: Examine Package Manager, Focus on Command Line Interface
 
 This Crux is even easier with docker container, no need to set up system.
 Therefore we can dive right away to compilation.
@@ -205,7 +205,7 @@ bsdtar -p -o -C /usr/ports/opt/mc/work/src -xf /usr/ports/opt/mc/mc-4.8.15.tar.x
 
 [![Docker Crux: prt-get Install][image-ss-prtget-install]{: .img-responsive }][photo-ss-prtget-install]
 
-#### Package Remove
+#### Package Removal
 
 {% highlight bash %}
 $ prt-get remove htop

@@ -19,7 +19,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Learning Package Manager, Focus on Command Line Interface
+> Goal: Examine Package Manager, Focus on Command Line Interface
 
 	You jump, I jump !
 

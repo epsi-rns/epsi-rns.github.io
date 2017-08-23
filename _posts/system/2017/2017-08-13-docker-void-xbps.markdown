@@ -17,7 +17,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Learning Package Manager, Focus on Command Line Interface
+> Goal: Examine Package Manager, Focus on Command Line Interface
 
 Void Linux is so interesting
 
@@ -151,7 +151,7 @@ Do you want to continue? [Y/n]
 
 [![Docker Void: XBPS Package Install: End][image-ss-xbps-fav-bottom]{: .img-responsive }][photo-ss-xbps-fav-bottom]
 
-#### Package Remove
+#### Package Removal
 
 {% highlight bash %}
 $ xbps-remove -R nano htop mc ncdu curl

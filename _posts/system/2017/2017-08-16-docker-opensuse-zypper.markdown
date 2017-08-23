@@ -7,7 +7,7 @@ tags: [docker, distro, package manager, opensuse]
 author: epsi
 
 excerpt:
-  Learning zypper step bu step,
+  Examine zypper step by step,
   using openSUSE container in Docker
 
 related_link_ids: 
@@ -17,15 +17,15 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Learning Package Manager, Focus on Command Line Interface
+> Goal: Examine Package Manager, Focus on Command Line Interface
 
 Using openSUSE minimal install in Docker,
 is a good way to learn zypper.
-Zypper is a Package Manager used by openSUSE.
+Zypper is a Package Manager utilized by openSUSE.
 With minimal install, there is no need,
 to download 4GB of full installation packages.
 
-We need tumbleweed rolling release with more often update than leap,
+We need <code>Tumbleweed</code> rolling release with more often update than leap,
 so that we have a chance to play more with package cycle.
 
 Since we are going to use docker again,
@@ -121,6 +121,9 @@ $ zypper install ncurses-utils
 {% highlight bash %}
 $ reset
 {% endhighlight %}
+
+openSUSE minimal install allow the user to remove systemd,
+leaving the system without init.
 
 -- -- --
 
@@ -426,7 +429,7 @@ systemd
 
 ### Conclusion
 
-	These are preliminary knowledge about Zypper.
+	These are just preliminary knowledge about Zypper.
 
 Thank you for reading
 

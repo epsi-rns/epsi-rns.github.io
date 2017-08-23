@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Learning Package Manager, Focus on Command Line Interface
+> Goal: Examine Package Manager, Focus on Command Line Interface
 
 I am so glad that finally I can learn Gentoo Portage using Docker.
 
@@ -247,7 +247,7 @@ Use fully qualified ebuild name instead.
 $ emerge app-misc/mc 
 {% endhighlight %}
 
-#### Package Remove
+#### Package Removal
 
 	Depclean
 

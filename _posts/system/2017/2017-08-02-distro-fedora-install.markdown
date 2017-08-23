@@ -147,7 +147,8 @@ Some packages might stay on your system while they have been removed from the re
 $ dnf list extras
 {% endhighlight %}
 
-And update
+And update.
+<code>update</code> in an alias for <code>upgrade</code>.
 
 {% highlight bash %}
 $ sudo dnf update

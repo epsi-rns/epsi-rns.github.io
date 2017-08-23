@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Learning Package Manager, Focus on Command Line Interface
+> Goal: Examine Package Manager, Focus on Command Line Interface
 
 I am so glad that finally, for the first time,
 I can learn Slackware Package Management using Docker.
@@ -226,7 +226,7 @@ $ slackpkg reinstall man nano htop
 
 ![Docker Slackpkg: Reinstall][image-ss-slackpkg-reinstall]{: .img-responsive }
 
-#### Package Remove
+#### Package Removal
 
 {% highlight bash %}
 $ removepkg htop
