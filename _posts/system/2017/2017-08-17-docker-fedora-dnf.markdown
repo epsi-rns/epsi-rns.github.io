@@ -449,6 +449,11 @@ Marking packages as installed by the group:
 
 ![Docker DNF: Group ][image-ss-dnf-g-install]{: .img-responsive }
 
+#### Beyond Group
+
+You can even remove group of packages as you can read in manual,
+or upgrade only for specific group.
+
 -- -- --
 
 ### Conclusion

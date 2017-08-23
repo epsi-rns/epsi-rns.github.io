@@ -267,6 +267,10 @@ $ zypper help | less
 
 #### Package Install
 
+{% highlight bash %}
+$ zypper help |in
+{% endhighlight %}
+
 Consider our favorite example package below.
 
 {% highlight bash %}
@@ -372,6 +376,39 @@ Description    :
 
 -- -- --
 
+### Group
+
+I cannot find any reference about group in Zypper.
+Althought there is group concept in YaST.
+
+#### Metapackage
+
+Neither metapackage exist in Zypper.
+
+#### Pattern
+
+The closest concept about group in zypper is,
+by using <code>pattern</code> package.
+
+{% highlight bash %}
+$ zypper pt
+Loading repository data...
+Reading installed packages...
+S | Name                 | Version       | Repository | Dependency
+--+----------------------+---------------+------------+-----------
+  | apparmor             | 20170319-10.2 | OSS        |           
+  | apparmor             | 20170319-10.2 | OSS        |           
+  | base                 | 20170319-10.2 | OSS        |           
+  | base                 | 20170319-10.2 | OSS        |           
+  | basesystem           | 20170319-10.2 | OSS        |           
+  | basesystem           | 20170319-10.2 | OSS        |           
+  | books                | 20170319-4.1  | OSS        |           
+{% endhighlight %}
+
+![Docker Zypper: Pattern][image-ss-zypper-pattern]{: .img-responsive }
+
+-- -- --
+
 ### Unsolved Issues on Minimal Install
 
 #### No Manual
@@ -455,3 +492,4 @@ Thank you for reading
 
 [image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
 
+[image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png

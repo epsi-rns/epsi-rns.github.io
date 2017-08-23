@@ -246,6 +246,13 @@ $ prt-get info htop
 
 -- -- --
 
+### Group
+
+I cannot find any reference about group in Crux's Ports.
+I guess there is no group concept.
+
+-- -- --
+
 ### Ports Difference
 
 You check the ports difference.

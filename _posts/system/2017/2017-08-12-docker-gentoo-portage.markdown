@@ -291,6 +291,37 @@ $ emerge -S htop
 
 -- -- --
 
+### Group
+
+	There is no group concept in portage.
+
+I have been looking for a concept of
+[group or pattern or metapackages] in portage.
+And found something better called <code>sets</code>.
+
+#### Metapackages
+
+If you insist to use metapackage,
+you can still use the search feature.
+
+{% highlight bash %}
+$ emerge -s meta
+{% endhighlight %}
+
+#### Sets
+
+Official
+
+*	<https://wiki.gentoo.org/wiki//etc/portage/sets>
+
+Awesome Blog
+
+*	<https://makuro.wordpress.com/2010/12/12/intro-to-portage-sets/>
+
+
+
+-- -- --
+
 ### Interesting Tools
 
 I do think that these tools are what I need.

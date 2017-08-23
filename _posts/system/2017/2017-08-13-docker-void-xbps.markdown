@@ -25,8 +25,8 @@ Void Linux is so interesting
 
 *	Void is using runit, as alternative init to systemd, sysvinit, or openrc.
 
-Since we are going to use docker again,
-you can read a common overview here.
+This container is built using <code>voidstrap</code> metapackage.
+Since we are going to use docker again, you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
 
@@ -225,6 +225,22 @@ xbps-query -RS htop
 
 -- -- --
 
+### Group
+
+I cannot find any reference about group in XBPS.
+I guess there is no group concept in XBPS.
+
+#### Metapackage
+
+However you can use <code>meta-package</code>,
+combined with this cheap search tricks.
+
+![Docker XBPS: Metapackages][image-ss-meta-package-1]{: .img-responsive }
+
+![Docker XBPS: Metapackages][image-ss-meta-package-2]{: .img-responsive }
+
+-- -- --
+
 ### Conclusion
 
 There are still things that I do not understand,
@@ -261,3 +277,6 @@ Thank you for reading
 [photo-ss-xbps-remove]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP_ea-U8XItnqBn0FV8XfB7JbDGUpjcUZMAd3LO?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-xbps-info]:       {{ asset_post }}/13-xbps-info.png
+
+[image-ss-meta-package-1]:  {{ asset_post }}/15-meta-package-1.png
+[image-ss-meta-package-2]:  {{ asset_post }}/15-meta-package-2.png
