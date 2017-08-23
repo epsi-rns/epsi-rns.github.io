@@ -99,7 +99,10 @@ bash-4.4#
 
 Since I use terminal with a lot of screenshot,
 I utilize the <code>$ reset</code> command frequently.
-Which is surpisingly not available in opeSUSE.
+Which is not available in openSUSE.
+I can understand that minimal install,
+could be a based for embedded system,
+that is no need for either reset nor manual. 
 
 There are two workaround,
 first is to emulate with character.
@@ -113,6 +116,10 @@ which contain <code>$ reset</code> command.
 
 {% highlight bash %}
 $ zypper install ncurses-utils
+{% endhighlight %}
+
+{% highlight bash %}
+$ reset
 {% endhighlight %}
 
 -- -- --
