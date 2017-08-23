@@ -145,6 +145,28 @@ Zypper
 	
 	*	/var/cache/zypp/packages/ * /suse/noarch/ * .noarch.rpm
 
+#### Get Help
+
+Read the fine manual. Helpless or help more.
+
+{% highlight bash %}
+$ zypper help | less
+{% endhighlight %}
+
+{% highlight bash %}
+$ zypper help install
+{% endhighlight %}
+
+#### Zypper Shell
+
+{% highlight bash %}
+$ zypper shell
+zypper> help in
+install (in) [options] <capability|rpm_file_uri> ...
+{% endhighlight %}
+
+![Docker openSUSE: Zypper Shell][image-ss-zypper-shell]{: .img-responsive }
+
 -- -- -- 
 
 ### Updating System
@@ -160,12 +182,6 @@ First thing to do is updating my system as usual.
 *	Distribution Upgrade
 
 *	Process that still being used after update and upgrade.
-
-Read the fine manual. Helpless or help more.
-
-{% highlight bash %}
-$ zypper help | less
-{% endhighlight %}
 
 #### List Updates
 
@@ -259,17 +275,7 @@ in my previous opensuse full install article.
 
 	Install, Remove, Search, Info
 
-Read the fine manual. Helpless or help more.
-
-{% highlight bash %}
-$ zypper help | less
-{% endhighlight %}
-
 #### Package Install
-
-{% highlight bash %}
-$ zypper help |in
-{% endhighlight %}
 
 Consider our favorite example package below.
 
@@ -478,8 +484,9 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-opensuse-docker]:    {{ asset_post }}/00-getting-started.png
 [image-ss-pull-opensuse]:      {{ asset_pull }}/opensuse-tumbleweed.png
+[image-ss-opensuse-docker]:    {{ asset_post }}/00-getting-started.png
+[image-ss-zypper-shell]:       {{ asset_post }}/00-zypper-shell.png
 
 [image-ss-zypper-lu]:  {{ asset_post }}/01-list-updates.png
 [image-ss-zypper-up]:  {{ asset_post }}/01-update.png
