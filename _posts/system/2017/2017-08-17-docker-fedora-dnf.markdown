@@ -3,7 +3,7 @@ layout: post
 title: "Docker - Fedora DNF"
 date: 2017-08-17 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager, opensuse]
+tags: [docker, distro, package manager, fedora]
 author: epsi
 
 excerpt:
