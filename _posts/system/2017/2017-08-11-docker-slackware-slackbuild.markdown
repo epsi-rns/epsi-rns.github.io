@@ -935,7 +935,7 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-slack-docker]:     {{ asset_post }}/00-start.png
+[image-ss-slack-docker]:     {{ asset_post }}/00-getting-started.png
 [image-ss-slackware64]:      {{ asset_post }}/01-install-slackware64.png
 [image-ss-file-search]:      {{ asset_post }}/01-file-search-groff.png
 [image-ss-slackpkg-patches]: {{ asset_post }}/01-slackpkg-upgrade-patches.png

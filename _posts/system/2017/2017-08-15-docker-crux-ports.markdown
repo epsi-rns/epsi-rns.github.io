@@ -3,7 +3,7 @@ layout: post
 title: "Docker - Crux Ports"
 date: 2017-08-15 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager, lfs]
+tags: [docker, distro, package manager, crux]
 author: epsi
 
 excerpt:
@@ -104,7 +104,7 @@ Before Arch, there was Crux.
 Arch was intended as additional Crux package manager,
 but then was recreated from scratch.
 While Arch Linux use <code>.pkg.tar.xz</code> extension for package, 
-Crus use <code>.pkg.tar.gz</code> extension for package,.
+Crus use <code>.pkg.tar.gz</code> extension for package.
 
 #### Reading
 
@@ -395,7 +395,7 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-crux-docker]:    {{ asset_post }}/00-start.png
+[image-ss-crux-docker]:    {{ asset_post }}/00-getting-started.png
 [image-ss-pull-crux]:      {{ asset_pull }}/crux.png
 
 [image-ss-ports-update]:   {{ asset_post }}/01-ports-update-half.png

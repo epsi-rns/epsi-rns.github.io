@@ -395,7 +395,7 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-lfs-docker]:       {{ asset_post }}/00-start.png
+[image-ss-lfs-docker]:       {{ asset_post }}/00-getting-started.png
 [image-ss-lfs-version]:      {{ asset_post }}/01-bash-version.png
 
 [image-ss-lfs-less-install]: {{ asset_post }}/02-less-make-install.png

@@ -3,7 +3,7 @@ layout: post
 title: "Docker - Void XBPS"
 date: 2017-08-13 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager, gentoo]
+tags: [docker, distro, package manager, void]
 author: epsi
 
 excerpt:
@@ -240,7 +240,7 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-void-docker]:     {{ asset_post }}/00-start.png
+[image-ss-void-docker]:     {{ asset_post }}/00-getting-started.png
 
 [image-ss-xbps-su-top]:     {{ asset_post }}/01-xbps-install-su-1-half.png
 [photo-ss-xbps-su-top]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN7yNgtq3tLkiTAAwArqzRtIjtdFEdHjEoHYp-_?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
