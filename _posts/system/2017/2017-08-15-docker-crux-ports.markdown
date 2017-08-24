@@ -22,14 +22,23 @@ related_link_ids:
 This Crux is even easier with docker container, no need to set up system.
 Therefore we can dive right away to compilation.
 
+#### Test Bed
+
+1.	Container: Docker
+
+2.	Operating System: Artix (OpenRC )
+
+3.	Window Manager: Herbstluftwm
+
 Since we are going to use docker again,
 you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
 
-#### Reading
-
-*	<https://crux.nu/Main/Handbook3-3>
+Of course you can use virtualization, the issue is distraction.
+We need to avoid tendency to focus on GUI tools.
+At the same time, limiting the scope to CLI tools.
+Most of the time, CLI tools is considered lower level than the GUI one.
 
 -- -- --
 
@@ -67,30 +76,28 @@ bash-4.3# exit
 {% endhighlight %}
 
 {% highlight bash %}
-$ docker ps -a 
+$ docker ps 
 {% raw %}
   --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
 {% endraw %}
 IMAGE                       NAMES                  STATUS
-crux                        nifty_beaver           Exited (0) 8 seconds ago
-busybox                     dazzling_agnesi        Exited (0) 38 hours ago
-debian:stretch              dazzling_neumann       Exited (0) 38 hours ago
-dock0/arch                  silly_leakey           Exited (1) 38 hours ago
-fedora:rawhide              musing_torvalds        Exited (0) 38 hours ago
-opensuse/amd64:tumbleweed   friendly_brahmagupta   Exited (0) 39 hours ago
-kevinleptons/lfs-auto       wonderful_nobel        Exited (0) 2 days ago
-voidlinux/voidlinux         awesome_davinci        Exited (0) 41 hours ago
-gentoo/stage3-amd64         amazing_shirley        Exited (0) 40 hours ago
-vbatts/slackware            cranky_keller          Exited (0) 3 days ago
+opensuse/amd64:tumbleweed   elegant_nightingale   Up 17 hours
+crux                        lucid_brown           Up 6 hours
+fedora:rawhide              musing_torvalds       Up 7 hours
+voidlinux/voidlinux         awesome_davinci       Up 6 hours
+gentoo/stage3-amd64         amazing_shirley       Up 8 hours
+vbatts/slackware            cranky_keller         Up 6 hours
 {% endhighlight %}
 
+![Docker openSUSE: List Running Containers][image-ss-docker-ps]{: .img-responsive }
+
 {% highlight bash %}
-$ docker start nifty_beaver
+$ docker start lucid_brown
 nifty_beaver
 {% endhighlight %}
 
 {% highlight bash %}
-$ docker attach nifty_beaver
+$ docker attach lucid_brown
 bash-4.3# 
 {% endhighlight %}
 
@@ -107,6 +114,10 @@ While Arch Linux use <code>.pkg.tar.xz</code> extension for package,
 Crus use <code>.pkg.tar.gz</code> extension for package.
 
 #### Reading
+
+*	<https://crux.nu/Main/Handbook3-1>
+
+*	<https://crux.nu/Main/Handbook3-3>
 
 *	<http://www.fukt.bsnet.se/~per/pkgutils/>
 
@@ -254,6 +265,46 @@ $ prt-get info htop
 {% endhighlight %}
 
 ![Docker Crux: prt-get Info][image-ss-prtget-info]{: .img-responsive }
+
+-- -- --
+
+### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+For that reason, I put the recorded event here, 
+before discussing about any further feature.
+
+Log options in Crux is disabled as default.
+You have to enable it manually by editing <code>prt-get.conf</code>
+
+{% highlight bash %}
+$ vim /etc/prt-get.conf 
+writelog enabled           # (enabled|disabled)
+logfile  /var/log/pkgbuild/%n.log
+{% endhighlight %}
+
+![Docker: vim /etc/prt-get.conf][image-ss-prtget-log]{: .img-responsive }
+
+This is the nano log after nano installation.
+
+{% highlight bash %}
+$ less /var/log/pkgbuild/nano.log
+=======> Building '/usr/ports/opt/nano/nano#2.4.3-1.pkg.tar.gz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/nano
+prt-get: installing nano 2.4.3-1
+prt-get: /usr/bin/pkgadd nano#2.4.3-1.pkg.tar.gz
+prt-get: build done Thu Aug 24 10:20:01 2017
+{% endhighlight %}
+
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
+
+![Docker: /var/log/pkgbuild/nano.log][image-ss-less-log]{: .img-responsive }
+
+**Reading**
+
+*	<https://crux.nu/doc/prt-get%20-%20User%20Manual.html#config_logging>
 
 -- -- --
 
@@ -414,6 +465,7 @@ Thank you for reading
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
 [image-ss-crux-docker]:    {{ asset_post }}/00-getting-started.png
+[image-ss-docker-ps]:      {{ asset_post }}/00-docker-ps.png
 [image-ss-pull-crux]:      {{ asset_pull }}/crux.png
 
 [image-ss-ports-update]:   {{ asset_post }}/01-ports-update-half.png
@@ -423,6 +475,8 @@ Thank you for reading
 [photo-ss-prtget-sysup]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNgbQz6ZW3fjABCjtcUaLZNlOcs03-_XckXl_63?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-prtget-diff]:    {{ asset_post }}/01-ports-difference.png
+[image-ss-less-log]:       {{ asset_post }}/07-log.png
+[image-ss-prtget-log]:     {{ asset_post }}/07-prtget-log-conf.png
 
 [image-ss-prtget-install]: {{ asset_post }}/13-prtget-install-half.png
 [photo-ss-prtget-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQaSQgPAmbhyfZwXjkhT46X8JPTWJ5035-5Mhm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
@@ -438,5 +492,3 @@ Thank you for reading
 [image-ss-search-glib]:    {{ asset_post }}/24-prtget-search-glib.png
 [image-ss-info-glibc]:     {{ asset_post }}/24-prtget-info-glibc.png
 [image-ss-update-glibc]:   {{ asset_post }}/24-prtget-update-glibc.png
-
-

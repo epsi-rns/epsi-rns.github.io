@@ -25,10 +25,25 @@ Void Linux is so interesting
 
 *	Void is using runit, as alternative init to systemd, sysvinit, or openrc.
 
+#### Test Bed
+
+1.	Container: Docker
+
+2.	Operating System: Artix (OpenRC )
+
+3.	Window Manager: Herbstluftwm
+
 This container is built using <code>voidstrap</code> metapackage.
-Since we are going to use docker again, you can read a common overview here.
+
+Since we are going to use docker again,
+you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+
+Of course you can use virtualization, the issue is distraction.
+We need to avoid tendency to focus on GUI tools.
+At the same time, limiting the scope to CLI tools.
+Most of the time, CLI tools is considered lower level than the GUI one.
 
 -- -- --
 
@@ -236,10 +251,21 @@ Do you want to continue? [Y/n] y
 #### Package Show Info
 
 {% highlight bash %}
-xbps-query -RS htop
+$ xbps-query -RS htop
 {% endhighlight %}
 
 ![Docker Void: XBPS Show Info][image-ss-xbps-info]{: .img-responsive }
+
+-- -- --
+
+### The Log File
+
+	Unfortunately, nothing in /var/log
+
+{% highlight bash %}
+$ ls -l /var/log/
+total 0
+{% endhighlight %}
 
 -- -- --
 

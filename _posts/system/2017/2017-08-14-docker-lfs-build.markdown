@@ -28,22 +28,31 @@ but do not let the fear intimidate you.
 Once you jump to LFS and swim,
 you will know that the myth is not true at all.
 
+This LFS is even easier with docker container,
+avoid daunting task such as setting up system.
+Therefore we can dive right away to compilation.
+
 #### Reading
 
 *	<http://www.linuxfromscratch.org/lfs/view/stable/>
 
--- -- --
+#### Test Bed
 
-### Using Docker
+1.	Container: Docker
 
-This LFS is even easier with docker container,
-avoid daunting task such as setting up system.
-Therefore we can dive right away to compilation.
+2.	Operating System: Artix (OpenRC )
+
+3.	Window Manager: Herbstluftwm
 
 Since we are going to use docker again,
 you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+
+Of course you can use virtualization, the issue is distraction.
+We need to avoid tendency to focus on GUI tools.
+At the same time, limiting the scope to CLI tools.
+Most of the time, CLI tools is considered lower level than the GUI one.
 
 -- -- --
 

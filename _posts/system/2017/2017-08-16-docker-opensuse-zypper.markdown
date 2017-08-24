@@ -28,14 +28,23 @@ to download 4GB of full installation packages.
 We need <code>Tumbleweed</code> rolling release with more often update than leap,
 so that we have a chance to play more with package cycle.
 
+#### Test Bed
+
+1.	Container: Docker
+
+2.	Operating System: Artix (OpenRC )
+
+3.	Window Manager: Herbstluftwm
+
 Since we are going to use docker again,
 you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
 
-#### Reading
-
-*	<https://en.opensuse.org/SDB:Zypper_usage>
+Of course you can use virtualization, the issue is distraction.
+We need to avoid tendency to focus on GUI tools.
+At the same time, limiting the scope to CLI tools.
+Most of the time, CLI tools is considered lower level than the GUI one.
 
 -- -- --
 
@@ -134,7 +143,9 @@ Zypper
 
 *	<https://github.com/openSUSE/libzypp>
 
-*	https://github.com/openSUSE/zypper>
+*	<https://github.com/openSUSE/zypper>
+
+*	<https://en.opensuse.org/SDB:Zypper_usage>
 
 *	<https://en.wikipedia.org/wiki/ZYpp>
 	
@@ -394,6 +405,31 @@ Description    :
 
 -- -- --
 
+### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+For that reason, I put the recorded event here, 
+before discussing about any further feature.
+
+{% highlight bash %}
+$ less /var/log/zypp/history
+# 2017-08-23 08:57:51 man-2.7.6-3.3.x86_64.rpm installed ok
+# Additional rpm output:
+# Updating /etc/sysconfig/cron ...
+# 
+2017-08-23 08:57:51|install|man|2.7.6-3.3|x86_64|root@d2e88a46e111|oss|21490bfff69e98449f8ae00bb9e91b15038566ca|
+2017-08-23 10:01:09|command|root@d2e88a46e111|'zypper' 'install' '--force' 'man' 'nano' 'htop' 'ncdu' 'fish'|
+2017-08-23 10:01:12|install|htop|2.0.2-3.4|x86_64|root@d2e88a46e111|oss|2807afd80fa606228799ab76baddfc2e688d60b8|
+{% endhighlight %}
+
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
+
+![Docker: /var/log/zypp/history][image-ss-less-log]{: .img-responsive }
+
+-- -- --
+
 ### Group
 
 I cannot find any reference about group in Zypper.
@@ -504,6 +540,7 @@ Thank you for reading
 [image-ss-zypper-lu]:  {{ asset_post }}/01-list-updates.png
 [image-ss-zypper-up]:  {{ asset_post }}/01-update.png
 [image-ss-zypper-dup]: {{ asset_post }}/01-distribution-upgrade.png
+[image-ss-less-log]:   {{ asset_post }}/07-log.png
 
 [image-ss-zypper-if]:  {{ asset_post }}/13-info-fish.png
 [image-ss-zypper-in]:  {{ asset_post }}/13-install.png

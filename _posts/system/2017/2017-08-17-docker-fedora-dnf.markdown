@@ -27,14 +27,23 @@ We need <code>Rawhide</code> rolling release with more often update,
 so that we have a chance to play more with package.
 No need to wait for another six month cycle.
 
+#### Test Bed
+
+1.	Container: Docker
+
+2.	Operating System: Artix (OpenRC )
+
+3.	Window Manager: Herbstluftwm
+
 Since we are going to use docker again,
 you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
 
-#### Reading
-
-*	<http://dnf.readthedocs.io/en/latest/command_ref.html>
+Of course you can use virtualization, the issue is distraction.
+We need to avoid tendency to focus on GUI tools.
+At the same time, limiting the scope to CLI tools.
+Most of the time, CLI tools is considered lower level than the GUI one.
 
 -- -- --
 
@@ -99,6 +108,8 @@ $ docker attach musing_torvalds
 DNF (Dandified YUM): Fedora: Python
 
 *	<https://github.com/rpm-software-management/dnf>
+
+*	<http://dnf.readthedocs.io/en/latest/command_ref.html>
 
 *	<https://en.wikipedia.org/wiki/DNF_(software)>
 	
@@ -392,6 +403,33 @@ Description  : The man-db package includes five tools for browsing man-pages:
 
 -- -- --
 
+### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+For that reason, I put the recorded event here, 
+before discussing about any further feature.
+
+{% highlight bash %}
+$ less /var/log/dnf.log
+2017-08-23T10:47:59Z INFO --- logging initialized ---
+2017-08-23T10:47:59Z DDEBUG timer: config: 1381 ms
+2017-08-23T10:47:59Z DEBUG DNF version: 2.5.1
+2017-08-23T10:47:59Z DDEBUG Command: dnf repolist 
+2017-08-23T10:47:59Z DDEBUG Installroot: /
+2017-08-23T10:47:59Z DDEBUG Releasever: 27
+2017-08-23T10:47:59Z DEBUG cachedir: /var/cache/dnf
+2017-08-23T10:47:59Z DDEBUG Base command: repolist
+2017-08-23T10:47:59Z DDEBUG Extra commands: ['repolist']
+{% endhighlight %}
+
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
+
+![Docker: /var/log/dnf.log][image-ss-less-log]{: .img-responsive }
+
+-- -- --
+
 ### Group
 
 Is this docker Minimal Install ?
@@ -509,6 +547,7 @@ Thank you for reading
 [image-ss-dnf-upgrade-3]: {{ asset_post }}/02-dnf-upgrade-3.png
 [image-ss-dnf-upgrade-4]: {{ asset_post }}/02-dnf-upgrade-4.png
 [image-ss-dnf-extra-cmd]: {{ asset_post }}/03-dnf-extra-commands.png
+[image-ss-less-log]:      {{ asset_post }}/07-log.png
 
 [image-ss-dnf-info]:      {{ asset_post }}/13-dnf-info.png
 [image-ss-dnf-install]:   {{ asset_post }}/13-dnf-install.png

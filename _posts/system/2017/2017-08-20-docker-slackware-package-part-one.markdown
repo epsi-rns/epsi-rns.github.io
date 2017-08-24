@@ -54,9 +54,23 @@ I can learn Slackware Package Management using Docker.
 Here is my report as a _new slacker_ who just landed in slackware land,
 my journey using minimal install.
 
-You can read a common overview about docker here.
+#### Test Bed
+
+1.	Container: Docker
+
+2.	Operating System: Artix (OpenRC )
+
+3.	Window Manager: Herbstluftwm
+
+Since we are going to use docker again,
+you can read a common overview here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+
+Of course you can use virtualization, the issue is distraction.
+We need to avoid tendency to focus on GUI tools.
+At the same time, limiting the scope to CLI tools.
+Most of the time, CLI tools is considered lower level than the GUI one.
 
 -- -- --
 
@@ -288,6 +302,25 @@ $ slackpkg info htop
 
 -- -- --
 
+### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+For that reason, I put the recorded event here, 
+before discussing about any further feature.
+
+Unfortunately, I cannot find any reference about slackpkg log file.
+However, there is are some log file for
+
+*	sbopkg:	/var/log/sbopkg/sbopkg-build-log
+
+*	slpkg:	 /var/log/slpkg/sbo/build_logs/build_fish_log
+
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
+
+-- -- --
+
 ### Minimal or Full Install ?
 
 	What should I do with this Container ?
@@ -307,8 +340,6 @@ is a slackware minimal install.
 Therefore you need to populate with full slackware distribution.
 
 {% highlight bash %}
-$ slackpkg update
-
 $ slackpkg install slackware64
 {% endhighlight %}
 
@@ -558,6 +589,22 @@ $ sbopkg -i fish
 As long as you prepare toolchain well,
 <code>sbopkg</code> is helpful.
 
+#### The sbopkg Log File
+
+{% highlight bash %}
+$ tail -n 15 /var/log/sbopkg/sbopkg-build-log 
+SUMMARY LOG
+Using the SBo repository for Slackware 14.2
+Queue Process:  Download, build, and install
+
+slpkg:
+  MD5SUM check for slpkg-3.2.8.tar.gz ... OK
+  Building package slpkg-3.2.8-x86_64-1_SBo.tgz ... OK
+  Installing package slpkg-3.2.8-x86_64-1_SBo.tgz ... OK
+{% endhighlight %}
+
+![Docker Slackware: sbopkg build log][image-ss-sbopkg-build-log]{: .img-responsive }
+
 -- -- --
 
 ### What's Next
@@ -574,8 +621,8 @@ Thank you for reading
 {% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-part-one.html
-[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-part-two.html
+[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package-part-one.html
+[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package-part-two.html
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
@@ -590,6 +637,7 @@ Thank you for reading
 [image-ss-removepkg]:          {{ asset_post }}/13-removepkg.png
 [image-ss-slackpkg-info]:      {{ asset_post }}/13-slackpkg-info.png
 [image-ss-slackpkg-reinstall]: {{ asset_post }}/13-slackpkg-reinstall.png
+[image-ss-sbopkg-build-log]:   {{ asset_post }}/17-sbopkg-log.png
 
 [image-ss-slackbuild-fish]:  {{ asset_post }}/22-slackbuild-fish.png
 [image-ss-fish-config-log]:  {{ asset_post }}/22-fish-config-log.png

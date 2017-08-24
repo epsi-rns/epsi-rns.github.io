@@ -430,6 +430,20 @@ You are freely to try other package other than <code>fish</code>.
 $ slpkg -s sbo ncdu
 {% endhighlight %}
 
+#### The slpkg Log File
+
+{% highlight bash %}
+$ tail -n 15 /var/log/slpkg/sbo/build_logs/build_fish_log 
+etc/fish/conf.d/
+install/
+install/doinst.sh
+install/slack-desc
+
+Slackware package /tmp/fish-2.6.0-x86_64-1_SBo.tgz created.
+{% endhighlight %}
+
+![Docker Slackware: slpkg build log][image-ss-slpkg-build-log]{: .img-responsive }
+
 -- -- --
 
 ### Conclusion
@@ -447,8 +461,8 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-part-one.html
-[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-part-two.html
+[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package-part-one.html
+[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package-part-two.html
 
 [image-ss-install-slaptget]:      {{ asset_post }}/24-install-slaptget.png
 [image-ss-slaptget-update]:       {{ asset_post }}/24-slaptget-update.png
@@ -467,9 +481,9 @@ Thank you for reading
 [image-ss-slpkg-update-err]: {{ asset_post }}/27-slpkg-update-certificate-error.png
 [image-ss-slackpkg-ca-cert]: {{ asset_post }}/27-slackpkg-install-ca-certificates.png
 [image-ss-slpkg-update]:     {{ asset_post }}/27-slpkg-update.png
+[image-ss-slpkg-build-log]:  {{ asset_post }}/29-slpkg-log.png
 
 [image-ss-slpkg-repo-list]:  {{ asset_post }}/28-slpkg-repo-list.png
 [image-ss-slpkg-etc-repo]:   {{ asset_post }}/28-slpkg-etc-repositories.png
 [image-ss-slpkg-sbo-fish]:   {{ asset_post }}/28-slpkg-sbo-fish-half.png
 [photo-ss-slpkg-sbo-fish]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP8DnPxKw_sjsW2jlR_LAjIBJiP2BcMjsDmHSyv?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-
