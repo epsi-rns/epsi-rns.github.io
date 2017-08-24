@@ -294,16 +294,10 @@ Emerge
 
 *	<https://github.com/gentoo/portage>
 	
-	Package Cache
+	Portage Library
 	
-	*	/var/db/pkg/*/*.ebuild
+	*	/usr/lib/portage
 	
-	Package Tree
-	
-	*	/usr/portage/metadata/md5-cache/*/*
-	
-	*	/usr/portage/app-misc/mc/*
-
 ![Gentoo: NCDU][image-ss-gentoo-ncdu]{: .img-responsive }
 
 -- -- --

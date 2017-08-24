@@ -133,10 +133,6 @@ slackpkg
 
 *	<https://docs.slackware.com/slackware:slackpkg>
 	
-	Package Cache
-	
-	*	/var/cache/packages/*/*/.txz
-
 slapt-get
 
 *	<https://github.com/jaos/slapt-get>
@@ -302,25 +298,6 @@ $ slackpkg info htop
 
 -- -- --
 
-### The Log File
-
-This is most the forgotten part of package management,
-although it is not uncommon to notice messages.
-For that reason, I put the recorded event here, 
-before discussing about any further feature.
-
-Unfortunately, I cannot find any reference about slackpkg log file.
-However, there is are some log file for
-
-*	sbopkg:	/var/log/sbopkg/sbopkg-build-log
-
-*	slpkg:	 /var/log/slpkg/sbo/build_logs/build_fish_log
-
-Most likely you want the tail, latest transaction,
-at the bottom of the recorded event.
-
--- -- --
-
 ### Minimal or Full Install ?
 
 	What should I do with this Container ?
@@ -406,6 +383,46 @@ So do nothave any plan to install <code>D Package Series</code>.
 If storage is not a problem for you,
 you can install <code>D Package Series</code>,
 or even use full <code>Slackware64</code> install.
+
+-- -- --
+
+### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+For that reason, I put the recorded event here, 
+before discussing about any further feature.
+
+Unfortunately, I cannot find any reference about slackpkg log file.
+However, there is are some log file for
+
+*	sbopkg:	/var/log/sbopkg/sbopkg-build-log
+
+*	slpkg:	 /var/log/slpkg/sbo/build_logs/build_fish_log
+
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
+
+-- -- --
+
+-- -- --
+
+#### Clean Up
+
+Time after time, your cache size may growing bigger and bigger.
+
+Package Cache
+	
+*	/var/cache/packages/ * / * / * .txz
+
+{% highlight bash %}
+$ ls -lR /var/cache/packages/slackware64/d
+{% endhighlight %}
+
+![Docker Slack: Cache][image-ss-slack-cache]:{: .img-responsive }
+
+Unfortunately, I haven't find any reference,
+on how to clean up this cache directory.
 
 -- -- --
 
@@ -638,6 +655,7 @@ Thank you for reading
 [image-ss-slackpkg-info]:      {{ asset_post }}/13-slackpkg-info.png
 [image-ss-slackpkg-reinstall]: {{ asset_post }}/13-slackpkg-reinstall.png
 [image-ss-sbopkg-build-log]:   {{ asset_post }}/17-sbopkg-log.png
+[image-ss-slack-cache]:        {{ asset_post }}/17-cache.png
 
 [image-ss-slackbuild-fish]:  {{ asset_post }}/22-slackbuild-fish.png
 [image-ss-fish-config-log]:  {{ asset_post }}/22-fish-config-log.png

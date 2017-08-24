@@ -149,12 +149,6 @@ Zypper
 
 *	<https://en.wikipedia.org/wiki/ZYpp>
 	
-	Package Cache
-	
-	*	/var/cache/zypp/packages/ * /x86_64/ * .x86_64.rpm
-	
-	*	/var/cache/zypp/packages/ * /suse/noarch/ * .noarch.rpm
-
 #### Get Help
 
 Read the fine manual. Helpless or help more.
@@ -430,6 +424,35 @@ at the bottom of the recorded event.
 
 -- -- --
 
+#### Clean Up
+
+Opensuse as default does not keep downloaded package,
+unless <code>keeppackages=1</code>
+sets in <code>/etc/zypp/repos.d/</code>.
+But sometimes cache files left for some reason.
+
+Package Cache
+	
+*	/var/cache/zypp/packages/ * /x86_64/ * .x86_64.rpm
+	
+*	/var/cache/zypp/packages/ * /suse/noarch/ * .noarch.rpm
+
+{% highlight bash %}
+$ ls -lR /var/cache/zypp/packages/
+{% endhighlight %}
+
+![Docker Zypper: Cache][image-ss-zypper-cache]{: .img-responsive }
+
+You can clean these directory.
+
+{% highlight bash %}
+$ zypper clean
+{% endhighlight %}
+
+![Docker Zypper: Clean][image-ss-zypper-clean]{: .img-responsive }
+
+-- -- --
+
 ### Group
 
 I cannot find any reference about group in Zypper.
@@ -550,3 +573,5 @@ Thank you for reading
 [image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
 
 [image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
+[image-ss-zypper-cache]:   {{ asset_post }}/17-cache.png
+[image-ss-zypper-clean]:   {{ asset_post }}/17-clean.png

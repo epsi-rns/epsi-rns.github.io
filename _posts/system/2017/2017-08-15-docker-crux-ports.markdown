@@ -204,10 +204,6 @@ Which we will solve later.
 
 Read the fine manual.
 
-{% highlight bash %}
-$ prt-get help | less
-{% endhighlight %}
-
 #### Package Install
 
 You can use <code>prt-get install</code>
@@ -305,6 +301,25 @@ at the bottom of the recorded event.
 **Reading**
 
 *	<https://crux.nu/doc/prt-get%20-%20User%20Manual.html#config_logging>
+
+-- -- --
+
+#### Clean Up
+
+Time after time, your cache size may growing bigger and bigger.
+
+Package Cache
+	
+*	/usr/ports/core/ * / * .pkg.tar.gz
+
+{% highlight bash %}
+$ ls -lR  /usr/ports/core/man-db/
+{% endhighlight %}
+
+![Docker CRUX: Ports Library][image-ss-usr-ports]{: .img-responsive }
+
+Unfortunately, I haven't find any reference,
+on how to clean up this port directory.
 
 -- -- --
 
@@ -484,6 +499,8 @@ Thank you for reading
 [image-ss-prtget-info]:    {{ asset_post }}/13-prtget-info.png
 [image-ss-prtget-remove]:  {{ asset_post }}/13-prtget-remove.png
 [image-ss-prtget-search]:  {{ asset_post }}/13-prtget-search.png
+
+[image-ss-usr-ports]:      {{ asset_post }}/17-cache.png
 
 [image-ss-prtget-update]:  {{ asset_post }}/22-prtget-update.png
 [image-ss-pkgadd-update]:  {{ asset_post }}/23-pkgadd-update.png

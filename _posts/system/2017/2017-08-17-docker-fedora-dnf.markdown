@@ -113,10 +113,6 @@ DNF (Dandified YUM): Fedora: Python
 
 *	<https://en.wikipedia.org/wiki/DNF_(software)>
 	
-	Package Cache
-	
-	*	/var/cache/dnf/ * /packages/ * .rpm
-
 #### Get Help
 
 Read the fine manual. 
@@ -237,6 +233,8 @@ that I have to put the output into four figures.
 #### Extra Command.
 
 Common clean up procedures.
+Actual we will discuss each later.
+Now I just feel the need to summarized the sequence here.
 
 {% highlight bash %}
 $ dnf clean packages
@@ -430,6 +428,36 @@ at the bottom of the recorded event.
 
 -- -- --
 
+#### Clean Up
+
+Time after time, your cache size may growing bigger and bigger.
+
+Package Cache
+	
+*	/var/cache/dnf/ * /packages/ * .rpm
+
+{% highlight bash %}
+$ ls -lR /var/cache/dnf/
+{% endhighlight %}
+
+![Docker DNF: Cache][image-ss-dnf-cache]{: .img-responsive }
+
+You can clean these directory.
+
+{% highlight bash %}
+$ dnf clean packages
+18 files removed
+{% endhighlight %}
+
+{% highlight bash %}
+$ dnf clean all
+9 files removed
+{% endhighlight %}
+
+![Docker DNF: Clean][image-ss-dnf-clean]{: .img-responsive }
+
+-- -- --
+
 ### Group
 
 Is this docker Minimal Install ?
@@ -558,3 +586,6 @@ Thank you for reading
 [image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
 [image-ss-dnf-g-install]: {{ asset_post }}/15-dnf-group-install-core.png
 [image-ss-dnf-g-list]:    {{ asset_post }}/15-dnf-grouplist.png
+
+[image-ss-dnf-cache]:     {{ asset_post }}/17-cache.png
+[image-ss-dnf-clean]:     {{ asset_post }}/17-clean.png

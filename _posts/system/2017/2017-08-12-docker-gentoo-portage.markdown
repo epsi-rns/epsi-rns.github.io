@@ -103,15 +103,6 @@ Emerge
 
 *	<https://github.com/gentoo/portage>
 	
-	Package Cache
-	
-	*	/var/db/pkg/*/*.ebuild
-	
-	Package Tree
-	
-	*	/usr/portage/metadata/md5-cache/*/*
-	
-	*	/usr/portage/app-misc/mc/*
 
 #### Get Help
 
@@ -347,6 +338,51 @@ at the bottom of the recorded event.
 
 -- -- --
 
+#### Clean Up
+
+Time after time, your portage source directory,
+may growing bigger and bigger in size.
+You can clean these directory.
+
+Package Source
+	
+*	/usr/portage/distfiles
+
+{% highlight bash %}
+$ ls -lR /usr/portage/distfiles
+{% endhighlight %}
+
+![Docker portage: Source][image-ss-portage-source]{: .img-responsive }
+
+This will only remove package if there are newer version.
+This command takes long time.
+Do not do that when you are very tired.
+
+{% highlight bash %}
+$ eclean distfiles
+ * Building file list for distfiles cleaning...
+ * Your distfiles directory was already clean.
+{% endhighlight %}
+
+![Docker portage: Clean Dist][image-ss-eclean-distfiles]{: .img-responsive }
+
+This will will keep only installed package.
+
+{% highlight bash %}
+$ eclean-dist -d
+ * Building file list for distfiles cleaning...
+ * Cleaning distfiles...
+ [    3.3 M ] fish-2.4.0.tar.gz
+ [  465.2 K ] htop-2.0.2.tar.gz
+ ===========
+ [    3.8 M ] Total space from 2 files were freed in the distfiles directory
+
+{% endhighlight %}
+
+![Docker portage: Clean Deep][image-ss-eclean-dist-deep]{: .img-responsive }
+
+-- -- --
+
 ### Group
 
 	There is no group concept in portage.
@@ -484,6 +520,9 @@ Thank you for reading
 [image-ss-emerge-remove]:      {{ asset_post }}/13-emerge-02-remove-depclean.png
 [image-ss-emerge-search]:      {{ asset_post }}/13-emerge-03-search-search.png
 
+[image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
+[image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
+[image-ss-eclean-dist-deep]:   {{ asset_post }}/17-eclean-dist-deep.png
 
 [image-ss-equery-depgraph]:    {{ asset_post }}/21-equery-depgraph.png
 
@@ -493,5 +532,4 @@ Thank you for reading
 [photo-ss-eix-sync]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM0XeXwWZOJK2dUO-hl8DvUWfUVb3Sn5WfwebdJ?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-eix-update]:   {{ asset_post }}/25-eix-update.png
-
 

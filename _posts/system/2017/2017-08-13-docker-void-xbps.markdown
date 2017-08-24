@@ -269,6 +269,36 @@ total 0
 
 -- -- --
 
+#### Clean Up
+
+Time after time, your cache size may growing bigger and bigger.
+
+Package Cache
+	
+*	/var/cache/xbps/ * .xbps
+
+{% highlight bash %}
+$ ls -lR  /var/cache/xbps/
+{% endhighlight %}
+
+![Docker XBPS: Cache][image-ss-xbps-cache]{: .img-responsive }
+
+You can clean these directory.
+Unused package will be removed.
+Some other stay.
+
+{% highlight bash %}
+$ xbps-remove -O
+Removed file-5.30_1.x86_64.xbps from cachedir (obsolete)
+Removed diffutils-3.5_2.x86_64.xbps from cachedir (obsolete)
+Removed libtls15-2.5.4_1.x86_64.xbps from cachedir (obsolete)
+Removed iproute2-4.10.0_1.x86_64.xbps from cachedir (obsolete)
+{% endhighlight %}
+
+![Docker XBPS: Clean][image-ss-xbps-clean]{: .img-responsive }
+
+-- -- --
+
 ### Group
 
 I cannot find any reference about group in XBPS.
@@ -324,3 +354,5 @@ Thank you for reading
 
 [image-ss-meta-package-1]:  {{ asset_post }}/15-meta-package-1.png
 [image-ss-meta-package-2]:  {{ asset_post }}/15-meta-package-2.png
+[image-ss-xbps-cache]:      {{ asset_post }}/17-cache.png
+[image-ss-xbps-clean]:      {{ asset_post }}/17-clean.png
