@@ -106,6 +106,41 @@ DNF (Dandified YUM): Fedora: Python
 	
 	*	/var/cache/dnf/ * /packages/ * .rpm
 
+#### Get Help
+
+Read the fine manual. 
+
+{% highlight bash %}
+$ man dnf
+{% endhighlight %}
+
+Since we do need have <code>man-db</code> nor <code>less</code> yet.
+This is what we can do.
+
+{% highlight bash %}
+$ dnf help | more
+{% endhighlight %}
+
+	I cannot even be 'help | less'.
+
+#### DNF Shell
+
+Most modern package manager has shell feature,
+that enable user to focus on the task of managing package.
+
+{% highlight bash %}
+$ dnf shell
+Fedora - Rawhide - Developmental pa 168 kB/s |  66 MB     06:38    
+Last metadata expiration check: 0:13:32 ago on Thu Aug 24 04:58:06 2017.
+> clean packages
+0 files removed
+> clean all
+9 files removed
+> 
+{% endhighlight %}
+
+![Docker Fedora: DNFShell][image-ss-dnf-shell]{: .img-responsive }
+
 -- -- -- 
 
 ### Updating System
@@ -114,16 +149,19 @@ DNF (Dandified YUM): Fedora: Python
 
 First thing to do is updating my system as usual.
 
+*	OS Release
+
 *	Repository List
 
 *	Upgrade
 
 *	Some Extra Command
 
-Read the fine manual.
+#### OS Release
 
 {% highlight bash %}
-$ dnf help | more
+$ cat /etc/fedora-release 
+Fedora release 27 (Rawhide)
 {% endhighlight %}
 
 #### Repository List
@@ -131,11 +169,6 @@ $ dnf help | more
 This Fedora container size is only 232MB,
 but the <code>$ dnf repolist</code> command is,
 ridiculously required to download 66MB.
-
-{% highlight bash %}
-$ cat /etc/fedora-release 
-Fedora release 27 (Rawhide)
-{% endhighlight %}
 
 {% highlight bash %}
 $ dnf repolist
@@ -236,11 +269,7 @@ Nothing to do.
 	Install, Remove, Search, Info
 
 Read the fine manual. Helpless or help more. 
-We need to install <code>man</code>
-
-{% highlight bash %}
-$ dnf help | less
-{% endhighlight %}
+We need to install <code>man</code>.
 
 #### Package Install
 
@@ -470,8 +499,9 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-fedora-docker]: {{ asset_post }}/00-getting-started.png
 [image-ss-pull-fedora]:   {{ asset_pull }}/fedora-rawhide.png
+[image-ss-fedora-docker]: {{ asset_post }}/00-getting-started.png
+[image-ss-dnf-shell]:     {{ asset_post }}/01-dnf-shell.png
 
 [image-ss-dnf-repolist]:  {{ asset_post }}/02-dnf-repolist.png
 [image-ss-dnf-upgrade-1]: {{ asset_post }}/02-dnf-upgrade-1.png

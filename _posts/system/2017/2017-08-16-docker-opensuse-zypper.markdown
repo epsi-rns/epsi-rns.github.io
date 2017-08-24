@@ -68,16 +68,15 @@ bash-4.4# exit
 {% endhighlight %}
 
 {% highlight bash %}
-$ docker ps -a 
+$ docker ps
 {% raw %}
   --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
 {% endraw %}
-IMAGE                       NAMES                  STATUS
-opensuse/amd64:tumbleweed   elegant_nightingale   Exited (0) 12 seconds ago
-debian:stretch              dazzling_neumann      Exited (0) 5 days ago
-dock0/arch                  silly_leakey          Exited (1) 5 days ago
-fedora:rawhide              musing_torvalds       Exited (0) 5 days ago
+IMAGE                       NAMES                 STATUS
+opensuse/amd64:tumbleweed   elegant_nightingale   Up 9 hours
 {% endhighlight %}
+
+![Docker openSUSE: List Running Containers][image-ss-docker-ps]{: .img-responsive }
 
 {% highlight bash %}
 $ docker start elegant_nightingale
@@ -159,6 +158,9 @@ $ zypper help install
 
 #### Zypper Shell
 
+Most modern package manager has shell feature,
+that enable user to focus on the task of managing package.
+
 {% highlight bash %}
 $ zypper shell
 zypper> help in
@@ -175,6 +177,8 @@ install (in) [options] <capability|rpm_file_uri> ...
 
 First thing to do is updating my system as usual.
 
+*	OS Release
+
 *	List Update
 
 *	Update
@@ -182,6 +186,14 @@ First thing to do is updating my system as usual.
 *	Distribution Upgrade
 
 *	Process that still being used after update and upgrade.
+
+#### OS Release
+
+{% highlight bash %}
+$ cat /etc/os-release 
+NAME="openSUSE Tumbleweed"
+...
+{% endhighlight %}
 
 #### List Updates
 
@@ -484,9 +496,10 @@ Thank you for reading
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
-[image-ss-pull-opensuse]:      {{ asset_pull }}/opensuse-tumbleweed.png
-[image-ss-opensuse-docker]:    {{ asset_post }}/00-getting-started.png
-[image-ss-zypper-shell]:       {{ asset_post }}/00-zypper-shell.png
+[image-ss-pull-opensuse]:   {{ asset_pull }}/opensuse-tumbleweed.png
+[image-ss-opensuse-docker]: {{ asset_post }}/00-getting-started.png
+[image-ss-docker-ps]:       {{ asset_post }}/00-docker-ps.png
+[image-ss-zypper-shell]:    {{ asset_post }}/01-zypper-shell.png
 
 [image-ss-zypper-lu]:  {{ asset_post }}/01-list-updates.png
 [image-ss-zypper-up]:  {{ asset_post }}/01-update.png

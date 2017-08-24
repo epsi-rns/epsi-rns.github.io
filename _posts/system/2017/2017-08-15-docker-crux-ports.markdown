@@ -120,6 +120,22 @@ prt-get
 
 *	<https://github.com/winkj/prt-get>
 
+#### Get Help
+
+If you are helpless, just add this <code>help | less</code> argument.
+
+{% highlight bash %}
+$ prt-get help | less
+{% endhighlight %}
+
+Or if you have <code>man-db</code> installed.
+I mean after, source downloaded, compiled, built, and finally installed,
+yes you can do below command.
+
+{% highlight bash %}
+$ man prt-get
+{% endhighlight %}
+
 -- -- -- 
 
 ### Updating System
@@ -148,13 +164,8 @@ Finished successfully
 
 Now is time to use <code>prt-get</code>,
 an advanced package management tool for CRUX.
-If you are helpless, just add this <code>help | less</code> argument.
 
-{% highlight bash %}
-$ prt-get help | less
-{% endhighlight %}
-
-Consider system update using <code>prt-get</code>.
+Consider system update using <code>prt-get sysup</code>.
 
 {% highlight bash %}
 $ prt-get sysup

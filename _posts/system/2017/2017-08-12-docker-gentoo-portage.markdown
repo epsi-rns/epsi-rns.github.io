@@ -99,6 +99,14 @@ Emerge
 	
 	*	/usr/portage/app-misc/mc/*
 
+#### Get Help
+
+Read the fine manual instead.
+
+{% highlight bash %}
+$ man emerge
+{% endhighlight %}
+
 -- -- --
 
 ### Updating System with Webrsync
@@ -107,7 +115,14 @@ Emerge
 
 First thing to do in my mind is updating my system.
 
-You can use <code>emerge -u</code> command.
+#### OS Release
+
+{% highlight bash %}
+$ cat /etc/gentoo-release 
+Gentoo Base System release 2.3
+{% endhighlight %}
+
+#### webrsync
 
 {% highlight bash %}
 ca9efc06241d / # emerge-webrsync
@@ -124,6 +139,11 @@ Fetching most recent snapshot ...
 {% endhighlight %}
 
 [![Docker Gentoo: emerge-webrsync][image-ss-emerge-webrsync]{: .img-responsive }][photo-ss-emerge-webrsync]
+
+
+#### Update
+
+You can use <code>emerge -u</code> command.
 
 {% highlight bash %}
 ca9efc06241d / # emerge -u system
@@ -190,10 +210,6 @@ $ rm portage-latest.tar.xz
 
 There are other command such as <code>emerge --sync</code>
 Read the fine manual instead.
-
-{% highlight bash %}
-$ man emerge
-{% endhighlight %}
 
 -- -- --
 

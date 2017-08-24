@@ -97,11 +97,29 @@ Void Linux use The X Binary Package System (XBPS) as package management.
 
 *	<https://github.com/voidlinux/xbps>
 
+#### Get Help
+
+Read the fine manual. 
+
+{% highlight bash %}
+$ man xbps-query
+$ man xbps-install
+$ xbps-install --help
+{% endhighlight %}
+
 -- -- --
 
 ### Update
 
 	First Thing First
+	
+{% highlight bash %}
+$ cat /etc/os-release
+NAME="void"
+ID="void"
+DISTRIB_ID="void"
+PRETTY_NAME="void"
+{% endhighlight %}
 
 {% highlight bash %}
 $ xbps-install -Su

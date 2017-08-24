@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker - Slackware - Part One"
+title: "Docker - Slackware Package - Part One"
 date: 2017-08-20 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager, slackware]
@@ -58,29 +58,6 @@ You can read a common overview about docker here.
 
 *	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
 
-
-#### Package Management
-
-Slackware does not really have a sophisticated official package management.
-Beside <code>slackpkg</code> there are special unoffical tools 
-to manage your packages such as <code>sbopkg</code>,
-<code>slapt-get</code>, <code>slapt-src</code>,
-<code>slapkg</code> and <code>slackpkgplus</code>.
-
-slapt-get
-
-*	<https://github.com/jaos/slapt-get>
-
-slpkg
-
-*	<https://github.com/dslackw/slpkg>
-
-slackpkg
-	
-	Package Cache
-	
-	*	/var/cache/packages/*/*/.txz
-
 -- -- --
 
 ### Getting Started With Docker
@@ -123,8 +100,6 @@ cranky_keller
 
 {% highlight bash %}
 $ docker attach cranky_keller
-sh-4.3# cat /etc/slackware-version 
-Slackware 14.2
 sh-4.3# 
 {% endhighlight %}
 
@@ -132,7 +107,58 @@ sh-4.3#
 
 -- -- --
 
+### Package Management
+
+Slackware does not really have a sophisticated official package management.
+Beside <code>slackpkg</code> there are special unoffical tools 
+to manage your packages such as <code>sbopkg</code>,
+<code>slapt-get</code>, <code>slapt-src</code>,
+<code>slapkg</code> and <code>slackpkgplus</code>.
+
+slackpkg
+
+*	<https://docs.slackware.com/slackware:slackpkg>
+	
+	Package Cache
+	
+	*	/var/cache/packages/*/*/.txz
+
+slapt-get
+
+*	<https://github.com/jaos/slapt-get>
+
+slpkg
+
+*	<https://github.com/dslackw/slpkg>
+
+#### Get Help
+
+Read the fine manual.
+Helpless or more.
+
+{% highlight bash %}
+$ slackpkg help | less
+{% endhighlight %}
+
+{% highlight bash %}
+$ man sbopkg
+
+$ man slapt-get
+$ man slapt-src
+
+$ man slpkg
+{% endhighlight %}
+
+-- -- --
+
 ### slackpkg
+
+#### OS Release
+
+{% highlight bash %}
+$ cat /etc/slackware-version 
+Slackware 14.2
+{% endhighlight %}
 
 #### Update
 
