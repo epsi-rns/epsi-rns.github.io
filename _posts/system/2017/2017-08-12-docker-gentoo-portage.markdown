@@ -273,7 +273,7 @@ $ emerge app-misc/mc
 	Depclean
 
 {% highlight bash %}
-$ emerge -d htop
+$ emerge -c htop
 {% endhighlight %}
 
 	Unmerge
@@ -338,7 +338,80 @@ at the bottom of the recorded event.
 
 -- -- --
 
-#### Clean Up
+
+### Dependency
+
+There are two main topics in dependency,
+_dependency_ itself, and _reverse dependency_.
+Beside these two, there are other topic as well,
+such as _managing conflict_ that we do not cover here.
+
+#### Dependency
+
+	Package that required by: such as man need groff and other.
+
+This _dependency_ information can be achieved by <code>-ep man</code> command.
+This will show required parts of the package.
+
+{% highlight bash %}
+$ emerge -ep man
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+
+...
+[ebuild   R    ] dev-libs/iniparser-3.1-r1 
+[ebuild   R    ] sys-apps/groff-1.22.2 
+[ebuild   R    ] sys-devel/gettext-0.19.8.1 
+...
+{% endhighlight %}
+
+![Docker Emerge: EP][image-ss-emerge-ep]{: .img-responsive }
+
+#### Reverse Dependency
+
+	Package that require: such as groff needed by man or other.
+
+This _reverse dependency_ require <code>equery depends</code> command.
+
+{% highlight bash %}
+$ equery depends groff
+ * These packages depend on groff:
+sys-apps/man-1.6g (>=sys-apps/groff-1.19.2-r1)
+{% endhighlight %}
+
+![Docker Equery: Depends][image-ss-equery-depends]{: .img-responsive }
+
+#### Pretend
+
+Consider pretend to remove the <code>groff</code> package.
+These commands have the same result.
+
+{% highlight bash %}
+$ emerge -pv --depclean groff
+{% endhighlight %}
+
+{% highlight bash %}
+$ emerge -c --verbose groff 
+
+Calculating dependencies... done!
+  sys-apps/groff-1.22.2 pulled in by:
+    sys-apps/man-1.6g requires >=sys-apps/groff-1.19.2-r1
+
+>>> No packages selected for removal by depclean
+Packages installed:   233
+Packages in world:    6
+Packages in system:   44
+Required packages:    233
+Number removed:       0
+{% endhighlight %}
+
+![Docker Emerge: PV Depclean][image-ss-emerge-pv-depclean]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
 
 Time after time, your portage source directory,
 may growing bigger and bigger in size.
@@ -409,8 +482,6 @@ Official
 Awesome Blog
 
 *	<https://makuro.wordpress.com/2010/12/12/intro-to-portage-sets/>
-
-
 
 -- -- --
 
@@ -519,6 +590,10 @@ Thank you for reading
 [image-ss-emerge-install-ask]: {{ asset_post }}/13-emerge-01-install-ask.png
 [image-ss-emerge-remove]:      {{ asset_post }}/13-emerge-02-remove-depclean.png
 [image-ss-emerge-search]:      {{ asset_post }}/13-emerge-03-search-search.png
+
+[image-ss-emerge-ep]:            {{ asset_post }}/14-emerge-ep.png
+[image-ss-equery-depends]:       {{ asset_post }}/14-equery-depends.png
+[image-ss-emerge-pv-depclean]:   {{ asset_post }}/14-emerge-pv-depclean.png
 
 [image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
 [image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png

@@ -399,7 +399,9 @@ Description    :
 
 -- -- --
 
-### The Log File
+### History
+
+#### The Log File
 
 This is most the forgotten part of package management,
 although it is not uncommon to notice messages.
@@ -424,7 +426,116 @@ at the bottom of the recorded event.
 
 -- -- --
 
-#### Clean Up
+### Dependency
+
+There are two main topics in package dependency,
+the _dependency_ itself, and _reverse dependency_.
+Beside these two, there are other topic as well,
+such as _managing conflict_ that we do not cover here.
+
+#### Help
+
+Zypper has a very nice help that show all dependency related options.
+
+{% highlight bash %}
+$ zypper help search
+search (se) [options] [querystring]
+...
+    --provides             Search for packages which provide the search strings.
+    --recommends           Search for packages which recommend the search strings.
+    --requires             Search for packages which require the search strings.
+    --suggests             Search for packages which suggest the search strings.
+    --conflicts            Search packages conflicting with search strings.
+    --obsoletes            Search for packages which obsolete the search strings.
+...
+{% endhighlight %}
+
+{% highlight bash %}
+$ zypper help info
+info (if) [options] <name> ...
+...
+    --provides            Show provides.
+    --requires            Show requires and prerequires.
+    --conflicts           Show conflicts.
+    --obsoletes           Show obsoletes.
+    --recommends          Show recommends.
+    --suggests            Show suggests.
+{% endhighlight %}
+
+![Docker Zypper: Help Info][image-ss-zypper-help-info]{: .img-responsive }
+
+#### Dependency
+
+	Package that required by: such as man need less and other.
+
+This _dependency_ information can be achieved by <code>info</code> command.
+This will show required parts of the package.
+
+{% highlight bash %}
+$ zypper info --requires man
+...
+Description    :                                   
+    A program for displaying man pages on the screen or sending them to a
+    printer (using groff).
+Requires       : [32]                              
+...
+    cron
+    glibc-locale
+    libgdbm.so.4()(64bit)
+    less
+{% endhighlight %}
+
+![Docker Zypper: Info Require][image-ss-zypper-if-require]{: .img-responsive }
+
+#### Reverse Dependency
+
+	Package that require: such as less needed by man or other.
+
+This _reverse dependency_ require <code>search</code> command.
+
+{% highlight bash %}
+$ zypper search --requires --match-exact less
+Loading repository data...
+Reading installed packages...
+
+S  | Name                 | Summary                                | Type   
+---+----------------------+----------------------------------------+--------
+   | calc                 | C-style arbitrary precision calculator | package
+   | git-core             | Core git tools                         | package
+   | lftp                 | Command Line File Transfer Program     | package
+i+ | man                  | A Program for Displaying man Pages     | package
+   | nmh                  | Unix Mail Handler                      | package
+   | patterns-caasp-Stack | openSUSE Kubic Stack                   | package
+   | quilt                | A Tool for Working with Many Patches   | package
+{% endhighlight %}
+
+![Docker Zypper: Search Require][image-ss-zypper-se-require]{: .img-responsive }
+
+#### Test
+
+Removing <code>less</code> would remove <code>man</code>.
+And also remove <code>fish</code>,
+because <code>fish</code> depend on <code>man</code>.
+
+{% highlight bash %}
+$ zypper rm less
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following 3 packages are going to be REMOVED:
+  fish less man
+
+3 packages to remove.
+After the operation, 9.4 MiB will be freed.
+Continue? [y/n/...? shows all options] (y):
+{% endhighlight %}
+
+![Docker Zypper: Test Dependency][image-ss-zypper-test-remove]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
 
 Opensuse as default does not keep downloaded package,
 unless <code>keeppackages=1</code>
@@ -489,6 +600,10 @@ S | Name                 | Version       | Repository | Dependency
 ### Unsolved Issues on Minimal Install
 
 #### No Manual
+
+No manual in openSUSE Docker.
+I have two others openSUSE full installation in PC,
+and all manual works well.
 
 {% highlight bash %}
 $ man man
@@ -571,6 +686,11 @@ Thank you for reading
 [image-ss-zypper-se]:  {{ asset_post }}/13-search-fish.png
 
 [image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
+
+[image-ss-zypper-help-info]:   {{ asset_post }}/14-help-info.png
+[image-ss-zypper-if-require]:  {{ asset_post }}/14-info-requires.png
+[image-ss-zypper-se-require]:  {{ asset_post }}/14-search-requires.png
+[image-ss-zypper-test-remove]: {{ asset_post }}/14-rm-less.png
 
 [image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
 [image-ss-zypper-cache]:   {{ asset_post }}/17-cache.png

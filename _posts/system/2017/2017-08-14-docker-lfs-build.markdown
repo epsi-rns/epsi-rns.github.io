@@ -359,17 +359,27 @@ make[1]: Leaving directory '/root/man-db-2.7.6.1'
 Since I use Docker in not an official way to practice LFS,
 I also cheat using the host. I find a way to resolve dependency.
 You can use <code>pactree</code> using arch based distribution (ALPM).
+Your package manager, might have similar tool.
 
-{% highlight bash %}
-$ pactree man-db
-{% endhighlight %}
 
 Here is my screenshot using Artix Linux,
 the host of my docker.
 
 [![Docker LFS: man: install][image-ss-artix-pactree]{: .img-responsive }][photo-ss-artix-pactree]
 
-Your package manager, might have similar tool.
+With Tree
+
+*	<code>pactree</code>
+
+*	<code>rpmreaper</code>
+
+*	<code>prt-get deptree</code>
+
+*	<code>slpkg deps-status --tree</code>
+
+Without Tree
+
+*	<code>dnf repoquery --requires man-db</code>
 
 *	<code>zypper info --requires man</code>
 
@@ -381,7 +391,7 @@ Your package manager, might have similar tool.
 
 *	<code>apt-cache showpkg man-db</code>
 
-*	<code>dnf repoquery --requires man-db</code>
+*	<code>prt-get depends</code>
 
 Next time, I'll check the dependency first before building my LFS package.
 

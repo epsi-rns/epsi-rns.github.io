@@ -269,7 +269,77 @@ total 0
 
 -- -- --
 
-#### Clean Up
+### Dependency
+
+There are two main topics in dependency,
+_dependency_ itself, and _reverse dependency_.
+Beside these two, there are other topic as well,
+such as _managing conflict_ that we do not cover here.
+
+#### Dependency
+
+	Package that required by: such as man-db need groff and other.
+
+This _dependency_ information can be achieved by 
+<code>-x</code> or code>-Rx</code> command.
+This will show required parts of the package.
+
+{% highlight bash %}
+$ xbps-query -x man-db
+bzip2>=0
+gzip>=0
+less>=0
+groff>=0
+grep>=0
+coreutils>=0
+glibc>=2.8_1
+libpipeline>=1.2.0_1
+libdb>=5.3.21_1
+zlib>=1.2.3_1
+{% endhighlight %}
+
+![Docker Void: XBPS Dependency][image-ss-xbps-query-x-lo]{: .img-responsive }
+
+#### Reverse Dependency
+
+	Package that require: such as groff needed by man or other.
+
+This _reverse dependency_ require 
+<code>-X</code> or <code>-RX</code> command.
+
+{% highlight bash %}
+$ xbps-query -X groff 
+fish-shell-2.6.0_1
+man-db-2.7.6.1_1
+{% endhighlight %}
+
+{% highlight bash %}
+$ xbps-query -RX groff 
+a2ps-4.14_4
+base-devel-20170527_1
+fish-shell-2.6.0_1
+man-db-2.7.6.1_1
+{% endhighlight %}
+
+![Docker Void: XBPS Reverse Dependency][image-ss-xbps-query-x-up]{: .img-responsive }
+
+#### Test
+
+Should remove <code>man-db</code> first before removing <code>groff</code>.
+<code>fish-shell</code> also depends on <code>man-db</code>.
+
+{% highlight bash %}
+$ xbps-remove groff
+groff-1.22.3_3 (remove) breaks installed pkg 'fish-shell-2.6.0_1'
+groff-1.22.3_3 (remove) breaks installed pkg 'man-db-2.7.6.1_1'
+Transaction aborted due to unresolved dependencies.
+{% endhighlight %}
+
+![Docker Void: XBPS Test Remove][image-ss-xbps-pretend]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
 
@@ -352,7 +422,12 @@ Thank you for reading
 
 [image-ss-xbps-info]:       {{ asset_post }}/13-xbps-info.png
 
+[image-ss-xbps-query-x-lo]: {{ asset_post }}/14-query-x-lowercase.png
+[image-ss-xbps-query-x-up]: {{ asset_post }}/14-query-x-uppercase.png
+[image-ss-xbps-pretend]:    {{ asset_post }}/14-remove-groff.png
+
 [image-ss-meta-package-1]:  {{ asset_post }}/15-meta-package-1.png
 [image-ss-meta-package-2]:  {{ asset_post }}/15-meta-package-2.png
 [image-ss-xbps-cache]:      {{ asset_post }}/17-cache.png
 [image-ss-xbps-clean]:      {{ asset_post }}/17-clean.png
+

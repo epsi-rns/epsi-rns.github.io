@@ -401,7 +401,9 @@ Description  : The man-db package includes five tools for browsing man-pages:
 
 -- -- --
 
-### The Log File
+### History
+
+#### The Log File
 
 This is most the forgotten part of package management,
 although it is not uncommon to notice messages.
@@ -424,11 +426,165 @@ $ less /var/log/dnf.log
 Most likely you want the tail, latest transaction,
 at the bottom of the recorded event.
 
-![Docker: /var/log/dnf.log][image-ss-less-log]{: .img-responsive }
+![Docker: /var/log/dnf.log][image-ss-var-log-dnf]{: .img-responsive }
+
+#### DNF History
+
+DNF has a very nice history feature.
+
+{% highlight bash %}
+$ dnf history
+ID     | Command line             | Date and time    | Action(s)      | Altered
+-------------------------------------------------------------------------------
+     8 | upgrade                  | 2017-08-24 14:48 | Update         |   15 **
+     7 | reinstall man-db         | 2017-08-23 15:47 | Reinstall      |    1   
+     6 | install man              | 2017-08-23 15:45 | Install        |    4   
+     5 | remove less              | 2017-08-23 13:14 | Erase          |    4   
+     4 | install man-db nano htop | 2017-08-23 12:56 | Install        |    5   
+     3 | install man              | 2017-08-23 12:55 | Install        |    5   
+     2 | upgrade --nogpgcheck     | 2017-08-23 11:31 | I, U           |  171 **
+     1 |                          | 2017-07-11 11:29 | Install        |  170 EE
+{% endhighlight %}
+
+![Docker DNF: History][image-ss-dnf-history]{: .img-responsive }
 
 -- -- --
 
-#### Clean Up
+### Dependency
+
+There are two main topics in dependency,
+_dependency_ itself, and _reverse dependency_.
+Beside these two, there are other topic as well,
+such as _managing conflict_ that we do not cover here.
+
+#### Help
+
+DNF has a <code>repoquery</code> help that show all dependency related options.
+
+{% highlight bash %}
+$ dnf help repoquery
+
+search for packages matching keyword
+...
+  --whatconflicts REQ   show only results that conflict REQ
+  --whatobsoletes REQ   show only results that obsolete REQ
+  --whatprovides REQ    show only results that provide REQ
+  --whatrequires REQ    shows results that requires package provides and files REQ
+  --whatrecommends REQ  show only results that recommend REQ
+  --whatenhances REQ    show only results that enhance REQ
+  --whatsuggests REQ    show only results that suggest REQ
+  --whatsupplements REQ
+...
+  --conflicts           Display capabilities that the package conflicts with.
+  --enhances            Display capabilities that the package can enhance.
+  --provides            Display capabilities provided by the package.
+  --recommends          Display capabilities that the package recommends.
+  --requires            Display capabilities that the package depends on.
+  --requires-pre        Display capabilities that the package depends on for
+                        running a %pre script.
+  --suggests            Display capabilities that the package suggests.
+{% endhighlight %}
+
+![Docker DNF: Help Repoquery][image-ss-dnf-help-repoquery]{: .img-responsive }
+
+#### Dependency
+
+	Package that required by: such as man-db need less and other.
+
+This _dependency_ information can be achieved by <code>repoquery --requires</code> command.
+This will show required parts of the package.
+
+{% highlight bash %}
+$ dnf repoquery --requires man-db
+Last metadata expiration check: 0:27:23 ago on Sat Aug 26 13:49:15 2017.
+/bin/sh
+coreutils
+grep
+groff-base
+gzip
+less
+libc.so.6(GLIBC_2.17)(64bit)
+libgdbm.so.4()(64bit)
+libpipeline.so.1()(64bit)
+libz.so.1()(64bit)
+rtld(GNU_HASH)
+{% endhighlight %}
+
+![Docker DNF: Repoquery Requires][image-ss-dnf-requires]{: .img-responsive }
+
+#### Reverse Dependency
+
+	Package that require: such as less needed by man-db or other.
+
+This _reverse dependency_ require <code>repoquery --whatrequires</code> command.
+
+{% highlight bash %}
+$ dnf repoquery --whatrequires less
+Last metadata expiration check: 0:29:36 ago on Sat Aug 26 13:49:15 2017.
+GMT-0:5.4.2-3.fc27.i686
+GMT-0:5.4.2-3.fc27.x86_64
+R-core-0:3.4.1-4.fc27.i686
+R-core-0:3.4.1-4.fc27.x86_64
+Singular-0:4.1.0p3-6.fc27.x86_64
+backup-manager-0:0.7.10-22.fc27.noarch
+c-graph-0:2.0-12.fc27.x86_64
+colordiff-0:1.0.18-2.fc27.noarch
+git-core-0:2.14.1-2.fc27.x86_64
+libguestfs-1:1.37.21-2.fc28.i686
+libguestfs-1:1.37.21-2.fc28.x86_64
+libguestfs-tools-c-1:1.37.21-2.fc28.x86_64
+man-db-0:2.7.6.1-5.fc27.x86_64
+octave-6:4.2.1-4.fc27.2.i686
+octave-6:4.2.1-4.fc27.2.x86_64
+rpmreaper-0:0.2.0-13.fc27.x86_64
+{% endhighlight %}
+
+![Docker DNF: Repoquery What Requires][image-ss-dnf-whatrequires]{: .img-responsive }
+
+#### Test
+
+Removing <code>less</code> would remove <code>man-db</code>.
+And also remove any unused dependency.
+
+{% highlight bash %}
+$ dnf remove less
+Dependencies resolved.
+====================================================================
+ Package         Arch       Version              Repository    Size
+====================================================================
+Removing:
+ less            x86_64     487-5.fc27           @rawhide     309 k
+Removing depended packages:
+ man-db          x86_64     2.7.6.1-5.fc27       @rawhide     1.9 M
+Removing unused dependencies:
+ groff-base      x86_64     1.22.3-11.fc27       @rawhide     3.7 M
+ libpipeline     x86_64     1.4.2-3.fc27         @rawhide     106 k
+
+Transaction Summary
+====================================================================
+Remove  3 Packages
+
+Freed space: 6.0 M
+Is this ok [y/N]: 
+{% endhighlight %}
+
+![Docker DNF: Test Dependency][image-ss-dnf-test-remove]{: .img-responsive }
+
+#### Tree
+
+	Most people love tree
+
+This <code>rpmreaper</code> is an RPM tool rather than DNF tool.
+
+{% highlight bash %}
+$ dnf install rpmreaper
+{% endhighlight %}
+
+![Docker Fedora: rpmreaper][image-ss-fedora-rpmreaper]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
 
@@ -575,12 +731,19 @@ Thank you for reading
 [image-ss-dnf-upgrade-3]: {{ asset_post }}/02-dnf-upgrade-3.png
 [image-ss-dnf-upgrade-4]: {{ asset_post }}/02-dnf-upgrade-4.png
 [image-ss-dnf-extra-cmd]: {{ asset_post }}/03-dnf-extra-commands.png
-[image-ss-less-log]:      {{ asset_post }}/07-log.png
+[image-ss-var-log-dnf]:   {{ asset_post }}/07-log.png
+[image-ss-dnf-history]:   {{ asset_post }}/07-history.png
 
 [image-ss-dnf-info]:      {{ asset_post }}/13-dnf-info.png
 [image-ss-dnf-install]:   {{ asset_post }}/13-dnf-install.png
 [image-ss-dnf-remove]:    {{ asset_post }}/13-dnf-remove.png
 [image-ss-dnf-search]:    {{ asset_post }}/13-dnf-search.png
+
+[image-ss-dnf-help-repoquery]: {{ asset_post }}/14-help-repoquery.png
+[image-ss-dnf-requires]:       {{ asset_post }}/14-repoquery-requires.png
+[image-ss-dnf-whatrequires]:   {{ asset_post }}/14-repoquery-whatrequires.png
+[image-ss-dnf-test-remove]:    {{ asset_post }}/14-remove-less.png
+[image-ss-fedora-rpmreaper]:   {{ asset_post }}/14-rpmreaper.png
 
 [image-ss-dnf-g-info1]:   {{ asset_post }}/15-dnf-group-info-core.png
 [image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
@@ -589,3 +752,4 @@ Thank you for reading
 
 [image-ss-dnf-cache]:     {{ asset_post }}/17-cache.png
 [image-ss-dnf-clean]:     {{ asset_post }}/17-clean.png
+

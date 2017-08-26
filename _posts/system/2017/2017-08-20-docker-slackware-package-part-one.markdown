@@ -405,9 +405,71 @@ at the bottom of the recorded event.
 
 -- -- --
 
+
+### Dependency
+
+Slackware proud of their **no dependency resolution** philosophy.
+A package that required by other packaged could be removed without prior warning.
+
+#### Example
+
+Removing <code>libpipeline</code> would **not** remove <code>man-db</code>.
+<code>libpipeline</code> would be removed without prior warning.
+Therefore be careful while remove.
+
+{% highlight bash %}
+$ removepkg groff
+
+Removing package /var/log/packages/groff-1.22.3-x86_64-2...
+Removing files:
+  --> Deleting symlink /usr/bin/geqn
+  --> Deleting symlink /usr/bin/gindxbib
+  --> Deleting symlink /usr/bin/glookbib
+...
+{% endhighlight %}
+
+![Docker Slackware: remove groff][image-ss-remove-groff]{: .img-responsive }
+
+{% highlight bash %}
+$ man man
+sh: /usr/bin/gtbl: No such file or directory
+sh: /usr/bin/nroff: No such file or directory
+{% endhighlight %}
+
+![Docker Slackware: man man][image-ss-man-man]{: .img-responsive }
+
+The same result for <code>slapt-get --remove</code>.
+
+{% highlight bash %}
+slapt-get --remove groff
+{% endhighlight %}
+
+#### Using slpkg deps-status
+
+However, you can use <code>slpkg</code>,
+and achieve dependency resolution.
+
+{% highlight bash %}
+$ slpkg deps-status --tree
++==============================================================================
+| Dependencies
+| -- Packages
++==============================================================================
++ man-db
+|
++-- fish
+ 
+
+Status summary
+===============================================================================
+found 1 dependencies in 1 packages.
+{% endhighlight %}
+
+![Docker Slackware: slpkg deps-status][image-ss-slpkg-deps-status]{: .img-responsive }
+
 -- -- --
 
-#### Clean Up
+### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
 
@@ -654,6 +716,11 @@ Thank you for reading
 [image-ss-removepkg]:          {{ asset_post }}/13-removepkg.png
 [image-ss-slackpkg-info]:      {{ asset_post }}/13-slackpkg-info.png
 [image-ss-slackpkg-reinstall]: {{ asset_post }}/13-slackpkg-reinstall.png
+
+[image-ss-man-man]:            {{ asset_post }}/14-man-man.png
+[image-ss-remove-groff]:       {{ asset_post }}/14-remove-groff.png
+[image-ss-slpkg-deps-status]:  {{ asset_post }}/14-slpkg-deps-status.png
+
 [image-ss-sbopkg-build-log]:   {{ asset_post }}/17-sbopkg-log.png
 [image-ss-slack-cache]:        {{ asset_post }}/17-cache.png
 

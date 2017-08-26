@@ -231,6 +231,10 @@ $ prt-get remove htop
 
 ![Docker Crux: prt-get Remove][image-ss-prtget-remove]{: .img-responsive }
 
+Removing package would not **not** package that depend on it.
+Package would be removed without prior warning.
+Therefore be careful while remove.
+
 #### Package Search
 
 {% highlight bash %}
@@ -304,7 +308,97 @@ at the bottom of the recorded event.
 
 -- -- --
 
-#### Clean Up
+### Dependency
+
+There are two main topics in dependency,
+_dependency_ itself, and _reverse dependency_.
+Beside these two, there are other topic as well,
+such as _managing conflict_ that we do not cover here.
+
+#### Help
+
+Ports has a very nice help that show all dependency related options.
+
+{% highlight bash %}
+$ prt-get help | less
+...
+DEPENDENCIES
+  depends   <port1 port2...>  show dependencies for these ports
+  quickdep  <port1 port2...>  same as 'depends' but simple format
+  deptree   <port>            show dependencies tree for <port>
+  dependent [opt] <port>      show installed packages which depend on 'port'
+...
+{% endhighlight %}
+
+![Docker Crux: Help Dependency][image-ss-help-dependency]{: .img-responsive }
+
+#### Dependency
+
+	Package that required by: such as man-db need libpipeline and other.
+
+This _dependency_ information can be achieved by 
+<code>depends</code> or <code>deptree</code> command.
+This will show required parts of the package.
+
+{% highlight bash %}
+$ prt-get depends man-db
+-- dependencies ([i] = installed)
+[i] zlib
+[i] gdbm
+[i] libpipeline
+[i] man-db
+{% endhighlight %}
+
+	Most people love tree
+
+{% highlight bash %}
+$ prt-get deptree man-db
+-- dependencies ([i] = installed, '-->' = seen before)
+[i] man-db
+[i]   zlib
+[i]   gdbm
+[i]   libpipeline
+{% endhighlight %}
+
+![Docker Crux: prt-get Deptree][image-ss-prtget-deptree]{: .img-responsive }
+
+#### Reverse Dependency
+
+	Package that require: such as libpipeline needed by man-db or other.
+
+This _reverse dependency_ require <code>dependent</code> command.
+
+{% highlight bash %}
+$ prt-get dependent libpipeline
+man-db
+{% endhighlight %}
+
+![Docker Crux: prt-get Dependent][image-ss-prtget-dependent]{: .img-responsive }
+
+#### Test
+
+Removing <code>libpipeline</code> would **not** remove <code>man-db</code>.
+<code>libpipeline</code> would be removed without prior warning.
+Therefore be careful while remove.
+
+{% highlight bash %}
+$ prt-get remove libpipeline
+
+-- Packages removed
+libpipeline
+{% endhighlight %}
+
+{% highlight bash %}
+$ man man
+man: error while loading shared libraries: libpipeline.so.1: 
+cannot open shared object file: No such file or directory
+{% endhighlight %}
+
+![Docker Crux: Remove libpipeline][image-ss-prtget-remove-lib]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
 
@@ -499,6 +593,11 @@ Thank you for reading
 [image-ss-prtget-info]:    {{ asset_post }}/13-prtget-info.png
 [image-ss-prtget-remove]:  {{ asset_post }}/13-prtget-remove.png
 [image-ss-prtget-search]:  {{ asset_post }}/13-prtget-search.png
+
+[image-ss-prtget-dependent]:  {{ asset_post }}/14-dependent.png
+[image-ss-prtget-deptree]:    {{ asset_post }}/14-deptree.png
+[image-ss-help-dependency]:   {{ asset_post }}/14-help-dependency.png
+[image-ss-prtget-remove-lib]: {{ asset_post }}/14-remove-libpipeline.png
 
 [image-ss-usr-ports]:      {{ asset_post }}/17-cache.png
 
