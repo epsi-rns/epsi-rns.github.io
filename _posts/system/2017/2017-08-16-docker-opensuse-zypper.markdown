@@ -533,6 +533,27 @@ Continue? [y/n/...? shows all options] (y):
 
 ![Docker Zypper: Test Dependency][image-ss-zypper-test-remove]{: .img-responsive }
 
+#### Verify
+
+Zypper has a tool, to install or repair, missing dependencies.
+
+{% highlight bash %}
+$ zypper verify
+Loading repository data...
+Reading installed packages...
+
+The following 3 NEW packages are going to be installed:
+  dracut pinentry systemd-sysvinit
+
+3 new packages to install.
+Overall download size: 792.0 KiB. Already cached: 0 B. After the operation, additional 1.3 MiB will be
+used.
+Some of the dependencies of installed packages are broken. In order to fix these dependencies, the following actions need to be taken:
+Continue? [y/n/...? shows all options] (y): y
+{% endhighlight %}
+
+![Docker Zypper: Verify Dependency][image-ss-zypper-verify]{: .img-responsive }
+
 -- -- --
 
 ### Clean Up
@@ -691,6 +712,7 @@ Thank you for reading
 [image-ss-zypper-if-require]:  {{ asset_post }}/14-info-requires.png
 [image-ss-zypper-se-require]:  {{ asset_post }}/14-search-requires.png
 [image-ss-zypper-test-remove]: {{ asset_post }}/14-rm-less.png
+[image-ss-zypper-verify]:      {{ asset_post }}/14-verify.png
 
 [image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
 [image-ss-zypper-cache]:   {{ asset_post }}/17-cache.png

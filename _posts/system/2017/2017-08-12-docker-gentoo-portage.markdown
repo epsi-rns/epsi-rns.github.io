@@ -409,6 +409,21 @@ Number removed:       0
 
 ![Docker Emerge: PV Depclean][image-ss-emerge-pv-depclean]{: .img-responsive }
 
+
+#### Verify
+
+Gentoo has a tool, to install or repair, missing dependencies.
+
+{% highlight bash %}
+$ emerge -uDN world
+Calculating dependencies... done!
+>>> Auto-cleaning packages...
+
+>>> No outdated packages were found on your system.
+{% endhighlight %}
+
+![Docker Emerge: Verify Dependency][image-ss-emerge-verify]{: .img-responsive }
+
 -- -- --
 
 ### Clean Up
@@ -594,6 +609,7 @@ Thank you for reading
 [image-ss-emerge-ep]:            {{ asset_post }}/14-emerge-ep.png
 [image-ss-equery-depends]:       {{ asset_post }}/14-equery-depends.png
 [image-ss-emerge-pv-depclean]:   {{ asset_post }}/14-emerge-pv-depclean.png
+[image-ss-emerge-verify]:        {{ asset_post }}/14-emerge-udn-world.png
 
 [image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
 [image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
