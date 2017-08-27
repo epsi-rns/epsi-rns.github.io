@@ -224,9 +224,96 @@ Repository 'Various window managers (openSUSE_Tumbleweed)' has been removed.
 
 ![Docker Zypper: Remove Repository][image-ss-zypper-removerepo]{: .img-responsive }
 
-
 #### Modify
 
+Always check the fine manual, like usual.
+
+{% highlight bash %}
+$ zypper help modifyrepo
+...
+  Command options:
+-d, --disable             Disable the repository (but don't remove it).
+-e, --enable              Enable a disabled repository.
+-r, --refresh             Enable auto-refresh of the repository.
+-R, --no-refresh          Disable auto-refresh of the repository.
+-n, --name <name>         Set a descriptive name for the repository.
+-p, --priority <integer>  Set priority of the repository.
+-k, --keep-packages       Enable RPM files caching.
+-K, --no-keep-packages    Disable RPM files caching.
+...
+-a, --all                 Apply changes to all repositories.
+-l, --local               Apply changes to all local repositories.
+-t, --remote              Apply changes to all remote repositories.
+-m, --medium-type <type>  Apply changes to repositories of specified type.
+{% endhighlight %}
+
+I like to change to change the repo directly, especially the long name,
+so I do not need to have long column in my terminal.
+And also I disable this newly added repo.
+
+{% highlight bash %}
+$ cat /etc/zypp/repos.d/X11_windowmanagers.repo 
+[X11_windowmanagers]
+name=Window Managers
+enabled=0
+autorefresh=0
+{% endhighlight %}
+
+![Docker Nano: Window Managers][image-ss-nano-repo]{: .img-responsive }
+
+Consider zypper repos again.
+
+{% highlight bash %}
+$ zypper repos
+Repository priorities are without effect. All enabled repositories share the same priority.
+
+# | Alias              | Name            | Enabled | GPG Check | Refresh
+--+--------------------+-----------------+---------+-----------+--------
+1 | X11_windowmanagers | Window Managers | No      | ----      | ----   
+2 | non-oss            | NON-OSS         | Yes     | (r ) Yes  | Yes    
+3 | oss                | OSS             | Yes     | (r ) Yes  | Yes  
+{% endhighlight %}
+
+![Docker Zypper: Repos Newly Added][image-ss-zypper-repos-newly]{: .img-responsive }
+
+Note that <code>X11_windowmanagers</code> has <code>1</code> index.
+Now we can enable it again using this command
+
+{% highlight bash %}
+$ zypper mr -e 1
+Repository 'X11_windowmanagers' has been successfully enabled.
+{% endhighlight %}
+
+Or using name, to make a clearer mandate.
+
+{% highlight bash %}
+$ zypper mr -e X11_windowmanagers
+Nothing to change for repository 'X11_windowmanagers'.
+{% endhighlight %}
+
+![Docker Zypper: mr enable][image-ss-zypper-mr-enable]{: .img-responsive }
+
+And **multiple** command at once.
+
+{% highlight bash %}
+$ zypper mr -r -k -p 70 X11_windowmanagers      
+Autorefresh has been enabled for repository 'X11_windowmanagers'.
+RPM files caching has been enabled for repository 'X11_windowmanagers'.
+Repository 'X11_windowmanagers' priority has been set to 70.
+{% endhighlight %}
+
+![Docker Zypper: mr multiple][image-ss-zypper-mr-multiple]{: .img-responsive }
+
+Or **all remote** repository at once.
+
+{% highlight bash %}
+$ zypper mr -Kt
+RPM files caching has been disabled for repository 'X11_windowmanagers'.
+Nothing to change for repository 'non-oss'.
+Nothing to change for repository 'oss'.
+{% endhighlight %}
+
+![Docker Zypper: mr remotes][image-ss-zypper-mr-remotes]{: .img-responsive }
 
 -- -- --
 
@@ -254,6 +341,8 @@ I have tried to reinstall, but it doesn't work.
 {% highlight bash %}
 $ zypper in -f man man-pages man-pages-posix 
 {% endhighlight %}
+
+I still do not know what to do about it.
 
 -- -- --
 
@@ -342,6 +431,11 @@ Thank you for reading
 [image-ss-zypper-refresh-wm]:  {{ asset_post }}/16-refresh-windowmanager.png
 [image-ss-zypper-removerepo]:  {{ asset_post }}/16-removerepo-windowmanagers.png
 [image-ss-zypper-repos-pen]:   {{ asset_post }}/16-repos-lr-pen.png
+[image-ss-zypper-mr-enable]:   {{ asset_post }}/16-mr-enable.png
+[image-ss-zypper-mr-multiple]: {{ asset_post }}/16-mr-multiple-commands.png
+[image-ss-zypper-mr-remotes]:  {{ asset_post }}/16-mr-all-remotes.png
+[image-ss-nano-repo]:          {{ asset_post }}/16-nano-windowmanagers-repo.png
+[image-ss-zypper-repos-newly]: {{ asset_post }}/16-repos-modified.png
 
 [image-ss-zypper-cache]: {{ asset_post }}/17-cache.png
 [image-ss-zypper-clean]: {{ asset_post }}/17-clean.png
