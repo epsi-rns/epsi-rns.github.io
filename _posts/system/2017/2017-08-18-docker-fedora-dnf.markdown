@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Fedora DNF"
-date: 2017-08-17 09:45:15 +0700
+date: 2017-08-18 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager, fedora]
 author: epsi
@@ -731,8 +731,6 @@ Thank you for reading
 [image-ss-dnf-upgrade-3]: {{ asset_post }}/02-dnf-upgrade-3.png
 [image-ss-dnf-upgrade-4]: {{ asset_post }}/02-dnf-upgrade-4.png
 [image-ss-dnf-extra-cmd]: {{ asset_post }}/03-dnf-extra-commands.png
-[image-ss-var-log-dnf]:   {{ asset_post }}/07-log.png
-[image-ss-dnf-history]:   {{ asset_post }}/07-history.png
 
 [image-ss-dnf-info]:      {{ asset_post }}/13-dnf-info.png
 [image-ss-dnf-install]:   {{ asset_post }}/13-dnf-install.png
@@ -753,3 +751,5 @@ Thank you for reading
 [image-ss-dnf-cache]:     {{ asset_post }}/17-cache.png
 [image-ss-dnf-clean]:     {{ asset_post }}/17-clean.png
 
+[image-ss-var-log-dnf]:   {{ asset_post }}/19-log.png
+[image-ss-dnf-history]:   {{ asset_post }}/19-history.png

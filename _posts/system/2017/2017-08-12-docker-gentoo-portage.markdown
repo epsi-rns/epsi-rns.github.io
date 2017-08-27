@@ -595,25 +595,26 @@ Thank you for reading
 [photo-ss-emerge-webrsync]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN4az7eFD30LhWON67bxjIl07QM5l2DlmxjGSGX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-emerge-update]:    {{ asset_post }}/01-emerge-update.png
-[image-ss-less-log]:         {{ asset_post }}/07-log.png
 
-[image-ss-emerge-install]:   {{ asset_post }}/13-emerge-01-install-half.png
-[photo-ss-emerge-install]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-emerge-install]:     {{ asset_post }}/13-emerge-01-install-half.png
+[photo-ss-emerge-install]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-ambigous]:  {{ asset_post }}/13-emerge-01-install-mc.png
+[image-ss-emerge-ambigous]:    {{ asset_post }}/13-emerge-01-install-mc.png
 
 [image-ss-emerge-install-ask]: {{ asset_post }}/13-emerge-01-install-ask.png
 [image-ss-emerge-remove]:      {{ asset_post }}/13-emerge-02-remove-depclean.png
 [image-ss-emerge-search]:      {{ asset_post }}/13-emerge-03-search-search.png
 
-[image-ss-emerge-ep]:            {{ asset_post }}/14-emerge-ep.png
-[image-ss-equery-depends]:       {{ asset_post }}/14-equery-depends.png
-[image-ss-emerge-pv-depclean]:   {{ asset_post }}/14-emerge-pv-depclean.png
-[image-ss-emerge-verify]:        {{ asset_post }}/14-emerge-udn-world.png
+[image-ss-emerge-ep]:          {{ asset_post }}/14-emerge-ep.png
+[image-ss-equery-depends]:     {{ asset_post }}/14-equery-depends.png
+[image-ss-emerge-pv-depclean]: {{ asset_post }}/14-emerge-pv-depclean.png
+[image-ss-emerge-verify]:      {{ asset_post }}/14-emerge-udn-world.png
 
 [image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
 [image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
 [image-ss-eclean-dist-deep]:   {{ asset_post }}/17-eclean-dist-deep.png
+
+[image-ss-less-log]:           {{ asset_post }}/19-log.png
 
 [image-ss-equery-depgraph]:    {{ asset_post }}/21-equery-depgraph.png
 

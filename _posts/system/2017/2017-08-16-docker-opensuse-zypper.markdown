@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker - openSUSE Zypper"
+title: "Docker - openSUSE Zypper - Part One"
 date: 2017-08-16 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager, opensuse]
@@ -8,12 +8,54 @@ author: epsi
 
 excerpt:
   Examine zypper step by step,
-  using openSUSE container in Docker
+  using openSUSE container in Docker.
+  One of Two Parts Article.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
 
 ---
+
+### Topics
+
+This is a two-parts article.
+There are few topics here.
+
+[ [Part One][local-part-one] ]
+
+*	Preface: Test Bed
+
+*	Getting Started With Docker
+
+*	Issues on Minimal Install: No Reset
+
+*	Package Management: ZYpp Frontend, Get Help, Zypper Shell
+
+*	Updating System: OS Release, List Updates, Update, Upgrades, Process Being Used
+
+*	Package IRSI: Install, Removal, Query Search, Show Info
+
+*	History: The Log File
+
+*	Dependency: Help, Dependency, Reverse Dependency, Test, Verify
+
+*	Clean Up
+
+*	Group: Pattern
+
+*	What's Next
+
+[ [Part Two][local-part-two] ]
+
+*	Repositories: List, Add/Remove/, Modify
+
+*	Interesting Issue: systemd Dependencies
+
+*	Unsolved Issues on Minimal Install: No Manual
+
+*	Conclusion
+
+-- -- --
 
 ### Preface
 
@@ -618,76 +660,23 @@ S | Name                 | Version       | Repository | Dependency
 
 -- -- --
 
-### Unsolved Issues on Minimal Install
+### What's Next
 
-#### No Manual
-
-No manual in openSUSE Docker.
-I have two others openSUSE full installation in PC,
-and all manual works well.
-
-{% highlight bash %}
-$ man man
-No manual entry for man
-
-$ echo $MANPATH
-
-$ cat /etc/manpath.config
-{% endhighlight %}
-
-I have tried to reinstall, but it doesn't work.
-
-{% highlight bash %}
-$ zypper in -f man man-pages man-pages-posix 
-{% endhighlight %}
-
--- -- --
-
-### Interesting Issue
-
-#### systemd Dependencies
-
-While solving the _no manual_ problem,
-I encountered another issue.
-
-{% highlight bash %}
-$ zypper in man
-{% endhighlight %}
-
-This is somehow interesting,
-manual pages in openSUSE depend on systemd.
-
-![systemd dependency issue on openSUSE][image-ss-zypper-systemd]{: .img-responsive }
-
-Why would a manual <code>man</code> need to depend to an init ?
-
-{% highlight bash %}
-$ zypper info --requires man
-Requires : [32]
-cron
-
-$ zypper info --requires cron
-Requires : [5]
-cronie = 1.5.1-66.3
-
-$ zypper info --requires cronie
-Requires : [26]
-systemd
-{% endhighlight %}
-
--- -- --
-
-### Conclusion
-
-	These are just preliminary knowledge about Zypper.
+Zypper has amazing <code>repository</code> commands,
+so many commands that this topic deserve its own long article.
+Consider finish reading [ [Part Two][local-part-two] ].
 
 Thank you for reading
+
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
+
+[local-part-one]: {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
+[local-part-two]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
@@ -699,7 +688,6 @@ Thank you for reading
 [image-ss-zypper-lu]:  {{ asset_post }}/01-list-updates.png
 [image-ss-zypper-up]:  {{ asset_post }}/01-update.png
 [image-ss-zypper-dup]: {{ asset_post }}/01-distribution-upgrade.png
-[image-ss-less-log]:   {{ asset_post }}/07-log.png
 
 [image-ss-zypper-if]:  {{ asset_post }}/13-info-fish.png
 [image-ss-zypper-in]:  {{ asset_post }}/13-install.png
@@ -717,3 +705,5 @@ Thank you for reading
 [image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
 [image-ss-zypper-cache]:   {{ asset_post }}/17-cache.png
 [image-ss-zypper-clean]:   {{ asset_post }}/17-clean.png
+
+[image-ss-less-log]:   {{ asset_post }}/19-log.png

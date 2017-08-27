@@ -45,6 +45,8 @@ Surprisingly the installment was succeed. There are few things in my experience.
 	And that confused me while I configure later.
 	But it fixed using YaST while doing x86_64 install.
 
+*	Using nomodeset for my PC, or  blinking screen.	
+
 This openSUSE utilize <code>BTRFS</code> in <code>root /</code>,
 and <code>XFS</code> at <code>/home</code>.
 I'm very happy that I finally get my first non <code>ext4</code>,
@@ -213,6 +215,8 @@ UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/spool           btrfs      subvol
 UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/tmp             btrfs      subvol=@/var/tmp      0 0
 {% endhighlight %}
 
+-- -- --
+
 #### Update
 
 	First Thing First
@@ -231,6 +235,53 @@ You can see the difference below.
 Please click for bigger figure.
 
 [![Zypper Up Dup Difference][image-ss-zypper-up-dup]{: .img-responsive }][photo-ss-zypper-up-dup]
+
+-- -- --
+
+### Rescue
+
+Three Weeks later after I wrote this post,
+I messed up my partition using Windows Easeus. 
+Since openSUSE use BTRFS,
+I have to download Tumbleweed Live all over again,
+and use <code>dd</code> to write to flash disk.
+Then using <code>nomodeset</code> to boot.
+And <code>chroot</code> before doing both
+<code>grub2-mkconfig</code> and <code>grub2-install</code>.
+Finally I have all my partition back again,
+but five minutes later my area has poweroutage issue.
+For that reason I decide to get some rest, instead of working.
+
+Guidance
+
+*	<https://www.suse.com/support/kb/doc/?id=7018126>
+
+First I have to make sure,
+that this is the right partition by <code>os-release</code>
+
+{% highlight bash %}
+$ mount /dev/sda7 /mnt
+$ cat /mnt/etc/os-release
+{% endhighlight %}
+
+And mount the rest
+
+{% highlight bash %}
+$ mount --rbind /proc /mnt/proc
+$ mount --rbind /sys /mnt/sys
+$ mount --rbind /dev /mnt/dev
+{% endhighlight %}
+
+And get my <code>ext4</code> partition to <code>/boot</code>.
+
+{% highlight bash %}
+$ chroot /mnt
+$ mount -a
+{% endhighlight %}
+
+And fix grub.
+
+All done except the power outage.
 
 -- -- -- 
 

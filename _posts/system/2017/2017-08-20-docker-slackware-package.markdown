@@ -21,21 +21,25 @@ related_link_ids:
 This is a two-parts article.
 There are few topics here.
 
-*	[ [Part One][local-part-one] ] Preface
+[ [Part One][local-part-one] ]
 
-*	[ [Part One][local-part-one] ] Preparing Docker
+*	Preface
 
-*	[ [Part One][local-part-one] ] IRSI: slackpkg install, removepkg, search, info
+*	Preparing Docker
 
-*	[ [Part One][local-part-one] ] Using slackbuild, manual compilation, and installpkg
+*	IRSI: slackpkg install, removepkg, search, info
 
-*	[ [Part One][local-part-one] ] Using sbopkg, automatic compilation
+*	Using slackbuild, manual compilation, and installpkg
 
-*	[ [Part Two][local-part-two] ] Using slapt-get and slapt-src
+*	Using sbopkg, automatic compilation
 
-*	[ [Part Two][local-part-two] ] Using slpkg
+[ [Part Two][local-part-two] ]
 
-*	[ [Part Two][local-part-two] ] Conclusion
+*	Using slapt-get and slapt-src
+
+*	Using slpkg
+
+*	Conclusion
 
 There are still other topic uncovered here
 
@@ -700,8 +704,8 @@ Thank you for reading
 {% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package-part-one.html
-[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package-part-two.html
+[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package.html
+[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package.html
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
@@ -721,8 +725,9 @@ Thank you for reading
 [image-ss-remove-groff]:       {{ asset_post }}/14-remove-groff.png
 [image-ss-slpkg-deps-status]:  {{ asset_post }}/14-slpkg-deps-status.png
 
-[image-ss-sbopkg-build-log]:   {{ asset_post }}/17-sbopkg-log.png
 [image-ss-slack-cache]:        {{ asset_post }}/17-cache.png
+
+[image-ss-sbopkg-build-log]:   {{ asset_post }}/19-sbopkg-log.png
 
 [image-ss-slackbuild-fish]:  {{ asset_post }}/22-slackbuild-fish.png
 [image-ss-fish-config-log]:  {{ asset_post }}/22-fish-config-log.png

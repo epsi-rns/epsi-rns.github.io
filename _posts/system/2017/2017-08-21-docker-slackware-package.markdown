@@ -461,8 +461,8 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package-part-one.html
-[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package-part-two.html
+[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package.html
+[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package.html
 
 [image-ss-install-slaptget]:      {{ asset_post }}/24-install-slaptget.png
 [image-ss-slaptget-update]:       {{ asset_post }}/24-slaptget-update.png

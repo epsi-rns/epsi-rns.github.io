@@ -584,8 +584,6 @@ Thank you for reading
 [photo-ss-prtget-sysup]:   https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNgbQz6ZW3fjABCjtcUaLZNlOcs03-_XckXl_63?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-prtget-diff]:    {{ asset_post }}/01-ports-difference.png
-[image-ss-less-log]:       {{ asset_post }}/07-log.png
-[image-ss-prtget-log]:     {{ asset_post }}/07-prtget-log-conf.png
 
 [image-ss-prtget-install]: {{ asset_post }}/13-prtget-install-half.png
 [photo-ss-prtget-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQaSQgPAmbhyfZwXjkhT46X8JPTWJ5035-5Mhm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
@@ -600,6 +598,9 @@ Thank you for reading
 [image-ss-prtget-remove-lib]: {{ asset_post }}/14-remove-libpipeline.png
 
 [image-ss-usr-ports]:      {{ asset_post }}/17-cache.png
+
+[image-ss-less-log]:       {{ asset_post }}/19-log.png
+[image-ss-prtget-log]:     {{ asset_post }}/19-prtget-log-conf.png
 
 [image-ss-prtget-update]:  {{ asset_post }}/22-prtget-update.png
 [image-ss-pkgadd-update]:  {{ asset_post }}/23-pkgadd-update.png
