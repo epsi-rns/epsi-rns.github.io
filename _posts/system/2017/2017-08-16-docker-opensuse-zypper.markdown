@@ -35,11 +35,7 @@ There are few topics here.
 
 *	Package IRSI: Install, Removal, Query Search, Show Info
 
-*	History: The Log File
-
 *	Dependency: Help, Dependency, Reverse Dependency, Test, Verify
-
-*	Clean Up
 
 *	Group: Pattern
 
@@ -47,7 +43,11 @@ There are few topics here.
 
 [ [Part Two][local-part-two] ]
 
-*	Repositories: List, Add/Remove/, Modify
+*	Repositories: List, Add/Remove, Modify
+
+*	History: The Log File
+
+*	Clean Up
 
 *	Interesting Issue: systemd Dependencies
 
@@ -441,33 +441,6 @@ Description    :
 
 -- -- --
 
-### History
-
-#### The Log File
-
-This is most the forgotten part of package management,
-although it is not uncommon to notice messages.
-For that reason, I put the recorded event here, 
-before discussing about any further feature.
-
-{% highlight bash %}
-$ less /var/log/zypp/history
-# 2017-08-23 08:57:51 man-2.7.6-3.3.x86_64.rpm installed ok
-# Additional rpm output:
-# Updating /etc/sysconfig/cron ...
-# 
-2017-08-23 08:57:51|install|man|2.7.6-3.3|x86_64|root@d2e88a46e111|oss|21490bfff69e98449f8ae00bb9e91b15038566ca|
-2017-08-23 10:01:09|command|root@d2e88a46e111|'zypper' 'install' '--force' 'man' 'nano' 'htop' 'ncdu' 'fish'|
-2017-08-23 10:01:12|install|htop|2.0.2-3.4|x86_64|root@d2e88a46e111|oss|2807afd80fa606228799ab76baddfc2e688d60b8|
-{% endhighlight %}
-
-Most likely you want the tail, latest transaction,
-at the bottom of the recorded event.
-
-![Docker: /var/log/zypp/history][image-ss-less-log]{: .img-responsive }
-
--- -- --
-
 ### Dependency
 
 There are two main topics in package dependency,
@@ -595,35 +568,6 @@ Continue? [y/n/...? shows all options] (y): y
 {% endhighlight %}
 
 ![Docker Zypper: Verify Dependency][image-ss-zypper-verify]{: .img-responsive }
-
--- -- --
-
-### Clean Up
-
-Opensuse as default does not keep downloaded package,
-unless <code>keeppackages=1</code>
-sets in <code>/etc/zypp/repos.d/</code>.
-But sometimes cache files left for some reason.
-
-Package Cache
-	
-*	/var/cache/zypp/packages/ * /x86_64/ * .x86_64.rpm
-	
-*	/var/cache/zypp/packages/ * /suse/noarch/ * .noarch.rpm
-
-{% highlight bash %}
-$ ls -lR /var/cache/zypp/packages/
-{% endhighlight %}
-
-![Docker Zypper: Cache][image-ss-zypper-cache]{: .img-responsive }
-
-You can clean these directory.
-
-{% highlight bash %}
-$ zypper clean
-{% endhighlight %}
-
-![Docker Zypper: Clean][image-ss-zypper-clean]{: .img-responsive }
 
 -- -- --
 

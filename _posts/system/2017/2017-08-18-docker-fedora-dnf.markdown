@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker - Fedora DNF"
+title: "Docker - Fedora DNF - Part One"
 date: 2017-08-18 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager, fedora]
@@ -8,12 +8,50 @@ author: epsi
 
 excerpt:
   Examine DNF step by step,
-  using Fedora container in Docker
+  using Fedora container in Docker.
+  One of Two Parts Article.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
 
 ---
+
+### Topics
+
+This is a two-parts article.
+There are few topics here.
+
+[ [Part One][local-part-one] ]
+
+*	Preface: Test Bed
+
+*	Getting Started With Docker
+
+*	Package Management: RPM Frontend, Get Help, DNF Shell
+
+*	Updating System: OS Release, Repository List, Upgrade, Extra Commands
+
+*	Package IRSI: Install, Removal, Query Search, Show Info
+
+*	Dependency: Help, Dependency, Reverse Dependency, Test, Tree
+
+*	Group: Group List, Group Info, Group Install, Beyond Group
+
+*	What's Next
+
+[ [Part Two][local-part-two] ]
+
+*	Repositories: repolist, repoinfo, repo-pkgs, --enablerepo
+
+*	Plugin: List, Install, Help, Config Manager Example
+
+*	History: The Log File, DNF History
+
+*	Clean Up
+
+*	Conclusion
+
+-- -- --
 
 ### Preface
 
@@ -230,7 +268,7 @@ that I have to put the output into four figures.
 
 ![Docker DNF: Upgrade][image-ss-dnf-upgrade-4]{: .img-responsive }
 
-#### Extra Command.
+#### Extra Commands
 
 Common clean up procedures.
 Actual we will discuss each later.
@@ -401,55 +439,6 @@ Description  : The man-db package includes five tools for browsing man-pages:
 
 -- -- --
 
-### History
-
-#### The Log File
-
-This is most the forgotten part of package management,
-although it is not uncommon to notice messages.
-For that reason, I put the recorded event here, 
-before discussing about any further feature.
-
-{% highlight bash %}
-$ less /var/log/dnf.log
-2017-08-23T10:47:59Z INFO --- logging initialized ---
-2017-08-23T10:47:59Z DDEBUG timer: config: 1381 ms
-2017-08-23T10:47:59Z DEBUG DNF version: 2.5.1
-2017-08-23T10:47:59Z DDEBUG Command: dnf repolist 
-2017-08-23T10:47:59Z DDEBUG Installroot: /
-2017-08-23T10:47:59Z DDEBUG Releasever: 27
-2017-08-23T10:47:59Z DEBUG cachedir: /var/cache/dnf
-2017-08-23T10:47:59Z DDEBUG Base command: repolist
-2017-08-23T10:47:59Z DDEBUG Extra commands: ['repolist']
-{% endhighlight %}
-
-Most likely you want the tail, latest transaction,
-at the bottom of the recorded event.
-
-![Docker: /var/log/dnf.log][image-ss-var-log-dnf]{: .img-responsive }
-
-#### DNF History
-
-DNF has a very nice history feature.
-
-{% highlight bash %}
-$ dnf history
-ID     | Command line             | Date and time    | Action(s)      | Altered
--------------------------------------------------------------------------------
-     8 | upgrade                  | 2017-08-24 14:48 | Update         |   15 **
-     7 | reinstall man-db         | 2017-08-23 15:47 | Reinstall      |    1   
-     6 | install man              | 2017-08-23 15:45 | Install        |    4   
-     5 | remove less              | 2017-08-23 13:14 | Erase          |    4   
-     4 | install man-db nano htop | 2017-08-23 12:56 | Install        |    5   
-     3 | install man              | 2017-08-23 12:55 | Install        |    5   
-     2 | upgrade --nogpgcheck     | 2017-08-23 11:31 | I, U           |  171 **
-     1 |                          | 2017-07-11 11:29 | Install        |  170 EE
-{% endhighlight %}
-
-![Docker DNF: History][image-ss-dnf-history]{: .img-responsive }
-
--- -- --
-
 ### Dependency
 
 There are two main topics in dependency,
@@ -584,36 +573,6 @@ $ dnf install rpmreaper
 
 -- -- --
 
-### Clean Up
-
-Time after time, your cache size may growing bigger and bigger.
-
-Package Cache
-	
-*	/var/cache/dnf/ * /packages/ * .rpm
-
-{% highlight bash %}
-$ ls -lR /var/cache/dnf/
-{% endhighlight %}
-
-![Docker DNF: Cache][image-ss-dnf-cache]{: .img-responsive }
-
-You can clean these directory.
-
-{% highlight bash %}
-$ dnf clean packages
-18 files removed
-{% endhighlight %}
-
-{% highlight bash %}
-$ dnf clean all
-9 files removed
-{% endhighlight %}
-
-![Docker DNF: Clean][image-ss-dnf-clean]{: .img-responsive }
-
--- -- --
-
 ### Group
 
 Is this docker Minimal Install ?
@@ -635,7 +594,7 @@ Available Environment Groups:
    Fedora Cloud Server
 {% endhighlight %}
 
-![Docker DNF: Group ][image-ss-dnf-g-list]{: .img-responsive }
+![Docker DNF: Group][image-ss-dnf-g-list]{: .img-responsive }
 
 #### Group Info
 
@@ -653,7 +612,7 @@ Environment Group: Minimal Install
    Standard
 {% endhighlight %}
 
-![Docker DNF: Group ][image-ss-dnf-g-info1]{: .img-responsive }
+![Docker DNF: Group][image-ss-dnf-g-info1]{: .img-responsive }
 
 And at the most bottom, there are only <code>Packages</code> as below.
 
@@ -675,7 +634,7 @@ Group: Core
    dnf-yum
 {% endhighlight %}
 
-![Docker DNF: Group ][image-ss-dnf-g-info2]{: .img-responsive }
+![Docker DNF: Group][image-ss-dnf-g-info2]{: .img-responsive }
 
 #### Group Install
 
@@ -698,7 +657,7 @@ Marking packages as installed by the group:
            plymouth                 selinux-policy-targeted     dhcp-client
 {% endhighlight %}
 
-![Docker DNF: Group ][image-ss-dnf-g-install]{: .img-responsive }
+![Docker DNF: Group][image-ss-dnf-g-install]{: .img-responsive }
 
 #### Beyond Group
 
@@ -707,17 +666,22 @@ or upgrade only for specific group.
 
 -- -- --
 
-### Conclusion
+### What's Next
 
-	These are just preliminary knowledge about DNF.
+These are just preliminary knowledge about DNF.
+Consider finish reading [ [Part Two][local-part-two] ].
 
 Thank you for reading
+
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
+
+[local-part-one]: {{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
+[local-part-two]: {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
@@ -747,6 +711,12 @@ Thank you for reading
 [image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
 [image-ss-dnf-g-install]: {{ asset_post }}/15-dnf-group-install-core.png
 [image-ss-dnf-g-list]:    {{ asset_post }}/15-dnf-grouplist.png
+
+[image-ss-dnf-r-info]:      {{ asset_post }}/16-repoinfo.png
+[image-ss-dnf-r-list]:      {{ asset_post }}/16-repolist.png
+[image-ss-dnf-r-list-all]:  {{ asset_post }}/16-repolist-all.png
+[image-ss-dnf-r-pkgs-info]: {{ asset_post }}/16-repo-pkgs-info.png
+[image-ss-dnf-r-pkgs-list]: {{ asset_post }}/16-repo-pkgs-list.png
 
 [image-ss-dnf-cache]:     {{ asset_post }}/17-cache.png
 [image-ss-dnf-clean]:     {{ asset_post }}/17-clean.png
