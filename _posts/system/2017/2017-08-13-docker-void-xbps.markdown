@@ -15,6 +15,34 @@ related_link_ids:
 
 ---
 
+### Topics
+
+There are few topics here.
+
+*	Preface: Test Bed
+
+*	Getting Started With Docker
+
+*	Package Management: Reading, Source Code, Get Help
+
+*	Updating System: OS Release, System Upgrade
+
+*	Package IRSI: Install, Removal, Query Search, Show Info
+
+*	Dependency: Help, Dependency, Reverse Dependency, Test
+
+*	Group: Metapackage
+
+*	Repositories: Configuration, Add Subrepository, List Packages
+
+*	History: The Log File
+
+*	Clean Up
+
+*	Conclusion
+
+-- -- --
+
 ### Preface
 
 > Goal: Examine Package Manager, Focus on Command Line Interface
@@ -127,6 +155,14 @@ $ xbps-install --help
 ### Update
 
 	First Thing First
+
+First thing to do is updating my system as usual.
+
+*	OS Release
+
+*	Update
+
+#### OS Release
 	
 {% highlight bash %}
 $ cat /etc/os-release
@@ -135,6 +171,8 @@ ID="void"
 DISTRIB_ID="void"
 PRETTY_NAME="void"
 {% endhighlight %}
+
+#### System Upgrade
 
 {% highlight bash %}
 $ xbps-install -Su
@@ -258,17 +296,6 @@ $ xbps-query -RS htop
 
 -- -- --
 
-### The Log File
-
-	Unfortunately, nothing in /var/log
-
-{% highlight bash %}
-$ ls -l /var/log/
-total 0
-{% endhighlight %}
-
--- -- --
-
 ### Dependency
 
 There are two main topics in dependency,
@@ -339,6 +366,129 @@ Transaction aborted due to unresolved dependencies.
 
 -- -- --
 
+### Group
+
+I cannot find any reference about group in XBPS.
+I guess there is no group concept in XBPS.
+
+#### Metapackage
+
+However you can use <code>meta-package</code>,
+combined with this cheap search tricks.
+
+![Docker XBPS: Metapackages][image-ss-meta-package-1]{: .img-responsive }
+
+![Docker XBPS: Metapackages][image-ss-meta-package-2]{: .img-responsive }
+
+-- -- --
+
+### Repository
+
+I found very few reference about repository in <code>xbps</code>.
+
+#### Configuration
+
+Configuration can be found in <code>/usr/share/xbps.d</code>
+
+{% highlight bash %}
+$ cat /usr/share/xbps.d/00-repository-main.conf 
+repository=https://repo.voidlinux.eu/current
+{% endhighlight %}
+
+Consider check the sign.
+
+{% highlight bash %}
+$ xbps-query -vL
+ 8242 https://repo.voidlinux.eu/current (RSA signed)
+      Signed-by: Void Linux
+      4096 60:ae:0c:d6:f0:95:17:80:bc:93:46:7a:89:af:a3:2d
+{% endhighlight %}
+
+![Docker XBPS: Repository: Install][image-ss-r-configuration]{: .img-responsive }
+
+#### Add Subrepository
+
+Sub-repositories can be found as packages.
+
+{% highlight bash %}
+$ xbps-query -Rs void-repo
+[-] void-repo-debug-9_1            Void Linux drop-in file for t...
+[-] void-repo-multilib-6_1         Void Linux drop-in file for t...
+[-] void-repo-multilib-nonfree-6_1 Void Linux drop-in file for t...
+[-] void-repo-nonfree-9_1          Void Linux drop-in file for t...
+{% endhighlight %}
+
+![Docker XBPS: Repository: Query][image-ss-r-query-repository]{: .img-responsive }
+
+Therefore a sub-repository can be installed as package.
+
+{% highlight bash %}
+xbps-install void-repo-nonfree
+1 package will be downloaded:
+  void-repo-nonfree-9_1 
+1 package will be installed:
+  void-repo-nonfree-9_1 
+
+Size to download:              1284B
+Size required on disk:         1337B
+Free space on disk:             22GB
+
+Do you want to continue? [Y/n] 
+{% endhighlight %}
+
+![Docker XBPS: Repository: Configuration][image-ss-r-repository-install]{: .img-responsive }
+
+Do not forget to obey the official manual to synchronize
+
+{% highlight bash %}
+$ xbps-install -S
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
+x86_64-repodata: 1315KB [avg rate: 1228KB/s]
+[*] Updating 'https://repo.voidlinux.eu/current/nonfree/x86_64-repodata' ...
+x86_64-repodata: 13KB [avg rate: 180MB/s]
+{% endhighlight %}
+
+![Docker XBPS: Repository: Synchronize][image-ss-r-repository-sync]{: .img-responsive }
+
+#### List Packages
+
+Now we can list avaliable packages from that repository.
+
+{% highlight bash %}
+$ cat /usr/share/xbps.d/10-repository-nonfree.conf 
+repository=https://repo.voidlinux.eu/current/nonfree
+{% endhighlight %}
+
+{% highlight bash %}
+$ xbps-query --repository=https://repo.voidlinux.eu/current/nonfree -Mis \*
+[-] CopyAgent-1.48.0451_1                    Copy.com sync agent
+[-] android-studio-2.3.3_1                   The official Androi...
+[-] broadcom-wl-dkms-6.30.223.271_6          Broadcom proprietar...
+[-] btsync-2.0.105_2                         Automatically sync ...
+[-] caja-CopyAgent-1.48.0451_1               Copy.com sync agent...
+[-] catalyst-15.302_2                        AMD catalyst driver...
+[-] catalyst-dkms-15.302_2                   AMD catalyst driver...
+[-] catalyst-libs-15.302_2                   AMD catalyst driver...
+[-] catalyst-opencl-15.302_2                 AMD catalyst driver...
+{% endhighlight %}
+
+![Docker XBPS: Repository: Query Packages][image-ss-r-query-packages]{: .img-responsive }
+
+-- -- --
+
+### History
+
+#### The Log File
+
+	Unfortunately, nothing in /var/log
+
+{% highlight bash %}
+$ ls -l /var/log/
+total 0
+{% endhighlight %}
+
+-- -- --
+
 ### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
@@ -366,22 +516,6 @@ Removed iproute2-4.10.0_1.x86_64.xbps from cachedir (obsolete)
 {% endhighlight %}
 
 ![Docker XBPS: Clean][image-ss-xbps-clean]{: .img-responsive }
-
--- -- --
-
-### Group
-
-I cannot find any reference about group in XBPS.
-I guess there is no group concept in XBPS.
-
-#### Metapackage
-
-However you can use <code>meta-package</code>,
-combined with this cheap search tricks.
-
-![Docker XBPS: Metapackages][image-ss-meta-package-1]{: .img-responsive }
-
-![Docker XBPS: Metapackages][image-ss-meta-package-2]{: .img-responsive }
 
 -- -- --
 
@@ -428,6 +562,12 @@ Thank you for reading
 
 [image-ss-meta-package-1]:  {{ asset_post }}/15-meta-package-1.png
 [image-ss-meta-package-2]:  {{ asset_post }}/15-meta-package-2.png
+
 [image-ss-xbps-cache]:      {{ asset_post }}/17-cache.png
 [image-ss-xbps-clean]:      {{ asset_post }}/17-clean.png
 
+[image-ss-r-query-packages]:     {{ asset_post }}/16-query-packages.png
+[image-ss-r-query-repository]:   {{ asset_post }}/16-query-void-repo.png
+[image-ss-r-repository-sync]:    {{ asset_post }}/16-repository-sync.png
+[image-ss-r-configuration]:      {{ asset_post }}/16-usr-share-xbps-d.png
+[image-ss-r-repository-install]: {{ asset_post }}/16-void-repo-nonfree-install.png

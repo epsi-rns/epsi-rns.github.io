@@ -29,7 +29,7 @@ There are few topics here.
 
 *	Package Management: RPM Frontend, Get Help, DNF Shell
 
-*	Updating System: OS Release, Repository List, Upgrade, Extra Commands
+*	Updating System: OS Release, Repository List, System Upgrade, Extra Commands
 
 *	Package IRSI: Install, Removal, Query Search, Show Info
 
@@ -226,7 +226,7 @@ repo id  repo name                                                     status
 
 ![Docker DNF: Repository List][image-ss-dnf-repolist]{: .img-responsive }
 
-#### Upgrade
+#### System Upgrade
 
 <code>update</code> is deprecated.
 
