@@ -402,39 +402,11 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
-{% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
 [local-part-one]: {{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
 [local-part-two]: {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
-
-[image-ss-pull-fedora]:   {{ asset_pull }}/fedora-rawhide.png
-[image-ss-fedora-docker]: {{ asset_post }}/00-getting-started.png
-[image-ss-dnf-shell]:     {{ asset_post }}/01-dnf-shell.png
-
-[image-ss-dnf-repolist]:  {{ asset_post }}/02-dnf-repolist.png
-[image-ss-dnf-upgrade-1]: {{ asset_post }}/02-dnf-upgrade-1.png
-[image-ss-dnf-upgrade-2]: {{ asset_post }}/02-dnf-upgrade-2.png
-[image-ss-dnf-upgrade-3]: {{ asset_post }}/02-dnf-upgrade-3.png
-[image-ss-dnf-upgrade-4]: {{ asset_post }}/02-dnf-upgrade-4.png
-[image-ss-dnf-extra-cmd]: {{ asset_post }}/03-dnf-extra-commands.png
-
-[image-ss-dnf-info]:      {{ asset_post }}/13-dnf-info.png
-[image-ss-dnf-install]:   {{ asset_post }}/13-dnf-install.png
-[image-ss-dnf-remove]:    {{ asset_post }}/13-dnf-remove.png
-[image-ss-dnf-search]:    {{ asset_post }}/13-dnf-search.png
-
-[image-ss-dnf-help-repoquery]: {{ asset_post }}/14-help-repoquery.png
-[image-ss-dnf-requires]:       {{ asset_post }}/14-repoquery-requires.png
-[image-ss-dnf-whatrequires]:   {{ asset_post }}/14-repoquery-whatrequires.png
-[image-ss-dnf-test-remove]:    {{ asset_post }}/14-remove-less.png
-[image-ss-fedora-rpmreaper]:   {{ asset_post }}/14-rpmreaper.png
-
-[image-ss-dnf-g-info1]:   {{ asset_post }}/15-dnf-group-info-core.png
-[image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
-[image-ss-dnf-g-install]: {{ asset_post }}/15-dnf-group-install-core.png
-[image-ss-dnf-g-list]:    {{ asset_post }}/15-dnf-grouplist.png
 
 [image-ss-dnf-r-info]:          {{ asset_post }}/16-repoinfo.png
 [image-ss-dnf-r-list]:          {{ asset_post }}/16-repolist.png

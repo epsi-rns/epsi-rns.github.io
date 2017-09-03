@@ -602,10 +602,10 @@ Thank you for reading
 [image-ss-less-log]:       {{ asset_post }}/19-log.png
 [image-ss-prtget-log]:     {{ asset_post }}/19-prtget-log-conf.png
 
-[image-ss-prtget-update]:  {{ asset_post }}/22-prtget-update.png
-[image-ss-pkgadd-update]:  {{ asset_post }}/23-pkgadd-update.png
+[image-ss-prtget-update]:  {{ asset_post }}/32-prtget-update.png
+[image-ss-pkgadd-update]:  {{ asset_post }}/33-pkgadd-update.png
 
-[image-ss-mc-error]:       {{ asset_post }}/24-prtget-install-mc-error.png
-[image-ss-search-glib]:    {{ asset_post }}/24-prtget-search-glib.png
-[image-ss-info-glibc]:     {{ asset_post }}/24-prtget-info-glibc.png
-[image-ss-update-glibc]:   {{ asset_post }}/24-prtget-update-glibc.png
+[image-ss-mc-error]:       {{ asset_post }}/34-prtget-install-mc-error.png
+[image-ss-search-glib]:    {{ asset_post }}/34-prtget-search-glib.png
+[image-ss-info-glibc]:     {{ asset_post }}/34-prtget-info-glibc.png
+[image-ss-update-glibc]:   {{ asset_post }}/34-prtget-update-glibc.png

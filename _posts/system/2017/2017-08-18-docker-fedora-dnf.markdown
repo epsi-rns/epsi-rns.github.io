@@ -711,15 +711,3 @@ Thank you for reading
 [image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
 [image-ss-dnf-g-install]: {{ asset_post }}/15-dnf-group-install-core.png
 [image-ss-dnf-g-list]:    {{ asset_post }}/15-dnf-grouplist.png
-
-[image-ss-dnf-r-info]:      {{ asset_post }}/16-repoinfo.png
-[image-ss-dnf-r-list]:      {{ asset_post }}/16-repolist.png
-[image-ss-dnf-r-list-all]:  {{ asset_post }}/16-repolist-all.png
-[image-ss-dnf-r-pkgs-info]: {{ asset_post }}/16-repo-pkgs-info.png
-[image-ss-dnf-r-pkgs-list]: {{ asset_post }}/16-repo-pkgs-list.png
-
-[image-ss-dnf-cache]:     {{ asset_post }}/17-cache.png
-[image-ss-dnf-clean]:     {{ asset_post }}/17-clean.png
-
-[image-ss-var-log-dnf]:   {{ asset_post }}/19-log.png
-[image-ss-dnf-history]:   {{ asset_post }}/19-history.png

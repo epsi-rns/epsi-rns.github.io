@@ -618,10 +618,10 @@ Thank you for reading
 
 [image-ss-equery-depgraph]:    {{ asset_post }}/21-equery-depgraph.png
 
-[image-ss-layman-list]:  {{ asset_post }}/23-layman-list.png
+[image-ss-layman-list]:  {{ asset_post }}/21-layman-list.png
 
-[image-ss-eix-sync]:     {{ asset_post }}/25-eix-sync-half.png
+[image-ss-eix-sync]:     {{ asset_post }}/21-eix-sync-half.png
 [photo-ss-eix-sync]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM0XeXwWZOJK2dUO-hl8DvUWfUVb3Sn5WfwebdJ?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-eix-update]:   {{ asset_post }}/25-eix-update.png
+[image-ss-eix-update]:   {{ asset_post }}/21-eix-update.png
 
