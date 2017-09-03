@@ -39,6 +39,10 @@ There are few topics here.
 
 *	Group: Pattern
 
+*	Interesting Issue: systemd Dependencies
+
+*	Unsolved Issues on Minimal Install: No Manual
+
 *	What's Next
 
 [ [Part Two][local-part-two] ]
@@ -49,9 +53,7 @@ There are few topics here.
 
 *	Clean Up
 
-*	Interesting Issue: systemd Dependencies
-
-*	Unsolved Issues on Minimal Install: No Manual
+*	Build from Source
 
 *	Conclusion
 
@@ -604,6 +606,69 @@ S | Name                 | Version       | Repository | Dependency
 
 -- -- --
 
+### Unsolved Issues on Minimal Install
+
+This is my bad. Not openSUSE's fault.
+
+#### No Manual
+
+No manual in openSUSE Docker.
+I have two others openSUSE full installation in PC,
+and all manual works well.
+
+{% highlight bash %}
+$ man man
+No manual entry for man
+
+$ echo $MANPATH
+
+$ cat /etc/manpath.config
+{% endhighlight %}
+
+I have tried to reinstall, but it doesn't work.
+
+{% highlight bash %}
+$ zypper in -f man man-pages man-pages-posix 
+{% endhighlight %}
+
+I still do not know what to do about it.
+
+-- -- --
+
+### Interesting Issue
+
+#### systemd Dependencies
+
+While solving the _no manual_ problem,
+I encountered another issue.
+
+{% highlight bash %}
+$ zypper in man
+{% endhighlight %}
+
+This is somehow interesting,
+manual pages in openSUSE depend on systemd.
+
+![systemd dependency issue on openSUSE][image-ss-zypper-systemd]{: .img-responsive }
+
+Why would a manual <code>man</code> need to depend to an init ?
+
+{% highlight bash %}
+$ zypper info --requires man
+Requires : [32]
+cron
+
+$ zypper info --requires cron
+Requires : [5]
+cronie = 1.5.1-66.3
+
+$ zypper info --requires cronie
+Requires : [26]
+systemd
+{% endhighlight %}
+
+-- -- --
+
 ### What's Next
 
 Zypper has amazing <code>repository</code> commands,
@@ -647,7 +712,4 @@ Thank you for reading
 [image-ss-zypper-verify]:      {{ asset_post }}/14-verify.png
 
 [image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
-[image-ss-zypper-cache]:   {{ asset_post }}/17-cache.png
-[image-ss-zypper-clean]:   {{ asset_post }}/17-clean.png
 
-[image-ss-less-log]:   {{ asset_post }}/19-log.png

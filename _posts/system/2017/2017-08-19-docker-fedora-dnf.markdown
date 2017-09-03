@@ -587,7 +587,6 @@ Now we can install the previously built rpm.
 
 {% highlight bash %}
 $ rpm -iv ~/rpmbuild/RPMS/x86_64/herbstluftwm-0.6.2-8.fc28.x86_64.rpm 
-rpm -iv ~/rpmbuild/RPMS/x86_64/herbstluftwm-0.6.2-8.fc28.x86_64.rpm 
 Preparing packages...
 herbstluftwm-0.6.2-8.fc28.x86_64
 {% endhighlight %}
@@ -603,7 +602,7 @@ Again, thank you.
 
 ### Conclusion
 
-Those above are my docker journey knowledge about DNF.
+	These are just preliminary knowledge about DNF.
 
 Thank you for reading
 

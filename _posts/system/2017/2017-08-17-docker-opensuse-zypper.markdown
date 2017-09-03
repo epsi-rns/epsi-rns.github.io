@@ -39,6 +39,10 @@ There are few topics here.
 
 *	Group: Pattern
 
+*	Interesting Issue: systemd Dependencies
+
+*	Unsolved Issues on Minimal Install: No Manual
+
 *	What's Next
 
 [ [Part Two][local-part-two] ]
@@ -49,9 +53,7 @@ There are few topics here.
 
 *	Clean Up
 
-*	Interesting Issue: systemd Dependencies
-
-*	Unsolved Issues on Minimal Install: No Manual
+*	Build from Source
 
 *	Conclusion
 
@@ -371,66 +373,142 @@ $ zypper clean
 
 -- -- --
 
-### Unsolved Issues on Minimal Install
+### Build from Source
 
-This is my bad. Not openSUSE's fault.
+Zypper has the capability to download the source code.
+Then we can utilize other tool to build from source.
 
-#### No Manual
+#### General Requirement
 
-No manual in openSUSE Docker.
-I have two others openSUSE full installation in PC,
-and all manual works well.
-
-{% highlight bash %}
-$ man man
-No manual entry for man
-
-$ echo $MANPATH
-
-$ cat /etc/manpath.config
-{% endhighlight %}
-
-I have tried to reinstall, but it doesn't work.
+We require to install <code>rpm-build</code> and toolchain.
 
 {% highlight bash %}
-$ zypper in -f man man-pages man-pages-posix 
+$ zypper in gcc make rpm-build
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following 28 NEW packages are going to be installed:
+  binutils cpp cpp7 dwz gcc gcc7 gettext-runtime gettext-tools libasan4
+  libatomic1 libcilkrts5 libcroco-0_6-3 libgomp1 libisl15 libitm1 liblsan0
+  libmpc3 libmpfr4 libmpx2 libmpxwrappers2 libtsan0 libubsan0 make patch
+  rpm-build systemd-rpm-macros tar which
+
+The following package is going to be upgraded:
+  libgcc_s1
+
+1 package to upgrade, 28 new.
+Overall download size: 38.9 MiB. Already cached: 0 B. After the operation,
+additional 148.1 MiB will be used.
+Continue? [y/n/...? shows all options] (y):
 {% endhighlight %}
 
-I still do not know what to do about it.
+![Docker Zypper: Install Toolchain][image-ss-install-toolchain]{: .img-responsive }
 
--- -- --
+#### Download and Extract
 
-### Interesting Issue
+	I choose herbstluftwm as an example.
 
-#### systemd Dependencies
-
-While solving the _no manual_ problem,
-I encountered another issue.
+Source install in zypper will *download* source code,
+and *extract* to into <code>/usr/src/packages/</code>.
+Downloading also install required package dependencies.
 
 {% highlight bash %}
-$ zypper in man
+$ zypper source-install herbstluftwm
+Retrieving repository 'Window Managers' metadata .............[done]
+Building repository 'Window Managers' cache ..................[done]
+...
+
+The following 213 NEW packages are going to be installed:
+  Mesa Mesa-libEGL-devel Mesa-libEGL1 Mesa-libGL-devel Mesa-libGL1
+  ...
+  xorg-x11-devel xorg-x11-util-devel xproto-devel xtrans xz-devel
+  zlib-devel
+
+The following source package is going to be installed:
+  herbstluftwm
+
+The following 5 packages are going to be upgraded:
+  glibc glibc-locale libgcrypt20 libstdc++6 python-base
+
+5 packages to upgrade, 213 new, 1 source package.
+Overall download size: 77.4 MiB. Already cached: 0 B. After the
+operation, additional 281.5 MiB will be used.
+Continue? [y/n/...? shows all options] (y):
 {% endhighlight %}
 
-This is somehow interesting,
-manual pages in openSUSE depend on systemd.
+Please click the figure for longer content.
 
-![systemd dependency issue on openSUSE][image-ss-zypper-systemd]{: .img-responsive }
+[![Docker Zypper: Install Source][image-ss-install-source]{: .img-responsive }][photo-ss-install-source]
 
-Why would a manual <code>man</code> need to depend to an init ?
+#### Source Path
+
+Now we have these directories,
+we need the herbstluftwm.spec.
 
 {% highlight bash %}
-$ zypper info --requires man
-Requires : [32]
-cron
-
-$ zypper info --requires cron
-Requires : [5]
-cronie = 1.5.1-66.3
-
-$ zypper info --requires cronie
-Requires : [26]
-systemd
+$ ls /usr/src/packages/      
+BUILD  BUILDROOT  RPMS	SOURCES  SPECS	SRPMS
 {% endhighlight %}
+
+{% highlight bash %}
+$ ls -l /usr/src/packages/SPECS/                  
+total 8
+-rw-r--r-- 1 root root 4468 Aug 31 16:19 herbstluftwm.spec
+{% endhighlight %}
+
+![Docker Source: /usr/src/packages/SPECS/][image-ss-usr-src-specs]{: .img-responsive }
+
+Consider use SPECS path as working directory for build.
+
+{% highlight bash %}
+$ cd /usr/src/packages/SPECS/
+{% endhighlight %}
+
+#### Build
+
+Just one command <code>rpmbuild -ba</code>.
+
+{% highlight bash %}
+$ rpmbuild -ba herbstluftwm.spec
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.bXhF1w
++ umask 022
++ cd /usr/src/packages/BUILD
++ cd /usr/src/packages/BUILD
++ rm -rf herbstluftwm-1335135043
++ /usr/bin/bzip2 -dc /usr/src/packages/SOURCES/herbstluftwm-1335135043.tar.bz2
+...
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.SxVkky
++ umask 022
++ cd /usr/src/packages/BUILD
++ cd herbstluftwm-1335135043
++ rm -rf /usr/src/packages/BUILDROOT/herbstluftwm-1335135043-3.280.x86_64
++ exit 0
+{% endhighlight %}
+
+![Docker RPM: rpmbuild -ba][image-ss-rpmbuild-ba]{: .img-responsive }
+
+#### Install The RPM Output
+
+Consider check if the output exist, and install.
+
+{% highlight bash %}
+$ ls -l /usr/src/packages/RPMS/x86_64/
+total 152
+-rw-r--r-- 1 root root 152794 Sep  3 17:28 herbstluftwm-1335135043-3.280.x86_64.rpm
+{% endhighlight %}
+
+![Docker Source: /usr/src/packages/RPMS/][image-ss-usr-src-rpms]{: .img-responsive }
+
+{% highlight bash %}
+$ rpm -iv /usr/src/packages/RPMS/x86_64/herbstluftwm-1335135043-3.280.x86_64.rpm 
+Preparing packages...
+herbstluftwm-1335135043-3.280.x86_64
+{% endhighlight %}
+
+![Docker RPM: rpm -iv][image-ss-rpm-iv]{: .img-responsive }
+
+Now we are done.
 
 -- -- --
 
@@ -444,36 +522,9 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
-{% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
 [local-part-one]: {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
 [local-part-two]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
-
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
-
-[image-ss-pull-opensuse]:   {{ asset_pull }}/opensuse-tumbleweed.png
-[image-ss-opensuse-docker]: {{ asset_post }}/00-getting-started.png
-[image-ss-docker-ps]:       {{ asset_post }}/00-docker-ps.png
-[image-ss-zypper-shell]:    {{ asset_post }}/01-zypper-shell.png
-
-[image-ss-zypper-lu]:  {{ asset_post }}/01-list-updates.png
-[image-ss-zypper-up]:  {{ asset_post }}/01-update.png
-[image-ss-zypper-dup]: {{ asset_post }}/01-distribution-upgrade.png
-
-[image-ss-zypper-if]:  {{ asset_post }}/13-info-fish.png
-[image-ss-zypper-in]:  {{ asset_post }}/13-install.png
-[image-ss-zypper-rm]:  {{ asset_post }}/13-remove-systemd.png
-[image-ss-zypper-se]:  {{ asset_post }}/13-search-fish.png
-
-[image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
-
-[image-ss-zypper-help-info]:   {{ asset_post }}/14-help-info.png
-[image-ss-zypper-if-require]:  {{ asset_post }}/14-info-requires.png
-[image-ss-zypper-se-require]:  {{ asset_post }}/14-search-requires.png
-[image-ss-zypper-test-remove]: {{ asset_post }}/14-rm-less.png
-[image-ss-zypper-verify]:      {{ asset_post }}/14-verify.png
-
-[image-ss-zypper-pattern]:     {{ asset_post }}/15-pattern.png
 
 [image-ss-zypper-addrepo]:     {{ asset_post }}/16-addrepo-windowmanagers.png
 [image-ss-etc-zypp-repos]:     {{ asset_post }}/16-etc-zypp-repos-d.png
@@ -495,3 +546,12 @@ Thank you for reading
 [image-ss-zypper-clean]: {{ asset_post }}/17-clean.png
 
 [image-ss-less-log]:     {{ asset_post }}/19-log.png
+
+[image-ss-install-toolchain]:  {{ asset_post }}/25-install-toolchain.png
+[image-ss-install-source]:     {{ asset_post }}/25-source-install-herbstluftwm-half.png
+[image-ss-rpmbuild-ba]:        {{ asset_post }}/25-rpmbuild.png
+[image-ss-rpm-iv]:             {{ asset_post }}/25-rpm-iv.png
+[image-ss-usr-src-rpms]:       {{ asset_post }}/25-usr-src-packages-rpms-x86-64.png
+[image-ss-usr-src-specs]:      {{ asset_post }}/25-usr-src-packages-specs.png
+
+[photo-ss-install-source]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOvBGGd9_F4XOFUUup12Q8qhy5YiFwWXKD22oNw?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
