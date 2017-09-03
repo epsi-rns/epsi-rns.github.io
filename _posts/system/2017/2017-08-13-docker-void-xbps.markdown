@@ -39,6 +39,8 @@ There are few topics here.
 
 *	Clean Up
 
+*	Build from Source
+
 *	Conclusion
 
 -- -- --
@@ -519,11 +521,137 @@ Removed iproute2-4.10.0_1.x86_64.xbps from cachedir (obsolete)
 
 -- -- --
 
+### Build from Source
+
+This part is about <code>xbps-src</code>.
+
+#### Reading
+
+* 	<https://wiki.voidlinux.eu/Xbps-src>
+
+*	<https://github.com/voidlinux/void-packages>
+
+#### Requirement
+
+First we need xtools.
+Later we will need qemu and gcc, or maybe proot.
+
+{% highlight bash %}
+$ xbps-install xtools
+2 packages will be downloaded:
+  libpcre2-10.30_1 expat-2.2.4_1 
+5 packages will be installed:
+  libpcre2-10.30_1 expat-2.2.4_1 git-2.14.1_1 
+  make-4.2.1_3 xtools-0.48_1 
+
+Size to download:              418KB
+Size required on disk:          33MB
+Free space on disk:             22GB
+
+Do you want to continue? [Y/n] 
+{% endhighlight %}
+
+![Docker XBPS-SRC: XTools][image-ss-b-install-xtools]{: .img-responsive }
+
+#### Void Packages
+
+Consider to go home.
+
+{% highlight bash %}
+$ cd ~
+{% endhighlight %}
+
+{% highlight bash %}
+$ git clone https://github.com/voidlinux/void-packages
+Cloning into 'void-packages'...
+remote: Counting objects: 407954, done.
+Receiving objects:  28% (117077/407954), 27.34 MiB | 1012.00 KiB/s  
+Receiving objects:  29% (118307/407954), 27.90 MiB | 1014.00 KiB/s  
+Receiving objects:  29% (118556/407954), 28.43 MiB | 1014.00 KiB/s  
+Receiving objects:  99% (407294/407954), 144.01 MiB | 866.00 KiB/s  
+remote: Total 407954 (delta 0), reused 0 (delta 0), pack-reused 407954
+Receiving objects: 100% (407954/407954), 144.01 MiB | 866.00 KiB/s  
+Receiving objects: 100% (407954/407954), 144.63 MiB | 1.30 MiB/s, done.
+Resolving deltas: 100% (233370/233370), done.
+Checking out files: 100% (12670/12670), done.
+{% endhighlight %}
+
+![Docker XBPS-SRC: Void Packages][image-ss-b-git-clone-void]{: .img-responsive }
+
+Consider to change working directory.
+
+{% highlight bash %}
+$ cd ~/void-packages/
+{% endhighlight %}
+
+#### Getting Help
+
+Read The Fine Manual. As usual.
+
+{% highlight bash %}
+$ ./xbps-src     
+xbps-src: [options] <target> [arguments]
+
+Targets: (only one may be specified)
+
+binary-bootstrap [arch]
+    Install bootstrap packages from host repositories into <masterdir>.
+    If the optional 'arch' argument is set, it will install bootstrap packages
+    from this architecture, and its required xbps utilities. The <masterdir>
+    will be initialized for chroot operations.
+{% endhighlight %}
+
+![Docker XBPS-SRC: Getting Help][image-ss-b-getting-help]{: .img-responsive }
+
+#### Bootstrap
+
+{% highlight bash %}
+$ ./xbps-src binary-bootstrap
+=> Installing bootstrap from binary package repositories...
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
+x86_64-repodata: 1315KB [avg rate: 2117KB/s]
+[*] Updating 'https://repo.voidlinux.eu/current/musl/x86_64-repodata' ...
+...
+52 packages will be downloaded:
+  glibc-devel-2.26_2 glibc-locales-2.26_2 binutils-2.29_1 
+  ...
+56 packages will be installed:
+  xbps-triggers-0.102_3 base-files-0.139_8 
+   ...
+
+Size to download:               47MB
+Size required on disk:         295MB
+Free space on disk:             22GB
+
+[*] Downloading binary packages
+glibc-devel-2.26_2.x86_64.xbps: 2358KB [avg rate: 1350KB/s]
+...
+xbps-0.51_18: installed successfully.
+xz-5.2.3_1: configuring ...
+xz-5.2.3_1: installed successfully.
+which-2.21_3: configuring ...
+which-2.21_3: installed successfully.
+base-chroot-0.65_2: configuring ...
+base-chroot-0.65_2: installed successfully.
+
+14 downloaded, 56 installed, 0 updated, 56 configured, 0 removed.
+=> Installed bootstrap successfully!
+{% endhighlight %}
+
+![Docker XBPS-SRC: Binary Bootstrap][image-ss-b-binary-bootstrap]{: .img-responsive }
+
+Now we should be ready to use <code>xbps-src</code>.
+
+#### Under Docker
+
+Unfortunately my host kernel does not support feature required by xbps-src.
+
+-- -- --
+
 ### Conclusion
 
 There are still things that I do not understand,
-such as <code>xbps-src</code> and
-install from git source.
+such as using <code>xbps-src</code>.
 
 Thank you for reading
 
@@ -571,3 +699,8 @@ Thank you for reading
 [image-ss-r-repository-sync]:    {{ asset_post }}/16-repository-sync.png
 [image-ss-r-configuration]:      {{ asset_post }}/16-usr-share-xbps-d.png
 [image-ss-r-repository-install]: {{ asset_post }}/16-void-repo-nonfree-install.png
+
+[image-ss-b-binary-bootstrap]:     {{ asset_post }}/25-binary-bootstrap-half.png
+[image-ss-b-git-clone-void]:       {{ asset_post }}/25-git-clone-void-packages.png
+[image-ss-b-getting-help]:         {{ asset_post }}/25-help.png
+[image-ss-b-install-xtools]:       {{ asset_post }}/25-install-xtools-half.png
