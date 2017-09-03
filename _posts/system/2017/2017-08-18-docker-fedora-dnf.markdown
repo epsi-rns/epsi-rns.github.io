@@ -49,6 +49,8 @@ There are few topics here.
 
 *	Clean Up
 
+*	Build from Source
+
 *	Conclusion
 
 -- -- --

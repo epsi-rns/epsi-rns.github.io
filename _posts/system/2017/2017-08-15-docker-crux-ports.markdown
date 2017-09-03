@@ -15,6 +15,36 @@ related_link_ids:
 
 ---
 
+### Topics
+
+There are few topics here.
+
+*	Preface: Test Bed
+
+*	Getting Started With Docker
+
+*	Package Management: Reading, Source Code, Front End, Get Help
+
+*	Updating System: Ports Update, System Upgrade
+
+*	Package IRSI: Install, Removal, Query Search, Show Info
+
+*	Dependency: Help, Dependency, Reverse Dependency, Test
+
+*	Ports Difference
+
+*	Group
+
+*	History: The Log File
+
+*	Clean Up
+
+*	Issues with Unmaintained Docker Container
+
+*	Conclusion
+
+-- -- --
+
 ### Preface
 
 > Goal: Examine Package Manager, Focus on Command Line Interface
@@ -155,6 +185,8 @@ $ man prt-get
 
 First thing to do is updating my system as usual.
 
+#### Ports Update
+
 You can use <code>ports -u</code> command.
 That remind me of <code>emerge -u</code> command.
 
@@ -172,6 +204,8 @@ Finished successfully
 {% endhighlight %}
 
 [![Docker Crux: Ports Update][image-ss-ports-update]{: .img-responsive }][photo-ss-ports-update]
+
+#### System Upgrade
 
 Now is time to use <code>prt-get</code>,
 an advanced package management tool for CRUX.
@@ -235,7 +269,7 @@ Removing package would not **not** package that depend on it.
 Package would be removed without prior warning.
 Therefore be careful while remove.
 
-#### Package Search
+#### Package Query Search
 
 {% highlight bash %}
 $ prt-get search htop
@@ -258,53 +292,13 @@ Found in /usr/ports/opt/htop:
 
 ![Docker Crux: prt-get Search][image-ss-prtget-search]{: .img-responsive } 
 
-#### Package Info
+#### Package Show Info
 
 {% highlight bash %}
 $ prt-get info htop
 {% endhighlight %}
 
 ![Docker Crux: prt-get Info][image-ss-prtget-info]{: .img-responsive }
-
--- -- --
-
-### The Log File
-
-This is most the forgotten part of package management,
-although it is not uncommon to notice messages.
-For that reason, I put the recorded event here, 
-before discussing about any further feature.
-
-Log options in Crux is disabled as default.
-You have to enable it manually by editing <code>prt-get.conf</code>
-
-{% highlight bash %}
-$ vim /etc/prt-get.conf 
-writelog enabled           # (enabled|disabled)
-logfile  /var/log/pkgbuild/%n.log
-{% endhighlight %}
-
-![Docker: vim /etc/prt-get.conf][image-ss-prtget-log]{: .img-responsive }
-
-This is the nano log after nano installation.
-
-{% highlight bash %}
-$ less /var/log/pkgbuild/nano.log
-=======> Building '/usr/ports/opt/nano/nano#2.4.3-1.pkg.tar.gz' succeeded.
-prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/nano
-prt-get: installing nano 2.4.3-1
-prt-get: /usr/bin/pkgadd nano#2.4.3-1.pkg.tar.gz
-prt-get: build done Thu Aug 24 10:20:01 2017
-{% endhighlight %}
-
-Most likely you want the tail, latest transaction,
-at the bottom of the recorded event.
-
-![Docker: /var/log/pkgbuild/nano.log][image-ss-less-log]{: .img-responsive }
-
-**Reading**
-
-*	<https://crux.nu/doc/prt-get%20-%20User%20Manual.html#config_logging>
 
 -- -- --
 
@@ -398,32 +392,6 @@ cannot open shared object file: No such file or directory
 
 -- -- --
 
-### Clean Up
-
-Time after time, your cache size may growing bigger and bigger.
-
-Package Cache
-	
-*	/usr/ports/core/ * / * .pkg.tar.gz
-
-{% highlight bash %}
-$ ls -lR  /usr/ports/core/man-db/
-{% endhighlight %}
-
-![Docker CRUX: Ports Library][image-ss-usr-ports]{: .img-responsive }
-
-Unfortunately, I haven't find any reference,
-on how to clean up this port directory.
-
--- -- --
-
-### Group
-
-I cannot find any reference about group in Crux's Ports.
-I guess there is no group concept.
-
--- -- --
-
 ### Ports Difference
 
 You check the ports difference.
@@ -446,7 +414,75 @@ bash-4.3#
 
 -- -- --
 
-### pkgadd
+### Group
+
+I cannot find any reference about group in Crux's Ports.
+I guess there is no group concept.
+
+-- -- --
+
+### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+For that reason, I put the recorded event here, 
+before discussing about any further feature.
+
+Log options in Crux is disabled as default.
+You have to enable it manually by editing <code>prt-get.conf</code>
+
+{% highlight bash %}
+$ vim /etc/prt-get.conf 
+writelog enabled           # (enabled|disabled)
+logfile  /var/log/pkgbuild/%n.log
+{% endhighlight %}
+
+![Docker: vim /etc/prt-get.conf][image-ss-prtget-log]{: .img-responsive }
+
+This is the nano log after nano installation.
+
+{% highlight bash %}
+$ less /var/log/pkgbuild/nano.log
+=======> Building '/usr/ports/opt/nano/nano#2.4.3-1.pkg.tar.gz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/nano
+prt-get: installing nano 2.4.3-1
+prt-get: /usr/bin/pkgadd nano#2.4.3-1.pkg.tar.gz
+prt-get: build done Thu Aug 24 10:20:01 2017
+{% endhighlight %}
+
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
+
+![Docker: /var/log/pkgbuild/nano.log][image-ss-less-log]{: .img-responsive }
+
+**Reading**
+
+*	<https://crux.nu/doc/prt-get%20-%20User%20Manual.html#config_logging>
+
+-- -- --
+
+### Clean Up
+
+Time after time, your cache size may growing bigger and bigger.
+
+Package Cache
+	
+*	/usr/ports/core/ * / * .pkg.tar.gz
+
+{% highlight bash %}
+$ ls -lR  /usr/ports/core/man-db/
+{% endhighlight %}
+
+![Docker CRUX: Ports Library][image-ss-usr-ports]{: .img-responsive }
+
+Unfortunately, I haven't find any reference,
+on how to clean up this port directory.
+
+-- -- --
+
+### Issues with Unmaintained Docker Container
+
+#### pkgadd
 
 Sometimes <code>prt-get</code> does not work, as you can see below.
 We have to face <code>openssl</code> install issue.
@@ -480,7 +516,7 @@ No differences found
 
 -- -- --
 
-### Dependency Build Issue with Unmaintained Docker Container
+#### Dependency Build
 
 {% highlight bash %}
 $ prt-get install mc
@@ -544,9 +580,7 @@ prt-get: updated successfully
 
 ![Docker Crux: update glibc][image-ss-update-glibc]{: .img-responsive }
 
--- -- --
-
-### Distribution Upgrade
+#### Distribution Upgrade
 
 Distribution upgrade from <code>3.1</code> to <code>3.2</code>
 can be done using live DVD. 
