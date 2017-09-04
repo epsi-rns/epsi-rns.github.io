@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine DNF step by step,
   using Fedora container in Docker.
-  One of Two Parts Article.
+  One of Three Parts Article.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Topics
 
-This is a two-parts article.
+This is a three-parts article.
 There are few topics here.
 
 [ [Part One][local-part-one] ]
@@ -33,15 +33,19 @@ There are few topics here.
 
 *	Package IRSI: Install, Removal, Query Search, Show Info
 
-*	Dependency: Help, Dependency, Reverse Dependency, Test, Tree
-
-*	Group: Group List, Group Info, Group Install, Beyond Group
-
 *	What's Next
 
 [ [Part Two][local-part-two] ]
 
+*	Dependency: Help, Dependency, Reverse Dependency, Test, Tree
+
+*	Group: Group List, Group Info, Group Install, Beyond Group
+
 *	Repositories: repolist, repoinfo, repo-pkgs, --enablerepo
+
+*	What's Next
+
+[ [Part Three][local-part-two] ]
 
 *	Plugin: List, Install, Help, Config Manager Example
 
@@ -441,233 +445,6 @@ Description  : The man-db package includes five tools for browsing man-pages:
 
 -- -- --
 
-### Dependency
-
-There are two main topics in dependency,
-_dependency_ itself, and _reverse dependency_.
-Beside these two, there are other topic as well,
-such as _managing conflict_ that we do not cover here.
-
-#### Help
-
-DNF has a <code>repoquery</code> help that show all dependency related options.
-
-{% highlight bash %}
-$ dnf help repoquery
-
-search for packages matching keyword
-...
-  --whatconflicts REQ   show only results that conflict REQ
-  --whatobsoletes REQ   show only results that obsolete REQ
-  --whatprovides REQ    show only results that provide REQ
-  --whatrequires REQ    shows results that requires package provides and files REQ
-  --whatrecommends REQ  show only results that recommend REQ
-  --whatenhances REQ    show only results that enhance REQ
-  --whatsuggests REQ    show only results that suggest REQ
-  --whatsupplements REQ
-...
-  --conflicts           Display capabilities that the package conflicts with.
-  --enhances            Display capabilities that the package can enhance.
-  --provides            Display capabilities provided by the package.
-  --recommends          Display capabilities that the package recommends.
-  --requires            Display capabilities that the package depends on.
-  --requires-pre        Display capabilities that the package depends on for
-                        running a %pre script.
-  --suggests            Display capabilities that the package suggests.
-{% endhighlight %}
-
-![Docker DNF: Help Repoquery][image-ss-dnf-help-repoquery]{: .img-responsive }
-
-#### Dependency
-
-	Package that required by: such as man-db need less and other.
-
-This _dependency_ information can be achieved by <code>repoquery --requires</code> command.
-This will show required parts of the package.
-
-{% highlight bash %}
-$ dnf repoquery --requires man-db
-Last metadata expiration check: 0:27:23 ago on Sat Aug 26 13:49:15 2017.
-/bin/sh
-coreutils
-grep
-groff-base
-gzip
-less
-libc.so.6(GLIBC_2.17)(64bit)
-libgdbm.so.4()(64bit)
-libpipeline.so.1()(64bit)
-libz.so.1()(64bit)
-rtld(GNU_HASH)
-{% endhighlight %}
-
-![Docker DNF: Repoquery Requires][image-ss-dnf-requires]{: .img-responsive }
-
-#### Reverse Dependency
-
-	Package that require: such as less needed by man-db or other.
-
-This _reverse dependency_ require <code>repoquery --whatrequires</code> command.
-
-{% highlight bash %}
-$ dnf repoquery --whatrequires less
-Last metadata expiration check: 0:29:36 ago on Sat Aug 26 13:49:15 2017.
-GMT-0:5.4.2-3.fc27.i686
-GMT-0:5.4.2-3.fc27.x86_64
-R-core-0:3.4.1-4.fc27.i686
-R-core-0:3.4.1-4.fc27.x86_64
-Singular-0:4.1.0p3-6.fc27.x86_64
-backup-manager-0:0.7.10-22.fc27.noarch
-c-graph-0:2.0-12.fc27.x86_64
-colordiff-0:1.0.18-2.fc27.noarch
-git-core-0:2.14.1-2.fc27.x86_64
-libguestfs-1:1.37.21-2.fc28.i686
-libguestfs-1:1.37.21-2.fc28.x86_64
-libguestfs-tools-c-1:1.37.21-2.fc28.x86_64
-man-db-0:2.7.6.1-5.fc27.x86_64
-octave-6:4.2.1-4.fc27.2.i686
-octave-6:4.2.1-4.fc27.2.x86_64
-rpmreaper-0:0.2.0-13.fc27.x86_64
-{% endhighlight %}
-
-![Docker DNF: Repoquery What Requires][image-ss-dnf-whatrequires]{: .img-responsive }
-
-#### Test
-
-Removing <code>less</code> would remove <code>man-db</code>.
-And also remove any unused dependency.
-
-{% highlight bash %}
-$ dnf remove less
-Dependencies resolved.
-====================================================================
- Package         Arch       Version              Repository    Size
-====================================================================
-Removing:
- less            x86_64     487-5.fc27           @rawhide     309 k
-Removing depended packages:
- man-db          x86_64     2.7.6.1-5.fc27       @rawhide     1.9 M
-Removing unused dependencies:
- groff-base      x86_64     1.22.3-11.fc27       @rawhide     3.7 M
- libpipeline     x86_64     1.4.2-3.fc27         @rawhide     106 k
-
-Transaction Summary
-====================================================================
-Remove  3 Packages
-
-Freed space: 6.0 M
-Is this ok [y/N]: 
-{% endhighlight %}
-
-![Docker DNF: Test Dependency][image-ss-dnf-test-remove]{: .img-responsive }
-
-#### Tree
-
-	Most people love tree
-
-This <code>rpmreaper</code> is an RPM tool rather than DNF tool.
-
-{% highlight bash %}
-$ dnf install rpmreaper
-{% endhighlight %}
-
-![Docker Fedora: rpmreaper][image-ss-fedora-rpmreaper]{: .img-responsive }
-
--- -- --
-
-### Group
-
-Is this docker Minimal Install ?
-I always wonder what inside theis Fedora docker Container.
-RPM <code>group</code> help me understand this riddle.
-
-#### Group List
-
-We can see <code>Minimal Install</code> group as below.
-
-{% highlight bash %}
-$ dnf grouplist
-Last metadata expiration check: 2:12:21 ago on Wed Aug 23 11:50:45 2017.
-Available Environment Groups:
-   Fedora Custom Operating System
-   Minimal Install
-   Fedora Server Edition
-   Fedora Workstation
-   Fedora Cloud Server
-{% endhighlight %}
-
-![Docker DNF: Group][image-ss-dnf-g-list]{: .img-responsive }
-
-#### Group Info
-
-And there is this <code>Core</code> group as below.
-
-{% highlight bash %}
-$ dnf group info "Minimal Install"
-Last metadata expiration check: 2:13:24 ago on Wed Aug 23 11:50:45 2017.
-Environment Group: Minimal Install
- Description: Basic functionality.
- Mandatory Groups:
-   Core
- Optional Groups:
-   Guest Agents
-   Standard
-{% endhighlight %}
-
-![Docker DNF: Group][image-ss-dnf-g-info1]{: .img-responsive }
-
-And at the most bottom, there are only <code>Packages</code> as below.
-
-{% highlight bash %}
-$ dnf group info core
-Last metadata expiration check: 2:14:07 ago on Wed Aug 23 11:50:45 2017.
-
-Group: Core
- Description: Smallest possible installation
- Mandatory Packages:
-   audit
-   basesystem
-   bash
-   coreutils
-   cronie
-   curl
-   dhcp-client
-   dnf
-   dnf-yum
-{% endhighlight %}
-
-![Docker DNF: Group][image-ss-dnf-g-info2]{: .img-responsive }
-
-#### Group Install
-
-Now we know, that not all the <code>Core</code> packages are installed,
-as some packages not required by the container.
-
-{% highlight bash %}
-$ dnf group install core
-Last metadata expiration check: 2:07:09 ago on Wed Aug 23 11:50:45 2017.
-No match for group package "ppc64-utils"
-Dependencies resolved.
-=============================================================================
- Group     Packages                                                        
-=============================================================================
-Marking packages as installed by the group:
- @Core     curl                     dnf-plugins-core            dnf        
-           sssd-common              policycoreutils             glibc      
-           NetworkManager           openssh-clients             systemd    
-           dracut-config-rescue     openssh-server              rootfiles  
-           plymouth                 selinux-policy-targeted     dhcp-client
-{% endhighlight %}
-
-![Docker DNF: Group][image-ss-dnf-g-install]{: .img-responsive }
-
-#### Beyond Group
-
-You can even remove group of packages as you can read in manual,
-or upgrade only for specific group.
-
--- -- --
-
 ### What's Next
 
 These are just preliminary knowledge about DNF.
@@ -682,8 +459,9 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
-[local-part-two]: {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
+[local-part-one]:   {{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
+[local-part-two]:   {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
+[local-part-three]: {{ site.url }}/system/2017/08/20/docker-fedora-dnf.html
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
@@ -703,13 +481,4 @@ Thank you for reading
 [image-ss-dnf-remove]:    {{ asset_post }}/13-dnf-remove.png
 [image-ss-dnf-search]:    {{ asset_post }}/13-dnf-search.png
 
-[image-ss-dnf-help-repoquery]: {{ asset_post }}/14-help-repoquery.png
-[image-ss-dnf-requires]:       {{ asset_post }}/14-repoquery-requires.png
-[image-ss-dnf-whatrequires]:   {{ asset_post }}/14-repoquery-whatrequires.png
-[image-ss-dnf-test-remove]:    {{ asset_post }}/14-remove-less.png
-[image-ss-fedora-rpmreaper]:   {{ asset_post }}/14-rpmreaper.png
 
-[image-ss-dnf-g-info1]:   {{ asset_post }}/15-dnf-group-info-core.png
-[image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
-[image-ss-dnf-g-install]: {{ asset_post }}/15-dnf-group-install-core.png
-[image-ss-dnf-g-list]:    {{ asset_post }}/15-dnf-grouplist.png

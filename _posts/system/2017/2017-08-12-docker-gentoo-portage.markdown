@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker - Gentoo Portage"
+title: "Docker - Gentoo Portage - Part Two"
 date: 2017-08-12 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager, gentoo]
@@ -16,308 +16,301 @@ related_link_ids:
 
 ---
 
-### Preface
+### Topics
 
-> Goal: Examine Package Manager, Focus on Command Line Interface
+This is a two-parts article.
+There are few topics here.
 
-I am so glad that finally I can learn Gentoo Portage using Docker.
+[ [Part One][local-part-one] ]
 
-#### Test Bed
+*	Preface: Test Bed
 
-1.	Container: Docker
+*	Getting Started With Docker
 
-2.	Operating System: Artix (OpenRC )
+*	Package Management: Portage Frontend, Get Help
 
-3.	Window Manager: Herbstluftwm
+*	Updating System: OS Release, webrsync, Update, Manually, More
 
-Since we are going to use docker again,
-you can read a common overview here.
+*	Package IRSI: Install, COnfirmation, Ambiguous, Removal, Query Search, Show Info
 
-*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
+*	Dependency: Dependency, Reverse Dependency, Pretend, Verify
 
-Of course you can use virtualization, the issue is distraction.
-We need to avoid tendency to focus on GUI tools.
-At the same time, limiting the scope to CLI tools.
-Most of the time, CLI tools is considered lower level than the GUI one.
+*	Group: Metapackages, Sets
 
--- -- --
+*	What's Next
 
-### Getting Started With Docker
+[ [Part Two][local-part-two] ]
 
-Our first move is, of course attach docker process, as usual.
+*	Interesting Tools: Equery, Layman, Eix
 
-{% highlight bash %}
-$ docker pull gentoo/stage3-amd64
-{% endhighlight %}
+*	Repository: Adding, Configuration, List Overlays, Removal, Synchronize, List Packages
 
-{% highlight bash %}
-$ docker image list 
-{% raw %}
-  --format 'table {{.Repository}}\t{{.Size}}'
-{% endraw %}
-REPOSITORY              SIZE
-gentoo/stage3-amd64     873MB
-vbatts/slackware        86.7MB
-voidlinux/voidlinux     202MB
-kevinleptons/lfs-auto   753MB
-{% endhighlight %}
+*	History: The Log File
 
-{% highlight bash %}
-$ docker run -it gentoo/stage3-amd64
-ca9efc06241d / # exit
-{% endhighlight %}
+*	Clean Up
 
-{% highlight bash %}
-$ docker ps -a 
-{% raw %}
-  --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'
-{% endraw %}
-IMAGE                 NAMES               STATUS
-gentoo/stage3-amd64   amazing_shirley     Exited (0) 24 seconds ago
-vbatts/slackware      cranky_keller       Exited (0) 37 minutes ago
-{% endhighlight %}
-
-{% highlight bash %}
-$ docker start amazing_shirley
-amazing_shirley
-{% endhighlight %}
-
-{% highlight bash %}
-$ docker attach amazing_shirley
-ca9efc06241d / #
-{% endhighlight %}
-
-![Docker Gentoo: Getting Started][image-ss-gentoo-docker]{: .img-responsive }
+*	Conclusion
 
 -- -- --
 
-### Package Management
+### Interesting Tools
 
-Gentoo use Portage to manage their packages.
+I do think that these tools are what I need.
 
-*	<https://wiki.gentoo.org/wiki/Portage>
+*	<code>Equery</code>
 
-#### Portage Frontend
+*	<code>Layman</code>
 
-Emerge
+*	<code>Eix</code>
 
-*	<https://github.com/gentoo/portage>
-	
+#### Equery
 
-#### Get Help
+There are a lot of interesting stuff in package site.
 
-Read the fine manual instead.
+*	<https://wiki.gentoo.org/wiki/Equery>
 
 {% highlight bash %}
-$ man emerge
+$ emerge --ask app-portage/gentoolkit
 {% endhighlight %}
+
+{% highlight bash %}
+$ equery depgraph ncdu
+{% endhighlight %}
+
+![Docker Equery: Dependency in Graph][image-ss-equery-depgraph]{: .img-responsive }
+
+#### Layman
+
+Managing Repository
+
+*	<https://wiki.gentoo.org/wiki/Layman>
+
+{% highlight bash %}
+$ layman-updater -R
+{% endhighlight %}
+
+{% highlight bash %}
+$ layman -L
+{% endhighlight %}
+
+![Docker Layman: List Available][image-ss-layman-available]{: .img-responsive }
+
+#### Eix
+
+Diffing local ebuild.
+
+*	<https://wiki.gentoo.org/wiki/Eix>
+
+{% highlight bash %}
+$ emerge --ask app-portage/eix
+{% endhighlight %}
+
+First Thing First, as usual.
+
+{% highlight bash %}
+$ eix-update
+{% endhighlight %}
+
+![Docker Eix: Update][image-ss-eix-update]{: .img-responsive }
+
+{% highlight bash %}
+$ eix-sync
+{% endhighlight %}
+
+![Docker Eix: Sync][image-ss-eix-sync]{: .img-responsive }
 
 -- -- --
 
-### Updating System with Webrsync
+### Repository
 
-	First Thing First
+Gentoo utilize <code>portage tree</code>
+as main <code>ebuild repository</code>.
 
-First thing to do in my mind is updating my system.
+#### Configuration
 
-#### OS Release
+*	<https://wiki.gentoo.org/wiki/etc/portage/repos.conf>
 
 {% highlight bash %}
-$ cat /etc/gentoo-release 
-Gentoo Base System release 2.3
+$ cat /usr/share/portage/config/repos.conf
+[DEFAULT]
+main-repo = gentoo
+
+[gentoo]
+location = /usr/portage
+sync-type = rsync
+sync-uri = rsync://rsync.gentoo.org/gentoo-portage
+auto-sync = yes
+
+# for daily squashfs snapshots
+#sync-type = squashdelta
+#sync-uri = mirror://gentoo/../snapshots/squashfs
 {% endhighlight %}
 
-#### webrsync
+![Docker Portage: Configuration][image-ss-r-repos-conf]{: .img-responsive }
+
+In Funtoo this wouldlook a little bit different.
 
 {% highlight bash %}
-ca9efc06241d / # emerge-webrsync
-Fetching most recent snapshot ...
- * Latest snapshot date: 20170814
- * 
- * Approximate snapshot timestamp: 1502757900
- *        Current local timestamp: 1502757301
- * 
- * The current local timestamp is possibly identical to the
- * timestamp of the latest snapshot. In order to force sync, use
- * the --revert option or remove the timestamp file located at
- * '/usr/portage/metadata/timestamp.x'.
+[DEFAULT]
+main-repo = gentoo
+
+[gentoo]
+location = /usr/portage
+sync-type = git
+sync-uri = git://github.com/funtoo/ports-2012.git
+auto-sync = yes
 {% endhighlight %}
 
-[![Docker Gentoo: emerge-webrsync][image-ss-emerge-webrsync]{: .img-responsive }][photo-ss-emerge-webrsync]
+I do not know how it looks in Zentoo.
+
+#### Overlay
+
+Gentoo has repository concept called <code>ebuild repository</code>,
+or in short called <code>overlay</code>.
+Overlay is additional ebuild outside the main package tree.
+
+*	<https://wiki.gentoo.org/wiki/Ebuild_repository>
+
+This is a list of overlay.
+
+*	<https://overlays.gentoo.org/>
 
 
-#### Update
+There is an ebuild repository frontend called <code>layman</code>.
 
-You can use <code>emerge -u</code> command.
+*	<https://wiki.gentoo.org/wiki/Layman>
+
+
+#### Adding Overlay
+
+Adding overlay is pretty straightforward.
 
 {% highlight bash %}
-ca9efc06241d / # emerge -u system
-Calculating dependencies... done!
->>> Auto-cleaning packages...
+$ layman -a xwing
 
->>> No outdated packages were found on your system.
+ * Adding overlay...
+ * Overlay "xwing" is not official. Continue installing? [y/n]: y
+ * Running Rsync... # /usr/bin/rsync -rlptDvz --progress --delete --delete-after --timeout=180 --exclude=distfiles/* --exclude=local/* --exclude=packages/* rsync://gentoo.xwing.info/xwing-overlay/ /var/lib/layman/xwing
+This is xwing.info / alderaan.xwing.info
+
+Server Address : 91.134.139.206
+Contact Name   : webmaster@xwing.info
+Hardware       : VPS 2016 SSD 3
 {% endhighlight %}
 
-{% highlight bash %}
-ca9efc06241d / # emerge -u world
-Calculating dependencies... done!
->>> Auto-cleaning packages...
+**More Info**
 
->>> No outdated packages were found on your system.
+*	<https://gpo.zugaina.org/Overlays/xwing>
+
+[![Docker Layman: Add Overlay][image-ss-r-layman-add]{: .img-responsive }][photo-ss-r-layman-add]
+
+#### Configuration
+
+Now xwing has been added to the <code>layman.conf</code>.
+
+{% highlight bash %}
+$ cat /etc/portage/repos.conf/layman.conf 
+[xwing]
+priority = 50
+location = /var/lib/layman/xwing
+layman-type = rsync
+auto-sync = No
 {% endhighlight %}
 
+![Docker Layman: Configuration][image-ss-r-layman-conf]{: .img-responsive }
+
+Consider have a look at the provided path.
+
 {% highlight bash %}
-ca9efc06241d / # eselect news read
-No news is good news.
+$ ls /var/lib/layman/xwing/
+app-office   media-gfx      net-misc        skel.metadata.xml
+eclass       media-plugins  profiles        x11-misc
+licenses     media-video    skel.ChangeLog  x11-plugins
+mail-filter  metadata       skel.ebuild     x11-themes
 {% endhighlight %}
 
-![Docker Gentoo: emerge --update][image-ss-emerge-update]{: .img-responsive }
+![Docker Layman: /var/lib/layman][image-ss-r-var-lib-layman]{: .img-responsive }
 
--- -- --
+#### List Overlays 
 
-### Manually Updating System
-
-As a beginner, I always curious how things works.
-
-Consider a fresh clean gentoo container.
+List available overlays. This will produce long list.
 
 {% highlight bash %}
-$ emerge
-!!! Section 'gentoo' in repos.conf has location attribute set to nonexistent directory: '/usr/portage'
-!!! Section 'x-portage' in repos.conf has location attribute set to nonexistent directory: '/usr/portage'
-!!! Invalid Repository Location (not a dir): '/usr/portage'
-
-
-!!! /etc/portage/make.profile is not a symlink and will probably prevent most merges.
-!!! It should point into a profile within /usr/portage/profiles/
-!!! (You can safely ignore this message when syncing. It's harmless.)
-
-
-!!! Your current profile is invalid. If you have just changed your profile
-!!! configuration, you should revert back to the previous configuration.
-!!! Allowed actions are limited to --help, --info, --search, --sync, and
-!!! --version.
+$ layman -L
 {% endhighlight %}
 
-You can manually populate portage tree.
-It is about only 70 megabytes download.
+List installed overlays.
 
 {% highlight bash %}
-$ cd /usr/
-$ wget -c http://distfiles.gentoo.org/snapshots/portage-latest.tar.xz
-$ tar -xvf portage-latest.tar.xz
-$ rm portage-latest.tar.xz
+$ layman -l
+
+ * xwing                     [Rsync     ] (rsync://gentoo.xwing....)
 {% endhighlight %}
 
--- -- --
+![Docker Layman: List Installed][image-ss-r-layman-installed]{: .img-responsive }
 
-### Updating More
+#### Overlay 
 
-There are other command such as <code>emerge --sync</code>
-Read the fine manual instead.
-
--- -- --
-
-### Package IRSI
-
-	Install, Remove, Search, Info
-
-Read the fine manual.
-
-#### Package Install
-
-What good is it life without our favorites packages ?
-Consider install it at the first place after system update.
-
-	Merge
+Overlay removal is also straightforward.
 
 {% highlight bash %}
-$ emerge htop fish ncdu
+$ layman -d xwing
+
+ * Deleting selected overlay(s)...
+ * Deleting directory "/var/lib/layman/xwing"
+ * Successfully deleted overlay(s) xwing.
 {% endhighlight %}
 
-With <code>emerge</code> command,
-these packages will be compiled, built and installed.
-<code>emerge</code> has a very nice looks, 
-many colors while building package.
+![Docker Layman: Remove Overlay][image-ss-r-layman-del]{: .img-responsive }
 
-[![Docker Emerge: Install Package][image-ss-emerge-install]{: .img-responsive }][photo-ss-emerge-install]
-
-#### Ask for Confirmation
-
-	Ask
+#### Synchronize Overlays
 
 {% highlight bash %}
-$ emerge -a htop fish ncdu
+$ layman -S
+
+ * Fetching remote list...
+ * Fetch Ok
+
+ * Syncing selected overlay(s)...
+ * Running Rsync... # /usr/bin/rsync -rlptDvz --progress --delete --delete-after --timeout=180 --exclude=distfiles/* --exclude=local/* --exclude=packages/* rsync://gentoo.xwing.info/xwing-overlay/ /var/lib/layman/xwing
+This is xwing.info / alderaan.xwing.info
+...
 {% endhighlight %}
 
-![Docker Emerge: Install][image-ss-emerge-install-ask]{: .img-responsive }
+[![Docker Layman: Synchronize][image-ss-r-layman-sync]{: .img-responsive }][photo-ss-r-layman-sync]
 
-#### Ambiguous Package
+#### List Packages
 
-How about this ?
-
-{% highlight bash %}
-$ emerge mc
-{% endhighlight %}
-
-![Docker Emerge: ebuild name is ambiguous][image-ss-emerge-ambigous]{: .img-responsive }
-
-Use fully qualified ebuild name instead.
+We can use <code>eix</code> to list packages.
+No need to check out <code>/var/lib/layman/xwing/</code> manually.
+First we have to <code>eix-sync</code>.
 
 {% highlight bash %}
-$ emerge app-misc/mc 
-{% endhighlight %}
-
-#### Package Removal
-
-	Depclean
-
-{% highlight bash %}
-$ emerge -c htop
-{% endhighlight %}
-
-	Unmerge
-
-{% highlight bash %}
-$ emerge -C htop
-{% endhighlight %}
-
-![Docker Emerge: Remove][image-ss-emerge-remove]{: .img-responsive }
-
-#### Package Search
-
-	Search
-
-{% highlight bash %}
-$ emerge -s htop
-{% endhighlight %}
-
-	Search Description
-
-{% highlight bash %}
-$ emerge -S htop
-{% endhighlight %}
-
-![Docker Emerge: Search][image-ss-emerge-search]{: .img-responsive }
-
-#### Package Info
-
-{% highlight bash %}
-$ emerge -pv htop
+$ eix-sync
 {% endhighlight %}
 
 {% highlight bash %}
-$ emerge -S htop
+$ eix --in-overlay xwing --only-names
+app-office/grisbi
+mail-filter/sqlgrey
+media-gfx/AfterShotPro
+...
 {% endhighlight %}
 
--- -- --
+![Docker Eix: --in-overlay][image-ss-r-eix-overlay]{: .img-responsive }
 
-### The Log File
+This is basic operation for ebuild repository.
+It is enough for preview.
+We are done.
+
+-- -- -- 
+
+### History
+
+#### The Log File
 
 This is most the forgotten part of package management,
 although it is not uncommon to notice messages.
-For that reason, I put the recorded event here, 
-before discussing about any further feature.
 
 {% highlight bash %}
 $ less /var/log/portage/elog/summary.log
@@ -335,94 +328,6 @@ Most likely you want the tail, latest transaction,
 at the bottom of the recorded event.
 
 ![Docker: /var/log/zypp/history][image-ss-less-log]{: .img-responsive }
-
--- -- --
-
-
-### Dependency
-
-There are two main topics in dependency,
-_dependency_ itself, and _reverse dependency_.
-Beside these two, there are other topic as well,
-such as _managing conflict_ that we do not cover here.
-
-#### Dependency
-
-	Package that required by: such as man need groff and other.
-
-This _dependency_ information can be achieved by <code>-ep man</code> command.
-This will show required parts of the package.
-
-{% highlight bash %}
-$ emerge -ep man
-
-These are the packages that would be merged, in order:
-
-Calculating dependencies... done!
-
-...
-[ebuild   R    ] dev-libs/iniparser-3.1-r1 
-[ebuild   R    ] sys-apps/groff-1.22.2 
-[ebuild   R    ] sys-devel/gettext-0.19.8.1 
-...
-{% endhighlight %}
-
-![Docker Emerge: EP][image-ss-emerge-ep]{: .img-responsive }
-
-#### Reverse Dependency
-
-	Package that require: such as groff needed by man or other.
-
-This _reverse dependency_ require <code>equery depends</code> command.
-
-{% highlight bash %}
-$ equery depends groff
- * These packages depend on groff:
-sys-apps/man-1.6g (>=sys-apps/groff-1.19.2-r1)
-{% endhighlight %}
-
-![Docker Equery: Depends][image-ss-equery-depends]{: .img-responsive }
-
-#### Pretend
-
-Consider pretend to remove the <code>groff</code> package.
-These commands have the same result.
-
-{% highlight bash %}
-$ emerge -pv --depclean groff
-{% endhighlight %}
-
-{% highlight bash %}
-$ emerge -c --verbose groff 
-
-Calculating dependencies... done!
-  sys-apps/groff-1.22.2 pulled in by:
-    sys-apps/man-1.6g requires >=sys-apps/groff-1.19.2-r1
-
->>> No packages selected for removal by depclean
-Packages installed:   233
-Packages in world:    6
-Packages in system:   44
-Required packages:    233
-Number removed:       0
-{% endhighlight %}
-
-![Docker Emerge: PV Depclean][image-ss-emerge-pv-depclean]{: .img-responsive }
-
-
-#### Verify
-
-Gentoo has a tool, to install or repair, missing dependencies.
-
-{% highlight bash %}
-$ emerge -uDN world
-Calculating dependencies... done!
->>> Auto-cleaning packages...
-
->>> No outdated packages were found on your system.
-{% endhighlight %}
-
-![Docker Emerge: Verify Dependency][image-ss-emerge-verify]{: .img-responsive }
 
 -- -- --
 
@@ -471,107 +376,7 @@ $ eclean-dist -d
 
 -- -- --
 
-### Group
-
-	There is no group concept in portage.
-
-I have been looking for a concept of
-[group or pattern or metapackages] in portage.
-And found something better called <code>sets</code>.
-
-#### Metapackages
-
-If you insist to use metapackage,
-you can still use the search feature.
-
-{% highlight bash %}
-$ emerge -s meta
-{% endhighlight %}
-
-#### Sets
-
-Official
-
-*	<https://wiki.gentoo.org/wiki//etc/portage/sets>
-
-Awesome Blog
-
-*	<https://makuro.wordpress.com/2010/12/12/intro-to-portage-sets/>
-
--- -- --
-
-### Interesting Tools
-
-I do think that these tools are what I need.
-
-*	<code>Equery</code>
-
-*	<code>Layman</code>
-
-*	<code>Eix</code>
-
-#### Equery
-
-There are a lot of interesting stuff in package site.
-
-*	<https://wiki.gentoo.org/wiki/Equery>
-
-{% highlight bash %}
-$ emerge --ask app-portage/gentoolkit
-{% endhighlight %}
-
-{% highlight bash %}
-$ equery depgraph ncdu
-{% endhighlight %}
-
-![Docker Equery: Dependency in Graph][image-ss-equery-depgraph]{: .img-responsive }
-
-#### Layman
-
-Managing Repository
-
-*	<https://wiki.gentoo.org/wiki/Layman>
-
-{% highlight bash %}
-$ layman-updater -R
-{% endhighlight %}
-
-{% highlight bash %}
-$ layman -L
-{% endhighlight %}
-
-![Docker Layman: List Repository][image-ss-layman-list]{: .img-responsive }
-
-#### Eix
-
-Diffing local ebuild.
-
-*	<https://wiki.gentoo.org/wiki/Eix>
-
-{% highlight bash %}
-$ emerge --ask app-portage/eix
-{% endhighlight %}
-
-First Thing First, as usual.
-
-{% highlight bash %}
-$ eix-update
-{% endhighlight %}
-
-![Docker Eix: Update][image-ss-eix-update]{: .img-responsive }
-
-{% highlight bash %}
-$ eix-sync
-{% endhighlight %}
-
-![Docker Eix: Sync][image-ss-eix-sync]{: .img-responsive }
-
--- -- --
-
 ### Conclusion
-
-No comment yet.
-Just like everything else I have to go deeper to comprehend.
 
 	I am a n00bs !
 
@@ -587,28 +392,8 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
-
-[image-ss-gentoo-docker]:    {{ asset_post }}/00-getting-started.png
-
-[image-ss-emerge-webrsync]:  {{ asset_post }}/01-webrsync-half.png
-[photo-ss-emerge-webrsync]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN4az7eFD30LhWON67bxjIl07QM5l2DlmxjGSGX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-
-[image-ss-emerge-update]:    {{ asset_post }}/01-emerge-update.png
-
-[image-ss-emerge-install]:     {{ asset_post }}/13-emerge-01-install-half.png
-[photo-ss-emerge-install]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
-
-[image-ss-emerge-ambigous]:    {{ asset_post }}/13-emerge-01-install-mc.png
-
-[image-ss-emerge-install-ask]: {{ asset_post }}/13-emerge-01-install-ask.png
-[image-ss-emerge-remove]:      {{ asset_post }}/13-emerge-02-remove-depclean.png
-[image-ss-emerge-search]:      {{ asset_post }}/13-emerge-03-search-search.png
-
-[image-ss-emerge-ep]:          {{ asset_post }}/14-emerge-ep.png
-[image-ss-equery-depends]:     {{ asset_post }}/14-equery-depends.png
-[image-ss-emerge-pv-depclean]: {{ asset_post }}/14-emerge-pv-depclean.png
-[image-ss-emerge-verify]:      {{ asset_post }}/14-emerge-udn-world.png
+[local-part-one]: {{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
+[local-part-two]: {{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
 
 [image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
 [image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
@@ -618,10 +403,22 @@ Thank you for reading
 
 [image-ss-equery-depgraph]:    {{ asset_post }}/21-equery-depgraph.png
 
-[image-ss-layman-list]:  {{ asset_post }}/21-layman-list.png
+[image-ss-layman-available]:   {{ asset_post }}/21-layman-list.png
 
-[image-ss-eix-sync]:     {{ asset_post }}/21-eix-sync-half.png
-[photo-ss-eix-sync]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM0XeXwWZOJK2dUO-hl8DvUWfUVb3Sn5WfwebdJ?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-eix-sync]:      {{ asset_post }}/21-eix-sync-half.png
+[photo-ss-eix-sync]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM0XeXwWZOJK2dUO-hl8DvUWfUVb3Sn5WfwebdJ?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-eix-update]:   {{ asset_post }}/21-eix-update.png
+[image-ss-eix-update]:    {{ asset_post }}/21-eix-update.png
 
+[image-ss-r-layman-add]:  {{ asset_post }}/25-layman-add-half.png
+[photo-ss-r-layman-add]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOMu9nSOgb10i0Omosy3lV-yymYS4YEuQNu7Grp?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-r-layman-sync]: {{ asset_post }}/25-layman-sync-half.png
+[photo-ss-r-layman-sync]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNUNmp7-O6k7TW-p_WddOXnsLnpYhAmmPI-1Th6?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+
+[image-ss-r-repos-conf]:  {{ asset_post }}/25-repos-conf.png
+[image-ss-r-eix-overlay]: {{ asset_post }}/25-eix-in-overlay.png
+[image-ss-r-layman-conf]: {{ asset_post }}/25-layman-conf.png
+[image-ss-r-layman-del]:  {{ asset_post }}/25-layman-delete.png
+[image-ss-r-layman-installed]: {{ asset_post }}/25-layman-list-installed.png
+[image-ss-r-var-lib-layman]:   {{ asset_post }}/25-var-lib-layman-xwing.png

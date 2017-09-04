@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Slackware Package - Part One"
-date: 2017-08-20 09:45:15 +0700
+date: 2017-08-20 13:35:15 +0700
 categories: system
 tags: [docker, distro, package manager, slackware]
 author: epsi
@@ -10,6 +10,7 @@ excerpt:
   Docker flow for Slackware Package Management,
   from slackpkg binary to slackbuild compilation.
   First time using Slackware experience.
+  One of Three Parts Article.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
@@ -18,7 +19,7 @@ related_link_ids:
 
 ### Topics
 
-This is a two-parts article.
+This is a three-parts article.
 There are few topics here.
 
 [ [Part One][local-part-one] ]
@@ -29,23 +30,37 @@ There are few topics here.
 
 *	IRSI: slackpkg install, removepkg, search, info
 
+*	Container: Slackware64, Minimal Install, Package Series
+
+*	History: The Log File
+
+*	No Dependency: Example, slpkg deps-status
+
+*	Cleanup
+
+[ [Part Two][local-part-two] ]
+
 *	Using slackbuild, manual compilation, and installpkg
 
 *	Using sbopkg, automatic compilation
 
-[ [Part Two][local-part-two] ]
+*	Using slapt-get: Reading, Install, Dependencies, Update, Upgrade, Install, Show Info
 
-*	Using slapt-get and slapt-src
+*	Using slapt-src: Update, Install
 
-*	Using slpkg
+[ [Part Three][local-part-three] ]
+
+*	Install slpkg: Dependency, Install, No certificate
+
+*	Using slpkg: Documentation, Update, Install, The Log File
+
+*	Repository: List, Configuration, Enable, List Package, Install Package
 
 *	Conclusion
 
 There are still other topic uncovered here
 
 *	slackpkgplus
-
-*	adding non official repo such as alien and slacky
 
 -- -- --
 
@@ -302,7 +317,7 @@ $ slackpkg info htop
 
 -- -- --
 
-### Minimal or Full Install ?
+### Container: Minimal or Full Install ?
 
 	What should I do with this Container ?
 
@@ -383,14 +398,16 @@ $ slackpkg install d
 {% endhighlight %}
 
 I remind that I keep my minimal install for learning purpose.
-So do nothave any plan to install <code>D Package Series</code>.
+So do not have any plan to install <code>D Package Series</code>.
 If storage is not a problem for you,
 you can install <code>D Package Series</code>,
 or even use full <code>Slackware64</code> install.
 
 -- -- --
 
-### The Log File
+### History
+
+#### The Log File
 
 This is most the forgotten part of package management,
 although it is not uncommon to notice messages.
@@ -409,8 +426,7 @@ at the bottom of the recorded event.
 
 -- -- --
 
-
-### Dependency
+### No Dependency
 
 Slackware proud of their **no dependency resolution** philosophy.
 A package that required by other packaged could be removed without prior warning.
@@ -485,216 +501,18 @@ Package Cache
 $ ls -lR /var/cache/packages/slackware64/d
 {% endhighlight %}
 
-![Docker Slack: Cache][image-ss-slack-cache]:{: .img-responsive }
+![Docker Slack: Cache][image-ss-slack-cache]{: .img-responsive }
 
 Unfortunately, I haven't find any reference,
 on how to clean up this cache directory.
 
 -- -- --
 
-### Slackbuild
-
-There are few options to have slackbuild compiled.
-
-*	Manual Compilation
-
-*	Using <code>sbopkg</code>
-
-*	Other tools such as <code>slapt-src</code>, and <code>slpkg</code>
-
-Here we I use <code>fish</code> as an experiment.
-You can use other Slackbuild as well such as <code>ncdu</code>.
-
-#### Manual Compilation
-
-Get the slackbuild.
-Using the appropriate slackware version.
-
-{% highlight bash %}
-$ cd ~
-
-$ wget -c ftp://ftp.slackbuilds.org/pub/slackbuilds/14.2/system/fish.tar.gz
-
-$ tar -xvf fish.tar.gz
-
-$ cd fish
-
-$ chmod +x fish.SlackBuild
-{% endhighlight %}
-
-Get the source code.
-Using <code>fish.info</code>
-
-{% highlight bash %}
-$ cat fish.info 
-PRGNAM="fish"
-VERSION="2.6.0"
-HOMEPAGE="http://fishshell.com/"
-DOWNLOAD="https://github.com/fish-shell/fish-shell/releases/download/2.6.0/fish-2.6.0.tar.gz"
-MD5SUM="ce9d8cc2a34d172a94cfa3ef9988937c"
-DOWNLOAD_x86_64=""
-MD5SUM_x86_64=""
-REQUIRES="man-db"
-MAINTAINER="Edinaldo P. Silva"
-EMAIL="edps.mundognu@gmail.com"
-
-$ wget -c --no-check-certificate https://github.com/fish-shell/fish-shell/releases/download/2.6.0/fish-2.6.0.tar.gz
-{% endhighlight %}
-
-Do the compilation process.
-Be brave to track error in <code>/tmp/*/config.log</code>
-whenever you encounter error.
-
-{% highlight bash %}
-$ ./fish.SlackBuild
-...
-Slackware package /tmp/fish-2.6.0-x86_64-1_SBo.tgz created.
-{% endhighlight %}
-
-And finally install.
-
-{% highlight bash %}
-$ installpkg /tmp/fish-2.6.0-x86_64-1_SBo.tgz
-Verifying package fish-2.6.0-x86_64-1_SBo.tgz.
-Installing package fish-2.6.0-x86_64-1_SBo.tgz:
-PACKAGE DESCRIPTION:
-# fish (Friendly Interactive Shell)
-#
-# fish is a user friendly command line shell for UNIX-like systems.
-#
-# fish includes case insensitive completions, a multiline editing
-# system, a new and simplified key binding system, and a large number
-# of command specific completions.
-#
-# Homepage: http://fishshell.com/
-#
-Executing install script for fish-2.6.0-x86_64-1_SBo.tgz.
-Package fish-2.6.0-x86_64-1_SBo.tgz installed.
-{% endhighlight %}
-
-![Docker Slackware: Build Fish using Slackbuild][image-ss-slackbuild-fish]{: .img-responsive }
-
-#### Tracking Dependency
-
-Sometimes (or usually for beginner),
-error happened while building from source.
-This step give me better understanding of my system.
-
-{% highlight bash %}
-$ ./fish.SlackBuild
-
-...
-...
-
-configure.ac:28: installing './missing'
-Makefile.am: installing './depcomp'
-autoreconf: Leaving directory 'pcre2-10.22'
-autoreconf: configure.ac: not using Libtool
-autoreconf: configure.ac: not using Automake
-autoreconf: Leaving directory '.'
-checking if autoreconf needs to be run... no
-checking if autoheader needs to be run... no
-checking for gcc... gcc
-checking whether the C compiler works... no
-configure: error: in '/tmp/SBo/fish-2.6.0':
-configure: error: C compiler cannot create executables
-See 'config.log' for more details
-{% endhighlight %}
-
-You should take a look at the config log for more verbose message.
-
-{% highlight bash %}
-$ less /tmp/SBo/fish-2.6.0/config.log
-{% endhighlight %}
-
-![Docker Slackware: Take a look at config.log][image-ss-fish-config-log]{: .img-responsive }
-
-You can see in that figure above that 
-we need to install <code>as</code> the Portable GNU Assembly.
-Other case we encounter a more complicated thing,
-such as missing file that must be search first.
-Here is some example.
-
-{% highlight bash %}
-$ find /usr/ -name crti*
-
-$ slackpkg file-search crti.o
-
-$ slackpkg search libxml2
-{% endhighlight %}
-
-This doesn't look as so bad. 
-Actually searching for these files is fun if you have time.
-
-	All you need is patience, and passion.
-
--- -- --
-
-### sbopkg
-
-After manual compilation, we can continue to automatic compilation.
-There is this <code>sbopkg</code> tool to make your life easier.
-
-**Reading**
-
-*	Official Site: [Building and Installing Packages with sbopkg][slackware-sbopkg]
-
-#### Install
-
-{% highlight bash %}
-$ cd ~
-
-$ wget -c --no-check-certificate https://github.com/sbopkg/sbopkg/releases/download/0.38.1/sbopkg-0.38.1-noarch-1_wsr.tgz
-
-$ installpkg sbopkg-0.38.1-noarch-1_wsr.tgz
-{% endhighlight %}
-
-Now you are ready to use <code>sbopkg</code>.
-But however you need to install <code>rsync</code> first,
-to populate repository data to local.
-
-#### Update
-
-	First Thing First
-
-{% highlight bash %}
-$ sbopkg
-
-$ slackpkg install rsync
-
-$ sbopkg -r
-
-$ sbopkg -i fish
-{% endhighlight %}
-
-![Docker Slackware: Install Fish with sbopkg][image-ss-sbopkg-install]{: .img-responsive }
-
-As long as you prepare toolchain well,
-<code>sbopkg</code> is helpful.
-
-#### The sbopkg Log File
-
-{% highlight bash %}
-$ tail -n 15 /var/log/sbopkg/sbopkg-build-log 
-SUMMARY LOG
-Using the SBo repository for Slackware 14.2
-Queue Process:  Download, build, and install
-
-slpkg:
-  MD5SUM check for slpkg-3.2.8.tar.gz ... OK
-  Building package slpkg-3.2.8-x86_64-1_SBo.tgz ... OK
-  Installing package slpkg-3.2.8-x86_64-1_SBo.tgz ... OK
-{% endhighlight %}
-
-![Docker Slackware: sbopkg build log][image-ss-sbopkg-build-log]{: .img-responsive }
-
--- -- --
-
 ### What's Next
 
 Consider finish reading [ [Part Two][local-part-two] ]
-that discuss <code>slapt-get</code>, <code>slapt-src</code>,
-and <code>slpkg</code>.
+that cover <code>slackbuild</code>, <code>sbopkg</code>,
+<code>slapt-get</code> and <code>slapt-src</code>.
 
 Thank you for reading
 
@@ -704,8 +522,9 @@ Thank you for reading
 {% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/20/docker-slackware-package.html
-[local-part-two]: {{ site.url }}/system/2017/08/21/docker-slackware-package.html
+[local-part-one]:   {{ site.url }}/system/2017/08/20/docker-slackware-package.html
+[local-part-two]:   {{ site.url }}/system/2017/08/21/docker-slackware-package.html
+[local-part-three]: {{ site.url }}/system/2017/08/22/docker-slackware-package.html
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
@@ -726,10 +545,4 @@ Thank you for reading
 [image-ss-slpkg-deps-status]:  {{ asset_post }}/14-slpkg-deps-status.png
 
 [image-ss-slack-cache]:        {{ asset_post }}/17-cache.png
-
-[image-ss-sbopkg-build-log]:   {{ asset_post }}/19-sbopkg-log.png
-
-[image-ss-slackbuild-fish]:  {{ asset_post }}/22-slackbuild-fish.png
-[image-ss-fish-config-log]:  {{ asset_post }}/22-fish-config-log.png
-[image-ss-sbopkg-install]:   {{ asset_post }}/22-sbopkg-fish.png
 

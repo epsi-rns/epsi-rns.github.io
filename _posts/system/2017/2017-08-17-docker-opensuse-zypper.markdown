@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Docker - openSUSE Zypper - Part Two"
-date: 2017-08-17 09:45:15 +0700
+title: "Docker - openSUSE Zypper - Part Three"
+date: 2017-08-17 13:35:15 +0700
 categories: system
 tags: [docker, distro, package manager, opensuse]
 author: epsi
@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine zypper step by step,
   using openSUSE container in Docker
-  One of Two Parts Article.
+  One of Three Parts Article.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Topics
 
-This is a two-parts article.
+This is a three-parts article.
 There are few topics here.
 
 [ [Part One][local-part-one] ]
@@ -35,19 +35,17 @@ There are few topics here.
 
 *	Package IRSI: Install, Removal, Query Search, Show Info
 
+[ [Part Two][local-part-two] ]
+
 *	Dependency: Help, Dependency, Reverse Dependency, Test, Verify
 
-*	Group: Pattern
-
-*	Interesting Issue: systemd Dependencies
-
-*	Unsolved Issues on Minimal Install: No Manual
+*	Repositories: List, Add/Remove, Modify
 
 *	What's Next
 
-[ [Part Two][local-part-two] ]
+[ [Part Three][local-part-three] ]
 
-*	Repositories: List, Add/Remove, Modify
+*	Group: Pattern
 
 *	History: The Log File
 
@@ -55,267 +53,44 @@ There are few topics here.
 
 *	Build from Source
 
+*	Interesting Issue: systemd Dependencies
+
+*	Unsolved Issues on Minimal Install: No Manual
+
 *	Conclusion
 
 -- -- --
 
-### Repository
+### Group
 
-Zypper has amazing <code>repository</code> commands.
+I cannot find any reference about group in Zypper.
+Althought there is group concept in YaST.
 
-#### List Repository
+#### Metapackage
 
-Like usual, zypper manual is more than enough.
-I mean, always check the fine manual first.
+Neither metapackage exist in Zypper.
 
-{% highlight bash %}
-$ zypper help repos
-repos (lr) [options] [repo] ...
+#### Pattern
 
-List all defined repositories.
-
-  Command options:
--e, --export <FILE.repo>  Export all defined repositories as a single local .repo file.
--a, --alias               Show also repository alias.
--n, --name                Show also repository name.
--u, --uri                 Show also base URI of repositories.
--p, --priority            Show also repository priority.
--r, --refresh             Show also the autorefresh flag.
--d, --details             Show more information like URI, priority, type.
--s, --service             Show also alias of parent service.
--E, --show-enabled-only   Show enabled repos only.
--U, --sort-by-uri         Sort the list by URI.
--P, --sort-by-priority    Sort the list by repository priority.
--A, --sort-by-alias       Sort the list by alias.
--N, --sort-by-name        Sort the list by name.
-{% endhighlight %}
-
-![Docker Zypper: Help Repository][image-ss-zypper-help-repos]{: .img-responsive }
-
-Consider getting started with this simple command.
+The closest concept about group in zypper is,
+by using <code>pattern</code> package.
 
 {% highlight bash %}
-$ zypper lr
-{% endhighlight %}
-
-or a more complex one.
-
-{% highlight bash %}
-$ zypper repos -p -E -N
-# | Alias   | Name    | Enabled | GPG Check | Refresh | Priority
---+---------+---------+---------+-----------+---------+---------
-1 | non-oss | NON-OSS | Yes     | (r ) Yes  | Yes     |   99    
-2 | oss     | OSS     | Yes     | (r ) Yes  | Yes     |   99    
-{% endhighlight %}
-
-![Docker Zypper: Repository -p -E -N][image-ss-zypper-repos-pen]{: .img-responsive }
-
-openSUSE put it in <code>/etc/zypp/repos.d/</code>.
-Like most configuration in unix world, you can edit manualy.
- 
-{% highlight bash %}
-$ ls /etc/zypp/repos.d/
-non-oss.repo  oss.repo
-{% endhighlight %}
-
-![Docker Zypp: /etc/zypp/repos.d/][image-ss-etc-zypp-repos]{: .img-responsive }
-
-And here is what each repository configuration.
-
-{% highlight bash %}
-$ cat /etc/zypp/repos.d/oss.repo 
-[oss]
-name=OSS
-enabled=1
-autorefresh=1
-baseurl=http://download.opensuse.org/tumbleweed/repo/oss/
-path=/
-type=yast2
-keeppackages=0
-{% endhighlight %}
-
-![Docker Zypp: /etc/zypp/repos.d/oss.repo][image-ss-etc-zypp-repos-oss]{: .img-responsive }
-
-There is also <code>zypper refresh</code> command.
-
-{% highlight bash %}
-$ zypper ref    
-Repository 'NON-OSS' is up to date.                                 
-Repository 'OSS' is up to date.                                     
-All repositories have been refreshed.
-{% endhighlight %}
-
-![Docker Zypper: Refresh][image-ss-zypper-refresh]{: .img-responsive }
-
-<code>zypper refresh</code> support process for specific repository.
-
-{% highlight bash %}
-$ zypper ref -f oss
-Forcing raw metadata refresh
-Retrieving repository 'OSS' metadata .........................[done]
-Forcing building of repository cache
-Building repository 'OSS' cache ..............................[done]
-Specified repositories have been refreshed.
-{% endhighlight %}
-
-![Docker Zypper: Refresh Specific][image-ss-zypper-refresh-oss]{: .img-responsive }
-
-#### Add/ Remove
-
-It has been a riddle for a SUSE's beginner like me,
-thinking about how openSUSE handle my weird favorites package,
-such as <code>herbstluftwm</code>.
-In openSUSE we have to add <code>X11:windowmanagers</code> first,
-using <code>zypper addrepo</code> command.
-
-{% highlight bash %}
-$ zypper ar http://download.opensuse.org/repositories/X11:windowmanagers/openSUSE_Tumbleweed/X11:windowmanagers.repo
-Adding repository 'Various window managers (openSUSE_Tumbleweed)' ................................[done]
-Repository 'Various window managers (openSUSE_Tumbleweed)' successfully added
-
-URI         : http://download.opensuse.org/repositories/X11:/windowmanagers/openSUSE_Tumbleweed/
-Enabled     : Yes                                                                               
-GPG Check   : Yes                                                                               
-Autorefresh : No                                                                                
-Priority    : 99 (default priority)                                                             
-
-Repository priorities are without effect. All enabled repositories share the same priority.
-{% endhighlight %}
-
-![Docker Zypper: Add Repository][image-ss-zypper-addrepo]{: .img-responsive }
-
-And refresh.
-
-{% highlight bash %}
-$ zypper ref
-Retrieving repository 'Various window managers (openSUSE_Tumbleweed)' metadata ...................[done]
-Building repository 'Various window managers (openSUSE_Tumbleweed)' cache ........................[done]
-Repository 'NON-OSS' is up to date.                                                                     
-Repository 'OSS' is up to date.                                                                         
-All repositories have been refreshed.
-{% endhighlight %}
-
-![Docker Zypper: Refresh Newly Added][image-ss-zypper-refresh-wm]{: .img-responsive }
-
-So that we can install <code>herbstluftwm</code>.
-
-{% highlight bash %}
-$ zypper install herbstluftwm
+$ zypper pt
 Loading repository data...
 Reading installed packages...
-Resolving package dependencies...
-
-The following 5 NEW packages are going to be installed:
-  herbstluftwm libX11-6 libX11-data libXau6 libxcb1
-
-5 new packages to install.
-Overall download size: 866.3 KiB. Already cached: 0 B. After the
-operation, additional 2.9 MiB will be used.
-Continue? [y/n/...? shows all options] (y): y
+S | Name                 | Version       | Repository | Dependency
+--+----------------------+---------------+------------+-----------
+  | apparmor             | 20170319-10.2 | OSS        |           
+  | apparmor             | 20170319-10.2 | OSS        |           
+  | base                 | 20170319-10.2 | OSS        |           
+  | base                 | 20170319-10.2 | OSS        |           
+  | basesystem           | 20170319-10.2 | OSS        |           
+  | basesystem           | 20170319-10.2 | OSS        |           
+  | books                | 20170319-4.1  | OSS        |           
 {% endhighlight %}
 
-![Docker Zypper: Install Herbstluftwm][image-ss-zypper-install-hl]{: .img-responsive }
-
-If you want, you can remove the newly add repository.
-
-{% highlight bash %}
-$ zypper rr X11_windowmanagers
-Removing repository 'Various window managers (openSUSE_Tumbleweed)' ..............................[done]
-Repository 'Various window managers (openSUSE_Tumbleweed)' has been removed.
-{% endhighlight %}
-
-![Docker Zypper: Remove Repository][image-ss-zypper-removerepo]{: .img-responsive }
-
-#### Modify
-
-Always check the fine manual, like usual.
-
-{% highlight bash %}
-$ zypper help modifyrepo
-...
-  Command options:
--d, --disable             Disable the repository (but don't remove it).
--e, --enable              Enable a disabled repository.
--r, --refresh             Enable auto-refresh of the repository.
--R, --no-refresh          Disable auto-refresh of the repository.
--n, --name <name>         Set a descriptive name for the repository.
--p, --priority <integer>  Set priority of the repository.
--k, --keep-packages       Enable RPM files caching.
--K, --no-keep-packages    Disable RPM files caching.
-...
--a, --all                 Apply changes to all repositories.
--l, --local               Apply changes to all local repositories.
--t, --remote              Apply changes to all remote repositories.
--m, --medium-type <type>  Apply changes to repositories of specified type.
-{% endhighlight %}
-
-I like to change to change the repo directly, especially the long name,
-so I do not need to have long column in my terminal.
-And also I disable this newly added repo.
-
-{% highlight bash %}
-$ cat /etc/zypp/repos.d/X11_windowmanagers.repo 
-[X11_windowmanagers]
-name=Window Managers
-enabled=0
-autorefresh=0
-{% endhighlight %}
-
-![Docker Nano: Window Managers][image-ss-nano-repo]{: .img-responsive }
-
-Consider zypper repos again.
-
-{% highlight bash %}
-$ zypper repos
-Repository priorities are without effect. All enabled repositories share the same priority.
-
-# | Alias              | Name            | Enabled | GPG Check | Refresh
---+--------------------+-----------------+---------+-----------+--------
-1 | X11_windowmanagers | Window Managers | No      | ----      | ----   
-2 | non-oss            | NON-OSS         | Yes     | (r ) Yes  | Yes    
-3 | oss                | OSS             | Yes     | (r ) Yes  | Yes  
-{% endhighlight %}
-
-![Docker Zypper: Repos Newly Added][image-ss-zypper-repos-newly]{: .img-responsive }
-
-Note that <code>X11_windowmanagers</code> has <code>1</code> index.
-Now we can enable it again using this command
-
-{% highlight bash %}
-$ zypper mr -e 1
-Repository 'X11_windowmanagers' has been successfully enabled.
-{% endhighlight %}
-
-Or using name, to make a clearer mandate.
-
-{% highlight bash %}
-$ zypper mr -e X11_windowmanagers
-Nothing to change for repository 'X11_windowmanagers'.
-{% endhighlight %}
-
-![Docker Zypper: mr enable][image-ss-zypper-mr-enable]{: .img-responsive }
-
-And **multiple** command at once.
-
-{% highlight bash %}
-$ zypper mr -r -k -p 70 X11_windowmanagers      
-Autorefresh has been enabled for repository 'X11_windowmanagers'.
-RPM files caching has been enabled for repository 'X11_windowmanagers'.
-Repository 'X11_windowmanagers' priority has been set to 70.
-{% endhighlight %}
-
-![Docker Zypper: mr multiple][image-ss-zypper-mr-multiple]{: .img-responsive }
-
-Or **all remote** repository at once.
-
-{% highlight bash %}
-$ zypper mr -Kt
-RPM files caching has been disabled for repository 'X11_windowmanagers'.
-Nothing to change for repository 'non-oss'.
-Nothing to change for repository 'oss'.
-{% endhighlight %}
-
-![Docker Zypper: mr remotes][image-ss-zypper-mr-remotes]{: .img-responsive }
+![Docker Zypper: Pattern][image-ss-zypper-pattern]{: .img-responsive }
 
 -- -- --
 
@@ -512,6 +287,71 @@ Now we are done.
 
 -- -- --
 
+-- -- --
+
+### Unsolved Issues on Minimal Install
+
+This is my bad. Not openSUSE's fault.
+
+#### No Manual
+
+No manual in openSUSE Docker.
+I have two others openSUSE full installation in PC,
+and all manual works well.
+
+{% highlight bash %}
+$ man man
+No manual entry for man
+
+$ echo $MANPATH
+
+$ cat /etc/manpath.config
+{% endhighlight %}
+
+I have tried to reinstall, but it doesn't work.
+
+{% highlight bash %}
+$ zypper in -f man man-pages man-pages-posix 
+{% endhighlight %}
+
+I still do not know what to do about it.
+
+-- -- --
+
+### Interesting Issue
+
+#### systemd Dependencies
+
+While solving the _no manual_ problem,
+I encountered another issue.
+
+{% highlight bash %}
+$ zypper in man
+{% endhighlight %}
+
+This is somehow interesting,
+manual pages in openSUSE depend on systemd.
+
+![systemd dependency issue on openSUSE][image-ss-zypper-systemd]{: .img-responsive }
+
+Why would a manual <code>man</code> need to depend to an init ?
+
+{% highlight bash %}
+$ zypper info --requires man
+Requires : [32]
+cron
+
+$ zypper info --requires cron
+Requires : [5]
+cronie = 1.5.1-66.3
+
+$ zypper info --requires cronie
+Requires : [26]
+systemd
+{% endhighlight %}
+
+-- -- --
+
 ### Conclusion
 
 	These are just preliminary knowledge about Zypper.
@@ -523,24 +363,14 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
-[local-part-two]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
+[local-part-one]:   {{ site.url }}/system/2017/08/15/docker-opensuse-zypper.html
+[local-part-two]:   {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
+[local-part-three]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
 
-[image-ss-zypper-addrepo]:     {{ asset_post }}/16-addrepo-windowmanagers.png
-[image-ss-etc-zypp-repos]:     {{ asset_post }}/16-etc-zypp-repos-d.png
-[image-ss-etc-zypp-repos-oss]: {{ asset_post }}/16-etc-zypp-repos-d-oss-repo.png
-[image-ss-zypper-help-repos]:  {{ asset_post }}/16-help-repos.png
-[image-ss-zypper-install-hl]:  {{ asset_post }}/16-install-herbstluftwm.png
-[image-ss-zypper-refresh]:     {{ asset_post }}/16-refresh.png
-[image-ss-zypper-refresh-oss]: {{ asset_post }}/16-refresh-f-oss.png
-[image-ss-zypper-refresh-wm]:  {{ asset_post }}/16-refresh-windowmanager.png
-[image-ss-zypper-removerepo]:  {{ asset_post }}/16-removerepo-windowmanagers.png
-[image-ss-zypper-repos-pen]:   {{ asset_post }}/16-repos-lr-pen.png
-[image-ss-zypper-mr-enable]:   {{ asset_post }}/16-mr-enable.png
-[image-ss-zypper-mr-multiple]: {{ asset_post }}/16-mr-multiple-commands.png
-[image-ss-zypper-mr-remotes]:  {{ asset_post }}/16-mr-all-remotes.png
-[image-ss-nano-repo]:          {{ asset_post }}/16-nano-windowmanagers-repo.png
-[image-ss-zypper-repos-newly]: {{ asset_post }}/16-repos-modified.png
+
+[image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
+
+[image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
 
 [image-ss-zypper-cache]: {{ asset_post }}/17-cache.png
 [image-ss-zypper-clean]: {{ asset_post }}/17-clean.png
@@ -555,3 +385,4 @@ Thank you for reading
 [image-ss-usr-src-specs]:      {{ asset_post }}/25-usr-src-packages-specs.png
 
 [photo-ss-install-source]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOvBGGd9_F4XOFUUup12Q8qhy5YiFwWXKD22oNw?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+

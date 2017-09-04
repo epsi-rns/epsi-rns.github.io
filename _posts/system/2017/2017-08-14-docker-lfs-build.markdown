@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - LFS Build"
-date: 2017-08-14 09:45:15 +0700
+date: 2017-08-14 13:35:15 +0700
 categories: system
 tags: [docker, distro, package manager, lfs]
 author: epsi

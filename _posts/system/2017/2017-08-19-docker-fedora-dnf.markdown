@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine DNF step by step,
   using Fedora container in Docker.
-  One of Two Parts Article.
+  One of Three Parts Article.
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
@@ -18,7 +18,7 @@ related_link_ids:
 
 ### Topics
 
-This is a two-parts article.
+This is a three-parts article.
 There are few topics here.
 
 [ [Part One][local-part-one] ]
@@ -33,15 +33,19 @@ There are few topics here.
 
 *	Package IRSI: Install, Removal, Query Search, Show Info
 
-*	Dependency: Help, Dependency, Reverse Dependency, Test, Tree
-
-*	Group: Group List, Group Info, Group Install, Beyond Group
-
 *	What's Next
 
 [ [Part Two][local-part-two] ]
 
+*	Dependency: Help, Dependency, Reverse Dependency, Test, Tree
+
+*	Group: Group List, Group Info, Group Install, Beyond Group
+
 *	Repositories: repolist, repoinfo, repo-pkgs, --enablerepo
+
+*	What's Next
+
+[ [Part Three][local-part-two] ]
 
 *	Plugin: List, Install, Help, Config Manager Example
 
@@ -52,6 +56,233 @@ There are few topics here.
 *	Build from Source
 
 *	Conclusion
+
+-- -- --
+
+### Dependency
+
+There are two main topics in dependency,
+_dependency_ itself, and _reverse dependency_.
+Beside these two, there are other topic as well,
+such as _managing conflict_ that we do not cover here.
+
+#### Help
+
+DNF has a <code>repoquery</code> help that show all dependency related options.
+
+{% highlight bash %}
+$ dnf help repoquery
+
+search for packages matching keyword
+...
+  --whatconflicts REQ   show only results that conflict REQ
+  --whatobsoletes REQ   show only results that obsolete REQ
+  --whatprovides REQ    show only results that provide REQ
+  --whatrequires REQ    shows results that requires package provides and files REQ
+  --whatrecommends REQ  show only results that recommend REQ
+  --whatenhances REQ    show only results that enhance REQ
+  --whatsuggests REQ    show only results that suggest REQ
+  --whatsupplements REQ
+...
+  --conflicts           Display capabilities that the package conflicts with.
+  --enhances            Display capabilities that the package can enhance.
+  --provides            Display capabilities provided by the package.
+  --recommends          Display capabilities that the package recommends.
+  --requires            Display capabilities that the package depends on.
+  --requires-pre        Display capabilities that the package depends on for
+                        running a %pre script.
+  --suggests            Display capabilities that the package suggests.
+{% endhighlight %}
+
+![Docker DNF: Help Repoquery][image-ss-dnf-help-repoquery]{: .img-responsive }
+
+#### Dependency
+
+	Package that required by: such as man-db need less and other.
+
+This _dependency_ information can be achieved by <code>repoquery --requires</code> command.
+This will show required parts of the package.
+
+{% highlight bash %}
+$ dnf repoquery --requires man-db
+Last metadata expiration check: 0:27:23 ago on Sat Aug 26 13:49:15 2017.
+/bin/sh
+coreutils
+grep
+groff-base
+gzip
+less
+libc.so.6(GLIBC_2.17)(64bit)
+libgdbm.so.4()(64bit)
+libpipeline.so.1()(64bit)
+libz.so.1()(64bit)
+rtld(GNU_HASH)
+{% endhighlight %}
+
+![Docker DNF: Repoquery Requires][image-ss-dnf-requires]{: .img-responsive }
+
+#### Reverse Dependency
+
+	Package that require: such as less needed by man-db or other.
+
+This _reverse dependency_ require <code>repoquery --whatrequires</code> command.
+
+{% highlight bash %}
+$ dnf repoquery --whatrequires less
+Last metadata expiration check: 0:29:36 ago on Sat Aug 26 13:49:15 2017.
+GMT-0:5.4.2-3.fc27.i686
+GMT-0:5.4.2-3.fc27.x86_64
+R-core-0:3.4.1-4.fc27.i686
+R-core-0:3.4.1-4.fc27.x86_64
+Singular-0:4.1.0p3-6.fc27.x86_64
+backup-manager-0:0.7.10-22.fc27.noarch
+c-graph-0:2.0-12.fc27.x86_64
+colordiff-0:1.0.18-2.fc27.noarch
+git-core-0:2.14.1-2.fc27.x86_64
+libguestfs-1:1.37.21-2.fc28.i686
+libguestfs-1:1.37.21-2.fc28.x86_64
+libguestfs-tools-c-1:1.37.21-2.fc28.x86_64
+man-db-0:2.7.6.1-5.fc27.x86_64
+octave-6:4.2.1-4.fc27.2.i686
+octave-6:4.2.1-4.fc27.2.x86_64
+rpmreaper-0:0.2.0-13.fc27.x86_64
+{% endhighlight %}
+
+![Docker DNF: Repoquery What Requires][image-ss-dnf-whatrequires]{: .img-responsive }
+
+#### Test
+
+Removing <code>less</code> would remove <code>man-db</code>.
+And also remove any unused dependency.
+
+{% highlight bash %}
+$ dnf remove less
+Dependencies resolved.
+====================================================================
+ Package         Arch       Version              Repository    Size
+====================================================================
+Removing:
+ less            x86_64     487-5.fc27           @rawhide     309 k
+Removing depended packages:
+ man-db          x86_64     2.7.6.1-5.fc27       @rawhide     1.9 M
+Removing unused dependencies:
+ groff-base      x86_64     1.22.3-11.fc27       @rawhide     3.7 M
+ libpipeline     x86_64     1.4.2-3.fc27         @rawhide     106 k
+
+Transaction Summary
+====================================================================
+Remove  3 Packages
+
+Freed space: 6.0 M
+Is this ok [y/N]: 
+{% endhighlight %}
+
+![Docker DNF: Test Dependency][image-ss-dnf-test-remove]{: .img-responsive }
+
+#### Tree
+
+	Most people love tree
+
+This <code>rpmreaper</code> is an RPM tool rather than DNF tool.
+
+{% highlight bash %}
+$ dnf install rpmreaper
+{% endhighlight %}
+
+![Docker Fedora: rpmreaper][image-ss-fedora-rpmreaper]{: .img-responsive }
+
+-- -- --
+
+### Group
+
+Is this docker Minimal Install ?
+I always wonder what inside theis Fedora docker Container.
+RPM <code>group</code> help me understand this riddle.
+
+#### Group List
+
+We can see <code>Minimal Install</code> group as below.
+
+{% highlight bash %}
+$ dnf grouplist
+Last metadata expiration check: 2:12:21 ago on Wed Aug 23 11:50:45 2017.
+Available Environment Groups:
+   Fedora Custom Operating System
+   Minimal Install
+   Fedora Server Edition
+   Fedora Workstation
+   Fedora Cloud Server
+{% endhighlight %}
+
+![Docker DNF: Group][image-ss-dnf-g-list]{: .img-responsive }
+
+#### Group Info
+
+And there is this <code>Core</code> group as below.
+
+{% highlight bash %}
+$ dnf group info "Minimal Install"
+Last metadata expiration check: 2:13:24 ago on Wed Aug 23 11:50:45 2017.
+Environment Group: Minimal Install
+ Description: Basic functionality.
+ Mandatory Groups:
+   Core
+ Optional Groups:
+   Guest Agents
+   Standard
+{% endhighlight %}
+
+![Docker DNF: Group][image-ss-dnf-g-info1]{: .img-responsive }
+
+And at the most bottom, there are only <code>Packages</code> as below.
+
+{% highlight bash %}
+$ dnf group info core
+Last metadata expiration check: 2:14:07 ago on Wed Aug 23 11:50:45 2017.
+
+Group: Core
+ Description: Smallest possible installation
+ Mandatory Packages:
+   audit
+   basesystem
+   bash
+   coreutils
+   cronie
+   curl
+   dhcp-client
+   dnf
+   dnf-yum
+{% endhighlight %}
+
+![Docker DNF: Group][image-ss-dnf-g-info2]{: .img-responsive }
+
+#### Group Install
+
+Now we know, that not all the <code>Core</code> packages are installed,
+as some packages not required by the container.
+
+{% highlight bash %}
+$ dnf group install core
+Last metadata expiration check: 2:07:09 ago on Wed Aug 23 11:50:45 2017.
+No match for group package "ppc64-utils"
+Dependencies resolved.
+=============================================================================
+ Group     Packages                                                        
+=============================================================================
+Marking packages as installed by the group:
+ @Core     curl                     dnf-plugins-core            dnf        
+           sssd-common              policycoreutils             glibc      
+           NetworkManager           openssh-clients             systemd    
+           dracut-config-rescue     openssh-server              rootfiles  
+           plymouth                 selinux-policy-targeted     dhcp-client
+{% endhighlight %}
+
+![Docker DNF: Group][image-ss-dnf-g-install]{: .img-responsive }
+
+#### Beyond Group
+
+You can even remove group of packages as you can read in manual,
+or upgrade only for specific group.
 
 -- -- --
 
@@ -251,358 +482,10 @@ Repo         : rawhide-source
 
 -- -- --
 
-### Plugin
+### What's Next
 
-One of the DNF feature that differ DNF from other package is Plugin.
-
-#### List
-
-Unfortunately I cannot any command to list DNF plugins.
-DNF search also won't work either.
-Luckily there are good documentation.
-
-*	<http://dnf-plugins-core.readthedocs.io/en/latest/>
-
-Or google if the plugin is not mentioned in above link.
-
-*	<https://fedoraproject.org/wiki/DNF_system_upgrade>
-
-#### Install 
-
-Consider this example: <code>config-manager</code>
-
-{% highlight bash %}
-$ dnf install dnf-plugin-config-manager
-Last metadata expiration check: 0:33:51 ago on Sat Sep  2 18:26:16 2017.
-Dependencies resolved.
-=============================================================================
- Package                      Arch       Version           Repository   Size
-=============================================================================
-Installing:
- dnf-plugins-core             noarch     2.1.3-2.fc27      rawhide      50 k
-Installing dependencies:
- python3-dnf-plugins-core     noarch     2.1.3-2.fc27      rawhide     138 k
-
-Transaction Summary
-=============================================================================
-Install  2 Packages
-
-Total download size: 188 k
-Installed size: 451 k
-Is this ok [y/N]: 
-{% endhighlight %}
-
-![Docker DNF: Plugin: config-manager][image-ss-dnf-cm-install]{: .img-responsive }
-
-#### Help
-
-{% highlight bash %}
-$ dnf help config-manager
-{% endhighlight %}
-
-![Docker DNF: Plugin: config-manager][image-ss-dnf-cm-help]{: .img-responsive }
-
-#### Config Manager Example
-
-Now we can enable a repository without the need to edit configuration manually.
-
-{% highlight bash %}
-$ dnf config-manager --set-enabled rawhide-source
-{% endhighlight %}
-
-![Docker DNF: Plugin: config-manager][image-ss-dnf-cm-set-enabled]{: .img-responsive }
-
--- -- --
-
-### History
-
-#### The Log File
-
-This is most the forgotten part of package management,
-although it is not uncommon to notice messages.
-For that reason, I put the recorded event here, 
-before discussing about any further feature.
-
-{% highlight bash %}
-$ less /var/log/dnf.log
-2017-08-23T10:47:59Z INFO --- logging initialized ---
-2017-08-23T10:47:59Z DDEBUG timer: config: 1381 ms
-2017-08-23T10:47:59Z DEBUG DNF version: 2.5.1
-2017-08-23T10:47:59Z DDEBUG Command: dnf repolist 
-2017-08-23T10:47:59Z DDEBUG Installroot: /
-2017-08-23T10:47:59Z DDEBUG Releasever: 27
-2017-08-23T10:47:59Z DEBUG cachedir: /var/cache/dnf
-2017-08-23T10:47:59Z DDEBUG Base command: repolist
-2017-08-23T10:47:59Z DDEBUG Extra commands: ['repolist']
-{% endhighlight %}
-
-Most likely you want the tail, latest transaction,
-at the bottom of the recorded event.
-
-![Docker: /var/log/dnf.log][image-ss-var-log-dnf]{: .img-responsive }
-
-#### DNF History
-
-DNF has a very nice history feature.
-
-{% highlight bash %}
-$ dnf history
-ID     | Command line             | Date and time    | Action(s)      | Altered
--------------------------------------------------------------------------------
-     8 | upgrade                  | 2017-08-24 14:48 | Update         |   15 **
-     7 | reinstall man-db         | 2017-08-23 15:47 | Reinstall      |    1   
-     6 | install man              | 2017-08-23 15:45 | Install        |    4   
-     5 | remove less              | 2017-08-23 13:14 | Erase          |    4   
-     4 | install man-db nano htop | 2017-08-23 12:56 | Install        |    5   
-     3 | install man              | 2017-08-23 12:55 | Install        |    5   
-     2 | upgrade --nogpgcheck     | 2017-08-23 11:31 | I, U           |  171 **
-     1 |                          | 2017-07-11 11:29 | Install        |  170 EE
-{% endhighlight %}
-
-![Docker DNF: History][image-ss-dnf-history]{: .img-responsive }
-
--- -- --
-
-### Clean Up
-
-Time after time, your cache size may growing bigger and bigger.
-
-Package Cache
-	
-*	/var/cache/dnf/ * /packages/ * .rpm
-
-{% highlight bash %}
-$ ls -lR /var/cache/dnf/
-{% endhighlight %}
-
-![Docker DNF: Cache][image-ss-dnf-cache]{: .img-responsive }
-
-You can clean these directory.
-
-{% highlight bash %}
-$ dnf clean packages
-18 files removed
-{% endhighlight %}
-
-{% highlight bash %}
-$ dnf clean all
-9 files removed
-{% endhighlight %}
-
-![Docker DNF: Clean][image-ss-dnf-clean]{: .img-responsive }
-
--- -- --
-
-### Build from Source
-
-DNF has the capability to download the source code.
-Then we can utilize other tool to build from source.
-
-#### Thank You Community
-
-I was wondering how DNF handle source code,
-and I finally figure out a generic steps,
-from the very nice *fedora Community in Google Plus*.
-
-
-Let me quote form "Johan Heikkilä":
-
-	Dnf has capability to install source packages, as long as they are available in the installed/enabled repositories. It is recommended to do the following steps as user and not as root.
-
-In this example:
-
-*	I actually alter the steps a bit for clarity.
-
-*	And I still use root for simplicity. It is just docker experience anyway.
-
-*	Using herbstluftwm as an example case
-
-#### General Requirement
-
-We require to install <code>rpm-build</code>
-
-{% highlight bash %}
-$ dnf install rpm-build
-Last metadata expiration check: 0:25:14 ago on Sun Sep  3 02:01:23 2017.
-Dependencies resolved.
-====================================================================
- Package             Arch   Version                   Repository
-                                                               Size
-====================================================================
-Installing:
- rpm-build           x86_64 4.13.90-0.git14002.7.fc28 rawhide 158 k
-Upgrading:
- python3-rpm         x86_64 4.13.90-0.git14002.7.fc28 rawhide 115 k
- rpm                 x86_64 4.13.90-0.git14002.7.fc28 rawhide 528 k
-...
- xz                  x86_64 5.2.3-4.fc27              rawhide 150 k
- zip                 x86_64 3.0-20.fc27               rawhide 270 k
-
-Transaction Summary
-====================================================================
-Install  35 Packages
-Upgrade   6 Packages
-
-Total download size: 17 M
-Is this ok [y/N]:
-Downloading Packages:
-(1/41): bzip2-1.0.6-24.fc27.x86_64.rpm        44 kB/s |  58 kB     00:01
-...
------------------------------------------------------------------------------
-Total                                        565 kB/s |  17 MB     00:30   
-...
-Running transaction
-  Preparing        :                                                     1/1 
-  Upgrading        : rpm-plugin-selinux-4.13.90-0.git14002.7.fc28.x8    1/47 
-...
-Installed:
-  rpm-build.x86_64 4.13.90-0.git14002.7.fc28   
-...  
-Upgraded:
-  python3-rpm.x86_64 4.13.90-0.git14002.7.fc28                               
-  rpm.x86_64 4.13.90-0.git14002.7.fc28                                       
-  rpm-build-libs.x86_64 4.13.90-0.git14002.7.fc28                            
-...            
-
-Complete!
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-install-rpmbuild]{: .img-responsive }
-
-And also these toolchain.
-
-{% highlight bash %}
-$ dnf install gcc make
-{% endhighlight %}
-
-#### Example Requirement
-
-Since the case is Herbstluftwm, 
-we also need require to install these packages
-to avoid missing dependencies.
-
-{% highlight bash %}
-$ dnf install glib2-devel libX11-devel libXinerama-devel
-{% endhighlight %}
-
-#### Download
-
-Now consider using home directory.
-
-{% highlight bash %}
-cd ~
-{% endhighlight %}
-
-Since we have already enable <code>rawhide-source</code>,
-we can directly download.
-
-{% highlight bash %}
-$ dnf download --source herbstluftwm
-Fedora - Rawhide - Developmental pa 840 kB/s |  66 MB     01:20    
-Last metadata expiration check: 0:01:12 ago on Sun Sep  3 01:53:48 2017.
-herbstluftwm-0.6.2-8.fc27.src.rpm    84 kB/s | 228 kB     00:02
-{% endhighlight %}
-
-or use <code>--enablerepo</code> and <code>--source</code> instead.
-
-{% highlight bash %}
-$ dnf --enablerepo rawhide download --source herbstluftwm
-{% endhighlight %}
-
-![Docker DNF: Download Source][image-ss-bs-download-source]{: .img-responsive }
-
-#### Extract
-
-We need to extract the previously downloaded package 
-to <code>~/rpmbuild</code> directory.
-As you can see below, there are warnings for using root.
-For real system, please do not use root.
-
-{% highlight bash %}
-$ rpm -ivh herbstluftwm-0.6.2-8.fc27.src.rpm 
-warning: herbstluftwm-0.6.2-8.fc27.src.rpm: Header V3 RSA/SHA256 Signature, key ID 9db62fb1: NOKEY
-Updating / installing...
-   1:herbstluftwm-0.6.2-8.fc27        
-warning: user mockbuild does not exist - using root
-warning: group mockbuild does not exist - using root
-warning: user mockbuild does not exist - using root
-warning: group mockbuild does not exist - using root
-################################# [100%]
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-rpm-ivh]{: .img-responsive }
-
-Now we have two directories inside.
-
-{% highlight bash %}
-$ ls rpmbuild/
-SOURCES  SPECS
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-ls-rpmbuild]{: .img-responsive }
-
-#### Build
-
-Consider get in to <code>~/rpmbuild/SPECS</code> to build.
-
-{% highlight bash %}
-$ cd ./rpmbuild/SPECS
-{% endhighlight %}
-
-{% highlight bash %}
-$ rpmbuild -ba herbstluftwm.spec
-...
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.jys9eY
-+ umask 022
-+ cd /root/rpmbuild/BUILD
-+ cd herbstluftwm-0.6.2
-+ /usr/bin/rm -rf /root/rpmbuild/BUILDROOT/herbstluftwm-0.6.2-8.fc28.x86_64
-+ exit 0
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-rpmbuild-ba]{: .img-responsive }
-
-Consider going back to <code>~/rpmbuild</code> directory.
-Now we can see additional directories inside as built result.
-
-{% highlight bash %}
-$ ls   
-BUILD  BUILDROOT  RPMS  SOURCES  SPECS  SRPMS
-{% endhighlight %}
-
-And the build output result
-
-{% highlight bash %}
-$ ls ~/rpmbuild/RPMS/x86_64
-herbstluftwm-0.6.2-8.fc28.x86_64.rpm
-herbstluftwm-debuginfo-0.6.2-8.fc28.x86_64.rpm
-herbstluftwm-debugsource-0.6.2-8.fc28.x86_64.rpm
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-result-rpm]{: .img-responsive }
-
-#### Install 
-
-Now we can install the previously built rpm.
-
-{% highlight bash %}
-$ rpm -iv ~/rpmbuild/RPMS/x86_64/herbstluftwm-0.6.2-8.fc28.x86_64.rpm 
-Preparing packages...
-herbstluftwm-0.6.2-8.fc28.x86_64
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-rpm-iv-hlwm]{: .img-responsive }
-
-#### Thank You
-
-I respect the help from community.
-Again, thank you.
-
--- -- --
-
-### Conclusion
-
-	These are just preliminary knowledge about DNF.
+These are just preliminary knowledge about DNF.
+Consider finish reading [ [Part Three][local-part-three] ].
 
 Thank you for reading
 
@@ -611,10 +494,20 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
-[local-part-two]: {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
+[local-part-one]:   {{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
+[local-part-two]:   {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
+[local-part-three]: {{ site.url }}/system/2017/08/20/docker-fedora-dnf.html
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
+[image-ss-dnf-help-repoquery]: {{ asset_post }}/14-help-repoquery.png
+[image-ss-dnf-requires]:       {{ asset_post }}/14-repoquery-requires.png
+[image-ss-dnf-whatrequires]:   {{ asset_post }}/14-repoquery-whatrequires.png
+[image-ss-dnf-test-remove]:    {{ asset_post }}/14-remove-less.png
+[image-ss-fedora-rpmreaper]:   {{ asset_post }}/14-rpmreaper.png
+
+[image-ss-dnf-g-info1]:   {{ asset_post }}/15-dnf-group-info-core.png
+[image-ss-dnf-g-info2]:   {{ asset_post }}/15-dnf-group-info-min.png
+[image-ss-dnf-g-install]: {{ asset_post }}/15-dnf-group-install-core.png
+[image-ss-dnf-g-list]:    {{ asset_post }}/15-dnf-grouplist.png
 
 [image-ss-dnf-r-info]:          {{ asset_post }}/16-repoinfo.png
 [image-ss-dnf-r-list]:          {{ asset_post }}/16-repolist.png
@@ -626,20 +519,3 @@ Thank you for reading
 [image-ss-dnf-r-pkgs-source]:   {{ asset_post }}/16-repo-pkgs-list-source.png
 [image-ss-dnf-enablerepo]:      {{ asset_post }}/16-enablerepo.png
 
-[image-ss-dnf-cm-set-enabled]:  {{ asset_post }}/18-cm-set-enabled.png
-[image-ss-dnf-cm-help]:         {{ asset_post }}/18-help-cm.png
-[image-ss-dnf-cm-install]:      {{ asset_post }}/18-plugin-install.png
-
-[image-ss-dnf-cache]:     {{ asset_post }}/17-cache.png
-[image-ss-dnf-clean]:     {{ asset_post }}/17-clean.png
-
-[image-ss-var-log-dnf]:   {{ asset_post }}/19-log.png
-[image-ss-dnf-history]:   {{ asset_post }}/19-history.png
-
-[image-ss-bs-download-source]:   {{ asset_post }}/25-download-source.png
-[image-ss-bs-install-rpmbuild]:  {{ asset_post }}/25-install-rpmbuild.png
-[image-ss-bs-ls-rpmbuild]:       {{ asset_post }}/25-ls-rpmbuild.png
-[image-ss-bs-result-rpm]:        {{ asset_post }}/25-result-rpm.png
-[image-ss-bs-rpmbuild-ba]:       {{ asset_post }}/25-rpmbuild-ba.png
-[image-ss-bs-rpm-ivh]:           {{ asset_post }}/25-rpm-ivh.png
-[image-ss-bs-rpm-iv-hlwm]:       {{ asset_post }}/25-rpm-iv-hlwm.png
