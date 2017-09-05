@@ -11,7 +11,7 @@ There are few topics here.
 
 *	Updating System: OS Release, webrsync, Update, Manually, More
 
-*	Package IRSI: Install, COnfirmation, Ambiguous, Removal, Query Search, Show Info
+*	Package IRSI: Install, Confirmation, Ambiguous, Removal, Query Search, Show Info
 
 *	Dependency: Dependency, Reverse Dependency, Pretend, Verify
 
