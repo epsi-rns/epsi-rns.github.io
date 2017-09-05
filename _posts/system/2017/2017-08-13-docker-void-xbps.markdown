@@ -378,6 +378,7 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-void' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
+[local-part-two]: {{ site.url }}/system/2017/08/14/docker-void-xbps.html
 
 [image-ss-void-docker]:     {{ asset_post }}/00-getting-started.png
 

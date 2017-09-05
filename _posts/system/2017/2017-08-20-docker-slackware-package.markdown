@@ -489,6 +489,7 @@ Thank you for reading
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
+[local-part-two]:   {{ site.url }}/system/2017/08/21/docker-slackware-package.html
 
 [image-ss-slack-docker]:     {{ asset_post }}/00-getting-started.png
 [image-ss-slackware64]:      {{ asset_post }}/01-install-slackware64.png

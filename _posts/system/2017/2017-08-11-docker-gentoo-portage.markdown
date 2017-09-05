@@ -449,7 +449,6 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
 
-[local-part-one]: {{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
 [local-part-two]: {{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html

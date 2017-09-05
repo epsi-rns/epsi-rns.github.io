@@ -427,6 +427,7 @@ Thank you for reading
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
+[local-part-two]:   {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
 
 [image-ss-pull-opensuse]:   {{ asset_pull }}/opensuse-tumbleweed.png
 [image-ss-opensuse-docker]: {{ asset_post }}/00-getting-started.png

@@ -431,6 +431,8 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
+[local-part-three]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
+
 [image-ss-zypper-help-info]:   {{ asset_post }}/14-help-info.png
 [image-ss-zypper-if-require]:  {{ asset_post }}/14-info-requires.png
 [image-ss-zypper-se-require]:  {{ asset_post }}/14-search-requires.png

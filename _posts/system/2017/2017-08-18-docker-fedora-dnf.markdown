@@ -428,6 +428,7 @@ Thank you for reading
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
+[local-part-two]:   {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
 
 [image-ss-pull-fedora]:   {{ asset_pull }}/fedora-rawhide.png
 [image-ss-fedora-docker]: {{ asset_post }}/00-getting-started.png

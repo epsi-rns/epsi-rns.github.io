@@ -457,6 +457,8 @@ Thank you for reading
 {% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
 
+[local-part-three]: {{ site.url }}/system/2017/08/22/docker-slackware-package.html
+
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
 [image-ss-sbopkg-build-log]:   {{ asset_post }}/19-sbopkg-log.png

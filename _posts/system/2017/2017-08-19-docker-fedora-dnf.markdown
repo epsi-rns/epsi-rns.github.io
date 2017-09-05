@@ -462,6 +462,8 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
 
+[local-part-three]: {{ site.url }}/system/2017/08/20/docker-fedora-dnf.html
+
 [image-ss-dnf-help-repoquery]: {{ asset_post }}/14-help-repoquery.png
 [image-ss-dnf-requires]:       {{ asset_post }}/14-repoquery-requires.png
 [image-ss-dnf-whatrequires]:   {{ asset_post }}/14-repoquery-whatrequires.png
