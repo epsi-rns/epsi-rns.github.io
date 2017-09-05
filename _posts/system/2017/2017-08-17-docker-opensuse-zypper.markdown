@@ -30,7 +30,7 @@ related_link_ids:
 ### Group
 
 I cannot find any reference about group in Zypper.
-Althought there is group concept in YaST.
+Although there is group concept in YaST.
 
 #### Metapackage
 
