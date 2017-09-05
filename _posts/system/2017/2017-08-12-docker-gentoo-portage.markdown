@@ -13,43 +13,17 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+  - 17082035  # Slackware Package
+  - 17081845  # Fedora DNF
+  - 17081535  # openSUSE Zypper
+  - 17081545  # Crux Ports
+  - 17081435  # LFS Build
+  - 17081345  # Void XBPS
+# - 17081145  # Gentoo Portage
 
 ---
 
-### Topics
-
-This is a two-parts article.
-There are few topics here.
-
-[ [Part One][local-part-one] ]
-
-*	Preface: Test Bed
-
-*	Getting Started With Docker
-
-*	Package Management: Portage Frontend, Get Help
-
-*	Updating System: OS Release, webrsync, Update, Manually, More
-
-*	Package IRSI: Install, COnfirmation, Ambiguous, Removal, Query Search, Show Info
-
-*	Dependency: Dependency, Reverse Dependency, Pretend, Verify
-
-*	Group: Metapackages, Sets
-
-*	What's Next
-
-[ [Part Two][local-part-two] ]
-
-*	Interesting Tools: Equery, Layman, Eix
-
-*	Repository: Adding, Configuration, List Overlays, Removal, Synchronize, List Packages
-
-*	History: The Log File
-
-*	Clean Up
-
-*	Conclusion
+{% include post/2017/08/toc-docker-gentoo-portage.html %}
 
 -- -- --
 
@@ -391,9 +365,6 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
-
-[local-part-one]: {{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
-[local-part-two]: {{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
 
 [image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
 [image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png

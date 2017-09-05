@@ -14,54 +14,17 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+# - 17082035  # Slackware Package
+  - 17081845  # Fedora DNF
+  - 17081535  # openSUSE Zypper
+  - 17081545  # Crux Ports
+  - 17081435  # LFS Build
+  - 17081345  # Void XBPS
+  - 17081145  # Gentoo Portage
 
 ---
----
 
-### Topics
-
-This is a three-parts article.
-There are few topics here.
-
-[ [Part One][local-part-one] ]
-
-*	Preface
-
-*	Preparing Docker
-
-*	IRSI: slackpkg install, removepkg, search, info
-
-*	Container: Slackware64, Minimal Install, Package Series
-
-*	History: The Log File
-
-*	No Dependency: Example, slpkg deps-status
-
-*	Cleanup
-
-[ [Part Two][local-part-two] ]
-
-*	Using slackbuild, manual compilation, and installpkg
-
-*	Using sbopkg, automatic compilation
-
-*	Using slapt-get: Reading, Install, Dependencies, Update, Upgrade, Install, Show Info
-
-*	Using slapt-src: Update, Install
-
-[ [Part Three][local-part-three] ]
-
-*	Install slpkg: Dependency, Install, No certificate
-
-*	Using slpkg: Documentation, Update, Install, The Log File
-
-*	Repository: List, Configuration, Enable, List Package, Install Package
-
-*	Conclusion
-
-There are still other topic uncovered here
-
-*	slackpkgplus
+{% include post/2017/08/toc-docker-slackware-package.html %}
 
 -- -- --
 
@@ -493,10 +456,6 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
-
-[local-part-one]:   {{ site.url }}/system/2017/08/20/docker-slackware-package.html
-[local-part-two]:   {{ site.url }}/system/2017/08/21/docker-slackware-package.html
-[local-part-three]: {{ site.url }}/system/2017/08/22/docker-slackware-package.html
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 

@@ -12,36 +12,17 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+  - 17082035  # Slackware Package
+  - 17081845  # Fedora DNF
+  - 17081535  # openSUSE Zypper
+# - 17081545  # Crux Ports
+  - 17081435  # LFS Build
+  - 17081345  # Void XBPS
+  - 17081145  # Gentoo Portage
 
 ---
 
-### Topics
-
-There are few topics here.
-
-*	Preface: Test Bed
-
-*	Getting Started With Docker
-
-*	Package Management: Reading, Source Code, Front End, Get Help
-
-*	Updating System: Ports Update, System Upgrade
-
-*	Package IRSI: Install, Removal, Query Search, Show Info
-
-*	Dependency: Help, Dependency, Reverse Dependency, Test
-
-*	Ports Difference
-
-*	Group
-
-*	History: The Log File
-
-*	Clean Up
-
-*	Issues with Unmaintained Docker Container
-
-*	Conclusion
+{% include post/2017/08/toc-docker-crux-ports.html %}
 
 -- -- --
 

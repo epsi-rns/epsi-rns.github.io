@@ -12,43 +12,17 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+  - 17082035  # Slackware Package
+  - 17081845  # Fedora DNF
+  - 17081535  # openSUSE Zypper
+  - 17081545  # Crux Ports
+  - 17081435  # LFS Build
+# - 17081345  # Void XBPS
+  - 17081145  # Gentoo Portage
 
 ---
 
-### Topics
-
-This is a two-parts article.
-There are few topics here.
-
-[ [Part One][local-part-one] ]
-
-*	Preface: Test Bed
-
-*	Getting Started With Docker
-
-*	Package Management: Reading, Source Code, Get Help
-
-*	Updating System: OS Release, System Upgrade
-
-*	Package IRSI: Install, Removal, Query Search, Show Info
-
-*	Dependency: Help, Dependency, Reverse Dependency, Test
-
-*	Group: Metapackage
-
-*	What's Next
-
-[ [Part Two][local-part-two] ]
-
-*	Repositories: Configuration, Add Subrepository, List Packages
-
-*	History: The Log File
-
-*	Clean Up
-
-*	Build from Source
-
-*	Conclusion
+{% include post/2017/08/toc-docker-void-xbps.html %}
 
 -- -- --
 
@@ -402,9 +376,6 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-void' %}
-
-[local-part-one]: {{ site.url }}/system/2017/08/13/docker-void-xbps.html
-[local-part-two]: {{ site.url }}/system/2017/08/14/docker-void-xbps.html
 
 [local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 

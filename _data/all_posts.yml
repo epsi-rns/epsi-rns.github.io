@@ -5,6 +5,66 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17082235
+  title: "Docker - Slackware Package - Part Three"
+  url: /system/2017/08/22/docker-slackware-package.html
+
+- id: 17082135
+  title: "Docker - Slackware Package - Part Two"
+  url: /system/2017/08/21/docker-slackware-package.html
+
+- id: 17082035
+  title: "Docker - Slackware Package - Part One"
+  url: /system/2017/08/20/docker-slackware-package.html
+
+- id: 17082045
+  title: "Docker - Fedora DNF - Part Three"
+  url: /system/2017/08/20/docker-fedora-dnf.html
+
+- id: 17081945
+  title: "Docker - Fedora DNF - Part Two"
+  url: /system/2017/08/19/docker-fedora-dnf.html
+
+- id: 17081845
+  title: "Docker - Fedora DNF - Part One"
+  url: /system/2017/08/18/docker-fedora-dnf.html
+
+- id: 17081735
+  title: "Docker - openSUSE Zypper - Part Three"
+  url: /system/2017/08/17/docker-opensuse-zypper.html
+
+- id: 17081635
+  title: "Docker - openSUSE Zypper - Part Two"
+  url: /system/2017/08/16/docker-opensuse-zypper.html
+
+- id: 17081535
+  title: "Docker - openSUSE Zypper - Part One"
+  url: /system/2017/08/15/docker-opensuse-zypper.html
+
+- id: 17081545
+  title: "Docker - Crux Ports"
+  url: /system/2017/08/15/docker-crux-ports.html
+
+- id: 17081435
+  title: "Docker - LFS Build"
+  url: /system/2017/08/14/docker-lfs-build.html
+
+- id: 17081445
+  title: "Docker - Void XBPS - Part Two"
+  url: /system/2017/08/14/docker-void-xbps.html
+
+- id: 17081345
+  title: "Docker - Void XBPS - Part One"
+  url: /system/2017/08/13/docker-void-xbps.html
+
+- id: 17081245
+  title: "Docker - Gentoo Portage - Part Two"
+  url: /system/2017/08/12/docker-gentoo-portage.html
+
+- id: 17081145
+  title: "Docker - Gentoo Portage - Part One"
+  url: /system/2017/08/11/docker-gentoo-portage.html
+
 - id: 17081045
   title: "Docker - Flow for Learning Linux Distribution"
   url: /system/2017/08/10/docker-distribution-flow.html
@@ -30,7 +90,7 @@
   url: /system/2017/08/05/grub2-btrfs-support.html
 
 - id: 17080345
-  title: "Distribution - openSUSE First Time Install"
+  title: "Distribution - openSUSE Tumbleweed First Time Install"
   url: /system/2017/08/03/distro-opensuse-install.html
 
 - id: 17080245

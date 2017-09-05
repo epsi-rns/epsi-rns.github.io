@@ -14,8 +14,19 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+  - 17082035  # Slackware Package
+  - 17081845  # Fedora DNF
+  - 17081535  # openSUSE Zypper
+  - 17081545  # Crux Ports
+# - 17081435  # LFS Build
+  - 17081345  # Void XBPS
+  - 17081145  # Gentoo Portage
 
 ---
+
+{% include post/2017/08/toc-docker-lfs-build.html %}
+
+-- -- --
 
 ### Preface
 
@@ -107,7 +118,7 @@ bash-4.4#
 
 -- -- --
 
-### Package Management
+### No Package Management
 
 LFS use no Package Manager.
 You have to download manually and compile by yourself,
@@ -131,7 +142,7 @@ $ bash version-check.sh
 
 -- -- --
 
-### Dependency Tree
+### No Dependency Resolver
 
 The fact that LFS has no package management,
 means you need to compile all the packages directly from source.
@@ -262,8 +273,6 @@ Basic package dependency can be found here.
 *	<http://www.linuxfromscratch.org/lfs/view/stable/chapter03/packages.html>
 
 #### Detail
-
-### man installation Detail
 
 Reading:
 

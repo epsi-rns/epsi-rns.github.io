@@ -13,51 +13,17 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+  - 17082035  # Slackware Package
+  - 17081845  # Fedora DNF
+# - 17081535  # openSUSE Zypper
+  - 17081545  # Crux Ports
+  - 17081435  # LFS Build
+  - 17081345  # Void XBPS
+  - 17081145  # Gentoo Portage
 
 ---
 
-### Topics
-
-This is a three-parts article.
-There are few topics here.
-
-[ [Part One][local-part-one] ]
-
-*	Preface: Test Bed
-
-*	Getting Started With Docker
-
-*	Issues on Minimal Install: No Reset
-
-*	Package Management: ZYpp Frontend, Get Help, Zypper Shell
-
-*	Updating System: OS Release, List Updates, Update, Upgrades, Process Being Used
-
-*	Package IRSI: Install, Removal, Query Search, Show Info
-
-[ [Part Two][local-part-two] ]
-
-*	Dependency: Help, Dependency, Reverse Dependency, Test, Verify
-
-*	Repositories: List, Add/Remove, Modify
-
-*	What's Next
-
-[ [Part Three][local-part-three] ]
-
-*	Group: Pattern
-
-*	History: The Log File
-
-*	Clean Up
-
-*	Build from Source
-
-*	Interesting Issue: systemd Dependencies
-
-*	Unsolved Issues on Minimal Install: No Manual
-
-*	Conclusion
+{% include post/2017/08/toc-docker-opensuse-zypper.html %}
 
 -- -- --
 
@@ -362,11 +328,6 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
-
-[local-part-one]:   {{ site.url }}/system/2017/08/15/docker-opensuse-zypper.html
-[local-part-two]:   {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
-[local-part-three]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
-
 
 [image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
 
