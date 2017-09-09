@@ -139,6 +139,89 @@ ID     | Command line             | Date and time    | Action(s)      | Altered
 
 -- -- --
 
+### Hold Package
+
+DNF can hold package using versionlock plugin.
+Or using <code>exclude</code> directive in configuration.
+
+#### Example
+
+Suppose you want to do system upgrade,
+but you do not want to upgrade certain package.
+There is a good reason for these,
+such as keeping old driver,
+because the latest has a issue or such reason.
+Or maybe we want to keep our current beloved newly compiled package
+that equipped with super duper specific configuration parameter optimization.
+
+{% highlight bash %}
+$  dnf upgrade
+Last metadata expiration check: 0:22:55 ago on Sat Sep  9 11:49:43 2017.
+Dependencies resolved.
+====================================================================
+ Package                  Arch   Version              Repository
+                                                               Size
+====================================================================
+Upgrading:
+ bash                     x86_64 4.4.12-11.fc28       rawhide 1.5 M
+ coreutils                x86_64 8.28-1.fc28          rawhide 1.2 M
+ coreutils-common         x86_64 8.28-1.fc28          rawhide 1.9 M
+ cpp                      x86_64 7.2.1-1.fc28         rawhide 9.2 M
+{% endhighlight %}
+
+![Docker DNF: BASH Unlocked][image-ss-h-dnf-bash-unlocked]{: .img-responsive }
+
+Consider BASH as our guinea pig locking example.
+
+#### Add Lock
+
+We can add lock easily using DNF.
+By using <code>exclude</code> directive in configuration.
+
+{% highlight bash %}
+$ nano /etc/dnf/dnf.conf 
+[main]
+gpgcheck=1
+installonly_limit=3
+clean_requirements_on_remove=True
+exclude=bash
+{% endhighlight %}
+
+![Docker DNF: Nano DNF Configuration][image-ss-h-nano-dnf-conf]{: .img-responsive }
+
+Now bash will be ignored.
+
+{% highlight bash %}
+$ dnf upgrade
+Last metadata expiration check: 0:40:43 ago on Sat Sep  9 11:49:43 2017.
+Dependencies resolved.
+====================================================================
+ Package                  Arch   Version              Repository
+                                                               Size
+====================================================================
+Upgrading:
+ coreutils                x86_64 8.28-1.fc28          rawhide 1.2 M
+ coreutils-common         x86_64 8.28-1.fc28          rawhide 1.9 M
+ cpp                      x86_64 7.2.1-1.fc28         rawhide 9.2 M
+ crypto-policies          noarch 20170823-1.git8d18c27.fc28
+{% endhighlight %}
+
+![Docker DNF: BASH Locked][image-ss-h-dnf-bash-locked]{: .img-responsive }
+  
+#### Remove Lock
+
+You can unlocked package by commenting the exclude in dnf.conf
+
+{% highlight bash %}
+$ cat /etc/dnf/dnf.conf 
+# exclude=bash
+{% endhighlight %}
+
+Example done successfully.
+Guinea pig is alive.
+
+-- -- --
+
 ### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
@@ -404,3 +487,7 @@ Thank you for reading
 [image-ss-bs-rpmbuild-ba]:       {{ asset_post }}/25-rpmbuild-ba.png
 [image-ss-bs-rpm-ivh]:           {{ asset_post }}/25-rpm-ivh.png
 [image-ss-bs-rpm-iv-hlwm]:       {{ asset_post }}/25-rpm-iv-hlwm.png
+
+[image-ss-h-dnf-bash-locked]:    {{ asset_post }}/27-hold-dnf-upgrade-bash-locked.png
+[image-ss-h-dnf-bash-unlocked]:  {{ asset_post }}/27-hold-dnf-upgrade-bash-unlocked.png
+[image-ss-h-nano-dnf-conf]:      {{ asset_post }}/27-hold-nano-dnf-conf.png

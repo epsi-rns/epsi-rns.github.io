@@ -31,6 +31,8 @@ There are few topics here.
 
 *	History: The Log File, DNF History
 
+*	Hold Package: Example, Add Lock, Remove Lock
+
 *	Clean Up
 
 *	Build from Source
