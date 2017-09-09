@@ -110,6 +110,17 @@ You can add the size, so you can monitor how the process grow
 as you work with your container.
 But size take a longer calculation as a drawback.
 
+For convenience you may put aliases to <code>~/.bashrc</code>.
+
+{% highlight bash %}
+{% raw %}
+alias docker-ps="docker ps -a --format 'table {{.Image}}\t{{.Names}}\t{{.Status}}'"
+alias docker-ls="docker image list --format 'table {{.Repository}}\t{{.Size}}'"
+{% endraw %}
+{% endhighlight %}
+
+![Alias][image-ss-alias]{: .img-responsive }
+
 #### (3) Terminal 3: Run an image to create process
 
 Do use interactive.
@@ -269,6 +280,7 @@ Thank you for reading
 [image-ss-term-2]:    {{ asset_flow }}/terminal-2.png
 [image-ss-term-3]:    {{ asset_flow }}/terminal-3.png
 [image-ss-term-4]:    {{ asset_flow }}/terminal-4.png
+[image-ss-alias]:     {{ asset_flow }}/docker-alias-bashrc.png
 
 [image-ss-term-all]: {{ asset_flow }}/all.png
 [photo-ss-term-all]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOGBr5RBUPtwBBJw14l1otPZZYR0WIur16lolb-?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

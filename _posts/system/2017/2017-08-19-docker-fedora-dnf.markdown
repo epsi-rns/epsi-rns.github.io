@@ -448,6 +448,74 @@ Repo         : rawhide-source
 
 ![Docker DNF: Repository][image-ss-dnf-enablerepo]{: .img-responsive }
 
+#### Mirror
+
+There is no need to explicitly specify mirror,
+in Fedora since DNF utilize metalink.
+As you can see in previous figure <code>dnf repoinfo</code>,
+the rawhide repo is already use <code>ftp.jaist.ac.jp</code>.
+
+{% highlight bash %}
+$ dnf repoinfo rawhide
+...
+Repo-baseurl : http://ftp.riken.jp/Linux/fedora/development/rawhide/Everything/x86_64/os/
+{% endhighlight %}
+
+If you wish you can inspect what is in there.
+Consider grab the metalink from <code>yum.repos.d</code>.
+
+{% highlight bash %}
+$ cat /etc/yum.repos.d/fedora-rawhide.repo 
+...
+
+[rawhide]
+name=Fedora - Rawhide - Developmental packages for the next Fedora release
+failovermethod=priority
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide//Everything/$basearch/os/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch
+
+...
+{% endhighlight %}
+
+Now see what is it in the metalink.
+
+{% highlight bash %}
+$ curl -L "https://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=x86_64"
+# repo = rawhide arch = x86_64 country = JP country = PH country = CN country = KR country = TH 
+https://ftp.yz.yamagata-u.ac.jp/pub/linux/fedora-projects/fedora/linux/development/rawhide/Everything/x86_64/os/
+http://ftp.jaist.ac.jp/pub/Linux/Fedora/development/rawhide/Everything/x86_64/os/
+http://ftp.riken.jp/Linux/fedora/development/rawhide/Everything/x86_64/os/
+http://ftp.kaist.ac.kr/fedora/development/rawhide/Everything/x86_64/os/
+https://mirrors.ustc.edu.cn/fedora/development/rawhide/Everything/x86_64/os/
+https://mirror.pregi.net/fedora/development/rawhide/Everything/x86_64/os/
+http://mirror2.totbb.net/fedora/linux/development/rawhide/Everything/x86_64/os/
+{% endhighlight %}
+
+![Docker DNF: Mirror Metalink][image-ss-dnf-mirror-metalink]{: .img-responsive }
+
+Now we can explicity use <code>ftp.riken.jp</code>.
+
+{% highlight bash %}
+$ nano /etc/yum.repos.d/fedora-rawhide.repo
+baseurl=http://ftp.riken.jp/Linux/fedora/development/rawhide/Everything/x86_64/os/
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/development/rawhide//Everything/$basearch/o$
+metalink=https://mirrors.fedoraproject.org/metalink?repo=rawhide&arch=$basearch
+{% endhighlight %}
+
+![Docker YUM: Mirror Base URL][image-ss-dnf-mirror-baseurl]{: .img-responsive }
+
+Check what happened to the rawhide repository
+
+{% highlight bash %}
+$ dnf repoinfo rawhide
+Fedora - Rawhide - Developmental packages for the nex 976 kB/s |  66 MB     01:09    
+Last metadata expiration check: 0:00:23 ago on Sat Sep  9 11:49:43 2017.
+...
+Repo-baseurl : http://ftp.riken.jp/Linux/fedora/development/rawhide/Everything/x86_64/os/
+{% endhighlight %}
+
+This is all about repository for now.
+
 -- -- --
 
 ### What's Next
@@ -485,3 +553,5 @@ Thank you for reading
 [image-ss-dnf-r-pkgs-source]:   {{ asset_post }}/16-repo-pkgs-list-source.png
 [image-ss-dnf-enablerepo]:      {{ asset_post }}/16-enablerepo.png
 
+[image-ss-dnf-mirror-metalink]: {{ asset_post }}/16-mirror-curl-metalink.png
+[image-ss-dnf-mirror-baseurl]:  {{ asset_post }}/16-nano-repos-d-baseurl.png

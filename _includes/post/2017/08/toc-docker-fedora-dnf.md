@@ -21,7 +21,7 @@ There are few topics here.
 
 *	Group: Group List, Group Info, Group Install, Beyond Group
 
-*	Repositories: repolist, repoinfo, repo-pkgs, --enablerepo
+*	Repositories: repolist, repoinfo, repo-pkgs, --enablerepo, Mirror
 
 *	What's Next
 

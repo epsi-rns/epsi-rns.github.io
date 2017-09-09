@@ -253,6 +253,99 @@ Now we are done.
 
 -- -- --
 
+### Hold Package
+
+Zypper hold package using lock mechanism.
+This is just terminology.
+
+#### Case Example
+
+Suppose you want to do system upgrade,
+but you do not want to upgrade certain package.
+There is a good reason for these,
+such as keeping old driver,
+because the latest has a issue or such reason.
+Or maybe we want to keep our current beloved newly compiled herbstluftwm
+that equipped with super duper specific configuration parameter optimization.
+
+{% highlight bash %}
+$ zypper dup
+
+Warning: ...
+...
+The following package is going to change vendor:
+  herbstluftwm   -> obs://build.opensuse.org/X11
+...
+{% endhighlight %}
+
+![Docker Zypper: dup unlocked][image-ss-zypper-h-dup-unlock]{: .img-responsive }
+
+You can skip or ignore by hold package
+so that the package will kept intact
+while doing system upgrade.
+
+#### Add Lock
+
+We can add lock easily using zypper.
+
+{% highlight bash %}
+$ zypper al herbstluftwm
+Specified lock has been successfully added.
+{% endhighlight %}
+
+This will put new package entry in <code>/etc/zypp/locks</code>.
+
+{% highlight bash %}
+$ cat /etc/zypp/locks 
+
+type: package
+match_type: glob
+case_sensitive: on
+solvable_name: herbstluftwm
+{% endhighlight %}
+
+Now you can view the entry in nice table.
+
+{% highlight bash %}
+$ zypper ll
+
+# | Name         | Type    | Repository
+--+--------------+---------+-----------
+1 | herbstluftwm | package | (any)  
+{% endhighlight %}
+
+![Docker Zypper: Add Lock][image-ss-zypper-h-add-lock]{: .img-responsive }
+
+#### Test Example
+
+Now we have different result
+when doing the same <code>zypper dup</code> command.
+
+{% highlight bash %}
+$ zypper dup
+Warning: ...
+...
+
+The following item is locked and will not be changed by any action:
+ Installed:
+  herbstluftwm
+{% endhighlight %}
+
+![Docker Zypper: dup locked][image-ss-zypper-h-dup-lock]{: .img-responsive }
+
+#### Remove Lock
+
+You can unlock package by removing list 
+from configuration <code>/etc/zypp/locks</code> 
+or command line 
+
+{% highlight bash %}
+$ zypper rl herbstluftwm
+1 lock has been successfully removed.
+{% endhighlight %}
+
+![Docker Zypper: Remove Lock][image-ss-zypper-h-rem-lock]{: .img-responsive }
+
 -- -- --
 
 ### Unsolved Issues on Minimal Install
@@ -347,3 +440,7 @@ Thank you for reading
 
 [photo-ss-install-source]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOvBGGd9_F4XOFUUup12Q8qhy5YiFwWXKD22oNw?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
+[image-ss-zypper-h-add-lock]:   {{ asset_post }}/27-add-lock.png
+[image-ss-zypper-h-dup-lock]:   {{ asset_post }}/27-dup-lock.png
+[image-ss-zypper-h-dup-unlock]: {{ asset_post }}/27-dup-unlock.png
+[image-ss-zypper-h-rem-lock]:   {{ asset_post }}/27-remove-lock.png

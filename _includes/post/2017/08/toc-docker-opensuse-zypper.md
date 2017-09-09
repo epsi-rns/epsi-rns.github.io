@@ -19,7 +19,7 @@ There are few topics here.
 
 *	Dependency: Help, Dependency, Reverse Dependency, Test, Verify
 
-*	Repositories: List, Add/Remove, Modify
+*	Repositories: List, Add/Remove, Modify, Additional, Mirror
 
 *	What's Next
 
@@ -32,6 +32,8 @@ There are few topics here.
 *	Clean Up
 
 *	Build from Source
+
+*	Hold Package: Case Example, Add Lock, Test Example, Remove Lock
 
 *	Interesting Issue: systemd Dependencies
 

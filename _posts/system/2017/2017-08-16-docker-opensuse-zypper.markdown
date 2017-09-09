@@ -393,7 +393,7 @@ Nothing to change for repository 'X11_windowmanagers'.
 
 ![Docker Zypper: mr enable][image-ss-zypper-mr-enable]{: .img-responsive }
 
-And **multiple** command at once.
+And **multiple** command at once. Raise priority.
 
 {% highlight bash %}
 $ zypper mr -r -k -p 70 X11_windowmanagers      
@@ -414,6 +414,88 @@ Nothing to change for repository 'oss'.
 {% endhighlight %}
 
 ![Docker Zypper: mr remotes][image-ss-zypper-mr-remotes]{: .img-responsive }
+
+#### Additional
+
+There are also additional repository contain specific package,
+i.e driver and multimedia codec provided by packman.
+
+*	<https://en.opensuse.org/Additional_package_repositories>
+
+Consider enable packman repository.
+
+{% highlight bash %}
+$ sudo zypper ar -f -n packman http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
+Adding repository 'packman' ..................................[done]
+Repository 'packman' successfully added
+
+URI         : http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/
+Enabled     : Yes                                                                
+GPG Check   : Yes                                                                
+Autorefresh : Yes                                                                
+Priority    : 99 (default priority)                                              
+
+Repository priorities in effect:    (See 'zypper lr -P' for details)
+      70 (raised priority)  :  1 repository  
+      99 (default priority) :  3 repositories
+{% endhighlight %}
+
+![Docker Zypper: Additional Packman][image-ss-zypper-additional]{: .img-responsive }
+
+Sometimes packman cannot be reach.
+For this docker, I would rather remove it.
+
+#### Mirror
+
+Sometimes you need to switch mirror,
+whether just to find nearest mirror such as your campus,
+or because the main repository is has been down for a few hours.
+Unfortunately I can not find good reference on how to switch mirror in openSUSE.
+
+All you need to do is go check the site,
+and make sure you check the column.
+
+*	<https://mirrors.opensuse.org/>
+
+{% highlight bash %}
+$ zypper ar http://ftp.riken.jp/Linux/opensuse/tumbleweed/repo/oss/ oss-jp
+Adding repository 'oss-jp' ...................................[done]
+Repository 'oss-jp' successfully added
+
+URI         : http://ftp.riken.jp/Linux/opensuse/tumbleweed/repo/oss/
+Enabled     : Yes                                                    
+GPG Check   : Yes                                                    
+Autorefresh : No                                                     
+Priority    : 99 (default priority)                                  
+
+Repository priorities are without effect. All enabled repositories share the same priority.
+{% endhighlight %}
+
+{% highlight bash %}
+$ zypper ref oss-jp
+Retrieving repository 'oss-jp' metadata ......................[done]
+Building repository 'oss-jp' cache ...........................[done]
+Specified repositories have been refreshed.
+{% endhighlight %}
+
+![Docker openSUSE: Mirror][image-ss-opensuse-mirror]{: .img-responsive }
+
+After this you may safely disable main repository.
+
+{% highlight bash %}
+$ zypper mr -d oss   
+Repository 'oss' has been successfully disabled.
+{% endhighlight %}
+
+Switching mirror has never been easier.
+
+{% highlight bash %}
+$ zypper mr -d oss-jp
+Repository 'oss-jp' has been successfully disabled.
+
+$ zypper mr -e oss   
+Repository 'oss' has been successfully enabled.
+{% endhighlight %}
 
 -- -- --
 
@@ -454,6 +536,5 @@ Thank you for reading
 [image-ss-zypper-mr-remotes]:  {{ asset_post }}/16-mr-all-remotes.png
 [image-ss-nano-repo]:          {{ asset_post }}/16-nano-windowmanagers-repo.png
 [image-ss-zypper-repos-newly]: {{ asset_post }}/16-repos-modified.png
-
-
-
+[image-ss-zypper-additional]:  {{ asset_post }}/16-repo-additional.png
+[image-ss-opensuse-mirror]:    {{ asset_post }}/16-mirror-jp.png
