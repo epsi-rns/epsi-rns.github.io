@@ -350,6 +350,122 @@ Getting snapshot timestamp ...
 
 -- -- -- 
 
+### Hold Package
+
+Portage hold package using package.mask configuration.
+
+*	<https://wiki.gentoo.org/wiki//etc/portage/package.mask>
+
+#### Example
+
+{% highlight bash %}
+$ eix --installed --upgrade
+[U] app-text/docbook-xml-dtd
+     Available versions:  
+     (4.1.2) 4.1.2-r6
+     (4.2)  4.2-r2
+     (4.3)  4.3-r1
+     (4.4)  4.4-r2
+     (4.5)  4.5-r1
+     Installed versions:  4.1.2-r6(4.1.2)(05:57:54 08/03/17)
+     Homepage:            http://www.docbook.org/
+     Description:         Docbook DTD for XML
+{% endhighlight %}
+
+![Docker Portage: upgradable][image-ss-h-eix-iu]{: .img-responsive }
+
+Consider app-text/docbook-xml-dtd as our guinea pig example.
+
+#### Before Mask
+
+This is the result before mask.
+
+*	Latest version available: 4.5-r1
+
+{% highlight bash %}
+$ emerge -a docbook-xml-dtd
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  NS    ] app-text/docbook-xml-dtd-4.5-r1 [4.1.2-r6]
+
+Would you like to merge these packages? [Yes/No] n
+
+Quitting.
+{% endhighlight %}
+
+![Docker Portage: example docbook][image-ss-h-example]{: .img-responsive }
+
+{% highlight bash %}
+$ emerge -s docbook-xml-dtd
+  
+[ Results for search key : docbook-xml-dtd ]
+Searching...
+
+...
+
+*  app-text/docbook-xml-dtd
+      Latest version available: 4.5-r1
+      Latest version installed: 4.1.2-r6
+      Size of files: 97 KiB
+      Homepage:      http://www.docbook.org/
+      Description:   Docbook DTD for XML
+      License:       docbook
+{% endhighlight %}
+
+#### Configuration
+
+Limit version to: 4.1.2-r6
+
+{% highlight bash %}
+$ echo ">app-text/docbook-xml-dtd-4.1.2-r6" > /etc/portage/package.mask/docbook
+{% endhighlight %}
+
+{% highlight bash %}
+$ cat /etc/portage/package.mask/docbook
+>app-text/docbook-xml-dtd-4.1.2-r6
+{% endhighlight %}
+
+Consider have a look at comparation below.
+
+![Docker Portage: comparation][image-ss-h-package-mask]{: .img-responsive }
+
+#### After Mask
+
+This is the result after mask.
+
+*	Latest version available: 4.1.2-r6
+
+{% highlight bash %}
+$ emerge -a docbook-xml-dtd
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild   R    ] app-text/docbook-xml-dtd-4.1.2-r6 
+
+Would you like to merge these packages? [Yes/No] 
+{% endhighlight %}
+
+{% highlight bash %}
+$ emerge -s docbook-xml-dtd
+  
+[ Results for search key : docbook-xml-dtd ]
+Searching...
+
+...
+
+*  app-text/docbook-xml-dtd
+      Latest version available: 4.1.2-r6
+      Latest version installed: 4.1.2-r6
+      Size of files: 74 KiB
+      Homepage:      http://www.docbook.org/
+      Description:   Docbook DTD for XML
+      License:       docbook
+{% endhighlight %}
+
+-- -- --
+
 ### History
 
 #### The Log File
@@ -468,3 +584,7 @@ Thank you for reading
 [image-ss-m-jaist-webrsync]:    {{ asset_post }}/26-mirror-jaist-webrsync.png
 [image-ss-m-mirrorlist-dialog]: {{ asset_post }}/26-mirrorlist-dialog.png
 [image-ss-m-mirror-make-conf]:  {{ asset_post }}/26-mirror-make-conf.png
+
+[image-ss-h-eix-iu]:       {{ asset_post }}/27-eix-installed-upgrade.png
+[image-ss-h-example]:      {{ asset_post }}/27-emerge-s-docbook-xml-dtd.png
+[image-ss-h-package-mask]: {{ asset_post }}/27-package-mask.png

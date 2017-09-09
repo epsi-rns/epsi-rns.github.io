@@ -27,6 +27,8 @@ There are few topics here.
 
 *	Mirror: Install, Select Mirror, Configuration, Test
 
+*	Hold Package: Example, Before Mask, Configuration, After Mask
+
 *	History: The Log File
 
 *	Clean Up
