@@ -277,6 +277,77 @@ This is basic operation for ebuild repository.
 It is enough for preview.
 We are done.
 
+-- -- --
+
+### Mirror
+
+Mirror can be configured in <code>/etc/portage/make.conf</code>.
+
+*	<https://wiki.gentoo.org/wiki/Mirrorselect>
+
+#### Install
+
+{% highlight bash %}
+$ emerge --ask app-portage/mirrorselect
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  N     ] dev-util/dialog-1.3.20170131  USE="nls unicode -examples -minimal -static-libs" 
+[ebuild  N     ] app-portage/mirrorselect-2.2.2-r2  PYTHON_TARGETS="python2_7 python3_4" 
+
+Would you like to merge these packages? [Yes/No] 
+{% endhighlight %}
+
+#### Select
+
+{% highlight bash %}
+$ mirrorselect -i -c Japan
+* Using url: https://api.gentoo.org/mirrors/distfiles.xml
+* Limiting test to "country=Japan" hosts. 
+* Downloading a list of mirrors...
+...
+* Modifying /etc/portage/make.conf with new mirrors...
+	Reading make.conf
+	Moving to /etc/portage/make.conf.backup
+	Writing new /etc/portage/make.conf
+* Done.
+{% endhighlight %}
+
+![Docker Portage: mirrorlist dialog][image-ss-m-mirrorlist-dialog]{: .img-responsive }
+
+#### Configuration
+
+{% highlight bash %}
+$ less /etc/portage/make.conf
+...
+GENTOO_MIRRORS="rsync://ftp.jaist.ac.jp/pub/Linux/Gentoo/ http://ftp.jaist.ac.jp/pub/Linux/Gentoo/"
+{% endhighlight %}
+
+![Docker Portage: mirror make.conf][image-ss-m-mirror-make-conf]{: .img-responsive }
+
+#### Test
+
+Now we have new Mirror
+
+{% highlight bash %}
+$ emerge-webrsync 
+Fetching most recent snapshot ...
+Trying to retrieve 20170908 snapshot from rsync://ftp.jaist.ac.jp/pub/Linux/Gentoo ...
+Fetching file portage-20170908.tar.xz.md5sum ...
+Fetching file portage-20170908.tar.bz2.md5sum ...
+Fetching file portage-20170908.tar.gz.md5sum ...
+Trying to retrieve 20170908 snapshot from http://ftp.jaist.ac.jp/pub/Linux/Gentoo ...
+Fetching file portage-20170908.tar.xz.md5sum ...
+Fetching file portage-20170908.tar.xz.gpgsig ...
+Fetching file portage-20170908.tar.xz ...
+Checking digest ...
+Getting snapshot timestamp ...
+...
+{% endhighlight %}
+
+![Docker Portage: jaist webrsync][image-ss-m-jaist-webrsync]{: .img-responsive }
+
 -- -- -- 
 
 ### History
@@ -393,3 +464,7 @@ Thank you for reading
 [image-ss-r-layman-del]:  {{ asset_post }}/25-layman-delete.png
 [image-ss-r-layman-installed]: {{ asset_post }}/25-layman-list-installed.png
 [image-ss-r-var-lib-layman]:   {{ asset_post }}/25-var-lib-layman-xwing.png
+
+[image-ss-m-jaist-webrsync]:    {{ asset_post }}/26-mirror-jaist-webrsync.png
+[image-ss-m-mirrorlist-dialog]: {{ asset_post }}/26-mirrorlist-dialog.png
+[image-ss-m-mirror-make-conf]:  {{ asset_post }}/26-mirror-make-conf.png

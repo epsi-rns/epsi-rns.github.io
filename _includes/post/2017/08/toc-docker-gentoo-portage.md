@@ -25,6 +25,8 @@ There are few topics here.
 
 *	Repository: Adding, Configuration, List Overlays, Removal, Synchronize, List Packages
 
+*	Mirror: Install, Select Mirror, Configuration, Test
+
 *	History: The Log File
 
 *	Clean Up
