@@ -21,13 +21,15 @@ There are few topics here.
 
 [ [Part Two][local-part-two] ]
 
-*	Repositories: Configuration, Add Subrepository, List Packages
+*	Repositories: Configuration, Add Subrepository, List Packages, Mirror
 
 *	History: The Log File
 
 *	Clean Up
 
 *	Build from Source
+
+*	Hold: Example, Lock, Result, Unlock
 
 *	Conclusion
 

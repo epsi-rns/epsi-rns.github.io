@@ -118,6 +118,37 @@ $ xbps-query --repository=https://repo.voidlinux.eu/current/nonfree -Mis \*
 
 ![Docker XBPS: Repository: Query Packages][image-ss-r-query-packages]{: .img-responsive }
 
+#### Mirror
+
+We can adjust the mirror by changing the configuration.
+
+{% highlight bash %}
+$ cat /usr/share/xbps.d/00-repository-main.conf 
+repository=https://repo.voidlinux.eu/current
+{% endhighlight %}
+
+{% highlight bash %}
+$ xbps-install -S
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
+{% endhighlight %}
+
+{% highlight bash %}
+$ echo "repository=https://repo2.voidlinux.eu/current" \
+> /usr/share/xbps.d/00-repository-main.conf 
+{% endhighlight %}
+
+{% highlight bash %}
+$ cat /usr/share/xbps.d/00-repository-main.conf 
+repository=https://repo2.voidlinux.eu/current
+{% endhighlight %}
+
+{% highlight bash %}
+$ xbps-install -S
+[*] Updating 'https://repo2.voidlinux.eu/current/x86_64-repodata' ...
+{% endhighlight %}
+
+![Docker XBPS: Mirror][image-ss-r-xbps-mirror]{: .img-responsive }
+
 -- -- --
 
 ### History
@@ -290,6 +321,65 @@ Unfortunately my host kernel does not support feature required by xbps-src.
 
 -- -- --
 
+### Hold
+
+Hold in **xbps** is pretty straightforward.
+
+#### Example
+
+Consider a system upgrade,
+we choose to hold <code>nano</code> and <code>mc</code> as our guinea pig example.
+
+{% highlight bash %}
+$ xbps-install -Su
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
+x86_64-repodata: 1332KB [avg rate: 814KB/s]
+18 packages will be downloaded:
+  bc-1.07.1_2 btrfs-progs-4.13_1 ca-certificates-20170717_1 
+  dash-0.5.9.1_2 dhcpcd-6.11.5_4 dnssec-anchors-20170822_1 
+  e2fsprogs-1.43.6_1 e2fsprogs-libs-1.43.6_1 
+  glibc-locales-2.26_2 libcap-ng-0.7.8_3 libharfbuzz-1.5.1_1 
+  mc-4.8.19_2 nano-2.8.7_1 nghttp2-1.25.0_1 qemu-2.10.0_1 
+  runit-2.1.2_8 runit-void-20170907_1 sudo-1.8.21p2_1 
+18 packages will be updated:
+  bc (1.07.1_1 -> 1.07.1_2) btrfs-progs (4.12_1 -> 4.13_1) 
+  ca-certificates (20161130+nmu1_1 -> 20170717_1) 
+...
+{% endhighlight %}
+
+#### Lock Package
+
+{% highlight bash %}
+$ xbps-pkgdb -m hold nano mc
+{% endhighlight %}
+
+![Docker XBPS: Hold][image-ss-h-xbps-hold]{: .img-responsive }
+
+#### Result
+
+We can see there is no more <code>mc</code> and <code>nano</code>.
+
+{% highlight bash %}
+$ xbps-install -Su
+[*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
+16 packages will be downloaded:
+  bc-1.07.1_2 btrfs-progs-4.13_1 ca-certificates-20170717_1 
+  dash-0.5.9.1_2 dhcpcd-6.11.5_4 dnssec-anchors-20170822_1 
+  e2fsprogs-1.43.6_1 e2fsprogs-libs-1.43.6_1 
+  glibc-locales-2.26_2 libcap-ng-0.7.8_3 libharfbuzz-1.5.1_1 
+  nghttp2-1.25.0_1 qemu-2.10.0_1 runit-2.1.2_8 
+  runit-void-20170907_1 sudo-1.8.21p2_1 
+...
+{% endhighlight %}
+
+#### Unlock Package
+
+{% highlight bash %}
+$ xbps-pkgdb -m unhold nano mc
+{% endhighlight %}
+
+-- -- --
+
 ### Conclusion
 
 There are still things that I do not understand,
@@ -315,3 +405,7 @@ Thank you for reading
 [image-ss-b-git-clone-void]:       {{ asset_post }}/25-git-clone-void-packages.png
 [image-ss-b-getting-help]:         {{ asset_post }}/25-help.png
 [image-ss-b-install-xtools]:       {{ asset_post }}/25-install-xtools-half.png
+
+[image-ss-h-xbps-hold]:     {{ asset_post }}/27-xbps-pkgdb-hold.png
+
+[image-ss-r-xbps-mirror]:   {{ asset_post }}/16-mirror.png

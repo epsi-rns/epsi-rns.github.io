@@ -461,6 +461,51 @@ on how to clean up this port directory.
 
 -- -- --
 
+### Hold Package
+
+Hold in prt-get is pretty straightforward.
+Ports can hold package using lock mechanism.
+This is just a terminology.
+
+Consider a system upgrade,
+we choose to hold openssl as our guinea pig example.
+We can see that <code>sysup</code> will have different result.
+
+{% highlight bash %}
+$ prt-get sysup
+prt-get: updating /usr/ports/core/openssl
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get lock openssl
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get sysup
+System is up to date
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get listlocked
+openssl
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get unlock openssl
+{% endhighlight %}
+
+{% highlight bash %}
+$ prt-get sysup
+prt-get: updating /usr/ports/core/openssl
+=======> Building '/usr/ports/core/openssl/openssl#1.0.2g-1.pkg.tar.gz'.
+bsdtar -p -o -C /usr/ports/core/openssl/work/src -xf /usr/ports/core/openssl/openssl-1.0.2g.tar.gz
+cp mksslcert.sh /usr/ports/core/openssl/work/src
+{% endhighlight %}
+
+![Docker Crux: prt-get Lock][image-ss-prtget-lock]{: .img-responsive }
+
+-- -- --
+
 ### Issues with Unmaintained Docker Container
 
 #### pkgadd
@@ -617,6 +662,8 @@ Thank you for reading
 [image-ss-less-log]:       {{ asset_post }}/19-log.png
 [image-ss-prtget-log]:     {{ asset_post }}/19-prtget-log-conf.png
 
+[image-ss-prtget-lock]:    {{ asset_post }}/27-prtget-lock.png
+
 [image-ss-prtget-update]:  {{ asset_post }}/32-prtget-update.png
 [image-ss-pkgadd-update]:  {{ asset_post }}/33-pkgadd-update.png
 
@@ -624,3 +671,4 @@ Thank you for reading
 [image-ss-search-glib]:    {{ asset_post }}/34-prtget-search-glib.png
 [image-ss-info-glibc]:     {{ asset_post }}/34-prtget-info-glibc.png
 [image-ss-update-glibc]:   {{ asset_post }}/34-prtget-update-glibc.png
+
