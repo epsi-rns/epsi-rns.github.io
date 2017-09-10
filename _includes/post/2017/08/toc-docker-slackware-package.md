@@ -11,9 +11,13 @@ There are few topics here.
 
 *	Container: Slackware64, Minimal Install, Package Series
 
+*	Mirror
+
 *	History: The Log File
 
 *	No Dependency: Example, slpkg deps-status
+
+*	Hold: Blacklist
 
 *	Cleanup
 

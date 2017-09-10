@@ -369,6 +369,39 @@ or even use full <code>Slackware64</code> install.
 
 -- -- --
 
+### Mirror
+
+Change mirror is slackware can be done,
+by changing the /etc/slackpkg/mirrors.
+Here I uncomment local university named kambing.
+
+{% highlight bash %}
+$ cat /etc/slackpkg/mirrors
+...
+# INDONESIA (ID)
+http://kambing.ui.ac.id/slackware/slackware64-14.2/
+...
+{% endhighlight %}
+
+![Docker Slackware: Change Mirrors][image-ss-slackpkg-mirrors]{: .img-responsive }
+
+The result will shown when update.
+
+{% highlight bash %}
+$ slackpkg update
+
+Updating the package lists...
+	Downloading...
+			Downloading http://kambing.ui.ac.id/slackware/slackware64-14.2/ChangeLog.txt...
+--2017-09-09 21:53:58--  http://kambing.ui.ac.id/slackware/slackware64-14.2/ChangeLog.txt
+{% endhighlight %}
+
+![Docker Slackware: Update Use Kambing][image-ss-slackpkg-kambing]{: .img-responsive }
+
+The repository is already using kambing.
+
+-- -- --
+
 ### History
 
 #### The Log File
@@ -453,6 +486,94 @@ found 1 dependencies in 1 packages.
 
 -- -- --
 
+### Hold 
+
+Holding package ini Slackware
+can be done using <code>/etc/slackpkg/blacklist</code>.
+
+Consider this <code>install-new</code> command.
+This will install a lot of package,
+and we want to reduce he number of package by blacklisting.
+
+{% highlight bash %}
+$ slackpkg install-new
+
+Looking for NEW packages to install. Please wait... DONE
+
+ConsoleKit2-1.0.0-x86_64-3.txz
+Cython-0.23.4-x86_64-1.txz
+LibRaw-0.17.2-x86_64-1.txz
+a52dec-0.7.4-x86_64-2.txz
+adwaita-icon-theme-3.18.0-noarch-1.txz
+alsa-plugins-1.1.1-x86_64-1.txz
+amor-4.14.3-x86_64-2.txz
+artikulate-4.14.3-x86_64-2.txz
+atkmm-2.24.2-x86_64-1.txz
+baloo-4.14.3-x86_64-2.txz
+baloo-widgets-4.14.3-x86_64-2.txz
+cairomm-1.12.0-x86_64-1.txz
+calligra-l10n-en_GB-2.9.11-noarch-1.txz
+calligra-l10n-ja-2.9.11-noarch-1.txz
+calligra-l10n-tr-2.9.11-noarch-1.txz
+cervisia-4.14.3-x86_64-2.txz
+cgmanager-0.39-x86_64-1.txz
+cups-filters-1.9.0-x86_64-2.txz
+dconf-editor-3.18.2-x86_64-1.txz
+{% endhighlight %}
+
+![Docker Slackpkg: unlock example][image-ss-install-new-unlock]{: .img-responsive }
+
+We can reduce by blacklist some few package
+
+#### Blacklist
+
+This is just an example.
+Blacklisting <code>lib</code> is a bad idea.
+
+{% highlight bash %}
+$ cat /etc/slackpkg/blacklist
+...
+calligra
+kde
+gst
+{% endhighlight %}
+
+![Docker Slackpkg: Blacklist][image-ss-slackpkg-blacklist]{: .img-responsive }
+
+Now we have fewer packages.
+
+{% highlight bash %}
+$ slackpkg install-new
+
+Looking for NEW packages to install. Please wait... DONE
+
+ConsoleKit2-1.0.0-x86_64-3.txz
+Cython-0.23.4-x86_64-1.txz
+LibRaw-0.17.2-x86_64-1.txz
+a52dec-0.7.4-x86_64-2.txz
+adwaita-icon-theme-3.18.0-noarch-1.txz
+alsa-plugins-1.1.1-x86_64-1.txz
+atkmm-2.24.2-x86_64-1.txz
+cairomm-1.12.0-x86_64-1.txz
+cgmanager-0.39-x86_64-1.txz
+cups-filters-1.9.0-x86_64-2.txz
+dconf-editor-3.18.2-x86_64-1.txz
+dri3proto-1.0-x86_64-2.txz
+eigen3-3.2.7-x86_64-2.txz
+elfutils-0.163-x86_64-1.txz
+eudev-3.1.5-x86_64-8.txz
+glibmm-2.46.4-x86_64-1.txz
+gnu-cobol-1.1-x86_64-1.txz
+gparted-0.26.1-x86_64-1.txz
+{% endhighlight %}
+
+![Docker Slackpkg: lock example][image-ss-install-new-lock]{: .img-responsive }
+
+This is just an example.
+I do not have any intention to install anything.
+
+-- -- --
+
 ### Clean Up
 
 Time after time, your cache size may growing bigger and bigger.
@@ -507,3 +628,9 @@ Thank you for reading
 
 [image-ss-slack-cache]:        {{ asset_post }}/17-cache.png
 
+[image-ss-slackpkg-mirrors]:   {{ asset_post }}/26-etc-slackpkg-mirrors.png
+[image-ss-slackpkg-kambing]:   {{ asset_post }}/26-slackpkg-kambing.png
+
+[image-ss-slackpkg-blacklist]: {{ asset_post }}/27-blacklist.png
+[image-ss-install-new-lock]:   {{ asset_post }}/27-install-new-lock.png
+[image-ss-install-new-unlock]: {{ asset_post }}/27-install-new-unlock.png

@@ -452,6 +452,10 @@ herbstluftwm-0.6.2-8.fc28.x86_64
 
 ![Docker RPM: Build Source][image-ss-bs-rpm-iv-hlwm]{: .img-responsive }
 
+#### Using Mock
+
+There are also Mock solution. But it is beyond this scope.
+
 #### Thank You
 
 I respect the help from community.
