@@ -58,37 +58,45 @@ Here is a list of DE with specific WM.
 
 GTK+3 based
 
-* gnome-shell is using Mutter
+*	[gnome-shell][gnome-shell] (C, Meson) is using [Mutter][mutter]
 
-* Cinnamon is using Muffin
+*	[Cinnamon][cinnamon] (C) is using [Muffin][muffin]
 
-* Pantheon is using Gala
+*	Elementary's Pantheon (Vala) is using [Gala][gala]
 
-* Mate is using Marco
+*	Mate is using [Marco][marco]
 
-* Unity is using Compiz
+*	[Unity][unity] is using [Compiz][compiz]
 
 
 GTK based
 
-* XFCE4 is using XFWM4
+*	[XFCE4][xfce4] (C) is using [XFWM4][xfwm4]
 
 
 QT5 based
 
-* KDE is using either kwin_x11 or kwin_wayland.
+*	KDE Plasma5 (C++, CMake) 
+	[[framework][plasma-framework], [dekstop][plasma-desktop], [workspace][plasma-workspace]]
+	is using either [kwin_x11][kwin] or [kwin_wayland][kwin].
+
+### DE with choice of WM
+
+*	LXQT (C++, CMake) can utilize openbox or xfwm4 or kwin
 
 
 New Contender
  
-* Deepin is using Deepin-WM, utilizing HTML5.
+*	Deepin (Vala, Go) is using [Deepin-WM][deepin-wm], utilizing HTML5.
 
-* Budgie is using Window-WM
+*	[Budgie][budgie] (Vala, Meson) is using Window-WM,
+	Moving from (GTK) to (QT, QML)
 
+*	BlankOn's [Manokwari][manokwari] (Vala, Utilize Meson Soon)
 
-### DE with choice of WM
+*	[Liri][liri-shell] (C++, QML), formerly Hawaii
 
-* LXQT can utilize openbox or xfwm4 or kwin
+*	[Orbital][orbital] (Rust, Cargo)
 
 -- -- --
 
@@ -96,11 +104,28 @@ New Contender
 
 There are many kind of Window Manager
 
-* Stacking WM: openbox, fluxbox
+*	Stacking WM: 
+	
+	*	[Openbox][openbox] (C)
+	
+	*	[Fluxbox][fluxbox] (C++)
 
-* Tiling WM: Awesome, i3, XMonad
+*	Tiling WM: 
 
-* Dynamic WM: You can switch from tiling to floating
+	*	[Awesome][awesome] (C), Lua Configuration
+	
+	*	[i3][i3]  or [i3-gaps][i3-gaps] (C), Text based Configuration
+	
+	*	[XMonad][xmonad] (Haskell)
+	
+	*	[HerbstluftWM][hlwm] (C),
+		BASH Configuration. But any language is welcomed.
+	
+	*	[BSPWM][bspwm] (C)
+	
+	*	[DWM][dwm] (C)
+
+*	Dynamic WM: You can switch from tiling to floating
 
 Note that you should read from wiki for more comprehensive knowledge.
 
@@ -205,3 +230,35 @@ Thank you for reading
 
 [image-ss-cinnamon-3d]: {{ site.url }}/assets/posts/desktop/2016/06/cinnamon-3d.png
 [photo-ss-cinnamon-3d]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMxkI2MO3-Uamt4onaDbVI1KNW2yxR2E6QtKF-r
+
+[gnome-shell]:	https://github.com/GNOME/gnome-shell
+[mutter]:		https://github.com/GNOME/mutter
+[cinnamon]:	https://github.com/linuxmint/Cinnamon
+[muffin]:	https://github.com/linuxmint/muffin
+[gala]:		https://github.com/elementary/gala
+[marco]:	https://github.com/mate-desktop/marco
+[unity]:	https://code.launchpad.net/unity
+[compiz]:	https://launchpad.net/compiz
+[xfce4]:	https://github.com/xfce-mirror/xfdesktop
+[xfwm4]:	https://github.com/xfce-mirror/xfwm4
+
+[plasma-framework]:	https://github.com/KDE/plasma-framework
+[plasma-desktop]:	https://github.com/KDE/plasma-desktop
+[plasma-workspace]:	https://github.com/KDE/plasma-workspace
+[kwin]:	https://github.com/KDE/kwin
+
+[deepin-wm]:	https://github.com/linuxdeepin/deepin-wm
+[budgie]:		https://github.com/budgie-desktop/budgie-desktop
+[manokwari]:	https://github.com/BlankOn/manokwari
+[liri-shell]:	https://github.com/lirios/shell
+[orbital]:		https://github.com/redox-os/orbital
+[openbox]:	https://github.com/danakj/openbox
+[fluxbox]:	https://github.com/fluxbox/fluxbox
+
+[awesome]:	https://github.com/awesomeWM/awesome
+[i3]:		https://github.com/i3/i3
+[i3-gaps]:	https://github.com/Airblader/i3
+[xmonad]:	https://github.com/xmonad/xmonad	
+[hlwm]:		https://github.com/herbstluftwm/herbstluftwm
+[bspwm]:	https://github.com/baskerville/bspwm
+[dwm]:		https://github.com/sr/dwm
