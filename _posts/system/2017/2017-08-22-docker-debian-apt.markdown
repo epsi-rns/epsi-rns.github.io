@@ -586,7 +586,7 @@ $ aptitude show ncdu
 
 ![Docker APT: Show][image-ss-apt-show]{: .img-responsive }
 
-This <code>show</code> wil grab all package with respected pattern.
+This <code>show</code> will grab all package with respected pattern.
 You can narrow the result using regular expression.
 
 {% highlight bash %}
@@ -658,6 +658,16 @@ We will discuss policy later.
 There are alternative text based user interface as well called <code>dselect</code>.
 
 ![Docker Dselect: Dialog][image-ss-dselect-dialog]{: .img-responsive }
+
+#### Interrupted Process
+
+Sometimes DPKG interrupted, for some reason such as,
+I have to immediately turn off my notebook or stuff.
+You can continue with this command.
+
+{% highlight bash %}
+$ dpkg --configure -a
+{% endhighlight %}
 
 -- -- --
 

@@ -90,7 +90,7 @@ at the bottom of the recorded event.
 
 Opensuse as default does not keep downloaded package,
 unless <code>keeppackages=1</code>
-sets in <code>/etc/zypp/repos.d/</code>.
+sets in <code class="code-file">/etc/zypp/repos.d/</code>.
 But sometimes cache files left for some reason.
 
 Package Cache
@@ -152,7 +152,7 @@ Continue? [y/n/...? shows all options] (y):
 	I choose herbstluftwm as an example.
 
 Source install in zypper will *download* source code,
-and *extract* to into <code>/usr/src/packages/</code>.
+and *extract* to into <code class="code-file">/usr/src/packages/</code>.
 Downloading also install required package dependencies.
 
 {% highlight bash %}
@@ -337,7 +337,7 @@ The following item is locked and will not be changed by any action:
 #### Remove Lock
 
 You can unlock package by removing list 
-from configuration <code>/etc/zypp/locks</code> 
+from configuration <code class="code-file">/etc/zypp/locks</code> 
 or command line 
 
 {% highlight bash %}

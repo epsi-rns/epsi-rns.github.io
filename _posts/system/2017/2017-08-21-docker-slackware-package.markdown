@@ -79,7 +79,7 @@ $ wget -c --no-check-certificate https://github.com/fish-shell/fish-shell/releas
 {% endhighlight %}
 
 Do the compilation process.
-Be brave to track error in <code>/tmp/*/config.log</code>
+Be brave to track error in <code class="code-file">/tmp/*/config.log</code>
 whenever you encounter error.
 
 {% highlight bash %}

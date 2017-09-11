@@ -122,8 +122,8 @@ bash-4.3#
 Before Arch, there was Crux.
 Arch was intended as additional Crux package manager,
 but then was recreated from scratch.
-While Arch Linux use <code>.pkg.tar.xz</code> extension for package, 
-Crus use <code>.pkg.tar.gz</code> extension for package.
+While Arch Linux use <code class="code-file">.pkg.tar.xz</code> extension for package, 
+Crus use <code class="code-file">.pkg.tar.gz</code> extension for package.
 
 #### Reading
 

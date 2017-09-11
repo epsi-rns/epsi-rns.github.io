@@ -177,8 +177,10 @@ Switch repository in Debian based is simple.
 
 #### Configuration
 
-Most of the time I manage repository using configuration directly,
-in Debian based distribution. I don't know if there is better way.
+Most of the time I manage repository using 
+<code class="code-file">sources.list</code>
+configuration directly in Debian based distribution.
+I don't know if there is better way.
 
 {% highlight bash %}
 $ cat /etc/apt/sources.list
@@ -200,7 +202,7 @@ deb http://auto.mirror.devuan.org/merged ascii           main
 {% endhighlight %}
 
 **Case**: Sometimes there is additional PPA as well,
-inside <code>/etc/apt/sources.list.d/</code> directory.
+inside <code class="code-file">/etc/apt/sources.list.d/</code> directory.
 
 {% highlight bash %}
 deb http://ppa.launchpad.net/wagungs/kali-linux2/ubuntu raring main

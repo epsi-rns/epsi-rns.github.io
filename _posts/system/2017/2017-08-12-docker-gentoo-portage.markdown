@@ -257,7 +257,7 @@ This is xwing.info / alderaan.xwing.info
 #### List Packages
 
 We can use <code>eix</code> to list packages.
-No need to check out <code>/var/lib/layman/xwing/</code> manually.
+No need to check out <code class="code-file">/var/lib/layman/xwing/</code> manually.
 First we have to <code>eix-sync</code>.
 
 {% highlight bash %}
@@ -282,7 +282,7 @@ We are done.
 
 ### Mirror
 
-Mirror can be configured in <code>/etc/portage/make.conf</code>.
+Mirror can be configured in <code class="code-file">etc/portage/make.conf</code>.
 
 *	<https://wiki.gentoo.org/wiki/Mirrorselect>
 
@@ -375,7 +375,7 @@ $ eix --installed --upgrade
 
 ![Docker Portage: upgradable][image-ss-h-eix-iu]{: .img-responsive }
 
-Consider app-text/docbook-xml-dtd as our guinea pig example.
+Consider <code>app-text/docbook-xml-dtd</code> as our guinea pig example.
 
 #### Before Mask
 
@@ -480,7 +480,7 @@ $ less /var/log/portage/elog/summary.log
  package sys-process/htop-2.0.2:
 
 WARN: setup
-To use lsof features in htop(what processes are accessing
+To use lsof features in htop (what processes are accessing
 what files), you must have sys-process/lsof installed.
 Unable to find kernel sources at /usr/src/linux
 Unable to calculate Linux Kernel version for build, attempting to use running version

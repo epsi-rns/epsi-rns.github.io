@@ -134,7 +134,7 @@ Canceled hold on apt.
 
 Youcan also lock by Pinning using negative value.
 Consider make a new <code>apt<code> file
-in <code>/etc/apt/preferences.d<code>
+in <code class="code-file">/etc/apt/preferences.d<code>
 
 {% highlight bash %}
 $ touch /etc/apt/preferences.d/apt

@@ -209,7 +209,7 @@ $ zypper repos -p -E -N
 
 ![Docker Zypper: Repository -p -E -N][image-ss-zypper-repos-pen]{: .img-responsive }
 
-openSUSE put it in <code>/etc/zypp/repos.d/</code>.
+openSUSE put it in <code class="code-file">/etc/zypp/repos.d/</code>.
 Like most configuration in unix world, you can edit manualy.
  
 {% highlight bash %}
