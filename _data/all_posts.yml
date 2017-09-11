@@ -5,15 +5,27 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17082435
+  title: "Docker - Debian APT - Part Three"
+  url: /system/2017/08/24/docker-debian-apt.html
+
+- id: 17082335
+  title: "Docker - Debian APT - Part Two"
+  url: /system/2017/08/23/docker-debian-apt.html
+
+- id: 17082215
+  title: "Docker - Debian APT - Part One"
+  url: /system/2017/08/22/docker-debian-apt.html
+
 - id: 17082235
   title: "Docker - Slackware Package - Part Three"
   url: /system/2017/08/22/docker-slackware-package.html
 
-- id: 17082135
+- id: 17082115
   title: "Docker - Slackware Package - Part Two"
   url: /system/2017/08/21/docker-slackware-package.html
 
-- id: 17082035
+- id: 17082015
   title: "Docker - Slackware Package - Part One"
   url: /system/2017/08/20/docker-slackware-package.html
 
@@ -29,15 +41,15 @@
   title: "Docker - Fedora DNF - Part One"
   url: /system/2017/08/18/docker-fedora-dnf.html
 
-- id: 17081735
+- id: 17081715
   title: "Docker - openSUSE Zypper - Part Three"
   url: /system/2017/08/17/docker-opensuse-zypper.html
 
-- id: 17081635
+- id: 17081615
   title: "Docker - openSUSE Zypper - Part Two"
   url: /system/2017/08/16/docker-opensuse-zypper.html
 
-- id: 17081535
+- id: 17081515
   title: "Docker - openSUSE Zypper - Part One"
   url: /system/2017/08/15/docker-opensuse-zypper.html
 
@@ -45,7 +57,7 @@
   title: "Docker - Crux Ports"
   url: /system/2017/08/15/docker-crux-ports.html
 
-- id: 17081435
+- id: 17081415
   title: "Docker - LFS Build"
   url: /system/2017/08/14/docker-lfs-build.html
 

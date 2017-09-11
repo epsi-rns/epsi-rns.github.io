@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Slackware Package - Part Two"
-date: 2017-08-21 13:35:15 +0700
+date: 2017-08-21 13:15:35 +0700
 categories: system
 tags: [docker, distro, package manager, slackware]
 author: epsi
@@ -14,11 +14,12 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
-# - 17082035  # Slackware Package
+  - 17082215  # Debian Portage
+# - 17082015  # Slackware Package
   - 17081845  # Fedora DNF
-  - 17081535  # openSUSE Zypper
+  - 17081515  # openSUSE Zypper
   - 17081545  # Crux Ports
-  - 17081435  # LFS Build
+  - 17081415  # LFS Build
   - 17081345  # Void XBPS
   - 17081145  # Gentoo Portage
 

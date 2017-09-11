@@ -3,7 +3,7 @@ There are few topics here.
 
 [ [Part One][local-part-one] ]
 
-*	Preface: Test Bed
+*	Preface: Test Bed, Must Read
 
 *	Getting Started With Docker
 
@@ -11,7 +11,7 @@ There are few topics here.
 
 *	Updating System: OS Release, Update, List Upgradable, Upgrade
 
-*	Package IRSI: Install, Removal, Query Search, Show Info, Policy
+*	Package IRSI: Install, Removal, Unused Dependency, Query Search, Show Info, Policy
 
 *	What's Next
 
@@ -31,14 +31,14 @@ There are few topics here.
 
 [ [Part Three][local-part-three] ]
 
-*	Hold Package: Case Example, Add Lock, Test Example, Remove Lock
+*	Hold Package: Building Example, Mark Hold, Pinning
 
-*	Build from Source
+*	Build from Source, The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
 
 *	Conclusion
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-part-one]:   {{ site.url }}/system/2017/08/23/docker-debian-apt.html
-[local-part-two]:   {{ site.url }}/system/2017/08/24/docker-debian-apt.html
-[local-part-three]: {{ site.url }}/system/2017/08/25/docker-debian-apt.html
+[local-part-one]:   {{ site.url }}/system/2017/08/22/docker-debian-apt.html
+[local-part-two]:   {{ site.url }}/system/2017/08/23/docker-debian-apt.html
+[local-part-three]: {{ site.url }}/system/2017/08/24/docker-debian-apt.html

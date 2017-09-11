@@ -13,11 +13,12 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
-  - 17082035  # Slackware Package
+  - 17082215  # Debian Portage
+  - 17082015  # Slackware Package
   - 17081845  # Fedora DNF
-  - 17081535  # openSUSE Zypper
+  - 17081515  # openSUSE Zypper
   - 17081545  # Crux Ports
-  - 17081435  # LFS Build
+  - 17081415  # LFS Build
   - 17081345  # Void XBPS
 # - 17081145  # Gentoo Portage
 
