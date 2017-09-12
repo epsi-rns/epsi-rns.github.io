@@ -1,6 +1,6 @@
 ### Main Topics
 
-This is one article of a package management series
+This is one topic of a package management series
 
 [[ Debian - APT ]][local-debian]
 [[ openSUSE - Zypper ]][local-opensuse]
