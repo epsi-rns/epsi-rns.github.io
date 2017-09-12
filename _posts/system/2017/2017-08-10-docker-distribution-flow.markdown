@@ -17,6 +17,10 @@ related_link_ids:
 
 ---
 
+{% include post/2017/08/topics-docker.html %}
+
+-- -- --
+
 ### Preface
 
 > Goal: Examine Package Manager, Focus on Command Line Interface

@@ -22,6 +22,10 @@ related_link_ids:
 
 ---
 
+{% include post/2017/08/topics-docker.html %}
+
+-- -- --
+
 ### Preface
 
 People see Diversity in Linux, as Distribution.

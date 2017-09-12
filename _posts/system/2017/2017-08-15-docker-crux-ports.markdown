@@ -23,6 +23,8 @@ related_link_ids:
 
 ---
 
+{% include post/2017/08/topics-docker.html %}
+
 {% include post/2017/08/toc-docker-crux-ports.html %}
 
 -- -- --
