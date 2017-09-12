@@ -1,7 +1,7 @@
 ### Table of Content
 
 This is a three-parts article.
-There are few topics here.
+There are few sections here.
 
 [ [Part One][local-part-one] ]
 

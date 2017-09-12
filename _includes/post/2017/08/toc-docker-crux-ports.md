@@ -1,6 +1,6 @@
 ### Table of Content
 
-There are few topics here.
+There are few sections here.
 
 *	Preface: Test Bed
 
