@@ -40,24 +40,7 @@ I can learn Slackware Package Management using Docker.
 Here is my report as a _new slacker_ who just landed in slackware land,
 my journey using minimal install.
 
-#### Test Bed
-
-1.	Container: Docker
-
-2.	Operating System: Artix (OpenRC )
-
-3.	Window Manager: Herbstluftwm
-
-Since we are going to use docker again,
-you can read a common overview here.
-
-*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
-
-Of course you can use virtualization, the issue is distraction.
-We need to avoid tendency to focus on GUI tools.
-At the same time, limiting the scope to CLI tools.
-Most of the time, CLI tools is considered lower level than the GUI one.
-
+{% include post/2017/08/docker-test-bed.md %}
 -- -- --
 
 ### Getting Started With Docker
@@ -612,7 +595,6 @@ Thank you for reading
 
 [slackware-sbopkg]: https://docs.slackware.com/howtos:slackware_admin:building_packages_with_sbopkg
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 [local-part-two]:   {{ site.url }}/system/2017/08/21/docker-slackware-package.html
 
 [image-ss-slack-docker]:     {{ asset_post }}/00-getting-started.png

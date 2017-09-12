@@ -36,23 +36,7 @@ related_link_ids:
 
 I am so glad that finally I can learn Gentoo Portage using Docker.
 
-#### Test Bed
-
-1.	Container: Docker
-
-2.	Operating System: Artix (OpenRC )
-
-3.	Window Manager: Herbstluftwm
-
-Since we are going to use docker again,
-you can read a common overview here.
-
-*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
-
-Of course you can use virtualization, the issue is distraction.
-We need to avoid tendency to focus on GUI tools.
-At the same time, limiting the scope to CLI tools.
-Most of the time, CLI tools is considered lower level than the GUI one.
+{% include post/2017/08/docker-test-bed.md %}
 
 -- -- --
 
@@ -453,8 +437,6 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
 
 [local-part-two]: {{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
-
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 
 [image-ss-gentoo-docker]:    {{ asset_post }}/00-getting-started.png
 

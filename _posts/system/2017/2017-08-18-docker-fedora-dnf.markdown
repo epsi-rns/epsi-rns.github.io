@@ -42,23 +42,7 @@ We need <code>Rawhide</code> rolling release with more often update,
 so that we have a chance to play more with package.
 No need to wait for another six month cycle.
 
-#### Test Bed
-
-1.	Container: Docker
-
-2.	Operating System: Artix (OpenRC )
-
-3.	Window Manager: Herbstluftwm
-
-Since we are going to use docker again,
-you can read a common overview here.
-
-*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
-
-Of course you can use virtualization, the issue is distraction.
-We need to avoid tendency to focus on GUI tools.
-At the same time, limiting the scope to CLI tools.
-Most of the time, CLI tools is considered lower level than the GUI one.
+{% include post/2017/08/docker-test-bed.md %}
 
 -- -- --
 
@@ -430,7 +414,6 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 [local-part-two]:   {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
 
 [image-ss-pull-fedora]:   {{ asset_pull }}/fedora-rawhide.png

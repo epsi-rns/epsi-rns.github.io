@@ -412,6 +412,9 @@ Requires : [26]
 systemd
 {% endhighlight %}
 
+openSUSE minimal install allow the user to remove systemd,
+leaving the system without init.
+
 -- -- --
 
 ### Conclusion

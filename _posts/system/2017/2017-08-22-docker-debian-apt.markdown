@@ -34,7 +34,7 @@ related_link_ids:
 
 > Goal: Examine Package Manager, Focus on Command Line Interface
 
-Using APT minimal install in Docker,
+Using Debian minimal install in Docker,
 is a good way to learn The **Advance Package Tool**.
 APT is considered a basic knowledge
 utilized by Debian's derived distribution
@@ -45,27 +45,12 @@ We only need <code>Stretch</code> stable release.
 We will switch to testing later on part three,
 so that we have a chance to play more with package cycle.
 
-#### Test Bed
-
-1.	Container: Docker
-
-2.	Operating System: Artix (OpenRC )
-
-3.	Window Manager: Herbstluftwm
-
-Since we are going to use docker again,
-you can read a common overview here.
-
-*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
-
-Of course you can use virtualization, the issue is distraction.
-We need to avoid tendency to focus on GUI tools.
-At the same time, limiting the scope to CLI tools.
-Most of the time, CLI tools is considered lower level than the GUI one.
+{% include post/2017/08/docker-test-bed.md %}
 
 #### Must Read
 
-You are encouraged to read this first before even starting to read this article.
+You are encouraged to read this first,
+before even starting to read this article.
 
 *	<https://debian-handbook.info/browse/stable/>
 
@@ -87,9 +72,13 @@ $ docker pull debian:stretch
 ![Docker Pull Debian Strecth][image-ss-pull-debian]{: .img-responsive }
 
 {% highlight bash %}
-$ docker image list --filter "reference=debian"
-REPOSITORY       TAG            IMAGE ID         CREATED          SIZE
-debian           stretch        a20fd0d59cf1     6 weeks ago      100MB
+$ docker image list  
+{% raw %}
+  --filter "reference=debian:*"
+  --format 'table {{.Repository}}\t{{.Size}}'
+{% endraw %}
+REPOSITORY          SIZE
+debian              100MB
 {% endhighlight %}
 
 {% highlight bash %}
@@ -688,7 +677,6 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-debian' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 [local-part-two]:   {{ site.url }}/system/2017/08/24/docker-debian-apt.html
 
 [image-ss-pull-debian]:		{{ asset_pull }}/debian-stretch.png

@@ -43,23 +43,7 @@ to download 4GB of full installation packages.
 We need <code>Tumbleweed</code> rolling release with more often update than leap,
 so that we have a chance to play more with package cycle.
 
-#### Test Bed
-
-1.	Container: Docker
-
-2.	Operating System: Artix (OpenRC )
-
-3.	Window Manager: Herbstluftwm
-
-Since we are going to use docker again,
-you can read a common overview here.
-
-*	[Docker - Flow for Learning Linux Distribution][local-docker-flow]
-
-Of course you can use virtualization, the issue is distraction.
-We need to avoid tendency to focus on GUI tools.
-At the same time, limiting the scope to CLI tools.
-Most of the time, CLI tools is considered lower level than the GUI one.
+{% include post/2017/08/docker-test-bed.md %}
 
 -- -- --
 
@@ -74,16 +58,13 @@ $ docker pull opensuse/amd64:tumbleweed
 ![Docker Pull openSUSE Tumbleweed][image-ss-pull-opensuse]{: .img-responsive }
 
 {% highlight bash %}
-$ docker image list 
+$ docker image list  
 {% raw %}
+  --filter "reference=opensuse/*:*"
   --format 'table {{.Repository}}\t{{.Size}}'
 {% endraw %}
-REPOSITORY              SIZE
-opensuse/amd64          101MB
-dock0/arch              870MB
-gentoo/stage3-amd64     873MB
-debian                  100MB
-fedora                  232MB
+REPOSITORY          SIZE
+opensuse/amd64      101MB
 {% endhighlight %}
 
 {% highlight bash %}
@@ -144,9 +125,6 @@ $ zypper install ncurses-utils
 {% highlight bash %}
 $ reset
 {% endhighlight %}
-
-openSUSE minimal install allow the user to remove systemd,
-leaving the system without init.
 
 -- -- --
 
@@ -429,7 +407,6 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
 [local-part-two]:   {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
 
 [image-ss-pull-opensuse]:   {{ asset_pull }}/opensuse-tumbleweed.png
