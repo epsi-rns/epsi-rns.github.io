@@ -9,11 +9,11 @@ There are few sections here.
 
 *	Getting Started With Docker
 
-*	Package Management: DPKG Frontend, APT Frontend, Get Help, The new APT, APT Shell
+*	Package Management: ALPM Frontend, ASP and AUR Helper, Get Help
 
-*	Updating System: OS Release, Update, List Upgradable, Upgrade
+*	Updating System: OS Release, The Riddle, Refresh Update, List Upgradable, Download Upgrade, Upgrade, Common Form
 
-*	Package IRSI: Install, Removal, Unused Dependency, Query Search, Show Info, Policy
+*	Package IRSI: Package Install, Package Removal, Package Query Search, Package Show Info
 
 *	What's Next
 
@@ -41,6 +41,6 @@ There are few sections here.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-part-one]:   {{ site.url }}/system/2017/08/24/docker-debian-apt.html
-[local-part-two]:   {{ site.url }}/system/2017/08/24/docker-debian-apt.html
-[local-part-three]: {{ site.url }}/system/2017/08/24/docker-debian-apt.html
+[local-part-one]:   {{ site.url }}/system/2017/08/24/docker-arch-alpm.html
+[local-part-two]:   {{ site.url }}/system/2017/08/25/docker-arch-alpm.html
+[local-part-three]: {{ site.url }}/system/2017/08/24/docker-arch-alpm.html

@@ -51,8 +51,8 @@ In short, any distribution using <code>pacman</code>
 
 Personally I have been an Arch user since 2014,
 I have used so many pacman command, but never really understand.
-Reading pacman manual again make me reaize that I know nothing.
-That is why I have a need to write down this blog.
+Reading pacman manual again makes me realize that I know nothing.
+That is why I have a need to write down this blog article.
 
 {% include post/2017/08/docker-test-bed.md %}
 
@@ -125,7 +125,7 @@ $ docker attach musing_pike
 
 Arch Linux use <code class="code-file">.pkg.tar.xz</code> extension for package.
 
-#### ALPM Frontend, ASP and AUR Helper"
+#### ALPM Frontend, ASP and AUR Helper
 
 ALPM = "Arch Linux Package Management"
 
@@ -267,7 +267,7 @@ $ pacman --sync --refresh
  community is up to date
 {% endhighlight %}
 
-![Docker Arch: pacman refresh][image-ss-pm-refresh]{: .img-responsive }
+![Docker pacman: refresh][image-ss-pm-refresh]{: .img-responsive }
 
 From the manual " _Passing two --refresh or -y flags will force a
 refresh of all package databases, even if they appear to be up-to-date._ "
@@ -312,7 +312,7 @@ perl-error 0.17025-1 -> 0.17025-2
 sqlite 3.20.0-1 -> 3.20.1-1
 {% endhighlight %}
 
-![Docker Arch: pacman upgradable][image-ss-pm-upgradable]{: .img-responsive }
+![Docker pacman: upgradable][image-ss-pm-upgradable]{: .img-responsive }
 
 #### Download Upgrade
 
@@ -341,17 +341,18 @@ Total Download Size:  63.59 MiB
 :: Proceed with download? [Y/n]
 {% endhighlight %}
 
-![Docker Arch: pacman download][image-ss-pm-download]{: .img-responsive }
+![Docker pacman: download][image-ss-pm-download]{: .img-responsive }
 
 You may add <code>--noconfirm</code> if you wish.
 this one not asking for PGP confirmation anymore.
 
-![Docker Arch: pacman confirm][image-ss-pm-noconfirm]{: .img-responsive }
+![Docker pacman: confirm][image-ss-pm-noconfirm]{: .img-responsive }
 
 #### Upgrade
 
 This command will install package, and download if necessary.
-This is a process with long output, therefore I put three images here.
+This is a process with long verbose output,
+I have to split out to three figures.
 
 This is why the first figure output looks pretty similar
 with the download command above since it works on the same upgradable packages.
@@ -367,7 +368,7 @@ Equal to:
 $ pacman --sync --sysupgrade
 {% endhighlight %}
 
-![Docker Arch: pacman sysupgrade][image-ss-pm-sysupgrade]{: .img-responsive }
+![Docker pacman: sysupgrade][image-ss-pm-sysupgrade]{: .img-responsive }
 
 #### Common Form
 
@@ -385,22 +386,246 @@ $ pacman -Syu
  there is nothing to do
 {% endhighlight %}
 
-![Docker Arch: pacman -Syu][image-ss-pacman-syu]{: .img-responsive }
+![Docker pacman: -Syu][image-ss-pacman-syu]{: .img-responsive }
 
 -- -- --
-
 
 ### Package IRSI
 
-To DO
+	Install, Remove, Search, Info
+
+#### Package Install
+
+Installing in Arch is just <code>--sync</code> with target.
+Consider our favorite example package below.
+This will also have a verbose long output.
+
+{% highlight bash %}
+$ pacman -S man-db nano less sudo
+{% endhighlight %}
+
+Or other favorites package.
+
+{% highlight bash %}
+$ pacman --sync man-db nano less sudo         
+warning: less-487-1 is up to date -- reinstalling
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (7) file-5.32-1  groff-1.22.3-7  libpipeline-1.4.2-1
+             less-487-1  man-db-2.7.6.1-2  nano-2.8.7-1
+             sudo-1.8.21.p2-1
+
+Total Download Size:    4.27 MiB
+Total Installed Size:  21.87 MiB
+Net Upgrade Size:      21.67 MiB
+
+:: Proceed with installation? [Y/n]
+{% endhighlight %} 
+
+![Docker pacman: sync target][image-ss-pm-install]{: .img-responsive }
+
+You can also download, and install later, with color
+
+{% highlight bash %}
+$ pacman -Sw wget curl --color always
+...
+Packages (2) curl-7.55.1-2  wget-1.19.1-2
+
+Total Download Size:  0.57 MiB
+...
+{% endhighlight %}
+
+{% highlight bash %}
+$ pacman -S wget curl --color always
+...
+Packages (2) curl-7.55.1-2  wget-1.19.1-2
+
+Total Installed Size:  4.02 MiB
+Net Upgrade Size:      2.59 MiB
+...
+{% endhighlight %}
+
+And you can also combine with system upgrade.
+
+{% highlight bash %}
+$ pacman -Syu htop ncdu fish vim
+:: Synchronizing package databases...
+ core is up to date
+ extra                   1651.4 KiB   263K/s 00:06 [##########] 100%
+ community                  4.0 MiB   190K/s 00:22 [##########] 100%
+:: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (8) bc-1.07.1-1  gpm-1.20.7-8  inetutils-1.9.4-5
+             vim-runtime-8.0.1092-1  fish-2.6.0-1  htop-2.0.2-2
+             ncdu-1.12-1  vim-8.0.1092-1
+
+Total Download Size:    8.52 MiB
+Total Installed Size:  39.99 MiB
+
+:: Proceed with installation? [Y/n]
+{% endhighlight %}
+
+![Docker pacman: sysupgrade target][image-ss-pm-sync-target]{: .img-responsive }
+
+#### Package Removal
+
+We many cases to be shown here.
+
+Consider this <code>fish</code>,
+no package has any dependency to this friendly water creature.
+
+{% highlight bash %}
+$ pacman -R fish
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --remove fish
+checking dependencies...
+
+Packages (1) fish-2.6.0-1
+
+Total Removed Size:  8.15 MiB
+
+:: Do you want to remove these packages? [Y/n]
+{% endhighlight %}
+
+We can also remove any its dependency as well
+by using <code>--recursive</code> option.
+
+{% highlight bash %}
+$ pacman --remove --recursive fish
+checking dependencies...
+
+Packages (3) bc-1.07.1-1  inetutils-1.9.4-5  fish-2.6.0-1
+
+Total Removed Size:  9.35 MiB
+
+:: Do you want to remove these packages? [Y/n]
+{% endhighlight %}
+
+![Docker pacman: Remove Recursive][image-ss-pm-rm-recursive]{: .img-responsive }
+
+Consider this <code>groff</code> case,
+that is dependency of <code>man-db</code>.
+Have a look at how ALPM manage dependency,
+this command will send error notification message.
+
+{% highlight bash %}
+$ pacman --remove groff
+checking dependencies...
+error: failed to prepare transaction (could not satisfy dependencies)
+:: man-db: removing groff breaks dependency 'groff'
+{% endhighlight %}
+
+It can be solved by using <code>--cascade</code> option.
+
+{% highlight bash %}
+$ pacman --remove --cascade groff
+checking dependencies...
+
+Packages (2) man-db-2.7.6.1-2  groff-1.22.3-7
+
+Total Removed Size:  10.39 MiB
+
+:: Do you want to remove these packages? [Y/n]
+{% endhighlight %}
+
+![Docker pacman: Remove Cascade][image-ss-pm-rm-cascade]{: .img-responsive }
+
+It is just an example. 
+We do not realy need to delete it.
+
+#### Package Query Search
+
+There are two kind of pacman searches, 
+
+*	local query search 
+
+*	repository sync search
+
+Local query search.
+
+{% highlight bash %}
+$ pacman -Qs ncdu
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --query --search ncdu
+local/ncdu 1.12-1
+    Disk usage analyzer with an ncurses interface
+{% endhighlight %}
+
+![Docker pacman: Query Search][image-ss-pm-query-search]{: .img-responsive }
+
+And repository search. 
+
+{% highlight bash %}
+$ pacman -Ss ncdu
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --sync --search ncdu
+community/ncdu 1.12-1 [installed]
+    Disk usage analyzer with an ncurses interface
+{% endhighlight %}
+
+![Docker pacman: Sync Search][image-ss-pm-sync-search]{: .img-responsive }
+
+There are also some AUR search command that we will discuss later.
+
+#### Package Show Info
+
+Pretty straightforward.
+
+{% highlight bash %}
+$ pacman -Qi ncdu
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --query --info ncdu
+Name            : ncdu
+Version         : 1.12-1
+Description     : Disk usage analyzer with an ncurses interface
+{% endhighlight %}
+
+![Docker pacman: Sync Info][image-ss-pm-sync-info]{: .img-responsive }
+
+And repository search. With slightly different output,
+the additional _Repository_ field.
+
+{% highlight bash %}
+$ pacman -Si ncdu
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --sync --info ncdu
+Repository      : community
+Name            : ncdu
+Version         : 1.12-1
+Description     : Disk usage analyzer with an ncurses interface
+{% endhighlight %}
 
 -- -- --
 
-### Not Finished Yet
+### What's Next
 
-To DO
-
-Thank you for reading
+<code>pacman</code> is a complete package management,
+one command rule all, and it is also very fast.
+So many commands that this topic deserve its own long article.
+Consider finish reading [ [Part Two][local-part-two] ].
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
@@ -409,7 +634,7 @@ Thank you for reading
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-arch' %}
 {% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
 
-[local-part-two]:   {{ site.url }}/system/2017/08/24/docker-arch-alpm.html
+[local-part-two]:   {{ site.url }}/system/2017/08/25/docker-arch-alpm.html
 
 [image-ss-pull-arch]:		{{ asset_pull }}/arch.png
 [image-ss-running-arch]:	{{ asset_post }}/00-running-image.png
@@ -422,3 +647,11 @@ Thank you for reading
 [image-ss-pm-noconfirm]:	{{ asset_post }}/01-noconfirm.png
 [image-ss-pm-sysupgrade]:	{{ asset_post }}/01-sysupgrade.png
 [image-ss-pacman-syu]:		{{ asset_post }}/01-pacman-syu.png
+
+[image-ss-pm-install]:		{{ asset_post }}/13-install.png
+[image-ss-pm-sync-target]:	{{ asset_post }}/13-syu-target.png
+[image-ss-pm-rm-cascade]:	{{ asset_post }}/13-remove-cascade.png
+[image-ss-pm-rm-recursive]:	{{ asset_post }}/13-remove-recursive.png
+[image-ss-pm-query-search]:	{{ asset_post }}/13-query-search.png
+[image-ss-pm-sync-search]:	{{ asset_post }}/13-sync-search.png
+[image-ss-pm-sync-info]:	{{ asset_post }}/13-sync-info.png

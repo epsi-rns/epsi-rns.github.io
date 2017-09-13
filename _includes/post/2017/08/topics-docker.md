@@ -4,7 +4,7 @@ This is one topic of a package management diversity series
 
 [[ Debian - APT ]][local-debian]
 [[ openSUSE - Zypper ]][local-opensuse]
-[[ Fedora DNF ]][local-fedora]
+[[ Fedora - DNF ]][local-fedora]
 [[ Arch - ALPM ]][local-arch]
 [[ Crux - Ports ]][local-crux]
 [[ Void - XBPS ]][local-void]
