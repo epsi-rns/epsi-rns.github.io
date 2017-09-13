@@ -498,6 +498,12 @@ We can also remove any its dependency as well
 by using <code>--recursive</code> option.
 
 {% highlight bash %}
+$ pacman -Rs fish
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
 $ pacman --remove --recursive fish
 checking dependencies...
 
@@ -525,6 +531,12 @@ error: failed to prepare transaction (could not satisfy dependencies)
 It can be solved by using <code>--cascade</code> option.
 
 {% highlight bash %}
+$ pacman -Rc groff
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
 $ pacman --remove --cascade groff
 checking dependencies...
 
@@ -537,10 +549,25 @@ Total Removed Size:  10.39 MiB
 
 ![Docker pacman: Remove Cascade][image-ss-pm-rm-cascade]{: .img-responsive }
 
+If you wish, you can have a cleaner removal.
+
+{% highlight bash %}
+$ pacman -Rcs groff
+checking dependencies...
+
+Packages (3) libpipeline-1.4.2-1  man-db-2.7.6.1-2  groff-1.22.3-7
+
+Total Removed Size:  10.50 MiB
+
+:: Do you want to remove these packages? [Y/n] 
+{% endhighlight %}
+
 It is just an example. 
 We do not realy need to delete it.
 
 #### Package Query Search
+
+In short, <code>pacman -[Q|S]s</code>.
 
 There are two kind of pacman searches, 
 
@@ -583,6 +610,8 @@ community/ncdu 1.12-1 [installed]
 There are also some AUR search command that we will discuss later.
 
 #### Package Show Info
+
+In short, <code>pacman -[Q|S][i|ii]</code>.
 
 Pretty straightforward.
 
