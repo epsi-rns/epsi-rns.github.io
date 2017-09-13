@@ -19,11 +19,13 @@ There are few sections here.
 
 [ [Part Two][local-part-two] ]
 
-*	Dependency: Dependency, Reverse Dependency, Test
+*	Dependency: Using pacman, Test, Using pactree
 
-*	Repository: Configuration, Policy, Add Repository, Mirror
+*	Repository: Configuration, Mirror
 
-*	Group: Task
+*	Group: Blackarch Example, List Group
+
+*	Hold Package: Building Example, Mark Hold, Pinning
 
 *	History: The Log File
 
@@ -33,8 +35,6 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
-*	Hold Package: Building Example, Mark Hold, Pinning
-
 *	Build from Source, The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
 
 *	Conclusion
@@ -43,4 +43,4 @@ There are few sections here.
 
 [local-part-one]:   {{ site.url }}/system/2017/08/24/docker-arch-alpm.html
 [local-part-two]:   {{ site.url }}/system/2017/08/25/docker-arch-alpm.html
-[local-part-three]: {{ site.url }}/system/2017/08/24/docker-arch-alpm.html
+[local-part-three]: {{ site.url }}/system/2017/08/26/docker-arch-alpm.html

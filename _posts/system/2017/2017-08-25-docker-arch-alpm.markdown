@@ -85,7 +85,7 @@ error: failed to prepare transaction (could not satisfy dependencies)
 :: man-db: removing groff breaks dependency 'groff'
 {% endhighlight %}
 
-#### pactree
+#### Using pactree
 
 There is a cool official tool, the <code>pactree</code>.
 
@@ -315,19 +315,95 @@ Enter a selection (default=all):
 
 -- -- --
 
-### Not Finished Yet
+### History
 
-TO DO
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
+
+#### The Log File
+
+There are few log files.
+
+*	/var/log/pacman.log
+
+<code>less</code> or <code>more</code> is a good tool to read log file.
+Most likely you want the <code>tail</code>, latest transaction,
+at the bottom of the recorded event.
+
+{% highlight bash %}
+$ grc tail /var/log/pacman.log
+[2017-09-13 21:48] [ALPM] installed gc (7.6.0-1)
+[2017-09-13 21:48] [ALPM] installed guile (2.2.2-1)
+[2017-09-13 21:48] [ALPM] installed make (4.2.1-2)
+[2017-09-13 21:48] [ALPM] reinstalled pacman (5.0.2-2)
+[2017-09-13 21:48] [ALPM] installed patch (2.7.5-1)
+[2017-09-13 21:48] [ALPM] installed pkg-config (0.29.2-1)
+[2017-09-13 21:48] [ALPM] reinstalled sudo (1.8.21.p2-1)
+[2017-09-13 21:48] [ALPM] reinstalled which (2.21-2)
+[2017-09-13 21:48] [ALPM] transaction completed
+[2017-09-13 21:48] [ALPM] running 'texinfo-install.hook'...
+{% endhighlight %}
+
+![Docker Arch: grc tail /var/log/pacman.log][image-ss-pacman-log]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
+
+APT as default keep downloaded package.
+
+Package Cache
+	
+*	/var/cache/pacman/pkg/ * -x86_64.pkg.tar.xz
+
+*	/var/cache/abs/local/yaourtbuild/ * -x86_64.pkg.tar.xz
+
+You can clean this directory by using
+
+{% highlight bash %}
+$ pacman -Sc
+{% endhighlight %}
+
+Equal to:
+{% highlight bash %}
+$ pacman --sync --clean
+Packages to keep:
+  All locally installed packages
+
+Cache directory: /var/cache/pacman/pkg/
+:: Do you want to remove all other packages from cache? [Y/n] y
+removing old packages from cache...
+
+Database directory: /var/lib/pacman/
+:: Do you want to remove unused repositories? [Y/n] y
+removing unused sync repositories...
+{% endhighlight %}
+
+![Docker Arch: Cache Clean][image-ss-cache-clean]{: .img-responsive }
+
+Note that all package that you use will still in that directory.
+You can uninstall manually if you want.
+Please preserve system packages such as driver and kernel,
+just in case upgrade issue happened.
+
+I personally like to collect important package to other directory,
+and remove all package manually.
+
+-- -- --
+
+### What's Next
+
+There are still, some interesting topic for <code>APT</code>.
+Consider finish reading [ [Part Three][local-part-three] ].
 
 Thank you for reading
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-arch' %}
 
-[local-part-three]:		{{ site.url }}/system/2017/08/24/docker-arch-alpm.html
+[local-part-three]:		{{ site.url }}/system/2017/08/26/docker-arch-alpm.html
 [local-selectively]:	{{ site.url }}/system/2014/12/27/selectively-install-blackarch-tools.html
 
 [image-ss-info-groff]:		{{ asset_post }}/14-sii-groff.png
@@ -342,3 +418,7 @@ Thank you for reading
 
 [image-ss-group-install]:	{{ asset_post }}/15-install-group.png
 [image-ss-group-list]:		{{ asset_post }}/15-list-group.png
+
+[image-ss-pacman-log]:		{{ asset_post }}/19-grc-tail-log-pacman.png
+
+[image-ss-cache-clean]:		{{ asset_post }}/17-clean.png

@@ -141,11 +141,6 @@ Pacman: C
 
 *	<https://github.com/andrewgregory/pacman/>
 	
-	Package Cache
-	
-	*	/var/cache/abs/local/yaourtbuild/*-x86_64.pkg.tar.xz
-	
-	*	/var/cache/pacman/pkg/*-x86_64.pkg.tar.xz
 	
 ASP: BASH
 
