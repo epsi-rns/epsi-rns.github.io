@@ -30,150 +30,166 @@ related_link_ids:
 
 -- -- --
 
-### Hold Package
+### Repository Pinning
 
-APT can lock package using either hold or pinning.
+Sometimes we need a package from unstable repository.
+There are few reason, such as trying latest version,
+or such version has not available yet in _testing_ or _stable_.
+I did when I curious about tomahawk while it was just landed in_unstable_.
+Do not be afraid to do this as long you do not mess with system packages.
 
-#### Building Example
+#### nmap Case
 
-Suppose you want to do system upgrade,
-but you do not want to upgrade certain package.
-There is a good reason for these,
-such as keeping old driver,
-because the latest has a issue or such reason.
-Or maybe we want to keep our current beloved newly compiled package
-that equipped with super duper specific configuration parameter optimization.
+Consider have a look at this <code>nmap</code> case.
+<code>nmap</code> has different version for stable and unstable.
 
-Consider change <code>sources.list</code> repository,
-from <code>stretch/stable</code> to <code>testing</code>.
-We need an example package that we can hold as a guinea pig example.
-We can achieveed this using <code>update</code>
-and <code>upgrade</code> or <code>list --upgradable</code> .
+*	https://packages.debian.org/search?keywords=nmap
 
-{% highlight bash %}
-$ nano /etc/apt/sources.list
-deb http://deb.debian.org/debian testing main
+*	stretch (stable): 7.40-1
 
-# deb http://deb.debian.org/debian stretch main
-# deb http://deb.debian.org/debian stretch-updates main
+*	sid (unstable): 7.60-1
 
-# deb http://kambing.ui.ac.id/debian stretch main
-# deb http://kambing.ui.ac.id/debian stretch-updates main
+nmap from sid (unstable) can be installed in stretch (stable).
+Steps below.
 
-# deb http://security.debian.org stretch/updates main
-{% endhighlight %}
+#### New Docker for Stretch
 
-![Docker APT: Testing: sources.list][image-ss-h-sources-list]{: .img-responsive }
+Ww need a new docker,
+because we use _stable_ release for <code>nmap</code>.
+Now update and upgrade silently using <code>-qq</code> option.
 
 {% highlight bash %}
-$ apt update
-Get:1 http://deb.debian.org/debian testing InRelease [135 kB]
-Get:2 http://deb.debian.org/debian testing/main amd64 Packages [9669 kB]
-Fetched 9804 kB in 7s (1270 kB/s)                                           
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-73 packages can be upgraded. Run 'apt list --upgradable' to see them.
-{% endhighlight %}
+$ docker run -it debian:stretch
 
-{% highlight bash %}
-$ apt list --upgradable
-Listing... Done
-adduser/testing 3.116 all [upgradable from: 3.115]
-apt/testing 1.5~rc1 amd64 [upgradable from: 1.4.7]
-aptitude/testing 0.8.9-1 amd64 [upgradable from: 0.8.7-1]
-aptitude-common/testing 0.8.9-1 all [upgradable from: 0.8.7-1]
-base-files/testing 10 amd64 [upgradable from: 9.9+deb9u1]
-bsdutils/testing 1:2.29.2-4 amd64 [upgradable from: 1:2.29.2-1]
-{% endhighlight %}
+root:/# apt update -y -qq
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
 
-And the winner is <code>apt</code> and <code>aptitude*</code>
-as our guinea pig locking example.
-
-![Docker APT: Testing: List Upgradable][image-ss-h-upgradable]{: .img-responsive }
-
-#### Mark Hold
-
-We can hold package easily using APT.
-By using <code>apt-mark hold</code>.
-Note that there is <code>no apt hold</code>.
-
-{% highlight bash %}
-$ apt-mark hold apt
-apt set on hold.
-{% endhighlight %}
-
-![Docker APT: Mark Hold][image-ss-h-mark-hold]{: .img-responsive }
-
-Now apt will be ignored when upgrade.
-
-{% highlight bash %}
-$ apt upgrade
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-Calculating upgrade... Done
-The following packages were automatically installed and are no longer required:
-  libperl5.24 perl-modules-5.24
-Use 'apt autoremove' to remove them.
-The following NEW packages will be installed:
-  fdisk gcc-7-base libperl5.26 perl-modules-5.26
-The following packages have been kept back:
-  apt libapt-pkg5.0
+root:/# apt upgrade -y -qq
 The following packages will be upgraded:
-  adduser aptitude aptitude-common base-files bsdutils dash
+  libgcrypt20
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 523 kB of archives.
 ...
 {% endhighlight %}
 
-![Docker APT: apt Kept Back][image-ss-h-upgrade-kept]{: .img-responsive }
+![Docker APT Pinning: New Stable Container][image-ss-rp-new-stable]{: .img-responsive }
+
+#### Stable nmap 
 
 {% highlight bash %}
-$ apt-mark unhold apt
-Canceled hold on apt.
+$ apt-get install -y -qq wget curl man-db nano less nmap
 {% endhighlight %}
-  
-#### Pinning
-
-Youcan also lock by Pinning using negative value.
-Consider make a new <code>apt<code> file
-in <code class="code-file">/etc/apt/preferences.d<code>
 
 {% highlight bash %}
-$ touch /etc/apt/preferences.d/apt
-
-$ nano /etc/apt/preferences.d/apt
-Package: apt
-Pin: release a=testing
-Pin-Priority: -1
+$ nmap -V
+Nmap version 7.40 ( https://nmap.org )
+...
 {% endhighlight %}
 
-<code>apt</code> won't even shown up in upgradable list.
+![Docker APT Pinning: nmap Stable][image-ss-rp-nmap-stable]{: .img-responsive }
 
-![Docker APT: /etc/apt/preferences.d][image-ss-h-preferences-d]{: .img-responsive }
+#### Pinning Unstable
+
+We need to switch the repository,
+to contain both _stable_ and _unstable_.
+
+{% highlight bash %}
+$ nano /etc/apt/sources.list
+{% endhighlight %}
+
+{% highlight bash %}
+$ cat /etc/apt/sources.list
+deb http://deb.debian.org/debian stable main
+deb http://deb.debian.org/debian unstable main
+{% endhighlight %}
+
+![Docker APT Pinning: Nano sources.list][image-ss-rp-nano-sources]{: .img-responsive }
+
+And give negative number in pinning preferences,
+so that this _unstable_ repository ignored,
+except for direct install with _target_.
+
+{% highlight bash %}
+$ touch /etc/apt/preferences.d/unstable
+$ nano /etc/apt/preferences.d/unstable
+{% endhighlight %}
+
+{% highlight bash %}
+$ cat /etc/apt/preferences.d/example 
+Package: *
+Pin: release a=unstable
+Pin-Priority: -10
+{% endhighlight %}
+
+![Docker APT Pinning: nano preferences.d ][image-ss-rp-nano-pinning]{: .img-responsive }
+
+{% highlight bash %}
+$ apt update
+...
+All packages are up to date.
+{% endhighlight %}
+
+{% highlight bash %}
+$ apt upgrade
+...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+{% endhighlight %}
+
+Make sure that system cannot be upgraded to _unstable_.
 
 {% highlight bash %}
 $ apt list --upgradable
 Listing... Done
-adduser/testing 3.116 all [upgradable from: 3.115]
-aptitude/testing 0.8.9-1 amd64 [upgradable from: 0.8.7-1]
-aptitude-common/testing 0.8.9-1 all [upgradable from: 0.8.7-1]
-base-files/testing 10 amd64 [upgradable from: 9.9+deb9u1]
-bsdutils/testing 1:2.29.2-4 amd64 [upgradable from: 1:2.29.2-1]
 {% endhighlight %}
 
-![Docker APT: Not Shown Up in Upgradable][image-ss-h-unupgradable]{: .img-responsive }
+![Docker APT Pinning: List Upgradables][image-ss-rp-upgradables]{: .img-responsive }
 
-Example done successfully.
-Guinea pig is alive.
-Do not forget to unpin.
+#### Unstable nmap 
+
+Have a look at thispolicy before we install <code>nmap</code>.
 
 {% highlight bash %}
-$ rm /etc/apt/preferences.d/apt
+$ apt policy
+Package files:
+ 100 /var/lib/dpkg/status
+     release a=now
+ -10 http://deb.debian.org/debian unstable/main amd64 Packages
+     release o=Debian,a=unstable,n=sid,l=Debian,c=main,b=amd64
+     origin deb.debian.org
+ 500 http://deb.debian.org/debian stable/main amd64 Packages
+     release v=9.1,o=Debian,a=stable,n=stretch,l=Debian,c=main,b=amd64
+     origin deb.debian.org
+Pinned packages:
 {% endhighlight %}
 
-I personally used this method to **prevent** my <code>sis671</code> driver
-to be updated for almost one and a half year.
-Finally, the new driver works, so I do not pin this driver anymore.
+![Docker APT Pinning: Policy Pinning][image-ss-rp-policy-pinning]{: .img-responsive }
+
+Install <code>nmap</code> with explicit target <code>-t unstable</code>.
+
+{% highlight bash %}
+$ apt install --target unstable nmap
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be upgraded:
+  nmap
+1 upgraded, 0 newly installed, 0 to remove and 136 not upgraded.
+Need to get 5401 kB of archives.
+...
+{% endhighlight %}
+
+![Docker APT Pinning: Target Unstable][image-ss-rp-target-unstable]{: .img-responsive }
+
+{% highlight bash %}
+$ nmap -V
+Nmap version 7.60 ( https://nmap.org )
+{% endhighlight %}
+
+![Docker APT Pinning: nmap Unstable][image-ss-rp-nmap-unstable]{: .img-responsive }
+
+Consider examine,
+have a look at the <code>nmap</code> version difference.
+Now we have _unstable_ package in _stable_ system.
 
 -- -- --
 
@@ -454,13 +470,6 @@ Thank you for reading
 
 [local-apt-source]:	{{ site.url }}/system/2016/07/01/apt-compile-source.html
 
-[image-ss-h-upgradable]:	{{ asset_post }}/27-list-upgradable.png
-[image-ss-h-sources-list]:	{{ asset_post }}/27-sources-list-testing.png
-[image-ss-h-mark-hold]:		{{ asset_post }}/27-mark-hold.png
-[image-ss-h-upgrade-kept]:	{{ asset_post }}/27-upgrade-kept-back.png
-[image-ss-h-preferences-d]:	{{ asset_post }}/27-preferences-d.png
-[image-ss-h-unupgradable]:	{{ asset_post }}/27-upgradable-pinned.png
-
 [image-ss-s-repository]:	{{ asset_post }}/25-sources-list.png
 [image-ss-s-toolchain]:		{{ asset_post }}/25-toolchain.png
 [image-ss-s-directory]:		{{ asset_post }}/25-working-dir.png
@@ -473,3 +482,12 @@ Thank you for reading
 [image-ss-s-directory-res]:	{{ asset_post }}/25-directory-result.png
 [image-ss-s-dpkg-install]:	{{ asset_post }}/25-install-apt.png
 [image-ss-s-version-works]:	{{ asset_post }}/25-version.png
+
+[image-ss-rp-upgradables]:	{{ asset_post }}/28-list-upgradables.png
+[image-ss-rp-nano-pinning]:	{{ asset_post }}/28-nano-pinning.png
+[image-ss-rp-nano-sources]:	{{ asset_post }}/28-nano-sources.list.png
+[image-ss-rp-new-stable]:	{{ asset_post }}/28-new-docker-stretch.png
+[image-ss-rp-nmap-stable]:	{{ asset_post }}/28-nmap-stable.png
+[image-ss-rp-nmap-unstable]:	{{ asset_post }}/28-nmap-unstable.png
+[image-ss-rp-policy-pinning]:	{{ asset_post }}/28-policy-pinning.png
+[image-ss-rp-target-unstable]:	{{ asset_post }}/28-target-unstable.png

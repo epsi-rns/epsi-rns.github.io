@@ -25,6 +25,8 @@ There are few sections here.
 
 *	Group: Task
 
+*	Hold Package: Building Example, Mark Hold, Pinning
+
 *	History: The Log File
 
 *	Clean Up
@@ -33,7 +35,7 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
-*	Hold Package: Building Example, Mark Hold, Pinning
+*	Repository Pinning: nmap Case, New Docker for Stretch, Stable nmap, Pinning Unstable, Unstable nmap
 
 *	Build from Source, The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
 
