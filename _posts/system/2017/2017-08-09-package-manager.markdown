@@ -365,38 +365,6 @@ OS: Manjaro-OpenRC
 
 [![Manjaro LXC][image-ss-lxc-package]{: .img-responsive }][photo-ss-lxc-package]
 
-
--- -- --
-
-#### Query AUR
-
-A special case for AUR,
-there are so many way to Query AUR in one system. 
-
-I Didn't Know What To Do Last Summer
-I still don't know what to do today.
-So I play with AUR instead.
-
-	#ihavenolife
-
-{% highlight bash %}
-$ package-query - As gst
-$ cower - s gst
-$ yaourt - s gst
-$ aura - As gst
-$ packer - Ss gst -- auronly
-$ pacaur - Ssa gst
-{% endhighlight %}
-
-
-#### Screenshot: Query AUR
-
-OS: Arch Linux
-
-*	Window Manager: HerbstluftWM
-
-[![Arch: Query AUR][image-ss-arch-query-aur]{: .img-responsive }][photo-ss-arch-query-aur]
-
 -- -- --
 
 Thank you for reading

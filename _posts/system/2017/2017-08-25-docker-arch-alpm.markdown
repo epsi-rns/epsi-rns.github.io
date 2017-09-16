@@ -26,7 +26,7 @@ related_link_ids:
 
 {% include post/2017/08/topics-docker.html %}
 
-{% include post/2017/08/toc-docker-debian-apt.html %}
+{% include post/2017/08/toc-docker-arch-alpm.html %}
 
 -- -- --
 

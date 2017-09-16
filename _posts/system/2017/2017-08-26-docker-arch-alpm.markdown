@@ -26,7 +26,7 @@ related_link_ids:
 
 {% include post/2017/08/topics-docker.html %}
 
-{% include post/2017/08/toc-docker-debian-apt.html %}
+{% include post/2017/08/toc-docker-arch-alpm.html %}
 
 -- -- --
 
@@ -153,7 +153,7 @@ Total Installed Size:  0.16 MiB
 :: Proceed with installation? [Y/n]
 {% endhighlight %}
 
-### makepkg
+#### makepkg
 
 There is this <code>makepkg</code> at the heart of automatic build.
 This will compile package, and create the <code>.tar.xz</code> ALPM package.
@@ -491,7 +491,40 @@ export EDITOR=vim
 $ . .profile
 {% endhighlight %}
 
-Consider use <code>pacaur</code> to query other AUR Helper.
+Consider use <code>pacaur</code> to install <code>asp</code>.
+
+{% highlight bash %}
+$ pacaur -S asp   
+[sudo] password for epsi: 
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (3) jq-1.5-5  oniguruma-6.6.1-1  asp-2-1
+
+Total Download Size:   0.35 MiB
+Total Installed Size:  1.50 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ asp-2-1-any               10.3 KiB   103K/s 00:00 [##########] 100%
+ oniguruma-6.6.1-1-x...   154.3 KiB   359K/s 00:00 [##########] 100%
+ jq-1.5-5-x86_64          191.8 KiB   291K/s 00:01 [##########] 100%
+(3/3) checking keys in keyring                     [##########] 100%
+(3/3) checking package integrity                   [##########] 100%
+(3/3) loading package files                        [##########] 100%
+(3/3) checking for file conflicts                  [##########] 100%
+:: Processing package changes...
+(1/3) installing oniguruma                         [##########] 100%
+(2/3) installing jq                                [##########] 100%
+(3/3) installing asp                               [##########] 100%
+{% endhighlight %}
+
+On most cases <code>pacaur</code> goes well.
+
+![Docker AUR: pacaur -S asp][image-ss-pacaur-asp]{: .img-responsive }
+
+Consider try another.
+Use <code>pacaur</code> to query other AUR Helper.
 
 {% highlight bash %}
 $ pacaur -S packer
@@ -518,7 +551,6 @@ Repo Installed Size:  0.19 MiB
 
 ![Docker AUR: pacaur -S packer][image-ss-pacaur-packer]{: .img-responsive }
 
-On most cases <code>pacaur</code> goes well.
 But oouch, sometimes an issue happened such as _failed to install_.
 This time we need a lower level method.
 
@@ -600,39 +632,100 @@ $ pksyu
 ![Docker AUR: pksyu][image-ss-pkyu]{: .img-responsive }
 
 There are still some other AUR helpers, but I never use any of them.
+Yet this article is already long. I have decided not to make it any longer.
 
 -- -- --
 
-### ASP
+### ABS
 
-#### Deprecated ABS
+AUR is not the only ALPM's strength,
+You can also build official package.
+Sometimes we need to build instead of binary
+to add build configuration to enable feature that was disabled,
+or disable feature we do not want,
+or any change in the build  for an official package.
+
+ABS stand for _The Arch Build System_.
+
+*	<https://wiki.archlinux.org/index.php/Arch_Build_System>
+
+#### Deprecation
+
+ASP is an alternative for ABS that has been deprecated.
+
+*	<https://www.archlinux.org/news/deprecation-of-abs/>
+
+#### ASP
+
+Using <code>asp</code> is as simple as below:
 
 {% highlight bash %}
-$ 
+$ asp export ncdu
+==> Initializing ASPROOT in /home/epsi/.cache/asp
+remote: Counting objects: 100, done.
+remote: Compressing objects: 100% (80/80), done.
+remote: Total 100 (delta 9), reused 78 (delta 5)
+Receiving objects: 100% (100/100), 14.46 KiB | 7.23 MiB/s, done.
+Resolving deltas: 100% (9/9), done.
+From https://git.archlinux.org/svntogit/community
+ * branch            packages/ncdu -> FETCH_HEAD
+ * [new branch]      packages/ncdu -> community/packages/ncdu
+==> exporting ncdu:trunk
 {% endhighlight %}
 
-#### Using SVN
+Now we can continue with <code>makepkg</code>.
 
 {% highlight bash %}
-$ 
+$ cd ncdu
+
+$ makepkg -i --skippgpcheck
 {% endhighlight %}
+
+![Docker ASP: export ncdu][image-ss-asp-ncdu]{: .img-responsive }
 
 -- -- --
 
 ### Screenshot
 
+#### Query AUR
+
+A special case for AUR,
+there are so many way to Query AUR in one system. 
+
+I Didn't Know What To Do Last Summer
+I still don't know what to do today.
+So I play with AUR instead.
+
+	#ihavenolife
+
+{% highlight bash %}
+$ package-query - As gst
+$ cower - s gst
+$ yaourt - s gst
+$ aura - As gst
+$ packer - Ss gst -- auronly
+$ pacaur - Ssa gst
+{% endhighlight %}
+
+
+#### Screenshot: Query AUR
+
+OS: Arch Linux
+
+*	Window Manager: HerbstluftWM
+
+[![Arch: Query AUR][image-ss-arch-query-aur]{: .img-responsive }][photo-ss-arch-query-aur]
+
 -- -- --
 
 ### Conclusion
 
--- -- --
+After years of being user,
+I realize that I do not now anything about ALPM.
 
-### Not Finished Yet
-
-TO DO
+	These are just preliminary knowledge about ALPM.
 
 Thank you for reading
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -657,7 +750,13 @@ Thank you for reading
 [image-ss-yaourt-action]:	{{ asset_post }}/26-yaourt-pacaur.png
 [image-ss-yaourtrc-vim]:	{{ asset_post }}/26-vim-yaourtrc.png
 [image-ss-yaourt-syua]:		{{ asset_post }}/26-yaourt-syua.png
+[image-ss-pacaur-asp]:		{{ asset_post }}/26-packer-asp.png
 [image-ss-pacaur-packer]:	{{ asset_post }}/26-pacaur-packer.png
 [image-ss-packer-aura-bin]:	{{ asset_post }}/26-packer-aura-bin.png
 [image-ss-packer-alias]:	{{ asset_post }}/26-packer-alias.png
-[image-ss-pkyu]:	{{ asset_post }}/26-pksyu.png
+[image-ss-pkyu]:			{{ asset_post }}/26-pksyu.png
+
+[image-ss-asp-ncdu]:		{{ asset_post }}/27-asp-ncdu.png
+
+[image-ss-arch-query-aur]:	{{ asset_path }}/package-manager/arch-hlwm-aur-no-rofi.png
+[photo-ss-arch-query-aur]:	https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNE2B9cj-nGL6eUIr08vN3MLe1h78NVPglm6LKW?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

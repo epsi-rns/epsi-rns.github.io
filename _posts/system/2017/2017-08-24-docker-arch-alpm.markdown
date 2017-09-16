@@ -169,14 +169,6 @@ Packer: BASH
 Yaourt: BASH/C
 
 *	<https://github.com/archlinuxfr/yaourt>
-	
-	Package Cache
-	
-	*	/tmp/yaourt-tmp-epsi/
-	
-	Package Cache (deprecated abs)
-	
-	*	/var/cache/abs/local/yaourtbuild/*-x86_64.pkg.tar.xz
 
 #### Get Help
 

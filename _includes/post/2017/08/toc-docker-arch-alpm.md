@@ -35,7 +35,13 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
-*	Build from Source, The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
+*	Introducing AUR: User Privilege, makepkg, Package Query, cower
+
+*	AUR Helper: yaourt, pacaur, packer, aura
+
+*	ABS: Deprecation, ASP
+
+*	Screenshot: Query AUR
 
 *	Conclusion
 
