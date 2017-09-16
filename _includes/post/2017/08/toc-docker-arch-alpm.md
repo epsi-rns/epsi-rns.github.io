@@ -25,7 +25,7 @@ There are few sections here.
 
 *	Group: Blackarch Example, List Group
 
-*	Hold Package: Building Example, Mark Hold, Pinning
+*	Lock Package: IgnorePkg, HoldPkg
 
 *	History: The Log File
 
@@ -39,7 +39,7 @@ There are few sections here.
 
 *	AUR Helper: yaourt, pacaur, packer, aura
 
-*	ABS: Deprecation, ASP
+*	ABS: Deprecation, ASP, SVN
 
 *	Screenshot: Query AUR
 

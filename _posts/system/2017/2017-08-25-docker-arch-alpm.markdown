@@ -315,6 +315,69 @@ Enter a selection (default=all):
 
 -- -- --
 
+### Lock Package
+
+Two method here
+
+*	<code>IgnorePkg</code> to avoid change, upgrade or downgrade.
+
+*	<code>HoldPkg</code> to avoid removal.
+
+#### IgnorePkg
+
+Consider an water creature case here that I installed from outdated repo.
+It will always be on the upgradable list.
+
+{% highlight bash %}
+$ pacman -Qu
+fish 2.4.0-1 -> 2.6.0-1
+{% endhighlight %}
+
+![Docker pacman: Outdated Package][image-ss-outdated]{: .img-responsive }
+
+Unless we explicitly **ignore** it, by using <code>IgnorePkg</code>
+in <code>/etc/pacman.conf</code>.
+
+{% highlight bash %}
+$ cat /etc/pacman.conf | grep fish
+IgnorePkg    = fish
+
+$ pacman -Qu
+fish 2.4.0-1 -> 2.6.0-1 [ignored]
+
+$ pacman -Su
+:: Starting full system upgrade...
+warning: fish: ignoring package upgrade (2.4.0-1 => 2.6.0-1)
+ there is nothing to do
+{% endhighlight %}
+
+![Docker pacman.conf: IgnoredPkg][image-ss-ignored]{: .img-responsive }
+
+I have been using this <code>IgnorePkg</code>
+to avoid driver upgrade for my <code>SiS671</code> driver,
+because there was about one year that,
+the later driver does not work with <code>xorg</code>.
+
+### HoldPkg
+
+What if I want this water creature to be always in my system ?
+We explicitly **hold** it, by using <code>HoldPkg</code>
+in <code>/etc/pacman.conf</code>.
+
+{% highlight bash %}
+$ cat /etc/pacman.conf | grep fish
+HoldPkg      = fish
+
+$ pacman -R fish
+checking dependencies...
+warning: fish is designated as a HoldPkg.
+:: HoldPkg was found in target list. Do you want to continue? [y/N]
+{% endhighlight %}
+
+![Docker pacman.conf: HoldPkg][image-ss-hold]{: .img-responsive }
+
+-- -- --
+
 ### History
 
 This is most the forgotten part of package management,
@@ -422,3 +485,7 @@ Thank you for reading
 [image-ss-pacman-log]:		{{ asset_post }}/19-grc-tail-log-pacman.png
 
 [image-ss-cache-clean]:		{{ asset_post }}/17-clean.png
+
+[image-ss-hold]:		{{ asset_post }}/28-hold-unremoved.png
+[image-ss-ignored]:		{{ asset_post }}/28-upgradable-ignored.png
+[image-ss-outdated]:	{{ asset_post }}/28-upgradable-outdated.png

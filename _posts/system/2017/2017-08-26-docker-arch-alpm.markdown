@@ -683,6 +683,44 @@ $ makepkg -i --skippgpcheck
 
 ![Docker ASP: export ncdu][image-ss-asp-ncdu]{: .img-responsive }
 
+#### Using SVN
+
+This is a lower level method than ASP for curious reader.
+But first you have to install SVN.
+
+{% highlight bash %}
+$ sudo pacman -S svn
+{% endhighlight %}
+
+I was a little bit confused, about this SVN thing.
+But then I got helpful answer from community.
+_Dean Wallace_ has pointed me to the right direction.
+And suggest to stick with <code>asp</code>
+
+{% highlight bash %}
+$ svn checkout --depth=empty svn://svn.archlinux.org/packages
+Checked out revision 305653.
+
+$ svn checkout --depth=empty svn://svn.archlinux.org/community
+Checked out revision 257755.
+
+$ svn update ncdu
+Updating 'ncdu':
+A    ncdu
+A    ncdu/trunk
+A    ncdu/trunk/PKGBUILD
+A    ncdu/repos
+A    ncdu/repos/community-i686
+A    ncdu/repos/community-i686/PKGBUILD
+A    ncdu/repos/community-x86_64
+A    ncdu/repos/community-x86_64/PKGBUILD
+Updated to revision 257755.
+{% endhighlight %}
+
+![Docker SVN: update ncdu][image-ss-svn-ncdu]{: .img-responsive }
+
+Now you can continue with newly downloaded PKGBUILD.
+
 -- -- --
 
 ### Screenshot
@@ -757,6 +795,7 @@ Thank you for reading
 [image-ss-pkyu]:			{{ asset_post }}/26-pksyu.png
 
 [image-ss-asp-ncdu]:		{{ asset_post }}/27-asp-ncdu.png
+[image-ss-svn-ncdu]:		{{ asset_post }}/27-svn-community-ncdu.png
 
 [image-ss-arch-query-aur]:	{{ asset_path }}/package-manager/arch-hlwm-aur-no-rofi.png
 [photo-ss-arch-query-aur]:	https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNE2B9cj-nGL6eUIr08vN3MLe1h78NVPglm6LKW?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

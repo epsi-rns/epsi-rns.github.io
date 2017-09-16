@@ -76,7 +76,7 @@ As usual, first, we do attach docker process.
 $ docker pull dock0/arch
 {% endhighlight %}
 
-![Docker Pull Debian Strecth][image-ss-pull-debian]{: .img-responsive }
+![Docker Pull Arch][image-ss-pull-arch]{: .img-responsive }
 
 {% highlight bash %}
 $ docker image list  
