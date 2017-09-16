@@ -482,21 +482,122 @@ $ yaourt -Syua
 
 #### pacaur
 
+Set editor as environment variable if necessary.
+
 {% highlight bash %}
-$ 
+$ cat .profile
+export EDITOR=vim
+
+$ . .profile
+{% endhighlight %}
+
+Consider use <code>pacaur</code> to query other AUR Helper.
+
+{% highlight bash %}
+$ pacaur -S packer
+:: Package packer not found in repositories, trying AUR...
+:: resolving dependencies...
+:: looking for inter-conflicts...
+:: packer-20150808-1 has been flagged out of date on Sun Apr  2 10:26:23 2017
+
+AUR Packages  (1) packer-20150808-1  
+Repo Packages (2) jansson-2.10-2  jshon-20131105-1  
+
+Repo Download Size:   0.05 MiB
+Repo Installed Size:  0.19 MiB
+
+:: Proceed with installation? [Y/n] 
+...
+==> Cleaning up...
+:: Installing packer package(s)...
+:: packer package(s) failed to install.
+:: ensure package version does not mismatch between .SRCINFO and PKGBUILD
+:: ensure package name has a VCS suffix if this is a devel package
+:: jshon is now an orphan package
+{% endhighlight %}
+
+![Docker AUR: pacaur -S packer][image-ss-pacaur-packer]{: .img-responsive }
+
+On most cases <code>pacaur</code> goes well.
+But oouch, sometimes an issue happened such as _failed to install_.
+This time we need a lower level method.
+
+{% highlight bash %}
+$ cower -d packer
+:: packer downloaded to /home/epsi
+
+$ cd packer/
+
+$ makepkg
+==> Making package: packer 20150808-1 (Sat Sep 16 05:21:21 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Cloning packer git repo...
+
+$ sudo pacman -U packer-20160325-1-any.pkg.tar.xz 
+...
+:: Processing package changes...
+(1/1) installing packer                            [##########] 100%
+...
 {% endhighlight %}
 
 #### packer
 
-{% highlight bash %}
-$ 
-{% endhighlight %}
-
-#### aura
+Consider use <code>packer</code> to query other AUR Helper.
 
 {% highlight bash %}
-$ 
+$ packer -S aura-bin
+packer -S aura-bin
+
+Aur Targets    (1): aura-bin
+
+Proceed with installation? [Y/n] y
+Edit aura-bin PKGBUILD with $EDITOR? [Y/n] n
+==> Making package: aura-bin 1.3.9-1 (Sat Sep 16 05:28:01 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Downloading aura-1.3.9-x86_64.tar.gz...
+...
+==> Checking for packaging issue...
+==> Creating package "aura-bin"...
+  -> Generating .PKGINFO file...
+  -> Generating .BUILDINFO file...
+  -> Generating .MTREE file...
+  -> Compressing package...
+==> Leaving fakeroot environment.
+==> Finished making: aura-bin 1.3.9-1 (Sat Sep 16 05:28:47 UTC 2017)
 {% endhighlight %}
+
+![Docker AUR: packer -S aura-bin][image-ss-packer-aura-bin]{: .img-responsive }
+
+I like to have alias in <code>.bashrc</code>
+so I do not have to remember all the options.
+This is an unoffocial tip for unofficial package.
+
+{% highlight bash %}
+alias pksyu="packer -Syu --noconfirm --noedit"
+{% endhighlight %}
+
+![Docker AUR: alias packer][image-ss-packer-alias]{: .img-responsive }
+
+{% highlight bash %}
+$ pksyu
+[sudo] password for epsi: 
+:: Synchronizing package databases...
+ core is up to date
+ extra is up to date
+ community is up to date
+:: Starting full system upgrade...
+ there is nothing to do
+:: Synchronizing aur database...
+ aur                                          6  6 [##########]100%
+:: Starting full aur upgrade...
+ local database is up to date
+ {% endhighlight %}
+
+![Docker AUR: pksyu][image-ss-pkyu]{: .img-responsive }
 
 -- -- --
 
@@ -554,3 +655,7 @@ Thank you for reading
 [image-ss-yaourt-action]:	{{ asset_post }}/26-yaourt-pacaur.png
 [image-ss-yaourtrc-vim]:	{{ asset_post }}/26-vim-yaourtrc.png
 [image-ss-yaourt-syua]:		{{ asset_post }}/26-yaourt-syua.png
+[image-ss-pacaur-packer]:	{{ asset_post }}/26-pacaur-packer.png
+[image-ss-packer-aura-bin]:	{{ asset_post }}/26-packer-aura-bin.png
+[image-ss-packer-alias]:	{{ asset_post }}/26-packer-alias.png
+[image-ss-pkyu]:	{{ asset_post }}/26-pksyu.png
