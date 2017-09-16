@@ -572,7 +572,7 @@ Edit aura-bin PKGBUILD with $EDITOR? [Y/n] n
 
 ![Docker AUR: packer -S aura-bin][image-ss-packer-aura-bin]{: .img-responsive }
 
-I like to have alias in <code>.bashrc</code>
+I like to have aliases in <code>.bashrc</code>
 so I do not have to remember all the options.
 This is an unoffocial tip for unofficial package.
 
@@ -598,6 +598,8 @@ $ pksyu
  {% endhighlight %}
 
 ![Docker AUR: pksyu][image-ss-pkyu]{: .img-responsive }
+
+There are still some other AUR helpers, but I never use any of them.
 
 -- -- --
 
