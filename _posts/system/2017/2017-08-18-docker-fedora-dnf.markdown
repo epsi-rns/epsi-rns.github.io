@@ -398,6 +398,65 @@ Description  : The man-db package includes five tools for browsing man-pages:
 
 ![Docker DNF: Package Show Info][image-ss-dnf-info]{: .img-responsive }
 
+#### Install Feature
+
+There are DNF feature that I do not see exist in other package management.
+I found this in a google plus posted by "Thorsten Leemhuis".
+
+The first one is, DNF install package that,
+provides certain executable as below example.
+
+{% highlight bash %}
+$ dnf install /usr/bin/mpc
+Last metadata expiration check: 0:09:22 ago on Sat Sep 16 15:04:13 2017.
+Dependencies resolved.
+====================================================================
+ Package           Arch        Version           Repository    Size
+====================================================================
+Installing:
+ mpc               x86_64      0.28-5.fc27       rawhide       52 k
+Installing dependencies:
+ libmpdclient      x86_64      2.13-1.fc27       rawhide       49 k
+
+Transaction Summary
+====================================================================
+Install  2 Packages
+
+Total download size: 101 k
+Installed size: 210 k
+Is this ok [y/N]: 
+{% endhighlight %}
+
+![Docker DNF: Package Install Feature Executable][image-ss-dnf-feat-exec]{: .img-responsive }
+
+The second is, install Perl package that provide specific library.
+
+{% highlight bash %}
+$ dnf install 'perl(File::Basename)'
+Last metadata expiration check: 0:37:04 ago on Sat Sep 16 15:04:13 2017.
+Dependencies resolved.
+====================================================================
+ Package                 Arch    Version             Repository
+                                                               Size
+====================================================================
+Installing:
+ perl-interpreter        x86_64  4:5.26.0-399.fc28   rawhide  6.2 M
+Installing dependencies:
+ perl-Carp               noarch  1.42-394.fc27       rawhide   28 k
+ ...
+ perl-threads-shared     x86_64  1.57-4.fc27         rawhide   46 k
+
+Transaction Summary
+====================================================================
+Install  17 Packages
+
+Total download size: 8.6 M
+Installed size: 21 M
+Is this ok [y/N]: 
+{% endhighlight %}
+
+![Docker DNF: Package Install Feature Library][image-ss-dnf-feat-exec]{: .img-responsive }
+
 -- -- --
 
 ### What's Next
@@ -427,9 +486,10 @@ Thank you for reading
 [image-ss-dnf-upgrade-4]: {{ asset_post }}/02-dnf-upgrade-4.png
 [image-ss-dnf-extra-cmd]: {{ asset_post }}/03-dnf-extra-commands.png
 
-[image-ss-dnf-info]:      {{ asset_post }}/13-dnf-info.png
-[image-ss-dnf-install]:   {{ asset_post }}/13-dnf-install.png
-[image-ss-dnf-remove]:    {{ asset_post }}/13-dnf-remove.png
-[image-ss-dnf-search]:    {{ asset_post }}/13-dnf-search.png
+[image-ss-dnf-info]:		{{ asset_post }}/13-dnf-info.png
+[image-ss-dnf-install]:		{{ asset_post }}/13-dnf-install.png
+[image-ss-dnf-remove]:		{{ asset_post }}/13-dnf-remove.png
+[image-ss-dnf-search]:		{{ asset_post }}/13-dnf-search.png
 
-
+[image-ss-dnf-feat-exec]:	{{ asset_post }}/13-dnf-contain-exec.png
+[image-ss-dnf-feat-lib]:	{{ asset_post }}/13-dnf-provide-perl-library.png
