@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, Repository List, System Upgrade, Extra Commands
 
-*	Package IRSI: Install, Removal, Query Search, Show Info
+*	Package IRSI: Install, Removal, Query Search, Show Info, Install Feature
 
 *	What's Next
 
