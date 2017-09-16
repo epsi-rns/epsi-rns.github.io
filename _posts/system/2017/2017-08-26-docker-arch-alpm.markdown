@@ -37,6 +37,12 @@ is the number of packages can be achieved from AUR (Arch User Repository).
 In order to use AUR you have to go through automatic build process.
 Don't be scared, this process is easy, and won't hurt you.
 
+	Personally I love the colored output
+
+In case you forget, this good reading is a must.
+
+*	https://wiki.archlinux.org/index.php/Arch_User_Repository
+
 It is a good idea to compile as a non-root user.
 Consider prepare a user if not exist yet.
 
@@ -154,6 +160,9 @@ This will compile package, and create the <code>.tar.xz</code> ALPM package.
 In order to do this we need to change our working directory first.
 This is a long verbose output.
 
+Although we can have AUR Frontend as described later,
+sometimes we need to go to lower level, use this sweet good <code>makepkg</code>.
+
 {% highlight bash %}
 $ cd package-query
 
@@ -251,7 +260,7 @@ $ makepkg --install
 
 <code>package-query</code> is,
 the base dependency of some AUR tools,
-such as <code>cower</code> and <code>yaourt</code>
+such as <code>cower</code> and <code>yaourt</code>.
 
 Now that we already have <code>package-query</code> installed.
 Consider see it in action, querying _sync_, _local_, and _AUR_.
@@ -275,17 +284,219 @@ provide flexible nice formatting.
 
 #### cower
 
+There is AUR tools that could make our life easier such as <code>cower</code>.
+First we have to find the <code>cower</code> origin.
+Since cower is AUR package, we can repeat the same process,
+like what we does to package-query to cower.
+
+{% highlight bash %}
+$ package-query --aur --sync --query cower
+aur/cower 17-2 (932) (28.91)
+
+$ cd ~
+
+$ wget -q https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
+
+$ tar -xzf cower.tar.gz 
+
+$ cd cower
+{% endhighlight %}
+
+![Docker AUR: Cower: Build][image-ss-cower-build]{: .img-responsive }
+
+There are these errors however.
+
+{% highlight bash %}
+$ makepkg -i
+...
+==> Verifying source file signatures with gpg...
+    cower-17.tar.gz ... FAILED (unknown public key 1EB2638FF56C0C53)
+==> ERROR: One or more PGP signatures could not be verified!
+{% endhighlight %}
+
+Use <code>--skippgpcheck</code> to pass PGP Check.
+
+{% highlight bash %}
+$ makepkg -i --skippgpcheck
+...
+/bin/sh: pod2man: command not found
+make: *** [Makefile:90: cower.1] Error 127
+==> ERROR: A failure occurred in build().
+    Aborting...
+{% endhighlight %}
+
+And fix Perl <code>$PATH</code> if necessary.
+
+{% highlight bash %}
+$ touch .profile
+
+$ nano .profile
+
+$ cat .profile
+export PATH=$PATH:/usr/bin/core_perl
+
+$ source .profile && export PATH
+
+$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl
+{% endhighlight %}
+
+{% highlight bash %}
+$ cd ~/cower
+$ makepkg -i --skippgpcheck
+makepkg -i --skippgpcheck
+==> WARNING: A package has already been built, installing existing package...
+==> Installing package cower with pacman -U...
+...
+{% endhighlight %}
+
+![Docker AUR: Cower: makepkg][image-ss-cower-makepkg]{: .img-responsive }
+
+Always RTFM
+
+{% highlight bash %}
+$ man cower
+{% endhighlight %}
+
+Consider see cower in action
+
+{% highlight bash %}
+$ cower -c -s cower
+aur/burgaur 2.2-2 (7, 0.10)
+    A delicious AUR helper. Made from cower.
+aur/burgaur-git 2.2-2 (1, 0.49)
+    A delicious AUR helper. Made from cower.
+aur/cower 17-2 (932, 28.91) [installed]
+    A simple AUR agent with a pretentious name
+aur/cower-git 17-1 (81, 2.11)
+    A simple AUR agent with a pretentious name
+aur/owlman 0.8-1 (1, 0.00)
+    A pacman and cower wrapper focused on simplicity
+{% endhighlight %}
+
+![Docker AUR: Cower: Action][image-ss-cower-action]{: .img-responsive }
+
+You can have more screenshot here
+
+*	[Unbundling AUR Helper Process][local-unbundling]
+
 -- -- --
 
-### AUR Frontend
+### AUR Helper
+
+Consider make our live easier with AUR Helper.
+Reading official documentation is a must.
+
+*	https://wiki.archlinux.org/index.php/AUR_helpers
 
 #### yaourt
 
-#### packer
+I also wrote an article once.
+With some configuration explained.
+
+*	[Install Yaourt, the AUR Helper][local-install-yaourt]
+
+Now consider cower again.
+
+{% highlight bash %}
+$ cd ~
+
+$ cower -d -c yaourt
+:: yaourt downloaded to /home/epsi
+
+$ cd yaourt
+
+$ makepkg -i
+makepkg -i
+==> Making package: yaourt 1.9-1 (Sat Sep 16 04:20:38 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Downloading yaourt-1.9.tar.gz...
+...
+{% endhighlight %}
+
+![Docker AUR: Yaourt: Install][image-ss-yaourt-install]{: .img-responsive }
+
+Always RTFM
+
+{% highlight bash %}
+$ man yaourt
+{% endhighlight %}
+
+Consider use <code>yaourt</code> to query other AUR Helper.
+
+{% highlight bash %}
+$ yaourt pacaur
+...
+3 aur/pacaur 4.7.10-1 (1001) (52.44)
+    An AUR helper that minimizes user interaction
+...
+==> Enter n° of packages to be installed (e.g., 1 2 3 or 1-3)
+==> ----------------------------------------------------------
+==> 3
+{% endhighlight %}
+
+![Docker AUR: Yaourt: Action][image-ss-yaourt-action]{: .img-responsive }
+
+Pressing <code>3</code> and <code>Enter</code> will install <code>aur/pacaur</code>
+
+Yaourt comes with config file.
+Just copy them to your home directory
+
+{% highlight bash %}
+$ cat /etc/yaourtrc
+$ cp /etc/yaourtrc ~/.yaourtrc
+{% endhighlight %}
+
+I left my <code class="code-file">~/.yauortrc</code> config as below to avoid
+too many confirmation question from yaourt.
+
+{% highlight conf %}
+$ cat ~/.yauortrc
+# SUDO
+SUDONOVERIF=1      # Avoid multiple sudo checks when timestamp_timeout=0
+
+# Prompt
+BUILD_NOCONFIRM=1  # Only prompt for editing files
+EDITFILES=0
+
+# Command
+MAKEPKG="makepkg --skippgpcheck"
+{% endhighlight %}
+
+![Docker AUR: Yaourtrc: ViM][image-ss-yaourtrc-vim]{: .img-responsive }
+
+This configuration is very helpful
+if you maintain your AUR upgrade regularly
+with a lot of Syua option in yaourt.
+
+This <code>yaourt -Syua</code> command will update all your AUR at once.
+Make sure you know what you are doing when skipping PGP Verification.
+
+{% highlight bash %}
+$ yaourt -Syua
+{% endhighlight %}
+
+![Docker AUR: yaourt -Syua][image-ss-yaourt-syua]{: .img-responsive }
 
 #### pacaur
 
+{% highlight bash %}
+$ 
+{% endhighlight %}
+
+#### packer
+
+{% highlight bash %}
+$ 
+{% endhighlight %}
+
 #### aura
+
+{% highlight bash %}
+$ 
+{% endhighlight %}
 
 -- -- --
 
@@ -293,7 +504,15 @@ provide flexible nice formatting.
 
 #### Deprecated ABS
 
+{% highlight bash %}
+$ 
+{% endhighlight %}
+
 #### Using SVN
+
+{% highlight bash %}
+$ 
+{% endhighlight %}
 
 -- -- --
 
@@ -317,9 +536,21 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-arch' %}
 
+[local-unbundling]:		{{ site.url }}/system/2014/12/26/unbundling-aur-helper-process.html
+[local-install-yaourt]:	{{ site.url }}/system/2016/06/21/install-yaourt.html
+
+[image-ss-user-privilege]:	{{ asset_post }}/25-user-privilege.png
 [image-ss-pq-action]:		{{ asset_post }}/25-action-package-query.png
 [image-ss-pq-pkgbuild]:		{{ asset_post }}/25-cat-pkgbuild.png
-[image-ss-pq-makepkg]:		{{ asset_post }}/25-makepkg.png
+[image-ss-pq-makepkg]:		{{ asset_post }}/25-makepkg-package-query.png
 [image-ss-pq-install]:		{{ asset_post }}/25-upgrade-package-query.png
-[image-ss-user-privilege]:	{{ asset_post }}/25-user-privilege.png
 [image-ss-pq-wget-aur]:		{{ asset_post }}/25-wget-aur-package-query.png
+
+[image-ss-cower-action]:	{{ asset_post }}/25-action-cower-cs.png
+[image-ss-cower-build]:		{{ asset_post }}/25-build-cower.png
+[image-ss-cower-makepkg]:	{{ asset_post }}/25-makepkg-cower.png
+
+[image-ss-yaourt-install]:	{{ asset_post }}/26-install-yaourt.png
+[image-ss-yaourt-action]:	{{ asset_post }}/26-yaourt-pacaur.png
+[image-ss-yaourtrc-vim]:	{{ asset_post }}/26-vim-yaourtrc.png
+[image-ss-yaourt-syua]:		{{ asset_post }}/26-yaourt-syua.png
