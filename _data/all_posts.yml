@@ -5,6 +5,22 @@
 # to folder _data/all_posts.yml
 
 
+- id: 17082715
+  title: "Docker - LFS Build"
+  url: /system/2017/08/27/docker-lfs-build.html
+
+- id: 17082635
+  title: "Docker - Arch ALPM - Part Three"
+  url: /system/2017/08/26/docker-arch-alpm.html
+
+- id: 17082535
+  title: "Docker - Arch ALPM - Part Two"
+  url: /system/2017/08/25/docker-arch-alpm.html
+
+- id: 17082415
+  title: "Docker - Arch ALPM - Part One"
+  url: /system/2017/08/24/docker-arch-alpm.html
+
 - id: 17082435
   title: "Docker - Debian APT - Part Three"
   url: /system/2017/08/24/docker-debian-apt.html
@@ -56,10 +72,6 @@
 - id: 17081545
   title: "Docker - Crux Ports"
   url: /system/2017/08/15/docker-crux-ports.html
-
-- id: 17081415
-  title: "Docker - LFS Build"
-  url: /system/2017/08/14/docker-lfs-build.html
 
 - id: 17081445
   title: "Docker - Void XBPS - Part Two"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - LFS Build"
-date: 2017-08-14 13:15:35 +0700
+date: 2017-08-27 13:15:35 +0700
 categories: system
 tags: [docker, distro, package manager, lfs]
 author: epsi
@@ -14,12 +14,13 @@ excerpt:
 
 related_link_ids: 
   - 17081045  # Docker Flow Distribution
+  - 17082415  # Arch ALPM
   - 17082215  # Debian Portage
   - 17082015  # Slackware Package
   - 17081845  # Fedora DNF
   - 17081515  # openSUSE Zypper
   - 17081545  # Crux Ports
-# - 17081415  # LFS Build
+# - 17082715  # LFS Build
   - 17081345  # Void XBPS
   - 17081145  # Gentoo Portage
 
