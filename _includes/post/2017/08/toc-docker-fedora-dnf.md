@@ -39,6 +39,8 @@ There are few sections here.
 
 *	Build from Source
 
+*	Miscellanous: Downgrade, dist-sync
+
 *	Conclusion
 
 [//]: <> ( -- -- -- links below -- -- -- )

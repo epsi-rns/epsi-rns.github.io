@@ -14,12 +14,12 @@ This is one topic of a package management diversity series
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+[local-crux]:		{{ site.url }}/system/2017/08/10/docker-crux-ports.html
 [local-gentoo]:		{{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
 [local-void]:		{{ site.url }}/system/2017/08/13/docker-void-xbps.html
-[local-crux]:		{{ site.url }}/system/2017/08/15/docker-crux-ports.html
 [local-opensuse]:	{{ site.url }}/system/2017/08/15/docker-opensuse-zypper.html
 [local-fedora]:		{{ site.url }}/system/2017/08/18/docker-fedora-dnf.html
-[local-slackware]:	{{ site.url }}/system/2017/08/20/docker-slackware-package.html
-[local-debian]:		{{ site.url }}/system/2017/08/22/docker-debian-apt.html
-[local-arch]:		{{ site.url }}/system/2017/08/24/docker-arch-alpm.html
-[local-lfs]:		{{ site.url }}/system/2017/08/27/docker-lfs-build.html
+[local-slackware]:	{{ site.url }}/system/2017/08/21/docker-slackware-package.html
+[local-debian]:		{{ site.url }}/system/2017/08/24/docker-debian-apt.html
+[local-arch]:		{{ site.url }}/system/2017/08/27/docker-arch-alpm.html
+[local-lfs]:		{{ site.url }}/system/2017/08/30/docker-lfs-build.html

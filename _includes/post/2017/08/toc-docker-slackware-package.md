@@ -49,6 +49,6 @@ There are still other topic uncovered here
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-part-one]:   {{ site.url }}/system/2017/08/20/docker-slackware-package.html
-[local-part-two]:   {{ site.url }}/system/2017/08/21/docker-slackware-package.html
-[local-part-three]: {{ site.url }}/system/2017/08/22/docker-slackware-package.html
+[local-part-one]:   {{ site.url }}/system/2017/08/21/docker-slackware-package.html
+[local-part-two]:   {{ site.url }}/system/2017/08/22/docker-slackware-package.html
+[local-part-three]: {{ site.url }}/system/2017/08/23/docker-slackware-package.html

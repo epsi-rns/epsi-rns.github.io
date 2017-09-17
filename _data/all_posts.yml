@@ -5,45 +5,49 @@
 # to folder _data/all_posts.yml
 
 
-- id: 17082715
+- id: 17083145
+  title: "Docker - Flow for Learning Linux Distribution"
+  url: /system/2017/08/31/docker-distribution-flow.html
+
+- id: 17083015
   title: "Docker - LFS Build"
-  url: /system/2017/08/27/docker-lfs-build.html
+  url: /system/2017/08/30/docker-lfs-build.html
+
+- id: 17082935
+  title: "Docker - Arch ALPM - Part Three"
+  url: /system/2017/08/29/docker-arch-alpm.html
+
+- id: 17082835
+  title: "Docker - Arch ALPM - Part Two"
+  url: /system/2017/08/28/docker-arch-alpm.html
+
+- id: 17082715
+  title: "Docker - Arch ALPM - Part One"
+  url: /system/2017/08/27/docker-arch-alpm.html
 
 - id: 17082635
-  title: "Docker - Arch ALPM - Part Three"
-  url: /system/2017/08/26/docker-arch-alpm.html
+  title: "Docker - Debian APT - Part Three"
+  url: /system/2017/08/26/docker-debian-apt.html
 
 - id: 17082535
-  title: "Docker - Arch ALPM - Part Two"
-  url: /system/2017/08/25/docker-arch-alpm.html
+  title: "Docker - Debian APT - Part Two"
+  url: /system/2017/08/25/docker-debian-apt.html
 
 - id: 17082415
-  title: "Docker - Arch ALPM - Part One"
-  url: /system/2017/08/24/docker-arch-alpm.html
-
-- id: 17082435
-  title: "Docker - Debian APT - Part Three"
+  title: "Docker - Debian APT - Part One"
   url: /system/2017/08/24/docker-debian-apt.html
 
 - id: 17082335
-  title: "Docker - Debian APT - Part Two"
-  url: /system/2017/08/23/docker-debian-apt.html
+  title: "Docker - Slackware Package - Part Three"
+  url: /system/2017/08/23/docker-slackware-package.html
 
 - id: 17082215
-  title: "Docker - Debian APT - Part One"
-  url: /system/2017/08/22/docker-debian-apt.html
-
-- id: 17082235
-  title: "Docker - Slackware Package - Part Three"
+  title: "Docker - Slackware Package - Part Two"
   url: /system/2017/08/22/docker-slackware-package.html
 
 - id: 17082115
-  title: "Docker - Slackware Package - Part Two"
-  url: /system/2017/08/21/docker-slackware-package.html
-
-- id: 17082015
   title: "Docker - Slackware Package - Part One"
-  url: /system/2017/08/20/docker-slackware-package.html
+  url: /system/2017/08/21/docker-slackware-package.html
 
 - id: 17082045
   title: "Docker - Fedora DNF - Part Three"
@@ -69,10 +73,6 @@
   title: "Docker - openSUSE Zypper - Part One"
   url: /system/2017/08/15/docker-opensuse-zypper.html
 
-- id: 17081545
-  title: "Docker - Crux Ports"
-  url: /system/2017/08/15/docker-crux-ports.html
-
 - id: 17081445
   title: "Docker - Void XBPS - Part Two"
   url: /system/2017/08/14/docker-void-xbps.html
@@ -89,9 +89,9 @@
   title: "Docker - Gentoo Portage - Part One"
   url: /system/2017/08/11/docker-gentoo-portage.html
 
-- id: 17081045
-  title: "Docker - Flow for Learning Linux Distribution"
-  url: /system/2017/08/10/docker-distribution-flow.html
+- id: 17081015
+  title: "Docker - Crux Ports"
+  url: /system/2017/08/10/docker-crux-ports.html
 
 - id: 17080945
   title: "Package Manager - Diversity in Linux"

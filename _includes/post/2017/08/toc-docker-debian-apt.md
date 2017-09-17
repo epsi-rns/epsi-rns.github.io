@@ -11,7 +11,7 @@ There are few sections here.
 
 *	Package Management: DPKG Frontend, APT Frontend, Get Help, The new APT, APT Shell
 
-*	Updating System: OS Release, Update, List Upgradable, Upgrade
+*	Updating System: OS Release, Refresh Update, List Upgradable, Upgrade
 
 *	Package IRSI: Install, Removal, Unused Dependency, Query Search, Show Info, Policy
 
@@ -43,6 +43,6 @@ There are few sections here.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-part-one]:   {{ site.url }}/system/2017/08/22/docker-debian-apt.html
-[local-part-two]:   {{ site.url }}/system/2017/08/23/docker-debian-apt.html
-[local-part-three]: {{ site.url }}/system/2017/08/24/docker-debian-apt.html
+[local-part-one]:   {{ site.url }}/system/2017/08/24/docker-debian-apt.html
+[local-part-two]:   {{ site.url }}/system/2017/08/25/docker-debian-apt.html
+[local-part-three]: {{ site.url }}/system/2017/08/26/docker-debian-apt.html

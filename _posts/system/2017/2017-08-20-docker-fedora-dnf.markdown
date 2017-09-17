@@ -12,16 +12,16 @@ excerpt:
   One of Three Parts Article.
 
 related_link_ids: 
-  - 17081045  # Docker Flow Distribution
-  - 17082415  # Arch ALPM
-  - 17082215  # Debian Portage
-  - 17082015  # Slackware Package
+  - 17083145  # Docker Summary
+  - 17083015  # LFS Build
+  - 17082715  # Arch ALPM
+  - 17082415  # Debian APT
+  - 17082115  # Slackware Package
 # - 17081845  # Fedora DNF
   - 17081515  # openSUSE Zypper
-  - 17081545  # Crux Ports
-  - 17082715  # LFS Build
   - 17081345  # Void XBPS
   - 17081145  # Gentoo Portage
+  - 17081015  # Crux Ports
 
 ---
 
@@ -254,6 +254,12 @@ $ dnf clean all
 
 ![Docker DNF: Clean][image-ss-dnf-clean]{: .img-responsive }
 
+And also orphan package with no dependency.
+
+{% highlight bash %}
+$ dnf autoremove
+{% endhighlight %}
+
 -- -- --
 
 ### Build from Source
@@ -467,6 +473,65 @@ Again, thank you.
 
 -- -- --
 
+### Miscellanous
+
+#### Downgrade
+
+We can downgrade easily with DNF.
+
+{% highlight bash %}
+$ dnf downgrade herbstluftwm
+...
+Running transaction
+  Preparing        :                                            1/1 
+  Downgrading      : herbstluftwm-0.6.2-8.fc27.x86_64           1/2 
+  Erasing          : herbstluftwm-0.6.2-8.fc28.x86_64           2/2 
+  Running scriptlet: herbstluftwm-0.6.2-8.fc28.x86_64           2/2 
+  Verifying        : herbstluftwm-0.6.2-8.fc27.x86_64           1/2 
+  Verifying        : herbstluftwm-0.6.2-8.fc28.x86_64           2/2 
+
+Downgraded:
+  herbstluftwm.x86_64 0.6.2-8.fc27                                  
+
+Complete!
+{% endhighlight %}
+
+![Docker DNF: Downgrade][image-ss-m-downgrade]{: .img-responsive }
+
+#### Distro Sync
+
+There is also this command, that sync packages to your current version.
+Downgrade if necessary. Useful in case of multiple repository.
+
+{% highlight bash %}
+$ dnf distro-sync
+Last metadata expiration check: 0:13:34 ago on Sun Sep 17 18:38:02 2017.
+Dependencies resolved.
+====================================================================
+ Package            Arch   Version                    Repository
+                                                               Size
+====================================================================
+Upgrading:
+ bash               x86_64 4.4.12-11.fc28             rawhide 1.5 M
+ bc                 x86_64 1.07.1-4.fc28              rawhide 126 k
+ binutils           x86_64 2.29-9.fc28                rawhide 5.9 M
+...
+Installing weak dependencies:
+ btrfs-progs        x86_64 4.13-1.fc28                rawhide 762 k
+
+Transaction Summary
+====================================================================
+Install   6 Packages
+Upgrade  83 Packages
+
+Total download size: 84 M
+Is this ok [y/N]:
+{% endhighlight %}
+
+![Docker DNF: Downgrade][image-ss-m-dist-sync]{: .img-responsive }
+
+-- -- --
+
 ### Conclusion
 
 	These are just preliminary knowledge about DNF.
@@ -499,3 +564,6 @@ Thank you for reading
 [image-ss-h-dnf-bash-locked]:    {{ asset_post }}/27-hold-dnf-upgrade-bash-locked.png
 [image-ss-h-dnf-bash-unlocked]:  {{ asset_post }}/27-hold-dnf-upgrade-bash-unlocked.png
 [image-ss-h-nano-dnf-conf]:      {{ asset_post }}/27-hold-nano-dnf-conf.png
+
+[image-ss-m-downgrade]:      {{ asset_post }}/29-downgrade.png
+[image-ss-m-dist-sync]:      {{ asset_post }}/29-dist-sync.png

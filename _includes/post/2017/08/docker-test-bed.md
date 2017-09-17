@@ -18,4 +18,4 @@ Most of the time, CLI tools is considered lower level than the GUI one.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-docker-flow]: {{ site.url }}/system/2017/08/10/docker-distribution-flow.html
+[local-docker-flow]: {{ site.url }}/system/2017/08/31/docker-distribution-flow.html

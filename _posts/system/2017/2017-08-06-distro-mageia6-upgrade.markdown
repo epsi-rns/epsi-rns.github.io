@@ -10,7 +10,7 @@ excerpt:
   Mageia 6 Upgrade Log.
 
 related_link_ids: 
-  - 17081045  # Docker Flow Distribution
+  - 17083145  # Docker Package Manager Summary
   - 17080945  # Package Manager Diversity
   - 17080845  # Debian Devuan Migration
   - 17080745  # Manjaro Artix Migration

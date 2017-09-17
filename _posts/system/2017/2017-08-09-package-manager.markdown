@@ -11,7 +11,7 @@ excerpt:
   Repository, Cache and nice Screenshot.
 
 related_link_ids: 
-  - 17081045  # Docker Flow Distribution
+  - 17083145  # Docker Package Manager Summary
   - 17080845  # Debian Devuan Migration
   - 17080745  # Manjaro Artix Migration
   - 17080645  # Mageia 6 Upgrade

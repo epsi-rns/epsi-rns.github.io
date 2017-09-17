@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - LFS Build"
-date: 2017-08-27 13:15:35 +0700
+date: 2017-08-30 13:15:35 +0700
 categories: system
 tags: [docker, distro, package manager, lfs]
 author: epsi
@@ -13,16 +13,16 @@ excerpt:
   to solving dependency.
 
 related_link_ids: 
-  - 17081045  # Docker Flow Distribution
-  - 17082415  # Arch ALPM
-  - 17082215  # Debian Portage
-  - 17082015  # Slackware Package
+  - 17083145  # Docker Summary
+  - 17083015  # LFS Build
+  - 17082715  # Arch ALPM
+  - 17082415  # Debian Portage
+  - 17082115  # Slackware Package
   - 17081845  # Fedora DNF
   - 17081515  # openSUSE Zypper
-  - 17081545  # Crux Ports
-# - 17082715  # LFS Build
   - 17081345  # Void XBPS
   - 17081145  # Gentoo Portage
+  - 17081015  # Crux Ports
 
 ---
 
@@ -46,6 +46,22 @@ you will know that the myth is not true at all.
 This LFS is even easier with docker container,
 avoid daunting task such as setting up system.
 Therefore we can dive right away to compilation.
+
+Here is I share my LFS experience.
+Of course this won't we a full blown experience,
+since I have decided to postpone LFS learning.
+
+#### Postpone
+
+Unfortunately, I failed in some process,
+and I do not even know, whether it is my stupidity as usual,
+or by lack of docker limitation knowledge
+I have rarely give up,
+but I must admit I'm running out of time.
+
+All I can say is, I have to pending this LFS experience,
+and continue LFS in chroot environment.
+I will write article later about this LFS.
 
 #### Reading
 

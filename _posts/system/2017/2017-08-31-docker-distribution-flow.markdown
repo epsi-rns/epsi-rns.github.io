@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Flow for Learning Linux Distribution"
-date: 2017-08-10 09:45:15 +0700
+date: 2017-08-31 09:45:15 +0700
 categories: system
 tags: [docker, distro, package manager]
 author: epsi
@@ -11,6 +11,16 @@ excerpt:
   whether package management, or init.
 
 related_link_ids: 
+# - 17083145  # Docker Summary
+  - 17083015  # LFS Build
+  - 17082715  # Arch ALPM
+  - 17082415  # Debian Portage
+  - 17082115  # Slackware Package
+  - 17081845  # Fedora DNF
+  - 17081515  # openSUSE Zypper
+  - 17081345  # Void XBPS
+  - 17081145  # Gentoo Portage
+  - 17081015  # Crux Ports
   - 16022800  # Learn LXC
   - 16030301  # Docker Manjaro
   - 16030900  # Docker Debian 

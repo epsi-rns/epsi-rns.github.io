@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Arch ALPM - Part Two"
-date: 2017-08-25 09:35:15 +0700
+date: 2017-08-28 09:35:15 +0700
 categories: system
 tags: [docker, distro, package manager, debian]
 author: epsi
@@ -12,16 +12,16 @@ excerpt:
   One of Three Parts Article.
 
 related_link_ids: 
-  - 17081045  # Docker Flow Distribution
-# - 17082415  # Arch ALPM
-  - 17082215  # Debian Portage
-  - 17082015  # Slackware Package
+  - 17083145  # Docker Summary
+  - 17083015  # LFS Build
+# - 17082715  # Arch ALPM
+  - 17082415  # Debian Portage
+  - 17082115  # Slackware Package
   - 17081845  # Fedora DNF
   - 17081515  # openSUSE Zypper
-  - 17081545  # Crux Ports
-  - 17082715  # LFS Build
   - 17081345  # Void XBPS
   - 17081145  # Gentoo Portage
+  - 17081015  # Crux Portse
 
 ---
 
@@ -467,7 +467,7 @@ Thank you for reading
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-arch' %}
 
-[local-part-three]:		{{ site.url }}/system/2017/08/26/docker-arch-alpm.html
+[local-part-three]:		{{ site.url }}/system/2017/08/29/docker-arch-alpm.html
 [local-selectively]:	{{ site.url }}/system/2014/12/27/selectively-install-blackarch-tools.html
 
 [image-ss-info-groff]:		{{ asset_post }}/14-sii-groff.png
