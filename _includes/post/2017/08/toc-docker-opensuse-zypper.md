@@ -9,7 +9,7 @@ There are few sections here.
 
 *	Getting Started With Docker
 
-*	Issues on Minimal Install: No Reset
+*	Issues on Minimal Install: No Reset, No Manual
 
 *	Package Management: ZYpp Frontend, Get Help, Zypper Shell
 
@@ -38,8 +38,6 @@ There are few sections here.
 *	Hold Package: Case Example, Add Lock, Test Example, Remove Lock
 
 *	Interesting Issue: systemd Dependencies
-
-*	Unsolved Issues on Minimal Install: No Manual
 
 *	Conclusion
 

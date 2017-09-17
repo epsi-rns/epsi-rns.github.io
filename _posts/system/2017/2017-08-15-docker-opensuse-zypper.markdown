@@ -127,6 +127,38 @@ $ zypper install ncurses-utils
 $ reset
 {% endhighlight %}
 
+#### No Manual
+
+No manual in openSUSE Docker.
+
+Change <code>rpm.install.excludedocs</code>
+from <code>yes</code> to <code>no</code>.
+
+{% highlight bash %}
+$ cat /etc/zypp/zypp.conf | grep excludedocs
+## Options for package installation: excludedocs
+rpm.install.excludedocs = no
+{% endhighlight %}
+
+If necessary later, you still need to reinstall some packages,
+so that the manual pages available in <code>/usr/share/man/</code>
+
+{% highlight bash %}
+$ zypper --quiet install --force man-pages man coreutils
+The following package is going to be upgraded:
+  coreutils
+
+The following 2 packages are going to be reinstalled:
+  man man-pages
+
+1 package to upgrade, 2 to reinstall.
+Overall download size: 5.5 MiB. Already cached: 0 B. After the
+operation, additional 34.8 KiB will be used.
+Continue? [y/n/...? shows all options] (y): y
+{% endhighlight %}
+
+![Docker openSUSE: Enable Manual Issue][image-ss-man-issue]{: .img-responsive }
+
 -- -- --
 
 ### Package Management
@@ -423,3 +455,5 @@ Thank you for reading
 [image-ss-zypper-in]:  {{ asset_post }}/13-install.png
 [image-ss-zypper-rm]:  {{ asset_post }}/13-remove-systemd.png
 [image-ss-zypper-se]:  {{ asset_post }}/13-search-fish.png
+
+[image-ss-man-issue]:  {{ asset_post }}/05-conclusion-man-issue.png

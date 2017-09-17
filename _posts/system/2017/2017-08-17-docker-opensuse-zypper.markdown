@@ -352,35 +352,6 @@ $ zypper rl herbstluftwm
 
 -- -- --
 
-### Unsolved Issues on Minimal Install
-
-This is my bad. Not openSUSE's fault.
-
-#### No Manual
-
-No manual in openSUSE Docker.
-I have two others openSUSE full installation in PC,
-and all manual works well.
-
-{% highlight bash %}
-$ man man
-No manual entry for man
-
-$ echo $MANPATH
-
-$ cat /etc/manpath.config
-{% endhighlight %}
-
-I have tried to reinstall, but it doesn't work.
-
-{% highlight bash %}
-$ zypper in -f man man-pages man-pages-posix 
-{% endhighlight %}
-
-I still do not know what to do about it.
-
--- -- --
-
 ### Interesting Issue
 
 #### systemd Dependencies
