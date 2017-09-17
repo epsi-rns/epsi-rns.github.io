@@ -457,7 +457,7 @@ and remove all package manually.
 
 ### What's Next
 
-There are still, some interesting topic for <code>APT</code>.
+There are still, some interesting topic for <code>ALPM</code>.
 Consider finish reading [ [Part Three][local-part-three] ].
 
 Thank you for reading

@@ -6,7 +6,7 @@
 
 
 - id: 17083145
-  title: "Docker - Flow for Learning Linux Distribution"
+  title: "Docker - Package Management Summary"
   url: /system/2017/08/31/docker-distribution-flow.html
 
 - id: 17083015
@@ -92,10 +92,6 @@
 - id: 17081015
   title: "Docker - Crux Ports"
   url: /system/2017/08/10/docker-crux-ports.html
-
-- id: 17080945
-  title: "Package Manager - Diversity in Linux"
-  url: /system/2017/08/09/package-manager.html
 
 - id: 17080845
   title: "Distribution - Debian to Devuan Migration"

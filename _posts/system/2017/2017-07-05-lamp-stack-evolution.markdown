@@ -9,6 +9,9 @@ author: epsi
 excerpt:
   This is a not so serious LAMP guidance for blogger.
 
+related_link_ids: 
+  - 17083145  # Docker Summary
+
 ---
 
 ### Preface

@@ -2,6 +2,7 @@
 
 This is one topic of a package management diversity series
 
+[[ Package Management Summary ]][local-summary]
 [[ Debian - APT ]][local-debian]
 [[ openSUSE - Zypper ]][local-opensuse]
 [[ Fedora - DNF ]][local-fedora]
@@ -14,6 +15,7 @@ This is one topic of a package management diversity series
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+[local-summary]:	{{ site.url }}/system/2017/08/31/docker-lfs-distribution-flow.html
 [local-crux]:		{{ site.url }}/system/2017/08/10/docker-crux-ports.html
 [local-gentoo]:		{{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
 [local-void]:		{{ site.url }}/system/2017/08/13/docker-void-xbps.html
