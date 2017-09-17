@@ -346,7 +346,7 @@ each article has deeper package management discussion.
 
 #### SlackPkg
 
-[[ Slackware - Package ]][local-slackware]
+**Article**: [[ Slackware - Package ]][local-slackware]
 
 {% highlight conf %}
 $ docker pull vbatts/slackware
@@ -367,7 +367,7 @@ slpkg
 
 #### Portage Frontend
 
-[[ Gentoo - Portage ]][local-gentoo]
+**Article**: [[ Gentoo - Portage ]][local-gentoo]
 
 {% highlight conf %}
 $ docker pull gentoo/stage3-amd64
@@ -386,7 +386,7 @@ Emerge
 
 #### XBPS
 
-[[ Void - XBPS ]][local-void]
+**Article**: [[ Void - XBPS ]][local-void]
 
 {% highlight conf %}
 $ docker pull voidlinux/voidlinux
@@ -399,7 +399,7 @@ XBPS: C
 
 #### Crux Ports
 
-[[ Crux - Ports ]][local-crux]
+**Article**: [[ Crux - Ports ]][local-crux]
 
 {% highlight conf %}
 $ docker pull crux
@@ -420,7 +420,7 @@ Frontend
 
 #### ALPM Frontend, ASP and AUR Helper"
 
-[[ Arch - ALPM ]][local-arch]
+**Article**: [[ Arch - ALPM ]][local-arch]
 
 {% highlight conf %}
 $ docker pull dock0/arch
@@ -500,7 +500,7 @@ YUM: Python
 
 #### DNF Frontend
 
-[[ Fedora - DNF ]][local-fedora]
+**Article**: [[ Fedora - DNF ]][local-fedora]
 
 {% highlight conf %}
 $ docker pull fedora:rawhide
@@ -517,7 +517,7 @@ DNF (Dandified YUM): Fedora: Python
 
 #### ZYpp Frontend
 
-[[ openSUSE - Zypper ]][local-opensuse]
+**Article**: [[ openSUSE - Zypper ]][local-opensuse]
 
 {% highlight conf %}
 $ docker pull opensuse/amd64:tumbleweed
@@ -537,7 +537,7 @@ Zypper: openSUSE
 
 #### APT Frontend
 
-[[ Debian - APT ]][local-debian]
+**Article**: [[ Debian - APT ]][local-debian]
 
 {% highlight conf %}
 $ docker pull debian:stretch
@@ -568,7 +568,7 @@ aptitude
 
 #### LFS Build
 
-[[ LFS - Build ]][local-lfs]
+**Article**: [[ LFS - Build ]][local-lfs]
 
 {% highlight conf %}
 $ docker pull kevinleptons/lfs-auto
@@ -631,6 +631,16 @@ You are all great sweet people.
 This is just a summary, we have not finished yet.
 There are links for each docker topic on top of this page.
 Consider reading each topic.
+
+[[ Debian - APT ]][local-debian]
+[[ openSUSE - Zypper ]][local-opensuse]
+[[ Fedora - DNF ]][local-fedora]
+[[ Arch - ALPM ]][local-arch]
+[[ Crux - Ports ]][local-crux]
+[[ Void - XBPS ]][local-void]
+[[ Slackware - Package ]][local-slackware]
+[[ Gentoo - Portage ]][local-gentoo]
+[[ LFS - Build ]][local-lfs]
 
 	Dream come true
 
