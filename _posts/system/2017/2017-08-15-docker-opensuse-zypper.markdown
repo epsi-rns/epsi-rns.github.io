@@ -130,6 +130,10 @@ $ reset
 #### No Manual
 
 No manual in openSUSE Docker.
+Minimal install is designed to be minimal,
+such as embedded system.
+The manual should not be in minimal install.
+Therefore we need to tweak this setting for our need.
 
 Change <code>rpm.install.excludedocs</code>
 from <code>yes</code> to <code>no</code>.
