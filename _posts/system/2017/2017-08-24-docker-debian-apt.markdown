@@ -614,6 +614,20 @@ Breaks: apt-utils (<< 1.3~exp2~)
 
 ![Docker DPKG: Query Status][image-ss-dpkg-status]{: .img-responsive }
 
+#### Change Log
+
+{% highlight bash %}
+$ apt-get changelog ncdu
+{% endhighlight %}
+
+Or:
+
+{% highlight bash %}
+$ apt changelog ncdu
+{% endhighlight %}
+
+![Docker APT: Changelog][image-ss-apt-changelog]{: .img-responsive }
+
 #### Package Policy
 
 We can examine the policy too.
@@ -710,3 +724,5 @@ Thank you for reading
 [image-ss-aptitude-remove]:		{{ asset_post }}/13-aptitude-remove.png
 [image-ss-aptitude-dialog]:		{{ asset_post }}/13-aptitude-dialog.png
 [image-ss-dselect-dialog]:		{{ asset_post }}/13-dselect-dialog.png
+
+[image-ss-apt-changelog]:		{{ asset_post }}/13-changelog.png

@@ -613,12 +613,11 @@ Do you want to continue? [Y/n]
 Go to build tree directory first.
 
 {% highlight bash %}
-cd ~/build/herbstluftwm
+$ cd ~/build/herbstluftwm
 {% endhighlight %}
 
 {% highlight bash %}
 $ dpkg-buildpackage -rfakeroot -uc -b
-dpkg-buildpackage -rfakeroot -uc -b
 dpkg-buildpackage: info: source package herbstluftwm
 dpkg-buildpackage: info: source version 0.7.0-1
 dpkg-buildpackage: info: source distribution unstable
@@ -648,6 +647,17 @@ herbstluftwm_0.7.0-1_amd64.buildinfo
 herbstluftwm_0.7.0-1_amd64.changes
 herbstluftwm_0.7.0-1_amd64.deb
 {% endhighlight %}
+
+#### Lintian
+
+Check for possible issue.
+
+{% highlight bash %}
+$ lintian
+W: herbstluftwm: binary-without-manpage usr/bin/dmenu_run_hlwm
+{% endhighlight %}
+
+![Docker Debian: lintian][image-ss-s-lintian]{: .img-responsive }
 
 #### Source Compile
 
@@ -695,6 +705,80 @@ Processing triggers for man-db (2.7.6.1-2) ...
 {% endhighlight %}
 
 ![Docker Debian: debi][image-ss-s-sudo-debi]{: .img-responsive }
+
+#### Debuild
+
+<code>debuild</code> is a convenient way,
+if you want to build your own package.
+
+Since we do not have our very own source,
+consider use the newly downloaded herbstluftwm.
+Go to build directory first.
+
+{% highlight bash %}
+$ cd ~/build/herbstluftwm-0.7.0
+{% endhighlight %}
+
+{% highlight bash %}
+$ debuild
+ dpkg-buildpackage -rfakeroot -us -uc
+dpkg-buildpackage: info: source package herbstluftwm
+dpkg-buildpackage: info: source version 0.7.0-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Christoph Egger <christoph@debian.org>
+ dpkg-source --before-build herbstluftwm-0.7.0
+...
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile dsc herbstluftwm_0.7.0-1.dsc Christoph Egger <christoph@debian.org>
+gpg: skipped "Christoph Egger <christoph@debian.org>": No secret key
+gpg: /tmp/debsign.q2AXXKv1/herbstluftwm_0.7.0-1.dsc: clear-sign failed: No secret key
+debsign: gpg error occurred!  Aborting....
+debuild: fatal error at line 1053:
+running debsign failed
+epsi@ea09d9991c35:~/build/herbstluftwm
+{% endhighlight %}
+
+![Docker Debian: debuild][image-ss-s-debuild]{: .img-responsive }
+
+Of course we do not have secret key for herbstuftwm.
+This is a part of Debian security model.
+
+#### Deb Checksums
+
+{% highlight bash %}
+$ debsums ./herbstluftwm_0.7.0-1_amd64.deb 
+/usr/bin/dmenu_run_hlwm                                                       OK
+/usr/bin/herbstclient                                                         OK
+/usr/bin/herbstluftwm                                                         OK
+/usr/share/bash-completion/completions/herbstclient-completion                OK
+/usr/share/doc/herbstluftwm/BUGS.gz                                           OK
+/usr/share/doc/herbstluftwm/NEWS.gz                                           OK
+/usr/share/doc/herbstluftwm/changelog.Debian.gz                               OK
+...
+{% endhighlight %}
+
+![Docker Debian: debsums][image-ss-s-debsums]{: .img-responsive }
+
+#### Show Source
+
+Now we can see the source info in cache.
+
+{% highlight bash %}
+$ apt-cache showsrc herbstluftwm
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ apt showsrc herbstluftwm
+...
+Vcs-Browser: http://git.debian.org/?p=collab-maint/herbstluftwm.git;a=summary
+Vcs-Git: git://git.debian.org/collab-maint/herbstluftwm.git
+...
+{% endhighlight %}
+
+![Docker Debian: showsrc][image-ss-s-showsrc]{: .img-responsive }
 
 -- -- --
 
@@ -744,3 +828,7 @@ Thank you for reading
 [image-ss-s-buildpackage]:	{{ asset_post }}/26-buildpackage.png
 [image-ss-s-sudo-debi]:		{{ asset_post }}/26-debi.png
 [image-ss-s-debcheckout]:	{{ asset_post }}/26-debcheckout.png
+[image-ss-s-debsums]:		{{ asset_post }}/26-debsums.png
+[image-ss-s-showsrc]:		{{ asset_post }}/26-showsrc.png
+[image-ss-s-lintian]:		{{ asset_post }}/26-lintian.png
+[image-ss-s-debuild]:		{{ asset_post }}/26-debuild.png

@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, Refresh Update, List Upgradable, Upgrade
 
-*	Package IRSI: Install, Removal, Unused Dependency, Query Search, Show Info, Policy
+*	Package IRSI: Install, Removal, Unused Dependency, Query Search, Show Info, Change Log, Policy
 
 *	What's Next
 
@@ -43,7 +43,7 @@ There are few sections here.
 
 *	Build from Source: The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
 
-*	Developer Script: debcheckout, Build Dependency, Build Package, Source Compile, debi
+*	Developer Script: debcheckout, Build Dependency, Build Package, Lintian, Source Compile, debi, Deb Checksums, Show Source
 
 *	Conclusion
 

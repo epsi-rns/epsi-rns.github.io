@@ -172,6 +172,41 @@ Do you want to continue? [Y/n]
 
 ![Docker APT: Test Dependency][image-ss-apt-test-remove]{: .img-responsive }
 
+#### Dotty
+
+there are also <code>graphviz</code> output named <code>dotty</code>
+
+{% highlight bash %}
+$ apt-cache -o APT::Cache::GivenOnly=1 dotty groff-base
+digraph packages {
+concentrate=true;
+size="30,40";
+"groff-base" -> "libc6";
+"groff-base" -> "libgcc1";
+"groff-base" -> "libstdc++6";
+"groff-base" -> "groff"[color=springgreen];
+"groff-base" -> "jgroff"[color=springgreen];
+"groff-base" -> "pmake"[color=springgreen];
+"groff-base" -> "troffcvt"[color=springgreen];
+"pmake" [color=orange,shape=diamond];
+"libc6" [color=orange,shape=box];
+"libgcc1" [color=orange,shape=box];
+"groff-base" [shape=box];
+"groff" [color=orange,shape=box];
+"troffcvt" [color=orange,shape=box];
+"libstdc++6" [color=orange,shape=box];
+"jgroff" [shape=triangle];
+}
+{% endhighlight %}
+
+![Docker APT: Cache Dotty][image-ss-cache-dotty]{: .img-responsive }
+
+{% highlight bash %}
+$ dot -Tpng groff-base.dot > groff-base.png
+{% endhighlight %}
+
+![Docker APT: Cache Dotty: Graphvis][image-ss-graphvis]{: .img-responsive }
+
 -- -- --
 
 ### Repository
@@ -480,6 +515,8 @@ Finally, the new driver works, so I do not pin this driver anymore.
 
 ### System Wide Information
 
+#### Cache Statistics
+
 There is this <code>stats</code> command
 to dump the system wide information.
 
@@ -517,7 +554,63 @@ Total buckets in GrpHashTable: 50503
   Shortest: 1
 {% endhighlight %}
 
-![Docker APT: cache-stats][image-ss-cache-stats]{: .img-responsive }
+#### Cache Dump
+
+There is this <code>dumpavail</code>
+and <code>dump</code> command
+with long output.
+
+{% highlight bash %}
+$ apt-cache dumpavail | less
+{% endhighlight %}
+
+{% highlight bash %}
+$ apt-cache dump | less
+Package: 0ad
+Version: 0.0.21-2
+Installed-Size: 18473
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: amd64
+...
+{% endhighlight %}
+
+![Docker APT: cache dump][image-ss-cache-dump]{: .img-responsive }
+
+Or just package names if you wish.
+
+{% highlight bash %}
+$ apt-cache pkgnames | less
+{% endhighlight %}
+
+#### APT Config
+
+{% highlight bash %}
+$ apt-config dump
+APT "";
+APT::Architecture "amd64";
+APT::Build-Essential "";
+APT::Build-Essential:: "build-essential";
+APT::Install-Recommends "1";
+APT::Install-Suggests "0";
+APT::Sandbox "";
+APT::Sandbox::User "_apt";
+APT::NeverAutoRemove "";
+APT::NeverAutoRemove:: "^firmware-linux.*";
+APT::NeverAutoRemove:: "^linux-firmware$";
+...
+{% endhighlight %}
+
+![Docker APT: config dump][image-ss-config-dump]{: .img-responsive }
+
+#### Verify
+
+{% highlight bash %}
+$ apt-get check
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+{% endhighlight %}
+
 
 -- -- --
 
@@ -586,6 +679,8 @@ Package Cache
 	
 *	/var/cache/apt/archives/ * .deb
 
+#### Clean
+
 You can clean this directory by using either
 
 {% highlight bash %}
@@ -626,6 +721,19 @@ APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/a
 
 ![Docker APT: autoclean][image-ss-docker-clean]{: .img-responsive }
 
+#### Orphan
+
+Quote from the manual,
+<code>deborphan</code> _finds packages that have no packages depending on them_.
+This is different with <code>autoremove</code>.
+
+{% highlight bash %}
+$ deborphan
+dh-systemd
+{% endhighlight %}
+
+![Docker Debian: deborphan][image-ss-deborphan]{: .img-responsive }
+
 -- -- --
 
 ### What's Next
@@ -647,6 +755,8 @@ Thank you for reading
 [image-ss-aptitude-s-d]:	{{ asset_post }}/14-aptitude-d-groff-base.png
 [image-ss-aptitude-s-r]:	{{ asset_post }}/14-aptitude-r-man-db.png
 [image-ss-aptitude-why]:	{{ asset_post }}/14-aptitude-why-groff-base.png
+[image-ss-cache-dotty]:		{{ asset_post }}/14-dotty.png
+[image-ss-graphvis]:		{{ asset_post }}/14-groff-base-dotty.png
 
 [image-ss-apt-policy]:		{{ asset_post }}/16-apt-policy.png
 [image-ss-sources-list]:	{{ asset_post }}/16-etc-apt-sources-list.png
@@ -662,6 +772,9 @@ Thank you for reading
 [image-ss-tail-log-dpkg]:	{{ asset_post }}/19-tail-log-dpkg.png
 
 [image-ss-cache-stats]:		{{ asset_post }}/19-stats.png
+[image-ss-config-dump]:		{{ asset_post }}/19-config-dump.png
+[image-ss-cache-dump]:		{{ asset_post }}/19-cache-dump.png
+[image-ss-deborphan]:		{{ asset_post }}/19-deborphan.png
 
 [image-ss-h-upgradable]:	{{ asset_post }}/27-list-upgradable.png
 [image-ss-h-sources-list]:	{{ asset_post }}/27-sources-list-testing.png
