@@ -478,6 +478,49 @@ Finally, the new driver works, so I do not pin this driver anymore.
 
 -- -- --
 
+### System Wide Information
+
+There is this <code>stats</code> command
+to dump the system wide information.
+
+{% highlight bash %}
+$ apt-cache stats
+Total package names: 1275 (25.5 k)
+Total package structures: 1275 (56.1 k)
+  Normal packages: 388
+  Pure virtual packages: 4
+  Single virtual packages: 192
+  Mixed virtual packages: 1
+  Missing: 690
+Total distinct versions: 389 (31.1 k)
+Total distinct descriptions: 389 (9336 )
+Total dependencies: 2677/1765 (81.8 k)
+Total ver/file relations: 389 (9336 )
+Total Desc/File relations: 389 (9336 )
+Total Provides mappings: 201 (4824 )
+Total globbed strings: 2808 (39.1 k)
+Total slack space: 20.8 k
+Total space accounted for: 691 k
+Total buckets in PkgHashTable: 50503
+  Unused: 49243
+  Used: 1260
+  Utilization: 2.4949%
+  Average entries: 1.0119
+  Longest: 3
+  Shortest: 1
+Total buckets in GrpHashTable: 50503
+  Unused: 49243
+  Used: 1260
+  Utilization: 2.4949%
+  Average entries: 1.0119
+  Longest: 3
+  Shortest: 1
+{% endhighlight %}
+
+![Docker APT: cache-stats][image-ss-cache-stats]{: .img-responsive }
+
+-- -- --
+
 ### History
 
 This is most the forgotten part of package management,
@@ -618,9 +661,12 @@ Thank you for reading
 [image-ss-tail-log-apt]:	{{ asset_post }}/19-tail-log-apt.png
 [image-ss-tail-log-dpkg]:	{{ asset_post }}/19-tail-log-dpkg.png
 
+[image-ss-cache-stats]:		{{ asset_post }}/19-stats.png
+
 [image-ss-h-upgradable]:	{{ asset_post }}/27-list-upgradable.png
 [image-ss-h-sources-list]:	{{ asset_post }}/27-sources-list-testing.png
 [image-ss-h-mark-hold]:		{{ asset_post }}/27-mark-hold.png
 [image-ss-h-upgrade-kept]:	{{ asset_post }}/27-upgrade-kept-back.png
 [image-ss-h-preferences-d]:	{{ asset_post }}/27-preferences-d.png
 [image-ss-h-unupgradable]:	{{ asset_post }}/27-upgradable-pinned.png
+

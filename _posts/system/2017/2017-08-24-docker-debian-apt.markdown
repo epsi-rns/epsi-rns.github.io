@@ -82,6 +82,9 @@ REPOSITORY          SIZE
 debian              100MB
 {% endhighlight %}
 
+By the container image size,
+Debian is good at managing minimal install.
+
 {% highlight bash %}
 $ docker run -it debian:stretch
 root@f77ea94688d1:/# exit
@@ -330,6 +333,12 @@ There is however.
 
 {% highlight bash %}
 $ aptitude safe-upgrade
+{% endhighlight %}
+
+And later we will discuss
+
+{% highlight bash %}
+$ apt dist-upgrade
 {% endhighlight %}
 
 -- -- --

@@ -27,6 +27,8 @@ There are few sections here.
 
 *	Hold Package: Building Example, Mark Hold, Pinning
 
+*	System Wide Information
+
 *	History: The Log File
 
 *	Clean Up
@@ -35,9 +37,13 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
+*	Distribution Upgrade
+
 *	Repository Pinning: nmap Case, New Docker for Stretch, Stable nmap, Pinning Unstable, Unstable nmap
 
-*	Build from Source, The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
+*	Build from Source: The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
+
+*	Developer Script: debcheckout, Build Dependency, Build Package, Source Compile, debi
 
 *	Conclusion
 

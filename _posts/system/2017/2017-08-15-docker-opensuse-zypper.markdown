@@ -68,6 +68,9 @@ REPOSITORY          SIZE
 opensuse/amd64      101MB
 {% endhighlight %}
 
+By the container image size,
+openSUSE is good at managing minimal install.
+
 {% highlight bash %}
 $ docker run -it opensuse/amd64:tumbleweed bash
 bash-4.4# exit

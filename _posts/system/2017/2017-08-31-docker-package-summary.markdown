@@ -128,6 +128,10 @@ Docker has image, and process.
 Each image an be spawn into several container process.
 
 	I wish you luck
+	
+-- -- --
+
+### Package Manager
 		
 #### Genre
 
@@ -164,6 +168,59 @@ I am sure you all love manual.
 		Do not forget to read the manual first.
 
 Why don't we go further to read the source code ?
+
+#### Approximate Timeline for Linux Package Manager Frontend
+
+Data taken from NEWS, wikipedia, Github First Commit, and Change Log.
+This may not be accurate.
+
+![Approximate Timeline for Linux Package Manager Frontend][image-ss-timeline]{: .img-responsive }
+
+*	maybe 1993: pkgtools/slackpkg
+
+*	1994: dpkg
+
+*	1997: rpm
+
+*	1998: apt-get
+
+*	1999: aptitude
+
+*	2000: portage/emerge
+
+*	2000: ports/prt-get
+
+*	2002: pacman/makepkg
+
+*	2003: yum
+
+*	2003: slapt-get
+
+*	2006: zypper
+
+*	2008: yaourt
+
+*	2010: xbps
+
+*	2010: package-query
+
+*	2010: cower
+
+*	2010: packer
+
+*	2011: pacaur
+
+*	2012: aura
+
+*	2013: apt
+
+*	2014: slpkg
+
+*	2014: asp
+
+*	2015: dnf
+
+*	2016: eopkg
 
 -- -- --
 
@@ -530,7 +587,7 @@ Zypper: openSUSE
 
 *	<https://github.com/openSUSE/libzypp>
 
-*	https://github.com/openSUSE/zypper>
+*	<https://github.com/openSUSE/zypper>
 
 *	<https://en.wikipedia.org/wiki/ZYpp>
 	
@@ -679,6 +736,8 @@ Thank you for reading
 [local-manjaro-lxc]:    {{ site.url }}/system/2016/02/28/lxc-demonstration.html
 [local-manjaro-docker]: {{ site.url }}/system/2016/03/03/docker-demonstration-manjaro.html
 [local-debian-docker]:  {{ site.url }}/system/2016/03/09/docker-demonstration-debian.html
+
+[image-ss-timeline]:	{{ asset_flow }}/timeline-02s.png
 
 [image-ss-pull-arch]:		{{ asset_pull }}/arch.png
 [image-ss-pull-crux]:		{{ asset_pull }}/crux.png

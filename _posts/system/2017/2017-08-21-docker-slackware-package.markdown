@@ -211,6 +211,16 @@ However, I choose not to bloat my minimal install.
 
 {% highlight bash %}
 $ slackpkg upgrade patches
+
+Checking local integrity... DONE
+Looking for patches in package list. Please wait... DONE
+
+bash-4.3.048-x86_64-1_slack14.2.txz
+kernel-headers-4.4.88-x86-1.txz
+
+Total package(s): 2
+
+Do you wish to upgrade selected packages (Y/n)?
 {% endhighlight %}
 
 ![Docker Slackware: Upgrade Patches][image-ss-slackpkg-patches]{: .img-responsive }

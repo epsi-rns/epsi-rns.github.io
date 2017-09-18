@@ -31,6 +31,84 @@ related_link_ids:
 
 -- -- --
 
+#### Distribution Upgrade
+
+There are cases that a system need more than upgrade,
+such as migrating python from python2 to python3,
+or ncurse case, especially when many application involved.
+Switching from one release to other release
+require <code>dist-upgrade</code>.
+I have never had issue with Debian,
+but I experienced issues in Debian derivatives.
+
+	No need to dist-upgrade in rolling release
+
+Now consider pulling oldstable <code>jessie</code> container.
+
+{% highlight bash %}
+$ docker pull debian:jessie
+jessie: Pulling from library/debian
+aa18ad1a0d33: Pull complete 
+Digest: sha256:f31c837c5dda4c4730a6f1189c9ae39031e966410d7b0885863bd6c43b5ff281
+Status: Downloaded newer image for debian:jessie
+
+$ docker run -it debian:jessie
+root@0bf84cd70449:/#
+{% endhighlight %}
+
+![Docker Debian: Pull Jessie][image-ss-dup-pull-jessie]{: .img-responsive }
+
+And do some basic task so that we can edit <code>sources.list</code>.
+
+{% highlight bash %}
+$ apt update
+$ apt upgrade
+$ apt install man-db nano less vim wget curl sudo
+{% endhighlight %}
+
+From Jessie
+
+{% highlight bash %}
+$ nano /etc/apt/sources.list
+deb http://deb.debian.org/debian jessie main
+deb http://deb.debian.org/debian jessie-updates main
+deb http://security.debian.org jessie/updates main
+{% endhighlight %}
+
+![Docker sources.list: jessie][image-ss-dup-nano-jessie]{: .img-responsive }
+
+To Stretch
+
+{% highlight bash %}
+$ cat /etc/apt/sources.list
+deb http://deb.debian.org/debian stretch main
+{% endhighlight %}
+
+![Docker sources.list: stretch][image-ss-dup-nano-stretch]{: .img-responsive }
+
+Do not forget to update.
+
+{% highlight bash %}
+$ apt update
+...
+132 packages can be upgraded. Run 'apt list --upgradable' to see them.
+{% endhighlight %}
+
+And <code>dist-upgrade</code>.
+
+{% highlight bash %}
+$ apt dist-upgrade
+{% endhighlight %}
+
+![Docker APT: dist-upgrade][image-ss-dup-dist-upgrade]{: .img-responsive }
+
+This example above using minimal install,
+in this case <code>upgrade</code> is sufficient
+and the same result with <code>dist-upgrade</code>.
+Nothing to worry about, the command finished successfully.
+
+-- -- --
+
 ### Repository Pinning
 
 Sometimes we need a package from unstable repository.
@@ -425,8 +503,6 @@ apt_1.5~rc1_amd64.deb
 
 ![Docker APT-SRC: Directory Result][image-ss-s-directory-res]{: .img-responsive }
 
--- -- --
-
 #### Install Result
 
 Install package using <code class="code-command">dpkg</code> command
@@ -454,6 +530,171 @@ apt 1.5~rc1 (amd64)
 ![Docker APT-SRC: Does it works?][image-ss-s-version-works]{: .img-responsive }
 
 After a few days, you will feels like compiling is not difficult.
+
+-- -- --
+
+### Developer Script
+
+There are other way though,
+more elegant to build package from source.
+If you are a developer there are few goodies
+you can have from <code>devscripts</code>.
+
+{% highlight bash %}
+$ apt install build-essential debhelper devscripts
+...
+Need to get 65.0 MB of archives.
+After this operation, 176 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
+...
+{% endhighlight %}
+
+Note that as usual, consider be as user and enable source repository.
+
+*	<code>debi</code>
+
+*	<code>debcheckout</code>
+
+#### debcheckout
+
+{% highlight bash %}
+$ apt-get source herbstluftwm
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ apt source herbstluftwm
+{% endhighlight %}
+
+Or 
+
+{% highlight bash %}
+$ debcheckout herbstluftwm
+debcheckout herbstluftwm
+declared git repository at git://git.debian.org/collab-maint/herbstluftwm.git
+git clone git://git.debian.org/collab-maint/herbstluftwm.git herbstluftwm ...
+Cloning into 'herbstluftwm'...
+remote: Counting objects: 7334, done.
+remote: Compressing objects: 100% (2114/2114), done.
+remote: Total 7334 (delta 5474), reused 6985 (delta 5193)
+Receiving objects: 100% (7334/7334), 1.27 MiB | 222.00 KiB/s, done.
+Resolving deltas: 100% (5474/5474), done.
+{% endhighlight %}
+
+![Docker Debian: debcheckout][image-ss-s-debcheckout]{: .img-responsive }
+
+#### Build Dependency
+
+{% highlight bash %}
+$ sudo apt build-dep herbstluftwm
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  asciidoc asciidoc-base asciidoc-common libglib2.0-bin libglib2.0-data
+  libglib2.0-dev libglib2.0-dev-bin libpcre16-3 libpcre3-dev libpcre32-3
+  libpcrecpp0v5 libpthread-stubs0-dev libx11-dev libxau-dev libxcb1-dev
+  libxdmcp-dev libxext-dev libxinerama-dev libxinerama1 libxml2-utils
+  x11proto-core-dev x11proto-input-dev x11proto-kb-dev x11proto-xext-dev
+  x11proto-xinerama-dev xorg-sgml-doctools xtrans-dev
+The following packages will be upgraded:
+  libglib2.0-0
+1 upgraded, 27 newly installed, 0 to remove and 20 not upgraded.
+Need to get 16.0 MB of archives.
+After this operation, 38.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+{% endhighlight %}
+
+![Docker Debian: build-dep][image-ss-s-build-dep]{: .img-responsive }
+
+#### Build Package
+
+Go to build tree directory first.
+
+{% highlight bash %}
+cd ~/build/herbstluftwm
+{% endhighlight %}
+
+{% highlight bash %}
+$ dpkg-buildpackage -rfakeroot -uc -b
+dpkg-buildpackage -rfakeroot -uc -b
+dpkg-buildpackage: info: source package herbstluftwm
+dpkg-buildpackage: info: source version 0.7.0-1
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Christoph Egger <christoph@debian.org>
+dpkg-buildpackage: info: host architecture amd64
+ dpkg-source --before-build herbstluftwm
+ fakeroot debian/rules clean
+dh clean --parallel
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/home/epsi/build/herbstluftwm'
+dh_auto_clean -- VERBOSE= COLOR=0
+	make -j2 clean VERBOSE= COLOR=0
+make[2]: Entering directory '/home/epsi/build/herbstluftwm'
+rm -f doc/herbstclient.1
+...
+{% endhighlight %}
+
+![Docker Debian: buildpackage][image-ss-s-buildpackage]{: .img-responsive }
+
+And you will have the result similar as below:
+
+{% highlight bash %}
+$ ls .. | grep herbstluftwm
+herbstluftwm
+herbstluftwm-dbgsym_0.7.0-1_amd64.deb
+herbstluftwm_0.7.0-1_amd64.buildinfo
+herbstluftwm_0.7.0-1_amd64.changes
+herbstluftwm_0.7.0-1_amd64.deb
+{% endhighlight %}
+
+#### Source Compile
+
+This is even shorter.
+
+{% highlight bash %}
+$ apt source --compile herbstluftwm
+Reading package lists... Done
+NOTICE: 'herbstluftwm' packaging is maintained in the 'Git' version control system at:
+git://git.debian.org/collab-maint/herbstluftwm.git
+Please use:
+git clone git://git.debian.org/collab-maint/herbstluftwm.git
+to retrieve the latest (possibly unreleased) updates to the package.
+Need to get 261 kB of source archives.
+Get:1 http://deb.debian.org/debian testing/main herbstluftwm 0.7.0-1 (dsc) [1969 B]
+Get:2 http://deb.debian.org/debian testing/main herbstluftwm 0.7.0-1 (tar) [247 kB]
+Get:3 http://deb.debian.org/debian testing/main herbstluftwm 0.7.0-1 (diff) [11.1 kB]
+Fetched 261 kB in 1s (152 kB/s)      
+dpkg-source: info: extracting herbstluftwm in herbstluftwm-0.7.0
+dpkg-source: info: unpacking herbstluftwm_0.7.0.orig.tar.gz
+dpkg-source: info: unpacking herbstluftwm_0.7.0-1.debian.tar.xz
+dpkg-buildpackage: info: source package herbstluftwm
+dpkg-buildpackage: info: source version 0.7.0-1
+dpkg-buildpackage: info: source distribution unstable
+{% endhighlight %}
+
+![Docker Debian: source compile][image-ss-s-compile]{: .img-responsive }
+
+#### Debi
+
+{% highlight bash %}
+$ sudo debi
+[sudo] password for epsi: 
+Selecting previously unselected package herbstluftwm-dbgsym.
+(Reading database ... 36536 files and directories currently installed.)
+Preparing to unpack herbstluftwm-dbgsym_0.7.0-1_amd64.deb ...
+Unpacking herbstluftwm-dbgsym (0.7.0-1) ...
+Selecting previously unselected package herbstluftwm.
+Preparing to unpack herbstluftwm_0.7.0-1_amd64.deb ...
+Unpacking herbstluftwm (0.7.0-1) ...
+Setting up herbstluftwm (0.7.0-1) ...
+update-alternatives: using /usr/bin/herbstluftwm to provide /usr/bin/x-window-manager (x-window-manager) in auto mode
+Setting up herbstluftwm-dbgsym (0.7.0-1) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+{% endhighlight %}
+
+![Docker Debian: debi][image-ss-s-sudo-debi]{: .img-responsive }
 
 -- -- --
 
@@ -492,3 +733,14 @@ Thank you for reading
 [image-ss-rp-nmap-unstable]:	{{ asset_post }}/28-nmap-unstable.png
 [image-ss-rp-policy-pinning]:	{{ asset_post }}/28-policy-pinning.png
 [image-ss-rp-target-unstable]:	{{ asset_post }}/28-target-unstable.png
+
+[image-ss-dup-dist-upgrade]:	{{ asset_post }}/23-dist-upgrade.png
+[image-ss-dup-pull-jessie]:		{{ asset_post }}/23-docker-jessie.png
+[image-ss-dup-nano-jessie]:		{{ asset_post }}/23-sources-jessie.png
+[image-ss-dup-nano-stretch]:	{{ asset_post }}/23-docker-stretch.png
+
+[image-ss-s-build-dep]:		{{ asset_post }}/26-build-dep.png
+[image-ss-s-compile]:		{{ asset_post }}/26-source-compile.png
+[image-ss-s-buildpackage]:	{{ asset_post }}/26-buildpackage.png
+[image-ss-s-sudo-debi]:		{{ asset_post }}/26-debi.png
+[image-ss-s-debcheckout]:	{{ asset_post }}/26-debcheckout.png
