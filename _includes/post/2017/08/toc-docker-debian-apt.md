@@ -1,6 +1,6 @@
 ### Table of Content
 
-This is a three-parts article.
+This is a four-parts article.
 There are few sections here.
 
 [ [Part One][local-part-one] ]
@@ -15,21 +15,15 @@ There are few sections here.
 
 *	Package IRSIF: Install, Download, Removal, Query Search, Show Info, List Files
 
-*	Package More: Change Log, Policy, aptitude, dselect, configure, Search Files, dlocate
-
 *	What's Next
 
 [ [Part Two][local-part-two] ]
 
-*	Dependency: Dependency, Reverse Dependency, Test
-
-*	Repository: Configuration, Policy, Add Repository, Mirror
-
 *	Group: Task
 
-*	Hold Package: Building Example, Mark Hold, Pinning
+*	Package More: Change Log, Policy, aptitude, dselect, configure, Search Files, dlocate
 
-*	System Wide Information
+*	System Wide: Statistics, List Packages, Config, Verify
 
 *	History: The Log File
 
@@ -39,9 +33,19 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
+*	Dependency: Dependency, Reverse Dependency, Test
+
+*	Hold Package: Building Example, Mark Hold, Pinning
+
+*	Repository: Configuration, Policy, Add Repository, Mirror
+
 *	Distribution Upgrade
 
 *	Repository Pinning: nmap Case, New Docker for Stretch, Stable nmap, Pinning Unstable, Unstable nmap
+
+*	What's Next
+
+[ [Part Four][local-part-four] ]
 
 *	Build from Source: The Toolchain, Source Repository, User Privilege, Build Directory, Example, Download Source, Build Source, Examine Directory, Install Result
 

@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine APT step by step,
   using Debian container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -139,13 +139,17 @@ Last updated Eight Years Ago.
 
 #### APT Frontend
 
-*	APT: Python:	<https://github.com/Debian/apt>
+*	APT (apt-get and family): Python:	
+
+	*	<https://github.com/Debian/apt>
+	
+	*	<https://anonscm.debian.org/git/apt/apt.git>
 	
 *	apt-src: No github yet
 
-*	apt-get: No github yet
-
 *	aptitude: No github yet
+
+	*	https://anonscm.debian.org/git/aptitude/aptitude.git
 	
 #### Get Help
 
@@ -667,133 +671,6 @@ $ dpkg-query --listfiles  ncdu
 
 -- -- --
 
-### Package More
-
-More about Package, than just IRSIF.
-
-#### Change Log
-
-{% highlight bash %}
-$ apt-get changelog ncdu
-{% endhighlight %}
-
-Or:
-
-{% highlight bash %}
-$ apt changelog ncdu
-{% endhighlight %}
-
-![Docker APT: Changelog][image-ss-apt-changelog]{: .img-responsive }
-
-#### Package Policy
-
-We can examine the policy too.
-
-{% highlight bash %}
-$ apt-cache policy ncdu
-{% endhighlight %}
-
-Almost equal to:
-
-{% highlight bash %}
-$ apt policy ncdu
-ncdu:
-  Installed: (none)
-  Candidate: 1.12-1+b1
-  Version table:
-     1.12-1+b1 500
-        500 http://deb.debian.org/debian stretch/main amd64 Packages
-{% endhighlight %}
-
-There is <code>no aptitude policy</code> this time.
-" _This aptitude does not have Super Cow Powers._ "
-However there is <code>aptitude versions</code>.
-
-{% highlight bash %}
-$ aptitude versions ncdu  
-p   1.12-1+b1                               stable              500 
-{% endhighlight %}
-
-![Docker APT: Policy][image-ss-apt-policy]{: .img-responsive }
-
-We will discuss policy later.
-
-#### Aptitude
-
-<code>aptitude</code> provide text based user interface.
-
-![Docker Aptitude: Dialog][image-ss-aptitude-dialog]{: .img-responsive }
-
-#### Dselect
-
-There are alternative text based user interface as well called <code>dselect</code>.
-
-![Docker Dselect: Dialog][image-ss-dselect-dialog]{: .img-responsive }
-
-#### Interrupted Process
-
-Sometimes DPKG interrupted, for some reason such as,
-I have to immediately turn off my notebook or stuff.
-You can continue with this command.
-
-{% highlight bash %}
-$ dpkg --configure -a
-{% endhighlight %}
-
-#### Search Files
-
-This looks like list files command, but very different task.
-This command looking for any package that match the corresponding search.
-
-{% highlight bash %}
-$ dpkg -S ncdu
-{% endhighlight %}
-
-Or
-
-{% highlight bash %}
-$ dpkg-query --search ncdu
-ncdu: /usr/share/doc/ncdu
-ncdu: /usr/share/doc/ncdu/changelog.Debian.amd64.gz
-fish-common: /usr/share/fish/completions/ncdu.fish
-ncdu: /usr/share/doc/ncdu/changelog.gz
-ncdu: /usr/share/doc/ncdu/changelog.Debian.gz
-ncdu: /usr/share/man/man1/ncdu.1.gz
-ncdu: /usr/share/doc/ncdu/copyright
-ncdu: /usr/bin/ncdu
-{% endhighlight %}
-
-![Docker DPKG: Search][image-ss-dpkg-search]{: .img-responsive }
-
-As you can see, it found in both _ncdu_ and _fish_ package.
-
-#### dlocate
-
-Alternatively
-
-{% highlight bash %}
-$ dlocate ncdu
-ncdu: /.
-ncdu: /usr
-ncdu: /usr/bin
-ncdu: /usr/bin/ncdu
-ncdu: /usr/share
-ncdu: /usr/share/doc
-ncdu: /usr/share/doc/ncdu
-ncdu: /usr/share/doc/ncdu/changelog.Debian.amd64.gz
-ncdu: /usr/share/doc/ncdu/changelog.Debian.gz
-ncdu: /usr/share/doc/ncdu/changelog.gz
-ncdu: /usr/share/doc/ncdu/copyright
-ncdu: /usr/share/man
-ncdu: /usr/share/man/man1
-ncdu: /usr/share/man/man1/ncdu.1.gz
-fish-common: /usr/share/fish/completions/ncdu.fish
-{% endhighlight %}
-
-![Docker Debian: dlocate][image-ss-dlocate]{: .img-responsive }
-
--- -- --
-
 ### What's Next
 
 APT is a mature package management,
@@ -821,7 +698,6 @@ Thank you for reading
 [image-ss-apt-upgrade]:		{{ asset_post }}/01-upgrade.png
 
 [image-ss-apt-install]:		{{ asset_post }}/13-apt-install.png
-[image-ss-apt-policy]:		{{ asset_post }}/13-apt-policy.png
 [image-ss-apt-remove]:		{{ asset_post }}/13-apt-remove.png
 [image-ss-apt-search]:		{{ asset_post }}/13-apt-search.png
 [image-ss-apt-show]:		{{ asset_post }}/13-apt-show.png
@@ -829,17 +705,10 @@ Thank you for reading
 [image-ss-dpkg-list]:		{{ asset_post }}/13-dpkg-list.png
 [image-ss-dpkg-status]:		{{ asset_post }}/13-dpkg-status.png
 
-[image-ss-aptitude-remove]:		{{ asset_post }}/13-aptitude-remove.png
-[image-ss-aptitude-dialog]:		{{ asset_post }}/13-aptitude-dialog.png
-[image-ss-dselect-dialog]:		{{ asset_post }}/13-dselect-dialog.png
-
-[image-ss-apt-changelog]:		{{ asset_post }}/13-changelog.png
-
-[image-ss-dlocate]:			{{ asset_post }}/13-dlocate.png
-[image-ss-dpkg-listfiles]:	{{ asset_post }}/13-dpkg-query-listfiles.png
-[image-ss-dpkg-search]:		{{ asset_post }}/13-dpkg-query-search.png
-
 [image-ss-download-cache]:		{{ asset_post }}/13-download-cache.png
 [image-ss-download-only]:		{{ asset_post }}/13-download-only.png
 [image-ss-download-nocache]:	{{ asset_post }}/13-download-no-cache.png
 [image-ss-dpkg-install]:		{{ asset_post }}/13-dpkg-install.png
+
+[image-ss-aptitude-remove]:		{{ asset_post }}/13-aptitude-remove.png
+

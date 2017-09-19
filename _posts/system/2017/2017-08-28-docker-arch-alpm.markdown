@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine APT step by step,
   using Debian container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -379,6 +379,41 @@ warning: fish is designated as a HoldPkg.
 
 -- -- --
 
+### System Wide
+
+System Wide Information
+
+#### List Packages
+
+Listing packages handled by package manager,
+can be achieved by <code>pacman -Sl</code>.
+Not that <code>pacman -Ql</code> has a very different task.
+
+{% highlight bash %}
+$ pacman -Sl
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ pacman --sync --list
+core acl 2.2.52-4 [installed]
+core archlinux-keyring 20170823-1 [installed]
+core attr 2.4.47-3 [installed]
+core autoconf 2.69-4 [installed]
+core automake 1.15.1-1 [installed]
+core b43-fwcutter 019-1
+...
+community zshdb 0.08-4
+community zstd 1.3.0-1
+community zsync 0.6.2-3
+community zynaddsubfx 3.0.2-1
+{% endhighlight %}
+
+![Docker pacman: List Packages][image-ss-list-packages]{: .img-responsive }
+
+-- -- --
+
 ### History
 
 This is most the forgotten part of package management,
@@ -490,3 +525,5 @@ Thank you for reading
 [image-ss-hold]:		{{ asset_post }}/28-hold-unremoved.png
 [image-ss-ignored]:		{{ asset_post }}/28-upgradable-ignored.png
 [image-ss-outdated]:	{{ asset_post }}/28-upgradable-outdated.png
+
+[image-ss-list-packages]:		{{ asset_post }}/19-list-packages.png

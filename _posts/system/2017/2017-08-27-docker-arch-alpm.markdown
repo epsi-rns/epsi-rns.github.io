@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine APT step by step,
   using Debian container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -378,9 +378,9 @@ $ pacman -Syu
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 #### Package Install
 

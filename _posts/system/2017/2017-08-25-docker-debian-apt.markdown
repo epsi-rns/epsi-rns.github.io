@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine APT step by step,
   using Debian container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -28,297 +28,6 @@ related_link_ids:
 {% include post/2017/08/topics-docker.html %}
 
 {% include post/2017/08/toc-docker-debian-apt.html %}
-
--- -- --
-
-### Dependency
-
-There are two main topics in package dependency,
-the _dependency_ itself, and _reverse dependency_.
-Beside these two, there are other topic as well,
-such as _managing conflict_ that we do not cover here.
-
-#### Dependency
-
-	Package that required by: such as man-db need groff-base and other.
-
-This will show required parts of the package.
-
-{% highlight bash %}
-$ apt-cache depends man-db  
-{% endhighlight %}
-
-Almost equal to:
-
-{% highlight bash %}
-$ apt depends man-db   
-man-db
-  PreDepends: dpkg
-  Depends: groff-base
-  Depends: bsdmainutils
- |...
-  Suggests: groff
-  Suggests: less
-  Suggests: <www-browser>
-    ...
-    lynx
-    ...
-  Replaces: <man>
-    man-db
-  ...
-  Replaces: <nlsutils>
-{% endhighlight %}
-
-![Docker APT: Dependency][image-ss-apt-depends]{: .img-responsive }
-
-This <code>apt show</code> provide dependency too.
-
-{% highlight bash %}
-$ apt show man-db
-root@d0c5bd2fc5b5:/# apt show man-db
-...
-Depends: groff-base (>= 1.18.1.1-15), bsdmainutils, debconf (>= 1.2.0) | debconf-2.0, libc6 (>= 2.17), libgdbm3 (>= 1.8.3), libpipeline1 (>= 1.4.0), zlib1g (>= 1:1.1.4)
-...
-{% endhighlight %}
-
-<code>aptitude search</code> also works too.
-
-{% highlight bash %}
-$ aptitude search ~Rman-db    
-i A bsdmainutils               - collection of more utilities from F
-p   cdebconf                   - Debian Configuration Management Sys
-i A debconf                    - Debian configuration management sys
-v   debconf-2.0                -                                    
-i A dpkg                       - Debian package management system   
-i A groff-base                 - GNU troff text-formatting system (b
-i A libc6                      - GNU C Library: Shared libraries    
-i A libgdbm3                   - GNU dbm database routines (runtime 
-i A libpipeline1               - pipeline manipulation library      
-i A zlib1g                     - compression library - runtime      
-{% endhighlight %}
-
-![Docker Aptitude: Search ~R][image-ss-aptitude-s-r]{: .img-responsive }
-
-#### Reverse Dependency
-
-	Package that require: such as groff-base needed by man-db or other.
-
-{% highlight bash %}
-$ apt-cache rdepends groff-base 
-{% endhighlight %}
-
-Almost equal to:
-
-{% highlight bash %}
-$ apt rdepends groff-base
-groff-base
-Reverse Depends:
-  Depends: man-db (>= 1.18.1.1-15)
-  Suggests: imagemagick-6.q16hdri
-  Suggests: imagemagick-6.q16
-  Recommends: rpmlint
-  Suggests: perl-doc
-  Replaces: groff (<< 1.17.2-9)
-  Suggests: imagemagick-6.q16hdri
-  Suggests: imagemagick-6.q16
-  Depends: groff (= 1.22.3-9)
-  Suggests: bioperl
-  Recommends: gdisk
-  Recommends: debian-el
-  Recommends: doclifter
-  Depends: cppman
-{% endhighlight %}
-
-![Docker APT: Reverse Dependency][image-ss-apt-rdepends]{: .img-responsive }
-
-<code>aptitude search</code> also works too.
-
-{% highlight bash %}
-$ aptitude search ~Dgroff-base
-p   cppman                     - C++ 98/11 manual pages for Linux, w
-p   groff                      - GNU troff text-formatting system   
-i   man-db                     - on-line manual pager               
-{% endhighlight %}
-
-![Docker Aptitude: Search ~D][image-ss-aptitude-s-d]{: .img-responsive }
-
-This <code>aptitude why</code> also provide reverse dependency.
-
-{% highlight bash %}
-$ aptitude why groff-base
-i   man-db Depends groff-base (>= 1.18.1.1-15)
-{% endhighlight %}
-
-![Docker Aptitude: Why][image-ss-aptitude-why]{: .img-responsive }
-
-#### Test
-
-Removing <code>groff-base</code> would remove <code>man-db</code>.
-
-{% highlight bash %}
-$ apt remove groff-base
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following package was automatically installed and is no longer required:
-  libpipeline1
-Use 'apt autoremove' to remove it.
-The following packages will be REMOVED:
-  groff-base man-db
-0 upgraded, 0 newly installed, 2 to remove and 0 not upgraded.
-After this operation, 5624 kB disk space will be freed.
-Do you want to continue? [Y/n]
-{% endhighlight %}
-
-![Docker APT: Test Dependency][image-ss-apt-test-remove]{: .img-responsive }
-
-#### Dotty
-
-there are also <code>graphviz</code> output named <code>dotty</code>
-
-{% highlight bash %}
-$ apt-cache -o APT::Cache::GivenOnly=1 dotty groff-base
-digraph packages {
-concentrate=true;
-size="30,40";
-"groff-base" -> "libc6";
-"groff-base" -> "libgcc1";
-"groff-base" -> "libstdc++6";
-"groff-base" -> "groff"[color=springgreen];
-"groff-base" -> "jgroff"[color=springgreen];
-"groff-base" -> "pmake"[color=springgreen];
-"groff-base" -> "troffcvt"[color=springgreen];
-"pmake" [color=orange,shape=diamond];
-"libc6" [color=orange,shape=box];
-"libgcc1" [color=orange,shape=box];
-"groff-base" [shape=box];
-"groff" [color=orange,shape=box];
-"troffcvt" [color=orange,shape=box];
-"libstdc++6" [color=orange,shape=box];
-"jgroff" [shape=triangle];
-}
-{% endhighlight %}
-
-![Docker APT: Cache Dotty][image-ss-cache-dotty]{: .img-responsive }
-
-{% highlight bash %}
-$ dot -Tpng groff-base.dot > groff-base.png
-{% endhighlight %}
-
-![Docker APT: Cache Dotty: Graphvis][image-ss-graphvis]{: .img-responsive }
-
--- -- --
-
-### Repository
-
-Switch repository in Debian based is simple.
-
-#### Configuration
-
-Most of the time I manage repository using 
-<code class="code-file">sources.list</code>
-configuration directly in Debian based distribution.
-I don't know if there is better way.
-
-{% highlight bash %}
-$ cat /etc/apt/sources.list
-deb http://deb.debian.org/debian stretch main
-deb http://deb.debian.org/debian stretch-updates main
-deb http://security.debian.org stretch/updates main
-{% endhighlight %}
-
-![Docker sources.list: original][image-ss-sources-list]{: .img-responsive }
-
-**Case**: Other derivation may use different repository.
-
-{% highlight bash %}
-deb http://auto.mirror.devuan.org/merged jessie          main
-deb http://auto.mirror.devuan.org/merged jessie-updates  main
-deb http://auto.mirror.devuan.org/merged jessie-security main
-
-deb http://auto.mirror.devuan.org/merged ascii           main
-{% endhighlight %}
-
-**Case**: Sometimes there is additional PPA as well,
-inside <code class="code-file">/etc/apt/sources.list.d/</code> directory.
-
-{% highlight bash %}
-deb http://ppa.launchpad.net/wagungs/kali-linux2/ubuntu raring main
-deb-src http://ppa.launchpad.net/wagungs/kali-linux2/ubuntu raring main
-deb http://ppa.launchpad.net/wagungs/kali-linux/ubuntu raring main
-deb-src http://ppa.launchpad.net/wagungs/kali-linux/ubuntu raring main
-{% endhighlight %}
-
-#### Policy
-
-However if you insist using command line,
-you can get a list anyway by using <code>apt-cache policy</code>
-
-{% highlight bash %}
-$ apt policy
-Package files:
- 100 /var/lib/dpkg/status
-     release a=now
- 500 http://security.debian.org stretch/updates/main amd64 Packages
-     release v=9,o=Debian,a=stable,n=stretch,l=Debian-Security,c=main,b=amd64
-     origin security.debian.org
- 500 http://deb.debian.org/debian stretch-updates/main amd64 Packages
-     release o=Debian,a=stable-updates,n=stretch-updates,l=Debian,c=main,b=amd64
-     origin deb.debian.org
- 500 http://deb.debian.org/debian stretch/main amd64 Packages
-     release v=9.1,o=Debian,a=stable,n=stretch,l=Debian,c=main,b=amd64
-     origin deb.debian.org
-Pinned packages:
-{% endhighlight %}
-
-![Docker APT: Policy][image-ss-apt-policy]{: .img-responsive }
-
-#### Add Repository
-
-This require a few steps.
-
-(1)	Append the repository to /etc/apt/sources.list. I usually utilize text editor.
-
-(2)	Add the repository key to the machine, if needed such as in PPA case.
-Or maybe using <code>apt-key</code> if necessary.
-
-(3) Do not forget to <code>apt update</code> to refresh.
-
-Note that Ubuntu based have this <code>add-apt-repository</code> command.
-
-#### Mirror
-
-Consider change our repository to nearest local server such as university.
-
-{% highlight bash %}
-$ nano /etc/apt/sources.list
-deb http://kambing.ui.ac.id/debian stretch main
-deb http://kambing.ui.ac.id/debian stretch-updates main
-deb http://security.debian.org stretch/updates main
-{% endhighlight %}
-
-![Docker sources.list: mirror][image-ss-nano-kambing]{: .img-responsive }
-
-No need any repository key. 
-We can update directly.
-
-{% highlight bash %}
-$ apt update
-Ign:1 http://kambing.ui.ac.id/debian stretch InRelease
-Get:2 http://kambing.ui.ac.id/debian stretch-updates InRelease [91.0 kB]
-Get:3 http://kambing.ui.ac.id/debian stretch Release [118 kB]      
-Hit:4 http://security.debian.org stretch/updates InRelease         
-Get:5 http://kambing.ui.ac.id/debian stretch-updates/main amd64 Packages [5553 B]
-Get:6 http://kambing.ui.ac.id/debian stretch Release.gpg [2373 B]
-Get:7 http://kambing.ui.ac.id/debian stretch/main amd64 Packages [9497 kB]
-Fetched 9714 kB in 47s (205 kB/s)                                                    
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-All packages are up to date.
-{% endhighlight %}
-
-![Docker APT: update kambing][image-ss-update-kambing]{: .img-responsive }
 
 -- -- --
 
@@ -363,6 +72,133 @@ More complete information provided in manual.
 {% highlight bash %}
 $ man tasksel
 {% endhighlight %}
+
+-- -- --
+
+### Package More
+
+More about Package, than just IRSIF.
+
+#### Change Log
+
+{% highlight bash %}
+$ apt-get changelog ncdu
+{% endhighlight %}
+
+Or:
+
+{% highlight bash %}
+$ apt changelog ncdu
+{% endhighlight %}
+
+![Docker APT: Changelog][image-ss-apt-changelog]{: .img-responsive }
+
+#### Package Policy
+
+We can examine the policy too.
+
+{% highlight bash %}
+$ apt-cache policy ncdu
+{% endhighlight %}
+
+Almost equal to:
+
+{% highlight bash %}
+$ apt policy ncdu
+ncdu:
+  Installed: (none)
+  Candidate: 1.12-1+b1
+  Version table:
+     1.12-1+b1 500
+        500 http://deb.debian.org/debian stretch/main amd64 Packages
+{% endhighlight %}
+
+There is <code>no aptitude policy</code> this time.
+" _This aptitude does not have Super Cow Powers._ "
+However there is <code>aptitude versions</code>.
+
+{% highlight bash %}
+$ aptitude versions ncdu  
+p   1.12-1+b1                               stable              500 
+{% endhighlight %}
+
+![Docker APT: Policy][image-ss-apt-policy]{: .img-responsive }
+
+We will discuss policy later.
+
+#### Aptitude
+
+<code>aptitude</code> provide text based user interface.
+
+![Docker Aptitude: Dialog][image-ss-aptitude-dialog]{: .img-responsive }
+
+#### Dselect
+
+There are alternative text based user interface as well called <code>dselect</code>.
+
+![Docker Dselect: Dialog][image-ss-dselect-dialog]{: .img-responsive }
+
+#### Interrupted Process
+
+Sometimes DPKG interrupted, for some reason such as,
+I have to immediately turn off my notebook or stuff.
+You can continue with this command.
+
+{% highlight bash %}
+$ dpkg --configure -a
+{% endhighlight %}
+
+#### Search Files
+
+This looks like list files command, but very different task.
+This command looking for any package that match the corresponding search.
+
+{% highlight bash %}
+$ dpkg -S ncdu
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ dpkg-query --search ncdu
+ncdu: /usr/share/doc/ncdu
+ncdu: /usr/share/doc/ncdu/changelog.Debian.amd64.gz
+fish-common: /usr/share/fish/completions/ncdu.fish
+ncdu: /usr/share/doc/ncdu/changelog.gz
+ncdu: /usr/share/doc/ncdu/changelog.Debian.gz
+ncdu: /usr/share/man/man1/ncdu.1.gz
+ncdu: /usr/share/doc/ncdu/copyright
+ncdu: /usr/bin/ncdu
+{% endhighlight %}
+
+![Docker DPKG: Search][image-ss-dpkg-search]{: .img-responsive }
+
+As you can see, it found in both _ncdu_ and _fish_ package.
+
+#### dlocate
+
+Alternatively
+
+{% highlight bash %}
+$ dlocate ncdu
+ncdu: /.
+ncdu: /usr
+ncdu: /usr/bin
+ncdu: /usr/bin/ncdu
+ncdu: /usr/share
+ncdu: /usr/share/doc
+ncdu: /usr/share/doc/ncdu
+ncdu: /usr/share/doc/ncdu/changelog.Debian.amd64.gz
+ncdu: /usr/share/doc/ncdu/changelog.Debian.gz
+ncdu: /usr/share/doc/ncdu/changelog.gz
+ncdu: /usr/share/doc/ncdu/copyright
+ncdu: /usr/share/man
+ncdu: /usr/share/man/man1
+ncdu: /usr/share/man/man1/ncdu.1.gz
+fish-common: /usr/share/fish/completions/ncdu.fish
+{% endhighlight %}
+
+![Docker Debian: dlocate][image-ss-dlocate]{: .img-responsive }
 
 -- -- --
 
@@ -513,7 +349,9 @@ Finally, the new driver works, so I do not pin this driver anymore.
 
 -- -- --
 
-### System Wide Information
+### System Wide
+
+System Wide Information
 
 #### Cache Statistics
 
@@ -554,11 +392,11 @@ Total buckets in GrpHashTable: 50503
   Shortest: 1
 {% endhighlight %}
 
-#### Cache Dump
+#### List Packages
 
 There is this <code>dumpavail</code>
 and <code>dump</code> command
-with long output.
+with long output to list packages
 
 {% highlight bash %}
 $ apt-cache dumpavail | less
@@ -577,6 +415,8 @@ Architecture: amd64
 ![Docker APT: cache dump][image-ss-cache-dump]{: .img-responsive }
 
 Or just package names if you wish.
+Listing packages handled by package manager,
+can be achieved by <code>apt-cache pkgnames</code>.
 
 {% highlight bash %}
 $ apt-cache pkgnames | less
@@ -772,7 +612,7 @@ dh-systemd
 
 ### What's Next
 
-There are still, some interesting topic for <code>APT</code>.
+There are still, repository topic and building from source.
 Consider finish reading [ [Part Three][local-part-three] ].
 
 Thank you for reading
@@ -784,19 +624,16 @@ Thank you for reading
 
 [local-part-three]:   {{ site.url }}/system/2017/08/26/docker-debian-apt.html
 
-[image-ss-apt-depends]:		{{ asset_post }}/14-apt-depends.png
-[image-ss-apt-rdepends]:	{{ asset_post }}/14-apt-rdepends.png
-[image-ss-aptitude-s-d]:	{{ asset_post }}/14-aptitude-d-groff-base.png
-[image-ss-aptitude-s-r]:	{{ asset_post }}/14-aptitude-r-man-db.png
-[image-ss-aptitude-why]:	{{ asset_post }}/14-aptitude-why-groff-base.png
-[image-ss-cache-dotty]:		{{ asset_post }}/14-dotty.png
-[image-ss-graphvis]:		{{ asset_post }}/14-groff-base-dotty.png
+[image-ss-apt-changelog]:		{{ asset_post }}/13-changelog.png
 
-[image-ss-apt-policy]:		{{ asset_post }}/16-apt-policy.png
-[image-ss-sources-list]:	{{ asset_post }}/16-etc-apt-sources-list.png
-[image-ss-nano-kambing]:	{{ asset_post }}/16-nano-kambing.png
-[image-ss-update-kambing]:	{{ asset_post }}/16-update-kambing.png
-[image-ss-apt-test-remove]:	{{ asset_post }}/16-test-remove.png
+[image-ss-apt-policy]:		{{ asset_post }}/13-apt-policy.png
+
+[image-ss-aptitude-dialog]:		{{ asset_post }}/13-aptitude-dialog.png
+[image-ss-dselect-dialog]:		{{ asset_post }}/13-dselect-dialog.png
+
+[image-ss-dlocate]:			{{ asset_post }}/13-dlocate.png
+[image-ss-dpkg-listfiles]:	{{ asset_post }}/13-dpkg-query-listfiles.png
+[image-ss-dpkg-search]:		{{ asset_post }}/13-dpkg-query-search.png
 
 [image-ss-tasksel-list]:	{{ asset_post }}/15-group-task.png
 [image-ss-apt-clean]:		{{ asset_post }}/17-clean.png
@@ -817,5 +654,3 @@ Thank you for reading
 [image-ss-h-upgrade-kept]:	{{ asset_post }}/27-upgrade-kept-back.png
 [image-ss-h-preferences-d]:	{{ asset_post }}/27-preferences-d.png
 [image-ss-h-unupgradable]:	{{ asset_post }}/27-upgradable-pinned.png
-
-
