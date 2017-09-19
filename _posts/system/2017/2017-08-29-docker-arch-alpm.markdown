@@ -242,7 +242,7 @@ Total Installed Size:  0.08 MiB
 
 ![Docker AUR: Package Query: Install][image-ss-pq-install]{: .img-responsive }
 
-#### Feature
+#### Example
 
 Consider this <code>asp-git</code> package form AUR.
 
@@ -251,6 +251,45 @@ $ wget https://aur.archlinux.org/cgit/aur.git/snapshot/asp-git.tar.gz
 $ tar -xvf asp-git.tar.gz
 $ cd asp-git
 {% endhighlight %}
+
+#### Dependency
+
+{% highlight bash %}
+$ makepkg
+==> Making package: asp-git 1.3.g375b035-1 (Tue Sep 19 21:22:25 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Missing dependencies:
+  -> asciidoc
+==> ERROR: Could not resolve all dependencies.
+
+==> ERROR: An unknown error has occurred. Exiting...
+{% endhighlight %}
+
+![Docker makepkg: Dependency Error][image-ss-asp-deps-error]{: .img-responsive }
+
+We can solve this using <code>syncdeps</code>.
+
+{% highlight bash %}
+$ makepkg --syncdeps
+==> Making package: asp-git 1.3.g375b035-1 (Tue Sep 19 21:31:03 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Installing missing dependencies...
+[sudo] password for epsi: 
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (1) asciidoc-8.6.9-3
+
+Total Installed Size:  2.23 MiB
+
+:: Proceed with installation? [Y/n]
+{% endhighlight %} 
+
+![Docker makepkg: Sync Dependency][image-ss-asp-syncdeps]{: .img-responsive }
+
+#### Download
 
 You can download package using  <code>--nobuild</code>.
 This is useful if you want to alter the configuration,
@@ -303,6 +342,8 @@ Switched to a new branch 'makepkg'
 
 ![Docker makepkg: asp-git][image-ss-asp-makepkg]{: .img-responsive }
 
+#### Install
+
 You can also use <code>--install</code> to automatically install.
 
 {% highlight bash %}
@@ -332,6 +373,23 @@ Reset branch 'makepkg'
 {% endhighlight %}
 
 ![Docker makepkg: install][image-ss-asp-install]{: .img-responsive }
+
+#### Namcap
+
+Check for possible issue, similar to lintian.
+The namcap name is the reverse pacman character.
+
+{% highlight bash %}
+$ namcap asp-git-2-1-any.pkg.tar.xz 
+asp-git E: Missing custom license directory (usr/share/licenses/asp-git)
+asp-git W: Referenced library 'bash' is an uninstalled dependency
+asp-git W: Dependency included and not needed ('awk')
+asp-git W: Dependency included and not needed ('bash')
+asp-git W: Dependency included and not needed ('jq')
+asp-git W: Dependency included and not needed ('git')
+{% endhighlight %}
+
+![Docker Arch: namcap][image-ss-asp-namcap]{: .img-responsive }
 
 -- -- --
 
@@ -442,9 +500,12 @@ Thank you for reading
 [image-ss-pq-install]:		{{ asset_post }}/25-upgrade-package-query.png
 [image-ss-pq-wget-aur]:		{{ asset_post }}/25-wget-aur-package-query.png
 
+[image-ss-asp-deps-error]:	{{ asset_post }}/25-makepkg-asp-git-deps-error.png
+[image-ss-asp-syncdeps]:	{{ asset_post }}/25-makepkg-asp-git-syncdeps.png
 [image-ss-asp-makepkg]:		{{ asset_post }}/25-makepkg-asp-git.png
 [image-ss-asp-install]:		{{ asset_post }}/25-makepkg-asp-git-install.png
 [image-ss-asp-nobuild]:		{{ asset_post }}/25-makepkg-asp-git-nobuild.png
+[image-ss-asp-namcap]:		{{ asset_post }}/25-namcap.png
 
 [image-ss-asp-ncdu]:		{{ asset_post }}/27-asp-ncdu.png
 [image-ss-svn-ncdu]:		{{ asset_post }}/27-svn-community-ncdu.png

@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, The Riddle, Refresh Update, List Upgradable, Download Upgrade, Upgrade, Common Form
 
-*	Package IRSIF: Install, Removal, Query Search, Show Info, List Files, Verify
+*	Package IRSIF: Install, Removal, Query Search, Show Info, Change Log, List Files, Verify, Package as File
 
 *	What's Next
 
@@ -37,7 +37,7 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
-*	Automatic Build: User Privilege, PKGBUILD, makepkg, Feature
+*	Automatic Build: User Privilege, PKGBUILD, makepkg, Example, Dependency, Download, Install, Namcap
 
 *	ABS: Deprecation, ASP, SVN
 

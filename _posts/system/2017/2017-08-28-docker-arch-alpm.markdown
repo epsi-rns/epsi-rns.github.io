@@ -429,6 +429,22 @@ zlib 1:1.2.11-2
 
 #### Search Files
 
+Files owner
+
+{% highlight bash %}
+$ pacman --query --own xargs
+/usr/bin/xargs is owned by findutils 4.6.0-2
+{% endhighlight %}
+
+Or:
+
+{% highlight bash %}
+$ pacman -Qo /usr/share/man/man1/ncdu.1.gz
+/usr/share/man/man1/ncdu.1.gz is owned by ncdu 1.12-1
+{% endhighlight %}
+
+![Docker Arch: pacman Query Owner][image-ss-query-owner]{: .img-responsive }
+
 To find package that provide a specific file,
 you can utilize <code>pkgfile</code>.
 
@@ -666,3 +682,4 @@ Thank you for reading
 
 [image-ss-database-check]:	{{ asset_post }}/19-database-check.png
 
+[image-ss-query-owner]:	{{ asset_post }}/19-query-owner.png

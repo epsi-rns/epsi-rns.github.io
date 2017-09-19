@@ -639,18 +639,35 @@ Breaks: apt-utils (<< 1.3~exp2~)
 
 ![Docker DPKG: Query Status][image-ss-dpkg-status]{: .img-responsive }
 
+You may find <code>dpkg -I</code> useful to get information directly from the package.
+
+{% highlight bash %}
+$ dpkg-deb --info htop_2.0.2-1_amd64.deb 
+ new debian package, version 2.0.
+ size 88164 bytes: control archive=856 bytes.
+     581 bytes,    17 lines      control              
+     564 bytes,     9 lines      md5sums              
+ Package: htop
+ Version: 2.0.2-1
+ Architecture: amd64
+ Maintainer: Daniel Lange <dl.ml1@usrlocal.de>
+...
+{% endhighlight %}
+
+![Docker DPKG: Deb Info][image-ss-dpkg-deb-info]{: .img-responsive }
+
 #### List Files
 
 Listing package files can be achieved using dpkg.
 
 {% highlight bash %}
-$ dpkg -L  ncdu
+$ dpkg -L ncdu
 {% endhighlight %}
 
 Or
 
 {% highlight bash %}
-$ dpkg-query --listfiles  ncdu
+$ dpkg-query --listfiles ncdu
 /.
 /usr
 /usr/bin
@@ -668,6 +685,14 @@ $ dpkg-query --listfiles  ncdu
 {% endhighlight %}
 
 ![Docker DPKG: List Files][image-ss-dpkg-listfiles]{: .img-responsive }
+
+#### Extract
+
+If you are a curious person, you can even extract the package.
+
+{% highlight bash %}
+$ dpkg-deb --extract htop_2.0.2-1_amd64.deb .
+{% endhighlight %}
 
 -- -- --
 
@@ -711,4 +736,5 @@ Thank you for reading
 [image-ss-dpkg-install]:		{{ asset_post }}/13-dpkg-install.png
 
 [image-ss-aptitude-remove]:		{{ asset_post }}/13-aptitude-remove.png
-
+[image-ss-dpkg-listfiles]:		{{ asset_post }}/13-dpkg-query-listfiles.png
+[image-ss-dpkg-deb-info]:		{{ asset_post }}/13-dpkg-deb-info.png

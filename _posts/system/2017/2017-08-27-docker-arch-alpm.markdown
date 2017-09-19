@@ -635,6 +635,34 @@ Version         : 1.12-1
 Description     : Disk usage analyzer with an ncurses interface
 {% endhighlight %}
 
+#### Change Log
+
+I rarely use this feature.
+
+{% highlight bash %}
+$ pacman -Qc jq
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --query --changelog jq
+Changelog for jq:
+1.5-4:
+fix CVE-2015-8863 (FS#50330)
+
+1.5-2:
+add oniguruma for regexp support
+
+1.5-1:
+upstream update
+
+1.4-1:
+move from AUR into [community]
+{% endhighlight %}
+
+![Docker pacman: changelog][image-ss-changelog]{: .img-responsive }
+
 #### List Files
 
 Pretty straightforward using <code>-Qi</code>.
@@ -704,6 +732,67 @@ ncdu: 10 total files, 0 altered files
 
 ![Docker pacman: query check][image-ss-pm-query-check]{: .img-responsive }
 
+#### Package as File
+
+You can examine downloaded package.
+
+{% highlight bash %}
+$ wget -c http://kambing.ui.ac.id/archlinux/community/os/x86_64/ncdu-1.12-1-x86_64.pkg.tar.xz
+{% endhighlight %}
+
+And gather information from the file directly
+
+{% highlight bash %}
+$ pacman --query --file ncdu-1.12-1-x86_64.pkg.tar.xz
+{% endhighlight %}
+
+Equal To:
+
+{% highlight bash %}
+$ pacman -Qp ncdu-1.12-1-x86_64.pkg.tar.xz
+ncdu 1.12-1
+{% endhighlight %}
+
+![Docker Arch: pacman query file][image-ss-query-file]{: .img-responsive }
+
+You can also query file
+with list <code>-Qpl</code> or info <code>-Qpi</code>.
+
+{% highlight bash %}
+$ pacman -Qpl ncdu-1.12-1-x86_64.pkg.tar.xz
+ncdu /usr/
+ncdu /usr/bin/
+ncdu /usr/bin/ncdu
+ncdu /usr/share/
+ncdu /usr/share/licenses/
+ncdu /usr/share/licenses/ncdu/
+ncdu /usr/share/licenses/ncdu/LICENSE
+ncdu /usr/share/man/
+ncdu /usr/share/man/man1/
+ncdu /usr/share/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker Arch: pacman query file list][image-ss-query-file-list]{: .img-responsive }
+
+If you are a curious person, you can even extract the package.
+
+{% highlight bash %}
+$ tar -Jxvf ncdu-1.12-1-x86_64.pkg.tar.xz 
+.PKGINFO
+.BUILDINFO
+.MTREE
+usr/
+usr/bin/
+usr/share/
+usr/share/licenses/
+usr/share/man/
+usr/share/man/man1/
+usr/share/man/man1/ncdu.1.gz
+usr/share/licenses/ncdu/
+usr/share/licenses/ncdu/LICENSE
+usr/bin/ncdu
+{% endhighlight %}
+
 -- -- --
 
 ### What's Next
@@ -742,8 +831,12 @@ Consider finish reading [ [Part Two][local-part-two] ].
 [image-ss-pm-sync-search]:	{{ asset_post }}/13-sync-search.png
 [image-ss-pm-sync-info]:	{{ asset_post }}/13-sync-info.png
 
-[image-ss-pkgfile-update]:	{{ asset_post }}/19-pkgfle-update.png
-[image-ss-pkgfile-list]:		{{ asset_post }}/19-pkgfile-list.png
+[image-ss-pkgfile-update]:	{{ asset_post }}/19-pkgfile-update.png
+[image-ss-pkgfile-list]:	{{ asset_post }}/19-pkgfile-list.png
+[image-ss-changelog]:		{{ asset_post }}/19-changelog.png
+
+[image-ss-query-file]:		{{ asset_post }}/19-query-file.png
+[image-ss-query-file-list]:	{{ asset_post }}/19-query-file-list.png
 
 [image-ss-pm-query-list]:	{{ asset_post }}/13-query-list.png
 [image-ss-pm-query-check]:	{{ asset_post }}/13-query-check.png

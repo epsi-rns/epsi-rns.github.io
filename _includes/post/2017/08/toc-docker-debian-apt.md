@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, Refresh Update, List Upgradable, Upgrade
 
-*	Package IRSIF: Install, Download, Removal, Query Search, Show Info, List Files
+*	Package IRSIF: Install, Download, Removal, Query Search, Show Info, List Files, Extract
 
 *	What's Next
 

@@ -636,7 +636,6 @@ Thank you for reading
 [image-ss-dselect-dialog]:		{{ asset_post }}/13-dselect-dialog.png
 
 [image-ss-dlocate]:			{{ asset_post }}/13-dlocate.png
-[image-ss-dpkg-listfiles]:	{{ asset_post }}/13-dpkg-query-listfiles.png
 [image-ss-dpkg-search]:		{{ asset_post }}/13-dpkg-query-search.png
 
 [image-ss-tasksel-list]:	{{ asset_post }}/15-group-task.png
