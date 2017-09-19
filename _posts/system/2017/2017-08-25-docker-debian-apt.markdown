@@ -611,7 +611,6 @@ Building dependency tree
 Reading state information... Done
 {% endhighlight %}
 
-
 -- -- --
 
 ### History
@@ -721,6 +720,41 @@ APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/a
 
 ![Docker APT: autoclean][image-ss-docker-clean]{: .img-responsive }
 
+#### Unused Dependency Removal
+
+Many times we remove package,
+and the dependency packages left in the system.
+We can clean up by utilize <code>apt-get autoremove</code>.
+
+{% highlight bash %}
+$ apt-get autoremove
+{% endhighlight %}
+
+Almost equal to:
+
+{% highlight bash %}
+$ apt autoremove
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  bc bzip2 file fish-common javascript-common libexpat1 libffi6
+  libgmp10 libgnutls30 libhogweed4 libidn11 libjs-jquery
+  libmagic-mgc libmagic1 libnettle6 libp11-kit0 libpcre2-32-0
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib
+  libreadline7 libssl1.1 libtasn1-6 libx11-6 libx11-data libxau6
+  libxcb1 libxdmcp6 lynx lynx-common mime-support python
+  python-minimal python2.7 python2.7-minimal xsel xz-utils
+0 upgraded, 0 newly installed, 37 to remove and 0 not upgraded.
+After this operation, 47.0 MB disk space will be freed.
+Do you want to continue? [Y/n] 
+{% endhighlight %}
+
+![Docker APT: Autoremove Unused Dependency][image-ss-apt-autoremove]{: .img-responsive }
+
+There is <code>no aptitude autoremove</code> this time.
+" _This aptitude does not have Super Cow Powers._ "
+
 #### Orphan
 
 Quote from the manual,
@@ -775,6 +809,7 @@ Thank you for reading
 [image-ss-config-dump]:		{{ asset_post }}/19-config-dump.png
 [image-ss-cache-dump]:		{{ asset_post }}/19-cache-dump.png
 [image-ss-deborphan]:		{{ asset_post }}/19-deborphan.png
+[image-ss-apt-autoremove]:	{{ asset_post }}/13-apt-autoremove.png
 
 [image-ss-h-upgradable]:	{{ asset_post }}/27-list-upgradable.png
 [image-ss-h-sources-list]:	{{ asset_post }}/27-sources-list-testing.png
@@ -782,4 +817,5 @@ Thank you for reading
 [image-ss-h-upgrade-kept]:	{{ asset_post }}/27-upgrade-kept-back.png
 [image-ss-h-preferences-d]:	{{ asset_post }}/27-preferences-d.png
 [image-ss-h-unupgradable]:	{{ asset_post }}/27-upgradable-pinned.png
+
 

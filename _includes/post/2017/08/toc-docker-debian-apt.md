@@ -13,7 +13,9 @@ There are few sections here.
 
 *	Updating System: OS Release, Refresh Update, List Upgradable, Upgrade
 
-*	Package IRSI: Install, Removal, Unused Dependency, Query Search, Show Info, Change Log, Policy
+*	Package IRSIF: Install, Download, Removal, Query Search, Show Info, List Files
+
+*	Package More: Change Log, Policy, aptitude, dselect, configure, Search Files, dlocate
 
 *	What's Next
 
@@ -31,7 +33,7 @@ There are few sections here.
 
 *	History: The Log File
 
-*	Clean Up
+*	Clean Up: Clean, Unused Dependency, Orphan
 
 *	What's Next
 

@@ -343,9 +343,9 @@ $ apt dist-upgrade
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 #### Package Install
 
@@ -405,6 +405,62 @@ This will assume yes for each confirmation.
 {% highlight bash %}
 $ apt-get install -y htop ncdu fish wget curl vim sudo aptitude
 {% endhighlight %}
+
+#### Download
+
+There are two ways to download package without installing.
+
+{% highlight bash %}
+$ apt-get install --download-only ncdu
+...
+Get:1 http://deb.debian.org/debian testing/main amd64 ncdu amd64 1.12-1+b1 [41.3 kB]
+Fetched 41.3 kB in 1s (27.8 kB/s)
+Download complete and in download only mode
+{% endhighlight %}
+
+![Docker Debian: Cache][image-ss-download-only]{: .img-responsive }
+
+The package will be in cache.
+
+{% highlight bash %}
+$ ls /var/cache/apt/archives/
+lock  ncdu_1.12-1+b1_amd64.deb	partial
+{% endhighlight %}
+
+![Docker APT: Download Only][image-ss-download-cache]{: .img-responsive }
+
+The next time you do install, it does need to download anymore,
+because the package is alre4ady in the cache.
+
+Alternatively you can bypass the cache.
+
+{% highlight bash %}
+$ cd ~
+{% endhighlight %}
+
+{% highlight bash %}
+$ apt-get download htop
+Get:1 http://deb.debian.org/debian testing/main amd64 htop amd64 2.0.2-1 [88.2 kB]
+Fetched 88.2 kB in 1s (69.2 kB/s)
+W: Download is performed unsandboxed as root as file '/root/htop_2.0.2-1_amd64.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+{% endhighlight %}
+
+![Docker APT: Download][image-ss-download-nocache]{: .img-responsive }
+
+And you can install using low level <code>dpkg</code> later on.
+
+{% highlight bash %}
+$ dpkg -i htop_2.0.2-1_amd64.deb 
+Selecting previously unselected package htop.
+(Reading database ... 36837 files and directories currently installed.)
+Preparing to unpack htop_2.0.2-1_amd64.deb ...
+Unpacking htop (2.0.2-1) ...
+Setting up htop (2.0.2-1) ...
+Processing triggers for mime-support (3.60) ...
+Processing triggers for man-db (2.7.6.1-2) ...
+{% endhighlight %}
+
+![Docker DPKG: Install][image-ss-dpkg-install]{: .img-responsive }
 
 #### Package Removal
 
@@ -467,41 +523,6 @@ Before the new <code>apt</code> comes out.
 
 It is just an example. 
 We do not realy need to delete it.
-
-#### Unused Dependency Removal
-
-Many times we remove package,
-and the dependency packages left in the system.
-We can clean up by utilize <code>apt-get autoremove</code>.
-
-{% highlight bash %}
-$ apt-get autoremove
-{% endhighlight %}
-
-Almost equal to:
-
-{% highlight bash %}
-$ apt autoremove
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following packages will be REMOVED:
-  bc bzip2 file fish-common javascript-common libexpat1 libffi6
-  libgmp10 libgnutls30 libhogweed4 libidn11 libjs-jquery
-  libmagic-mgc libmagic1 libnettle6 libp11-kit0 libpcre2-32-0
-  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib
-  libreadline7 libssl1.1 libtasn1-6 libx11-6 libx11-data libxau6
-  libxcb1 libxdmcp6 lynx lynx-common mime-support python
-  python-minimal python2.7 python2.7-minimal xsel xz-utils
-0 upgraded, 0 newly installed, 37 to remove and 0 not upgraded.
-After this operation, 47.0 MB disk space will be freed.
-Do you want to continue? [Y/n] 
-{% endhighlight %}
-
-![Docker APT: Autoremove Unused Dependency][image-ss-apt-autoremove]{: .img-responsive }
-
-There is <code>no aptitude autoremove</code> this time.
-" _This aptitude does not have Super Cow Powers._ "
 
 #### Package Query Search
 
@@ -614,6 +635,42 @@ Breaks: apt-utils (<< 1.3~exp2~)
 
 ![Docker DPKG: Query Status][image-ss-dpkg-status]{: .img-responsive }
 
+#### List Files
+
+Listing package files can be achieved using dpkg.
+
+{% highlight bash %}
+$ dpkg -L  ncdu
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ dpkg-query --listfiles  ncdu
+/.
+/usr
+/usr/bin
+/usr/bin/ncdu
+/usr/share
+/usr/share/doc
+/usr/share/doc/ncdu
+/usr/share/doc/ncdu/changelog.Debian.amd64.gz
+/usr/share/doc/ncdu/changelog.Debian.gz
+/usr/share/doc/ncdu/changelog.gz
+/usr/share/doc/ncdu/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker DPKG: List Files][image-ss-dpkg-listfiles]{: .img-responsive }
+
+-- -- --
+
+### Package More
+
+More about Package, than just IRSIF.
+
 #### Change Log
 
 {% highlight bash %}
@@ -683,6 +740,58 @@ You can continue with this command.
 $ dpkg --configure -a
 {% endhighlight %}
 
+#### Search Files
+
+This looks like list files command, but very different task.
+This command looking for any package that match the corresponding search.
+
+{% highlight bash %}
+$ dpkg -S ncdu
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ dpkg-query --search ncdu
+ncdu: /usr/share/doc/ncdu
+ncdu: /usr/share/doc/ncdu/changelog.Debian.amd64.gz
+fish-common: /usr/share/fish/completions/ncdu.fish
+ncdu: /usr/share/doc/ncdu/changelog.gz
+ncdu: /usr/share/doc/ncdu/changelog.Debian.gz
+ncdu: /usr/share/man/man1/ncdu.1.gz
+ncdu: /usr/share/doc/ncdu/copyright
+ncdu: /usr/bin/ncdu
+{% endhighlight %}
+
+![Docker DPKG: Search][image-ss-dpkg-search]{: .img-responsive }
+
+As you can see, it found in both _ncdu_ and _fish_ package.
+
+#### dlocate
+
+Alternatively
+
+{% highlight bash %}
+$ dlocate ncdu
+ncdu: /.
+ncdu: /usr
+ncdu: /usr/bin
+ncdu: /usr/bin/ncdu
+ncdu: /usr/share
+ncdu: /usr/share/doc
+ncdu: /usr/share/doc/ncdu
+ncdu: /usr/share/doc/ncdu/changelog.Debian.amd64.gz
+ncdu: /usr/share/doc/ncdu/changelog.Debian.gz
+ncdu: /usr/share/doc/ncdu/changelog.gz
+ncdu: /usr/share/doc/ncdu/copyright
+ncdu: /usr/share/man
+ncdu: /usr/share/man/man1
+ncdu: /usr/share/man/man1/ncdu.1.gz
+fish-common: /usr/share/fish/completions/ncdu.fish
+{% endhighlight %}
+
+![Docker Debian: dlocate][image-ss-dlocate]{: .img-responsive }
+
 -- -- --
 
 ### What's Next
@@ -714,7 +823,6 @@ Thank you for reading
 [image-ss-apt-install]:		{{ asset_post }}/13-apt-install.png
 [image-ss-apt-policy]:		{{ asset_post }}/13-apt-policy.png
 [image-ss-apt-remove]:		{{ asset_post }}/13-apt-remove.png
-[image-ss-apt-autoremove]:	{{ asset_post }}/13-apt-autoremove.png
 [image-ss-apt-search]:		{{ asset_post }}/13-apt-search.png
 [image-ss-apt-show]:		{{ asset_post }}/13-apt-show.png
 
@@ -726,3 +834,12 @@ Thank you for reading
 [image-ss-dselect-dialog]:		{{ asset_post }}/13-dselect-dialog.png
 
 [image-ss-apt-changelog]:		{{ asset_post }}/13-changelog.png
+
+[image-ss-dlocate]:			{{ asset_post }}/13-dlocate.png
+[image-ss-dpkg-listfiles]:	{{ asset_post }}/13-dpkg-query-listfiles.png
+[image-ss-dpkg-search]:		{{ asset_post }}/13-dpkg-query-search.png
+
+[image-ss-download-cache]:		{{ asset_post }}/13-download-cache.png
+[image-ss-download-only]:		{{ asset_post }}/13-download-only.png
+[image-ss-download-nocache]:	{{ asset_post }}/13-download-no-cache.png
+[image-ss-dpkg-install]:		{{ asset_post }}/13-dpkg-install.png
