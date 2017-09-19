@@ -591,7 +591,6 @@ Thank you for reading
 [image-ss-update-kambing]:	{{ asset_post }}/16-update-kambing.png
 [image-ss-apt-test-remove]:	{{ asset_post }}/16-test-remove.png
 
-
 [image-ss-dup-dist-upgrade]:	{{ asset_post }}/23-dist-upgrade.png
 [image-ss-dup-pull-jessie]:		{{ asset_post }}/23-docker-jessie.png
 [image-ss-dup-nano-jessie]:		{{ asset_post }}/23-sources-jessie.png

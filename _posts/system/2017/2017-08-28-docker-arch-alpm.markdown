@@ -387,7 +387,7 @@ System Wide Information
 
 Listing packages handled by package manager,
 can be achieved by <code>pacman -Sl</code>.
-Not that <code>pacman -Ql</code> has a very different task.
+Note that <code>pacman -Ql</code> has a very different task.
 
 {% highlight bash %}
 $ pacman -Sl
@@ -411,6 +411,74 @@ community zynaddsubfx 3.0.2-1
 {% endhighlight %}
 
 ![Docker pacman: List Packages][image-ss-list-packages]{: .img-responsive }
+
+You can query only installed packages.
+
+{% highlight bash %}
+$ pacman --query
+acl 2.2.52-4
+apr 1.6.2-1
+apr-util 1.6.0-1
+archlinux-keyring 20170823-1
+...
+xz 5.2.3-1
+zlib 1:1.2.11-2
+{% endhighlight %}
+
+![Docker pacman: List Installed Packages][image-ss-list-installed]{: .img-responsive }
+
+#### Search Files
+
+To find package that provide a specific file,
+you can utilize <code>pkgfile</code>.
+
+{% highlight bash %}
+$ pkgfile --update
+:: Updating 3 repos...
+  download complete: core                 [   703.3 KiB  92.9K/s  2 remaining]
+  download complete: extra                [     7.3 MiB   117K/s  1 remaining]
+  download complete: community            [    16.7 MiB   176K/s  0 remaining]
+:: download complete in 97.48s            <    24.7 MiB   260K/s  3 files    >
+:: waiting for 1 process to finish repacking repos...
+{% endhighlight %}
+
+![Docker Arch: pkgfile update][image-ss-pkgfile-update]{: .img-responsive }
+
+{% highlight bash %}
+$ pkgfile --search /etc/man_db.conf 
+core/man-db
+{% endhighlight %}
+
+![Docker Arch: pkgfile package][image-ss-pkgfile-package]{: .img-responsive }
+
+#### Verify
+
+Verify integrity of package database, such as dependencies and consistency.
+Since <code>pacman 5.0</code>, <code>testdb</code> has been replaced.
+
+{% highlight bash %}
+$ pacman -Dk
+$ pacman -Dkk
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --database --check
+$ pacman --database --check --check
+error: missing 'yp-tools>=2.12-2' dependency for 'archboot'
+error: missing 'wine' dependency for 'playonlinux'
+error: missing 'wine' dependency for 'wine-mono'
+error: missing 'wine' dependency for 'winetricks'
+{% endhighlight %}
+
+![Docker Arch: pacman database check][image-ss-database-check]{: .img-responsive }
+
+You can also <code>query check</code>.
+
+{% highlight bash %}
+$ pacman --query --check
+{% endhighlight %}
 
 -- -- --
 
@@ -448,6 +516,10 @@ $ grc tail /var/log/pacman.log
 -- -- --
 
 ### Clean Up
+
+Keep your system neat and tidy.
+
+#### Cache
 
 APT as default keep downloaded package.
 
@@ -488,6 +560,64 @@ just in case upgrade issue happened.
 I personally like to collect important package to other directory,
 and remove all package manually.
 
+#### Autoremove
+
+ALPM has this very nice autoremove feature that is flexible
+but not easy to remember for daily basis.
+
+Supposed that I just remove vim,
+without removing dependency.
+
+{% highlight bash %}
+$ pacman --remove vim
+{% endhighlight %}
+
+Now we can have this
+
+{% highlight bash %}
+$ pacman --query --deps --unrequired        
+gpm 1.20.7-8
+vim-runtime 8.0.1092-1
+{% endhighlight %}
+
+![Docker Arch: pacman --query --deps --unrequired][image-ss-pacman-qdt]{: .img-responsive }
+
+Consider, not to be noisy this time.
+We have array of packages in a row.
+
+{% highlight bash %}
+$ pacman -Qdtq
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ pacman --query --deps --unrequired  --quiet       
+gpm
+vim-runtime
+{% endhighlight %}
+
+Now we can remove recursively.
+
+{% highlight bash %}
+$ pacman -Qdtq | pacman -Rs -
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --query --deps --unrequired  --quiet | pacman  --remove --recursive -
+checking dependencies...
+
+Packages (2) gpm-1.20.7-8  vim-runtime-8.0.1092-1
+
+Total Removed Size:  27.21 MiB
+
+:: Do you want to remove these packages? [Y/n] 
+{% endhighlight %}
+
+![Docker Arch: Autoremove][image-ss-pacman-qdtq-rs]{: .img-responsive }
+
 -- -- --
 
 ### What's Next
@@ -521,9 +651,18 @@ Thank you for reading
 [image-ss-pacman-log]:		{{ asset_post }}/19-grc-tail-log-pacman.png
 
 [image-ss-cache-clean]:		{{ asset_post }}/17-clean.png
+[image-ss-pacman-qdt]:		{{ asset_post }}/17-pacman-qdt.png
+[image-ss-pacman-qdtq-rs]:	{{ asset_post }}/17-pacman-qdtq-rs.png
 
 [image-ss-hold]:		{{ asset_post }}/28-hold-unremoved.png
 [image-ss-ignored]:		{{ asset_post }}/28-upgradable-ignored.png
 [image-ss-outdated]:	{{ asset_post }}/28-upgradable-outdated.png
 
-[image-ss-list-packages]:		{{ asset_post }}/19-list-packages.png
+[image-ss-list-packages]:	{{ asset_post }}/19-list-packages.png
+
+[image-ss-pkgfile-package]:	{{ asset_post }}/19-pkgfile-package.png
+[image-ss-pkgfile-update]:	{{ asset_post }}/19-pkgfile-update.png
+[image-ss-list-installed]:	{{ asset_post }}/19-list-installed.png
+
+[image-ss-database-check]:	{{ asset_post }}/19-database-check.png
+

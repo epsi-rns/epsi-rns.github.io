@@ -168,12 +168,13 @@ Total Installed Size:  1.50 MiB
 (3/3) installing asp                               [##########] 100%
 {% endhighlight %}
 
+This behave like <code>pacman</code>.
 On most cases <code>pacaur</code> goes well.
 
 ![Docker AUR: pacaur -S asp][image-ss-pacaur-asp]{: .img-responsive }
 
 Consider try another.
-Use <code>pacaur</code> to query other AUR Helper.
+Use <code>pacaur</code> to query AUR Helper.
 
 {% highlight bash %}
 $ pacaur -S packer

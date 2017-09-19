@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, The Riddle, Refresh Update, List Upgradable, Download Upgrade, Upgrade, Common Form
 
-*	Package IRSIF: Package Install, Package Removal, Package Query Search, Package Show Info
+*	Package IRSIF: Install, Removal, Query Search, Show Info, List Files, Verify
 
 *	What's Next
 
@@ -27,15 +27,17 @@ There are few sections here.
 
 *	Lock Package: IgnorePkg, HoldPkg
 
+*	System Wide: List Packages, Search Files
+
 *	History: The Log File
 
-*	Clean Up
+*	Clean Up: Cache, Autoremove
 
 *	What's Next
 
 [ [Part Three][local-part-three] ]
 
-*	Introducing AUR: User Privilege, makepkg, Package Query, cower
+*	Introducing AUR: User Privilege, makepkg, Package Query, cower, Foreign Package
 
 *	ABS: Deprecation, ASP, SVN
 

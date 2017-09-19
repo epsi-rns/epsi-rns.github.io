@@ -245,6 +245,67 @@ Total Installed Size:  0.08 MiB
 
 ![Docker AUR: Package Query: Install][image-ss-pq-install]{: .img-responsive }
 
+#### makepkg Feature
+
+Consider this <code>asp-git</code> package form AUR.
+
+{% highlight bash %}
+$ wget https://aur.archlinux.org/cgit/aur.git/snapshot/asp-git.tar.gz
+$ tar -xvf asp-git.tar.gz
+$ cd asp-git
+{% endhighlight %}
+
+You can download package using  <code>--nobuild</code>.
+This is useful if you want to alter the configuration,
+or even the source code.
+
+{% highlight bash %}
+$ makepkg -o
+==> Making package: asp-git 1.3.g375b035-1 (Tue Sep 19 17:02:41 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Cloning asp git repo...
+Cloning into bare repository '/home/epsi/asp-git/asp'...
+remote: Counting objects: 347, done.
+remote: Total 347 (delta 0), reused 0 (delta 0), pack-reused 347
+Receiving objects: 100% (347/347), 65.53 KiB | 175.00 KiB/s, done.
+Resolving deltas: 100% (204/204), done.
+==> Validating source files with md5sums...
+    asp ... Skipped
+==> Extracting sources...
+  -> Creating working copy of asp git repo...
+Cloning into 'asp'...
+done.
+==> Starting pkgver()...
+==> Updated version: asp-git 2-1
+==> Sources are ready.
+{% endhighlight %}
+
+![Docker makepkg: nobuild][image-ss-asp-nobuild]{: .img-responsive }
+
+Now you can continue, without cloning.
+
+{% highlight bash %}
+$ makepkg
+==> Making package: asp-git 2-1 (Tue Sep 19 17:07:18 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Updating asp git repo...
+Fetching origin
+==> Validating source files with md5sums...
+    asp ... Skipped
+==> Extracting sources...
+  -> Creating working copy of asp git repo...
+Switched to a new branch 'makepkg'
+==> Starting pkgver()...
+==> Starting build()...
+...
+{% endhighlight %}
+
+![Docker makepkg: asp-git][image-ss-asp-makepkg]{: .img-responsive }
+
 You can also use <code>--install</code> to automatically install.
 
 {% highlight bash %}
@@ -255,7 +316,25 @@ Equal to:
 
 {% highlight bash %}
 $ makepkg --install
+==> Making package: asp-git 2-1 (Tue Sep 19 17:12:18 UTC 2017)
+==> Checking runtime dependencies...
+==> Checking buildtime dependencies...
+==> Retrieving sources...
+  -> Updating asp git repo...
+Fetching origin
+==> Validating source files with md5sums...
+    asp ... Skipped
+==> Extracting sources...
+  -> Creating working copy of asp git repo...
+Reset branch 'makepkg'
+==> Starting pkgver()...
+==> WARNING: A package has already been built, installing existing package...
+==> Installing package asp-git with pacman -U...
+[sudo] password for epsi: 
+...
 {% endhighlight %}
+
+![Docker makepkg: install][image-ss-asp-install]{: .img-responsive }
 
 #### Package Query
 
@@ -381,6 +460,29 @@ You can have more screenshot here
 
 *	[Unbundling AUR Helper Process][local-unbundling]
 
+#### Foreign Package
+
+We can identify any foreign package, such as build from AUR. 
+
+{% highlight bash %}
+$ pacman -Qm
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --query --foreign
+asp-git 2-1
+aura-bin 1.3.9-1
+cower 17-2
+pacaur 4.7.10-1
+package-query 1.9-2
+packer 20160325-1
+yaourt 1.9-1
+{% endhighlight %}
+
+![Docker pacman: query foreign][image-ss-query-foreign]{: .img-responsive }
+
 -- -- --
 
 ### ABS
@@ -497,5 +599,11 @@ Thank you for reading
 [image-ss-cower-build]:		{{ asset_post }}/25-build-cower.png
 [image-ss-cower-makepkg]:	{{ asset_post }}/25-makepkg-cower.png
 
+[image-ss-asp-makepkg]:		{{ asset_post }}/25-makepkg-asp-git.png
+[image-ss-asp-install]:		{{ asset_post }}/25-makepkg-asp-git-install.png
+[image-ss-asp-nobuild]:		{{ asset_post }}/25-makepkg-asp-git-nobuild.png
+
 [image-ss-asp-ncdu]:		{{ asset_post }}/27-asp-ncdu.png
 [image-ss-svn-ncdu]:		{{ asset_post }}/27-svn-community-ncdu.png
+
+[image-ss-query-foreign]:	{{ asset_post }}/19-foreign-package.png

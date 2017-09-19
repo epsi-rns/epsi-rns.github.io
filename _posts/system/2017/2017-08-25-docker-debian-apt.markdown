@@ -444,6 +444,8 @@ APT::NeverAutoRemove:: "^linux-firmware$";
 
 #### Verify
 
+Verify integrity of package database, such as dependencies.
+
 {% highlight bash %}
 $ apt-get check
 Reading package lists... Done
@@ -512,13 +514,15 @@ $ tail /var/log/dpkg.log
 
 ### Clean Up
 
+Keep your system neat and tidy.
+
+#### Clean
+
 APT as default keep downloaded package.
 
 Package Cache
 	
 *	/var/cache/apt/archives/ * .deb
-
-#### Clean
 
 You can clean this directory by using either
 

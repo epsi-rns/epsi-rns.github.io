@@ -635,6 +635,75 @@ Version         : 1.12-1
 Description     : Disk usage analyzer with an ncurses interface
 {% endhighlight %}
 
+#### List Files
+
+Pretty straightforward using <code>-Qi</code>.
+Note that <code>-Si</code> is totally different task.
+
+{% highlight bash %}
+$ pacman --query --list ncdu
+ncdu /usr/
+ncdu /usr/bin/
+ncdu /usr/bin/ncdu
+ncdu /usr/share/
+ncdu /usr/share/licenses/
+ncdu /usr/share/licenses/ncdu/
+ncdu /usr/share/licenses/ncdu/LICENSE
+ncdu /usr/share/man/
+ncdu /usr/share/man/man1/
+ncdu /usr/share/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker pacman: query list][image-ss-pm-query-list]{: .img-responsive }
+
+Listing package files also can be achieved using <code>pkgfile</code>.
+
+{% highlight bash %}
+$ pkgfile --update
+:: Updating 3 repos...
+  download complete: core                 [   703.3 KiB  92.9K/s  2 remaining]
+  download complete: extra                [     7.3 MiB   117K/s  1 remaining]
+  download complete: community            [    16.7 MiB   176K/s  0 remaining]
+:: download complete in 97.48s            <    24.7 MiB   260K/s  3 files    >
+:: waiting for 1 process to finish repacking repos...
+{% endhighlight %}
+
+![Docker Arch: pkgfile update][image-ss-pkgfile-update]{: .img-responsive }
+
+{% highlight bash %}
+$ pkgfile --list ncdu
+community/ncdu	/usr/
+community/ncdu	/usr/bin/
+community/ncdu	/usr/bin/ncdu
+community/ncdu	/usr/share/
+community/ncdu	/usr/share/licenses/
+community/ncdu	/usr/share/licenses/ncdu/
+community/ncdu	/usr/share/licenses/ncdu/LICENSE
+community/ncdu	/usr/share/man/
+community/ncdu	/usr/share/man/man1/
+community/ncdu	/usr/share/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker Arch: pkgfile list][image-ss-pkgfile-list]{: .img-responsive }
+
+
+#### Verify
+
+You can verify integrity of a package.
+
+{% highlight bash %}
+$ pacman -Qkk ncdu
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pacman --query --check --check ncdu
+ncdu: 10 total files, 0 altered files
+{% endhighlight %}
+
+![Docker pacman: query check][image-ss-pm-query-check]{: .img-responsive }
+
 -- -- --
 
 ### What's Next
@@ -672,3 +741,9 @@ Consider finish reading [ [Part Two][local-part-two] ].
 [image-ss-pm-query-search]:	{{ asset_post }}/13-query-search.png
 [image-ss-pm-sync-search]:	{{ asset_post }}/13-sync-search.png
 [image-ss-pm-sync-info]:	{{ asset_post }}/13-sync-info.png
+
+[image-ss-pkgfile-update]:	{{ asset_post }}/19-pkgfle-update.png
+[image-ss-pkgfile-list]:		{{ asset_post }}/19-pkgfile-list.png
+
+[image-ss-pm-query-list]:	{{ asset_post }}/13-query-list.png
+[image-ss-pm-query-check]:	{{ asset_post }}/13-query-check.png
