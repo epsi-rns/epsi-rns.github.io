@@ -37,13 +37,15 @@ There are few sections here.
 
 [ [Part Three][local-part-three] ]
 
-*	Introducing AUR: User Privilege, makepkg, Package Query, cower, Foreign Package
+*	Automatic Build: User Privilege, PKGBUILD, makepkg, Feature
 
 *	ABS: Deprecation, ASP, SVN
 
 *	What's Next
 
 [ [Part Four][local-part-four] ]
+
+*	Introducing AUR: Package Query, cower, Foreign Package
 
 *	AUR Helper: yaourt, pacaur, packer, aura
 
@@ -56,4 +58,4 @@ There are few sections here.
 [local-part-one]:   {{ site.url }}/system/2017/08/27/docker-arch-alpm.html
 [local-part-two]:   {{ site.url }}/system/2017/08/28/docker-arch-alpm.html
 [local-part-three]: {{ site.url }}/system/2017/08/29/docker-arch-alpm.html
-[local-part-four]: {{ site.url }}/system/2017/08/30/docker-arch-alpm.html
+[local-part-four]:	{{ site.url }}/system/2017/08/30/docker-arch-alpm.html

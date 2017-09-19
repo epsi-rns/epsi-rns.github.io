@@ -31,18 +31,15 @@ related_link_ids:
 
 -- -- --
 
-### Introducing AUR
+### Automatic Build
 
-One of the most important strength to Arch,
-is the number of packages can be achieved from AUR (Arch User Repository).
-In order to use AUR you have to go through automatic build process.
+<code>makepkg</code> is some kind of automatic build process,
+utilizing information from <code>PKGBUKD</code>.
 Don't be scared, this process is easy, and won't hurt you.
 
-	Personally I love the colored output
-
-In case you forget, this good reading is a must.
-
-*	https://wiki.archlinux.org/index.php/Arch_User_Repository
+No need to do <code>configure</code>, <code>make</code>,
+and <code>make install</code> separately.
+Since they are already in <code>PKGBUKD</code>.
 
 It is a good idea to compile as a non-root user.
 Consider prepare a user if not exist yet.
@@ -90,10 +87,10 @@ $ cd ~
 
 #### PKGBUILD
 
-AUR handle source code only in one text file named <code>PKGBUILD</code>.
+ALPM handle source code only in one text file named <code>PKGBUILD</code>.
 Indeed a smart design, only one text file.
 
-Consider check this <code>package query</code> package.
+Consider check this <code>package query</code> package from AUR.
 
 *	https://aur.archlinux.org/packages/package-query/
 
@@ -245,7 +242,7 @@ Total Installed Size:  0.08 MiB
 
 ![Docker AUR: Package Query: Install][image-ss-pq-install]{: .img-responsive }
 
-#### makepkg Feature
+#### Feature
 
 Consider this <code>asp-git</code> package form AUR.
 
@@ -335,153 +332,6 @@ Reset branch 'makepkg'
 {% endhighlight %}
 
 ![Docker makepkg: install][image-ss-asp-install]{: .img-responsive }
-
-#### Package Query
-
-<code>package-query</code> is,
-the base dependency of some AUR tools,
-such as <code>cower</code> and <code>yaourt</code>.
-
-Now that we already have <code>package-query</code> installed.
-Consider see it in action, querying _sync_, _local_, and _AUR_.
-
-{% highlight bash %}
-$ cd ..
-
-$ package-query -S package-query
-
-$ package-query -Q package-query
-local/package-query 1.9-2
-
-$ package-query -A package-query
-aur/package-query 1.9-2 [installed] (1148) (9.78)
-{% endhighlight %}
-
-![Docker AUR: Package Query: Action][image-ss-pq-action]{: .img-responsive }
-
-In its manual, you can see that <code>package-query</code>
-provide flexible nice formatting.
-
-#### cower
-
-There is AUR tools that could make our life easier such as <code>cower</code>.
-First we have to find the <code>cower</code> origin.
-Since cower is AUR package, we can repeat the same process,
-like what we does to package-query to cower.
-
-{% highlight bash %}
-$ package-query --aur --sync --query cower
-aur/cower 17-2 (932) (28.91)
-
-$ cd ~
-
-$ wget -q https://aur.archlinux.org/cgit/aur.git/snapshot/cower.tar.gz
-
-$ tar -xzf cower.tar.gz 
-
-$ cd cower
-{% endhighlight %}
-
-![Docker AUR: Cower: Build][image-ss-cower-build]{: .img-responsive }
-
-There are these errors however.
-
-{% highlight bash %}
-$ makepkg -i
-...
-==> Verifying source file signatures with gpg...
-    cower-17.tar.gz ... FAILED (unknown public key 1EB2638FF56C0C53)
-==> ERROR: One or more PGP signatures could not be verified!
-{% endhighlight %}
-
-Use <code>--skippgpcheck</code> to pass PGP Check.
-
-{% highlight bash %}
-$ makepkg -i --skippgpcheck
-...
-/bin/sh: pod2man: command not found
-make: *** [Makefile:90: cower.1] Error 127
-==> ERROR: A failure occurred in build().
-    Aborting...
-{% endhighlight %}
-
-And fix Perl <code>$PATH</code> if necessary.
-
-{% highlight bash %}
-$ touch .profile
-
-$ nano .profile
-
-$ cat .profile
-export PATH=$PATH:/usr/bin/core_perl
-
-$ source .profile && export PATH
-
-$ echo $PATH
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl
-{% endhighlight %}
-
-{% highlight bash %}
-$ cd ~/cower
-$ makepkg -i --skippgpcheck
-makepkg -i --skippgpcheck
-==> WARNING: A package has already been built, installing existing package...
-==> Installing package cower with pacman -U...
-...
-{% endhighlight %}
-
-![Docker AUR: Cower: makepkg][image-ss-cower-makepkg]{: .img-responsive }
-
-Always RTFM
-
-{% highlight bash %}
-$ man cower
-{% endhighlight %}
-
-Consider see cower in action
-
-{% highlight bash %}
-$ cower -c -s cower
-aur/burgaur 2.2-2 (7, 0.10)
-    A delicious AUR helper. Made from cower.
-aur/burgaur-git 2.2-2 (1, 0.49)
-    A delicious AUR helper. Made from cower.
-aur/cower 17-2 (932, 28.91) [installed]
-    A simple AUR agent with a pretentious name
-aur/cower-git 17-1 (81, 2.11)
-    A simple AUR agent with a pretentious name
-aur/owlman 0.8-1 (1, 0.00)
-    A pacman and cower wrapper focused on simplicity
-{% endhighlight %}
-
-![Docker AUR: Cower: Action][image-ss-cower-action]{: .img-responsive }
-
-You can have more screenshot here
-
-*	[Unbundling AUR Helper Process][local-unbundling]
-
-#### Foreign Package
-
-We can identify any foreign package, such as build from AUR. 
-
-{% highlight bash %}
-$ pacman -Qm
-{% endhighlight %}
-
-Equal to:
-
-{% highlight bash %}
-$ pacman --query --foreign
-asp-git 2-1
-aura-bin 1.3.9-1
-cower 17-2
-pacaur 4.7.10-1
-package-query 1.9-2
-packer 20160325-1
-yaourt 1.9-1
-{% endhighlight %}
-
-![Docker pacman: query foreign][image-ss-query-foreign]{: .img-responsive }
 
 -- -- --
 
@@ -586,18 +436,11 @@ Thank you for reading
 
 [local-part-four]:		{{ site.url }}/system/2017/08/30/docker-arch-alpm.html
 
-[local-unbundling]:		{{ site.url }}/system/2014/12/26/unbundling-aur-helper-process.html
-
 [image-ss-user-privilege]:	{{ asset_post }}/25-user-privilege.png
-[image-ss-pq-action]:		{{ asset_post }}/25-action-package-query.png
 [image-ss-pq-pkgbuild]:		{{ asset_post }}/25-cat-pkgbuild.png
 [image-ss-pq-makepkg]:		{{ asset_post }}/25-makepkg-package-query.png
 [image-ss-pq-install]:		{{ asset_post }}/25-upgrade-package-query.png
 [image-ss-pq-wget-aur]:		{{ asset_post }}/25-wget-aur-package-query.png
-
-[image-ss-cower-action]:	{{ asset_post }}/25-action-cower-cs.png
-[image-ss-cower-build]:		{{ asset_post }}/25-build-cower.png
-[image-ss-cower-makepkg]:	{{ asset_post }}/25-makepkg-cower.png
 
 [image-ss-asp-makepkg]:		{{ asset_post }}/25-makepkg-asp-git.png
 [image-ss-asp-install]:		{{ asset_post }}/25-makepkg-asp-git-install.png
