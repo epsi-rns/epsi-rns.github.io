@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine zypper step by step,
   using openSUSE container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -239,6 +239,15 @@ NAME="openSUSE Tumbleweed"
 $ zypper lu
 Loading repository data...
 Reading installed packages...
+No updates found.
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ zypper list-updates
+Loading repository data...
+Reading installed packages...
 S | Repository | Name             | Current Version | Available Version | Arch  
 --+------------+------------------+-----------------+-------------------+-------
 v | OSS        | coreutils        | 8.27-2.3        | 8.27-3.1          | x86_64
@@ -257,6 +266,16 @@ This will update _only_ newer packages.
 
 {% highlight bash %}
 $ zypper up
+Loading repository data...
+Reading installed packages...
+
+Nothing to do.
+{% endhighlight %}
+
+Equal To:
+
+{% highlight bash %}
+$ zypper update
 Loading repository data...
 Reading installed packages...
 
@@ -283,6 +302,18 @@ You can see that both are slightly different.
 
 {% highlight bash %}
 $ zypper dup
+Warning: ...
+Loading repository data...
+Reading installed packages...
+Computing distribution upgrade...
+
+Nothing to do.
+{% endhighlight %}
+
+Equal To:
+
+{% highlight bash %}
+$ zypper dist-upgrade
 Warning: You are about to do a distribution upgrade with all enabled repositories. Make sure these repositories are compatible before you continue. See 'man zypper' for more information about this command.
 Loading repository data...
 Reading installed packages...
@@ -298,6 +329,24 @@ Continue? [y/n/...? shows all options] (y):
 {% endhighlight %}
 
 ![Docker Zypper: Distribution Upgrade][image-ss-zypper-dup]{: .img-responsive }
+
+#### Patch Check
+
+Another update method.
+
+{% highlight bash %}
+$ zypper pchk
+{% endhighlight %}
+
+Equal To:
+
+{% highlight bash %}
+$ zypper patch-check
+Loading repository data...
+Reading installed packages...
+
+0 patches needed (0 security patches)
+{% endhighlight %}
 
 #### Process Being Used
 
@@ -330,6 +379,12 @@ Consider our favorite example package below.
 
 {% highlight bash %}
 $ zypper in man nano htop ncdu fish
+{% endhighlight %}
+
+Equal To:
+
+{% highlight bash %}
+$ zypper install man nano htop ncdu fish
 Loading repository data...
 Reading installed packages...
 Resolving package dependencies...
@@ -348,7 +403,6 @@ operation, additional 190.3 MiB will be used.
 Continue? [y/n/...? shows all options] (y): 
 {% endhighlight %}
 
-
 ![Docker Zypper: Install][image-ss-zypper-in]{: .img-responsive }
 
 Note that you can <code>reinstall</code> using <code>-f</code> argument.
@@ -357,10 +411,44 @@ Note that you can <code>reinstall</code> using <code>-f</code> argument.
 $ zypper install --force man nano htop ncdu fish
 {% endhighlight %}
 
+#### Download
+
+Download without install is possible.
+
+{% highlight bash %}
+$ zypper in --download-only wget
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following NEW package is going to be installed:
+  wget
+
+1 new package to install.
+Overall download size: 667.1 KiB. Already cached: 0 B. Download
+only.
+Continue? [y/n/...? shows all options] (y): 
+{% endhighlight %}
+
+![Docker Zypper: Download Only][image-ss-download]{: .img-responsive }
+
+And you can continue with install later.
+
+{% highlight bash %}
+$ zypper in wget
+{% endhighlight %}
+
+
 #### Package Removal
 
 {% highlight bash %}
 $ zypper rm systemd
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ zypper remove systemd
 Loading repository data...
 Reading installed packages...
 Resolving package dependencies...
@@ -380,10 +468,42 @@ Continue? [y/n/...? shows all options] (y):
 
 ![Docker Zypper: Remove][image-ss-zypper-rm]{: .img-responsive }
 
+#### Dependency Removal
+
+Supposed you install ViM, and later desire to remove ViM, with all dependencies.
+
+{% highlight bash %}
+$ zypper remove --clean-deps vim
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ zypper rm -u vim
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following 3 packages are going to be REMOVED:
+  libdb-4_8 perl vim
+
+3 packages to remove.
+After the operation, 45.3 MiB will be freed.
+Continue? [y/n/...? shows all options] (y): 
+{% endhighlight %}
+
+![Docker Zypper: Dependency][image-ss-dependency]{: .img-responsive }
+
 #### Package Query Search
 
 {% highlight bash %}
 $ zypper se fish
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ zypper search fish
 Loading repository data...
 Reading installed packages...
 
@@ -406,6 +526,12 @@ i+ | fish                           | A user friendl-> | package
 
 {% highlight bash %}
 $ zypper if fish
+{% endhighlight %}
+
+Eauql to
+
+{% highlight bash %}
+$ zypper info fish
 Loading repository data...
 Reading installed packages...
 
@@ -428,6 +554,37 @@ Description    :
 {% endhighlight %}
 
 ![Docker Zypper: Show Info][image-ss-zypper-if]{: .img-responsive }
+
+#### Package File List
+
+I cannot find any reference about listing files in particular package.
+Therefore I use the lower level <code>rpm -ql</code> instead.
+
+{% highlight bash %}
+$ rpm --query --list ncdu
+/usr/bin/ncdu
+/usr/share/doc/packages/ncdu
+/usr/share/doc/packages/ncdu/COPYING
+/usr/share/doc/packages/ncdu/ChangeLog
+/usr/share/doc/packages/ncdu/README
+/usr/share/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker RPM: Query List][image-ss-rpm-ql]{: .img-responsive }
+
+However there is this <code>zypper -f</code> command
+
+{% highlight bash %}
+$ zypper search --file /etc/manpath.config 
+Loading repository data...
+Reading installed packages...
+
+S  | Name | Summary                            | Type   
+---+------+------------------------------------+--------
+i+ | man  | A Program for Displaying man Pages | package
+{% endhighlight %}
+
+![Docker Zypper: Search File][image-ss-search-file]{: .img-responsive }
 
 -- -- --
 
@@ -453,13 +610,18 @@ Thank you for reading
 [image-ss-docker-ps]:       {{ asset_post }}/00-docker-ps.png
 [image-ss-zypper-shell]:    {{ asset_post }}/01-zypper-shell.png
 
-[image-ss-zypper-lu]:  {{ asset_post }}/01-list-updates.png
-[image-ss-zypper-up]:  {{ asset_post }}/01-update.png
-[image-ss-zypper-dup]: {{ asset_post }}/01-distribution-upgrade.png
+[image-ss-zypper-lu]:	{{ asset_post }}/01-list-updates.png
+[image-ss-zypper-up]:	{{ asset_post }}/01-update.png
+[image-ss-zypper-dup]:	{{ asset_post }}/01-distribution-upgrade.png
 
-[image-ss-zypper-if]:  {{ asset_post }}/13-info-fish.png
-[image-ss-zypper-in]:  {{ asset_post }}/13-install.png
-[image-ss-zypper-rm]:  {{ asset_post }}/13-remove-systemd.png
-[image-ss-zypper-se]:  {{ asset_post }}/13-search-fish.png
+[image-ss-zypper-if]:	{{ asset_post }}/13-info-fish.png
+[image-ss-zypper-in]:	{{ asset_post }}/13-install.png
+[image-ss-zypper-rm]:	{{ asset_post }}/13-remove-systemd.png
+[image-ss-zypper-se]:	{{ asset_post }}/13-search-fish.png
 
-[image-ss-man-issue]:  {{ asset_post }}/05-conclusion-man-issue.png
+[image-ss-man-issue]:	{{ asset_post }}/05-conclusion-man-issue.png
+
+[image-ss-download]:	{{ asset_post }}/13-download-only.png
+[image-ss-dependency]:	{{ asset_post }}/13-dependency-removal.png
+[image-ss-rpm-ql]:		{{ asset_post }}/13-rpm-ql.png
+[image-ss-search-file]:	{{ asset_post }}/13-search-file.png

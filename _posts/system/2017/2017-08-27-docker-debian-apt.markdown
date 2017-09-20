@@ -346,6 +346,12 @@ Resolving deltas: 100% (5474/5474), done.
 #### Build Dependency
 
 {% highlight bash %}
+$ sudo apt-get build-dep herbstluftwm
+{% endhighlight %}
+
+Or:
+
+{% highlight bash %}
 $ sudo apt build-dep herbstluftwm
 Reading package lists... Done
 Building dependency tree       

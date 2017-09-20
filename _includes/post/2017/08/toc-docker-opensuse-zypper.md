@@ -1,6 +1,6 @@
 ### Table of Content
 
-This is a three-parts article.
+This is a four-parts article.
 There are few sections here.
 
 [ [Part One][local-part-one] ]
@@ -13,27 +13,35 @@ There are few sections here.
 
 *	Package Management: ZYpp Frontend, Get Help, Zypper Shell
 
-*	Updating System: OS Release, List Updates, Update, Upgrades, Process Being Used
+*	Updating System: OS Release, List Updates, Update, Upgrades, Patch Check, Process Being Used
 
-*	Package IRSI: Install, Removal, Query Search, Show Info
+*	Package IRSIF: Install, Download Only, Removal, Dependency Removal, Query Search, Show Info, File List
+
+*	What's Next
 
 [ [Part Two][local-part-two] ]
 
 *	Dependency: Help, Dependency, Reverse Dependency, Test, Verify
 
-*	Repositories: List, Add/Remove, Modify, Additional, Mirror
-
-*	What's Next
-
-[ [Part Three][local-part-three] ]
-
 *	Group: Pattern
+
+*	System Wide: List Packages
 
 *	History: The Log File
 
 *	Clean Up
 
-*	Build from Source
+*	What's Next
+
+[ [Part Three][local-part-three] ]
+
+*	Repositories: List, Add/Remove, Modify, Service List, Additional, Mirror
+
+*	What's Next
+
+[ [Part Four][local-part-four] ]
+
+*	Build from Source: General Requirement, Download and Extract, Build Dependencies, Source Path, Build, Install RPM, rpmlint
 
 *	Hold Package: Case Example, Add Lock, Test Example, Remove Lock
 
@@ -43,6 +51,7 @@ There are few sections here.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-part-one]:   {{ site.url }}/system/2017/08/15/docker-opensuse-zypper.html
-[local-part-two]:   {{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
-[local-part-three]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
+[local-part-one]:	{{ site.url }}/system/2017/08/15/docker-opensuse-zypper.html
+[local-part-two]:	{{ site.url }}/system/2017/08/16/docker-opensuse-zypper.html
+[local-part-three]:	{{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
+[local-part-four]:	{{ site.url }}/system/2017/08/18/docker-opensuse-zypper.html

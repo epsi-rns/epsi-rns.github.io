@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine zypper step by step,
   using openSUSE container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -144,6 +144,12 @@ Zypper has a tool, to install or repair, missing dependencies.
 
 {% highlight bash %}
 $ zypper verify
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ zypper ve
 Loading repository data...
 Reading installed packages...
 
@@ -161,351 +167,153 @@ Continue? [y/n/...? shows all options] (y): y
 
 -- -- --
 
-### Repository
+### Group
 
-Zypper has amazing <code>repository</code> commands.
+I cannot find any reference about group in Zypper.
+Although there is group concept in YaST.
 
-#### List Repository
+#### Metapackage
 
-Like usual, zypper manual is more than enough.
-I mean, always check the fine manual first.
+Neither metapackage exist in Zypper.
 
-{% highlight bash %}
-$ zypper help repos
-repos (lr) [options] [repo] ...
+#### Pattern
 
-List all defined repositories.
-
-  Command options:
--e, --export <FILE.repo>  Export all defined repositories as a single local .repo file.
--a, --alias               Show also repository alias.
--n, --name                Show also repository name.
--u, --uri                 Show also base URI of repositories.
--p, --priority            Show also repository priority.
--r, --refresh             Show also the autorefresh flag.
--d, --details             Show more information like URI, priority, type.
--s, --service             Show also alias of parent service.
--E, --show-enabled-only   Show enabled repos only.
--U, --sort-by-uri         Sort the list by URI.
--P, --sort-by-priority    Sort the list by repository priority.
--A, --sort-by-alias       Sort the list by alias.
--N, --sort-by-name        Sort the list by name.
-{% endhighlight %}
-
-![Docker Zypper: Help Repository][image-ss-zypper-help-repos]{: .img-responsive }
-
-Consider getting started with this simple command.
+The closest concept about group in zypper is,
+by using <code>pattern</code> package.
 
 {% highlight bash %}
-$ zypper lr
-{% endhighlight %}
-
-or a more complex one.
-
-{% highlight bash %}
-$ zypper repos -p -E -N
-# | Alias   | Name    | Enabled | GPG Check | Refresh | Priority
---+---------+---------+---------+-----------+---------+---------
-1 | non-oss | NON-OSS | Yes     | (r ) Yes  | Yes     |   99    
-2 | oss     | OSS     | Yes     | (r ) Yes  | Yes     |   99    
-{% endhighlight %}
-
-![Docker Zypper: Repository -p -E -N][image-ss-zypper-repos-pen]{: .img-responsive }
-
-openSUSE put it in <code class="code-file">/etc/zypp/repos.d/</code>.
-Like most configuration in unix world, you can edit manualy.
- 
-{% highlight bash %}
-$ ls /etc/zypp/repos.d/
-non-oss.repo  oss.repo
-{% endhighlight %}
-
-![Docker Zypp: /etc/zypp/repos.d/][image-ss-etc-zypp-repos]{: .img-responsive }
-
-And here is what each repository configuration.
-
-{% highlight bash %}
-$ cat /etc/zypp/repos.d/oss.repo 
-[oss]
-name=OSS
-enabled=1
-autorefresh=1
-baseurl=http://download.opensuse.org/tumbleweed/repo/oss/
-path=/
-type=yast2
-keeppackages=0
-{% endhighlight %}
-
-![Docker Zypp: /etc/zypp/repos.d/oss.repo][image-ss-etc-zypp-repos-oss]{: .img-responsive }
-
-There is also <code>zypper refresh</code> command.
-
-{% highlight bash %}
-$ zypper ref    
-Repository 'NON-OSS' is up to date.                                 
-Repository 'OSS' is up to date.                                     
-All repositories have been refreshed.
-{% endhighlight %}
-
-![Docker Zypper: Refresh][image-ss-zypper-refresh]{: .img-responsive }
-
-<code>zypper refresh</code> support process for specific repository.
-
-{% highlight bash %}
-$ zypper ref -f oss
-Forcing raw metadata refresh
-Retrieving repository 'OSS' metadata .........................[done]
-Forcing building of repository cache
-Building repository 'OSS' cache ..............................[done]
-Specified repositories have been refreshed.
-{% endhighlight %}
-
-![Docker Zypper: Refresh Specific][image-ss-zypper-refresh-oss]{: .img-responsive }
-
-#### Add/ Remove
-
-It has been a riddle for a SUSE's beginner like me,
-thinking about how openSUSE handle my weird favorites package,
-such as <code>herbstluftwm</code>.
-In openSUSE we have to add <code>X11:windowmanagers</code> first,
-using <code>zypper addrepo</code> command.
-
-{% highlight bash %}
-$ zypper ar http://download.opensuse.org/repositories/X11:windowmanagers/openSUSE_Tumbleweed/X11:windowmanagers.repo
-Adding repository 'Various window managers (openSUSE_Tumbleweed)' ................................[done]
-Repository 'Various window managers (openSUSE_Tumbleweed)' successfully added
-
-URI         : http://download.opensuse.org/repositories/X11:/windowmanagers/openSUSE_Tumbleweed/
-Enabled     : Yes                                                                               
-GPG Check   : Yes                                                                               
-Autorefresh : No                                                                                
-Priority    : 99 (default priority)                                                             
-
-Repository priorities are without effect. All enabled repositories share the same priority.
-{% endhighlight %}
-
-![Docker Zypper: Add Repository][image-ss-zypper-addrepo]{: .img-responsive }
-
-And refresh.
-
-{% highlight bash %}
-$ zypper ref
-Retrieving repository 'Various window managers (openSUSE_Tumbleweed)' metadata ...................[done]
-Building repository 'Various window managers (openSUSE_Tumbleweed)' cache ........................[done]
-Repository 'NON-OSS' is up to date.                                                                     
-Repository 'OSS' is up to date.                                                                         
-All repositories have been refreshed.
-{% endhighlight %}
-
-![Docker Zypper: Refresh Newly Added][image-ss-zypper-refresh-wm]{: .img-responsive }
-
-So that we can install <code>herbstluftwm</code>.
-
-{% highlight bash %}
-$ zypper install herbstluftwm
+$ zypper pt
 Loading repository data...
 Reading installed packages...
-Resolving package dependencies...
-
-The following 5 NEW packages are going to be installed:
-  herbstluftwm libX11-6 libX11-data libXau6 libxcb1
-
-5 new packages to install.
-Overall download size: 866.3 KiB. Already cached: 0 B. After the
-operation, additional 2.9 MiB will be used.
-Continue? [y/n/...? shows all options] (y): y
+S | Name                 | Version       | Repository | Dependency
+--+----------------------+---------------+------------+-----------
+  | apparmor             | 20170319-10.2 | OSS        |           
+  | apparmor             | 20170319-10.2 | OSS        |           
+  | base                 | 20170319-10.2 | OSS        |           
+  | base                 | 20170319-10.2 | OSS        |           
+  | basesystem           | 20170319-10.2 | OSS        |           
+  | basesystem           | 20170319-10.2 | OSS        |           
+  | books                | 20170319-4.1  | OSS        |           
 {% endhighlight %}
 
-![Docker Zypper: Install Herbstluftwm][image-ss-zypper-install-hl]{: .img-responsive }
+![Docker Zypper: Pattern][image-ss-zypper-pattern]{: .img-responsive }
 
-If you want, you can remove the newly add repository.
+-- -- --
 
-{% highlight bash %}
-$ zypper rr X11_windowmanagers
-Removing repository 'Various window managers (openSUSE_Tumbleweed)' ..............................[done]
-Repository 'Various window managers (openSUSE_Tumbleweed)' has been removed.
-{% endhighlight %}
+### System Wide
 
-![Docker Zypper: Remove Repository][image-ss-zypper-removerepo]{: .img-responsive }
+System Wide Information
 
-#### Modify
+#### List Packages
 
-Always check the fine manual, like usual.
+There is this <code>zypper packages</code> command
 
 {% highlight bash %}
-$ zypper help modifyrepo
-...
+$ zypper help packages
+packages (pa) [options] [repository] ...
+
+List all packages available in specified repositories.
+
   Command options:
--d, --disable             Disable the repository (but don't remove it).
--e, --enable              Enable a disabled repository.
--r, --refresh             Enable auto-refresh of the repository.
--R, --no-refresh          Disable auto-refresh of the repository.
--n, --name <name>         Set a descriptive name for the repository.
--p, --priority <integer>  Set priority of the repository.
--k, --keep-packages       Enable RPM files caching.
--K, --no-keep-packages    Disable RPM files caching.
-...
--a, --all                 Apply changes to all repositories.
--l, --local               Apply changes to all local repositories.
--t, --remote              Apply changes to all remote repositories.
--m, --medium-type <type>  Apply changes to repositories of specified type.
+
+-r, --repo <alias|#|URI>  Just another means to specify repository.
+-i, --installed-only      Show only installed packages.
+-u, --not-installed-only  Show only packages which are not installed.
+    --orphaned            Show packages which are orphaned (without repository).
+    --suggested           Show packages which are suggested.
+    --recommended         Show packages which are recommended.
+    --unneeded            Show packages which are unneeded.
+-N, --sort-by-name        Sort the list by package name.
+-R, --sort-by-repo        Sort the list by repository.
+ {% endhighlight %}
+ 
+ {% highlight bash %}
+ $ zypper pa --unneeded
+Loading repository data...
+Reading installed packages...
+S | Repository | Name               | Version    | Arch  
+--+------------+--------------------+------------+-------
+i | oss        | asciidoc           | 8.6.9-3.1  | noarch
+i | oss        | glib2-devel        | 2.54.0-1.1 | x86_64
+i | oss        | libsgutils2-1_43-2 | 1.43-3.1   | x86_64
+i | oss        | libxslt-devel      | 1.1.29-6.1 | x86_64
+i | oss        | openssl            | 1.0.2l-2.1 | noarch
+i | oss        | p11-kit            | 0.23.2-2.5 | x86_64
+i | oss        | p11-kit-tools      | 0.23.2-2.5 | x86_64
+i | oss        | xorg-x11-devel     | 7.6-47.3   | noarch
+ {% endhighlight %}
+ 
+ {% highlight bash %}
+$ zypper pa --orphaned
+Loading repository data...
+Reading installed packages...
+S  | Repository | Name                  | Version          | Arch  
+---+------------+-----------------------+------------------+-------
+i+ | @System    | herbstluftwm          | 1335135043-3.280 | x86_64
+i  | @System    | openSUSE-release-mini | 20170816-1.2     | x86_64
 {% endhighlight %}
 
-I like to change to change the repo directly, especially the long name,
-so I do not need to have long column in my terminal.
-And also I disable this newly added repo.
+![Docker Zypper: Package Unneeded][image-ss-packages-unneeded]{: .img-responsive }
+
+-- -- --
+
+### History
+
+#### The Log File
+
+This is most the forgotten part of package management,
+although it is not uncommon to notice messages.
 
 {% highlight bash %}
-$ cat /etc/zypp/repos.d/X11_windowmanagers.repo 
-[X11_windowmanagers]
-name=Window Managers
-enabled=0
-autorefresh=0
+$ less /var/log/zypp/history
+# 2017-08-23 08:57:51 man-2.7.6-3.3.x86_64.rpm installed ok
+# Additional rpm output:
+# Updating /etc/sysconfig/cron ...
+# 
+2017-08-23 08:57:51|install|man|2.7.6-3.3|x86_64|root@d2e88a46e111|oss|21490bfff69e98449f8ae00bb9e91b15038566ca|
+2017-08-23 10:01:09|command|root@d2e88a46e111|'zypper' 'install' '--force' 'man' 'nano' 'htop' 'ncdu' 'fish'|
+2017-08-23 10:01:12|install|htop|2.0.2-3.4|x86_64|root@d2e88a46e111|oss|2807afd80fa606228799ab76baddfc2e688d60b8|
 {% endhighlight %}
 
-![Docker Nano: Window Managers][image-ss-nano-repo]{: .img-responsive }
+Most likely you want the tail, latest transaction,
+at the bottom of the recorded event.
 
-Consider zypper repos again.
+![Docker: /var/log/zypp/history][image-ss-less-log]{: .img-responsive }
+
+-- -- --
+
+### Clean Up
+
+Opensuse as default does not keep downloaded package,
+unless <code>keeppackages=1</code>
+sets in <code class="code-file">/etc/zypp/repos.d/</code>.
+But sometimes cache files left for some reason.
+
+Package Cache
+	
+*	/var/cache/zypp/packages/ * /x86_64/ * .x86_64.rpm
+	
+*	/var/cache/zypp/packages/ * /suse/noarch/ * .noarch.rpm
 
 {% highlight bash %}
-$ zypper repos
-Repository priorities are without effect. All enabled repositories share the same priority.
-
-# | Alias              | Name            | Enabled | GPG Check | Refresh
---+--------------------+-----------------+---------+-----------+--------
-1 | X11_windowmanagers | Window Managers | No      | ----      | ----   
-2 | non-oss            | NON-OSS         | Yes     | (r ) Yes  | Yes    
-3 | oss                | OSS             | Yes     | (r ) Yes  | Yes  
+$ ls -lR /var/cache/zypp/packages/
 {% endhighlight %}
 
-![Docker Zypper: Repos Newly Added][image-ss-zypper-repos-newly]{: .img-responsive }
+![Docker Zypper: Cache][image-ss-zypper-cache]{: .img-responsive }
 
-Note that <code>X11_windowmanagers</code> has <code>1</code> index.
-Now we can enable it again using this command
+You can clean these directory.
 
 {% highlight bash %}
-$ zypper mr -e 1
-Repository 'X11_windowmanagers' has been successfully enabled.
+$ zypper clean
 {% endhighlight %}
 
-Or using name, to make a clearer mandate.
-
-{% highlight bash %}
-$ zypper mr -e X11_windowmanagers
-Nothing to change for repository 'X11_windowmanagers'.
-{% endhighlight %}
-
-![Docker Zypper: mr enable][image-ss-zypper-mr-enable]{: .img-responsive }
-
-And **multiple** command at once. Raise priority.
-
-{% highlight bash %}
-$ zypper mr -r -k -p 70 X11_windowmanagers      
-Autorefresh has been enabled for repository 'X11_windowmanagers'.
-RPM files caching has been enabled for repository 'X11_windowmanagers'.
-Repository 'X11_windowmanagers' priority has been set to 70.
-{% endhighlight %}
-
-![Docker Zypper: mr multiple][image-ss-zypper-mr-multiple]{: .img-responsive }
-
-Or **all remote** repository at once.
-
-{% highlight bash %}
-$ zypper mr -Kt
-RPM files caching has been disabled for repository 'X11_windowmanagers'.
-Nothing to change for repository 'non-oss'.
-Nothing to change for repository 'oss'.
-{% endhighlight %}
-
-![Docker Zypper: mr remotes][image-ss-zypper-mr-remotes]{: .img-responsive }
-
-#### Additional
-
-There are also additional repository contain specific package,
-i.e driver and multimedia codec provided by packman.
-
-*	<https://en.opensuse.org/Additional_package_repositories>
-
-Consider enable packman repository.
-
-{% highlight bash %}
-$ sudo zypper ar -f -n packman http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/ packman
-Adding repository 'packman' ..................................[done]
-Repository 'packman' successfully added
-
-URI         : http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/
-Enabled     : Yes                                                                
-GPG Check   : Yes                                                                
-Autorefresh : Yes                                                                
-Priority    : 99 (default priority)                                              
-
-Repository priorities in effect:    (See 'zypper lr -P' for details)
-      70 (raised priority)  :  1 repository  
-      99 (default priority) :  3 repositories
-{% endhighlight %}
-
-![Docker Zypper: Additional Packman][image-ss-zypper-additional]{: .img-responsive }
-
-Sometimes packman cannot be reach.
-For this docker, I would rather remove it.
-
-#### Mirror
-
-Sometimes you need to switch mirror,
-whether just to find nearest mirror such as your campus,
-or because the main repository is has been down for a few hours.
-Unfortunately I can not find good reference on how to switch mirror in openSUSE.
-
-All you need to do is go check the site,
-and make sure you check the column.
-
-*	<https://mirrors.opensuse.org/>
-
-{% highlight bash %}
-$ zypper ar http://ftp.riken.jp/Linux/opensuse/tumbleweed/repo/oss/ oss-jp
-Adding repository 'oss-jp' ...................................[done]
-Repository 'oss-jp' successfully added
-
-URI         : http://ftp.riken.jp/Linux/opensuse/tumbleweed/repo/oss/
-Enabled     : Yes                                                    
-GPG Check   : Yes                                                    
-Autorefresh : No                                                     
-Priority    : 99 (default priority)                                  
-
-Repository priorities are without effect. All enabled repositories share the same priority.
-{% endhighlight %}
-
-{% highlight bash %}
-$ zypper ref oss-jp
-Retrieving repository 'oss-jp' metadata ......................[done]
-Building repository 'oss-jp' cache ...........................[done]
-Specified repositories have been refreshed.
-{% endhighlight %}
-
-![Docker openSUSE: Mirror][image-ss-opensuse-mirror]{: .img-responsive }
-
-After this you may safely disable main repository.
-
-{% highlight bash %}
-$ zypper mr -d oss   
-Repository 'oss' has been successfully disabled.
-{% endhighlight %}
-
-Switching mirror has never been easier.
-
-{% highlight bash %}
-$ zypper mr -d oss-jp
-Repository 'oss-jp' has been successfully disabled.
-
-$ zypper mr -e oss   
-Repository 'oss' has been successfully enabled.
-{% endhighlight %}
+![Docker Zypper: Clean][image-ss-zypper-clean]{: .img-responsive }
 
 -- -- --
 
 ### What's Next
 
-We have not finished yet.
+Repository deserve their own article.
 Consider finish reading [ [Part Three][local-part-three] ].
 
 Thank you for reading
@@ -525,20 +333,10 @@ Thank you for reading
 [image-ss-zypper-test-remove]: {{ asset_post }}/14-rm-less.png
 [image-ss-zypper-verify]:      {{ asset_post }}/14-verify.png
 
-[image-ss-zypper-addrepo]:     {{ asset_post }}/16-addrepo-windowmanagers.png
-[image-ss-etc-zypp-repos]:     {{ asset_post }}/16-etc-zypp-repos-d.png
-[image-ss-etc-zypp-repos-oss]: {{ asset_post }}/16-etc-zypp-repos-d-oss-repo.png
-[image-ss-zypper-help-repos]:  {{ asset_post }}/16-help-repos.png
-[image-ss-zypper-install-hl]:  {{ asset_post }}/16-install-herbstluftwm.png
-[image-ss-zypper-refresh]:     {{ asset_post }}/16-refresh.png
-[image-ss-zypper-refresh-oss]: {{ asset_post }}/16-refresh-f-oss.png
-[image-ss-zypper-refresh-wm]:  {{ asset_post }}/16-refresh-windowmanager.png
-[image-ss-zypper-removerepo]:  {{ asset_post }}/16-removerepo-windowmanagers.png
-[image-ss-zypper-repos-pen]:   {{ asset_post }}/16-repos-lr-pen.png
-[image-ss-zypper-mr-enable]:   {{ asset_post }}/16-mr-enable.png
-[image-ss-zypper-mr-multiple]: {{ asset_post }}/16-mr-multiple-commands.png
-[image-ss-zypper-mr-remotes]:  {{ asset_post }}/16-mr-all-remotes.png
-[image-ss-nano-repo]:          {{ asset_post }}/16-nano-windowmanagers-repo.png
-[image-ss-zypper-repos-newly]: {{ asset_post }}/16-repos-modified.png
-[image-ss-zypper-additional]:  {{ asset_post }}/16-repo-additional.png
-[image-ss-opensuse-mirror]:    {{ asset_post }}/16-mirror-jp.png
+[image-ss-zypper-pattern]: {{ asset_post }}/15-pattern.png
+
+[image-ss-zypper-cache]: {{ asset_post }}/17-cache.png
+[image-ss-zypper-clean]: {{ asset_post }}/17-clean.png
+
+[image-ss-less-log]:     {{ asset_post }}/19-log.png
+[image-ss-packages-unneeded]:   {{ asset_post }}/19-packages-unneeded.png

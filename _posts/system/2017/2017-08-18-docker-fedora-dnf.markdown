@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Fedora DNF - Part One"
-date: 2017-08-18 09:45:15 +0700
+date: 2017-08-18 13:15:35 +0700
 categories: system
 tags: [docker, distro, package manager, fedora]
 author: epsi
