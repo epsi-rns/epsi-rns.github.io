@@ -18,7 +18,7 @@ related_link_ids:
   - 17082715  # Arch ALPM
   - 17082415  # Debian Portage
   - 17082115  # Slackware Package
-  - 17081845  # Fedora DNF
+  - 17081815  # Fedora DNF
   - 17081515  # openSUSE Zypper
   - 17081345  # Void XBPS
   - 17081145  # Gentoo Portage

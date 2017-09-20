@@ -7,11 +7,15 @@
 
 - id: 17083145
   title: "Docker - Package Management Summary"
-  url: /system/2017/08/31/docker-distribution-flow.html
+  url: /system/2017/08/31/docker-package-summary.html
 
 - id: 17083015
   title: "Docker - LFS Build"
   url: /system/2017/08/30/docker-lfs-build.html
+
+- id: 17083035
+  title: "Docker - Arch ALPM - Part Four"
+  url: /system/2017/08/30/docker-arch-alpm.html
 
 - id: 17082935
   title: "Docker - Arch ALPM - Part Three"
@@ -24,6 +28,10 @@
 - id: 17082715
   title: "Docker - Arch ALPM - Part One"
   url: /system/2017/08/27/docker-arch-alpm.html
+
+- id: 17082735
+  title: "Docker - Debian APT - Part Four"
+  url: /system/2017/08/27/docker-debian-apt.html
 
 - id: 17082635
   title: "Docker - Debian APT - Part Three"
@@ -57,9 +65,13 @@
   title: "Docker - Fedora DNF - Part Two"
   url: /system/2017/08/19/docker-fedora-dnf.html
 
-- id: 17081845
+- id: 17081815
   title: "Docker - Fedora DNF - Part One"
   url: /system/2017/08/18/docker-fedora-dnf.html
+
+- id: 17081845
+  title: "Docker - openSUSE Zypper - Part Four"
+  url: /system/2017/08/18/docker-opensuse-zypper.html
 
 - id: 17081715
   title: "Docker - openSUSE Zypper - Part Three"
