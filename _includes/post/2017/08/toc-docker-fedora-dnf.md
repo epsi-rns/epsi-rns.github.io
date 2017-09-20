@@ -1,6 +1,6 @@
 ### Table of Content
 
-This is a three-parts article.
+This is a four-parts article.
 There are few sections here.
 
 [ [Part One][local-part-one] ]
@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, Repository List, System Upgrade, Extra Commands
 
-*	Package IRSI: Install, Removal, Query Search, Show Info, Install Feature
+*	Package IRSIF: Install, Removal, Query Search, Show Info, Install Feature, List File
 
 *	What's Next
 
@@ -27,7 +27,7 @@ There are few sections here.
 
 *	What's Next
 
-[ [Part Three][local-part-two] ]
+[ [Part Three][local-part-three] ]
 
 *	Plugin: List, Install, Help, Config Manager Example
 
@@ -37,9 +37,15 @@ There are few sections here.
 
 *	Clean Up
 
-*	Build from Source
-
 *	Miscellanous: Downgrade, dist-sync
+
+*	What's Next
+
+[ [Part Four][local-part-four] ]
+
+*	Build from Source: Requirement, Example, Extract, Dependencies, Build, Install
+
+*	Inspect Package: rpmlint, rpm -Qpl, rpmls, rpm2cpio
 
 *	Conclusion
 

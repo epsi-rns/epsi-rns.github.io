@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine DNF step by step,
   using Fedora container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -94,6 +94,81 @@ $ dnf config-manager --set-enabled rawhide-source
 
 -- -- --
 
+### System Wide
+
+System Wide Information
+
+#### List Packages
+
+Listing packages handled by package manager,
+available in repository.
+
+{% highlight bash %}
+$ dnf list --available | less
+Last metadata expiration check: 0:29:01 ago on Wed Sep 20 14:19:59 2017.
+Available Packages
+0ad.x86_64                               0.0.22-2.fc27                   rawhide
+0ad-data.noarch                          0.0.22-1.fc27                   rawhide
+0ad-debugsource.x86_64                   0.0.22-2.fc27                   rawhide
+0install.x86_64                          2.12.1-1.fc27                   rawhide
+0xFFFF.x86_64                            0.3.9-15.fc26                   rawhide
+2048-cli.x86_64                          0.9.1-4.fc27                    rawhide
+2048-cli-debugsource.x86_64              0.9.1-4.fc27                    rawhide
+{% endhighlight %}
+
+![Docker DNF: List Available][image-ss-list-available]{: .img-responsive }
+
+Extra package. The documentation define extras as
+_that is packages installed on the system that are not available in any known repository_ .
+
+{% highlight bash %}
+$ dnf list --extras
+Last metadata expiration check: 0:44:25 ago on Wed Sep 20 14:19:59 2017.
+Extra Packages
+9wm.x86_64                           1.2-7.fc20             @System 
+audit-libs.x86_64                    2.7.7-5.fc27           @System 
+python3-asn1crypto.noarch            0.22.0-4.fc27          @rawhide
+python3-rpm.x86_64                   4.14.0-0.rc1.2.fc28    @System 
+rpm.x86_64                           4.14.0-0.rc1.2.fc28    @System 
+rpm-build.x86_64                     4.14.0-0.rc1.2.fc28    @System 
+rpm-build-libs.x86_64                4.14.0-0.rc1.2.fc28    @System 
+rpm-libs.x86_64                      4.14.0-0.rc1.2.fc28    @System 
+rpm-plugin-selinux.x86_64            4.14.0-0.rc1.2.fc28    @System 
+rpm-plugin-systemd-inhibit.x86_64    4.14.0-0.rc1.2.fc28    @System 
+shared-mime-info.x86_64              1.8-6.fc28             @System 
+systemd.x86_64                       234-5.fc27             @System 
+systemd-container.x86_64             234-5.fc27             @rawhide
+systemd-libs.x86_64                  234-5.fc27             @System 
+systemd-pam.x86_64                   234-5.fc27             @System 
+vim-minimal.x86_64                   2:8.0.1097-1.fc28      @System 
+{% endhighlight %}
+
+![Docker DNF: List Extras][image-ss-list-extras]{: .img-responsive }
+
+You can try other such as
+
+{% highlight bash %}
+$ dnf list recent 
+{% endhighlight %}
+
+For more information you can:
+
+{% highlight bash %}
+$ dnf help list | less
+...
+  --all                 show all packages (default)
+  --available           show only available packages
+  --installed           show only installed packages
+  --extras              show only extras packages
+  --updates             show only upgrades packages
+  --upgrades            show only upgrades packages
+  --autoremove          show only autoremove packages
+  --recent              show only recently changed packages
+...
+{% endhighlight %}
+
+-- -- --
+
 ### History
 
 #### The Log File
@@ -129,6 +204,17 @@ DNF has a very nice history feature.
 $ dnf history
 ID     | Command line             | Date and time    | Action(s)      | Altered
 -------------------------------------------------------------------------------
+    19 | update                   | 2017-09-18 13:10 | Update         |    1   
+    18 | distro-sync              | 2017-09-17 19:15 | I, O, U        |   93 **
+    17 | downgrade herbstluftwm   | 2017-09-17 18:49 | Downgrade      |    1   
+    16 | -y install mock          | 2017-09-09 13:29 | Install        |   24   
+    15 | install wget             | 2017-09-09 11:35 | Install        |    1  <
+    14 | install gcc              | 2017-09-03 02:47 | Install        |    8 > 
+    13 | install make             | 2017-09-03 02:43 | Install        |    1   
+    12 | install glib2-devel libX | 2017-09-03 02:42 | Install        |   18   
+    11 | install rpm-build        | 2017-09-03 02:30 | I, U           |   41   
+    10 | install dnf-plugin-confi | 2017-09-02 19:02 | Install        |    2   
+     9 | install rpmreaper        | 2017-08-26 16:07 | Install        |    1   
      8 | upgrade                  | 2017-08-24 14:48 | Update         |   15 **
      7 | reinstall man-db         | 2017-08-23 15:47 | Reinstall      |    1   
      6 | install man              | 2017-08-23 15:45 | Install        |    4   
@@ -140,6 +226,52 @@ ID     | Command line             | Date and time    | Action(s)      | Altered
 {% endhighlight %}
 
 ![Docker DNF: History][image-ss-dnf-history]{: .img-responsive }
+
+Now we can <code>undo</code>.
+
+{% highlight bash %}
+$ dnf history undo 15
+Last metadata expiration check: 0:06:49 ago on Wed Sep 20 14:19:59 2017.
+Undoing transaction 15, from Sat Sep  9 11:35:43 2017
+    Install wget-1.19.1-3.fc27.x86_64 @rawhide
+====================================================================
+ Package    Arch         Version               Repository      Size
+====================================================================
+Removing:
+ wget       x86_64       1.19.1-3.fc27         @rawhide       2.8 M
+
+Transaction Summary
+====================================================================
+Remove  1 Package
+
+Freed space: 2.8 M
+Is this ok [y/N]:
+{% endhighlight %}
+
+But not everything can be undone.
+
+{% highlight bash %}
+$ dnf history undo 19
+Last metadata expiration check: 0:10:19 ago on Wed Sep 20 14:19:59 2017.
+Undoing transaction 19, from Mon Sep 18 13:10:27 2017
+    Upgraded ncdu-1.12-5.fc27.x86_64 @rawhide
+    Upgrade       1.12-6.fc28.x86_64 @rawhide
+No package ncdu-0:1.12-5.fc27.x86_64 available.
+Error: An operation cannot be undone
+{% endhighlight %}
+
+Or <code>rollback</code>.
+
+{% highlight bash %}
+$ dnf history rollback 18
+Last metadata expiration check: 0:10:31 ago on Wed Sep 20 14:19:59 2017.
+Rollback to transaction 18, from Sun Sep 17 19:15:24 2017
+  Undoing the following transactions: 19
+    Upgraded ncdu-1.12-5.fc27.x86_64 @rawhide
+    Upgrade       1.12-6.fc28.x86_64 @rawhide
+No package ncdu-0:1.12-5.fc27.x86_64 available.
+Error: A transaction cannot be undone
+{% endhighlight %}
 
 -- -- --
 
@@ -262,217 +394,6 @@ $ dnf autoremove
 
 -- -- --
 
-### Build from Source
-
-DNF has the capability to download the source code.
-Then we can utilize other tool to build from source.
-
-#### Thank You Community
-
-I was wondering how DNF handle source code,
-and I finally figure out a generic steps,
-from the very nice *fedora Community in Google Plus*.
-
-
-Let me quote form "Johan Heikkilä":
-
-	Dnf has capability to install source packages, as long as they are available in the installed/enabled repositories. It is recommended to do the following steps as user and not as root.
-
-In this example:
-
-*	I actually alter the steps a bit for clarity.
-
-*	And I still use root for simplicity. It is just docker experience anyway.
-
-*	Using herbstluftwm as an example case
-
-#### General Requirement
-
-We require to install <code>rpm-build</code>
-
-{% highlight bash %}
-$ dnf install rpm-build
-Last metadata expiration check: 0:25:14 ago on Sun Sep  3 02:01:23 2017.
-Dependencies resolved.
-====================================================================
- Package             Arch   Version                   Repository
-                                                               Size
-====================================================================
-Installing:
- rpm-build           x86_64 4.13.90-0.git14002.7.fc28 rawhide 158 k
-Upgrading:
- python3-rpm         x86_64 4.13.90-0.git14002.7.fc28 rawhide 115 k
- rpm                 x86_64 4.13.90-0.git14002.7.fc28 rawhide 528 k
-...
- xz                  x86_64 5.2.3-4.fc27              rawhide 150 k
- zip                 x86_64 3.0-20.fc27               rawhide 270 k
-
-Transaction Summary
-====================================================================
-Install  35 Packages
-Upgrade   6 Packages
-
-Total download size: 17 M
-Is this ok [y/N]:
-Downloading Packages:
-(1/41): bzip2-1.0.6-24.fc27.x86_64.rpm        44 kB/s |  58 kB     00:01
-...
------------------------------------------------------------------------------
-Total                                        565 kB/s |  17 MB     00:30   
-...
-Running transaction
-  Preparing        :                                                     1/1 
-  Upgrading        : rpm-plugin-selinux-4.13.90-0.git14002.7.fc28.x8    1/47 
-...
-Installed:
-  rpm-build.x86_64 4.13.90-0.git14002.7.fc28   
-...  
-Upgraded:
-  python3-rpm.x86_64 4.13.90-0.git14002.7.fc28                               
-  rpm.x86_64 4.13.90-0.git14002.7.fc28                                       
-  rpm-build-libs.x86_64 4.13.90-0.git14002.7.fc28                            
-...            
-
-Complete!
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-install-rpmbuild]{: .img-responsive }
-
-And also these toolchain.
-
-{% highlight bash %}
-$ dnf install gcc make
-{% endhighlight %}
-
-#### Example Requirement
-
-Since the case is Herbstluftwm, 
-we also need require to install these packages
-to avoid missing dependencies.
-
-{% highlight bash %}
-$ dnf install glib2-devel libX11-devel libXinerama-devel
-{% endhighlight %}
-
-#### Download
-
-Now consider using home directory.
-
-{% highlight bash %}
-cd ~
-{% endhighlight %}
-
-Since we have already enable <code>rawhide-source</code>,
-we can directly download.
-
-{% highlight bash %}
-$ dnf download --source herbstluftwm
-Fedora - Rawhide - Developmental pa 840 kB/s |  66 MB     01:20    
-Last metadata expiration check: 0:01:12 ago on Sun Sep  3 01:53:48 2017.
-herbstluftwm-0.6.2-8.fc27.src.rpm    84 kB/s | 228 kB     00:02
-{% endhighlight %}
-
-or use <code>--enablerepo</code> and <code>--source</code> instead.
-
-{% highlight bash %}
-$ dnf --enablerepo rawhide download --source herbstluftwm
-{% endhighlight %}
-
-![Docker DNF: Download Source][image-ss-bs-download-source]{: .img-responsive }
-
-#### Extract
-
-We need to extract the previously downloaded package 
-to <code>~/rpmbuild</code> directory.
-As you can see below, there are warnings for using root.
-For real system, please do not use root.
-
-{% highlight bash %}
-$ rpm -ivh herbstluftwm-0.6.2-8.fc27.src.rpm 
-warning: herbstluftwm-0.6.2-8.fc27.src.rpm: Header V3 RSA/SHA256 Signature, key ID 9db62fb1: NOKEY
-Updating / installing...
-   1:herbstluftwm-0.6.2-8.fc27        
-warning: user mockbuild does not exist - using root
-warning: group mockbuild does not exist - using root
-warning: user mockbuild does not exist - using root
-warning: group mockbuild does not exist - using root
-################################# [100%]
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-rpm-ivh]{: .img-responsive }
-
-Now we have two directories inside.
-
-{% highlight bash %}
-$ ls rpmbuild/
-SOURCES  SPECS
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-ls-rpmbuild]{: .img-responsive }
-
-#### Build
-
-Consider get in to <code>~/rpmbuild/SPECS</code> to build.
-
-{% highlight bash %}
-$ cd ./rpmbuild/SPECS
-{% endhighlight %}
-
-{% highlight bash %}
-$ rpmbuild -ba herbstluftwm.spec
-...
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.jys9eY
-+ umask 022
-+ cd /root/rpmbuild/BUILD
-+ cd herbstluftwm-0.6.2
-+ /usr/bin/rm -rf /root/rpmbuild/BUILDROOT/herbstluftwm-0.6.2-8.fc28.x86_64
-+ exit 0
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-rpmbuild-ba]{: .img-responsive }
-
-Consider going back to <code>~/rpmbuild</code> directory.
-Now we can see additional directories inside as built result.
-
-{% highlight bash %}
-$ ls   
-BUILD  BUILDROOT  RPMS  SOURCES  SPECS  SRPMS
-{% endhighlight %}
-
-And the build output result
-
-{% highlight bash %}
-$ ls ~/rpmbuild/RPMS/x86_64
-herbstluftwm-0.6.2-8.fc28.x86_64.rpm
-herbstluftwm-debuginfo-0.6.2-8.fc28.x86_64.rpm
-herbstluftwm-debugsource-0.6.2-8.fc28.x86_64.rpm
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-result-rpm]{: .img-responsive }
-
-#### Install 
-
-Now we can install the previously built rpm.
-
-{% highlight bash %}
-$ rpm -iv ~/rpmbuild/RPMS/x86_64/herbstluftwm-0.6.2-8.fc28.x86_64.rpm 
-Preparing packages...
-herbstluftwm-0.6.2-8.fc28.x86_64
-{% endhighlight %}
-
-![Docker RPM: Build Source][image-ss-bs-rpm-iv-hlwm]{: .img-responsive }
-
-#### Using Mock
-
-There are also Mock solution. But it is beyond this scope.
-
-#### Thank You
-
-I respect the help from community.
-Again, thank you.
-
--- -- --
-
 ### Miscellanous
 
 #### Downgrade
@@ -532,9 +453,10 @@ Is this ok [y/N]:
 
 -- -- --
 
-### Conclusion
+### What's Next
 
-	These are just preliminary knowledge about DNF.
+These are this build from source topic.
+Consider finish reading [ [Part Four][local-part-four] ].
 
 Thank you for reading
 
@@ -542,6 +464,8 @@ Thank you for reading
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
+
+[local-part-four]: {{ site.url }}/system/2017/08/21/docker-fedora-dnf.html
 
 [image-ss-dnf-cm-set-enabled]:  {{ asset_post }}/18-cm-set-enabled.png
 [image-ss-dnf-cm-help]:         {{ asset_post }}/18-help-cm.png
@@ -552,14 +476,8 @@ Thank you for reading
 
 [image-ss-var-log-dnf]:   {{ asset_post }}/19-log.png
 [image-ss-dnf-history]:   {{ asset_post }}/19-history.png
-
-[image-ss-bs-download-source]:   {{ asset_post }}/25-download-source.png
-[image-ss-bs-install-rpmbuild]:  {{ asset_post }}/25-install-rpmbuild.png
-[image-ss-bs-ls-rpmbuild]:       {{ asset_post }}/25-ls-rpmbuild.png
-[image-ss-bs-result-rpm]:        {{ asset_post }}/25-result-rpm.png
-[image-ss-bs-rpmbuild-ba]:       {{ asset_post }}/25-rpmbuild-ba.png
-[image-ss-bs-rpm-ivh]:           {{ asset_post }}/25-rpm-ivh.png
-[image-ss-bs-rpm-iv-hlwm]:       {{ asset_post }}/25-rpm-iv-hlwm.png
+[image-ss-list-available]:   {{ asset_post }}/19-list-available.png
+[image-ss-list-extras]:   {{ asset_post }}/19-list-extras.png
 
 [image-ss-h-dnf-bash-locked]:    {{ asset_post }}/27-hold-dnf-upgrade-bash-locked.png
 [image-ss-h-dnf-bash-unlocked]:  {{ asset_post }}/27-hold-dnf-upgrade-bash-unlocked.png

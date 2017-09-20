@@ -369,9 +369,9 @@ in my previous opensuse full install article.
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 #### Package Install
 
@@ -557,7 +557,7 @@ Description    :
 
 #### Package File List
 
-I cannot find any reference about listing files in particular package.
+My bad, I cannot find any reference about listing files in particular package.
 Therefore I use the lower level <code>rpm -ql</code> instead.
 
 {% highlight bash %}
@@ -572,7 +572,8 @@ $ rpm --query --list ncdu
 
 ![Docker RPM: Query List][image-ss-rpm-ql]{: .img-responsive }
 
-However there is this <code>zypper -f</code> command
+However there is this <code>zypper -f</code> command,
+similar with <code>rpm -qf</code> instead.
 
 {% highlight bash %}
 $ zypper search --file /etc/manpath.config 

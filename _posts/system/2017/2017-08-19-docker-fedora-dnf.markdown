@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine DNF step by step,
   using Fedora container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary

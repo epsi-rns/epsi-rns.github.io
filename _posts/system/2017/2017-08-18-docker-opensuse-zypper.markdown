@@ -191,6 +191,14 @@ herbstluftwm-1335135043-3.280.x86_64
 
 Now we are almost done.
 
+-- -- --
+
+### Inspect Package
+
+Often we need to inspect <code>.rpm</code> package.
+No need any <code>zypper</code> command,
+as this more like an <code>rpm</code> issue.
+
 #### rpmlint
 
 Check for possible issue, similar to lintian or namcap.
@@ -209,12 +217,6 @@ herbstluftwm.x86_64: W: file-contains-current-date /usr/bin/herbstluftwm
 {% endhighlight %}
 
 ![Docker openSUSE: rpmlint][image-ss-rpmlint]{: .img-responsive }
-
-### Inspect Files
-
-Often we need to inspect <code>.rpm</code> package.
-No need any <code>zypper</code> command,
-as this more like an <code>rpm</code> issue.
 
 #### rpm -Qpl
 

@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   Examine DNF step by step,
   using Fedora container in Docker.
-  One of Three Parts Article.
+  One of Four Parts Article.
 
 related_link_ids: 
   - 17083145  # Docker Summary
@@ -273,9 +273,9 @@ Nothing to do.
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 Read the fine manual. Helpless or help more. 
 We need to install <code>man</code>.
@@ -458,7 +458,37 @@ Is this ok [y/N]:
 
 ![Docker DNF: Package Install Feature Library][image-ss-dnf-feat-exec]{: .img-responsive }
 
+#### Package File List
+
+Therefore is however something similar with <code>rpm -ql</code> instead.
+
+{% highlight bash %}
+$ dnf repoquery -l ncdu
+Last metadata expiration check: 1:50:36 ago on Wed Sep 20 14:19:59 2017.
+/usr/bin/ncdu
+/usr/lib/.build-id
+/usr/lib/.build-id/83
+/usr/lib/.build-id/83/e67e014bbe91489897a5c369d4716734fc26e0
+/usr/share/doc/ncdu
+/usr/share/doc/ncdu/COPYING
+/usr/share/doc/ncdu/ChangeLog
+/usr/share/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker DNF: List File][image-ss-dnf-repoquery-l]]{: .img-responsive }
+
+My bad, I cannot find any reference searching files owner.
+Therefore I use the lower level <code>rpm -qf</code> instead.
+
+{% highlight bash %}
+$ rpm -qf /etc/man_db.conf 
+man-db-2.7.6.1-5.fc27.x86_64
+{% endhighlight %}
+
+![Docker RPM: Query File][image-ss-rpm-qf]{: .img-responsive }
+
 -- -- --
+
 
 ### What's Next
 
@@ -494,3 +524,6 @@ Thank you for reading
 
 [image-ss-dnf-feat-exec]:	{{ asset_post }}/13-dnf-contain-exec.png
 [image-ss-dnf-feat-lib]:	{{ asset_post }}/13-dnf-provide-perl-library.png
+
+[image-ss-dnf-repoquery-l]:	{{ asset_post }}/13-dnf-repoquery-l.png
+[image-ss-rpm-qf]:			{{ asset_post }}/13-rpm-qf.png

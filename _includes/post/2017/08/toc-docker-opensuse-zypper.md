@@ -41,7 +41,9 @@ There are few sections here.
 
 [ [Part Four][local-part-four] ]
 
-*	Build from Source: General Requirement, Download and Extract, Build Dependencies, Source Path, Build, Install RPM, rpmlint
+*	Build from Source: General Requirement, Download and Extract, Build Dependencies, Source Path, Build, Install RPM
+
+*	Inspect Package: rpmlint, rpm -Qpl, rpmls, rpm2cpio
 
 *	Hold Package: Case Example, Add Lock, Test Example, Remove Lock
 
