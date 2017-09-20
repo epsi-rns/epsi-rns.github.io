@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker - Void XBPS - Part One"
-date: 2017-08-13 09:45:15 +0700
+date: 2017-08-13 13:15:35 +0700
 categories: system
 tags: [docker, distro, package manager, void]
 author: epsi
@@ -18,7 +18,7 @@ related_link_ids:
   - 17082115  # Slackware Package
   - 17081815  # Fedora DNF
   - 17081515  # openSUSE Zypper
-# - 17081345  # Void XBPS
+# - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
   - 17081015  # Crux Ports
 

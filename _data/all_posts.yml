@@ -57,6 +57,10 @@
   title: "Docker - Slackware Package - Part One"
   url: /system/2017/08/21/docker-slackware-package.html
 
+- id: 17082145
+  title: "Docker - Fedora DNF - Part Four"
+  url: /system/2017/08/21/docker-fedora-dnf.html
+
 - id: 17082045
   title: "Docker - Fedora DNF - Part Three"
   url: /system/2017/08/20/docker-fedora-dnf.html
@@ -89,7 +93,7 @@
   title: "Docker - Void XBPS - Part Two"
   url: /system/2017/08/14/docker-void-xbps.html
 
-- id: 17081345
+- id: 17081315
   title: "Docker - Void XBPS - Part One"
   url: /system/2017/08/13/docker-void-xbps.html
 

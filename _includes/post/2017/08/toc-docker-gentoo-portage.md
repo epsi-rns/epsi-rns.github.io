@@ -15,6 +15,10 @@ There are few sections here.
 
 *	Package IRSI: Install, Confirmation, Ambiguous, Download, Removal, Query Search, Show Info
 
+*	What's Next
+
+[ [Part Two][local-part-two] ]
+
 *	Dependency: Dependency, Reverse Dependency, Pretend, Verify
 
 *	Group: Metapackages, Sets
@@ -23,7 +27,7 @@ There are few sections here.
 
 *	What's Next
 
-[ [Part Two][local-part-two] ]
+[ [Part Three][local-part-three] ]
 
 *	Interesting Tools: Equery, Layman, Eix
 
@@ -42,5 +46,6 @@ There are few sections here.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[local-part-one]: {{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
-[local-part-two]: {{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
+[local-part-one]:	{{ site.url }}/system/2017/08/11/docker-gentoo-portage.html
+[local-part-two]:	{{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
+[local-part-three]:	{{ site.url }}/system/2017/08/13/docker-gentoo-portage.html
