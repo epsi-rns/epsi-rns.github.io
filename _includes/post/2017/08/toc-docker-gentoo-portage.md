@@ -13,11 +13,13 @@ There are few sections here.
 
 *	Updating System: OS Release, webrsync, Update, Manually, More
 
-*	Package IRSI: Install, Confirmation, Ambiguous, Removal, Query Search, Show Info
+*	Package IRSI: Install, Confirmation, Ambiguous, Download, Removal, Query Search, Show Info
 
 *	Dependency: Dependency, Reverse Dependency, Pretend, Verify
 
 *	Group: Metapackages, Sets
+
+*	System Wide: emerge, revdep-rebuild, Upgradables
 
 *	What's Next
 

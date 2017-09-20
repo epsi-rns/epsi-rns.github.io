@@ -314,8 +314,8 @@ $ aptitude upgrade
 
 #### Full Upgrade
 
-There are also this <code>full-upgrade</code>,
-that resolve dependecny conflict automatically.
+There is also this <code>full-upgrade</code>,
+that resolve dependency conflict automatically.
 
 {% highlight bash %}
 $ apt-get full-upgrade

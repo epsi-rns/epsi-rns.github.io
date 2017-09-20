@@ -213,9 +213,9 @@ Read the fine manual instead.
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 Read the fine manual.
 
@@ -263,6 +263,95 @@ Use fully qualified ebuild name instead.
 $ emerge app-misc/mc 
 {% endhighlight %}
 
+#### Download
+
+You can download package and install later on.
+
+{% highlight bash %}
+$ emerge -a --fetchonly curl
+
+These are the packages that would be fetched, in order:
+
+Calculating dependencies... done!
+[ebuild     U  ] net-misc/curl-7.55.1 [7.55.0]
+
+Would you like to fetch the source files for these packages? [Yes/No] y
+
+>>> Fetching (1 of 1) net-misc/curl-7.55.1::gentoo
+>>> Downloading 'rsync://ftp.jaist.ac.jp/pub/Linux/Gentoo/distfiles/curl-7.55.1.tar.bz2'
+...
+receiving incremental file list
+curl-7.55.1.tar.bz2
+      2,786,830 100%  157.30kB/s    0:00:17 (xfr#1, to-chk=0/1)
+
+sent 43 bytes  received 2,787,617 bytes  50,228.11 bytes/sec
+total size is 2,786,830  speedup is 1.00
+ * curl-7.55.1.tar.bz2 SHA256 SHA512 WHIRLPOOL size ;-) ...  [ ok ]
+{% endhighlight %}
+
+![Docker Emerge: Fetch Only][image-ss-emerge-fetchonly]{: .img-responsive }
+
+Now you can continue to install.
+
+{% highlight bash %}
+$ emerge -a curl
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild     U  ] net-misc/curl-7.55.1 [7.55.0]
+
+Would you like to merge these packages? [Yes/No] y
+
+>>> Verifying ebuild manifests
+
+>>> Emerging (1 of 1) net-misc/curl-7.55.1::gentoo
+...
+{% endhighlight %}
+
+#### Only Dependencies
+
+Just any other build system, we can prepare dependency first,
+before build our package.
+
+{% highlight bash %}
+$ emerge --onlydeps herbstluftwm
+Calculating dependencies... done!
+
+>>> Verifying ebuild manifests
+
+>>> Emerging (1 of 16) dev-libs/libbsd-0.8.3::gentoo
+ * libbsd-0.8.3.tar.xz SHA256 SHA512 WHIRLPOOL size ;-) ...  [ ok ]
+>>> Unpacking source...
+>>> Unpacking libbsd-0.8.3.tar.xz to /var/tmp/portage/dev-libs/libbsd-0.8.3/work
+>>> Source unpacked in /var/tmp/portage/dev-libs/libbsd-0.8.3/work
+>>> Preparing source in /var/tmp/portage/dev-libs/libbsd-0.8.3/work/libbsd-0.8.3 ...
+>>> Source prepared.
+...
+{% endhighlight %}
+
+![Docker Emerge: onlydeps][image-ss-emerge-onlydeps]{: .img-responsive }
+
+If you need a more verbose message,
+all you need is <code>--ask</code>.
+
+{% highlight bash %}
+$ emerge --ask --onlydeps herbstluftwm
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  N     ] dev-libs/libbsd-0.8.3  USE="-static-libs" ABI_X86="(64) -32 (-x32)" 
+[ebuild  N     ] x11-proto/xproto-7.0.31  USE="-doc" ABI_X86="(64) -32 (-x32)" 
+[ebuild  N     ] x11-proto/xextproto-7.3.0  USE="-doc" ABI_X86="(64) -32 (-x32)" 
+[ebuild  N     ] media-fonts/font-util-1.3.1 
+[ebuild  N     ] x11-misc/util-macros-1.19.1 
+[ebuild  N     ] x11-libs/xtrans-1.3.5  USE="-doc" 
+[ebuild  N     ] x11-proto/xf86bigfontproto-1.2.0-r1  ABI_X86="(64) -32 (-x32)" 
+{% endhighlight %}
+
+![Docker Emerge: onlydeps-ask][image-ss-emerge-onlydeps-ask]{: .img-responsive }
+
 #### Package Removal
 
 	Depclean
@@ -304,6 +393,10 @@ $ emerge -pv htop
 {% highlight bash %}
 $ emerge -S htop
 {% endhighlight %}
+
+#### Package File List
+
+TBD
 
 -- -- --
 
@@ -422,6 +515,114 @@ Awesome Blog
 
 -- -- --
 
+### System Wide
+
+There is this <code>emerge --info</code> command
+to dump the system wide information.
+
+#### Emerge
+
+{% highlight bash %}
+$ emerge --info
+Portage 2.3.8 (python 3.4.5-final-0, default/linux/amd64/13.0, gcc-5.4.0, glibc-2.23-r4, 4.9.44-1-lts x86_64)
+=================================================================
+System uname: Linux-4.9.44-1-lts-x86_64-Intel-R-_Core-TM-2_Duo_CPU_T7300_@_2.00GHz-with-gentoo-2.3
+KiB Mem:     1921768 total,    304060 free
+KiB Swap:    3431420 total,   3431016 free
+Timestamp of repository gentoo: Mon, 18 Sep 2017 00:45:02 +0000
+Head commit of repository gentoo: 6bbdcd277441846d6b9c1dd01fd75f1835cbd0cc
+Timestamp of repository xwing: Mon, 04 Sep 2017 16:00:05 +0000
+sh bash 4.3_p48-r1
+...
+{% endhighlight %}
+
+![Docker Emerge: Info][image-ss-emerge-info]{: .img-responsive }
+
+#### evdep-rebuild
+
+Verify integrity of package database, such as dependencies.
+
+{% highlight bash %}
+$ revdep-rebuild
+ * This is the new python coded version
+ * Please report any bugs found using it.
+ * The original revdep-rebuild script is installed as revdep-rebuild.sh
+ * Please file bugs at: https://bugs.gentoo.org/
+ * Collecting system binaries and libraries
+ * Checking dynamic linking consistency
+
+Your system is consistent
+{% endhighlight %}
+
+![Docker Gentoo: revdep-rebuild][image-ss-revdep-rebuild]{: .img-responsive }
+
+#### Upgradables
+
+There are also this command that show upgradable packages.
+
+{% highlight bash %}
+$ emerge -uDNp world
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  rR    ] app-arch/bzip2-1.0.6-r8 [1.0.6-r8]
+[ebuild     U  ] sys-apps/gentoo-functions-0.12 [0.10]
+[ebuild  rR    ] sys-libs/zlib-1.2.11 [1.2.11]
+[ebuild     U  ] dev-libs/openssl-1.0.2l [1.0.2k]
+[ebuild     U  ] dev-libs/libgcrypt-1.8.1 [1.7.8]
+[ebuild     U  ] dev-libs/libtasn1-4.12-r1 [4.10-r2]
+[ebuild  rR    ] dev-lang/python-3.4.5 
+[ebuild  rR    ] dev-lang/python-2.7.12 
+[ebuild     U  ] dev-libs/libxml2-2.9.4-r3 [2.9.4-r1]
+[ebuild     U  ] dev-libs/libpcre-8.41 [8.40-r1]
+[ebuild  rR    ] net-misc/openssh-7.5_p1-r1 
+
+The following packages are causing rebuilds:
+
+  (sys-libs/zlib-1.2.11:0/1::gentoo, ebuild scheduled for merge) causes rebuilds for:
+    (net-misc/openssh-7.5_p1-r1:0/0::gentoo, ebuild scheduled for merge)
+    (dev-lang/python-2.7.12:2.7/2.7::gentoo, ebuild scheduled for merge)
+    (dev-lang/python-3.4.5:3.4/3.4m::gentoo, ebuild scheduled for merge)
+  (app-arch/bzip2-1.0.6-r8:0/1::gentoo, ebuild scheduled for merge) causes rebuilds for:
+    (dev-lang/python-2.7.12:2.7/2.7::gentoo, ebuild scheduled for merge)
+    (dev-lang/python-3.4.5:3.4/3.4m::gentoo, ebuild scheduled for merge)
+{% endhighlight %}
+
+![Docker Emerge: List Upgradables][image-ss-emerge-undp]{: .img-responsive }
+
+You may consider to use <code>--columns</code> for prettier output.
+
+{% highlight bash %}
+$ emerge --update --deep --newuse --pretend --columns world
+{% endhighlight %}
+
+-- -- --
+
+### Clean Up
+
+Keep your system neat and tidy.
+
+#### depclean
+
+{% highlight bash %}
+$ emerge --depclean
+...
+
+Calculating dependencies... done!
+>>> No packages selected for removal by depclean
+>>> To see reverse dependencies, use --verbose
+Packages installed:   229
+Packages in world:    10
+Packages in system:   44
+Required packages:    229
+Number removed:       0
+{% endhighlight %}
+
+![Docker emerge: depclean][image-ss-depclean]{: .img-responsive }
+
+-- -- --
+
 ### What's Next
 
 No comment yet.
@@ -449,19 +650,26 @@ Thank you for reading
 [image-ss-emerge-install]:     {{ asset_post }}/13-emerge-01-install-half.png
 [photo-ss-emerge-install]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-ambigous]:    {{ asset_post }}/13-emerge-01-install-mc.png
+[image-ss-emerge-ambigous]:		{{ asset_post }}/13-emerge-01-install-mc.png
 
-[image-ss-emerge-install-ask]: {{ asset_post }}/13-emerge-01-install-ask.png
-[image-ss-emerge-remove]:      {{ asset_post }}/13-emerge-02-remove-depclean.png
-[image-ss-emerge-search]:      {{ asset_post }}/13-emerge-03-search-search.png
+[image-ss-emerge-install-ask]:	{{ asset_post }}/13-emerge-01-install-ask.png
+[image-ss-emerge-remove]:		{{ asset_post }}/13-emerge-02-remove-depclean.png
+[image-ss-emerge-search]:		{{ asset_post }}/13-emerge-03-search-search.png
+[image-ss-emerge-fetchonly]:	{{ asset_post }}/13-emerge-fetchonly.png
+[image-ss-emerge-onlydeps]:		{{ asset_post }}/13-emerge-onlydeps.png
+[image-ss-emerge-onlydeps-ask]:	{{ asset_post }}/13-emerge-onlydeps-ask.png
 
-[image-ss-emerge-ep]:          {{ asset_post }}/14-emerge-ep.png
-[image-ss-equery-depends]:     {{ asset_post }}/14-equery-depends.png
-[image-ss-emerge-pv-depclean]: {{ asset_post }}/14-emerge-pv-depclean.png
-[image-ss-emerge-verify]:      {{ asset_post }}/14-emerge-udn-world.png
+[image-ss-emerge-ep]:		{{ asset_post }}/14-emerge-ep.png
+[image-ss-equery-depends]:	{{ asset_post }}/14-equery-depends.png
+[image-ss-emerge-pv-depclean]:	{{ asset_post }}/14-emerge-pv-depclean.png
+[image-ss-emerge-verify]:	{{ asset_post }}/14-emerge-udn-world.png
 
-[image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
-[image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
-[image-ss-eclean-dist-deep]:   {{ asset_post }}/17-eclean-dist-deep.png
+[image-ss-portage-source]:	{{ asset_post }}/17-dir-source.png
+[image-ss-eclean-distfiles]:	{{ asset_post }}/17-eclean-distfiles.png
+[image-ss-eclean-dist-deep]:	{{ asset_post }}/17-eclean-dist-deep.png
 
-[image-ss-less-log]:           {{ asset_post }}/19-log.png
+[image-ss-less-log]:			{{ asset_post }}/19-log.png
+[image-ss-emerge-info]:			{{ asset_post }}/19-emerge-info.png
+[image-ss-revdep-rebuild]:		{{ asset_post }}/19-revdep-rebuild.png
+[image-ss-depclean]:			{{ asset_post }}/19-depclean.png
+[image-ss-emerge-undp]:	{{ asset_post }}/19-emerge-undp.png

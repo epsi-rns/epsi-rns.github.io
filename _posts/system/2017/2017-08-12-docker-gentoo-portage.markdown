@@ -543,6 +543,10 @@ $ eclean-dist -d
 
 ### Conclusion
 
+The fact that this article only takes two parts,
+compared to other four-parts article,
+show my lack of knowledge.
+
 	I am a n00bs !
 
 I just feel that I'm not afraid to use emerge.
