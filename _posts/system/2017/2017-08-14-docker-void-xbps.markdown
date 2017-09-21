@@ -161,7 +161,7 @@ System wide information.
 
 #### Installed Packages
 
-You can query only installed packages.
+You can query installed packages.
 
 {% highlight bash %}
 $ xbps-query --list-pkgs

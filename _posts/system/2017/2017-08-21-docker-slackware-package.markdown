@@ -233,9 +233,9 @@ No news is good news
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 #### Package Install
 
@@ -262,19 +262,75 @@ We have seen search in action in previous section.
 
 {% highlight bash %}
 $ slackpkg file-search htop
+
+Looking for htop in package list. Please wait... DONE
+
+The list below shows the packages that contains "htop" file.
+
+[uninstalled] - htop-2.0.1-x86_64-1
+[uninstalled] - bash-completion-2.2-noarch-3
+
+You can search specific packages using "slackpkg search package".
 {% endhighlight %}
 
 {% highlight bash %}
 $ slackpkg search htop
+
+Looking for htop in package list. Please wait... DONE
+
+The list below shows all packages with name matching "htop".
+
+[uninstalled] - htop-2.0.1-x86_64-1
+
+You can search specific files using "slackpkg file-search file".
 {% endhighlight %}
 
 #### Package Info
 
 {% highlight bash %}
 $ slackpkg info htop
+
+PACKAGE NAME:  htop-2.0.1-x86_64-1.txz
+PACKAGE LOCATION:  ./slackware64/ap
+PACKAGE SIZE (compressed):  80 K
+PACKAGE SIZE (uncompressed):  220 K
+PACKAGE DESCRIPTION:
+...
 {% endhighlight %}
 
 ![Docker Slackpkg: Info][image-ss-slackpkg-info]{: .img-responsive }
+
+#### List File
+
+Listing package files can be achieved using <code>/var/log/packages/</code>.
+
+{% highlight bash %}
+$ cat /var/log/packages/ncdu-1.12-x86_64-1_SBo 
+PACKAGE NAME:     ncdu-1.12-x86_64-1_SBo
+COMPRESSED PACKAGE SIZE:     44K
+UNCOMPRESSED PACKAGE SIZE:     100K
+PACKAGE LOCATION: /tmp/ncdu-1.12-x86_64-1_SBo.tgz
+PACKAGE DESCRIPTION:
+...
+FILE LIST:
+./
+install/
+install/slack-desc
+usr/
+usr/bin/
+usr/bin/ncdu
+usr/doc/
+usr/doc/ncdu-1.12/
+usr/doc/ncdu-1.12/COPYING
+usr/doc/ncdu-1.12/ChangeLog
+usr/doc/ncdu-1.12/README
+usr/doc/ncdu-1.12/ncdu.SlackBuild
+usr/man/
+usr/man/man1/
+usr/man/man1/ncdu.1.gz
+{% endhighlight %}
+
+![Docker Slackware: /var/log/packages][image-ss-var-log-packages]{: .img-responsive }
 
 -- -- --
 
@@ -396,6 +452,112 @@ Updating the package lists...
 ![Docker Slackware: Update Use Kambing][image-ss-slackpkg-kambing]{: .img-responsive }
 
 The repository is already using kambing.
+
+-- -- --
+
+### System Wide
+
+System wide information.
+
+#### Installed Packages
+
+You can query installed packages,
+with rather hackish low level slackway as below
+
+{% highlight bash %}
+$ ls /var/log/packages/
+aaa_base-14.2-x86_64-2
+aaa_elflibs-14.2-x86_64-23
+aaa_terminfo-5.9-x86_64-1
+autoconf-2.69-noarch-1
+automake-1.15-noarch-1
+bash-4.3.048-x86_64-1_slack14.2
+...
+wget-1.18-x86_64-1
+which-2.21-x86_64-1
+xproto-7.0.29-noarch-1
+xz-5.2.2-x86_64-1
+{% endhighlight %}
+
+![Docker Slackware: /var/log/packages][image-ss-var-log-packages]{: .img-responsive }
+
+#### Update
+
+{% highlight bash %}
+$ slackpkg update
+
+Updating the package lists...
+	Downloading...
+			Downloading http://kambing.ui.ac.id/slackware/slackware64-14.2/ChangeLog.txt...
+--2017-09-21 07:57:34--  http://kambing.ui.ac.id/slackware/slackware64-14.2/ChangeLog.txt
+Resolving kambing.ui.ac.id (kambing.ui.ac.id)... 152.118.24.30, 2403:da00:1:3::1e
+Connecting to kambing.ui.ac.id (kambing.ui.ac.id)|152.118.24.30|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 430814 (421K) [text/plain]
+Saving to: '/tmp/slackpkg.TCDDsX/ChangeLog.txt'
+
+/tmp/slackpkg.TC 100%[==========>] 420.72K   215KB/s    in 2.0s    
+...
+{% endhighlight %}
+
+![Docker slackpkg: update][image-ss-slackpkg-update]{: .img-responsive }
+
+#### Install New
+
+This will install a lot of package.
+I personally, avoid to use it.
+
+{% highlight bash %}
+$ slackpkg install-new
+
+Looking for NEW packages to install. Please wait... DONE
+
+ConsoleKit2-1.0.0-x86_64-3.txz
+Cython-0.23.4-x86_64-1.txz
+LibRaw-0.17.2-x86_64-1.txz
+...
+{% endhighlight %}
+
+![Docker slackpkg: install new][image-ss-slackpkg-update]{: .img-responsive }
+
+#### Upgrade All
+
+{% highlight bash %}
+$ slackpkg upgrade-all
+
+Checking local integrity... DONE
+Looking for packages to upgrade. Please wait... DONE
+
+No packages match the pattern for upgrade. Try:
+
+	/usr/sbin/slackpkg install|reinstall
+{% endhighlight %}
+
+#### Clean System
+
+Clean non official repository.
+I won't do this.
+
+{% highlight bash %}
+$ slackpkg clean-system
+
+Looking for packages to remove. Please wait... DONE
+
+fish-2.6.0-x86_64-1_SBo
+kdev-python-1.7.2-x86_64-1
+man-db-2.7.6.1-x86_64-2_SBo
+ncdu-1.12-x86_64-1_SBo
+openbox-3.6.1-x86_64-1alien
+python2-pythondialog-3.4.0-x86_64-1_SBo
+sbopkg-0.38.1-noarch-1_wsr
+slapt-get-0.10.2t-x86_64-1
+slapt-src-0.3.2i-x86_64-1
+slpkg-3.2.8-x86_64-1_SBo
+
+Total package(s): 10
+
+Do you wish to remove selected packages (Y/n)? 
+{% endhighlight %}
 
 -- -- --
 
@@ -608,25 +770,30 @@ Thank you for reading
 
 [local-part-two]:   {{ site.url }}/system/2017/08/22/docker-slackware-package.html
 
-[image-ss-slack-docker]:     {{ asset_post }}/00-getting-started.png
-[image-ss-slackware64]:      {{ asset_post }}/01-install-slackware64.png
-[image-ss-file-search]:      {{ asset_post }}/01-file-search-groff.png
-[image-ss-slackpkg-patches]: {{ asset_post }}/01-slackpkg-upgrade-patches.png
-[image-ss-slackware64-huge]: {{ asset_flow }}/terminal-2.png
+[image-ss-slack-docker]:		{{ asset_post }}/00-getting-started.png
+[image-ss-slackware64]:			{{ asset_post }}/01-install-slackware64.png
+[image-ss-file-search]:			{{ asset_post }}/01-file-search-groff.png
+[image-ss-slackpkg-patches]:	{{ asset_post }}/01-slackpkg-upgrade-patches.png
+[image-ss-slackware64-huge]:	{{ asset_flow }}/terminal-2.png
 
-[image-ss-removepkg]:          {{ asset_post }}/13-removepkg.png
-[image-ss-slackpkg-info]:      {{ asset_post }}/13-slackpkg-info.png
-[image-ss-slackpkg-reinstall]: {{ asset_post }}/13-slackpkg-reinstall.png
+[image-ss-removepkg]:			{{ asset_post }}/13-removepkg.png
+[image-ss-slackpkg-info]:		{{ asset_post }}/13-slackpkg-info.png
+[image-ss-slackpkg-reinstall]:	{{ asset_post }}/13-slackpkg-reinstall.png
+[image-ss-var-log-packages]:	{{ asset_post }}/13-var-log-packages.png
 
-[image-ss-man-man]:            {{ asset_post }}/14-man-man.png
-[image-ss-remove-groff]:       {{ asset_post }}/14-remove-groff.png
-[image-ss-slpkg-deps-status]:  {{ asset_post }}/14-slpkg-deps-status.png
+[image-ss-man-man]:				{{ asset_post }}/14-man-man.png
+[image-ss-remove-groff]:		{{ asset_post }}/14-remove-groff.png
+[image-ss-slpkg-deps-status]:	{{ asset_post }}/14-slpkg-deps-status.png
 
-[image-ss-slack-cache]:        {{ asset_post }}/17-cache.png
+[image-ss-slack-cache]:			{{ asset_post }}/17-cache.png
+[image-ss-var-log-packages]:	{{ asset_post }}/19-ls-var-log-packages.png
 
-[image-ss-slackpkg-mirrors]:   {{ asset_post }}/26-etc-slackpkg-mirrors.png
-[image-ss-slackpkg-kambing]:   {{ asset_post }}/26-slackpkg-kambing.png
+[image-ss-slackpkg-mirrors]:	{{ asset_post }}/26-etc-slackpkg-mirrors.png
+[image-ss-slackpkg-kambing]:	{{ asset_post }}/26-slackpkg-kambing.png
 
-[image-ss-slackpkg-blacklist]: {{ asset_post }}/27-blacklist.png
-[image-ss-install-new-lock]:   {{ asset_post }}/27-install-new-lock.png
-[image-ss-install-new-unlock]: {{ asset_post }}/27-install-new-unlock.png
+[image-ss-slackpkg-blacklist]:	{{ asset_post }}/27-blacklist.png
+[image-ss-install-new-lock]:	{{ asset_post }}/27-install-new-lock.png
+[image-ss-install-new-unlock]:	{{ asset_post }}/27-install-new-unlock.png
+
+[image-ss-slackpkg-update]: 		{{ asset_post }}/19-slackpkg-update.png
+[image-ss-slackpkg-install-new]:	{{ asset_post }}/19-slackpkg-install-new.png

@@ -9,11 +9,13 @@ There are few sections here.
 
 *	Preparing Docker
 
-*	IRSI: slackpkg install, removepkg, search, info
+*	IRSIF: slackpkg install, removepkg, Query Search, Show Info, List File
 
 *	Container: Slackware64, Minimal Install, Package Series
 
 *	Mirror
+
+*	System Wide: Installed Packages
 
 *	History: The Log File
 
