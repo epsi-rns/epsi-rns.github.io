@@ -395,9 +395,83 @@ $ emerge -pv htop
 $ emerge -S htop
 {% endhighlight %}
 
+#### Change Log
+
+{% highlight bash %}
+$ equery changes ncdu
+*ncdu-1.12 (29 Aug 2016)
+
+  29 Aug 2016; Jeroen Roovers <jer@gentoo.org> +ncdu-1.12.ebuild:
+  Version bump.
+
+  Package-Manager: portage-2.3.0
+
+  29 Aug 2016; Jeroen Roovers <jer@gentoo.org>
+  -files/ncdu-1.9-pkgconfig.patch:
+  Drop obsolete patch.
+
+  Package-Manager: portage-2.3.0
+{% endhighlight %}
+
+![Docker Gentoo: equery changes][image-ss-equery-changes]{: .img-responsive }
+
+All change log.
+
+{% highlight bash %}
+$ equery changes -f ncdu
+{% endhighlight %}
+
+#### Check
+
+Verification
+
+{% highlight bash %}
+$ equery check ncdu
+* Checking sys-fs/ncdu-1.12 ...
+   11 out of 11 files passed
+{% endhighlight %}
+
+![Docker Gentoo: equery check][image-ss-equery-check]{: .img-responsive }
+
+Check for Possible Issue
+
+{% highlight bash %}
+$ repoman ncdu
+{% endhighlight %}
+
+
 #### Package File List
 
-TBD
+Listing package files can be achieved using <code>equery files</code>.
+
+{% highlight bash %}
+$ equery files ncdu
+ * Searching for ncdu ...
+ * Contents of sys-fs/ncdu-1.12:
+/usr
+/usr/bin
+/usr/bin/ncdu
+/usr/share
+/usr/share/doc
+/usr/share/doc/ncdu-1.12
+/usr/share/doc/ncdu-1.12/ChangeLog.bz2
+/usr/share/doc/ncdu-1.12/README.bz2
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/ncdu.1.bz2
+{% endhighlight %}
+
+![Docker Gentoo: equery files][image-ss-equery-files]{: .img-responsive }
+
+Searching file owner
+
+{% highlight bash %}
+$ equery belongs /etc/man.conf 
+ * Searching for /etc/man.conf ... 
+sys-apps/man-1.6g (/etc/man.conf)
+{% endhighlight %}
+
+![Docker Gentoo: equery belong][image-ss-equery-belong]{: .img-responsive }
 
 -- -- --
 
@@ -435,3 +509,7 @@ Thank you for reading
 [image-ss-emerge-fetchonly]:	{{ asset_post }}/13-emerge-fetchonly.png
 [image-ss-emerge-onlydeps]:		{{ asset_post }}/13-emerge-onlydeps.png
 [image-ss-emerge-onlydeps-ask]:	{{ asset_post }}/13-emerge-onlydeps-ask.png
+[image-ss-equery-belong]:		{{ asset_post }}/13-equery-belong.png
+[image-ss-equery-files]:		{{ asset_post }}/13-equery-files.png
+[image-ss-equery-changes]:		{{ asset_post }}/13-equery-changes.png
+[image-ss-equery-check]:		{{ asset_post }}/13-equery-check.png

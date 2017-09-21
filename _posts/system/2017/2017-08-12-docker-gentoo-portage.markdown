@@ -76,6 +76,13 @@ sys-apps/man-1.6g (>=sys-apps/groff-1.19.2-r1)
 
 ![Docker Equery: Depends][image-ss-equery-depends]{: .img-responsive }
 
+It can also query all packages including not installed packages.
+The process take long and need a lot of CPU.
+
+{% highlight bash %}
+$ equery depends - agroff
+{% endhighlight %}
+
 #### Pretend
 
 Consider pretend to remove the <code>groff</code> package.
@@ -149,10 +156,13 @@ Awesome Blog
 
 ### System Wide
 
+System wide information.
+
+#### Emerge
+
 There is this <code>emerge --info</code> command
 to dump the system wide information.
 
-#### Emerge
 
 {% highlight bash %}
 $ emerge --info
@@ -221,7 +231,7 @@ The following packages are causing rebuilds:
     (dev-lang/python-3.4.5:3.4/3.4m::gentoo, ebuild scheduled for merge)
 {% endhighlight %}
 
-![Docker Emerge: List Upgradables][image-ss-emerge-undp]{: .img-responsive }
+![Docker Emerge: List Upgradable Packages][image-ss-emerge-undp]{: .img-responsive }
 
 You may consider to use <code>--columns</code> for prettier output.
 
@@ -250,11 +260,51 @@ Calculating dependencies... done!
 ...
 {% endhighlight %}
 
+![Docker Emerge: Installed Packages][image-ss-emerge-ep]{: .img-responsive }
+
 You may consider to use <code>--columns</code> for prettier output.
 
 {% highlight bash %}
 $ emerge --emptytree --pretend --columns @world
 {% endhighlight %}
+
+#### Obsolete Packages
+
+Obsolete packages in current system.
+
+{% highlight bash %}
+$ eix-test-obsolete
+...
+Redundant in /etc/portage/package.mask:
+
+... considered as REDUNDANT_IF_MASK_NO_CHANGE
+[I] dev-lang/perl (5.24.1-r2@08/03/17): Larry Wall's Practical Extraction and Report Language
+[I] sys-apps/openrc (0.28@08/15/17): OpenRC manages the services, startup and shutdown of a host
+[I] sys-devel/libtool (2.4.6-r3(2)@08/03/17): A shared library tool for developers
+[I] sys-process/procps (3.3.12@08/03/17): standard informational utilities and process-handling tools
+Found 4 matches
+...
+Installed packages with a version not in the database (or masked):
+[?] sys-apps/file (5.31@09/18/17 -> 5.30): identify a file's format by scanning binary data for patterns
+[?] sys-apps/portage (2.3.8@09/18/17 -> 2.3.6): Portage is the package management and distribution system for Gentoo
+Found 2 matches
+{% endhighlight %}
+
+![Docker Gentoo: eix-test-obsolete][image-ss-eix-test-obsolete]{: .img-responsive }
+
+#### Recent Packages
+
+Packages that has been changed recently in repository.
+
+{% highlight bash %}
+$ eix-diff
+[>]   == app-admin/ansible (2.3.1.0^t -> 2.3.2.0-r1^t): Model-driven deployment, config management, and command execution framework
+[>]   == app-admin/logsurfer+ (1.8-r2^d -> 1.8-r3^d): Real Time Log Monitoring and Alerting
+[>]   == app-arch/par2cmdline (0.6.12 -> 0.7.3): A PAR-2.0 file verification and repair tool
+...
+{% endhighlight %}
+
+![Docker Gentoo: eix-diff][image-ss-eix-diff]{: .img-responsive }
 
 -- -- --
 
@@ -381,10 +431,13 @@ Thank you for reading
 [image-ss-revdep-rebuild]:		{{ asset_post }}/19-revdep-rebuild.png
 [image-ss-depclean]:			{{ asset_post }}/19-depclean.png
 [image-ss-emerge-undp]:	{{ asset_post }}/19-emerge-undp.png
-
+[image-ss-emerge-ep]:	{{ asset_post }}/19-emerge-ep.png
 
 [image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
 [image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
 [image-ss-eclean-dist-deep]:   {{ asset_post }}/17-eclean-dist-deep.png
 
 [image-ss-less-log]:           {{ asset_post }}/19-log.png
+
+[image-ss-eix-test-obsolete]:	{{ asset_post }}/19-eix-test-obsolete.png
+[image-ss-eix-diff]:			{{ asset_post }}/19-eix-diff.png

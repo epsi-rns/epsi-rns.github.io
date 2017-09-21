@@ -473,7 +473,7 @@ Searching...
 
 ### Conclusion
 
-The fact that this article only takes two parts,
+The fact that this article only takes three parts,
 compared to other four-parts article,
 show my lack of knowledge.
 

@@ -460,7 +460,7 @@ Is this ok [y/N]:
 
 #### Package File List
 
-Therefore is however something similar with <code>rpm -ql</code> instead.
+Therefore is something similar with <code>rpm -ql</code>.
 
 {% highlight bash %}
 $ dnf repoquery -l ncdu

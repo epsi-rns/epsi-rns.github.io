@@ -146,6 +146,12 @@ PRETTY_NAME="void"
 #### System Upgrade
 
 {% highlight bash %}
+$ xbps-install --sync --update
+{% endhighlight %}
+
+or
+
+{% highlight bash %}
 $ xbps-install -Su
 
 [*] Updating 'https://repo.voidlinux.eu/current/x86_64-repodata' ...
@@ -157,9 +163,9 @@ $ xbps-install -Su
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 Read the fine manual.
 
@@ -264,6 +270,34 @@ $ xbps-query -RS htop
 {% endhighlight %}
 
 ![Docker Void: XBPS Show Info][image-ss-xbps-info]{: .img-responsive }
+
+#### List Files
+
+Listing files in particular package.
+
+{% highlight bash %}
+$ xbps-query -f ncdu
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ xbps-query --file ncdu
+/usr/bin/ncdu
+/usr/share/man/man1/ncdu.1
+/usr/share/licenses/ncdu/COPYING
+{% endhighlight %}
+
+![Docker Void: XBPS Query File][image-ss-xbps-query-file]{: .img-responsive }
+
+There is this file owner command.
+
+{% highlight bash %}
+$ xbps-query --ownedby /etc/man_db.conf 
+man-db-2.7.6.1_1: /etc/man_db.conf (configuration file)
+{% endhighlight %}
+
+![Docker Void: XBPS Query Ownedby][image-ss-xbps-query-ownedby]{: .img-responsive }
 
 -- -- --
 
@@ -388,6 +422,8 @@ Thank you for reading
 [photo-ss-xbps-remove]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP_ea-U8XItnqBn0FV8XfB7JbDGUpjcUZMAd3LO?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-xbps-info]:       {{ asset_post }}/13-xbps-info.png
+[image-ss-xbps-query-ownedby]:  {{ asset_post }}/13-xbps-query-ownedby.png
+[image-ss-xbps-query-file]:  {{ asset_post }}/13-xbps-query-file.png
 
 [image-ss-xbps-query-x-lo]: {{ asset_post }}/14-query-x-lowercase.png
 [image-ss-xbps-query-x-up]: {{ asset_post }}/14-query-x-uppercase.png

@@ -23,7 +23,7 @@ There are few sections here.
 
 *	Group: Metapackages, Sets
 
-*	System Wide: emerge, revdep-rebuild, Upgradables
+*	System Wide: emerge, revdep-rebuild, Upgradables, Installed, Recent, Obsolete
 
 *	What's Next
 

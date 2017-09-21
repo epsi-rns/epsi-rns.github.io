@@ -13,7 +13,7 @@ There are few sections here.
 
 *	Updating System: OS Release, System Upgrade
 
-*	Package IRSI: Install, Removal, Query Search, Show Info
+*	Package IRSI: Install, Removal, Query Search, Show Info, List File
 
 *	Dependency: Help, Dependency, Reverse Dependency, Test
 
@@ -24,6 +24,8 @@ There are few sections here.
 [ [Part Two][local-part-two] ]
 
 *	Repositories: Configuration, Add Subrepository, List Packages, Mirror
+
+*	System Wide: Installed Packages, Verify
 
 *	History: The Log File
 

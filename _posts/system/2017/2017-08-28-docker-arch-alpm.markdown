@@ -496,6 +496,30 @@ You can also <code>query check</code>.
 $ pacman --query --check
 {% endhighlight %}
 
+#### /var/lib
+
+You can also examine <code>/var/lib/pacman/local</code>.
+
+{% highlight bash %}
+$ ls /var/lib/pacman/local/ncdu-1.12-1/
+desc  files  mtree
+{% endhighlight %}
+
+{% highlight bash %}
+$ cat /var/lib/pacman/local/ncdu-1.12-1/desc 
+%NAME%
+ncdu
+
+%VERSION%
+1.12-1
+
+%DESC%
+Disk usage analyzer with an ncurses interface
+...
+{% endhighlight %}
+
+![Docker Arch: cat /var/lib/pacman/local][image-ss-var-lib]{: .img-responsive }
+
 -- -- --
 
 ### History
@@ -675,11 +699,9 @@ Thank you for reading
 [image-ss-outdated]:	{{ asset_post }}/28-upgradable-outdated.png
 
 [image-ss-list-packages]:	{{ asset_post }}/19-list-packages.png
-
 [image-ss-pkgfile-package]:	{{ asset_post }}/19-pkgfile-package.png
 [image-ss-pkgfile-update]:	{{ asset_post }}/19-pkgfile-update.png
 [image-ss-list-installed]:	{{ asset_post }}/19-list-installed.png
-
 [image-ss-database-check]:	{{ asset_post }}/19-database-check.png
-
-[image-ss-query-owner]:	{{ asset_post }}/19-query-owner.png
+[image-ss-query-owner]:		{{ asset_post }}/19-query-owner.png
+[image-ss-var-lib]:			{{ asset_post }}/19-var-lib.png

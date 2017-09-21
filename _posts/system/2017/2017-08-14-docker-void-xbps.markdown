@@ -155,6 +155,81 @@ $ xbps-install -S
 
 -- -- --
 
+### System Wide
+
+System wide information.
+
+#### Installed Packages
+
+You can query only installed packages.
+
+{% highlight bash %}
+$ xbps-query --list-pkgs
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ xbps-query  
+ii acl-2.2.52_4                    Access Control List filesyste...
+ii alsa-lib-1.1.4.1_1              The Advanced Linux Sound Arch...
+ii at-spi2-atk-2.24.1_1            A GTK+ module that bridges AT...
+ii at-spi2-core-2.24.1_1           Assistive Technology Service ...
+ii atk-2.26.0_1                    Set of interfaces for accessi...
+...
+ii xkbcomp-1.4.0_1                 XKBD keymap compiler
+ii xkeyboard-config-2.21_1         X Keyboard Configuration Data...
+ii xtools-0.48_1                   Opinionated helpers for worki...
+ii zlib-1.2.11_2                   A compression/decompression L...
+{% endhighlight %}
+
+![Docker XBPS: xbps-query --list-pkgs][image-ss-xbps-query-list-pkgs]{: .img-responsive }
+
+#### Verify
+
+There is this <code>xbps-pkgdb --all</code> command.
+
+{% highlight bash %}
+$ xbps-pkgdb -a
+ERROR: xbps: hash mismatch for /usr/share/xbps.d/00-repository-main.conf.
+ERROR: xbps: files check FAILED.
+{% endhighlight %}
+
+#### /var/db/xbps
+
+You can also examine any <code>.plist</code> in this directory
+
+*	/var/db/xbps/pkgdb- * .plist
+
+{% highlight bash %}
+$ head /var/db/xbps/pkgdb-0.38.plist 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>_XBPS_ALTERNATIVES_</key>
+	<dict>
+		<key>awk</key>
+		<array>
+			<string>gawk</string>
+		</array>
+{% endhighlight %}
+
+![Docker XBPS: /var/db/xbps/][image-ss-var-db-xbps]{: .img-responsive }
+
+#### Orphan
+
+{% highlight bash %}
+$ xbps-query -o
+{% endhighlight %}
+
+{% highlight bash %}
+$ xbps-query --list-orphans
+{% endhighlight %}
+
+
+-- -- --
+
 ### History
 
 #### The Log File
@@ -413,3 +488,6 @@ Thank you for reading
 [image-ss-h-xbps-hold]:     {{ asset_post }}/27-xbps-pkgdb-hold.png
 
 [image-ss-r-xbps-mirror]:   {{ asset_post }}/16-mirror.png
+
+[image-ss-xbps-query-list-pkgs]:   {{ asset_post }}/19-xbps-query-list-pkgs.png
+[image-ss-var-db-xbps]:		{{ asset_post }}/19-var-db-xbps.png
