@@ -35,30 +35,7 @@ you might desire to know the reason by reading this overview.
 
 -- -- --
 
-### Piping and Forking in Many Languages
-
-This article is one part of a collection.
-All integrated, on related to another.
-So we can compare each other quickly.
-
-Tutorial/ Guidance/ Article:
-[[ Pipe Overview ]][local-overview]
-[[ BASH ]][local-BASH]
-[[ Perl ]][local-Perl]
-[[ Python ]][local-python]
-[[ Ruby ]][local-Ruby]
-[[ PHP ]][local-PHP]
-[[ Lua ]][local-Lua]
-[[ Haskell ]][local-Haskell]
-
-Source Code Directory:
-[[ BASH ]][dotfiles-BASH]
-[[ Perl ]][dotfiles-Perl]
-[[ Python ]][dotfiles-python]
-[[ Ruby ]][dotfiles-Ruby]
-[[ PHP ]][dotfiles-PHP]
-[[ Lua ]][dotfiles-Lua]
-[[ Haskell ]][dotfiles-Haskell]
+{% include post/2017/04/pipe-and-fork-language.md %}
 
 -- -- --
 
@@ -142,15 +119,7 @@ one after another, below the command line prompt.
 
 ![Pipe: Basic][image-time-basic]{: .img-responsive }
 
-Similar Code: 
-[[ BASH basic ]][dotfiles-bash-01-basic]
-[[ Perl basic ]][dotfiles-perl-01-basic]
-[[ Python basic datetime ]][dotfiles-python-01-basic-date]
-[[ Python basic time ]][dotfiles-python-01-basic-time]
-[[ Ruby basic ]][dotfiles-ruby-01-basic]
-[[ PHP basic ]][dotfiles-php-01-basic]
-[[ Lua basic ]][dotfiles-lua-01-basic]
-[[ Haskell basic ]][dotfiles-haskell-01-basic]
+{% include post/2017/04/pipe-and-fork-similar-01.md %}
 
 -- -- --
 
@@ -231,14 +200,7 @@ main = do
     system $ cmdin ++ " | " ++ cmdout
 {% endhighlight %}
 
-Similar Code: 
-[[ Perl system ]][dotfiles-perl-02-system]
-[[ Python system ]][dotfiles-python-02-system]
-[[ Python popen ]][dotfiles-python-02-popen]
-[[ Ruby system ]][dotfiles-ruby-02-system]
-[[ Ruby spawn ]][dotfiles-ruby-02-spawn]
-[[ Ruby shell ]][dotfiles-ruby-02-shell]
-[[ Haskell system ]][dotfiles-haskell-02-system]
+{% include post/2017/04/pipe-and-fork-similar-02.md %}
 
 -- -- --
 
@@ -311,17 +273,7 @@ to detach dzen2. No need to fork
 
 	Your wallpaper might be different than mine.
 
-Similar Code: 
-[[ BASH native ]][dotfiles-bash-02-native]
-[[ Perl uni IO ]][dotfiles-perl-02-uni-io]
-[[ Perl uni open ]][dotfiles-perl-02-uni-open]
-[[ Perl IPC open2 ]][dotfiles-perl-02-uni-open2]
-[[ Python subProcess]][dotfiles-python-02-subprocess]
-[[ Ruby popen ]][dotfiles-ruby-02-popen]
-[[ PHP popen ]][dotfiles-php-02-popen]
-[[ PHP proc open ]][dotfiles-php-02-proc-open]
-[[ Lua popen ]][dotfiles-lua-02-popen]
-[[ Haskell createProcess ]][dotfiles-haskell-02-process]
+{% include post/2017/04/pipe-and-fork-similar-02.md %}
 
 -- -- --
 
@@ -401,20 +353,7 @@ main = do
 
 {% endhighlight %}
 
-Similar Code: 
-[[ BASH pipe ]][dotfiles-bash-03-pipe]
-[[ Perl pipe open ]][dotfiles-perl-03-pipe-open]
-[[ Perl pipe IO ]][dotfiles-perl-03-pipe-io]
-[[ Perl IPC Open2 ]][dotfiles-perl-03-pipe-open2]
-[[ Python subProcess ]][dotfiles-python-03-subprocess]
-[[ Ruby pipe IO ]][dotfiles-ruby-03-pipe-io]
-[[ Ruby popen ]][dotfiles-ruby-03-popen]
-[[ Ruby open3 ]][dotfiles-ruby-03-open3]
-[[ Ruby PTY ]][dotfiles-ruby-03-pty]
-[[ PHP popen ]][dotfiles-php-03-popen]
-[[ PHP proc open ]][dotfiles-php-03-proc-open]
-[[ Lua popen ]][dotfiles-lua-03-popen]
-[[ Haskell createProcess ]][dotfiles-haskell-03-process]
+{% include post/2017/04/pipe-and-fork-similar-03.md %}
 
 -- -- --
 
@@ -531,14 +470,7 @@ This step also add system command that kill
 any previous dzen2 instance. So it will be guaranteed,
 that the dzen2 shown is coming from the latest script.
 
-Similar Code: 
-[[ BASH fork ]][dotfiles-bash-05-fork]
-[[ Perl fork ]][dotfiles-perl-05-fork]
-[[ Python fork ]][dotfiles-python-05-fork]
-[[ Ruby fork ]][dotfiles-ruby-05-fork]
-[[ PHP fork ]][dotfiles-php-05-fork]
-[[ Lua fork ]][dotfiles-lua-05-fork]
-[[ Haskell fork ]][dotfiles-haskell-05-fork]
+{% include post/2017/04/pipe-and-fork-similar-05.md %}
 
 -- -- --
 
@@ -652,14 +584,7 @@ This would have <code>dzen2</code> output similar to this below.
 
 	You may use transset-df instead of transset.
 
-Similar Code: 
-[[ BASH conky ]][dotfiles-bash-07-conky]
-[[ Perl conky ]][dotfiles-perl-07-conky]
-[[ Python conky ]][dotfiles-python-07-conky]
-[[ Ruby conky ]][dotfiles-ruby-07-conky]
-[[ PHP conky ]][dotfiles-php-07-conky]
-[[ Lua conky ]][dotfiles-lua-07-conky]
-[[ Haskell conky ]][dotfiles-haskell-07-conky]
+{% include post/2017/04/pipe-and-fork-similar-07.md %}
 
 -- -- --
 
@@ -693,14 +618,7 @@ The code is very similar.
 **Source**:
 *	[github.com/.../dotfiles/.../haskell-17-conky.hs][dotfiles-haskell-17-conky]
 
-Similar Code: 
-[[ BASH lemon ]][dotfiles-bash-17-conky]
-[[ Perl lemon ]][dotfiles-perl-17-conky]
-[[ Python lemon ]][dotfiles-python-17-conky]
-[[ Ruby lemon ]][dotfiles-ruby-17-conky]
-[[ PHP lemon ]][dotfiles-php-17-conky]
-[[ Lua lemon ]][dotfiles-lua-17-conky]
-[[ Haskell lemon ]][dotfiles-haskell-17-conky]
+{% include post/2017/04/pipe-and-fork-similar-17.md %}
 
 -- -- --
 
@@ -740,86 +658,4 @@ Thank you for reading.
 [image-time-basic]: {{ asset_path }}/pipe-basic-haskell.png
 
 [local-overview]: {{ site.url }}/code/2017/04/23/overview-pipe-and-fork.html
-[local-BASH]:     {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
-[local-Perl]:     {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
-[local-python]:   {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
-[local-Ruby]:     {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
-[local-PHP]:      {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
-[local-Lua]:      {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
-[local-Haskell]:  {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
-
 [local-haskell-dollar]: {{ site.url }}/code/2016/05/14/haskell-dollar-syntax.html
-
-[dotfiles-BASH]:    {{ dotfiles_path }}/bash
-[dotfiles-Perl]:    {{ dotfiles_path }}/perl
-[dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
-[dotfiles-PHP]:     {{ dotfiles_path }}/php
-[dotfiles-Lua]:     {{ dotfiles_path }}/lua
-[dotfiles-Haskell]: {{ dotfiles_path }}/haskell
-
-[dotfiles-bash-01-basic]:   {{ dotfiles_path }}/bash/bash-01-basic.sh
-[dotfiles-perl-01-basic]:     {{ dotfiles_path }}/perl/perl-01-basic.pl
-[dotfiles-python-01-basic-date]: {{ dotfiles_path }}/python/python-01-basic-date.py
-[dotfiles-python-01-basic-time]: {{ dotfiles_path }}/python/python-01-basic-time.py
-[dotfiles-ruby-01-basic]:   {{ dotfiles_path }}/ruby/ruby-01-basic.rb
-[dotfiles-php-01-basic]:   {{ dotfiles_path }}/php/php-01-basic.php
-[dotfiles-lua-01-basic]:   {{ dotfiles_path }}/lua/lua-01-basic.lua
-[dotfiles-haskell-01-basic]:   {{ dotfiles_path }}/haskell/haskell-01-basic.hs
-
-[dotfiles-perl-02-system]:    {{ dotfiles_path }}/perl/perl-02-system-shell.pl
-[dotfiles-python-02-system]:  {{ dotfiles_path }}/python/python-02-system-shell.py
-[dotfiles-python-02-popen]:   {{ dotfiles_path }}/python/python-02-popen.py
-[dotfiles-ruby-02-system]:    {{ dotfiles_path }}/ruby/ruby-02-system.rb
-[dotfiles-ruby-02-spawn]:     {{ dotfiles_path }}/ruby/ruby-02-spawn.rb
-[dotfiles-ruby-02-shell]:     {{ dotfiles_path }}/ruby/ruby-02-shell.rb
-[dotfiles-haskell-02-system]: {{ dotfiles_path }}/haskell/haskell-02-system.hs
-
-[dotfiles-bash-02-native]:       {{ dotfiles_path }}/bash/bash-02-native.sh
-[dotfiles-perl-02-uni-io]:       {{ dotfiles_path }}/perl/perl-02-uni-io.pl
-[dotfiles-perl-02-uni-open]:     {{ dotfiles_path }}/perl/perl-02-uni-open.pl
-[dotfiles-perl-02-uni-open2]:    {{ dotfiles_path }}/perl/perl-02-uni-open2.pl
-[dotfiles-python-02-subprocess]: {{ dotfiles_path }}/python/python-02-subprocess-open.py
-[dotfiles-ruby-02-popen]:        {{ dotfiles_path }}/ruby/ruby-02-popen.rb
-[dotfiles-php-02-popen]:         {{ dotfiles_path }}/php/php-02-popen.php
-[dotfiles-php-02-proc-open]:     {{ dotfiles_path }}/php/php-02-proc-open.php
-[dotfiles-lua-02-popen]:         {{ dotfiles_path }}/lua/lua-02-popen.lua
-[dotfiles-haskell-02-process]:   {{ dotfiles_path }}/haskell/haskell-02-process.hs
-
-[dotfiles-bash-03-pipe]:         {{ dotfiles_path }}/bash/bash-03-pipe.sh
-[dotfiles-perl-03-pipe-io]:      {{ dotfiles_path }}/perl/perl-03-pipe-io.pl
-[dotfiles-perl-03-pipe-open]:    {{ dotfiles_path }}/perl/perl-03-pipe-open.pl
-[dotfiles-perl-03-pipe-open2]:   {{ dotfiles_path }}/perl/perl-03-pipe-open2.pl
-[dotfiles-python-03-subprocess]: {{ dotfiles_path }}/python/python-03-subprocess-simple.py
-[dotfiles-ruby-03-open3]:        {{ dotfiles_path }}/ruby/ruby-03-open3.rb
-[dotfiles-ruby-03-pipe-io]:      {{ dotfiles_path }}/ruby/ruby-03-pipe-io.rb
-[dotfiles-ruby-03-popen]:        {{ dotfiles_path }}/ruby/ruby-03-popen.rb
-[dotfiles-ruby-03-pty]:          {{ dotfiles_path }}/ruby/ruby-03-pty.rb
-[dotfiles-php-03-popen]:         {{ dotfiles_path }}/php/php-03-popen.php
-[dotfiles-php-03-proc-open]:     {{ dotfiles_path }}/php/php-03-proc-open.php
-[dotfiles-lua-03-popen]:         {{ dotfiles_path }}/lua/lua-03-popen.lua
-[dotfiles-haskell-03-process]:   {{ dotfiles_path }}/haskell/haskell-03-process.hs
-
-[dotfiles-bash-05-fork]:    {{ dotfiles_path }}/bash/bash-05-fork.sh
-[dotfiles-perl-05-fork]:    {{ dotfiles_path }}/perl/perl-05-fork-sub.pl
-[dotfiles-python-05-fork]:  {{ dotfiles_path }}/python/python-05-fork-def.py
-[dotfiles-ruby-05-fork]:    {{ dotfiles_path }}/ruby/ruby-05-fork-def.rb
-[dotfiles-php-05-fork]:     {{ dotfiles_path }}/php/php-05-fork-function.php
-[dotfiles-lua-05-fork]:     {{ dotfiles_path }}/lua/lua-05-fork-function.lua
-[dotfiles-haskell-05-fork]: {{ dotfiles_path }}/haskell/haskell-05-fork.hs
-
-[dotfiles-bash-07-conky]:    {{ dotfiles_path }}/bash/bash-07-conky.sh
-[dotfiles-perl-07-conky]:    {{ dotfiles_path }}/perl/perl-07-fork-conky.pl
-[dotfiles-python-07-conky]:  {{ dotfiles_path }}/python/python-07-fork-conky.py
-[dotfiles-ruby-07-conky]:    {{ dotfiles_path }}/ruby/ruby-07-fork-conky.rb
-[dotfiles-php-07-conky]:     {{ dotfiles_path }}/php/php-07-fork-conky.php
-[dotfiles-lua-07-conky]:     {{ dotfiles_path }}/lua/lua-07-fork-function.lua
-[dotfiles-haskell-07-conky]: {{ dotfiles_path }}/haskell/haskell-07-fork.hs
-
-[dotfiles-bash-17-conky]:    {{ dotfiles_path }}/bash/bash-17-conky.sh
-[dotfiles-perl-17-conky]:    {{ dotfiles_path }}/perl/perl-17-fork-conky.pl
-[dotfiles-python-17-conky]:  {{ dotfiles_path }}/python/python-17-fork-conky.py
-[dotfiles-ruby-17-conky]:    {{ dotfiles_path }}/ruby/ruby-17-fork-conky.rb
-[dotfiles-php-17-conky]:     {{ dotfiles_path }}/php/php-17-fork-conky.php
-[dotfiles-lua-17-conky]:     {{ dotfiles_path }}/lua/lua-17-fork-function.lua
-[dotfiles-haskell-17-conky]: {{ dotfiles_path }}/haskell/haskell-17-fork.hs
