@@ -25,6 +25,12 @@ There are few sections here.
 
 *	System Wide: emerge, revdep-rebuild, Upgradables, Installed, Recent, Obsolete
 
+*	Package: Building Package, Extract
+
+*	History: The Log File
+
+*	Clean Up
+
 *	What's Next
 
 [ [Part Three][local-part-three] ]
@@ -36,10 +42,6 @@ There are few sections here.
 *	Mirror: Install, Select Mirror, Configuration, Test
 
 *	Hold Package: Example, Before Mask, Configuration, After Mask
-
-*	History: The Log File
-
-*	Clean Up
 
 *	Conclusion
 

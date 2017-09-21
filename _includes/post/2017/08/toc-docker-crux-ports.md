@@ -10,7 +10,9 @@ There are few sections here.
 
 *	Updating System: Ports Update, System Upgrade
 
-*	Package IRSI: Install, Removal, Query Search, Show Info
+*	Package IRSIF: Install, Removal, Query Search, Show Info, List File
+
+*	System Wide: Installed Packages
 
 *	Dependency: Help, Dependency, Reverse Dependency, Test
 

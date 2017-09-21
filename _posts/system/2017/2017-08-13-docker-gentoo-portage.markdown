@@ -69,7 +69,20 @@ $ layman-updater -R
 {% endhighlight %}
 
 {% highlight bash %}
-$ layman -L
+$ layman --list
+{% endhighlight %}
+
+{% highlight bash %}
+$ layman --list-local
+
+ * xwing                     [Rsync     ] (rsync://gentoo.xwing....)
+{% endhighlight %}
+
+{% highlight bash %}
+$ layman --fetch
+
+ * Fetching remote list...
+ * Fetch Ok
 {% endhighlight %}
 
 ![Docker Layman: List Available][image-ss-layman-available]{: .img-responsive }

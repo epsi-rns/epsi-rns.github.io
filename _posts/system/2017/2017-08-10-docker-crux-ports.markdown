@@ -201,9 +201,9 @@ Which we will solve later.
 
 -- -- --
 
-### Package IRSI
+### Package IRSIF
 
-	Install, Remove, Search, Info
+	Install, Remove, Search, Info, File
 
 Read the fine manual.
 
@@ -265,9 +265,88 @@ Found in /usr/ports/opt/htop:
 
 {% highlight bash %}
 $ prt-get info htop
+Name:         htop
+Path:         /usr/ports/opt
+Version:      1.0.3
+Release:      1
+Description:  an interactive process viewer
+URL:          http://hisham.hm/htop
+Packager:     Simone Rota, sip at crux dot nu
+Maintainer:   Thomas Penteker, tek at serverop dot de
+Dependencies: ncurses
 {% endhighlight %}
 
 ![Docker Crux: prt-get Info][image-ss-prtget-info]{: .img-responsive }
+
+#### List Files
+
+Listing files in particular package.
+
+{% highlight bash %}
+$ pkginfo -l wget
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ pkginfo --list wget
+etc/
+etc/wgetrc
+usr/
+usr/bin/
+usr/bin/wget
+usr/man/
+usr/man/man1/
+usr/man/man1/wget.1.gz
+
+{% endhighlight %}
+
+![Docker Void: pkginfo list][image-ss-pkginfo-list]{: .img-responsive }
+
+There is this file owner command.
+
+{% highlight bash %}
+$ pkginfo -o /etc/wgetrc 
+{% endhighlight %}
+
+{% highlight bash %}
+$ pkginfo --owner /etc/wgetrc 
+Package  File
+wget     etc/wgetrc
+{% endhighlight %}
+
+![Docker Void: pkginfo owner][image-ss-pkginfo-owner]{: .img-responsive }
+
+-- -- --
+
+### System Wide
+
+System wide information.
+
+#### Installed Packages
+
+{% highlight bash %}
+$ pkginfo -i
+{% endhighlight %}
+
+Equal to:
+
+{% highlight bash %}
+$ pkginfo --installed
+acl 2.2.52-1
+attr 2.4.47-1
+autoconf 2.69-1
+automake 1.15-1
+bash 4.3.42-1
+...
+wget 1.17-1
+which 2.21-1
+xz 5.2.2-1
+zip 3.0-1
+zlib 1.2.8-1
+{% endhighlight %}
+
+![Docker Crux: pkginfo --installed][image-ss-pkginfo-installed]{: .img-responsive }
 
 -- -- --
 
@@ -634,9 +713,11 @@ Thank you for reading
 [image-ss-prtget-install]: {{ asset_post }}/13-prtget-install-half.png
 [photo-ss-prtget-install]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMQaSQgPAmbhyfZwXjkhT46X8JPTWJ5035-5Mhm?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-prtget-info]:    {{ asset_post }}/13-prtget-info.png
-[image-ss-prtget-remove]:  {{ asset_post }}/13-prtget-remove.png
-[image-ss-prtget-search]:  {{ asset_post }}/13-prtget-search.png
+[image-ss-prtget-info]:		{{ asset_post }}/13-prtget-info.png
+[image-ss-prtget-remove]:	{{ asset_post }}/13-prtget-remove.png
+[image-ss-prtget-search]:	{{ asset_post }}/13-prtget-search.png
+[image-ss-pkginfo-list]:	{{ asset_post }}/13-pkginfo-list.png
+[image-ss-pkginfo-owner]:	{{ asset_post }}/13-pkginfo-owner.png
 
 [image-ss-prtget-dependent]:  {{ asset_post }}/14-dependent.png
 [image-ss-prtget-deptree]:    {{ asset_post }}/14-deptree.png
@@ -647,6 +728,8 @@ Thank you for reading
 
 [image-ss-less-log]:       {{ asset_post }}/19-log.png
 [image-ss-prtget-log]:     {{ asset_post }}/19-prtget-log-conf.png
+
+[image-ss-pkginfo-installed]:   {{ asset_post }}/19-pkginfo-installed.png
 
 [image-ss-prtget-lock]:    {{ asset_post }}/27-prtget-lock.png
 

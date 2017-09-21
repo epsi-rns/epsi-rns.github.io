@@ -185,7 +185,7 @@ ii zlib-1.2.11_2                   A compression/decompression L...
 
 ![Docker XBPS: xbps-query --list-pkgs][image-ss-xbps-query-list-pkgs]{: .img-responsive }
 
-#### Verify
+#### Verify Database
 
 There is this <code>xbps-pkgdb --all</code> command.
 
@@ -217,7 +217,25 @@ $ head /var/db/xbps/pkgdb-0.38.plist
 
 ![Docker XBPS: /var/db/xbps/][image-ss-var-db-xbps]{: .img-responsive }
 
-#### Orphan
+#### Available Packages
+
+{% highlight bash %}
+$ xbps-install -Suvn
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+$ xbps-install --sync --update --verbose --dry-run 
+Found libbluetooth-5.47_2 (update) in repository https://repo2.voidlinux.eu/current
+Found orc-0.4.27_1 (update) in repository https://repo2.voidlinux.eu/current
+libbluetooth-5.47_2 update x86_64 https://repo2.voidlinux.eu/current 148896 49988
+orc-0.4.27_1 update x86_64 https://repo2.voidlinux.eu/current 604924 149904
+{% endhighlight %}
+
+![Docker XBPS: xbps-install -Suvn][image-ss-var-xbps-install-suvn]{: .img-responsive }
+
+#### Orphan Packages
 
 {% highlight bash %}
 $ xbps-query -o
@@ -227,6 +245,7 @@ $ xbps-query -o
 $ xbps-query --list-orphans
 {% endhighlight %}
 
+Currently, no orphan this time.
 
 -- -- --
 
@@ -489,5 +508,6 @@ Thank you for reading
 
 [image-ss-r-xbps-mirror]:   {{ asset_post }}/16-mirror.png
 
-[image-ss-xbps-query-list-pkgs]:   {{ asset_post }}/19-xbps-query-list-pkgs.png
-[image-ss-var-db-xbps]:		{{ asset_post }}/19-var-db-xbps.png
+[image-ss-xbps-query-list-pkgs]:	{{ asset_post }}/19-xbps-query-list-pkgs.png
+[image-ss-var-db-xbps]:				{{ asset_post }}/19-var-db-xbps.png
+[image-ss-var-xbps-install-suvn]:	{{ asset_post }}/19-xbps-install-suvn.png

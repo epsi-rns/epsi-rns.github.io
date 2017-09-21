@@ -308,6 +308,57 @@ $ eix-diff
 
 -- -- --
 
+### Package
+
+#### Building Package
+
+{% highlight bash %}
+$ quickpkg ncdu
+ * Building package for sys-fs/ncdu-1.12 ...                 [ ok ]
+
+ * Packages now in '/usr/portage/packages':
+ * sys-fs/ncdu-1.12: 50.8K
+{% endhighlight %}
+
+Now it is there.
+
+{% highlight bash %}
+$ ls -l /usr/portage/packages/sys-fs/
+total 52
+-rw------- 1 root root 52025 Sep 21 06:12 ncdu-1.12.tbz2
+{% endhighlight %}
+
+![Docker Gentoo: quickpkg][image-ss-quickpkg]{: .img-responsive }
+
+#### Extract
+
+{% highlight bash %}
+$ cd ~
+$ tar -jxvf /usr/portage/packages/sys-fs/ncdu-1.12.tbz2
+tar -jxvf /usr/portage/packages/sys-fs/ncdu-1.12.tbz2
+./usr/
+./usr/bin/
+./usr/bin/ncdu
+
+bzip2: (stdin): trailing garbage after EOF ignored
+./usr/share/
+./usr/share/doc/
+./usr/share/doc/ncdu-1.12/
+./usr/share/doc/ncdu-1.12/ChangeLog.bz2
+./usr/share/doc/ncdu-1.12/README.bz2
+./usr/share/man/
+./usr/share/man/man1/
+./usr/share/man/man1/ncdu.1.bz2
+
+$ ls -l
+total 4
+drwxr-xr-x 4 root root 4096 Aug 15 19:31 usr
+{% endhighlight %}
+
+![Docker Gentoo: extract package][image-ss-extract]{: .img-responsive }
+
+-- -- --
+
 ### History
 
 #### The Log File
@@ -441,3 +492,6 @@ Thank you for reading
 
 [image-ss-eix-test-obsolete]:	{{ asset_post }}/19-eix-test-obsolete.png
 [image-ss-eix-diff]:			{{ asset_post }}/19-eix-diff.png
+
+[image-ss-quickpkg]:	{{ asset_post }}/29-quickpkg.png
+[image-ss-extract]:		{{ asset_post }}/29-extract.png

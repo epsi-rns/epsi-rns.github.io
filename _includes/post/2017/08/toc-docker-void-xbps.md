@@ -25,7 +25,7 @@ There are few sections here.
 
 *	Repositories: Configuration, Add Subrepository, List Packages, Mirror
 
-*	System Wide: Installed Packages, Verify
+*	System Wide: Installed Packages, Verify, /var/db/xbps, Available, Orphan
 
 *	History: The Log File
 
