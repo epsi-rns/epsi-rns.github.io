@@ -43,30 +43,7 @@ Impatient coder like me, like to open many tab on browser.
 
 -- -- --
 
-### Modularized HerbstluftWM in Many Languages
-
-This article is one part of a collection.
-All integrated, on related to another.
-So we can compare each other quickly.
-
-Tutorial/ Guidance/ Article:
-[[ Modularized Overview ][local-overview]]
-[[ BASH ][local-BASH]]
-[[ Perl ][local-Perl]]
-[[ Python ][local-python]]
-[[ Ruby ][local-Ruby]]
-[[ PHP ][local-PHP]]
-[[ Lua ][local-Lua]]
-[[ Haskell ][local-Haskell]]
-
-Source Code Directory:
-[[ BASH ][dotfiles-BASH]]
-[[ Perl ][dotfiles-Perl]]
-[[ Python ][dotfiles-python]]
-[[ Ruby ][dotfiles-Ruby]]
-[[ PHP ][dotfiles-PHP]]
-[[ Lua ][dotfiles-Lua]]
-[[ Haskell ][dotfiles-Haskell]]
+{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -182,14 +159,7 @@ xsetroot -solid "${color['blue500']}"
 
 *	[github.com/.../dotfiles/.../bash/gmc.sh][dotfiles-bash-gmc]
 
-Similar Code: 
-[[ BASH Color ][dotfiles-bash-gmc]]
-[[ Perl Color ][dotfiles-perl-gmc]]
-[[ Python Color ][dotfiles-python-gmc]]
-[[ Ruby Color ][dotfiles-ruby-gmc]]
-[[ PHP Color ][dotfiles-php-gmc]]
-[[ Lua Color ][dotfiles-lua-gmc]]
-[[ Haskell Color ][dotfiles-haskell-gmc]]
+{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
 -- -- --
 
@@ -258,14 +228,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 
 *	[github.com/.../dotfiles/.../bash/config.sh][dotfiles-bash-config]
 
-Similar Code: 
-[[ BASH Config ][dotfiles-bash-config]]
-[[ Perl Config ][dotfiles-perl-config]]
-[[ Python Config ][dotfiles-python-config]]
-[[ Ruby Config ][dotfiles-ruby-config]]
-[[ PHP Config ][dotfiles-php-config]]
-[[ Lua Config ][dotfiles-lua-config]]
-[[ Haskell Config ][dotfiles-haskell-config]]
+{% include post/2017/05/herbstlustwm-modularized-config.md %}
 
 -- -- --
 
@@ -319,14 +282,7 @@ You can see the debugging result in figure below.
 
 *	[github.com/.../dotfiles/.../bash/helper.sh][dotfiles-bash-helper]
 
-Similar Code: 
-[[ BASH Helper ][dotfiles-bash-helper]]
-[[ Perl Helper ][dotfiles-perl-helper]]
-[[ Python Helper ][dotfiles-python-helper]]
-[[ Ruby Helper ][dotfiles-ruby-helper]]
-[[ PHP Helper ][dotfiles-php-helper]]
-[[ Lua Helper ][dotfiles-lua-helper]]
-[[ Haskell Helper ][dotfiles-haskell-helper]]
+{% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
 -- -- --
 
@@ -418,14 +374,7 @@ startup_run() {
 
 *	[github.com/.../dotfiles/.../bash/startup.sh][dotfiles-bash-startup]
 
-Similar Code: 
-[[ BASH Startup ][dotfiles-bash-startup]]
-[[ Perl Startup ][dotfiles-perl-startup]]
-[[ Python Startup ][dotfiles-python-startup]]
-[[ Ruby Startup ][dotfiles-ruby-startup]]
-[[ PHP Startup ][dotfiles-php-startup]]
-[[ Lua Startup ][dotfiles-lua-startup]]
-[[ Haskell Startup ][dotfiles-haskell-startup]]
+{% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
 -- -- --
 
@@ -491,14 +440,7 @@ startup_run
 
 *	[github.com/.../dotfiles/.../bash/autostart.sh][dotfiles-bash-autostart]
 
-Similar Code: 
-[[ BASH autostart ][dotfiles-bash-autostart]]
-[[ Perl autostart ][dotfiles-perl-autostart]]
-[[ Python autostart ][dotfiles-python-autostart]]
-[[ Ruby autostart ][dotfiles-ruby-autostart]]
-[[ PHP autostart ][dotfiles-php-autostart]]
-[[ Lua autostart ][dotfiles-lua-autostart]]
-[[ Haskell autostart ][dotfiles-haskell-autostart]]
+{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
 -- -- --
 
@@ -532,21 +474,6 @@ Happy Configuring.
 [image-bash-01-tree]:         {{ asset_path }}/hlwm-bash-01-tree.png
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
-[local-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
-[local-perl]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
-[local-python]:   {{ site.url }}/desktop/2017/05/04/herbstlustwm-modularized-python.html
-[local-ruby]:     {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-ruby.html
-[local-php]:      {{ site.url }}/desktop/2017/05/06/herbstlustwm-modularized-php.html
-[local-lua]:      {{ site.url }}/desktop/2017/05/07/herbstlustwm-modularized-lua.html
-[local-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
-
-[dotfiles-BASH]:    {{ dotfiles_path }}/bash
-[dotfiles-Perl]:    {{ dotfiles_path }}/perl
-[dotfiles-python]:  {{ dotfiles_path }}/python
-[dotfiles-Ruby]:    {{ dotfiles_path }}/ruby
-[dotfiles-PHP]:     {{ dotfiles_path }}/php
-[dotfiles-Lua]:     {{ dotfiles_path }}/lua
-[dotfiles-Haskell]: {{ dotfiles_path }}/haskell
 
 [dotfiles-bash-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/bash
 [dotfiles-bash-autostart]: {{ dotfiles_path }}/bash/autostart.sh
@@ -554,45 +481,3 @@ Happy Configuring.
 [dotfiles-bash-config]:    {{ dotfiles_path }}/bash/config.sh
 [dotfiles-bash-helper]:    {{ dotfiles_path }}/bash/helper.sh
 [dotfiles-bash-startup]:   {{ dotfiles_path }}/bash/startup.sh
-
-[dotfiles-perl-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
-[dotfiles-perl-autostart]: {{ dotfiles_path }}/perl/autostart.pl
-[dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/gmc.pm
-[dotfiles-perl-config]:    {{ dotfiles_path }}/perl/config.pm
-[dotfiles-perl-helper]:    {{ dotfiles_path }}/perl/helper.pm
-[dotfiles-perl-startup]:   {{ dotfiles_path }}/perl/startup.pm
-
-[dotfiles-python-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
-[dotfiles-python-autostart]: {{ dotfiles_path }}/python/autostart.py
-[dotfiles-python-gmc]:       {{ dotfiles_path }}/python/gmc.py
-[dotfiles-python-config]:    {{ dotfiles_path }}/python/config.py
-[dotfiles-python-helper]:    {{ dotfiles_path }}/python/helper.py
-[dotfiles-python-startup]:   {{ dotfiles_path }}/python/startup.py
-
-[dotfiles-ruby-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/ruby
-[dotfiles-ruby-autostart]: {{ dotfiles_path }}/ruby/autostart.rb
-[dotfiles-ruby-gmc]:       {{ dotfiles_path }}/ruby/gmc.rb
-[dotfiles-ruby-config]:    {{ dotfiles_path }}/ruby/config.rb
-[dotfiles-ruby-helper]:    {{ dotfiles_path }}/ruby/helper.rb
-[dotfiles-ruby-startup]:   {{ dotfiles_path }}/ruby/startup.rb
-
-[dotfiles-php-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/php
-[dotfiles-php-autostart]: {{ dotfiles_path }}/php/autostart.php
-[dotfiles-php-gmc]:       {{ dotfiles_path }}/php/gmc.php
-[dotfiles-php-config]:    {{ dotfiles_path }}/php/config.php
-[dotfiles-php-helper]:    {{ dotfiles_path }}/php/helper.php
-[dotfiles-php-startup]:   {{ dotfiles_path }}/php/startup.php
-
-[dotfiles-lua-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
-[dotfiles-lua-autostart]: {{ dotfiles_path }}/lua/autostart.lua
-[dotfiles-lua-gmc]:       {{ dotfiles_path }}/lua/gmc.lua
-[dotfiles-lua-config]:    {{ dotfiles_path }}/lua/config.lua
-[dotfiles-lua-helper]:    {{ dotfiles_path }}/lua/helper.lua
-[dotfiles-lua-startup]:   {{ dotfiles_path }}/lua/startup.lua
-
-[dotfiles-haskell-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/haskell
-[dotfiles-haskell-autostart]: {{ dotfiles_path }}/haskell/autostart.hs
-[dotfiles-haskell-gmc]:       {{ dotfiles_path }}/haskell/MyGMC.hs
-[dotfiles-haskell-config]:    {{ dotfiles_path }}/haskell/MyConfig.hs
-[dotfiles-haskell-helper]:    {{ dotfiles_path }}/haskell/MyHelper.hs
-[dotfiles-haskell-startup]:   {{ dotfiles_path }}/haskell/MyStartup.hs

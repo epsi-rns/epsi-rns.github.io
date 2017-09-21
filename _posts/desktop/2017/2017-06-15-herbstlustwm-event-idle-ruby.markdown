@@ -70,39 +70,7 @@ Let's have a look at <code class="code-file">pipehandler.rb</code> in github.
 
 -- -- --
 
-### HerbstluftWM Idle Event in Many Languages
-
-This article is one part of a collection.
-All integrated, on related to another.
-So we can compare each other quickly.
-
-Tutorial/ Guidance/ Article:
-[[ Idle Event Overview ][local-overview]]
-[[ BASH ][local-bash]]
-[[ Perl ][local-perl]]
-[[ Python ][local-python]]
-[[ Ruby ][local-ruby]]
-[[ PHP ][local-php]]
-[[ Lua ][local-lua]]
-[[ Haskell ][local-haskell]]
-
-Dzen2 Source Code Directory:
-[[ BASH ][dotfiles-dzen2-bash]]
-[[ Perl ][dotfiles-dzen2-perl]]
-[[ Python ][dotfiles-dzen2-python]]
-[[ Ruby ][dotfiles-dzen2-ruby]]
-[[ PHP ][dotfiles-dzen2-php]]
-[[ Lua ][dotfiles-dzen2-lua]]
-[[ Haskell ][dotfiles-dzen2-haskell]]
-
-Lemonbar Source Code Directory:
-[[ BASH ][dotfiles-lemon-bash]]
-[[ Perl ][dotfiles-lemon-perl]]
-[[ Python ][dotfiles-lemon-python]]
-[[ Ruby ][dotfiles-lemon-ruby]]
-[[ PHP ][dotfiles-lemon-php]]
-[[ Lua ][dotfiles-lemon-lua]]
-[[ Haskell ][dotfiles-lemon-haskell]]
+{% include post/2017/06/herbstlustwm-event-idle-language.md %}
 
 -- -- --
 
@@ -206,6 +174,8 @@ Simple version. No idle event. Only statusbar initialization.
 *	**Lemonbar**: 
 	[github.com/.../dotfiles/.../ruby/pipehandler.simple.rb][dotfiles-lemon-ruby-pipehandler-simple]
 	[github.com/.../dotfiles/.../ruby/pipehandler.01-init.rb][dotfiles-lemon-ruby-pipehandler-init]
+
+{% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
 
 -- -- --
 
@@ -671,6 +641,8 @@ After reunification, they are not very long scripts after all.
 *	**Lemonbar**: 
 	[github.com/.../dotfiles/.../ruby/panel-lemonbar.rb][dotfiles-hlwm-ruby-lemon-compact]
 
+{% include post/2017/06/herbstlustwm-event-idle-panel.md %}
+
 -- -- --
 
 #### Desktop Screenshot
@@ -718,13 +690,6 @@ Enjoy the window manager !
 [local-bash-pipe]:   {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
 
 [local-overview]: {{ site.url }}/desktop/2017/06/11/herbstlustwm-event-idle-overview.html
-[local-bash]:     {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html
-[local-perl]:     {{ site.url }}/desktop/2017/06/13/herbstlustwm-event-idle-perl.html
-[local-python]:   {{ site.url }}/desktop/2017/06/14/herbstlustwm-event-idle-python.html
-[local-ruby]:     {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
-[local-php]:      {{ site.url }}/desktop/2017/06/16/herbstlustwm-event-idle-php.html
-[local-lua]:      {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
-[local-haskell]:  {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
 
 [dotfiles-lemon-ruby-pipehandler-init]:      {{ dotfiles_lemon }}/ruby/pipehandler.01-init.rb
 [dotfiles-lemon-ruby-pipehandler-idle]:      {{ dotfiles_lemon }}/ruby/pipehandler.02-idle.rb
@@ -732,90 +697,12 @@ Enjoy the window manager !
 [dotfiles-lemon-ruby-pipehandler-event]:     {{ dotfiles_lemon }}/ruby/pipehandler.04-event.rb
 [dotfiles-lemon-ruby-pipehandler-conky]:     {{ dotfiles_lemon }}/ruby/pipehandler.05-conky.rb
 
-[dotfiles-dzen2-bash]:    {{ dotfiles_dzen2 }}/bash
-[dotfiles-dzen2-perl]:    {{ dotfiles_dzen2 }}/perl
-[dotfiles-dzen2-python]:  {{ dotfiles_dzen2 }}/python
-[dotfiles-dzen2-ruby]:    {{ dotfiles_dzen2 }}/ruby
-[dotfiles-dzen2-php]:     {{ dotfiles_dzen2 }}/php
-[dotfiles-dzen2-lua]:     {{ dotfiles_dzen2 }}/lua
-[dotfiles-dzen2-haskell]: {{ dotfiles_dzen2 }}/haskell
-
-[dotfiles-lemon-bash]:    {{ dotfiles_lemon }}/bash
-[dotfiles-lemon-perl]:    {{ dotfiles_lemon }}/perl
-[dotfiles-lemon-python]:  {{ dotfiles_lemon }}/python
-[dotfiles-lemon-ruby]:    {{ dotfiles_lemon }}/ruby
-[dotfiles-lemon-php]:     {{ dotfiles_lemon }}/php
-[dotfiles-lemon-lua]:     {{ dotfiles_lemon }}/lua
-[dotfiles-lemon-haskell]: {{ dotfiles_lemon }}/haskell
-
-[dotfiles-dzen2-bash-panel]:       {{ dotfiles_dzen2 }}/bash/panel.sh
-[dotfiles-dzen2-bash-helper]:      {{ dotfiles_dzen2 }}/bash/helper.sh
-[dotfiles-dzen2-bash-output]:      {{ dotfiles_dzen2 }}/bash/output.sh
-[dotfiles-dzen2-bash-pipehandler]: {{ dotfiles_dzen2 }}/bash/pipehandler.sh
-
-[dotfiles-dzen2-perl-panel]:       {{ dotfiles_dzen2 }}/perl/panel.pl
-[dotfiles-dzen2-perl-helper]:      {{ dotfiles_dzen2 }}/perl/helper.pm
-[dotfiles-dzen2-perl-output]:      {{ dotfiles_dzen2 }}/perl/output.pm
-[dotfiles-dzen2-perl-pipehandler]: {{ dotfiles_dzen2 }}/perl/pipehandler.pm
-
-[dotfiles-dzen2-python-panel]:       {{ dotfiles_dzen2 }}/python/panel.py
-[dotfiles-dzen2-python-helper]:      {{ dotfiles_dzen2 }}/python/helper.py
-[dotfiles-dzen2-python-output]:      {{ dotfiles_dzen2 }}/python/output.py
-[dotfiles-dzen2-python-pipehandler]: {{ dotfiles_dzen2 }}/python/pipehandler.py
-
 [dotfiles-dzen2-ruby-panel]:       {{ dotfiles_dzen2 }}/ruby/panel.rb
 [dotfiles-dzen2-ruby-helper]:      {{ dotfiles_dzen2 }}/ruby/helper.rb
 [dotfiles-dzen2-ruby-output]:      {{ dotfiles_dzen2 }}/ruby/output.rb
 [dotfiles-dzen2-ruby-pipehandler]: {{ dotfiles_dzen2 }}/ruby/pipehandler.rb
 
-[dotfiles-dzen2-php-panel]:       {{ dotfiles_dzen2 }}/php/panel.php
-[dotfiles-dzen2-php-helper]:      {{ dotfiles_dzen2 }}/php/helper.php
-[dotfiles-dzen2-php-output]:      {{ dotfiles_dzen2 }}/php/output.php
-[dotfiles-dzen2-php-pipehandler]: {{ dotfiles_dzen2 }}/php/pipehandler.php
-
-[dotfiles-dzen2-lua-panel]:       {{ dotfiles_dzen2 }}/lua/panel.lua
-[dotfiles-dzen2-lua-common]:      {{ dotfiles_dzen2 }}/lua/common.lua
-[dotfiles-dzen2-lua-helper]:      {{ dotfiles_dzen2 }}/lua/helper.lua
-[dotfiles-dzen2-lua-output]:      {{ dotfiles_dzen2 }}/lua/output.lua
-[dotfiles-dzen2-lua-pipehandler]: {{ dotfiles_dzen2 }}/lua/pipehandler.lua
-
-[dotfiles-dzen2-haskell-panel]:       {{ dotfiles_dzen2 }}/haskell/panel.hs
-[dotfiles-dzen2-haskell-helper]:      {{ dotfiles_dzen2 }}/haskell/MyHelper.hs
-[dotfiles-dzen2-haskell-output]:      {{ dotfiles_dzen2 }}/haskell/MyOutput.hs
-[dotfiles-dzen2-haskell-pipehandler]: {{ dotfiles_dzen2 }}/haskell/MyPipeHandler.hs
-
-[dotfiles-lemon-bash-panel]:       {{ dotfiles_lemon }}/bash/panel.sh
-[dotfiles-lemon-bash-helper]:      {{ dotfiles_lemon }}/bash/helper.sh
-[dotfiles-lemon-bash-output]:      {{ dotfiles_lemon }}/bash/output.sh
-[dotfiles-lemon-bash-pipehandler]: {{ dotfiles_lemon }}/bash/pipehandler.sh
-
-[dotfiles-lemon-perl-panel]:       {{ dotfiles_lemon }}/perl/panel.pl
-[dotfiles-lemon-perl-helper]:      {{ dotfiles_lemon }}/perl/helper.pm
-[dotfiles-lemon-perl-output]:      {{ dotfiles_lemon }}/perl/output.pm
-[dotfiles-lemon-perl-pipehandler]: {{ dotfiles_lemon }}/perl/pipehandler.pm
-
-[dotfiles-lemon-python-panel]:       {{ dotfiles_lemon }}/python/panel.py
-[dotfiles-lemon-python-helper]:      {{ dotfiles_lemon }}/python/helper.py
-[dotfiles-lemon-python-output]:      {{ dotfiles_lemon }}/python/output.py
-[dotfiles-lemon-python-pipehandler]: {{ dotfiles_lemon }}/python/pipehandler.py
-
 [dotfiles-lemon-ruby-panel]:       {{ dotfiles_lemon }}/ruby/panel.rb
 [dotfiles-lemon-ruby-helper]:      {{ dotfiles_lemon }}/ruby/helper.rb
 [dotfiles-lemon-ruby-output]:      {{ dotfiles_lemon }}/ruby/output.rb
 [dotfiles-lemon-ruby-pipehandler]: {{ dotfiles_lemon }}/ruby/pipehandler.rb
-
-[dotfiles-lemon-php-panel]:       {{ dotfiles_lemon }}/php/panel.php
-[dotfiles-lemon-php-helper]:      {{ dotfiles_lemon }}/php/helper.php
-[dotfiles-lemon-php-output]:      {{ dotfiles_lemon }}/php/output.php
-[dotfiles-lemon-php-pipehandler]: {{ dotfiles_lemon }}/php/pipehandler.php
-
-[dotfiles-lemon-lua-panel]:       {{ dotfiles_lemon }}/lua/panel.lua
-[dotfiles-lemon-lua-common]:      {{ dotfiles_lemon }}/lua/common.lua
-[dotfiles-lemon-lua-helper]:      {{ dotfiles_lemon }}/lua/helper.lua
-[dotfiles-lemon-lua-output]:      {{ dotfiles_lemon }}/lua/output.lua
-[dotfiles-lemon-lua-pipehandler]: {{ dotfiles_lemon }}/lua/pipehandler.lua
-
-[dotfiles-lemon-haskell-panel]:       {{ dotfiles_lemon }}/haskell/panel.hs
-[dotfiles-lemon-haskell-helper]:      {{ dotfiles_lemon }}/haskell/MyHelper.hs
-[dotfiles-lemon-haskell-output]:      {{ dotfiles_lemon }}/haskell/MyOutput.hs
-[dotfiles-lemon-haskell-pipehandler]: {{ dotfiles_lemon }}/haskell/MyPipeHandler.hs
