@@ -51,9 +51,17 @@ Artix Linux, formerly Manjaro-OpenRC.
 
 *	<https://github.com/artix-linux>
 
+*	<https://sourceforge.net/projects/artix-linux/>
+
+
+Migration
+
 *	<https://artix-linux.github.io/migrate/>
 
-*	<https://sourceforge.net/projects/artix-linux/>
+*	https://artixlinux.org/migrate.php
+
+*	https://systemd-free.org/migrate.php
+
 
 Not that I need spoonfeeding.
 I just need to know more about this repository.
@@ -338,6 +346,86 @@ Jekyll works well in Artix.
 
 -- -- --
 
+### Download Popularity
+
+This section, written in September 2017, About seven weeks after my Artix installation.
+
+	"Arch Linux Derivatives"
+
+Data Taken: 2017-09-23 03 AM UTC 07:00
+
+<https://sourceforge.net/projects/manjarolinux>
+
+*	58520 Downloads
+
+<https://sourceforge.net/projects/artix-linux/>
+
+*	17689 Downloads
+
+<https://sourceforge.net/projects/antergos/>
+
+*	5709 Downloads
+
+< https://sourceforge.net/projects/bluestarlinux>
+
+*	5301 Downloads
+
+<https://sourceforge.net/projects/archbang>
+
+*	Summer 2016 we have gone systemd free, we now ship with OpenRC init system
+
+*	1302 Downloads
+
+<https://sourceforge.net/projects/archlabs/>
+
+*	696 Downloads
+
+<https://sourceforge.net/projects/kaosx/>
+
+*	KaOSx is not an Arch Derivatives.
+
+*	536 Downloads
+
+<https://sourceforge.net/projects/obrevenge>
+
+*	474 Downloads
+
+<https://sourceforge.net/projects/architect-linux/>
+
+*	277 Downloads
+
+<https://sourceforge.net/projects/chakra>
+
+*	117 Downloads
+
+<https://sourceforge.net/projects/bridgelinux>
+
+*	47 Downloads
+
+<https://sourceforge.net/projects/archassault>
+
+*	Inactive
+
+*	17 Downloads
+
+<https://sourceforge.net/projects/arch-anywhere>
+
+*	0 Downloads
+
+<https://sourceforge.net/projects/archmerge>
+
+*	0 Downloads
+
+Not available in Sourceforge
+
+*	BlackArch
+
+*	BBQ
+
+Surprisingly Artix is very Popular, but KaOSx is not.
+
+-- -- --
+
 ### Conclusion
 
 I haven't found other bug yet with Artix Linux.
@@ -365,7 +453,7 @@ Thank you for reading
 [image-ss-systemd-dummy]:  {{ asset_post }}/systemd-dummy.png
 [photo-ss-systemd-dummy]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipPFMKW1rFxXOfA6S6-rwnTDwXv_LVGDUP3C8reD?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-artix-lxc]:     {{ asset_path }}/artix-lxc-gentoo-emerge-webrsync.png
+[image-ss-artix-lxc]:     {{ asset_path }}/package-manager/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
 [image-ss-artix-docker]:  {{ asset_post }}/docker-slackware.png
