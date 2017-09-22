@@ -14,7 +14,8 @@
   border-bottom-right-radius: 10px;
   @include box-shadow(0 1px 1px rgba(0,0,0,.05));
 
-  background: $yellow-makara url("../images/stripe-glossy/00.png") left top repeat-x;
+//  background: $yellow-makara url("../images/stripe-glossy/00.png") left top repeat-x;
+  background: $colBlue300 url("../images/stripe-glossy/00.png") left top repeat-x;
 //  @include gradient-striped(rgba(255,255,255,.35), 45deg);
 
   ul.navbar-nav li a:hover,

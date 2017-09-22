@@ -737,7 +737,7 @@ Thank you for reading
 [local-manjaro-docker]: {{ site.url }}/system/2016/03/03/docker-demonstration-manjaro.html
 [local-debian-docker]:  {{ site.url }}/system/2016/03/09/docker-demonstration-debian.html
 
-[image-ss-timeline]:	{{ asset_flow }}/timeline-02s.png
+[image-ss-timeline]:	{{ asset_flow }}/timeline-04s.png
 
 [image-ss-pull-arch]:		{{ asset_pull }}/arch.png
 [image-ss-pull-crux]:		{{ asset_pull }}/crux.png
