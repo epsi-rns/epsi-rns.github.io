@@ -33,6 +33,8 @@ There are few sections here.
 
 *	Clean Up: Cache, Autoremove
 
+*	Case: When chroot fail
+
 *	What's Next
 
 [ [Part Three][local-part-three] ]

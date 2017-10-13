@@ -77,7 +77,7 @@ Required By     : None
 #### Test
 
 Removing <code>groff-base</code>.
-We ahve already discuss this on package removal.
+We have already discuss this on package removal.
 
 {% highlight bash %}
 $ pacman --remove groff
@@ -660,6 +660,30 @@ Total Removed Size:  27.21 MiB
 
 -- -- --
 
+### Case
+
+#### When chroot fail
+
+Once I had a *kernel panic*, that caused by filesystem failure,
+due to electricity went out.
+This wasn't the only misery, apparently chroot also failed miserably,
+with message _input/output error_, that means I cannot do _pacman_
+to reinstall missing files (mostly library).
+
+This is when <code>pacman -U -r</code>,
+this command can have a _target directory.
+It means we can install in different root location.
+After installing <code>glibc</code> from different partition (or live usb),
+I can chroot successfully.
+Later I can _pacman_ in chroot to replace some missing library files.
+
+Note that image below does not run on docker,
+but real life problem solving.
+
+![Arch Case: case chroot][image-ss-case-chroot]{: .img-responsive }
+
+-- -- --
+
 ### What's Next
 
 There are still, some interesting topic for <code>ALPM</code>.
@@ -705,3 +729,4 @@ Thank you for reading
 [image-ss-database-check]:	{{ asset_post }}/19-database-check.png
 [image-ss-query-owner]:		{{ asset_post }}/19-query-owner.png
 [image-ss-var-lib]:			{{ asset_post }}/19-var-lib.png
+[image-ss-case-chroot]:		{{ asset_post }}/29-pacman-u-with-target.png
