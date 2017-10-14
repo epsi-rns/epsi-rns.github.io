@@ -170,7 +170,7 @@ Thank you for reading
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/$MFT-filesystem-btrfs' %}
+{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/$MFT' %}
 
 [image-ss-partitioner]:      {{ asset_post }}/kaosx-kde-partitioner-manager.png
 [image-ss-fedora-grub]:      {{ asset_post }}/fedora-grub-btrfs-issue.png
