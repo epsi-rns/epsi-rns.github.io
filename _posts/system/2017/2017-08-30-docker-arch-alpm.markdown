@@ -7,7 +7,7 @@ tags: [docker, distro, package manager, debian]
 author: epsi
 
 excerpt:
-  Examine APT step by step,
+  Examine ALPM step by step,
   using Debian container in Docker.
   One of Four Parts Article.
 

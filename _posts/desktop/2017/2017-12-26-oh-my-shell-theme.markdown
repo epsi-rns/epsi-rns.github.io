@@ -3,12 +3,12 @@ layout: post-sidemenu-wm
 title:  "Iterate Oh My BASH Theme"
 date:   2017-12-26 09:35:15 +0700
 categories: desktop
-tags: [ricing]
+tags: [ricing, bash, zsh]
 author: epsi
 
 excerpt:
   Preview each oh-my-bash theme live.
-  Also apllicable to oh-my-zsh.
+  Also applicable to oh-my-zsh.
   
 related_link_ids: 
   - 17050135  # HerbstluftWM Overview
