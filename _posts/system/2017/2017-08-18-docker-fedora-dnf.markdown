@@ -475,7 +475,7 @@ Last metadata expiration check: 1:50:36 ago on Wed Sep 20 14:19:59 2017.
 /usr/share/man/man1/ncdu.1.gz
 {% endhighlight %}
 
-![Docker DNF: List File][image-ss-dnf-repoquery-l]]{: .img-responsive }
+![Docker DNF: List File][image-ss-dnf-repoquery-l]{: .img-responsive }
 
 My bad, I cannot find any reference searching files owner.
 Therefore I use the lower level <code>rpm -qf</code> instead.
