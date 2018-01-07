@@ -8,6 +8,7 @@ author: epsi
 
 excerpt:
   Installing Jekyll on openSUSE is easy and straightforward
+  This article also cover RVM.
 
 related_link_ids: 
   - 16062329  # Jekyll Install Debian
