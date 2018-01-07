@@ -34,7 +34,7 @@ There are two approaches for openSUSE,
 
 * System Wide: Install gem as root with Ruby provided by openSUSE
 
-* Local RVM: Install gem in user space with RVM (Ruby Version Manager)
+* Local RVM: Install gem in user space with RVM (Ruby Version Manager) 
 
 You can click images for complete screenshot.
 
@@ -103,6 +103,12 @@ And run with very simple command.
 
 For some reasons, it is good to run Ruby outside root.
 Don't ask me why, I'm a n00b in Ruby.
+
+#### Reading
+
+This is a must read link before you start RVM.
+
+* [rvm.io](https://rvm.io/)
 
 #### Prerequisite
 
