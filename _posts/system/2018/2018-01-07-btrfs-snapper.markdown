@@ -271,7 +271,7 @@ That's all
 
 ### Conclusion
 
-	It works !
+	I have to learn about the basic of BTRFS before going back to snapper !
 
 Thank you for reading
 
