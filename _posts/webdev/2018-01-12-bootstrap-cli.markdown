@@ -150,7 +150,7 @@ this <code>sache.json</code> at root directory.
 
 There are still, some interesting topic for <code>PHP</code>,
 the <code>composer</code>.
-Consider finish reading [ [Part Four][local-part-four] ].
+Consider finish reading [ [Part Three][local-part-three] ].
 
 Thank you for reading.
 
@@ -158,7 +158,7 @@ Thank you for reading.
 
 {% assign asset_path = site.url | append: '/assets/posts/webdev/2018/01/bootstrap' %}
 
-[local-part-four]:		{{ site.url }}/webdev/2018/01/13/bootstrap-cli.html
+[local-part-three]:		{{ site.url }}/webdev/2018/01/13/bootstrap-cli.html
 
 [image-ss-gem-install-bundler]: {{ asset_path }}/gem-install-bundler.png
 

@@ -92,7 +92,7 @@ Since we are going to use <code>NodeJS</code> a lot,
 such as <code>Bower</code>, and <code>Grunt</code>.
 we should begin with Node Module using NPM.
 At least for me as beginner in NodeJS land.
-Consider finish reading [ [Part Two][local-part-two] ].
+Consider finish reading [ [Part One][local-part-one] ].
 
 Thank you for reading.
 
@@ -100,6 +100,6 @@ Thank you for reading.
 
 {% assign asset_path = site.url | append: '/assets/posts/webdev/2018/01/bootstrap' %}
 
-[local-part-two]:		{{ site.url }}/webdev/2018/01/11/bootstrap-cli.html
+[local-part-one]:		{{ site.url }}/webdev/2018/01/11/bootstrap-cli.html
 
 [image-ss-grunt-docs]: {{ asset_path }}/grunt-docs.png
