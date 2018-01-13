@@ -237,7 +237,7 @@ Thank you for reading.
 
 {% assign asset_path = site.url | append: '/assets/posts/webdev/2018/01/bootstrap' %}
 
-[local-part-three]:		{{ site.url }}/webdev/2018/01/12/boostrap-cli.html
+[local-part-three]:		{{ site.url }}/webdev/2018/01/12/bootstrap-cli.html
 
 [image-ss-source-npm-install]: {{ asset_path }}/source-npm-install.png
 [photo-ss-source-npm-install]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPWjgC3oq4ebrZ6kNMDk30cX9IiRVK8zcNtcUwc?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
