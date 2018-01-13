@@ -126,7 +126,7 @@ Now you can run the server
 
 ### Sache
 
-There is this [sache](http://www.sache.in/) offical documentation.
+There is this [sache](http://www.sache.in/) official documentation.
 But I consider this good article:
 
 * [Share your Sass with Sache](http://thesassway.com/intermediate/share-your-sass-with-sache-a-quick-guide)
