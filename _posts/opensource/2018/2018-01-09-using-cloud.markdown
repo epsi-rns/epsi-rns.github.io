@@ -7,6 +7,7 @@ tags: [console]
 author: epsi
 
 excerpt:
+  General cloud goodies for personal document transfer.
   Sync data using file sharing tool on the cloud,
   either Dropbox, Goggle Drive, Mega and Git,
   instead of USB Flash Disk, between Home and Office.
