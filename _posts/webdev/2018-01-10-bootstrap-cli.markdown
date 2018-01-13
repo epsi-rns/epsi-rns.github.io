@@ -60,13 +60,13 @@ Not more that one day.
 By the language platform,
 let me reorganize this article as this below:
 
-* Part One: Summary
+* Summary
 
-* Part Two (NodeJS): bower, grunt, less, eyeglass
+* Part One (NodeJS): bower, grunt, less, eyeglass
 
-* Part Three (Ruby): Gemfile, SASS/SCSS, Jekyll, sache
+* Part Two (Ruby): Gemfile, SASS/SCSS, Jekyll, sache
 
-* Part Four (PHP): Composer
+* Part Three (PHP): Composer
 
 Looks complete right ?
 There is also other popular technology, not being used by bootstrap,

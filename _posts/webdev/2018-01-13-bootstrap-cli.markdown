@@ -35,7 +35,7 @@ You should install <code>PHP7</code>,
 % sudo zypper in php7 php7-openssl php7-phar
 {% endhighlight %}
 
-[![openSUSE Zypper: Install PHP7][image-ss-zypper-in-php7]: .img-responsive }][photo-ss-zypper-in-php7]
+[![openSUSE Zypper: Install PHP7][image-ss-zypper-in-php7]{: .img-responsive }][photo-ss-zypper-in-php7]
 
 #### Download
 
