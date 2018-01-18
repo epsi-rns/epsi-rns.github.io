@@ -42,6 +42,6 @@ service:
   yandex_metrica_key: "37483295"
   disqus_key: epsirnsgithubio
   muut: false
-  google_adsense: true
+  google_adsense: false
    
 comments: true
