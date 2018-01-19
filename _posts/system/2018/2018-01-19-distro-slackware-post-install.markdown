@@ -9,6 +9,7 @@ author: epsi
 excerpt:
   My Slackware Experience,
   setting up suitable environment at home.
+  "Boys and Toys, Because boys will be boys".
 
 related_link_ids: 
   - 17080845  # Debian Devuan Migration
@@ -54,6 +55,8 @@ The issue with Slackware is that the repository is scattered.
 [![Slackware: slpkg slackonly herbstluftwm][image-ss-slpkg]{: .img-responsive }][photo-ss-slpkg]
 
 These below are the list.
+
+> "Boys and Toys: Because boys will be boys".
 
 -- -- --
 
@@ -108,6 +111,8 @@ slpkg slonly
 
 Note that pktstat and nload, are available in github.
 
+[![Slackware: network/ monitoring][image-ss-netmon]{: .img-responsive }][photo-ss-netmon]
+
 -- -- --
 
 ### language 
@@ -116,25 +121,25 @@ For mostly blogging.
 
 sbopkg
 
-* pip (python)
+* [pip](https://pypi.python.org/pypi/pip) (python)
 
-* lua
+* [lua](https://www.lua.org/)
 
-* ghc (deb8)
+* [ghc](https://www.haskell.org/ghc/) (deb8)
 
 slpkg alien
 
-* nodejs
+* [nodejs](https://nodejs.org/en/)
 
 slpkg slonly
 
-* ghc (binary)
+* [ghc](https://www.haskell.org/ghc/) (binary)
 
-* google-go-lang (1.9.2), (ln -s /usr/bin/go)
+* [google-go-lang](https://golang.org/) (1.9.2), (ln -s /usr/bin/go)
 
 manual
 
-* gem install jekyll
+* [gem](https://rubygems.org/) install [jekyll](https://jekyllrb.com/)
 
 #### Notes
 
@@ -148,17 +153,19 @@ manual
 
 ### Desktop Ricing
 
+[![Slackware: teamocil/tmux on herbstluftwm][image-ss-teamocil]{: .img-responsive }][photo-ss-teamocil]
+
 #### Font 
 
 Using git clone, then manually copy to .fonts
 
-* awesome
+* [awesome font](https://github.com/FortAwesome/Font-Awesome)
 
-* siji
+* [siji](https://github.com/stark/siji)
 
-* takao
+* [takao](https://github.com/SumiTomohiko/UnnamedFukidashi/tree/master/takao-fonts-ttf)
 
-* powerline symbols
+* [powerline symbols](http://powerline.readthedocs.io/en/master/installation/linux.html)
 
 #### window-manager 
 
@@ -167,13 +174,13 @@ I switch from source from sbopkg to binary from slonly.
 
 sbopkg 
 
-* dwm
+* [dwm](https://dwm.suckless.org/)
 
-* herbstluftwm
+* [herbstluftwm](https://www.herbstluftwm.org/)
 
-* sxhkd
+* [sxhkd]
 
-* bspwm
+* [bspwm](https://github.com/baskerville/sxhkd)
 
 * i3status :< confuse, yajl
 
@@ -185,25 +192,25 @@ sbopkg
 
 * i3 (perl) :< -JSON-XS, -common-sense, -Types-Serialiser, -AnyEvent, -
 
-* awesome :< lgi
+* [awesomewm](https://awesomewm.org/) :< lgi
 
-* xmonad :< -utf8-string, -X11, -mtl, -extensible-exceptions, -setlocale, -
+* [xmonad](http://xmonad.org/) :< -utf8-string, -X11, -mtl, -extensible-exceptions, -setlocale, -
 
 * xmobar :< -stm, -parsec, -HTTP -X11-xft, hinotify, regex-compat, -
 
-* dmenu
+* [dmenu](https://tools.suckless.org/dmenu/)
 
-* dzen
+* [dzen2](https://github.com/robm/dzen)
 
-* lemonbar
+* [lemonbar](https://github.com/LemonBoy/bar)
 
-* polybar
+* [polybar](https://github.com/jaagr/polybar)
 
-* tint2
+* [tint2](https://gitlab.com/o9000/tint2/blob/master/doc/tint2.md#configuration)
 
 * obmenu
 
-* openbox
+* [openbox](http://openbox.org/wiki/Main_Page)
 
 slack
 
@@ -215,13 +222,13 @@ slack
 
 slpkg slonly
 
-* i3
+* [i3wm](https://i3wm.org/)
 
-* herbstluftwm
+* [herbstluftwm](https://www.herbstluftwm.org/)
 
-* bspwm
+* [bspwm](https://github.com/baskerville/bspwm)
 
-* awesome
+* [awesomewm](https://awesomewm.org/)
 
 * awesome-extra
 
@@ -231,64 +238,88 @@ sbopkg
 
 * rxvt-unicode
 
-* scrot :< giblib :< imlib2
+* [scrot](https://github.com/dreamer/scrot) :< giblib :< imlib2
 
-* lxappearance
+* [lxappearance](https://wiki.lxde.org/en/LXAppearance)
 
-* feh
+* [feh](https://feh.finalrewind.org/)
 
-* nitrogen
+* [nitrogen](https://github.com/l3ib/nitrogen)
 
-* compton :< libconfig
+* [compton](https://github.com/chjj/compton) :< libconfig
 
-* cmus
+* [cmus](https://github.com/cmus/cmus)
 
-* mpd
+* [mpd](https://www.musicpd.org/)
 
-* mpc :< libmpdclient
+* [mpc](https://github.com/MusicPlayerDaemon/mpc) :< libmpdclient
 
-* ncmpcpp
+* [ncmpcpp](https://github.com/arybczak/ncmpcpp)
 
-* dunst :<libxdg-basedir
+* [dunst](https://dunst-project.org/) :<libxdg-basedir
 
-* rofi :< libxkbcommon, check
+* [rofi](https://github.com/DaveDavenport/rofi/) :< libxkbcommon, check
 
-* conky :< tolua++
+* [conky](https://github.com/brndnmtthws/conky) :< tolua++
 
 * parcellite
 
-* neofetch
+* [neofetch](https://github.com/dylanaraps/neofetch)
 
 slpkg slonly
 
-* powerline-status
+* [powerline-status](http://powerline.readthedocs.io/)
+
+* [Pipe Terminal Screensaver](https://github.com/pipeseroni/pipes.sh/blob/master/pipes.sh)
+
+* [byobu](https://github.com/dustinkirkland/byobu)
 
 (via cpan)
 
-* TERM::Extended-Color 
+* [TERM::Extended-Color](https://github.com/trapd00r/Term-ExtendedColor)
+* [asciiquarium](https://github.com/cmatsuoka/asciiquarium)
 
 (git clone)
 
-* ls++
+* [ls++ (ls on steroid)](https://github.com/trapd00r/ls--)
 
-* cava
+* [cava](https://github.com/karlstav/cava)
 
+* [ViM NERDtree](https://github.com/scrooloose/nerdtree)
 
-* vim-plugin-NERDtree
+* [powerline fonts](https://github.com/powerline/fonts)
 
-* powerline fonts
-
-* lemonbar-xft
+* [lemonbar-xft](https://github.com/drscream/lemonbar-xft)
 
 (via pip)
 
-* qtile 
+* [qtile ](http://www.qtile.org/)
 
-* powerline
+* [powerline](http://powerline.readthedocs.io/)
 
 (via npm)
 
-* gtop
+* [gtop](https://github.com/aksakalli/gtop)
+
+(via govendor, go install)
+
+* [mpdviz](https://github.com/lucy/mpdviz)
+
+(via gem)
+
+* [teamocil](http://www.teamocil.com/)
+
+(just script)
+
+* [info.sh](http://pub.z3bra.org/monochromatic/misc/info.sh)
+
+#### Other Toys
+
+Star Wars Movie ?
+
+{% highlight bash %}
+% telnet towel.blinkenlights.nl
+{% endhighlight %}
 
 #### Not solved yet
 
@@ -312,3 +343,10 @@ Thank you for reading
 
 [image-ss-slpkg]: {{ asset_path }}/slackware-slpkg-herbstluftwm.png
 [photo-ss-slpkg]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipO-7d8WdZeJbdOAs9VK6lRWjonT7a2LL1dTyC2a?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+
+[image-ss-teamocil]: {{ asset_path }}/slackware-teamocil-neofetch.png
+[photo-ss-teamocil]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPGC_-QPc2mxu8NEIrM21-A3ChZ2KPTi1AftDjc?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+
+[image-ss-netmon]: {{ asset_path }}/slackware-net-monitor.png
+[photo-ss-netmon]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPXf6cSRKkcB7FDooJXs8E3e2QOSKKWvNsF5_3z?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+
