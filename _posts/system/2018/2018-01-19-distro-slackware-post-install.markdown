@@ -235,6 +235,14 @@ slpkg slonly
 
 * awesome-extra
 
+#### Shell
+
+* [oh-my-bash][github-oh-my-bash] ([ohmybash.github.io][site-oh-my-bash])
+
+* [oh-my-zsh][github-oh-my-zsh] ([ohmyz.sh][site-oh-my-zsh])
+
+* [oh-my-fish][github-oh-my-fish]
+
 #### Ricing Component
 
 sbopkg
