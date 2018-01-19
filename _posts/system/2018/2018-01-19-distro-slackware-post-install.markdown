@@ -19,6 +19,9 @@ related_link_ids:
 
 ### Preface
 
+This is my **slackware post-install log**, for my personal use, 
+including most desktop ricing stuff, except wallpaper :-) .
+
 	Any desktop ricer can use this guidance, no matter what distribution they use.
 
 I made an experiment with BTRFS snapshot in my openSUSE,
