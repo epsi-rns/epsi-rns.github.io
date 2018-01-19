@@ -486,14 +486,16 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/awesome/3.5' %}
+
 [image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
 [image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-binding.png
 [photo-ss-awesome-fullscreen]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPPFTkZLKgqQVrvGwBn4nYJo74xIf-IATzz7YlG
 
-[source-main-theme]:    https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/theme.lua
-[source-user-vars]:     https://github.com/epsi-rns/dotfiles/blob/master/awesome/main/user-variables.lua
-[source-globalbuttons]: https://github.com/epsi-rns/dotfiles/blob/master/awesome/binding/globalbuttons.lua
-[source-statusbar]:     https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/statusbar.lua
-[source-helper]:        https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/arrow/helper.lua
-[source-lain]:          https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain.lua
-[source-laindiskfree]:  https://github.com/epsi-rns/dotfiles/blob/master/awesome/anybox/lain/lain-diskfree.lua
+[source-main-theme]:    {{ dotfiles_path }}/main/theme.lua
+[source-user-vars]:     {{ dotfiles_path }}/main/user-variables.lua
+[source-globalbuttons]: {{ dotfiles_path }}/binding/globalbuttons.lua
+[source-statusbar]:     {{ dotfiles_path }}/anybox/arrow/statusbar.lua
+[source-helper]:        {{ dotfiles_path }}/anybox/arrow/helper.lua
+[source-lain]:          {{ dotfiles_path }}/anybox/lain/lain.lua
+[source-laindiskfree]:  {{ dotfiles_path }}/anybox/lain/lain-diskfree.lua
