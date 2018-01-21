@@ -16,8 +16,17 @@ excerpt:
 
 If you are moving to non-systemd environment,
 you might notice that your window manager might behave differently.
+I mean, there is no such different with Desktop Environment,
+but Window Manager under Desktop Manager does not contain dbus session.
 In short dbus session is not working under certain circumstances,
-no removable drive, other partition not shown, and so on.
+
+* no removable drive, 
+
+* other partition not shown, 
+
+* operation permitted for root only,
+
+* and so on.
 
 It will be easier to figure out the issue with figures.
 
@@ -94,7 +103,15 @@ Everything works well here.
 This is where the most issue happened.
 The solution depends on the Desktop Manager.
 
-#### LightDM
+Intead of different DM, I also give different tiers [DM - distro - init]:
+
+* LightDM -- Slackware - SysVinit. 
+
+* SDDM - Artix - OpenRC
+
+* SLiM - Devuan - SysVinit
+
+#### LightDM on Slackware
 
 We can simply use LightDM's Xsession wrapper,
 by altering the <code>/etc/lightdm/Xsession</code>,
@@ -103,7 +120,81 @@ and add <code>dbus-launch</code> in <code>exec</code> line
 
 ![dbus: lightdm Xsession wrapper][image-ss-lightdm]{: .img-responsive }
 
+I'm using LightDM - Slackware - SysVinit. 
+
+* [idnux lightdm](https://github.com/idnux/idnux_slackbuilds/tree/master/lightdm)
+
+You can switch to <code>init 3</code> and switchback to <code>init 4</code>.
+
+{% highlight bash %}
+% init 3
+
+% init 4
+
+{% endhighlight %}
+
+Or just kill the DM.
+
+{% highlight bash %}
+% pkill lightdm
+{% endhighlight %}
+
+#### SDDM on Artix
+
+There is also similar file in SDDM,
+in <code>/usr/share/sddm/scripts/Xsession</code>.
+
+I'm using SDDM - Artix - OpenRC.
+
+* [idnux lightdm](https://github.com/idnux/idnux_slackbuilds/tree/master/lightdm)
+
+Restart using daemon manager.
+
+{% highlight bash %}
+% rc-service xdm restart
+{% endhighlight %}
+
+Note that this sddm run under <code>/etc/conf.d/xdm</code>
+
+{% highlight bash %}
+$ cat /etc/conf.d/xdm
+# We always try and start X on a static VT.
+CHECKVT=7
+
+# What display manager do you use ? 
+DISPLAYMANAGER="sddm"
+{% endhighlight %}
+
+Related Daemon
+
+{% highlight bash %}
+$ rc-service dbus status
+ * status: started
+{% endhighlight %}
+
 -- -- --
+
+#### SLiM (or XDM) on Devuan
+
+There is not much to say with this Devuan.
+dbus with WMs works properly without further configuration.
+
+Unless you turn off the dbus daemon.
+Your dbus will be fine.
+
+{% highlight bash %}
+$ sudo service dbus status
+[ ok ] dbus is running.
+{% endhighlight %}
+
+-- -- --
+
+### Credits
+
+Thank you to folks at Slackware Indonesia Telegram Group,
+for being a good company while solving these dbus issues.
+
+	Your ideas pointing to right direction.
 
 ### Conclusion
 
@@ -119,6 +210,7 @@ Thank you for reading
 
 [image-ss-desktop]:     {{ asset_path }}/dbus-launch-herbstluftwm.png
 [image-ss-lightdm]:     {{ asset_path }}/dbus-lightdm-wrapper.png
+[image-ss-sddm]:        {{ asset_path }}/dbus-sddm-wrapper.png
 [image-ss-rofi]:        {{ asset_path }}/dbus-rofi-dbus-launch.png
 [image-ss-thunar-none]: {{ asset_path }}/dbus-thunar-no-dbus.png
 [image-ss-thunar-with]: {{ asset_path }}/dbus-thunar-with-dbus.png
