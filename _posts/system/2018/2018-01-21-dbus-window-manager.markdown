@@ -164,8 +164,6 @@ in <code>/usr/share/sddm/scripts/Xsession</code>.
 
 I'm using SDDM - Artix - OpenRC.
 
-* [idnux lightdm](https://github.com/idnux/idnux_slackbuilds/tree/master/lightdm)
-
 Restart using daemon manager.
 
 {% highlight bash %}
