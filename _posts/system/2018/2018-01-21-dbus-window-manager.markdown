@@ -88,6 +88,8 @@ And voila, the mighty thunar will show my storage device.
 In Slackware you can use <code>xwmconfig</code>,
 that will create <code>.xsession</code> in home directory.
 
+	Do not forget to remove .xsession if you want to use init 4
+
 Here is an example of <code>xinitrc</code>.
 It also has <code>dbus-launch</code> in it.
 
