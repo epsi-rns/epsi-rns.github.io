@@ -111,9 +111,25 @@ Intead of different DM, I also give different tiers [DM - distro - init]:
 
 * SLiM - Devuan - SysVinit
 
+Before you begin, make sure dbus service is actively running.
+
 #### LightDM on Slackware
 
-We can simply use LightDM's Xsession wrapper,
+Activate the messagebus daemon first.
+
+{% highlight bash %}
+% sudo chmod +x /etc/rc.d/rc.messagebus
+
+% sudo /etc/rc.d/rc.messagebus start
+Starting system message bus:  /usr/bin/dbus-uuidgen --ensure ; /usr/bin/dbus-daemon --system
+
+% sudo /etc/rc.d/rc.messagebus status
+System dbus-daemon is running.
+{% endhighlight %}
+
+![dbus: messagebus daemon][image-ss-messagebus]{: .img-responsive }
+
+Now we can simply use LightDM's Xsession wrapper,
 by altering the <code>/etc/lightdm/Xsession</code>,
 and add <code>dbus-launch</code> in <code>exec</code> line
 (the last line).
@@ -143,6 +159,8 @@ Or just kill the DM.
 
 There is also similar file in SDDM,
 in <code>/usr/share/sddm/scripts/Xsession</code>.
+
+![dbus: sddm Xsession wrapper][image-ss-sddm]{: .img-responsive }
 
 I'm using SDDM - Artix - OpenRC.
 
@@ -179,8 +197,8 @@ $ rc-service dbus status
 There is not much to say with this Devuan.
 dbus with WMs works properly without further configuration.
 
-Unless you turn off the dbus daemon.
-Your dbus will be fine.
+Unless you do not turn off the dbus daemon,
+your dbus will be fine.
 
 {% highlight bash %}
 $ sudo service dbus status
@@ -215,3 +233,4 @@ Thank you for reading
 [image-ss-thunar-none]: {{ asset_path }}/dbus-thunar-no-dbus.png
 [image-ss-thunar-with]: {{ asset_path }}/dbus-thunar-with-dbus.png
 [image-ss-xinitrc]:     {{ asset_path }}/dbus-xinitrc.png
+[image-ss-messagebus]:  {{ asset_path }}/dbus-messagebus.png
