@@ -1,0 +1,311 @@
+---
+layout: post
+title:  "Using Git for Working Between Computer"
+date:   2018-01-22 15:17:35 +0700
+categories: opensource
+tags: [console]
+author: epsi
+
+excerpt:
+  Common git commands for working between Home and Office.
+  Git as file sharing tool on the cloud,
+  Sync data using Git, instead of USB Flash Disk.
+
+---
+
+### Preface
+
+> This could be a guidance, for git beginner, as well.
+
+I have been working with git, for this my personal blog,
+for use with a single computer.
+Now, I have moved on from working with standalone single computer,
+to works anywhere, anytime.
+
+I did once upon a time,
+wrote an article covering git for single computer.
+
+* [Using Git for Daily Repo Updating][local-using-git]
+
+Now, let's forget about it,
+and write a whole new article from scratch.
+There are just a few steps, for git beginner, Each with figure:
+
+*	Create Repository: Create a github repository.
+
+*	First Computer: Push your first commit, with first computer.
+
+*	Refresh Browser: Refresh browser, to see if you are succeed.
+
+*	Second Computer: Pull your newly repo, with second computer, and make a change.
+
+*	Back to First Computer: Pull altered repo, with first computer.
+
+This is about moving from single.
+
+	Single Life (Edisi Jomblo)
+
+-- -- --
+
+### Create Repository
+
+	Push your first commit, with first computer.
+
+You have to do it manually.
+Create a github account.
+And then create a repository,
+let's name it <code>anycode</code>.
+
+You should see the result as below:
+
+
+[![github: Create Account][image-ss-github-create]{: .img-responsive }][photo-ss-github-create]
+
+	One small step for man, one giant leap for mankind.
+
+-- -- --
+
+### First Computer
+
+	Push your first commit, with first computer.
+
+Just follow this step, common guidance from github itself.
+Create a directory with any name,
+let's say <code>anycode</code> as our working directory.
+	
+{% highlight bash %}
+% cd githublab 
+
+% mkdir anycode
+
+% cd anycode
+
+% touch README.md
+
+% geany README.md
+
+% git init
+Initialized empty Git repository in /home/epsi/githublab/anycode/.git/
+{% endhighlight %}
+
+[![git CLI: First Computer][image-ss-gitcli-first]{: .img-responsive }][photo-ss-gitcli-first]
+
+Consider create a file <code>README.md</code>
+with content anything in your mind.
+
+{% highlight bash %}
+% git add README.md
+
+% git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   README.md
+
+% git commit -m 'I love you, honey!'
+[master (root-commit) 6119e49] I love you, honey!
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+{% endhighlight %}
+
+While we see the word <code>origin</code>,
+as a named remote repository, scattered in most tutorial.
+Actually you can name it anything you want,
+such as <code>cinta</code>.
+
+	Cinta is the word Love in Indonesia
+
+{% highlight bash %}
+% git remote add cinta https://github.com/epsi-rns/anycode.git
+
+% git push --set-upstream cinta master
+Username for 'https://github.com': epsi-rns
+Password for 'https://epsi-rns@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 270 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/epsi-rns/anycode.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from cinta.
+{% endhighlight %}
+
+It means we push to the remote named <code>cinta</code>,
+specifically to <code>master</code> branch.
+
+	Shout it loud!
+
+-- -- --
+
+### Refresh Browser
+
+	Refresh browser, to see if you are succeed.
+
+Consider check the result in github (on the internet cloud).	
+You should see the result as below:
+
+[![github: Refresh Browser][image-ss-github-refresh]{: .img-responsive }][photo-ss-github-refresh]
+
+-- -- --
+
+### Second Computer
+
+	Pull your newly repo, with second computer, and make a change.
+
+Now move to other computer.
+Or for testing, just use other directory.
+Create a directory with any name,
+let's say <code>mycode</code> as our newly working directory.
+
+All you have to do is pull.
+again we do not need to use the word <code>origin</code>.
+You can name it anything you want,
+such as <code>rindu</code>.
+
+	Rindu is Indonesian word for Missing You
+
+{% highlight bash %}
+% mkdir mycode
+
+% cd mycode
+
+% git init
+Initialized empty Git repository in /home/epsi/githublab/mycode/.git/
+
+% git remote add rindu https://github.com/epsi-rns/anycode
+
+% git remote --verbose
+rindu	https://github.com/epsi-rns/anycode (fetch)
+rindu	https://github.com/epsi-rns/anycode (push)
+
+% git pull rindu master
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/epsi-rns/anycode
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> rindu/master
+ % ls -l
+total 4
+-rw-r--r-- 1 epsi users 56 Jan 23 03:10 README.md
+{% endhighlight %}
+
+[![git CLI: Second Computer][image-ss-gitcli-second]{: .img-responsive }][photo-ss-gitcli-second]
+
+Consider make some changes.
+Commit it with description such as <code>beli bunga</code>.
+And push to the github (on the internet cloud).
+
+	Beli bunga, means buy flower
+
+{% highlight bash %}
+% geany README.md
+
+% touch TO-DO.md
+
+% geany TO-DO.md
+
+% git add --all
+
+% git commit -m 'TO DO: Beli Bunga'
+[master 5c517cc] TO DO: Beli Bunga
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 TO-DO.md
+ % git push -u rindu master
+Username for 'https://github.com': epsi-rns
+Password for 'https://epsi-rns@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 370 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/epsi-rns/anycode
+   6119e49..5c517cc  master -> master
+Branch master set up to track remote branch master from rindu.
+{% endhighlight %}
+
+You should also see changes in your browser.
+
+	Shout it loud. Again!
+
+-- -- --
+
+### Back to First Computer
+
+	Pull altered repo, with first computer.
+
+Now consider, going back to the first computer,
+the <code>anycode</code> directory, 
+to see if we can get the latest changes,
+from the github (on the internet cloud).
+
+All you need is to pull.
+
+{% highlight bash %}
+% cd anycode
+
+% git pull
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/epsi-rns/anycode
+   6119e49..5c517cc  master     -> cinta/master
+Updating 6119e49..5c517cc
+Fast-forward
+ README.md | 2 +-
+ TO-DO.md  | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 TO-DO.md
+{% endhighlight %}
+
+[![git CLI: Back to First Computer][image-ss-gitcli-first-back]{: .img-responsive }][photo-ss-gitcli-first-back]
+
+Local repository in your first computer has been updated.
+
+{% highlight bash %}
+% ls -l
+total 8
+-rw-r--r-- 1 epsi users 70 Jan 23 04:06 README.md
+-rw-r--r-- 1 epsi users 18 Jan 23 04:06 TO-DO.md
+{% endhighlight %}
+
+-- -- --
+
+### Conclusion
+
+This is not about single computer,
+this is about single life.
+
+	I wish I could say loud
+
+That's all.
+
+Thank you for reading
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/opensource/2018/01' %}
+
+[local-using-git]: {{ site.url }}/opensource/2016/06/19/using-git.html
+
+[image-ss-gitcli-first]:      {{ asset_path }}/gitcli-first-process-account.png
+[photo-ss-gitcli-first]:      https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNBaxqhehR2BA96mn2sG_VYczDm-LYlS4XUA7-g?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+
+[image-ss-gitcli-first-back]: {{ asset_path }}/gitcli-first-pull.png
+[photo-ss-gitcli-first-back]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNNEKgPkr0De-cuaTo_RNvP948JuH4r_N87zQY3?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+
+[image-ss-gitcli-second]:     {{ asset_path }}/gitcli-second-change-content.png
+[photo-ss-gitcli-second]:     https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipMPqav2vapsRrTbZI-Ni2TZruSB6CzFwtgkOqJF?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+
+[image-ss-github-create]:     {{ asset_path }}/github-create-account.png
+[photo-ss-github-create]:     https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPQtTZAREb2SnsDWIz9NSxsikimIIp4_Rko7pMV?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR 
+
+[image-ss-github-refresh]:    {{ asset_path }}/github-refresh-browser.png
+[photo-ss-github-refresh]:    https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipMU1Qmwz15uVevw0gPs5lfvrw5gPWEbU5IB3_k8?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR

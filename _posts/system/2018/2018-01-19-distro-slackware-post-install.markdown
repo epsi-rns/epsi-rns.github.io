@@ -273,6 +273,8 @@ sbopkg
 
 * [conky](https://github.com/brndnmtthws/conky) :< tolua++
 
+* [w3m](https://github.com/tats/w3m)
+
 * parcellite
 
 * [neofetch](https://github.com/dylanaraps/neofetch)
