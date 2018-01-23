@@ -39,7 +39,7 @@ gems:
 # External Services, leave blank to ignore or put true to use
 service:
   google_analytics_key: "UA-78098670-1"
-  yandex_metrica_key: "37483295"
+# yandex_metrica_key: "37483295"
   disqus_key: epsirnsgithubio
   muut: false
   google_adsense: false
