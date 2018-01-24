@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Git for Working Between Computer"
-date:   2018-01-22 15:17:35 +0700
+date:   2018-01-15 15:17:35 +0700
 categories: opensource
 tags: [console]
 author: epsi

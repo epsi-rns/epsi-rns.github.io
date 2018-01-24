@@ -2,7 +2,7 @@
 layout: post
 title:  "Telegram Bot, Getting Token"
 categories: code
-date:   2018-01-24 09:35:15 +0700
+date:   2018-01-21 09:17:35 +0700
 tags: [coding, API]
 author: epsi
 

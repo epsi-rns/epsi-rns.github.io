@@ -95,7 +95,7 @@ And hey... Sorry for my english okay.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[link-dotfiles]: {{ site.url }}https://github.com/epsi-rns/dotfiles/
+[link-dotfiles]: https://github.com/epsi-rns/dotfiles/
 [local-difference-de-wm]: {{ site.url }}/desktop/2016/06/13/de-wm-shell-difference.html
 
 [local-awesome-preparing]:      {{ site.url }}/desktop/2016/07/13/modularized-awesome-preparing.html 

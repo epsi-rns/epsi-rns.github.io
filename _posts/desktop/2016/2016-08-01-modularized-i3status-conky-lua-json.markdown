@@ -83,7 +83,7 @@ bar {
 }
 {% endhighlight %}
 
-![i3status: workspace][image-workspace]{: .img-responsive }
+![i3status: workspace][image-i3-workspace]{: .img-responsive }
 
 You can check my dotfiles here
 
