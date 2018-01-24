@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Telegram Bot, Getting Token"
+title:  "Telegram Bot - Getting Token"
 categories: code
 date:   2018-01-21 09:17:35 +0700
 tags: [coding, API]
@@ -10,6 +10,8 @@ excerpt:
   Getting Telegram Token from @botfather.
 
 ---
+
+{% include post/2018/01/toc-telegram-bot.html %}
 
 ### Preparation
 

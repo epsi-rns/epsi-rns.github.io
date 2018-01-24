@@ -2,7 +2,7 @@
 layout: post
 title:  "Telegram Bot - BASH Makefile"
 categories: code
-date:   2018-01-25 03:17:35 +0700
+date:   2018-01-25 04:17:35 +0700
 tags: [coding, API, bash]
 author: epsi
 
@@ -12,6 +12,8 @@ excerpt:
   No webhook in BASH series.
 
 ---
+
+{% include post/2018/01/toc-telegram-bot.html %}
 
 ### Bashful Bot
 

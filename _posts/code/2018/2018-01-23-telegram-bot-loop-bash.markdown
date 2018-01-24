@@ -13,6 +13,8 @@ excerpt:
 
 ---
 
+{% include post/2018/01/toc-telegram-bot.html %}
+
 ### Bashful Bot
 
 > Goal: Create a Modularized Script
