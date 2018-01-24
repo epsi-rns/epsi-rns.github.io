@@ -19,7 +19,7 @@ excerpt:
 
 #### Preface
 
-Would it be nice if we can have help udage for our script ?
+Would it be nice if we can have help usage for our script ?
 
 {% highlight bash %}
 % cd ~/Documents/cupubot/bash
@@ -37,15 +37,10 @@ operations:
 
 ![BASH: Telegram Bot: Script with Usage][image-cli-s-usage]{: .img-responsive }
 
-#### Preparation
-
-Before You begin, you need to get a telegram bot token.
-It is already discussed in previous article.
-
 #### Previous Guidance
 
 We have already see a modular bash script in previous article.
-Now, let's make this script usefulfor anyone by showing usage and version.
+Now, let's make this script useful for anyone by showing usage and version.
 
 #### Issue
 

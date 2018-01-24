@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Telegram Bot - BASH Command"
+title:  "Telegram Bot - BASH CLI"
 categories: code
 date:   2018-01-22 09:17:35 +0700
 tags: [coding, API, bash]
