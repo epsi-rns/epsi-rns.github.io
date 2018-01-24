@@ -224,7 +224,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2018/01' %}
+{% assign asset_path = '/assets/posts/system/2018/01' %}
 
 [image-ss-desktop]:     {{ asset_path }}/dbus-launch-herbstluftwm.png
 [image-ss-lightdm]:     {{ asset_path }}/dbus-lightdm-wrapper.png

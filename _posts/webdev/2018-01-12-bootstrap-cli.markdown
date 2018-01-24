@@ -156,9 +156,9 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/webdev/2018/01/bootstrap' %}
+{% assign asset_path = '/assets/posts/webdev/2018/01/bootstrap' %}
 
-[local-part-three]:		{{ site.url }}/webdev/2018/01/13/bootstrap-cli.html
+[local-part-three]:		/webdev/2018/01/13/bootstrap-cli.html
 
 [image-ss-gem-install-bundler]: {{ asset_path }}/gem-install-bundler.png
 

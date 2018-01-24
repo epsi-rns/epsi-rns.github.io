@@ -92,7 +92,7 @@ $ while sleep 1; do date +'%a %b %d %H:%M:%S'; done | \
   dzen2 -ta r -h 25 -y -30 -w 200 -x -200 
 {% endhighlight %}
 
-Yu can use Transparency with either transset-df or 
+You can use Transparency with either transset-df or 
 transset (from xorg-transset), by using -title-name.
 Use <code>&</code> to detach process from the console.
 

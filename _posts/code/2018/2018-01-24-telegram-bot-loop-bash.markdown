@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Telegram Bot, Loop Version, with BASH"
+title:  "Telegram Bot, Using Loop, with BASH"
 categories: code
-date:   2018-01-24 05:35:15 +0700
-tags: [coding, conky, bash]
+date:   2018-01-24 09:35:15 +0700
+tags: [coding, API, bash]
 author: epsi
 
 excerpt:
@@ -13,7 +13,7 @@ excerpt:
 
 ### Bashful Bot
 
-> Goal: Parsing Telegram API in BASH console using jq and json_reformat
+> Goal: Parsing JSON feed from Telegram API in BASH console
 
 Telegram Bot is one of the interesting hype I met.
 Its API is simple and easy to use.
@@ -31,13 +31,10 @@ This guidance is using terminal.
 
 ### Preparation
 
-Before You begin, you need to get a telegram bot token
+Before You begin, you need to get a telegram bot token.
+It is already discussed in previous article.
 
-*	Subscribe to @botfather, in your telegram.
 
-*	Make a /newbot, in @botfather.
-
-*	Save your token, somewhere in your notebook.
 
 -- -- --
 
@@ -461,10 +458,10 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/code/2018/01' %}
+{% assign asset_path = '/assets/posts/code/2018/01' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
-[local-overview]: {{ site.url }}/code/2017/04/23/overview-pipe-and-fork.html
+[local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 

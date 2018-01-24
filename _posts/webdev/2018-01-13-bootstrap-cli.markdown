@@ -99,7 +99,7 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/webdev/2018/01/bootstrap' %}
+{% assign asset_path = '/assets/posts/webdev/2018/01/bootstrap' %}
 
 [image-ss-zypper-in-php7]: {{ asset_path }}/zypper-in-php7.png
 [photo-ss-zypper-in-php7]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNABiohFsyJct01pqs4yNKaE1cHx5JB-Qv0xnn5?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR

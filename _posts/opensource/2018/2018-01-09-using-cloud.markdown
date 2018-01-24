@@ -223,9 +223,9 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/opensource/2018/01' %}
+{% assign asset_path = '/assets/posts/opensource/2018/01' %}
 
-[local-using-git]: {{ site.url }}/opensource/2016/06/19/using-git.html
+[local-using-git]: /opensource/2016/06/19/using-git.html
 
 [image-ss-git-pull]: {{ asset_path }}/arch-git-pull.png
 [photo-ss-git-pull]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipNS1hY7GLVRnTn1G-46H1BbOPzWpKfKn1ymQz4v

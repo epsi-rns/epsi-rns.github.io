@@ -98,8 +98,8 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/webdev/2018/01/bootstrap' %}
+{% assign asset_path = '/assets/posts/webdev/2018/01/bootstrap' %}
 
-[local-part-one]:		{{ site.url }}/webdev/2018/01/11/bootstrap-cli.html
+[local-part-one]:	/webdev/2018/01/11/bootstrap-cli.html
 
 [image-ss-grunt-docs]: {{ asset_path }}/grunt-docs.png

@@ -9,7 +9,7 @@
         {% if avatar.image contains 'http' %}
           {% assign av_img = avatar.image %}
         {% elsif avatar.image %}
-          {% assign av_img = avatar.image | prepend: '/assets/site/images/authors/' | prepend: site.url %}
+          {% assign av_img = avatar.image | prepend: '/assets/site/images/authors/' %}
         {% endif %}
 
         <div class="container">

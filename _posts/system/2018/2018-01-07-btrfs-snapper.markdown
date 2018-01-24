@@ -277,7 +277,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2018/01' %}
+{% assign asset_path = '/assets/posts/system/2018/01' %}
 
 [image-ss-snapper-issue]: {{ asset_path }}/snapper-issue.png
 [photo-ss-snapper-issue]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipMZ_vBHEVIO0l6mSuBArZStbxGqLzcsURZSzGr1

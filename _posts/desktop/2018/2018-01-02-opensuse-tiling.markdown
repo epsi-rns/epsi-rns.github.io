@@ -106,7 +106,7 @@ Thank you for reading and visiting.
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2018/01' %}
+{% assign asset_path = '/assets/posts/desktop/2018/01' %}
 
 [image-ss-i3]: {{ asset_path }}/opensuse-i3.png
 [photo-ss-i3]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipM0UianivdO-I2orCzgEb1XoJNcmSxpRAWZamq9
