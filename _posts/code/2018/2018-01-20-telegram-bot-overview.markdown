@@ -55,24 +55,31 @@ Before You begin, you need to get a telegram bot token.
 
 *	[Telegram Bot - BASH Makefile][local-bash-makefile]
 
+*	[Telegram Bot - BASH Group Tools][local-bash-group]
+
 -- -- --
 
-There above are some my logs,
-that I put together, so I won't have
-any problems finding it in the future.
+### What is Next ?
 
+First, we need token.
+
+*	[Telegram Bot - Getting Token][local-token]
+
+
+I hope you enjoy this series.
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
 [local-overview]:      /code/2018/01/20/telegram-bot-overview.html
 [local-token]:         /code/2018/01/21/telegram-bot-token.html
 [local-bash-cli]:      /code/2018/01/22/telegram-bot-loop-bash.html
 [local-bash-script]:   /code/2018/01/23/telegram-bot-loop-bash.html
 [local-bash-argument]: /code/2018/01/24/telegram-bot-loop-bash.html
-[local-bash-makefile]: /code/2018/01/24/telegram-bot-loop-bash.html
+[local-bash-makefile]: /code/2018/01/25/telegram-bot-loop-bash.html
+[local-bash-group]:    /code/2018/01/26/telegram-bot-loop-bash.html
 
 [image-telegram-desktop]:       {{ asset_path }}/telegram-desktop.png

@@ -112,18 +112,20 @@ $ OK. Send me the new profile photo for the bot.
 
 -- -- --
 
-There above are some my logs,
-that I put together, so I won't have
-any problems finding it in the future.
+### What is Next ?
+
+We are going to analyze Telegram API, JSON output in BASH Console.
+
+*	[Telegram Bot - BASH CLI][local-bash-cli]
 
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
+[local-bash-cli]:      /code/2018/01/22/telegram-bot-loop-bash.html
 
 [image-cli-start]:       {{ asset_path }}/botfather_start.png
 [image-cli-newbot]:      {{ asset_path }}/botfather_newbot.png

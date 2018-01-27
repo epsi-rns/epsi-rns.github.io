@@ -448,18 +448,21 @@ I think that is all.
 
 -- -- --
 
-There above are some simple codes, that I put together. 
-I'm mostly posting codes so I won't have
-any problems finding it in the future.
+### What is Next ?
+
+We will make the script more usable for other people,
+by adding <code>help usage </code>.
+
+*	[Telegram Bot - BASH Option Argument][local-bash-argument]
 
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
+[local-bash-argument]: /code/2018/01/24/telegram-bot-loop-bash.html
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 

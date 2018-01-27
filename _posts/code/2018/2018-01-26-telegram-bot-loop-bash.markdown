@@ -510,12 +510,11 @@ Hot to get Avatar URL.
 
 *	Compose the file URL, based on Telegram API using <code>token</code>, <code>file_id</code> and <code>file_path</code>.
 
-The telegram 
+-- -- --
 
+### Conclusions
 
 I think that's all.
-
--- -- --
 
 I'm mostly posting codes so I won't have
 any problems finding it in the future.
@@ -525,12 +524,11 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
 [local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
-
 
 [image-group-newmember]:   {{ asset_path }}/cupubot-group-newmember.png
 [image-phone-newmember]:   {{ asset_path }}/cupubot-phone-newmember.png

@@ -222,20 +222,28 @@ operations:
 
 I think that's all.
 
--- -- --
+### What is Next ?
 
-There above are some simple codes, that I put together. 
-I'm mostly posting codes so I won't have
-any problems finding it in the future.
+We will add some chat group tools such as
+
+*	Greet New Member.
+
+*	Text Logger.
+
+*	HTML Logger.
+
+Just have a look at the next article.
+
+*	[Telegram Bot - BASH Group Tools][local-bash-group]
 
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
+[local-bash-group]:    /code/2018/01/26/telegram-bot-loop-bash.html
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 

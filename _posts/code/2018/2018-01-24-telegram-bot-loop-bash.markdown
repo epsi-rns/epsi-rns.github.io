@@ -251,20 +251,21 @@ Yeah, that is all. Not so complicated after all.
 
 	Can you read the pattern ?
 
--- -- --
+### What is Next ?
 
-There above are some simple codes, that I put together. 
-I'm mostly posting codes so I won't have
-any problems finding it in the future.
+We will make the script more usable for other people,
+by adding <code>Makefile</code> for deployment.
+
+*	[Telegram Bot - BASH Makefile][local-bash-makefile]
 
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
+[local-bash-makefile]: /code/2018/01/25/telegram-bot-loop-bash.html
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 
