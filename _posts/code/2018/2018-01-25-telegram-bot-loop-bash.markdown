@@ -2,7 +2,7 @@
 layout: post
 title:  "Telegram Bot - BASH Makefile"
 categories: code
-date:   2018-01-25 04:17:35 +0700
+date:   2018-01-25 09:17:35 +0700
 tags: [coding, API, bash]
 author: epsi
 
@@ -21,9 +21,8 @@ excerpt:
 
 #### Previous Guidance
 
-We're almost finished.
 We're already see an almost finished bash project in previous article.
-This is the last part in BASH before we move on to other shell, such as FISH.
+We should finish what we have done.
 
 #### Issue
 

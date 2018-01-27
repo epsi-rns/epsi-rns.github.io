@@ -33,9 +33,10 @@ Now, let's gather these commands together into a script
 
 -- -- --
 
-### Simple Script without Loop
+### Our Very First Script
 
-We can summarize all previous lessons to this short script.
+Every journey has a begining. 
+This is a script, only to observe the telegram update.
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -54,6 +55,37 @@ fi
 
 tele_url="https://api.telegram.org/bot${token}"
 
+### -- main -- 
+
+updates=$(curl -s "${tele_url}/getUpdates")
+count_update=$(echo $updates | jq -r ".result | length") 
+    
+for ((i=0; i<$count_update; i++)); do
+    update=$(echo $updates | jq -r ".result[$i]")
+    echo "$update\n"
+done
+{% endhighlight %}
+
+#### Execute
+
+Say something with your bot in your smartphone.
+And run the script.
+
+{% highlight bash %}
+% ~/Documents/cupubot/bash/main-observe.bash
+{% endhighlight %}
+
+![BASH: Telegram Bot: Observe Script][image-cli-s-observe]{: .img-responsive }
+
+-- -- --
+
+### Simple Script without Loop
+
+We can summarize all previous lessons,
+by changing the main parts of the previous script.
+
+
+{% highlight bash %}
 ### -- main -- 
 
 updates=$(curl -s "${tele_url}/getUpdates")
@@ -81,6 +113,8 @@ for ((i=0; i<$count_update; i++)); do
     ...
 done
 {% endhighlight %}
+
+#### Execute
 
 Say something again with your bot in your smartphone.
 And run the script.
@@ -208,6 +242,8 @@ while true; do
     sleep 1
 done
 {% endhighlight %}
+
+#### Execute
 
 Again, say something again with your bot in your smartphone.
 And run the script.
@@ -400,13 +436,15 @@ function get_feedback() {
 }
 {% endhighlight %}
 
-I think that is all.
+#### Execute
 
 {% highlight bash %}
 % ~/Documents/cupubot/bash/main-modular.bash
 {% endhighlight %}
 
 ![BASH: Telegram Bot: Modular Script with Loop][image-cli-s-modular]{: .img-responsive }
+
+I think that is all.
 
 -- -- --
 
@@ -431,6 +469,7 @@ Thank you for reading.
 [image-cli-result]:     {{ asset_path }}/cupubot-cli-getupdate-result.png
 [image-cli-chat-id]:    {{ asset_path }}/cupubot-cli-chat-id.png
 [image-cli-feedback]:   {{ asset_path }}/cupubot-cli-feedback.png
+[image-cli-s-observe]:  {{ asset_path }}/cupubot-cli-script-observe.png
 [image-cli-s-noloop]:   {{ asset_path }}/cupubot-cli-script-noloop.png
 [image-cli-s-loop]:     {{ asset_path }}/cupubot-cli-script-loop.png
 [image-cli-s-modular]:  {{ asset_path }}/cupubot-cli-script-modular.png

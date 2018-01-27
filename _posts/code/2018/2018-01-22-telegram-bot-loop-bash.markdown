@@ -109,6 +109,33 @@ you should install it first.
 
 -- -- --
 
+### Save the JSON
+
+Just like most cool API, Telegram also utilize JSON.
+Instead of calling the API over and over again,
+you may redirect the JSON output to a file,
+and analyze the result later on.
+
+{% highlight bash %}
+% curl -s "${tele_url}/getMe" > getMe.json
+
+% cat getMe.json | json_reformat
+{
+    "ok": true,
+    "result": {
+        "id": 513194798,
+        "is_bot": true,
+        "first_name": "Cupu Bot",
+        "username": "cupu_cupu_bot"
+    }
+}
+{% endhighlight %}
+
+![BASH: Telegram Bot: redirect JSON output to file][image-cli-pipe]{: .img-responsive }
+
+
+-- -- --
+
 ### Get Updates
 
 This is the heart of the API.
@@ -288,6 +315,7 @@ Thank you for reading.
 
 [image-cli-config]:     {{ asset_path }}/cupubot-cli-config.png
 [image-cli-getme]:      {{ asset_path }}/cupubot-cli-getme.png
+[image-cli-pipe]:       {{ asset_path }}/cupubot-cli-pipe.png
 [image-cli-empty]:      {{ asset_path }}/cupubot-cli-getupdate-empty.png
 [image-cli-result]:     {{ asset_path }}/cupubot-cli-getupdate-result.png
 [image-cli-chat-id]:    {{ asset_path }}/cupubot-cli-chat-id.png
