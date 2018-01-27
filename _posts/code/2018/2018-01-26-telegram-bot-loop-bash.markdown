@@ -227,47 +227,296 @@ Consider, check the smartphone.
 
 ### Text Logger
 
-{% highlight bash %}
-
-{% endhighlight %}
-
-
-{% highlight bash %}
-
-{% endhighlight %}
-
+I enjoy making an online tutorial at telegram chat group.
+Why not go further, by logging it.
+And  the script is even simple. It needs no loop.
 
 {% highlight bash %}
+#!/usr/bin/env bash
 
+DIR=$(dirname "$0")
+. ${DIR}/config-logger.bash
+. ${DIR}/functions-logger.bash
+
+### -- main -- 
+
+parse_update 
 {% endhighlight %}
+
+But we need an additional line in config,
+where to point the log file.
+It could be anywhere actually.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- config -- 
+...
+
+### -- last update --
+...
+
+### -- logfile --
+log_file=./logfile.txt
+
+rm $log_file
+
+if [ ! -f $log_file ];
+then
+    touch $log_file
+fi
+{% endhighlight %}
+
+But the functions are entirely different.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- function -- 
+
+function parse_update() {
+
+	# Do not offset ! Stay with ID.
+	# Script might need to be restarted.
+    updates=$(curl -s "${tele_url}/getUpdates")
+
+    count_update=$(echo $updates | jq -r ".result | length") 
+    
+    [[ $count_update -eq 0 ]] && echo -n "."
+
+    for ((i=0; i<$count_update; i++)); do
+        update=$(echo $updates | jq -r ".result[$i]")      
+        message=$(echo $update | jq -r ".message")     
+        
+        get_log_line "$message"
+        echo -e "${log_line}" # or using tee
+        echo -e "${log_line}" >> $log_file
+    done
+}
+
+function get_log_line() {
+    local message=$1   
+
+    chat_id=$(echo $message | jq -r ".chat.id") 
+  
+    from=$(echo $update | jq -r ".message.from") 
+
+    first_name=$(echo $from | jq -r ".first_name")
+    last_name=$(echo $from | jq -r ".last_name")
+    username=$(echo $from | jq -r ".username")
+
+    unixdate=$(echo $message | jq -r ".date") 
+    textdate=$(date -d @$unixdate +'%H:%M:%S')
+
+    text=$(echo $message | jq -r ".text") 
+    
+    message_is_reply=$(echo $message | jq -r "select(.reply_to_message != null)")
+    
+    if [ -n "$message_is_reply" ];
+    then
+       reply=$(echo $message | jq -r ".reply_to_message") 
+       reply_text=$(echo $reply | jq -r ".text")
+       reply_first_name=$(echo $reply | jq -r ".from.first_name")
+       text=":: ~ ${reply_first_name} : ${reply_text}\n\n${text}"
+    fi
+
+    log_line="[ $textdate ] @${username} ~ $first_name $last_name:\n$text\n\n"
+}
+{% endhighlight %}
+
+#### Execute
+
+Consider see it in action.
+Just run the script.
+
+{% highlight bash %}
+% ~/Documents/cupubot/bash/logger_text/main_logger.bash
+{% endhighlight %}
+
+![BASH: Telegram Bot: Logger Text Result][image-group-logger-text]{: .img-responsive }
+
+#### How does it works ?
+
+Just dump all the text messages.
+Nothing special here.
 
 -- -- --
 
 ### HTML Logger
 
+HTML logging has no big differences with Text logging.
+HTML is actually just a text with tag.
+It is just, has nicer preview.
+
+The only different is, HTML logger require Avatar images.
+Which is, this URL require a few steps of Telegram API>
+
+It has almost same config script.
+
 {% highlight bash %}
+### -- logfile --
+log_file=./logfile.html
+
+rm $log_file
+
+if [ ! -f $log_file ];
+then
+    touch $log_file
+fi
+{% endhighlight %}
+
+And a few HTMl tags.
+Do not forget the unicode character sets.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+DIR=$(dirname "$0")
+. ${DIR}/config-logger.bash
+. ${DIR}/functions-logger.bash
+
+### -- main -- 
+
+echo "<html>"  >> $log_file
+echo "<head>"  >> $log_file
+echo "    <title>Log</title>"  >> $log_file
+echo '    <meta charset="utf-8">'  >> $log_file
+echo '    <link rel="stylesheet" href="log.css">'  >> $log_file
+echo "</head>"  >> $log_file
+
+echo "<body>"  >> $log_file
+
+echo "<table>"  >> $log_file
+parse_update 
+echo "</table>"  >> $log_file
+
+echo "</body>"  >> $log_file
+echo "</html>"  >> $log_file
+{% endhighlight %}
+
+Ans this functions script, is badass.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- function -- 
+
+function parse_update() {
+
+	# Do not offset ! Stay with ID.
+	# Script might need to be restarted.
+    updates=$(curl -s "${tele_url}/getUpdates")
+
+    # echo $updates | json_reformat
+
+    count_update=$(echo $updates | jq -r ".result | length") 
+    [[ $count_update -eq 0 ]] && echo -n "."
+
+    for ((i=0; i<$count_update; i++)); do
+        update=$(echo $updates | jq -r ".result[$i]")
+        message=$(echo $update | jq -r ".message") 
+
+        get_avatar   "$message"
+        get_log_line "$message"
+        echo -e "${log_line_text}"
+        
+        echo "<tr>"                  >> $log_file
+        
+        echo "    <td valign="top">" >> $log_file
+        echo "<img src='${avatar_url}' height='42' width='42' style=' vertical-align: text-top;'>" >> $log_file
+        echo "    </td>"             >> $log_file
+        
+        echo "    <td valign="top">" >> $log_file
+        echo "${log_line_html}"      >> $log_file
+        echo "    </td>"             >> $log_file
+        
+        echo "</tr>"                 >> $log_file
+    done
+}
+
+function get_log_line() {
+    local message=$1   
+    
+    first_name=$(echo $from | jq -r ".first_name")
+    last_name=$(echo $from | jq -r ".last_name")
+    username=$(echo $from | jq -r ".username")
+
+    unixdate=$(echo $message | jq -r ".date") 
+    textdate=$(date -d @$unixdate +'%H:%M:%S')
+
+    text=$(echo $message | jq -r ".text") 
+    
+    message_is_reply=$(echo $message | jq -r "select(.reply_to_message != null)")
+    
+    if [ -n "$message_is_reply" ];
+    then
+       reply=$(echo $message | jq -r ".reply_to_message") 
+       reply_text=$(echo $reply | jq -r ".text")
+       reply_first_name=$(echo $reply | jq -r ".from.first_name")
+       text=":: ~ ${reply_first_name} : ${reply_text}<br/>${text}"
+    fi
+
+    log_line_text="[ $textdate ] @${username} ~ $first_name $last_name:\n$text\n\n"
+    text=$(echo "${text//$'\n'/<br/>}")    
+    log_line_html="[ $textdate ] @${username} ~ $first_name $last_name:<br/>$text<br/>"
+}
+
+function get_avatar() {
+    local message=$1   
+
+    chat_id=$(echo $message | jq -r ".chat.id")  
+      
+    from=$(echo $update | jq -r ".message.from") 
+    from_id=$(echo $from | jq -r ".id")
+    
+    photos=$(curl -s "${tele_url}/getUserProfilePhotos?user_id=$from_id&limit=1")
+    photo=$(echo $photos | jq -r ".result.photos[0][0]")   
+
+    file_id=$(echo $photo | jq -r ".file_id")
+    get_file=$(curl -s "${tele_url}/getFile?file_id=$file_id")
+
+    
+    file_path=$(echo $get_file | jq -r ".result.file_path")   
+    file_id=$(echo $get_file | jq -r ".result.file_id")   
+
+    # https://api.telegram.org/file/bot<token>/    
+    avatar_url="https://api.telegram.org/file/bot${token}/$file_path?file_id=$file_id"
+}
 
 {% endhighlight %}
 
+#### Execute
+
+Consider see it in action.
+Just run the script.
 
 {% highlight bash %}
-
+% ~/Documents/cupubot/bash/logger_html/main_logger.bash
 {% endhighlight %}
 
+And open the result in a browser.
 
-{% highlight bash %}
+![BASH: Telegram Bot: Logger HTML Result][image-group-logger-html]{: .img-responsive }
 
-{% endhighlight %}
+#### How does it works ?
 
+Hot to get Avatar URL.
 
--- -- --
+*	First, we need the ID of the user, that we can get from each JSON.
+
+*	Call <code>getUserProfilePhotos</code> API using that ID, to retrieve the <code>file_id</code>.
+
+*	Call <code>getFile</code> API using that <code>file_id</code>, to retrieve the <code>file_path</code>.
+
+*	Compose the file URL, based on Telegram API using <code>token</code>, <code>file_id</code> and <code>file_path</code>.
+
+The telegram 
 
 
 I think that's all.
 
 -- -- --
 
-There above are some simple codes, that I put together. 
 I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
@@ -283,5 +532,7 @@ Thank you for reading.
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 
 
-[image-group-newmember]: {{ asset_path }}/cupubot-group-newmember.png
-[image-phone-newmember]: {{ asset_path }}/cupubot-phone-newmember.png
+[image-group-newmember]:   {{ asset_path }}/cupubot-group-newmember.png
+[image-phone-newmember]:   {{ asset_path }}/cupubot-phone-newmember.png
+[image-group-logger-text]: {{ asset_path }}/cupubot-logger-text.png
+[image-group-logger-html]: {{ asset_path }}/cupubot-logger-html.png
