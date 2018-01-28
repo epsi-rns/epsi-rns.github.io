@@ -223,6 +223,54 @@ operations:
 
 ![BASH: Telegram Bot: Makefile System Wide][image-makefile-systemwide]{: .img-responsive }
 
+-- -- --
+
+### Complete Code
+
+For you as an example.
+Including <code>.PHONY</code>.
+
+I also give a dummy <code>doc</code>, as default option for make.
+
+{% highlight make %}
+##
+# cupubot-bash
+# Cupubot is a Telegram bot. Just another learning project
+##
+
+PREFIX ?= /usr/local
+bindir        = $(PREFIX)/bin
+libdir        = $(PREFIX)/lib
+
+# default target
+all: doc
+
+doc: 
+	@echo "Nothing to do..."
+
+# auxiliary
+install:
+	@echo "Installing..."
+	# Scripts
+	@install -D -m755 ./cupubot-bash $(DESTDIR)$(bindir)/cupubot-bash
+	# Libs
+	@mkdir -p $(DESTDIR)$(libdir)/cupubot/tasks
+	@install -D -m644 ./*.bash $(DESTDIR)$(libdir)/cupubot
+	@install -D -m644 ./tasks/*.bash $(DESTDIR)$(libdir)/cupubot/tasks
+
+uninstall:
+	@echo "Uninstalling..."
+	# Scripts
+	@rm $(DESTDIR)$(bindir)/cupubot-bash
+	# Libs
+	@rm -r $(DESTDIR)$(libdir)/cupubot
+
+clean:
+	@echo "Cleaning..."
+
+.PHONY: install uninstall clean
+{% endhighlight %}
+
 I think that's all.
 
 ### What is Next ?
