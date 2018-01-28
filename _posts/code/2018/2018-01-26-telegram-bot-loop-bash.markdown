@@ -50,104 +50,184 @@ To enable this group tools.
 
 -- -- --
 
+### Change in Main File
+
+<code>main.bash</code>:
+
+{% highlight bash %}
+#!/usr/bin/env bash
+# This is a telegram bot in bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# module: main
+. ${DIR}/config.bash
+. ${DIR}/messages.bash
+. ${DIR}/options.bash
+. ${DIR}/controller.bash
+
+# module: task
+. ${DIR}/tasks/observe.bash
+. ${DIR}/tasks/reply.bash
+. ${DIR}/tasks/new_member.bash
+. ${DIR}/tasks/logger_text.bash
+. ${DIR}/tasks/logger_html.bash
+
+### -- main --
+
+get_options_from_arguments "$@"
+{% endhighlight %}
+
+<code>config.bash</code>:
+
+The config is exactly the same as previous guidance,
+except these two lines, that required for logger.
+
+{% highlight bash %}
+...
+
+### -- logfile --
+log_file_text=~/Documents/logfile.txt
+log_file_html=~/Documents/logfile.html
+{% endhighlight %}
+
+
+<code>options.bash</code>:
+
+{% highlight bash %}
+# handling --command
+function handle_command_optarg() {
+	local command=$1
+	
+    case "$command" in
+        version) 
+            message_version
+            exit;;
+        help) 
+            message_usage
+            exit;;
+        observe)
+            do_observe
+            exit;;
+        reply)
+            loop_reply
+            exit;;
+        new-member)
+            loop_newmember
+            exit;;
+        logger-text)
+            do_logger_text
+            exit;;
+        logger-html)
+            do_logger_html
+            exit;;
+        *) 
+            # Invalid Option
+            message_usage
+            exit;;
+    esac
+}
+{% endhighlight %}
+
+<code>controller.bash</code>:
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- task controller --
+
+function do_observe() {
+    process_observe
+} 
+
+function loop_reply() {
+    while true; do 
+        process_reply   
+        sleep 1
+    done
+}
+
+function loop_newmember() {
+    while true; do 
+        process_newmember   
+        sleep 1
+    done
+}
+
+function do_logger_text() {
+    # empty logger file
+    [[ -f $log_file_text ]] && rm $log_file_text
+	
+    process_logger_text
+} 
+
+function do_logger_html() {
+	
+    # empty logger file
+    [[ -f $log_file_html ]] && rm $log_file_html
+	
+cat << EOF >> $log_file_html
+<html>
+<head>
+  <title>Log</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <table>
+EOF
+
+process_logger_html
+
+cat << EOF >> $log_file_html
+  </table>
+</body>
+</html>
+EOF
+
+} 
+{% endhighlight %}
+
+-- -- --
+
 ### Chat New Member
 
-To make it simple I utilize only three script.
-<code>main</code>, <code>config</code>, <code>functions</code>.
+This functions script is a little bit different,
+compared with the previous example.
+
+<code>config.bash</code>:
 
 {% highlight bash %}
 #!/usr/bin/env bash
 
-DIR=$(dirname "$0")
-. ${DIR}/config-newmember.bash
-. ${DIR}/functions-newmember.bash
+function process_newmember() {
+	# global-project : last_id
+	# global-module  : _
+	local i update message_id chat_id
 
-### -- main -- 
-
-while true; do 
-    parse_update
-    sleep 1
-done
-{% endhighlight %}
-
-The config is exactly the same as previous guidance.
-This is just a reminder so you do not need to open previous article.
-
-{% highlight bash %}
-#!/usr/bin/env bash
-
-### -- config -- 
-
-# $token variable here in config.sh
-config_file=~/.config/cupubot/config.sh
-
-if [ ! -f $config_file ];
-then
-    echo "Config not found!" && exit 0
-else
-    source $config_file
-fi
-
-tele_url="https://api.telegram.org/bot${token}"
-
-### -- last update --
-
-last_id_file=~/.config/cupubot/id.txt
-last_id=0
-
-if [ ! -f $last_id_file ];
-then
-    touch $last_id_file
-    echo 0 > $last_id_file    
-else
-    last_id=$(cat $last_id_file)
-    # echo "last id = $last_id"
-fi
-{% endhighlight %}
-
-But this functions script is a little bit different.
-
-{% highlight bash %}
-#!/usr/bin/env bash
-# no need sha-bang for the script to run,
-# but needed, so file manager can detect its type.
-
-### -- function -- 
-
-function parse_update() {
-
-    updates=$(curl -s "${tele_url}/getUpdates?offset=$last_id")
-    # echo $updates | json_reformat
-
-    count_update=$(echo $updates | jq -r ".result | length") 
-    # echo $count_update
+    local updates=$(curl -s "${tele_url}/getUpdates?offset=$last_id")
+    local count_update=$(echo $updates | jq -r ".result | length") 
     
     [[ $count_update -eq 0 ]] && echo -n "."
 
     for ((i=0; i<$count_update; i++)); do
         update=$(echo $updates | jq -r ".result[$i]")
-        # echo "$update"
-    
         last_id=$(echo $update | jq -r ".update_id") 
-        # echo "$last_id"
-     
         message_id=$(echo $update | jq -r ".message.message_id") 
-        # echo "$message_id"
-
         chat_id=$(echo $update | jq -r ".message.chat.id") 
-        # echo "$chat_id"
 
-        get_feedback "$update"
-        
+        local update_with_new_member=$(echo $update | jq -r ".message | select(.new_chat_member != null)")
+
         if [ -n "$update_with_new_member" ];
         then
-            echo -e "\n: ${feedback}"
+            get_feedback_newmember "$update"
+            
+            # display on standard output
+            echo -e "\n: ${return_feedback}"
 
             result=$(curl -s "${tele_url}/sendMessage" \
                       --data-urlencode "chat_id=${chat_id}" \
-                      --data-urlencode "text=$feedback"
+                      --data-urlencode "text=$return_feedback"
                 );
-            # echo $result | json_reformat
         fi
 
         last_id=$(($last_id + 1))            
@@ -155,28 +235,21 @@ function parse_update() {
     done
 }
 
-function get_feedback() {
+function get_feedback_newmember() {
+	# global-module  : return_feedback
     local update=$1
 
-    update_with_new_member=$(echo $update | jq -r ".message | select(.new_chat_member != null)")
-    if [ -n "$update_with_new_member" ];
-    then
-        # echo "${update_with_new_member}"
+    local new_chat_member=$(echo $update | jq -r ".message.new_chat_member")
         
-        new_chat_member=$(echo $update | jq -r ".message.new_chat_member")
-        # echo "$new_chat_member"
+    local first_name=$(echo $new_chat_member | jq -r ".first_name")
+    local last_name=$(echo $new_chat_member | jq -r ".last_name")
+    local username=$(echo $new_chat_member | jq -r ".username")
         
-        first_name=$(echo $new_chat_member | jq -r ".first_name")
-        last_name=$(echo $new_chat_member | jq -r ".last_name")
-        username=$(echo $new_chat_member | jq -r ".username")
-        
-        # "😊"
-        feedback="Selamat datang di @dotfiles_id 😊, $first_name $last_name @${username}."
-    else
-        feedback=""
-    fi
+    # "😊"
+    return_feedback="Selamat datang di @dotfiles_id 😊, $first_name $last_name @${username}."
 }
 {% endhighlight %}
+
 
 #### Execute
 
@@ -186,7 +259,7 @@ No need to say something.
 And run the script.
 
 {% highlight bash %}
-% ~/Documents/cupubot/bash/new_member/main-newmember.bash
+% ./main.bash --new-member
 {% endhighlight %}
 
 ![BASH: Telegram Bot: New Member Script][image-group-newmember]{: .img-responsive }
@@ -222,105 +295,68 @@ Consider, check the smartphone.
 
 ![BASH: Telegram Bot: New Member Feedback Script on Smartphone][image-phone-newmember]{: .img-responsive }
 
-
 -- -- --
 
 ### Text Logger
 
 I enjoy making an online tutorial at telegram chat group.
 Why not go further, by logging it.
-And  the script is even simple. It needs no loop.
+And the script is even simple. It needs no loop.
+
+The functions are entirely different,
+compared with the previous one.
 
 {% highlight bash %}
 #!/usr/bin/env bash
 
-DIR=$(dirname "$0")
-. ${DIR}/config-logger.bash
-. ${DIR}/functions-logger.bash
-
-### -- main -- 
-
-parse_update 
-{% endhighlight %}
-
-But we need an additional line in config,
-where to point the log file.
-It could be anywhere actually.
-
-{% highlight bash %}
-#!/usr/bin/env bash
-
-### -- config -- 
-...
-
-### -- last update --
-...
-
-### -- logfile --
-log_file=./logfile.txt
-
-rm $log_file
-
-if [ ! -f $log_file ];
-then
-    touch $log_file
-fi
-{% endhighlight %}
-
-But the functions are entirely different.
-
-{% highlight bash %}
-#!/usr/bin/env bash
-
-### -- function -- 
-
-function parse_update() {
-
-	# Do not offset ! Stay with ID.
-	# Script might need to be restarted.
-    updates=$(curl -s "${tele_url}/getUpdates")
-
-    count_update=$(echo $updates | jq -r ".result | length") 
+function process_logger_text() {
+	# global-project : last_id
+	# global-module  : _
+	local i update message
     
-    [[ $count_update -eq 0 ]] && echo -n "."
+    local updates=$(curl -s "${tele_url}/getUpdates")
+    local count_update=$(echo $updates | jq -r ".result | length") 
 
     for ((i=0; i<$count_update; i++)); do
-        update=$(echo $updates | jq -r ".result[$i]")      
-        message=$(echo $update | jq -r ".message")     
+        update=$(echo $updates | jq -r ".result[$i]")
+        message=$(echo $update | jq -r ".message") 
+        last_id=$(echo $update | jq -r ".update_id") 
         
-        get_log_line "$message"
-        echo -e "${log_line}" # or using tee
-        echo -e "${log_line}" >> $log_file
+        get_log_text_line "$message"
+        echo -e "${return_log_line_text}" | tee -a $log_file_text
+
+        last_id=$(($last_id + 1))            
+        # echo $last_id > $last_id_file
     done
 }
 
-function get_log_line() {
-    local message=$1   
+function get_log_text_line() {
+	# global-module  : return_log_line_text
+    local message=$1
 
-    chat_id=$(echo $message | jq -r ".chat.id") 
-  
-    from=$(echo $update | jq -r ".message.from") 
+    local chat_id=$(echo $message | jq -r ".chat.id") 
+    local from=$(echo $message | jq -r ".from") 
 
-    first_name=$(echo $from | jq -r ".first_name")
-    last_name=$(echo $from | jq -r ".last_name")
-    username=$(echo $from | jq -r ".username")
+    local first_name=$(echo $from | jq -r ".first_name")
+    local last_name=$(echo $from | jq -r ".last_name")
+    local username=$(echo $from | jq -r ".username")
 
-    unixdate=$(echo $message | jq -r ".date") 
-    textdate=$(date -d @$unixdate +'%H:%M:%S')
+    local unixdate=$(echo $message | jq -r ".date") 
+    local textdate=$(date -d @$unixdate +'%H:%M:%S')
 
-    text=$(echo $message | jq -r ".text") 
+    local text=$(echo $message | jq -r ".text") 
     
-    message_is_reply=$(echo $message | jq -r "select(.reply_to_message != null)")
+    local message_is_reply=$(echo $message | jq -r "select(.reply_to_message != null)")
     
     if [ -n "$message_is_reply" ];
     then
-       reply=$(echo $message | jq -r ".reply_to_message") 
-       reply_text=$(echo $reply | jq -r ".text")
-       reply_first_name=$(echo $reply | jq -r ".from.first_name")
+       local reply=$(echo $message | jq -r ".reply_to_message") 
+       local reply_text=$(echo $reply | jq -r ".text")
+       local reply_first_name=$(echo $reply | jq -r ".from.first_name")
        text=":: ~ ${reply_first_name} : ${reply_text}\n\n${text}"
     fi
 
-    log_line="[ $textdate ] @${username} ~ $first_name $last_name:\n$text\n\n"
+    return_log_line_text="[ $textdate ] @${username} ~ $first_name $last_name:\n$text\n\n"
 }
 {% endhighlight %}
 
@@ -330,8 +366,11 @@ Consider see it in action.
 Just run the script.
 
 {% highlight bash %}
-% ~/Documents/cupubot/bash/logger_text/main_logger.bash
+% ./main.bash --logger-text
 {% endhighlight %}
+
+Forgive me for my  old screenshot.
+This is before utilizing <code>getopt</code>.
 
 ![BASH: Telegram Bot: Logger Text Result][image-group-logger-text]{: .img-responsive }
 
@@ -349,140 +388,105 @@ HTML is actually just a text with tag.
 It is just, has nicer preview.
 
 The only different is, HTML logger require Avatar images.
-Which is, this URL require a few steps of Telegram API>
-
-It has almost same config script.
-
-{% highlight bash %}
-### -- logfile --
-log_file=./logfile.html
-
-rm $log_file
-
-if [ ! -f $log_file ];
-then
-    touch $log_file
-fi
-{% endhighlight %}
-
-And a few HTMl tags.
-Do not forget the unicode character sets.
+Which is, this URL require a few steps of Telegram API.
+As an implementation, there is this badass script.
 
 {% highlight bash %}
 #!/usr/bin/env bash
 
-DIR=$(dirname "$0")
-. ${DIR}/config-logger.bash
-. ${DIR}/functions-logger.bash
-
-### -- main -- 
-
-echo "<html>"  >> $log_file
-echo "<head>"  >> $log_file
-echo "    <title>Log</title>"  >> $log_file
-echo '    <meta charset="utf-8">'  >> $log_file
-echo '    <link rel="stylesheet" href="log.css">'  >> $log_file
-echo "</head>"  >> $log_file
-
-echo "<body>"  >> $log_file
-
-echo "<table>"  >> $log_file
-parse_update 
-echo "</table>"  >> $log_file
-
-echo "</body>"  >> $log_file
-echo "</html>"  >> $log_file
-{% endhighlight %}
-
-Ans this functions script, is badass.
-
-{% highlight bash %}
-#!/usr/bin/env bash
-
-### -- function -- 
-
-function parse_update() {
-
-	# Do not offset ! Stay with ID.
-	# Script might need to be restarted.
-    updates=$(curl -s "${tele_url}/getUpdates")
-
-    # echo $updates | json_reformat
-
-    count_update=$(echo $updates | jq -r ".result | length") 
+function process_logger_html() {
+	# global-project : last_id
+	# global-module  : _
+	local i update message avatar_image
+    
+    local updates=$(curl -s "${tele_url}/getUpdates")
+    local count_update=$(echo $updates | jq -r ".result | length") 
+    
     [[ $count_update -eq 0 ]] && echo -n "."
 
     for ((i=0; i<$count_update; i++)); do
         update=$(echo $updates | jq -r ".result[$i]")
         message=$(echo $update | jq -r ".message") 
+        last_id=$(echo $update | jq -r ".update_id") 
 
-        get_avatar   "$message"
-        get_log_line "$message"
-        echo -e "${log_line_text}"
+        get_avatar "$message"
+        get_log_html_line "$message"
         
-        echo "<tr>"                  >> $log_file
+        # display on standard output
+        echo -e "${return_log_line_text}"
+
+        avatar_image="<img src='${return_avatar_url}' height='42' width='42'"
+        avatar_image+=" style=' vertical-align: text-top;'>"
         
-        echo "    <td valign="top">" >> $log_file
-        echo "<img src='${avatar_url}' height='42' width='42' style=' vertical-align: text-top;'>" >> $log_file
-        echo "    </td>"             >> $log_file
-        
-        echo "    <td valign="top">" >> $log_file
-        echo "${log_line_html}"      >> $log_file
-        echo "    </td>"             >> $log_file
-        
-        echo "</tr>"                 >> $log_file
+cat << EOF >> $log_file_html
+    <tr>
+      <td valign="top">
+        ${avatar_image}
+      </td>
+      <td valign="top">
+        ${return_log_line_html}
+      </td>
+    </tr>
+EOF
+
+        last_id=$(($last_id + 1))            
+        # echo $last_id > $last_id_file
     done
 }
 
-function get_log_line() {
-    local message=$1   
+function get_log_html_line() {
+	# global-module  : return_log_line_text return_log_line_html
+    local message=$1
     
-    first_name=$(echo $from | jq -r ".first_name")
-    last_name=$(echo $from | jq -r ".last_name")
-    username=$(echo $from | jq -r ".username")
-
-    unixdate=$(echo $message | jq -r ".date") 
-    textdate=$(date -d @$unixdate +'%H:%M:%S')
-
-    text=$(echo $message | jq -r ".text") 
+    local from=$(echo $update | jq -r ".message.from") 
     
-    message_is_reply=$(echo $message | jq -r "select(.reply_to_message != null)")
+    local first_name=$(echo $from | jq -r ".first_name")
+    local last_name=$(echo $from | jq -r ".last_name")
+    local username=$(echo $from | jq -r ".username")
+
+    local unixdate=$(echo $message | jq -r ".date") 
+    local textdate=$(date -d @$unixdate +'%H:%M:%S')
+
+    local text=$(echo $message | jq -r ".text") 
+    
+    local message_is_reply=$(echo $message | jq -r "select(.reply_to_message != null)")
     
     if [ -n "$message_is_reply" ];
     then
-       reply=$(echo $message | jq -r ".reply_to_message") 
-       reply_text=$(echo $reply | jq -r ".text")
-       reply_first_name=$(echo $reply | jq -r ".from.first_name")
+       local reply=$(echo $message | jq -r ".reply_to_message") 
+       local reply_text=$(echo $reply | jq -r ".text")
+       local reply_first_name=$(echo $reply | jq -r ".from.first_name")
        text=":: ~ ${reply_first_name} : ${reply_text}<br/>${text}"
     fi
 
-    log_line_text="[ $textdate ] @${username} ~ $first_name $last_name:\n$text\n\n"
+    return_log_line_text="[ $textdate ] @${username} ~ $first_name $last_name:\n$text\n\n"
+
     text=$(echo "${text//$'\n'/<br/>}")    
-    log_line_html="[ $textdate ] @${username} ~ $first_name $last_name:<br/>$text<br/>"
+    return_log_line_html="[ $textdate ] @${username} ~ $first_name $last_name:<br/>$text<br/>"
 }
 
 function get_avatar() {
+	# global-module  : return_avatar_url
     local message=$1   
 
-    chat_id=$(echo $message | jq -r ".chat.id")  
-      
-    from=$(echo $update | jq -r ".message.from") 
-    from_id=$(echo $from | jq -r ".id")
+    local chat_id=$(echo $message | jq -r ".chat.id") 
+    local from=$(echo $update | jq -r ".message.from") 
+
+    local from_id=$(echo $from | jq -r ".id")
+    local photos=$(curl -s "${tele_url}/getUserProfilePhotos?user_id=$from_id&limit=1")
+
+    local photo=$(echo $photos | jq -r ".result.photos[0][0]")   
+    local file_id_photo=$(echo $photo | jq -r ".file_id")
     
-    photos=$(curl -s "${tele_url}/getUserProfilePhotos?user_id=$from_id&limit=1")
-    photo=$(echo $photos | jq -r ".result.photos[0][0]")   
-
-    file_id=$(echo $photo | jq -r ".file_id")
-    get_file=$(curl -s "${tele_url}/getFile?file_id=$file_id")
-
+    local get_file=$(curl -s "${tele_url}/getFile?file_id=$file_id_photo")
     
-    file_path=$(echo $get_file | jq -r ".result.file_path")   
-    file_id=$(echo $get_file | jq -r ".result.file_id")   
-
-    # https://api.telegram.org/file/bot<token>/    
-    avatar_url="https://api.telegram.org/file/bot${token}/$file_path?file_id=$file_id"
+    local file_path=$(echo $get_file | jq -r ".result.file_path")   
+    local file_id=$(echo $get_file | jq -r ".result.file_id")   
+    
+    return_avatar_url="https://api.telegram.org/file/bot${token}/$file_path?file_id=$file_id"
+    
+    # https://api.telegram.org/file/bot<token>/
 }
-
 {% endhighlight %}
 
 #### Execute
@@ -491,7 +495,7 @@ Consider see it in action.
 Just run the script.
 
 {% highlight bash %}
-% ~/Documents/cupubot/bash/logger_html/main_logger.bash
+% ./main.bash --logger-html
 {% endhighlight %}
 
 And open the result in a browser.

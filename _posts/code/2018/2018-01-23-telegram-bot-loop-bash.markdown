@@ -19,6 +19,22 @@ excerpt:
 
 > Goal: Create a Modularized Script
 
+When you are in the mood,
+the growth of code become escalated quickly.
+We know, how, a long script can looks complicated. 
+Before you know it, it become unmaintainable.
+Even with BASH, it is a good idea to start with,
+an example of code skeleton.
+
+Single script also good when it comes to other thing such as performance.
+The thing is, I have a brain issue, especially when reading long script,
+I suddenly feeling stupid in the corner.
+
+	Feeling stupid, alone in the corner
+
+So let's compartmentalize each part into chunk.
+Make a separate script is good to understand how it works.
+
 #### Preparation
 
 Before You begin, you need to get a telegram bot token.
@@ -27,9 +43,8 @@ It is already discussed in previous article.
 #### Previous Guidance
 
 We have already see a few bash command tricks in previous article.
-Now, let's gather these commands together into a script
-
-	Continue
+Now, let's gather these commands together into a script.
+Continue the previous lesson.
 
 -- -- --
 
@@ -37,6 +52,8 @@ Now, let's gather these commands together into a script
 
 Every journey has a begining. 
 This is a script, only to observe the telegram update.
+
+<code>01-main-simple</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -66,45 +83,7 @@ for ((i=0; i<$count_update; i++)); do
 done
 {% endhighlight %}
 
-#### Execute
-
-Say something with your bot in your smartphone.
-And run the script.
-
-{% highlight bash %}
-% ~/Documents/cupubot/bash/main-observe.bash
-{% endhighlight %}
-
-![BASH: Telegram Bot: Observe Script][image-cli-s-observe]{: .img-responsive }
-
--- -- --
-
-### Simple Script without Loop
-
-We can summarize all previous lessons,
-by changing the main parts of the previous script.
-
-
-{% highlight bash %}
-### -- main -- 
-
-updates=$(curl -s "${tele_url}/getUpdates")
-count_update=$(echo $updates | jq -r ".result | length") 
-    
-for ((i=0; i<$count_update; i++)); do
-    update=$(echo $updates | jq -r ".result[$i]")
-        
-    last_id=$(echo $update | jq -r ".update_id")      
-    message_id=$(echo $update | jq -r ".message.message_id")     
-    chat_id=$(echo $update | jq -r ".message.chat.id") 
-           
-    result=$(curl -s "${tele_url}/sendMessage" \
-                  --data-urlencode "chat_id=${chat_id}" \
-                  --data-urlencode "reply_to_message_id=${message_id}" \
-                  --data-urlencode "text=Thank you for your message."
-        );
-done
-{% endhighlight %}
+#### How does it works ?
 
 What matters here is the for loop (using C++ style).
 
@@ -116,37 +95,27 @@ done
 
 #### Execute
 
-Say something again with your bot in your smartphone.
+Say something with your bot in your smartphone.
 And run the script.
 
 {% highlight bash %}
-% ~/Documents/cupubot/bash/main-noloop.bash
+% ./01-main-simple.bash
 {% endhighlight %}
 
-![BASH: Telegram Bot: Simple Script No Loop][image-cli-s-noloop]{: .img-responsive }
-
-I know it looks like it does nothing.
-But hey, let's have a look here at the smartphone.
-
-![BASH: Telegram Bot: Simple Script on Smartphone][image-phone-noloop]{: .img-responsive }
+![BASH: Telegram Bot: Observe Script][image-cli-s-observe]{: .img-responsive }
 
 -- -- --
 
-### Single Script with Loop
+### Simple Script with Section
 
-Now we are ready to our loop.
-This script is self explanatory.
-And I also add some hints on how to debug with commented echo.
+We can rewrite this script in a more elegant fashion.
+Just like mowadays coding, using function,
+and separate it with sections.
 
-	OMG long script !
-
-Do not worry about the length,
-we will make it modular later on.
+<code>02-main-single</code>
 
 {% highlight bash %}
-% #!/usr/bin/env bash
-
-# This is a telegram bot in bash
+#!/usr/bin/env bash
 
 ### -- config -- 
 
@@ -162,6 +131,256 @@ fi
 
 tele_url="https://api.telegram.org/bot${token}"
 
+### -- task -- 
+
+function process_observe() {
+	local i update
+    local updates=$(curl -s "${tele_url}/getUpdates")
+    local count_update=$(echo $updates | jq -r ".result | length") 
+    
+    for ((i=0; i<$count_update; i++)); do
+        update=$(echo $updates | jq -r ".result[$i]")
+        echo "$update\n"
+    done
+}
+
+### -- controller --
+
+function do_observe() {
+	# no loop
+    process_observe
+} 
+
+### -- main --
+
+do_observe
+{% endhighlight %}
+
+Do not worry about the controller,
+It will be more clear later,
+after some few codes.
+
+#### Execute
+
+Run the script.
+No need to say something with your bot in your smartphone.
+
+{% highlight bash %}
+% ./02-main-single.bash
+{% endhighlight %}
+
+-- -- --
+
+### Simple Modular Script
+
+Now, consider compartmentalize each section,
+refactor each chunk into script.
+
+<code>03-main-modular</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- module --
+
+DIR=$(dirname "$0")
+. ${DIR}/03-config.bash
+. ${DIR}/03-controller.bash
+. ${DIR}/03-task-observe.bash
+
+### -- main --
+
+do_observe
+{% endhighlight %}
+
+<code>03-config</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+# no need sha-bang for the script to run,
+# but needed, so file manager can detect its type.
+
+### -- config -- 
+
+# $token variable here in config.sh
+config_file=~/.config/cupubot/config.sh
+
+if [ ! -f $config_file ];
+then
+    ## exit success (0)
+    echo "Config not found!" && exit 0 
+else
+    source $config_file
+fi
+
+tele_url="https://api.telegram.org/bot${token}"
+{% endhighlight %}
+
+<code>03-controller.</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- task controller --
+
+function do_observe() {
+    process_observe
+} 
+{% endhighlight %}
+
+<code>03-task-observe</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+function process_observe() {
+	local i update
+    local updates=$(curl -s "${tele_url}/getUpdates")
+    local count_update=$(echo $updates | jq -r ".result | length") 
+    
+    for ((i=0; i<$count_update; i++)); do
+        update=$(echo $updates | jq -r ".result[$i]")
+        echo "$update\n"
+    done
+}
+{% endhighlight %}
+
+#### Execute
+
+Run the script.
+No need to say something with your bot in your smartphone.
+
+{% highlight bash %}
+% ./03-main-modular.bash
+{% endhighlight %}
+
+This our first modular skeleton.
+
+-- -- --
+
+### Modular Script without Loop
+
+Now we are ready to a more useful Telegram Bot API,
+to reply a message. Just one message.
+We are going to reply many messages later in a loop.
+
+Now, consider compartmentalize each section,
+refactor each chunk into script.
+
+<code>04-main-noloop</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- module --
+
+DIR=$(dirname "$0")
+. ${DIR}/03-config.bash         # no change
+. ${DIR}/04-controller.bash
+. ${DIR}/03-task-observe.bash   # no need
+. ${DIR}/04-task-reply.bash
+
+### -- main --
+
+do_reply
+
+{% endhighlight %}
+
+<code>04-controller.</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- task controller --
+
+function do_observe() {
+    process_observe
+} 
+
+function do_reply() {
+    process_reply
+} 
+
+{% endhighlight %}
+
+<code>04-task-reply</code>
+
+We can summarize all previous lessons, in this short script.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+function process_reply() {
+	local i update message_id chat_id
+    local updates=$(curl -s "${tele_url}/getUpdates")
+    local count_update=$(echo $updates | jq -r ".result | length") 
+    
+    for ((i=0; i<$count_update; i++)); do
+        update=$(echo $updates | jq -r ".result[$i]")
+    
+        message_id=$(echo $update | jq -r ".message.message_id")     
+        chat_id=$(echo $update | jq -r ".message.chat.id") 
+           
+        result=$(curl -s "${tele_url}/sendMessage" \
+                  --data-urlencode "chat_id=${chat_id}" \
+                  --data-urlencode "reply_to_message_id=${message_id}" \
+                  --data-urlencode "text=Thank you for your message."
+            );
+    done
+}
+{% endhighlight %}
+
+#### Execute
+
+Run the script.
+No need to say something with your bot in your smartphone.
+
+{% highlight bash %}
+% ./04-no-loop.bash
+{% endhighlight %}
+
+![BASH: Telegram Bot: Simple Script No Loop][image-cli-s-noloop]{: .img-responsive }
+
+I know it looks like it does nothing.
+But hey, let's have a look here at the smartphone.
+
+![BASH: Telegram Bot: Simple Script on Smartphone][image-phone-noloop]{: .img-responsive }
+
+-- -- --
+
+### Modular Script with Loop
+
+We are still have to wrap all the messages in a loop,
+so all messages can be replied.
+
+	OMG long script !
+
+<code>05-main-loop</code>
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+### -- module --
+
+DIR=$(dirname "$0")
+. ${DIR}/05-config.bash
+. ${DIR}/05-controller.bash
+. ${DIR}/03-task-observe.bash   # no need
+. ${DIR}/05-task-reply.bash
+
+### -- main --
+
+loop_reply
+{% endhighlight %}
+
+<code>05-config</code>
+
+Add this line to config below <code>tele_url</code>.
+
+{% highlight bash %}
+...
+tele_url="https://api.telegram.org/bot${token}"
+
 ### -- last update --
 last_id_file=~/.config/cupubot/id.txt
 last_id=0
@@ -174,43 +393,61 @@ else
     last_id=$(cat $last_id_file)
     # echo "last id = $last_id"
 fi
+{% endhighlight %}
 
-### -- function -- 
+<code>05-controller.</code>
 
-function parse_update() {
+Remove the previous <code>do_reply</code> and change to <code>loop_reply</code>.
 
-    updates=$(curl -s "${tele_url}/getUpdates?offset=$last_id")
-    # echo $updates | json_reformat
+{% highlight bash %}
+#!/usr/bin/env bash
 
-    count_update=$(echo $updates | jq -r ".result | length") 
-    # echo $count_update
+### -- task controller --
+
+function do_observe() {
+    process_observe
+} 
+
+function loop_reply() {
+    while true; do 
+        process_reply   
+        sleep 1
+    done
+}
+{% endhighlight %}
+
+<code>05-task-observe</code>
+
+And finally this long script.
+This script is self explanatory.
+And I also add some hints about global and local variable.
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+function process_reply() {
+	# global-project : last_id
+	# global-module  : _
+	local i update message_id chat_id text
+
+    local updates=$(curl -s "${tele_url}/getUpdates?offset=$last_id")
+    local count_update=$(echo $updates | jq -r ".result | length") 
     
     [[ $count_update -eq 0 ]] && echo -n "."
 
     for ((i=0; i<$count_update; i++)); do
-        update=$(echo $updates | jq -r ".result[$i]")
-        # echo "$update"
-    
-        last_id=$(echo $update | jq -r ".update_id") 
-        # echo "$last_id"
-     
-        message_id=$(echo $update | jq -r ".message.message_id") 
-        # echo "$message_id"
-    
+        update=$(echo $updates | jq -r ".result[$i]")   
+        last_id=$(echo $update | jq -r ".update_id")     
+        message_id=$(echo $update | jq -r ".message.message_id")    
         chat_id=$(echo $update | jq -r ".message.chat.id") 
-        # echo "$chat_id"
         
-        text=$(echo $update | jq -r ".message.text") 
-        # echo "$text"
-        
-        get_feedback "$text"
+        get_feedback_reply "$update"
     
         result=$(curl -s "${tele_url}/sendMessage" \
                   --data-urlencode "chat_id=${chat_id}" \
                   --data-urlencode "reply_to_message_id=${message_id}" \
-                  --data-urlencode "text=$feedback"
+                  --data-urlencode "text=$return_feedback"
             );
-        # echo $result | json_reformat
 
         last_id=$(($last_id + 1))            
         echo $last_id > $last_id_file
@@ -219,37 +456,33 @@ function parse_update() {
     done
 }
 
-function get_feedback() {
-	first_word=$(echo $text | head -n 1 | awk '{print $1;}')
-	# echo $first_word
+function get_feedback_reply() {
+	# global-module  : return_feedback
+    local update=$1
+    
+    text=$(echo $update | jq -r ".message.text") 	
+	local first_word=$(echo $text | head -n 1 | awk '{print $1;}')
 	
-	feedback='Good message !'
+	return_feedback='Good message !'
 	case $first_word in
         '/id') 
             username=$(echo $update | jq -r ".message.chat.username")
-            feedback="You are the mighty @${username}"
+            return_feedback="You are the mighty @${username}"
         ;;
         *)
-            feedback='Thank you for your message.'            
+            return_feedback='Thank you for your message.'            
         ;;
     esac
 }
-
-### -- main -- 
-
-while true; do 
-    parse_update    
-    sleep 1
-done
 {% endhighlight %}
 
 #### Execute
 
-Again, say something again with your bot in your smartphone.
-And run the script.
+Run the script.
+No need to say something with your bot in your smartphone.
 
 {% highlight bash %}
-% ~/Documents/cupubot/bash/main-loop.bash
+% ./05-main-loop.bash
 {% endhighlight %}
 
 ![BASH: Telegram Bot: Simple Script with Loop][image-cli-s-loop]{: .img-responsive }
@@ -259,9 +492,11 @@ But hey, let's have a look here at the smartphone.
 
 ![BASH: Telegram Bot: Script Feedback on Smartphone][image-phone-loop]{: .img-responsive }
 
-We can how long script can looks complicated. 
+-- -- --
 
-What matters here are 
+### How Does it works ?
+
+What matters here are.
 
 #### The while loop.
 
@@ -274,7 +509,7 @@ done
 #### The Function, Wrapping Process
 
 {% highlight bash %}
-function parse_update() {
+function parse_reply() {
     ...
     for ((i=0; i<$count_update; i++)); do
         ...
@@ -291,158 +526,11 @@ This function, made to handle
 * or text
 
 {% highlight bash %}
-function get_feedback()
+function get_feedback_reply()
     ...
 }
 {% endhighlight %}
--- -- --
 
-### Modular Script with Loop
-
-I have a brain issue, especially when reading long script,
-I suddenly feeling stupid in the corner.
-
-	feeling stupid, alone in the corner
-
-So let's compartmentalize each part into chunk.
-Make a separate script is good to understand how it works.
-But single script also good when it comes to other thing such as performance.
-
-{% highlight bash %}
-#!/usr/bin/env bash
-# sha-bang required
-
-# This is a telegram bot in bash
-
-DIR=$(dirname "$0")
-. ${DIR}/config.bash
-. ${DIR}/functions.bash
-
-### -- main -- 
-
-while true; do 
-    parse_update    
-    sleep 1
-done
-{% endhighlight %}
-
-Now it looks simple, right !
-What matters here is this line.
-
-{% highlight bash %}
-DIR=$(dirname "$0")
-{% endhighlight %}
-
-The <code>config.bash</code>:
-
-{% highlight bash %}
-#!/usr/bin/env bash
-# no need sha-bang for the script to run,
-# but needed, so file manager can detect its type.
-
-### -- config -- 
-
-# $token variable here in config.sh
-config_file=~/.config/cupubot/config.sh
-
-if [ ! -f $config_file ];
-then
-    echo "Config not found!" && exit 0
-else
-    source $config_file
-fi
-
-tele_url="https://api.telegram.org/bot${token}"
-
-### -- last update --
-last_id_file=~/.config/cupubot/id.txt
-last_id=0
-
-if [ ! -f $last_id_file ];
-then
-    touch $last_id_file
-    echo 0 > $last_id_file    
-else
-    last_id=$(cat $last_id_file)
-    # echo "last id = $last_id"
-fi
-{% endhighlight %}
-
-The <code>function.bash</code>:
-
-{% highlight bash %}
-#!/usr/bin/env bash
-# no need sha-bang for the script to run,
-# but needed, so file manager can detect its type.
-
-### -- function -- 
-
-function parse_update() {
-
-    updates=$(curl -s "${tele_url}/getUpdates?offset=$last_id")
-    # echo $updates | json_reformat
-
-    count_update=$(echo $updates | jq -r ".result | length") 
-    # echo $count_update
-    
-    [[ $count_update -eq 0 ]] && echo -n "."
-
-    for ((i=0; i<$count_update; i++)); do
-        update=$(echo $updates | jq -r ".result[$i]")
-        # echo "$update"
-    
-        last_id=$(echo $update | jq -r ".update_id") 
-        # echo "$last_id"
-     
-        message_id=$(echo $update | jq -r ".message.message_id") 
-        # echo "$message_id"
-    
-        chat_id=$(echo $update | jq -r ".message.chat.id") 
-        # echo "$chat_id"
-        
-        text=$(echo $update | jq -r ".message.text") 
-        # echo "$text"
-        
-        get_feedback "$text"
-    
-        result=$(curl -s "${tele_url}/sendMessage" \
-                  --data-urlencode "chat_id=${chat_id}" \
-                  --data-urlencode "reply_to_message_id=${message_id}" \
-                  --data-urlencode "text=$feedback"
-            );
-        # echo $result | json_reformat
-
-        last_id=$(($last_id + 1))            
-        echo $last_id > $last_id_file
-        
-        echo -e "\n: ${text}"
-    done
-}
-
-function get_feedback() {
-	first_word=$(echo $text | head -n 1 | awk '{print $1;}')
-	# echo $first_word
-	
-	feedback='Good message !'
-	case $first_word in
-        '/id') 
-            username=$(echo $update | jq -r ".message.chat.username")
-            feedback="You are the mighty @${username}"
-        ;;
-        *)
-            feedback='Thank you for your message.'            
-        ;;
-    esac
-}
-{% endhighlight %}
-
-#### Execute
-
-{% highlight bash %}
-% ~/Documents/cupubot/bash/main-modular.bash
-{% endhighlight %}
-
-![BASH: Telegram Bot: Modular Script with Loop][image-cli-s-modular]{: .img-responsive }
 
 I think that is all.
 
@@ -475,7 +563,6 @@ Thank you for reading.
 [image-cli-s-observe]:  {{ asset_path }}/cupubot-cli-script-observe.png
 [image-cli-s-noloop]:   {{ asset_path }}/cupubot-cli-script-noloop.png
 [image-cli-s-loop]:     {{ asset_path }}/cupubot-cli-script-loop.png
-[image-cli-s-modular]:  {{ asset_path }}/cupubot-cli-script-modular.png
 [image-phone-feedback]: {{ asset_path }}/cupubot-phone-feedback.png
 [image-phone-noloop]:   {{ asset_path }}/cupubot-phone-script-noloop.png
 [image-phone-loop]:     {{ asset_path }}/cupubot-phone-script-loop.png

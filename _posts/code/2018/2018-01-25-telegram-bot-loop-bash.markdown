@@ -42,9 +42,9 @@ Here are our source looks like
 
 {% highlight bash %}
 % ls
-Makefile      functions.bash     main-noloop.bash
-config.bash   main-loop.bash     messages.bash
-cupubot-bash  main-modular.bash  options.bash
+Makefile         cupubot-bash   modular-tutorial
+config.bash      main.bash      options.bash
+controller.bash  messages.bash  tasks
 {% endhighlight %}
 
 ![BASH: Telegram Bot: Makefile Source][image-makefile-source]{: .img-responsive }
@@ -57,10 +57,10 @@ cupubot-bash  main-modular.bash  options.bash
 
 DIR=$(dirname "$0")
 DIR=${DIR}/../lib/cupubot
-. ${DIR}/main-modular.bash
+. ${DIR}/main.bash
 {% endhighlight %}
 
-To enable this, we need to alter <code>main-modular.bash</code> a bit.
+To enable this, we need to alter <code>main.bash</code> a bit.
 
 {% highlight bash %}
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -73,7 +73,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 We are no longer can use use <code>DIR=$(dirname "$0")</code>.
 Because our main path has been changed,
-from the same path directory with <code>main-modular.bash</code>,
+from the same path directory with <code>main.bash</code>,
 to different directory.
 It will be called from <code>/usr/local/bin</code>.
 
@@ -128,8 +128,9 @@ install:
 	@install -D -m755 ./cupubot-bash $(DESTDIR)$(bindir)/cupubot-bash
 	
 	# Libs
-	@mkdir -p $(DESTDIR)$(libdir)/cupubot
+	@mkdir -p $(DESTDIR)$(libdir)/cupubot/tasks
 	@install -D -m644 ./*.bash $(DESTDIR)$(libdir)/cupubot
+	@install -D -m644 ./tasks/*.bash $(DESTDIR)$(libdir)/cupubot/tasks
 {% endhighlight %}
 
 It is pretty clear and self explanatory.
@@ -156,12 +157,14 @@ Now here it is the result.
 % ls /usr/local/bin/cupu*  /usr/local/lib/cupubot/*
 /usr/local/bin/cupubot-bash
 /usr/local/lib/cupubot/config.bash
-/usr/local/lib/cupubot/functions.bash
-/usr/local/lib/cupubot/main-loop.bash
-/usr/local/lib/cupubot/main-modular.bash
-/usr/local/lib/cupubot/main-noloop.bash
+/usr/local/lib/cupubot/controller.bash
+/usr/local/lib/cupubot/main.bash
 /usr/local/lib/cupubot/messages.bash
 /usr/local/lib/cupubot/options.bash
+
+/usr/local/lib/cupubot/tasks:
+logger_html.bash  new_member.bash  reply.bash
+logger_text.bash  observe.bash
 {% endhighlight %}
 
 ![BASH: Telegram Bot: Makefile Destination][image-makefile-destination]{: .img-responsive }

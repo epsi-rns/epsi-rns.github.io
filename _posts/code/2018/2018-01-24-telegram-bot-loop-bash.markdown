@@ -26,10 +26,10 @@ Would it be nice if we can have help usage for our script ?
 {% highlight bash %}
 % cd ~/Documents/cupubot/bash
 
-% ./main-modular.bash --version
+% ./main.bash --version
 cupubot v0.001
 
-% ./main-modular.bash --help
+% ./main.bash --help
 usage:  cupubot [options]
 operations:
  general
@@ -58,18 +58,30 @@ Luckily bash has, this <code>OPTIN</code> feature, comes to the rescue.
 
 I'm going to make it as brief as possible.
 We need a bit of change in our main script.
-Two more scripts.
+Two more scripts: <code>messages.bash</code>,
+and <code>options.bash</code>.
 
 {% highlight bash %}
-DIR=$(dirname "$0")
+#!/usr/bin/env bash
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# module: main
 . ${DIR}/config.bash
-. ${DIR}/functions.bash
 . ${DIR}/messages.bash
 . ${DIR}/options.bash
+. ${DIR}/controller.bash
+
+# module: task
+. ${DIR}/tasks/observe.bash
+. ${DIR}/tasks/reply.bash
+
+### -- main --
+
+get_options_from_arguments "$@"
 {% endhighlight %}
 
-### Message Function
+### Message Script
 
 These are the functions, that will be called later.
 Politically, every public bash project should have these two.
@@ -93,53 +105,130 @@ function message_version() {
 }
 {% endhighlight %}
 
-### Message Function
+### Beginner Version
 
-And these is the script that process the argument.
+Consider this short script.
 
 {% highlight bash %}
-function get_options_from_arguments() {
+#!/usr/bin/env bash
 
-    # http://wiki.bash-hackers.org/howto/getopts_tutorial
-
-    # get options
-    count=0
-    
+function get_options_from_arguments() {   
     # ! : indirect expansion
     while [[ -n "${!OPTIND}" ]]; do
         case "${!OPTIND}" in
             version)   
-                message_version; 
+                message_version
                 exit;;
         esac
 
+        shift $OPTIND
+        OPTIND=1
+    done
+}
+{% endhighlight %}
+
+You can run with this command:
+
+{% highlight bash %}
+% ./main.bash version
+cupubot v0.001
+{% endhighlight %}
+
+#### How does it works
+
+The <code>OPTIND</code> is an index of argument,
+the <code>!</code> is indirect expansion.
+It means <code>!OPTIND</code> return the value of index.
+
+When we pass one argument,
+the <code>${OPTIND}</code> will have the value of index <code>1</code>.
+And then the <code>${!OPTIND}</code> have the value <code>version</code>.
+After shift the <code>${OPTIND}</code> will have the value of index <code>0</code>,
+and the loop will be terminated.
+
+### Option Script
+
+Now the complete version of the script that process the argument.
+
+{% highlight bash %}
+# reading
+# http://wiki.bash-hackers.org/howto/getopts_tutorial
+
+# handling command
+function handle_command_plain() {
+	local command=$1
+
+    case "$command" in
+        version)   
+            message_version
+            exit;;
+    esac
+}
+
+# handling -command
+function handle_command_opt() {
+	local command=$1
+	
+    case "$command" in
+        -)
+            handle_command_optarg "$OPTARG"
+            ;;
+         h)  
+            message_usage
+            exit;;
+         v)  
+            message_version
+            exit;;
+         *)  
+            # Invalid Option
+            message_usage
+            exit;;
+    esac
+}
+
+# handling --command
+function handle_command_optarg() {
+	local command=$1
+	
+    case "$command" in
+        version) 
+            message_version
+            exit;;
+        help) 
+            message_usage
+            exit;;
+        observe)
+            do_observe
+            exit;;
+        reply)
+            loop_reply
+            exit;;
+        *) 
+            # Invalid Option
+            message_usage
+            exit;;
+    esac
+}
+
+function get_options_from_arguments() {  
+	# get argument length	
+	[[ $# -eq "0" ]] && message_usage && exit;
+	 
+    # ! : indirect expansion
+    while [[ -n "${!OPTIND}" ]]; do
+        handle_command_plain "${!OPTIND}"
+
         while getopts "vh-:" OPT; do
-            case "$OPT" in
-                -)
-                    case "$OPTARG" in
-                        version) 
-                            message_version; 
-                            exit;;
-                        help) 
-                            message_usage; 
-                            exit;;
-                        *) 
-                            continue;;
-                    esac;;
-                h)  
-                    message_usage; 
-                    exit;;
-                v)  
-                    message_version; 
-                    exit;;
-                *)  
-                    continue;;
-            esac
+             handle_command_opt "$OPT"
         done
 
         shift $OPTIND
         OPTIND=1
     done
+    
+	# Invalid Option
+    message_usage
+    exit
 }
 {% endhighlight %}
 
