@@ -53,9 +53,11 @@ Before You begin, you need to get a telegram bot token.
 
 *	[Telegram Bot - BASH Option Argument][local-bash-argument]
 
-*	[Telegram Bot - BASH Makefile][local-bash-makefile]
-
 *	[Telegram Bot - BASH Group Tools][local-bash-group]
+
+*	[Telegram Bot - Makefile][local-bash-makefile]
+
+*	[Telegram Bot - manual][local-bash-manual]
 
 -- -- --
 
@@ -79,7 +81,8 @@ Thank you for reading.
 [local-bash-cli]:      /code/2018/01/22/telegram-bot-loop-bash.html
 [local-bash-script]:   /code/2018/01/23/telegram-bot-loop-bash.html
 [local-bash-argument]: /code/2018/01/24/telegram-bot-loop-bash.html
-[local-bash-makefile]: /code/2018/01/25/telegram-bot-loop-bash.html
 [local-bash-group]:    /code/2018/01/26/telegram-bot-loop-bash.html
+[local-bash-makefile]: /code/2018/01/28/telegram-bot-loop-makefile.html
+[local-bash-manual]:   /code/2018/01/29/telegram-bot-loop-manual.html
 
 [image-telegram-desktop]:       {{ asset_path }}/telegram-desktop.png
