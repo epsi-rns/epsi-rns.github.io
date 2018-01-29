@@ -21,7 +21,7 @@ excerpt:
 
 #### Previous Guidance
 
-We're already see an almost finished bash project in previous article.
+We're already see a finished bash project in previous article.
 We should finish what we have done.
 
 #### Issue
@@ -283,12 +283,14 @@ clean:
 
 I think that's all.
 
-### Conclusions
+-- -- --
 
-I think that's all.
+### What is Next ?
 
-I'm mostly posting codes so I won't have
-any problems finding it in the future.
+We will make the script more usable for other people,
+by adding <code>Manual Page</code> for documentation.
+
+*	[Telegram Bot - Manual Page][local-manual]
 
 Thank you for reading.
 
@@ -296,6 +298,8 @@ Thank you for reading.
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
+
+[local-manual]: /code/2018/01/29/telegram-bot-loop-manual.html
 
 [dotfiles-makefile]: {{ dotfiles_path }}/Makefile
 

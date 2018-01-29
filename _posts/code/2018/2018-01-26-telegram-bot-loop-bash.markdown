@@ -574,7 +574,7 @@ Hot to get Avatar URL.
 We will make the script more usable for other people,
 by adding <code>Makefile</code> for deployment.
 
-*	[Telegram Bot - BASH Makefile][local-bash-makefile]
+*	[Telegram Bot - Makefile][local-makefile]
 
 Thank you for reading.
 
@@ -583,7 +583,7 @@ Thank you for reading.
 {% assign asset_path = '/assets/posts/code/2018/01' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-bash-makefile]: /code/2018/01/28/telegram-bot-loop-makefile.html
+[local-makefile]: /code/2018/01/28/telegram-bot-loop-makefile.html
 
 [dotfiles-config]:      {{ dotfiles_path }}/config.bash
 [dotfiles-controller]:  {{ dotfiles_path }}/controller.bash
