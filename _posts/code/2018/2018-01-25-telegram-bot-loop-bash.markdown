@@ -241,11 +241,12 @@ I also give a dummy <code>doc</code>, as default option for make.
 PREFIX ?= /usr/local
 bindir        = $(PREFIX)/bin
 libdir        = $(PREFIX)/lib
+mandir        = $(PREFIX)/man
 
 # default target
-all: doc
+all: dummy
 
-doc: 
+dummy: 
 	@echo "Nothing to do..."
 
 # auxiliary
@@ -257,6 +258,9 @@ install:
 	@mkdir -p $(DESTDIR)$(libdir)/cupubot/tasks
 	@install -D -m644 ./*.bash $(DESTDIR)$(libdir)/cupubot
 	@install -D -m644 ./tasks/*.bash $(DESTDIR)$(libdir)/cupubot/tasks
+	# Documentation
+	@gzip -k -f ./man/cupubot-bash.1
+	@install -D -m644 ./man/cupubot-bash.1.gz $(DESTDIR)$(mandir)/man1/
 
 uninstall:
 	@echo "Uninstalling..."
@@ -264,6 +268,8 @@ uninstall:
 	@rm $(DESTDIR)$(bindir)/cupubot-bash
 	# Libs
 	@rm -r $(DESTDIR)$(libdir)/cupubot
+	# Documentation
+	@rm $(DESTDIR)$(mandir)/man1/cupubot-bash.1.gz
 
 clean:
 	@echo "Cleaning..."
