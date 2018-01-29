@@ -53,7 +53,7 @@ Continue the previous lesson.
 Every journey has a begining. 
 This is a script, only to observe the telegram update.
 
-<code>01-main-simple</code>
+<code class="code-file">01-main-simple.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -83,9 +83,12 @@ for ((i=0; i<$count_update; i++)); do
 done
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../01-main-simple.bash][dotfiles-01-main]
+
 #### How does it works ?
 
-What matters here is the for loop (using C++ style).
+What matters here is the for loop (using C style).
 
 {% highlight bash %}
 for ((i=0; i<$count_update; i++)); do
@@ -112,7 +115,7 @@ We can rewrite this script in a more elegant fashion.
 Just like mowadays coding, using function,
 and separate it with sections.
 
-<code>02-main-single</code>
+<code class="code-file">02-main-single.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -156,6 +159,9 @@ function do_observe() {
 do_observe
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../02-main-single.bash][dotfiles-02-main]
+
 Do not worry about the controller,
 It will be more clear later,
 after some few codes.
@@ -176,7 +182,7 @@ No need to say something with your bot in your smartphone.
 Now, consider compartmentalize each section,
 refactor each chunk into script.
 
-<code>03-main-modular</code>
+<code class="code-file">03-main-modular.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -193,7 +199,10 @@ DIR=$(dirname "$0")
 do_observe
 {% endhighlight %}
 
-<code>03-config</code>
+**Source**:
+*	[github.com/.../cupubot/.../03-main-modular.bash][dotfiles-03-main]
+
+<code class="code-file">03-config.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -216,7 +225,10 @@ fi
 tele_url="https://api.telegram.org/bot${token}"
 {% endhighlight %}
 
-<code>03-controller.</code>
+**Source**:
+*	[github.com/.../cupubot/.../03-config.bash][dotfiles-03-config]
+
+<code class="code-file">03-controller.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -228,7 +240,10 @@ function do_observe() {
 } 
 {% endhighlight %}
 
-<code>03-task-observe</code>
+**Source**:
+*	[github.com/.../cupubot/.../03-controller.bash][dotfiles-03-ctrl]
+
+<code class="code-file">03-task-observe.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -244,6 +259,9 @@ function process_observe() {
     done
 }
 {% endhighlight %}
+
+**Source**:
+*	[github.com/.../cupubot/.../03-task-observe.bash][dotfiles-03-task]
 
 #### Execute
 
@@ -267,7 +285,7 @@ We are going to reply many messages later in a loop.
 Now, consider compartmentalize each section,
 refactor each chunk into script.
 
-<code>04-main-noloop</code>
+<code class="code-file">04-main-noloop.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -286,7 +304,10 @@ do_reply
 
 {% endhighlight %}
 
-<code>04-controller.</code>
+**Source**:
+*	[github.com/.../cupubot/.../04-main-noloop.bash][dotfiles-04-main]
+
+<code class="code-file">04-controller.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -303,7 +324,10 @@ function do_reply() {
 
 {% endhighlight %}
 
-<code>04-task-reply</code>
+**Source**:
+*	[github.com/.../cupubot/.../04-controller.bash][dotfiles-04-ctrl]
+
+<code class="code-file">04-task-reply.bash</code>
 
 We can summarize all previous lessons, in this short script.
 
@@ -330,6 +354,9 @@ function process_reply() {
 }
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../04-task-reply.bash][dotfiles-04-task]
+
 #### Execute
 
 Run the script.
@@ -355,7 +382,7 @@ so all messages can be replied.
 
 	OMG long script !
 
-<code>05-main-loop</code>
+<code class="code-file">05-main-loop.bash</code>
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -373,7 +400,10 @@ DIR=$(dirname "$0")
 loop_reply
 {% endhighlight %}
 
-<code>05-config</code>
+**Source**:
+*	[github.com/.../cupubot/.../05-main-loop.bash][dotfiles-05-main]
+
+<code class="code-file">05-config.bash</code>
 
 Add this line to config below <code>tele_url</code>.
 
@@ -395,7 +425,10 @@ else
 fi
 {% endhighlight %}
 
-<code>05-controller.</code>
+**Source**:
+*	[github.com/.../cupubot/.../05-config.bash][dotfiles-05-config]
+
+<code class="code-file">05-controller.bash</code>
 
 Remove the previous <code>do_reply</code> and change to <code>loop_reply</code>.
 
@@ -416,7 +449,10 @@ function loop_reply() {
 }
 {% endhighlight %}
 
-<code>05-task-observe</code>
+**Source**:
+*	[github.com/.../cupubot/.../05-controller.bash][dotfiles-05-ctrl]
+
+<code class="code-file">05-task-observe.bash</code>
 
 And finally this long script.
 This script is self explanatory.
@@ -476,6 +512,9 @@ function get_feedback_reply() {
 }
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../05-task-observe.bash][dotfiles-05-task]
+
 #### Execute
 
 Run the script.
@@ -496,7 +535,7 @@ But hey, let's have a look here at the smartphone.
 
 ### How Does it works ?
 
-What matters here are.
+What matters here are:
 
 #### The while loop.
 
@@ -548,11 +587,9 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/code/2018/01' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
+{% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash/modular-tutorial' %}
 
 [local-bash-argument]: /code/2018/01/24/telegram-bot-loop-bash.html
-
-[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 
 [image-cli-config]:     {{ asset_path }}/cupubot-cli-config.png
 [image-cli-getme]:      {{ asset_path }}/cupubot-cli-getme.png
@@ -566,4 +603,18 @@ Thank you for reading.
 [image-phone-feedback]: {{ asset_path }}/cupubot-phone-feedback.png
 [image-phone-noloop]:   {{ asset_path }}/cupubot-phone-script-noloop.png
 [image-phone-loop]:     {{ asset_path }}/cupubot-phone-script-loop.png
+
+[dotfiles-01-main]:   {{ dotfiles_path }}/01-main-simple.bash
+[dotfiles-02-main]:   {{ dotfiles_path }}/02-main-single.bash
+[dotfiles-03-config]: {{ dotfiles_path }}/03-config.bash
+[dotfiles-03-ctrl]:   {{ dotfiles_path }}/03-controller.bash
+[dotfiles-03-main]:   {{ dotfiles_path }}/03-main-modular.bash
+[dotfiles-03-task]:   {{ dotfiles_path }}/03-task-observe.bash
+[dotfiles-04-ctrl]:   {{ dotfiles_path }}/04-controller.bash
+[dotfiles-04-main]:   {{ dotfiles_path }}/04-main-noloop.bash
+[dotfiles-04-task]:   {{ dotfiles_path }}/04-task-reply.bash
+[dotfiles-05-config]: {{ dotfiles_path }}/05-config.bash
+[dotfiles-05-ctrl]:   {{ dotfiles_path }}/05-controller.bash
+[dotfiles-05-main]:   {{ dotfiles_path }}/05-main-loop.bash
+[dotfiles-05-task]:   {{ dotfiles_path }}/05-task-reply.bash
 

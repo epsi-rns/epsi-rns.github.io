@@ -52,7 +52,7 @@ To enable this group tools.
 
 ### Change in Main File
 
-<code>main.bash</code>:
+<code class="code-file">main.bash</code>:
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -78,7 +78,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 get_options_from_arguments "$@"
 {% endhighlight %}
 
-<code>config.bash</code>:
+**Source**:
+*	[github.com/.../cupubot/.../main.bash][dotfiles-main]
+
+<code class="code-file">config.bash</code>:
 
 The config is exactly the same as previous guidance,
 except these two lines, that required for logger.
@@ -91,8 +94,40 @@ log_file_text=~/Documents/logfile.txt
 log_file_html=~/Documents/logfile.html
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../config.bash][dotfiles-config]
 
-<code>options.bash</code>:
+<code class="code-file">messages.bash</code>:
+
+{% highlight bash %}
+#!/usr/bin/env bash
+
+function message_usage() {
+    cat <<-EOF
+usage:  cupubot [options]
+
+operations:
+ general
+   -h, --help       display help information
+   -v, --version    display version information
+   --observe        show JSON output of getUpdates
+   --reply          reply all messages
+   --new-member     greet new member
+   --logger-text    log chat conversation
+   --logger-html    log chat conversation
+EOF
+}
+
+function message_version() {
+	local version='v0.001'
+    echo "cupubot $version"
+}
+{% endhighlight %}
+
+**Source**:
+*	[github.com/.../cupubot/.../messages.bash][dotfiles-messages]
+
+<code class="code-file">options.bash</code>:
 
 {% highlight bash %}
 # handling --command
@@ -129,7 +164,10 @@ function handle_command_optarg() {
 }
 {% endhighlight %}
 
-<code>controller.bash</code>:
+**Source**:
+*	[github.com/.../cupubot/.../options.bash][dotfiles-options]
+
+<code class="code-file">controller.bash</code>:
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -187,6 +225,9 @@ EOF
 } 
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../controller.bash][dotfiles-controller]
+
 -- -- --
 
 ### Chat New Member
@@ -194,7 +235,7 @@ EOF
 This functions script is a little bit different,
 compared with the previous example.
 
-<code>config.bash</code>:
+<code class="code-file">tasks/new_member.bash</code>:
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -250,6 +291,8 @@ function get_feedback_newmember() {
 }
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../new_member.bash][dotfiles-new_member]
 
 #### Execute
 
@@ -306,6 +349,8 @@ And the script is even simple. It needs no loop.
 The functions are entirely different,
 compared with the previous one.
 
+<code class="code-file">tasks/logger_text.bash</code>:
+
 {% highlight bash %}
 #!/usr/bin/env bash
 
@@ -360,6 +405,9 @@ function get_log_text_line() {
 }
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../logger_text.bash][dotfiles-logger_text]
+
 #### Execute
 
 Consider see it in action.
@@ -390,6 +438,8 @@ It is just, has nicer preview.
 The only different is, HTML logger require Avatar images.
 Which is, this URL require a few steps of Telegram API.
 As an implementation, there is this badass script.
+
+<code class="code-file">tasks/logger_html.bash</code>:
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -489,6 +539,9 @@ function get_avatar() {
 }
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../logger_html.bash][dotfiles-logger_html]
+
 #### Execute
 
 Consider see it in action.
@@ -516,12 +569,12 @@ Hot to get Avatar URL.
 
 -- -- --
 
-### Conclusions
+### What is Next ?
 
-I think that's all.
+We will make the script more usable for other people,
+by adding <code>Makefile</code> for deployment.
 
-I'm mostly posting codes so I won't have
-any problems finding it in the future.
+*	[Telegram Bot - BASH Makefile][local-bash-makefile]
 
 Thank you for reading.
 
@@ -530,9 +583,16 @@ Thank you for reading.
 {% assign asset_path = '/assets/posts/code/2018/01' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-overview]: /code/2017/04/23/overview-pipe-and-fork.html
+[local-bash-makefile]: /code/2018/01/28/telegram-bot-loop-makefile.html
 
-[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+[dotfiles-config]:      {{ dotfiles_path }}/config.bash
+[dotfiles-controller]:  {{ dotfiles_path }}/controller.bash
+[dotfiles-main]:        {{ dotfiles_path }}/main.bash
+[dotfiles-messages]:    {{ dotfiles_path }}/messages.bash
+[dotfiles-options]:     {{ dotfiles_path }}/options.bash
+[dotfiles-new_member]:  {{ dotfiles_path }}/tasks/new_member.bash
+[dotfiles-logger_text]: {{ dotfiles_path }}/tasks/logger_text.bash
+[dotfiles-logger_html]: {{ dotfiles_path }}/tasks/logger_html.bash
 
 [image-group-newmember]:   {{ asset_path }}/cupubot-group-newmember.png
 [image-phone-newmember]:   {{ asset_path }}/cupubot-phone-newmember.png

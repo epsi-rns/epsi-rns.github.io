@@ -313,8 +313,6 @@ Thank you for reading.
 
 [local-bash-script]:   /code/2018/01/23/telegram-bot-loop-bash.html
 
-[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
-
 [image-cli-config]:     {{ asset_path }}/cupubot-cli-config.png
 [image-cli-getme]:      {{ asset_path }}/cupubot-cli-getme.png
 [image-cli-pipe]:       {{ asset_path }}/cupubot-cli-pipe.png

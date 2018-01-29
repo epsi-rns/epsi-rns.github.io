@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Telegram Bot - BASH Makefile"
+title:  "Telegram Bot - Makefile"
 categories: code
-date:   2018-01-25 09:17:35 +0700
+date:   2018-01-28 09:17:35 +0700
 tags: [coding, API, bash]
 author: epsi
 
@@ -244,10 +244,11 @@ libdir        = $(PREFIX)/lib
 mandir        = $(PREFIX)/man
 
 # default target
-all: dummy
+all: doc
 
-dummy: 
-	@echo "Nothing to do..."
+doc: 
+	@echo "Manual Page..."
+	@gzip -k -f ./man/cupubot-bash.1
 
 # auxiliary
 install:
@@ -277,21 +278,17 @@ clean:
 .PHONY: install uninstall clean
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../Makefile][dotfiles-makefile]
+
 I think that's all.
 
-### What is Next ?
+### Conclusions
 
-We will add some chat group tools such as
+I think that's all.
 
-*	Greet New Member.
-
-*	Text Logger.
-
-*	HTML Logger.
-
-Just have a look at the next article.
-
-*	[Telegram Bot - BASH Group Tools][local-bash-group]
+I'm mostly posting codes so I won't have
+any problems finding it in the future.
 
 Thank you for reading.
 
@@ -300,9 +297,7 @@ Thank you for reading.
 {% assign asset_path = '/assets/posts/code/2018/01' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-bash-group]:    /code/2018/01/26/telegram-bot-loop-bash.html
-
-[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+[dotfiles-makefile]: {{ dotfiles_path }}/Makefile
 
 [image-makefile-source]:      {{ asset_path }}/cupubot-makefile-ls-source.png
 [image-makefile-destination]: {{ asset_path }}/cupubot-makefile-ls-destination.png

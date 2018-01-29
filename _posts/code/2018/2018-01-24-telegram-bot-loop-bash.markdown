@@ -31,10 +31,11 @@ cupubot v0.001
 
 % ./main.bash --help
 usage:  cupubot [options]
+
 operations:
  general
-   -v, --version    display version information
    -h, --help       display help information
+   -v, --version    display version information
 {% endhighlight %}
 
 ![BASH: Telegram Bot: Script with Usage][image-cli-s-usage]{: .img-responsive }
@@ -81,6 +82,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 get_options_from_arguments "$@"
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../main.bash][dotfiles-main]
+
 ### Message Script
 
 These are the functions, that will be called later.
@@ -91,10 +95,11 @@ Do not let your user, getting confused in the dark without a clue.
 function message_usage() {
     cat <<-EOF
 usage:  cupubot [options]
+
 operations:
  general
-   -v, --version    display version information
    -h, --help       display help information
+   -v, --version    display version information
 
 EOF
 }
@@ -104,6 +109,9 @@ function message_version() {
     echo "cupubot $version"
 }
 {% endhighlight %}
+
+**Source**:
+*	[github.com/.../cupubot/.../messages.bash][dotfiles-messages]
 
 ### Beginner Version
 
@@ -232,6 +240,9 @@ function get_options_from_arguments() {
 }
 {% endhighlight %}
 
+**Source**:
+*	[github.com/.../cupubot/.../options.bash][dotfiles-options]
+
 -- -- --
 
 ### How does it works
@@ -339,13 +350,22 @@ So here is our acceptable argument.
 Yeah, that is all. Not so complicated after all.
 
 	Can you read the pattern ?
+	
+-- -- --
 
 ### What is Next ?
 
-We will make the script more usable for other people,
-by adding <code>Makefile</code> for deployment.
+We will add some chat group tools such as
 
-*	[Telegram Bot - BASH Makefile][local-bash-makefile]
+*	Greet New Member.
+
+*	Text Logger.
+
+*	HTML Logger.
+
+Just have a look at the next article.
+
+*	[Telegram Bot - BASH Group Tools][local-bash-group]
 
 Thank you for reading.
 
@@ -354,8 +374,10 @@ Thank you for reading.
 {% assign asset_path = '/assets/posts/code/2018/01' %}
 {% assign dotfiles_path = 'https://github.com/epsi-rns/cupubot/tree/master/loop/bash' %}
 
-[local-bash-makefile]: /code/2018/01/25/telegram-bot-loop-bash.html
+[local-bash-group]:    /code/2018/01/26/telegram-bot-loop-bash.html
 
-[dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
+[dotfiles-main]:     {{ dotfiles_path }}/main.bash
+[dotfiles-messages]: {{ dotfiles_path }}/messages.bash
+[dotfiles-options]:  {{ dotfiles_path }}/options.bash
 
 [image-cli-s-usage]:  {{ asset_path }}/cupubot-cli-script-usage.png
