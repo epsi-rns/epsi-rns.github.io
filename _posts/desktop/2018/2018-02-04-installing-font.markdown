@@ -198,8 +198,6 @@ Now you can check using <code>xfd</code>
 
 #### Font Cache
 
-As usual, but system wide.
-
 {% highlight bash %}
 % fc-cache -f -v
 ...
@@ -209,8 +207,6 @@ As usual, but system wide.
 % fc-list | grep siji
 /home/epsi/.local/share/fonts/misc/siji.pcf: Siji:style=Regular
 {% endhighlight %}
-
-You need to log out before using this font.
 
 #### Add Font Path
 
@@ -285,7 +281,7 @@ You can also browse a character in a font with either of these program,
 ### Font to Use
 
 I also ask some friends,
-in (@dotfiles_id)[https://t.me/dotfiles_id] telegram group,
+in [@dotfiles_id](https://t.me/dotfiles_id) telegram group,
 about their favorites font. I would like to summarize here:
 
 	Fonts @ dotfiles_id
@@ -298,9 +294,17 @@ about their favorites font. I would like to summarize here:
 
 * [ionicons](http://ionicons.com/)
 
+* [icomoon](https://icomoon.io/)
+
 * [Powerline Symbol](http://powerline.readthedocs.io/en/master/installation/linux.html)
 
 * [Powerline Extra Symbol](https://github.com/ryanoasis/powerline-extra-symbols)
+
+#### Bar (Text)
+
+* Terminus
+
+* Roboto
 
 #### Libreoffice
 
