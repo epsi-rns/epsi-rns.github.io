@@ -282,6 +282,64 @@ You can also browse a character in a font with either of these program,
 
 -- -- --
 
+### Font to Use
+
+I also ask my friend in @dotfiles_id telegram group,
+about their favorites font. I would like to summarize here:
+
+	Fonts @ dotfiles_id
+
+#### Icon Font/ Glyph Bar
+
+* [FontAwesome](https://fontawesome.com/)
+
+* [Siji](https://github.com/stark/siji)
+
+* [ionicons](http://ionicons.com/)
+
+* [Powerline Symbol](http://powerline.readthedocs.io/en/master/installation/linux.html)
+
+* [Powerline Extra Symbol](https://github.com/ryanoasis/powerline-extra-symbols)
+
+#### Libreoffice
+
+* Carlito (Calibri substitution)
+
+* Caladea (Cambria substitution)
+
+#### Design (Inkscape)
+
+* Oswald (Google Font)
+
+* Raleway (Google Font)
+
+#### Web
+
+* Default: arial, helvetica, sans 
+
+#### Terminal
+
+* Iosevka, Monofur, Tewi, ShureTech Mono, mPlus
+
+* [IBM Plex](https://github.com/IBM/type)
+
+* [Hermit](https://pcaro.es/p/hermit/)
+
+#### Text Editor (Coding)
+
+* Hack, Ubuntu Mono, Fira Code
+
+* Monaco, Meslo
+
+### Links:
+
+* [Font to use in Terminal Emulator](https://www.slant.co/topics/7014/~fonts-to-use-in-a-terminal-emulator)
+
+* [Free Font for 2017](https://www.creativebloq.com/features/10-new-free-fonts-for-2017)
+
+
+-- -- --
+
 ### Conclusion
 
 It works.
