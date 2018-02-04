@@ -135,6 +135,14 @@ I have to logout, before I can show this in my <code>zsh</code>.
 
 Consider have a look at <code>siji</code> as our example.
 
+There are a few more step required for bitmap fonts.
+
+*	<code>mkfontdir</code>, and <code>mkfontscale</code>
+
+*	<code>xset fp+</code>
+
+#### Notation
+
 As you might already notice.
 XLFD using exotic notation.
 
@@ -204,37 +212,15 @@ As usual, but system wide.
 
 You need to log out before using this font.
 
-#### Lemonbar
+#### Add Font Path
 
--- -- --
-
-### System Wide
-
-Sometimes we need to use the font in system wide,
-using <code>/usr/share/fonts</code>.
-
-#### Issue
-
-Bitmap Font does not show up in my Lemonbar.
-
-#### Copy and Paste
+This step, you should do, or the font won't shown up in Lemonbar.
 
 {% highlight bash %}
-% cd /usr/share/fonts/misc
-
-% sudo cp ~/.local/share/fonts/misc/siji.pcf .
-Password: 
-
-% sudo mkfontdir
-% sudo mkfontscale
-
-% fc-cache
-% fc-list | grep siji
-/home/epsi/.local/share/fonts/misc/siji.pcf: Siji:style=Regular
-/usr/share/fonts/misc/siji.pcf: Siji:style=Regular
+% xset fp+ ~/.local/share/fonts/misc
 {% endhighlight %}
 
-You need to logout and relogin in order to use this bitmap font.
+![XLFD: Siji Set X Font Path][image-ss-siji-xset-fp]{: .img-responsive }
 
 #### Select Font
 
@@ -255,6 +241,32 @@ Using XLFD
 {% endhighlight %}
 
 ![XLFD: Siji at Lemonbar][image-ss-siji-lemonbar]{: .img-responsive }
+
+-- -- --
+
+### System Wide
+
+Sometimes we need to use the font in system wide,
+using <code>/usr/share/fonts</code>.
+
+#### Copy and Paste
+
+{% highlight bash %}
+% cd /usr/share/fonts/misc
+
+% sudo cp ~/.local/share/fonts/misc/siji.pcf .
+Password: 
+
+% sudo mkfontdir
+% sudo mkfontscale
+
+% fc-cache
+% fc-list | grep siji
+/home/epsi/.local/share/fonts/misc/siji.pcf: Siji:style=Regular
+/usr/share/fonts/misc/siji.pcf: Siji:style=Regular
+{% endhighlight %}
+
+You need to logout and relogin in order to use this bitmap font.
 
 -- -- --
 
@@ -287,6 +299,7 @@ Thank you for reading and visiting.
 [image-ss-terminal]:      {{ asset_path }}/font-xfce4-terminal.png
 [image-ss-siji-copy]:     {{ asset_path }}/font-siji-copy.png
 [image-ss-siji-mkfont]:   {{ asset_path }}/font-siji-mkfont.png
+[image-ss-siji-xset-fp]:  {{ asset_path }}/font-siji-xset-fp.png
 [image-ss-siji-xfd]:      {{ asset_path }}/font-siji-xfd.png
 [image-ss-siji-xfontsel]: {{ asset_path }}/font-siji-xfontsel.png
 [image-ss-siji-lemonbar]: {{ asset_path }}/font-siji-lemonbar.png
