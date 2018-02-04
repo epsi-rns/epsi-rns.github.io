@@ -284,7 +284,8 @@ You can also browse a character in a font with either of these program,
 
 ### Font to Use
 
-I also ask my friend in @dotfiles_id telegram group,
+I also ask some friends,
+in (@dotfiles_id)[https://t.me/dotfiles_id] telegram group,
 about their favorites font. I would like to summarize here:
 
 	Fonts @ dotfiles_id
