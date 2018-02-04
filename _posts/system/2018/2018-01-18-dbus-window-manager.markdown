@@ -207,6 +207,16 @@ $ sudo service dbus status
 
 -- -- --
 
+### Session
+
+If you have policy issue with message 'not authorized to perform'
+while mounting device form Thunar,
+you can run <code>lxsession</code> from terminal to enable it.
+
+![policy: not authorized to perform][image-ss-notauthorized]{: .img-responsive }
+
+-- -- --
+
 ### Credits
 
 Thank you to folks at Slackware Indonesia Telegram Group,
@@ -234,3 +244,4 @@ Thank you for reading
 [image-ss-thunar-with]: {{ asset_path }}/dbus-thunar-with-dbus.png
 [image-ss-xinitrc]:     {{ asset_path }}/dbus-xinitrc.png
 [image-ss-messagebus]:  {{ asset_path }}/dbus-messagebus.png
+[image-ss-notauthorized]: {{ asset_path }}/not-authorized-to-perform.png
