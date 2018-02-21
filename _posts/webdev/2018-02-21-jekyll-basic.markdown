@@ -30,7 +30,7 @@ right away, just like that.
 
 Here, I present a Jekyll Tutorial, step by step, for beginners.
 
-* Pengantar: Daftar Isi
+* Preface: Table of Content
 
 * SSG: Static Site Generator
 
@@ -402,6 +402,9 @@ $ tree
 {% endhighlight %}
 
 #### _includes/head.html
+
+Again, do not let these code below intimidate you.
+This is just an example of <code>liquid</code> template.
 
 {% highlight html %}
 {% raw %}
