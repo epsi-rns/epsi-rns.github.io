@@ -5,6 +5,98 @@
 # to folder _data/all_posts.yml
 
 
+- id: 18020425
+  title: "Linux - Installing Font"
+  url: /desktop/2018/02/04/installing-font.html
+
+- id: 18012917
+  title: "Telegram Bot - Manual Page"
+  url: /code/2018/01/29/telegram-bot-loop-manual.html
+
+- id: 18012817
+  title: "Telegram Bot - Makefile"
+  url: /code/2018/01/28/telegram-bot-loop-makefile.html
+
+- id: 18012617
+  title: "Telegram Bot - BASH Group Tools"
+  url: /code/2018/01/26/telegram-bot-loop-bash.html
+
+- id: 18012417
+  title: "Telegram Bot - BASH Option Argument"
+  url: /code/2018/01/24/telegram-bot-loop-bash.html
+
+- id: 18012317
+  title: "Telegram Bot - BASH Script"
+  url: /code/2018/01/23/telegram-bot-loop-bash.html
+
+- id: 18012217
+  title: "Telegram Bot - BASH CLI"
+  url: /code/2018/01/22/telegram-bot-loop-bash.html
+
+- id: 18012117
+  title: "Telegram Bot - Getting Token"
+  url: /code/2018/01/21/telegram-bot-token.html
+
+- id: 18012017
+  title: "Telegram Bot - Overview"
+  url: /code/2018/01/20/telegram-bot-overview.html
+
+- id: 18011845
+  title: "dbus in Window Manager"
+  url: /system/2018/01/18/dbus-window-manager.html
+
+- id: 18011745
+  title: "Distribution - Slackware Post Install Log"
+  url: /system/2018/01/17/distro-slackware-post-install.html
+
+- id: 18011517
+  title: "Using Git for Working Between Computer"
+  url: /opensource/2018/01/15/using-git.html
+
+- id: 18011335
+  title: "Bootstrap CLI Webtools - Part Three"
+  url: /webdev/2018/01/13/bootstrap-cli.html
+
+- id: 18011235
+  title: "Bootstrap CLI Webtools - Part Two"
+  url: /webdev/2018/01/12/bootstrap-cli.html
+
+- id: 18011135
+  title: "Bootstrap CLI Webtools - Part One"
+  url: /webdev/2018/01/11/bootstrap-cli.html
+
+- id: 18011035
+  title: "Bootstrap CLI Webtools - Summary"
+  url: /webdev/2018/01/10/bootstrap-cli.html
+
+- id: 18010956
+  title: "Using Cloud for Daily Activity"
+  url: /opensource/2018/01/09/using-cloud.html
+
+- id: 18010745
+  title: "File System - Trapped in Snapper Rollback"
+  url: /system/2018/01/07/btrfs-snapper.html
+
+- id: 18010602
+  title: "Jekyll Installation on openSUSE"
+  url: /webdev/2018/01/06/jekyll-basic.html
+
+- id: 18010602
+  title: "Jekyll Installation on openSUSE"
+  url: /webdev/2018/01/06/jekyll-opensuse-install.html
+
+- id: 18010225
+  title: "openSUSE Tumbleweed Tiling Experience"
+  url: /desktop/2018/01/02/opensuse-tiling.html
+
+- id: 17123035
+  title: "Parsing BASH command in ZSH"
+  url: /code/2017/12/30/parse-bash-in-zsh.html
+
+- id: 17122635
+  title: "Iterate Oh My BASH Theme"
+  url: /desktop/2017/12/26/oh-my-shell-theme.html
+
 - id: 17083145
   title: "Docker - Package Management Summary"
   url: /system/2017/08/31/docker-package-summary.html
@@ -96,6 +188,10 @@
 - id: 17081315
   title: "Docker - Void XBPS - Part One"
   url: /system/2017/08/13/docker-void-xbps.html
+
+- id: 17081345
+  title: "Docker - Gentoo Portage - Part Three"
+  url: /system/2017/08/13/docker-gentoo-portage.html
 
 - id: 17081245
   title: "Docker - Gentoo Portage - Part Two"
