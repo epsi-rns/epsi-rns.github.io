@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll - Step by Step"
 categories: webdev
 date:   2018-02-21 09:17:35 +0700

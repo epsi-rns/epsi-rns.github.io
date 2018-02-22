@@ -9,7 +9,7 @@ Jekyll related articles.
 
 *	[About][local-about]
 
-*	[Step-by-step][local-basic]
+*	[Step by Step][local-basic]
 
 ### Install
 
