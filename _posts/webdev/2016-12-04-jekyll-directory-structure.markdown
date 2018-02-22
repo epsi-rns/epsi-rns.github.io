@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll Directory Structure"
 categories: webdev
 date:   2016-12-04 11:52:15 +0700

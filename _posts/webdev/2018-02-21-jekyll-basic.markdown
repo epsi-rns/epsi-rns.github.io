@@ -21,6 +21,10 @@ related_link_ids:
 
 ### Preface
 
+This article is intended for beginner.
+
+> Explain Jekyll Directory Step by Step
+
 Jekyll is not the only **SSG** (Static Site Generator).
 In fact I have migration plan to Hugo.
 But I still find that Jekyll is easy for beginner,

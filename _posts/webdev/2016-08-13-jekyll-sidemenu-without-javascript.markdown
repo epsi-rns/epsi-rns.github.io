@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll Collapsed Sidemenu Without Javascript"
 categories: webdev
 date:   2016-08-13 01:15:15 +0700

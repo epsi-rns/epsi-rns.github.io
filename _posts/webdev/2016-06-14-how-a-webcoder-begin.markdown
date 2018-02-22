@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Step by Step Guidance to be a Webcoder"
 date:   2016-06-14 01:09:15 +0700
 categories: webdev

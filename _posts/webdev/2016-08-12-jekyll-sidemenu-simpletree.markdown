@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll Sidemenu Simple Tree"
 categories: webdev
 date:   2016-08-12 01:15:15 +0700

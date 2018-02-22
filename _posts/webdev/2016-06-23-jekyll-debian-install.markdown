@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll Installation on Debian"
 categories: webdev
 date:   2016-06-23 04:29:15 +0700

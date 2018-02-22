@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll Responsive Side Menu"
 categories: webdev
 date:   2016-08-11 03:15:15 +0700

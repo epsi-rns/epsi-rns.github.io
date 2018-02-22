@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Create Stripes Using Inkscape to Decorate Blog Post"
 categories: webdev
 date:   2016-06-10 02:51:15 +0700
