@@ -5,12 +5,16 @@
   submenu:
   - title: Overview
     url: /webdev/2016/05/14/jekyll-blog-overview.html
+  - title: Step by Step
+    url: /webdev/2018/02/21/jekyll-basic.html
   - title: Webcoder Guidance
     url: /webdev/2016/06/14/how-a-webcoder-begin.html
   - title: Install Debian
     url: /webdev/2016/06/23/jekyll-debian-install.html
   - title: Install Arch
     url: /webdev/2016/06/22/jekyll-arch-install.html
+  - title: Install openSUSE
+    url: /webdev/2018/01/06/jekyll-opensuse-install.html
   - title: Directory Structure
     url: /webdev/2016/12/04/jekyll-directory-structure.html    
 
