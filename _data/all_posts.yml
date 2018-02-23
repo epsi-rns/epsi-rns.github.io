@@ -5,6 +5,10 @@
 # to folder _data/all_posts.yml
 
 
+- id: 18022117
+  title: "Jekyll - Step by Step"
+  url: /webdev/2018/02/21/jekyll-basic.html
+
 - id: 18020425
   title: "Linux - Installing Font"
   url: /desktop/2018/02/04/installing-font.html
@@ -76,10 +80,6 @@
 - id: 18010745
   title: "File System - Trapped in Snapper Rollback"
   url: /system/2018/01/07/btrfs-snapper.html
-
-- id: 18010602
-  title: "Jekyll Installation on openSUSE"
-  url: /webdev/2018/01/06/jekyll-basic.html
 
 - id: 18010602
   title: "Jekyll Installation on openSUSE"

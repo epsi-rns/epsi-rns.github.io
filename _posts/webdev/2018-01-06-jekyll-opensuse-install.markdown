@@ -1,5 +1,6 @@
 ---
-layout: post-sidemenu-jekyll
+# layout: post-sidemenu-jekyll
+layout: post
 title:  "Jekyll Installation on openSUSE"
 categories: webdev
 date:   2018-01-06 16:02:15 +0700
@@ -11,8 +12,9 @@ excerpt:
   This article also cover installing RVM on openSUSE.
 
 related_link_ids: 
+  - 18022117  # Jekyll Step by Step
   - 16062329  # Jekyll Install Debian
-  - 16062202  # Jekyll Install Arch/Manjaro"
+  - 16062202  # Jekyll Install Arch/Manjaro
   - 16052948  # Jekyll Related Posts
 
 ---
