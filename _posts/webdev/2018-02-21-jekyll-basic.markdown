@@ -12,9 +12,9 @@ excerpt:
   When you are done with install, this is what to do.
 
 related_link_ids: 
-  - 18010602  # Jekyll Install openSUSE
   - 16062329  # Jekyll Install Debian
-  - 16062202  # Jekyll Install Arch/Manjaro"
+  - 16062202  # Jekyll Install Arch/Manjaro
+  - 18010602  # Jekyll Install openSUSE
   - 16052948  # Jekyll Related Posts
 
 ---
