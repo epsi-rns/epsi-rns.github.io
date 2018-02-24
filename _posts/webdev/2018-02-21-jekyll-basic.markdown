@@ -19,25 +19,18 @@ related_link_ids:
 
 ---
 
-### Preface
-
 This article is intended for beginner.
 
-> Explain Jekyll Directory Step by Step
+> Goal: Explain Jekyll Directory Step by Step
 
-Jekyll is not the only **SSG** (Static Site Generator).
-In fact I have migration plan to Hugo.
-But I still find that Jekyll is easy for beginner,
-in context of its relationship with **github**.
-You can just uploaded it to github,
-and you can view your **github.io** site,
-right away, just like that.
+
+### Table of Content
 
 Here, I present a Jekyll Tutorial, step by step, for beginners.
 
-* Preface: Table of Content
+* Table of Content
 
-* SSG: Static Site Generator
+* Preface
 
 * 1: Jekyll Build/ Serve
 
@@ -55,13 +48,37 @@ Here, I present a Jekyll Tutorial, step by step, for beginners.
 
 * 8: Directory Structure: *Real Life Site*
 
-* Penutup
+* Conclusion
 
 	Salam mean **greet**, in Indonesia Language
 
 -- -- --
 
-### Static site Generator
+### Preface
+
+Jekyll is an SSG (Static Site Generator) that is supported by **github**.
+Jekyll is not the only **SSG** (Static Site Generator).
+
+
+#### Static Site Generator
+
+SSG is a tool to make a site that contain static HTML.
+
+*	Input: Code in files.
+
+*	Output: Corresponding HTML files.
+
+So basically, we cannot use any dynamic site feature,
+such as form, or database input-output, and so on.
+
+Because this site is static, it is lighter for server to handle,
+no overhead to process PHP or RoR or stuff.
+No need for database processing either.
+
+Static side is also considered safer in security context.
+No input -output means, minimize server security hole.
+
+#### List of Static Site Generator
 
 In case, that you need a broader view about SSG.
 Here is a list:
@@ -82,6 +99,47 @@ Here is a list:
 
 If this list above is not enough, you might consider to have a look at
 [staticgen.com]([https://www.staticgen.com/)
+
+
+#### How Does It Works
+
+*	Static Site: Server only transfer files in directory
+	: either HTML, CSS, Javascript or CSS.
+
+*	Dynamic Site: Server, process script for each **request*.
+	For example: PHP script has html output, even in the client it is still has <code>.php</code> extensions.
+	The rest is usually static: HTML, CSS, Javascript or CSS.
+
+*	SSG: Server make a static site, everytime there is a change in code.
+	In local PC: Everytime we save from text editor in SSG working directory.
+	In github: Every commit to Jekyll Site repository.
+
+In short: server load only happened after commit.
+The rest, server only transfer static data to client (browser).
+That is why the server is lightweight.
+
+#### Why Jeykll ?
+
+Jekyll in context of its relation to **github**, is easy for beginner,
+You can just uploaded it to github, and you can view your **github.io** site,
+right away, just like that.
+
+Honestly, this is the only SSG that I ever use in my real life site.
+So my opinion could be changed over time.
+
+#### Why Not Jeykll ?
+
+In fact I have migration plan to Hugo.
+
+After blogging time to time, after 194 article, Jekyll become so slugish.
+It is because Jekyll is based on Scripting Language (Ruby) that should be interpreted from to to time.
+Meanwhile Hugo is binary based. That is why Hugo is faster.
+
+If you only have a few article below a hundred, Jekyll is perfectly fine.
+
+#### Begin The Guidance
+
+Let's get the tutorial started.
 
 -- -- --
 
@@ -554,7 +612,7 @@ We are almost finished.
 Now it is time to make a post.
 Consider preparing these artefacts:
 
-1. Directory: <code>_post</code>
+1. Directory: <code>_posts</code>
 
 2. Example Post: <code>_posts/2018-02-20-using-jekyll.markdown</code>
 
