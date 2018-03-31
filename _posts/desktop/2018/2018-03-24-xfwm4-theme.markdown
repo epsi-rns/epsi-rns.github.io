@@ -153,7 +153,7 @@ I put a box, 24 px height, filled with gradient with four handles as shown above
 
 *	Handle 2: rgba = (0, 0, 0, 24)
 
-*	Handle 1: rgba = (0, 0, 0, 64)
+*	Handle 3: rgba = (0, 0, 0, 64)
 
 On <code>highlight</code> layer, over the top border: 8px vertical offset of the previous box
 I put a box, 16 px height, filled with gradient with two handles.
