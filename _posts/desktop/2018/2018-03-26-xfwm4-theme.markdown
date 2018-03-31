@@ -22,7 +22,7 @@ related_link_ids:
 
 ArchEdgeUGM, based on ArchEdgeUI.
 
-![xfwm4 Theme: Tutor 04 - ArchEdgeUGM][image-ss-tutor-05-archedge]{: .img-responsive }
+![xfwm4 Theme: Tutor 05 - ArchEdgeUGM][image-ss-tutor-05-archedge]{: .img-responsive }
 
 #### Based On
 
@@ -318,7 +318,7 @@ Tutor Five, Fancy Icon.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[image-ss-tutor-05-archedge]: {{ asset_path }}tutor-05-archedgedugm.png
+[image-ss-tutor-05-archedge]: {{ asset_path }}/tutor-05-archedgedugm.png
 
 [image-ss-tutor-04-gtkcolor]: {{ asset_path }}/tutor-04-preview-full-gtk-appearance.png
 [image-ss-tutor-04-slices]:   {{ asset_path }}/tutor-04-slices.png
