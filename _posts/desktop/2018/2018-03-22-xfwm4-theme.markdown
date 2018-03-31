@@ -240,11 +240,14 @@ We are done with solid border.
 Tutor Three, Minimalist PNG Button.
 We are going to have our very first functional theme.
 This will be equipped with icon, but with minimalist design.
+Consider reading [ [Part Three][local-part-three] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
 [dotfiles-tutor-02]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-02
+
+[local-part-three]:	/webdev/2018/03/23/xfwm4-theme.html
 
 [image-ss-tutor-02-border]:    {{ asset_path }}/tutor-02-border.png
 [image-ss-tutor-02-preview]:   {{ asset_path }}/tutor-02-preview-full.png

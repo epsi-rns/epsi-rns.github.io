@@ -375,11 +375,14 @@ So that user won't click the wrong button.
 ### What's Next
 
 Tutor Five, PNG Fancy Icon.
+Consider finish reading [ [Part Five][local-part-five] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
 [dotfiles-tutor-04]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-04
+
+[local-part-five]:	/webdev/2018/03/25/xfwm4-theme.html
 
 [image-ss-tutor-04-gtkcolor]: {{ asset_path }}/tutor-04-preview-full-gtk-appearance.png
 [image-ss-tutor-04-slices]:   {{ asset_path }}/tutor-04-slices.png

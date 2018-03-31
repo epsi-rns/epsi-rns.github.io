@@ -211,11 +211,14 @@ We are done with our very first step.
 
 Tutor Two, the solid XPM border.
 We are going to utilize XPM instead of PNG.
+Consider alos reading [ [Part Two][local-part-two] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
 [dotfiles-tutor-01]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-01
+
+[local-part-two]:	/webdev/2018/03/22/xfwm4-theme.html
 
 [image-ss-tutor-01-pagesize]:  {{ asset_path }}/tutor-01-page-size.png
 [image-ss-tutor-01-active]:    {{ asset_path }}/tutor-01-ss-active.png
