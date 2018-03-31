@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "XFWM4 Theme - Part One"
+title:  "XFWM4 Theme - Part Two"
 categories: desktop
 date:   2018-03-22 09:25:15 +0700
 tags: [xfwm4, theme, inkscape]
@@ -10,211 +10,245 @@ excerpt:
   XFWM4 theme step by step, covering most style.
   Using Inkscape, one SVG file to create each PNG/XPM part.
 
-related_link_ids:
-  - 16080325  # Install i3 Arch
-  - 16080224  # Install i3 Debian
-
 ---
 
-> Tutor One: PNG Solid Border, Very Basic, No Design Yet.
+{% include post/2018/03/toc-xfwm4-theme.html %}
 
-### First Inkscape Document
+-- -- --
+
+> Tutor Two: XPM Solid Border
+
+No icon yet, we will create a solid border, along with a hole beside the border.
+
+> Hints: Use mogrify to convert from PNG to XPM
+
+### Inkscape Document
 
 	This is the Inkscape Part.
 
-Consider make your first inkscape document.
-Open Inkscape, set <code>custom size</code> in <code>document properties</code>.
+#### SVG Source
 
-#### Document Properties
+SVG source available at:
 
-It can be done from menu (<kbd>File - Document Properties</kbd>).
-Or just press (<kbd>Shift+Ctrl+D</kbd>).
+* [github.com/epsi-rns/dotfiles/.../tutor-02][dotfiles-tutor-02]
 
-* Default Units: px
+#### SVG Filename
 
-* Units: px
+Copy our previous document and name it as <code>tutor-02-solid.svg</code>, or anything you desire.
 
-* Width: 40 px
-
-* Height: 40 px
-
-![xfwm4 Theme: Tutor 01 - Document Properties][image-ss-tutor-01-pagesize]{: .img-responsive }
-
-#### Save
-
-Name it as <code>tutor-01-active.svg</code>, or anything you desire.
-
-#### Layers
-
-Prepare Three Layers.
-Open Layers Dock (<kbd>Shift+Ctrl+L</kbd>).
-
-*	Frame: This is where we define export target name
-
-*	Background: (optional), any solid background is fine,
-	this should cover the size of page, such as 40 px * 40 px .
-
-*	Name: (optional) for use to identify, such as [left, right, bottom, 1, 2, 3 ,4 5]
-
-#### Frame Layer
+#### Box Size
 
 We are using 10px border for this theme.
 
-Create Box, each with [Width * Height]
+Open the SVG file, and select <code>Left</code> box.
+You can see the size is [W*H = 10px * 20px].
 
-*	Bottom Left: [10px * 10px]
+#### Layer
 
-*	Bottom Right: [10px * 10px]
+Create new layer named, <code>theme</code>, or anything you want.
 
-*	Top Left: [10px * 10px]
+Create Solid Border, above the <code>Left</code> box.
+We are going to divide the 10px width into three area
 
-*	Top Right: [10px * 10px]
+*	4px: Black (#000000ff)
 
-*	Bottom: [20px * 10px]
+*	2px: Yellow500 (#fff176ff)
 
-*	Left: [10px * 20px]
+*	4px: Leave it empty, no object.
 
-*	Right: [10px * 20px]
+![xfwm4 Theme: Tutor 02 - Solid Border Window][image-ss-tutor-02-border]{: .img-responsive }
 
-*	Each [1, 2, 3, 4, 5]: [10px * 10px]
+#### The Box.
 
-You may use any color.
-But I prefer google material color blue300 (#64b5f6ff), blue500 (#2196f3ff), blue700 (#1976d2ff), blue900 (#0d47a1ff).
+Continue for each box, until all border finished as a whole.
 
-![xfwm4 Theme: Tutor 01 - Full Preview][image-ss-tutor-01-preview]{: .img-responsive }
+![xfwm4 Theme: Tutor 02 - Slices][image-ss-tutor-02-slices]{: .img-responsive }
 
-#### Export Page
+#### Inactive Border
 
-Export the whole page can be done from menu (<kbd>File - Export PNG Image</kbd>).
-Or just press (<kbd>Shift+Ctrl+E</kbd>).
+Add rounded corner. It require inkscape tools, such as <code>Path - Difference</code>.
 
-Choose <code>Page Tab</code> to export the whole page.
+#### Export PNG
 
-![xfwm4 Theme: Tutor 01 - Active Full Preview][image-ss-tutor-01-slices]{: .img-responsive }
+	This is a tricky part.
 
-#### Slices
+In general, to export the PNG, you must hide both <code>name</code> layer and <code>background</code> layer.
+We do not want any text in PNG. And we want to export the empty space as transparent in PNG.
 
-Select each box in <code>frame</code> layer, you should see tab changing to <code>selection</code> in Export Dock.
-For each box, name the target file as the corresponding box such as <code>bottom-left-active.png</code>, and export the box to PNG.
+Now the tricky part, for each border box parts.
+We must select the box first,
+so we can have the export target filename such as <code>bottom-left-active.png</code>.
+Then we have to hide the <code>frame</code> layer, because we want empty space as transparent.
+You can see the selection in figure below.
+The next thing to do is to click the export button to export PNG.
 
-![xfwm4 Theme: Tutor 01 - Export PNG][image-ss-tutor-01-export]{: .img-responsive }
+![xfwm4 Theme: Tutor 02 - Active Full Preview][image-ss-tutor-02-preview]{: .img-responsive }
 
-You should see the result in file manager.
+Do export for each boxes.
 
-![xfwm4 Theme: Tutor 01 - PNG Files][image-ss-tutor-01-files]{: .img-responsive }
+#### Check The Result
+
+You can see the transparent result in GIMP, just zoom with 16:1, it will be something like this.
+
+![xfwm4 Theme: Tutor 02 - GIMP Preview][image-ss-tutor-02-gimp]{: .img-responsive }
 
 -- -- --
 
-### First Theme
+### Checking Out The Theme
 
 	This is the XFWM Part.
 
-#### Configuration
+#### Mogrify
 
-Beside PNG (or XPM), XFWM4 theme require <code>themerc</code>.
-I won't go deep, since there are already many tutorial about this on the internet.
-Mine was grabbed (copy-paste) from the default XFCE4 theme.
+The last thing to do is to convert PNG files to XPM.
+You can do this using mogrify, from ImageMagick.
 
-{% highlight conf %}
-active_text_color=active_text_color_1
-active_text_shadow_color=active_hilight_1
-
-inactive_text_color=inactive_text_color_2
-inactive_text_shadow_color=inactive_hilight_2
-
-button_offset=2
-button_spacing=0
-
-full_width_title=true
-
-maximized_offset=0
-show_app_icon=true
-shadow_delta_height=-6
-shadow_delta_width=-10
-shadow_delta_x=-12
-shadow_delta_y=-12
-shadow_opacity=100
-
-title_horizontal_offset=1
-title_shadow_active=under
-title_shadow_inactive=under
-title_vertical_offset_active=1
-title_vertical_offset_inactive=1
-
-button_layout=O|TSHMC
+{% highlight bash %}
+$ mogrify -format xpm *.png
 {% endhighlight %}
 
-#### Title Font
+![xfwm4 Theme: Tutor 02 - Mogrify][image-ss-tutor-02-mogrify]{: .img-responsive }
 
-I set font size to <code>0</code> to hide title.
+Now you can safely delete all the PNG file.
 
-#### ./themes
+#### Inside XPM
 
-In order to use the theme, you should copy the content of xfwm4 directory to
-<code>~/.themes/tutor-01/xfwm4</code>.
+It is like a C language script document.
 
-#### Window Manager Setting
+{% highlight c %}
+/* XPM */
+static char *bottom_left_active[] = {
+/* columns rows colors chars-per-pixel */
+"10 10 3 1 ",
+"  c black",
+". c #FFF176",
+"X c None",
+/* pixels */
+"    ..XXXX",
+"    ..XXXX",
+"    ..XXXX",
+"    ..XXXX",
+"    ......",
+"    ......",
+"          ",
+"          ",
+"          ",
+"          "
+};
 
-Now you can set the theme for the Window Manager.
+{% endhighlight %}
 
-![xfwm4 Theme: Tutor 01 - Window Manager Setting][image-ss-tutor-01-setting]{: .img-responsive }
+#### Changing XPM
 
-Choose <code>tutor-01</code>.
+I would like to change the code from <code>X</code> to <code>space</code>,
+so empty transparent area will be represented as space instead on any character.
+
+With my Geany as favorite text editor I can open all XPM,
+and do search and replace at once.
+No magic required, my XPM will be looks like this below.
+
+
+{% highlight c %}
+/* XPM */
+static char *bottom_left_active[] = {
+/* columns rows colors chars-per-pixel */
+"10 10 3 1 ",
+"@ c black",
+". c #FFF176", 
+"  c None",
+/* pixels */
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@......",
+"@@@@......",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@"
+};
+{% endhighlight %}
+
+Now the looks of my XPM, seems make sense.
+
+#### GTK Feature in XPM.
+
+The idea of XPM, is that we can add color feature,
+overriding the hardcoded hexadecimal RGB setting.
+With GTK, we can add <code>active_color_1</code> and <code>active_color_1</code>.
+
+Consider change this part.
+
+{% highlight c %}
+static char *bottom_left_active[] = {
+"@ c black",
+". c #FFF176", 
+"  c None",
+}
+{% endhighlight %}
+
+It is easy when you master your text editor.
+Just do search and replace to get this looks below.
+
+{% highlight c %}
+static char *bottom_left_active[] = {
+"@ c black s active_color_2",
+". c #FFF176 s active_color_1", 
+"  c None",
+}
+{% endhighlight %}
+
+Now, the complete XPM would be as below
+
+{% highlight c %}
+/* XPM */
+static char *bottom_left_active[] = {
+/* columns rows colors chars-per-pixel */
+"10 10 3 1 ",
+"@ c black s active_color_2",
+". c #FFF176 s active_color_1", 
+"  c None",
+/* pixels */
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@......",
+"@@@@......",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@"
+};
+{% endhighlight %}
+
+Do it for each XPM.
 
 #### Result
 
-Voila, you have your first theme.
-Congratulation. Felicitationes.
+The border would follow the color of your GTK appearance, instead of just Yellow.
 
-![xfwm4 Theme: Tutor 01 - Active Border Window][image-ss-tutor-01-active]{: .img-responsive }
+![xfwm4 Theme: Tutor 02 - XPM with GTK Color][image-ss-tutor-02-gtk-color]{: .img-responsive }
 
-But wait, it is not finished yet sir.
-This is just the active Window,
-you also need to setup the inactive window.
-
--- -- --
-
-### Inactive Border
-
-Consider go back to inkscape
-
-*	duplicate the previous active border
-
-*	move to 40px vertical
-
-*	change the frame color to yellow300 (#fff176ff), yellow500 (#ffeb3bff), yellow700 (#fbc02dff), yellow900 (#f57f17ff).
-
-*	For each box, name the target file as the corresponding box such as <code>top-right-inactive</code>, and export the PNG.
-
-*	Copy the content of xfwm4 directory to <code>./theme</code>
-
-![xfwm4 Theme: Tutor 01 - Active Inactive Full Preview][image-ss-tutor-01-borders]{: .img-responsive }
-
-Now, set the theme for the Window Manager, to other than <code>tutor-01</code> such as <code>default</code>.
-After that, reset to <code>tutor-01</code>. You should see the result of inactive border, immediately.
-
-#### Result
-
-![xfwm4 Theme: Tutor 01 - Inactive Border Window][image-ss-tutor-01-inactive]{: .img-responsive }
-
-We are done with our very first step.
+We are done with solid border.
 
 -- -- --
 
 ### What's Next
 
-Tutor Two, the solid XPM border.
-We are going to utilize XPM instead of PNG.
+Tutor Three, Minimalist PNG Button.
+We are going to have our very first functional theme.
+This will be equipped with icon, but with minimalist design.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[image-ss-tutor-01-pagesize]:  {{ asset_path }}/tutor-01-page-size.png
-[image-ss-tutor-01-active]:    {{ asset_path }}/tutor-01-ss-active.png
-[image-ss-tutor-01-inactive]:  {{ asset_path }}/tutor-01-ss-inactive.png
-[image-ss-tutor-01-preview]:   {{ asset_path }}/tutor-01-preview-full.png
-[image-ss-tutor-01-slices]:    {{ asset_path }}/tutor-01-slices-active.png
-[image-ss-tutor-01-borders]:   {{ asset_path }}/tutor-01-slices-inactive.png
-[image-ss-tutor-01-export]:    {{ asset_path }}/tutor-01-export-png.png
-[image-ss-tutor-01-files]:     {{ asset_path }}/tutor-01-png-files.png
-[image-ss-tutor-01-setting]:   {{ asset_path }}/tutor-01-setting-window-manager.png
+[dotfiles-tutor-02]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-02
+
+[image-ss-tutor-02-border]:    {{ asset_path }}/tutor-02-border.png
+[image-ss-tutor-02-preview]:   {{ asset_path }}/tutor-02-preview-full.png
+[image-ss-tutor-02-slices]:    {{ asset_path }}/tutor-02-slices.png
+[image-ss-tutor-02-gimp]:      {{ asset_path }}/tutor-02-gimp.png
+[image-ss-tutor-02-mogrify]:   {{ asset_path }}/tutor-02-ss-mogrify.png
+[image-ss-tutor-02-gtk-color]: {{ asset_path }}/tutor-02-xpm-gtk-color.png

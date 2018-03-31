@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "XFWM4 Theme - Part Two"
+title:  "XFWM4 Theme - Part Three"
 categories: desktop
 date:   2018-03-23 09:25:15 +0700
 tags: [xfwm4, theme, inkscape]
@@ -10,237 +10,197 @@ excerpt:
   XFWM4 theme step by step, covering most style.
   Using Inkscape, one SVG file to create each PNG/XPM part.
 
-related_link_ids:
-  - 16080325  # Install i3 Arch
-  - 16080224  # Install i3 Debian
-
 ---
 
-> Tutor Two: XPM Solid Border
+{% include post/2018/03/toc-xfwm4-theme.html %}
 
-No icon yet, we will create a solid border, along with a hole beside the border.
+-- -- --
 
-> Hints: Use mogrify to convert from PNG to XPM
+> Tutor Three: Flat Design, Minimalist PNG Button
 
 ### Inkscape Document
 
 	This is the Inkscape Part.
 
-#### SVG Filename
+#### SVG Source
 
-Copy our previous document and name it as <code>tutor-02-solid.svg</code>, or anything you desire.
+SVG source available at:
 
-#### Box Size
+* [github.com/epsi-rns/dotfiles/.../tutor-03][dotfiles-tutor-03]
+
+#### Get the SVG
+
+You may make from scratch or get my <code>tutor-03-button.svg</code> from my dotfiles repository at github.
+
+#### Slices
+
+Before you begin this the slices that we want to achieve.
+
+![xfwm4 Theme: Tutor 03 - Slices Preview][image-ss-tutor-03-slices]{: .img-responsive }
+
+#### Border
+
+I won't give much explanation.
+We're already have border tutorial in previous article.
 
 We are using 10px border for this theme.
+Additionaly, the top has 14px height.
+10px solid, with additional 4px empty space.
 
-Open the SVG file, and select <code>Left</code> box.
-You can see the size is [W*H = 10px * 20px].
+![xfwm4 Theme: Tutor 03 - Border Preview][image-ss-tutor-03-border]{: .img-responsive }
 
-#### Layer
+Just export each PNG boxes and test the theme border.
 
-Create new layer named, <code>theme</code>, or anything you want.
+#### Button
 
-Create Solid Border, above the <code>Left</code> box.
-We are going to divide the 10px width into three area
+There are some window buttons, in my <code>themerc</code>, my layout is:
 
-*	4px: Black (#000000ff)
+{% highlight conf %}
+button_layout=O|TSHMC
+{% endhighlight %}
 
-*	2px: Yellow500 (#fff176ff)
+Let me explain with my own window understanding, or better, with target save button
 
-*	4px: Leave it empty, no object.
+*	S  : shade
 
-![xfwm4 Theme: Tutor 02 - Solid Border Window][image-ss-tutor-02-border]{: .img-responsive }
+*	St : shade-toggled
 
-#### The Box.
+*	H  : hide
 
-Continue for each box, until all border finished as a whole.
+*	M  : maximize
 
-![xfwm4 Theme: Tutor 02 - Slices][image-ss-tutor-02-slices]{: .img-responsive }
+*	Mt : maximize-toggled (restore)
 
-#### Inactive Border
+*	C  : close
 
-Add rounded corner. It require inkscape tools, such as <code>Path - Difference</code>.
+*	T  : stick
 
-#### Export PNG
+*	Tt : stick-toggled
 
-	This is a tricky part.
+*	O  : menu
 
-In general, to export the PNG, you must hide both <code>name</code> layer and <code>background</code> layer.
-We do not want any text in PNG. And we want to export the empty space as transparent in PNG.
+Each button has states:
 
-Now the tricky part, for each border box parts.
-We must select the box first,
-so we can have the export target filename such as <code>bottom-left-active.png</code>.
-Then we have to hide the <code>frame</code> layer, because we want empty space as transparent.
-You can see the selection in figure below.
-The next thing to do is to click the export button to export PNG.
+*	active
 
-![xfwm4 Theme: Tutor 02 - Active Full Preview][image-ss-tutor-02-preview]{: .img-responsive }
+*	inactive
 
-Do export for each boxes.
+*	prelight (hover)
 
-#### Check The Result
+*	pressed
 
-You can see the transparent result in GIMP, just zoom with 16:1, it will be something like this.
+So we can have a complete button name, for example for close button such as
 
-![xfwm4 Theme: Tutor 02 - GIMP Preview][image-ss-tutor-02-gimp]{: .img-responsive }
+*	close-active.png
+
+*	close-inactive.png
+
+*	close-prelight.png
+
+*	close-pressed.png
+
+![xfwm4 Theme: Tutor 03 - Button Preview][image-ss-tutor-03-button]{: .img-responsive }
+
+Note that border only have two states [active, inactive], and do not have the other two state [prelight, pressed].
+
+#### Detail
+
+Each box button has the size of [W*H = 20px * 14px].
+You can clone my example, or you have your own creation.
+
+I'm using goggle material color: red100, red300, red500, red700, red900.
+You can use other color as well such as: blue100, blue300, blue500, blue700, blue900.
+Or other color combination, as you desire.
+
+![xfwm4 Theme: Tutor 03 - Detail Guidance][image-ss-tutor-03-detail]{: .img-responsive }
 
 -- -- --
 
-### Checking Out The Theme
+### Minimalist Theme
 
 	This is the XFWM Part.
 
-#### Mogrify
-
-The last thing to do is to convert PNG files to XPM.
-You can do this using mogrify, from ImageMagick.
-
-{% highlight bash %}
-$ mogrify -format xpm *.png
-{% endhighlight %}
-
-![xfwm4 Theme: Tutor 02 - Mogrify][image-ss-tutor-02-mogrify]{: .img-responsive }
-
-Now you can safely delete all the PNG file.
-
-#### Inside XPM
-
-It is like a C language script document.
-
-{% highlight c %}
-/* XPM */
-static char *bottom_left_active[] = {
-/* columns rows colors chars-per-pixel */
-"10 10 3 1 ",
-"  c black",
-". c #FFF176",
-"X c None",
-/* pixels */
-"    ..XXXX",
-"    ..XXXX",
-"    ..XXXX",
-"    ..XXXX",
-"    ......",
-"    ......",
-"          ",
-"          ",
-"          ",
-"          "
-};
-
-{% endhighlight %}
-
-#### Changing XPM
-
-I would like to change the code from <code>X</code> to <code>space</code>,
-so empty transparent area will be represented as space instead on any character.
-
-With my Geany as favorite text editor I can open all XPM,
-and do search and replace at once.
-No magic required, my XPM will be looks like this below.
-
-
-{% highlight c %}
-/* XPM */
-static char *bottom_left_active[] = {
-/* columns rows colors chars-per-pixel */
-"10 10 3 1 ",
-"@ c black",
-". c #FFF176", 
-"  c None",
-/* pixels */
-"@@@@..    ",
-"@@@@..    ",
-"@@@@..    ",
-"@@@@..    ",
-"@@@@......",
-"@@@@......",
-"@@@@@@@@@@",
-"@@@@@@@@@@",
-"@@@@@@@@@@",
-"@@@@@@@@@@"
-};
-{% endhighlight %}
-
-Now the looks of my XPM, seems make sense.
-
-#### GTK Feature in XPM.
-
-The idea of XPM, is that we can add color feature,
-overriding the hardcoded hexadecimal RGB setting.
-With GTK, we can add <code>active_color_1</code> and <code>active_color_1</code>.
-
-Consider change this part.
-
-{% highlight c %}
-static char *bottom_left_active[] = {
-"@ c black",
-". c #FFF176", 
-"  c None",
-}
-{% endhighlight %}
-
-It is easy when you master your text editor.
-Just do search and replace to get this looks below.
-
-{% highlight c %}
-static char *bottom_left_active[] = {
-"@ c black s active_color_2",
-". c #FFF176 s active_color_1", 
-"  c None",
-}
-{% endhighlight %}
-
-Now, the complete XPM would be as below
-
-{% highlight c %}
-/* XPM */
-static char *bottom_left_active[] = {
-/* columns rows colors chars-per-pixel */
-"10 10 3 1 ",
-"@ c black s active_color_2",
-". c #FFF176 s active_color_1", 
-"  c None",
-/* pixels */
-"@@@@..    ",
-"@@@@..    ",
-"@@@@..    ",
-"@@@@..    ",
-"@@@@......",
-"@@@@......",
-"@@@@@@@@@@",
-"@@@@@@@@@@",
-"@@@@@@@@@@",
-"@@@@@@@@@@"
-};
-{% endhighlight %}
-
-Do it for each XPM.
-
 #### Result
 
-The border would follow the color of your GTK appearance, instead of just Yellow.
+Now, we already have our preview.
 
-![xfwm4 Theme: Tutor 02 - XPM with GTK Color][image-ss-tutor-02-gtk-color]{: .img-responsive }
+![xfwm4 Theme: Tutor 03 - Active Window][image-ss-tutor-03-active]{: .img-responsive }
 
-We are done with solid border.
+#### Usability
+
+The issue with minimalist color is that,
+it is good in aestethic issue, but lack of functional aspect.
+In order to solve this usability issue, I put functional icon on keypressed,
+such as the <code>x</code> icon for close.
+So that user won't click the wrong button.
+
+![xfwm4 Theme: Tutor 03 - Usability Issue][image-ss-tutor-03-usable]{: .img-responsive }
+
+-- -- --
+
+### 2bmat Minimalist Theme
+
+For my own exercise , I make this <code>2bmat</code> minimalist theme.
+
+#### SVG Source
+
+SVG source available at:
+
+* [github.com/epsi-rns/dotfiles/.../2bmat][dotfiles-2bmat]
+
+#### Slices
+
+![xfwm4 Theme: 2bmat Slices][image-ss-2bmat-slices]{: .img-responsive }
+
+
+#### Preview
+
+![xfwm4 Theme: 2bmat Preview][image-ss-2bmat]{: .img-responsive }
+
+-- -- --
+
+### xfgaps Minimalist Theme
+
+I also make this <code>xfgaps</code> minimalist theme, that is very suitable for tiling.
+
+#### SVG Source
+
+SVG source available at:
+
+* [github.com/epsi-rns/dotfiles/.../xfgaps][dotfiles-xfgaps]
+
+#### Slices
+
+![xfwm4 Theme: xfgaps Slices][image-ss-xfgaps-slices]{: .img-responsive }
+
+
+#### Preview
+
+![xfwm4 Theme: xfgaps Preview][image-ss-xfgaps]{: .img-responsive }
 
 -- -- --
 
 ### What's Next
 
-Tutor Three, Minimalist PNG Button.
-We are going to have our very first functional theme.
-This will be equipped with icon, but with minimalist design.
+Tutor Four, PNG Gradient over XPM.
+Making a more serious theme.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[image-ss-tutor-02-border]:    {{ asset_path }}/tutor-02-border.png
-[image-ss-tutor-02-preview]:   {{ asset_path }}/tutor-02-preview-full.png
-[image-ss-tutor-02-slices]:    {{ asset_path }}/tutor-02-slices.png
-[image-ss-tutor-02-gimp]:      {{ asset_path }}/tutor-02-gimp.png
-[image-ss-tutor-02-mogrify]:   {{ asset_path }}/tutor-02-ss-mogrify.png
-[image-ss-tutor-02-gtk-color]: {{ asset_path }}/tutor-02-xpm-gtk-color.png
+[dotfiles-tutor-03]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-03
+[dotfiles-2bmat]:     https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/2bmat
+[dotfiles-xfgaps]:    https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xfgaps
+
+[image-ss-tutor-03-slices]:   {{ asset_path }}/tutor-03-slices.png
+[image-ss-tutor-03-border]:   {{ asset_path }}/tutor-03-border.png
+[image-ss-tutor-03-button]:   {{ asset_path }}/tutor-03-button.png
+[image-ss-tutor-03-detail]:   {{ asset_path }}/tutor-03-detail.png
+[image-ss-tutor-03-usable]:   {{ asset_path }}/tutor-03-usability.png
+[image-ss-tutor-03-active]:   {{ asset_path }}/tutor-03-ss-active.png
+
+[image-ss-2bmat]:         {{ asset_path }}/tutor-03-2bmat.png
+[image-ss-2bmat-slices]:  {{ asset_path }}/tutor-03-2bmat-slices.png
+
+[image-ss-xfgaps]:        {{ asset_path }}/tutor-03-xfgaps.png
+[image-ss-xfgaps-slices]: {{ asset_path }}/tutor-03-xfgaps-slices.png

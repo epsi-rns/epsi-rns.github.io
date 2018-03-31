@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "XFWM4 Theme - Part Three"
+title:  "XFWM4 Theme - Part Four"
 categories: desktop
 date:   2018-03-24 09:25:15 +0700
 tags: [xfwm4, theme, inkscape]
@@ -10,115 +10,357 @@ excerpt:
   XFWM4 theme step by step, covering most style.
   Using Inkscape, one SVG file to create each PNG/XPM part.
 
-related_link_ids:
-  - 16080325  # Install i3 Arch
-  - 16080224  # Install i3 Debian
-
 ---
 
-> Tutor Three: Flat Design, Minimalist PNG Button
+{% include post/2018/03/toc-xfwm4-theme.html %}
+
+-- -- --
+
+> Tutor Four: PNG Gradient over XPM
+
+### Preview
+
+Screenshot of shaded window.
+
+![xfwm4 Theme: Tutor 04 - Shade Window][image-ss-tutor-04-shade]{: .img-responsive }
+
+#### Based On
+
+This work, inspired by <code>xfwm-gaps</code>. As my admiration, and respect, to his excellent taste in design.
+
+*	[addy-dclxvi/xfwm4-theme-collections](https://github.com/addy-dclxvi/xfwm4-theme-collections)
+
+-- -- --
 
 ### Inkscape Document
 
 	This is the Inkscape Part.
 
+#### SVG Source
+
+SVG source available at:
+
+* [github.com/epsi-rns/dotfiles/.../tutor-04][dotfiles-tutor-04]
+
 #### Get the SVG
 
-You may make from scratch or get my <code>tutor-03-button.svg</code> from my dotfiles repository at github.
+You may make from scratch or get my <code>tutor-04-button.svg</code> from my dotfiles repository at github.
 
 #### Slices
 
 Before you begin this the slices that we want to achieve.
 
-![xfwm4 Theme: Tutor 03 - Slices Preview][image-ss-tutor-03-slices]{: .img-responsive }
+![xfwm4 Theme: Tutor 04 - Slices Preview][image-ss-tutor-04-slices]{: .img-responsive }
 
-#### Border
+#### Layers
 
-I won't give much explanation.
-We're already have border tutorial in previous article.
+I utilize some more layers, we are going to build this step by step.
 
-We are using 10px border for this theme.
-Additionaly, the top has 14px height.
-10px solid, with additional 4px empty space.
+![xfwm4 Theme: Tutor 04 - Layers][image-ss-tutor-04-layers]{: .img-responsive }
 
-![xfwm4 Theme: Tutor 03 - Border Preview][image-ss-tutor-03-border]{: .img-responsive }
+#### Size
 
-Just export each PNG boxes and test the theme border.
-
-#### Button
-
-There are some window buttons, in my <code>themerc</code>, my layout is:
-
-{% highlight conf %}
-button_layout=O|TSHMC
-{% endhighlight %}
-
-Let me explain with my own window understanding, or better, with target save button
-
-*	S  : shade
-
-*	St : shade-toggled
-
-*	H  : hide
-
-*	M  : maximize
-
-*	Mt : maximize-toggled (restore)
-
-*	C  : close
-
-*	T  : stick
-
-*	Tt : stick-toggled
-
-*	O  : menu
-
-Each button has states:
-
-*	active
-
-*	inactive
-
-*	prelight (hover)
-
-*	pressed
-
-So we can have a complete button name, for example for close button such as
-
-*	close-active.png
-
-*	close-inactive.png
-
-*	close-prelight.png
-
-*	close-pressed.png
-
-![xfwm4 Theme: Tutor 03 - Button Preview][image-ss-tutor-03-button]{: .img-responsive }
-
-Note that border only have two states [active, inactive], and do not have the other two state [prelight, pressed].
-
-#### Detail
-
-Each box button has the size of [W*H = 20px * 14px].
-You can clone my example, or you have your own creation.
-
-I'm using goggle material color: red100, red300, red500, red700, red900.
-You can use other color as well such as: blue100, blue300, blue500, blue700, blue900.
-Or other color combination, as you desire.
-
-![xfwm4 Theme: Tutor 03 - Detail Guidance][image-ss-tutor-03-detail]{: .img-responsive }
+We are using, only 5px border for this theme.
+Except, the top has 24px height.
 
 -- -- --
 
-### Minimalist Theme
+### Building the XPM
+
+	This is also the Inkscape Part.
+
+Since we are going to use both XPM and PNG, first we should make our flat XPM.
+
+#### Size and Color
+
+We are using, only 5px border for this theme.
+Except, the top has 24px height.
+All the buttons also have 24px height.
+
+Size:
+
+*	left, right, bottom: 5px
+
+*	top, title, button, menu: 24px
+
+Colors:
+
+*	active: grey200 (#eeeeeeff)
+
+*	inactive: grey400 (#e0e0e0ff)
+
+Create a new layer called XPM and make each boxes as below.
+
+![xfwm4 Theme: Tutor 04 - XPM Slices Preview][image-ss-tutor-04-xpm]{: .img-responsive }
+
+
+#### Export PNG
+
+	This is not a tricky part.
+
+In general, to export the PNG, you must hide the <code>name</code> layer.
+No need to hide the <code>background</code> layer, since no hollow
+I mean all box area covered by solid color.
+
+There is no tricky part here.
+Just lock all layers, except frames.
+Then each time you click any frame box, 
+it will show the target filename such as <code>bottom-left-active.png</code>.
+
+Now, please export all necessary boxes.
+
+#### Mogrify
+
+Do not forget to convert to XPM using Mogrify.
+And also do not forget to delete all the PNG.
+
+{% highlight bash %}
+$ mogrify -format xpm *.png
+{% endhighlight %}
+
+#### Tips
+
+Since we are going to concentrate on making PNG,
+you may put all the XPMs on ther directory,
+and merge later after we're done with all the PNGs.
+
+-- -- --
+
+### Gradient and Highlight
+
+	This is still the Inkscape Part.
+
+#### Layer
+
+I utilize some more layers, such as this two
+
+*	gradient
+
+*	layer
+
+#### Border
+
+Remember that, the top has 24px height.
+
+![xfwm4 Theme: Tutor 04 - Border Preview][image-ss-tutor-04-border]{: .img-responsive }
+
+On <code>gradient</code> layer, over the top border:
+I put a box, 24 px height, filled with gradient with four handles as shown above.
+
+*	Handle 0: rgba = (0, 0, 0, 80)
+
+*	Handle 1: rgba = (0, 0, 0, 48)
+
+*	Handle 2: rgba = (0, 0, 0, 24)
+
+*	Handle 1: rgba = (0, 0, 0, 64)
+
+On <code>highlight</code> layer, over the top border: 8px vertical offset of the previous box
+I put a box, 16 px height, filled with gradient with two handles.
+
+*	Handle 0: rgba = (255, 255, 255, 255)
+
+*	Handle 1: rgba = (255, 255, 255, 40)
+
+Neither gradient or highlight on inactive border. It is just simply flat.
+
+#### Export
+
+Now that we are done, we can export each PNG boxes and test the theme border.
+
+-- -- --
+
+### Button
+
+	This is still also the Inkscape Part.
+
+#### Specification
+
+*	Size: W*H = 32px * 24px.  Each box button has this size.
+
+*	Colors: Using Google Material: Red, Green , Blue, Orange, Indigo. 
+	Each box button has different color. Toggle button has the same color as its base button.
+
+You may have different, to suit your needs.
+
+#### Layout
+
+We are going to make a uniform shape for each button.
+Hence, any button layout is fine. 
+In my <code>themerc</code>, you can use <code>O|TSHMC</code> layout.
+
+![xfwm4 Theme: Tutor 04 - Button Preview][image-ss-tutor-04-button]{: .img-responsive }
+
+#### Details
+
+There are four details, for each use the same spec as these below
+
+*	Active: 
+
+	*	layer icon: circle of 12 px radius with red300 color
+
+	*	layer icon-border: circle of 16 px radius with white color
+
+	![xfwm4 Theme: Tutor 04 - Detail Active][image-ss-tutor-04-button-active]{: .img-responsive }
+
+* Inactive:
+
+	*	layer icon: circle of 12 px radius with red300 color
+
+	*	layer icon-border: circle of 16 px radius with white color
+
+	![xfwm4 Theme: Tutor 04 - Detail Inactive][image-ss-tutor-04-button-inactive]{: .img-responsive }
+
+* Prelight
+
+	*	layer icon: circle of 12 px radius with red300 color
+
+	*	layer icon-border: circle of 16 px radius with white color
+
+	*	layer button: cut circle of 28 px radius with red700 color
+
+	![xfwm4 Theme: Tutor 04 - Detail Prelight][image-ss-tutor-04-button-prelight]{: .img-responsive }
+
+* Pressed, give an icon to solve usability issue.
+
+	*	layer icon: circle of 12 px radius with red300 color
+
+	*	layer icon-border: circle of 16 px radius with white color
+
+	*	layer button: cut circle of 32 px radius with red700 color
+
+	*	layer icon: <code>x</code> shape with red900 color
+
+	![xfwm4 Theme: Tutor 04 - Detail Pressed][image-ss-tutor-04-button-pressed]{: .img-responsive }
+
+#### Export
+
+	This is a tricky part.
+
+Consider set these layers before export:
+
+*	Locked: icon, icon-border, button, highlight, gradient
+
+*	Unlocked: Frame
+
+*	Hide: name, XPM, background
+
+Now the tricky part, for each border box parts.
+We must select the box first in <code>frame</code> layer,
+so we can have the export target filename such as <code>bottom-left-active.png</code>.
+Then we have to hide the <code>frame</code> layer, because we want empty space as transparent.
+The next thing to do is to click the export button to export PNG.
+
+Unhide the <code>frame</code> layer, to select other box.
+
+-- -- --
+
+### Gradient Theme
 
 	This is the XFWM Part.
 
-#### Result
+#### Configuration
+
+This is the required <code>themerc</code> for this theme.
+
+{% highlight conf %}
+active_text_color=#444444
+inactive_text_color=#888888
+
+button_offset=2
+button_spacing=0
+
+full_width_title=true
+
+maximized_offset=0
+show_app_icon=true
+shadow_delta_height=-6
+shadow_delta_width=-10
+shadow_delta_x=-12
+shadow_delta_y=-12
+shadow_opacity=100
+
+title_horizontal_offset=1
+title_shadow_active=false
+title_shadow_inactive=under
+title_vertical_offset_active=1
+title_vertical_offset_inactive=1
+
+button_layout=O|STHMC
+{% endhighlight %}
+
+#### Title Font
+
+Optionally, You may set font size <code>0</code> to hide title.
+
+#### XPM
+
+You can use merge GTK color feature into XPM.
+
+Consider this XPM.
+
+{% highlight c %}
+/* XPM */
+static char *bottom_active[] = {
+/* columns rows colors chars-per-pixel */
+"20 5 1 1 ",
+"  c gray88",
+/* pixels */
+"                    ",
+"                    ",
+"                    ",
+"                    ",
+"                    "
+};
+{% endhighlight %}
+
+Just search and replace from
+
+{% highlight conf %}
+"  c gray88",
+{% endhighlight %}
+
+to
+
+{% highlight conf %}
+"  c gray88 s active_color_2",
+{% endhighlight %}
+
+and respectively also search and replace from
+
+{% highlight conf %}
+"  c #EEEEEE",
+{% endhighlight %}
+
+to
+
+{% highlight conf %}
+"  c #EEEEEE s inactive_color_2",
+{% endhighlight %}
+
+Note that you can also utilize <code>color_1</code>,
+instead of <code>color_2</code>, by search and replace.
+
+#### XPM and PNG
+
+Now, merge the XPM directory to xfwm4 directory,
+so the XPM and the PNG has the same directory.
+
+#### Changing Color
+
+You can change GTK Appearance from system setting.
+
+![xfwm4 Theme: Tutor 04 - GTK Appearance][image-ss-tutor-04-gtkcolor]{: .img-responsive }
+
+You are done with GTK color.
+
+-- -- --
+
+### Result
 
 Now, we already have our preview.
 
-![xfwm4 Theme: Tutor 03 - Active Window][image-ss-tutor-03-active]{: .img-responsive }
+![xfwm4 Theme: Tutor 04 - Active Window][image-ss-tutor-04-active]{: .img-responsive }
 
 #### Usability
 
@@ -128,21 +370,27 @@ In order to solve this usability issue, I put functional icon on keypressed,
 such as the <code>x</code> icon for close.
 So that user won't click the wrong button.
 
-![xfwm4 Theme: Tutor 03 - Usability Issue][image-ss-tutor-03-usable]{: .img-responsive }
-
 -- -- --
 
 ### What's Next
 
-Tutor Four, PNG Gradient over XPM.
-Making a more serious theme.
+Tutor Five, PNG Fancy Icon.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[image-ss-tutor-03-slices]:   {{ asset_path }}/tutor-03-slices.png
-[image-ss-tutor-03-border]:   {{ asset_path }}/tutor-03-border.png
-[image-ss-tutor-03-button]:   {{ asset_path }}/tutor-03-button.png
-[image-ss-tutor-03-detail]:   {{ asset_path }}/tutor-03-detail.png
-[image-ss-tutor-03-usable]:   {{ asset_path }}/tutor-03-usability.png
-[image-ss-tutor-03-active]:   {{ asset_path }}/tutor-03-ss-active.png
+[dotfiles-tutor-04]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-04
+
+[image-ss-tutor-04-gtkcolor]: {{ asset_path }}/tutor-04-preview-full-gtk-appearance.png
+[image-ss-tutor-04-slices]:   {{ asset_path }}/tutor-04-slices.png
+[image-ss-tutor-04-layers]:   {{ asset_path }}/tutor-04-layers.png
+[image-ss-tutor-04-border]:   {{ asset_path }}/tutor-04-border.png
+[image-ss-tutor-04-xpm]:      {{ asset_path }}/tutor-04-xpm.png
+[image-ss-tutor-04-button]:   {{ asset_path }}/tutor-04-button.png
+[image-ss-tutor-04-shade]:    {{ asset_path }}/tutor-04-shade.png
+[image-ss-tutor-04-active]:   {{ asset_path }}/tutor-04-ss-active.png
+
+[image-ss-tutor-04-button-active]:   {{ asset_path }}/tutor-04-button-active.png
+[image-ss-tutor-04-button-inactive]: {{ asset_path }}/tutor-04-button-inactive.png
+[image-ss-tutor-04-button-prelight]: {{ asset_path }}/tutor-04-button-prelight.png
+[image-ss-tutor-04-button-pressed]:  {{ asset_path }}/tutor-04-button-pressed.png

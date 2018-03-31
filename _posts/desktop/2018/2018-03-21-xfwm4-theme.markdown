@@ -1,6 +1,6 @@
 ---
 layout: post-sidemenu-wm
-title:  "XFWM4 Theme - Overview"
+title:  "XFWM4 Theme - Part One"
 categories: desktop
 date:   2018-03-21 09:25:15 +0700
 tags: [xfwm4, theme, inkscape]
@@ -10,141 +10,219 @@ excerpt:
   XFWM4 theme step by step, covering most style.
   Using Inkscape, one SVG file to create each PNG/XPM part.
 
-related_link_ids:
-  - 16080325  # Install i3 Arch
-  - 16080224  # Install i3 Debian
-
 ---
 
-### Preface
-
-> Goal: Explaining XFWM4 Theme Step by Step
-
-After two years using Tiling Window Manager,
-people start to ask me how to do this, and that,
-and how to where to start learning.
-First I thought openbox is good start,
-but I take further backward, 
-start from theme instead, using XFCE4.
-It means XFWM4 theme.
-
-![xfwm4 Theme: xfgaps tiling screenshot][image-ss-xfgaps-tiling]{: .img-responsive }
-
-> Also: Reusable SVG, as a base for XFWM4 theme.
-
-I have been also using inkscape for years,
-it is a good tools to make a theme.
-But instead of make a different SVG for each part.
-I create only one SVG for each theme,
-luckily inkscape has export feature that can be utilized
-to manage filename target for each part.
-
-![xfwm4 Theme: xfgaps SVG slices][image-ss-xfgaps-slices]{: .img-responsive }
-
-	This guidance applied for any distribution.
-
-### Reading
-
-Before you begin.
-Reading this, is a must:
-
-*	[howto/xfwm4_theme](https://wiki.xfce.org/howto/xfwm4_theme)
-
-All material from in this article based on above link.
-
-### Table of Content
-
-Here, I present a XFWM4 Tutorial, step by step, for beginners.
-
-1.	PNG Solid Border (Very Basic, No Design Yet)
-
-	![xfwm4 Theme: Tutor 01 - PNG Solid Border][image-ss-tutor-01-term]{: .img-responsive }
-
-2.	XPM Solid Border
-
-	![xfwm4 Theme: Tutor 02 - XPM Tranparent Border][image-ss-tutor-02-term]{: .img-responsive }
-
-3.	Minimalist PNG Button (Flat Design)
-
-	![xfwm4 Theme: Tutor 03 - Minimalist PNG][image-ss-tutor-03-term]{: .img-responsive }
-
-4.	PNG Gradient over XPM
-
-	![xfwm4 Theme: Tutor 04 - PNG Gradient over XPM][image-ss-tutor-04-term]{: .img-responsive }
-
-5.	PNG Fancy Icon
-
-	![xfwm4 Theme: Tutor 05 - PNG Fancy Icon][image-ss-tutor-05-term]{: .img-responsive }
-
-
-For each guidance, there is two parts.
-
-*	Inkscape Part
-
-*	Theme Part
+{% include post/2018/03/toc-xfwm4-theme.html %}
 
 -- -- --
 
-### Using Inkscape XML
+> Tutor One: PNG Solid Border, Very Basic, No Design Yet.
 
-I have made my Inkscape in my PC.
-I also have made the target for each export for my particular home directory.
-And of course, you have your own home directory, that is sifferent than mine.
+### First Inkscape Document
 
-{% highlight xml %}
-<svg
-   ...
-   inkscape:export-filename="/home/epsi/2018 - Inkscape/themes/tutor-01/tutor-01.png"
-   inkscape:export-xdpi="90"
-   inkscape:export-ydpi="90">
-{% endhighlight %}
+	This is the Inkscape Part.
 
-You can easily open the SVG file using any text editor,
-and do such search and replace to suit your own needs.
+Consider make your first inkscape document.
+Open Inkscape, set <code>custom size</code> in <code>document properties</code>.
 
-{% highlight xml %}
-<svg
-   ...
-   inkscape:export-filename="/home/sapi/.themes/tutor-01/xfwm4/tutor-01.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
-{% endhighlight %}
+#### SVG Source
 
-![xfwm4 Theme: SVG XML Search and Replace][image-ss-search-replace]{: .img-responsive }
+SVG source available at:
 
-I mostly use text editor to fix dpi issue.
+* [github.com/epsi-rns/dotfiles/.../tutor-01][dotfiles-tutor-01]
+
+#### Document Properties
+
+It can be done from menu (<kbd>File - Document Properties</kbd>).
+Or just press (<kbd>Shift+Ctrl+D</kbd>).
+
+* Default Units: px
+
+* Units: px
+
+* Width: 40 px
+
+* Height: 40 px
+
+![xfwm4 Theme: Tutor 01 - Document Properties][image-ss-tutor-01-pagesize]{: .img-responsive }
+
+#### Save
+
+Name it as <code>tutor-01-active.svg</code>, or anything you desire.
+
+#### Layers
+
+Prepare Three Layers.
+Open Layers Dock (<kbd>Shift+Ctrl+L</kbd>).
+
+*	Frame: This is where we define export target name
+
+*	Background: (optional), any solid background is fine,
+	this should cover the size of page, such as 40 px * 40 px .
+
+*	Name: (optional) for use to identify, such as [left, right, bottom, 1, 2, 3 ,4 5]
+
+#### Frame Layer
+
+We are using 10px border for this theme.
+
+Create Box, each with [Width * Height]
+
+*	Bottom Left: [10px * 10px]
+
+*	Bottom Right: [10px * 10px]
+
+*	Top Left: [10px * 10px]
+
+*	Top Right: [10px * 10px]
+
+*	Bottom: [20px * 10px]
+
+*	Left: [10px * 20px]
+
+*	Right: [10px * 20px]
+
+*	Each [1, 2, 3, 4, 5]: [10px * 10px]
+
+You may use any color.
+But I prefer google material color blue300 (#64b5f6ff), blue500 (#2196f3ff), blue700 (#1976d2ff), blue900 (#0d47a1ff).
+
+![xfwm4 Theme: Tutor 01 - Full Preview][image-ss-tutor-01-preview]{: .img-responsive }
+
+#### Export Page
+
+Export the whole page can be done from menu (<kbd>File - Export PNG Image</kbd>).
+Or just press (<kbd>Shift+Ctrl+E</kbd>).
+
+Choose <code>Page Tab</code> to export the whole page.
+
+![xfwm4 Theme: Tutor 01 - Active Full Preview][image-ss-tutor-01-slices]{: .img-responsive }
+
+#### Slices
+
+Select each box in <code>frame</code> layer, you should see tab changing to <code>selection</code> in Export Dock.
+For each box, name the target file as the corresponding box such as <code>bottom-left-active.png</code>, and export the box to PNG.
+
+![xfwm4 Theme: Tutor 01 - Export PNG][image-ss-tutor-01-export]{: .img-responsive }
+
+You should see the result in file manager.
+
+![xfwm4 Theme: Tutor 01 - PNG Files][image-ss-tutor-01-files]{: .img-responsive }
 
 -- -- --
 
-### Material Color
+### First Theme
 
-I'm using Google Material Color
+	This is the XFWM Part.
 
-* [material.io/guidelines/style/color.html](https://material.io/guidelines/style/color.html)
+#### Configuration
 
-There is also an inkscape palette:
+Beside PNG (or XPM), XFWM4 theme require <code>themerc</code>.
+I won't go deep, since there are already many tutorial about this on the internet.
+Mine was grabbed (copy-paste) from the default XFCE4 theme.
 
-* [KiSSFLOW/gimp-material-design-color-palette](https://github.com/KiSSFLOW/gimp-material-design-color-palette)
+{% highlight conf %}
+active_text_color=active_text_color_1
+active_text_shadow_color=active_hilight_1
 
-A very useful stuff, you just have to put it at <code>~/.config/inkscape/palletes</code>.
+inactive_text_color=inactive_text_color_2
+inactive_text_shadow_color=inactive_hilight_2
+
+button_offset=2
+button_spacing=0
+
+full_width_title=true
+
+maximized_offset=0
+show_app_icon=true
+shadow_delta_height=-6
+shadow_delta_width=-10
+shadow_delta_x=-12
+shadow_delta_y=-12
+shadow_opacity=100
+
+title_horizontal_offset=1
+title_shadow_active=under
+title_shadow_inactive=under
+title_vertical_offset_active=1
+title_vertical_offset_inactive=1
+
+button_layout=O|TSHMC
+{% endhighlight %}
+
+#### Title Font
+
+I set font size to <code>0</code> to hide title.
+
+#### ./themes
+
+In order to use the theme, you should copy the content of xfwm4 directory to
+<code>~/.themes/tutor-01/xfwm4</code>.
+
+#### Window Manager Setting
+
+Now you can set the theme for the Window Manager.
+
+![xfwm4 Theme: Tutor 01 - Window Manager Setting][image-ss-tutor-01-setting]{: .img-responsive }
+
+Choose <code>tutor-01</code>.
+
+#### Result
+
+Voila, you have your first theme.
+Congratulation. Felicitationes.
+
+![xfwm4 Theme: Tutor 01 - Active Border Window][image-ss-tutor-01-active]{: .img-responsive }
+
+But wait, it is not finished yet sir.
+This is just the active Window,
+you also need to setup the inactive window.
+
+-- -- --
+
+### Inactive Border
+
+Consider go back to inkscape
+
+*	duplicate the previous active border
+
+*	move to 40px vertical
+
+*	change the frame color to yellow300 (#fff176ff), yellow500 (#ffeb3bff), yellow700 (#fbc02dff), yellow900 (#f57f17ff).
+
+*	For each box, name the target file as the corresponding box such as <code>top-right-inactive</code>, and export the PNG.
+
+*	Copy the content of xfwm4 directory to <code>./theme</code>
+
+![xfwm4 Theme: Tutor 01 - Active Inactive Full Preview][image-ss-tutor-01-borders]{: .img-responsive }
+
+Now, set the theme for the Window Manager, to other than <code>tutor-01</code> such as <code>default</code>.
+After that, reset to <code>tutor-01</code>. You should see the result of inactive border, immediately.
+
+#### Result
+
+![xfwm4 Theme: Tutor 01 - Inactive Border Window][image-ss-tutor-01-inactive]{: .img-responsive }
+
+We are done with our very first step.
 
 -- -- --
 
 ### What's Next
 
-Tutor One, PNG Solid Border.
-Let's get it started.
-
+Tutor Two, the solid XPM border.
+We are going to utilize XPM instead of PNG.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[image-ss-xfgaps-tiling]:  {{ asset_path }}/overview-xfgaps-tiling.png
-[image-ss-xfgaps-slices]:  {{ asset_path }}/overview-xfgaps-slices.png
-[image-ss-search-replace]: {{ asset_path }}/overview-svg-search-and-replace.png
+[dotfiles-tutor-01]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-01
 
-[image-ss-tutor-01-term]:  {{ asset_path }}/tutor-01-ss-inactive.png
-[image-ss-tutor-02-term]:  {{ asset_path }}/tutor-02-ss-mogrify.png
-[image-ss-tutor-03-term]:  {{ asset_path }}/tutor-03-ss-active.png
-[image-ss-tutor-04-term]:  {{ asset_path }}/tutor-04-ss-active.png
-[image-ss-tutor-05-term]:  {{ asset_path }}/tutor-05-ss-xftab.png
+[image-ss-tutor-01-pagesize]:  {{ asset_path }}/tutor-01-page-size.png
+[image-ss-tutor-01-active]:    {{ asset_path }}/tutor-01-ss-active.png
+[image-ss-tutor-01-inactive]:  {{ asset_path }}/tutor-01-ss-inactive.png
+[image-ss-tutor-01-preview]:   {{ asset_path }}/tutor-01-preview-full.png
+[image-ss-tutor-01-slices]:    {{ asset_path }}/tutor-01-slices-active.png
+[image-ss-tutor-01-borders]:   {{ asset_path }}/tutor-01-slices-inactive.png
+[image-ss-tutor-01-export]:    {{ asset_path }}/tutor-01-export-png.png
+[image-ss-tutor-01-files]:     {{ asset_path }}/tutor-01-png-files.png
+[image-ss-tutor-01-setting]:   {{ asset_path }}/tutor-01-setting-window-manager.png

@@ -1,0 +1,160 @@
+---
+layout: post-sidemenu-wm
+title:  "XFWM4 Theme - Overview"
+categories: desktop
+date:   2018-03-20 09:25:15 +0700
+tags: [xfwm4, theme, inkscape]
+author: epsi
+
+excerpt:
+  XFWM4 theme step by step, covering most style.
+  Using Inkscape, one SVG file to create each PNG/XPM part.
+
+---
+
+{% include post/2018/03/toc-xfwm4-theme.html %}
+
+-- -- --
+
+### Preface
+
+> Goal: Explaining XFWM4 Theme Step by Step
+
+After two years using Tiling Window Manager,
+people start to ask me how to do this, and that,
+and how to where to start learning.
+First I thought openbox is good start,
+but I take further backward, 
+start from theme instead, using XFCE4.
+It means XFWM4 theme.
+
+![xfwm4 Theme: xfgaps tiling screenshot][image-ss-xfgaps-tiling]{: .img-responsive }
+
+> Also: Reusable SVG, as a base for XFWM4 theme.
+
+I have been also using inkscape for years,
+it is a good tools to make a theme.
+But instead of make a different SVG for each part.
+I create only one SVG for each theme,
+luckily inkscape has export feature that can be utilized
+to manage filename target for each part.
+
+![xfwm4 Theme: xfgaps SVG slices][image-ss-xfgaps-slices]{: .img-responsive }
+
+	This guidance applied for any distribution.
+
+### Reading
+
+Before you begin.
+Reading this, is a must:
+
+*	[howto/xfwm4_theme](https://wiki.xfce.org/howto/xfwm4_theme)
+
+All material from in this article based on above link.
+
+### Table of Content
+
+Here, I present a XFWM4 Tutorial, step by step, for beginners.
+
+1.	PNG Solid Border (Very Basic, No Design Yet)
+
+	![xfwm4 Theme: Tutor 01 - PNG Solid Border][image-ss-tutor-01-term]{: .img-responsive }
+
+2.	XPM Solid Border
+
+	![xfwm4 Theme: Tutor 02 - XPM Tranparent Border][image-ss-tutor-02-term]{: .img-responsive }
+
+3.	Minimalist PNG Button (Flat Design)
+
+	![xfwm4 Theme: Tutor 03 - Minimalist PNG][image-ss-tutor-03-term]{: .img-responsive }
+
+4.	PNG Gradient over XPM
+
+	![xfwm4 Theme: Tutor 04 - PNG Gradient over XPM][image-ss-tutor-04-term]{: .img-responsive }
+
+5.	PNG Fancy Icon
+
+	![xfwm4 Theme: Tutor 05 - PNG Fancy Icon][image-ss-tutor-05-term]{: .img-responsive }
+
+
+For each guidance, there is two parts.
+
+*	Inkscape Part
+
+*	Theme Part
+
+-- -- --
+
+#### SVG Source
+
+SVG source available at:
+
+* [github.com/epsi-rns/dotfiles/.../themes][dotfiles-tutor]
+
+-- -- --
+
+### Using Inkscape XML
+
+I have made my SVG using Inkscape in my PC.
+I also have made the target for each export for my particular home directory.
+And of course, you have your own home directory, that is sifferent than mine.
+
+{% highlight xml %}
+<svg
+   ...
+   inkscape:export-filename="/home/epsi/2018 - Inkscape/themes/tutor-01/tutor-01.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+{% endhighlight %}
+
+You can easily open the SVG file using any text editor,
+and do such search and replace to suit your own needs.
+
+{% highlight xml %}
+<svg
+   ...
+   inkscape:export-filename="/home/sapi/.themes/tutor-01/xfwm4/tutor-01.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+{% endhighlight %}
+
+![xfwm4 Theme: SVG XML Search and Replace][image-ss-search-replace]{: .img-responsive }
+
+I mostly use text editor to fix dpi issue.
+
+-- -- --
+
+### Material Color
+
+I'm using Google Material Color
+
+* [material.io/guidelines/style/color.html](https://material.io/guidelines/style/color.html)
+
+There is also an inkscape palette:
+
+* [KiSSFLOW/gimp-material-design-color-palette](https://github.com/KiSSFLOW/gimp-material-design-color-palette)
+
+A very useful stuff, you just have to put it at <code>~/.config/inkscape/palletes</code>.
+
+-- -- --
+
+### What's Next
+
+Tutor One, PNG Solid Border.
+Let's get it started.
+
+
+[//]: <> ( -- -- -- links below -- -- -- )
+{% assign asset_path = '/assets/posts/desktop/2018/03' %}
+
+[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes
+
+[image-ss-xfgaps-tiling]:  {{ asset_path }}/overview-xfgaps-tiling.png
+[image-ss-xfgaps-slices]:  {{ asset_path }}/overview-xfgaps-slices.png
+[image-ss-search-replace]: {{ asset_path }}/overview-svg-search-and-replace.png
+
+[image-ss-tutor-01-term]:  {{ asset_path }}/tutor-01-ss-inactive.png
+[image-ss-tutor-02-term]:  {{ asset_path }}/tutor-02-ss-mogrify.png
+[image-ss-tutor-03-term]:  {{ asset_path }}/tutor-03-ss-active.png
+[image-ss-tutor-04-term]:  {{ asset_path }}/tutor-04-ss-active.png
+[image-ss-tutor-05-term]:  {{ asset_path }}/tutor-05-ss-xftab.png
