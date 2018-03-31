@@ -1,0 +1,148 @@
+---
+layout: post-sidemenu-wm
+title:  "XFWM4 Theme - Part Three"
+categories: desktop
+date:   2018-03-24 09:25:15 +0700
+tags: [xfwm4, theme, inkscape]
+author: epsi
+
+excerpt:
+  XFWM4 theme step by step, covering most style.
+  Using Inkscape, one SVG file to create each PNG/XPM part.
+
+related_link_ids:
+  - 16080325  # Install i3 Arch
+  - 16080224  # Install i3 Debian
+
+---
+
+> Tutor Three: Flat Design, Minimalist PNG Button
+
+### Inkscape Document
+
+	This is the Inkscape Part.
+
+#### Get the SVG
+
+You may make from scratch or get my <code>tutor-03-button.svg</code> from my dotfiles repository at github.
+
+#### Slices
+
+Before you begin this the slices that we want to achieve.
+
+![xfwm4 Theme: Tutor 03 - Slices Preview][image-ss-tutor-03-slices]{: .img-responsive }
+
+#### Border
+
+I won't give much explanation.
+We're already have border tutorial in previous article.
+
+We are using 10px border for this theme.
+Additionaly, the top has 14px height.
+10px solid, with additional 4px empty space.
+
+![xfwm4 Theme: Tutor 03 - Border Preview][image-ss-tutor-03-border]{: .img-responsive }
+
+Just export each PNG boxes and test the theme border.
+
+#### Button
+
+There are some window buttons, in my <code>themerc</code>, my layout is:
+
+{% highlight conf %}
+button_layout=O|TSHMC
+{% endhighlight %}
+
+Let me explain with my own window understanding, or better, with target save button
+
+*	S  : shade
+
+*	St : shade-toggled
+
+*	H  : hide
+
+*	M  : maximize
+
+*	Mt : maximize-toggled (restore)
+
+*	C  : close
+
+*	T  : stick
+
+*	Tt : stick-toggled
+
+*	O  : menu
+
+Each button has states:
+
+*	active
+
+*	inactive
+
+*	prelight (hover)
+
+*	pressed
+
+So we can have a complete button name, for example for close button such as
+
+*	close-active.png
+
+*	close-inactive.png
+
+*	close-prelight.png
+
+*	close-pressed.png
+
+![xfwm4 Theme: Tutor 03 - Button Preview][image-ss-tutor-03-button]{: .img-responsive }
+
+Note that border only have two states [active, inactive], and do not have the other two state [prelight, pressed].
+
+#### Detail
+
+Each box button has the size of [W*H = 20px * 14px].
+You can clone my example, or you have your own creation.
+
+I'm using goggle material color: red100, red300, red500, red700, red900.
+You can use other color as well such as: blue100, blue300, blue500, blue700, blue900.
+Or other color combination, as you desire.
+
+![xfwm4 Theme: Tutor 03 - Detail Guidance][image-ss-tutor-03-detail]{: .img-responsive }
+
+-- -- --
+
+### Minimalist Theme
+
+	This is the XFWM Part.
+
+#### Result
+
+Now, we already have our preview.
+
+![xfwm4 Theme: Tutor 03 - Active Window][image-ss-tutor-03-active]{: .img-responsive }
+
+#### Usability
+
+The issue with minimalist color is that,
+it is good in aestethic issue, but lack of functional aspect.
+In order to solve this usability issue, I put functional icon on keypressed,
+such as the <code>x</code> icon for close.
+So that user won't click the wrong button.
+
+![xfwm4 Theme: Tutor 03 - Usability Issue][image-ss-tutor-03-usable]{: .img-responsive }
+
+-- -- --
+
+### What's Next
+
+Tutor Four, PNG Gradient over XPM.
+Making a more serious theme.
+
+[//]: <> ( -- -- -- links below -- -- -- )
+{% assign asset_path = '/assets/posts/desktop/2018/03' %}
+
+[image-ss-tutor-03-slices]:   {{ asset_path }}/tutor-03-slices.png
+[image-ss-tutor-03-border]:   {{ asset_path }}/tutor-03-border.png
+[image-ss-tutor-03-button]:   {{ asset_path }}/tutor-03-button.png
+[image-ss-tutor-03-detail]:   {{ asset_path }}/tutor-03-detail.png
+[image-ss-tutor-03-usable]:   {{ asset_path }}/tutor-03-usability.png
+[image-ss-tutor-03-active]:   {{ asset_path }}/tutor-03-ss-active.png

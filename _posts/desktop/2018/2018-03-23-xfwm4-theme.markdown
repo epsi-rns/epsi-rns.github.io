@@ -1,0 +1,246 @@
+---
+layout: post-sidemenu-wm
+title:  "XFWM4 Theme - Part Two"
+categories: desktop
+date:   2018-03-23 09:25:15 +0700
+tags: [xfwm4, theme, inkscape]
+author: epsi
+
+excerpt:
+  XFWM4 theme step by step, covering most style.
+  Using Inkscape, one SVG file to create each PNG/XPM part.
+
+related_link_ids:
+  - 16080325  # Install i3 Arch
+  - 16080224  # Install i3 Debian
+
+---
+
+> Tutor Two: XPM Solid Border
+
+No icon yet, we will create a solid border, along with a hole beside the border.
+
+> Hints: Use mogrify to convert from PNG to XPM
+
+### Inkscape Document
+
+	This is the Inkscape Part.
+
+#### SVG Filename
+
+Copy our previous document and name it as <code>tutor-02-solid.svg</code>, or anything you desire.
+
+#### Box Size
+
+We are using 10px border for this theme.
+
+Open the SVG file, and select <code>Left</code> box.
+You can see the size is [W*H = 10px * 20px].
+
+#### Layer
+
+Create new layer named, <code>theme</code>, or anything you want.
+
+Create Solid Border, above the <code>Left</code> box.
+We are going to divide the 10px width into three area
+
+*	4px: Black (#000000ff)
+
+*	2px: Yellow500 (#fff176ff)
+
+*	4px: Leave it empty, no object.
+
+![xfwm4 Theme: Tutor 02 - Solid Border Window][image-ss-tutor-02-border]{: .img-responsive }
+
+#### The Box.
+
+Continue for each box, until all border finished as a whole.
+
+![xfwm4 Theme: Tutor 02 - Slices][image-ss-tutor-02-slices]{: .img-responsive }
+
+#### Inactive Border
+
+Add rounded corner. It require inkscape tools, such as <code>Path - Difference</code>.
+
+#### Export PNG
+
+	This is a tricky part.
+
+In general, to export the PNG, you must hide both <code>name</code> layer and <code>background</code> layer.
+We do not want any text in PNG. And we want to export the empty space as transparent in PNG.
+
+Now the tricky part, for each border box parts.
+We must select the box first,
+so we can have the export target filename such as <code>bottom-left-active.png</code>.
+Then we have to hide the <code>frame</code> layer, because we want empty space as transparent.
+You can see the selection in figure below.
+The next thing to do is to click the export button to export PNG.
+
+![xfwm4 Theme: Tutor 02 - Active Full Preview][image-ss-tutor-02-preview]{: .img-responsive }
+
+Do export for each boxes.
+
+#### Check The Result
+
+You can see the transparent result in GIMP, just zoom with 16:1, it will be something like this.
+
+![xfwm4 Theme: Tutor 02 - GIMP Preview][image-ss-tutor-02-gimp]{: .img-responsive }
+
+-- -- --
+
+### Checking Out The Theme
+
+	This is the XFWM Part.
+
+#### Mogrify
+
+The last thing to do is to convert PNG files to XPM.
+You can do this using mogrify, from ImageMagick.
+
+{% highlight bash %}
+$ mogrify -format xpm *.png
+{% endhighlight %}
+
+![xfwm4 Theme: Tutor 02 - Mogrify][image-ss-tutor-02-mogrify]{: .img-responsive }
+
+Now you can safely delete all the PNG file.
+
+#### Inside XPM
+
+It is like a C language script document.
+
+{% highlight c %}
+/* XPM */
+static char *bottom_left_active[] = {
+/* columns rows colors chars-per-pixel */
+"10 10 3 1 ",
+"  c black",
+". c #FFF176",
+"X c None",
+/* pixels */
+"    ..XXXX",
+"    ..XXXX",
+"    ..XXXX",
+"    ..XXXX",
+"    ......",
+"    ......",
+"          ",
+"          ",
+"          ",
+"          "
+};
+
+{% endhighlight %}
+
+#### Changing XPM
+
+I would like to change the code from <code>X</code> to <code>space</code>,
+so empty transparent area will be represented as space instead on any character.
+
+With my Geany as favorite text editor I can open all XPM,
+and do search and replace at once.
+No magic required, my XPM will be looks like this below.
+
+
+{% highlight c %}
+/* XPM */
+static char *bottom_left_active[] = {
+/* columns rows colors chars-per-pixel */
+"10 10 3 1 ",
+"@ c black",
+". c #FFF176", 
+"  c None",
+/* pixels */
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@......",
+"@@@@......",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@"
+};
+{% endhighlight %}
+
+Now the looks of my XPM, seems make sense.
+
+#### GTK Feature in XPM.
+
+The idea of XPM, is that we can add color feature,
+overriding the hardcoded hexadecimal RGB setting.
+With GTK, we can add <code>active_color_1</code> and <code>active_color_1</code>.
+
+Consider change this part.
+
+{% highlight c %}
+static char *bottom_left_active[] = {
+"@ c black",
+". c #FFF176", 
+"  c None",
+}
+{% endhighlight %}
+
+It is easy when you master your text editor.
+Just do search and replace to get this looks below.
+
+{% highlight c %}
+static char *bottom_left_active[] = {
+"@ c black s active_color_2",
+". c #FFF176 s active_color_1", 
+"  c None",
+}
+{% endhighlight %}
+
+Now, the complete XPM would be as below
+
+{% highlight c %}
+/* XPM */
+static char *bottom_left_active[] = {
+/* columns rows colors chars-per-pixel */
+"10 10 3 1 ",
+"@ c black s active_color_2",
+". c #FFF176 s active_color_1", 
+"  c None",
+/* pixels */
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@..    ",
+"@@@@......",
+"@@@@......",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@",
+"@@@@@@@@@@"
+};
+{% endhighlight %}
+
+Do it for each XPM.
+
+#### Result
+
+The border would follow the color of your GTK appearance, instead of just Yellow.
+
+![xfwm4 Theme: Tutor 02 - XPM with GTK Color][image-ss-tutor-02-gtk-color]{: .img-responsive }
+
+We are done with solid border.
+
+-- -- --
+
+### What's Next
+
+Tutor Three, Minimalist PNG Button.
+We are going to have our very first functional theme.
+This will be equipped with icon, but with minimalist design.
+
+[//]: <> ( -- -- -- links below -- -- -- )
+{% assign asset_path = '/assets/posts/desktop/2018/03' %}
+
+[image-ss-tutor-02-border]:    {{ asset_path }}/tutor-02-border.png
+[image-ss-tutor-02-preview]:   {{ asset_path }}/tutor-02-preview-full.png
+[image-ss-tutor-02-slices]:    {{ asset_path }}/tutor-02-slices.png
+[image-ss-tutor-02-gimp]:      {{ asset_path }}/tutor-02-gimp.png
+[image-ss-tutor-02-mogrify]:   {{ asset_path }}/tutor-02-ss-mogrify.png
+[image-ss-tutor-02-gtk-color]: {{ asset_path }}/tutor-02-xpm-gtk-color.png
