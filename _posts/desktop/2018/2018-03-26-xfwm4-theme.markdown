@@ -20,9 +20,15 @@ related_link_ids:
 
 ### Preview
 
-Screenshot of shaded window.
+ArchEdgeUGM, based on ArchEdgeUI.
 
-![xfwm4 Theme: Tutor 04 - Shade Window][image-ss-tutor-04-shade]{: .img-responsive }
+![xfwm4 Theme: Tutor 04 - ArchEdgeUGM][image-ss-tutor-05-archedge]{: .img-responsive }
+
+#### Based On
+
+This work, inspired by <code>ArchEdgeUI</code>. As my admiration to his excellent taste in design.
+
+*	[ArchedgeUI-Tabbed-Decoration-for-Xfce-607124366](https://www.deviantart.com/art/ArchedgeUI-Tabbed-Decoration-for-Xfce-607124366)
 
 -- -- --
 
@@ -311,6 +317,8 @@ Tutor Five, Fancy Icon.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
+
+[image-ss-tutor-05-archedge]: {{ asset_path }}tutor-05-archedgedugm.png
 
 [image-ss-tutor-04-gtkcolor]: {{ asset_path }}/tutor-04-preview-full-gtk-appearance.png
 [image-ss-tutor-04-slices]:   {{ asset_path }}/tutor-04-slices.png

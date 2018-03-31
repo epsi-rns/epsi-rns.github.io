@@ -45,7 +45,12 @@ to manage filename target for each part.
 
 ### Reading
 
-...
+Before you begin.
+Reading this, is a must:
+
+*	[howto/xfwm4_theme](https://wiki.xfce.org/howto/xfwm4_theme)
+
+All material from in this article based on above link.
 
 ### Table of Content
 
@@ -116,6 +121,12 @@ I mostly use text editor to fix dpi issue.
 I'm using Google Material Color
 
 * [material.io/guidelines/style/color.html](https://material.io/guidelines/style/color.html)
+
+There is also an inkscape palette:
+
+* [KiSSFLOW/gimp-material-design-color-palette](https://github.com/KiSSFLOW/gimp-material-design-color-palette)
+
+A very useful stuff, you just have to put it at <code>~/.config/inkscape/palletes</code>.
 
 -- -- --
 

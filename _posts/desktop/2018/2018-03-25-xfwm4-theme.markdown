@@ -24,6 +24,12 @@ Screenshot of shaded window.
 
 ![xfwm4 Theme: Tutor 04 - Shade Window][image-ss-tutor-04-shade]{: .img-responsive }
 
+#### Based On
+
+This work, inspired by <code>xfwm-gaps</code>. As my admiration to his excellent taste in design.
+
+*	[addy-dclxvi/xfwm4-theme-collections](https://github.com/addy-dclxvi/xfwm4-theme-collections)
+
 -- -- --
 
 ### Inkscape Document
