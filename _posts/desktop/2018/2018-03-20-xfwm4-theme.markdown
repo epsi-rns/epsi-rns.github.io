@@ -150,7 +150,7 @@ Let's get it started.
 
 [dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes
 
-[local-part-one]:	/webdev/2018/03/21/xfwm4-theme.html
+[local-part-one]:	/desktop/2018/03/21/xfwm4-theme.html
 
 [image-ss-xfgaps-tiling]:  {{ asset_path }}/overview-xfgaps-tiling.png
 [image-ss-xfgaps-slices]:  {{ asset_path }}/overview-xfgaps-slices.png

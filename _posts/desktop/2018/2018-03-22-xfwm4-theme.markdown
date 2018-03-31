@@ -247,7 +247,7 @@ Consider reading [ [Part Three][local-part-three] ].
 
 [dotfiles-tutor-02]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-02
 
-[local-part-three]:	/webdev/2018/03/23/xfwm4-theme.html
+[local-part-three]:	/desktop/2018/03/23/xfwm4-theme.html
 
 [image-ss-tutor-02-border]:    {{ asset_path }}/tutor-02-border.png
 [image-ss-tutor-02-preview]:   {{ asset_path }}/tutor-02-preview-full.png

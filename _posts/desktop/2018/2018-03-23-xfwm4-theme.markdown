@@ -193,7 +193,7 @@ Consider finish reading [ [Part Four][local-part-four] ].
 [dotfiles-2bmat]:     https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/2bmat
 [dotfiles-xfgaps]:    https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xfgaps
 
-[local-part-four]:	/webdev/2018/03/24/xfwm4-theme.html
+[local-part-four]:	/desktop/2018/03/24/xfwm4-theme.html
 
 [image-ss-tutor-03-slices]:   {{ asset_path }}/tutor-03-slices.png
 [image-ss-tutor-03-border]:   {{ asset_path }}/tutor-03-border.png
