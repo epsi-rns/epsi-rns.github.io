@@ -1,0 +1,14 @@
+<div class="panel panel-primary hidden-sm hidden-xs">
+  <div class="panel-heading">
+    <h3 class="panel-title pull-left">Isle of Dotsites</h3>
+    <span class="fa fa-newspaper-o pull-right"></span>
+    <div class="clearfix"></div>
+  </div>
+  <div class="panel-body">
+  <ul class="recent-post">
+    {% for friend in site.data.friends limit:9 %}
+    <li><a href="{{ friend.url }}">{{ friend.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>

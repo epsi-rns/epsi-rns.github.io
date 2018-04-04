@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu-wm
+layout: post
 title:  "XFWM4 Theme - Part Two"
 categories: desktop
 date:   2018-03-22 09:25:15 +0700

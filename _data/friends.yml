@@ -1,0 +1,9 @@
+# Helper for related links
+
+# just copy the result manually
+# from _site/pages/all_posts.yml 
+# to folder _data/all_posts.yml
+
+
+- title: "BanditHijo (R)-Chive"
+  url: http://bandithijo.com/

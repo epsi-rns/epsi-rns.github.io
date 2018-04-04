@@ -138,6 +138,35 @@ A very useful stuff, you just have to put it at <code>~/.config/inkscape/pallete
 
 -- -- --
 
+### Dotfiles Resources
+
+From dotcats telegram channel and groups. We are mostly cats.
+
+#### Theme
+
+Known dotfiles resources containing XFWM4 theme.
+
+*	Faat Fuut:
+	https://github.com/Fuut13/fuut-xfwm.xfce-theme-Collections/blob/master/README.md
+
+*	White Cat:
+	https://github.com/addy-dclxvi/xfwm4-theme-collections
+
+*	Nanda Vera:
+	https://github.com/yuune/Stick-xfwm4
+
+#### Tools
+
+Known dotfiles resources containing XFWM4 tools.
+
+*	Black Cat:
+	https://github.com/noirecat/Shift
+
+
+
+
+-- -- --
+
 ### What's Next
 
 Tutor One, PNG Solid Border.
