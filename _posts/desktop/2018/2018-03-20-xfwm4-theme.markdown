@@ -190,8 +190,14 @@ Let's get it started.
 [image-ss-xfgaps-slices]:  {{ asset_path }}/overview-xfgaps-slices.png
 [image-ss-search-replace]: {{ asset_path }}/overview-svg-search-and-replace.png
 
-[image-ss-tutor-01-term]:  {{ asset_path }}/tutor-01-ss-inactive.png
-[image-ss-tutor-02-term]:  {{ asset_path }}/tutor-02-ss-mogrify.png
-[image-ss-tutor-03-term]:  {{ asset_path }}/tutor-03-ss-active.png
-[image-ss-tutor-04-term]:  {{ asset_path }}/tutor-04-ss-active.png
-[image-ss-tutor-05-term]:  {{ asset_path }}/tutor-05-ss-xftab.png
+[image-ss-tutor-01-term-alt]:  {{ asset_path }}/tutor-01-ss-inactive.png
+[image-ss-tutor-02-term-alt]:  {{ asset_path }}/tutor-02-ss-mogrify.png
+[image-ss-tutor-03-term-alt]:  {{ asset_path }}/tutor-03-ss-active.png
+[image-ss-tutor-04-term-alt]:  {{ asset_path }}/tutor-04-ss-active.png
+[image-ss-tutor-05-term-alt]:  {{ asset_path }}/tutor-05-ss-xftab.png
+
+[image-ss-tutor-01-term]:  {{ asset_path }}/ss-xfwm4-tutor-01.png
+[image-ss-tutor-02-term]:  {{ asset_path }}/ss-xfwm4-tutor-02.png
+[image-ss-tutor-03-term]:  {{ asset_path }}/ss-xfwm4-tutor-03.png
+[image-ss-tutor-04-term]:  {{ asset_path }}/ss-xfwm4-tutor-04.png
+[image-ss-tutor-05-term]:  {{ asset_path }}/ss-xfwm4-tutor-05.png
