@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu-wm
+layout: post
 title:  "XFWM4 Theme - Overview"
 categories: desktop
 date:   2018-03-20 09:25:15 +0700
@@ -136,6 +136,8 @@ There is also an inkscape palette:
 
 A very useful stuff, you just have to put it at <code>~/.config/inkscape/palletes</code>.
 
+![Inkscape: Google Material Colors Pallete][image-ss-inkscape-gmc]{: .img-responsive }
+
 -- -- --
 
 ### Dotfiles Resources
@@ -146,24 +148,19 @@ From dotcats telegram channel and groups. We are mostly cats.
 
 Known dotfiles resources containing XFWM4 theme.
 
-*	Faat Fuut:
-	https://github.com/Fuut13/fuut-xfwm.xfce-theme-Collections/blob/master/README.md
+*	Faat Fuut: [Fuut13/fuut-xfwm.xfce-theme-Collections][cat-fuut]
 
-*	White Cat:
-	https://github.com/addy-dclxvi/xfwm4-theme-collections
+*	White Cat: [addy-dclxvi/xfwm4-theme-collections][cat-white]
 
-*	Nanda Vera:
-	https://github.com/yuune/Stick-xfwm4
+*	Hard Cat: [epsi-rns/dotfiles/../themes][cat-hard]
+
+*	Nanda Vera: [yuune/Stick-xfwm4][cat-vera]
 
 #### Tools
 
 Known dotfiles resources containing XFWM4 tools.
 
-*	Black Cat:
-	https://github.com/noirecat/Shift
-
-
-
+*	Black Cat: [noirecat/Shift][cat-black]
 
 -- -- --
 
@@ -179,7 +176,15 @@ Let's get it started.
 
 [dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes
 
-[local-part-one]:	/desktop/2018/03/21/xfwm4-theme.html
+[local-part-one]:  /desktop/2018/03/21/xfwm4-theme.html
+
+[cat-fuut]:        https://github.com/Fuut13/fuut-xfwm.xfce-theme-Collections/blob/master/README.md
+[cat-white]:       https://github.com/addy-dclxvi/xfwm4-theme-collections
+[cat-hard]:        https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes
+[cat-vera]:        https://github.com/yuune/Stick-xfwm4
+[cat-black]:       https://github.com/noirecat/Shift
+
+[image-ss-inkscape-gmc]:   {{ asset_path }}/inkscape-gmc.png
 
 [image-ss-xfgaps-tiling]:  {{ asset_path }}/overview-xfgaps-tiling.png
 [image-ss-xfgaps-slices]:  {{ asset_path }}/overview-xfgaps-slices.png
