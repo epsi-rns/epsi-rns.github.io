@@ -75,7 +75,7 @@ window.font:                      terminus-8
 
 ### Window
 
-Here maping, between the XPM and button required by Fluxbox.
+Here is mapping, between the XPM and button required by Fluxbox.
 
 #### Common
 
@@ -94,7 +94,21 @@ window.title.height:              24
 window.handleWidth:               3
 {% endhighlight %}
 
+#### Title and Label
+
+![fluxbox Style: exilorate SVG title and label][image-svg-menu]{: .img-responsive }
+
+{% highlight conf %}
+window.title.focus.pixmap:        title-active.xpm
+window.title.unfocus.pixmap:      title-inactive.xpm
+
+window.label.focus.pixmap:        label-active.xpm
+window.label.unfocus.pixmap:      label-inactive.xpm
+{% endhighlight %}
+
 #### Focused
+
+![fluxbox Style: exilorate SVG focused button][image-svg-focused]{: .img-responsive }
 
 {% highlight conf %}
 window.title.focus.pixmap:        title-active.xpm
@@ -121,6 +135,8 @@ window.grip.focus.color:          #ffeb3b
 
 Can you see the <code>x</code> on close icon ?
 
+![fluxbox Style: exilorate SVG pressed button][image-svg-pressed]{: .img-responsive }
+
 {% highlight conf %}
 window.stick.pressed.pixmap:      stick-pressed.xpm
 window.stuck.pressed.pixmap:      stuck-pressed.xpm
@@ -130,6 +146,8 @@ window.maximize.pressed.pixmap:   maximize-pressed.xpm
 {% endhighlight %}
 
 #### Unfocused
+
+![fluxbox Style: exilorate SVG unfocused button][image-svg-unfocused]{: .img-responsive }
 
 {% highlight conf %}
 window.title.unfocus.pixmap:      title-inactive.xpm
@@ -211,6 +229,12 @@ window.grip.unfocus.color:        #1976d2
 #### Pixmap
 
 There are some XPM utilized here.
+
+![fluxbox Style: exilorate SVG bullet button][image-svg-bullet]{: .img-responsive }
+
+And again this image:
+
+![fluxbox Style: exilorate SVG title and label][image-svg-menu]{: .img-responsive }
 
 {% highlight conf %}
 menu.submenu.pixmap:              bullet.xpm
@@ -369,5 +393,12 @@ Have fun with Fluxbox theming.
 [image-ss-focused]:    {{ asset_path }}/fluxbox-exilorate-focused.png
 [image-ss-unfocused]:  {{ asset_path }}/fluxbox-exilorate-unfocused.png
 [image-ss-menu]:       {{ asset_path }}/fluxbox-exilorate-menu.png
+
 [image-ss-toolbar-left]:  {{ asset_path }}/fluxbox-exilorate-toolbar-left.png
 [image-ss-toolbar-right]: {{ asset_path }}/fluxbox-exilorate-toolbar-right.png
+
+[image-svg-focused]:   {{ asset_path }}/fluxbox-exilorate-svg-focused.png
+[image-svg-pressed]:   {{ asset_path }}/fluxbox-exilorate-svg-pressed.png
+[image-svg-unfocused]: {{ asset_path }}/fluxbox-exilorate-svg-unfocused.png
+[image-svg-bullet]:    {{ asset_path }}/fluxbox-exilorate-svg-bullet.png
+[image-svg-menu]:      {{ asset_path }}/fluxbox-exilorate-svg-menu.png
