@@ -121,7 +121,7 @@ $ mogrify -format xpm *.png
 #### Tips
 
 Since we are going to concentrate on making PNG,
-you may put all the XPMs on ther directory,
+you may put all the XPMs on other directory,
 and merge later after we're done with all the PNGs.
 
 -- -- --
@@ -136,7 +136,7 @@ I utilize some more layers, such as this two
 
 *	gradient
 
-*	layer
+*	highlight
 
 #### Border
 
