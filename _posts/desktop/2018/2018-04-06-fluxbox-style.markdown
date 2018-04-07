@@ -16,6 +16,8 @@ excerpt:
 
 > Goal: Reusable SVG, as a base for Fluxbox theme.
 
+![fluxbox Style: exilorate Window Preview][image-ss-window]{: .img-responsive }
+
 I will go straight to Inkscape's SVG,
 and discuss about the style configuration later.
 
@@ -224,6 +226,8 @@ Consider continue reading [ [Style Part][local-part-style] ]
 
 [local-overview]:    /desktop/2018/03/20/xfwm4-theme.html
 [local-part-style]:  /desktop/2018/04/07/fluxbox-style.html
+
+[image-ss-window]:   {{ asset_path }}/fluxbox-exilorate-window.png
 
 [image-ss-svg]:      {{ asset_path }}/fluxbox-exilorate-svg.png
 [image-ss-layers]:   {{ asset_path }}/fluxbox-exilorate-layers.png
