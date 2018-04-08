@@ -96,9 +96,9 @@ Now you can check using <code>fc-list</code>
 
 ![Font: fc-cache fc-list][image-ss-fc-list]{: .img-responsive }
 
-Note that by the time this article is written,
+Note that by the time this article is being written,
 FontAwesome is still having 4.x series version.
-With 5.x series the font is in <code>web-fonts-with-css/webfonts/</code> directory .
+With 5.x series the font is in <code>web-fonts-with-css/webfonts/</code> directory.
 
 -- -- --
 
