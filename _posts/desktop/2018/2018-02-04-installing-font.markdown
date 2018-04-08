@@ -68,6 +68,8 @@ I prefer git clone to make sure the font downloaded right.
 
 And copy-paste later on.
 
+
+
 ### Copy and Paste
 
 Copy paste manually.
@@ -93,6 +95,10 @@ Now you can check using <code>fc-list</code>
 {% endhighlight %}
 
 ![Font: fc-cache fc-list][image-ss-fc-list]{: .img-responsive }
+
+Note that by the time this article is written,
+FontAwesome is still having 4.x series version.
+With 5.x series the font is in <code>web-fonts-with-css/webfonts/</code> directory .
 
 -- -- --
 
