@@ -13,7 +13,7 @@
         {% endif %}
 
         <div class="container">
-        <div class="col-lg-2 text-center">
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
           {% if av_img %}
             <img src="{{ av_img }}" 
                  class="bio-photo" 
@@ -23,7 +23,7 @@
           {% endif %}
         </div>
                 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
           <div>By <span class="fa fa-pencil"> {{ author.name }}</span><br/></div>
 
           <div>
@@ -45,10 +45,16 @@
 
         </div>
         </div>
-                
+
+                </div>                
+                <!-- /well -->
+        {% endif %}
+
+
+                <div class="well">
         <div class="container">
 
-        <div class="col-lg-2 text-center">
+        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
             <img src="/assets/site/images/license/cc-by-sa.png" 
                  class="bio-photo" 
                  height="31"
@@ -56,15 +62,12 @@
                  alt="CC BY-SA 4.0"></a>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
             This article is licensed under:<br/>
             <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">
                 <b>Attribution-ShareAlike</b> 4.0 International (CC BY-SA 4.0)</a>
         </div>
 
         </div>
-        
-        
                 </div>                
                 <!-- /well -->
-        {% endif %}
