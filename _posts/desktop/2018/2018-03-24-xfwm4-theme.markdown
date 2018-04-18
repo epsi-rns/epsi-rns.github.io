@@ -32,11 +32,11 @@ This work, inspired by <code>xfwm-gaps</code>. As my admiration, and respect, to
 
 -- -- --
 
-### Inkscape Document
+### Unified Graphic Material
 
 	This is the Inkscape Part.
 
-#### SVG Source
+#### Inkscape Document
 
 SVG source available at:
 
@@ -107,7 +107,7 @@ Just lock all layers, except frames.
 Then each time you click any frame box, 
 it will show the target filename such as <code>bottom-left-active.png</code>.
 
-Now, please export all necessary boxes.
+Now, please export all necessary boxes. Each or using batch export.
 
 #### Mogrify
 
@@ -166,7 +166,7 @@ Neither gradient or highlight on inactive border. It is just simply flat.
 
 #### Export
 
-Now that we are done, we can export each PNG boxes and test the theme border.
+Now that we are done, we can batch export each PNG boxes and test the theme border.
 
 -- -- --
 

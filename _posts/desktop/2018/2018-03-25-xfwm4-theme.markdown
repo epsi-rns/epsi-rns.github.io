@@ -36,11 +36,11 @@ That's why, I changed the icon looks.
 
 -- -- --
 
-### Inkscape Document
+### Unified Graphic Material
 
 	This is the Inkscape Part.
 
-#### SVG Source
+#### Inkscape Document
 
 SVG source available at:
 
@@ -172,6 +172,8 @@ There are four details, this is just one example, other button might have differ
 	![xfwm4 Theme: Tutor 05 - Detail Pressed][image-ss-tutor-05-button-pressed]{: .img-responsive }
 
 #### Export
+
+> Hint: Use Inkscape's Batch Export, to export all shapes at once.
 
 	This is a tricky part.
 

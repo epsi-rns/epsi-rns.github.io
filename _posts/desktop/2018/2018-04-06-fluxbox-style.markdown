@@ -31,11 +31,11 @@ Most Inkscape related article has been discussed in previous XFWM4 article.
 
 -- -- --
 
-### Inkscape Document
+### Unified Graphic Material
 
 	This is the Inkscape Part.
 
-#### SVG Source
+#### Inkscape Document
 
 SVG source is available at:
 
@@ -72,7 +72,7 @@ Since we are going to use XPM only.
 
 #### Exporting Button
 
-	This is a tricky part.
+> Hint: Use Inkscape's Batch Export, to export all shapes at once.
 
 Consider set these layers before export:
 
@@ -87,6 +87,8 @@ We must select the box first in <code>frame</code> layer,
 so we can have the export target filename such as <code>close-active.png</code>.
 
 ![fluxbox Style: exilorate SVG export][image-ss-export]{: .img-responsive }
+
+	This is a tricky part.
 
 For image with transparency, such as <code>selected</code> menu button,
 We have to hide the <code>frame</code> layer, because we want empty space as transparent.

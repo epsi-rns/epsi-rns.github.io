@@ -22,11 +22,11 @@ No icon yet, we will create a solid border, along with a hole beside the border.
 
 > Hints: Use mogrify to convert from PNG to XPM
 
-### Inkscape Document
+### Unified Graphic Material
 
 	This is the Inkscape Part.
 
-#### SVG Source
+#### Inkscape Document
 
 SVG source available at:
 
@@ -84,7 +84,7 @@ The next thing to do is to click the export button to export PNG.
 
 ![xfwm4 Theme: Tutor 02 - Active Full Preview][image-ss-tutor-02-preview]{: .img-responsive }
 
-Do export for each boxes.
+Do export for each boxes. Or even better to select all shapes in frame layer, then use Batch Export later.
 
 #### Check The Result
 

@@ -30,6 +30,8 @@ It means XFWM4 theme.
 
 ![xfwm4 Theme: xfgaps tiling screenshot][image-ss-xfgaps-tiling]{: .img-responsive }
 
+#### Unified Graphic Material
+
 > Also: Reusable SVG, as a base for XFWM4 theme.
 
 I have been also using inkscape for years,
@@ -42,6 +44,8 @@ to manage filename target for each part.
 ![xfwm4 Theme: xfgaps SVG slices][image-ss-xfgaps-slices]{: .img-responsive }
 
 	This guidance applied for any distribution.
+
+Hint: Use Inkscape's Batch Export, to export all shapes at once.
 
 ### Reading
 

@@ -18,11 +18,11 @@ excerpt:
 
 > Tutor Three: Flat Design, Minimalist PNG Button
 
-### Inkscape Document
+### Unified Graphic Material
 
 	This is the Inkscape Part.
 
-#### SVG Source
+#### Inkscape Document
 
 SVG source available at:
 

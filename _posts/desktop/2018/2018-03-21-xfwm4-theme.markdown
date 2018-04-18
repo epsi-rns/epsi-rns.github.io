@@ -18,9 +18,12 @@ excerpt:
 
 > Tutor One: PNG Solid Border, Very Basic, No Design Yet.
 
-### First Inkscape Document
+
+### Unified Graphic Material
 
 	This is the Inkscape Part.
+
+#### First Inkscape Document
 
 Consider make your first inkscape document.
 Open Inkscape, set <code>custom size</code> in <code>document properties</code>.
@@ -99,6 +102,8 @@ Choose <code>Page Tab</code> to export the whole page.
 ![xfwm4 Theme: Tutor 01 - Active Full Preview][image-ss-tutor-01-slices]{: .img-responsive }
 
 #### Slices
+
+> Hint: Use Inkscape's Batch Export, to export all shapes at once.
 
 Select each box in <code>frame</code> layer, you should see tab changing to <code>selection</code> in Export Dock.
 For each box, name the target file as the corresponding box such as <code>bottom-left-active.png</code>, and export the box to PNG.
