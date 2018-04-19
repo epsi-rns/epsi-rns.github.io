@@ -26,7 +26,8 @@ A flat design theme, originally made for dotcats community.
 
 #### Based On
 
-This work, inspired by <code>xfwm-gaps</code>. As my admiration, and respect, to his excellent taste in design.
+This work, inspired by <code>Block Theme</code> from [white cat](https://github.com/addy-dclxvi).
+As my admiration, and respect, to his excellent taste in design.
 
 *	[addy-dclxvi/openbox-theme-collections](https://github.com/addy-dclxvi/openbox-theme-collections/tree/master/Blocks/openbox-3)
 
@@ -351,7 +352,7 @@ window.active.button.close.pressed.image.color:     #d32f2f
 window.active.button.close.disabled.image.color:    #e0e0e0
 {% endhighlight %}
 
-I'm' just dumping my config here.
+I'm just dumping my config here.
 
 ![openbox Theme: flatypuss - Flat Soft Color][image-ss-active]{: .img-responsive }
 
