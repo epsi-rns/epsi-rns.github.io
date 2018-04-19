@@ -12,6 +12,10 @@ excerpt:
 
 ---
 
+{% include post/2018/04/toc-openbox-theme.html %}
+
+-- -- --
+
 ### Preface
 
 > Goal: Explaining Openbox Theme Configuration

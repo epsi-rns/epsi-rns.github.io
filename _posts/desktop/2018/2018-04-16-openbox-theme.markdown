@@ -12,6 +12,9 @@ excerpt:
 
 ---
 
+{% include post/2018/04/toc-openbox-theme.html %}
+
+-- -- --
 ### Preface
 
 > Goal: Reusable SVG, as a base for Openbox theme.
