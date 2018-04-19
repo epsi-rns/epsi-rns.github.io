@@ -85,6 +85,12 @@ And here is the result:
 
 ![openbox Theme: matclue multi color][image-ss-multicolor]{: .img-responsive }
 
+I originally name this theme as <code>matblue</code>,
+but after I found a cheap way to get other colors,
+I renamed it to <code>matclue</code>.
+
+	I have no clue why.
+
 -- -- --
 
 ### Configuration
@@ -117,7 +123,8 @@ And see the result:
 
 ![openbox Theme: matclue geometry][image-ss-geometry]{: .img-responsive }
 
-I know it is weird, but you have a comprehensive understanding about the geometry.
+I know it is weird, but with this figure,
+you will have a comprehensive understanding about the window geometry.
 
 -- -- --
 
@@ -497,7 +504,7 @@ Consider continue reading [ [Style Part][local-part-style] ]
 [dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
 
 [local-part-special]:  /desktop/2018/04/18/openbox-theme.html
-
+[cat-black]:       https://github.com/noirecat/arc-ob-theme
 
 [image-ss-button]:        {{ asset_path }}/openbox-matclue-button.png
 [image-ss-geometry]:      {{ asset_path }}/openbox-matclue-geometry.png
@@ -510,10 +517,3 @@ Consider continue reading [ [Style Part][local-part-style] ]
 [image-ss-title-label]:   {{ asset_path }}/openbox-matclue-overview.png
 [image-ss-toggle-button]: {{ asset_path }}/openbox-matclue-toggle-button.png
 [image-ss-fullscreen]:    {{ asset_path }}/openbox-matclue-fullscreen.png
-
-/openbox-flatypuss.png
-/openbox-flatypuss-slices.png
-
-
-
-
