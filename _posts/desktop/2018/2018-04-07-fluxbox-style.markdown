@@ -12,6 +12,8 @@ excerpt:
 
 ---
 
+{% include post/2018/04/toc-fluxbox.html %}
+
 ### Preface
 
 > Goal: Explaining Fluxbox Style Configuration
@@ -71,6 +73,11 @@ toolbar.iconbar.unfocused.font:   terminus-8
 window.font:                      terminus-8
 {% endhighlight %}
 
+Or you can simply set at once.
+
+{% highlight conf %}
+*font: terminus-8
+{% endhighlight %}
 -- -- --
 
 ### Window
@@ -381,7 +388,7 @@ Do not forget to read the [ [Inkscape Part][local-part-inkscape] ]
 I think we are done with Fluxbox style configuration.
 Have fun with Fluxbox theming.
 
-
+You may also want to go back to [ [Overview][local-part-overview] ]
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
@@ -389,6 +396,7 @@ Have fun with Fluxbox theming.
 [dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/styles/exilorate
 
 [local-part-inkscape]: /desktop/2018/04/06/fluxbox-style.html
+[local-part-overview]: /desktop/2018/04/01/fluxbox-overview.html
 
 [image-ss-focused]:    {{ asset_path }}/fluxbox-exilorate-focused.png
 [image-ss-unfocused]:  {{ asset_path }}/fluxbox-exilorate-unfocused.png

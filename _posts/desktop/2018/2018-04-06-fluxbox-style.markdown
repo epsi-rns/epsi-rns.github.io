@@ -12,6 +12,8 @@ excerpt:
 
 ---
 
+{% include post/2018/04/toc-fluxbox.html %}
+
 ### Preface
 
 > Goal: Reusable SVG, as a base for Fluxbox theme.
@@ -217,7 +219,7 @@ There are four details, for each use the same spec as these below
 ### What's Next
 
 This is only the Inkscape Part,
-Consider continue reading [ [Style Part][local-part-style] ]
+Consider continue reading [ [Theme: Style Part][local-part-style] ]
 
 
 
