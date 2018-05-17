@@ -65,8 +65,9 @@ But there are also other reading material as well, from my first googling attemp
 As a window manager, Fluxbox has a unique feature.
 It is the <code>tabs</code> feature.
 
-This guidance doesn't explain these feature below.
-I rarely use it, but I always think that this is interesting.
+This guidance doesn't explain these features below.
+I rarely use it.
+Ity is just, I always think that this is interesting.
 
 #### Toolbar
 
