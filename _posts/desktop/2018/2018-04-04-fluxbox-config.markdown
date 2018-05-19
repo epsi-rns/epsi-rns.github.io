@@ -150,7 +150,7 @@ Now you can see the openSUSE's XDG menu.
 
 -- -- --
 
-#### Custom Menu
+### Custom Menu
 
 I would rather create my own menu <code>~/.fluxbox/menu.favorites</code>,
 based on my favorites application.
@@ -172,7 +172,6 @@ It is either the minimalist version.
     [exec] (Clementine) {clementine}
     [exec] (scrot -d 5) {scrot -d 5}
 [end] # (Favorites)
-
 {% endhighlight %}
 
 Or a more structured one:
@@ -205,7 +204,6 @@ Or a more structured one:
     [exec] (Geany) {geany}
     [exec] (scrot -d 5) {scrot -d 5}
 [end] # (Favorites)
-
 {% endhighlight %}
 
 ![fluxbox Feature: Custom Favorites Menu][image-ss-menu-favorites]{: .img-responsive }
