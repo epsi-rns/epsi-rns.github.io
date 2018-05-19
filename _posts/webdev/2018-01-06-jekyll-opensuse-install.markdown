@@ -149,9 +149,9 @@ And this rpm downloaded
 {% highlight bash %}
 % source ~/.rvm/scripts/rvm
 
-% list known
+% rvm list known
 
-% rvminstall 2.4
+% rvm install 2.4
 
 % rvm --default use 2.4.1
 

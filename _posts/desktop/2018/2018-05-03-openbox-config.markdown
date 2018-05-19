@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Openbox Config - Binding"
+title:  "Openbox Config - Key and Mouse Binding"
 categories: desktop
 date:   2018-05-03 09:25:15 +0700
 tags: [openbox]

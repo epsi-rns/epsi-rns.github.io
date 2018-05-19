@@ -133,7 +133,7 @@ Actually there is not many to say here,
 because I splitted the article to: key/mouse bindng, rules, and menu.
 
 This is only an overview.
-Consider continue reading [ [Config: Key/Mouse Binding][local-part-config] ].
+Consider continue reading [ [Config: Key and Mouse Binding][local-part-config] ].
 
 
 
