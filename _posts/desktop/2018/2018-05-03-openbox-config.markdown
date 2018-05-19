@@ -46,6 +46,8 @@ The format is:
 
 I add two more keybind.
 
+![openbox Keybinding: Undecorate][image-ss-w-a-x]{: .img-responsive }
+
 {% highlight xml %}
     <keybind key="W-A-z">
       <action name="Decorate"/>
@@ -54,6 +56,11 @@ I add two more keybind.
       <action name="Undecorate"/>
     </keybind>
 {% endhighlight %}
+
+With courtesy of my friend (Asem Bused),
+I can show you the visual representation of this keybinding.
+
+![openbox Keybinding: Decorate][image-ss-w-a-z]{: .img-responsive }
 
 I like terminal with no window border.
 
@@ -344,3 +351,5 @@ Consider continue reading [ [Config: Rules][local-part-config] ].
 
 [local-part-config]:  /desktop/2018/05/04/openbox-config.html
 
+[image-ss-w-a-x]:          {{ asset_path }}/openbox-keybind-W-A-x.png
+[image-ss-w-a-z]:          {{ asset_path }}/openbox-keybind-W-A-z.png
