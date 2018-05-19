@@ -56,7 +56,7 @@ We need to create it manually.
 
 ### Main Menu
 
-Now this is a manually created <code>~/.config/openbox/menu.xml</code>.
+This is a manually created <code>~/.config/openbox/menu.xml</code>.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -317,7 +317,6 @@ You need to copy the contetn of XDG menu under <code>id="root-menu"</code>.
         </item>
     </menu>
 </openbox_menu>
-
 {% endhighlight %}
 
 And the final result is.
@@ -326,12 +325,33 @@ And the final result is.
 
 -- -- --
 
+### Additional Menu
+
+#### OB Log Out
+
+You can add <code>oblogout</code> item as right away.
+
+{% highlight conf %}
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+    <menu id="system-menu" label="System">
+        ...
+        <item label="OB Log Out">
+            <action name="Execute"><execute>oblogout</execute></action>
+        </item>
+    </menu>
+    <menu id="root-menu" label="Openbox 3">
+        ..
+    </menu>
+</openbox_menu>
+{% endhighlight %}
+
+-- -- --
+
 ### What's Next
 
 We are finished with openbox configuration.
 Consider going back reading [ [Config: Overview][local-part-config] ].
-
-To Be Done: Tint2
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}

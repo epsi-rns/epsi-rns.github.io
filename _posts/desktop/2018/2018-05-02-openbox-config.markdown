@@ -123,28 +123,114 @@ You might want different setting.
 
 ### Logging Out
 
-To be done: OB Logout
+This is not a part of config, but rather an additional feature,
+utilize third party application.
+
+#### Default
+
+This is the default logout dialog from openbox.
+
+![openbox Logout: default exit][image-ss-exit]{: .img-responsive }
+
+#### OB Logout
+
+However, there is a good application called <code>oblogout</code>,
+that you can set them as keybinding, or just put it in menu.
+
+{% highlight bash %}
+$ oblogout
+{% endhighlight %}
+
+![openbox Logout: oblogout][image-ss-oblogout]{: .img-responsive }
+
+-- -- --
+
+### Startup
+
+There is this <code>~/.config/openbox/autostart</code> file,
+that manage the startup.
+
+I change my autostart from time to time.
+It all depen on your need, mood, and the weather on your city.
+
+#### Current autostart
+
+{% highlight conf %}
+# -- non windowed app --
+
+nitrogen --restore &
+nm-applet &
+
+compton &
+# dunst &
+parcellite &
+mpd &
+
+tint2 &
+
+thunar --daemon &
+
+# -- windowed app --
+
+geany &
+thunar &
+urxvt &
+urxvt &
+firefox &
+{% endhighlight %}
+
+This non **windowed-app**, will be discussed later in rules section,
+in the next article.
+
+#### Old autostart
+
+My old startup file contain these lines.
+
+{% highlight conf %}
+## Volume control for systray
+(sleep 2s && pnmixer) &
+
+## Volume keys daemon
+xfce4-volumed &
+
+## Enable power management
+xfce4-power-manager &
+
+## Start Thunar Daemon
+thunar --daemon &
+
+## Start xscreensaver
+xscreensaver -no-splash &
+
+## Start Clipboard manager
+(sleep 3s && clipit) &
+{% endhighlight %}
+
+#### Source
+
+*	[github.com/.../dotfiles/.../autostart][dotfiles-autostart]
+
 
 -- -- --
 
 ### What's Next
 
 Actually there is not many to say here,
-because I splitted the article to: key/mouse bindng, rules, and menu.
+because I splitted the article to: key/mouse binding, rules, and menu.
 
-This is only an overview.
 Consider continue reading [ [Config: Key and Mouse Binding][local-part-config] ].
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]: {{ dotfiles }}/rc.xml
+[dotfiles-autostart]: {{ dotfiles }}/autostart
 
 [local-part-config]:  /desktop/2018/05/03/openbox-config.html
 
 [image-ss-obconf]:          {{ asset_path }}/openbox-obconf.png
+[image-ss-exit]:            {{ asset_path }}/openbox-exit.png
+[image-ss-oblogout]:        {{ asset_path }}/openbox-oblogout.png
 [image-ss-config-desktops]: {{ asset_path }}/openbox-config-desktops-tint2.png
 [image-ss-config-margin]:   {{ asset_path }}/openbox-config-margin.png

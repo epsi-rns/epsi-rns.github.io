@@ -146,7 +146,6 @@ We need to set the <code>type="normal"</code> to avoid dialog to be resized.
 
 ### What's Next
 
-This is only an overview.
 Consider continue reading [ [Config: Menu][local-part-config] ].
 
 

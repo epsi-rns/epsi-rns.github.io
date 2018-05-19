@@ -260,9 +260,75 @@ Left:       Click:         Close
 
 -- -- --
 
-#### More Custom Key Binding.
+### More Custom Key Binding.
 
-To be done: Rofi, etc
+Mostly borrowed from my i3 configuration.
+
+#### Summary
+
+{% highlight conf %}
+W-e:        oblogout
+W-Return:   xfce4-terminal
+W-A-d:      dmenu_run
+W-S-d:      rofi -show run -opacity 90
+W-Tab:      rofi -show window -opacity 90
+{% endhighlight %}
+
+### OB Log Out
+
+*	[https://wiki.archlinux.org/index.php/Oblogout](https://wiki.archlinux.org/index.php/Oblogout)
+
+{% highlight conf %}
+    <keybind key="W-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>oblogut</name>
+        </startupnotify>
+        <command>oblogout</command>
+      </action>
+    </keybind>
+{% endhighlight %}
+
+#### Terminal
+
+{% highlight conf %}
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>xfce4-terminal</command>
+      </action>
+    </keybind>
+{% endhighlight %}
+
+#### dmenu
+
+{% highlight conf %}
+    <keybind key="W-A-d">
+      <action name="Execute">
+        <command>dmenu_run</command>
+      </action>
+    </keybind>
+{% endhighlight %}
+
+#### Rofi Run
+
+{% highlight conf %}
+    <keybind key="W-S-d">
+      <action name="Execute">
+        <command>rofi -show run -opacity 90</command>
+      </action>
+    </keybind>
+{% endhighlight %}
+
+#### Rofi Window
+
+{% highlight conf %}
+    <keybind key="W-Tab">
+      <action name="Execute">
+        <command>rofi -show window -opacity 90</command>
+      </action>
+    </keybind>
+{% endhighlight %}
 
 -- -- --
 
