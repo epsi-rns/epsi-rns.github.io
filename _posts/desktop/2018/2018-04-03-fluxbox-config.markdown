@@ -147,6 +147,19 @@ Control F3 :Workspace 3
 Control F4 :Workspace 4
 {% endhighlight %}
 
+#### More Custom Key Binding.
+
+Mostly borrowed from my i3 configuration.
+
+{% highlight conf %}
+# custom keybind
+Mod4 Return  :Exec xfce4-terminal
+Mod4 d       :Exec i3-dmenu-desktop
+Mod4 Mod1 d  :Exec dmenu_run
+Mod4 Shift d :Exec rofi -show run -opacity 90
+Mod4 Ctrl d  :Exec rofi -show window -opacity 90
+{% endhighlight %}
+
 #### Source
 
 *	[github.com/.../dotfiles/.../keys][dotfiles-keys]
