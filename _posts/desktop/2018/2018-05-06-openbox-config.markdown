@@ -1,136 +1,190 @@
 ---
 layout: post
-title:  "Openbox Config - OB Menu Generator"
+title:  "Openbox Menu - Dynamic"
 categories: desktop
 date:   2018-05-06 09:25:15 +0700
 tags: [openbox]
 author: epsi
 
 excerpt:
-  A brief explanation about Openbox rc.xml Configuration
+  Using Bunsenslabs Script as Dynamic Openbox menu.
 
 ---
 
 {% include post/2018/05/toc-openbox-config.html %}
 
-### OB Menu Generator
+### BunsenLabs Script
 
-Nowadays, people are using automation, rather than a crafting menu manually.
-There is this <code>openbox-obmenu-generator</code> tools,.
+> Goal: Using Bunsenslabs Script as Dynamic Openbox menu.
 
-*	[https://github.com/trizen/obmenu-generator](https://github.com/trizen/obmenu-generator)
+I'm not using BunsenLabs, but I found these script useful.
 
-It is cleverly using perl array preprocessor,
-before converting to xml.
-Since it has dfferent format than the original xml,
-I put this on different menu article.
+	Respect
 
-#### Install
+#### Format
 
-First you need to clone.
-or install using AUR.
-Depend on your distribution.
+To create dynamic menu, we utilize script,
+and use <code>menu execute=""</code>.
 
-{% highlight conf %}
-$ git clone https://github.com/trizen/obmenu-generator
+{% highlight xml %}
+    <menu execute="/home/epsi/.config/openbox/bin/bl-tint2-pipemenu" 
+        id="bl-tint2-pipemenu" label="Tint2"/>
 {% endhighlight %}
 
-I'm using openSUSE, so I'm stick with zypper.
-You can see more in manual installation page on github.
+#### Preparation
 
-{% highlight conf %}
-$ sudo zypper in perl-Linux-DesktopFiles
-$ sudo zypper in perl-Gtk2
-{% endhighlight %}
-
-#### Config
-
-Now you need to copy <code>schema.pl</code>
-to <code>~/.config/obmenu-generator</code>.
-It contain predefined array in perl.
-
-{% highlight perl %}
-#!/usr/bin/perl
-
-# ...
-
-our $SCHEMA = [
-
-    #          COMMAND                 LABEL              ICON
-    {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
-    {item => ['xterm',            'Terminal',     'utilities-terminal']},
-    {item => ['xdg-open http://', 'Web Browser',  'web-browser']},
-    {item => ['gmrun',            'Run command',  'system-run']},
-
-    # ...
-]
-{% endhighlight %}
-
-#### Default Menu
-
-Just run the <code>obmenu-generator</code>.
+You need a file called <code class="code-file">bl-include.cfg</code>.
 
 {% highlight bash %}
-$ ./obmenu-generator -s > ~/.config/openbox/menu.xml 
+$ git clone https://github.com/BunsenLabs/bunsen-common
 {% endhighlight %}
 
-#### Icon
+Put it under <code class="code-file">~/.config/openbox/bin</code>.
 
-Adding icon is as simply as adding <code>-i</code> argument.
+#### Getting the Scripts
+
+First clone this:
+
+*	[https://github.com/BunsenLabs/bunsen-pipemenus](https://github.com/BunsenLabs/bunsen-pipemenus)
 
 {% highlight bash %}
-$ ./obmenu-generator -s -i > ~/.config/openbox/menu.xml 
+$ git clone https://github.com/BunsenLabs/bunsen-pipemenus
 {% endhighlight %}
 
-There will be temporary icon directory in 
-<code>~/.config/obmenu-generator/icons/</code>.
+And copy the whole file from <code class="code-file">bin</code> directory,
+under <code class="code-file">~/.config/openbox/bin</code>.
 
-And in the generated <code>menu.xml</code>, it has this hardcoded icon path:
+There will be a bunch of file:
+
+*	bl-compositor, bl-conky-pipemenu, bl-dropbox-pipemenu, bl-graphics-pipemenu,
+	bl-help-pipemenu, bl-kb-pipemenu, bl-libreoffice-pipemenu, bl-multimedia-pipemenu,
+	bl-places-pipemenu, bl-printing-pipemenu, bl-recent-files-pipemenu,
+	bl-remote-desktop-pipemenu, bl-sshconfig-pipemenu, bl-tint2-pipemenu,
+	bl-x-www-browser-pipemenu.
+
+#### Modify the Scripts
+
+Open all the pipemenu scripts, and do a search and replace.
+
+*	[github.com/.../dotfiles/.../bin/][dotfiles-bin]
+
+Change from
 
 {% highlight bash %}
-...
-    <item label="File Manager" icon="/home/epsi/.config/obmenu-generator/icons/bd6f34dfc816e8ba8054aeb1419095a4.png">
-        <action name="Execute"><command><![CDATA[xdg-open .]]></command></action>
-    </item>
-...
+BL_COMMON_LIBDIR='/usr/lib/bunsen/common'
 {% endhighlight %}
 
-![openbox Config: obmenu-generator with icon][image-ss-obmenu-icon]{: .img-responsive }
+To
 
-#### Icon Theme Case
+{% highlight bash %}
+BL_COMMON_LIBDIR='/home/epsi/.config/openbox/bin/'
+{% endhighlight %}
 
-I'm using **Breeze**, but I want **Numix Circle**, in my Menu.
+Do not forget to add executable mode for all scripts.
 
-All I need is to change <code>~/.gtkrc-2.0</code>
-to **Numix Circle** temporarily,
-run <code>obmenu-generator</code>,
-and get it back to **Breeze**.
+{% highlight bash %}
+$ chmod +x /home/epsi/.config/openbox/bin/
+{% endhighlight %}
 
-You can also use <code>lxapperance</code> to do this temporarily.
- 
+#### Main Menu
+
+Modify the <code class="code-file">~/.config/openbox/menu.xml</code>.
+
+{% highlight bash %}
+        ...
+        <separator label="Dynamic Script"/>
+        <menu execute="cat /home/epsi/.config/openbox/menu.bunsenlabs.xml" 
+            id="bunsenlabs-menu" label="BunsenLabs"/>
+        ...
+{% endhighlight %}
+
+#### Sub Menu
+
+Create the <code class="code-file">~/.config/openbox/menu.bunsenlabs.xml</code>.
+
+*	[github.com/.../dotfiles/.../menu.bunsenlabs.xml][dotfiles-bunsenlabs]
+
+{% highlight bash %}
+<openbox_pipe_menu>
+    <separator label="BunsenLabs Script"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-compositor" 
+        id="bl-compositor" label="Compositor"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-conky-pipemenu" 
+        id="bl-conky-pipemenu" label="Conky"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-dropbox-pipemenu" 
+        id="bl-dropbox-pipemenu" label="Dropbox"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-graphics-pipemenu" 
+        id="bl-graphics-pipemenu" label="Graphics"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-help-pipemenu" 
+        id="bl-help-pipemenu" label="Help"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-kb-pipemenu" 
+        id="bl-kb-pipemenu" label="Keybinds"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-libreoffice-pipemenu" 
+        id="bl-libreoffice-pipemenu" label="LibreOffice"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-multimedia-pipemenu" 
+        id="bl-multimedia-pipemenu" label="Multimedia"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-places-pipemenu" 
+        id="bl-places-pipemenu" label="Places"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-printing-pipemenu" 
+        id="bl-printing-pipemenu" label="Printing"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-recent-files-pipemenu" 
+        id="bl-recent-files-pipemenu" label="Files"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-remote-desktop-pipemenu" 
+        id="bl-remote-desktop-pipemenu" label="Remote Desktop"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-sshconfig-pipemenu" 
+        id="bl-sshconfig-pipemenu" label="SSH"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-tint2-pipemenu" 
+        id="bl-tint2-pipemenu" label="Tint2"/>
+    <menu execute="/home/epsi/.config/openbox/bin/bl-x-www-browser-pipemenu" 
+        id="bl-x-www-browser-pipemenu" label="Browser"/>
+</openbox_pipe_menu>
+{% endhighlight %}
+
+Consider reconfigure openbox. And have a look at the result.
+
+![openbox Menu: Bunsenlabs Dynamic Script][image-ss-menu-bunsenlabs]{: .img-responsive }
+
+#### Additional Configuration
+
+Some menu need a configuration file called
+<code class="code-file">~/.config/openbox/pipemenus.rc</code>.
+
+*	[github.com/.../dotfiles/.../pipemenus.rc][dotfiles-pipemenus]
+
+I grab this from Kali user, and change a bit, as below.
+
 {% highlight conf %}
-...
-gtk-theme-name="Breeze"
-gtk-icon-theme-name="Numix-Circle"
-...
+# pipemenu.rc holds the applications which appear in the Openbox pipemenus
+# Edit the arrays to add or remove package names, making sure there are spaces
+# between each entry.
+
+# Multimedia pipemenu (bl-multimedia-pipemenu)
+MM_APPS=( 'vlc' 'audacious' 'smplayer' 'gnome-mplayer' 'mplayer' 'clementine')
+MM_EDITORS=('mhwaveedit' 'audacity' 'openshot' )
+MM_UTILS=('xfburn' 'gtk-recordmydesktop' )
+
+# Graphics pipemenu (bl-graphics-pipemenu)
+GRAPHICS_APPS=( 'mirage' 'gimp' 'blender' 'inkscape' )
+GRAPHICS_SCROTS=('xfce4-screenshooter' 'scrot' 'spectacle')
+
+# Browsers pipemenu (bl-x-www-browser-pipemenu)
+BROWSERS=('chromium' 'iceweasel' 'midori' 'google-chrome-stable' 'opera' )
 {% endhighlight %}
 
 -- -- --
 
 ### What's Next
 
-We are finished with openbox configuration.
-Consider going back reading [ [Config: Overview][local-part-config] ].
+Consider continue reading [ [Menu: Generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
-[dotfiles-rc-xml]:   {{ dotfiles }}/rc.xml
-[dotfiles-menu-xml]: {{ dotfiles }}/menu.xml
-[dotfiles-fav-xml]:  {{ dotfiles }}/menu.favorites.xml
-[dotfiles-xdg-xml]:  {{ dotfiles }}/menu.xdg.xml
+[dotfiles-bin]:   {{ dotfiles }}/bin/
+[dotfiles-bunsenlabs]: {{ dotfiles }}/menu.bunsenlabs.xml
+[dotfiles-pipemenus]:  {{ dotfiles }}/pipemenus.rc
 
-[local-part-config]:  /desktop/2018/05/01/openbox-config.html
+[local-part-config]:  /desktop/2018/05/07/openbox-config.html
 
-[image-ss-obmenu-icon]:    {{ asset_path }}/openbox-obmenu-icon.png
+[image-ss-menu-bunsenlabs]:    {{ asset_path }}/openbox-menu-bl-scripts.png

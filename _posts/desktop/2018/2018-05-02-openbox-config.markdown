@@ -19,11 +19,11 @@ excerpt:
 
 #### Reading
 
-<code>rc.xml</code> has been comprehensively covered in this article.
+<code class="code-file">rc.xml</code> has been comprehensively covered in this article.
 
 *	[http://openbox.org/wiki/Help:Configuration](http://openbox.org/wiki/Help:Configuration)
 
-Therefore, this article only discuss about changes in rc.xml and stuff.
+Therefore, this article only discuss about changes in **rc.xml** and stuff.
 
 That article above clearly defined 13 sections of xml:
 Resistance, Focus, Placement, Theme, Desktops, Resize (and move),
@@ -31,7 +31,7 @@ Applications, Keyboard, Mouse, Margins, Menu, Dock, and Coordinates.
 
 #### OBConf
 
-There is a GUI tools to edit the rc.xml, called <code>obconf</code>.
+There is a GUI tools to edit the **rc.xml**, called <code>obconf</code>.
 
 ![openbox Config: theme][image-ss-obconf]{: .img-responsive }
 
@@ -147,7 +147,7 @@ $ oblogout
 
 ### Startup
 
-There is this <code>~/.config/openbox/autostart</code> file,
+There is this <code class="code-file">~/.config/openbox/autostart</code> file,
 that manage the startup.
 
 I change my autostart from time to time.

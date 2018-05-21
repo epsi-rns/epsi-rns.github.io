@@ -17,6 +17,8 @@ excerpt:
 
 > Goal: Explaining openbox rules in rc.xml configuration 
 
+again, have a look at the <code class="code-file">rc.xml</code>.
+
 #### Case
 
 I came from Tiling Window Manager,
@@ -146,7 +148,7 @@ We need to set the <code>type="normal"</code> to avoid dialog to be resized.
 
 ### What's Next
 
-Consider continue reading [ [Config: Menu][local-part-config] ].
+Consider continue reading [ [Menu: Static][local-part-config] ].
 
 
 [//]: <> ( -- -- -- links below -- -- -- )

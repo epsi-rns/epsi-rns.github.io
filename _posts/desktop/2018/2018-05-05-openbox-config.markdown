@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Openbox Config - Menu"
+title:  "Openbox Menu - Static"
 categories: desktop
 date:   2018-05-05 09:25:15 +0700
 tags: [openbox]
@@ -27,7 +27,7 @@ There is also a whole article for this.
 
 ### Default rc.xml.
 
-The default <code>~/.config/openbox/rc.xml</code> looks similar to this below:
+The default <code class="code-file">~/.config/openbox/rc.xml</code> looks similar to this below:
 
 {% highlight xml %}
   <menu>
@@ -43,9 +43,9 @@ The default <code>~/.config/openbox/rc.xml</code> looks similar to this below:
 
 It simply show something like this:
 
-![openbox Config: default menu][image-ss-menu-default]{: .img-responsive }
+![openbox Menu: default][image-ss-menu-default]{: .img-responsive }
 
-My openSUSE's openbox come **without** <code>~/.config/openbox/menu.xml</code>.
+My openSUSE's openbox come **without** <code class="code-file">~/.config/openbox/menu.xml</code>.
 We need to create it manually.
 
 #### Source
@@ -56,7 +56,7 @@ We need to create it manually.
 
 ### Main Menu
 
-This is a manually created <code>~/.config/openbox/menu.xml</code>.
+This is a manually created <code class="code-file">~/.config/openbox/menu.xml</code>.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -75,11 +75,7 @@ This is a manually created <code>~/.config/openbox/menu.xml</code>.
         </item>
     </menu>
     <menu id="root-menu" label="Openbox 3">
-        <separator label="Static/Manual"/>
-        <menu execute="cat /home/epsi/.config/openbox/menu.favorites.xml" 
-            id="fav-menu" label="Favorites" icon="/usr/share/icons/gnome/16x16/categories/gnome-util.png"/>
-        <menu execute="cat /home/epsi/.config/openbox/menu.xdg.xml" 
-            id="xdg-menu" label="XDG Menu"/>
+        ...
         <separator label="System"/>        
         <menu id="system-menu"/>
         <separator/>
@@ -92,7 +88,7 @@ This is a manually created <code>~/.config/openbox/menu.xml</code>.
 </openbox_menu>
 {% endhighlight %}
 
-![openbox Config: system menu][image-ss-menu-system]{: .img-responsive }
+![openbox Menu: system][image-ss-menu-system]{: .img-responsive }
 
 Note that the system menu is recreated manually.
 
@@ -113,15 +109,6 @@ Note that the system menu is recreated manually.
 </openbox_menu>
 {% endhighlight %}
 
-And do not worry about this line, we will discuss it later.
-
-{% highlight xml %}
-        <menu execute="cat /home/epsi/.config/openbox/menu.favorites.xml" 
-            id="fav-menu" label="Favorites" icon="/usr/share/icons/gnome/16x16/categories/gnome-util.png"/>
-        <menu execute="cat /home/epsi/.config/openbox/menu.xdg.xml" 
-            id="xdg-menu" label="XDG Menu"/>
-{% endhighlight %}
-
 #### Source
 
 *	[github.com/.../dotfiles/.../menu.xml][dotfiles-menu-xml]
@@ -130,7 +117,18 @@ And do not worry about this line, we will discuss it later.
 
 ### Pipe Menu
 
-I would rather create custom menu <code>~/.config/openbox/menu.favorites.xml</code>,
+We can add sub menu in separate xml file.
+
+{% highlight xml %}
+    <menu id="root-menu" label="Openbox 3">
+        <separator label="Static/Manual"/>
+        <menu execute="cat /home/epsi/.config/openbox/menu.favorites.xml" 
+            id="fav-menu" label="Favorites" icon="/usr/share/icons/gnome/16x16/categories/gnome-util.png"/>
+        ...
+    </menu>
+{% endhighlight %}
+
+I would rather create custom menu <code class="code-file">~/.config/openbox/menu.favorites.xml</code>,
 based on my favorites application.
 
 It needs a <code>openbox_pipe_menu</code> tag to deliver a pipe menu
@@ -199,7 +197,7 @@ The complete version is here:
 </openbox_pipe_menu>
 {% endhighlight %}
 
-![openbox Config: favorites menu][image-ss-menu-favorites]{: .img-responsive }
+![openbox Menu: favorites][image-ss-menu-favorites]{: .img-responsive }
 
 #### Source
 
@@ -231,6 +229,18 @@ $ xdg_menu --format openbox3 --root-menu /etc/xdg/menus/applications.menu > ~/.c
 {% endhighlight %}
 
 *	[wiki.archlinux.org/index.php/Xdg-menu](https://wiki.archlinux.org/index.php/Xdg-menu#OpenBox)
+
+First prepare your <code class="code-file">~/.config/openbox/menu.xml</code>
+
+{% highlight xml %}
+    <menu id="root-menu" label="Openbox 3">
+        <separator label="Static/Manual"/>
+        ...
+        <menu execute="cat /home/epsi/.config/openbox/menu.xdg.xml" 
+            id="xdg-menu" label="XDG Menu"/>
+        ...
+    </menu>
+{% endhighlight %}
 
 Depend on your setup,
 the result of <code>~/.config/openbox/menu.xdg.xml</code> would looks similar like this one:
@@ -270,7 +280,7 @@ We need to change a bit before we can use it as pipe menu.
 
 Now you can see the openSUSE's XDG menu.
 
-![openbox Config: XDG menu SUSE][image-ss-menu-xdg-suse]{: .img-responsive }
+![openbox Menu: XDG SUSE][image-ss-menu-xdg-suse]{: .img-responsive }
 
 #### Source
 
@@ -280,7 +290,7 @@ Now you can see the openSUSE's XDG menu.
 
 ### Merge All
 
-You can merge the XDG menu to <code>menu.xml</code> as a static menu,
+You can merge the XDG menu to <code class="code-file">menu.xml</code> as a static menu,
 to have a nice looking menu.
 You need to copy the contetn of XDG menu under <code>id="root-menu"</code>.
 
@@ -321,7 +331,7 @@ You need to copy the contetn of XDG menu under <code>id="root-menu"</code>.
 
 And the final result is.
 
-![openbox Config: merge menu][image-ss-menu-merge]{: .img-responsive }
+![openbox Menu: Merge][image-ss-menu-merge]{: .img-responsive }
 
 -- -- --
 
@@ -350,7 +360,7 @@ You can add <code>oblogout</code> item as right away.
 
 ### What's Next
 
-Consider continue reading [ [Config: OB Menu Generator][local-part-config] ].
+Consider continue reading [ [Menu: Dynamic][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}

@@ -25,7 +25,7 @@ This guidance structured into separated articles:
 
 *	Config: rc.xml (general, binding, rules)
 
-*	Config: menu.xml (and sub menus, obmenu-generator)
+*	Config: menu.xml (static and sub menus, dynamic, obmenu-generator)
 
 #### Window Manager Features
 

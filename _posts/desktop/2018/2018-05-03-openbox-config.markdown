@@ -68,7 +68,7 @@ Of course you can add your own keybind.
 
 #### Summarize
 
-Rather than, go deep into rc.xml.
+Rather than, go deep into <code class="code-file">rc.xml</code>.
 I just want to put my key binding here.
 I have limited brain capacity.
 I need to write down as below.

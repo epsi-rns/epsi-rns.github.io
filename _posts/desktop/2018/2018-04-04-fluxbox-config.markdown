@@ -28,7 +28,7 @@ The syntax is:
 #### Default
 
 This is the default fluxbox menu in openSUSE.
-You can find it in <code>~/.fluxbox/menu</code> file.
+You can find it in <code class="code-file">~/.fluxbox/menu</code> file.
 
 {% highlight conf %}
 # Version 0.2   07.12.2004 - hvogel@hennevogel.de
@@ -64,7 +64,7 @@ We will learn to customize later.
 #### Window Menu
 
 There are other menu, used for window context,
-<code>~/.fluxbox/windowmenu</code> file.
+<code class="code-file">~/.fluxbox/windowmenu</code> file.
 The window menu is actually customizable.
 
 *	[fluxbox-wiki.org/.../Editing_the_windowmenu.html](http://fluxbox-wiki.org/category/howtos/en/Editing_the_windowmenu.html)
@@ -74,7 +74,7 @@ The window menu is actually customizable.
 #### Other Distribution
 
 This is the default fluxbox menu in Fedora.
-You can find it in <code>~/.fluxbox/menu</code> file.
+You can find it in <code class="code-file">~/.fluxbox/menu</code> file.
 
 {% highlight conf %}
 [begin] (Fluxbox-1.3.7)

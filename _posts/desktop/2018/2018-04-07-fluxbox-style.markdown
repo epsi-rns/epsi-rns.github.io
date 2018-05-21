@@ -51,7 +51,7 @@ here we I put my style.
 
 #### Configuration Source
 
-<code>theme.cfg</code> is available at:
+<code class="code-file">theme.cfg</code> is available at:
 
 * [github.com/epsi-rns/dotfiles/.../exilorate][dotfiles-tutor]
 

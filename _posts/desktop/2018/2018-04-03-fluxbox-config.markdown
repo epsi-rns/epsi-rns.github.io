@@ -42,7 +42,7 @@ Config is available at:
 
 ### Config: init
 
-Consider start with <code>~/.fluxbox/init</code> file.
+Consider start with <code class="code-file">~/.fluxbox/init</code> file.
 
 *	[fluxbox-wiki.org/.../Editing_the_init_file.html](http://fluxbox-wiki.org/category/howtos/en/Editing_the_init_file.html)
 
@@ -75,7 +75,7 @@ session.styleOverlay:       ~/.fluxbox/overlay
 
 ### Config: Startup
 
-Most my <code>~/.fluxbox/startup</code> file only configure,
+Most my <code class="code-file">~/.fluxbox/startup</code> file only configure,
 common non-windowed-application in window manager.
 
 #### Wallpaper
@@ -136,7 +136,7 @@ exec fluxbox
 
 ### Config: Key Binding
 
-This <code>~/.fluxbox/keys</code> file is self explanatory.
+This <code class="code-file">~/.fluxbox/keys</code> file is self explanatory.
 No need to be a wm-hacker to configure.
 
 {% highlight conf %}
@@ -168,7 +168,7 @@ Mod4 Ctrl d  :Exec rofi -show window -opacity 90
 
 ### Rules
 
-This <code>~/.fluxbox/apps</code> file, govern each application.
+This <code class="code-file">~/.fluxbox/apps</code> file, govern each application.
 
 *	[fluxbox-wiki.org/.../Editing_the_apps_file.html](http://fluxbox-wiki.org/category/howtos/en/Editing_the_apps_file.html)
 
