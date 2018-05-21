@@ -353,6 +353,8 @@ W-A-Right:     UnmaximizeFull, MaximizeVert, MoveResizeTo: -0 0 50%
 W-A-Left:      UnmaximizeFull, MaximizeVert, MoveResizeTo:  0 0 50%
 {% endhighlight %}
 
+Now we can emulate simple tiling easily.
+
 ![openbox Keybinding: Tiling][image-ss-tiling]{: .img-responsive }
 
 There are also <code>variety</code> wallapaper if you want,
