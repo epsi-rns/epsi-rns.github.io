@@ -151,7 +151,7 @@ Some menu need a configuration file called
 
 *	[github.com/.../dotfiles/.../pipemenus.rc][dotfiles-pipemenus]
 
-I grab this from Kali user, and change a bit, as below.
+I grab this from a Kali user, and change a bit, as below.
 
 {% highlight conf %}
 # pipemenu.rc holds the applications which appear in the Openbox pipemenus

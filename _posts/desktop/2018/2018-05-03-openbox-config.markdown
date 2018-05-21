@@ -42,30 +42,6 @@ The format is:
   </keyboard>
 {% endhighlight %}
 
-#### Custom Key Binding.
-
-I add two more keybind.
-
-![openbox Keybinding: Undecorate][image-ss-w-a-x]{: .img-responsive }
-
-{% highlight xml %}
-    <keybind key="W-A-z">
-      <action name="Decorate"/>
-    </keybind>
-    <keybind key="W-A-x">
-      <action name="Undecorate"/>
-    </keybind>
-{% endhighlight %}
-
-With courtesy of my friend (Asem Bused),
-I can show you the visual representation of this keybinding.
-
-![openbox Keybinding: Decorate][image-ss-w-a-z]{: .img-responsive }
-
-I like terminal with no window border.
-
-Of course you can add your own keybind.
-
 #### Summarize
 
 Rather than, go deep into <code class="code-file">rc.xml</code>.
@@ -267,21 +243,40 @@ Left:       Click:         Close
 
 -- -- --
 
-### More Custom Key Binding.
+### Custom Key Binding.
 
-Mostly borrowed from my i3 configuration.
+#### Openbox Key Binding.
 
-#### Summary
+I add two more keybind.
 
 {% highlight conf %}
-W-e:        oblogout
-W-Return:   xfce4-terminal
-W-A-d:      dmenu_run
-W-S-d:      rofi -show run -opacity 90
-W-Tab:      rofi -show window -opacity 90
+W-A-Z:   Decorate
+W-A-X:   Undecorate
 {% endhighlight %}
 
-### OB Log Out
+![openbox Keybinding: Undecorate][image-ss-w-a-x]{: .img-responsive }
+
+{% highlight xml %}
+    <keybind key="W-A-z">
+      <action name="Decorate"/>
+    </keybind>
+    <keybind key="W-A-x">
+      <action name="Undecorate"/>
+    </keybind>
+{% endhighlight %}
+
+With courtesy of my friend (Asem Bused),
+I can show you the visual representation of this keybinding.
+
+![openbox Keybinding: Decorate][image-ss-w-a-z]{: .img-responsive }
+
+I like terminal with no window border.
+
+Of course you can add your own keybind.
+
+#### OB Log Out
+
+More about OB Logout in:
 
 *	[https://wiki.archlinux.org/index.php/Oblogout](https://wiki.archlinux.org/index.php/Oblogout)
 
@@ -297,45 +292,71 @@ W-Tab:      rofi -show window -opacity 90
     </keybind>
 {% endhighlight %}
 
-#### Terminal
+
+#### My Custom Binding
+
+*	[github.com/.../dotfiles/.../keybind.xml.txt][dotfiles-keybind]
+
+Mostly borrowed from my i3 configuration.
 
 {% highlight conf %}
-    <keybind key="W-Return">
-      <action name="Execute">
-        <command>xfce4-terminal</command>
-      </action>
-    </keybind>
+W-x:        oblogout
+W-Return:   xfce4-terminal
+W-A-d:      dmenu_run
+W-S-d:      rofi -show run -opacity 90
+W-Tab:      rofi -show window -opacity 90
 {% endhighlight %}
 
-#### dmenu
+#### Addy's Custom Binding
+
+*	[github.com/addy-dclxvi/.../rc.xml](https://github.com/addy-dclxvi/almighty-dotfiles/blob/master/.config/openbox/rc.xml)
 
 {% highlight conf %}
-    <keybind key="W-A-d">
-      <action name="Execute">
-        <command>dmenu_run</command>
-      </action>
-    </keybind>
+W-Tab:      skippy-xd
+
+XF86AudioStop:   mpc stop
+XF86AudioPlay:   mpc toggle
+XF86AudioPrev:   mpc prev
+XF86AudioNext:   mpc next
+
+XF86AudioRaiseVolume: amixer -D pulse sset Master '5%+'
+XF86AudioLowerVolume: amixer -D pulse sset Master '5%-'
+XF86AudioMute:        amixer set Master toggle
 {% endhighlight %}
 
-#### Rofi Run
+In my system, I use
+
+{% highlight bash %}
+$ amixer -D default sset Master '5%+'
+{% endhighlight %}
+
+Pulseaudio user may use:
+
+{% highlight bash %}
+$ pactl set-sink-volume 0 +5%
+{% endhighlight %}
+
+#### Arcolinux Custom Binding
+
+I must admit that, these are cool.
+
+*	[github.com/arcolinux/.../rc.xml](https://github.com/arcolinux/arcolinux-openbox-configs/blob/master/rc.xml)
 
 {% highlight conf %}
-    <keybind key="W-S-d">
-      <action name="Execute">
-        <command>rofi -show run -opacity 90</command>
-      </action>
-    </keybind>
+W-Escape:      xkill
+
+W-Right:       UnmaximizeFull, MaximizeVert, MoveResizeTo: 50%, MoveToEdgeEast
+W-Left:        UnmaximizeFull, MaximizeVert, MoveResizeTo: 50%, MoveToEdgeWest
+W-Up:          MaximizeFull
+W-Down:        UnmaximizeFull, MoveResizeTo: 80% 80%, MoveToCenter
+W-A-Right:     UnmaximizeFull, MaximizeVert, MoveResizeTo: -0 0 50%
+W-A-Left:      UnmaximizeFull, MaximizeVert, MoveResizeTo:  0 0 50%
 {% endhighlight %}
 
-#### Rofi Window
+![openbox Keybinding: Tiling][image-ss-tiling]{: .img-responsive }
 
-{% highlight conf %}
-    <keybind key="W-Tab">
-      <action name="Execute">
-        <command>rofi -show window -opacity 90</command>
-      </action>
-    </keybind>
-{% endhighlight %}
+There are also <code>variety</code> wallapaper if you want,
+but I'd rather not using it.
 
 -- -- --
 
@@ -347,9 +368,11 @@ Consider continue reading [ [Config: Rules][local-part-config] ].
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
-[dotfiles-rc-xml]: {{ dotfiles }}/rc.xml
+[dotfiles-rc-xml]:  {{ dotfiles }}/rc.xml
+[dotfiles-keybind]: {{ dotfiles }}/keybind.xml.txt
 
 [local-part-config]:  /desktop/2018/05/04/openbox-config.html
 
 [image-ss-w-a-x]:          {{ asset_path }}/openbox-keybind-W-A-x.png
 [image-ss-w-a-z]:          {{ asset_path }}/openbox-keybind-W-A-z.png
+[image-ss-tiling]:         {{ asset_path }}/openbox-keybind-tiling.png
