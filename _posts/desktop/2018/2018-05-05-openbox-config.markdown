@@ -350,8 +350,7 @@ You can add <code>oblogout</code> item as right away.
 
 ### What's Next
 
-We are finished with openbox configuration.
-Consider going back reading [ [Config: Overview][local-part-config] ].
+Consider continue reading [ [Config: OB Menu Generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
@@ -362,7 +361,7 @@ Consider going back reading [ [Config: Overview][local-part-config] ].
 [dotfiles-fav-xml]:  {{ dotfiles }}/menu.favorites.xml
 [dotfiles-xdg-xml]:  {{ dotfiles }}/menu.xdg.xml
 
-[local-part-config]:  /desktop/2018/05/01/openbox-config.html
+[local-part-config]:  /desktop/2018/05/06/openbox-config.html
 
 [image-ss-menu-default]:   {{ asset_path }}/openbox-menu-default.png
 [image-ss-menu-system]:    {{ asset_path }}/openbox-menu-system.png
