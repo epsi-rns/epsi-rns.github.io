@@ -187,6 +187,9 @@ in the next article.
 My old startup file contain these lines.
 
 {% highlight conf %}
+## Menu Transparency
+compton -m 0.9 -e 0.7 &
+
 ## Volume control for systray
 (sleep 2s && pnmixer) &
 

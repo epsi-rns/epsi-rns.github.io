@@ -41,11 +41,19 @@ $ git clone https://github.com/BunsenLabs/bunsen-common
 
 Put it under <code class="code-file">~/.config/openbox/bin</code>.
 
+#### BunsenLabs or ArcoLinux
+
+There are choices:
+
+*	[github.com/BunsenLabs/bunsen-pipemenus](https://github.com/BunsenLabs/bunsen-pipemenus)
+
+*	[github.com/arcolinux/arcolinux-pipemenus](https://github.com/arcolinux/arcolinux-pipemenus)
+
+It is all, up to you. But in this tutorial, I prefer BunsenLabs.
+
 #### Getting the Scripts
 
 First clone this:
-
-*	[https://github.com/BunsenLabs/bunsen-pipemenus](https://github.com/BunsenLabs/bunsen-pipemenus)
 
 {% highlight bash %}
 $ git clone https://github.com/BunsenLabs/bunsen-pipemenus

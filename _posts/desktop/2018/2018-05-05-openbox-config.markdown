@@ -43,7 +43,7 @@ The default <code class="code-file">~/.config/openbox/rc.xml</code> looks simila
 
 It simply show something like this:
 
-![openbox Menu: default][image-ss-menu-default]{: .img-responsive }
+![openbox Menu: SUSE default][image-ss-menu-default]{: .img-responsive }
 
 My openSUSE's openbox come **without** <code class="code-file">~/.config/openbox/menu.xml</code>.
 We need to create it manually.
@@ -54,9 +54,11 @@ We need to create it manually.
 
 -- -- --
 
-### Main Menu
+### Main Menu: OpenSUSE
 
-This is a manually created <code class="code-file">~/.config/openbox/menu.xml</code>.
+You can find the default at <code>/etc/xdg/openbox/menu.xml</code>.
+However, this is a manually created 
+<code class="code-file">~/.config/openbox/menu.xml</code>.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -114,6 +116,96 @@ Note that the system menu is recreated manually.
 *	[github.com/.../dotfiles/.../menu.xml][dotfiles-menu-xml]
 
 -- -- --
+
+### Main Menu: Fedora
+
+With Fedora, it slighlty different:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="applications-menu" label="Applications" execute="/usr/libexec/openbox-xdg-menu applications"/>
+<menu id="preferences-menu" label="Preferences" execute="/usr/libexec/openbox-xdg-menu preferences"/>
+<menu id="administration-menu" label="Administration" execute="/usr/libexec/openbox-xdg-menu system-settings"/>
+<menu id="terminals-menu" label="Terminals" execute="/usr/libexec/openbox-xdg-menu /etc/xdg/openbox/terminals"/>
+
+<menu id="root-menu" label="Openbox 3">
+  <separator label="Openbox"/>
+  <menu id="applications-menu"/>
+  <menu id="preferences-menu"/>
+  <menu id="administration-menu"/>
+  <separator/>
+  <menu id="terminals-menu"/>
+  <separator/>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Exit">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <separator/>
+  <item label="Log Out">
+    <action name="SessionLogout">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>
+{% endhighlight %}
+
+![openbox Menu: Fedora default][image-ss-menu-fedora]{: .img-responsive }
+
+-- -- --
+
+### Main Menu: Debian
+
+With Debian, it is also different:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal emulator">
+    <action name="Execute"><execute>x-terminal-emulator</execute></action>
+  </item>
+  <item label="Web browser">
+    <action name="Execute"><execute>x-www-browser</execute></action>
+  </item>
+  <!-- This requires the presence of the 'openbox-menu' package to work -->
+  <menu id="/Debian" />
+  <separator />
+  <menu id="applications-menu" label="Applications" execute="/usr/bin/obamenu"/>
+  <separator />
+  <item label="ObConf">
+    <action name="Execute"><execute>obconf</execute></action>
+  </item>
+  <item label="Reconfigure">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Restart">
+    <action name="Restart" />
+  </item>
+  <separator />
+  <item label="Exit">
+    <action name="Exit" />
+  </item>
+</menu>
+
+</openbox_menu>
+{% endhighlight %}
+
+-- -- --
+
 
 ### Pipe Menu
 
@@ -339,13 +431,16 @@ And the final result is.
 
 #### OB Log Out
 
-You can add <code>oblogout</code> item as right away.
+You can add <code>oblogout</code> item right away.
 
 {% highlight conf %}
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
     <menu id="system-menu" label="System">
         ...
+        <item label="Run Command">
+            <action name="gmrun"/>
+        </item>
         <item label="OB Log Out">
             <action name="Execute"><execute>oblogout</execute></action>
         </item>
@@ -374,7 +469,10 @@ Consider continue reading [ [Menu: Dynamic][local-part-config] ].
 [local-part-config]:  /desktop/2018/05/06/openbox-config.html
 
 [image-ss-menu-default]:   {{ asset_path }}/openbox-menu-default.png
+[image-ss-menu-fedora]:    {{ asset_path }}/openbox-menu-fedora-default.png
 [image-ss-menu-system]:    {{ asset_path }}/openbox-menu-system.png
 [image-ss-menu-favorites]: {{ asset_path }}/openbox-menu-favorites.png
 [image-ss-menu-xdg-suse]:  {{ asset_path }}/openbox-menu-xdg-suse.png
 [image-ss-menu-merge]:     {{ asset_path }}/openbox-menu-merge.png
+
+

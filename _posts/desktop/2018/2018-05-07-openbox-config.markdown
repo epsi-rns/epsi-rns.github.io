@@ -78,6 +78,8 @@ Just run the <code>obmenu-generator</code>.
 $ ./obmenu-generator -s > ~/.config/openbox/menu.xml 
 {% endhighlight %}
 
+And do not forget to <code>Reconfigure</code> openbox.
+
 #### Icon
 
 Adding icon is as simply as adding <code>-i</code> argument.
@@ -121,6 +123,138 @@ gtk-icon-theme-name="Numix-Circle"
 
 -- -- --
 
+### Dynamic Menu
+
+We can also achieve dynamic menu,
+by editing the <code class="code-file">menu.xml</code>,
+into this:
+
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://openbox.org/">
+    <menu id="root-menu" label="obmenu-generator" execute="/usr/bin/obmenu-generator" />
+</openbox_menu>
+{% endhighlight %}
+
+*	[github.com/.../dotfiles/.../menu.xml][dotfiles-dynamic]
+
+But I'd prefer static menu, that is faster.
+
+-- -- --
+
+### Custom Schema
+
+It is time to edit <code class="code-file">schema.pl</code>.
+Most of the idea comes form ArcoLinux.
+
+*	[github.com/arcolinux/.../schema.pl](https://github.com/arcolinux/arcolinux-obmenu-generator/blob/master/schema.pl)
+
+#### Favorites
+
+Put this on top most:
+
+{% highlight perl %}
+    # Favorites
+    {begin => ['Favorites', 'utilities-desktop-extra']},
+        {sep => 'Terminal'},
+        {item => ['urxvt',              'URxvt',            'terminal']},
+        {item => ['xfce4-terminal',     'XFCE4 Terminal',   'terminal']},
+        {sep => 'Office'},
+        {item => ['libreoffice',        'LibreOffice',      'libreoffice-main']},
+        {sep => 'File Manager'},        
+        {item => ['pcmanfm-qt',         'PC Man FM Qt',     'file-manager']},
+        {item => ['thunar',             'Thunar',           'thunar']},
+        {sep => 'Internet'},
+        {item => ['firefox',            'Firefox',          'firefox']},
+        {item => ['chromium',           'Chromium',         'chromium']},
+        {item => ['midori',             'Midori',           'midori']},
+        {item => ['transmission',       'Transmission',     'transmission']},
+        {item => ['telegram',           'Telegram',         'telegram']},
+        {sep => 'Media'},
+        {item => ['clementine',         'Clementine',       'clementine']},
+        {item => ['vlc',                'VLC',              'vlc']},
+        {item => ['xfce4-screenhoter',  'Screenshot',       'camera']},
+        {sep => 'Editor'},
+        {item => ['geany',              'Geany',            'geany']},
+        {sep => 'System'},
+        {item => ["xfce4-taskmanager",  'Taskmanager',      'gnome-system-monitor']},
+        {item => ["hardinfo",           'Hardinfo',         'hardinfo']},
+    {end => undef},
+{% endhighlight %}
+
+#### Replace Default Application
+
+Comment unused line, and add these lines:
+
+{% highlight perl %}
+    #          COMMAND                 LABEL              ICON
+    # {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
+    # {item => ['xterm',            'Terminal',     'utilities-terminal']},
+    # {item => ['xdg-open http://', 'Web Browser',  'web-browser']},
+    {item => ['gmrun',            'Run command',  'system-run']},
+    {sep => undef},
+
+    {item => ['exo-open --launch TerminalEmulator',                                 'Terminal',          'terminal']},
+    {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
+    {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
+{% endhighlight %}
+
+#### Categories Remain Intact
+
+{% highlight perl %}
+    {sep => 'Categories'},
+
+    #          NAME            LABEL                ICON
+    {cat => ['utility',     'Accessories', 'applications-utilities']},
+    {cat => ['development', 'Development', 'applications-development']},
+    {cat => ['education',   'Education',   'applications-science']},
+    {cat => ['game',        'Games',       'applications-games']},
+    {cat => ['graphics',    'Graphics',    'applications-graphics']},
+    {cat => ['audiovideo',  'Multimedia',  'applications-multimedia']},
+    {cat => ['network',     'Network',     'applications-internet']},
+    {cat => ['office',      'Office',      'applications-office']},
+    {cat => ['other',       'Other',       'applications-other']},
+    {cat => ['settings',    'Settings',    'applications-accessories']},
+    {cat => ['system',      'System',      'applications-system']},
+{% endhighlight %}
+
+#### Add Places
+
+{% highlight perl %}
+    {sep => undef},
+    {pipe => ['/home/epsi/.config/openbox/bin/bl-places-pipemenu',         'Places',       'folder']},
+{% endhighlight %}
+
+#### Bottom
+
+{% highlight perl %}
+    {pipe => ['/home/epsi/.config/openbox/bin/bl-help-pipemenu',              'Help &amp; Resources',              'info']},
+    {sep  => undef},
+
+    ## The xscreensaver lock command
+    {item => ['xscreensaver-command -lock', 'Lock', 'system-lock-screen']},
+
+    ## This option uses the default Openbox's "Exit" action
+    # {exit => ['Exit', 'application-exit']},
+
+    ## This uses the 'oblogout' menu
+    {item => ['oblogout', 'Exit', 'application-exit']},
+{% endhighlight %}
+
+#### Reconfigure
+
+{% highlight bash %}
+$ ./obmenu-generator -s -i > ~/.config/openbox/menu.xml 
+{% endhighlight %}
+
+And do not forget to <code>Reconfigure</code> openbox.
+
+![openbox Config: obmenu-generator custom schema.pl][image-ss-obmenu-custom]{: .img-responsive }
+
+-- -- --
+
 ### What's Next
 
 We are finished with openbox configuration.
@@ -131,8 +265,10 @@ Consider going back reading [ [Config: Overview][local-part-config] ].
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]:    {{ dotfiles }}/rc.xml
+[dotfiles-dynamic]:   {{ dotfiles }}/menu.dynamic.xml
 [dotfiles-schema-pl]: {{ dotfiles }}/obmenu-generator/schema.pl
 
 [local-part-config]:  /desktop/2018/05/01/openbox-config.html
 
 [image-ss-obmenu-icon]:    {{ asset_path }}/openbox-obmenu-icon.png
+[image-ss-obmenu-custom]:  {{ asset_path }}/openbox-obmenu-custom.png

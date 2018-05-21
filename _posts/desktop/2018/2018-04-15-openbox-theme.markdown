@@ -109,6 +109,16 @@ Black and White is sufficient.
 
 -- -- --
 
+### Menu Transparency
+
+You can set with compton.
+
+{% highlight xml %}
+compton -m 0.8
+{% endhighlight %}
+
+-- -- --
+
 ### Theme Color
 
 I'm using Google's material color for theming.
