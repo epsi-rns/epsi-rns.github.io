@@ -147,7 +147,7 @@ But I'd prefer static menu, that is faster.
 ### Custom Schema
 
 It is time to edit <code class="code-file">schema.pl</code>.
-Most of the idea comes form ArcoLinux.
+Most of the ideas comes form ArcoLinux.
 
 *	[github.com/arcolinux/.../schema.pl](https://github.com/arcolinux/arcolinux-obmenu-generator/blob/master/schema.pl)
 

@@ -398,7 +398,7 @@ window.inactive.button.toggled.unpressed.image.color: #f5f5f5
 
 -- -- --
 
-#### Menus
+### Menus
 
 This should be self explanatory.
 
@@ -434,6 +434,42 @@ menu.items.active.disabled.text.color: #9e9e9e
 
 -- -- --
 
+#### Compositor: Shadow Menu
+
+Before make the menu pretty with shadow,
+we need to adjust a bit, to get the effect
+
+{% highlight conf %}
+menu.border.width: 7
+menu.overlap.x:    4
+menu.overlap.y:    0
+{% endhighlight %}
+
+Now we need to adjust compositor in <code>compton.conf</code>.
+
+{% highlight conf %}
+# Shadow
+shadow = true;
+no-dnd-shadow = true;
+no-dock-shadow = true;
+clear-shadow = true;
+shadow-radius = 7;
+shadow-offset-x = -14;
+shadow-offset-y = -7;
+{% endhighlight %}
+
+Consider also change the menu opacity in <code>compton.conf</code>.
+
+{% highlight conf %}
+# Opacity
+menu-opacity = 0.9;
+frame-opacity = 1;
+{% endhighlight %}
+
+![openbox Theme: menu with compositor][image-ss-compton]{: .img-responsive }
+
+-- -- --
+
 ### Conclusion
 
 I think that's all about theme.
@@ -456,7 +492,6 @@ I'm thinking of make another openbox article.
 [image-ss-menuonly]:   {{ asset_path }}/openbox-flatypuss-menu-only.png
 [image-ss-mogrify]:    {{ asset_path }}/openbox-flatypuss-xbm-png.png
 [image-ss-button]:     {{ asset_path }}/openbox-flatypuss-button.png
-
-
+[image-ss-compton]:    {{ asset_path }}/openbox-menu-compton.png
 
 
