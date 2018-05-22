@@ -2,7 +2,7 @@
 layout: post
 title:  "Openbox Menu - Dynamic"
 categories: desktop
-date:   2018-05-06 09:25:15 +0700
+date:   2018-05-08 09:25:15 +0700
 tags: [openbox]
 author: epsi
 
@@ -193,6 +193,6 @@ Consider continue reading [ [Menu: Generator][local-part-config] ].
 [dotfiles-bunsenlabs]: {{ dotfiles }}/menu.bunsenlabs.xml
 [dotfiles-pipemenus]:  {{ dotfiles }}/pipemenus.rc
 
-[local-part-config]:  /desktop/2018/05/07/openbox-config.html
+[local-part-config]:  /desktop/2018/05/09/openbox-config.html
 
 [image-ss-menu-bunsenlabs]:    {{ asset_path }}/openbox-menu-bl-scripts.png

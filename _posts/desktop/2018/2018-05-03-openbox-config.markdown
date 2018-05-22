@@ -1,380 +1,243 @@
 ---
 layout: post
-title:  "Openbox Config - Key and Mouse Binding"
+title:  "Openbox Config - General rc.xml"
 categories: desktop
 date:   2018-05-03 09:25:15 +0700
 tags: [openbox]
 author: epsi
 
 excerpt:
-  A brief explanation about Openbox rc.xml Configuration
+  A brief explanation about Openbox rc.xml configuration in general.
 
 ---
 
 {% include post/2018/05/toc-openbox-config.html %}
 
-> Goal: Explaining openbox key and mouse binding in rc.xml configuration 
+### Overview
 
-### Key Binding
+> Goal: Explaining Openbox rc.xml configuration in general
 
-There is a whole article for this.
+#### Reading
 
-*	[http://openbox.org/wiki/Help:Bindings](http://openbox.org/wiki/Help:Bindings#Key_bindings)
+<code class="code-file">rc.xml</code> has been comprehensively covered in this article.
+
+*	[http://openbox.org/wiki/Help:Configuration](http://openbox.org/wiki/Help:Configuration)
+
+Therefore, this article only discuss about changes in **rc.xml** and stuff.
+
+That article above clearly defined 13 sections of xml:
+Resistance, Focus, Placement, Theme, Desktops, Resize (and move),
+Applications, Keyboard, Mouse, Margins, Menu, Dock, and Coordinates.
+
+#### OBConf
+
+There is a GUI tools to edit the **rc.xml**, called <code>obconf</code>.
+
+![openbox Config: theme][image-ss-obconf]{: .img-responsive }
 
 #### Source
 
 *	[github.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
 
-#### Format
-
-The format is:
-
-{% highlight xml %}
-  <keyboard>
-    ...
-    <keybind key="C-A-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    ...
-  </keyboard>
-{% endhighlight %}
-
-#### Summarize
-
-Rather than, go deep into <code class="code-file">rc.xml</code>.
-I just want to put my key binding here.
-I have limited brain capacity.
-I need to write down as below.
-
-{% highlight conf %}
-# Keybindings for desktop switching
-
-C-A-Left:   GoToDesktop:   left
-C-A-Right:  GoToDesktop:   right
-C-A-Up:     GoToDesktop:   up
-C-A-Down:   GoToDesktop:   down
-
-S-A-Left:   SendToDesktop: left
-S-A-Right:  SendToDesktop: right
-S-A-Up:     SendToDesktop: up
-S-A-Down:   SendToDesktop: down
-
-W-F1:       GoToDesktop:   1
-W-F2:       GoToDesktop:   2
-W-F3:       GoToDesktop:   3
-W-F4:       GoToDesktop:   4
-
-W-d:        ToggleShowDesktop
-
-# Keybindings for windows
-
-A-F4:       Close
-A-Escape:   Lower, FocusToBottom, Unfocus
-A-space:    ShowMenu:      client-menu
-
-# Keybindings for window switching 
-
-A-Tab:      NextWindow - Focus, Raise, Unshade
-A-S-Tab:    PreviousWindow - Focus, Raise, Unshade
-C-A-Tab:    NextWindow - Focus, Raise, Unshade
-
-# Keybindings for window switching with the arrow keys 
-
-W-S-Right:  DirectionalCycleWindows: right
-W-S-Left:   DirectionalCycleWindows: left
-W-S-Up:     DirectionalCycleWindows: up
-W-S-Down:   DirectionalCycleWindows: above
-
-# Keybindings for running applications
-
-W-e:        Execute: urxvt
-{% endhighlight %}
-
-The last line, it is actually xterm terminal,
-but I change it to urxvt.
-
 -- -- --
 
-### Mouse Binding
+### Theme
 
-The format is:
+The representative xml of theme configuration,
+would looks similar as example below.
 
 {% highlight xml %}
-  <mouse>
+  <theme>
+    <name>flatypuss</name>
+    <titleLayout>NLSDIMC</titleLayout>
     ...
-    <context name="Frame">
-      <mousebind button="A-Left" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-      </mousebind>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
+    <font place="ActiveWindow">
       ...
-    </context>
-  </mouse>
+    </font>
+  </theme>
 {% endhighlight %}
 
-#### Summarize
+Where the character means:
 
-{% highlight conf %}
-# Context: Frame
+*	N: window icon
 
-A-Left:     Press:         Focus, Raise
-A-Left:     Click:         Unshade
-A-Left:     Drag:          Move
+*	L: window label (AKA title).
 
-A-Right:    Press:         Focus, Raise, Unshade
-A-Right:    Drag:          Resize
+*	I: iconify
 
-A-Middle:   Press:         Lower, FocusToBottom, Unfocus
+*	M: maximize
 
-A-Up:       Click:         GoToDesktop:    previous
-A-Down:     Click:         GoToDesktop:    next
+*	C: close
 
-C-A-Up:     Click:         GoToDesktop:    previous
-C-A-Down:   Click:         GoToDesktop:    next
+*	S: shade (roll up/down)
 
-A-S-Up:     Click:         SendToDesktop:  previous
-A-S-Down:   Click:         SendToDesktop:  next
-
-# Context: Titlebar
-
-Left:       Drag:          Move
-Left:       DoubleClick:   ToggleMaximize
-Up:         Click:         if not shaded:  Shade, FocusToBottom, Unfocus, Lower
-Down:       Click:         if shaded:  Unshade, Raise
-
-# Context: Titlebar Top Right Bottom Left TLCorner TRCorner BRCorner BLCorner
-
-Left:       Press:         Focus, Raise, Unshade
-Middle:     Press:         Lower, FocusToBottom, Unfocus
-Right:      Press:         Focus, Raise, ShowMenu
-
-# Context: Top
-
-Left:       Drag:          Resize:         top
-
-# Context: Left
-
-Left:       Drag:          Resize:         left
-
-# Context: Right
-
-Left:       Drag:          Resize:         right
-
-# Context: Bottom
-
-Left:       Drag:          Resize:         bottom
-Right:      Press:         Focus, Raise, ShowMenu
-
-# Context: TRCorner BRCorner TLCorner BLCorner
-
-Left:       Press:         Focus, Raise, Unshade
-Left:       Drag:          Resize
-
-# Context: Client
-
-Left:       Press:         Focus, Raise
-Middle:     Press:         Focus, Raise
-Right:      Press:         Focus, Raise
-
-# Context: AllDesktops
-
-Left:       Press:         Focus, Raise, Unshade
-Left:       Click:         ToggleOmnipresent
-
-# Context: Desktop
-
-Up:         Click:         GoToDesktop:    previous
-Down:       Click:         GoToDesktop:    next
-A-Up:       Click:         GoToDesktop:    previous
-A-Down:     Click:         GoToDesktop:    next
-C-A-Up:     Click:         GoToDesktop:    previous
-C-A-Down:   Click:         GoToDesktop:    next
-Left:       Press:         Focus, Raise
-Right:      Press:         Focus, Raise
-
-# Context: Root
-
-Middle:     Press:         ShowMenu:       client-list-combined-menu
-Right:      Press:         ShowMenu:       root-menu
-
-# Context: MoveResize
-
-Up:         Click:         GoToDesktop:    previous
-Down:       Click:         GoToDesktop:    next
-A-Up:       Click:         GoToDesktop:    previous
-A-Down:     Click:         GoToDesktop:    next
-{% endhighlight %}
-
-#### Summmarize The Buttons
-
-{% highlight conf %}
-# Context: Icon
-
-Left:       Press:         Focus, Raise, Unshade, ShowMenu
-Right:      Press:         Focus, Raise, ShowMenu
-
-# Context: Shade
-
-Left:       Press:         Focus, Raise
-Left:       Click:         ToggleShade
-
-# Context: Iconify
-
-Left:       Press:         Focus, Raise
-Left:       Click:         Iconify
-
-# Context: Maximize
-
-Left:       Press:         Focus, Raise, Unshade
-Middle:     Press:         Focus, Raise, Unshade
-Right:      Press:         Focus, Raise, Unshade
-Left:       Click:         ToggleMaximize
-Middle:     Click:         ToggleMaximize: vertical  
-Right:      Click:         ToggleMaximize: horizontal
-
-# Context: Close
-
-Left:       Press:         Focus, Raise, Unshade
-Left:       Click:         Close
-{% endhighlight %}
+*	D: omnipresent (on all desktops).
 
 -- -- --
 
-### Custom Key Binding.
+### Desktop
 
-#### Openbox Key Binding.
-
-I add two more keybind.
-
-{% highlight conf %}
-W-A-Z:   Decorate
-W-A-X:   Undecorate
-{% endhighlight %}
-
-![openbox Keybinding: Undecorate][image-ss-w-a-x]{: .img-responsive }
+I like to use, geeky greek character to identify my desktop.
 
 {% highlight xml %}
-    <keybind key="W-A-z">
-      <action name="Decorate"/>
-    </keybind>
-    <keybind key="W-A-x">
-      <action name="Undecorate"/>
-    </keybind>
+  <desktops>
+    <number>4</number>
+    <firstdesk>1</firstdesk>
+    <names>
+      <name>α</name>
+      <name>β</name>
+      <name>γ</name>
+      <name>δ</name>
+    </names>
+    <popupTime>875</popupTime>
+  </desktops>
 {% endhighlight %}
 
-With courtesy of my friend (Asem Bused),
-I can show you the visual representation of this keybinding.
+Now you can see the result in <code>tint2</code> as below.
 
-![openbox Keybinding: Decorate][image-ss-w-a-z]{: .img-responsive }
+![openbox Config: desktops tint2][image-ss-config-desktops]{: .img-responsive }
 
-I like terminal with no window border.
+-- -- --
 
-Of course you can add your own keybind.
+### Gaps
 
-#### OB Log Out
+You can set desktop margins.
+Note that I put 40 on top,
+because I have my tint2 panel.
+You might want different setting.
 
-More about OB Logout in:
-
-*	[https://wiki.archlinux.org/index.php/Oblogout](https://wiki.archlinux.org/index.php/Oblogout)
-
-{% highlight conf %}
-    <keybind key="W-x">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>oblogut</name>
-        </startupnotify>
-        <command>oblogout</command>
-      </action>
-    </keybind>
+{% highlight xml %}
+  <margins>
+    <top>40</top>
+    <bottom>10</bottom>
+    <left>10</left>
+    <right>10</right>
+  </margins>
 {% endhighlight %}
 
+![openbox Config: desktops margin][image-ss-config-margin]{: .img-responsive }
 
-#### My Custom Binding
+-- -- --
 
-*	[github.com/.../dotfiles/.../keybind.xml.txt][dotfiles-keybind]
+### Logging Out
 
-Mostly borrowed from my i3 configuration.
+This is not a part of config, but rather an additional feature,
+utilize third party application.
 
-{% highlight conf %}
-W-x:        oblogout
-W-Return:   xfce4-terminal
-W-A-d:      dmenu_run
-W-S-d:      rofi -show run -opacity 90
-W-Tab:      rofi -show window -opacity 90
-{% endhighlight %}
+#### Default
 
-#### Addy's Custom Binding
+This is the default logout dialog from openbox.
 
-*	[github.com/addy-dclxvi/.../rc.xml](https://github.com/addy-dclxvi/almighty-dotfiles/blob/master/.config/openbox/rc.xml)
+![openbox Logout: default exit][image-ss-exit]{: .img-responsive }
 
-{% highlight conf %}
-W-Tab:      skippy-xd
+#### OB Logout
 
-XF86AudioStop:   mpc stop
-XF86AudioPlay:   mpc toggle
-XF86AudioPrev:   mpc prev
-XF86AudioNext:   mpc next
-
-XF86AudioRaiseVolume: amixer -D pulse sset Master '5%+'
-XF86AudioLowerVolume: amixer -D pulse sset Master '5%-'
-XF86AudioMute:        amixer set Master toggle
-{% endhighlight %}
-
-In my system, I use
+However, there is a good application called <code>oblogout</code>,
+that you can set them as keybinding, or just put it in menu.
 
 {% highlight bash %}
-$ amixer -D default sset Master '5%+'
+$ oblogout
 {% endhighlight %}
 
-Pulseaudio user may use:
+![openbox Logout: oblogout][image-ss-oblogout]{: .img-responsive }
 
-{% highlight bash %}
-$ pactl set-sink-volume 0 +5%
-{% endhighlight %}
+-- -- --
 
-#### Arcolinux Custom Binding
+### Startup
 
-I must admit that, these are cool.
+There is this <code class="code-file">~/.config/openbox/autostart</code> file,
+that manage the startup.
 
-*	[github.com/arcolinux/.../rc.xml](https://github.com/arcolinux/arcolinux-openbox-configs/blob/master/rc.xml)
+I change my autostart from time to time.
+It all depen on your need, mood, and the weather on your city.
+
+#### Current autostart
 
 {% highlight conf %}
-W-Escape:      xkill
+# -- non windowed app --
 
-W-Right:       UnmaximizeFull, MaximizeVert, MoveResizeTo: 50%, MoveToEdgeEast
-W-Left:        UnmaximizeFull, MaximizeVert, MoveResizeTo: 50%, MoveToEdgeWest
-W-Up:          MaximizeFull
-W-Down:        UnmaximizeFull, MoveResizeTo: 80% 80%, MoveToCenter
-W-A-Right:     UnmaximizeFull, MaximizeVert, MoveResizeTo: -0 0 50%
-W-A-Left:      UnmaximizeFull, MaximizeVert, MoveResizeTo:  0 0 50%
+nitrogen --restore &
+nm-applet &
+
+compton &
+# dunst &
+parcellite &
+mpd &
+
+tint2 -c ~/.config/tint2/tint2rc-top &
+tint2 -c ~/.config/tint2/tint2rc-bottom &
+
+thunar --daemon &
+
+# -- windowed app --
+
+geany &
+thunar &
+urxvt &
+urxvt &
+firefox &
 {% endhighlight %}
 
-Now we can emulate simple tiling easily.
+This non **windowed-app**, will be discussed later in rules section,
+in the next article.
 
-![openbox Keybinding: Tiling][image-ss-tiling]{: .img-responsive }
+#### Old autostart
 
-There are also <code>variety</code> wallapaper if you want,
-but I'd rather not using it.
+My old startup file contain these lines.
+
+{% highlight conf %}
+### panel
+tint2 &
+
+## Menu Transparency
+compton -m 0.9 -e 0.7 &
+
+## Volume control for systray
+(sleep 2s && pnmixer) &
+
+## Volume keys daemon
+xfce4-volumed &
+
+## Enable power management
+xfce4-power-manager &
+
+## Start Thunar Daemon
+thunar --daemon &
+
+## Start xscreensaver
+xscreensaver -no-splash &
+
+## Start Clipboard manager
+(sleep 3s && clipit) &
+{% endhighlight %}
+
+#### Source
+
+*	[github.com/.../dotfiles/.../autostart][dotfiles-autostart]
+
 
 -- -- --
 
 ### What's Next
 
-Consider continue reading [ [Config: Rules][local-part-config] ].
+Actually there is not many to say here,
+because I splitted the article to: key/mouse binding, rules, and menu.
+
+Consider continue reading [ [Config: Key and Mouse Binding][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
-[dotfiles-rc-xml]:  {{ dotfiles }}/rc.xml
-[dotfiles-keybind]: {{ dotfiles }}/keybind.xml.txt
+[dotfiles-rc-xml]: {{ dotfiles }}/rc.xml
+[dotfiles-autostart]: {{ dotfiles }}/autostart
 
 [local-part-config]:  /desktop/2018/05/04/openbox-config.html
 
-[image-ss-w-a-x]:          {{ asset_path }}/openbox-keybind-W-A-x.png
-[image-ss-w-a-z]:          {{ asset_path }}/openbox-keybind-W-A-z.png
-[image-ss-tiling]:         {{ asset_path }}/openbox-keybind-tiling.png
+[image-ss-obconf]:          {{ asset_path }}/openbox-obconf.png
+[image-ss-exit]:            {{ asset_path }}/openbox-exit.png
+[image-ss-oblogout]:        {{ asset_path }}/openbox-oblogout.png
+[image-ss-config-desktops]: {{ asset_path }}/openbox-config-desktops-tint2.png
+[image-ss-config-margin]:   {{ asset_path }}/openbox-config-margin.png

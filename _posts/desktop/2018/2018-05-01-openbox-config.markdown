@@ -27,6 +27,10 @@ This guidance structured into separated articles:
 
 *	Config: menu.xml (static and sub menus, dynamic, obmenu-generator)
 
+*	Tint2: Taskbar, Background, Panel Items
+
+We have already discuss about theme last months.
+
 #### Window Manager Features
 
 As most of any other Window Manager, Openbox has these features:
@@ -68,6 +72,6 @@ Consider continue reading [ [Config: General rc.xml][local-part-config] ].
 
 [dotfiles-tutor]:  {{ dotfiles }}
 
-[local-part-config]:  /desktop/2018/05/02/openbox-config.html
+[local-part-config]:  /desktop/2018/05/03/openbox-config.html
 
 
