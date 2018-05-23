@@ -175,7 +175,7 @@ Put this on top most:
         {sep => 'Media'},
         {item => ['clementine',         'Clementine',       'clementine']},
         {item => ['vlc',                'VLC',              'vlc']},
-        {item => ['xfce4-screenhoter',  'Screenshot',       'camera']},
+        {item => ['xfce4-screenshoter', 'Screenshot',       'camera']},
         {sep => 'Editor'},
         {item => ['geany',              'Geany',            'geany']},
         {sep => 'System'},

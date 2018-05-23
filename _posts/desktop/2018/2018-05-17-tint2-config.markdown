@@ -138,9 +138,10 @@ Not so common component
 
 * P: Button
 
-#### Executor
+#### Executor: MPC Controller.
 
 You can have as many <code>executor</code> as you need.
+It means, you can make a monitoring system in tint2, such as CPU, memory and stuff.
 
 {% highlight conf %}
 execp = new
@@ -185,6 +186,7 @@ execp_font = xos4 Terminess Powerline 8
 #### Button
 
 You can have as many <code>button</code> as you need.
+Not just URL launcher as below, but any command is fine.
 
 We need <code>png</code> image for each button icon,
 or just text.
