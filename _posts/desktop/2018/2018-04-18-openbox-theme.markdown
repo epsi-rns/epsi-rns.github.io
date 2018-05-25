@@ -396,6 +396,25 @@ window.inactive.button.toggled.unpressed.image.color: #f5f5f5
 
 ![openbox Theme: flatypuss inactive window][image-ss-inactive]{: .img-responsive }
 
+If you wish, you can also add colors for each inactive button.
+
+{% highlight conf %}
+!! teal: u:100
+window.inactive.button.shade.unpressed.image.color:   #b2dfdb
+
+!! orange: u:100
+window.inactive.button.desk.unpressed.image.color:    #ffe0b2
+
+!! green: u:100
+window.inactive.button.iconify.unpressed.image.color: #c8e6c9
+
+!! blue: u:100
+window.inactive.button.max.unpressed.image.color:     #bbdefb
+
+!! red: u:100
+window.inactive.button.close.unpressed.image.color:   #ffcdd2
+{% endhighlight %}
+
 -- -- --
 
 ### Menus

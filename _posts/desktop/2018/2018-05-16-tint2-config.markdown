@@ -216,6 +216,27 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-05
 
 -- -- --
 
+### Tutor 05: solid
+
+For exercise, you can examine this config below.
+I'm using this to match my menu and theme color.
+
+#### Screenshot
+
+![Tint2: Tutor 05 Solid][image-ss-tutor-05-solid]{: .img-responsive }
+
+#### Source
+
+Have a look at the <code class="code-file">tint2rc-tutor-05-solid</code>:
+
+{% highlight bash %}
+$ tint2 -c ~/.config/tint2/tint2rc-tutor-05-sloid
+{% endhighlight %}
+
+*	[github.com/.../dotfiles/.../tint2rc-tutor-05-solid][dotfiles-tutor-05-solid]
+
+-- -- --
+
 ### Tutor 06: Bright Background
 
 Consider changing from dark panel to bright panel.
@@ -325,3 +346,4 @@ Consider continue reading [ [Tint2: Panel Items][local-part-config] ].
 [image-ss-tutor-04]:    {{ asset_path }}/tint2rc-tutor-04.png
 [image-ss-tutor-05]:    {{ asset_path }}/tint2rc-tutor-05.png
 [image-ss-tutor-06]:    {{ asset_path }}/tint2rc-tutor-06.png
+[image-ss-tutor-05-solid]: {{ asset_path }}/tint2rc-tutor-05-solid.png
