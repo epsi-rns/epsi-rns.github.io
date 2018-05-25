@@ -30,8 +30,8 @@ Depend on your installation,
 your minimum fstab contain only this two entry.
 
 {% highlight conf %}
-/dev/sda11   /                   ext4        defaults                                1       1
-/dev/sda13   none                swap        swap                                    0       0
+/dev/sda11   /                 ext4      defaults                                1       1
+/dev/sda13   none              swap      swap                                    0       0
 {% endhighlight %}
 
 #### Manual Page
@@ -52,25 +52,25 @@ How about the rest.
 # Fedora
 # /etc/fstab
 
-/dev/sda11   /                   ext4        defaults                                1       1
-/dev/sda13   none                swap        swap                                    0       0
+/dev/sda11   /                 ext4      defaults                                1       1
+/dev/sda13   none              swap      swap                                    0       0
 
 ### Common
 
-/dev/sda1    /media/System       ntfs-3g     defaults,noauto,locale=en_US.UTF-8      0       0
-/dev/sda6    /media/Docs         ntfs-3g     defaults,locale=en_US.UTF-8             0       0
-/dev/sda5    /media/Works        ext4        defaults,users,exec                     0       2
+/dev/sda1    /media/System     ntfs-3g   defaults,noauto,locale=en_US.UTF-8      0       0
+/dev/sda6    /media/Docs       ntfs-3g   defaults,locale=en_US.UTF-8             0       0
+/dev/sda5    /media/Works      ext4      defaults,users,exec                     0       2
 
 ### Other Distribution
 
-/dev/sda10   /media/KaOSx        xfs         defaults,noauto,users                   0       0
-/dev/sda12   /media/Debian       ext4        defaults,noauto,users                   0       0
+/dev/sda10   /media/KaOSx      xfs       defaults,noauto,users                   0       0
+/dev/sda12   /media/Debian     ext4      defaults,noauto,users                   0       0
 
 ### OpenSUSE
 
-/dev/sda9    /media/openSUSE     btrfs       defaults,noauto,users                   0       0
-/dev/sda7    /media/Boot         ext4        defaults,noauto,user,errors=remount-ro  0       0
-/dev/sda8    /media/Fun          xfs         defaults,noauto,users                   0       0
+/dev/sda9    /media/openSUSE   btrfs     defaults,noauto,users                   0       0
+/dev/sda7    /media/Boot       ext4      defaults,noauto,user,errors=remount-ro  0       0
+/dev/sda8    /media/Fun        xfs       defaults,noauto,users                   0       0
 {% endhighlight %}
 
 ### Additional entry
