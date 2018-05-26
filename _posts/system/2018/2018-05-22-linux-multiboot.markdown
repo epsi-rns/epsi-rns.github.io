@@ -15,24 +15,67 @@ related_link_ids:
 
 ---
 
-### Using Device
+### Overview
+
+There are three parts of mount point on **fstab**,
+that we are going to talk about.
+
+*	Initial: clean install: root and swap
+
+*	Common: shared partition, and windows data partititon
+
+*	Custom: access to other OS
+
+	*	OpenSUSE: access to: Fedora, Debian, KaOSx.
+
+	*	Fedora: access to: openSUSE, Debian, KaOSx.
+
+	*	Debian: access to: openSUSE, Fedora, KaOSx.
+
+	*	KaOSx: access to: openSUSE, Fedora, Debian.
+
+#### Device Name and UUID
+
+There are two approach of setting mount point
+
+*	Using device path: e.g /dev/sda9
+
+*	Using UUID: e.g c114d95e-bc0a-4b41-a2db-abd21aa9850f
+
+#### List Block Device
+
+We are going to use **lsblk**,
+to have a listing of our beloved block device .
+
+{% highlight conf %}
+% lsblk   
+NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda       8:0    0 465.8G  0 disk 
+├─sda1    8:1    0 131.9G  0 part /media/System
+├─sda2    8:2    0     1K  0 part 
+├─sda5    8:5    0  57.7G  0 part /media/Works
+├─sda6    8:6    0  66.4G  0 part /media/Docs
+├─sda7    8:7    0   999M  0 part /media/Boot
+├─sda8    8:8    0   9.9G  0 part /media/Fun
+├─sda9    8:9    0  49.1G  0 part /media/openSUSE
+├─sda10   8:10   0  49.1G  0 part /media/KaOSx
+├─sda11   8:11   0  49.1G  0 part /
+├─sda12   8:12   0  49.1G  0 part /media/Debian
+└─sda13   8:13   0   2.5G  0 part [SWAP]
+{% endhighlight %}
+
+![Multiboot: custom: lsblk][image-ss-lsblk-custom]{: .img-responsive }
+
+-- -- --
+
+### Using Device Path
 
 Since openSUSE with BTRFS is complex,
 I'm going to start with Fedora.
 
-Before we use UUID, I start with device.
+Before we use UUID, I start with device name.
 It is easier to read **/dev/sda9**
 than read **c114d95e-bc0a-4b41-a2db-abd21aa9850f**.
-
-#### Minimum
-
-Depend on your installation,
-your minimum fstab contain only this two entry.
-
-{% highlight conf %}
-/dev/sda11   /                 ext4      defaults                                1       1
-/dev/sda13   none              swap      swap                                    0       0
-{% endhighlight %}
 
 #### Manual Page
 
@@ -44,9 +87,76 @@ $ man fstab
 
 ![Multiboot: man fstab][image-ss-man-fstab]{: .img-responsive }
 
-#### Complete
+#### Initial
+
+Depend on your installation,
+your minimum fstab contain only this two entry.
+
+{% highlight conf %}
+# Fedora
+
+/dev/sda11   /                 ext4      defaults                                1       1
+/dev/sda13   none              swap      swap                                    0       0
+{% endhighlight %}
+
+![Multiboot: initial: lsblk -o][image-ss-lsblk-o-initial]{: .img-responsive }
+
+#### Common
+
+Add shared Partition.
+And this Windows is common to all linux.
+
+{% highlight conf %}
+### Common
+
+/dev/sda1    /media/System     ntfs-3g   defaults,noauto,locale=en_US.UTF-8      0       0
+/dev/sda6    /media/Docs       ntfs-3g   defaults,locale=en_US.UTF-8             0       0
+/dev/sda5    /media/Works      ext4      defaults,users,exec                     0       2
+{% endhighlight %}
+
+![Multiboot: common: lsblk -o][image-ss-lsblk-o-common]{: .img-responsive }
+
+#### Custom Access
 
 How about the rest.
+
+{% highlight conf %}
+### Other Distribution
+
+/dev/sda10   /media/KaOSx      xfs       defaults,noauto,users                   0       0
+/dev/sda12   /media/Debian     ext4      defaults,noauto,users                   0       0
+
+### OpenSUSE
+
+/dev/sda9    /media/openSUSE   btrfs     defaults,noauto,users                   0       0
+/dev/sda7    /media/Boot       ext4      defaults,noauto,user,errors=remount-ro  0       0
+/dev/sda8    /media/Fun        xfs       defaults,noauto,users                   0       0
+{% endhighlight %}
+
+![Multiboot: custom: lsblk -o][image-ss-lsblk-o-custom]{: .img-responsive }
+
+And the result of **lsblk -o** is:
+
+{% highlight conf %}
+% lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT
+NAME    FSTYPE LABEL  MOUNTPOINT
+sda                   
+├─sda1  ntfs   System /media/System
+├─sda2                
+├─sda5  ext4   Works  /media/Works
+├─sda6  ntfs   Docs   /media/Docs
+├─sda7  ext4   boot   /media/Boot
+├─sda8  xfs    Fun    /media/Fun
+├─sda9  btrfs         /media/openSUSE
+├─sda10 xfs    KaOSx  /media/KaOSx
+├─sda11 ext4   Fedora /
+├─sda12 ext4   Debian /media/Debian
+└─sda13 swap          [SWAP]
+{% endhighlight %}
+
+#### Complete
+
+And finally this is all.
 
 {% highlight conf %}
 # Fedora
@@ -73,7 +183,7 @@ How about the rest.
 /dev/sda8    /media/Fun        xfs       defaults,noauto,users                   0       0
 {% endhighlight %}
 
-### Additional entry
+#### Additional entry
 
 However, there are entry on the fourth field, like this one:
 
@@ -109,7 +219,6 @@ Because I put my samba (network neighbourhood) directory over there.
 Now we are going to convert each device name such as */dev/sda9*,
 to UUID such as **c114d95e-bc0a-4b41-a2db-abd21aa9850f**.
 First, consider what the map in your PC.
-
 
 {% highlight conf %}
 % tree /dev/disk/by-uuid
@@ -162,6 +271,18 @@ UUID=9c76fb33-fa7a-46af-b2bb-f82d385b81b6   /       ext4   defaults             
 UUID=b623e30b-c7a5-4f99-a250-45372da4c5b4   none    swap    swap                            0       0
 {% endhighlight %}
 
+#### mtab
+
+Consider cross check the result with **/etc/mtab**.
+Note that normally swap would not be shown.
+
+{% highlight conf %}
+% cat /etc/mtab | grep sda | column -t
+/dev/sda11  /  ext4  rw,relatime,data=ordered  0  0
+{% endhighlight %}
+
+![Multiboot: initial mtab][image-ss-mtab-initial]{: .img-responsive }
+
 #### Debian
 
 In a same way, consider have a look at ext4 in Debian.
@@ -189,14 +310,6 @@ UUID=b623e30b-c7a5-4f99-a250-45372da4c5b4 swap      swap    defaults,noatime    
 {% endhighlight %}
 
 It is pretty much the same with XFS.
-
-{% highlight conf %}
-# / was on /dev/sda10 during installation
-UUID=50f93bc6-711d-4f70-84cf-09748e653543 /         xfs     defaults,noatime            0       1
-
-# swap was on /dev/sda13 during installation
-UUID=b623e30b-c7a5-4f99-a250-45372da4c5b4 swap      swap    defaults,noatime            0       0
-{% endhighlight %}
 
 #### openSUSE
 
@@ -230,7 +343,6 @@ UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/spool                btrfs      s
 UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/tmp                  btrfs      subvol=@/var/tmp      0 0
 {% endhighlight %}
 
-
 -- -- --
 
 ### Common Mount Point
@@ -251,11 +363,11 @@ UUID=954a9b1e-c8c0-4f38-8877-fa891c79c9ae       /media/Works        ext4        
 
 I mean for every **fstab** in my system (Fedora, openSUSE, Debian, KaOSx).
 
-#### GParted
+#### mtab
 
-Again with GUI, to have better understanding.
+Consider cross check the result with **/etc/mtab**.
 
-![Multiboot: gparted][image-ss-gparted]{: .img-responsive }
+![Multiboot: common mtab][image-ss-mtab-common]{: .img-responsive }
 
 -- -- --
 
@@ -286,6 +398,25 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 #Entry for /dev/sda8 (openSUSE home):
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
+
+#### mtab
+
+Again, consider cross check the result with **/etc/mtab**.
+
+{% highlight conf %}
+% cat /etc/mtab | grep sda | column -t
+/dev/sda11  /                ext4     rw,relatime,data=ordered                                            0  0
+/dev/sda5   /media/Works     ext4     rw,nosuid,nodev,relatime,data=ordered                               0  0
+/dev/sda1   /media/System    fuseblk  rw,relatime,user_id=0,group_id=0,allow_other,blksize=4096           0  0
+/dev/sda6   /media/Docs      fuseblk  rw,relatime,user_id=0,group_id=0,allow_other,blksize=4096           0  0
+/dev/sda12  /media/Debian    ext4     rw,nosuid,nodev,noexec,relatime,data=ordered                        0  0
+/dev/sda9   /media/openSUSE  btrfs    rw,nosuid,nodev,noexec,relatime,space_cache,subvolid=257,subvol=/@  0  0
+/dev/sda10  /media/KaOSx     xfs      rw,nosuid,nodev,noexec,relatime,attr2,inode64,noquota               0  0
+/dev/sda7   /media/Boot      ext4     rw,nosuid,nodev,noexec,relatime,errors=remount-ro,data=ordered      0  0
+/dev/sda8   /media/Fun       xfs      rw,nosuid,nodev,noexec,relatime,attr2,inode64,noquota               0  0
+{% endhighlight %}
+
+![Multiboot: custom mtab][image-ss-mtab-custom]{: .img-responsive }
 
 #### Debian
 
@@ -354,6 +485,12 @@ UUID=9c76fb33-fa7a-46af-b2bb-f82d385b81b6       /media/Fedora       ext4        
 UUID=4190d7a9-fb03-4d19-864f-7d04f89c3be0       /media/Debian       ext4        defaults,noauto,users                   0       0
 {% endhighlight %}
 
+#### GParted
+
+Again with GUI, to have better understanding.
+
+![Multiboot: gparted][image-ss-gparted]{: .img-responsive }
+
 -- -- --
 
 ### What's next
@@ -370,3 +507,13 @@ Samba ?
 [image-ss-by-uuid]:      {{ asset_path }}/opensuse-disk-by-uuid.png
 [image-ss-man-fstab]:    {{ asset_path }}/man-fstab.png
 [image-ss-man-mount]:    {{ asset_path }}/man-mount.png
+
+[image-ss-lsblk-common]:       {{ asset_path }}/fedora-lsblk-common.png
+[image-ss-lsblk-custom]:       {{ asset_path }}/fedora-lsblk-custom.png
+[image-ss-lsblk-initial]:      {{ asset_path }}/fedora-lsblk-initial.png
+[image-ss-lsblk-o-common]:     {{ asset_path }}/fedora-lsblk-o-common.png
+[image-ss-lsblk-o-custom]:     {{ asset_path }}/fedora-lsblk-o-custom.png
+[image-ss-lsblk-o-initial]:    {{ asset_path }}/fedora-lsblk-o-initial.png
+[image-ss-mtab-common]:  {{ asset_path }}/fedora-mtab-column-common.png
+[image-ss-mtab-custom]:  {{ asset_path }}/fedora-mtab-column-custom.png
+[image-ss-mtab-initial]: {{ asset_path }}/fedora-mtab-column-initial.png

@@ -21,22 +21,28 @@ It has been four years since the last time I wrote my multiboot article.
 
 *	[Linux Multiboot, Setting up Partitions][basic-multiboot]
 
+#### Shared Partition
+
 Since then, I use multiboot in other computer as well.
 I found that multiboot requires a shared partition,
 that I could use, along with every installed linux.
 
 	I usually named them Works or Docs.
 
+#### Samba Configuration
+
 And I also use the same samba configuration,
 so my network always find the right document,
 no matter linux, that I boot.
 
+#### Table of Content
+
 This time, I need to show up more configuration,
 how to make, a shared partition across different distribution.
 
-*	/etc/fstab to make shared partition
+*	Partition Schema
 
-*	grub configuration
+*	/etc/fstab to make shared partition
 
 *	samba configuration
 
@@ -109,6 +115,19 @@ to avoid confusion, I name the /home partition of openSUSE as **Fun**.
 {% endhighlight %}
 
 ![Partition: Disk by Label][image-ss-by-label]{: .img-responsive }
+
+#### Partition Information
+
+You can get partition information,
+for each device path such as **/dev/sda9**,
+by using this command.
+
+{% highlight bash %}
+% sudo file -sL /dev/sda9
+/dev/sda9: BTRFS Filesystem sectorsize 4096, nodesize 16384, leafsize 16384, UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f, 32208326656/52743372800 bytes used, 1 devices
+{% endhighlight %}
+
+![Partition: Device Information][image-ss-file-sda9]{: .img-responsive }
 
 -- -- --
 
@@ -206,7 +225,15 @@ How it is going to be ?
 Before going further to /etc/fstab.
 This is what we want to achieve.
 
-#### blkid
+#### KDE Partition Manager.
+
+With this GUI, you will have better understanding.
+
+![Multiboot: KDE Partition Manager][image-ss-partman]{: .img-responsive }
+
+#### Block Device Attribute
+
+GUI is nice, however, there is a more geeky way using **blkid**.
 
 {% highlight conf %}
 % sudo blkid -o list                                                         ~ andalan
@@ -226,12 +253,6 @@ device         fs_type label    mount point        UUID
 
 ![Multiboot: blkid -o list][image-ss-blkid]{: .img-responsive }
 
-#### KDE Partition Manager.
-
-With this GUI, you will have better understanding.
-
-![Multiboot: KDE Partition Manager][image-ss-partman]{: .img-responsive }
-
 -- -- --
 
 ### What's next
@@ -248,3 +269,5 @@ How do we achieve it ?
 [image-ss-by-label]:   {{ asset_path }}/opensuse-disk-by-label.png
 [image-ss-media-dir]:  {{ asset_path }}/opensuse-media-directory.png
 [image-ss-blkid]:      {{ asset_path }}/opensuse-blkid-list.png
+
+[image-ss-file-sda9]:  {{ asset_path }}/fedora-file-sda9.png
