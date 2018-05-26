@@ -8,12 +8,11 @@ author: epsi
 
 excerpt:
   Based on my experience.
-
-related_link_ids: 
-  - 14010246  # Debian Install
-  - 14040246  # Arch Install
-
+  Updating other linux using chroot
+  
 ---
+
+{% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
 
@@ -23,12 +22,15 @@ while you are still working with current OS.
 Here I use openSUSE as a primary OS,
 while updating other OS.
 
+These three OS below share very similar chroot method.
+There are only minor differences.
+
 -- -- --
 
 ### Debian
 
 Just use normal chroot method.
-The only issue is resolv.conf symbolic link.
+The only issue is **resolv.conf** symbolic link.
 
 #### chroot
 
@@ -47,6 +49,8 @@ Do this sequence of command, to do chroot:
 % sudo chroot /media/Debian
 {% endhighlight %}
 
+I adapt the command above from Gentoo manual.
+
 ![chroot: Debian: chroot][image-ss-debian-chroot]{: .img-responsive }
 
 This will take you to Debian root.
@@ -63,7 +67,7 @@ We need to get rid of the original symlink, and replace with a new one.
 % sudo cp -L /etc/resolv.conf /media/Debian/etc/
 {% endhighlight %}
 
-![chroot: Debian: /etc/resolv.conf][image-ss-debian-resolv]{: .img-responsive }
+![chroot: Debian: rename /etc/resolv.conf][image-ss-debian-rename]{: .img-responsive }
 
 #### Update
 
@@ -83,6 +87,8 @@ Do not forget to restore the original **/etc/resolv.conf**
 % sudo rm /media/Debian/etc/resolv.conf
 % sudo mv /media/Debian/etc/resolv.conf.symlink /media/Debian/etc/resolv.conf
 {% endhighlight %}
+
+![chroot: Debian: restore /etc/resolv.conf][image-ss-debian-restore]{: .img-responsive }
 
 #### Post chroot
 
@@ -104,12 +110,20 @@ Unmount all
 Sometimes the volume is busy,
 you need the <code>-f</code> argument.
 
+{% highlight conf %}
+umount: /media/Debian/dev: target is busy
+        (In some cases useful info about processes that
+         use the device is found by lsof(8) or fuser(1).)
+{% endhighlight %}
+
+Sometimes it can't be unmount.
+
 -- -- --
 
 ### Fedora
 
 Just use normal chroot method.
-The only issue is resolv.conf symbolic link.
+The only issue is **resolv.conf** symbolic link.
 
 #### chroot
 
@@ -198,24 +212,104 @@ Unmount all
 Sometimes the volume is busy,
 you need the <code>-f</code> argument.
 
+-- -- --
+
+### KaOSx
+
+Just use normal chroot method.
+No issue at all.
+
+#### chroot
+
+Do this sequence of command, to do chroot:
+
+{% highlight conf %}
+% mount /media/KaOSx
+
+% sudo mount --rbind  /dev /media/KaOSx/dev
+% sudo mount --make-rslave /media/KaOSx/dev
+% sudo mount -t proc /proc /media/KaOSx/proc
+% sudo mount --rbind  /sys /media/KaOSx/sys
+% sudo mount --make-rslave /media/KaOSx/sys
+% sudo mount --rbind  /tmp /media/KaOSx/tmp 
+
+% sudo chroot /media/KaOSx
+{% endhighlight %}
+
+I adapt the command above from Gentoo manual.
+
+![chroot: KaOSx: chroot][image-ss-kaosx-chroot]{: .img-responsive }
+
+This will take you to KaOSx root.
+
+#### Copy resolv.conf
+
+To enable internat access, we must have **/etc/resolv.conf**.
+
+{% highlight conf %}
+% sudo cp -L /etc/resolv.conf /media/KaOSx/etc/
+{% endhighlight %}
+
+![chroot: KaOSx: rename /etc/resolv.conf][image-ss-kaosx-resolv]{: .img-responsive }
+
+No need to restore anything later.
+
+#### Update
+
+{% highlight conf %}
+# pacman -Syu
+{% endhighlight %}
+
+![chroot: KaOSx: pacman -Syu][image-ss-kaosx-update]{: .img-responsive }
+
+#### Post chroot
+
+Just exit, you will be back to original user prompt.
+
+{% highlight conf %}
+# exit
+{% endhighlight %}
+
+Unmount all
+
+{% highlight conf %}
+% sudo umount /media/KaOSx/dev
+% sudo umount /media/KaOSx/proc
+% sudo umount /media/KaOSx/sys
+% sudo umount /media/KaOSx/tmp 
+{% endhighlight %}
+
+![chroot: KaOSx: umount][image-ss-kaosx-umount]{: .img-responsive }
+
+Sometimes the volume is busy,
+you need the <code>-f</code> argument.
+Sometimes it can't be unmount.
 
 -- -- --
 
 ### What's next
 
-Samba ?
+Consider continue reading [ [Network: Samba][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
+[local-part-config]:       /system/2018/05/25/linux-samba.html
+
 [dotfiles-multiboot]:      {{ dotfiles }}
 
 [image-ss-fedora-update]:  {{ asset_path }}/fedora-chroot-dnf-update.png
 [image-ss-fedora-resolv]:  {{ asset_path }}/fedora-etc-resolv.png
 
-[image-ss-debian-chroot]:  {{ asset_path }}//debian-chroot.png
-[image-ss-debian-update]:  {{ asset_path }}//debian-chroot-apt-update.png
-[image-ss-debian-upgrade]: {{ asset_path }}//debian-chroot-apt-upgrade.png
-[image-ss-debian-resolv]:  {{ asset_path }}//debian-etc-resolv.png
+[image-ss-debian-chroot]:  {{ asset_path }}/debian-chroot.png
+[image-ss-debian-update]:  {{ asset_path }}/debian-chroot-apt-update.png
+[image-ss-debian-upgrade]: {{ asset_path }}/debian-chroot-apt-upgrade.png
+[image-ss-debian-rename]:  {{ asset_path }}/debian-resolv-rename.png
+[image-ss-debian-restore]: {{ asset_path }}/debian-resolv-restore.png
+
+[image-ss-kaosx-chroot]:   {{ asset_path }}/kaosx-chroot.png
+[image-ss-kaosx-update]:   {{ asset_path }}/kaosx-pacman-syu.png
+[image-ss-kaosx-resolv]:   {{ asset_path }}/kaosx-resolv-copy.png
+[image-ss-kaosx-umount]:   {{ asset_path }}/kaosx-umount.png

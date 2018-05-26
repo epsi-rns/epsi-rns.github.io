@@ -363,7 +363,7 @@ Consider continue reading [ [Tint2: More Backgrounds][local-part-config] ].
 [dotfiles-tutor-02]:    {{ dotfiles }}/tint2rc-tutor-02
 [dotfiles-tutor-03]:    {{ dotfiles }}/tint2rc-tutor-03
 
-[local-part-config]:  /desktop/2018/05/16/tint2-config.html
+[local-part-config]:    /desktop/2018/05/16/tint2-config.html
 
 [image-ss-top-wide]:    {{ asset_path }}/tint2-top-wide.png
 [image-ss-tint2conf]:   {{ asset_path }}/tint2conf.png

@@ -15,6 +15,8 @@ related_link_ids:
 
 ---
 
+{% include post/2018/05/toc-multiboot.html %}
+
 This is a remake of my facebook note with the same title.
 
 * [facebook.com/notes/.../426339144178768][facebook-note]
@@ -190,10 +192,18 @@ For more information you can
  $ man mount
 {% endhighlight %}
 
+-- -- --
+
+### What's Next
+
+Consider continue reading [ [Multiboot: Partition Schema][local-part-config] ].
+
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2014/03' %}
+
+[local-part-config]:    /system/2018/05/21/linux-multiboot.html
 
 [facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/linux-multiboot/426339144178768
 [image-cover]: {{ asset_path }}/multiboot-cover.png

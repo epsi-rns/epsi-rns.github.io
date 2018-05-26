@@ -8,12 +8,11 @@ author: epsi
 
 excerpt:
   Based on my experience.
-
-related_link_ids: 
-  - 14010246  # Debian Install
-  - 14040246  # Arch Install
+  My partition schema.
 
 ---
+
+{% include post/2018/05/toc-multiboot.html %}
 
 ### Preface
 
@@ -298,13 +297,16 @@ device         fs_type label    mount point        UUID
 ### What's next
 
 How do we achieve it ?
+Consider continue reading [ [Multiboot: /etc/fstab][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
-[basic-multiboot]: {{ site.url }}/system/2014/03/13/linux-multiboot.html
+[local-part-config]:      /system/2018/05/22/linux-multiboot.html
+
+[basic-multiboot]:        {{ site.url }}/system/2014/03/13/linux-multiboot.html
 
 [dotfiles-multiboot]:     {{ dotfiles }}
 [dotfiles-grub-debian]:   {{ dotfiles }}/grub.debian.cfg
@@ -312,9 +314,9 @@ How do we achieve it ?
 [dotfiles-grub-opensuse]: {{ dotfiles }}/grub.opensuse.cfg
 [dotfiles-grub-kaosx]:    {{ dotfiles }}/grub.kaosx.cfg
 
-[image-ss-partman]:    {{ asset_path }}/kaosx-kde-partman.png
-[image-ss-by-label]:   {{ asset_path }}/opensuse-disk-by-label.png
-[image-ss-media-dir]:  {{ asset_path }}/opensuse-media-directory.png
-[image-ss-blkid]:      {{ asset_path }}/opensuse-blkid-list.png
+[image-ss-partman]:       {{ asset_path }}/kaosx-kde-partman.png
+[image-ss-by-label]:      {{ asset_path }}/opensuse-disk-by-label.png
+[image-ss-media-dir]:     {{ asset_path }}/opensuse-media-directory.png
+[image-ss-blkid]:         {{ asset_path }}/opensuse-blkid-list.png
 
-[image-ss-file-sda9]:  {{ asset_path }}/fedora-file-sda9.png
+[image-ss-file-sda9]:     {{ asset_path }}/fedora-file-sda9.png

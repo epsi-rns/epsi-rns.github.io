@@ -8,12 +8,11 @@ author: epsi
 
 excerpt:
   Based on my experience.
-
-related_link_ids: 
-  - 14010246  # Debian Install
-  - 14040246  # Arch Install
+  My smb.conf.
 
 ---
+
+{% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
 
@@ -433,14 +432,15 @@ Access form Android:
 
 ### Conclusion
 
-Finished
+Finished. We are done with multiboot article series.
+Consider going back reading old article [ [Multiboot: Setting up Partition][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
-[basic-multiboot]: http://localhost:4000/system/2014/03/13/linux-multiboot.html
+[local-part-config]:        /system/2014/03/13/linux-multiboot.html
 
 [dotfiles-multiboot]:      {{ dotfiles }}
 [dotfiles-smb-debian]:     {{ dotfiles }}/smb.debian.conf

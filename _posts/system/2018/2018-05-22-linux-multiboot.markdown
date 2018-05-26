@@ -8,12 +8,11 @@ author: epsi
 
 excerpt:
   Based on my experience.
-
-related_link_ids: 
-  - 14010246  # Debian Install
-  - 14040246  # Arch Install
+  My fstab.
 
 ---
+
+{% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
 
@@ -518,12 +517,14 @@ Again with GUI, to have better understanding.
 
 ### What's next
 
-Samba ?
+Consider continue reading [ [Multiboot: chroot][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
+
+[local-part-config]:       /system/2018/05/23/linux-multiboot.html
 
 [dotfiles-multiboot]:      {{ dotfiles }}
 [dotfiles-fstab-debian]:   {{ dotfiles }}/fstab.debian
@@ -531,12 +532,10 @@ Samba ?
 [dotfiles-fstab-opensuse]: {{ dotfiles }}/fstab.opensuse
 [dotfiles-fstab-kaosx]:    {{ dotfiles }}/fstab.kaosx
 
-[basic-multiboot]: http://localhost:4000/system/2014/03/13/linux-multiboot.html
-
-[image-ss-gparted]:      {{ asset_path }}/opensuse-gparted.png
-[image-ss-by-uuid]:      {{ asset_path }}/opensuse-disk-by-uuid.png
-[image-ss-man-fstab]:    {{ asset_path }}/man-fstab.png
-[image-ss-man-mount]:    {{ asset_path }}/man-mount.png
+[image-ss-gparted]:        {{ asset_path }}/opensuse-gparted.png
+[image-ss-by-uuid]:        {{ asset_path }}/opensuse-disk-by-uuid.png
+[image-ss-man-fstab]:      {{ asset_path }}/man-fstab.png
+[image-ss-man-mount]:      {{ asset_path }}/man-mount.png
 
 [image-ss-lsblk-common]:       {{ asset_path }}/fedora-lsblk-common.png
 [image-ss-lsblk-custom]:       {{ asset_path }}/fedora-lsblk-custom.png
