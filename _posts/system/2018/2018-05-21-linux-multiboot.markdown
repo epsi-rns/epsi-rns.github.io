@@ -304,7 +304,7 @@ How do we achieve it ?
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
-[basic-multiboot]: http://localhost:4000/system/2014/03/13/linux-multiboot.html
+[basic-multiboot]: {{ site.url }}/system/2014/03/13/linux-multiboot.html
 
 [dotfiles-multiboot]:     {{ dotfiles }}
 [dotfiles-grub-debian]:   {{ dotfiles }}/grub.debian.cfg
