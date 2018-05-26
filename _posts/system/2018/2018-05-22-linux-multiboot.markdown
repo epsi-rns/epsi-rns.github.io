@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux Multiboot, /etc/fstab"
+title:  "Linux Multiboot - /etc/fstab"
 date:   2018-05-22 09:25:15 +0700
 categories: system
 tags: [thought]
@@ -65,6 +65,12 @@ sda       8:0    0 465.8G  0 disk
 {% endhighlight %}
 
 ![Multiboot: custom: lsblk][image-ss-lsblk-custom]{: .img-responsive }
+
+#### Dotfiles Document
+
+Config is available at:
+
+* [github.com/epsi-rns/dotfiles/.../multiboot][dotfiles-multiboot]
 
 -- -- --
 
@@ -399,6 +405,11 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
 
+Have a look at the <code class="code-file">fstab.fedora</code> config:
+
+*	[github.com/.../dotfiles/.../fstab.fedora][dotfiles-fstab-fedora]
+
+
 #### mtab
 
 Again, consider cross check the result with **/etc/mtab**.
@@ -442,6 +453,10 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
 
+Have a look at the <code class="code-file">fstab.debian</code> config:
+
+*	[github.com/.../dotfiles/.../fstab.debian][dotfiles-fstab-debian]
+
 #### KaOSx
 
 And so does KaOSx.
@@ -465,6 +480,10 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
 
+Have a look at the <code class="code-file">fstab.kaosx</code> config:
+
+*	[github.com/.../dotfiles/.../fstab.kaosx][dotfiles-fstab-kaosx]
+
 #### openSUSE
 
 And also does openSUSE.
@@ -485,6 +504,10 @@ UUID=9c76fb33-fa7a-46af-b2bb-f82d385b81b6       /media/Fedora       ext4        
 UUID=4190d7a9-fb03-4d19-864f-7d04f89c3be0       /media/Debian       ext4        defaults,noauto,users                   0       0
 {% endhighlight %}
 
+Have a look at the <code class="code-file">fstab.opensuse</code> config:
+
+*	[github.com/.../dotfiles/.../fstab.opensuse][dotfiles-fstab-opensuse]
+
 #### GParted
 
 Again with GUI, to have better understanding.
@@ -500,6 +523,13 @@ Samba ?
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
+{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
+
+[dotfiles-mutliboot]:      {{ dotfiles }}
+[dotfiles-fstab-debian]:   {{ dotfiles }}/fstab.debian
+[dotfiles-fstab-fedora]:   {{ dotfiles }}/fstab.fedora
+[dotfiles-fstab-opensuse]: {{ dotfiles }}/fstab.opensuse
+[dotfiles-fstab-kaosx]:    {{ dotfiles }}/fstab.kaosx
 
 [basic-multiboot]: http://localhost:4000/system/2014/03/13/linux-multiboot.html
 
@@ -514,6 +544,6 @@ Samba ?
 [image-ss-lsblk-o-common]:     {{ asset_path }}/fedora-lsblk-o-common.png
 [image-ss-lsblk-o-custom]:     {{ asset_path }}/fedora-lsblk-o-custom.png
 [image-ss-lsblk-o-initial]:    {{ asset_path }}/fedora-lsblk-o-initial.png
-[image-ss-mtab-common]:  {{ asset_path }}/fedora-mtab-column-common.png
-[image-ss-mtab-custom]:  {{ asset_path }}/fedora-mtab-column-custom.png
-[image-ss-mtab-initial]: {{ asset_path }}/fedora-mtab-column-initial.png
+[image-ss-mtab-common]:        {{ asset_path }}/fedora-mtab-column-common.png
+[image-ss-mtab-custom]:        {{ asset_path }}/fedora-mtab-column-custom.png
+[image-ss-mtab-initial]:       {{ asset_path }}/fedora-mtab-column-initial.png

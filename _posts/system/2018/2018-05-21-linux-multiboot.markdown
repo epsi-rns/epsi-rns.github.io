@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux Multiboot, Partition Schema"
+title:  "Linux Multiboot - Partition Schema"
 date:   2018-05-21 09:25:15 +0700
 categories: system
 tags: [thought]
@@ -29,11 +29,36 @@ that I could use, along with every installed linux.
 
 	I usually named them Works or Docs.
 
+Of course you can use different name.
+However this is my configuration:
+
+*	Works: shared partition for any linux in my PC.
+
+*	Docs: Windows Data.
+
 #### Samba Configuration
 
 And I also use the same samba configuration,
 so my network always find the right document,
 no matter linux, that I boot.
+
+To be exact, my samba path always here.
+
+*	<code>/media/Works/Samba</code>
+
+{% highlight conf %}
+% tree -L 1 /media/Works
+/media/Works
+├── ...
+├── e-Pajak
+├── ...
+├── githublab
+├── ..
+├── Mailbox
+├── Music
+├── Samba
+└── ...
+{% endhighlight %}
 
 #### Table of Content
 
@@ -47,6 +72,14 @@ how to make, a shared partition across different distribution.
 *	samba configuration
 
 *	updating with chroot
+
+#### Dotfiles Document
+
+Config is available at:
+
+* [github.com/epsi-rns/dotfiles/.../multiboot][dotfiles-multiboot]
+
+Including **grub**, **fstab**, and **samba**.
 
 -- -- --
 
@@ -262,8 +295,15 @@ How do we achieve it ?
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
+{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [basic-multiboot]: http://localhost:4000/system/2014/03/13/linux-multiboot.html
+
+[dotfiles-mutliboot]:     {{ dotfiles }}
+[dotfiles-grub-debian]:   {{ dotfiles }}/grub.debian.conf
+[dotfiles-grub-fedora]:   {{ dotfiles }}/grub.fedora.conf
+[dotfiles-grub-opensuse]: {{ dotfiles }}/grub.opensuse.conf
+[dotfiles-grub-kaosx]:    {{ dotfiles }}/grub.kaosx.conf
 
 [image-ss-partman]:    {{ asset_path }}/kaosx-kde-partman.png
 [image-ss-by-label]:   {{ asset_path }}/opensuse-disk-by-label.png

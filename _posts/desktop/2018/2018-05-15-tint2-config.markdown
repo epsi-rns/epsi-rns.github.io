@@ -56,6 +56,12 @@ There is, however a GUI tools called <code>tint2conf</code>.
 But we are not going to use it.
 So prepare your text favorite text editor, sucah as geany or ViM.
 
+#### Dotfiles Document
+
+Config is available at:
+
+* [github.com/epsi-rns/dotfiles/.../tint2/config][dotfiles-tutor]
+
 -- -- --
 
 ### Tutor 01: Minimalist
@@ -352,6 +358,7 @@ Consider continue reading [ [Tint2: More Backgrounds][local-part-config] ].
 
 [cat-white]:       https://github.com/addy-dclxvi/tint2-theme-collections
 
+[dotfiles-tutor]:       {{ dotfiles }}
 [dotfiles-tutor-01]:    {{ dotfiles }}/tint2rc-tutor-01
 [dotfiles-tutor-02]:    {{ dotfiles }}/tint2rc-tutor-02
 [dotfiles-tutor-03]:    {{ dotfiles }}/tint2rc-tutor-03
