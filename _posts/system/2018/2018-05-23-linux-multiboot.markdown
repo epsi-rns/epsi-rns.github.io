@@ -27,6 +27,12 @@ while updating other OS in chroot environment
 These three OS below share very similar chroot method.
 There are only minor differences.
 
+*	Debian
+
+*	Fedora
+
+*	KaOSx
+
 -- -- --
 
 ### Debian
