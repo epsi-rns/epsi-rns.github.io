@@ -8,13 +8,15 @@ author: epsi
 
 excerpt:
   Based on my experience.
-  My smb.conf.
+  Thorough /etc/samba/smb.conf example
 
 ---
 
 {% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
+
+> Goal: Thorough /etc/samba/smb.conf example
 
 This is more like a network topic rather than a multiboot topic,
 I gather this samba article here, because of my multiboot situation.

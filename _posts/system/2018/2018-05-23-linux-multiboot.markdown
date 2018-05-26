@@ -8,7 +8,7 @@ author: epsi
 
 excerpt:
   Based on my experience.
-  Updating other linux using chroot
+  Updating other linux in chroot environment.
   
 ---
 
@@ -16,11 +16,13 @@ excerpt:
 
 ### Overview
 
-One andvatange of multiboot is that you can update other OS,
+> Goal: Updating linux in chroot environment.
+
+One advantange of multiboot is that you can update other OS,
 while you are still working with current OS.
 
 Here I use openSUSE as a primary OS,
-while updating other OS.
+while updating other OS in chroot environment
 
 These three OS below share very similar chroot method.
 There are only minor differences.

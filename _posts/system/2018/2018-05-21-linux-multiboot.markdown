@@ -16,6 +16,8 @@ excerpt:
 
 ### Preface
 
+> Goal: Latest partition schema as a based of this multiboot article series..
+
 It has been four years since the last time I wrote my multiboot article.
 
 *	[Linux Multiboot, Setting up Partitions][basic-multiboot]

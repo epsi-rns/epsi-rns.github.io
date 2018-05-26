@@ -8,13 +8,15 @@ author: epsi
 
 excerpt:
   Based on my experience.
-  My fstab.
+  Thorough /etc/fstab/ example.
 
 ---
 
 {% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
+
+> Goal: Thorough /etc/fstab/ example
 
 There are three parts of mount point on **fstab**,
 that we are going to talk about.
