@@ -60,6 +60,13 @@ To be exact, my samba path always here.
 └── ...
 {% endhighlight %}
 
+And in <code>smb.conf</code> for each distribution installed:
+
+{% highlight conf %}
+[Samba]
+   path = /media/Works/Samba/
+{% endhighlight %}
+
 #### Table of Content
 
 This time, I need to show up more configuration,
@@ -299,11 +306,11 @@ How do we achieve it ?
 
 [basic-multiboot]: http://localhost:4000/system/2014/03/13/linux-multiboot.html
 
-[dotfiles-mutliboot]:     {{ dotfiles }}
-[dotfiles-grub-debian]:   {{ dotfiles }}/grub.debian.conf
-[dotfiles-grub-fedora]:   {{ dotfiles }}/grub.fedora.conf
-[dotfiles-grub-opensuse]: {{ dotfiles }}/grub.opensuse.conf
-[dotfiles-grub-kaosx]:    {{ dotfiles }}/grub.kaosx.conf
+[dotfiles-multiboot]:     {{ dotfiles }}
+[dotfiles-grub-debian]:   {{ dotfiles }}/grub.debian.cfg
+[dotfiles-grub-fedora]:   {{ dotfiles }}/grub.fedora.cfg
+[dotfiles-grub-opensuse]: {{ dotfiles }}/grub.opensuse.cfg
+[dotfiles-grub-kaosx]:    {{ dotfiles }}/grub.kaosx.cfg
 
 [image-ss-partman]:    {{ asset_path }}/kaosx-kde-partman.png
 [image-ss-by-label]:   {{ asset_path }}/opensuse-disk-by-label.png

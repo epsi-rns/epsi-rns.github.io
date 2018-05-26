@@ -405,7 +405,7 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
 
-Have a look at the <code class="code-file">fstab.fedora</code> config:
+Have a look at the <code class="code-file">/etc/fstab</code> config for Fedora:
 
 *	[github.com/.../dotfiles/.../fstab.fedora][dotfiles-fstab-fedora]
 
@@ -453,7 +453,7 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
 
-Have a look at the <code class="code-file">fstab.debian</code> config:
+Have a look at the <code class="code-file">/etc/fstab</code> config for Debian:
 
 *	[github.com/.../dotfiles/.../fstab.debian][dotfiles-fstab-debian]
 
@@ -480,7 +480,7 @@ UUID=23342d48-c3be-402c-b049-b3e9ddeafbc0       /media/Boot         ext4        
 UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         defaults,noauto,users                   0       0
 {% endhighlight %}
 
-Have a look at the <code class="code-file">fstab.kaosx</code> config:
+Have a look at the <code class="code-file">/etc/fstab</code> config for KaOSx:
 
 *	[github.com/.../dotfiles/.../fstab.kaosx][dotfiles-fstab-kaosx]
 
@@ -504,7 +504,7 @@ UUID=9c76fb33-fa7a-46af-b2bb-f82d385b81b6       /media/Fedora       ext4        
 UUID=4190d7a9-fb03-4d19-864f-7d04f89c3be0       /media/Debian       ext4        defaults,noauto,users                   0       0
 {% endhighlight %}
 
-Have a look at the <code class="code-file">fstab.opensuse</code> config:
+Have a look at the <code class="code-file">/etc/fstab</code> config for openSUSE:
 
 *	[github.com/.../dotfiles/.../fstab.opensuse][dotfiles-fstab-opensuse]
 
@@ -525,7 +525,7 @@ Samba ?
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
-[dotfiles-mutliboot]:      {{ dotfiles }}
+[dotfiles-multiboot]:      {{ dotfiles }}
 [dotfiles-fstab-debian]:   {{ dotfiles }}/fstab.debian
 [dotfiles-fstab-fedora]:   {{ dotfiles }}/fstab.fedora
 [dotfiles-fstab-opensuse]: {{ dotfiles }}/fstab.opensuse
