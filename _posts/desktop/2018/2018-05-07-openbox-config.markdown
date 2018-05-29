@@ -429,9 +429,9 @@ And the final result is.
 
 ### Additional Menu
 
-#### OB Log Out
+#### OB Log Out/ BL Exit
 
-You can add <code>oblogout</code> item right away.
+You can add <code>oblogout</code> or item right away.
 
 {% highlight conf %}
 <?xml version="1.0" encoding="utf-8"?>

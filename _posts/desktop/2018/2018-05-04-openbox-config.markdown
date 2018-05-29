@@ -285,7 +285,7 @@ More about OB Logout in:
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>oblogut</name>
+          <name>oblogout</name>
         </startupnotify>
         <command>oblogout</command>
       </action>

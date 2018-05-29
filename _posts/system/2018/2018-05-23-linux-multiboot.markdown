@@ -295,6 +295,24 @@ Sometimes it can't be unmount.
 
 -- -- --
 
+### Miscellanous
+
+#### Reading
+
+*	[https://wiki.archlinux.org/index.php/change_root](https://wiki.archlinux.org/index.php/change_root)
+
+#### arch-chroot
+
+If you are in Ubuntu, you are lucky,
+that Ubuntu support arch-install-scripts.
+
+#### Tools
+
+*	Bhaskar Chowdhury: 
+	[github.com/.../change_os_root](https://github.com/unixbhaskar/AdminScripts/blob/master/change_os_root)
+
+-- -- --
+
 ### What's next
 
 Consider continue reading [ [Network: Samba][local-part-config] ].

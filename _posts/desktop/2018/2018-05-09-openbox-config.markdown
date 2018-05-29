@@ -257,9 +257,9 @@ And do not forget to <code>Reconfigure</code> openbox.
 
 ### What's Next
 
-We are finished with openbox configuration.
+We are almost finished with openbox configuration.
 
-Consider continue reading [ [Tint2: Simple Taskbar][local-part-config] ].
+Consider continue reading [ [Openbox: Exit][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
@@ -269,7 +269,7 @@ Consider continue reading [ [Tint2: Simple Taskbar][local-part-config] ].
 [dotfiles-dynamic]:   {{ dotfiles }}/menu.dynamic.xml
 [dotfiles-schema-pl]: {{ dotfiles }}/obmenu-generator/schema.pl
 
-[local-part-config]:  /desktop/2018/05/15/tint2-config.html
+[local-part-config]:  /desktop/2018/05/11/openbox-exit.html
 
 [image-ss-obmenu-icon]:    {{ asset_path }}/openbox-obmenu-icon.png
 [image-ss-obmenu-custom]:  {{ asset_path }}/openbox-obmenu-custom.png

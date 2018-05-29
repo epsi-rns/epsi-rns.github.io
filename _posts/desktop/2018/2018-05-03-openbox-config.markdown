@@ -121,30 +121,6 @@ You might want different setting.
 
 -- -- --
 
-### Logging Out
-
-This is not a part of config, but rather an additional feature,
-utilize third party application.
-
-#### Default
-
-This is the default logout dialog from openbox.
-
-![openbox Logout: default exit][image-ss-exit]{: .img-responsive }
-
-#### OB Logout
-
-However, there is a good application called <code>oblogout</code>,
-that you can set them as keybinding, or just put it in menu.
-
-{% highlight bash %}
-$ oblogout
-{% endhighlight %}
-
-![openbox Logout: oblogout][image-ss-oblogout]{: .img-responsive }
-
--- -- --
-
 ### Startup
 
 There is this <code class="code-file">~/.config/openbox/autostart</code> file,
@@ -237,7 +213,5 @@ Consider continue reading [ [Config: Key and Mouse Binding][local-part-config] ]
 [local-part-config]:  /desktop/2018/05/04/openbox-config.html
 
 [image-ss-obconf]:          {{ asset_path }}/openbox-obconf.png
-[image-ss-exit]:            {{ asset_path }}/openbox-exit.png
-[image-ss-oblogout]:        {{ asset_path }}/openbox-oblogout.png
 [image-ss-config-desktops]: {{ asset_path }}/openbox-config-desktops-tint2.png
 [image-ss-config-margin]:   {{ asset_path }}/openbox-config-margin.png
