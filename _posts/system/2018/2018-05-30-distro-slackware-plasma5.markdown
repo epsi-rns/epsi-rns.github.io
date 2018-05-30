@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Distribution - Slackware Post Install Log"
+title: "Distribution - Slackware Plasma 5"
 date: 2018-05-30 09:45:15 +0700
 categories: system
 tags: [slackware, distro, package manager]
