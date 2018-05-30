@@ -43,6 +43,10 @@ As most of any other Window Manager, Openbox has these features:
 
 *	Config: Key Binding
 
+-- -- --
+
+### Additional Resources
+
 #### Reading
 
 There are some good resources.
@@ -59,6 +63,18 @@ I found that the holy archwiki is a also good start.
 Config is available at:
 
 * [github.com/epsi-rns/dotfiles/.../openbox/config][dotfiles-tutor]
+
+#### Ricing
+
+These are some good openbox galleries on deviantart:
+
+*	[nixiepro.deviantart.com](https://nixiepro.deviantart.com/gallery/46455703/Screenshots)
+
+*	[fikriomar16.deviantart.com](https://fikriomar16.deviantart.com/art/Break-The-Glass-747098702)
+
+*	[addy-dclxvi.deviantart.com](https://addy-dclxvi.deviantart.com/art/Openbox-Alchemy-733909333)
+
+I can't tell you how I adore these galleries.
 
 -- -- --
 
