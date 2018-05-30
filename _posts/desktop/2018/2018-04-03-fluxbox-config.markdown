@@ -134,6 +134,16 @@ exec fluxbox
 
 -- -- --
 
+### Workspace Name
+
+You can have nice workspace name
+
+{% highlight conf %}
+session.screen0.workspaceNames:	1:α, 2:β, 3:γ, 4:δ,
+{% endhighlight %}
+
+-- -- --
+
 ### Config: Key Binding
 
 This <code class="code-file">~/.fluxbox/keys</code> file is self explanatory.
@@ -158,6 +168,7 @@ Mod4 d       :Exec i3-dmenu-desktop
 Mod4 Mod1 d  :Exec dmenu_run
 Mod4 Shift d :Exec rofi -show run -opacity 90
 Mod4 Ctrl d  :Exec rofi -show window -opacity 90
+Mod4 t       :ToggleDecor
 {% endhighlight %}
 
 #### Source
@@ -199,6 +210,28 @@ Or do automatic grouping.
 
 -- -- --
 
+### Panel
+
+#### Hide Toolbar
+
+Toolbar is not the only option.
+You can autohide it.
+
+{% highlight conf %}
+session.screen0.toolbar.autoHide:	true
+{% endhighlight %}
+
+#### Other Panel: tint2
+
+You can use other panel as well.
+For example: double tint2 panel (top and bottom), as figure below.
+
+[![fluxbox Config: tint2 panel][image-ss-tint2]{: .img-responsive }][photo-ss-tint2]
+
+Please click the screenshot to see the original size.
+
+-- -- --
+
 ### What's Next
 
 This is configuration in general,
@@ -218,6 +251,6 @@ we need to go deep with [ [Config: Menu Part][local-part-menu] ].
 [image-ss-directory]:     {{ asset_path }}/fluxbox-directory.png
 [image-ss-menu-init]:     {{ asset_path }}/fluxbox-menu-init.png
 
-
-
+[image-ss-tint2]:         {{ asset_path }}/fluxbox-tint2.png
+[photo-ss-tint2]:         https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNUYbPsqONpSXNXURca7MESyvLE2u1XPOV3NlKz?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
