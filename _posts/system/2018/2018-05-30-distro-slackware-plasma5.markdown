@@ -35,11 +35,12 @@ But unfortunately I read this first which is scary.
 After a few months later, I search again, and successfully made it.
 
 {% highlight bash %}
-$ slackpkg update
-$ slackpkg install ktown
-$ slackpkg install-new
-$ slackpkg upgrade ktown
-$ slackpkg upgrade-all 
+$ sudo slackpkg update gpg
+$ sudo slackpkg update
+$ sudo slackpkg install ktown
+$ sudo slackpkg install-new
+$ sudo slackpkg upgrade ktown
+$ sudo slackpkg upgrade-all 
 {% endhighlight %}
 
 I'm still using openbox while doing all these above.
@@ -57,6 +58,12 @@ MIRRORPLUS['ktown']=http://bear.alienbase.nl/mirrors/alien-kde/14.2/5/x86_64/
 
 ![slackpkgplus: ktown][image-ss-slackpkgplus]{: .img-responsive }
 
+And update the GPG.
+
+{% highlight bash %}
+$ sudo slackpkg update gpg
+{% endhighlight %}
+
 -- -- --
 
 ### Step by Step
@@ -66,7 +73,7 @@ MIRRORPLUS['ktown']=http://bear.alienbase.nl/mirrors/alien-kde/14.2/5/x86_64/
 This is very common. No need for further explanation.
 
 {% highlight bash %}
-$ slackpkg update
+$ sudo slackpkg update
 {% endhighlight %}
 
 #### Install ktown
@@ -74,7 +81,7 @@ $ slackpkg update
 This take you to a dialog.
 
 {% highlight bash %}
-$ slackpkg install ktown
+$ sudo slackpkg install ktown
 {% endhighlight %}
 
 [![slackpkg: install ktown dialog][image-ss-ktown-dialog]{: .img-responsive }][photo-ss-ktown-dialog]
@@ -88,7 +95,7 @@ Folowed by common slackpkg process.
 Just another step.
 
 {% highlight bash %}
-$ slackpkg install-new
+$ sudo slackpkg install-new
 {% endhighlight %}
 
 #### Upgrade ktown
@@ -96,7 +103,7 @@ $ slackpkg install-new
 This take you to a dialog.
 
 {% highlight bash %}
-$ slackpkg upgrade ktown
+$ sudo slackpkg upgrade ktown
 {% endhighlight %}
 
 [![slackpkg: upgrade ktown screenshot][image-ss-ktown-upgrade]{: .img-responsive }][photo-ss-ktown-upgrade]
@@ -109,7 +116,7 @@ Please click image above to enlarge.
 Just another step.
 
 {% highlight bash %}
-$ slackpkg upgrade-all
+$ sudo slackpkg upgrade-all
 {% endhighlight %}
 
 -- -- --
