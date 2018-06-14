@@ -19,7 +19,7 @@ For those who likes to play console pixel-art in terminal
 to create a desktop screenshot, 
 you can download a collection of shell script here<br/>
 
-* <https://github.com/epsi-rns/ansi-color>
+* <https://bitbucket.org/epsi/ansi-color>
 
 -- -- --
 
@@ -61,7 +61,7 @@ Dear kawan-kawan sekalian,
 
 Bagi yang suka bermain console pixel art di terminal. Silahkan unduh shell script yang dikumpulkan sini:<br/>
 
-* <https://github.com/epsi-rns/ansi-color>
+* <https://bitbucket.org/epsi/ansi-color>
 
 Semoga bermanfaat, tidak sia-sia.<br/>
 Selamat membuat screenshot.<br/>
