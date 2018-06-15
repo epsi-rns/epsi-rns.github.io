@@ -81,7 +81,7 @@ A few things to be noted here:
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskell-01-basic]
+*	[gitlab.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskell-01-basic]
 
 {% highlight haskell %}
 import Data.Time.LocalTime
@@ -148,7 +148,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -174,7 +174,7 @@ that required later on this article.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-02-system.hs][dotfiles-haskell-02-system]
+*	[gitlab.com/.../dotfiles/.../haskell-02-system.hs][dotfiles-haskell-02-system]
 
 {% highlight haskell %}
 import System.Process
@@ -224,7 +224,7 @@ We use this amazingly cool Haskell's
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-02-process.hs][dotfiles-haskell-02-process]
+*	[gitlab.com/.../dotfiles/.../haskell-02-process.hs][dotfiles-haskell-02-process]
 
 {% highlight haskell %}
 import System.Process
@@ -304,7 +304,7 @@ This should be self explanatory.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-03-process.hs][dotfiles-haskell-03-process]
+*	[gitlab.com/.../dotfiles/.../haskell-03-process.hs][dotfiles-haskell-03-process]
 
 {% highlight haskell %}
 import System.Process
@@ -386,7 +386,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-05-fork.hs][dotfiles-haskell-05-fork]
+*	[gitlab.com/.../dotfiles/.../haskell-05-fork.hs][dotfiles-haskell-05-fork]
 
 {% highlight haskell %}
 import System.Process
@@ -495,7 +495,7 @@ detached from script. So we two forks, dzen and transset.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-07-conky.hs][dotfiles-haskell-07-conky]
+*	[gitlab.com/.../dotfiles/.../haskell-07-conky.hs][dotfiles-haskell-07-conky]
 
 {% highlight haskell %}
 import System.Process
@@ -616,7 +616,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../haskell-17-conky.hs][dotfiles-haskell-17-conky]
+*	[gitlab.com/.../dotfiles/.../haskell-17-conky.hs][dotfiles-haskell-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -641,7 +641,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-haskell-idle]:   {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html

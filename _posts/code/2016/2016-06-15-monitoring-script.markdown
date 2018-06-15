@@ -131,7 +131,7 @@ Thank you for reading
 
 [link-ksevelyar]: https://github.com/ksevelyar/dotfiles/blob/master/xmonad/dzen/status_bars/dzen_main.sh
 [link-stackoverflow]: https://stackoverflow.com/questions/26791240/how-to-get-percentage-of-processor-use-with-bash
-[dotfiles-net-speed]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/assets/bin/chunk_net_speed.sh
+[dotfiles-net-speed]: https://gitlab.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/assets/bin/chunk_net_speed.sh
 
 [image-monitoring-script]: {{ site.url }}/assets/posts/opensource/2016/06/monitoring-script.png
 [photo-monitoring-script]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOVlmzVIqONsL04Gm3BISrMYLk7fY-vGK3wdROV

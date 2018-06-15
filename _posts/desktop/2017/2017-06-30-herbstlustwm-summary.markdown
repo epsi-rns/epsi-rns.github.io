@@ -62,15 +62,15 @@ Now we have *example* code in Seven Languages: BASH, Perl, Python, Ruby, PHP, Lu
 
 HerbstluftWM
 
-*	<https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm>
+*	<https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm>
 
 Dzen2
 
-*	<https://github.com/epsi-rns/dotfiles/tree/master/standalone/dzen2-hlwm>
+*	<https://gitlab.com/epsi-rns/dotfiles/tree/master/standalone/dzen2-hlwm>
 
 Lemonbar
 
-*	<https://github.com/epsi-rns/dotfiles/tree/master/standalone/lemon-hlwm>
+*	<https://gitlab.com/epsi-rns/dotfiles/tree/master/standalone/lemon-hlwm>
 
 -- -- --
 
@@ -236,8 +236,8 @@ Something in me cannot stop typing codes. But I have to stop anyway. I have grow
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 
 [local-modularized-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html

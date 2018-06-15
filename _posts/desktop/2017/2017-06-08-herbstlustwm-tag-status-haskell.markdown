@@ -52,10 +52,10 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/][dotfiles-dzen2-haskell]
+	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-dzen2-haskell]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/][dotfiles-lemon-haskell]
+	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-lemon-haskell]
 
 -- -- --
 
@@ -99,10 +99,10 @@ Let's have a look at <code class="code-file">helper.hs</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/helper.sh][dotfiles-dzen2-haskell-helper]
+	[gitlab.com/.../dotfiles/.../haskell/helper.sh][dotfiles-dzen2-haskell-helper]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/helper.sh][dotfiles-lemon-haskell-helper]
+	[gitlab.com/.../dotfiles/.../haskell/helper.sh][dotfiles-lemon-haskell-helper]
 
 {% include post/2017/06/herbstlustwm-tag-status-helper.md %}
 
@@ -394,10 +394,10 @@ Or in Dzen2 version:
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/01-testparams.hs][dotfiles-dzen2-haskell-testparams]
+	[gitlab.com/.../dotfiles/.../haskell/01-testparams.hs][dotfiles-dzen2-haskell-testparams]
 
 *	**Lemon**: 
-	[github.com/.../dotfiles/.../haskell/01-testparams.hs][dotfiles-lemon-haskell-testparams]
+	[gitlab.com/.../dotfiles/.../haskell/01-testparams.hs][dotfiles-lemon-haskell-testparams]
 
 {% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
 
@@ -452,10 +452,10 @@ myColor key = M.findWithDefault "#ffffff" key (fromList colorSchemes)
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-dzen2-haskell-gmc]
+	[gitlab.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-dzen2-haskell-gmc]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-lemon-haskell-gmc]
+	[gitlab.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-lemon-haskell-gmc]
 
 {% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
 
@@ -468,10 +468,10 @@ Let's have a look at <code class="code-file">output.hs</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/output.hs][dotfiles-dzen2-haskell-output]
+	[gitlab.com/.../dotfiles/.../haskell/output.hs][dotfiles-dzen2-haskell-output]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../hasell/output.hs][dotfiles-lemon-haskell-output]
+	[gitlab.com/.../dotfiles/.../hasell/output.hs][dotfiles-lemon-haskell-output]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -819,10 +819,10 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 #### View Source File:
 
 *	**dzen2**: 
-	[github.com/.../dotfiles/.../haskell/01-testoutput.hs][dotfiles-dzen2-haskell-testoutput]
+	[gitlab.com/.../dotfiles/.../haskell/01-testoutput.hs][dotfiles-dzen2-haskell-testoutput]
 
 *	**lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/01-testoutput.hs][dotfiles-lemon-haskell-testoutput]
+	[gitlab.com/.../dotfiles/.../haskell/01-testoutput.hs][dotfiles-lemon-haskell-testoutput]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -847,8 +847,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png

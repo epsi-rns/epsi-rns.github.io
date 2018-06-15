@@ -52,10 +52,10 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../php/][dotfiles-dzen2-php]
+	[gitlab.com/.../dotfiles/.../php/][dotfiles-dzen2-php]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/][dotfiles-lemon-php]
+	[gitlab.com/.../dotfiles/.../php/][dotfiles-lemon-php]
 
 -- -- --
 
@@ -99,10 +99,10 @@ Let's have a look at <code class="code-file">helper.php</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../php/helper.php][dotfiles-dzen2-php-helper]
+	[gitlab.com/.../dotfiles/.../php/helper.php][dotfiles-dzen2-php-helper]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/helper.php][dotfiles-lemon-php-helper]
+	[gitlab.com/.../dotfiles/.../php/helper.php][dotfiles-lemon-php-helper]
 
 {% include post/2017/06/herbstlustwm-tag-status-helper.md %}
 
@@ -317,10 +317,10 @@ Or in Dzen2 version:
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../php/01-testparams.php][dotfiles-dzen2-php-testparams]
+	[gitlab.com/.../dotfiles/.../php/01-testparams.php][dotfiles-dzen2-php-testparams]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/01-testparams.php][dotfiles-lemon-php-testparams]
+	[gitlab.com/.../dotfiles/.../php/01-testparams.php][dotfiles-lemon-php-testparams]
 
 {% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
 
@@ -369,10 +369,10 @@ $color = array(
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../php/gmc.php][dotfiles-dzen2-php-gmc]
+	[gitlab.com/.../dotfiles/.../php/gmc.php][dotfiles-dzen2-php-gmc]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/gmc.php][dotfiles-lemon-php-gmc]
+	[gitlab.com/.../dotfiles/.../php/gmc.php][dotfiles-lemon-php-gmc]
 
 {% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
 
@@ -385,10 +385,10 @@ Let's have a look at <code class="code-file">output.php</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../php/output.php][dotfiles-dzen2-php-output]
+	[gitlab.com/.../dotfiles/.../php/output.php][dotfiles-dzen2-php-output]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../php/output.php][dotfiles-lemon-php-output]
+	[gitlab.com/.../dotfiles/.../php/output.php][dotfiles-lemon-php-output]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -696,10 +696,10 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 #### View Source File:
 
 *	**dzen2**: 
-	[github.com/.../dotfiles/.../php/01-testoutput.php][dotfiles-dzen2-php-testoutput]
+	[gitlab.com/.../dotfiles/.../php/01-testoutput.php][dotfiles-dzen2-php-testoutput]
 
 *	**lemonbar**: 
-	[github.com/.../dotfiles/.../php/01-testoutput.php][dotfiles-lemon-php-testoutput]
+	[gitlab.com/.../dotfiles/.../php/01-testoutput.php][dotfiles-lemon-php-testoutput]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -724,8 +724,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png

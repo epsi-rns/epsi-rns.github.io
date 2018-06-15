@@ -31,7 +31,7 @@ Source Code Directory:
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 [local-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html

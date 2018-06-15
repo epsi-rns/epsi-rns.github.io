@@ -84,7 +84,7 @@ $ man lemonbar
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
+*	[gitlab.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
 
 Figure below show a transparent lemonbar on top.
 With three different Font, in one panel.
@@ -163,9 +163,9 @@ $ ~/Documents/standalone/lemon/example/02-main.sh
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../02-main.sh][dotfiles-example-02-main-bash]
+*	[gitlab.com/.../dotfiles/.../02-main.sh][dotfiles-example-02-main-bash]
 
-*	[github.com/.../dotfiles/.../02-output.sh][dotfiles-example-02-output-bash]
+*	[gitlab.com/.../dotfiles/.../02-output.sh][dotfiles-example-02-output-bash]
 
 You can see in figure below, how alignment made in lemonbar.
 The home icon is on the right side of the statusbar panel.
@@ -272,9 +272,9 @@ $ ~/Documents/standalone/lemon/example/03-main.sh
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../03-main.sh][dotfiles-example-03-main-bash]
+*	[gitlab.com/.../dotfiles/.../03-main.sh][dotfiles-example-03-main-bash]
 
-*	[github.com/.../dotfiles/.../03-output.lua][dotfiles-example-03-output-lua]
+*	[gitlab.com/.../dotfiles/.../03-output.lua][dotfiles-example-03-output-lua]
 
 ![Lemonbar Example: Conky][image-example-03]{: .img-responsive }
 
@@ -383,17 +383,17 @@ $ ~/Documents/standalone/lemon/conky/main.sh
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../main.sh][dotfiles-main]
+*	[gitlab.com/.../dotfiles/.../main.sh][dotfiles-main]
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
-*	[github.com/.../dotfiles/.../gmc.luca][dotfiles-gmc]
+*	[gitlab.com/.../dotfiles/.../gmc.luca][dotfiles-gmc]
 
-*	[github.com/.../dotfiles/.../helper.lua][dotfiles-helper]
+*	[gitlab.com/.../dotfiles/.../helper.lua][dotfiles-helper]
 
-*	[github.com/.../dotfiles/.../parts.lua][dotfiles-parts]
+*	[gitlab.com/.../dotfiles/.../parts.lua][dotfiles-parts]
 
-*	[github.com/.../dotfiles/.../assembly.lua][dotfiles-assembly]
+*	[gitlab.com/.../dotfiles/.../assembly.lua][dotfiles-assembly]
 
 ![Lemonbar: Modularized Conky Lua][image-conky-01]{: .img-responsive }
 
@@ -496,9 +496,9 @@ For code comparation you should see both source code yourself.
 
 **Source**:
 
-*	[github.com/.../dotfiles/...lemon.../main.sh][dotfiles-multi-lemon]
+*	[gitlab.com/.../dotfiles/...lemon.../main.sh][dotfiles-multi-lemon]
 
-*	[github.com/.../dotfiles/...dzen2.../main.sh][dotfiles-multi-dzen2]
+*	[gitlab.com/.../dotfiles/...dzen2.../main.sh][dotfiles-multi-dzen2]
 
 [![Real Life Lemonbar: Conky Lua][image-ss-real-lemon]{: .img-responsive }][photo-ss-real-lemon]
 
@@ -517,8 +517,8 @@ Have Fun
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/conky' %}
-{% assign dotfiles_expath = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/example' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon/conky' %}
+{% assign dotfiles_expath = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon/example' %}
 
 [image-example-01]: {{ asset_path }}/lemon-01-example-01.png
 [image-example-02]: {{ asset_path }}/lemon-01-example-02.png
@@ -542,8 +542,8 @@ Have Fun
 [dotfiles-parts]:    {{ dotfiles_path }}/parts.lua
 [dotfiles-assembly]: {{ dotfiles_path }}/assembly.lua
 
-[dotfiles-multi-lemon]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
-[dotfiles-multi-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
+[dotfiles-multi-lemon]: https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
+[dotfiles-multi-dzen2]: https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
 
 [local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  

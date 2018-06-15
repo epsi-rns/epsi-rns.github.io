@@ -53,20 +53,20 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/][dotfiles-dzen2-lua]
+	[gitlab.com/.../dotfiles/.../lua/][dotfiles-dzen2-lua]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
+	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
 
 #### The PipeHandler Source File:
 
 Let's have a look at <code class="code-file">pipehandler.lua</code> in github.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.lua][dotfiles-dzen2-lua-pipehandler]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.lua][dotfiles-dzen2-lua-pipehandler]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.lua][dotfiles-lemon-lua-pipehandler]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.lua][dotfiles-lemon-lua-pipehandler]
 
 -- -- --
 
@@ -104,10 +104,10 @@ pipehandler.detach_lemon(monitor, lemon_parameters)
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/panel.lua][dotfiles-dzen2-lua-panel]
+	[gitlab.com/.../dotfiles/.../lua/panel.lua][dotfiles-dzen2-lua-panel]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/panel.lua][dotfiles-lemon-lua-panel]
+	[gitlab.com/.../dotfiles/.../lua/panel.lua][dotfiles-lemon-lua-panel]
 
 
 #### Run Lemon, Run !
@@ -174,7 +174,7 @@ and <code>set_windowtitle</code>, have already been discussed.
 Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.01-init.lua][dotfiles-lemon-lua-pipehandler-init]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.01-init.lua][dotfiles-lemon-lua-pipehandler-init]
 
 {% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
 
@@ -284,7 +284,7 @@ Be aware, that Lua is using non zero based array.
 With idle event. The **heart** of the script.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.02-idle.lua][dotfiles-lemon-lua-pipehandler-idle]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.02-idle.lua][dotfiles-lemon-lua-pipehandler-idle]
 
 -- -- --
 
@@ -349,7 +349,7 @@ But it does works. So why bother ?
 Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.03-clickable.lua][dotfiles-lemon-lua-pipehandler-clickable]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.03-clickable.lua][dotfiles-lemon-lua-pipehandler-clickable]
 
 ### Interval Based Event
 
@@ -373,7 +373,7 @@ In real code later, we do not need the timestamp.
 Before merging combined event into main code,
 consider this test in an isolated fashion.
 
-*	[github.com/.../dotfiles/.../lua/11-testevents.lua][dotfiles-lemon-lua-testevents]
+*	[gitlab.com/.../dotfiles/.../lua/11-testevents.lua][dotfiles-lemon-lua-testevents]
 
 -- -- --
 
@@ -523,7 +523,7 @@ Combined event consist of both,
 synchronous interval event and asynchronous idle event.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.04-event.lua][dotfiles-lemon-lua-pipehandler-event]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.04-event.lua][dotfiles-lemon-lua-pipehandler-event]
 
 -- -- --
 
@@ -603,7 +603,7 @@ pipehandler.detach_lemon_conky(params_bottom)
 Dual Bar, <code>detach_lemon_conky</code> function.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/pipehandler.05-conky.lua][dotfiles-lemon-lua-pipehandler-conky]
+	[gitlab.com/.../dotfiles/.../lua/pipehandler.05-conky.lua][dotfiles-lemon-lua-pipehandler-conky]
 
 -- -- --
 
@@ -640,10 +640,10 @@ in <code class="code-file">~/.config/herbstluftwm/</code> directory.
 After reunification, they are not very long scripts after all.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/panel-dzen2.lua][dotfiles-hlwm-lua-dzen2-compact]
+	[gitlab.com/.../dotfiles/.../lua/panel-dzen2.lua][dotfiles-hlwm-lua-dzen2-compact]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/panel-lemonbar.lua][dotfiles-hlwm-lua-lemon-compact]
+	[gitlab.com/.../dotfiles/.../lua/panel-lemonbar.lua][dotfiles-hlwm-lua-lemon-compact]
 
 {% include post/2017/06/herbstlustwm-event-idle-panel.md %}
 
@@ -664,9 +664,9 @@ Enjoy the window manager !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
-{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png

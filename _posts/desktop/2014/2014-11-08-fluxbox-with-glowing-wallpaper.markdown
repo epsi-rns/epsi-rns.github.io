@@ -46,11 +46,11 @@ This Fluxbox utilised a modified version of Axonkolor theme that I found in Devi
 
 **Fluxbox**: Arch Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/arch>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/arch>
 
 **Fluxbox**: Debian Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/debian>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/debian>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

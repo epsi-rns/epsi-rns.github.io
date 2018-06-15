@@ -39,7 +39,7 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../ruby/][dotfiles-ruby-directory]
+*	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-ruby-directory]
 
 -- -- --
 
@@ -152,7 +152,7 @@ system("xsetroot -solid '#{GMC::COLOR['blue500']}'")
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-ruby-gmc]
+*	[gitlab.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-ruby-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -199,7 +199,7 @@ do_config("rule",      Config::Rules)
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/config.rb][dotfiles-ruby-config]
+*	[gitlab.com/.../dotfiles/.../ruby/config.rb][dotfiles-ruby-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -244,7 +244,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-ruby-helper]
+*	[gitlab.com/.../dotfiles/.../ruby/helper.rb][dotfiles-ruby-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -339,7 +339,7 @@ end
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/startup.rb][dotfiles-ruby-startup]
+*	[gitlab.com/.../dotfiles/.../ruby/startup.rb][dotfiles-ruby-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -403,7 +403,7 @@ startup_run
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../ruby/autostart.rb][dotfiles-ruby-autostart]
+*	[gitlab.com/.../dotfiles/.../ruby/autostart.rb][dotfiles-ruby-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -425,7 +425,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-ruby-tag-status]:   {{ site.url }}/desktop/2017/06/05/herbstlustwm-tag-status-ruby.html
 [local-ruby-event-idle]:   {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
@@ -440,7 +440,7 @@ Happy Configuring.
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
-[dotfiles-ruby-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/ruby
+[dotfiles-ruby-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/ruby
 [dotfiles-ruby-autostart]: {{ dotfiles_path }}/ruby/autostart.rb
 [dotfiles-ruby-gmc]:       {{ dotfiles_path }}/ruby/gmc.rb
 [dotfiles-ruby-config]:    {{ dotfiles_path }}/ruby/config.rb

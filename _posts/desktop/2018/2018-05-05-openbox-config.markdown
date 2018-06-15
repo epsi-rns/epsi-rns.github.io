@@ -51,7 +51,7 @@ There is also a whole article for this.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
+*	[gitlab.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
 
 #### Format
 
@@ -153,7 +153,7 @@ Consider continue reading [ [Menu: Static][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]: {{ dotfiles }}/rc.xml
 

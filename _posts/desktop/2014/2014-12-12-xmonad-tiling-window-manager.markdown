@@ -141,8 +141,8 @@ Five selfieshoot are worth five thousand words
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[dotfiles-xmobar]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-xmobar/
-[dotfiles-dzen]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen/
+[dotfiles-xmobar]: https://gitlab.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-xmobar/
+[dotfiles-dzen]: https://gitlab.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen/
 
 
 [image-ss-self-explanatory]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-self-explanatory.png

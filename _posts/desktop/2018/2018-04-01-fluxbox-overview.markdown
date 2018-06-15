@@ -113,7 +113,7 @@ Consider continue reading [ [Config: General Part][local-part-config] ].
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/config
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/config
 
 [local-part-config]:  /desktop/2018/04/03/fluxbox-config.html
 

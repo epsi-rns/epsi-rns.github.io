@@ -105,7 +105,7 @@ I do not know why, but the default config is really short.
 
 Have a look at the <code class="code-file">smb.conf</code> config for Fedora:
 
-*	[github.com/.../dotfiles/.../smb.fedora.conf][dotfiles-smb-fedora]
+*	[gitlab.com/.../dotfiles/.../smb.fedora.conf][dotfiles-smb-fedora]
 
 I have an issue with SELinux in Fedora.
 The easiest workaround is simply to disable SELinux.
@@ -151,7 +151,7 @@ Debian takes longer default cofig.
 
 Have a look at the <code class="code-file">smb.conf</code> config for Debian:
 
-*	[github.com/.../dotfiles/.../smb.debian.conf][dotfiles-smb-debian]
+*	[gitlab.com/.../dotfiles/.../smb.debian.conf][dotfiles-smb-debian]
 
 #### KaOSx
 
@@ -195,7 +195,7 @@ in order to work from local area network.
 
 Have a look at the <code class="code-file">smb.conf</code> config for KaOSx:
 
-*	[github.com/.../dotfiles/.../smb.kaosx.conf][dotfiles-smb-kaosx]
+*	[gitlab.com/.../dotfiles/.../smb.kaosx.conf][dotfiles-smb-kaosx]
 
 #### openSUSE
 
@@ -229,7 +229,7 @@ I also have to put <code>netbios name</code>.
 
 Have a look at the <code class="code-file">smb.conf</code> config for openSUSE:
 
-*	[github.com/.../dotfiles/.../smb.opensuse.conf][dotfiles-smb-openSUSE]
+*	[gitlab.com/.../dotfiles/.../smb.opensuse.conf][dotfiles-smb-openSUSE]
 
 -- -- --
 
@@ -440,7 +440,7 @@ Consider going back reading old article [ [Multiboot: Setting up Partition][loca
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:        /system/2014/03/13/linux-multiboot.html
 

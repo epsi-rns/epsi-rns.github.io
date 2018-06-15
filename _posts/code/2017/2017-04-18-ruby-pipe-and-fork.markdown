@@ -52,7 +52,7 @@ using <code>sleep</code> code.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../ruby-01-basic.rb][dotfiles-ruby-01-basic]
+*	[gitlab.com/.../dotfiles/.../ruby-01-basic.rb][dotfiles-ruby-01-basic]
 
 {% highlight ruby %}
 #!/usr/bin/ruby
@@ -86,7 +86,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -116,11 +116,11 @@ that required later on this article.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../ruby-02-shell.rb][dotfiles-ruby-02-shell]
+*	[gitlab.com/.../dotfiles/.../ruby-02-shell.rb][dotfiles-ruby-02-shell]
 
-*	[github.com/.../dotfiles/.../ruby-02-spawn.rb][dotfiles-ruby-02-spawn]
+*	[gitlab.com/.../dotfiles/.../ruby-02-spawn.rb][dotfiles-ruby-02-spawn]
 
-*	[github.com/.../dotfiles/.../ruby-02-system.rb][dotfiles-ruby-02-system]
+*	[gitlab.com/.../dotfiles/.../ruby-02-system.rb][dotfiles-ruby-02-system]
 
 Using <code>system</code>:
 
@@ -188,7 +188,7 @@ We use this flexible Ruby's <code>IO.popen</code> mechanism.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../ruby-02-popen.rb][dotfiles-ruby-02-popen]
+*	[gitlab.com/.../dotfiles/.../ruby-02-popen.rb][dotfiles-ruby-02-popen]
 
 {% highlight ruby %}
 #!/usr/bin/ruby
@@ -260,13 +260,13 @@ This should be self explanatory.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../ruby-03-open3.rb][dotfiles-ruby-03-open3]
+*	[gitlab.com/.../dotfiles/.../ruby-03-open3.rb][dotfiles-ruby-03-open3]
 
-*	[github.com/.../dotfiles/.../ruby-03-pipe-io.rb][dotfiles-ruby-03-pipe-io]
+*	[gitlab.com/.../dotfiles/.../ruby-03-pipe-io.rb][dotfiles-ruby-03-pipe-io]
 
-*	[github.com/.../dotfiles/.../ruby-03-popen.rb][dotfiles-ruby-03-popen]
+*	[gitlab.com/.../dotfiles/.../ruby-03-popen.rb][dotfiles-ruby-03-popen]
 
-*	[github.com/.../dotfiles/.../ruby-03-pty.rb][dotfiles-ruby-03-pty]
+*	[gitlab.com/.../dotfiles/.../ruby-03-pty.rb][dotfiles-ruby-03-pty]
 
 Using <code>IO.pipe</code>:
 
@@ -412,7 +412,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../ruby-05-fork.rb][dotfiles-ruby-05-fork]
+*	[gitlab.com/.../dotfiles/.../ruby-05-fork.rb][dotfiles-ruby-05-fork]
 
 {% highlight ruby %}
 #!/usr/bin/ruby
@@ -505,7 +505,7 @@ detached from script. So we two forks, dzen and transset.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../ruby-07-conky.rb][dotfiles-ruby-07-conky]
+*	[gitlab.com/.../dotfiles/.../ruby-07-conky.rb][dotfiles-ruby-07-conky]
 
 {% highlight ruby %}
 #!/usr/bin/ruby
@@ -598,7 +598,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../ruby-17-conky.rb][dotfiles-ruby-17-conky]
+*	[gitlab.com/.../dotfiles/.../ruby-17-conky.rb][dotfiles-ruby-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -623,7 +623,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-ruby-idle]:   {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html

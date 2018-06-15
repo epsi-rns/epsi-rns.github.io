@@ -269,7 +269,7 @@ Put your creativity here to make eye candy statusbar.
 
 ## Configuration Source
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome>
 
 With this complexity, now you know why
 I can't just put all the code in this post.

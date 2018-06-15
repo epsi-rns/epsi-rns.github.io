@@ -498,7 +498,7 @@ I'm thinking of make another openbox article.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
 
 [local-part-special]:  /desktop/2018/04/18/openbox-theme.html
 [cat-black]:       https://github.com/noirecat/arc-ob-theme

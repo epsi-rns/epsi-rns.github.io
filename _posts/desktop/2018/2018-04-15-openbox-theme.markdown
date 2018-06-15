@@ -171,7 +171,7 @@ Let's get it started.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/openbox/themes
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes
 
 [local-part-svg]:  /desktop/2018/04/16/openbox-theme.html
 
@@ -179,7 +179,7 @@ Let's get it started.
 [cat-omar-02]:     https://github.com/fikriomar16/obtgen
 
 [cat-white]:       https://github.com/addy-dclxvi/openbox-theme-collections
-[cat-hard]:        https://github.com/epsi-rns/dotfiles/tree/master/openbox/themes
+[cat-hard]:        https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes
 [cat-vera]:        https://github.com/yuune/openbox-patched
 [cat-black]:       https://github.com/noirecat/arc-ob-theme
 

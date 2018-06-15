@@ -154,7 +154,7 @@ Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [local-bash]:    {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
 [local-perl]:    {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html

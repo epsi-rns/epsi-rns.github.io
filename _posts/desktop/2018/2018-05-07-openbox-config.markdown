@@ -50,7 +50,7 @@ We need to create it manually.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
+*	[gitlab.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
 
 -- -- --
 
@@ -113,7 +113,7 @@ Note that the system menu is recreated manually.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../menu.xml][dotfiles-menu-xml]
+*	[gitlab.com/.../dotfiles/.../menu.xml][dotfiles-menu-xml]
 
 -- -- --
 
@@ -293,7 +293,7 @@ The complete version is here:
 
 #### Source
 
-*	[github.com/.../dotfiles/.../menu.favorites.xml][dotfiles-fav-xml]
+*	[gitlab.com/.../dotfiles/.../menu.favorites.xml][dotfiles-fav-xml]
 
 #### Icons
 
@@ -376,7 +376,7 @@ Now you can see the openSUSE's XDG menu.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../menu.xdg.xml][dotfiles-xdg-xml]
+*	[gitlab.com/.../dotfiles/.../menu.xdg.xml][dotfiles-xdg-xml]
 
 -- -- --
 
@@ -459,7 +459,7 @@ Consider continue reading [ [Menu: Dynamic][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]:   {{ dotfiles }}/rc.xml
 [dotfiles-menu-xml]: {{ dotfiles }}/menu.xml

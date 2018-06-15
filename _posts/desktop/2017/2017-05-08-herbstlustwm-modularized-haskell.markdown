@@ -47,7 +47,7 @@ It seems to be I'm not the only person who used Haskell with HerbsluftWM.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../haskell/][dotfiles-haskell-directory]
+*	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-haskell-directory]
 
 -- -- --
 
@@ -164,7 +164,7 @@ main = do
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-haskell-gmc]
+*	[gitlab.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-haskell-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -211,7 +211,7 @@ main = do
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../haskell/config.hs][dotfiles-haskell-config]
+*	[gitlab.com/.../dotfiles/.../haskell/config.hs][dotfiles-haskell-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -266,7 +266,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../haskell/helper.hs][dotfiles-haskell-helper]
+*	[gitlab.com/.../dotfiles/.../haskell/helper.hs][dotfiles-haskell-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -464,7 +464,7 @@ to determine whether the application should be launch or not.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../haskell/startup.hs][dotfiles-haskell-startup]
+*	[gitlab.com/.../dotfiles/.../haskell/startup.hs][dotfiles-haskell-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -531,7 +531,7 @@ main = do
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../haskell/autostart.hs][dotfiles-haskell-autostart]
+*	[gitlab.com/.../dotfiles/.../haskell/autostart.hs][dotfiles-haskell-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -553,7 +553,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-haskell-tag-status]:   {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
 [local-haskell-event-idle]:   {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
@@ -569,7 +569,7 @@ Happy Configuring.
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 [local-haskell-loop]: {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html
 
-[dotfiles-haskell-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/haskell
+[dotfiles-haskell-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/haskell
 [dotfiles-haskell-autostart]: {{ dotfiles_path }}/haskell/autostart.hs
 [dotfiles-haskell-gmc]:       {{ dotfiles_path }}/haskell/MyGMC.hs
 [dotfiles-haskell-config]:    {{ dotfiles_path }}/haskell/MyConfig.hs

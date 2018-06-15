@@ -109,6 +109,6 @@ Well. As a haskell n00b. I must admit still don't know how to do it.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[dotfiles-statusbar]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs
+[dotfiles-statusbar]: https://gitlab.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyStatusBar.hs
 [image-ss-xmonad]: {{ site.url }}/assets/posts/desktop/2016/05/xmonad-with-conkyless-dzen.png
 [photo-ss-xmonad]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOEIyDFTTWBIDPPauWwcqkgW9rglIrV5gR8xZaT

@@ -39,7 +39,7 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../python/][dotfiles-python-directory]
+*	[gitlab.com/.../dotfiles/.../python/][dotfiles-python-directory]
 
 -- -- --
 
@@ -140,7 +140,7 @@ os.system("xsetroot -solid '"+color['blue500']+"'")
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/gmc.py][dotfiles-python-gmc]
+*	[gitlab.com/.../dotfiles/.../python/gmc.py][dotfiles-python-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -184,7 +184,7 @@ helper.do_config("rule",      config.rules)
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/config.py][dotfiles-python-config]
+*	[gitlab.com/.../dotfiles/.../python/config.py][dotfiles-python-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -227,7 +227,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/helper.py][dotfiles-python-helper]
+*	[gitlab.com/.../dotfiles/.../python/helper.py][dotfiles-python-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -316,7 +316,7 @@ def run():
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/startup.py][dotfiles-python-startup]
+*	[gitlab.com/.../dotfiles/.../python/startup.py][dotfiles-python-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -387,7 +387,7 @@ startup.run()
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../python/autostart.py][dotfiles-python-autostart]
+*	[gitlab.com/.../dotfiles/.../python/autostart.py][dotfiles-python-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -409,7 +409,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-python-tag-status]:   {{ site.url }}/desktop/2017/06/04/herbstlustwm-tag-status-python.html
 [local-python-event-idle]:   {{ site.url }}/desktop/2017/06/14/herbstlustwm-event-idle-python.html
@@ -424,7 +424,7 @@ Happy Configuring.
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
-[dotfiles-python-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
+[dotfiles-python-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/python
 [dotfiles-python-autostart]: {{ dotfiles_path }}/python/autostart.py
 [dotfiles-python-gmc]:       {{ dotfiles_path }}/python/gmc.py
 [dotfiles-python-config]:    {{ dotfiles_path }}/python/config.py

@@ -93,7 +93,7 @@ rather than use standard tuples.
 I suggest you to take a look at 
 the code below to examine the possibility.
 
-*	[github.com/.../dotfiles/.../04-data-type.hs][dotfiles-04-data-type]
+*	[gitlab.com/.../dotfiles/.../04-data-type.hs][dotfiles-04-data-type]
 
 -- -- --
 
@@ -153,7 +153,7 @@ key
 
 ### View Source File:
 
-*	[github.com/.../dotfiles/.../02-tuples.hs][dotfiles-02-tuples]
+*	[gitlab.com/.../dotfiles/.../02-tuples.hs][dotfiles-02-tuples]
 
 -- -- --
 
@@ -427,7 +427,7 @@ Of course, this is just a simple example on how to use <code>mapM</code>.
 
 ### View Source File:
 
-*	[github.com/.../dotfiles/.../03-dictionary.hs][dotfiles-03-dictionary]
+*	[gitlab.com/.../dotfiles/.../03-dictionary.hs][dotfiles-03-dictionary]
 
 -- -- --
 
@@ -446,7 +446,7 @@ Happy Coding.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
 [local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
 [local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html

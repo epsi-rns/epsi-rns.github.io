@@ -245,7 +245,7 @@ Consider reading [ [Part Three][local-part-three] ].
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[dotfiles-tutor-02]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-02
+[dotfiles-tutor-02]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-02
 
 [local-part-three]:	/desktop/2018/03/23/xfwm4-theme.html
 

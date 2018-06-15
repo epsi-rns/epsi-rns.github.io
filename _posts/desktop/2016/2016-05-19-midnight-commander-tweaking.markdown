@@ -36,5 +36,5 @@ Have fun with helping people!<br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[dotfiles-skin-mc]: https://github.com/epsi-rns/dotfiles/blob/master/config/mc/skins/trans-light.epsi.ini
+[dotfiles-skin-mc]: https://gitlab.com/epsi-rns/dotfiles/blob/master/config/mc/skins/trans-light.epsi.ini
 [image-ss-mc-etc]: {{ site.url }}/assets/posts/desktop/2016/05/mc-etc.png

@@ -393,7 +393,7 @@ You may also want to go back to [ [Overview][local-part-overview] ]
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/styles/exilorate
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/styles/exilorate
 
 [local-part-inkscape]: /desktop/2018/04/06/fluxbox-style.html
 [local-part-overview]: /desktop/2018/04/01/fluxbox-overview.html

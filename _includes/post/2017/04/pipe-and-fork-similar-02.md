@@ -15,7 +15,7 @@ Similar Code:
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-bash-02-native]:       {{ dotfiles_path }}/bash/bash-02-native.sh
 [dotfiles-perl-02-uni-io]:       {{ dotfiles_path }}/perl/perl-02-uni-io.pl

@@ -51,7 +51,7 @@ Now you need to copy <code class="code-file">schema.pl</code>
 to <code>~/.config/obmenu-generator</code>.
 It contain predefined array in perl.
 
-*	[github.com/.../dotfiles/.../schema.pl][dotfiles-schema-pl]
+*	[gitlab.com/.../dotfiles/.../schema.pl][dotfiles-schema-pl]
 
 {% highlight perl %}
 #!/usr/bin/perl
@@ -138,7 +138,7 @@ into this:
 </openbox_menu>
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../menu.xml][dotfiles-dynamic]
+*	[gitlab.com/.../dotfiles/.../menu.xml][dotfiles-dynamic]
 
 But I'd prefer static menu, that is faster.
 
@@ -263,7 +263,7 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]:    {{ dotfiles }}/rc.xml
 [dotfiles-dynamic]:   {{ dotfiles }}/menu.dynamic.xml

@@ -178,13 +178,13 @@ Let's get it started.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes
 
 [local-part-one]:  /desktop/2018/03/21/xfwm4-theme.html
 
 [cat-fuut]:        https://github.com/Fuut13/fuut-xfwm.xfce-theme-Collections/blob/master/README.md
 [cat-white]:       https://github.com/addy-dclxvi/xfwm4-theme-collections
-[cat-hard]:        https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes
+[cat-hard]:        https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes
 [cat-vera]:        https://github.com/yuune/Stick-xfwm4
 [cat-black]:       https://github.com/noirecat/Shift
 

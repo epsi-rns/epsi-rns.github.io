@@ -53,7 +53,7 @@ using <code>sleep</code> code.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../perl-01-basic.pl][dotfiles-perl-01-basic]
+*	[gitlab.com/.../dotfiles/.../perl-01-basic.pl][dotfiles-perl-01-basic]
 
 {% highlight perl %}
 #!/usr/bin/perl
@@ -92,7 +92,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -119,7 +119,7 @@ that required later on this article.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../perl-02-system.pl][dotfiles-perl-02-system]
+*	[gitlab.com/.../dotfiles/.../perl-02-system.pl][dotfiles-perl-02-system]
 
 {% highlight perl %}
 #!/usr/bin/perl
@@ -169,11 +169,11 @@ and the last, using object oriented <code>IO::Pipe</code.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../perl-02-uni-io.pl][dotfiles-perl-02-uni-io]
+*	[gitlab.com/.../dotfiles/.../perl-02-uni-io.pl][dotfiles-perl-02-uni-io]
 
-*	[github.com/.../dotfiles/.../perl-02-uni-open.pl][dotfiles-perl-02-uni-open]
+*	[gitlab.com/.../dotfiles/.../perl-02-uni-open.pl][dotfiles-perl-02-uni-open]
 
-*	[github.com/.../dotfiles/.../perl-02-uni-open2.pl][dotfiles-perl-02-uni-open2]
+*	[gitlab.com/.../dotfiles/.../perl-02-uni-open2.pl][dotfiles-perl-02-uni-open2]
 
 Using <code>open</code>:
 
@@ -314,11 +314,11 @@ Bidirectional means, a process can read and write at the same time.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../perl-03-pipe-io.pl][dotfiles-perl-03-pipe-io]
+*	[gitlab.com/.../dotfiles/.../perl-03-pipe-io.pl][dotfiles-perl-03-pipe-io]
 
-*	[github.com/.../dotfiles/.../perl-03-pipe-open.pl][dotfiles-perl-03-pipe-open]
+*	[gitlab.com/.../dotfiles/.../perl-03-pipe-open.pl][dotfiles-perl-03-pipe-open]
 
-*	[github.com/.../dotfiles/.../perl-03-pipe-open2.pl][dotfiles-perl-03-pipe-open2]
+*	[gitlab.com/.../dotfiles/.../perl-03-pipe-open2.pl][dotfiles-perl-03-pipe-open2]
 
 Using <code>open</code>:
 
@@ -440,7 +440,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../perl-05-fork.pl][dotfiles-perl-05-fork]
+*	[gitlab.com/.../dotfiles/.../perl-05-fork.pl][dotfiles-perl-05-fork]
 
 {% highlight perl %}
 #!/usr/bin/perl
@@ -548,7 +548,7 @@ detached from script. So we two forks, dzen and transset.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../perl-07-conky.pl][dotfiles-perl-07-conky]
+*	[gitlab.com/.../dotfiles/.../perl-07-conky.pl][dotfiles-perl-07-conky]
 
 {% highlight perl %}
 #!/usr/bin/perl
@@ -657,7 +657,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../perl-17-conky.pl][dotfiles-perl-17-conky]
+*	[gitlab.com/.../dotfiles/.../perl-17-conky.pl][dotfiles-perl-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -682,7 +682,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-perl-idle]:   {{ site.url }}/desktop/2017/06/13/herbstlustwm-event-idle-perl.html

@@ -69,7 +69,7 @@ session.styleOverlay:       ~/.fluxbox/overlay
 
 #### Source
 
-*	[github.com/.../dotfiles/.../init][dotfiles-init]
+*	[gitlab.com/.../dotfiles/.../init][dotfiles-init]
 
 -- -- --
 
@@ -130,7 +130,7 @@ exec fluxbox
 
 #### Source
 
-*	[github.com/.../dotfiles/.../startup][dotfiles-startup]
+*	[gitlab.com/.../dotfiles/.../startup][dotfiles-startup]
 
 -- -- --
 
@@ -173,7 +173,7 @@ Mod4 t       :ToggleDecor
 
 #### Source
 
-*	[github.com/.../dotfiles/.../keys][dotfiles-keys]
+*	[gitlab.com/.../dotfiles/.../keys][dotfiles-keys]
 
 -- -- --
 
@@ -206,7 +206,7 @@ Or do automatic grouping.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../apps][dotfiles-apps]
+*	[gitlab.com/.../dotfiles/.../apps][dotfiles-apps]
 
 -- -- --
 
@@ -239,7 +239,7 @@ we need to go deep with [ [Config: Menu Part][local-part-menu] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/config' %}
 
 [dotfiles-tutor]:   {{ dotfiles }}
 [dotfiles-init]:    {{ dotfiles }}/init

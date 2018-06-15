@@ -174,4 +174,4 @@ What do you think ?
 [image-dark]:     {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-dark-on-grey.png
 [hires-dark]:     https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNS74SpNlGH0hjKXDtpro_pJFv4GPdSOH2U9tam
 
-[source-i3]: https://github.com/epsi-rns/dotfiles/tree/master/i3
+[source-i3]: https://gitlab.com/epsi-rns/dotfiles/tree/master/i3

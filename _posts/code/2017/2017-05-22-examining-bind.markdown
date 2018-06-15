@@ -660,7 +660,7 @@ Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/bind' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/notes/haskell/bind' %}
 
 [local-overview]: {{ site.url }}/code/2017/05/20/explaining-monad.html
 [local-part-01]:  {{ site.url }}/code/2017/05/21/explaining-monad.html

@@ -440,7 +440,7 @@ In fact the source configuration is easier to be read now.
 
 ## Configuration Source
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome>
 
 -- -- --
 
@@ -486,7 +486,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/awesome/3.5' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/awesome/3.5' %}
 
 [image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
 [image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-binding.png

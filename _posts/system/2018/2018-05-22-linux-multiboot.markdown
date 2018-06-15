@@ -408,7 +408,7 @@ UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         
 
 Have a look at the <code class="code-file">/etc/fstab</code> config for Fedora:
 
-*	[github.com/.../dotfiles/.../fstab.fedora][dotfiles-fstab-fedora]
+*	[gitlab.com/.../dotfiles/.../fstab.fedora][dotfiles-fstab-fedora]
 
 
 #### mtab
@@ -456,7 +456,7 @@ UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         
 
 Have a look at the <code class="code-file">/etc/fstab</code> config for Debian:
 
-*	[github.com/.../dotfiles/.../fstab.debian][dotfiles-fstab-debian]
+*	[gitlab.com/.../dotfiles/.../fstab.debian][dotfiles-fstab-debian]
 
 #### KaOSx
 
@@ -483,7 +483,7 @@ UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         
 
 Have a look at the <code class="code-file">/etc/fstab</code> config for KaOSx:
 
-*	[github.com/.../dotfiles/.../fstab.kaosx][dotfiles-fstab-kaosx]
+*	[gitlab.com/.../dotfiles/.../fstab.kaosx][dotfiles-fstab-kaosx]
 
 #### openSUSE
 
@@ -507,7 +507,7 @@ UUID=4190d7a9-fb03-4d19-864f-7d04f89c3be0       /media/Debian       ext4        
 
 Have a look at the <code class="code-file">/etc/fstab</code> config for openSUSE:
 
-*	[github.com/.../dotfiles/.../fstab.opensuse][dotfiles-fstab-opensuse]
+*	[gitlab.com/.../dotfiles/.../fstab.opensuse][dotfiles-fstab-opensuse]
 
 #### GParted
 
@@ -524,7 +524,7 @@ Consider continue reading [ [Multiboot: chroot][local-part-config] ].
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:       /system/2018/05/23/linux-multiboot.html
 

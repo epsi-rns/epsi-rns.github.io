@@ -12,7 +12,7 @@ Similar Code:
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-bash-gmc]:       {{ dotfiles_path }}/bash/gmc.sh
 [dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/gmc.pm

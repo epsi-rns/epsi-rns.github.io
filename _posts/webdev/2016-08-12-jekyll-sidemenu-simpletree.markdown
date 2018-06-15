@@ -61,7 +61,7 @@ to hold my Window Manager (WM) menu.
   - title: Difference WM/DE
     url: /desktop/2016/06/13/de-wm-shell-difference.html
   - title: Dotfiles
-    url: https://github.com/epsi-rns/dotfiles/  
+    url: https://gitlab.com/epsi-rns/dotfiles/  
 
 - title: Tiling WM
   url: /pages/desktop/twm

@@ -35,7 +35,7 @@ I just want to share a little, from what I just learn. To speed up learning proc
 
 Talk is cheap. Here is the code on github account:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome>
 
 <br/>
 [![Refactoring Awesome Light with Midnight Commander][image-ss-awesome-light]{: .img-responsive }][photo-ss-awesome-light]

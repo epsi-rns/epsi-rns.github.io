@@ -53,7 +53,7 @@ using <code>sleep</code> code.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-01-basic.sh][dotfiles-bash-01-basic]
+*	[gitlab.com/.../dotfiles/.../bash-01-basic.sh][dotfiles-bash-01-basic]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -87,7 +87,7 @@ Haskell has no loop, but using <code>forever</code> control.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskell-01-basic]
+*	[gitlab.com/.../dotfiles/.../haskell-01-basic.hs][dotfiles-haskell-01-basic]
 
 {% highlight haskell %}
 import Data.Time.LocalTime
@@ -131,7 +131,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -164,7 +164,7 @@ to locate the conky script assets.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-02-native.sh][dotfiles-bash-02-native]
+*	[gitlab.com/.../dotfiles/.../bash-02-native.sh][dotfiles-bash-02-native]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -201,7 +201,7 @@ From this step forward, this would looks different in other language.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-03-pipe.sh][dotfiles-bash-03-pipe]
+*	[gitlab.com/.../dotfiles/.../bash-03-pipe.sh][dotfiles-bash-03-pipe]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -238,7 +238,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-05-fork-simple.sh][dotfiles-bash-05-fork-simple]
+*	[gitlab.com/.../dotfiles/.../bash-05-fork-simple.sh][dotfiles-bash-05-fork-simple]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -341,7 +341,7 @@ detach_dzen2
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-05-fork.sh][dotfiles-bash-05-fork]
+*	[gitlab.com/.../dotfiles/.../bash-05-fork.sh][dotfiles-bash-05-fork]
 
 {% include post/2017/04/pipe-and-fork-similar-05.md %}
 
@@ -362,7 +362,7 @@ sleep 1 && exec `(transset .8 -n dzentop >/dev/null 2>&1 &)` &
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../bash-07-conky-simple.sh][dotfiles-bash-07-conky-simple]
+*	[gitlab.com/.../dotfiles/.../bash-07-conky-simple.sh][dotfiles-bash-07-conky-simple]
 
 Finally, we have this complete script.
 
@@ -428,7 +428,7 @@ detach_transset
 {% endhighlight %}
 
 **Source**:
-*	[github.com/.../dotfiles/.../bash-07-conky.sh][dotfiles-bash-07-conky]
+*	[gitlab.com/.../dotfiles/.../bash-07-conky.sh][dotfiles-bash-07-conky]
 
 
 This would have <code>dzen2</code> output similar to this below.
@@ -447,7 +447,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../bash-17-conky.sh][dotfiles-bash-17-conky]
+*	[gitlab.com/.../dotfiles/.../bash-17-conky.sh][dotfiles-bash-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -471,7 +471,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-bash-idle]:   {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html

@@ -137,7 +137,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-04</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-04
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-04][dotfiles-tutor-04]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-04][dotfiles-tutor-04]
 
 -- -- --
 
@@ -212,7 +212,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-05</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-05
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-05][dotfiles-tutor-05]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-05][dotfiles-tutor-05]
 
 -- -- --
 
@@ -233,7 +233,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-05-solid</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-05-sloid
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-05-solid][dotfiles-tutor-05-solid]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-05-solid][dotfiles-tutor-05-solid]
 
 -- -- --
 
@@ -325,7 +325,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-06</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-06
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-06][dotfiles-tutor-06]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-06][dotfiles-tutor-06]
 
 -- -- --
 
@@ -335,7 +335,7 @@ Consider continue reading [ [Tint2: Panel Items][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/tint2' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/tint2' %}
 
 [dotfiles-tutor-04]:    {{ dotfiles }}/tint2rc-tutor-04
 [dotfiles-tutor-05]:    {{ dotfiles }}/tint2rc-tutor-05

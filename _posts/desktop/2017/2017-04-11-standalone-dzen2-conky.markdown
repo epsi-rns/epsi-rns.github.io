@@ -72,7 +72,7 @@ And forget about the old conky style.
 Let's do our very first conky. 
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../01.lua][dotfiles-example-01-lua]
+*	[gitlab.com/.../dotfiles/.../01.lua][dotfiles-example-01-lua]
 
 {% highlight lua %}
 conky.config = {
@@ -115,7 +115,7 @@ Let's show a simple dzen2 statusbar by put this conky
 in a script <code class="code-file">conky-example/01.sh</code>.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
+*	[gitlab.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -207,9 +207,9 @@ Here is a working example:
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../02.sh][dotfiles-example-02-bash]
+*	[gitlab.com/.../dotfiles/.../02.sh][dotfiles-example-02-bash]
 
-*	[github.com/.../dotfiles/.../02.lua][dotfiles-example-02-lua]
+*	[gitlab.com/.../dotfiles/.../02.lua][dotfiles-example-02-lua]
 
 {% highlight lua %}
 -- vim: ts=4 sw=4 noet ai cindent syntax=lua
@@ -386,7 +386,7 @@ The entry point conky.lua is very simple.
 I have put all the stuff in libraries.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -415,7 +415,7 @@ conky.text = [[\
 The color preset is just simpler.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../presets/bright-background.lua][dotfiles-preset]
+*	[gitlab.com/.../dotfiles/.../presets/bright-background.lua][dotfiles-preset]
 
 {% highlight lua %}
 colorPreset = {
@@ -445,7 +445,7 @@ The image above is simply an output of
 this <code class="code-file">assemblies/separator.lua</code> configuration.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../assemblies/separator.lua][dotfiles-assembly-separator]
+*	[gitlab.com/.../dotfiles/.../assemblies/separator.lua][dotfiles-assembly-separator]
 
 {% highlight lua %}
 enabled = ''
@@ -469,7 +469,7 @@ Here is another sample to create a bright back arrow without making a lot of eff
 <code class="code-file">assemblies/back-arrow.lua</code> configuration.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../assemblies/back-arrow.lua][dotfiles-assembly-back-arrow]
+*	[gitlab.com/.../dotfiles/.../assemblies/back-arrow.lua][dotfiles-assembly-back-arrow]
 
 {% highlight lua %}
 deco = helper.decoDoubleArrowLeft
@@ -518,9 +518,9 @@ For code comparation you should see both source code yourself.
 
 **Source**:
 
-*	[github.com/.../dotfiles/...dzen2.../main.sh][dotfiles-multi-dzen2]
+*	[gitlab.com/.../dotfiles/...dzen2.../main.sh][dotfiles-multi-dzen2]
 
-*	[github.com/.../dotfiles/...lemon.../main.sh][dotfiles-multi-lemon]
+*	[gitlab.com/.../dotfiles/...lemon.../main.sh][dotfiles-multi-lemon]
 
 [![Real Life Dzen2: Conky Lua][image-ss-real-dzen2]{: .img-responsive }][photo-ss-real-dzen2]
 
@@ -540,9 +540,9 @@ Have Fun
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/conky' %}
-{% assign dotfiles_expath = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/conky-example' %}
-{% assign dotfiles_assets = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/assets' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/conky' %}
+{% assign dotfiles_expath = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/conky-example' %}
+{% assign dotfiles_assets = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/assets' %}
 
 [image-11-example-00]: {{ asset_path }}/dzen2-conky-11-example-00-cli.png
 [image-11-example-01]: {{ asset_path }}/dzen2-conky-11-example-01-bash.png
@@ -571,8 +571,8 @@ Have Fun
 [dotfiles-assembly-separator]:  {{ dotfiles_path }}/assemblies/separator.lua
 [dotfiles-assembly-back-arrow]: {{ dotfiles_path }}/assemblies/back-arrow.lua
 
-[dotfiles-multi-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
-[dotfiles-multi-lemon]: https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
+[dotfiles-multi-dzen2]: https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/multi/
+[dotfiles-multi-lemon]: https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon/multi/
 
 [local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  

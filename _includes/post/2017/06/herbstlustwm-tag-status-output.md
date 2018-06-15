@@ -21,8 +21,8 @@ Similar Code (Lemonbar):
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [dotfiles-dzen2-bash-output]:      {{ dotfiles_dzen2 }}/bash/output.sh
 [dotfiles-dzen2-perl-output]:      {{ dotfiles_dzen2 }}/perl/output.pm

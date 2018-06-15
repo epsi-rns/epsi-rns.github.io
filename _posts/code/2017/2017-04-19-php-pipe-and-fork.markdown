@@ -74,7 +74,7 @@ using <code>sleep</code> code.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../php-01-basic.php][dotfiles-php-01-basic]
+*	[gitlab.com/.../dotfiles/.../php-01-basic.php][dotfiles-php-01-basic]
 
 {% highlight php %}
 #!/usr/bin/php56  
@@ -106,7 +106,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -145,9 +145,9 @@ to locate the conky script assets.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../php-02-popen.php][dotfiles-php-02-popen]
+*	[gitlab.com/.../dotfiles/.../php-02-popen.php][dotfiles-php-02-popen]
 
-*	[github.com/.../dotfiles/.../php-02-proc-open.php][dotfiles-php-02-proc-open]
+*	[gitlab.com/.../dotfiles/.../php-02-proc-open.php][dotfiles-php-02-proc-open]
 
 {% highlight php %}
 #!/usr/bin/php
@@ -245,9 +245,9 @@ Also <code>proc_open</code> that has bidirectional capability.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../php-03-popen.php][dotfiles-php-03-popen]
+*	[gitlab.com/.../dotfiles/.../php-03-popen.php][dotfiles-php-03-popen]
 
-*	[github.com/.../dotfiles/.../php-03-proc-open.php][dotfiles-php-03-proc-open]
+*	[gitlab.com/.../dotfiles/.../php-03-proc-open.php][dotfiles-php-03-proc-open]
 
 {% highlight php %}
 <?php # using PHP7
@@ -325,7 +325,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../php-05-fork.php][dotfiles-php-05-fork]
+*	[gitlab.com/.../dotfiles/.../php-05-fork.php][dotfiles-php-05-fork]
 
 {% highlight php %}
 <?php # using PHP7
@@ -431,7 +431,7 @@ detached from script. So we two forks, dzen and transset.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../php-07-conky.php][dotfiles-php-07-conky]
+*	[gitlab.com/.../dotfiles/.../php-07-conky.php][dotfiles-php-07-conky]
 
 {% highlight php %}
 <?php # using PHP7
@@ -534,7 +534,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../php-17-conky.php][dotfiles-php-17-conky]
+*	[gitlab.com/.../dotfiles/.../php-17-conky.php][dotfiles-php-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -559,7 +559,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-php-idle]:   {{ site.url }}/desktop/2017/06/16/herbstlustwm-event-idle-php.html

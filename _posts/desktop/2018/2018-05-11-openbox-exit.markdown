@@ -109,7 +109,7 @@ Unfortunately, I still don't know how to activate svg icons in oblogout.
 
 #### Config Source
 
-*	[github.com/.../dotfiles/.../oblogout/config][dotfiles-oblogout]
+*	[gitlab.com/.../dotfiles/.../oblogout/config][dotfiles-oblogout]
 
 -- -- --
 
@@ -191,7 +191,7 @@ Now we have the beautiful exit dialog.
 
 #### Config Source
 
-*	[github.com/.../dotfiles/.../bl-exit/bl-exitrc][dotfiles-bl-exit]
+*	[gitlab.com/.../dotfiles/.../bl-exit/bl-exitrc][dotfiles-bl-exit]
 
 -- -- --
 
@@ -215,7 +215,7 @@ Consider continue reading [ [Tint2: Simple Taskbar][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-oblogout]: {{ dotfiles }}/oblogout/config
 [dotfiles-bl-exit]:  {{ dotfiles }}/bl-exit/bl-exitrc

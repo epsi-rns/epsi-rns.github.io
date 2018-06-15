@@ -52,10 +52,10 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
+	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
+	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
 
 -- -- --
 
@@ -99,10 +99,10 @@ Let's have a look at <code class="code-file">helper.rb</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-dzen2-ruby-helper]
+	[gitlab.com/.../dotfiles/.../ruby/helper.rb][dotfiles-dzen2-ruby-helper]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/helper.rb][dotfiles-lemon-ruby-helper]
+	[gitlab.com/.../dotfiles/.../ruby/helper.rb][dotfiles-lemon-ruby-helper]
 
 {% include post/2017/06/herbstlustwm-tag-status-helper.md %}
 
@@ -311,10 +311,10 @@ Or in Dzen2 version:
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-dzen2-ruby-testparams]
+	[gitlab.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-dzen2-ruby-testparams]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-lemon-ruby-testparams]
+	[gitlab.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-lemon-ruby-testparams]
 
 {% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
 
@@ -365,10 +365,10 @@ end
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-dzen2-ruby-gmc]
+	[gitlab.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-dzen2-ruby-gmc]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-lemon-ruby-gmc]
+	[gitlab.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-lemon-ruby-gmc]
 
 {% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
 
@@ -381,10 +381,10 @@ Let's have a look at <code class="code-file">output.rb</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/output.rb][dotfiles-dzen2-ruby-output]
+	[gitlab.com/.../dotfiles/.../ruby/output.rb][dotfiles-dzen2-ruby-output]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/output.rb][dotfiles-lemon-ruby-output]
+	[gitlab.com/.../dotfiles/.../ruby/output.rb][dotfiles-lemon-ruby-output]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -674,10 +674,10 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 #### View Source File:
 
 *	**dzen2**: 
-	[github.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-dzen2-ruby-testoutput]
+	[gitlab.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-dzen2-ruby-testoutput]
 
 *	**lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-lemon-ruby-testoutput]
+	[gitlab.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-lemon-ruby-testoutput]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -702,8 +702,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png

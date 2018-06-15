@@ -162,7 +162,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-01</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-01
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-01][dotfiles-tutor-01]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-01][dotfiles-tutor-01]
 
 -- -- --
 
@@ -306,7 +306,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-02</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-02
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-02][dotfiles-tutor-02]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-02][dotfiles-tutor-02]
 
 -- -- --
 
@@ -344,7 +344,7 @@ Have a look at the <code class="code-file">tint2rc-tutor-03</code>:
 $ tint2 -c ~/.config/tint2/tint2rc-tutor-03
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../tint2rc-tutor-03][dotfiles-tutor-03]
+*	[gitlab.com/.../dotfiles/.../tint2rc-tutor-03][dotfiles-tutor-03]
 
 -- -- --
 
@@ -354,7 +354,7 @@ Consider continue reading [ [Tint2: More Backgrounds][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/tint2' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/tint2' %}
 
 [cat-white]:       https://github.com/addy-dclxvi/tint2-theme-collections
 

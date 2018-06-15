@@ -142,7 +142,7 @@ and make your awesome WM more awesome
 My configuration dotfiles is here.
 You can copy for your own needs.
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome>
 
 Since this configuration is already modularized,
 it is easier to learn part by part.

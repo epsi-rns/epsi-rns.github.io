@@ -74,7 +74,7 @@ There will be a bunch of file:
 
 Open all the pipemenu scripts, and do a search and replace.
 
-*	[github.com/.../dotfiles/.../bin/][dotfiles-bin]
+*	[gitlab.com/.../dotfiles/.../bin/][dotfiles-bin]
 
 Change from
 
@@ -110,7 +110,7 @@ Modify the <code class="code-file">~/.config/openbox/menu.xml</code>.
 
 Create the <code class="code-file">~/.config/openbox/menu.bunsenlabs.xml</code>.
 
-*	[github.com/.../dotfiles/.../menu.bunsenlabs.xml][dotfiles-bunsenlabs]
+*	[gitlab.com/.../dotfiles/.../menu.bunsenlabs.xml][dotfiles-bunsenlabs]
 
 {% highlight bash %}
 <openbox_pipe_menu>
@@ -157,7 +157,7 @@ Consider reconfigure openbox. And have a look at the result.
 Some menu need a configuration file called
 <code class="code-file">~/.config/openbox/pipemenus.rc</code>.
 
-*	[github.com/.../dotfiles/.../pipemenus.rc][dotfiles-pipemenus]
+*	[gitlab.com/.../dotfiles/.../pipemenus.rc][dotfiles-pipemenus]
 
 I grab this from a Kali user, and change a bit, as below.
 
@@ -187,7 +187,7 @@ Consider continue reading [ [Menu: Generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-bin]:   {{ dotfiles }}/bin/
 [dotfiles-bunsenlabs]: {{ dotfiles }}/menu.bunsenlabs.xml

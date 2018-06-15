@@ -495,9 +495,9 @@ You may modify this config to suit your needs.
 [photo-i3status-top]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipN89O6K1_nEO7RMlR2NQ00xT2FGLmLU1HUFJCrT
 [photo-i3status-bottom]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP_wqTnm_iRFFL28-nJ-lAiExnzeWz2jWTs7CvP
 
-[source-i3]:     https://github.com/epsi-rns/dotfiles/tree/master/i3
-[source-helper]: https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonhelper.lua
-[source-parts]:  https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonparts.lua
-[source-top]:    https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.top.lua
-[source-bottom]: https://github.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.bottom.lua
+[source-i3]:     https://gitlab.com/epsi-rns/dotfiles/tree/master/i3
+[source-helper]: https://gitlab.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonhelper.lua
+[source-parts]:  https://gitlab.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/jsonparts.lua
+[source-top]:    https://gitlab.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.top.lua
+[source-bottom]: https://gitlab.com/epsi-rns/dotfiles/blob/master/i3/conky/04.modular/conkyrc.bottom.lua
 

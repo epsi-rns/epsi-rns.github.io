@@ -92,7 +92,7 @@ So we either call it from system or emulate it with.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../lua-01-basic.lua][dotfiles-lua-01-basic]
+*	[gitlab.com/.../dotfiles/.../lua-01-basic.lua][dotfiles-lua-01-basic]
 
 {% highlight lua %}
 #!/usr/bin/lua
@@ -130,7 +130,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -167,7 +167,7 @@ that's why emulate it with <code>debug.getinfo</code>
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../lua-02-popen.lua][dotfiles-lua-02-popen]
+*	[gitlab.com/.../dotfiles/.../lua-02-popen.lua][dotfiles-lua-02-popen]
 
 {% highlight lua %}
 #!/usr/bin/lua
@@ -226,7 +226,7 @@ And <code>pipeout</code> to external command.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../lua-03-popen.lua][dotfiles-lua-03-popen]
+*	[gitlab.com/.../dotfiles/.../lua-03-popen.lua][dotfiles-lua-03-popen]
 
 {% highlight lua %}
 #!/usr/bin/lua
@@ -288,7 +288,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../lua-05-fork.lua][dotfiles-lua-05-fork]
+*	[gitlab.com/.../dotfiles/.../lua-05-fork.lua][dotfiles-lua-05-fork]
 
 {% highlight lua %}
 #!/usr/bin/lua
@@ -410,7 +410,7 @@ detached from script. So we two forks, dzen and transset.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../lua-07-conky.lua][dotfiles-lua-07-conky]
+*	[gitlab.com/.../dotfiles/.../lua-07-conky.lua][dotfiles-lua-07-conky]
 
 {% highlight lua %}
 #!/usr/bin/lua
@@ -533,7 +533,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../lua-17-conky.lua][dotfiles-lua-17-conky]
+*	[gitlab.com/.../dotfiles/.../lua-17-conky.lua][dotfiles-lua-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -558,7 +558,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-lua-idle]:   {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html

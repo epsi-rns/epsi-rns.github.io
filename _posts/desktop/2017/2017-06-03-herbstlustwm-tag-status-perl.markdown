@@ -52,10 +52,10 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../perl/][dotfiles-dzen2-perl]
+	[gitlab.com/.../dotfiles/.../perl/][dotfiles-dzen2-perl]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/][dotfiles-lemon-perl]
+	[gitlab.com/.../dotfiles/.../perl/][dotfiles-lemon-perl]
 
 
 -- -- --
@@ -100,10 +100,10 @@ Let's have a look at <code class="code-file">helper.pm</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../perl/helper.pm][dotfiles-dzen2-perl-helper]
+	[gitlab.com/.../dotfiles/.../perl/helper.pm][dotfiles-dzen2-perl-helper]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/helper.pm][dotfiles-lemon-perl-helper]
+	[gitlab.com/.../dotfiles/.../perl/helper.pm][dotfiles-lemon-perl-helper]
 
 {% include post/2017/06/herbstlustwm-tag-status-helper.md %}
 
@@ -338,10 +338,10 @@ Or in Dzen2 version:
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../perl/01-testparams.sh][dotfiles-dzen2-perl-testparams]
+	[gitlab.com/.../dotfiles/.../perl/01-testparams.sh][dotfiles-dzen2-perl-testparams]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/01-testparams.sh][dotfiles-lemon-perl-testparams]
+	[gitlab.com/.../dotfiles/.../perl/01-testparams.sh][dotfiles-lemon-perl-testparams]
 
 {% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
 
@@ -390,10 +390,10 @@ our %color = (
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../perl/gmc.pm][dotfiles-dzen2-perl-gmc]
+	[gitlab.com/.../dotfiles/.../perl/gmc.pm][dotfiles-dzen2-perl-gmc]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/gmc.pm][dotfiles-lemon-perl-gmc]
+	[gitlab.com/.../dotfiles/.../perl/gmc.pm][dotfiles-lemon-perl-gmc]
 
 {% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
 
@@ -406,10 +406,10 @@ Let's have a look at <code class="code-file">output.pm</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../perl/output.pm][dotfiles-dzen2-perl-output]
+	[gitlab.com/.../dotfiles/.../perl/output.pm][dotfiles-dzen2-perl-output]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../perl/output.pm][dotfiles-lemon-perl-output]
+	[gitlab.com/.../dotfiles/.../perl/output.pm][dotfiles-lemon-perl-output]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -724,10 +724,10 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 #### View Source File:
 
 *	**dzen2**: 
-	[github.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-dzen2-perl-testoutput]
+	[gitlab.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-dzen2-perl-testoutput]
 
 *	**lemonbar**: 
-	[github.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-lemon-perl-testoutput]
+	[gitlab.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-lemon-perl-testoutput]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -752,8 +752,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png

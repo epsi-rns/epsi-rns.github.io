@@ -226,7 +226,7 @@ Consider continue reading [ [Theme: Style Part][local-part-style] ]
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/styles/exilorate
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/styles/exilorate
 
 [local-overview]:    /desktop/2018/03/20/xfwm4-theme.html
 [local-part-style]:  /desktop/2018/04/07/fluxbox-style.html

@@ -53,20 +53,20 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
+	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
+	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
 
 #### The PipeHandler Source File:
 
 Let's have a look at <code class="code-file">pipehandler.rb</code> in github.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.rb][dotfiles-dzen2-ruby-pipehandler]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.rb][dotfiles-dzen2-ruby-pipehandler]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.rb][dotfiles-lemon-ruby-pipehandler]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.rb][dotfiles-lemon-ruby-pipehandler]
 
 -- -- --
 
@@ -104,10 +104,10 @@ detach_lemon(monitor, lemon_parameters)
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/panel.rb][dotfiles-dzen2-ruby-panel]
+	[gitlab.com/.../dotfiles/.../ruby/panel.rb][dotfiles-dzen2-ruby-panel]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/panel.rb][dotfiles-lemon-ruby-panel]
+	[gitlab.com/.../dotfiles/.../ruby/panel.rb][dotfiles-lemon-ruby-panel]
 
 
 #### Run Lemon, Run !
@@ -172,8 +172,8 @@ and <code>set_windowtitle</code>, have already been discussed.
 Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.simple.rb][dotfiles-lemon-ruby-pipehandler-simple]
-	[github.com/.../dotfiles/.../ruby/pipehandler.01-init.rb][dotfiles-lemon-ruby-pipehandler-init]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.simple.rb][dotfiles-lemon-ruby-pipehandler-simple]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.01-init.rb][dotfiles-lemon-ruby-pipehandler-init]
 
 {% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
 
@@ -282,7 +282,7 @@ This is the minimum version.
 With idle event. The **heart** of the script.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.02-idle.rb][dotfiles-lemon-ruby-pipehandler-idle]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.02-idle.rb][dotfiles-lemon-ruby-pipehandler-idle]
 
 -- -- --
 
@@ -358,7 +358,7 @@ we open the IO in read and write mode <code>r+</code>.
 Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.03-clickable.rb][dotfiles-lemon-ruby-pipehandler-clickable]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.03-clickable.rb][dotfiles-lemon-ruby-pipehandler-clickable]
 
 ### Interval Based Event
 
@@ -382,7 +382,7 @@ In real code later, we do not need the timestamp.
 Before merging combined event into main code,
 consider this test in an isolated fashion.
 
-*	[github.com/.../dotfiles/.../ruby/11-testevents.rb][dotfiles-lemon-ruby-testevents]
+*	[gitlab.com/.../dotfiles/.../ruby/11-testevents.rb][dotfiles-lemon-ruby-testevents]
 
 -- -- --
 
@@ -521,7 +521,7 @@ Combined event consist of both,
 synchronous interval event and asynchronous idle event.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.04-event.rb][dotfiles-lemon-ruby-pipehandler-event]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.04-event.rb][dotfiles-lemon-ruby-pipehandler-event]
 
 -- -- --
 
@@ -599,7 +599,7 @@ detach_lemon_conky(params_bottom)
 Dual Bar, <code>detach_lemon_conky</code> function.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/pipehandler.05-conky.rb][dotfiles-lemon-ruby-pipehandler-conky]
+	[gitlab.com/.../dotfiles/.../ruby/pipehandler.05-conky.rb][dotfiles-lemon-ruby-pipehandler-conky]
 
 -- -- --
 
@@ -636,10 +636,10 @@ in <code class="code-file">~/.config/herbstluftwm/</code> directory.
 After reunification, they are not very long scripts after all.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../ruby/panel-dzen2.rb][dotfiles-hlwm-ruby-dzen2-compact]
+	[gitlab.com/.../dotfiles/.../ruby/panel-dzen2.rb][dotfiles-hlwm-ruby-dzen2-compact]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../ruby/panel-lemonbar.rb][dotfiles-hlwm-ruby-lemon-compact]
+	[gitlab.com/.../dotfiles/.../ruby/panel-lemonbar.rb][dotfiles-hlwm-ruby-lemon-compact]
 
 {% include post/2017/06/herbstlustwm-event-idle-panel.md %}
 
@@ -660,9 +660,9 @@ Enjoy the window manager !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
-{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png

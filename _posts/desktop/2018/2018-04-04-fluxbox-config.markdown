@@ -57,7 +57,7 @@ You can find it in <code class="code-file">~/.fluxbox/menu</code> file.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../menu][dotfiles-menu]
+*	[gitlab.com/.../dotfiles/.../menu][dotfiles-menu]
 
 We will learn to customize later.
 
@@ -146,7 +146,7 @@ Now you can see the openSUSE's XDG menu.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../menu.opensuse.xdg][dotfiles-xdg]
+*	[gitlab.com/.../dotfiles/.../menu.opensuse.xdg][dotfiles-xdg]
 
 -- -- --
 
@@ -238,7 +238,7 @@ And the main menu <code>~/.fluxbox/menu</code> would be:
 
 #### Source
 
-*	[github.com/.../dotfiles/.../menu.favorites][dotfiles-fav]
+*	[gitlab.com/.../dotfiles/.../menu.favorites][dotfiles-fav]
 
 -- -- --
 
@@ -262,7 +262,7 @@ Consider having fun with theme by continue reading [ [Theme: Inkscape Part][loca
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/fluxbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/config' %}
 
 [dotfiles-tutor]:  {{ dotfiles }}
 [dotfiles-menu]:   {{ dotfiles }}/menu

@@ -156,7 +156,7 @@ Happy Coding.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[dotfiles-layout]: https://github.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyLayoutHook.hs
+[dotfiles-layout]: https://gitlab.com/epsi-rns/dotfiles/blob/master/xmonad/xmonad-dzen-2/lib/MyLayoutHook.hs
 [image-ss-xmonad-dollar]: {{ site.url }}/assets/posts/code/2016/05/haskell-dollar.png
 [photo-ss-xmonad-dollar]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOsazbKB0CKjB1fbBIs1pD9bLhbZoDbfIOc8Uo4
 

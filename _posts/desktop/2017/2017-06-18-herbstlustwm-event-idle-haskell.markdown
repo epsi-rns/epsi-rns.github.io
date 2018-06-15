@@ -53,20 +53,20 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/][dotfiles-dzen2-haskell]
+	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-dzen2-haskell]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/][dotfiles-lemon-haskell]
+	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-lemon-haskell]
 
 #### The PipeHandler Source File:
 
 Let's have a look at <code class="code-file">pipehandler.hs</code> in github.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/pipehandler.hs][dotfiles-dzen2-haskell-pipehandler]
+	[gitlab.com/.../dotfiles/.../haskell/pipehandler.hs][dotfiles-dzen2-haskell-pipehandler]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/pipehandler.hs][dotfiles-lemon-haskell-pipehandler]
+	[gitlab.com/.../dotfiles/.../haskell/pipehandler.hs][dotfiles-lemon-haskell-pipehandler]
 
 -- -- --
 
@@ -107,10 +107,10 @@ main = do
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/panel.hs][dotfiles-dzen2-haskell-panel]
+	[gitlab.com/.../dotfiles/.../haskell/panel.hs][dotfiles-dzen2-haskell-panel]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/panel.hs][dotfiles-lemon-haskell-panel]
+	[gitlab.com/.../dotfiles/.../haskell/panel.hs][dotfiles-lemon-haskell-panel]
 
 
 #### Run Lemon, Run !
@@ -175,7 +175,7 @@ and <code>setWindowtitle</code>, have already been discussed.
 Simple version. No idle event. Only statusbar initialization.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.01-init.hs][dotfiles-lemon-haskell-pipehandler-init]
+	[gitlab.com/.../dotfiles/.../haskell/MyPipeHandler.01-init.hs][dotfiles-lemon-haskell-pipehandler-init]
 
 {% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
 
@@ -283,7 +283,7 @@ This is the minimum version.
 With idle event. The **heart** of the script.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.02-idle.hs][dotfiles-lemon-haskell-pipehandler-idle]
+	[gitlab.com/.../dotfiles/.../haskell/MyPipeHandler.02-idle.hs][dotfiles-lemon-haskell-pipehandler-idle]
 
 -- -- --
 
@@ -347,7 +347,7 @@ runLemon monitor parameters = do
 Piping lemonbar output to shell, implementing lemonbar clickable area.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.03-clickable.hs][dotfiles-lemon-haskell-pipehandler-clickable]
+	[gitlab.com/.../dotfiles/.../haskell/MyPipeHandler.03-clickable.hs][dotfiles-lemon-haskell-pipehandler-clickable]
 
 -- -- --
 
@@ -373,7 +373,7 @@ In real code later, we do not need the timestamp.
 Before merging combined event into main code,
 consider this test in an isolated fashion.
 
-*	[github.com/.../dotfiles/.../haskell/11-testevents.hs][dotfiles-lemon-haskell-testevents]
+*	[gitlab.com/.../dotfiles/.../haskell/11-testevents.hs][dotfiles-lemon-haskell-testevents]
 
 -- -- --
 
@@ -522,7 +522,7 @@ Combined event consist of both,
 synchronous interval event and asynchronous idle event.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.04-event.hs][dotfiles-lemon-haskell-pipehandler-event]
+	[gitlab.com/.../dotfiles/.../haskell/MyPipeHandler.04-event.hs][dotfiles-lemon-haskell-pipehandler-event]
 
 -- -- --
 
@@ -606,7 +606,7 @@ main = do
 Dual Bar, <code>detach_lemon_conky</code> function.
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/MyPipeHandler.05-conky.hs][dotfiles-lemon-haskell-pipehandler-conky]
+	[gitlab.com/.../dotfiles/.../haskell/MyPipeHandler.05-conky.hs][dotfiles-lemon-haskell-pipehandler-conky]
 
 -- -- --
 
@@ -645,10 +645,10 @@ in <code class="code-file">~/.config/herbstluftwm/</code> directory.
 After reunification, they are not very long scripts after all.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../haskell/panel-dzen2.hs][dotfiles-hlwm-haskell-dzen2-compact]
+	[gitlab.com/.../dotfiles/.../haskell/panel-dzen2.hs][dotfiles-hlwm-haskell-dzen2-compact]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../haskell/panel-lemonbar.hs][dotfiles-hlwm-haskell-lemon-compact]
+	[gitlab.com/.../dotfiles/.../haskell/panel-lemonbar.hs][dotfiles-hlwm-haskell-lemon-compact]
 
 {% include post/2017/06/herbstlustwm-event-idle-panel.md %}
 
@@ -669,9 +669,9 @@ Enjoy the window manager !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
-{% assign dotfiles_hlwm  = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_hlwm  = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [image-hlwm-01-event-idle]:   {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png

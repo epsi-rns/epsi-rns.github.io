@@ -53,7 +53,7 @@ Suppose that you have an original code as below that need to be debugged.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky-simple]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky-simple]
 
 {% highlight lua %}
 conky.config = {
@@ -82,7 +82,7 @@ additional debugging utilities is as below
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../debug.lua][dotfiles-conky-debug]
+*	[gitlab.com/.../dotfiles/.../debug.lua][dotfiles-conky-debug]
 
 {% highlight lua %}
 conky.config = {
@@ -141,9 +141,9 @@ Here is another example of Conky as a feed to Dzen2
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../conky.sh][dotfiles-conky-deco-debug]
+*	[gitlab.com/.../dotfiles/.../conky.sh][dotfiles-conky-deco-debug]
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky-deco-debug]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky-deco-debug]
 
 
 {% highlight bash %}
@@ -168,10 +168,10 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone' %}
 
-[dotfiles-conky-simple]:     {{ dotfiles_path }}/lang/assets/conky.lua
-[dotfiles-conky-debug]:      {{ dotfiles_path }}/lang/assets/debug.lua
+[dotfiles-conky-simple]:     {{ dotfiles_path }}/pipe/assets/conky.lua
+[dotfiles-conky-debug]:      {{ dotfiles_path }}/pipe/assets/debug.lua
 [dotfiles-conky-deco-debug]: {{ dotfiles_path }}/dzen2/debug/conky.lua
 [dotfiles-bash-deco-debug]:  {{ dotfiles_path }}/dzen2/debug/conky.lua
 

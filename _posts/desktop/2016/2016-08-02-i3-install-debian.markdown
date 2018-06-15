@@ -174,7 +174,7 @@ however i3status using conky-lua-json is complex.
 My configuration dotfiles is here.
 You can copy for your own needs.
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/i3>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/i3>
 
 Since this configuration is already modularized,
 it is easier to learn part by part.

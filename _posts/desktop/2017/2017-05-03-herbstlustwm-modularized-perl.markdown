@@ -39,7 +39,7 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../perl/][dotfiles-perl-directory]
+*	[gitlab.com/.../dotfiles/.../perl/][dotfiles-perl-directory]
 
 #### Influence
 
@@ -163,7 +163,7 @@ system("xsetroot -solid '$color{'blue500'}'");
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/gmc.pm][dotfiles-perl-gmc]
+*	[gitlab.com/.../dotfiles/.../perl/gmc.pm][dotfiles-perl-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -207,7 +207,7 @@ helper::do_config("rule",      %config::rules);
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/config.pm][dotfiles-perl-config]
+*	[gitlab.com/.../dotfiles/.../perl/config.pm][dotfiles-perl-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -255,7 +255,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/helper.pm][dotfiles-perl-helper]
+*	[gitlab.com/.../dotfiles/.../perl/helper.pm][dotfiles-perl-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -345,7 +345,7 @@ sub run() {
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/startup.pm][dotfiles-perl-startup]
+*	[gitlab.com/.../dotfiles/.../perl/startup.pm][dotfiles-perl-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -415,7 +415,7 @@ startup::run();
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../perl/autostart.pl][dotfiles-perl-autostart]
+*	[gitlab.com/.../dotfiles/.../perl/autostart.pl][dotfiles-perl-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -437,7 +437,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-perl-tag-status]:   {{ site.url }}/desktop/2017/06/03/herbstlustwm-tag-status-perl.html
 [local-perl-event-idle]:   {{ site.url }}/desktop/2017/06/13/herbstlustwm-event-idle-perl.html
@@ -451,7 +451,7 @@ Happy Configuring.
 [image-perl-01-tree]:         {{ asset_path }}/hlwm-perl-01-tree.png
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
-[dotfiles-perl-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
+[dotfiles-perl-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/perl
 [dotfiles-perl-autostart]: {{ dotfiles_path }}/perl/autostart.pl
 [dotfiles-perl-gmc]:       {{ dotfiles_path }}/perl/gmc.pm
 [dotfiles-perl-config]:    {{ dotfiles_path }}/perl/config.pm

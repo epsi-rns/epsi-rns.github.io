@@ -140,7 +140,7 @@ Consider continue reading [ [Common Config Trick][local-part-style] ]
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
 
-[dotfiles-tutor]:  https://github.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
+[dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
 
 [local-overview]:    /desktop/2018/03/20/xfwm4-theme.html
 [local-part-style]:  /desktop/2018/04/17/openbox-theme.html

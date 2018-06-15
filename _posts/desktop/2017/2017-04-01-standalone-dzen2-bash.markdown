@@ -125,7 +125,7 @@ I mean not in <code>man dzen2</code>, from the command line.
 Let's put this dzen in a script <code class="code-file">bash-example/01.sh</code>.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-01]
+*	[gitlab.com/.../dotfiles/.../01.sh][dotfiles-example-01]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -167,7 +167,7 @@ And let's also refactor between the panel and output,
 <code class="code-file">bash-example/02-output.sh</code>.
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../02-main.sh][dotfiles-example-02-main]
+*	[gitlab.com/.../dotfiles/.../02-main.sh][dotfiles-example-02-main]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -197,7 +197,7 @@ sleep 1 && exec `(transset-df .8 -n dzentop >/dev/null 2>&1 &)` &
 {% endhighlight %}
 
 **Source**:<br/>
-*	[github.com/.../dotfiles/.../02-output.sh][dotfiles-example-02-output]
+*	[gitlab.com/.../dotfiles/.../02-output.sh][dotfiles-example-02-output]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -257,9 +257,9 @@ Here is a working example:
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../03-main.sh][dotfiles-example-03-main]
+*	[gitlab.com/.../dotfiles/.../03-main.sh][dotfiles-example-03-main]
 
-*	[github.com/.../dotfiles/.../03-output.sh][dotfiles-example-03-output]
+*	[gitlab.com/.../dotfiles/.../03-output.sh][dotfiles-example-03-output]
 
 
 {% highlight bash %}
@@ -338,9 +338,9 @@ Here is a working example:
 
 **Source**:<br/>
 
-*	[github.com/.../dotfiles/.../04-main.sh][dotfiles-example-04-main]
+*	[gitlab.com/.../dotfiles/.../04-main.sh][dotfiles-example-04-main]
 
-*	[github.com/.../dotfiles/.../04-output.sh][dotfiles-example-04-output]
+*	[gitlab.com/.../dotfiles/.../04-output.sh][dotfiles-example-04-output]
 
 Dzen2 can read <code class="code-file">.xbm</code> image format.
 For your convenience, I have made some eight glyph icons.
@@ -512,9 +512,9 @@ I know how terrible it is.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash' %}
-{% assign dotfiles_expath = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash-example' %}
-{% assign dotfiles_assets = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/assets' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash' %}
+{% assign dotfiles_expath = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash-example' %}
+{% assign dotfiles_assets = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/assets' %}
 
 [image-01-preview]:    {{ asset_path }}/dzen2-01-preview.png
 [image-02-example-00]: {{ asset_path }}/dzen2-02-example-00.png
@@ -547,7 +547,7 @@ I know how terrible it is.
 [dotfiles-segments]:   {{ dotfiles_path }}/segments.sh
 [dotfiles-themes]:     {{ dotfiles_path }}/themes
 
-[dotfiles-hlwm-dzen2]: https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm/bash/dzen2/panel.sh
+[dotfiles-hlwm-dzen2]: https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm/bash/dzen2/panel.sh
 
 [local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
 [local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  

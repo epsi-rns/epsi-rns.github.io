@@ -75,7 +75,7 @@ $ watch --color ~/Documents/standalone/cli/example/01.sh
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
+*	[gitlab.com/.../dotfiles/.../01.sh][dotfiles-example-01-bash]
 
 ![CLI: Using Bash and Watch][image-cli-01]{: .img-responsive }
 
@@ -144,13 +144,13 @@ I also put a more complete ANSI escaping code in separate bash script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-02-bash]
+*	[gitlab.com/.../dotfiles/.../01.sh][dotfiles-example-02-bash]
 
-*	[github.com/.../dotfiles/.../ansi.sh][dotfiles-example-02-ansi]
+*	[gitlab.com/.../dotfiles/.../ansi.sh][dotfiles-example-02-ansi]
 
-*	[github.com/.../dotfiles/.../helpercpu.sh][dotfiles-example-02-helpercpu]
+*	[gitlab.com/.../dotfiles/.../helpercpu.sh][dotfiles-example-02-helpercpu]
 
-*	[github.com/.../dotfiles/.../progressbar.sh][dotfiles-example-02-progressbar]
+*	[gitlab.com/.../dotfiles/.../progressbar.sh][dotfiles-example-02-progressbar]
 
 ![CLI: Using Bash Loop Only][image-cli-02]{: .img-responsive }
 
@@ -251,9 +251,9 @@ $ ~/Documents/standalone/cli/example/03.sh
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../01.sh][dotfiles-example-03-bash]
+*	[gitlab.com/.../dotfiles/.../01.sh][dotfiles-example-03-bash]
 
-*	[github.com/.../dotfiles/.../01.lua][dotfiles-example-03-lua]
+*	[gitlab.com/.../dotfiles/.../01.lua][dotfiles-example-03-lua]
 
 ![CLI: A Very Simple Conky][image-cli-03]{: .img-responsive }
 
@@ -325,15 +325,15 @@ $ ~/Documents/standalone/cli/conky/main.sh
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../main.sh][dotfiles-main]
+*	[gitlab.com/.../dotfiles/.../main.sh][dotfiles-main]
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
-*	[github.com/.../dotfiles/.../ansi.lua][dotfiles-ansi]
+*	[gitlab.com/.../dotfiles/.../ansi.lua][dotfiles-ansi]
 
-*	[github.com/.../dotfiles/.../helper.lua][dotfiles-helper]
+*	[gitlab.com/.../dotfiles/.../helper.lua][dotfiles-helper]
 
-*	[github.com/.../dotfiles/.../parts.lua][dotfiles-parts]
+*	[gitlab.com/.../dotfiles/.../parts.lua][dotfiles-parts]
 
 ![CLI: Using Conky Lua][image-cli-04]{: .img-responsive }
 
@@ -430,8 +430,8 @@ Have Fun
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/cli/conky' %}
-{% assign dotfiles_expath = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/cli/example' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/cli/conky' %}
+{% assign dotfiles_expath = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/cli/example' %}
 
 [image-cli-01]: {{ asset_path }}/cli-01-bash-watch.png
 [image-cli-02]: {{ asset_path }}/cli-02-bash-loop.png

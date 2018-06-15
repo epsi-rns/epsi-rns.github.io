@@ -31,7 +31,7 @@ Source Code Directory:
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [local-overview]: {{ site.url }}/code/2017/04/23/overview-pipe-and-fork.html
 [local-BASH]:     {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html

@@ -70,7 +70,7 @@ pair :: Pair
 pair = ("key", "value")
 {% endhighlight %}
 
-*	[github.com/.../dotfiles/.../04-data-type.hs][dotfiles-04-data-type]
+*	[gitlab.com/.../dotfiles/.../04-data-type.hs][dotfiles-04-data-type]
 
 -- -- --
 
@@ -269,7 +269,7 @@ with my own IO action.
 
 ### View Source File:
 
-*	[github.com/.../dotfiles/.../05-passing-argument.hs][dotfiles-05-passing-argument]
+*	[gitlab.com/.../dotfiles/.../05-passing-argument.hs][dotfiles-05-passing-argument]
 
 -- -- --
 
@@ -468,7 +468,7 @@ You can try it yourself in your terminal.
 
 ### View Source File:
 
-*	[github.com/.../dotfiles/.../06-passing-argument.hs][dotfiles-06-passing-argument]
+*	[gitlab.com/.../dotfiles/.../06-passing-argument.hs][dotfiles-06-passing-argument]
 
 -- -- --
 
@@ -482,7 +482,7 @@ Happy Coding.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/notes/haskell/map' %}
 
 [local-overview]: {{ site.url }}/code/2017/05/12/haskell-loop-with-map.html
 [local-part-01]:  {{ site.url }}/code/2017/05/13/haskell-loop-with-map.html

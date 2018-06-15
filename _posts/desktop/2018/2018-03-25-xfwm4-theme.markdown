@@ -279,8 +279,8 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[dotfiles-tutor-05]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-05
-[dotfiles-xftab]:     https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xftab
+[dotfiles-tutor-05]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-05
+[dotfiles-xftab]:     https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xftab
 
 [image-ss-tutor-05-archedge]: {{ asset_path }}/tutor-05-archedgedugm.png
 [image-ss-tutor-05-slices]:   {{ asset_path }}/tutor-05-slices.png

@@ -203,7 +203,7 @@ Reading
 
 ### Main Config
 
-* <https://github.com/epsi-rns/dotfiles/blob/master/config/powerline/config.json>
+* <https://gitlab.com/epsi-rns/dotfiles/blob/master/config/powerline/config.json>
 
 Here is the place, you configure which colorscheme and theme you are using.
 
@@ -221,7 +221,7 @@ Here is the place, you configure which colorscheme and theme you are using.
 
 Self Explanatory
 
-* https://github.com/epsi-rns/dotfiles/blob/master/config/powerline/colorschemes/epsi.json
+* https://gitlab.com/epsi-rns/dotfiles/blob/master/config/powerline/colorschemes/epsi.json
 
 {% highlight json %}
 		"user":      { "fg": "gray2", "bg": "yellow", "attr": ["bold"] },
@@ -235,7 +235,7 @@ It is going to be your choice,
 of what segment you need to show 
 in your shell.
 
-* https://github.com/epsi-rns/dotfiles/blob/master/config/powerline/themes/shell/epsi.json
+* https://gitlab.com/epsi-rns/dotfiles/blob/master/config/powerline/themes/shell/epsi.json
 
 {% highlight json %}
 	{
@@ -270,7 +270,7 @@ Happy terminal customizing
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [docs-powerline]: http://powerline.readthedocs.org/en/master/configuration/segments/common.html
-[dotfiles-powerline]: https://github.com/epsi-rns/dotfiles/tree/master/config/powerline
+[dotfiles-powerline]: https://gitlab.com/epsi-rns/dotfiles/tree/master/config/powerline
 
 [image-ss-powerline-light]: {{ site.url }}/assets/posts/desktop/2016/03/powerline-light.png
 [image-ss-powerline-dark]: {{ site.url }}/assets/posts/desktop/2016/03/powerline-dark.png

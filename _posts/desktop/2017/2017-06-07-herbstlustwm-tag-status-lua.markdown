@@ -52,10 +52,10 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/][dotfiles-dzen2-lua]
+	[gitlab.com/.../dotfiles/.../lua/][dotfiles-dzen2-lua]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
+	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
 
 -- -- --
 
@@ -144,10 +144,10 @@ end
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/common.lua][dotfiles-dzen2-lua-common]
+	[gitlab.com/.../dotfiles/.../lua/common.lua][dotfiles-dzen2-lua-common]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/common.lua][dotfiles-lemon-lua-common]
+	[gitlab.com/.../dotfiles/.../lua/common.lua][dotfiles-lemon-lua-common]
 
 -- -- --
 
@@ -158,10 +158,10 @@ Let's have a look at <code class="code-file">helper.lua</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/helper.lua][dotfiles-dzen2-lua-helper]
+	[gitlab.com/.../dotfiles/.../lua/helper.lua][dotfiles-dzen2-lua-helper]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/helper.lua][dotfiles-lemon-lua-helper]
+	[gitlab.com/.../dotfiles/.../lua/helper.lua][dotfiles-lemon-lua-helper]
 
 {% include post/2017/06/herbstlustwm-tag-status-helper.md %}
 
@@ -394,10 +394,10 @@ Or in Dzen2 version:
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/01-testparams.lua][dotfiles-dzen2-lua-testparams]
+	[gitlab.com/.../dotfiles/.../lua/01-testparams.lua][dotfiles-dzen2-lua-testparams]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/01-testparams.lua][dotfiles-lemon-lua-testparams]
+	[gitlab.com/.../dotfiles/.../lua/01-testparams.lua][dotfiles-lemon-lua-testparams]
 
 {% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
 
@@ -447,10 +447,10 @@ _M.color = {
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/gmc.lua][dotfiles-dzen2-lua-gmc]
+	[gitlab.com/.../dotfiles/.../lua/gmc.lua][dotfiles-dzen2-lua-gmc]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/gmc.lua][dotfiles-lemon-lua-gmc]
+	[gitlab.com/.../dotfiles/.../lua/gmc.lua][dotfiles-lemon-lua-gmc]
 
 {% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
 
@@ -463,10 +463,10 @@ Let's have a look at <code class="code-file">output.lua</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../lua/output.lua][dotfiles-dzen2-lua-output]
+	[gitlab.com/.../dotfiles/.../lua/output.lua][dotfiles-dzen2-lua-output]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../lua/output.lua][dotfiles-lemon-lua-output]
+	[gitlab.com/.../dotfiles/.../lua/output.lua][dotfiles-lemon-lua-output]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -784,10 +784,10 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 #### View Source File:
 
 *	**dzen2**: 
-	[github.com/.../dotfiles/.../lua/01-testoutput.lua][dotfiles-dzen2-lua-testoutput]
+	[gitlab.com/.../dotfiles/.../lua/01-testoutput.lua][dotfiles-dzen2-lua-testoutput]
 
 *	**lemonbar**: 
-	[github.com/.../dotfiles/.../lua/01-testoutput.lua][dotfiles-lemon-lua-testoutput]
+	[gitlab.com/.../dotfiles/.../lua/01-testoutput.lua][dotfiles-lemon-lua-testoutput]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -812,8 +812,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png

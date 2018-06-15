@@ -39,7 +39,7 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../lua/][dotfiles-lua-directory]
+*	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lua-directory]
 
 -- -- --
 
@@ -159,7 +159,7 @@ os.execute("xsetroot -solid '" .. gmc.color["blue500"] .. "'")
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../lua/gmc.lua][dotfiles-lua-gmc]
+*	[gitlab.com/.../dotfiles/.../lua/gmc.lua][dotfiles-lua-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -203,7 +203,7 @@ helper.do_config('rule',      config.rules)
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../lua/config.lua][dotfiles-lua-config]
+*	[gitlab.com/.../dotfiles/.../lua/config.lua][dotfiles-lua-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -248,7 +248,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../lua/helper.lua][dotfiles-lua-helper]
+*	[gitlab.com/.../dotfiles/.../lua/helper.lua][dotfiles-lua-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -367,7 +367,7 @@ to determine whether it should be launch or not.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../lua/startup.lua][dotfiles-lua-startup]
+*	[gitlab.com/.../dotfiles/.../lua/startup.lua][dotfiles-lua-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -434,7 +434,7 @@ startup.run()
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../lua/autostart.lua][dotfiles-lua-autostart]
+*	[gitlab.com/.../dotfiles/.../lua/autostart.lua][dotfiles-lua-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -456,7 +456,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-lua-tag-status]:   {{ site.url }}/desktop/2017/06/07/herbstlustwm-tag-status-lua.html
 [local-lua-event-idle]:   {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
@@ -471,7 +471,7 @@ Happy Configuring.
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
-[dotfiles-lua-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
+[dotfiles-lua-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/lua
 [dotfiles-lua-autostart]: {{ dotfiles_path }}/lua/autostart.lua
 [dotfiles-lua-gmc]:       {{ dotfiles_path }}/lua/gmc.lua
 [dotfiles-lua-config]:    {{ dotfiles_path }}/lua/config.lua

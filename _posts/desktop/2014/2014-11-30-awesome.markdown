@@ -63,7 +63,7 @@ Awesome has floating option to make you feel like you are in stacking WM.
 
 **rc.lua** Configuration:
 
-* <https://github.com/epsi-rns/dotfiles/tree/master/awesome>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome>
 
 **Additional Packages**
 

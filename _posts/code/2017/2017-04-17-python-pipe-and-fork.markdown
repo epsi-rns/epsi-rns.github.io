@@ -55,9 +55,9 @@ Using <code>time</code> library, or using <code>datetime</code> library.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../python-01-basic-date.py][dotfiles-python-01-basic-date]
+*	[gitlab.com/.../dotfiles/.../python-01-basic-date.py][dotfiles-python-01-basic-date]
 
-*	[github.com/.../dotfiles/.../python-01-basic-time.py][dotfiles-python-01-basic-time]
+*	[gitlab.com/.../dotfiles/.../python-01-basic-time.py][dotfiles-python-01-basic-time]
 
 Using <code>time</code> library.
 
@@ -108,7 +108,7 @@ I made it as simple as possible.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../conky.lua][dotfiles-conky]
+*	[gitlab.com/.../dotfiles/.../conky.lua][dotfiles-conky]
 
 {% highlight lua %}
 conky.config = {
@@ -136,9 +136,9 @@ since we are going to use <code>subprocess.Popen</code> anyway.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../python-02-system.py][dotfiles-python-02-system]
+*	[gitlab.com/.../dotfiles/.../python-02-system.py][dotfiles-python-02-system]
 
-*	[github.com/.../dotfiles/.../python-02-popen.py][dotfiles-python-02-popen]
+*	[gitlab.com/.../dotfiles/.../python-02-popen.py][dotfiles-python-02-popen]
 
 Using <code>os.system</code>:
 
@@ -198,7 +198,7 @@ We use this awesomely cool Python's
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../python-02-subprocess.py][dotfiles-python-02-subprocess]
+*	[gitlab.com/.../dotfiles/.../python-02-subprocess.py][dotfiles-python-02-subprocess]
 
 {% highlight python %}
 #!/usr/bin/env python3
@@ -286,9 +286,9 @@ But I would not make thos tutorial too complex.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../python-03-subprocess.py][dotfiles-python-03-subprocess]
+*	[gitlab.com/.../dotfiles/.../python-03-subprocess.py][dotfiles-python-03-subprocess]
 
-*	[github.com/.../dotfiles/.../python-03-try-except.py][dotfiles-python-03-try-except]
+*	[gitlab.com/.../dotfiles/.../python-03-try-except.py][dotfiles-python-03-try-except]
 
 {% highlight python %}
 #!/usr/bin/env python3
@@ -355,7 +355,7 @@ no need to wait for dzen2 to finish the script.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../python-05-fork.py][dotfiles-python-05-fork]
+*	[gitlab.com/.../dotfiles/.../python-05-fork.py][dotfiles-python-05-fork]
 
 {% highlight python %}
 #!/usr/bin/env python3
@@ -464,7 +464,7 @@ detached from script. So we two forks, dzen and transset.
 
 **Source**:
 
-*	[github.com/.../dotfiles/.../python-07-conky.py][dotfiles-python-07-conky]
+*	[gitlab.com/.../dotfiles/.../python-07-conky.py][dotfiles-python-07-conky]
 
 {% highlight python %}
 #!/usr/bin/env python3
@@ -578,7 +578,7 @@ I also provide Lemonbar, instead of Dzen2.
 The code is very similar.
 
 **Source**:
-*	[github.com/.../dotfiles/.../python-17-conky.py][dotfiles-python-17-conky]
+*	[gitlab.com/.../dotfiles/.../python-17-conky.py][dotfiles-python-17-conky]
 
 {% include post/2017/04/pipe-and-fork-similar-17.md %}
 
@@ -603,7 +603,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/code/2017/04' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 [dotfiles-conky]: {{ dotfiles_path }}/assets/conky.lua
 [local-python-idle]:   {{ site.url }}/desktop/2017/06/14/herbstlustwm-event-idle-python.html

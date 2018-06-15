@@ -23,7 +23,7 @@ There is a whole article for this.
 
 #### Source
 
-*	[github.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
+*	[gitlab.com/.../dotfiles/.../rc.xml][dotfiles-rc-xml]
 
 #### Format
 
@@ -295,7 +295,7 @@ More about OB Logout in:
 
 #### My Custom Binding
 
-*	[github.com/.../dotfiles/.../keybind.xml.txt][dotfiles-keybind]
+*	[gitlab.com/.../dotfiles/.../keybind.xml.txt][dotfiles-keybind]
 
 Mostly borrowed from my i3 configuration.
 
@@ -368,7 +368,7 @@ Consider continue reading [ [Config: Rules][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
-{% assign dotfiles = 'https://github.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
+{% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]:  {{ dotfiles }}/rc.xml
 [dotfiles-keybind]: {{ dotfiles }}/keybind.xml.txt

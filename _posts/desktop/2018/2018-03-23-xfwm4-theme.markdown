@@ -189,9 +189,9 @@ Consider finish reading [ [Part Four][local-part-four] ].
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[dotfiles-tutor-03]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-03
-[dotfiles-2bmat]:     https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/2bmat
-[dotfiles-xfgaps]:    https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xfgaps
+[dotfiles-tutor-03]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-03
+[dotfiles-2bmat]:     https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/2bmat
+[dotfiles-xfgaps]:    https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xfgaps
 
 [local-part-four]:	/desktop/2018/03/24/xfwm4-theme.html
 

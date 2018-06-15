@@ -12,7 +12,7 @@ Similar Code:
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/pipe' %}
 
 
 [dotfiles-bash-autostart]: {{ dotfiles_path }}/bash/autostart.sh

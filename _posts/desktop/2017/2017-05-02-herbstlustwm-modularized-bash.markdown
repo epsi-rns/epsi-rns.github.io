@@ -39,7 +39,7 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../bash/][dotfiles-bash-directory]
+*	[gitlab.com/.../dotfiles/.../bash/][dotfiles-bash-directory]
 
 -- -- --
 
@@ -157,7 +157,7 @@ xsetroot -solid "${color['blue500']}"
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/gmc.sh][dotfiles-bash-gmc]
+*	[gitlab.com/.../dotfiles/.../bash/gmc.sh][dotfiles-bash-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -226,7 +226,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/config.sh][dotfiles-bash-config]
+*	[gitlab.com/.../dotfiles/.../bash/config.sh][dotfiles-bash-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -280,7 +280,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/helper.sh][dotfiles-bash-helper]
+*	[gitlab.com/.../dotfiles/.../bash/helper.sh][dotfiles-bash-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -372,7 +372,7 @@ startup_run() {
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/startup.sh][dotfiles-bash-startup]
+*	[gitlab.com/.../dotfiles/.../bash/startup.sh][dotfiles-bash-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -438,7 +438,7 @@ startup_run
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../bash/autostart.sh][dotfiles-bash-autostart]
+*	[gitlab.com/.../dotfiles/.../bash/autostart.sh][dotfiles-bash-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -460,7 +460,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-bash-tag-status]:   {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
 [local-bash-event-idle]:   {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html
@@ -475,7 +475,7 @@ Happy Configuring.
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
-[dotfiles-bash-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/bash
+[dotfiles-bash-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/bash
 [dotfiles-bash-autostart]: {{ dotfiles_path }}/bash/autostart.sh
 [dotfiles-bash-gmc]:       {{ dotfiles_path }}/bash/gmc.sh
 [dotfiles-bash-config]:    {{ dotfiles_path }}/bash/config.sh

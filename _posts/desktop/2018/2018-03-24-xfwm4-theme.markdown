@@ -380,7 +380,7 @@ Consider finish reading [ [Part Five][local-part-five] ].
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/03' %}
 
-[dotfiles-tutor-04]:  https://github.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-04
+[dotfiles-tutor-04]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-04
 
 [local-part-five]:	/desktop/2018/03/25/xfwm4-theme.html
 

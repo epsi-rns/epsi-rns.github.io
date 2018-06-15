@@ -273,7 +273,7 @@ I think that's all.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[source-termite]: https://github.com/epsi-rns/dotfiles/tree/master/config/termite
+[source-termite]: https://gitlab.com/epsi-rns/dotfiles/tree/master/config/termite
 
 [image-arch-bright]: {{ site.url }}/assets/posts/desktop/2016/09/arch-termite-bright.png
 [photo-arch-bright]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNQAwvxM9LVDwDIe2JrjlHcUwzxaf6j_f8gpaRj

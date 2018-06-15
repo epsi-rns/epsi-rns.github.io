@@ -46,7 +46,7 @@ you might desire to read this overview.
 
 Impatient coder like me, like to open many tab on browser.
 
-*	[github.com/.../dotfiles/.../php/][dotfiles-php-directory]
+*	[gitlab.com/.../dotfiles/.../php/][dotfiles-php-directory]
 
 -- -- --
 
@@ -146,7 +146,7 @@ system("xsetroot -solid '".COLOR['blue500']."'");
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../php/gmc.php][dotfiles-php-gmc]
+*	[gitlab.com/.../dotfiles/.../php/gmc.php][dotfiles-php-gmc]
 
 {% include post/2017/05/herbstlustwm-modularized-gmc.md %}
 
@@ -190,7 +190,7 @@ do_config("rule",      $rules);
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../php/config.php][dotfiles-php-config]
+*	[gitlab.com/.../dotfiles/.../php/config.php][dotfiles-php-config]
 
 {% include post/2017/05/herbstlustwm-modularized-config.md %}
 
@@ -236,7 +236,7 @@ You can see the debugging result in figure below.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../php/helper.php][dotfiles-php-helper]
+*	[gitlab.com/.../dotfiles/.../php/helper.php][dotfiles-php-helper]
 
 {% include post/2017/05/herbstlustwm-modularized-helper.md %}
 
@@ -339,7 +339,7 @@ The PHP manual has said it clearly.
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../php/startup.php][dotfiles-php-startup]
+*	[gitlab.com/.../dotfiles/.../php/startup.php][dotfiles-php-startup]
 
 {% include post/2017/05/herbstlustwm-modularized-startup.md %}
 
@@ -403,7 +403,7 @@ startup_run();
 
 #### View Source File:
 
-*	[github.com/.../dotfiles/.../php/autostart.php][dotfiles-php-autostart]
+*	[gitlab.com/.../dotfiles/.../php/autostart.php][dotfiles-php-autostart]
 
 {% include post/2017/05/herbstlustwm-modularized-autostart.md %}
 
@@ -425,7 +425,7 @@ Happy Configuring.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
-{% assign dotfiles_path = 'https://github.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
+{% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-php-tag-status]:   {{ site.url }}/desktop/2017/06/06/herbstlustwm-tag-status-php.html
 [local-php-event-idle]:   {{ site.url }}/desktop/2017/06/16/herbstlustwm-event-idle-php.html
@@ -440,7 +440,7 @@ Happy Configuring.
 
 [local-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
 
-[dotfiles-php-directory]: https://github.com/epsi-rns/dotfiles/tree/master/herbstluftwm/php
+[dotfiles-php-directory]: https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm/php
 [dotfiles-php-autostart]: {{ dotfiles_path }}/php/autostart.php
 [dotfiles-php-gmc]:       {{ dotfiles_path }}/php/gmc.php
 [dotfiles-php-config]:    {{ dotfiles_path }}/php/config.php

@@ -81,7 +81,7 @@ A Cruel Angel's Thesis
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [code-haruka]:  https://github.com/codeharuka/dotfiles
-[dotfiles-lib]: https://github.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen-2/lib
+[dotfiles-lib]: https://gitlab.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen-2/lib
 [image-ss-xmonad-1]: {{ site.url }}/assets/posts/desktop/2016/03/modularized-xmonad-1.png
 [photo-ss-xmonad-1]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOKT57PCBcojHBHxvol8dl_brt0PdPtckpNTniu
 [image-ss-xmonad-2]: {{ site.url }}/assets/posts/desktop/2016/03/modularized-xmonad-2.png

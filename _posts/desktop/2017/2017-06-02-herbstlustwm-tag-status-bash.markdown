@@ -52,10 +52,10 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../bash/][dotfiles-dzen2-bash]
+	[gitlab.com/.../dotfiles/.../bash/][dotfiles-dzen2-bash]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/][dotfiles-lemon-bash]
+	[gitlab.com/.../dotfiles/.../bash/][dotfiles-lemon-bash]
 
 -- -- --
 
@@ -99,10 +99,10 @@ Let's have a look at <code class="code-file">helper.sh</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../bash/helper.sh][dotfiles-dzen2-bash-helper]
+	[gitlab.com/.../dotfiles/.../bash/helper.sh][dotfiles-dzen2-bash-helper]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/helper.sh][dotfiles-lemon-bash-helper]
+	[gitlab.com/.../dotfiles/.../bash/helper.sh][dotfiles-lemon-bash-helper]
 
 {% include post/2017/06/herbstlustwm-tag-status-helper.md %}
 
@@ -335,10 +335,10 @@ Or in Dzen2 version:
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-dzen2-bash-testparams]
+	[gitlab.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-dzen2-bash-testparams]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-lemon-bash-testparams]
+	[gitlab.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-lemon-bash-testparams]
 
 {% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
 
@@ -387,10 +387,10 @@ declare -A color=(
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../bash/gmc.sh][dotfiles-dzen2-bash-gmc]
+	[gitlab.com/.../dotfiles/.../bash/gmc.sh][dotfiles-dzen2-bash-gmc]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/gmc.sh][dotfiles-lemon-bash-gmc]
+	[gitlab.com/.../dotfiles/.../bash/gmc.sh][dotfiles-lemon-bash-gmc]
 
 {% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
 
@@ -403,10 +403,10 @@ Let's have a look at <code class="code-file">output.sh</code> in github.
 #### View Source File:
 
 *	**Dzen2**: 
-	[github.com/.../dotfiles/.../bash/output.sh][dotfiles-dzen2-bash-output]
+	[gitlab.com/.../dotfiles/.../bash/output.sh][dotfiles-dzen2-bash-output]
 
 *	**Lemonbar**: 
-	[github.com/.../dotfiles/.../bash/output.sh][dotfiles-lemon-bash-output]
+	[gitlab.com/.../dotfiles/.../bash/output.sh][dotfiles-lemon-bash-output]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -714,10 +714,10 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 #### View Source File:
 
 *	**dzen2**: 
-	[github.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-dzen2-bash-testoutput]
+	[gitlab.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-dzen2-bash-testoutput]
 
 *	**lemonbar**: 
-	[github.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-lemon-bash-testoutput]
+	[gitlab.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-lemon-bash-testoutput]
 
 {% include post/2017/06/herbstlustwm-tag-status-output.md %}
 
@@ -742,8 +742,8 @@ Enjoy the statusbar !
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
-{% assign dotfiles_dzen2 = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
-{% assign dotfiles_lemon = 'https://github.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
+{% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
+{% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 
 [image-hlwm-02-tag-status]:   {{ asset_path }}/herbstclient-02-tag-status.png
 [image-hlwm-02-monitor-rect]: {{ asset_path }}/herbstclient-03-monitor-rect.png
