@@ -29,6 +29,10 @@ I am still curious about this sound thing.
 Altough I'm using openSUSE.
 This article can be a reference to other linux as well.
 
+I mostly pour my daily linux troubleshooting in a blog,
+so I can find the solution easily,
+if I have similar issue another day.
+
 -- -- --
 
 ### The Operating System Part
