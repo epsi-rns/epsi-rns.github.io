@@ -278,6 +278,21 @@ total 8
 
 -- -- --
 
+### Enable SSH
+
+To enable SSH. Use this URL guidance:
+
+* [help.github.com/articles/connecting-to-github-with-ssh](https://help.github.com/articles/connecting-to-github-with-ssh/)
+
+And do not forget to change the origin,
+from <code>https</code> protocol to <code>git</code>.
+
+{% highlight bash %}
+$ git remote add origin git@github.com:epsi-rns/anycode.git
+{% endhighlight %}
+
+-- -- --
+
 ### Conclusion
 
 This is not about single computer,
