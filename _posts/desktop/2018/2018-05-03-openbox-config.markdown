@@ -142,10 +142,14 @@ compton &
 parcellite &
 mpd &
 
-tint2 -c ~/.config/tint2/tint2rc-top &
-tint2 -c ~/.config/tint2/tint2rc-bottom &
-
 thunar --daemon &
+
+xautolock -locker i3lock -time 7 &
+
+# -- panel --
+
+tint2 -c ~/.config/openbox/tint2/tint2rc-top &
+tint2 -c ~/.config/openbox/tint2/tint2rc-tutor-05-solid &
 
 # -- windowed app --
 
