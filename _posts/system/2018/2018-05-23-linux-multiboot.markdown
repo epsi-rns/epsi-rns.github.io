@@ -63,6 +63,19 @@ I adapt the command above from Gentoo manual.
 
 This will take you to Debian root.
 
+#### Dio Putra suggestion
+
+My friend, Dio Putra that has enycypted Debian partition, 
+private message me, and gave me this suggestion.
+
+*	<code>mount -o bind</code> instead of <code>mount --rbind</code>,
+	This rbind make this hard to be unmounted.
+
+*	<code>umount -R</code> instead of <code>umount -f</code>
+
+*	No need to bind <code>/tmp</code>
+
+
 #### Rename resolv.conf
 
 To enable internat access, we must have **/etc/resolv.conf**.
@@ -76,6 +89,14 @@ We need to get rid of the original symlink, and replace with a new one.
 {% endhighlight %}
 
 ![chroot: Debian: rename /etc/resolv.conf][image-ss-debian-rename]{: .img-responsive }
+
+There is this other method using fstab.
+
+*	[slackware chroot](https://docs.slackware.com/howtos:general_admin:setting_up_a_slackware_chroot)
+
+{% highlight conf %}
+/etc/resolv.conf chroot_folder/etc/resolv.conf none bind,auto 0 0
+{% endhighlight %}
 
 #### Update
 

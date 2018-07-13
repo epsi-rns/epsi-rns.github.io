@@ -314,7 +314,7 @@ slpkg slonly
 
 * [gtop](https://github.com/aksakalli/gtop)
 
-(via govendor, go install)
+(via go install)
 
 * [mpdviz](https://github.com/lucy/mpdviz)
 

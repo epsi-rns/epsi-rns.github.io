@@ -332,6 +332,54 @@ Or more eleganly for pulseaudio, you can use <code>pavucontrol</code>.
 
 -- -- --
 
+### Miscellanous
+
+#### Volume Control: amixer
+
+{% highlight bash %}
+$ amixer -D pulse sset Master '5%+'
+$ amixer -D pulse sset Master '5%-'
+$ amixer set Master toggle
+{% endhighlight %}
+
+![audio: amixer][image-ss-amixer-volume]{: .img-responsive }
+
+#### Volume Control: pactl
+
+<code>pactl</code> and <code>pacmd</code>.
+
+{% highlight bash %}
+% pactl set-sink-volume 0 +1%
+% pactl set-sink-volume 0 80%
+{% endhighlight %}
+
+![audio: pactl][image-ss-pactl-volume]{: .img-responsive }
+
+#### Information: pactl
+
+{% highlight bash %}
+% pactl info
+Server String: /run/user/1000/pulse/native
+Library Protocol Version: 32
+Server Protocol Version: 32
+Is Local: yes
+Client Index: 110
+Tile Size: 65472
+User Name: epsi
+Host Name: andalan
+Server Name: pulseaudio
+Server Version: 11.1
+Default Sample Specification: s16le 2ch 44100Hz
+Default Channel Map: front-left,front-right
+Default Sink: alsa_output.pci-0000_00_1b.0.analog-stereo
+Default Source: alsa_output.pci-0000_00_1b.0.analog-stereo.monitor
+Cookie: d448:eedf
+{% endhighlight %}
+
+![audio: pactl][image-ss-pactl-info]{: .img-responsive }
+
+-- -- --
+
 ### Conclusion
 
 That's not all. Not at all.
@@ -368,4 +416,8 @@ Thank you for reading
 [image-ss-alsamixer]:     {{ asset_path }}/audio-alsamixer.png
 [image-ss-xfce4-mixer]:   {{ asset_path }}/audio-xfce4-mixer.png
 [image-ss-pavucontrol]:   {{ asset_path }}/audio-pavucontrol.png
+
+[image-ss-amixer-volume]: {{ asset_path }}/audio-amixer-volume.png
+[image-ss-pactl-volume]:  {{ asset_path }}/audio-pactl-volume.png
+[image-ss-pactl-info]:  {{ asset_path }}/audio-pactl-info.png
 
