@@ -65,7 +65,7 @@ This will take you to Debian root.
 
 #### Dio Putra suggestion
 
-My friend, Dio Putra that has enycypted Debian partition, 
+My friend, **Dio Putra** that has encrypted Debian partition, 
 private message me, and gave me this suggestion.
 
 *	<code>mount -o bind</code> instead of <code>mount --rbind</code>,

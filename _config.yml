@@ -32,7 +32,7 @@ markdown: kramdown
 
 future: false
 
-gems:
+plugins:
    - jekyll-paginate
 #  - jemoji
 
