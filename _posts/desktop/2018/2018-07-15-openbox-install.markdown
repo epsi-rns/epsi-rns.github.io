@@ -32,6 +32,14 @@ Here are the list:
 
 *	Specific Openbox Utility: oblogut, obmenu-generator
 
+
+These specific openbox utility require some sill,
+such as git clone, using cpan, and such.
+
+*	oblogout
+
+*	obmenu-generator
+
 #### Distribution
 
 So here below are my screenshots as install log for:
@@ -85,7 +93,6 @@ $ sudo zypper install openbox tint2
 {% endhighlight %}
 
 ![openSUSE: zypper install openbox tint2][image-ss-zypper]{: .img-responsive }
-
 
 -- -- --
 
