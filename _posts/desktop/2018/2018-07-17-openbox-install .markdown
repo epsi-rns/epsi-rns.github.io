@@ -8,7 +8,7 @@ author: epsi
 
 excerpt:
   Specific tools for openbox.
-  Not for idiots.
+  Not really for idiots.
 
 ---
 
@@ -27,7 +27,7 @@ But I will give different example for openSUSE
 
 ### Compile Step by Step
 
-This is an eaxample for any distribution that does not support oblogout package.
+This is an example for any distribution that does not support oblogout package.
 You have to compile it yourself. But do not worry. It is easy.
 
 #### git clone
