@@ -276,7 +276,7 @@ and <code class="code-file">tint2rc-bottom</code>:
 ### What's Next
 
 We are finished with tint2 configuration.
-Consider going back reading [ [Config: Overview][local-part-config] ].
+Consider continue reading [ [Install: openbox, tint2][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
@@ -288,7 +288,7 @@ Consider going back reading [ [Config: Overview][local-part-config] ].
 [dotfiles-top]:         {{ dotfiles }}/tint2rc-top
 [dotfiles-bottom]:      {{ dotfiles }}/tint2rc-bottom
 
-[local-part-config]:  /desktop/2018/05/01/openbox-config.html
+[local-part-config]:  /desktop/2018/07/15/openbox-install.html
 
 [image-ss-tutor-07]:    {{ asset_path }}/tint2rc-tutor-07.png
 [image-ss-tutor-08]:    {{ asset_path }}/tint2rc-tutor-08.png

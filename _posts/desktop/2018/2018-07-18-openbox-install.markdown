@@ -122,12 +122,13 @@ $ ./obmenu-generator
 
 ### What's Next
 
-Consider continue reading [ [Config: General rc.xml][local-part-config] ].
+We are finished with installation procedure.
+Consider going back reading [ [Config: Overview][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/07' %}
 
-[local-part-config]:  /desktop/2018/05/03/openbox-config.html
+[local-part-config]:  /desktop/2018/05/01/openbox-config.html
 
 [image-ss-debian-run]:               {{ asset_path }}/04-debian-obmenu-generator.png
 [image-ss-f28-cpan-desktopfiles]:    {{ asset_path }}/04-fedora28-cpan-linux-desktopfiles.png

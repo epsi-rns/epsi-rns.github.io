@@ -111,12 +111,12 @@ $ sudo emerge --ask openbox tint2
 
 ### What's Next
 
-Consider continue reading [ [Config: General rc.xml][local-part-config] ].
+Consider continue reading [ [Install: scrot, feh, nitrogen][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/07' %}
 
-[local-part-config]:  /desktop/2018/05/03/openbox-config.html
+[local-part-config]:  /desktop/2018/07/16/openbox-install.html
 
 [image-ss-apt]:      {{ asset_path }}/01-apt-install-openbox-tint2.png
 [image-ss-dnf]:      {{ asset_path }}/01-dnf-install-openbox-tint2.png

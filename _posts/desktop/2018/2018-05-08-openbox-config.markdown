@@ -183,7 +183,7 @@ BROWSERS=('chromium' 'iceweasel' 'midori' 'google-chrome-stable' 'opera' )
 
 ### What's Next
 
-Consider continue reading [ [Menu: Generator][local-part-config] ].
+Consider continue reading [ [Menu: XDG Applications][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}

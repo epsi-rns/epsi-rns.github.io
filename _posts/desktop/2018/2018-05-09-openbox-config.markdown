@@ -1,275 +1,247 @@
 ---
 layout: post
-title:  "Openbox Menu - Generator"
+title:  "Openbox Menu - XDG Applications"
 categories: desktop
 date:   2018-05-09 09:25:15 +0700
 tags: [openbox]
 author: epsi
 
 excerpt:
-  Using OB Menu Generator as Static Openbox menu.
+  Using openbox-menu script as Dynamic Openbox menu.
 
 ---
 
 {% include post/2018/05/toc-openbox-config.html %}
 
-### OB Menu Generator
+### openbox-menu Script
 
-> Goal: Using OB Menu Generator as Static Openbox menu.
+> Goal: Using openbox-menu Script as Dynamic Openbox menu.
 
-Nowadays, people are using automation, rather than a crafting menu manually.
-There is this <code>openbox-obmenu-generator</code> tools,.
+My friend, named Addy DCVLXVI, as always giving me a good suggestion.
+<code>openbox-menu</code>, a very useful trick,
+to make an openbox menu without sweating.
 
-*	[https://github.com/trizen/obmenu-generator](https://github.com/trizen/obmenu-generator)
+	Respect
 
-It is cleverly using perl array preprocessor,
-before converting to xml.
-Since it has dfferent format than the original xml,
-I put this on different menu article.
+#### XDG menus
 
-#### Install
+If you haven't notice, there are these files 
+in <code>/etc/xdg/menus</code>.
 
-First you need to clone.
-or install using AUR.
-Depend on your distribution.
+![openbox-menu: /etc/xdg/menus][image-ss-xdg-menus]{: .img-responsive }
 
-{% highlight conf %}
-$ git clone https://github.com/trizen/obmenu-generator
-{% endhighlight %}
+We are going to utilize this.
+For this example let use use this <code>lxde-applications.menu</code>.
 
-I'm using openSUSE, so I'm stick with zypper.
-You can see more in manual installation page on github.
+#### Sub Menu
 
-{% highlight conf %}
-$ sudo zypper in perl-Linux-DesktopFiles
-$ sudo zypper in perl-Gtk2
-{% endhighlight %}
-
-#### Config
-
-Now you need to copy <code class="code-file">schema.pl</code>
-to <code>~/.config/obmenu-generator</code>.
-It contain predefined array in perl.
-
-*	[gitlab.com/.../dotfiles/.../schema.pl][dotfiles-schema-pl]
-
-{% highlight perl %}
-#!/usr/bin/perl
-
-# ...
-
-our $SCHEMA = [
-
-    #          COMMAND                 LABEL              ICON
-    {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
-    {item => ['xterm',            'Terminal',     'utilities-terminal']},
-    {item => ['xdg-open http://', 'Web Browser',  'web-browser']},
-    {item => ['gmrun',            'Run command',  'system-run']},
-
-    # ...
-]
-{% endhighlight %}
-
-#### Default Menu
-
-Just run the <code>obmenu-generator</code>.
+Create the <code class="code-file">~/.config/openbox/menu.applications.xml</code>.
 
 {% highlight bash %}
-$ ./obmenu-generator -s > ~/.config/openbox/menu.xml 
+$ openbox-menu lxde-applications.menu > ~/.config/openbox/menu.applications.xml
 {% endhighlight %}
 
-And do not forget to <code>Reconfigure</code> openbox.
-
-#### Icon
-
-Adding icon is as simply as adding <code>-i</code> argument.
+Sometime there are icon errors.
+you can surpress with redirecting to <code>/dev/null</code>.
 
 {% highlight bash %}
-$ ./obmenu-generator -s -i > ~/.config/openbox/menu.xml 
+$ openbox-menu lxde-applications.menu > ~/.config/openbox/menu.applications.xml 2> /dev/null
 {% endhighlight %}
 
-There will be temporary icon directory in 
-<code>~/.config/obmenu-generator/icons/</code>.
+![openbox-menu: pipe to file][image-ss-pipe-file]{: .img-responsive }
 
-And in the generated <code>menu.xml</code>, it has this hardcoded icon path:
+#### Main Menu
 
-{% highlight bash %}
-...
-    <item label="File Manager" icon="/home/epsi/.config/obmenu-generator/icons/bd6f34dfc816e8ba8054aeb1419095a4.png">
-        <action name="Execute"><command><![CDATA[xdg-open .]]></command></action>
-    </item>
-...
-{% endhighlight %}
+To create dynamic menu, we utilize script,
+and use <code>menu execute=""</code>.
 
-![openbox Config: obmenu-generator with icon][image-ss-obmenu-icon]{: .img-responsive }
-
-#### Icon Theme Case
-
-I'm using **Breeze**, but I want **Numix Circle**, in my Menu.
-
-All I need is to change <code>~/.gtkrc-2.0</code>
-to **Numix Circle** temporarily,
-run <code>obmenu-generator</code>,
-and get it back to **Breeze**.
-
-You can also use <code>lxapperance</code> to do this temporarily.
- 
-{% highlight conf %}
-...
-gtk-theme-name="Breeze"
-gtk-icon-theme-name="Numix-Circle"
-...
-{% endhighlight %}
-
--- -- --
-
-### Dynamic Menu
-
-We can also achieve dynamic menu,
-by editing the <code class="code-file">menu.xml</code>,
-into this:
+Modify the <code class="code-file">~/.config/openbox/menu.xml</code>.
 
 {% highlight xml %}
-<?xml version="1.0" encoding="utf-8"?>
-<openbox_menu xmlns="http://openbox.org/"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://openbox.org/">
-    <menu id="root-menu" label="obmenu-generator" execute="/usr/bin/obmenu-generator" />
-</openbox_menu>
+    <menu execute="cat /home/epsi/.config/openbox/menu.applications.xml" 
+        id="lxde-apps" label="LXDE Applications"/>
 {% endhighlight %}
 
-*	[gitlab.com/.../dotfiles/.../menu.xml][dotfiles-dynamic]
+Consider reconfigure openbox. And have a look at the result.
 
-But I'd prefer static menu, that is faster.
+{% highlight bash %}
+$ openbox --reconfigure
+{% endhighlight %}
+
+![openbox-menu: lxde-applications.menu][image-ss-menu-lxde]{: .img-responsive }
+
+Voila... It is so easy.
 
 -- -- --
 
-### Custom Schema
+### Install openbox-menu
 
-It is time to edit <code class="code-file">schema.pl</code>.
-Most of the ideas comes form ArcoLinux.
+The downside of this method is, sometimes it is not easy to setup.
+Debian based, and Gentoo play well with this <code>openbox-menu</code>.
+Other than that, we might need to clone from repository.
 
-*	[github.com/arcolinux/.../schema.pl](https://github.com/arcolinux/arcolinux-obmenu-generator/blob/master/schema.pl)
+#### Debian-based
 
-#### Favorites
-
-Put this on top most:
-
-{% highlight perl %}
-    # Favorites
-    {begin => ['Favorites', 'utilities-desktop-extra']},
-        {sep => 'Terminal'},
-        {item => ['urxvt',              'URxvt',            'terminal']},
-        {item => ['xfce4-terminal',     'XFCE4 Terminal',   'terminal']},
-        {sep => 'Office'},
-        {item => ['libreoffice',        'LibreOffice',      'libreoffice-main']},
-        {sep => 'File Manager'},        
-        {item => ['pcmanfm-qt',         'PC Man FM Qt',     'file-manager']},
-        {item => ['thunar',             'Thunar',           'thunar']},
-        {sep => 'Internet'},
-        {item => ['firefox',            'Firefox',          'firefox']},
-        {item => ['chromium',           'Chromium',         'chromium']},
-        {item => ['midori',             'Midori',           'midori']},
-        {item => ['transmission',       'Transmission',     'transmission']},
-        {item => ['telegram',           'Telegram',         'telegram']},
-        {sep => 'Media'},
-        {item => ['clementine',         'Clementine',       'clementine']},
-        {item => ['vlc',                'VLC',              'vlc']},
-        {item => ['xfce4-screenshoter', 'Screenshot',       'camera']},
-        {sep => 'Editor'},
-        {item => ['geany',              'Geany',            'geany']},
-        {sep => 'System'},
-        {item => ["xfce4-taskmanager",  'Taskmanager',      'gnome-system-monitor']},
-        {item => ["hardinfo",           'Hardinfo',         'hardinfo']},
-    {end => undef},
-{% endhighlight %}
-
-#### Replace Default Application
-
-Comment unused line, and add these lines:
-
-{% highlight perl %}
-    #          COMMAND                 LABEL              ICON
-    # {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
-    # {item => ['xterm',            'Terminal',     'utilities-terminal']},
-    # {item => ['xdg-open http://', 'Web Browser',  'web-browser']},
-    {item => ['gmrun',            'Run command',  'system-run']},
-    {sep => undef},
-
-    {item => ['exo-open --launch TerminalEmulator',                                 'Terminal',          'terminal']},
-    {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
-    {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'webbrowser-app']},
-{% endhighlight %}
-
-#### Categories Remain Intact
-
-{% highlight perl %}
-    {sep => 'Categories'},
-
-    #          NAME            LABEL                ICON
-    {cat => ['utility',     'Accessories', 'applications-utilities']},
-    {cat => ['development', 'Development', 'applications-development']},
-    {cat => ['education',   'Education',   'applications-science']},
-    {cat => ['game',        'Games',       'applications-games']},
-    {cat => ['graphics',    'Graphics',    'applications-graphics']},
-    {cat => ['audiovideo',  'Multimedia',  'applications-multimedia']},
-    {cat => ['network',     'Network',     'applications-internet']},
-    {cat => ['office',      'Office',      'applications-office']},
-    {cat => ['other',       'Other',       'applications-other']},
-    {cat => ['settings',    'Settings',    'applications-accessories']},
-    {cat => ['system',      'System',      'applications-system']},
-{% endhighlight %}
-
-#### Add Places
-
-{% highlight perl %}
-    {sep => undef},
-    {pipe => ['/home/epsi/.config/openbox/bin/bl-places-pipemenu',         'Places',       'folder']},
-{% endhighlight %}
-
-#### Bottom
-
-{% highlight perl %}
-    {pipe => ['/home/epsi/.config/openbox/bin/bl-help-pipemenu',              'Help &amp; Resources',              'info']},
-    {sep  => undef},
-
-    ## The xscreensaver lock command
-    {item => ['xscreensaver-command -lock', 'Lock', 'system-lock-screen']},
-
-    ## This option uses the default Openbox's "Exit" action
-    # {exit => ['Exit', 'application-exit']},
-
-    ## This uses the 'oblogout' menu
-    {item => ['oblogout', 'Exit', 'application-exit']},
-{% endhighlight %}
-
-#### Reconfigure
+Install in Debian-based is as easy as:
 
 {% highlight bash %}
-$ ./obmenu-generator -s -i > ~/.config/openbox/menu.xml 
+$ sudo apt install openbox-menu lxmenu-data
 {% endhighlight %}
 
-And do not forget to <code>Reconfigure</code> openbox.
+![openbox-menu: apt install][image-ss-apt-install]{: .img-responsive }
 
-![openbox Config: obmenu-generator custom schema.pl][image-ss-obmenu-custom]{: .img-responsive }
+#### Gentoo
+
+Install in Gentoo is as easy as:
+
+{% highlight bash %}
+$ emerge --ask openbox-menu lxmenu-data
+{% endhighlight %}
+
+![openbox-menu: emerge lxmenu-data][image-ss-emerge-lxmenu-data]{: .img-responsive }
+
+Allright, now you can apply the <code>USE</code> by applying.
+
+{% highlight bash %}
+$ etc-update
+{% endhighlight %}
+
+And run it, once again.
+
+{% highlight bash %}
+$ emerge --ask openbox-menu lxmenu-data
+{% endhighlight %}
+
+![openbox-menu: emerge openbox-menu][image-ss-emerge-openbox-menu]{: .img-responsive }
+
+#### Mercurial Clone
+
+The official documentation is here:
+
+*	[fabrice.thiroux.free.fr/openbox-menu_en.html](http://fabrice.thiroux.free.fr/openbox-menu_en.html)
+
+We need to know where the source:
+
+*	[bitbucket.org/fabriceT/openbox-menu](https://bitbucket.org/fabriceT/openbox-menu)
+
+This is a <code>mercurial</code> repository.
+Not a <code>git</code> repository.
+And here is the magical command:
+
+{% highlight bash %}
+$ hg clone https://bitbucket.org/fabriceT/openbox-menu
+{% endhighlight %}
+
+![openbox-menu: hg clone (mercurial)][image-ss-hg-pull]{: .img-responsive }
+
+#### make and make install
+
+As usual common installation from source.
+
+{% highlight bash %}
+$ make
+{% endhighlight %}
+
+![openbox-menu: make][image-ss-make]{: .img-responsive }
+
+{% highlight bash %}
+$ sudo make install
+{% endhighlight %}
+
+![openbox-menu: sudo make install][image-ss-make-install]{: .img-responsive }
+
+Now you can run from anywhere in your linux box.
+
+{% highlight bash %}
+$ openbox-menu
+{% endhighlight %}
+
+#### openSUSE Dependency
+
+<code>lxmenu-data</code> is available in openSUSE repository
+
+{% highlight bash %}
+$ sudo zypper in lxmenu-data
+{% endhighlight %}
+
+In order to compile the source above properly,
+you need to install the development package,
+as the compile time dependency.
+
+*	gtk2-devel
+
+*	menu-cache-devel
+
+{% highlight bash %}
+$ sudo zypper install gtk2-devel
+{% endhighlight %}
+
+![openbox-menu: zypper gtk2-devel][image-ss-zypper-gtk2-devel]{: .img-responsive }
+
+{% highlight bash %}
+$ sudo zypper install menu-cache-devel
+{% endhighlight %}
+
+![openbox-menu: zypper menu-cache][image-ss-zypper-menu-cache]{: .img-responsive }
+
+#### Fedora Dependency
+
+<code>lxmenu-data</code> is also available in repository
+
+{% highlight bash %}
+$ sudo dnf install lxmenu-data
+{% endhighlight %}
+
+![openbox-menu: dnf gtk2-devel][image-ss-dnf-lxmenu-data]: .img-responsive }
+
+In order to compile the source above properly,
+you need to install the development package,
+as the compile time dependency.
+
+{% highlight bash %}
+$ sudo dnf install gtk2-devel
+{% endhighlight %}
+
+![openbox-menu: dnf gtk2-devel][image-ss-dnf-gtk2-devel]{: .img-responsive }
+
+{% highlight bash %}
+$ sudo dnf install menu-cache-devel
+{% endhighlight %}
+
+![openbox-menu:dnf menu-cache][image-ss-dnf-menu-cache]{: .img-responsive }
 
 -- -- --
 
 ### What's Next
 
-We are almost finished with openbox configuration.
-
-Consider continue reading [ [Openbox: Exit][local-part-config] ].
+Consider continue reading [ [Menu: Generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
-[dotfiles-rc-xml]:    {{ dotfiles }}/rc.xml
-[dotfiles-dynamic]:   {{ dotfiles }}/menu.dynamic.xml
-[dotfiles-schema-pl]: {{ dotfiles }}/obmenu-generator/schema.pl
+[dotfiles-bin]:   {{ dotfiles }}/bin/
+[dotfiles-bunsenlabs]: {{ dotfiles }}/menu.bunsenlabs.xml
+[dotfiles-pipemenus]:  {{ dotfiles }}/pipemenus.rc
 
-[local-part-config]:  /desktop/2018/05/11/openbox-exit.html
+[local-part-config]:  /desktop/2018/05/10/openbox-config.html
 
-[image-ss-obmenu-icon]:    {{ asset_path }}/openbox-obmenu-icon.png
-[image-ss-obmenu-custom]:  {{ asset_path }}/openbox-obmenu-custom.png
+[image-ss-xdg-menus]:    {{ asset_path }}/om-opensuse-etc-xdg-menus.png
+[image-ss-pipe-file]:    {{ asset_path }}/om-opensuse-pipe-to-file.png
+[image-ss-menu-lxde]:    {{ asset_path }}/openbox-menu-lxde-applications.png
+
+[image-ss-apt-install]:    {{ asset_path }}/omenu-apt-debian-install.png
+
+[image-ss-emerge-lxmenu-data]:  {{ asset_path }}/om-emerge-lxmenu-data.png
+[image-ss-emerge-openbox-menu]: {{ asset_path }}/om-emerge-openbox-menu.png
+
+[image-ss-hg-pull]:        {{ asset_path }}/om-opensuse-hg-pull.png
+[image-ss-make]:           {{ asset_path }}/om-opensuse-make.png
+[image-ss-make-install]:   {{ asset_path }}/om-opensuse-make-install.png
+
+[image-ss-zypper-gtk2-devel]: {{ asset_path }}/om-zypper-gtk2-devel.png
+[image-ss-zypper-menu-cache]: {{ asset_path }}/om-zypper-menu-cache-devel.png
+
+[image-ss-dnf-lxmenu-data]:   {{ asset_path }}/om-f28-dnf-lxmenu-data.png
+[image-ss-dnf-gtk2-devel]:    {{ asset_path }}/om-f28-dnf-gtk2-devel.png
+[image-ss-dnf-menu-cache]:    {{ asset_path }}/om-f28-dnf-menu-cache-devel.png

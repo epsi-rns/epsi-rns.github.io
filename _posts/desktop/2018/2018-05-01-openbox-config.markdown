@@ -31,6 +31,11 @@ This guidance structured into separated articles:
 
 We have already discuss about theme last months.
 
+After a few discussion, I decide to put a section, about installation.
+This is not, a part of config. But if you wish, here it is.
+
+*	Install: Solving difficulties about installation [Debian, Fedora, openSUSE, Gentoo]
+
 #### Window Manager Features
 
 As most of any other Window Manager, Openbox has these features:

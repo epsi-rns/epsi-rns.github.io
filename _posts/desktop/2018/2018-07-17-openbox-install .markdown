@@ -169,12 +169,12 @@ I really just can't help it.
 
 ### What's Next
 
-Consider continue reading [ [Config: General rc.xml][local-part-config] ].
+Consider continue reading [ [Install: obmenu-generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/07' %}
 
-[local-part-config]:  /desktop/2018/05/03/openbox-config.html
+[local-part-config]:  /desktop/2018/07/18/openbox-install.html
 
 [photo-ss-gentoo-emerge]:    https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNIJ3emTGQYMi-LpdndCLAsgOxbAbG6jyCEhjkT?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
