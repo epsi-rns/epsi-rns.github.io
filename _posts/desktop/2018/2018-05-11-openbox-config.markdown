@@ -227,6 +227,43 @@ I have test this in my Gentoo.
 
 -- -- --
 
+### Custom Dialog
+
+There is, however, this old good trick from urukrama,
+using gxmessage. gxmessage is not very common, and not available in all distro.
+
+*	[urukrama.wordpress.com/.../confirm-to-shut-down/](https://urukrama.wordpress.com/2007/12/03/confirm-to-shut-down-reboot-or-log-out-in-openbox/)
+
+Let me rewrite the good script for a modern days systemd style.
+
+*	[gitlab.com/.../dotfiles/.../gxmessage-exit.sh][dotfiles-gxmessage-exit-sh]
+
+{% highlight bash %}
+#!/bin/bash
+
+gxmessage "Are you sure you want to shut down your computer?" \
+  -center -title "Take action" \
+  -font "Sans bold 10" \
+  -default "Cancel" \
+  -buttons "_Cancel":1,"_Log out":2,"_Reboot":3,"_Shut down":4 \
+  >/dev/null
+
+case $? in
+  1) echo "Exit";;
+  2) openbox --exit;;
+  3) systemctl reboot;;
+  4) systemctl poweroff;;
+esac
+{% endhighlight %}
+
+![openbox menu: gxmessage exit dialog][image-ss-gxmessage]{: .img-responsive }
+
+Or the ugly one.
+
+![openbox menu: xmessage exit dialog][image-ss-xmessage]{: .img-responsive }
+
+-- -- --
+
 ### What's Next
 
 We are almost finished with openbox configuration.
@@ -239,6 +276,7 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 
 [dotfiles-menu-systemd-xml]:  {{ dotfiles }}/menu.systemd.xml
 [dotfiles-menu-openrc-xml]:   {{ dotfiles }}/menu.openrc.xml
+[dotfiles-gxmessage-exit-sh]: {{ dotfiles }}/gxmessage-exit.sh
 
 [local-part-config]:  /desktop/2018/05/12/openbox-exit.html
 
@@ -250,3 +288,6 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 
 [image-ss-menu-gksu]:    {{ asset_path }}/openbox-menu-exit-systemctl-xml-gksu.png
 [image-ss-menu-xterm]:   {{ asset_path }}/openbox-menu-openrc-xterm.png
+
+[image-ss-gxmessage]:    {{ asset_path }}/openbox-gxmessage.png
+[image-ss-xmessage]:     {{ asset_path }}/openbox-xmessage.png
