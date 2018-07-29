@@ -221,7 +221,7 @@ Use no password.
 
 I have test this in my Gentoo.
 
-*	[gitlab.com/.../dotfiles/.../menu.systemd.xml][dotfiles-menu-openrc-xml]
+*	[gitlab.com/.../dotfiles/.../menu.openrc.xml][dotfiles-menu-openrc-xml]
 
 -- -- --
 
