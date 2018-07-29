@@ -41,7 +41,7 @@ I have already had many repository in there.
 You might have difeerent directory.
 
 {% highlight bash %}
-$  cd /media/Works/2018\ -\ Build/
+$ cd /media/Works/2018\ -\ Build/
 {% endhighlight %}
 
 Now it is a good time to clone.

@@ -2,7 +2,7 @@
 layout: post
 title:  "Openbox Utilty - Exit"
 categories: desktop
-date:   2018-05-11 09:25:15 +0700
+date:   2018-05-12 09:25:15 +0700
 tags: [openbox]
 author: epsi
 
