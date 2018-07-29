@@ -211,6 +211,8 @@ The respective openbox menu would be <code>menu.openrc.xml</code>.
 </openbox_pipe_menu>
 {% endhighlight %}
 
+![openbox menu: xml xterm sudo][image-ss-menu-xterm]{: .img-responsive }
+
 And set in <code>/etc/sudoers</code>,
 to make it behaves like systemctl.
 Use no password.
@@ -238,7 +240,7 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 [dotfiles-menu-systemd-xml]:  {{ dotfiles }}/menu.systemd.xml
 [dotfiles-menu-openrc-xml]:   {{ dotfiles }}/menu.openrc.xml
 
-[local-part-config]:  /desktop/2018/05/11/openbox-exit.html
+[local-part-config]:  /desktop/2018/05/12/openbox-exit.html
 
 [image-ss-menu-main]:    {{ asset_path }}/openbox-menu-exit-systemctl.png
 [image-ss-exit-gksu]:    {{ asset_path }}/openbox-terminal-exit-gksu.png
@@ -247,3 +249,4 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 [image-ss-xterm-sudo]:   {{ asset_path }}/openbox-terminal-xterm-sudo.png
 
 [image-ss-menu-gksu]:    {{ asset_path }}/openbox-menu-exit-systemctl-xml-gksu.png
+[image-ss-menu-xterm]:   {{ asset_path }}/openbox-menu-openrc-xterm.png

@@ -269,7 +269,7 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 [dotfiles-dynamic]:   {{ dotfiles }}/menu.dynamic.xml
 [dotfiles-schema-pl]: {{ dotfiles }}/obmenu-generator/schema.pl
 
-[local-part-config]:  /desktop/2018/05/11/openbox-exit.html
+[local-part-config]:  /desktop/2018/05/11/openbox-config.html
 
 [image-ss-obmenu-icon]:    {{ asset_path }}/openbox-obmenu-icon.png
 [image-ss-obmenu-custom]:  {{ asset_path }}/openbox-obmenu-custom.png
