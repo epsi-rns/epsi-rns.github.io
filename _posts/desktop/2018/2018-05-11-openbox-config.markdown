@@ -34,7 +34,7 @@ $ systemctl poweroff
 
 And the respective openbox menu would be <code>menu.systemd.xml</code>.
 
-{% highlight xml%}
+{% highlight xml %}
 <openbox_pipe_menu>
     <item label="Logout">
         <action name="Exit" />
@@ -58,9 +58,10 @@ I have test this in my Fedora, openSUSE and Debian.
 
 *	[gitlab.com/.../dotfiles/.../menu.systemd.xml][dotfiles-menu-systemd-xml]
 
-#### Sub menu other than systems
+#### Sub menu other than systemd
 
 This could be like this in other system (such as openrc).
+But may vary depend on your setup.
 
 {% highlight bash %}
 $ pm-suspend
@@ -69,39 +70,13 @@ $ reboot
 $ poweroff
 {% endhighlight %}
 
-But may vary depend on your setup.
-
-And the respective openbox menu would be <code>menu.openrc.xml</code>.
-
-{% highlight xml%}
-<openbox_pipe_menu>
-    <item label="Logout">
-        <action name="Exit" />
-    </item>
-    <item label="Suspend">
-        <action name="Execute"><execute>pm-suspend</execute></action>
-    </item>
-    <item label="Hibernate">
-        <action name="Execute"><execute>pm-hibernate</execute></action>
-    </item>
-    <item label="Reboot">
-        <action name="Execute"><execute>reboot</execute></action>
-    </item>
-    <item label="Shutdown">
-        <action name="Execute"><execute>poweroff</execute></action>
-    </item>
-</openbox_pipe_menu>
-{% endhighlight %}
-
-I have test this in my Gentoo.
-
-*	[gitlab.com/.../dotfiles/.../menu.systemd.xml][dotfiles-menu-openrc-xml]
+It needs workaround to setup this in openbox menu.
 
 #### Main Menu
 
 And in mainmenu add this.
 
-{% highlight xml%}
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
     <menu id="system-menu" label="System">
@@ -140,7 +115,7 @@ $ gksu systemctl poweroff
 
 Now your menu could be
 
-{% highlight xml%}
+{% highlight xml %}
 <openbox_pipe_menu>
     <item label="Logout">
         <action name="Exit" />
@@ -181,7 +156,7 @@ $ xterm -e 'sudo systemctl poweroff'
 #### Setting up sudoers
 
 In order this <code>sudo</code> to work you,
-first you must setup <code>/etc/sudoers</code>
+first you must setup <code>/etc/sudoers</code>.
 
 {% highlight conf %}
 root ALL=(ALL) ALL
@@ -200,6 +175,53 @@ Or in openSUSE, there is something like this:
 Defaults targetpw
 ALL   ALL=(ALL) ALL
 {% endhighlight %}
+
+-- -- --
+
+### Forcing no Password
+
+Now consider to see non-systemd again.
+
+{% highlight bash %}
+$ pm-suspend
+$ pm-hibernate
+$ reboot
+$ poweroff
+{% endhighlight %}
+
+The respective openbox menu would be <code>menu.openrc.xml</code>.
+
+{% highlight xml %}
+<openbox_pipe_menu>
+    <item label="Logout">
+        <action name="Exit" />
+    </item>
+    <item label="Suspend">
+        <action name="Execute"><execute>xterm -e sudo pm-suspend</execute></action>
+    </item>
+    <item label="Hibernate">
+        <action name="Execute"><execute>xterm -e sudo pm-hibernate</execute></action>
+    </item>
+    <item label="Reboot">
+        <action name="Execute"><execute>xterm -e sudo reboot</execute></action>
+    </item>
+    <item label="Shutdown">
+        <action name="Execute"><execute>xterm -e sudo poweroff</execute></action>
+    </item>
+</openbox_pipe_menu>
+{% endhighlight %}
+
+And set in <code>/etc/sudoers</code>,
+to make it behaves like systemctl.
+Use no password.
+
+{% highlight xml %}
+%wheel ALL=(ALL) NOPASSWD: ALL
+{% endhighlight %}
+
+I have test this in my Gentoo.
+
+*	[gitlab.com/.../dotfiles/.../menu.systemd.xml][dotfiles-menu-openrc-xml]
 
 -- -- --
 
