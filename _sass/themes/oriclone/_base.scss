@@ -164,6 +164,12 @@ div.post-meta {
   border-width: 1px 0;
 }  
 
+.post-content table th,
+.post-content table td {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
 
 // ---------------------------------------------------------------------
 // components
