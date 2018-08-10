@@ -3,7 +3,7 @@ layout: post
 title:  "Bootstrap CLI Webtools - Summary"
 date:   2018-01-10 17:35:15 +0700
 categories: webdev
-tags:   [css, js]
+tags:   [css, js, bootstrap]
 author: epsi
 
 excerpt:
