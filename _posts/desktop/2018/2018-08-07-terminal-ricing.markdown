@@ -105,8 +105,32 @@ Most choices comes to these three terminals:
 	I rarely use it.
 	This emulator is now widely used in most distro.
 	And it also have compilation time dependencies with mono.
-
+	
 #### urxvt configuration
+
+This is a long topic, so I put it separately below.
+
+#### xfce4-terminal configuration
+
+This is GUI based config.
+I nevert touch the config manually.
+
+#### termite configuration
+
+| Config | Path |
+| :--- | :--- |
+| termite | ~/.config/termite/config |
+
+Source:
+
+*	[gitlab.com/.../dotfiles/.../termite][dotfiles-termite]
+
+It was originally frtom my friend **morgareth**,
+but I cannot find the dotfiles any longer.
+
+-- -- --
+
+### urxvt configuration
 
 You can use two configs, or just one merged config:
 
@@ -132,11 +156,162 @@ My config are originally grabbed from these my two friends:
 
 *	[Nanda Vera](https://github.com/yuune/dotfiles/blob/master/.Xresources)
 
+#### colors
+
+Using <code>.Xdefaults</code> or <code>.Xresources</code>.
+
+{% highlight conf %}
+! ############
+! # based on #
+! # blackcat #
+! #  night   #
+! ############
+
+*background:   #121212
+*foreground:   #E8E8E8
+
+! BLK
+*color0:       #141212
+*color8:       #404040
+
+! RED
+*color1:       #EC5C5C
+*color9:       #EC5C5C
+
+! GRN
+*color2:       #5CF577
+*color10:      #5CF577
+
+! YLW
+*color3:       #F9EB3D
+*color11:      #F9EB3D
+
+! BLU
+*color4:       #0286D5
+*color12:      #0286D5
+
+! MAG
+*color5:       #807DB6
+*color13:      #807DB6
+
+! CYN
+*color6:       #60CFE6
+*color14:      #60CFE6
+
+! WHT
+*color7:       #FEFEFE
+*color15:      #FEFEFE
+{% endhighlight %}
+
 You can grab more color from [dotshare](http://dotshare.it/).
 
 *	[dotshare.it/category/terms/colors/](http://dotshare.it/category/terms/colors/)
 
-And more <code>.Xresources</code> example, also from [dotshare](http://dotshare.it/).
+#### more resources
+
+Using <code>.Xdefaults</code> or <code>.Xresources</code>.
+
+{% highlight conf %}
+! ############
+! #  COLORS  #
+! ############
+! # based on #
+! # rukavera #
+! ############
+
+! special
+*.foreground:     #adb2c2
+! *.background:     #03262b
+! *.background:     #eeeeee
+! *.cursorColor:    #adb2c2
+
+
+! - For real transparency (composite):
+urxvt*depth: 32
+urxvt.background: [80]#03262b
+! urxvt*background: rgba:0000/0000/0200/c800
+
+! - For fake transparency:
+! urxvt*transparent: true
+! urxvt*shading: 30
+
+URxvt.intensityStyles:  false
+!URxvt.font:             xft:Hack:bold:pixelsize=12
+!URxvt.boldFont:         xft:Hack:bold:pixelsize=12
+
+!! Hack
+URxvt.font:             xft:Hack:bold:pixelsize=12;hinting=True;antialias:True,\
+                        xft:PowerlineSymbols,\
+                        xft:FontAwesome:size=10,\
+                        xft:WenQuanYi Bitmap Song-12:medium;antialias=False,\
+                        xft:WenQuanYi Zen Hei-12:medium;antialias=True,\
+                        xft:HanaMinA-12:medium;antialias:True,\
+                        xft:HanaMinB-12:medium;antialias:True,\
+                        xft:HanaMinPlus-12:medium;antialias:True
+URxvt.boldFont:         xft:Hack:bold:pixelsize=12;hinting=True;antialias:True,\
+                        xft:FontAwesome:size=10,\
+                        xft:WenQuanYi Bitmap Song-12:bold;antialias=False,\
+                        xft:WenQuanYi Zen Hei-12:bold;antialias=True,\
+                        xft:HanaMinA-12:bold;antialias:True,\
+                        xft:HanaMinB-12:bold;antialias:True,\
+                        xft:HanaMinPlus-12:bold;antialias:True
+!
+
+URxvt.saveLines:        8192
+
+URxvt*scrollTtyOutput:    false
+URxvt*scrollWithBuffer:   true
+URxvt*scrollTtyKeypress:  true
+URxvt.scrollBar:          false
+URxvt.internalBorder:     25
+URxvt.cursorBlink:        false
+URxvt.cursorUnderline:    true
+! URxvt.scrollBar: false
+! URxvt.scrollBar_right: false
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+! ############
+! # based on #
+! # blackcat #
+! ############
+
+! URxvt.perl-ext-common: default, tabbed
+
+! URxvt.keysym.Control-Alt-C: perl:clipboard:copy
+! URxvt.keysym.Control-Alt-V: perl:clipboard:paste
+
+URxvt.letterSpace: -1
+!URxvt.lineSpace: 1
+
+URxvt.termName: rxvt-unicode
+URxvt.geometry: 115x24+366+211
+
+!URxvt.transparent: true
+!URxvt.shading: 5
+!URxvt.fadecolor: #0c0c0c
+!URxvt.fading: 30
+!URxvt.depth: 32
+
+URxvt.saveLine: 10000
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+!URxvt.highlightColor:
+!URxvt.hightlightTextColor:
+
+URxvt.url-select.launcher: firefox
+URxvt.url-select.underline: true
+
+URxvt.loginShell: true
+{% endhighlight %}
+
+And you can grab more <code>.Xresources</code> example,
+also from [dotshare](http://dotshare.it/).
 
 *	[dotshare.it/category/misc/misc/](http://dotshare.it/category/misc/misc/)
 
@@ -145,20 +320,6 @@ And more <code>.Xresources</code> example, also from [dotshare](http://dotshare.
 I never try this, but this is seems cool.
 
 * [awesome-urxvt](https://github.com/bookercodes/awesome-urxvt/blob/master/readme.md)
-
-
-#### termite configuration
-
-| Config | Path |
-| :--- | :--- |
-| termite | ~/.config/termite/config |
-
-Source:
-
-*	[gitlab.com/.../dotfiles/.../termite][dotfiles-termite]
-
-It was originally frtom my friend **morgareth**,
-but I cannot find the dotfiles any longer.
 
 
 -- -- --
@@ -195,6 +356,40 @@ It needs special config. An it is also highly customizable.
 
 #### .bashrc prompt
 
+This is my colorful bashrc.
+
+![Terminal Ricing: Colourful BASH prompt][image-ss-prompt-bash-color]{: .img-responsive }
+
+{% highlight bash %}
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+echo
+
+printf "\033[0m
+    \033[49;35m|\033[49;31m|\033[101;31m|\033[41;97m|\033[49;91m|\033[49;93m|\033[0m
+  \033[105;35m|\033[45;97m|\033[49;97m||\033[100;97m||\033[49;37m||\033[103;33m|\033[43;97m|\033[0m
+  \033[49;95m|\033[49;94m|\033[100;37m||\033[40;97m||\033[40;37m||\033[49;33m|\033[49;32m|\033[0m
+  \033[104;34m|\033[44;97m|\033[49;90m||\033[40;39m||\033[49;39m||\033[102;32m|\033[42;97m|\033[0m
+    \033[49;34m|\033[49;36m|\033[106;36m|\033[46;97m|\033[49;96m|\033[49;92m|\033[0m
+
+"
+
+my_t="[\e[1;33m\t\e[01;37m]"
+my_u="[\[\e[1;34m\u\e[01;37m\]]"
+my_h="[\[\e[00;37m\]${HOSTNAME%%.*}\[\e[01;37m\]]"
+my_w="$\[\e[01;31m\]\w\[\e[01;37m\]"
+my_n="$\[\e[01;31m\]\n\[\e[01;37m\]"
+export PS1="\[\e[01;37m\]┌─${my_t}──${my_u}──${my_h}:${my_w}${my_n}└──\[\e[01;37m\]>>\[\e[0m\]"
+{% endhighlight %}
+
 You can grab more <code>.bashrc</code> from [dotshare](http://dotshare.it/).
 
 *	[dotshare.it/category/shells/bash/](http://dotshare.it/category/shells/bash/)
@@ -207,6 +402,30 @@ You can grab more <code>.zshrc</code> from [dotshare](http://dotshare.it/).
 
 #### oh-my-bash configuration
 
+With this <code>oh-my-bash</code> prompt theming framework,
+the code above could be transformed into simple code.
+
+![Terminal Ricing: oh-my-bash prompt][image-ss-prompt-oh-my-bash]{: .img-responsive }
+
+{% highlight bash %}
+# Path to your oh-my-bash installation.
+export OSH=/home/epsi/.oh-my-bash
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-bash is loaded.
+OSH_THEME="font"
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(core git bashmarks progress)
+
+if tty -s
+then
+  source $OSH/oh-my-bash.sh
+fi
+{% endhighlight %}
+
+Do not forget to set the right path.
+
 | Config | Path |
 | :--- | :--- |
 | bash | ~/.bashrc |
@@ -217,10 +436,34 @@ Source:
 
 #### oh-my-zsh configuration
 
+![Terminal Ricing: oh-my-zsh prompt][image-ss-prompt-oh-my-zsh]{: .img-responsive }
+
+{% highlight bash %}
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/epsi/.oh-my-zsh
+
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="terminalparty"
+# robbyrussell afowler fino kardan nanotech philips re5et simonoff sporty256 
+# terminalparty tjkirch tonotdo wezm adben af-magic
+
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# alias
+alias jekyll-blog='jekyll serve --config _config.yml,_config_dev.yml'
+{% endhighlight %}
+
+Do not forget to set the right path.
+
 | Config | Path |
 | :--- | :--- |
 | zsh | ~/.zshrc |
-
 
 Source:
 
@@ -232,8 +475,26 @@ There are many files that can be configured in this powerline directory:
 
 *	[gitlab.com/.../dotfiles/.../powerline][dotfiles-powerline]
 
-To use powerline, add it in your <code>.bashrc</code>,
-or <code>.zrc</code> or <code>.config/fish/config.fish</code>.
+To use powerline, add it in your <code>.bashrc</code>, or <code>.zrc</code>.
+
+{% highlight bash %}
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+{% endhighlight %}
+
+Or <code>.config/fish/config.fish</code>.
+
+{% highlight bash %}
+powerline-daemon -q
+set POWERLINE_BASH_CONTINUATION 1
+set POWERLINE_BASH_SELECT 1
+set fish_function_path $fish_function_path "/usr/lib/python3.6/site-packages/powerline/bindings/fish"
+powerline-setup
+{% endhighlight %}
+
+Do not forget to set the right path.
 
 | Config | Path |
 | :--- | :--- |
@@ -257,8 +518,81 @@ In fact I only know this two.
 
 #### tmux configuration
 
-tmux can have a very nice panelbar,
+tmux can have a very nice statusbar,
 that can be set on top or bottom of your terminal.
+
+![Terminal Ricing: tmux statusbar][image-ss-tmux-statusbar]{: .img-responsive }
+
+{% highlight conf %}
+set -g mouse on
+
+######################
+### DESIGN CHANGES ###
+######################
+
+# loud or quiet?
+set-option -g visual-activity off
+set-option -g visual-bell off
+set-option -g visual-silence off
+set-window-option -g monitor-activity off
+set-option -g bell-action none
+
+#  modes
+setw -g mode-attr bold
+
+# messages
+set -g message-attr bold
+
+#### http://dotshare.it/dots/8268/0/raw/
+
+# Mode
+set-option -g mode-bg brightblack
+set-option -g mode-fg default
+
+# Status position
+set-option -g status-position top
+
+# Status update interval
+set-option -g status-interval 5
+
+# Basic status bar colors
+set-option -g status-bg default
+set-option -g status-fg white
+
+# Left side of status bar
+set-option -g status-left-length 40
+set-option -g status-left "#[fg=brightwhite,bg=brightblack] #S #[fg=default,bg=default] "
+
+# Window status
+set-option -g window-status-format "#[fg=white,bg=brightblack] #I #[fg=white,bg=black] #W "
+set-option -g window-status-current-format "#[fg=brightwhite,bg=green] #I #[fg=brightwhite,bg=blue] #W "
+set-option -g window-status-separator " "
+set-option -g status-justify left
+
+# Right side of status bar
+set-option -g status-right-length 40
+set-option -g status-right " #[fg=brightwhite,bg=black] %a, %d %b %H:%M #[fg=brightwhite,bg=brightblack] #(whoami)@#h "
+
+# Pane border
+set-option -g pane-border-bg default
+set-option -g pane-border-fg brightblack
+set-option -g pane-active-border-bg default
+set-option -g pane-active-border-fg white
+
+# Pane number indicator
+set-option -g display-panes-colour brightblack
+set-option -g display-panes-active-colour brightwhite
+
+# Clock mode
+set-option -g clock-mode-colour white
+set-option -g clock-mode-style 24
+
+# Message
+set-option -g message-bg default
+set-option -g message-fg default
+{% endhighlight %}
+
+Do not forget to set the right path.
 
 | Config | Path |
 | :--- | :--- |
@@ -290,7 +624,12 @@ there are also ready to use application that manage previous tools
 
 *	[byobu](http://byobu.co/): using either tmux or gnu screen backend, not managing layout.
 
-![Terminal Ricing: Debian URXVT][image-ss-debian-urxvt]{: .img-responsive }
+### byobu screenshot
+
+I do not configure byobu.
+But if you widh, this is my screenshot.
+
+![Terminal Ricing: Byobu at Debian URXVT][image-ss-debian-urxvt]{: .img-responsive }
 
 #### teamocil configuration
 
@@ -301,6 +640,18 @@ I'm using Jekyll for daily basis blogging.
 Instead of typing the same command over and over again,
 using teamocil can be helpful.
 
+{% highlight yaml %}
+windows:
+  - name: sample-four-panes
+    root: /media/Works/githublab/epsi-rns.github.io
+    layout: tiled
+    panes:
+      - vim -M ./_config.yml
+      - jekyll-blog
+      - git status
+      - exa --long
+{% endhighlight %}
+
 | Config | Path |
 | :--- | :--- |
 | teamocil | ~/.teamocil/jekyll.yml |
@@ -308,6 +659,11 @@ using teamocil can be helpful.
 This is the configuration:
 
 *	[gitlab.com/.../dotfiles/.../teamocil][dotfiles-teamocil]
+
+And last, my screenshot for my real daily basis blogging.
+Well.. this not really a racing, but more on productivity.
+
+![Terminal Ricing: teamocil jekyll layout][image-ss-teamocil-jekyll]{: .img-responsive }
 
 -- -- --
 
@@ -325,10 +681,19 @@ There are two known compositor for ricing:
 Simply run compton to enable it.
 
 {% highlight bash %}
-$ compton &!
+$ compton &
 {% endhighlight %}
 
 #### compton configuration
+
+{% highlight conf %}
+# Opacity
+menu-opacity = 0.9;
+#inactive-opacity = 0.7;
+frame-opacity = 0.7;
+inactive-opacity-override = false;
+alpha-step = 0.06;
+{% endhighlight %}
 
 | Config | Path |
 | :--- | :--- |
@@ -344,6 +709,13 @@ Source
 
 Terminal can have padding using [gtk.css](https://developer.gnome.org/gtk3/stable/chap-css-overview.html)
 Setting this padding would make your terminal way cooler.
+The padding config is as simply as:
+
+{% highlight css %}
+VteTerminal, vte-terminal {
+	padding: 5px 24px 24px 24px;
+}
+{% endhighlight %}
 
 | Config | Path |
 | :--- | :--- |
@@ -356,7 +728,6 @@ Source
 A more complete config can be seen here:
 
 *	[M. Yuga Nugraha](https://github.com/myugan/dotfiles/blob/master/home/.config/gtk-3.0/gtk.css)
-
 
 -- -- --
 
@@ -415,7 +786,95 @@ This is also a must have config.
 
 ![Terminal Ricing: git log vim][image-ss-git-log-vim]{: .img-responsive }
 
+The preivous screenshot is running a cool command,
+that you can also for your screenhot setup.
+
+{% highlight bash %}
+$ git log | vim -R -
+{% endhighlight %}
+
 #### vimrc configuration
+
+This is my current <code>vimrc</code>.
+
+{% highlight conf %}
+" -- -- ViM Standard -- -- 
+
+set number
+syntax on
+set encoding=utf-8
+
+" -- -- ViM UI -- --
+
+set background=dark
+set t_Co=256
+if &term =~ '256color'
+  " Disable Background Color Erase (BCE) so that color schemes
+  " work properly when Vim is used inside tmux and GNU screen.
+  " See also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
+
+set laststatus=2 " always show the status line
+set lazyredraw " do not redraw while running macros
+set showbreak=↪ " indicate wrapped line
+hi clear ModeMsg " Disable Color StatusLine on Insert Mode and Visual Mode
+
+" -- -- Vundle Begin -- --
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" -- -- Vundle Plugin -- --
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+
+" Plugin 'Lokaltog/powerline'
+
+
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
+
+
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+" -- -- Vundle End -- --
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" -- -- GUI Settings -- --
+
+autocmd GUIEnter * set guioptions-=m
+autocmd GUIEnter * set guioptions-=T
+"autocmd GUIEnter * set gfn=Bitstream\ Vera\ Sans\ Mono\ 10
+autocmd GUIEnter * set gfn=Monaco\ for\ Powerline\ 10
+let g:Powerline_symbols = 'fancy'
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+autocmd GUIEnter * set vb t_vb= " disable visual bell
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+" let g:airline_theme='powerlineish'
+
+" -- -- colorscheme -- --
+
+colorscheme ir_black
+" colorscheme evening
+" colorscheme molokai
+
+" -- -- NERDTree -- --
+
+let NERDTreeShowHidden=1
+{% endhighlight %}
 
 | Config | Path |
 | :--- | :--- |
@@ -488,6 +947,11 @@ Thank you for reading and visiting.
 [image-ss-debian-urxvt]:           {{ asset_path }}/byobu-objdump-and-source.png
 [image-ss-greeting-syawal]:        {{ asset_path }}/syawal-1439h.png
 [image-ss-git-log-vim]:            {{ asset_path }}/git-log-vim-r.png
+[image-ss-prompt-bash-color]:      {{ asset_path }}//prompt-bash.png
+[image-ss-prompt-oh-my-bash]:      {{ asset_path }}//prompt-oh-my-bash.png
+[image-ss-prompt-oh-my-zsh]:       {{ asset_path }}//prompt-oh-my-zsh.png
+[image-ss-tmux-statusbar]:         {{ asset_path }}//tmux-statusbar.png
+[image-ss-teamocil-jekyll]:        {{ asset_path }}//teamocil-jekyll.png
 
 [dotfiles-xdefaults]:     {{ dotfiles }}/urxvt/Xdefaults
 [dotfiles-xresources]:    {{ dotfiles }}/urxvt/Xresources
