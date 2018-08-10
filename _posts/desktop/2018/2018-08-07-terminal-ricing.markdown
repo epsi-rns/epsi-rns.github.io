@@ -661,7 +661,7 @@ This is the configuration:
 *	[gitlab.com/.../dotfiles/.../teamocil][dotfiles-teamocil]
 
 And last, my screenshot for my real daily basis blogging.
-Well.. this not really a racing, but more on productivity.
+Well.. this not really a ricing, but more on productivity.
 
 ![Terminal Ricing: teamocil jekyll layout][image-ss-teamocil-jekyll]{: .img-responsive }
 
