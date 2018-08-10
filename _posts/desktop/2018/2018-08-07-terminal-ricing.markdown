@@ -50,6 +50,12 @@ There are few parts in terminal ricing:
 *	Special CLI application: ViM Text Editor
 
 *	Pixel Art
+
+#### Dofiles Source
+
+The dotfiles are available at:
+
+*	[gitlab.com/epsi-rns/dotfiles/tree/master/terminal](https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal)
 	
 #### Path
 
@@ -85,17 +91,17 @@ But at the same time, the terminal needs flexbility when it comes to colorscheme
 
 Most choices comes to these three terminals:
 
-*	urxvt:
+*	[urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html):
 	My favorite is <code>rxvt unicode</code>,
 	but sometimes it has trouble with font setting,
 	such as arrow in ViM when using bold fonts.
 
-*	xfce4-terminal:
+*	[xfce4-terminal](https://docs.xfce.org/apps/terminal/start):
 	It just works, and stable.
 	It has GUI based configuration.
 	But not many customizable colorscheme.
 
-*	termite:
+*	[termite](https://github.com/thestinger/termite):
 	I rarely use it.
 	This emulator is now widely used in most distro.
 	And it also have compilation time dependencies with mono.
@@ -103,10 +109,6 @@ Most choices comes to these three terminals:
 #### urxvt configuration
 
 You can use two configs, or just one merged config:
-
-*	[gitlab.com/.../dotfiles/.../xdefaults][dotfiles-xdefaults]
-
-*	[gitlab.com/.../dotfiles/.../xresources][dotfiles-xresources]
 
 | Config | Path |
 | :--- | :--- |
@@ -118,6 +120,33 @@ You can load using <code>xrdb</code>.
 $ xrdb ~/.Xresources
 {% endhighlight %}
 
+Source:
+
+*	[gitlab.com/.../dotfiles/.../xdefaults][dotfiles-xdefaults]
+
+*	[gitlab.com/.../dotfiles/.../xresources][dotfiles-xresources]
+
+My config are originally grabbed from these my two friends:
+
+*	[M. Yuga Nugraha](https://github.com/myugan/dotfiles/blob/master/home/.Xresources)
+
+*	[Nanda Vera](https://github.com/yuune/dotfiles/blob/master/.Xresources)
+
+You can grab more color from [dotshare](http://dotshare.it/).
+
+*	[dotshare.it/category/terms/colors/](http://dotshare.it/category/terms/colors/)
+
+And more <code>.Xresources</code> example, also from [dotshare](http://dotshare.it/).
+
+*	[dotshare.it/category/misc/misc/](http://dotshare.it/category/misc/misc/)
+
+#### urxvt extension
+
+I never try this, but this is seems cool.
+
+* [awesome-urxvt](https://github.com/bookercodes/awesome-urxvt/blob/master/readme.md)
+
+
 #### termite configuration
 
 | Config | Path |
@@ -128,18 +157,22 @@ Source:
 
 *	[gitlab.com/.../dotfiles/.../termite][dotfiles-termite]
 
+It was originally frtom my friend **morgareth**,
+but I cannot find the dotfiles any longer.
+
+
 -- -- --
 
 ### Shell and Shell Prompt
 
-There are many shells.
-Most commonly used are:
+Shell are part of operating system.
+There are many shells, most commonly used are:
 
-*	BASH
+*	[BASH](https://www.gnu.org/software/bash/)
 
-*	ZSH
+*	[ZSH](http://www.zsh.org/)
 
-*	FISH
+*	[FISH](https://fishshell.com/)
 
 you can switch the default shell by this command:
 
@@ -159,6 +192,18 @@ For each shell, it has ready to use customizable prompt configuration:
 
 But there are also a unique arrow prompt called <code>powerline</code>.
 It needs special config. An it is also highly customizable.
+
+#### .bashrc prompt
+
+You can grab more <code>.bashrc</code> from [dotshare](http://dotshare.it/).
+
+*	[dotshare.it/category/shells/bash/](http://dotshare.it/category/shells/bash/)
+
+#### .zshrc prompt
+
+You can grab more <code>.zshrc</code> from [dotshare](http://dotshare.it/).
+
+*	[dotshare.it/category/shells/zsh/](http://dotshare.it/category/shells/zsh/)
 
 #### oh-my-bash configuration
 
@@ -206,11 +251,14 @@ or <code>.zrc</code> or <code>.config/fish/config.fish</code>.
 There are two widely used terminal multiplexer.
 In fact I only know this two.
 
-*	tmux
+*	[tmux](https://github.com/tmux/tmux/wiki)
 
-*	gnu screen
+*	[gnu screen](https://www.gnu.org/software/screen/)
 
 #### tmux configuration
+
+tmux can have a very nice panelbar,
+that can be set on top or bottom of your terminal.
 
 | Config | Path |
 | :--- | :--- |
@@ -224,6 +272,13 @@ I like to copy the tmux config from [dotshare](http://dotshare.it/).
 
 *	[dotshare.it/category/terms/tmux/](http://dotshare.it/category/terms/tmux/)
 
+#### gnu screen configuration
+
+I do not use gnu screen.
+However you can grab the config from [dotshare](http://dotshare.it/).
+
+*	[dotshare.it/category/terms/screen/](http://dotshare.it/category/terms/screen/)
+
 -- -- --
 
 ### Multiplexer Wrapper
@@ -231,13 +286,16 @@ I like to copy the tmux config from [dotshare](http://dotshare.it/).
 Beyond the multiplexer,
 there are also ready to use application that manage previous tools
 
-*	teamocil: using tmux as backend, managing layout.
+*	[teamocil](http://www.teamocil.com/): using tmux as backend, managing layout.
 
-*	byobu: using either tmux or gnu screen backend, not managing layout.
+*	[byobu](http://byobu.co/): using either tmux or gnu screen backend, not managing layout.
 
 ![Terminal Ricing: Debian URXVT][image-ss-debian-urxvt]{: .img-responsive }
 
 #### teamocil configuration
+
+Teamocil is a simple tool used to automatically
+create windows and panes in tmux with YAML files.
 
 I'm using Jekyll for daily basis blogging.
 Instead of typing the same command over and over again,
@@ -260,9 +318,9 @@ This is the configuration:
 You need compositor to enable transparency, shadow and such effects.
 There are two known compositor for ricing:
 
-*	xcompmgr
+*	[xcompmgr](http://cgit.freedesktop.org/xorg/app/xcompmgr/)
 
-*	compton: successor of xcompmgr
+*	[compton](https://github.com/chjj/compton): successor of xcompmgr
 
 Simply run compton to enable it.
 
@@ -284,7 +342,7 @@ Source
 
 ### gtk.css
 
-Terminal can have padding.
+Terminal can have padding using [gtk.css](https://developer.gnome.org/gtk3/stable/chap-css-overview.html)
 Setting this padding would make your terminal way cooler.
 
 | Config | Path |
@@ -295,6 +353,11 @@ Source
 
 *	[gitlab.com/.../dotfiles/.../gtk.css][dotfiles-gtk-css]
 
+A more complete config can be seen here:
+
+*	[M. Yuga Nugraha](https://github.com/myugan/dotfiles/blob/master/home/.config/gtk-3.0/gtk.css)
+
+
 -- -- --
 
 ### Background
@@ -304,6 +367,12 @@ Wallpaper is the most ingredient in ricing.
 You are free to use any wallpaper
 
 But there are other trick as well.
+
+#### custom wallpaper
+
+I also make custom wallpaper at deviantart.
+
+*	[deviantart.com/nurwijayadi](http://nurwijayadi.deviantart.com/)
 
 #### hackish style
 
@@ -319,13 +388,13 @@ as shown in most top picture above.
 
 There are many CLI application such as
 
-*	Music visualizer: CAVA
+*	Music visualizer: [CAVA](https://github.com/karlstav/cava)
 
-*	System information: neofetch
+*	System information: [neofetch](https://github.com/dylanaraps/neofetch), screenfetch
 
-*	System Monitoring: htop
+*	System Monitoring: htop, [gtop](https://github.com/aksakalli/gtop)
 
-*	exa: colorful rust based ls 
+*	[exa](https://the.exa.website/): colorful rust based ls 
 
 This is not the place to explain detail for this CLI applications.
 However, this is most commonly use <code>neofetch</code> custom config is a must:
@@ -339,6 +408,8 @@ However, this is most commonly use <code>neofetch</code> custom config is a must
 -- -- --
 
 ### ViM as Special CLI application
+
+[Vim](https://www.vim.org/) is an advanced text editor
 
 This is also a must have config.
 
@@ -354,10 +425,14 @@ Source:
 
 *	[gitlab.com/.../dotfiles/.../vimrc][dotfiles-vimrc]
 
-I copy from my fiend bandithijo,
+I copy the config from my friend **bandithijo**,
 and strip down to suit my needs.
 
 *	[bandithijo/.../.vimrc](https://github.com/bandithijo/dotfiles/blob/master/.vimrc)
+
+There are more ViM rc at [dotshare](http://dotshare.it/).
+
+*	[dotshare.it/category/vim/rc/](http://dotshare.it/category/vim/rc/)
 
 #### vim path
 
@@ -368,6 +443,15 @@ There are two directories in this ViM directory:
 | vim | ~/.vim/* |
 
 *	[gitlab.com/.../dotfiles/.../vim][dotfiles-vim]
+
+There are more ViM colors at [dotshare](http://dotshare.it/).
+
+*	[http://dotshare.it/category/vim/colors/](http://dotshare.it/category/vim/colors/)
+
+#### Learning ViM
+
+Beside the basic <code>vimtutor</code>, you might want to 
+[learn ViM script the hard way](http://learnvimscriptthehardway.stevelosh.com/).
 
 -- -- --
 
