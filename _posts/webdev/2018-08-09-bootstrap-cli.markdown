@@ -1,62 +1,32 @@
 ---
 layout: post
-title:  "Bootstrap on Jekyll - Install RVM"
+title:  "Bootstrap - Offline Template Examples"
 date:   2018-08-09 09:35:15 +0700
 categories: webdev
 tags:   [ruby, jekyll, bootstrap]
 author: epsi
 
 excerpt:
-  Step by step install bootstrap v4.1 on localhost,
-  using Jekyll bundle on RVM.  
+  Get a local copy of bootstrap template examples,
+  using no server.
 
 ---
 
 
 ### Preface
 
-> Time to embrace the CLI webtools
+> Get a local copy of bootstrap template examples.
 
-You can install the boostrap v4.1 source code site on your localhost.
+You can install the boostrap v4.1 template examples
+as a local offline copy that can be launched from open file manager.
 
 *	[getbootstrap.com/docs/4.1/examples/](https://getbootstrap.com/docs/4.1/examples/)
-
-The bootstrap v4.1 utilize jekyll bundle.
-This can be achieved using RVM (Ruby Version Manager).
-RVM run on user space locally, and it won't affect your system.
-That means it is distro-agnostic.
-
-*	[rvm.io](https://rvm.io)
-
-The Jekyll here run inside bundle.
-This bundle lock the jekyll version, 
-along with all of its dependencies.
-That means any bundle can run anywhere without version conflict.
-Very useful, while deploying, or moving from one machine to another.
-
-#### Why Another Tutorial ?
-
-The step in this guidance is
-almost the same with the officials site below.
-
-*	[rvm.io/rvm/install](https://rvm.io/rvm/install)
-
-I need to keep the screenshot so I can help people.
-For each step, I can give screenshot.
-So the people get the idea, of what to expect,
-when issuing command on terminal shell.
 
 #### Step
 
 *	Get Bootstrap Source Code
 
-*	Install Ruby with RVM
-
-*	Install Jekyll with Bundle
-
 *	Generate dist (js + css)
-
-*	Run the site on localhost
 
 -- -- --
 
@@ -80,13 +50,9 @@ This is the pure html, if you want to start, using templates
 $ cd site/docs/4.1/examples
 {% endhighlight %}
 
-You may click the image for bigger resolution.
+You may consider, clicking the image for bigger resolution.
 
-![Bootstrap: examples directory][image-ss-twbs-examples]{: .img-responsive }
-
-And this is the result that we want to achieve:
-
-![Bootstrap: cover on localhost:9001][image-ss-twbs-cover]{: .img-responsive }
+[![Bootstrap: examples directory][image-ss-twbs-examples]{: .img-responsive }][photo-ss-twbs-examples]
 
 -- -- --
 
@@ -123,6 +89,8 @@ $ cp -a dist site/docs/4.1/
 
 #### Copy Paste Using File Manager
 
+If you have difficulty using terminal,
+you may use File Manager.
 Depend on your Desktop Environment,
 your file manager might be:
 
@@ -147,159 +115,32 @@ But sometimes I met people who does not have a clue about this.
 $ thunar &
 {% endhighlight %}
 
+-- -- --
+
+###	Open The Offline Examples
+
 #### No server
 
 You do not need Jekyll to have a local copy of your bootstrap.
-Just open it from file manager to browser, such as firefox.
+Just open it from file manager to browser, such as firefox, or chromium.
 
--- -- --
+![Bootstrap: oen from file manager][image-ss-twbs-open-with]{: .img-responsive }
 
-### Install Ruby with RVM
+#### Open in Your Browser
 
-These are the steps summary:
+And this is the result:
 
-{% highlight bash %}
-$ gpg --keyserver hkp://keys.gnupg.net --recv-keys \
-  409B6B1796C275462A1703113804BB82D39DC0E3 \
-  7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+[![Bootstrap: cover using localcopy][image-ss-twbs-cover]{: .img-responsive }][photo-ss-twbs-cover]
 
-$ \curl -sSL https://get.rvm.io | bash -s stable
+#### Fully Working Site
 
-$ source ~/.rvm/scripts/rvm
-
-$ rvm list known
-
-$ rvm install 2.4
-
-$ rvm —default use 2.4.4
-
-$ ruby -v
-
-$ which ruby
-{% endhighlight %}
-
-#### GPG
-
-{% highlight bash %}
-$ gpg --keyserver hkp://keys.gnupg.net --recv-keys \
-  409B6B1796C275462A1703113804BB82D39DC0E3 \
-  7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-{% endhighlight %}
-
-![RVM: GPG Keys][image-ss-rvm-gpg-keys]{: .img-responsive }
-
-#### Get RVM
-
-{% highlight bash %}
-$ \curl -sSL https://get.rvm.io | bash -s stable
-{% endhighlight %}
-
-![RVM: Get RVM][image-ss-rvm-get-rvm]{: .img-responsive }
-
-#### List Known Ruby
-
-{% highlight bash %}
-$ source ~/.rvm/scripts/rvm
-
-$ rvm list known
-{% endhighlight %}
-
-![RVM: List Known][image-ss-rvm-list-known]{: .img-responsive }
-
-We can see some Ruby version, such as <code>4.2</code>.
-
-#### Install Ruby
-
-Consider install Ruby <code>4.2</code>.
-
-{% highlight bash %}
-$ rvm install 2.4
-{% endhighlight %}
-
-![RVM: Install Ruby][image-ss-rvm-install-ruby]{: .img-responsive }
-
-#### Set Default Ruby
-
-{% highlight bash %}
-$ source ~/.rvm/scripts/rvm
-
-$ rvm —default use 2.4.4
-
-$ ruby -v
-
-$ which ruby
-{% endhighlight %}
-
-![RVM: Default Ruby][image-ss-rvm-default-ruby]{: .img-responsive }
-
-#### Set Environment
-
-Set yor path environment
-such as in <code>.bashrc</code> or <code>.zshrc</code>.
-You may use any text editor, e.g. gedit, geany, nano, or ViM.
-Add these two lines:
-
-{% highlight bash %}
-export PATH=${PATH}:~/.rvm/gems/ruby-2.4.4/bin/
-source ~/.rvm/scripts/rvm
-{% endhighlight %}
-
-![RVM: bashrc zshrc][image-ss-rvm-zsh-path]{: .img-responsive }
-
--- -- --
-
-### Install Jekyll with Bundle
-
-These are the steps summary:
-
-{% highlight bash %}
-$ gem install bundler
-
-$ cd bootstrap-4.1.3
-
-$ bundle install
-
-$ bundle exec jekyll serve
-{% endhighlight %}
-
-#### Gem Install Bundler
-
-{% highlight bash %}
-$ gem install bundler
-{% endhighlight %}
-
-![Gem: gem install bundler][image-ss-gem-install-bundler]{: .img-responsive }
-
-#### Gemfile Bundle Install
-
-{% highlight bash %}
-$ cd bootstrap-4.1.3
-
-$ bundle install
-{% endhighlight %}
-
-![Gem: Gemfile bundle install][image-ss-gem-bundle-install]{: .img-responsive }
-
-#### Bundle Exec Jekyll 
-
-{% highlight bash %}
-$ bundle exec jekyll serve
-{% endhighlight %}
-
-![Gem: bundle exec jekyll serve][image-ss-gem-bundle-exec]{: .img-responsive }
-
-#### Open On Your Browser
-
-> localhost:9001
-
-![Bootstrap: index on localhost:9001][image-ss-twbs-localhost]{: .img-responsive }
+In order to have a fully working site, you need Jekyll.
 
 -- -- --
 
 ### What's Next
 
-
-Consider finish reading [ [Part One][local-part-one] ].
+Consider finish reading [ [Part Two][local-part-two] ].
 
 Thank you for reading.
 
@@ -307,23 +148,13 @@ Thank you for reading.
 
 {% assign asset_path = '/assets/posts/webdev/2018/08' %}
 
-[local-part-one]:	/webdev/2018/01/11/bootstrap-cli.html
+[local-part-two]:	/webdev/2018/08/10/bootstrap-cli.html
 
 [image-ss-twbs-examples]:       {{ asset_path }}/bootstrap-examples-directory.png
-[image-ss-twbs-cover]:          {{ asset_path }}/bootstrap-jekyll-localhost-9001-cover.png
-[image-ss-twbs-localhost]:      {{ asset_path }}/bootstrap-jekyll-localhost-9001.png
-
+[image-ss-twbs-cover]:          {{ asset_path }}/bootstrap-localcopy-cover.png
+[image-ss-twbs-open-with]:      {{ asset_path }}/bootstrap-open-with.png
 [image-ss-twbs-npm-run-dist]:   {{ asset_path }}/bootstrap-npm-run-dist.png
 [image-ss-twbs-dist-copy]:      {{ asset_path }}/bootstrap-dist-copy.png
 
-[image-ss-rvm-gpg-keys]:        {{ asset_path }}/rvm-gpg-keys.png
-[image-ss-rvm-get-rvm]:         {{ asset_path }}/rvm-curl-get-rvm.png
-[image-ss-rvm-list-known]:      {{ asset_path }}/rvm-list-known.png
-[image-ss-rvm-install-ruby]:    {{ asset_path }}/rvm-install-2.4.png
-[image-ss-rvm-default-ruby]:    {{ asset_path }}/rvm-use-default.png
-[image-ss-rvm-zsh-path]:        {{ asset_path }}/rvm-zsh-path.png
-
-[image-ss-gem-install-bundler]: {{ asset_path }}/rvm-gem-install-bundler.png
-[image-ss-gem-bundle-install]:  {{ asset_path }}/rvm-gemfile-bundle-install.png
-[image-ss-gem-bundle-exec]:     {{ asset_path }}/rvm-bundle-exec-jekyll-serve.png
-
+[photo-ss-twbs-cover]:          https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNr-NHrZmWFQ38-cSwmnq9O8JQibSS8HGgcHUZ0?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+[photo-ss-twbs-examples]:       https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipN1pglfVjhERNLs0ETKnBXiDVFJeTBr7qZIMqpw?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
