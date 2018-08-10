@@ -12,6 +12,9 @@ excerpt:
 
 ---
 
+{% include post/2018/08/toc-bootstrap-cli.html %}
+
+-- -- --
 
 ### Preface
 
@@ -109,7 +112,8 @@ your file manager might be:
 *	Pantheon: pantheon-files
 
 I know it looks dumb explaining this,
-But sometimes I met people who does not have a clue about this.
+but sometimes I met people who does not have a clue about this.
+I respect all the reader, both beginner and expert.
 
 {% highlight bash %}
 $ thunar &

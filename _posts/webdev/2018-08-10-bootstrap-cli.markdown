@@ -12,6 +12,9 @@ excerpt:
 
 ---
 
+{% include post/2018/08/toc-bootstrap-cli.html %}
+
+-- -- --
 
 ### Preface
 
@@ -210,7 +213,15 @@ $ bundle exec jekyll serve
 
 ### What's Next
 
-Consider go back to [ [Part One][local-part-one] ].
+There are however, other material such as making custom themes,
+but let us now limit the scope here,
+and lt them in other article series.
+
+For now, consider go back to [ [Part One][local-part-one] ].
+
+### Conclusion
+
+It just works.
 
 Thank you for reading.
 
