@@ -9,6 +9,14 @@ author: epsi
 excerpt:
   Terminal ricing is different with desktop ricing.
 
+related_link_ids:
+  - 16032117 # powerline
+  - 16032038 # Console Pixel Art
+  - 17122635 # Iterate Oh My BASH Theme
+  - 17041225 # Standalone CLI System Monitoring Using Conky
+  - 16051900 # midnight commander
+  - 16091915 # install termite
+
 ---
 
 ### Preface

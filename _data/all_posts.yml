@@ -5,6 +5,162 @@
 # to folder _data/all_posts.yml
 
 
+- id: 18080725
+  title: "Linux - Terminal Ricing"
+  url: /desktop/2018/08/07/terminal-ricing.html
+
+- id: 18071825
+  title: "Openbox Install - obmenu-generator"
+  url: /desktop/2018/07/18/openbox-install.html
+
+- id: 18071725
+  title: "Openbox Install - oblogout"
+  url: /desktop/2018/07/17/openbox-install.html
+
+- id: 18071625
+  title: "Openbox Install - Common Utility"
+  url: /desktop/2018/07/16/openbox-install.html
+
+- id: 18071525
+  title: "Openbox Install - Basic"
+  url: /desktop/2018/07/15/openbox-install.html
+
+- id: 18062245
+  title: "Audio Command Line, a must have Knowledge"
+  url: /system/2018/06/22/audio-command-line.html
+
+- id: 18053045
+  title: "Distribution - Slackware Plasma 5"
+  url: /system/2018/05/30/distro-slackware-plasma5.html
+
+- id: 18052525
+  title: "Linux Network - Samba"
+  url: /system/2018/05/25/linux-samba.html
+
+- id: 18052325
+  title: "Linux Multiboot - chroot"
+  url: /system/2018/05/23/linux-multiboot.html
+
+- id: 18052225
+  title: "Linux Multiboot - /etc/fstab"
+  url: /system/2018/05/22/linux-multiboot.html
+
+- id: 18052125
+  title: "Linux Multiboot - Partition Schema"
+  url: /system/2018/05/21/linux-multiboot.html
+
+- id: 18051725
+  title: "Tint2 - Panel Items"
+  url: /desktop/2018/05/17/tint2-config.html
+
+- id: 18051625
+  title: "Tint2 - More Backgrounds"
+  url: /desktop/2018/05/16/tint2-config.html
+
+- id: 18051525
+  title: "Tint2 - Simple Taskbar"
+  url: /desktop/2018/05/15/tint2-config.html
+
+- id: 18051225
+  title: "Openbox Utilty - Exit"
+  url: /desktop/2018/05/12/openbox-exit.html
+
+- id: 18051125
+  title: "Openbox Menu - Exit"
+  url: /desktop/2018/05/11/openbox-config.html
+
+- id: 18051025
+  title: "Openbox Menu - Generator"
+  url: /desktop/2018/05/10/openbox-config.html
+
+- id: 18050925
+  title: "Openbox Menu - XDG Applications"
+  url: /desktop/2018/05/09/openbox-config.html
+
+- id: 18050825
+  title: "Openbox Menu - Dynamic"
+  url: /desktop/2018/05/08/openbox-config.html
+
+- id: 18050725
+  title: "Openbox Menu - Static"
+  url: /desktop/2018/05/07/openbox-config.html
+
+- id: 18050525
+  title: "Openbox Config - Rules"
+  url: /desktop/2018/05/05/openbox-config.html
+
+- id: 18050425
+  title: "Openbox Config - Key and Mouse Binding"
+  url: /desktop/2018/05/04/openbox-config.html
+
+- id: 18050325
+  title: "Openbox Config - General rc.xml"
+  url: /desktop/2018/05/03/openbox-config.html
+
+- id: 18050125
+  title: "Openbox Config - Overview"
+  url: /desktop/2018/05/01/openbox-config.html
+
+- id: 18041825
+  title: "Openbox Theme - Special Trick"
+  url: /desktop/2018/04/18/openbox-theme.html
+
+- id: 18041725
+  title: "Openbox Theme - Common Config Trick"
+  url: /desktop/2018/04/17/openbox-theme.html
+
+- id: 18041625
+  title: "Openbox Theme - Common Inkscape Trick"
+  url: /desktop/2018/04/16/openbox-theme.html
+
+- id: 18041525
+  title: "Openbox Theme - Overview"
+  url: /desktop/2018/04/15/openbox-theme.html
+
+- id: 18040725
+  title: "Fluxbox Theme - Style Part"
+  url: /desktop/2018/04/07/fluxbox-style.html
+
+- id: 18040625
+  title: "Fluxbox Theme - Inkscape Part"
+  url: /desktop/2018/04/06/fluxbox-style.html
+
+- id: 18040425
+  title: "Fluxbox Config - Menu"
+  url: /desktop/2018/04/04/fluxbox-config.html
+
+- id: 18040325
+  title: "Fluxbox Config - General"
+  url: /desktop/2018/04/03/fluxbox-config.html
+
+- id: 18040125
+  title: "Fluxbox Overview"
+  url: /desktop/2018/04/01/fluxbox-overview.html
+
+- id: 18032525
+  title: "XFWM4 Theme - Part Five"
+  url: /desktop/2018/03/25/xfwm4-theme.html
+
+- id: 18032425
+  title: "XFWM4 Theme - Part Four"
+  url: /desktop/2018/03/24/xfwm4-theme.html
+
+- id: 18032325
+  title: "XFWM4 Theme - Part Three"
+  url: /desktop/2018/03/23/xfwm4-theme.html
+
+- id: 18032225
+  title: "XFWM4 Theme - Part Two"
+  url: /desktop/2018/03/22/xfwm4-theme.html
+
+- id: 18032125
+  title: "XFWM4 Theme - Part One"
+  url: /desktop/2018/03/21/xfwm4-theme.html
+
+- id: 18032025
+  title: "XFWM4 Theme - Overview"
+  url: /desktop/2018/03/20/xfwm4-theme.html
+
 - id: 18022117
   title: "Jekyll - Step by Step"
   url: /webdev/2018/02/21/jekyll-basic.html

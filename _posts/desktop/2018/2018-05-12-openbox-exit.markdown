@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Openbox Utilty - Exit"
+title:  "Openbox Utility - Exit"
 categories: desktop
 date:   2018-05-12 09:25:15 +0700
 tags: [openbox]
