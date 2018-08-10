@@ -154,6 +154,148 @@ Just open it from file manager to browser, such as firefox.
 
 -- -- --
 
+### Install Ruby with RVM
+
+These are the steps summary:
+
+{% highlight bash %}
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys \
+  409B6B1796C275462A1703113804BB82D39DC0E3 \
+  7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+$ \curl -sSL https://get.rvm.io | bash -s stable
+
+$ source ~/.rvm/scripts/rvm
+
+$ rvm list known
+
+$ rvm install 2.4
+
+$ rvm —default use 2.4.4
+
+$ ruby -v
+
+$ which ruby
+{% endhighlight %}
+
+#### GPG
+
+{% highlight bash %}
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys \
+  409B6B1796C275462A1703113804BB82D39DC0E3 \
+  7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+{% endhighlight %}
+
+![RVM: GPG Keys][image-ss-rvm-gpg-keys]{: .img-responsive }
+
+#### Get RVM
+
+{% highlight bash %}
+$ \curl -sSL https://get.rvm.io | bash -s stable
+{% endhighlight %}
+
+![RVM: Get RVM][image-ss-rvm-get-rvm]{: .img-responsive }
+
+#### List Known Ruby
+
+{% highlight bash %}
+$ source ~/.rvm/scripts/rvm
+
+$ rvm list known
+{% endhighlight %}
+
+![RVM: List Known][image-ss-rvm-list-known]{: .img-responsive }
+
+We can see some Ruby version, such as <code>4.2</code>.
+
+#### Install Ruby
+
+Consider install Ruby <code>4.2</code>.
+
+{% highlight bash %}
+$ rvm install 2.4
+{% endhighlight %}
+
+![RVM: Install Ruby][image-ss-rvm-install-ruby]{: .img-responsive }
+
+#### Set Default Ruby
+
+{% highlight bash %}
+$ source ~/.rvm/scripts/rvm
+
+$ rvm —default use 2.4.4
+
+$ ruby -v
+
+$ which ruby
+{% endhighlight %}
+
+![RVM: Default Ruby][image-ss-rvm-default-ruby]{: .img-responsive }
+
+#### Set Environment
+
+Set yor path environment
+such as in <code>.bashrc</code> or <code>.zshrc</code>.
+You may use any text editor, e.g. gedit, geany, nano, or ViM.
+Add these two lines:
+
+{% highlight bash %}
+export PATH=${PATH}:~/.rvm/gems/ruby-2.4.4/bin/
+source ~/.rvm/scripts/rvm
+{% endhighlight %}
+
+![RVM: bashrc zshrc][image-ss-rvm-zsh-path]{: .img-responsive }
+
+-- -- --
+
+### Install Jekyll with Bundle
+
+These are the steps summary:
+
+{% highlight bash %}
+$ gem install bundler
+
+$ cd bootstrap-4.1.3
+
+$ bundle install
+
+$ bundle exec jekyll serve
+{% endhighlight %}
+
+#### Gem Install Bundler
+
+{% highlight bash %}
+$ gem install bundler
+{% endhighlight %}
+
+![Gem: gem install bundler][image-ss-gem-install-bundler]{: .img-responsive }
+
+#### Gemfile Bundle Install
+
+{% highlight bash %}
+$ cd bootstrap-4.1.3
+
+$ bundle install
+{% endhighlight %}
+
+![Gem: Gemfile bundle install][image-ss-gem-bundle-install]{: .img-responsive }
+
+#### Bundle Exec Jekyll 
+
+{% highlight bash %}
+$ bundle exec jekyll serve
+{% endhighlight %}
+
+![Gem: bundle exec jekyll serve][image-ss-gem-bundle-exec]{: .img-responsive }
+
+#### Open On Your Browser
+
+> localhost:9001
+
+![Bootstrap: index on localhost:9001][image-ss-twbs-localhost]{: .img-responsive }
+
+-- -- --
+
 ### What's Next
 
 
