@@ -16,14 +16,25 @@ excerpt:
 > Goal: Share common configuration for terminal ricing.
 
 Terminal ricing is different in with desktop ricing.
-While in desktop ricing we deal with window manager, panel, notification
+While in desktop ricing we deal with: window manager, panel, notification
 and the most ingredient called wallpaper.
-Terminal ricing deal with shell, prompt, pixel-art, and multiplexer.
+Terminal ricing deal with: shell, prompt, pixel-art, and multiplexer.
 Terminal ricing along with CLI application, are part of desktop ricing.
+
+	This guidance applied for most distribution.
+
+#### Screenshot
 
 ![Terminal Ricing: Gentoo XFCE4 Terminal][image-ss-gentoo-xfce4-terminal]{: .img-responsive }
 
-	This guidance applied for most distribution.
+I intentionally use scary command with scary output to get the hackish screenshot feeling.
+Haciksh here, I mean hack in computer context, not amateur writing context.
+
+The terminal is using other terminal as background, not a wallpaper.
+The other terminal is doing actual compilation.
+Compilation give the screenshot more hackish looks.
+
+Not too much effort, but works for me.
 
 #### Table of Content
 
