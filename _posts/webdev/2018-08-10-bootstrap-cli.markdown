@@ -91,6 +91,8 @@ $ gpg --keyserver hkp://keys.gnupg.net --recv-keys \
   7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 {% endhighlight %}
 
+You may consider, clicking the image for wider figure.
+
 [![RVM: GPG Keys][image-ss-rvm-gpg-keys]{: .img-responsive }][photo-ss-rvm-gpg-keys]
 
 #### Get RVM
@@ -108,8 +110,6 @@ $ source ~/.rvm/scripts/rvm
 
 $ rvm list known
 {% endhighlight %}
-
-You may consider, clicking the image for wider figure.
 
 ![RVM: List Known][image-ss-rvm-list-known]{: .img-responsive }
 
@@ -181,6 +181,23 @@ $ gem install bundler
 
 #### Gemfile Bundle Install
 
+There is a file named <code>Gemfile</code>
+in extracted bootstrap directory.
+It is an ruby bundle configuration.
+Jekyll it requires a ruby bundle.
+
+{% highlight ruby %}
+source 'https://rubygems.org'
+
+group :development, :test do
+  gem 'jekyll', '~> 3.8.3'
+  gem 'jekyll-redirect-from', '~> 0.14.0'
+  gem 'jekyll-sitemap', '~> 1.2.0'
+  gem 'jekyll-toc', '~> 0.6.0'
+end
+{% endhighlight %}
+
+
 {% highlight bash %}
 $ cd bootstrap-4.1.3
 
@@ -195,7 +212,32 @@ You may consider, clicking the image for longer message.
 
 ###	Run The Site on Localhost
 
+There is a file named <code>_config.yml</code>
+in extracted bootstrap directory.
+It is a Jekyll configuration.
+
+{% highlight yaml %}
+# Dependencies
+markdown:       kramdown
+highlighter:    rouge
+
+kramdown:
+  auto_ids:     true
+
+...
+{% endhighlight %}
+
 #### Bundle Exec
+
+Run the Jekyll, this will read the <code>_config.yml</code>.
+
+Instead of 
+
+{% highlight bash %}
+$ jekyll serve
+{% endhighlight %}
+
+Run the Jekyll inside bundle.
 
 {% highlight bash %}
 $ bundle exec jekyll serve

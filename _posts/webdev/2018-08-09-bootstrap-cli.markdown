@@ -72,13 +72,48 @@ There are two methods:
 
 #### Using NPM
 
+There is a file named <code>package.json</code>
+in extracted bootstrap directory.
+It is an npm package bundle configuration.
+
+{% highlight bash %}
+{
+  "name": "bootstrap",
+  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "version": "4.1.3",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+...
+}
+{% endhighlight %}
+
+Now you need to run <code>npm install</code> in that folder,
+so that the npm can install the right package.
+
+{% highlight bash %}
+$ cd bootstrap-4.1.3
+
+$ npm install
+{% endhighlight %}
+
+![Bootstrap: npm install][image-ss-twbs-npm-install]{: .img-responsive }
+
+And <code>npm run dist</code> in the very same folder.
+
 {% highlight bash %}
 $ cd bootstrap-4.1.3
 
 $ npm run dist
 {% endhighlight %}
 
-![Bootstrap: npm run dist][image-ss-twbs-npm-run-dist]{: .img-responsive }
+[![Bootstrap: npm run dist][image-ss-twbs-npm-run-dist]{: .img-responsive }][photo-ss-twbs-npm-run-dist]
 
 #### Copy Using Terminal
 
@@ -158,7 +193,9 @@ Thank you for reading.
 [image-ss-twbs-cover]:          {{ asset_path }}/bootstrap-localcopy-cover.png
 [image-ss-twbs-open-with]:      {{ asset_path }}/bootstrap-open-with.png
 [image-ss-twbs-npm-run-dist]:   {{ asset_path }}/bootstrap-npm-run-dist.png
+[image-ss-twbs-npm-install]:    {{ asset_path }}/bootstrap-npm-install.png
 [image-ss-twbs-dist-copy]:      {{ asset_path }}/bootstrap-dist-copy.png
 
 [photo-ss-twbs-cover]:          https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNr-NHrZmWFQ38-cSwmnq9O8JQibSS8HGgcHUZ0?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 [photo-ss-twbs-examples]:       https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipN1pglfVjhERNLs0ETKnBXiDVFJeTBr7qZIMqpw?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+[photo-ss-twbs-npm-run-dist]:   https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipMDoZWvnqtW83zacS01IEpmnrmIJSvfzloPIlrm?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
