@@ -27,9 +27,11 @@ as a local offline copy that can be launched from open file manager.
 
 #### Step
 
-*	Get Bootstrap Source Code
+* {: .list-content} Get Bootstrap Source Code
 
-*	Generate dist (js + css)
+* {: .list-content} Generate dist (js + css)
+
+* {: .list-content} Open The Offline Examples
 
 -- -- --
 
@@ -156,7 +158,7 @@ $ thunar &
 
 -- -- --
 
-###	Open The Offline Examples
+### Open The Offline Examples
 
 #### No server
 

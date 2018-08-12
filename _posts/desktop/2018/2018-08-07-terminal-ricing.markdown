@@ -48,27 +48,27 @@ Not too much effort, but works for me.
 
 There are few parts in terminal ricing:
 
-*	Terminal: urxvt, xfce4-terminal, termite
+* {: .list-content} Terminal: urxvt, xfce4-terminal, termite
 
-*	Shell: bash, zsh, fish
+* {: .list-content} Shell: bash, zsh, fish
 
-*	Shell Prompt: powerline, oh-my-bash, oh-my-zsh, oh-my-fish
+* {: .list-content} Shell Prompt: powerline, oh-my-bash, oh-my-zsh, oh-my-fish
 
-*	Multiplexer: tmux, gnu screen
+* {: .list-content} Multiplexer: tmux, gnu screen
 
-*	Multiplexer Wrapper: teamocil, byobu
+* {: .list-content} Multiplexer Wrapper: teamocil, byobu
 
-*	Compositor Decoration: Compton
+* {: .list-content} Compositor Decoration: Compton
 
-*	Padding Decoration: gtk.css
+* {: .list-content} Padding Decoration: gtk.css
 
-*	Background Decoration: Wallpaper
+* {: .list-content} Background Decoration: Wallpaper
 
-*	Example CLI application: neofetch
+* {: .list-content} Example CLI application: neofetch
 
-*	Special CLI application: ViM Text Editor
+* {: .list-content} Special CLI application: ViM Text Editor
 
-*	Pixel Art
+* {: .list-content} Pixel Art
 
 #### Dofiles Source
 

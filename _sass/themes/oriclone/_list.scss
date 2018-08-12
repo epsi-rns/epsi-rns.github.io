@@ -16,6 +16,10 @@ ul li.list-content {
     margin-left: 20px;
 }
 
+ul li.list-content p {
+    display: inline;
+}
+
 ul.recent-post li a:hover,
 ul li.list-content:hover {
     background: #ffff00;

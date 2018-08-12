@@ -51,11 +51,11 @@ when issuing command on terminal shell.
 
 #### Step
 
-*	Install Ruby with RVM
+* {: .list-content} Install Ruby with RVM
 
-*	Install Jekyll with Bundle
+* {: .list-content} Install Jekyll with Bundle
 
-*	Run the site on localhost
+* {: .list-content} Run the site on localhost
 
 -- -- --
 
