@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Linux - Terminal Ricing"
+title:  "Linux - Terminal Customization"
 categories: desktop
 date:   2018-08-07 09:25:15 +0700
 tags: [terminal, shell]
@@ -21,7 +21,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Share common configuration for terminal ricing.
+> Goal: Share common configuration for terminal customization.
 
 Terminal ricing is different in with desktop ricing.
 While in desktop ricing we deal with: window manager, panel, notification
@@ -487,6 +487,16 @@ Do not forget to set the right path.
 Source:
 
 *	[gitlab.com/.../dotfiles/.../oh-my-zsh][dotfiles-oh-my-zsh]
+
+#### Iterate Theme for oh-my-bash
+
+One of my issue with oh-my-bash is that I cannot find preview for each theme. 
+But do not worry, there is a workaround. Even better, we can see each theme live, in action for each theme.
+If you ever wonder how to get the looks of each oh-my-bash theme easily, I made a script for you to play with.
+
+*	[Iterate Oh My BASH Theme][local-iterate-bash-theme]
+
+This method also applied with oh-my-zsh.
 
 #### powerline configuration
 
@@ -961,6 +971,8 @@ Thank you for reading and visiting.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/08' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal' %}
+
+[local-iterate-bash-theme]:  /desktop/2017/12/26/oh-my-shell-theme.html
 
 [image-ss-gentoo-xfce4-terminal]:  {{ asset_path }}/tmux-vim-gcc-c-asm.png
 [image-ss-debian-urxvt]:           {{ asset_path }}/byobu-objdump-and-source.png
