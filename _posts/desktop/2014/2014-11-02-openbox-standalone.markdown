@@ -66,11 +66,11 @@ I also separate menu files in configuration to make it more modular.
 
 **Openbox**: Arch Configuration:
 
-* <https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/arch>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/legacy-arch>
 
 **Openbox**: Debian Configuration:
 
-* <https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/debian>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/legacy-debian>
 
 <hr/>
 
@@ -90,7 +90,7 @@ You can see how the taskbar has different tint2 looks form those screenshot abov
 
 You can pick tint2 configuration from my collection here
 
-* <https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox.arch/tint2>
+* <https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/legacy-arch/tint2>
 
 Or make your own cool tint2 taskbar based on this thread.
 
