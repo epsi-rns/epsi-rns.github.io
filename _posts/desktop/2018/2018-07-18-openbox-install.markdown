@@ -28,6 +28,8 @@ This is the summary.
 
 *	Install CPAN for local user
 
+*	CPAN Gtk2 (in some case)
+
 *	CPAN Data::Dump (in some case)
 
 *	CPAN Test::More
