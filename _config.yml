@@ -24,7 +24,7 @@ locale: en_US
 logo: /assets/site/images/authors/epsi-vexel.png
 
 
-paginate: 7
+paginate: 27
 paginate_path: "pages/blog-:num"
 
 # Build settings
