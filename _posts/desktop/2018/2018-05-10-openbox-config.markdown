@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Openbox Menu - Generator"
+title:  "Openbox Menu - OB Menu Generator"
 categories: desktop
 date:   2018-05-10 09:25:15 +0700
 tags: [openbox]
@@ -37,13 +37,10 @@ Depend on your distribution.
 $ git clone https://github.com/trizen/obmenu-generator
 {% endhighlight %}
 
-I'm using openSUSE, so I'm stick with zypper.
 You can see more in manual installation page on github.
 
-{% highlight conf %}
-$ sudo zypper in perl-Linux-DesktopFiles
-$ sudo zypper in perl-Gtk2
-{% endhighlight %}
+Consider also reading installation detail on [ [OBMenu Generator: Install][local-part-install] ].
+
 
 #### Config
 
@@ -270,6 +267,7 @@ Consider continue reading [ [Openbox: Exit][local-part-config] ].
 [dotfiles-schema-pl]: {{ dotfiles }}/obmenu-generator/schema.pl
 
 [local-part-config]:  /desktop/2018/05/11/openbox-config.html
+[local-part-install]: /desktop/2018/07/18/openbox-install.html
 
 [image-ss-obmenu-icon]:    {{ asset_path }}/openbox-obmenu-icon.png
 [image-ss-obmenu-custom]:  {{ asset_path }}/openbox-obmenu-custom.png

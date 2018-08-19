@@ -40,6 +40,19 @@ This is the summary.
 
 *	Run ./obmenu-generator
 
+I'm using openSUSE, so I'm stick with zypper, instead of CPAN.
+
+{% highlight conf %}
+$ sudo zypper in perl-Linux-DesktopFiles
+$ sudo zypper in perl-Gtk2
+{% endhighlight %}
+
+In Gentoo, you can issue this command:
+
+{% highlight conf %}
+$ emerge --ask dev-perl/Gtk2
+{% endhighlight %}
+
 -- -- --
 
 ### Example CPAN in Fedora
