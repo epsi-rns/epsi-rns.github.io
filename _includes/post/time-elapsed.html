@@ -1,5 +1,10 @@
 {% comment %}
 http://www.zachstronaut.com/posts/2009/01/20/php-relative-date-time-string.html
+
+https://timeago.org/
+That way the time ago is updated dynamically as time passes,
+as opposed to having to rebuild Jekyll every day.
+
 {% endcomment %}
 
 {% capture spaceless %}
@@ -59,4 +64,5 @@ http://www.zachstronaut.com/posts/2009/01/20/php-relative-date-time-string.html
           <span title="{{ page.date | date: "%b %-d, %Y" }}">
             {{ elapsed_time }} {{ elapsed_text }}
           </span></time>
+          &nbsp; 
  

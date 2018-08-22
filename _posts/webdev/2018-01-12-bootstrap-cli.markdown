@@ -83,10 +83,30 @@ Then I make an empty <code>output</code> directory.
 Now we can run sass.
 
 {% highlight bash %}
+% sass --help
+{% endhighlight %}
+
+{% highlight bash %}
 % sass --update input:output  --style compressed --sourcemap=none
 {% endhighlight %}
 
 [![SASS: update][image-ss-sass-standalone]{: .img-responsive }][photo-ss-sass-standalone]
+
+For my system, I have my real directory as below:
+
+{% highlight bash %}
+% sass -I _sass --update _sass/themes:assets/themes
+{% endhighlight %}
+
+{% highlight bash %}
+sass --watch -I _sass --update _sass/themes:assets/themes --style compressed --sourcemap=none
+{% endhighlight %}
+
+And there are also alternative, using Node.
+
+{% highlight bash %}
+node-sass _sass/themes --include-path _sass --output assets/themes
+{% endhighlight %}
 
 -- -- --
 
