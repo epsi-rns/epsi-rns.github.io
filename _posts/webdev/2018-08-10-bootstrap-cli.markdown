@@ -113,11 +113,11 @@ $ rvm list known
 
 ![RVM: List Known][image-ss-rvm-list-known]{: .img-responsive }
 
-We can see some Ruby version, such as <code>4.2</code>.
+We can see some Ruby version, such as <code>2.4</code>.
 
 #### Install Ruby
 
-Consider install Ruby <code>4.2</code>.
+Consider install Ruby <code>2.4</code>.
 
 {% highlight bash %}
 $ rvm install 2.4

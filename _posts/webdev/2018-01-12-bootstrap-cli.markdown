@@ -92,20 +92,20 @@ Now we can run sass.
 
 [![SASS: update][image-ss-sass-standalone]{: .img-responsive }][photo-ss-sass-standalone]
 
-For my system, I have my real directory as below:
+For my Hugo blog, I have my real directory as below:
 
 {% highlight bash %}
-% sass -I _sass --update _sass/themes:assets/themes
+% sass -I sass --update sass/themes/oriclone:static/assets/css
 {% endhighlight %}
 
 {% highlight bash %}
-sass --watch -I _sass --update _sass/themes:assets/themes --style compressed --sourcemap=none
+% sass --watch -I sass  sass/themes/oriclone:static/assets/css --style compressed --sourcemap=none
 {% endhighlight %}
 
 And there are also alternative, using Node.
 
 {% highlight bash %}
-node-sass _sass/themes --include-path _sass --output assets/themes
+% node-sass _sass/themes --include-path _sass --output assets/themes
 {% endhighlight %}
 
 -- -- --
