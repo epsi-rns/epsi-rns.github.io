@@ -1,6 +1,25 @@
 // ---------------------------------------------------------------------
 // chunk/page-sidebar.html, chunk/post-sidebar.html, 
-// panel/archive;
+// card/archive;
+//
+
+.main-content li {
+  li:nth-child(even) {
+    background-color: #fff;
+  }
+
+  li:nth-child(odd) {
+    background-color: #eee;
+  }
+}
+
+.meta-item:nth-child(even) {
+    background-color: #eee;
+}
+
+.meta-item:nth-child(odd) {
+    background-color: #fff;
+}
 
 li.even {
   background-color: #fff;
@@ -10,65 +29,80 @@ li.odd {
   background-color: #eee;
 }
 
+.blog-post .main-content li p {
+  display: inline;
+}
+
+.blog-post .main-content li,
 ul li.list-month,
 ul li.list-content {
-    @include list-unstyled;
-    margin-left: 20px;
+/*    @include list-unstyled;*/
+  padding-left: 0;
+  list-style: none;
+
+  margin-left: 20px;
 }
 
-ul li.list-content p {
-    display: inline;
-}
-
-ul.recent-post li a:hover,
+ul.card_list li a:hover,
 ul li.list-content:hover {
     background: #ffff00;
 }
 
-.panel {
-  ul.recent-post,
-  ul li.list-content {
-    font-size: ceil(($font-size-base * 0.85)); // ~12px
+
+.card ul.card_list,
+.card ul li.list-content {
+    font-size: 12px;
   }  
-  ul li.list-content {
+.card ul li.list-content {
     margin-left: 0px;  
   }
-}
+
 
 ul.archive-month,
 ul.archive-item,
-ul.recent-post {
+ul.card_list {
   padding: 0px;
 }
 
 ul#search_results,
-ul.recent-post {    
-    @include list-unstyled;
+ul.card_list {    
+/*  @include list-unstyled; */
+  padding-left: 0;
+  list-style: none;
+  
+  font-size: 13px;
+
     margin-left: 20px;    
 }
 
+.blog-post .main-content li:before,
 ul li.list-month:before,
 ul li.list-content:before,
 ul#search_results li:before,
-ul.recent-post li:before {    
+ul.card_list li:before {    
     font-family: 'FontAwesome';
     margin: 0 5px 0 -20px;
 }
 
+.blog-post .main-content li:before,
 ul li.list-content:before,
 ul#search_results li:before,
-ul.recent-post li:before {
+ul.card_list li:before {
+  font-family: "Font Awesome 5 Free";
+//  font-weight: 900;
     content: '\f054';
-    color: $gray-dark;
+    color: #7b8a8b; /* $gray-dark; */
 }
 
 ul li.list-month:before {
+  font-family: "Font Awesome 5 Free";
+//  font-weight: 900;
     content: '\f073';
-    color: $gray-base;    
+    color: #000; /* $gray-base;     */
 }
 
 ul li.list-content:hover:before,
 ul#search_results li:hover:before,
-ul.recent-post li:hover:before {    
-    color: $yellow-makara;
+ul.card_list li:hover:before {    
+    color: #2980b9; /* yellow makara */
 }

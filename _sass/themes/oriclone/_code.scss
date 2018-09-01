@@ -1,0 +1,85 @@
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+}
+
+  pre {
+    background-color: transparent; 
+    border: 1px solid $brand-primary;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2); 
+  }
+
+  pre:hover {
+    background-color: #eee;
+    border: 1px solid $yellow-makara;    
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);  
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);     
+  }
+
+.highlight {
+  pre {
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+  }
+
+  pre {
+    background-color: transparent; 
+    border: 1px solid $brand-primary;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2); 
+  }
+
+  pre:hover {
+    background-color: #444;
+    border: 1px solid $yellow-makara;    
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);  
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);     
+  }
+}
+
+.highlighter-rouge {
+
+}
+
+.highlighter-rouge .highlight {
+    background: #f4f4f4;
+}
+
+.highlighter-rouge .highlight pre {
+  background-color: transparent;
+  color: #7b8a8b;
+}
+
+code {
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+code.code-command {
+  background-color: $brand-info;
+}
+
+code.code-file {
+  background-color: $light;
+}
+
+code.code-command:hover,
+code.code-file:hover {
+  color: black;
+  background-color: $yellow-makara;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+

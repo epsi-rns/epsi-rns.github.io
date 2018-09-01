@@ -24,7 +24,7 @@
       list-style: none;
 
       &.page {
-        .pagination-item {
+        .page-item {
           text-decoration: none; // No underlines on circle links
           width: $pages-item-size;
           height: $pages-item-size;
@@ -41,7 +41,7 @@
         }
 
         &.current-page {
-          .pagination-item {
+          .page-item {
             background: $pages-item-active;
 //  epsi    box-shadow: $pages-item-active-shadow;
             color: $pages-item-active-color;

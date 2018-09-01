@@ -1,8 +1,10 @@
-.navbar-fixed-top {
+.navbar.fixed-top {
   border-bottom: 1px solid black;
+  border-left:   1px solid black;  
+  border-right:  1px solid black;
 }
 
-.navbar-default {
+.bg-stripe {
 
   img {
     width:  48px;
@@ -14,16 +16,16 @@
   border-bottom-right-radius: 10px;
   @include box-shadow(0 1px 1px rgba(0,0,0,.05));
 
-//  background: $yellow-makara url("../images/stripe-glossy/00.png") left top repeat-x;
-  background: $colBlue300 url("../images/stripe-glossy/00.png") left top repeat-x;
+  background: $yellow-makara url("../images/stripe-glossy/00.png") left top repeat-x;
+//  background: $colBlue500 url("../images/stripe-glossy/00.png") left top repeat-x;
 //  @include gradient-striped(rgba(255,255,255,.35), 45deg);
 
   ul.navbar-nav li a:hover,
   ul.navbar-nav li.dropdown.open a.dropdown-toggle,  
-  ul.navbar-nav li a:focus,
-  div.navbar-header:hover {
-    background: $brand-primary url("../images/stripe-glossy/00.png") left top repeat-x;
+  ul.navbar-nav li a:focus {
+    background: $colBlue500 url("../images/stripe-glossy/00.png") left top repeat-x;
     box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
+    border-radius: 4px;
   }
 
   ul.navbar-nav li:hover a,
@@ -41,6 +43,10 @@
     color: white;
   }    
   
+}
+
+.bg-stripe:hover {
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
 }
 
 .navbar-brand {
@@ -63,38 +69,40 @@
 }
 
 .navbar:hover,
-.panel,
-.well {
+.badge,
+.card {
   box-shadow: 2px 2px 2px rgba(0,0,0,.2);  
 }
 
 // ---------------------------------------------------------------------
 // 
 
-#lay_top {
+#layout-header {
   display: none;
 }
 
 @media (min-width: 768px) {
-  #lay_top {
+  #layout-header {
     display: block;
   }
 }
 
-#lay_top {
+#layout-header {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;  
-  padding-top: 53px;
+}
+
+#layout-header_message {
+  padding-top: 57px;
   margin-left: 20px;
   margin-right: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  
 }
 
-#lay_top {
+#layout-header_message {
     border-bottom-left-radius:  10px;
     border-bottom-right-radius: 10px;
     box-shadow: 3px 3px 5px #888;
@@ -110,7 +118,7 @@
 }
 
 // Fix div p, unwanted margin 
-div#lay_top p, div#lay_top h3 {
+div#layout-header p, div#layout-header h3 {
     margin: 0 .25em;
     padding: .25em 0;
 }

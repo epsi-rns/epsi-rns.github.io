@@ -1,41 +1,15 @@
-body {
-    /* 100px is double the height of the navbar - */
-    /* I made it a big larger for some more space - */
-    /* keep it at 50px at least if you want to use the fixed top nav */
-    margin-top: 60px; 
+/* ---------------------------------------------------------------------
+// _layout
+
+// page.html, post.html
+*/
+
+.maxwidth {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 1366px; /* or 1360px */
 }
 
-@media (min-width: 768px) {
-  body {
-    margin-top: 100px;
-  }
-}
-
-
-/**
- * Site footer
- */
- 
-.site-footer {
-//    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-//    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
+.layout-base {
+  padding-top: 20px;
 }

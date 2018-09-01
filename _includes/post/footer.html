@@ -1,6 +1,6 @@
 
         {% if page.author %}
-                <div class="well">
+                <div class="rounded-box">
         {% if page.author %}
           {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.data.owner %}
         {% endif %}
@@ -12,10 +12,10 @@
           {% assign av_img = avatar.image | prepend: '/assets/site/images/authors/' %}
         {% endif %}
 
-        <div class="container">
-        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
+        <div class="d-flex flex-row justify-content-center align-items-center">
+        <div class="p-2 text-center">
           {% if av_img %}
-            <img src="{{ av_img }}" 
+            <img src="{{ site.baseurl }}{{ av_img }}" 
                  class="bio-photo" 
                  height="{{ avatar.height }}"
                  width="{{ avatar.width }}"
@@ -23,22 +23,22 @@
           {% endif %}
         </div>
                 
-        <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="p-2 ">
           <div>By <span class="fa fa-pencil"> {{ author.name }}</span><br/></div>
 
           <div>
               <span>Share: </span>
               <span class="social-share-twitter">
                 <a href="https://twitter.com/intent/tweet?hashtags={{ page.tags | join: ',' | remove: ' ' }}&amp;text={{ page.title | escape | replace:' ','%20' }}&amp;url={{ site.url }}{{ page.url }}{% if author.twitter %}&amp;via={{ author.twitter }}{% endif %}" 
-                   title="Share on Twitter" itemprop="Twitter"><i class="fa fa-twitter-square"></i> Tweet</a>
+                   title="Share on Twitter" itemprop="Twitter"><i class="fab fa-twitter-square"></i> Tweet</a>
               </span>
               <span class="social-share-facebook">
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" 
-                   title="Share on Facebook" itemprop="Facebook"><i class="fa fa-facebook-square"></i> Like</a>
+                   title="Share on Facebook" itemprop="Facebook"><i class="fab fa-facebook-square"></i> Like</a>
               </span>
               <span class="social-share-googleplus">
                 <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" 
-                   title="Share on Google Plus" itemprop="GooglePlus"><i class="fa fa-google-plus-square"></i> +1</a>
+                   title="Share on Google Plus" itemprop="GooglePlus"><i class="fab fa-google-plus-square"></i> +1</a>
               </span>
               <!-- /.social-share -->
           </div>
@@ -46,28 +46,27 @@
         </div>
         </div>
 
-                </div>                
-                <!-- /well -->
+                </div>
+                <!-- /rounded-box -->
         {% endif %}
 
+                <div class="rounded-box">
+        <div class="d-flex flex-row justify-content-center align-items-center">
 
-                <div class="well">
-        <div class="container">
-
-        <div class="col-lg-2 col-md-2 col-sm-2 text-center">
-            <img src="/assets/site/images/license/cc-by-sa.png" 
+        <div class="p-2 text-center">
+            <img src="{{ site.baseurl }}/assets/site/images/license/cc-by-sa.png" 
                  class="bio-photo" 
                  height="31"
                  width="88"
                  alt="CC BY-SA 4.0"></a>
         </div>
 
-        <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="p-2">
             This article is licensed under:<br/>
             <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">
                 <b>Attribution-ShareAlike</b> 4.0 International (CC BY-SA 4.0)</a>
         </div>
 
         </div>
-                </div>                
-                <!-- /well -->
+                </div>
+                <!-- /rounded-box -->

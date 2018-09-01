@@ -1,81 +1,49 @@
 
-<header class="site-header">
-</header>
 
-<div id="lay_top">
-  {{ site.description }}
-</div>
+    <div id="layout-header" class="maxwidth">
+    <div id="layout-header_message">
+        {{ site.description }}
+    </div>
+    </div>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" 
-        data-toggle="collapse" data-target="#navbar" 
-        aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ site.url }}">
-        <img src="/assets/site/images/logo-orb-spiral.png" 
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-stripe text-dark maxwidth">
+    {% comment %}bg-light or bg-dark or bg-stripe{% endcomment %}
+      <a class="navbar-brand" href="{{ site.baseurl }}">
+         <img src="{{ site.baseurl }}/assets/site/images/logo-orb-spiral.png" 
              alt="{{ site.title }}" />
       </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div  id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">       
-        {% for link in site.data.navigation_header %}
-        
-          {% if link.url contains 'http' %}
-            {% assign domain = '' %}
-          {% else %}
-            {% assign domain = site.url %}
-          {% endif %}
-          
-          {% unless link.dropdown %}
-          <li>
-            <a class="page-link" href="{{ domain }}{{ link.url }}" 
-              {% if link.url contains 'http' %}target="_blank"{% endif %}
-            >{{ link.title }}</a>
+      <button class="navbar-toggler" type="button" 
+              data-toggle="collapse" data-target="#navbarCollapse" 
+              aria-controls="navbarCollapse" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ site.baseurl }}/pages/index">Blog <span class="sr-only">(current)</span></a>
           </li>
-          {% else %}
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" 
-               data-toggle="dropdown" role="button" 
-               aria-haspopup="true" aria-expanded="false"
-            >{{ link.title }} <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            {% for sublink in link.dropdown %}
-        
-              {% if sublink.url contains 'http' %}
-                {% assign domain = '' %}
-              {% else %}
-                {% assign domain = site.url %}
-              {% endif %}
-
-              <li>
-                <a class="page-link" href="{{ domain }}{{ sublink.url }}" 
-                  {% if sublink.url contains 'http' %}target="_blank"{% endif %}
-                >{{ sublink.title }}</a>
-              </li>
-              
-            {% endfor %}
-            </ul>
-          </li>          
-          {% endunless %}
-        {% endfor %}
-        
-        <form class="navbar-form navbar-right" action="/pages/search" method="get">
-          <input type="text" name="q" class="form-control col-lg-8" placeholder="Search...">
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Archives
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/tag">By Tag</a>
+          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/category">By Category</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-y">By Year</a>
+          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-m">By Month</a>
+        </div>
+      </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ site.baseurl }}/pages/about">About</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0" action="{{ site.baseurl }}/pages/search" method="get">
+          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
         </form>
-        
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
-
+      </div>
+    </nav>
 

@@ -1,0 +1,14 @@
+<div class="card hidden-sm hidden-xs">
+  <div class="card-header bg-dark text-light">
+    <p class="card-title float-left">Isle of Dotsites</p>
+    <span class="fa fa-newspaper-o float-right"></span>
+    <div class="clearfix"></div>
+  </div>
+  <div class="card-body">
+  <ul class="card_list">
+    {% for friend in site.data.friends limit:9 %}
+    <li><a href="{{ friend.url }}">{{ friend.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>

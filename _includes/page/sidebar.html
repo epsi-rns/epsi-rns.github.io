@@ -1,4 +1,6 @@
-{% unless site.url == "http://localhost:4000" %}
-{% include panel/recent-posts.html %}
-{% include panel/tags.html view_tag_type = 'before' %}
+<div class="layout-sidebar">
+{% unless site.url == "http://localhost:4001" %}
+{% include card/recent-posts.html %}
+{% include card/tags.html view_tag_type = 'before' %}
 {% endunless %}
+</div>

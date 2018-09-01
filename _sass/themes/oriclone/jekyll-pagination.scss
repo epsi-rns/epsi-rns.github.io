@@ -1,0 +1,15 @@
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    // pre variables
+    "themes/oriclone/variables_color",
+
+    "vendors/bootstrap/functions",
+    "vendors/bootstrap/variables",
+    "vendors/bootstrap/mixins",
+    "vendors/bootstrap/pagination",
+    "vendors/pagination/jekyll-pagination",
+    
+    // theme
+    "themes/oriclone/pagination"
+;
+

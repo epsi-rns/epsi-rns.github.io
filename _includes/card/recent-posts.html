@@ -1,0 +1,15 @@
+<div class="card hidden-sm hidden-xs">
+  <div class="card-header bg-dark text-light">
+    <p class="card-title float-left">Recent Posts</p>
+    <span class="fa fa-newspaper-o float-right"></span>
+    <div class="clearfix"></div>
+  </div>
+  <div class="card-body">
+  <ul class="card_list">
+    {% for post in site.posts limit:5 %}
+    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>
+

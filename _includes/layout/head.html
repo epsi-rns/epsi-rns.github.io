@@ -1,36 +1,38 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% comment %}
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  {% endcomment %}  
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  {% comment %}Let's Fake the Generator{% endcomment %}
-  <meta name="generator" content="Karimata 1.2.3 Media Engine" />
+<head>    
+    {% comment %}<!-- Required meta tags -->{% endcomment %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="stylesheet" href="{{ "/assets/themes/oriclone/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <link href="{{ site.url }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-
-  {% comment %}
-  <!-- unused -->
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="keywords" content="blewah" />
-  <meta name="author" content="">  
-  <link href="{{ site.url }}/?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
-  <link href="{{ site.url }}/?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
-  <link href="{{ site.url }}/component/search/?format=opensearch" rel="search" title="Search ILUNI" type="application/opensearchdescription+xml" />  
-  {% endcomment %}  
+    <title>{{ (page.title | default: site.title) | escape }}</title>
   
-  <!-- JavaScript -->
-  <script src="{{ "/assets/vendors/jquery/jquery.min.js" | prepend: site.baseurl }}"></script>
-  <script src="{{ "/assets/vendors/bootstrap/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>   
+    {% comment %}Let's Fake the Generator{% endcomment %}
+    <meta name="generator" content="Karimata 1.2.3 Media Engine" />
 
-  {% include opengraph.html %}
-  
+    {% comment %}<!-- Bootstrap CSS -->{% endcomment %}
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/bootstrap.css" >
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/fontawesome.css" >
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/jekyll-pagination.css" >
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/main.css" >
+
+    {% comment %}<!-- Custom CSS -->{% endcomment %}
+    {% if layout.customcss %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/{{ layout.customcss}}">
+    {% endif %}
+    {% if page.customcss %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/{{ page.customcss}}">
+    {% endif %}
+
+    {% comment %}<!-- Custom JS -->{% endcomment %}
+    <script src="{{ site.baseurl }}/assets/vendors/js/jquery.min.js"></script>
+
+    {% comment %}<!-- Stuff -->{% endcomment %}        
+    <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    
+    {% include head/opengraph.html %}
+    {% include head/twitter.html %}
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -41,3 +43,7 @@
 </head>
 
 
+
+
+
+    

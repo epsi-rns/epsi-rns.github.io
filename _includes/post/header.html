@@ -1,39 +1,40 @@
 
-  <header class="post-header"> 
-      <div class="post-title"> 
-        <div class="calendar calendar-icon-{{ page.date | date: "%m" }}">
+  <header class="main-header"> 
+      <div class="main_title"> 
+        <div class="calendar calendar-icon--{{ page.date | date: "%m" }}">
           <div class="calendar-day">{{ page.date | date: "%d" }}</div>
         </div>
-        <h1 itemprop="name headline">
+        <h2 itemprop="name headline">
           <a href="{{ site.url | append:site.baseurl | append:page.url }}"
-          >{{ page.title }}</a></h1>
+          >{{ page.title }}</a></h2>
       </div>
       <div class="clearfix"></div>
-      <div class="post-meta container-fluid">
+      <div class="meta container-fluid">
         {% if page.author %}
-        <span class="post-author">
+        <span class="meta_author">
             <span class="fa fa-user"></span>
             &nbsp;
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">{{ page.author }}</span></span>
         </span>
         {% endif %}  
-        <div class="post-time pull-left">
-          {% include post/time-elapsed.html %}  
+        <div class="meta_time float-left">
+          {% include post/time-elapsed.html %}
         </div>
-        <div class="post-tags pull-right" id="tags">
+        <div class="meta_tags float-right" id="meta_tags">
           {% for tag in page.tags %}
             <a href="{{ site.url | append:site.baseurl }}/pages/tag#{{ tag }}">
-              <span class="label label-tag"><span class="fa fa-tag"></span> {{ tag }}</span></a>
+              <span class="badge badge-dark"><span class="fa fa-tag"></span> {{ tag }}</span></a>
           {% endfor %}
         </div>       
-        <div class="post-tags pull-right" id="cats">
+        <div class="meta_cats float-right" id="meta_cats">
           {% for cat in page.categories %}
             <a href="{{ site.url | append:site.baseurl }}/pages/category#{{ cat }}">
-              <span class="label label-cat"><span class="fa fa-folder"></span> {{ cat }}</span></a>
+              <span class="badge badge-light"><span class="fa fa-folder"></span> {{ cat }}</span></a>
           {% endfor %}
           &nbsp;
         </div>
-      </div>    
-    
+      </div>
   </header>
+
+  <div class="clearfix"></div>

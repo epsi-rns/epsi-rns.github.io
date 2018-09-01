@@ -1,22 +1,23 @@
+---
+opengraph:
+  image: assets/site/images/authors/epsi-vexel.png
+---
 <!DOCTYPE html>
 <html lang="en">
 
   {% include layout/head.html %}
 
 <body>
-  {% include service/google-analytics.html %}
-  {% include service/yandex-metrica.html %}
+    {% include service/google-analytics.html %}
+    {% include service/yandex-metrica.html %}
 
     {% include layout/header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
+    <div class="layout-base">
         {{ content }}
-      </div>
     </div>
 
     {% include layout/footer.html %}
-
-</Body>
-{% comment %}use uppercase (B)ody, anti telkom js inject{% endcomment %}
+    {% include layout/scripts.html %}
+</body>
 </html>

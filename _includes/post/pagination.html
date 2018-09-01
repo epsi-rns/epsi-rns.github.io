@@ -1,19 +1,19 @@
 
-  <ul class="pagination center-block container-fluid" 
+  <ul class="pagination justify-content-between" 
       role="navigation" aria-labelledby="pagination-label">
 
       {% if page.previous %}    
-      <li class="previous pull-left">
-        <a class="pagination-item" 
-           href="{{ site.url }}{{ page.previous.url }}" 
+      <li class="page-item previous">
+        <a class="page-link" 
+           href="{{ site.baseurl }}{{ page.previous.url }}" 
            title="{{ page.previous.title }}">&laquo; </a>
       </li>
       {% endif %}
 
       {% if page.next %}    
-      <li class="next pull-right">
-        <a class="pagination-item" 
-           href="{{ site.url }}{{ page.next.url }}" 
+      <li class="page-item next">
+        <a class="page-link" 
+           href="{{ site.baseurl }}{{ page.next.url }}" 
            title="{{ page.next.title }}"> &raquo;</a>
       </li>
       {% endif %}          

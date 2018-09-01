@@ -1,0 +1,50 @@
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+    // pre variables
+    "themes/oriclone/variables_color",
+
+    // bootstrap
+    "vendors/bootstrap/functions",
+    "vendors/bootstrap/variables",
+    "vendors/bootstrap/mixins"
+;
+
+// Custom variables (non bootstrap)
+
+$spacing-unit:     30px;
+
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+@import
+    // theme
+    "gmc",
+    "bootstrap-custom",
+    "layout",
+    "navheadbar",
+    "common",
+    "list",
+    "post-header",
+    "post-calendar",
+    "stripes",
+    "navsidemenu",
+    "code",
+    "rounded-box",
+
+    // https://github.com/jwarby/jekyll-pygments-themes/blob/master/monokai.css 
+    "syntax-highlighting-dark"
+;
+
+/* to do:
+*  remove color yellow makara and monad blue
+*  find color a (href)
+*/

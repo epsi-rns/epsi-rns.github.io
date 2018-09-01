@@ -1,24 +1,26 @@
 ---
 layout: default
+# customcss: assets/themes/oriclone/css/bootstrap-custom.css
 ---
 
-    <div class="container-fluid maxwidth">
+    <main role="main" class="container-fluid maxwidth">
 
         <div class="row">
             <div class="col-md-8">
 
-<div id="sitedesc-image"></div>
-<article class="post well">
+              <div id="sitedesc-image"></div>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+              <article class="rounded-box">
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+                <header class="main-header">
+                  <h2 class="main_title">{{ page.title }}</h2>
+                </header>
 
-</article>
+                <div class="main-content">
+                  {{ content }}
+                </div>
+
+              </article>
 
             </div>
             <!-- /.col-lg-8 -->
@@ -30,7 +32,4 @@ layout: default
             
         </div>
 
-
-    </div>
-    <!-- /.container -->
-                
+    </main><!-- /.container-fluid -->

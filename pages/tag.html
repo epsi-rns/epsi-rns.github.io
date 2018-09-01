@@ -15,11 +15,11 @@ search_omit: true
   {% assign tag_array = tag_array | sort %}
 {% endcapture %}
 
-<div class="tag-box inline">
+<div class="tag-box">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% assign this_word = tag_array[item] | strip_newlines %}
-    <a href="#{{ this_word }}"><span class="label label-tag">{{ this_word }} 
-    <span class="tag-count">{{ site.tags[this_word].size }}</span></span></a>
+    <a href="#{{ this_word }}"><span class="badge badge-dark">{{ this_word }} 
+    <span class="tag-box_count badge badge-light">{{ site.tags[this_word].size }}</span></span></a>
   {% endunless %}{% endfor %}
 </div>
 <br/>
@@ -30,9 +30,9 @@ search_omit: true
   <div class ="anchor-target tag-word" id="{{ this_word }}">
     <span class="fa fa-tag"></span> {{ this_word }}</div>
   {% for post in site.tags[this_word] %}{% if post.title != null %}
-      <div class="tag-post-item container-fluid">      
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <div class="post-time pull-right">          
+      <div class="meta-item container-fluid">
+        <a class="meta_link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <div class="meta_time float-right">
           <time datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: "%b %-d, %Y" }}</time>
           <span class="fa fa-calendar"></span>

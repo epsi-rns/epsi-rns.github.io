@@ -1,42 +1,7 @@
 <footer class="site-footer">
     
-{% comment %}
-
-<div class="container-fluid">
-    <div class="col-lg-8 col-lg-offset-2">
-    <h4 class="footer-heading">{{ site.title }}</h4>
-
-    <div class="footer-col-wrapper">
-
-      <div class="col-lg-4">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-3">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          {% endif %}
-
-          {% if site.twitter_username %}
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="col-lg-5">
-        <p>{{ site.description }}</p>
-      </div>
-
-    </div>
-    </div>
-</div>
-
-{% endcomment %}
-
 <div class="container-fluid maxwidth">
-    <div class="col-md-8 col-md-offset-2 site-owner">
+    <div class="col-md-8 offset-md-2 site-owner text-center">
     {% assign owner = site.data.owner %}
 
     <span>Yet Another Open Source Blog.<br/>
@@ -45,26 +10,47 @@
     </span>
 
     <div class="social-icons">
-        {% if owner.twitter %}<a href="https://twitter.com/{{ owner.twitter }}" title="{{ owner.name}} on Twitter" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>{% endif %}
-        {% if owner.facebook %}<a href="https://facebook.com/{{ owner.facebook }}" title="{{ owner.name}} on Facebook" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>{% endif %}
-        {% if owner.google.plus %}<a href="https://plus.google.com/+{{ owner.google.plus }}" title="{{ owner.name}} on Google+" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a>{% endif %}
-        {% if owner.linkedin %}<a href="https://linkedin.com/in/{{ owner.linkedin }}" title="{{ owner.name}} on LinkedIn" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>{% endif %}
-        {% if owner.stackexchange %}<a href="{{ owner.stackexchange }}" title="{{ owner.name}} on StackExchange" target="_blank"><i class="fa fa-stack-exchange fa-2x"></i></a>{% endif %}
-        {% if owner.instagram %}<a href="https://instagram.com/{{ owner.instagram }}" title="{{ owner.name}} on Instagram" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>{% endif %}
-        {% if owner.flickr %}<a href="https://www.flickr.com/photos/{{ owner.flickr }}" title="{{ owner.name}} on Flickr" target="_blank"><i class="fa fa-flickr fa-2x"></i></a>{% endif %}
-        {% if owner.github %}<a href="https://github.com/{{ owner.github }}" title="{{ owner.name}} on Github" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>{% endif %}
-        {% if owner.tumblr %}<a href="http://{{ owner.tumblr }}.tumblr.com" title="{{ owner.name}} on Tumblr" target="_blank"><i class="fa fa-tumblr-square fa-2x"></i></a>{% endif %}
-        {% if owner.pinterest %}<a href="https://www.pinterest.com/{{ owner.pinterest }}/" title="{{ owner.name}} on Pinterest" target="_blank"><i class="fa fa-pinterest fa-2x"></i></a>{% endif %}
-        {% if owner.weibo %}<a href="https://www.weibo.com/u/{{ owner.weibo }}/" title="{{ owner.name}} on Weibo" target="_blank"><i class="fa fa-weibo fa-2x"></i></a>{% endif %}
-        {% if owner.deviantart %}<a href="http://{{ owner.deviantart }}.deviantart.com/" title="{{ owner.name}} on DeviantArt" target="_blank"><i class="fa fa-deviantart fa-2x"></i></a>{% endif %}
-      <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="fa fa-rss-square fa-2x"></i></a>
+        {% if owner.twitter %}<a href="https://twitter.com/{{ owner.twitter }}" 
+          title="{{ owner.name}} on Twitter" target="_blank">
+          <i class="fab fa-twitter-square fa-2x"></i></a>{% endif %}
+        {% if owner.facebook %}<a href="https://facebook.com/{{ owner.facebook }}" 
+          title="{{ owner.name}} on Facebook" target="_blank">
+          <i class="fab fa-facebook-square fa-2x"></i></a>{% endif %}
+        {% if owner.google.plus %}<a href="https://plus.google.com/+{{ owner.google.plus }}" 
+          title="{{ owner.name}} on Google+" target="_blank">
+          <i class="fab fa-google-plus-square fa-2x"></i></a>{% endif %}
+        {% if owner.linkedin %}<a href="https://linkedin.com/in/{{ owner.linkedin }}" 
+          title="{{ owner.name}} on LinkedIn" target="_blank">
+          <i class="fab fa-linkedin-square fa-2x"></i></a>{% endif %}
+        {% if owner.stackexchange %}<a href="{{ owner.stackexchange }}" 
+          title="{{ owner.name}} on StackExchange" target="_blank">
+          <i class="fab fa-stack-exchange fa-2x"></i></a>{% endif %}
+        {% if owner.instagram %}<a href="https://instagram.com/{{ owner.instagram }}" 
+          title="{{ owner.name}} on Instagram" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i></a>{% endif %}
+        {% if owner.flickr %}<a href="https://www.flickr.com/photos/{{ owner.flickr }}" 
+          title="{{ owner.name}} on Flickr" target="_blank">
+          <i class="fab fa-flickr fa-2x"></i></a>{% endif %}
+        {% if owner.github %}<a href="https://github.com/{{ owner.github }}" 
+          title="{{ owner.name}} on Github" target="_blank">
+          <i class="fab fa-github-square fa-2x"></i></a>{% endif %}
+        {% if owner.tumblr %}<a href="http://{{ owner.tumblr }}.tumblr.com" 
+          title="{{ owner.name}} on Tumblr" target="_blank">
+          <i class="fab fa-tumblr-square fa-2x"></i></a>{% endif %}
+        {% if owner.pinterest %}<a href="https://www.pinterest.com/{{ owner.pinterest }}/" 
+          title="{{ owner.name}} on Pinterest" target="_blank">
+          <i class="fab fa-pinterest fa-2x"></i></a>{% endif %}
+        {% if owner.weibo %}<a href="https://www.weibo.com/u/{{ owner.weibo }}/" 
+          title="{{ owner.name}} on Weibo" target="_blank">
+          <i class="fab fa-weibo fa-2x"></i></a>{% endif %}
+        {% if owner.deviantart %}<a href="http://{{ owner.deviantart }}.deviantart.com/" 
+          title="{{ owner.name}} on DeviantArt" target="_blank">
+          <i class="fab fa-deviantart fa-2x"></i></a>{% endif %}
+        <a href="{{ site.url }}{{ site.baseurl }}/feed.xml" title="Atom/RSS feed">
+          <i class="fa fa-rss-square fa-2x"></i></a>
     </div><!-- /.social-icons -->
     
     </div>
 </div>
 
 </footer>
-
-{% if site.comments %}
-<script id="dsq-count-scr" src="//epsirnsgithubio.disqus.com/count.js" async></script>
-{% endif %}

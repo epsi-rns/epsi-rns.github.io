@@ -1,0 +1,23 @@
+{% unless page.related_link_ids == nil or page.related_link_ids == empty %}
+<div class="card hidden-sm">
+  <div class="card-header bg-dark text-light">
+    <p class="pcard-title float-left">Related Posts</p>
+    <span class="fa fa-link float-right"></span>
+    <div class="clearfix"></div>
+  </div>
+  <div class="card-body">
+  <ul class="card_list">
+    {% for link_id in page.related_link_ids %}
+    <li>
+      {% for dpost in site.data.archives %}
+      {% if dpost.id == link_id %}
+        <a href="{{ site.baseurl }}{{ dpost.url }}">{{ dpost.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>
+{% endunless %}
+

@@ -1,0 +1,7 @@
+// Font Awesome
+$fa-font-path:        "/assets/vendors/font-awesome-5";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "vendors/font-awesome-5/fontawesome";
+@import "vendors/font-awesome-5/solid";
+@import "vendors/font-awesome-5/brands";

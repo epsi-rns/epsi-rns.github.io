@@ -1,21 +1,60 @@
 ---
-layout: page-sidemenu-wm
-opengraph:
-  image: assets/images/authors/epsi-vexel.png
+layout: default
+title: Welcome Page
 ---
 
+  <main role="main" class="container-fluid maxwidth">
 
-    <p>I'm changing my welcome screen, and move some tutorial here.
-    If you are in a hurry, my old blog can be found in <a href="{{ site.url }}/pages/index">blog section</a>. 
-    I'm sorry for this temporary inconvenience.
-    </p>
+    <section class="jumbotron text-center">
+      <div class="container-fluid">
+        <h1 class="jumbotron-heading">
+          Hello Open Source World.</h1>          
 
-    <h4>Simple Dashboard</h4>
-    <p>This template has a responsive menu. 
-    The menu will appear collapsed on smaller screens,
-    and will appear non-collapsed on larger screens.
-    There is a toggle button on smaller screen. 
-    When toggled using the button above, the menu will appear/disappear. 
-    On small screens, the page content will be pushed off canvas.</p>
+        <div class="main-content">
 
-{% include archives-m.html %}
+          <p class="lead text-muted">
+              My name is Epsi. I'm an open source enthusiast.
+              This site is mainly discuss about linux distribution,
+              desktop customization, window manager tweak,
+              And sometimes other interesting issue as well,
+              such as package manager, file system and init.</p>
+
+          <p>
+            <a href="{{ site.baseurl }}/pages/archives-m" 
+               class="btn btn-primary my-2">Articles Sorted by Month</a>
+            <a href="{{ site.baseurl }}/pages/tag" 
+               class="btn btn-secondary my-2">Articles Sorted by Tag</a>
+          </p>
+
+          <p class="lead text-muted">
+              Although I like command line, I'm not a hacker.
+              You won't find any illegal activities in this site.</p>
+
+          <p><img alt="Terminal for Dummies" class="img-responsive"
+              src="{{ site.baseurl }}/assets/posts/desktop/2016/08/i3gaps-bright.png" /></p>
+
+          <p class="lead text-muted">
+              There are so many things to say.
+              I don't want to live in regrets.
+              So I make this blog.</p>
+
+          <div class="justify-content-center img-responsive">
+            <img src="{{ site.baseurl }}/assets/site/images/authors/epsi-vexel.png" 
+                 class="bio-photo" 
+                 alt="epsi bio photo"></a>
+          </div>
+
+          <p class="lead text-muted">
+              This site is using Oriclone Theme.</p>
+          <p>
+            <a href="http://epsi-rns.github.io/demo-jekyll" 
+               class="btn btn-primary my-2">Jekyll Demo Site</a>
+            <a href="https://github.com/epsi-rns/demo-jekyll" 
+               class="btn btn-secondary my-2">Clone Repository</a>
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>

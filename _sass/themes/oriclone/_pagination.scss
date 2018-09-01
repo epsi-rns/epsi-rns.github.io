@@ -3,31 +3,34 @@
 
 // pagination.html, pagination-better.html, post.html
 
-
-
 .pagination {
   text-align: center;
   
-  li a.pagination-item {
+  // always show
+  .simple {
+    display: inline-block;
+  }
+  
+  li a.page-item {
     border: 1px solid $monad-blue;
   }
 
-  li span.pagination-item {
+  li span.page-item {
     background-color: $yellow-makara;
     border: 1px solid $brand-primary;     
   }
 
-  li.current-page span.pagination-item {
+  li.current-page span.page-item {
     border: 1px solid $brand-primary; 
   }
 
-  li:hover a.pagination-item {
+  li:hover a.page-item {
     color: white;
     border: 1px solid $yellow-makara;    
     box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
   }  
   
-  li.blognext, li.blogprevious {
+  li.blog_next, li.blog_previous {
     display: inline-block;
   }
   
@@ -36,14 +39,16 @@
     color: $gray;
     border: 1px solid $monad-blue;
   }  
-  
-  li.blognext a, li.blogprevious a {
+
+  li.next a, li.previous a,
+  li.blog_next a, li.blog_previous a {
     background-color: $pages-item-background;
     color: $monad-blue;
     border: 1px solid $monad-blue;
   }
-  
-  li.blognext:hover a, li.blogprevious:hover a {
+
+  li.next:hover a, li.previous:hover a,
+  li.blog_next:hover a, li.blog_previous:hover a {
     background-color: $brand-primary;
     color: white;
     border: 1px solid $yellow-makara;

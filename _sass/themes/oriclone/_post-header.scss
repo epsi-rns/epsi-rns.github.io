@@ -1,0 +1,127 @@
+// ---------------------------------------------------------------------
+// components
+
+.main-header { margin-bottom: 15px; }
+
+.main_title  {
+  padding: 1px 15px;
+  border-radius: 10px;  
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05)); 
+  background: rgba(256, 256, 256, 0.5);
+
+  margin: 0px 0px 5px 0px;
+  min-height: 65px;
+}
+
+a {
+    word-wrap: break-word;
+}
+div.post-meta {
+  border: 1px solid #666666;
+  border-width: 1px 0;
+}  
+
+.main_title  a { color: #2C3E50; }
+.main_title  a:hover { color: #2980b9; }
+
+.main_title  {
+  a { 
+    color: $brand-primary;
+  }
+  a:hover { 
+    color: $monad-blue;
+  }
+}
+
+.main_title  h2 {
+  margin: 10px 0px 10px 0px;
+}
+
+
+// ---------------------------------------------------------------------
+// Components: Tags
+
+
+.archive-year,
+.tag-word {
+    font-weight: bold;
+}
+
+/* Tag badge background color */
+
+ul#meta_tags a,
+ul#meta_cats a { display: inline; }
+
+div.meta_tags {
+  text-align: right;
+}  
+
+.meta-item,
+.post-header {
+    @extend %vertical-rhythm;
+}
+
+.meta-item {
+  border-bottom: 1px solid #666666;
+}
+
+#meta_tags a:hover,
+#meta_cats a:hover {
+  color: white;
+}
+
+.card a span.badge-tag,
+.card a span.badge-cat {
+  font-weight: normal;
+}
+
+a span.badge-tag,
+a span.badge-cat {
+    background-color: #eee;
+    color: $monad-blue;
+    span.fa-tag,
+    span.tag-box_count {
+        color: $gray;
+        vertical-align: super;
+        font-size: smaller;  
+    }
+}
+
+a span.badge-tag span.tag-box_count,
+a span.badge-cat span.tag-box_count {
+        color: $gray;
+        vertical-align: super;
+        font-size: smaller;  
+    }
+
+
+.card .badge.badge-cat {
+  font-size: 85%;
+}
+
+a:hover span.badge-tag,
+a:hover span.badge-cat {
+    background-color: $brand-primary;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5); 
+}
+
+.meta #meta_cats {
+   .badge-cat {
+      padding-bottom: .0em;
+    }
+}
+ 
+.meta #meta_tags {
+   .badge-tag {
+      padding-bottom: .0em;
+    }
+}
+
+.post-list {
+  .meta-item {
+    .badge-tag {
+      padding-bottom: .1em;
+    }
+  }
+}
