@@ -17,7 +17,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: "http://epsi-rns.github.io" 
 
 # the subpath of your site, e.g. /blog
-baseurl: "/demo-jekyll" 
+baseurl: "" 
 
 # Missing timezone in metadata date can lead to wrong date in url
 timezone: Asia/Jakarta

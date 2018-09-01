@@ -16,7 +16,7 @@
          id="{{ year.name }}">{{ year_text }}</div>
 
     <ul class="archive-month">
-      {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%m'" | sort: 'name' %}
+      {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%m'" | sort: 'name' | reverse %}
       {% for month in postsByMonth %}
       <li class="list-month">
 
