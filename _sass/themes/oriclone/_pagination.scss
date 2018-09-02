@@ -59,4 +59,12 @@
     background-color: transparent;
     color: $monad-blue;  
   }
+  
+  .previous span:after {
+    content: " previous"
+  }
+
+  .next span:before {
+    content: "next "
+  } 
 }
