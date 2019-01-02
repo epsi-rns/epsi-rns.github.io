@@ -9,10 +9,13 @@ author: epsi
 excerpt:
   With Equery, you can upgrade package by category.
   One category today. And other category the day after.
-  You can install only what you need, instead of compile all.
+  You can install only what you need, instead of compile all at once.
   And save your precious time.
 
 ---
+
+Hello again everybody.
+It has been a while since my last article.
 
 ### Preface
 
@@ -20,6 +23,11 @@ excerpt:
 
 Gentoo is Fun.
 But sometimes it takes too long to compile.
+
+With Equery, you can upgrade package by category.
+One category today. And other category the day after.
+You can install only what you need, instead of compile all at once.
+And save your precious time.
 
 I think this classic issue is, already somewhere in gentoo manual.
 I just love to write a blog about this.
@@ -37,7 +45,7 @@ I have life to take care of, so compile all upgraded packages is not an option.
 
 #### Example
 
-Last month I have got a bunch of package started with:
+Last month I have got a bunch of packages started with:
 
 * dev-ruby
 
@@ -55,6 +63,7 @@ Last month I have got a bunch of package started with:
 
 ![Portage: emerge -uvDN @world][image-ss-emerge-uvdn-cut]{: .img-responsive }
 
+What a long list of packages!
 Sure that, I can't give you the whole screenshot here.
 Too long that, the list does not even fit my wide screen.
 
@@ -201,6 +210,8 @@ Now you can emerge your categories.
  % sudo emerge --ask -uvDN $(equery list -F '$name' "dev-ruby/*")
 {% endhighlight %}
 
+![Portage: emerge -uvDN category empty][image-ss-emerge-empty]{: .img-responsive }
+
 This should show empty, no more packages to be compiled.
 
 #### Emerge Other Category.
@@ -239,7 +250,8 @@ Now we can go back to our simple command.
 Solved.
 Compiling in Gentoo is fun again.
 
-Thank you for reading
+Happy New Year 2019.
+And thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -252,5 +264,7 @@ Thank you for reading
 [image-ss-emerge-uvdn-system]:  {{ asset_path }}/gentoo-01-emerge-uvdn-system-small.png
 [photo-ss-emerge-uvdn-system]:  https://photos.google.com/album/AF1QipMhBXeFkoeJXHJaQ2A9agbh3-iEMEt0BFFipsex/photo/AF1QipP2hdG6-ODC7L23u7-IsnBXt2uHgOJ7_xwPpC6n
 
-[image-ss-emerge-dev-ruby]:     {{ asset_path }}/gentoo-emerge-ruby-cut.png
+[image-ss-emerge-dev-ruby]:     {{ asset_path }}/gentoo-01-emerge-ruby-cut.png
 [photo-ss-emerge-dev-ruby]:     https://photos.google.com/album/AF1QipMhBXeFkoeJXHJaQ2A9agbh3-iEMEt0BFFipsex/photo/AF1QipP4pOQdYzwZV0cvrNo4QnsYYgaYtky8YQHz3VYQ
+
+[image-ss-emerge-empty]:        {{ asset_path }}/gentoo-01-emerge-uvdn-dev-ruby-empty.png
