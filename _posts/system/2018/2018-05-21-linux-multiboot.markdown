@@ -165,7 +165,8 @@ by using this command.
 
 {% highlight bash %}
 % sudo file -sL /dev/sda9
-/dev/sda9: BTRFS Filesystem sectorsize 4096, nodesize 16384, leafsize 16384, UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f, 32208326656/52743372800 bytes used, 1 devices
+/dev/sda9: BTRFS Filesystem sectorsize 4096, nodesize 16384, leafsize 16384, 
+UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f, 32208326656/52743372800 bytes used, 1 devices
 {% endhighlight %}
 
 ![Partition: Device Information][image-ss-file-sda9]{: .img-responsive }

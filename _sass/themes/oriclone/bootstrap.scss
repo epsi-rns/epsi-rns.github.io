@@ -1,6 +1,8 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import 
     // pre variables
-    "themes/oriclone/variables_color",
+    "vendors/bootstrap/functions",
+    "themes/oriclone/variables",
     "vendors/bootstrap/bootstrap"
 ;
+

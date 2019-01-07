@@ -1,0 +1,44 @@
+// -- -- -- -- --
+// _decoration.scss
+
+body {
+  background-image: url("../images/funky-lines.png");
+}
+
+.shadow-hover { box-shadow: $box-shadow; }
+
+.shadow-hover:hover {
+  box-shadow: 0 1rem 3rem rgba($black, .175);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.card-header {
+//    @include gradient-striped(rgba(255,255,255,.05), 45deg);  
+}
+
+.bg-stripe-zero {
+  background: lighten($blue, 35%) url("../images/stripe-glossy/00.png") left top repeat-x;
+}
+
+.card:hover {
+  .bg-stripe-zero {
+    background: $yellow url("../images/stripe-glossy/00.png") left top repeat-x;
+  }
+  
+  .card-body li {
+    color: darken($blue, 15%);
+  }
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.badge {
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2);  
+}
+
+.read-more a:after {
+    content: " »"
+} 
+

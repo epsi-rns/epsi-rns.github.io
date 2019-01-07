@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
     <title>{{ (page.title | default: site.title) | escape }}</title>
   
     {% comment %}Let's Fake the Generator{% endcomment %}
@@ -13,7 +16,6 @@
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/bootstrap.css" >
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/fontawesome.css" >
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/jekyll-pagination.css" >
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/main.css" >
 
     {% comment %}<!-- Custom CSS -->{% endcomment %}
@@ -24,22 +26,11 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/{{ page.customcss}}">
     {% endif %}
 
-    {% comment %}<!-- Custom JS -->{% endcomment %}
-    <script src="{{ site.baseurl }}/assets/vendors/js/jquery.min.js"></script>
-
     {% comment %}<!-- Stuff -->{% endcomment %}        
     <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     
     {% include head/opengraph.html %}
     {% include head/twitter.html %}
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1758163826608681",
-    enable_page_level_ads: true
-  });
-</script>
 </head>
 
 

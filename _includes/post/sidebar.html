@@ -1,12 +1,10 @@
 <div class="layout-sidebar">
 {% unless site.url == "http://localhost:4001" %}
 {% include card/friends.html %}
-{% include card/category.html %}
+{% include card/categories.html %}
 {% include card/related-posts.html %}
 {% include card/archives.html %}
 {% include card/tags.html view_tag_type = 'after' %}
 {% include card/recent-posts.html %}
 {% endunless %}
 </div>
-
-{% comment %}{% include service/google-adsense.html %}{% endcomment %}

@@ -1,5 +1,5 @@
-<div class="panel panel-primary">
-  <div class="panel-body" markdown="1">
+<div class="card bg-light text-dark">
+  <div class="card-body" markdown="1">
 
 Modular Code (Dzen2): 
 [[ BASH Panel ][dotfiles-dzen2-bash-panel]]

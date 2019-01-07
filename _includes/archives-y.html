@@ -15,16 +15,22 @@
     <div class ="anchor-target archive-year" 
          id="{{ year.name }}">{{ year_text }}</div>
 
-    <ul class="archive-item">
+    <div class="archive-list pl-3">
       {% for post in year.items %}
-      <li class="list-content">
-        <time class="float-right">{{ post.date | date:"%d %b" }}&nbsp;
-        <span class="fa fa-calendar"></span></time>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </li>
+      <div class="archive-item d-flex flex-row-reverse archive-list">
+        <div class="text-right text-nowrap">
+          <time>{{ post.date | date:"%d %b" }}&nbsp;
+          <span class="fa fa-calendar"></span></time>
+        </div>
+        <div class="mr-auto">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </div>
+      </div>
       {% endfor %}
-    </ul>
+    </div>
 {% endfor %}
 </section>
+
+

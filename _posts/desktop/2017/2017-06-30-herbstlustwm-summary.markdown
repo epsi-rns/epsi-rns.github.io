@@ -181,7 +181,7 @@ Haskell Coding
 
 -- -- --
 
-### Micellanous Links
+### Miscellanous Links
 
 Dotshare
 

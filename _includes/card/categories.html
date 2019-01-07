@@ -1,14 +1,15 @@
-<div class="card">
-  <div class="card-header bg-dark text-light">
+<div class="card mb-3 shadow-hover">
+  <div class="card-header bg-stripe-zero text-dark pb-0">
     <p class="card-title float-left">Categories</p>
     <span class="fa fa-tag float-right"></span>
     <div class="clearfix"></div>
   </div>
-  <div class="card-body">
+  <div class="card-body py-2">
       {% for cat in site.categories %}
         <a href="{{ site.baseurl }}/pages/category#{{ cat[0] }}">
-          <span class="badge badge-dark">{{ cat[0] }} <span class="fa fa-folder"></span></span>
+          <span class="badge badge-primary">{{ cat[0] }} <span class="fa fa-folder"></span></span>
         </a>&nbsp;
       {% endfor %} 
   </div>
 </div> 
+

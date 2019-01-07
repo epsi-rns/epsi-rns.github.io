@@ -1,41 +1,101 @@
-// ---------------------------------------------------------------------
-// chunk/page-sidebar.html, chunk/post-sidebar.html, 
-// card/archive;
-//
+// -- -- -- -- --
+// _list.scss
 
+div.archive-item {
+  position: relative;
+}
+
+div.archive-item a:before {
+  position: absolute;
+  left: -15px;
+
+  font-family: "Font Awesome 5 Free";
+  content: '\f054';
+  color: $gray;
+}
+
+.archive-item:hover:before {
+    color: $dark;
+}
+
+ul.archive-item,
+ul.archive-item ul, {
+  position: relative;
+  list-style: none;
+}
+
+ul.archive-item li:before {
+  position: relative;
+  left: -15px;
+  content: "\00BB";
+  color: $dark;
+}
+
+// -- -- -- -- --
+// Components: Tags
+
+.archive-year {
+    font-weight: bold;
+}
+
+.meta-item { margin-bottom: 15px; }
+
+// -- -- -- -- --
+// Flip Flop
+
+.archive-list {
+  .archive-item:nth-child(even) {
+    background-color: $light;
+  }
+
+  .archive-item:nth-child(odd) {
+    background-color: darken($light, 5%);
+  }
+
+  .archive-item:hover {
+    background-color: lighten($yellow, 10%);
+  }
+}
+
+.archive-list,
 .main-content li {
   li:nth-child(even) {
-    background-color: #fff;
+    background-color: $light;
   }
 
   li:nth-child(odd) {
-    background-color: #eee;
+    background-color: darken($light, 5%);
   }
 }
 
+
 .meta-item:nth-child(even) {
-    background-color: #eee;
+    background-color: $light;
 }
 
 .meta-item:nth-child(odd) {
-    background-color: #fff;
+    background-color: darken($light, 5%);
+}
+  
+.meta-item:hover {
+    background-color: lighten($yellow, 10%);
 }
 
 li.even {
-  background-color: #fff;
+  background-color: $light;
 }
 
 li.odd {
-  background-color: #eee;
+  background-color: darken($light, 5%);
 }
+
+
 
 .blog-post .main-content li p {
   display: inline;
 }
 
-.blog-post .main-content li,
-ul li.list-month,
-ul li.list-content {
+.blog-post .main-content li {
 /*    @include list-unstyled;*/
   padding-left: 0;
   list-style: none;
@@ -43,20 +103,11 @@ ul li.list-content {
   margin-left: 20px;
 }
 
-ul.card_list li a:hover,
-ul li.list-content:hover {
-    background: #ffff00;
+.card-body .archive-year a:hover,
+ul li.list-month a:hover,
+ul.card_list li:hover {
+    background: lighten($yellow, 15%);
 }
-
-
-.card ul.card_list,
-.card ul li.list-content {
-    font-size: 12px;
-  }  
-.card ul li.list-content {
-    margin-left: 0px;  
-  }
-
 
 ul.archive-month,
 ul.archive-item,
@@ -72,26 +123,36 @@ ul.card_list {
   
   font-size: 13px;
 
-    margin-left: 20px;    
+  margin-left: 20px;    
+}
+
+
+ul.card_archive {
+  li.list-month {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -20px;
+  }
+
+
 }
 
 .blog-post .main-content li:before,
-ul li.list-month:before,
-ul li.list-content:before,
-ul#search_results li:before,
-ul.card_list li:before {    
-    font-family: 'FontAwesome';
-    margin: 0 5px 0 -20px;
-}
-
-.blog-post .main-content li:before,
-ul li.list-content:before,
 ul#search_results li:before,
 ul.card_list li:before {
   font-family: "Font Awesome 5 Free";
 //  font-weight: 900;
     content: '\f054';
     color: #7b8a8b; /* $gray-dark; */
+    margin: 0 5px 0 -12px;
+}
+
+.archive-month:before {
+  font-family: "Font Awesome 5 Free";
+//  font-weight: 900;
+    content: '\f073';
+    color: #000; /* $gray-base;     */
+    margin: 0 5px 0 -15px;
 }
 
 ul li.list-month:before {
@@ -99,10 +160,13 @@ ul li.list-month:before {
 //  font-weight: 900;
     content: '\f073';
     color: #000; /* $gray-base;     */
+    margin: 0 5px 0 -12px;
 }
 
-ul li.list-content:hover:before,
 ul#search_results li:hover:before,
 ul.card_list li:hover:before {    
-    color: #2980b9; /* yellow makara */
+    color: $yellow;
 }
+
+
+

@@ -1,0 +1,14 @@
+// -- -- -- -- --
+// _post-navigation.scss
+
+.previous {
+  a.page-link:after {
+    content: " previous"
+  }
+}
+
+.next {
+  a.page-link:before {
+    content: "next "
+  }
+}

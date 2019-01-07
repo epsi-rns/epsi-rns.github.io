@@ -1,14 +1,15 @@
-<div class="sectionbox">
-  <div class="sectionbox-heading">
+<div class="card mb-3 shadow-hover">
+  <div class="card-header bg-light text-dark pb-0">
+    <p class="card-title">
     {% if include.title %}
     {{ include.title }}
     {% else %}
     Screenshot Information
     {% endif %}
+    </p>
+    <div class="clearfix"></div>
   </div>
-  <div class="sectionbox-body">
-    <div>
+  <div class="card-body py-2">
     {{ include.ss_content }}
-    </div>
   </div>
 </div>

@@ -1,10 +1,10 @@
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title pull-left">HerbstluftWM Tag Status in Many Languages</h3>
-    <span class="fa fa-newspaper-o pull-right"></span>
+<div class="card shadow-hover mb-4">
+  <div class="card-header bg-light text-dark">
+    <p class="card-title float-left">HerbstluftWM Tag Status in Many Languages</p>
+    <span class="fa fa-archive float-right"></span>
     <div class="clearfix"></div>
   </div>
-  <div class="panel-body" markdown="1">
+  <div class="card-body" markdown="1">
 
 This article is one part of a collection.
 All integrated, one related to another.

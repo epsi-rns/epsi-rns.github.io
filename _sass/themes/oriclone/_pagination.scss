@@ -1,70 +1,101 @@
-// ---------------------------------------------------------------------
-// _includes
+@include media-breakpoint-up(md) {
 
-// pagination.html, pagination-better.html, post.html
-
-.pagination {
-  text-align: center;
-  
-  // always show
-  .simple {
-    display: inline-block;
-  }
-  
-  li a.page-item {
-    border: 1px solid $monad-blue;
+  .blog_previous {
+    span.page-link:after,
+    a.page-link:after {
+      content: " previous"
+    }
   }
 
-  li span.page-item {
-    background-color: $yellow-makara;
-    border: 1px solid $brand-primary;     
+  .blog_next {
+    span.page-link:before,
+    a.page-link:before {
+      content: "next "
+    }
   }
 
-  li.current-page span.page-item {
-    border: 1px solid $brand-primary; 
-  }
-
-  li:hover a.page-item {
-    color: white;
-    border: 1px solid $yellow-makara;    
-    box-shadow: 2px 2px 2px rgba(0,0,0,.2); 
-  }  
-  
-  li.blog_next, li.blog_previous {
-    display: inline-block;
-  }
-  
-  li.inactive span {
-    background-color: white;
-    color: $gray;
-    border: 1px solid $monad-blue;
-  }  
-
-  li.next a, li.previous a,
-  li.blog_next a, li.blog_previous a {
-    background-color: $pages-item-background;
-    color: $monad-blue;
-    border: 1px solid $monad-blue;
-  }
-
-  li.next:hover a, li.previous:hover a,
-  li.blog_next:hover a, li.blog_previous:hover a {
-    background-color: $brand-primary;
-    color: white;
-    border: 1px solid $yellow-makara;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.2);    
-  } 
-  
-  li.pages-indicator span {
-    background-color: transparent;
-    color: $monad-blue;  
-  }
-  
-  .previous span:after {
-    content: " previous"
-  }
-
-  .next span:before {
-    content: "next "
-  } 
 }
+
+$grid-breakpoints-custom: (
+  xs:  0,
+  xs2: 320px,
+  xs3: 400px,
+  xs4: 480px,
+  sm:  576px,
+  sm2: 600px,
+  md:  768px,
+  lg:  992px,
+  xl:  1200px
+) !default;
+
+ul.pagination {
+
+  li.first,
+  li.last,
+  li.pages-indicator {
+    display: none;
+  }
+
+  li.pagination--offset-1,
+  li.pagination--offset-2,
+  li.pagination--offset-3,
+  li.pagination--offset-4,
+  li.pagination--offset-5,
+  li.pagination--offset-6,
+  li.pagination--offset-7 {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xs, $grid-breakpoints-custom) {
+  }
+  
+  @include media-breakpoint-up(xs2, $grid-breakpoints-custom) {
+    li.pages-indicator {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-up(xs3, $grid-breakpoints-custom) {
+    li.pagination--offset-1 {
+      display: inline-block;
+    }
+  }
+  
+  @include media-breakpoint-up(xs4, $grid-breakpoints-custom) {
+    li.pagination--offset-2 {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-up(sm, $grid-breakpoints-custom) {
+    li.first,
+    li.last,
+    li.pagination--offset-3 {
+      display: inline-block;
+    }
+  }
+  
+  @include media-breakpoint-up(sm2, $grid-breakpoints-custom) {
+    li.pagination--offset-4 {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-up(md, $grid-breakpoints-custom) {
+    li.pagination--offset-5,
+    li.pagination--offset-6 {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-up(lg, $grid-breakpoints-custom) {
+    li.pagination--offset-7 {
+      display: inline-block;
+    }
+  }
+
+  @include media-breakpoint-up(xl, $grid-breakpoints-custom) {
+  }
+
+}
+

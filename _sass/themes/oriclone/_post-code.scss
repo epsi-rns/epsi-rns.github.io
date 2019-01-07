@@ -1,0 +1,54 @@
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 15px;
+}
+
+  pre {
+    background-color: transparent; 
+    border: 1px solid $blue;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2); 
+    border-radius: 4px;
+  }
+
+  pre:hover {
+    background-color: #eee;
+    border: 1px solid $yellow;    
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);  
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);     
+  }
+
+code {
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+code.code-command {
+  background-color: $gray;
+}
+
+code.code-file {
+  background-color: $light;
+}
+
+code.code-command:hover,
+code.code-file:hover {
+  color: black;
+  background-color: $yellow;
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+

@@ -26,7 +26,7 @@ timezone: Asia/Jakarta
 locale: en_US
 logo: /assets/site/images/authors/epsi-vexel.png
 
-paginate: 27
+paginate: 10
 paginate_path: "pages/blog-:num"
 
 # Build settings

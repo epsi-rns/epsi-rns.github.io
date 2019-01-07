@@ -1,49 +1,57 @@
 
+<header>
+  <div id="layout-header" class="maxwidth">
+  <div id="layout-header_message"
+       class="maxwidth rounded-bottom shadow-hover
+              border border-top-0 border-dark text-light">
+       {{ site.description }}
+  </div>
+  </div>
 
-    <div id="layout-header" class="maxwidth">
-    <div id="layout-header_message">
-        {{ site.description }}
+  <nav class="navbar navbar-expand-md navbar-light fixed-top
+              bg-stripe maxwidth rounded-bottom shadow-hover
+              border border-top-0 border-dark">
+    <a class="navbar-brand" href="{{ site.baseurl | prepend:site.url }}">
+       <img src="{{ site.baseurl }}/assets/site/images/logo-orb-spiral.png" 
+           alt="{{ site.title }}" />
+    </a>
+    <button class="navbar-toggler" type="button" 
+            data-toggle="collapse" data-target="#navbarCollapse" 
+            aria-controls="navbarCollapse" aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ site.baseurl }}/pages/index"
+             >Blog <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+             role="button" data-toggle="dropdown" 
+             aria-haspopup="true" aria-expanded="false"
+             >Archives
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/tag">By Tag</a>
+            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/category">By Category</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-y">By Year</a>
+            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-m">By Month</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ site.baseurl }}/pages/about">About</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0" 
+           action="{{ site.baseurl }}/pages/search" method="get">
+        <input class="form-control mr-sm-2" type="text" name="q" 
+           placeholder="Search..." aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" 
+           type="submit">Search</button>
+      </form>
     </div>
-    </div>
-
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-stripe text-dark maxwidth">
-    {% comment %}bg-light or bg-dark or bg-stripe{% endcomment %}
-      <a class="navbar-brand" href="{{ site.baseurl }}">
-         <img src="{{ site.baseurl }}/assets/site/images/logo-orb-spiral.png" 
-             alt="{{ site.title }}" />
-      </a>
-      <button class="navbar-toggler" type="button" 
-              data-toggle="collapse" data-target="#navbarCollapse" 
-              aria-controls="navbarCollapse" aria-expanded="false" 
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ site.baseurl }}/pages/index">Blog <span class="sr-only">(current)</span></a>
-          </li>
-      <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Archives
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/tag">By Tag</a>
-          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/category">By Category</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-y">By Year</a>
-          <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-m">By Month</a>
-        </div>
-      </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{{ site.baseurl }}/pages/about">About</a>
-          </li>
-        </ul>
-        <form class="form-inline mt-2 mt-md-0" action="{{ site.baseurl }}/pages/search" method="get">
-          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." aria-label="Search">
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-
+  </nav>
+</header>

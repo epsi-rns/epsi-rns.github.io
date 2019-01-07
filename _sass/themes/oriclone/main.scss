@@ -1,20 +1,32 @@
-// Small screen / tablet
-//** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
-
-//** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min !default;
-
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
-    // pre variables
-    "themes/oriclone/variables_color",
-
-    // bootstrap
+  // variables
     "vendors/bootstrap/functions",
+    "variables",
     "vendors/bootstrap/variables",
-    "vendors/bootstrap/mixins"
+    "vendors/bootstrap/mixins/breakpoints",
+    "vendors/bootstrap/mixins/image",
+    "vendors/bootstrap/mixins/gradients",
+    "vendors/bootstrap/mixins/transition",
+    "vendors/bootstrap/mixins/box-shadow",
+
+  // taken from bootstrap
+    "sticky-footer-navbar",
+    "bootstrap-custom",
+
+  // custom: general
+    "layout",
+    "decoration",
+    "stripes",
+    "list",
+    "pagination",
+
+  // custom: post
+    "post-navigation",
+    "post-calendar",
+    "post-header",
+    "post-content",
+    "post-code",
+    "post-highlight-jekyll"
 ;
 
 // Custom variables (non bootstrap)
@@ -26,25 +38,7 @@ $spacing-unit:     30px;
 }
 
 @import
-    // theme
-    "gmc",
-    "bootstrap-custom",
-    "layout",
-    "navheadbar",
-    "common",
-    "list",
-    "post-header",
-    "post-calendar",
-    "stripes",
-    "navsidemenu",
-    "code",
-    "rounded-box",
-
-    // https://github.com/jwarby/jekyll-pygments-themes/blob/master/monokai.css 
+  // syntax highlighting
+  // https://github.com/jwarby/jekyll-pygments-themes/blob/master/monokai.css 
     "syntax-highlighting-dark"
 ;
-
-/* to do:
-*  remove color yellow makara and monad blue
-*  find color a (href)
-*/

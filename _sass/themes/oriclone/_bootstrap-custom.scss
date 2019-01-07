@@ -1,25 +1,17 @@
-/* custom epsi boy */
-
-.navbar-brand img {
-    width:  48px;
-    height: 48px;
-    margin-top:    -10px;
-    margin-bottom: -10px;
-  }
-
-/* v3 compat */
-
-.btn-group-xs > .btn, .btn-xs {
-    padding  : .25rem .4rem;
-    font-size  : .875rem;
-    line-height  : .5;
-    border-radius : .2rem;
+.layout-base {
+  padding-top: 50px;
 }
 
-/* Show it is fixed to the top */
+.navbar-brand img {
+  width: 48px;
+  height: 48px;
+  margin-top:    -10px;
+  margin-bottom: -10px;
+}
 
-body {
-  padding-top: 4.5rem;
+.cover-heading,
+.blog-post-title {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
 /* album.css */
@@ -34,6 +26,7 @@ body {
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);

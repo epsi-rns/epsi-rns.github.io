@@ -13,9 +13,13 @@ opengraph:
 
     {% include layout/header.html %}
 
-    <div class="layout-base">
-        {{ content }}
-    </div>
+  <div class="container-fluid maxwidth">
+
+    <div class="row layout-base">
+      {{ content }}
+    </div><!-- .row -->
+
+  </div><!-- .container-fluid -->
 
     {% include layout/footer.html %}
     {% include layout/scripts.html %}

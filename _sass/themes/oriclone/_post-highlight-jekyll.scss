@@ -1,0 +1,34 @@
+
+.highlight {
+  pre {
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+  }
+
+  pre {
+    color: $light;
+    background-color: transparent; 
+    border: 1px solid $dark;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2); 
+  }
+
+  pre:hover {
+    background-color: #444;
+    border: 1px solid $yellow;    
+    box-shadow: 3px 3px 3px rgba(0,0,0,.5);  
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);     
+  }
+}
+
+.highlighter-rouge {
+
+}
+
+.highlighter-rouge .highlight {
+    background: #f4f4f4;
+}
+
+.highlighter-rouge .highlight pre {
+  background-color: transparent;
+  color: #7b8a8b;
+}

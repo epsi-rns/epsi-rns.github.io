@@ -1,11 +1,11 @@
 {% unless page.related_link_ids == nil or page.related_link_ids == empty %}
-<div class="card hidden-sm">
-  <div class="card-header bg-dark text-light">
-    <p class="pcard-title float-left">Related Posts</p>
+<div class="card hidden-sm mb-3 shadow-hover">
+  <div class="card-header bg-stripe-zero text-dark pb-0">
+    <p class="card-title float-left">Related Posts</p>
     <span class="fa fa-link float-right"></span>
     <div class="clearfix"></div>
   </div>
-  <div class="card-body">
+  <div class="card-body py-2">
   <ul class="card_list">
     {% for link_id in page.related_link_ids %}
     <li>

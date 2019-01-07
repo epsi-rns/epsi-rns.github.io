@@ -1,8 +1,5 @@
-/* ---------------------------------------------------------------------
-// _layout
-
-// page.html, post.html
-*/
+// -- -- -- -- --
+// _layout.scss
 
 .maxwidth {
    margin-right: auto;
@@ -10,6 +7,13 @@
    max-width: 1366px; /* or 1360px */
 }
 
-.layout-base {
-  padding-top: 20px;
+#sitedesc_image {
+    width: 354px;
+    height: 60px;
+    max-width: 100%; 
+    background: transparent url(/assets/site/images/yaosb.png) no-repeat left top;
+    background-size: 100% auto;
+    float: none;
+    margin: 0 auto;  
 }
+

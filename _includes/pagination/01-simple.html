@@ -1,0 +1,71 @@
+{% capture spaceless %}
+  {% assign total_pages = paginator.total_pages %}
+{% endcapture %}
+
+<nav aria-label="Page navigation">
+
+  {{ if total_pages > 1 }}
+  <ul class="pagination justify-content-center">
+    <!-- First Page. -->
+    {% unless paginator.page == 1 %}
+      <li class="page-item">
+        <a class="page-link"
+           href="{{ site.baseurl }}{{ page.paginate_root }}" 
+           rel="first">First</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">First</span>
+      </li>
+    {% endunless %}
+
+    <!-- Previous Page. -->
+    {% if paginator.previous_page %}
+      <li class="page-item">
+        <a class="page-link" 
+           href="{{ site.baseurl }}{{ paginator.previous_page_path }}" 
+           rel="prev">Previous</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+    {% endif %}
+
+    <!-- Indicator Number. -->
+    <li class="page-item disabled">
+      <span class="page-link">
+        Page: {{ paginator.page }} of {{ total_pages }}</span>
+    </li>
+
+    <!-- Next Page. -->
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" 
+           href="{{ site.baseurl }}{{ paginator.next_page_path }}" 
+           rel="next">Next</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Next</span>
+      </li>
+    {% endif %}
+
+    <!-- Last Page. -->
+    {% unless paginator.page == total_pages %}
+      <li class="page-item">
+        <a class="page-link"
+           href="{{ site.paginate_path | relative_url | replace: ':num', total_pages }}"
+           rel="last">Last</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Last</span>
+      </li>
+    {% endunless %}
+  </ul>
+  {{ end }}
+
+</nav>
+
+

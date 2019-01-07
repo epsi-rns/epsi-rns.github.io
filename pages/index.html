@@ -5,16 +5,26 @@ opengraph:
   image: /assets/images/authors/epsi-vexel.png
 ---
 
-<div class="home">
+  <header>
+    <h2>Posts</h2>
+  </header>
 
-  <h2 class="page-heading">Posts</h2>
+{% comment %}
+  {% include pagination/01-simple.html %}
+  {% include pagination/02-number.html %}
+  {% include pagination/03-adjacent.html %}
+  {% include pagination/04-indicator.html %}
+  {% include pagination/05-responsive.html %}
+  {% include pagination/06-screenreader.html %}
+{% endcomment %}
 
-  {% include pagination.html %}
+  {% include pagination/06-screenreader.html %}
 
   <!-- This loops through the paginated posts -->
+<section id="archive">
   <div class="post-list">
     {% for post in paginator.posts %}
-    <div class="meta-item">
+    <div class="meta-item p-3 border-bottom shadow-hover">
       <strong><a class="meta_link" 
         href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
       </strong></a>
@@ -42,10 +52,7 @@ opengraph:
     </div>
     {% endfor %}
   </div>
-  
-  
-  {% include pagination-better.html %}  
+</section>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>

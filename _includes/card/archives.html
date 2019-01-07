@@ -1,10 +1,10 @@
-<div class="card">
-  <div class="card-header bg-dark text-light">
+<div class="card mb-3 shadow-hover">
+  <div class="card-header bg-stripe-zero text-dark pb-0">
     <p class="card-title float-left">Archives</p>
     <span class="fa fa-archive float-right"></span>
     <div class="clearfix"></div>
   </div>
-  <div class="card-body">
+  <div class="card-body py-2">
   {% assign pg_year  = page.date | date: '%Y' %}
   {% assign pg_month = page.date | date: '%m' %}
   
@@ -16,7 +16,7 @@
       </div>
 
     {% if pg_year == year.name %}
-    <ul class="archive-month">
+    <ul class="card_archive">
       {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%m'" %}
       {% assign postsByMonthSorted = postsByMonth | sort: 'name' | reverse %}
 
@@ -30,9 +30,9 @@
         {% endfor %}
 
           {% if pg_month == month.name %}
-          <ul class="archive-item">
+          <ul class="card_list">
           {% for post in month.items %}
-          <li class="list-content">    
+          <li>    
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
           </li>
           {% endfor %}
@@ -45,5 +45,3 @@
   {% endfor %}
   </div>
 </div> 
-
-
