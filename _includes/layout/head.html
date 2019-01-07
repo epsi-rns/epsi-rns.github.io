@@ -8,7 +8,7 @@
     <meta name="MobileOptimized" content="320">
 
     <title>{{ (page.title | default: site.title) | escape }}</title>
-  
+
     {% comment %}Let's Fake the Generator{% endcomment %}
     <meta name="generator" content="Karimata 1.2.3 Media Engine" />
 
@@ -28,7 +28,8 @@
 
     {% comment %}<!-- Stuff -->{% endcomment %}        
     <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    
+    <link rel="alternate" type="application/rss" href="{{ "/feed.xml" | prepend: site.baseurl }}" title="Yet Another Open Source Blog" />
+
     {% include head/opengraph.html %}
     {% include head/twitter.html %}
 </head>
