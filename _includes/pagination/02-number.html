@@ -11,7 +11,7 @@
 
 <nav aria-label="Page navigation">
 
-  {{ if total_pages > 1 }}
+  {% if total_pages > 1 %}
   <ul class="pagination justify-content-center">
 
     <!-- Previous Page. -->
@@ -60,7 +60,7 @@
       </li>
     {% endif %}
   </ul>
-  {{ end }}
+  {% endif %}
 
 </nav>
 

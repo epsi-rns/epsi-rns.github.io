@@ -73,29 +73,20 @@
     {% for page in (1..total_pages) %}
     
     {% capture spaceless %}
-      <!-- Flag Calculation -->
       {% assign page_current_flag = false %}
 
       {% if total_pages > link_max %}
-      <!-- Complex page numbers. -->
 
-        <!-- Lower limit pages. -->
-        <!-- If the user is on a page which is in the lower limit.  -->
         {% if page_current <= limit_lower %}
-          <!-- If the current loop page is less than max_links. -->
           {% if page <= min_lower %}
             {% assign page_current_flag = true %}
           {% endif %}
 
-        <!-- Upper limit pages. -->
-        <!-- If the user is on a page which is in the upper limit. -->
         {% elsif page_current >= limit_upper %}
-          <!-- If the current loop page is greater than total pages minus $max_links -->
           {% if page > max_upper %}
             {% assign page_current_flag = true %}
           {% endif %}
 
-        <!-- Middle pages. -->
         {% else %}
           
           {% if (page >= lower_offset) and (page <= upper_offset) %}
@@ -104,18 +95,15 @@
 
         {% endif %}
       {% else %}
-      <!-- Simple page numbers. -->
 
         {% assign page_current_flag = true %}
       {% endif %}
 
       {% if page_current_flag == true %}
-      <!-- Calculate Offset Class. -->
         {% assign diff_offset = page | minus: page_current | abs %}
       {% endif %}
     {% endcapture %}
 
-      <!-- Show Pager. -->
       {% if page_current_flag == true %}
       <li class="page-item {% if page == page_current %} active{% endif %} pagination--offset-{{ diff_offset }}">
         {% if page == page_current %} 

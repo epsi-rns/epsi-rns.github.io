@@ -33,7 +33,7 @@
 
 <nav aria-label="Page navigation">
 
-  {{ if total_pages > 1 }}
+  {% if total_pages > 1 %}
   <ul class="pagination justify-content-center">
     <!-- Previous Page. -->
     {% if paginator.previous_page %}
@@ -69,10 +69,11 @@
     {% for page in (1..total_pages) %}
     
     {% capture spaceless %}
+      <!-- Flag Calculation -->
       {% assign page_current_flag = false %}
 
-      <!-- Complex page numbers. -->
       {% if total_pages > link_max %}
+      <!-- Complex page numbers. -->
 
         <!-- Lower limit pages. -->
         <!-- If the user is on a page which is in the lower limit.  -->
@@ -98,8 +99,9 @@
           {% endif %}
 
         {% endif %}
-      <!-- Simple page numbers. -->
+
       {% else %}
+      <!-- Simple page numbers. -->
 
         {% assign page_current_flag = true %}
       {% endif %}
@@ -162,7 +164,7 @@
       </li>
     {% endif %}
   </ul>
-  {{ end }}
+  {% endif %}
 
 </nav>
 

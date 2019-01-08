@@ -16,9 +16,10 @@ opengraph:
   {% include pagination/04-indicator.html %}
   {% include pagination/05-responsive.html %}
   {% include pagination/06-screenreader.html %}
+  {% include pagination/07-cleanup.html %}
 {% endcomment %}
 
-  {% include pagination/06-screenreader.html %}
+  {% include pagination/07-cleanup.html %}
 
   <!-- This loops through the paginated posts -->
 <section id="archive">
@@ -53,8 +54,6 @@ opengraph:
     {% endfor %}
   </div>
 </section>
-
-  {% include pagination/01-simple.html %}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 

@@ -4,7 +4,7 @@
 
 <nav aria-label="Page navigation">
 
-  {{ if total_pages > 1 }}
+  {% if total_pages > 1 %}
   <ul class="pagination justify-content-center">
     <!-- First Page. -->
     {% unless paginator.page == 1 %}
@@ -64,7 +64,7 @@
       </li>
     {% endunless %}
   </ul>
-  {{ end }}
+  {% endif %}
 
 </nav>
 
