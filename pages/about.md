@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Temporary About
+title: About Epsi
 permalink: /pages/about/
 opengraph:
   image: /assets/site/images/authors/epsi-vexel.png
