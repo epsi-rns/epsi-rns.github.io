@@ -9,7 +9,9 @@
     color: $light;
     background-color: transparent; 
     border: 1px solid $dark;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.2); 
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    overflow: auto;
+    max-height: 350px;
   }
 
   pre:hover {
@@ -31,4 +33,24 @@
 .highlighter-rouge .highlight pre {
   background-color: transparent;
   color: #7b8a8b;
+}
+
+@include media-breakpoint-up(xs) {
+  .highlight {
+    max-width: 300px;
+    pre { overflow: scroll; }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .highlight {
+    max-width: 500px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .highlight {
+    max-width: none;
+    pre { overflow: auto; }
+  }
 }
