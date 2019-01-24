@@ -24,7 +24,7 @@ Example in Debian, Fedora, openSUSE, Gentoo.
 #### scrot
 
 {% highlight bash %}
-$ sudo -sbcd5
+$ scrot -sbcd5
 {% endhighlight %}
 
 ![scrot -sbcd5][image-ss-scrot]{: .img-responsive }
