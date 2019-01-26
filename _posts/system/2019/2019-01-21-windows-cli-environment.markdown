@@ -12,6 +12,8 @@ excerpt:
 
 ---
 
+{% include post/2019/01/windows-cli.html %}
+
 ### Preface
 
 > Goal: Prepare comfortable CLI environment in Windows.
@@ -160,6 +162,13 @@ $ choco install youtube-dl
 
 -- -- --
 
+### What is Next ?
+
+There is other article, that you might need to read.
+Consider continue reading [ [Windows - Chocolatey - Sass][local-whats-next] ].
+
+-- -- --
+
 ### Conclusion
 
 Solved.
@@ -171,6 +180,8 @@ And thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/system/2019/01' %}
+
+[local-whats-next]:         https://epsi-rns.gitlab.io/frontend/2019/01/23/windows-choco-sass/
 
 [image-ss-choco-install-curl]:     {{ asset_path }}/windows-01-choco-install-curl.png
 [image-ss-choco-install-ydl]:      {{ asset_path }}/windows-01-choco-install-youtube-dl.png
