@@ -4,6 +4,8 @@
 # from _site/pages/all_posts.yml 
 # to folder _data/all_posts.yml
 
+- title: "Teknik Nih (search engine)"
+  url: http://tekniknih.com/
 
 - title: "BanditHijo (R)-Chive"
   url: http://bandithijo.com/

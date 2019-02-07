@@ -13,6 +13,8 @@ opengraph:
 Hello, my name is Epsi. I'm an open source enthusiast.
 I have made a ready to use, Jekyll site customization.
 
+{% include page/social-accounts.html %}
+
 Although I like command line, I'm not a hacker.
 You won't find any illegal activities in this site.
 
@@ -35,7 +37,7 @@ If you need, there is a guidance on how to setup Jekyll Blog.
 	Installing Jekyll is something cool.
 	Having an example of working site is something else.
 
-* [Overview of this Blog][local-blog]
+* [Example Content of this Blog][local-blog]
 
 	I know nothing. Nothing at all.
 
@@ -50,4 +52,4 @@ If you need, there is a guidance on how to setup Jekyll Blog.
 [image-13]: {{ site.url }}/assets/site/images/authors/epsi-13.jpg
 
 [local-geek]: {{ site.url }}/opensource/2016/05/18/becoming-geek.html
-[local-blog]: {{ site.url }}/webdev/2016/05/14/jekyll-blog-overview.html
+[local-blog]: {{ site.url }}/desktop/2018/08/07/terminal-ricing.html
