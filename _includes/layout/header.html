@@ -11,22 +11,28 @@
   <nav class="navbar navbar-expand-md navbar-light fixed-top
               bg-stripe maxwidth rounded-bottom shadow-hover
               border border-top-0 border-dark">
+
     <a class="navbar-brand" href="{{ site.baseurl | prepend:site.url }}">
        <img src="{{ site.baseurl }}/assets/site/images/logo-orb-spiral.png" 
            alt="{{ site.title }}" />
     </a>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ site.baseurl }}/pages/index"
+           >Blog <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+
     <button class="navbar-toggler" type="button" 
             data-toggle="collapse" data-target="#navbarCollapse" 
             aria-controls="navbarCollapse" aria-expanded="false" 
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ site.baseurl }}/pages/index"
-             >Blog <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
              role="button" data-toggle="dropdown" 
@@ -53,5 +59,6 @@
            type="submit">Search</button>
       </form>
     </div>
+
   </nav>
 </header>
