@@ -212,6 +212,13 @@ This ncmpppc is a common case that typically show below process in sequence:
 
 ![make: install: finished][image-ss-install-finished]{: .img-responsive }
 
+You can also use only <code>make</code>, if you do not want to install.
+After all, this is just an ordinary <code>Makefile</code>.
+
+{% highlight bash %}
+$ make
+{% endhighlight %}
+
 -- -- --
 
 ### Post Install
