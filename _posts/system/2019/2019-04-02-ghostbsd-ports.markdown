@@ -9,7 +9,7 @@ author: epsi
 excerpt:
   GhostBSD provide pkg as binary package manager.
   Ports also provided as package manager to compile source code.
-  This article give an example of Port
+  This article give an example of Ports
   so that beginner can examine this case
   to help understanding the the process
   of installing package using ports.
@@ -70,9 +70,9 @@ Have a nice reading.
 
 > Goal: One Example Case of Ports: ncmpcpp
 
-After examing a few packages as en example,
+I examined a few packages to be a candidate for an example case,
 from irssi, ncurse, ncdu, etc.
-I decided that ncmpcpp is suitable for this example.
+After a while, I decided that ncmpcpp is suitable for this example.
 
 * ncmpcpp: It has many dependency, so I can do recursive config.
 
@@ -85,7 +85,7 @@ I decided that ncmpcpp is suitable for this example.
 #### Prerequisite
 
 Almost all commands below require root privileges.
-You can either login s root or run each command using sudo.
+You can either login as root or run each command using sudo.
 
 -- -- --
 
