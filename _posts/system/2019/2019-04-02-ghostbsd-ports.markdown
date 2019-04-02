@@ -42,7 +42,7 @@ Multiboot of W7, GhostBSD and some linux.
 What has been an accident, leverage my knowledge.
 A blessed in disguise.
 
-> Kill the boy, And let the man be born
+> Kill the boy, and let the man be born
 
 #### Issue
 
@@ -51,8 +51,11 @@ There are three things that amaze me with BSD. The ZFS, Jail, Ports.
 The fact that installing and running GhostBSD,
 is as easy Ubuntu and Manjaro, is a little annoying.
 I always thought that BSD is as hard Gentoo Portage.
-I do not have time to switch from pkg to ports due to load of works,
-so I try ports just for one case. One example.
+All I think about is ports.
+
+Since, I do not have time to switch from pkg to ports due to load of works,
+or even installing FreeBSD from the start.
+All I can do is try ports just for one case. One example.
 And I hope that this example could help other BSD beginner like me,
 understanding the process of installing package using ports.
 
