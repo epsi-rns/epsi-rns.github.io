@@ -60,7 +60,7 @@ GhostBSD is using openRC.
 
 GhostBSD use different path
 
-* `home`, under `\usr\home`.
+* `home`, under `/usr/home`.
   Example: `/usr/home/epsi`.
 
 * Every package outside the base system lay on `/usr/local/`.

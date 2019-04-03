@@ -49,7 +49,7 @@ My personal historical journey
   Trying to setup wireless dongle because my internal card is not supported.
   I also try many kind of desktop environment.
 
-* Trident with ZFS, all hard drive space.
+* Trident with ZFS, I choose to use all hard drive space.
   And realize this volume manager is something cool.
   I also experience Lumina.
 
