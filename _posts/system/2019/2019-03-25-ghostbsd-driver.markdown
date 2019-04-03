@@ -125,7 +125,7 @@ $ sudo pkg install drm-kmod
 $ kldload i915kms
 {% endhighlight %}
 
-And make it permanent in `/etc/rc.conf`
+And make it permanent in `/etc/rc.conf` if necessary.
 
 {% highlight config %}
 kld_list="/boot/modules/i915kms.ko"
