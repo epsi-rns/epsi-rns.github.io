@@ -74,6 +74,20 @@ that allow me to install BSD as multiboot.
 Multiboot mean a chance to learn other OS.
 I do not want VM, I desire native.
 
+#### Screenshot
+
+Masochist dekstop aka ricer would love this GhostBSD.
+You just can copy paste your linux dotfiles, and most of all works,
+just like you move dotfiles from one distribution to other notebook.
+
+![ghostbsd: screenfetch][image-ss-ghostbsd-screenfetch]{: .img-responsive }
+
+Any DE/WM run on slackware would run on GhostBSD.
+It means DE with high dependency with systemd such as Pantheon,
+would not run on GhostBSD.
+
+> Pefer nosystemd? just jump to BSD!
+
 -- -- --
 
 ### How I did the Multiboot
@@ -241,3 +255,5 @@ Consider continue reading [ [GhostBSD Driver][local-part-config] ].
 {% assign asset_path = '/assets/posts/system/2019/03' %}
 
 [local-part-config]:       /system/2019/03/25/ghostbsd-driver.html
+
+[image-ss-ghostbsd-screenfetch]:    {{ asset_path }}/ghostbsd-screenfetch.png
