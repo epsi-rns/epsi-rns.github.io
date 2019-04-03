@@ -7,12 +7,7 @@ tags: [bsd, package manager]
 author: epsi
 
 excerpt:
-  GhostBSD provide pkg as binary package manager.
-  Ports also provided as package manager to compile source code.
-  This article give an example of Ports
-  so that beginner can examine this case
-  to help understanding the the process
-  of installing package using ports.
+  GhostBSD multiboot situation with Windows and Linux is possible.
 
 ---
 
@@ -237,36 +232,12 @@ Telegram is a good place to talk about BSD
 
 ### What's Next ?
 
-Have a nice reading.
+Thank you for reading this article.
 
+Consider continue reading [ [GhostBSD Driver][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/04/ncmpcpp' %}
+{% assign asset_path = '/assets/posts/system/2019/03' %}
 
-
-[image-ss-portsnap-extract]:    {{ asset_path }}/01-portsnap-fetch-extract.png
-[image-ss-portsnap-update]:     {{ asset_path }}/01-portsnap-fetch-update.png
-
-[image-ss-make-all-depends]:    {{ asset_path }}/02-ncmpcpp-make-all-depends-list.png
-[image-ss-make-config]:         {{ asset_path }}/02-ncmpcpp-config-recursive.png
-
-[image-ss-recursive-fftw3]:     {{ asset_path }}/03-ncmpcpp-config-recursive-fftw3.png
-[image-ss-recursive-gettext]:   {{ asset_path }}/03-ncmpcpp-config-recursive-gettext.png
-[image-ss-recursive-libconv]:   {{ asset_path }}/03-ncmpcpp-config-recursive-libconv.png
-[image-ss-recursive-ncurses]:   {{ asset_path }}/03-ncmpcpp-config-recursive-ncurses.png
-[image-ss-recursive-perl5]:     {{ asset_path }}/03-ncmpcpp-config-recursive-perl5.png
-[image-ss-recursive-pkg]:       {{ asset_path }}/03-ncmpcpp-config-recursive-pkg.png
-
-[image-ss-install]:             {{ asset_path }}/04-ncmpcpp-make-install.png
-[image-ss-install-check]:       {{ asset_path }}/04-ncmpcpp-make-install-check.png
-[image-ss-install-compilation]: {{ asset_path }}/04-ncmpcpp-make-install-compilation.png
-[image-ss-install-finished]:    {{ asset_path }}/04-ncmpcpp-make-install-finished.png
-
-[image-ss-make-deinstall]:      {{ asset_path }}/05-ncmpcpp-make-deinstall.png
-[image-ss-make-reinstall]:      {{ asset_path }}/05-ncmpcpp-make-install-again.png
-[image-ss-make-clean]:          {{ asset_path }}/05-ncmpcpp-make-clean.png
-[image-ss-make-distclean]:      {{ asset_path }}/05-ncmpcpp-make-distclean.png
-[image-ss-disfiles]:            {{ asset_path }}/05-ncmpcpp-usr-ports-distfiles.png
-
-[image-ss-ncmpcpp-running]:     {{ asset_path }}/06-ncmpcpp-run.png
+[local-part-config]:       /system/2019/03/25/ghostbsd-driver.html

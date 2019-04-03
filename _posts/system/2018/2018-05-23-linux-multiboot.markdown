@@ -336,7 +336,8 @@ that Ubuntu support arch-install-scripts.
 
 ### What's next
 
-Consider continue reading [ [Network: Samba][local-part-config] ].
+Consider continue reading [ [Network: Samba][local-part-config] ],
+or consider [ [GhostBSD Multiboot][local-part-ghost] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -344,6 +345,7 @@ Consider continue reading [ [Network: Samba][local-part-config] ].
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:       /system/2018/05/25/linux-samba.html
+[local-part-ghost]:        /system/2019/03/20/ghostbsd-multiboot.html
 
 [dotfiles-multiboot]:      {{ dotfiles }}
 
