@@ -208,9 +208,9 @@ Unlike linux, I should always use `sudo`, until I find a way.
 
 -- -- --
 
-### Disccussion
+### Discussion
 
-Telegram is a good palce to talk about BSD
+Telegram is a good place to talk about BSD
 
 #### English
 
@@ -237,35 +237,8 @@ Telegram is a good palce to talk about BSD
 
 ### What's Next ?
 
-#### Interesting Topic: Ports
-
-Now here comes the issue.
-There are three things that amaze me with BSD. The ZFS, Jail, Ports.
-The fact that installing and running GhostBSD,
-is as easy Ubuntu and Manjaro, is a little annoying.
-I always thought that BSD is as hard Gentoo Portage.
-All I think about is ports.
-
-Since, I do not have time to switch from pkg to ports due to load of works,
-or even installing FreeBSD from the start.
-All I can do is try ports just for one case. One example.
-And I hope that this example could help other BSD beginner like me,
-understanding the process of installing package using ports.
-
-Although I'm using GhostBSD.
-I'm sure this also works in TrueOS and Trident.
-
 Have a nice reading.
 
-
--- -- --
-
-### Conclusion
-
-Using ports in GhostBSD is fun, actually.
-
-
-And thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
