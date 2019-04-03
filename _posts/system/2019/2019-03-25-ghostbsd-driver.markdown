@@ -121,8 +121,8 @@ As a beginner, I prefer GhostBSD.
 #### Display Driver
 
 {% highlight config %}
-# sudo pkg install drm-kmod
-# kldload i915kms
+$ sudo pkg install drm-kmod
+$ kldload i915kms
 {% endhighlight %}
 
 And make it permanent in `/etc/rc.conf`
@@ -136,8 +136,8 @@ kld_list="/boot/modules/i915kms.ko"
 Just like any linux with openRC.
 
 {% highlight config %}
-# rc-update add lightdm default
-# service lightdm start
+$ rc-update add lightdm default
+$ service lightdm start
 {% endhighlight %}
 
 -- -- --
