@@ -337,7 +337,7 @@ that Ubuntu support arch-install-scripts.
 ### What's next
 
 Consider continue reading [ [Network: Samba][local-part-config] ],
-or consider [ [GhostBSD Multiboot][local-part-ghost] ].
+or consider [ [GhostBSD - Multiboot][local-part-ghost] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

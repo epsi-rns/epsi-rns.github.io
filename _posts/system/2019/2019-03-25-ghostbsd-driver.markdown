@@ -146,13 +146,13 @@ $ service lightdm start
 
 Thank you for reading this article.
 
-Consider continue reading [ [GhostBSD Ports][local-part-config] ].
+Consider continue reading [ [GhostBSD - Migraion from Linux][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/system/2019/03' %}
 
-[local-part-config]:       /system/2019/04/02/ghostbsd-ports.html
+[local-part-config]:       /system/2019/03/30/ghostbsd-migration.html
 
 [image-usb-dongle]:         {{ asset_path }}/WN725N.jpg
 [image-network-restart]:    {{ asset_path }}/trident-service-network-restart.jpg

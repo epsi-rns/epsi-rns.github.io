@@ -76,17 +76,7 @@ I do not want VM, I desire native.
 
 #### Screenshot
 
-Masochist dekstop aka ricer would love this GhostBSD.
-You just can copy paste your linux dotfiles, and most of all works,
-just like you move dotfiles from one distribution to other notebook.
-
 ![ghostbsd: screenfetch][image-ss-ghostbsd-screenfetch]{: .img-responsive }
-
-Any DE/WM run on slackware would run on GhostBSD.
-It means DE with high dependency with systemd such as Pantheon,
-would not run on GhostBSD.
-
-> Pefer nosystemd? just jump to BSD!
 
 -- -- --
 
@@ -217,38 +207,11 @@ Unlike linux, I should always use `sudo`, until I find a way.
 
 -- -- --
 
-### Discussion
-
-Telegram is a good place to talk about BSD
-
-#### English
-
-* [TrueOS Community](https://t.me/TrueOSCommunity)
-
-* [Project Trident](https://t.me/ProjectTrident)
-
-* [GhostBSD](https://t.me/ghostbsd)
-
-* [BSD](https://t.me/unitedbsd)
-
-* [Lumina Desktop](https://t.me/luminadesktop)
-
-#### Local (Indonesia)
-
-* [Laskar Setan Merah](https://t.me/setanmerahID)
-
-* [Free BSD Indonesia](https://t.me/freebsdid)
-
-* [Pegel BSD](https://t.me/pegelbsd)
-
-
--- -- --
-
 ### What's Next ?
 
 Thank you for reading this article.
 
-Consider continue reading [ [GhostBSD Driver][local-part-config] ].
+Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
