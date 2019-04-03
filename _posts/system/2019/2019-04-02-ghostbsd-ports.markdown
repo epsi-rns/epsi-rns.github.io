@@ -16,59 +16,23 @@ excerpt:
 
 ---
 
-### Behind The Screen
+### Preface
 
-Good day folks,
-
-It has been a busy busy year that forced me to be apart from my blog.
-But here we are again, jump from Linux to BSD.
-
-#### A Well Oops
-
-One day, I try to cheer my self up, by buying a second handed notebook.
-After ten days, setting up W7, Proxmox, Void, Funtoo, and NixOS.
-The notebook was ready to be use as my daily basis working station.
-Well you know, I have to face a busy busy month ahead of me.
-Before I sleep, I decide to install my last OS, the latest True OS,
-and I accidentally wipe all partition in that notebook.
-Oo wwhat a mess...?@#!!!
-
-After a while, I feel a warm bright light in my mind, and give me this idea: 
-__This is it!! It is time to give BSD family a try.__
-After find time at weekend, I try the old True OS desktop,
-and then GhostBSD with UFS, later Trident with ZFS,
-TrueOS server again with ZFS, and finally settle with 
-Multiboot of W7, GhostBSD and some linux.
-What has been an accident, leverage my knowledge.
-A blessed in disguise.
-
-> Kill the boy, and let the man be born
+> Goal: One Example Case of Ports
 
 #### Issue
 
-Now here comes the issue.
-There are three things that amaze me with BSD. The ZFS, Jail, Ports.
-The fact that installing and running GhostBSD,
-is as easy Ubuntu and Manjaro, is a little annoying.
-I always thought that BSD is as hard Gentoo Portage.
-All I think about is ports.
-
-Since, I do not have time to switch from pkg to ports due to load of works,
-or even installing FreeBSD from the start.
-All I can do is try ports just for one case. One example.
-And I hope that this example could help other BSD beginner like me,
-understanding the process of installing package using ports.
+I need to leverage BSD knowledge from using binary <code>pkg</code>
+to source based <code>ports</code> using already installed GhostBSD,
+without installing FreeBSD.
 
 Although I'm using GhostBSD.
 I'm sure this also works in TrueOS and Trident.
 
-Have a nice reading.
+I hope that this example could help other BSD beginner like me,
+understanding the process of installing package using ports.
 
--- -- --
-
-### Preface
-
-> Goal: One Example Case of Ports: ncmpcpp
+#### Example Candidate
 
 I examined a few packages to be a candidate for an example case,
 from irssi, ncurse, ncdu, etc.
@@ -82,10 +46,18 @@ After a while, I decided that ncmpcpp is suitable for this example.
 
 * irssi: Already in other tutorial.
 
+> I decide to use ncmpcpp
+
 #### Prerequisite
 
 Almost all commands below require root privileges.
 You can either login as root or run each command using sudo.
+
+#### Reading
+
+Official documentation of FreeBSD:
+
+* [Using the Ports Collection](https://www.freebsd.org/doc/handbook/ports-using.html)
 
 -- -- --
 
@@ -128,6 +100,12 @@ Most tutorial is usually ask to just go there, and run this command:
 {% highlight bash %}
 $ make install clean
 {% endhighlight %}
+
+As a beginner, I won't argue the official documentation.
+The fact is, this is just an ordinary <code>Makefile</code>.
+The <code>make</code> command might sufficient to compile.
+However, we either need to <code>make install</code>
+or <code>make package</code> to build package.
 
 #### Dependencies
 
@@ -212,11 +190,11 @@ This ncmpppc is a common case that typically show below process in sequence:
 
 ![make: install: finished][image-ss-install-finished]{: .img-responsive }
 
-You can also use only <code>make</code>, if you do not want to install.
-After all, this is just an ordinary <code>Makefile</code>.
+You can also use only <code>make package</code> without <code>install</code>,
+if you want to build package without installing.
 
 {% highlight bash %}
-$ make
+$ make package
 {% endhighlight %}
 
 -- -- --
@@ -292,6 +270,10 @@ Sounds in ncmpcpp works as charmed.
 ### Conclusion
 
 Using ports in GhostBSD is fun, actually.
+
+I just think I need to read this
+[porters-handbook/](https://www.freebsd.org/doc/en/books/porters-handbook/) later.
+And this [Less Known pkg(8) Features](https://vermaden.wordpress.com/2019/01/17/less-known-pkg8-features/).
 
 And thank you for reading.
 
