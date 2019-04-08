@@ -12,6 +12,8 @@ excerpt:
 
 ---
 
+{% include post/2019/03/toc-ghostbsd.html %}
+
 ### Desktop Customization
 
 Masochist dekstop aka ricer would love this GhostBSD.

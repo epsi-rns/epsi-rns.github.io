@@ -11,6 +11,8 @@ excerpt:
 
 ---
 
+{% include post/2019/03/toc-ghostbsd.html %}
+
 ### Preface
 
 Good day folks,

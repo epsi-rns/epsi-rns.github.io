@@ -12,6 +12,8 @@ excerpt:
 
 ---
 
+{% include post/2019/03/toc-ghostbsd.html %}
+
 ### Preface
 
 From the perspective of user,
