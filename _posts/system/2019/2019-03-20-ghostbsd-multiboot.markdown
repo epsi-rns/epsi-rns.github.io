@@ -28,6 +28,8 @@ Before I sleep, I decide to install my last OS, the latest True OS,
 and I accidentally wipe all partition in that notebook.
 Oo wwhat a mess...?@#!!!
 
+![linux: gparted][image-ss-void-gparted]{: .img-responsive }
+
 After a while, I feel a warm bright light in my mind, and give me this idea: 
 __This is it!! It is time to give BSD family a try.__
 After find time, started at weekend, I try some distribution.
@@ -76,6 +78,8 @@ I do not want VM, I desire native.
 
 #### Screenshot
 
+My first impression of the logo is that it looks like __hello kitty__.
+
 ![ghostbsd: screenfetch][image-ss-ghostbsd-screenfetch]{: .img-responsive }
 
 -- -- --
@@ -95,6 +99,14 @@ For MBR situation, it takes:
 * Free Space for Extended Partiions.
   This could be used as container for some linux,
   swap, data partition, or maybe windows data.
+
+#### Partitions Arrangement
+
+Consider this screenshot, so you can figure out what I'm talking about.
+
+![ghostbsd: gpart show][image-ss-ghostbsd-gpart-show]{: .img-responsive }
+
+Note that I took this picture after installing GhostBSD.
 
 #### Windows
 
@@ -155,6 +167,12 @@ I setup 60GB data partition dedicated to be shared between linux and BSD.
 
 I also setup other linux as well, Funtoo, 
 and one partition that likely change from time to time.
+
+#### Partition Editor
+
+FreeBSD came with no `gparted`. You can use `sade` instead.
+
+![ghostbsd: sade][image-ss-ghostbsd-sade]{: .img-responsive }
 
 -- -- --
 
@@ -220,3 +238,7 @@ Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 [local-part-config]:       /system/2019/03/25/ghostbsd-driver.html
 
 [image-ss-ghostbsd-screenfetch]:    {{ asset_path }}/ghostbsd-screenfetch.png
+
+[image-ss-ghostbsd-gpart-show]:     {{ asset_path }}/ghost-gpart-show.png
+[image-ss-ghostbsd-sade]:           {{ asset_path }}/ghost-sade.png
+[image-ss-void-gparted]:            {{ asset_path }}/void-gparted.png
