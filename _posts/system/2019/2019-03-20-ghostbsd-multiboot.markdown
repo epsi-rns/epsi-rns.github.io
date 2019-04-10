@@ -3,7 +3,7 @@ layout: post
 title:  "GhostBSD - Multiboot"
 date:   2019-03-20 09:45:15 +0700
 categories: system
-tags: [bsd, package manager]
+tags: [bsd]
 author: epsi
 
 excerpt:
@@ -109,6 +109,25 @@ Consider this screenshot, so you can figure out what I'm talking about.
 ![ghostbsd: gpart show][image-ss-ghostbsd-gpart-show]{: .img-responsive }
 
 Note that I took this picture after installing GhostBSD.
+
+#### Burning The Live ISO
+
+It is easier to use USB these day than burning into DVD.
+
+![ghostbsd: dd if pv of][image-ss-dd-live-usb]{: .img-responsive }
+
+Just be sure that you choose the right device.
+
+{% highlight bash %}
+$ sudo dd if=/media/Works/iso-distribution/GhostBSD18.12.iso of=/dev/sdb bs=4096
+{% endhighlight %}
+
+Or even better using `pv`.
+
+{% highlight bash %}
+$ dd if=/media/Works/iso-distribution/GhostBSD18.12.iso | pv -s 2700M | sudo dd of=/dev/sdb
+{% endhighlight %}
+
 
 #### Windows
 
@@ -244,3 +263,4 @@ Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 [image-ss-ghostbsd-gpart-show]:     {{ asset_path }}/ghost-gpart-show.png
 [image-ss-ghostbsd-sade]:           {{ asset_path }}/ghost-sade.png
 [image-ss-void-gparted]:            {{ asset_path }}/void-gparted.png
+[image-ss-dd-live-usb]:             {{ asset_path }}dd-if-of-pv-ghost.png

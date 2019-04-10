@@ -3,7 +3,7 @@ layout: post
 title:  "GhostBSD - Driver"
 date:   2019-03-25 09:45:15 +0700
 categories: system
-tags: [bsd, package manager]
+tags: [bsd]
 author: epsi
 
 excerpt:
