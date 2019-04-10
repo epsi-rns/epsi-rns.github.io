@@ -263,4 +263,4 @@ Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 [image-ss-ghostbsd-gpart-show]:     {{ asset_path }}/ghost-gpart-show.png
 [image-ss-ghostbsd-sade]:           {{ asset_path }}/ghost-sade.png
 [image-ss-void-gparted]:            {{ asset_path }}/void-gparted.png
-[image-ss-dd-live-usb]:             {{ asset_path }}dd-if-of-pv-ghost.png
+[image-ss-dd-live-usb]:             {{ asset_path }}/dd-if-of-pv-ghost.png
