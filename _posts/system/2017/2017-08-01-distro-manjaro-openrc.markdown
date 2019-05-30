@@ -202,7 +202,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}\
+{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
 {% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-manjaro' %}
 
 [image-ss-manjaro-sddm]: {{ asset_post }}/sddm-no-face.png
