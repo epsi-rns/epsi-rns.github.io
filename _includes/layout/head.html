@@ -1,19 +1,9 @@
-<head>    
+<head>
+    {% include meta/html.html %}
     {% comment %}<!-- Required meta tags -->{% endcomment %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-
     <title>{{ (page.title | default: site.title) | escape }}</title>
-
-    {% comment %}Let's Fake the Generator{% endcomment %}
-    <meta name="generator" content="Karimata 1.2.3 Media Engine" />
-
+  
     {% comment %}<!-- Bootstrap CSS -->{% endcomment %}
-
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/bootstrap.css" >
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/fontawesome.css" >
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/themes/oriclone/css/main.css" >
@@ -30,12 +20,8 @@
     <link href="{{ site.baseurl }}/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link rel="alternate" type="application/rss" href="{{ "/feed.xml" | prepend: site.baseurl }}" title="Yet Another Open Source Blog" />
 
-    {% include head/opengraph.html %}
-    {% include head/twitter.html %}
+    {% include meta/seo.html %}
+    {% include meta/opengraph.html %}
+    {% include meta/twitter.html %}
 </head>
 
-
-
-
-
-    

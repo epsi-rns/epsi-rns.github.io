@@ -1,0 +1,32 @@
+{% comment %}
+
+Source:
+https://github.com/mmistakes/so-simple-theme/blob/master/_includes/open-graph.html
+
+A liquid tuple would be nice,
+but liquid is only a template after all.
+
+{% endcomment %}
+ 
+{% comment %}
+<!-- Open Graph -->
+{% endcomment %}
+  <meta property="og:locale"       content="{{ site.locale }}">
+  <meta property="og:type"         content="article">
+  <meta property="og:title"        content="{{ (page.title | default: site.title) | escape }}">
+{% if page.excerpt %}
+  <meta property="og:description"  content="{{ page.excerpt | strip_html }}">
+{% else %}
+  <meta property="og:description"  content="{{ site.description | strip }}">
+{% endif %}
+  <meta property="og:url"          content="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+  <meta property="og:site_name"    content="{{ site.title }}">
+  {% if page.opengraph.image %}
+  <meta property="og:image"        content="{{ site.url }}{{ site.baseurl }}{{ page.opengraph.image }}">
+  {% elsif layout.opengraph.image %}
+  <meta property="og:image"        content="{{ site.url }}{{ site.baseurl }}/{{ layout.opengraph.image }}">
+  {% endif %}
+  <meta property="og:latitude"     content="-6.193665"/>
+  <meta property="og:longitude"    content="106.848558"/>
+  <meta property="og:locality"     content="Jakarta"/>
+  <meta property="og:country-name" content="Indonesia"/>
