@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Iterate Oh My BASH Theme"
-date:   2017-12-26 09:35:15 +0700
+date      : 2017-12-26 09:35:15 +0700
 categories: desktop
-tags: [ricing, bash, zsh]
+tags      : [ricing, bash, zsh]
+keywords  : [oh-my-bash, oh-my-zsh, theme]
 author: epsi
 
 excerpt:

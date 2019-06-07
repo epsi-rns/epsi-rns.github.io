@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Parsing BASH command in ZSH"
-date:   2017-12-30 09:35:15 +0700
+date      : 2017-12-30 09:35:15 +0700
 categories: code
-tags: [coding, bash, zsh]
+tags      : [coding, bash, zsh]
+keywords  : [clobbering]
 author: epsi
 
 excerpt:

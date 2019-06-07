@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in Lua"
-date:   2017-05-07 17:35:15 +0700
+date      : 2017-05-07 17:35:15 +0700
 categories: desktop
-tags: [coding, lua, herbstluftwm]
+tags      : [coding, lua, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - Slackware Post Install Log"
-date: 2018-01-17 09:45:15 +0700
+date      : 2018-01-17 09:45:15 +0700
 categories: system
-tags: [slackware, distro, package manager]
+tags      : [slackware, distro, package manager]
+keywords  : [post install]
 author: epsi
 
 excerpt:

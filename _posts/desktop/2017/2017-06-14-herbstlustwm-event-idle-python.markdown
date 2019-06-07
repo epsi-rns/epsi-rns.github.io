@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Idle Event in Python"
-date:   2017-06-14 17:35:15 +0700
+date      : 2017-06-14 17:35:15 +0700
 categories: desktop
-tags: [coding, python, herbstluftwm, statusbar]
+tags      : [coding, python, herbstluftwm, statusbar]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

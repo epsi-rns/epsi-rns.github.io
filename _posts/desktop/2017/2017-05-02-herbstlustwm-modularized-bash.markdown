@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in BASH"
-date:   2017-05-02 17:35:15 +0700
+date      : 2017-05-02 17:35:15 +0700
 categories: desktop
-tags: [coding, bash, herbstluftwm]
+tags      : [coding, bash, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

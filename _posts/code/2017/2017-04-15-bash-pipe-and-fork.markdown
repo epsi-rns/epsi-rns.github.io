@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piping and Forking in BASH"
+date      : 2017-04-15 17:35:15 +0700
 categories: code
-date:   2017-04-15 17:35:15 +0700
-tags: [coding, conky, bash]
+tags      : [coding, conky, bash]
+keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
 excerpt:

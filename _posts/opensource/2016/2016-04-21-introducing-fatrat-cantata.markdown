@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Introducing FatRat and Cantata"
-date:   2016-04-21 21:39:15 +0700
+date      : 2016-04-21 21:39:15 +0700
 categories: opensource
-tags: [app, kde]
+tags      : [app, kde]
 author: epsi
 
 excerpt:

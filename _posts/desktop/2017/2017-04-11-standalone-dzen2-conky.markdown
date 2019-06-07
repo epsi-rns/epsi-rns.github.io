@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Standalone Dzen2 Statusbar Using Conky"
 categories: desktop
-date:   2017-04-11 00:05:15 +0700
-tags: [ricing, statusbar, conky]
+date      : 2017-04-11 00:05:15 +0700
+tags      : [ricing, statusbar, conky]
+keywords  : [standalone, dzen2]
 author: epsi
 
 excerpt:

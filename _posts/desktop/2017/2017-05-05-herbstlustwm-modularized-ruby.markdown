@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in Ruby"
-date:   2017-05-05 17:35:15 +0700
+date      : 2017-05-05 17:35:15 +0700
 categories: desktop
-tags: [coding, ruby, herbstluftwm]
+tags      : [coding, ruby, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Modularized XMonad Config"
-date:   2016-03-26 14:58:15 +0700
+date      : 2016-03-26 14:58:15 +0700
 categories: desktop
-tags: [screenshot, xmonad, dotfiles]
+tags      : [screenshot, xmonad, dotfiles]
+keywords  : [modularized, refactoring, decomposition]
 author: epsi
 
 excerpt: 

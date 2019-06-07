@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Create XBM for your Dzen2"
 categories: desktop
-date:   2017-04-08 13:35:15 +0700
-tags: [ricing, statusbar, inkscape, gimp]
+date      : 2017-04-08 13:35:15 +0700
+tags      : [ricing, statusbar, inkscape, gimp]
+keywords  : [dzen2, xbm]
 author: epsi
 
 excerpt:

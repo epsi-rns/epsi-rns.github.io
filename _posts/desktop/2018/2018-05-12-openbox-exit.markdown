@@ -2,8 +2,9 @@
 layout: post
 title:  "Openbox Utility - Exit"
 categories: desktop
-date:   2018-05-12 09:25:15 +0700
-tags: [openbox]
+date      : 2018-05-12 09:25:15 +0700
+tags      : [openbox]
+keywords  : [tutorial, utility]
 author: epsi
 
 excerpt:

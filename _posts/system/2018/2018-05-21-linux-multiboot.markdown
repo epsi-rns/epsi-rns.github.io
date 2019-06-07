@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Linux Multiboot - Partition Schema"
-date:   2018-05-21 09:25:15 +0700
+date      : 2018-05-21 09:25:15 +0700
 categories: system
-tags: [thought]
+tags      : [thought]
+keywords  : [multiboot, partition]
 author: epsi
 
 excerpt:

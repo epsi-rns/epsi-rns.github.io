@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "What to Do, When the System Stuck, on Boot"
-date:   2016-05-19 15:39:15 +0700
+date      : 2016-05-19 15:39:15 +0700
 categories: system
-tags: [package manager]
+tags      : [package manager]
+keywords  : [boot, grub2, troubleshooting]
 author: epsi
 
 excerpt:

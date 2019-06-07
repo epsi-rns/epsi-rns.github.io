@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Install i3 WM in Arch Linux based Distribution"
 categories: desktop
-date:   2016-08-03 19:25:15 +0700
-tags: [i3wm, install]
+date      : 2016-08-03 19:25:15 +0700
+tags      : [i3wm, install]
+keywords  : [i3, i3gaps, i3blocks, i3status, pacman]
 author: epsi
 
 excerpt:

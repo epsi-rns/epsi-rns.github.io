@@ -1,9 +1,9 @@
 ---
 layout: post-sidemenu-wm
 title:  "Is it a Gnome Shell Customization, or Am I just got bored ?"
-date:   2014-04-22 12:18:15 +0700
+date      : 2014-04-22 12:18:15 +0700
 categories: desktop
-tags: [screenshot, gnome-shell, conky]
+tags      : [screenshot, gnome-shell, conky]
 author: epsi
 
 excerpt:

@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "openSUSE Tumbleweed Tiling Experience"
 categories: desktop
-date:   2018-01-02 09:25:15 +0700
-tags: [i3wm, install]
+date      : 2018-01-02 09:25:15 +0700
+tags      : [install]
+keywords  : [opensuse, tumbleweed, tiling]
 author: epsi
 
 excerpt:

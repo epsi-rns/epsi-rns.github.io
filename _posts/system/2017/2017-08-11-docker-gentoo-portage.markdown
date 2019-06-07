@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Gentoo Portage - Part One"
-date: 2017-08-11 09:45:15 +0700
+date      : 2017-08-11 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager, gentoo]
+tags      : [docker, distro, package manager, gentoo]
+keywords  : [emerge]
 author: epsi
 
 excerpt:

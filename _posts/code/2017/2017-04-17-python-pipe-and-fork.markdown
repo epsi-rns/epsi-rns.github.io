@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piping and Forking in Python"
+date      : 2017-04-17 17:35:15 +0700
 categories: code
-date:   2017-04-17 17:35:15 +0700
-tags: [coding, conky, perl]
+tags      : [coding, conky, perl]
+keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
 excerpt:

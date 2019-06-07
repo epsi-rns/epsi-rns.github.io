@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "The Difference Between DE, Shell, WM and Compositor"
 categories: desktop
-date:   2016-06-13 23:16:15 +0700
-tags: [thought]
+date      : 2016-06-13 23:16:15 +0700
+tags      : [thought]
+keywords  : [desktop manager, window manager, shell, compositor]
 author: epsi
 
 excerpt:

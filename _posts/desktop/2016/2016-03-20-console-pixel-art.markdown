@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Console Pixel Art, a Collection of Scripts"
-date:   2016-03-20 22:38:15 +0700
+date      : 2016-03-20 22:38:15 +0700
 categories: desktop
-tags: [screenshot, console, bash]
+tags      : [screenshot, console, bash]
+keywords  : [crunchbang, pixel art, shell script, xmonad]
 author: epsi
 
 excerpt: 

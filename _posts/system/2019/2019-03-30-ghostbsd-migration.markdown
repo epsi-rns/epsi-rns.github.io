@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "GhostBSD - Migration from Linux"
-date:   2019-03-30 09:45:15 +0700
+date      : 2019-03-30 09:45:15 +0700
 categories: system
-tags: [bsd]
+tags      : [bsd]
+keywords  : [ghostbsd, migration]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Slackware Package - Part Three"
-date: 2017-08-23 09:35:15 +0700
+date      : 2017-08-23 09:35:15 +0700
 categories: system
-tags: [docker, distro, package manager, slackware]
+tags      : [docker, distro, package manager, slackware]
+keywords  : [slackpkg, slpkg]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in Python"
-date:   2017-05-04 17:35:15 +0700
+date      : 2017-05-04 17:35:15 +0700
 categories: desktop
-tags: [coding, python, herbstluftwm]
+tags      : [coding, python, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "XMonad with Conkyless Dzen, Total Control of Theme"
-date:   2016-05-11 21:02:15 +0700
+date      : 2016-05-11 21:02:15 +0700
 categories: desktop
-tags: [screenshot, xmonad, dotfiles]
+tags      : [screenshot, xmonad, dotfiles]
+keywords  : [modularized, dzen2]
 author: epsi
 
 excerpt:

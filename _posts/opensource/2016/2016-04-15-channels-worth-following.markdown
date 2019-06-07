@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Channels Worth Following"
-date:   2016-04-15 23:07:15 +0700
+date      : 2016-04-15 23:07:15 +0700
 categories: opensource
-tags: [inkscape, design, news]
+tags      : [inkscape, design, news]
 author: epsi
 
 excerpt: >

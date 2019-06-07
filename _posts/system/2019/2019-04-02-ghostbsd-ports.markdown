@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "GhostBSD - Ports"
-date:   2019-04-02 09:45:15 +0700
+date      : 2019-04-02 09:45:15 +0700
 categories: system
-tags: [bsd, package manager]
+tags      : [bsd, package manager]
+keywords  : [ghostbsd, ports]
 author: epsi
 
 excerpt:

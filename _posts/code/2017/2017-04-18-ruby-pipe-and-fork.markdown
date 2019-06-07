@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piping and Forking in Ruby"
+date      : 2017-04-18 17:35:15 +0700
 categories: code
-date:   2017-04-18 17:35:15 +0700
-tags: [coding, conky, ruby]
+tags      : [coding, conky, ruby]
+keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
 excerpt:

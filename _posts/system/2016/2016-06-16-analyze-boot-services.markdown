@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Analyze Services in Linux Boot Process"
-date:   2016-06-16 18:57:15 +0700
+date      : 2016-06-16 18:57:15 +0700
 categories: system
-tags: [init]
+tags      : [init]
+keywords  : [systemd, svg]
 author: epsi
 
 excerpt:

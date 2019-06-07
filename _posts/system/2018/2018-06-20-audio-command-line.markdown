@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Audio Command Line, a must have Knowledge"
-date:   2018-06-22 09:45:15 +0700
+date      : 2018-06-22 09:45:15 +0700
 categories: system
-tags: [thought, audio]
+tags      : [thought, audio]
+keywords  : [troubleshooting, audiopulse, alsamixer]
 author: epsi
 
 excerpt:

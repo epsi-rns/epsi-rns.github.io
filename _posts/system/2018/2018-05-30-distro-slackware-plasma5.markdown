@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - Slackware Plasma 5"
-date: 2018-05-30 09:45:15 +0700
+date      : 2018-05-30 09:45:15 +0700
 categories: system
-tags: [slackware, distro, package manager]
+tags      : [slackware, distro, package manager]
+keywords  : [multiboot, partition, plasma5, ktown, slackpkg]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "XMonad Menu Bar"
-date:   2014-12-15 11:58:15 +0700
+date      : 2014-12-15 11:58:15 +0700
 categories: desktop
-tags: [ricing, xmonad]
+tags      : [ricing, xmonad]
+keywords  : [panel]
 author: epsi
 
 excerpt:

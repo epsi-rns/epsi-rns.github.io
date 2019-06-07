@@ -2,8 +2,9 @@
 layout: post
 title:  "Tint2 - More Backgrounds"
 categories: desktop
-date:   2018-05-16 09:25:15 +0700
-tags: [openbox]
+date      : 2018-05-16 09:25:15 +0700
+tags      : [openbox]
+keywords  : [tutorial, configuration, tint2]
 author: epsi
 
 excerpt:

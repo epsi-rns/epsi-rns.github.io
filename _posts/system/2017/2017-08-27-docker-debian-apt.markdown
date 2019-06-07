@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Debian APT - Part Four"
-date: 2017-08-27 09:35:15 +0700
+date      : 2017-08-27 09:35:15 +0700
 categories: system
-tags: [docker, distro, package manager, debian]
+tags      : [docker, distro, package manager, debian]
+keywords  : [apt]
 author: epsi
 
 excerpt:

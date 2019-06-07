@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in Perl"
-date:   2017-05-03 17:35:15 +0700
+date      : 2017-05-03 17:35:15 +0700
 categories: desktop
-tags: [coding, perl, herbstluftwm]
+tags      : [coding, perl, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

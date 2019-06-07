@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Unbundling AUR Helper Process"
-date:   2014-12-26 18:08:15 +0700
+date      : 2014-12-26 18:08:15 +0700
 categories: system
-tags: [arch, package manager]
+tags      : [arch, package manager]
+keywords  : [aur, yaourt]
 author: epsi
 
 excerpt:

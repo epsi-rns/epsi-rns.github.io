@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "HerbstluftWM in Seven Languages Summary"
-date:   2017-06-30 17:35:15 +0700
+date      : 2017-06-30 17:35:15 +0700
 categories: desktop
-tags: [coding, herbstluftwm, dotfiles]
+tags      : [coding, herbstluftwm, dotfiles]
+keywords  : [overview, summary]
 author: epsi
 
 excerpt:

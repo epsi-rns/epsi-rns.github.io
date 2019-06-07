@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Install Yaourt, the AUR Helper"
-date:   2016-06-21 05:27:15 +0700
+date      : 2016-06-21 05:27:15 +0700
 categories: system
-tags: [package manager]
+tags      : [package manager]
+keywords  : [aur, yaourt]
 author: epsi
 
 excerpt:

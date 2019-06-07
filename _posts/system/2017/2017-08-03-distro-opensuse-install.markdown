@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - openSUSE Tumbleweed First Time Install"
-date: 2017-08-03 09:45:15 +0700
+date      : 2017-08-03 09:45:15 +0700
 categories: system
-tags: [opensuse, distro, package manager]
+tags      : [opensuse, distro, package manager]
+keywords  : [zypper, tumbleweed]
 author: epsi
 
 excerpt:

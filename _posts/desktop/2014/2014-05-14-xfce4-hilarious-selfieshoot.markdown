@@ -1,9 +1,9 @@
 ---
 layout: post-sidemenu-wm
 title:  "Selfieshoot of Hilarious XFCE4 Customization"
-date:   2014-05-14 12:35:15 +0700
+date      : 2014-05-14 12:35:15 +0700
 categories: desktop
-tags: [screenshot, xfce4]
+tags      : [screenshot, xfce4]
 author: epsi
 
 excerpt:

@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Debugging Conky"
 categories: desktop
-date:   2017-04-22 19:15:15 +0700
-tags: [ricing, statusbar, conky]
+date      : 2017-04-22 19:15:15 +0700
+tags      : [ricing, statusbar, conky]
+keywords  : [dzen2, lua]
 author: epsi
 
 excerpt:

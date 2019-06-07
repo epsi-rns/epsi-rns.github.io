@@ -2,8 +2,9 @@
 layout: post
 title:  "Fluxbox Config - Menu"
 categories: desktop
-date:   2018-04-04 09:25:15 +0700
-tags: [fluxbox]
+date      : 2018-04-04 09:25:15 +0700
+tags      : [fluxbox]
+keywords  : [tutorial, configuration]
 author: epsi
 
 excerpt:

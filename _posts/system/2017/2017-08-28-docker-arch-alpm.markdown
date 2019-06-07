@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Arch ALPM - Part Two"
-date: 2017-08-28 09:35:15 +0700
+date      : 2017-08-28 09:35:15 +0700
 categories: system
-tags: [docker, distro, package manager, debian]
+tags      : [docker, distro, package manager, debian]
+keywords  : [arch]
 author: epsi
 
 excerpt:

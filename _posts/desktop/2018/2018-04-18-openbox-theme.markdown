@@ -2,8 +2,9 @@
 layout: post
 title:  "Openbox Theme - Special Trick"
 categories: desktop
-date:   2018-04-18 09:25:15 +0700
-tags: [openbox, theme, inkscape]
+date      : 2018-04-18 09:25:15 +0700
+tags      : [openbox, theme, inkscape]
+keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Idle Event in Perl"
-date:   2017-06-13 17:35:15 +0700
+date      : 2017-06-13 17:35:15 +0700
 categories: desktop
-tags: [coding, perl, herbstluftwm, statusbar]
+tags      : [coding, perl, herbstluftwm, statusbar]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "i3 Window manager with i3 Bar"
-date:   2014-12-06 18:46:15 +0700
+date      : 2014-12-06 18:46:15 +0700
 categories: desktop
-tags: [screenshot, i3wm, conky, statusbar]
+tags      : [screenshot, i3wm, conky, statusbar]
+keywords  : [i3bar, panel]
 author: epsi
 
 excerpt:

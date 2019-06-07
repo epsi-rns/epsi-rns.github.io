@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Install i3 WM in Debian"
 categories: desktop
-date:   2016-08-02 22:24:15 +0700
-tags: [i3wm, install]
+date      : 2016-08-02 22:24:15 +0700
+tags      : [i3wm, install]
+keywords  : [i3, i3gaps, i3blocks, i3status, apt]
 author: epsi
 
 excerpt:

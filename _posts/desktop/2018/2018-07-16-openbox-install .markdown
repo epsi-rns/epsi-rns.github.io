@@ -2,8 +2,9 @@
 layout: post
 title:  "Openbox Install - Common Utility"
 categories: desktop
-date:   2018-07-16 09:25:15 +0700
-tags: [openbox]
+date      : 2018-07-16 09:25:15 +0700
+tags      : [openbox]
+keywords  : [tutorial, install]
 author: epsi
 
 excerpt:

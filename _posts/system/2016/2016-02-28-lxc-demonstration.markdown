@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Learn Different Package Management Using LXC"
-date:   2016-02-28 23:00:15 +0700
+date      : 2016-02-28 23:00:15 +0700
 categories: system
-tags: [cloud, package manager]
+tags      : [cloud, package manager]
+keywords  : [lxc, container]
 author: epsi
 
 excerpt:

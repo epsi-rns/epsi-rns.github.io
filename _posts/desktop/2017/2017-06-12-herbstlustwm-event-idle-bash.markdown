@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Idle Event in BASH"
-date:   2017-06-12 17:35:15 +0700
+date      : 2017-06-12 17:35:15 +0700
 categories: desktop
-tags: [coding, bash, herbstluftwm, statusbar]
+tags      : [coding, bash, herbstluftwm, statusbar]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

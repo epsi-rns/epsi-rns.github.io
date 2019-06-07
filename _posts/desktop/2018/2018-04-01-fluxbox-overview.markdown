@@ -2,8 +2,9 @@
 layout: post
 title:  "Fluxbox Overview"
 categories: desktop
-date:   2018-04-01 09:25:15 +0700
-tags: [fluxbox]
+date      : 2018-04-01 09:25:15 +0700
+tags      : [fluxbox]
+keywords  : [tutorial]
 author: epsi
 
 excerpt:

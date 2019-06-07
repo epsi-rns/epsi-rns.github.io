@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Linux - Installing Font"
 categories: desktop
-date:   2018-02-04 09:25:15 +0700
-tags: [install]
+date      : 2018-02-04 09:25:15 +0700
+tags      : [install]
+keywords  : [linux, font]
 author: epsi
 
 excerpt:

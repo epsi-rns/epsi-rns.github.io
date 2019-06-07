@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Idle Event in PHP"
-date:   2017-06-16 17:35:15 +0700
+date      : 2017-06-16 17:35:15 +0700
 categories: desktop
-tags: [coding, php, herbstluftwm, statusbar]
+tags      : [coding, php, herbstluftwm, statusbar]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Tag Status in Lua"
-date:   2017-06-07 17:35:15 +0700
+date      : 2017-06-07 17:35:15 +0700
 categories: desktop
-tags: [coding, lua, herbstluftwm, statusbar]
+tags      : [coding, lua, herbstluftwm, statusbar]
+keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
 excerpt:

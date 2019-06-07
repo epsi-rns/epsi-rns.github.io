@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - Mageia 6 Upgrade"
-date: 2017-08-06 09:45:15 +0700
+date      : 2017-08-06 09:45:15 +0700
 categories: system
-tags: [mageia, distro, package manager]
+tags      : [mageia, distro, package manager]
+keywords  : [urpmi]
 author: epsi
 
 excerpt:

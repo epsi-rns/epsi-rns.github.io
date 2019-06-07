@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Control Your Package with APT Pinning"
-date:   2015-03-17 12:49:15 +0700
+date      : 2015-03-17 12:49:15 +0700
 categories: system
-tags: [debian, package manager]
+tags      : [debian, package manager]
+keywords  : [apt pinning]
 author: epsi
 
 excerpt:

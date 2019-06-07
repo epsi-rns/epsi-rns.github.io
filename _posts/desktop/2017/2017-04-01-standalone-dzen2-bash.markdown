@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Standalone Dzen2 Statusbar Using BASH"
 categories: desktop
-date:   2017-04-01 01:35:15 +0700
-tags: [ricing, statusbar, bash]
+date      : 2017-04-01 01:35:15 +0700
+tags      : [ricing, statusbar, bash]
+keywords  : [standalone, dzen2, bash]
 author: epsi
 
 excerpt:

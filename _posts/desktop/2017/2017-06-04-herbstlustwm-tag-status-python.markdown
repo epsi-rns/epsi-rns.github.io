@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Tag Status in Python"
-date:   2017-06-04 17:35:15 +0700
+date      : 2017-06-04 17:35:15 +0700
 categories: desktop
-tags: [coding, python, herbstluftwm, statusbar]
+tags      : [coding, python, herbstluftwm, statusbar]
+keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
 excerpt:

@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "Selectively Install BlackArch Tools"
-date:   2014-12-27 11:58:15 +0700
+date      : 2014-12-27 11:58:15 +0700
 # published: false
 categories: system
-tags: [security, arch, package manager]
+tags      : [security, arch, package manager]
+keywords  : [blackarch, pacman]
 author: epsi
 
 excerpt:

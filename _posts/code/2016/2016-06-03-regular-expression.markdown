@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Meet Our Friend, Regular Expression"
-date:   2016-06-03 16:53:15 +0700
+date      : 2016-06-03 16:53:15 +0700
 categories: code
-tags: [thought, console]
+tags      : [thought, console]
+keywords  : [regular expression]
 author: epsi
 
 excerpt:

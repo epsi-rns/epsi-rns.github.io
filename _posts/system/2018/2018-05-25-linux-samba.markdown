@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Linux Network - Samba"
-date:   2018-05-25 09:25:15 +0700
+date      : 2018-05-25 09:25:15 +0700
 categories: system
-tags: [thought]
+tags      : [thought]
+keywords  : [multiboot, partition, samba, smb, smb.conf]
 author: epsi
 
 excerpt:

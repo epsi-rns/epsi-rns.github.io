@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Facebook Groups, Resources for Linux Enthusiast"
-date:   2014-03-12 14:57:15 +0700
+date      : 2014-03-12 14:57:15 +0700
 categories: opensource
-tags: [thought]
+tags      : [thought]
 author: epsi
 
 excerpt:

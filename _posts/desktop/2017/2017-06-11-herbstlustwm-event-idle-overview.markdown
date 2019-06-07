@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "HerbstluftWM Idle Event Overview"
-date:   2017-06-11 17:35:15 +0700
+date      : 2017-06-11 17:35:15 +0700
 categories: desktop
-tags: [coding, herbstluftwm, dotfiles]
+tags      : [coding, herbstluftwm, dotfiles]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Tag Status in PHP"
-date:   2017-06-06 17:35:15 +0700
+date      : 2017-06-06 17:35:15 +0700
 categories: desktop
-tags: [coding, php, herbstluftwm, statusbar]
+tags      : [coding, php, herbstluftwm, statusbar]
+keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
 excerpt:

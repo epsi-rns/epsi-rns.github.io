@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Using Git for Working Between Computer"
-date:   2018-01-15 15:17:35 +0700
+date      : 2018-01-15 15:17:35 +0700
 categories: opensource
-tags: [console]
+tags      : [console]
+keywords  : [git, github, ssh]
 author: epsi
 
 excerpt:

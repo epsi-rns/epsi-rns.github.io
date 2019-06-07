@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Void XBPS - Part One"
-date: 2017-08-13 13:15:35 +0700
+date      : 2017-08-13 13:15:35 +0700
 categories: system
-tags: [docker, distro, package manager, void]
+tags      : [docker, distro, package manager, void]
+keywords  : [xbps]
 author: epsi
 
 excerpt:

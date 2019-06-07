@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - openSUSE Zypper - Part Four"
-date: 2017-08-18 09:45:15 +0700
+date      : 2017-08-18 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager, opensuse]
+tags      : [docker, distro, package manager, opensuse]
+keywords  : [zypper]
 author: epsi
 
 excerpt:

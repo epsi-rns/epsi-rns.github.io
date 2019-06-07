@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Two Languages of The Future"
-date:   2016-03-29 09:02:15 +0700
+date      : 2016-03-29 09:02:15 +0700
 categories: opensource
-tags: [thought, coding, language, go, rust]
+tags      : [thought, coding, language]
+keywords  : [go, rust]
 author: epsi
 
 excerpt:

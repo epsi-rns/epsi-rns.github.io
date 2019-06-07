@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Wireless Command Line, a must have Knowledge"
-date:   2014-03-13 18:32:15 +0700
+date      : 2014-03-13 18:32:15 +0700
 categories: system
-tags: [thought, network]
+tags      : [thought, network]
+keywords  : [command line interface, cli, wireless, ip, iw, nmcli]
 author: epsi
 
 excerpt:

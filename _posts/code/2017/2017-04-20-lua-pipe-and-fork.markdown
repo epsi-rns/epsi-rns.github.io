@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piping and Forking in Lua"
+date      : 2017-04-20 17:35:15 +0700
 categories: code
-date:   2017-04-20 17:35:15 +0700
-tags: [coding, conky, lua]
+tags      : [coding, conky, lua]
+keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
 excerpt:

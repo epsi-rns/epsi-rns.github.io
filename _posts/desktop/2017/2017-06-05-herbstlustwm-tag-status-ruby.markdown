@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Tag Status in Ruby"
-date:   2017-06-05 17:35:15 +0700
+date      : 2017-06-05 17:35:15 +0700
 categories: desktop
-tags: [coding, ruby, herbstluftwm, statusbar]
+tags      : [coding, ruby, herbstluftwm, statusbar]
+keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
 excerpt:

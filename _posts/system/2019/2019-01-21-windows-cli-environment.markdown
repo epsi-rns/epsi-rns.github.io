@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Windows - Setting up CLI Environment"
-date:   2019-01-21 09:45:15 +0700
+date      : 2019-01-21 09:45:15 +0700
 categories: system
-tags: [windows, package manager]
+tags      : [windows, package manager]
+keywords  : [chocolatey, cmder]
 author: epsi
 
 excerpt:

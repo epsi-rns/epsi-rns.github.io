@@ -1,9 +1,9 @@
 ---
 layout: post-sidemenu-wm
 title:  "Standalone Openbox WM with Tint2 Panel"
-date:   2014-11-02 03:02:15 +0700
+date      : 2014-11-02 03:02:15 +0700
 categories: desktop
-tags: [screenshot, openbox, tint2, ricing]
+tags      : [screenshot, openbox, tint2, ricing]
 author: epsi
 
 excerpt:

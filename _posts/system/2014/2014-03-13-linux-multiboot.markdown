@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Linux Multiboot, Setting up Partitions"
-date:   2014-03-13 18:31:15 +0700
+date      : 2014-03-13 18:31:15 +0700
 categories: system
-tags: [thought]
+tags      : [thought]
+keywords  : [multiboot, partition]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piping and Forking in PHP"
+date      : 2017-04-19 17:35:15 +0700
 categories: code
-date:   2017-04-19 17:35:15 +0700
-tags: [coding, conky, php]
+tags      : [coding, conky, php]
+keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
 excerpt:

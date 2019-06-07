@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "XMonad Tiling Window Manager"
-date:   2014-12-12 22:59:15 +0700
+date      : 2014-12-12 22:59:15 +0700
 categories: desktop
-tags: [screenshot, xmonad, dotfiles]
+tags      : [screenshot, xmonad, dotfiles]
+keywords  : [xmobar, dzen2]
 author: epsi
 
 excerpt:

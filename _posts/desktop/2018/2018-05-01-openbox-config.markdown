@@ -2,8 +2,9 @@
 layout: post
 title:  "Openbox Config - Overview"
 categories: desktop
-date:   2018-05-01 09:25:15 +0700
-tags: [openbox]
+date      : 2018-05-01 09:25:15 +0700
+tags      : [openbox]
+keywords  : [tutorial, configuration]
 author: epsi
 
 excerpt:

@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Getting XLFD Font"
 categories: desktop
-date:   2017-04-13 23:20:15 +0700
-tags: [ricing]
+date      : 2017-04-13 23:20:15 +0700
+tags      : [ricing]
+keywords  : [font, xlfd]
 author: epsi
 
 excerpt:

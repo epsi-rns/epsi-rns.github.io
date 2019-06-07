@@ -2,8 +2,9 @@
 layout: post
 title:  "Manjaro Logo on i3WM on Material Wallpaper"
 categories: desktop
-date:   2016-11-19 00:57:15 +0700
-tags: [inkscape, ricing]
+date      : 2016-11-19 00:57:15 +0700
+tags      : [inkscape, ricing]
+keywords  : [manjaro logo, material wallpaper]
 author: epsi
 
 excerpt:

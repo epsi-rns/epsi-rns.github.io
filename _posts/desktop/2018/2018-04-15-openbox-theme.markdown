@@ -2,8 +2,9 @@
 layout: post
 title:  "Openbox Theme - Overview"
 categories: desktop
-date:   2018-04-15 09:25:15 +0700
-tags: [xfwm4, theme, inkscape]
+date      : 2018-04-15 09:25:15 +0700
+tags      : [xfwm4, theme, inkscape]
+keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
 excerpt:

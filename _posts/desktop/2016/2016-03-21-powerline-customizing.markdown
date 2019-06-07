@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Customizing Shell Prompt with Powerline"
-date:   2016-03-21 19:17:15 +0700
+date      : 2016-03-21 19:17:15 +0700
 categories: desktop
-tags: [ricing, dotfiles]
+tags      : [ricing, dotfiles]
+keywords  : [powerline, arch, debian]
 author: epsi
 
 excerpt: 

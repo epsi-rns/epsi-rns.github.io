@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "My Mageia Experiment"
-date:   2014-05-09 19:34:15 +0700
+date      : 2014-05-09 19:34:15 +0700
 categories: system
-tags: [screenshot, distro, kwin]
+tags      : [screenshot, distro, kwin]
+keywords  : [mageia, urpmi]
 author: epsi
 
 excerpt:

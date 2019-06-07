@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Linux Multiboot - chroot"
-date:   2018-05-23 09:25:15 +0700
+date      : 2018-05-23 09:25:15 +0700
 categories: system
-tags: [thought]
+tags      : [thought]
+keywords  : [multiboot, partition, chroot]
 author: epsi
 
 excerpt:

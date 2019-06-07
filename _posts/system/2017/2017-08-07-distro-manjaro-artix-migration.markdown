@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - Manjaro OpenRC to Artix Migration"
-date: 2017-08-07 09:45:15 +0700
+date      : 2017-08-07 09:45:15 +0700
 categories: system
-tags: [manjaro, artix, openrc, distro, package manager]
+tags      : [manjaro, artix, openrc, distro, package manager]
+keywords  : [pacman]
 author: epsi
 
 excerpt:

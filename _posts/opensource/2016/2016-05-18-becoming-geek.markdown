@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Becoming a Geek, a Weird Story About Nerd"
+date      : 2016-05-18 11:39:15 +0700
 categories: opensource
-tags: [thought, about]
+tags      : [thought, about]
 author: epsi
 opengraph:
   image: /assets/site/images/authors/epsi-vexel.png

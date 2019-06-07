@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Package Management Summary"
-date: 2017-08-31 09:45:15 +0700
+date      : 2017-08-31 09:45:15 +0700
 categories: system
-tags: [docker, distro, package manager]
+tags      : [docker, distro, package manager]
+keywords  : [overview, summary]
 author: epsi
 
 excerpt:

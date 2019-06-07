@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - Fedora First Time Install"
-date: 2017-08-02 09:45:15 +0700
+date      : 2017-08-02 09:45:15 +0700
 categories: system
-tags: [fedora, distro, package manager]
+tags      : [fedora, distro, package manager]
+keywords  : [dnf]
 author: epsi
 
 excerpt:

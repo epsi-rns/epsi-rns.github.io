@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Standalone Statusbar Overview"
 categories: desktop
-date:   2017-04-10 13:35:15 +0700
-tags: [ricing, statusbar, bash]
+date      : 2017-04-10 13:35:15 +0700
+tags      : [ricing, statusbar, bash]
+keywords  : [standalone, dzen2, lemonbar]
 author: epsi
 
 excerpt:

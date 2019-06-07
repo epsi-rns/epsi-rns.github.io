@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "GhostBSD - Multiboot"
-date:   2019-03-20 09:45:15 +0700
+date      : 2019-03-20 09:45:15 +0700
 categories: system
-tags: [bsd]
+tags      : [bsd]
+keywords  : [ghostbsd, multiboot, ufs]
 author: epsi
 
 excerpt:

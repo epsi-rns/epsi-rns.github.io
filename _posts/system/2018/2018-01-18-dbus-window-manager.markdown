@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "dbus in Window Manager"
-date: 2018-01-18 09:45:15 +0700
+date      : 2018-01-18 09:45:15 +0700
 categories: system
-tags: [etc]
+tags      : [etc]
+keywords  : [window manager, dbus, session, non-systemd]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Gentoo - Selective Emerge with Equery"
-date:   2019-01-01 09:45:15 +0700
+date      : 2019-01-01 09:45:15 +0700
 categories: system
-tags: [gentoo, package manager]
+tags      : [gentoo, package manager]
+keywords  : [emerge, equery]
 author: epsi
 
 excerpt:

@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Tag Status in BASH"
-date:   2017-06-02 17:35:15 +0700
+date      : 2017-06-02 17:35:15 +0700
 categories: desktop
-tags: [coding, bash, herbstluftwm, statusbar]
+tags      : [coding, bash, herbstluftwm, statusbar]
+keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
 excerpt:

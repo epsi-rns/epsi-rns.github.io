@@ -2,8 +2,9 @@
 layout: post
 title:  "Fluxbox Theme - Style Part"
 categories: desktop
-date:   2018-04-07 09:25:15 +0700
-tags: [fluxbox, theme, inkscape]
+date      : 2018-04-07 09:25:15 +0700
+tags      : [fluxbox, theme, inkscape]
+keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
 excerpt:

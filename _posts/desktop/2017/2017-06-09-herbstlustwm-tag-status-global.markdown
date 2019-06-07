@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Tag Status Global Notes"
-date:   2017-06-09 17:35:15 +0700
+date      : 2017-06-09 17:35:15 +0700
 categories: desktop
-tags: [coding, herbstluftwm, dotfiles]
+tags      : [coding, herbstluftwm, dotfiles]
+keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
 excerpt:

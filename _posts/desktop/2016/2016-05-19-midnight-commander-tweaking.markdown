@@ -1,8 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Midnight Commander Tweaking, can Help People Better"
+date      : 2016-05-19 13:34:15 +0700
 categories: desktop
-tags: [ricing, dotfiles]
+tags      : [ricing, dotfiles]
+keywords  : [midnight commander]
 author: epsi
 
 excerpt:

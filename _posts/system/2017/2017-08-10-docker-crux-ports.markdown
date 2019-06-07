@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Docker - Crux Ports"
-date: 2017-08-10 13:15:35 +0700
+date      : 2017-08-10 13:15:35 +0700
 categories: system
-tags: [docker, distro, package manager, crux]
+tags      : [docker, distro, package manager, crux]
+keywords  : [prt-get]
 author: epsi
 
 excerpt:

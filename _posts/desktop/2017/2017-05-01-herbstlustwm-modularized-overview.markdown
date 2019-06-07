@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Modularized HerbstluftWM Overview"
-date:   2017-05-01 17:35:15 +0700
+date      : 2017-05-01 17:35:15 +0700
 categories: desktop
-tags: [coding, herbstluftwm, dotfiles]
+tags      : [coding, herbstluftwm, dotfiles]
+keywords  : [modularized, overview, summary]
 author: epsi
 
 excerpt:

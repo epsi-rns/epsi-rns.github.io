@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Gtk3 Adoption Rate in Debian."
-date:   2014-02-22 21:29:15 +0700
+date      : 2014-02-22 21:29:15 +0700
 categories: system
-tags: [debian, package manager]
+tags      : [debian, package manager]
+keywords  : [gtk3]
 author: epsi
 
 excerpt:

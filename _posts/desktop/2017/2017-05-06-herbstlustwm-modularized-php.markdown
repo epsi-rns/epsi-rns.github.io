@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in PHP"
-date:   2017-05-06 17:35:15 +0700
+date      : 2017-05-06 17:35:15 +0700
 categories: desktop
-tags: [coding, php, herbstluftwm]
+tags      : [coding, php, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

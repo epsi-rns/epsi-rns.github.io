@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "File System - Trapped in Snapper Rollback"
-date: 2018-01-07 09:45:15 +0700
+date      : 2018-01-07 09:45:15 +0700
 categories: system
-tags: [btrfs, grub2, filesystem]
+tags      : [btrfs, grub2, filesystem]
+keywords  : [opensuse, snapper, troubleshooting]
 author: epsi
 
 excerpt:

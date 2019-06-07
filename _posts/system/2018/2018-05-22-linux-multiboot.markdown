@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Linux Multiboot - /etc/fstab"
-date:   2018-05-22 09:25:15 +0700
+date      : 2018-05-22 09:25:15 +0700
 categories: system
-tags: [thought]
+tags      : [thought]
+keywords  : [multiboot, partition, fstab]
 author: epsi
 
 excerpt:

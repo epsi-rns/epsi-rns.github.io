@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Idle Event in Ruby"
-date:   2017-06-15 17:35:15 +0700
+date      : 2017-06-15 17:35:15 +0700
 categories: desktop
-tags: [coding, ruby, herbstluftwm, statusbar]
+tags      : [coding, ruby, herbstluftwm, statusbar]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

@@ -2,8 +2,9 @@
 layout: post
 title:  "Openbox Menu - OB Menu Generator"
 categories: desktop
-date:   2018-05-10 09:25:15 +0700
-tags: [openbox]
+date      : 2018-05-10 09:25:15 +0700
+tags      : [openbox]
+keywords  : [tutorial, configuration, menu]
 author: epsi
 
 excerpt:

@@ -2,8 +2,9 @@
 layout: post-sidemenu-wm
 title:  "Standalone Lemonbar Using Conky"
 categories: desktop
-date:   2017-04-14 06:25:15 +0700
-tags: [ricing, statusbar, conky]
+date      : 2017-04-14 06:25:15 +0700
+tags      : [ricing, statusbar, conky]
+keywords  : [standalone, lemonbar, bash, lua]
 author: epsi
 
 excerpt:

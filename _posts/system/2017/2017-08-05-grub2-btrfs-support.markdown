@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "File System - GRUB2 support for BTRFS"
-date: 2017-08-05 09:45:15 +0700
+date      : 2017-08-05 09:45:15 +0700
 categories: system
-tags: [btrfs, grub2, filesystem]
+tags      : [btrfs, grub2, filesystem]
+keywords  : [opensuse, partition, grub2]
 author: epsi
 
 excerpt:

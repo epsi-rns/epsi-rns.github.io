@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Using Cloud for Daily Activity"
-date:   2018-01-09 12:56:15 +0700
+date      : 2018-01-09 12:56:15 +0700
 categories: opensource
-tags: [console]
+tags      : [console]
+keywords  : [cloud, dropbox, google drive, mega]
 author: epsi
 
 excerpt:

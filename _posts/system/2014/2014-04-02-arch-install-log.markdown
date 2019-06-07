@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Arch Linux - Install/ Post Install Log"
-date:   2014-04-02 08:46:15 +0700
+date      : 2014-04-02 08:46:15 +0700
 categories: system
-tags: [arch, distro, package manager]
+tags      : [arch, distro, package manager]
+keywords  : [cli, install, post install]
 author: epsi
 
 excerpt:

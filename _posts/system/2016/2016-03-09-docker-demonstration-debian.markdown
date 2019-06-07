@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Running Guest OS via Docker on top of Debian for the first time"
-date:   2016-03-09 23:00:15 +0700
+date      : 2016-03-09 23:00:15 +0700
 categories: system
-tags: [cloud, docker, package manager]
+tags      : [cloud, docker, package manager]
+keywords  : [docker, debian]
 author: epsi
 
 excerpt:

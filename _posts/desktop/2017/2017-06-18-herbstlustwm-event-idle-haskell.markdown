@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "HerbstluftWM Idle Event in Haskell"
-date:   2017-06-18 17:35:15 +0700
+date      : 2017-06-18 17:35:15 +0700
 categories: desktop
-tags: [coding, haskell, herbstluftwm, statusbar]
+tags      : [coding, haskell, herbstluftwm, statusbar]
+keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
 excerpt:

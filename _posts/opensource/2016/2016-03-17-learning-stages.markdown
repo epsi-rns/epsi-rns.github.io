@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Learning Stages Guidance, from Beginner to Enthusiast"
-date:   2016-03-17 23:00:15 +0700
+date      : 2016-03-17 23:00:15 +0700
 categories: opensource
-tags: [thought]
+tags      : [thought]
 author: epsi
 
 excerpt: 

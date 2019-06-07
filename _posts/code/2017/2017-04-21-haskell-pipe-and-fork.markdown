@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Piping and Forking in Haskell"
+date      : 2017-04-21 17:35:15 +0700
 categories: code
-date:   2017-04-21 17:35:15 +0700
-tags: [coding, conky, haskell]
+tags      : [coding, conky, haskell]
+keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
 excerpt:

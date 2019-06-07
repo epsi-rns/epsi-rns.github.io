@@ -1,9 +1,10 @@
 ---
 layout: post-sidemenu-wm
 title:  "Piping and Forking Overview"
+date      : 2017-04-23 17:35:15 +0700
 categories: code
-date:   2017-04-23 17:35:15 +0700
-tags: [coding, conky, dotfiles]
+tags      : [coding, conky, dotfiles]
+keywords  : [pipe and fork, dzen2, lemonbar, overview, summary]
 author: epsi
 
 excerpt:

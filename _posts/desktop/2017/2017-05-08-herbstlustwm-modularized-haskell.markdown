@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Modularized HerbstluftWM in Haskell"
-date:   2017-05-08 17:35:15 +0700
+date      : 2017-05-08 17:35:15 +0700
 categories: desktop
-tags: [coding, haskell, herbstluftwm]
+tags      : [coding, haskell, herbstluftwm]
+keywords  : [modularized]
 author: epsi
 
 excerpt:

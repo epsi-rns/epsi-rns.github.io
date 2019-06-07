@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Distribution - Manjaro OpenRC Issues"
-date: 2017-08-01 09:45:15 +0700
+date      : 2017-08-01 09:45:15 +0700
 categories: system
-tags: [debian, devuan, sysvinit, distro, package manager]
+tags      : [debian, devuan, sysvinit, distro, package manager]
+keywords  : [open-rc, troubleshooting]
 author: epsi
 
 excerpt:

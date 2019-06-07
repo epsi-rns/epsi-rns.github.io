@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "Init Civil War, The systemd Controversy"
-date:   2014-11-28 04:19:15 +0700
+date      : 2014-11-28 04:19:15 +0700
 categories: system
-tags: [init]
+tags      : [init]
+keywords  : [systmed, openrc, sysvinit]
 author: epsi
 
 excerpt:
