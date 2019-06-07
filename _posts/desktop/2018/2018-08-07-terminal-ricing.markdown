@@ -2,8 +2,9 @@
 layout: post
 title:  "Linux - Terminal Customization"
 categories: desktop
-date:   2018-08-07 09:25:15 +0700
-tags: [terminal, shell]
+date      : 2018-08-07 09:25:15 +0700
+tags      : [terminal, shell]
+keywords  : [bash, zsh, fish, tmux, urxvt, xfce4-terminal, termite, compton, gtk.css, powerline, neofetch]
 author: epsi
 
 excerpt:

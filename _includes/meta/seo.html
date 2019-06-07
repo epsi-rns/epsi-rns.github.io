@@ -10,24 +10,24 @@
 {% endif %}
 
 {% capture spaceless %}
+  {% assign cats  = '' | split: '' %}
+  {% assign tags  = '' | split: '' %}
+  {% assign words = '' | split: '' %}
   {% assign terms = '' | split: '' %}
-  {% assign cats = page.categories %}
-  {% assign tags = page.tags %}
 
-  {% if cats %}
-    {% if tags %}
-      {% assign terms = cats | concat: tags %}
-    {% else %}
-      {% assign terms = cats %}
-    {% endif %}
-  {% else %}
-    {% if tags %}
-      {% assign terms = tags %}
-    {% else %}
-      {% assign terms = '' | split: '' %}
-    {% endif %}
+  {% if page.categories  %}
+    {% assign cats = page.categories %}
   {% endif %}
   
+  {% if page.tags  %}
+    {% assign tags = page.tags %}
+  {% endif %}
+
+  {% if page.keywords  %}
+    {% assign words = page.keywords %}
+  {% endif %}
+  
+  {% assign terms = cats | concat: tags  | concat: words %}
   {% assign termssize = terms | size %}
 {% endcapture %}
 
