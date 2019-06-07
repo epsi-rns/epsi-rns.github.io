@@ -1,3 +1,7 @@
+{% comment %} fake randomize by using date day for array under 30 data {% endcomment %}
+{% assign length = 5 %}
+{% assign size_adjusted = site.data.friends | size | minus: length %}
+{% assign start = page.date | date: "%d" | modulo: size_adjusted %}
 <div class="card hidden-sm hidden-xs mb-3 shadow-hover">
   <div class="card-header bg-stripe-zero text-dark pb-0">
     <p class="card-title float-left">Isle of Dotsites</p>
@@ -6,7 +10,8 @@
   </div>
   <div class="card-body py-2">
   <ul class="card_list">
-    {% for friend in site.data.friends limit:9 %}
+	{% assign selection = site.data.friends | slice: start, length %}
+    {% for friend in selection %}
     <li><a href="{{ friend.url }}">{{ friend.title }}</a></li>
     {% endfor %}
   </ul>

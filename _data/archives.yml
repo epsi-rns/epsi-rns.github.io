@@ -5,6 +5,30 @@
 # to folder _data/all_posts.yml
 
 
+- id: 19040245
+  title: "GhostBSD - Ports"
+  url: /system/2019/04/02/ghostbsd-ports.html
+
+- id: 19033045
+  title: "GhostBSD - Migration from Linux"
+  url: /system/2019/03/30/ghostbsd-migration.html
+
+- id: 19032545
+  title: "GhostBSD - Driver"
+  url: /system/2019/03/25/ghostbsd-driver.html
+
+- id: 19032045
+  title: "GhostBSD - Multiboot"
+  url: /system/2019/03/20/ghostbsd-multiboot.html
+
+- id: 19012145
+  title: "Windows - Setting up CLI Environment"
+  url: /system/2019/01/21/windows-cli-environment.html
+
+- id: 19010145
+  title: "Gentoo - Selective Emerge with Equery"
+  url: /system/2019/01/01/gentoo-selective-emerge.html
+
 - id: 18080725
   title: "Linux - Terminal Customization"
   url: /desktop/2018/08/07/terminal-ricing.html

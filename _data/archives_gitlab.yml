@@ -1,0 +1,556 @@
+# Helper for related links
+# Archives by Date
+
+# just copy the result manually
+# from /pages/archives/index.txt
+# to folder data/archives.yml
+
+
+- id: 19051317
+  title: "Hexo - EJS - Section List Layout"
+  url: /ssg/2019/05/13/hexo-ejs-section-list-layout/
+  
+- id: 19051217
+  title: "Hexo - EJS - Custom Page Layout"
+  url: /ssg/2019/05/12/hexo-ejs-custom-page-layout/
+  
+- id: 19051117
+  title: "Hexo - EJS - Custom Page Introduction"
+  url: /ssg/2019/05/11/hexo-ejs-custom-page-intro/
+  
+- id: 19051017
+  title: "Hexo - EJS - Section List Introduction"
+  url: /ssg/2019/05/10/hexo-ejs-section-list-intro/
+  
+- id: 19050817
+  title: "Hexo - Bulma - SASS Layout"
+  url: /ssg/2019/05/08/hexo-bulma-sass-layout/
+  
+- id: 19050717
+  title: "Hexo - Bulma - SASS Introduction"
+  url: /ssg/2019/05/07/hexo-bulma-sass-intro/
+  
+- id: 19050617
+  title: "Hexo - Bulma - CSS Layout"
+  url: /ssg/2019/05/06/hexo-bulma-css-layout/
+  
+- id: 19050517
+  title: "Hexo - Bulma - CSS Introduction"
+  url: /ssg/2019/05/05/hexo-bulma-css-intro/
+  
+- id: 19050417
+  title: "Hexo - Layout"
+  url: /ssg/2019/05/04/hexo-layout/
+  
+- id: 19050317
+  title: "Hexo - Minimal"
+  url: /ssg/2019/05/03/hexo-minimal/
+  
+- id: 19050217
+  title: "Hexo - Install"
+  url: /ssg/2019/05/02/hexo-install/
+  
+- id: 19050117
+  title: "Hexo - Overview"
+  url: /ssg/2019/05/01/hexo-overview/
+  
+- id: 19042517
+  title: "Hugo - Conclusion"
+  url: /ssg/2019/04/25/hugo-conclusion/
+  
+- id: 19042117
+  title: "Hugo - Blog Post"
+  url: /ssg/2019/04/21/hugo-sass-content/
+  
+- id: 19041917
+  title: "Hugo - Pagination"
+  url: /ssg/2019/04/19/hugo-bulma-pagination/
+  
+- id: 19041517
+  title: "Hugo - Data"
+  url: /ssg/2019/04/15/hugo-data/
+  
+- id: 19041417
+  title: "Hugo - Widget"
+  url: /ssg/2019/04/14/hugo-widget/
+  
+- id: 19041317
+  title: "Hugo - Custom Content Type"
+  url: /ssg/2019/04/13/hugo-custom-output/
+  
+- id: 19041217
+  title: "Hugo - Archive"
+  url: /ssg/2019/04/12/hugo-archive/
+  
+- id: 19041117
+  title: "Hugo - Taxonomy"
+  url: /ssg/2019/04/11/hugo-taxonomy/
+  
+- id: 19041017
+  title: "Hugo - Section List"
+  url: /ssg/2019/04/10/hugo-section-list/
+  
+- id: 19040817
+  title: "Hugo - Bulma - SASS Layout"
+  url: /ssg/2019/04/08/hugo-bulma-sass-layout/
+  
+- id: 19040717
+  title: "Hugo - Bulma - SASS Introduction"
+  url: /ssg/2019/04/07/hugo-bulma-sass-intro/
+  
+- id: 19040617
+  title: "Hugo - Bulma - CSS Layout"
+  url: /ssg/2019/04/06/hugo-bulma-css-layout/
+  
+- id: 19040517
+  title: "Hugo - Bulma - CSS Introduction"
+  url: /ssg/2019/04/05/hugo-bulma-css-intro/
+  
+- id: 19040317
+  title: "Hugo - Layout"
+  url: /ssg/2019/04/03/hugo-layout/
+  
+- id: 19040217
+  title: "Hugo - Minimal"
+  url: /ssg/2019/04/02/hugo-minimal/
+  
+- id: 19040117
+  title: "Hugo - Overview"
+  url: /ssg/2019/04/01/hugo-overview/
+  
+- id: 19031017
+  title: "Bulma SASS - Helpers"
+  url: /frontend/2019/03/10/bulma-sass-helpers/
+  
+- id: 19030917
+  title: "Bulma SASS - Post"
+  url: /frontend/2019/03/09/bulma-sass-post/
+  
+- id: 19030817
+  title: "Bulma SASS - Widget"
+  url: /frontend/2019/03/08/bulma-sass-panels/
+  
+- id: 19030717
+  title: "Bulma SASS - Responsive Layout"
+  url: /frontend/2019/03/07/bulma-sass-layout/
+  
+- id: 19030617
+  title: "Bulma SASS - Custom Class"
+  url: /frontend/2019/03/06/bulma-sass-custom/
+  
+- id: 19030517
+  title: "Bulma SASS - Inside a Theme"
+  url: /frontend/2019/03/05/bulma-sass-theme/
+  
+- id: 19030417
+  title: "Bulma SASS - Introduction"
+  url: /frontend/2019/03/04/bulma-sass-intro/
+  
+- id: 19030317
+  title: "Bulma - Navigation Bar"
+  url: /frontend/2019/03/03/bulma-navbar/
+  
+- id: 19030217
+  title: "Bulma - Minimal"
+  url: /frontend/2019/03/02/bulma-minimal/
+  
+- id: 19030117
+  title: "Bulma - Overview"
+  url: /frontend/2019/03/01/bulma-overview/
+  
+- id: 19020917
+  title: "CSS Layout - Fake Table"
+  url: /frontend/2019/02/09/css-layout-fake-table/
+  
+- id: 19020717
+  title: "CSS Layout - Float with Calc"
+  url: /frontend/2019/02/07/css-layout-calc/
+  
+- id: 19020517
+  title: "CSS Layout - Grid System"
+  url: /frontend/2019/02/05/css-layout-grid/
+  
+- id: 19020317
+  title: "CSS Layout - Flex"
+  url: /frontend/2019/02/03/css-layout-flex/
+  
+- id: 19020117
+  title: "CSS Layout - Overview"
+  url: /frontend/2019/02/01/css-layout-overview/
+  
+- id: 19012317
+  title: "Windows - Chocolatey - Sass"
+  url: /frontend/2019/01/23/windows-choco-sass/
+  
+- id: 19012117
+  title: "Windows - Chocolatey - Hugo"
+  url: /ssg/2019/01/21/windows-choco-hugo/
+  
+- id: 19011517
+  title: "Sass - Task Runner"
+  url: /frontend/2019/01/15/sass-task-runner/
+  
+- id: 19011317
+  title: "Sass - Common Implementation"
+  url: /frontend/2019/01/13/sass-common-compiler/
+  
+- id: 19010817
+  title: "Jekyll Pagination - Screenreader"
+  url: /ssg/2019/01/08/jekyll-pagination-screenreader/
+  
+- id: 19010717
+  title: "Jekyll Pagination - Responsive"
+  url: /ssg/2019/01/07/jekyll-pagination-responsive/
+  
+- id: 19010617
+  title: "Jekyll Pagination - Indicator"
+  url: /ssg/2019/01/06/jekyll-pagination-indicator/
+  
+- id: 19010517
+  title: "Jekyll Pagination - Adjacent"
+  url: /ssg/2019/01/05/jekyll-pagination-adjacent/
+  
+- id: 19010417
+  title: "Jekyll Pagination - Number"
+  url: /ssg/2019/01/04/jekyll-pagination-number/
+  
+- id: 19010317
+  title: "Jekyll Pagination - Simple"
+  url: /ssg/2019/01/03/jekyll-pagination-simple/
+  
+- id: 19010117
+  title: "Jekyll Pagination - Summary"
+  url: /ssg/2019/01/01/jekyll-pagination-summary/
+  
+- id: 18121517
+  title: "Hugo - Javacript - lunr Search"
+  url: /ssg/2018/12/15/hugo-javascript-search/
+  
+- id: 18121017
+  title: "Hugo - Service"
+  url: /ssg/2018/12/10/hugo-service/
+  
+- id: 18120717
+  title: "Hugo - Meta - Opengraph SEO"
+  url: /ssg/2018/12/07/hugo-meta-opengraph/
+  
+- id: 18120517
+  title: "Hugo - Syntax Highlighting"
+  url: /ssg/2018/12/05/hugo-syntax-highlighting/
+  
+- id: 18112617
+  title: "Hugo - Content - Raw HTML"
+  url: /ssg/2018/11/26/hugo-html-content/
+  
+- id: 18112517
+  title: "Hugo - Content - Markdown"
+  url: /ssg/2018/11/25/hugo-markdown-content/
+  
+- id: 18112417
+  title: "Hugo - Bootstrap - Blog Post"
+  url: /ssg/2018/11/24/hugo-bootstrap-content/
+  
+- id: 18112217
+  title: "Hugo - Pagination - Screen Reader"
+  url: /ssg/2018/11/22/hugo-pagination-screenreader/
+  
+- id: 18112117
+  title: "Hugo - SASS - Pagination - Responsive"
+  url: /ssg/2018/11/21/hugo-pagination-responsive/
+  
+- id: 18112017
+  title: "Hugo - Pagination - Indicator"
+  url: /ssg/2018/11/20/hugo-pagination-indicator/
+  
+- id: 18111917
+  title: "Hugo - Pagination - Adjacent"
+  url: /ssg/2018/11/19/hugo-pagination-adjacent/
+  
+- id: 18111817
+  title: "Hugo - Pagination - Number"
+  url: /ssg/2018/11/18/hugo-pagination-number/
+  
+- id: 18111717
+  title: "Hugo - Pagination - Simple"
+  url: /ssg/2018/11/17/hugo-pagination-simple/
+  
+- id: 18091517
+  title: "Hugo - Data"
+  url: /ssg/2018/09/15/hugo-data/
+  
+- id: 18091417
+  title: "Hugo - Widget"
+  url: /ssg/2018/09/14/hugo-sidebar/
+  
+- id: 18091317
+  title: "Hugo - Custom Content Type"
+  url: /ssg/2018/09/13/hugo-custom-output/
+  
+- id: 18091217
+  title: "Hugo - Archive"
+  url: /ssg/2018/09/12/hugo-archive/
+  
+- id: 18091117
+  title: "Hugo - Taxonomy"
+  url: /ssg/2018/09/11/hugo-taxonomy/
+  
+- id: 18091017
+  title: "Hugo - Section List"
+  url: /ssg/2018/09/10/hugo-section-list/
+  
+- id: 18090817
+  title: "Hugo - Bootstrap - SASS Customization"
+  url: /ssg/2018/09/08/hugo-bootstrap-sass-custom/
+  
+- id: 18090717
+  title: "Hugo - Bootstrap - SASS"
+  url: /ssg/2018/09/07/hugo-bootstrap-sass/
+  
+- id: 18090617
+  title: "Hugo - Bootstrap - Components"
+  url: /ssg/2018/09/06/hugo-bootstrap-components/
+  
+- id: 18090517
+  title: "Hugo - Bootstrap - Layout"
+  url: /ssg/2018/09/05/hugo-bootstrap-layout/
+  
+- id: 18090317
+  title: "Hugo - Layout"
+  url: /ssg/2018/09/03/hugo-layout/
+  
+- id: 18090217
+  title: "Hugo - Minimal"
+  url: /ssg/2018/09/02/hugo-minimal/
+  
+- id: 18090117
+  title: "Hugo - Summary"
+  url: /ssg/2018/09/01/hugo-summary/
+  
+- id: 18081517
+  title: "Git Pages - Deploying"
+  url: /ssg/2018/08/15/git-hosting/
+  
+- id: 18081035
+  title: "Bootstrap - Install Jekyll on RVM"
+  url: /frontend/2018/08/10/bootstrap-cli-rvm-bundle/
+  
+- id: 18080935
+  title: "Bootstrap - Offline Template Examples"
+  url: /frontend/2018/08/09/bootstrap-cli-offline/
+  
+- id: 18022117
+  title: "Jekyll - Step by Step"
+  url: /ssg/2018/02/21/jekyll-basic/
+  
+- id: 18012917
+  title: "Telegram Bot - Manual Page"
+  url: /code/2018/01/29/telegram-bot-loop-manual/
+  
+- id: 18012817
+  title: "Telegram Bot - Makefile"
+  url: /code/2018/01/28/telegram-bot-loop-makefile/
+  
+- id: 18012617
+  title: "Telegram Bot - BASH Group Tools"
+  url: /code/2018/01/26/telegram-bot-loop-bash-04/
+  
+- id: 18012417
+  title: "Telegram Bot - BASH Option Argument"
+  url: /code/2018/01/24/telegram-bot-loop-bash-03/
+  
+- id: 18012317
+  title: "Telegram Bot - BASH Script"
+  url: /code/2018/01/23/telegram-bot-loop-bash-02/
+  
+- id: 18012217
+  title: "Telegram Bot - BASH CLI"
+  url: /code/2018/01/22/telegram-bot-loop-bash-01/
+  
+- id: 18012117
+  title: "Telegram Bot - Getting Token"
+  url: /code/2018/01/21/telegram-bot-token/
+  
+- id: 18012017
+  title: "Telegram Bot - Overview"
+  url: /code/2018/01/20/telegram-bot-overview/
+  
+- id: 18011335
+  title: "Bootstrap CLI Webtools - Part Three"
+  url: /frontend/2018/01/13/bootstrap-cli-part-three/
+  
+- id: 18011235
+  title: "Bootstrap CLI Webtools - Part Two"
+  url: /frontend/2018/01/12/bootstrap-cli-part-two/
+  
+- id: 18011135
+  title: "Bootstrap CLI Webtools - Part One"
+  url: /frontend/2018/01/11/bootstrap-cli-part-one/
+  
+- id: 18011035
+  title: "Bootstrap CLI Webtools - Summary"
+  url: /frontend/2018/01/10/bootstrap-cli-summary/
+  
+- id: 18010602
+  title: "Jekyll Installation on openSUSE"
+  url: /ssg/2018/01/06/ekyll-opensuse-install/
+  
+- id: 17070525
+  title: "The LAMP Stack Evolution"
+  url: /backend/2017/07/05/lamp-stack-evolution/
+  
+- id: 17052410
+  title: "Examining Bind in Haskell: Do Notation"
+  url: /code/2017/05/24/examining-bind-04/
+  
+- id: 17052310
+  title: "Examining Bind in Haskell: Example using Number"
+  url: /code/2017/05/23/examining-bind-03/
+  
+- id: 17052210
+  title: "Examining Bind in Haskell: Hello World"
+  url: /code/2017/05/22/examining-bind-02/
+  
+- id: 17052135
+  title: "Explaining Monad: References"
+  url: /code/2017/05/21/explaining-monad-01/
+  
+- id: 17052035
+  title: "Explaining Monad: Overview"
+  url: /code/2017/05/20/explaining-monad-00/
+  
+- id: 17051535
+  title: "Loop in Haskell With Map, Part Three"
+  url: /code/2017/05/15/haskell-loop-with-map-03/
+  
+- id: 17051435
+  title: "Loop in Haskell With Map, Part Two"
+  url: /code/2017/05/14/haskell-loop-with-map-02/
+  
+- id: 17051335
+  title: "Loop in Haskell With Map, Part One"
+  url: /code/2017/05/13/haskell-loop-with-map-01/
+  
+- id: 17051235
+  title: "Loop in Haskell With Map, Overview"
+  url: /code/2017/05/12/haskell-loop-with-map-00/
+  
+- id: 16120452
+  title: "Jekyll Directory Structure"
+  url: /ssg/2016/12/04/jekyll-directory-structure/
+  
+- id: 16111130
+  title: "Inkscape Logo Creation Part Three"
+  url: /design/inkscape/inkscape-logo-03-coloring/
+  
+- id: 16111110
+  title: "Inkscape Logo Creation Part Two"
+  url: /design/inkscape/inkscape-logo-02-making-shape-example/
+  
+- id: 16111100
+  title: "Inkscape Logo Creation Part One"
+  url: /design/inkscape/inkscape-logo-01-preparing-document/
+  
+- id: 16110129
+  title: "Inkscape: Text Feature"
+  url: /design/inkscape/inkscape-text-feature/
+  
+- id: 16100339
+  title: "Inkscape: Flat Wallpaper with Isometric Looks"
+  url: /design/inkscape/inkscape-flat-isometric-wallpaper/
+  
+- id: 16081315
+  title: "Jekyll Collapsed Sidemenu Without Javascript"
+  url: /ssg/2016/08/13/jekyll-sidemenu-without-javascript/
+  
+- id: 16081215
+  title: "Jekyll Sidemenu Simple Tree"
+  url: /ssg/2016/08/12/jekyll-sidemenu-simpletree/
+  
+- id: 16081115
+  title: "Jekyll Responsive Side Menu"
+  url: /ssg/2016/08/11/jekyll-responsive-sidemenu/
+  
+- id: 16062329
+  title: "Jekyll Installation on Debian"
+  url: /ssg/2016/06/23/jekyll-debian-install/
+  
+- id: 16062202
+  title: "Jekyll Installation on Arch/Manjaro"
+  url: /ssg/2016/06/22/jekyll-arch-install/
+  
+- id: 16061409
+  title: "Step by Step Guidance to be a Webcoder"
+  url: /frontend/2016/06/14/how-a-webcoder-begin/
+  
+- id: 16061225
+  title: "Elapsed Time, Yet Another Jekyll Liquid Port"
+  url: /ssg/2016/06/12/jekyll-liquid-time-elapsed/
+  
+- id: 16061051
+  title: "Create Stripes Using Inkscape to Decorate Blog Post"
+  url: /frontend/2016/06/10/stripes-to-decorate-blog-post/
+  
+- id: 16060951
+  title: "Jekyll Post Archives Without Plugin"
+  url: /ssg/2016/06/09/jekyll-post-archives-without-plugin/
+  
+- id: 16052948
+  title: "Jekyll Related Posts Without Plugin"
+  url: /ssg/2016/05/29/jekyll-related-posts-without-plugin/
+  
+- id: 16051435
+  title: "Jekyll Blog Overview"
+  url: /ssg/2016/05/14/jekyll-blog-overview/
+  
+- id: 16051403
+  title: "How Haskell Syntax can Make Your Code Cleaner"
+  url: /code/2016/05/14/haskell-dollar-syntax/
+  
+- id: 16022348
+  title: "Inkscape: Anti Corruption Movement"
+  url: /design/inkscape/inkscape-anti-corruption-movement/
+  
+- id: 15111111
+  title: "Inkscape: Isometric Infographics"
+  url: /design/inkscape/inkscape-isometric-infographics/
+  
+- id: 15102011
+  title: "Inkscape: Another Discussion e-Flyer"
+  url: /design/inkscape/inkscape-discussion-flyer/
+  
+- id: 15101649
+  title: "Setup LAMP stack with Manjaro OpenRC"
+  url: /backend/2015/10/16/lamp-stack-manjaro-openrc/
+  
+- id: 15101010
+  title: "Inkscape: Object Clip"
+  url: /design/inkscape/inkscape-object-clip/
+  
+- id: 15091126
+  title: "Multipurpose Design Based on Stamp Ornament Box"
+  url: /design/inkscape/inkscape-stamp-poster-flyer/
+  
+- id: 15090658
+  title: "Inkscape: Vexel Face Tracing"
+  url: /design/inkscape/inkscape-vexel-face-tracing/
+  
+- id: 15090348
+  title: "Inkscape: Logo with Stamp Ornament"
+  url: /design/inkscape/inkscape-stamp-logo/
+  
+- id: 15081723
+  title: "Inkscape: Event Invitation Stock Image"
+  url: /design/inkscape/inkscape-invitation-stock/
+  
+- id: 15080808
+  title: "Inkscape: Event Banner Collection"
+  url: /design/inkscape/inkscape-event-banners/
+  
+- id: 15070707
+  title: "Inkscape: Event Schedule Announcement"
+  url: /design/inkscape/inkscape-event-schedule/
+  
+- id: 15060606
+  title: "Inkscape: Non Standard Alumni Logo"
+  url: /design/inkscape/inkscape-non-standard-makara/
+  

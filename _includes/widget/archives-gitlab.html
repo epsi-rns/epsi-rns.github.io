@@ -1,0 +1,19 @@
+{% comment %} fake randomize by using year day for array under 365 data {% endcomment %}
+{% assign length = 5 %}
+{% assign size_adjusted = site.data.archives_gitlab | size | minus: length %}
+{% assign start = page.date | date: "%j" | modulo: size_adjusted %}
+<div class="card hidden-sm hidden-xs mb-3 shadow-hover">
+  <div class="card-header bg-stripe-zero text-dark pb-0">
+    <p class="card-title float-left">Web/Mobile Development</p>
+    <span class="fas fa-child float-right"></span>
+    <div class="clearfix"></div>
+  </div>
+  <div class="card-body py-2">
+  <ul class="card_list">
+	{% assign selection = site.data.archives_gitlab | slice: start, length %}
+    {% for archive in selection %}
+    <li><a href="http://epsi-rns.gitlab.io{{ archive.url }}">{{ archive.title }}</a></li>
+    {% endfor %}
+  </ul>
+  </div>
+</div>
