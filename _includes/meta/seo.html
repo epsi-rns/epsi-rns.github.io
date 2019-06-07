@@ -9,6 +9,28 @@
   <meta name="description" content="{{ site.description | strip }}">
 {% endif %}
 
-{% if page.tags %}
-  <meta name="keywords"    content="{{ page.tags | join: ", " }}">
+{% capture spaceless %}
+  {% assign terms = '' | split: '' %}
+  {% assign cats = page.categories %}
+  {% assign tags = page.tags %}
+
+  {% if cats %}
+    {% if tags %}
+      {% assign terms = cats | concat: tags %}
+    {% else %}
+      {% assign terms = cats %}
+    {% endif %}
+  {% else %}
+    {% if tags %}
+      {% assign terms = tags %}
+    {% else %}
+      {% assign terms = '' | split: '' %}
+    {% endif %}
+  {% endif %}
+  
+  {% assign termssize = terms | size %}
+{% endcapture %}
+
+{% if termssize != 0 %}
+  <meta name="keywords"    content="{{ terms | join: ", " }}">
 {% endif %}
