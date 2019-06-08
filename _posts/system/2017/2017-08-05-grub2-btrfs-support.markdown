@@ -7,6 +7,9 @@ tags      : [btrfs, grub2, filesystem]
 keywords  : [opensuse, partition, grub2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/opensuse.png
+
 excerpt:
   openSUSE Post Install Log.
 

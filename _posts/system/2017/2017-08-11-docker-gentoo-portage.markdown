@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, gentoo]
 keywords  : [emerge]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Docker flow for Gentoo Portage,
   from emerge-webrsync to manual rsync.

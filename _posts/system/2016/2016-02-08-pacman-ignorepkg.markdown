@@ -7,6 +7,9 @@ tags      : [arch, package manager]
 keywords  : [pacman, pacman.conf]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/arch.png
+
 excerpt:
    There is no need to sync all updated packages. 
    Pacman has IgnorePkg directive to filter unnecessary update of big size package.

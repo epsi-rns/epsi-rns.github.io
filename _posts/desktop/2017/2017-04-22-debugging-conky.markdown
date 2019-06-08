@@ -7,6 +7,9 @@ tags      : [ricing, statusbar, conky]
 keywords  : [dzen2, lua]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   A simple trick of Debugging Conky
   

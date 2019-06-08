@@ -7,6 +7,9 @@ tags      : [thought]
 keywords  : [multiboot, partition, fstab]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/tux.png
+
 excerpt:
   Based on my experience.
   Thorough /etc/fstab/ example.

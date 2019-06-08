@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, crux]
 keywords  : [prt-get]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Docker flow for Crux Linux pkgtools,
   first time using Crux Linux experience.

@@ -7,6 +7,9 @@ tags      : [init]
 keywords  : [systemd, svg]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/tux.png
+
 excerpt:
   If you want to gain a faster linux boot,
   you can analyze services loaded on boot with systemd.

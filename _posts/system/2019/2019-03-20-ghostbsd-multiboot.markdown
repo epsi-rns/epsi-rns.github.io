@@ -7,9 +7,11 @@ tags      : [bsd]
 keywords  : [ghostbsd, multiboot, ufs]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/ghostbsd.png
+
 excerpt:
   GhostBSD multiboot situation with Windows and Linux is possible.
-
 ---
 
 {% include post/2019/03/toc-ghostbsd.html %}

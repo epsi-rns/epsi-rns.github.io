@@ -7,6 +7,9 @@ tags      : [cloud, docker, package manager]
 keywords  : [docker, debian]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Yet another Docker showcase. Now using Debian.
   Docker is supposed to do one special thing.

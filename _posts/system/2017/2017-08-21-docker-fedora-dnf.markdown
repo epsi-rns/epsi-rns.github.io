@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, fedora]
 keywords  : [dnf]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Examine DNF step by step,
   using Fedora container in Docker.

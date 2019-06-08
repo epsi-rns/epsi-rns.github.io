@@ -6,6 +6,9 @@ categories: desktop
 tags      : [screenshot, awesome]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   I t needs transition to become a Tiling Window Manager user.
   I recommend Awesome WM for first time Tiling Window Manager.

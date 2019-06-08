@@ -7,6 +7,9 @@ tags      : [screenshot, xmonad, dotfiles]
 keywords  : [modularized, refactoring, decomposition]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/haskell.png
+
 excerpt: 
   A show case of who to separate XMonad configuration
   to make your configuration tidy, and easier to read.

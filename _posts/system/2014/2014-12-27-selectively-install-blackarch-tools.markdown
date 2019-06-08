@@ -8,6 +8,9 @@ tags      : [security, arch, package manager]
 keywords  : [blackarch, pacman]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/arch.png
+
 excerpt:
   With BlackArch you can install tools by category.
   One category today. And other category the day after.

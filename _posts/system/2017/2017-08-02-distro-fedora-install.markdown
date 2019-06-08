@@ -7,6 +7,9 @@ tags      : [fedora, distro, package manager]
 keywords  : [dnf]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/fedora.png
+
 excerpt:
   Fedora Install Log.
 

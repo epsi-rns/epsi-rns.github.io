@@ -7,6 +7,9 @@ tags      : [openbox]
 keywords  : [tutorial, utility]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   Openbox logging out for dummies.
 

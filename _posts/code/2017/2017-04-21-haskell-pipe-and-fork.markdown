@@ -7,6 +7,9 @@ tags      : [coding, conky, haskell]
 keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/haskell.png
+
 excerpt:
   How to be a Haskell Plumber.
   

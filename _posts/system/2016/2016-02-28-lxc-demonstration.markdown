@@ -7,6 +7,9 @@ tags      : [cloud, package manager]
 keywords  : [lxc, container]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   There are interesting differences between major distribution.
   One interest most is how they manage their packages.

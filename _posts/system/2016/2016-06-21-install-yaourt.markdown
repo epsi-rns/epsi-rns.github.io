@@ -7,6 +7,9 @@ tags      : [package manager]
 keywords  : [aur, yaourt]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/arch.png
+
 excerpt:
   One of arch linux based advantage is access to AUR (Arch User Repository).
   To install AUR package we need tool, the AUR helpers.

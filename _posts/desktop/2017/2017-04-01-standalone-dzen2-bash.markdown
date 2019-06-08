@@ -7,6 +7,9 @@ tags      : [ricing, statusbar, bash]
 keywords  : [standalone, dzen2, bash]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Dzen2 is easy when you have guidance.
   This tutorial guide you to write Dzen2 in Bash.

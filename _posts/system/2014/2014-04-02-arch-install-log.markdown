@@ -7,6 +7,9 @@ tags      : [arch, distro, package manager]
 keywords  : [cli, install, post install]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/arch.png
+
 excerpt:
   Many beginners asked for guidance to install Arch. 
   So I put this two logs.

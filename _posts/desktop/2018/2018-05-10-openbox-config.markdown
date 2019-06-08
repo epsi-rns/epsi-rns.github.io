@@ -7,6 +7,9 @@ tags      : [openbox]
 keywords  : [tutorial, configuration, menu]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   Using OB Menu Generator as Static Openbox menu.
 

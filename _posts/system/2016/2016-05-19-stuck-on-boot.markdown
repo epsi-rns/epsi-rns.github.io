@@ -7,6 +7,9 @@ tags      : [package manager]
 keywords  : [boot, grub2, troubleshooting]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/tux.png
+
 excerpt:
   Very simple GRUB2 tips when linux stuck on boot.
 

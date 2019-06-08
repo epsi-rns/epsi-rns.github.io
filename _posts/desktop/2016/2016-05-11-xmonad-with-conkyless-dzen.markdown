@@ -7,6 +7,9 @@ tags      : [screenshot, xmonad, dotfiles]
 keywords  : [modularized, dzen2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/haskell.png
+
 excerpt:
   Tidier code by removing conky in any dzen statusbar.
   Create a thematic XMonad configuration by controlling 

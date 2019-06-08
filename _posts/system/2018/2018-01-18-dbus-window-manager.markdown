@@ -7,6 +7,9 @@ tags      : [etc]
 keywords  : [window manager, dbus, session, non-systemd]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/tux.png
+
 excerpt:
   Solving dbus session in non-systemd environment,
   in application level, session level, and system wide.

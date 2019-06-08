@@ -7,7 +7,10 @@ categories: system
 tags      : [security, arch, package manager]
 keywords  : [blackarch, install, pacman]
 author: epsi
- 
+
+opengraph:
+  image: /assets/site/images/topics/arch.png
+
 excerpt:
   There is no need to install BlackArch or ArchAssault as a full distribution.
   With any distribution utilized pacman, any of these can be instaled as a repository. 

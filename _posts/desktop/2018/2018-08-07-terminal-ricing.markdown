@@ -7,6 +7,9 @@ tags      : [terminal, shell]
 keywords  : [bash, zsh, fish, tmux, urxvt, xfce4-terminal, termite, compton, gtk.css, powerline, neofetch]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Terminal ricing is different with desktop ricing.
 

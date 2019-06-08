@@ -7,6 +7,9 @@ tags      : [openbox, theme, inkscape]
 keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   I found this rare multi color trick.
 

@@ -7,6 +7,9 @@ tags      : [console]
 keywords  : [git]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/git.png
+
 excerpt:
   A coder should be familiar with git, 
   git is a must have tool for coder.

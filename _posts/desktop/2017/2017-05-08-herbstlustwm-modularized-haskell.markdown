@@ -7,6 +7,9 @@ tags      : [coding, haskell, herbstluftwm]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/haskell.png
+
 excerpt:
   Doing Hersbtluft WM Config using Haskell.
   

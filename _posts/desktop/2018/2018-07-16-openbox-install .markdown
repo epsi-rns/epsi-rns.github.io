@@ -7,6 +7,9 @@ tags      : [openbox]
 keywords  : [tutorial, install]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   Common utility for most window manager.
   Still for Dummies.

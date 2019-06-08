@@ -7,6 +7,9 @@ tags      : [coding, conky, bash]
 keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   How to be a Bashful Plumber.
   

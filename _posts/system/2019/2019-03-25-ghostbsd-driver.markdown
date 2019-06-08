@@ -7,10 +7,12 @@ tags      : [bsd]
 keywords  : [ghostbsd, wireless driver, display driver]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/ghostbsd.png
+
 excerpt:
   GhostBSD driver sounds scary at first.
   But once you get along it make sense.
-
 ---
 
 {% include post/2019/03/toc-ghostbsd.html %}

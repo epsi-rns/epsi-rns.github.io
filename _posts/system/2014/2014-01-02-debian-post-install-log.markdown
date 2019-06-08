@@ -7,6 +7,9 @@ tags      : [debian, distro, package manager]
 keywords  : [debian wheezy, post install]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/debian.png
+
 excerpt:
   Using terminal only. 
   What to do on first run and.... 

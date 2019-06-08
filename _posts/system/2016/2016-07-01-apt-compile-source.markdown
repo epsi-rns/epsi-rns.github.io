@@ -7,6 +7,9 @@ tags      : [debian, package manager]
 keywords  : [apt, apt-src]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/debian.png
+
 excerpt:
   If you think Debian package management based 
   is not challenging enough for beginner,

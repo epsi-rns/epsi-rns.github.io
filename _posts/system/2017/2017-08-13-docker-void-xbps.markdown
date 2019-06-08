@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, void]
 keywords  : [xbps]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Docker flow for Void Linux XBPS,
   first time using Void experience.

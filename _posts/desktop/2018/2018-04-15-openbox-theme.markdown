@@ -7,6 +7,9 @@ tags      : [xfwm4, theme, inkscape]
 keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   Openbox theme step by step, covering two theme styles.
   Using Inkscape, one SVG file to create each XBM part.

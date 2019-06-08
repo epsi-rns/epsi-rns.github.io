@@ -7,6 +7,9 @@ tags      : [windows, package manager]
 keywords  : [chocolatey, cmder]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Windows can have powerful command line environment using
   chocolatey package manager and cmder terminal.

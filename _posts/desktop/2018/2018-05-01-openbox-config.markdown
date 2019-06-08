@@ -7,6 +7,9 @@ tags      : [openbox]
 keywords  : [tutorial, configuration]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   Overview about Openbox in configuration.
 

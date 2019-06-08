@@ -7,6 +7,9 @@ tags      : [console]
 keywords  : [bash]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/post-default.png
+
 excerpt:
   Conky is good for desktop decoration. And watch is pretty in Console.
   Using only bash script only to make our monitoring script more transparent.

@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, lfs]
 keywords  : [lfs]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Docker flow for LFS package installation,
   first time using LFS experience.

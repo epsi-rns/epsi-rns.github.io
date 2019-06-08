@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager]
 keywords  : [overview, summary]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Docker flow for learning linux distribution,
   whether package management, or init.

@@ -7,6 +7,9 @@ tags      : [coding, bash, herbstluftwm]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Doing Hersbtluft WM Config using BASH.
   

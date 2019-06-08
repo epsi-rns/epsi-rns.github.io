@@ -7,6 +7,9 @@ tags      : [openbox, theme, inkscape]
 keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   A brief explanation about Openbox theme.
   Step by step, using Inkscape, one SVG file to create each XBM part.

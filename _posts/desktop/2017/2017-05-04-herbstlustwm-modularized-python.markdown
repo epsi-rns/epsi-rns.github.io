@@ -7,6 +7,9 @@ tags      : [coding, python, herbstluftwm]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/python.png
+
 excerpt:
   Doing Hersbtluft WM Config using Python.
   

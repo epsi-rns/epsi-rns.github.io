@@ -7,6 +7,9 @@ tags      : [thought, audio]
 keywords  : [troubleshooting, audiopulse, alsamixer]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Even if you have installed your linux successfully 
   you still need to know your own hardware. 

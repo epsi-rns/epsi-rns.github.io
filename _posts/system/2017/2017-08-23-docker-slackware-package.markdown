@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, slackware]
 keywords  : [slackpkg, slpkg]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Docker flow for Slackware Package Management,
   using slapt-get, slapt-src, and slpkg.

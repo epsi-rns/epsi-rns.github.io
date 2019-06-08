@@ -7,6 +7,9 @@ tags      : [coding, bash, zsh]
 keywords  : [clobbering]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Parsing BASH config for use with other program
   such as zsh, fish, or maybe Perl and Python.

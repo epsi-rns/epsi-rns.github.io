@@ -7,6 +7,9 @@ tags      : [opensuse, distro, package manager]
 keywords  : [zypper, tumbleweed]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/opensuse.png
+
 excerpt:
   openSUSE Tumbleweed Post Install Log.
 

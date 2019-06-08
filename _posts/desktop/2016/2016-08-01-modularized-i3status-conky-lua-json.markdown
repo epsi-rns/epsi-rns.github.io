@@ -7,6 +7,9 @@ tags      : [i3wm]
 keywords  : [modularized, conky, i3status, json]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   This article explain conky lua configuration
   for i3status using JSON.

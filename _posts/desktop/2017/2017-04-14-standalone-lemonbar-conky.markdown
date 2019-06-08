@@ -7,6 +7,9 @@ tags      : [ricing, statusbar, conky]
 keywords  : [standalone, lemonbar, bash, lua]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   Lemonbar is also easy when you have guidance.
   This tutorial guide you to write Lemonbar in Conky.

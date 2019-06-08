@@ -7,6 +7,9 @@ tags      : [openbox]
 keywords  : [tutorial, configuration, tint2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   A brief guidance about Tint2 theme.
 

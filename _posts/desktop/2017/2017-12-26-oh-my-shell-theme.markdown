@@ -7,6 +7,9 @@ tags      : [ricing, bash, zsh]
 keywords  : [oh-my-bash, oh-my-zsh, theme]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Preview each oh-my-bash theme live.
   Also applicable to oh-my-zsh.

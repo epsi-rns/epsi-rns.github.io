@@ -7,6 +7,9 @@ tags      : [bsd, package manager]
 keywords  : [ghostbsd, ports]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/ghostbsd.png
+
 excerpt:
   GhostBSD provide pkg as binary package manager.
   Ports also provided as package manager to compile source code.
@@ -14,7 +17,6 @@ excerpt:
   so that beginner can examine this case
   to help understanding the the process
   of installing package using ports.
-
 ---
 
 {% include post/2019/03/toc-ghostbsd.html %}

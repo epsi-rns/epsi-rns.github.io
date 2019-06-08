@@ -7,6 +7,9 @@ tags      : [ricing, install]
 keywords  : [termite]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   Installing Termite in Arch based distribution is easy,
   the thing get tough when installing vte3-ng in Debian based.

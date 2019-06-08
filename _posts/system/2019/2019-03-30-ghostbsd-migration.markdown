@@ -7,10 +7,12 @@ tags      : [bsd]
 keywords  : [ghostbsd, migration]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/ghostbsd.png
+
 excerpt:
   This article contain common issues,
   for migrating from linux to BSD.
-
 ---
 
 {% include post/2019/03/toc-ghostbsd.html %}

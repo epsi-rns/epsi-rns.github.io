@@ -7,6 +7,9 @@ tags      : [coding, conky, php]
 keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/php.png
+
 excerpt:
   How to be a PHP Plumber.
   

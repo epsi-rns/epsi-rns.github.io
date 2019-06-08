@@ -7,6 +7,9 @@ tags      : [gentoo, package manager]
 keywords  : [emerge, equery]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/gentoo.png
+
 excerpt:
   With Equery, you can upgrade package by category.
   One category today. And other category the day after.

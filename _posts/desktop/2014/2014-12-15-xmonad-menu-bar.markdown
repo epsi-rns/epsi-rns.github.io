@@ -7,6 +7,9 @@ tags      : [ricing, xmonad]
 keywords  : [panel]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/haskell.png
+
 excerpt:
   XMonad itself comes with nothing but black intimidating screen.
   It can be customized very nicely with dzen2 bar.

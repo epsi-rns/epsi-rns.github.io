@@ -7,6 +7,9 @@ tags      : [cloud, docker, package manager]
 keywords  : [docker, manjaro]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt: 
   A cheap way to learn different package management 
   from major linux distribution using Docker.

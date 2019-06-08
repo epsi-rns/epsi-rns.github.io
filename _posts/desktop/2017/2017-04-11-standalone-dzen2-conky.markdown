@@ -4,8 +4,11 @@ title:  "Standalone Dzen2 Statusbar Using Conky"
 categories: desktop
 date      : 2017-04-11 00:05:15 +0700
 tags      : [ricing, statusbar, conky]
-keywords  : [standalone, dzen2]
+keywords  : [standalone, dzen2, lua]
 author: epsi
+
+opengraph:
+  image: /assets/site/images/topics/lua.png
 
 excerpt:
   Dzen2 is easy when you have guidance.

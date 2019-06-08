@@ -7,6 +7,9 @@ tags      : [arch, package manager]
 keywords  : [aur, yaourt]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/arch.png
+
 excerpt:
   For those who are really tired of how easy yaourt (or packer) is. 
   You may consider 'cower' to download  PKGBUILD from AUR manually. 

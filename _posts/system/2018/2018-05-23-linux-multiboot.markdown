@@ -7,6 +7,9 @@ tags      : [thought]
 keywords  : [multiboot, partition, chroot]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/tux.png
+
 excerpt:
   Based on my experience.
   Updating other linux in chroot environment.

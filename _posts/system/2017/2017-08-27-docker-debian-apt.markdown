@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, debian]
 keywords  : [apt]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Examine APT step by step,
   using Debian container in Docker.

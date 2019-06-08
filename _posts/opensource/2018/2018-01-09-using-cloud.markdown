@@ -7,6 +7,9 @@ tags      : [console]
 keywords  : [cloud, dropbox, google drive, mega]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/git.png
+
 excerpt:
   General cloud goodies for personal document transfer.
   Sync data using file sharing tool on the cloud,

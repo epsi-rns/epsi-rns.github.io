@@ -7,6 +7,9 @@ tags      : [coding, php, herbstluftwm]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/php.png
+
 excerpt:
   Doing Hersbtluft WM Config using PHP.
   

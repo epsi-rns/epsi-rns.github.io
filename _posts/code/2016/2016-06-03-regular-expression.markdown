@@ -7,6 +7,9 @@ tags      : [thought, console]
 keywords  : [regular expression]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/post-default.png
+
 excerpt:
   It is easy to replace text with text editor.
   But this is not the case when you need

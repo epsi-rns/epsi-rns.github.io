@@ -7,6 +7,9 @@ tags      : [fluxbox]
 keywords  : [tutorial, configuration]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/fluxbox.png
+
 excerpt:
   A brief explanation about Fluxbox menu configuration.
 

@@ -7,6 +7,9 @@ tags      : [coding, python, herbstluftwm, statusbar]
 keywords  : [event idle, lemonbar, dzen2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/python.png
+
 excerpt:
   HersbtluftWM Event Idle using Dzen2 or Lemonbar.
   Modularized implementation in Python script.

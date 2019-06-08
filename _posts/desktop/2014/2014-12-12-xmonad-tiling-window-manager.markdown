@@ -7,6 +7,9 @@ tags      : [screenshot, xmonad, dotfiles]
 keywords  : [xmobar, dzen2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/haskell.png
+
 excerpt:
   This show case show you the looks of Tiling Window Manager with XMonad.
   XMonad is an amazing Tiling Window Manager.

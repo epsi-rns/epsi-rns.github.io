@@ -7,6 +7,9 @@ tags      : [awesome]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   This article explain directory structure of
   modularized Awesome WM configuration (rc.lua)

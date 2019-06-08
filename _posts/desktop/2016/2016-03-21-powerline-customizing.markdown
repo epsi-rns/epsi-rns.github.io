@@ -7,6 +7,9 @@ tags      : [ricing, dotfiles]
 keywords  : [powerline, arch, debian]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/python.png
+
 excerpt: 
   For those who wants to looks cool with their console screenshot.
   Or people who does ricing a lot. Well, Powerline is for you.

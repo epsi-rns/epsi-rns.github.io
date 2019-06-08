@@ -6,6 +6,9 @@ categories: desktop
 tags      : [screenshot, xfce4]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/xfce.png
+
 excerpt:
   XFCE4 is great, so simple, but yet it has this cool simple tiling.
   It is a built in feature, that some people forget to explore.

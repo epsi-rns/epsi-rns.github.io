@@ -7,6 +7,9 @@ tags      : [ricing, console, conky]
 keywords  : [standalone, dzen2, bash, lua]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   System monitoring using Text User Interface turn out to be not so difficult.
   We have three option here, using Watch, Bash, and Conky..

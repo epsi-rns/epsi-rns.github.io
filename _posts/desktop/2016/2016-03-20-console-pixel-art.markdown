@@ -7,6 +7,9 @@ tags      : [screenshot, console, bash]
 keywords  : [crunchbang, pixel art, shell script, xmonad]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt: 
   This github repository is dedicated to !# crunchbang fellow
   who does a really great job of collecting ANSI Colorschemes scripts.

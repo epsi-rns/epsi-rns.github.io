@@ -7,6 +7,9 @@ tags      : [fluxbox, theme, inkscape]
 keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/fluxbox.png
+
 excerpt:
   A brief explanation about Fluxbox theme (or style).
   Step by step, using Inkscape, one SVG file to create each XPM part.

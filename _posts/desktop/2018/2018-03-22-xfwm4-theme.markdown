@@ -7,6 +7,9 @@ tags      : [xfwm4, theme, inkscape]
 keywords  : [tutorial, free SVG, custom theme]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/xfce.png
+
 excerpt:
   XFWM4 theme step by step, covering most style.
   Using Inkscape, one SVG file to create each PNG/XPM part.

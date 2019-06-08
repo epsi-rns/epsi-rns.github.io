@@ -7,6 +7,9 @@ tags      : [docker, distro, package manager, opensuse]
 keywords  : [zypper]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/docker.png
+
 excerpt:
   Examine zypper step by step,
   using openSUSE container in Docker.

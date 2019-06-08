@@ -7,6 +7,9 @@ tags      : [debian, devuan, sysvinit, distro, package manager]
 keywords  : [apt]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/debian.png
+
 excerpt:
   Debian Systemd to Devuan Sysvinit, Migrate Log.
 

@@ -7,6 +7,9 @@ tags      : [coding, conky, ruby]
 keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/ruby.png
+
 excerpt:
   How to be a Ruby Plumber.
   

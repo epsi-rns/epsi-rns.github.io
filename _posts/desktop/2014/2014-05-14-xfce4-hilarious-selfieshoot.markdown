@@ -6,6 +6,9 @@ categories: desktop
 tags      : [screenshot, xfce4]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/xfce.png
+
 excerpt:
   A show case of how customizable XFCE4 is.
   It is really enjoying.

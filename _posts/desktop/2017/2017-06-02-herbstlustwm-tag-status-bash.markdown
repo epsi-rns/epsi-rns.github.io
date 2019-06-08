@@ -7,6 +7,9 @@ tags      : [coding, bash, herbstluftwm, statusbar]
 keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/bash.png
+
 excerpt:
   HersbtluftWM Tag Status using Dzen2 or Lemonbar.
   Modularized implementation in BASH script.

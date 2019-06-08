@@ -7,6 +7,9 @@ tags      : [coding, conky, lua]
 keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   How to be a Lua Plumber.
   

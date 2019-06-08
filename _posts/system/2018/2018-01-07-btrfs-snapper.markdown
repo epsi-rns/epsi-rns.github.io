@@ -7,6 +7,9 @@ tags      : [btrfs, grub2, filesystem]
 keywords  : [opensuse, snapper, troubleshooting]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/opensuse.png
+
 excerpt:
   My openSUSE Experience, solving unintended snapper rollback.
 

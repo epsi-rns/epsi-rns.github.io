@@ -7,6 +7,9 @@ tags      : [debian, package manager]
 keywords  : [apt pinning]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/debian.png
+
 excerpt:
   APT Pinning is not a very interesting topic. But it saved my notebook's life.
   Now my notebook can live longer. By keeping the old driver, and never update it ever.

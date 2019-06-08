@@ -7,6 +7,9 @@ tags      : [coding, conky, perl]
 keywords  : [pipe and fork, dzen2, lemonbar]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/python.png
+
 excerpt:
   How to be a Python Plumber.
   

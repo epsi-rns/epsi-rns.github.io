@@ -7,6 +7,9 @@ tags      : [coding, lua, herbstluftwm]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   Doing Hersbtluft WM Config using Lua.
   

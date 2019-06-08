@@ -7,6 +7,9 @@ tags      : [coding, perl, herbstluftwm]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/perl.png
+
 excerpt:
   Doing Hersbtluft WM Config using Perl.
   

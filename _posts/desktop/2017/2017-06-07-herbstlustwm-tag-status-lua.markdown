@@ -7,6 +7,9 @@ tags      : [coding, lua, herbstluftwm, statusbar]
 keywords  : [tag status, lemonbar, dzen2]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt:
   HersbtluftWM Tag Status using Dzen2 or Lemonbar.
   Modularized implementation in Lua script.

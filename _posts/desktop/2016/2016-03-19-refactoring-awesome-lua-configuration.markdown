@@ -7,6 +7,9 @@ tags      : [screenshot, awesome, dotfiles]
 keywords  : [modularized]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/lua.png
+
 excerpt: 
   A show case of how to separate Awesome WM configuration
   to make your configuration tidy, and easier to read.

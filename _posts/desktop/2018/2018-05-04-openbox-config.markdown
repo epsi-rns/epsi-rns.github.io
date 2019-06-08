@@ -7,6 +7,9 @@ tags      : [openbox]
 keywords  : [tutorial, configuration, key binding, mouse binding]
 author: epsi
 
+opengraph:
+  image: /assets/site/images/topics/openbox.png
+
 excerpt:
   A brief explanation about Openbox rc.xml Configuration
 
