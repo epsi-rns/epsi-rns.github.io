@@ -982,11 +982,11 @@ Thank you for reading and visiting.
 [image-ss-debian-urxvt]:           {{ asset_path }}/byobu-objdump-and-source.png
 [image-ss-greeting-syawal]:        {{ asset_path }}/syawal-1439h.png
 [image-ss-git-log-vim]:            {{ asset_path }}/git-log-vim-r.png
-[image-ss-prompt-bash-color]:      {{ asset_path }}//prompt-bash.png
-[image-ss-prompt-oh-my-bash]:      {{ asset_path }}//prompt-oh-my-bash.png
-[image-ss-prompt-oh-my-zsh]:       {{ asset_path }}//prompt-oh-my-zsh.png
-[image-ss-tmux-statusbar]:         {{ asset_path }}//tmux-statusbar.png
-[image-ss-teamocil-jekyll]:        {{ asset_path }}//teamocil-jekyll.png
+[image-ss-prompt-bash-color]:      {{ asset_path }}/prompt-bash.png
+[image-ss-prompt-oh-my-bash]:      {{ asset_path }}/prompt-oh-my-bash.png
+[image-ss-prompt-oh-my-zsh]:       {{ asset_path }}/prompt-oh-my-zsh.png
+[image-ss-tmux-statusbar]:         {{ asset_path }}/tmux-statusbar.png
+[image-ss-teamocil-jekyll]:        {{ asset_path }}/teamocil-jekyll.png
 
 [dotfiles-xdefaults]:     {{ dotfiles }}/urxvt/Xdefaults
 [dotfiles-xresources]:    {{ dotfiles }}/urxvt/Xresources
