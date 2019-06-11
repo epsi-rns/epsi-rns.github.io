@@ -352,13 +352,14 @@ Notice the <code>exec ~/conky/conkyhijri.sh</code> code.
 #### Hijri Script
 
 Since this is not my script, I won't put it in my blog.
-But you can have alook at my dotfiles.
+But you can have a look at my dotfiles.
 
 *	[gitlab.com/.../dotfiles/.../dobbie/conkyhijri.sh][dotfiles-hijri]
 
 #### Monitoring Code
 
 I also port the rest code, to monitor the status of my system.
+My intention is to have a more clear indentation for conditional script.
 
 {% highlight lua %}
 cpu_usage = 'CPU Usage: ${cpu}% - RAM Usage: ${mem}'
@@ -399,7 +400,8 @@ monitor = ''
 .. '${alignc}[ ' .. net_up .. ' ' ..net_down .. ' ]\n'
 {% endhighlight %}
 
-My intention is to have a more clear indentation for conditional script.
+Notice, how I manage the <code>wlan</code> name.
+You may change it to suit your system.
 
 #### The Text
 
