@@ -1,11 +1,4 @@
-# Helper for related links
-
-# just copy the result manually
-# from _site/pages/all_posts.yml 
-# to folder _data/all_posts.yml
-
-- title: "Teknik Nih (search engine)"
-  url: http://tekniknih.com/
+# Helper for friends widget
 
 - title: "BanditHijo (R)-Chive"
   url: http://bandithijo.com/
@@ -43,6 +36,9 @@
 - title: "epsi @ github.io (desktop)"
   url: http://epsi-rns.github.io/
 
+- title: "epsi @ gitlab.io (webdev)"
+  url: http://epsi-rns.github.io/
+
 - title: "A Sky"
   url: https://asky-el.gitlab.io
 
@@ -52,6 +48,14 @@
 - title: "Muhammad Nur Fuad"
   url: https://illvart.com/
 
+- title: "Hadi Hidayat Hammurabi"
+  url: http://hadihammurabi.com/
+
+- title: "Virdio Sam"
+  url: http://diosamuel.netlify.com
+
+- title: "Teknik Nih (search engine)"
+  url: http://webkartu.com/
+
 - title: "GIMPScape ID"
   url: https://gimpscape.org/
-
