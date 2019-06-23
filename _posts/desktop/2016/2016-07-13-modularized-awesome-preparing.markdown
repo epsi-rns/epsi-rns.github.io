@@ -4,7 +4,7 @@ title:  "Preparing Modularized Awesome WM Configuration"
 categories: desktop
 date      : 2016-07-13 12:50:15 +0700
 tags      : [awesome]
-keywords  : [modularized]
+keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
 opengraph:

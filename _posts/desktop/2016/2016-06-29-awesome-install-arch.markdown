@@ -4,7 +4,7 @@ title:  "Install Awesome WM in Arch Linux based Distribution"
 categories: desktop
 date      : 2016-06-29 23:34:15 +0700
 tags      : [awesome, install]
-keywords  : [modularized, vicious, lain]
+keywords  : [tiling, window manager, modularized, vicious, lain]
 author: epsi
 
 excerpt:
