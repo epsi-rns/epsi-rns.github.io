@@ -72,5 +72,3 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 
 [local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
-
-[local-whats-next]:     {{< baseurl >}}ssg/2019/05/25/hexo-content-markdown/
