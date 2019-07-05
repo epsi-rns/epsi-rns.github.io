@@ -233,7 +233,7 @@ end
 
 With this <kbd>mod+s</kbd> you can popup binding cheatsheet.
 
-![Awesome WM: Simple Binding Cheatsheet][image-ss-01-help-simple]
+![Awesome WM: Simple Binding Cheatsheet][image-ss-01-help-simple]{: .img-responsive }
 
 #### Calling Script
 
@@ -599,7 +599,7 @@ from the original example configutration script.
 
 All standard binding can be seen in screenshot figure below:
 
-![Awesome WM: Standard Binding Cheatsheet][image-ss-01-help-standard]
+![Awesome WM: Standard Binding Cheatsheet][image-ss-01-help-standard]{: .img-responsive }
 
 #### Custom Fix Size
 
@@ -648,6 +648,8 @@ I need this fix size while making screenshot for blogging.
 
 I put these codes in the middle.
 So I do not to worry about removing comma, at the end of this section.
+
+![Awesome WM: Custom Binding Fix Size][image-ss-01-fix-size]{: .img-responsive }
 
 -- -- --
 
@@ -826,6 +828,7 @@ What do you think ?
 
 [image-ss-01-help-simple]:  {{ asset_path }}/01-awesome-help-simple.png
 [image-ss-01-help-standard]:{{ asset_path }}/01-awesome-help-standard.png
+[image-ss-01-fix-size]:     {{ asset_path }}/01-awesome-wm-fix-size.gif
 
 [dotfiles-config]:          {{ dotfiles }}/rc.lua
 [dotfiles-bindtotags]:      {{ dotfiles }}/binding/bindtotags.lua
