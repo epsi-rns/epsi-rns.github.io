@@ -8,7 +8,7 @@ keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
 opengraph:
-  image: /assets/site/images/topics/lua.png
+  image: /assets/posts/desktop/2019/06/01-menu-custom.png
 
 excerpt:
   Awesome WM customization step by step.
