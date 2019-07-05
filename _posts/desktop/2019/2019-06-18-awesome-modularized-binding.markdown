@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Awesome WM - Statusbar Modules"
+title:  "Awesome WM - Binding Modules"
 categories: desktop
 date      : 2019-06-18 09:25:15 +0700
 tags      : [awesome]
