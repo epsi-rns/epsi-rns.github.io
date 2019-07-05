@@ -23,6 +23,8 @@ related_link_ids:
 
 ---
 
+{% include post/2019/06/toc-awesome.html %}
+
 ### Preface
 
 > Goal: Keyboard and mouse binding modules in modularized configuration.
@@ -818,7 +820,7 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
 
-[local-whats-next]: /desktop/2019/06/19/awesome-modularized-decoration.html
+[local-whats-next]: /desktop/2019/06/19/awesome-modularized-statusbar.html
 
 [image-ss-01-tree]:     {{ asset_path }}/01-tree-binding.png
 

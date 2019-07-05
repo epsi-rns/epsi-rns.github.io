@@ -23,6 +23,8 @@ related_link_ids:
 
 ---
 
+{% include post/2019/06/toc-awesome.html %}
+
 ### Preface
 
 > Goal: Main modules in modularized configuration.

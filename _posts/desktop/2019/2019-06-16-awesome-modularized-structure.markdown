@@ -24,6 +24,8 @@ related_link_ids:
 
 ---
 
+{% include post/2019/06/toc-awesome.html %}
+
 ### Preface
 
 > Goal: Preparing modularized configuration by examining folder structure.

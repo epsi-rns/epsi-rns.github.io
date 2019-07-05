@@ -23,6 +23,8 @@ related_link_ids:
 
 ---
 
+{% include post/2019/06/toc-awesome.html %}
+
 ### Preface
 
 > Goal: Statusbar and titlebar binding modules in modularized configuration.
