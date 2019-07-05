@@ -45,7 +45,7 @@ main
 0 directories, 7 files
 {% endhighlight %}
 
-![Awesome WM: Artefacts in Main][image-ss-01-tree]{: .img-responsive }
+![Awesome WM: Artefacts in Main][image-ss-01-tree-main]{: .img-responsive }
 
 We have already moved `error-handling.lua`
 and `user-variables.lua` in previous article.
@@ -616,7 +616,7 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
 
-[image-ss-01-tree]:     {{ asset_path }}/01-tree-main.png
+[image-ss-01-tree-main]:    {{ asset_path }}/01-tree-main.png
 [image-ss-01-layout]:   {{ asset_path }}/01-layout.png
 [image-ss-01-tags-number]:  {{ asset_path }}/01-tags-number.png
 [image-ss-01-tags-takao]:   {{ asset_path }}/01-tags-takao.png
