@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Awesome WM - Binding Modules"
+title:  "Awesome WM - Statusbar Modules"
 categories: desktop
 date      : 2019-06-18 09:25:15 +0700
 tags      : [awesome]
@@ -805,12 +805,20 @@ root.keys(RC.globalkeys)
 
 -- -- --
 
+### What is Next ?
+
+Consider continue reading [ [Awesome WM - Modularized Structure][local-whats-next] ].
+There are, some interesting topic,
+about refactoring<code>Awesome WM</code> using <code>Lua</code>.
+
 What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
+
+[local-whats-next]: /desktop/2019/06/19/awesome-modularized-decoration.html
 
 [image-ss-01-tree]:     {{ asset_path }}/01-tree-binding.png
 

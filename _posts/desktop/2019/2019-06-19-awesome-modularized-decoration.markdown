@@ -68,7 +68,7 @@ deco/
 
 * 6: Statusbar Summary
 
-* What is Next ?
+* Conclusion
 
 -- -- --
 
@@ -588,6 +588,14 @@ end)
 {% endhighlight %}
 
 -- -- --
+
+### Conclusion
+
+> I'll be back!
+
+After this Awesome WM modularization
+there will be another article,
+about Awesome WM customization.
 
 What do you think ?
 

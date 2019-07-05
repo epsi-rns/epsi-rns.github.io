@@ -608,13 +608,20 @@ that code above is enough.
 
 -- -- --
 
-What do you think ?
+### What is Next ?
 
+Consider continue reading [ [Awesome WM - Binding Modules][local-whats-next] ].
+There are, some interesting topic,
+about refactoring<code>Awesome WM</code> using <code>Lua</code>.
+
+What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
+
+[local-whats-next]: /desktop/2019/06/18/awesome-modularized-binding.html
 
 [image-ss-01-tree-main]:    {{ asset_path }}/01-tree-main.png
 [image-ss-01-layout]:       {{ asset_path }}/01-layout.png

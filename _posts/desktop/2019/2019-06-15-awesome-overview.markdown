@@ -59,7 +59,18 @@ so yes, this is not my final thought.
 
 -- -- --
 
+### What is Next ?
+
+Consider continue reading [ [Awesome WM - Modularized Structure][local-whats-next] ].
+There are, some interesting topic,
+about refactoring<code>Awesome WM</code> using <code>Lua</code>.
+
 What do you think ?
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
+{% assign asset_path = '/assets/posts/desktop/2019/06' %}
+
+[local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
+
+[local-whats-next]:     {{< baseurl >}}ssg/2019/05/25/hexo-content-markdown/
