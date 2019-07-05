@@ -617,7 +617,7 @@ What do you think ?
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
 
 [image-ss-01-tree-main]:    {{ asset_path }}/01-tree-main.png
-[image-ss-01-layout]:   {{ asset_path }}/01-layout.png
+[image-ss-01-layout]:       {{ asset_path }}/01-layout.png
 [image-ss-01-tags-number]:  {{ asset_path }}/01-tags-number.png
 [image-ss-01-tags-takao]:   {{ asset_path }}/01-tags-takao.png
 [image-ss-01-menu-simple]:  {{ asset_path }}/01-menu-simple.png

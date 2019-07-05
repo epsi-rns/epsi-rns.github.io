@@ -807,14 +807,12 @@ root.keys(RC.globalkeys)
 
 What do you think ?
 
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
 
 [image-ss-01-tree]:     {{ asset_path }}/01-tree-binding.png
-[image-ss-01-layout]:   {{ asset_path }}/01-layout.png
 
 [image-ss-01-help-simple]:  {{ asset_path }}/01-awesome-help-simple.png
 [image-ss-01-help-standard]:{{ asset_path }}/01-awesome-help-standard.png
