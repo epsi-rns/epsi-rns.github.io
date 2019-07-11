@@ -824,7 +824,7 @@ What do you think ?
 
 [local-whats-next]: /desktop/2019/06/19/awesome-modularized-statusbar.html
 
-[image-ss-01-tree]:     {{ asset_path }}/01-tree-binding.png
+[image-ss-01-tree-binding]: {{ asset_path }}/01-tree-binding.png
 
 [image-ss-01-help-simple]:  {{ asset_path }}/01-awesome-help-simple.png
 [image-ss-01-help-standard]:{{ asset_path }}/01-awesome-help-standard.png

@@ -17,8 +17,11 @@ opengraph:
         {% include post/header.html %}
 
         <article class="main-content" itemprop="articleBody">
-          {% comment %}{% include service/google-adsense.html %}{% endcomment %}
+          {% include service/google-adsense.html %}
+          <br/>
           {{ content }}
+          <br/>
+          {% include service/google-adsense.html %}
         </article>
 
         {% include post/navigation.html %}
