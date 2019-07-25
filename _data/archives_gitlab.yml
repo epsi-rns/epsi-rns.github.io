@@ -6,6 +6,94 @@
 # to folder data/archives.yml
 
 
+- id: 19062117
+  title: "SASS - Loop - Spacing Class"
+  url: /frontend/2019/06/21/sass-loop-spacing-class/
+  
+- id: 19053009
+  title: "Hexo - Summary"
+  url: /ssg/2019/05/30/hexo-summary/
+  
+- id: 19052917
+  title: "Netlify - Deploying"
+  url: /ssg/2019/05/29/deploy-netlify/
+  
+- id: 19052817
+  title: "Hexo - Meta - SEO"
+  url: /ssg/2019/05/28/hexo-meta-seo/
+  
+- id: 19052717
+  title: "Hexo - Content - Syntax Highlighting"
+  url: /ssg/2019/05/27/hexo-syntax-highlighting/
+  
+- id: 19052617
+  title: "Hexo - Content - Raw HTML"
+  url: /ssg/2019/05/26/hexo-content-html/
+  
+- id: 19052517
+  title: "Hexo - Content - Markdown"
+  url: /ssg/2019/05/25/hexo-content-markdown/
+  
+- id: 19052417
+  title: "Hexo - Content - Blog Post"
+  url: /ssg/2019/05/24/hexo-content-post/
+  
+- id: 19052317
+  title: "Hexo - Pagination - Filtering Caveat"
+  url: /ssg/2019/05/23/hexo-pagination-filtering-caveat/
+  
+- id: 19052317
+  title: "Hexo - Pagination - Handling URL"
+  url: /ssg/2019/05/23/hexo-pagination-handling-url/
+  
+- id: 19052217
+  title: "Hexo - Pagination - Screen Reader"
+  url: /ssg/2019/05/22/hexo-pagination-screenreader/
+  
+- id: 19052117
+  title: "Hexo - Pagination - Responsive"
+  url: /ssg/2019/05/21/hexo-pagination-responsive/
+  
+- id: 19052017
+  title: "Hexo - Pagination - Indicator"
+  url: /ssg/2019/05/20/hexo-pagination-indicator/
+  
+- id: 19051917
+  title: "Hexo - Pagination - Logic"
+  url: /ssg/2019/05/19/hexo-pagination-logic/
+  
+- id: 19051917
+  title: "Hexo - Pagination - Adjacent"
+  url: /ssg/2019/05/19/hexo-pagination-adjacent/
+  
+- id: 19051817
+  title: "Hexo - Pagination - Navigation"
+  url: /ssg/2019/05/18/hexo-pagination-navigation/
+  
+- id: 19051817
+  title: "Hexo - Pagination - Number"
+  url: /ssg/2019/05/18/hexo-pagination-number/
+  
+- id: 19051717
+  title: "Hexo - Pagination - Simple"
+  url: /ssg/2019/05/17/hexo-pagination-simple/
+  
+- id: 19051717
+  title: "Hexo - Pagination - Introduction"
+  url: /ssg/2019/05/17/hexo-pagination-intro/
+  
+- id: 19051617
+  title: "Hexo - EJS - Data"
+  url: /ssg/2019/05/16/hexo-ejs-data/
+  
+- id: 19051517
+  title: "Hexo - EJS - Widget"
+  url: /ssg/2019/05/15/hexo-ejs-widget/
+  
+- id: 19051417
+  title: "Hexo - EJS - Custom Content Type"
+  url: /ssg/2019/05/14/hexo-ejs-custom-output/
+  
 - id: 19051317
   title: "Hexo - EJS - Section List Layout"
   url: /ssg/2019/05/13/hexo-ejs-section-list-layout/
