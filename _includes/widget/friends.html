@@ -10,7 +10,7 @@
   </div>
   <div class="card-body py-2">
   <ul class="card_list">
-	{% assign selection = site.data.friends | slice: start, length %}
+    {% assign selection = site.data.friends | slice: start, length %}
     {% for friend in selection %}
     <li><a href="{{ friend.url }}">{{ friend.title }}</a></li>
     {% endfor %}

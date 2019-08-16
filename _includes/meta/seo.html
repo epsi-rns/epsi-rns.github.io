@@ -1,15 +1,5 @@
-
-{% if page.author %}
-  <meta name="author"      content="{{ page.author }}">
-{% endif %}  
-
-{% if page.excerpt %}
-  <meta name="description" content="{{ page.excerpt | strip_html }}">
-{% else %}
-  <meta name="description" content="{{ site.description | strip }}">
-{% endif %}
-
 {% capture spaceless %}
+  <!-- keywords -->
   {% assign cats  = '' | split: '' %}
   {% assign tags  = '' | split: '' %}
   {% assign words = '' | split: '' %}
@@ -31,6 +21,11 @@
   {% assign termssize = terms | size %}
 {% endcapture %}
 
+  <meta name="author"
+        content="{{ page.author | default: "epsi" }}">
+  <meta name="description"
+        content="{{ description }}">
 {% if termssize != 0 %}
-  <meta name="keywords"    content="{{ terms | join: ", " }}">
+  <meta name="keywords"
+        content="{{ terms | join: ", " }}">
 {% endif %}

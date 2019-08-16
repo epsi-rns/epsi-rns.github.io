@@ -7,14 +7,9 @@ A liquid tuple would be nice,
 but liquid is only a template after all.
 
 {% endcomment %}
+
 {% capture spaceless %}
-
-  {% if page.excerpt %}
-    {% assign description = page.excerpt | strip_html %}
-  {% else %}
-    {% assign description = site.description | strip %}
-  {% endif %}
-
+  <!-- image -->
   {% if page.opengraph.image %}
     {% assign ogi = page.opengraph.image %}
   {% elsif layout.opengraph.image %}
@@ -23,16 +18,24 @@ but liquid is only a template after all.
     {% assign ogi = site.logo %}
   {% endif %}
 
+  <!-- fix -->
+  {% assign ogimage = ogi | prepend: site.baseurl | prepend: site.url %}
+  {% assign ogtitle = (page.title | default: site.title) | escape %}
+  {% assign ogurl   = page.url 
+                    | replace:'index.html',''
+                    | prepend: site.baseurl
+                    | prepend: site.url %}
+
 {% endcapture %}
 
   {% comment %}<!-- Open Graph -->{% endcomment %}
   <meta property="og:locale"       content="{{ site.locale }}">
   <meta property="og:type"         content="article">
-  <meta property="og:title"        content="{{ (page.title | default: site.title) | escape }}">
+  <meta property="og:title"        content="{{ ogtitle }}">
   <meta property="og:description"  content="{{ description }}">
-  <meta property="og:url"          content="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+  <meta property="og:url"          content="{{ ogurl }}">
   <meta property="og:site_name"    content="{{ site.title }}">
-  <meta property="og:image"        content="{{ site.url }}{{ site.baseurl }}{{ ogi }}">
+  <meta property="og:image"        content="{{ ogimage }}">
   <meta property="og:latitude"     content="-6.193665"/>
   <meta property="og:longitude"    content="106.848558"/>
   <meta property="og:locality"     content="Jakarta"/>

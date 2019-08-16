@@ -10,7 +10,7 @@
   </div>
   <div class="card-body py-2">
   <ul class="card_list">
-	{% assign selection = site.data.archives_gitlab | slice: start, length %}
+    {% assign selection = site.data.archives_gitlab | slice: start, length %}
     {% for archive in selection %}
     <li><a href="https://epsi-rns.gitlab.io{{ archive.url }}">{{ archive.title }}</a></li>
     {% endfor %}

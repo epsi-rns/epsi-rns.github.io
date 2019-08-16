@@ -2,28 +2,24 @@
 <!-- Twitter Cards -->
 {% endcomment %}
 
-  <meta name="twitter:title"        content="{{ (page.title | default: site.title) | escape }}">
-{% if page.excerpt %}
-  <meta name="twitter:description"  content="{{ page.excerpt | strip_html }}">
-{% else %}
-  <meta name="twitter:description"  content="{{ site.description | strip }}">
-{% endif %}
+  <meta name="twitter:title"       content="{{ (page.title | default: site.title) | escape }}">
+  <meta name="twitter:description" content="{{ description }}">
 {% if site.owner.twitter %}
-  <meta name="twitter:site"         content="@{{ site.owner.twitter }}">
+  <meta name="twitter:site"        content="@{{ site.owner.twitter }}">
 {% endif %}
 {% if author.twitter %}
-  <meta name="twitter:creator"      content="@{{ author.twitter }}">
+  <meta name="twitter:creator"     content="@{{ author.twitter }}">
 {% endif %}
 
 {% if page.image.feature %}
-  <meta name="twitter:card"         content="summary_large_image">
-  <meta name="twitter:image"        content="{{ site.url }}{{ site.baseurl }}/images/{{ page.image.feature }}">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:image"       content="{{ site.url }}{{ site.baseurl }}/images/{{ page.image.feature }}">
 {% else %}
   {% if page.image.thumb %}
     {% assign twimg = site.baseurl | append: "/assets/images/" | append: page.image.thumb %}
   {% else %}
     {% assign twimg = site.baseurl | append: site.logo %}
   {% endif %}
-  <meta name="twitter:card"         content="summary">
-  <meta name="twitter:image"        content="{{ site.url }}{{ twimg }}}">
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:image"       content="{{ site.url }}{{ twimg }}}">
 {% endif %}

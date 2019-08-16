@@ -1,3 +1,21 @@
+{% capture spaceless %}
+
+  <!-- description -->
+  {% if page.excerpt %}
+    {% assign description = page.excerpt | strip_html %}
+  {% else %}
+    {% assign description = site.description | strip %}
+  {% endif %}
+
+  {% assign description = description
+                        | newline_to_br
+                        | strip_newlines
+                        | replace: '<br />', ' '
+                        | strip_html
+                        | strip
+                        | truncatewords: 150 %}
+{% endcapture %}
+
 <head>
     {% include meta/html.html %}
     {% comment %}<!-- Required meta tags -->{% endcomment %}
