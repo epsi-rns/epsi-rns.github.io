@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Awesome WM - Theme"
+title:  "Awesome WM - Theme - Main"
 categories: desktop
 date      : 2019-10-20 09:25:15 +0700
 tags      : [awesome]
@@ -35,9 +35,9 @@ Awesome support theming:
 
 * Native Gap
 
-* Titlebar
+* Element Color: Task, Tag, Menu
 
-* Task and Tag Color
+* Titlebar Icon
 
 * Layout Icon
 
@@ -119,11 +119,7 @@ and you can always configure it as you like later.
 
 * 3: Elements
 
-* 4: Binding: Tag List Buttons
-
-* 5: Binding: Task List Buttons
-
-* 6: Statusbar Summary
+* 4: Titlebar (next article)
 
 * Conclusion
 
@@ -362,9 +358,9 @@ theme.taglist_squares_unsel    = theme_path .. "taglist/clone/square_unsel.png"
 
 I have made my own custom SVG source:
 
-![SVG Source: Tag List][image-ss-svg-taglist]{: .img-responsive }
+![SVG Source: Tag List][image-svg-taglist]{: .img-responsive }
 
-You might want to alter th eimage yourself to suit your needs.
+You might want to alter the image yourself to suit your needs.
 
 #### Task List
 
@@ -548,7 +544,7 @@ What do you think ?
 [image-ss-02-titlebar]: {{ asset_path }}/02-titlebar.png
 [image-ss-02-menu]:     {{ asset_path }}/02-menu.png
 
-[image-ss-svg-taglist]: {{ asset_path }}/clone-taglist.png
+[image-svg-taglist]:    {{ asset_path }}/clone-taglist.png
 
 [dotfiles-theme]:       {{ dotfiles }}/themes/clone/theme.lua
 [dotfiles-gmc]:         {{ dotfiles }}/themes/clone/gmc.lua
