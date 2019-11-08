@@ -55,6 +55,8 @@ modularization. So here below are our topics:
 
 * Customization: Statusbar and Looks
 
+* Theme
+
 I think that is all for today.
 This article will grow.
 so yes, this is not my final thought.

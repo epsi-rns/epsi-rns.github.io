@@ -484,7 +484,7 @@ awful.screen.connect_for_each_screen(function(s)
     layout = wibox.layout.align.horizontal,
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
-      mylauncher,
+      RC.launcher,
       s.mytaglist,
       s.mypromptbox,
     },
@@ -501,6 +501,8 @@ end)
 {% endhighlight %}
 
 That is all, for simple taskbar.
+
+Notice the variable that renamed from `mylauncher` to `RC.launcher`.
 
 #### Module Script
 
@@ -573,7 +575,7 @@ awful.screen.connect_for_each_screen(function(s)
     layout = wibox.layout.align.horizontal,
     { -- Left widgets
       layout = wibox.layout.fixed.horizontal,
-      mylauncher,
+      RC.launcher,
       s.mytaglist,
       s.mypromptbox,
     },
