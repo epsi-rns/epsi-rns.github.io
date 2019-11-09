@@ -60,7 +60,7 @@ deco/
 
 * 1: Titlebar
 
-* 2: Statusbar Sekleton
+* 2: Statusbar Skeleton
 
 * 3: Wallpaper
 

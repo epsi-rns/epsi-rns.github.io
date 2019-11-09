@@ -38,7 +38,9 @@ related_link_ids:
 
 * 2: SVG Icons
 
-* 3: Configuration
+* 3: Theme Configuration
+
+* 4: Titlebar Configuration
 
 -- -- --
 
@@ -80,17 +82,37 @@ SVG source available at:
 
 #### Exporting
 
-Inkscape is a very nice tools.
-It can name each object, so we can have the right name,
-while exporting to PNG.
+Inkscape is a very nice tools. Inkscape can name each object properly.
 
-![Inkscape: Export Selection with Name][image-ix-02-titlebar]{: .img-responsive }
+![Inkscape: Naming Object Property][image-ink-02-object]{: .img-responsive }
+
+So we can have the right name, while exporting to PNG.
+
+![Inkscape: Export Selection with Name][image-ink-02-export]{: .img-responsive }
+
+Any SVG can be edited in text editor,
+so you can change the export properties at once,
+by search and replace.
+In this case I change from `export-xdpi="900"` to `export-xdpi="384"`.
+
+{% highlight lua %}
+    <rect
+       y="2"
+       x="82"
+       height="16"
+       width="16"
+       id="close_normal"
+       style="opacity:1;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:0.99999994;stroke-opacity:1"
+       inkscape:label="#rect1194"
+       inkscape:export-xdpi="384"
+       inkscape:export-ydpi="384" />
+{% endhighlight %}
 
 Generating icon has never been easier than this.
 
 -- -- --
 
-### 3: Configuration
+### 3: Theme Configuration
 
 We need to map from generated PNG to Awesome predefined variable names.
 
@@ -136,6 +158,39 @@ And the result is a very nice titlebar.
 
 -- -- --
 
+### 4: Titlebar Configuration
+
+Just in case you did not notice,
+there is these lines in Awesome 4.x series:
+
+{% highlight lua %}
+theme.titlebar_minimize_button_normal           = icondir .. "minimize_normal.png"
+theme.titlebar_minimize_button_focus            = icondir .. "minimize_focus.png"
+{% endhighlight %}
+
+Consider go back to previous article,
+and add `minimizebutton (c)` to this module:
+
+*	[gitlab.com/.../dotfiles/.../deco/titlebar.lua][dotfiles-titlebar]
+
+{% highlight lua %}
+        { -- Right
+            awful.titlebar.widget.floatingbutton (c),
+            awful.titlebar.widget.minimizebutton (c),
+            awful.titlebar.widget.maximizedbutton(c),
+            awful.titlebar.widget.stickybutton   (c),
+            awful.titlebar.widget.ontopbutton    (c),
+            awful.titlebar.widget.closebutton    (c),
+            layout = wibox.layout.fixed.horizontal()
+        },
+{% endhighlight %}
+
+And a new minimized button is there below.
+
+![AwesomeWM: Titlebars with Minimize Button][image-ss-minimize]{: .img-responsive }
+
+-- -- --
+
 ### What is Next ?
 
 Consider continue reading [ [Awesome WM - Theme - Layout Icons][local-whats-next] ].
@@ -156,10 +211,12 @@ What do you think ?
 
 [image-ss-02-titlebar]: {{ asset_path }}/02-titlebar.png
 [image-fm-02-titlebar]: {{ asset_path }}/02-thunar-titlebar.png
-[image-ix-02-titlebar]: {{ asset_path }}/02-export-titlebar.png
+[image-ink-02-export]:  {{ asset_path }}/02-inkscape-export-titlebar.png
+[image-ink-02-object]:  {{ asset_path }}/02-inkscape-object-properties.png
 
 [image-svg-titlebar]:   {{ asset_path }}/clone-titlebar.png
 [image-rvm-two-panes]:  {{ asset_path }}/gentoo-rvm-jekyll-two-panes.png
+[image-ss-minimize]:    {{ asset_path }}/02-minimize-button.png
 
 [dotfiles-titlebar]:    {{ dotfiles }}/themes/clone/titlebar.lua
 [dotfiles-svg-icons]:   {{ dotfiles }}/themes/clone/titlebar/clone/

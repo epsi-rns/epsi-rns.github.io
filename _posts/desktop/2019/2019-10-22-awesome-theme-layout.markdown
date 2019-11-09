@@ -60,7 +60,7 @@ Inkscape use SVG as default format.
 
 * [github.com/epsi-rns/dotfiles/.../layouts/][dotfiles-svg-icons]
 
-Again, if you never had experience on theming using SVG,
+Again, if you are not familiar with theming using SVG,
 I recommend you to read this article below before continue:
 
 * [XFWM4 Theme - Part One][local-xfwm4-theme]

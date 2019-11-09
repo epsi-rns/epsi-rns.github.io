@@ -367,7 +367,8 @@ I have made my own custom SVG source:
 
 ![SVG Source: Tag List][image-svg-taglist]{: .img-responsive }
 
-You might want to alter the image yourself to suit your needs.
+You might want to alter the image yourself to suit your needs,
+such as switch color or else.
 
 SVG source available at:
 
