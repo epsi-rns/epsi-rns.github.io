@@ -8,11 +8,12 @@ keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
 opengraph:
-  image: /assets/posts/desktop/2019/06/01-menu-custom.png
+  image: /assets/posts/desktop/2019/10/clone-titlebar.png
 
 excerpt:
-  Awesome WM customization step by step.
-  Statusbar and titlebar modules in modularized configuration.
+  Awesome WM theme step by step.
+  Custom Flat Design Titlebar, Minimalist PNG Button.
+  Using Inkscape, one SVG file to create each PNG resource.
 
 related_link_ids:
   - 16071350  # Preparing Modularized
@@ -26,6 +27,10 @@ related_link_ids:
 {% include post/2019/06/toc-awesome.html %}
 
 -- -- --
+
+### Preface
+
+> Goal: Custom Flat Design Titlebar, Minimalist PNG Button
 
 #### Table of Content
 
@@ -43,12 +48,14 @@ This titlebar utilize PNG file.
 
 ![Awesome WM: Title Bar][image-ss-02-titlebar]{: .img-responsive }
 
-Consider have a look at the resource in file manager.
+Consider have a look at the resources in file manager.
 
 ![Awesome WM: Thunar Title Bar][image-fm-02-titlebar]{: .img-responsive }
 
 I decide to remade the the PNG using Inkscape.
 Inkscape use SVG as default format.
+
+* [github.com/epsi-rns/dotfiles/.../titlebar/][dotfiles-svg-icons]
 
 If you never had experience on theming using SVG,
 I recommend you to read this article below before continue:
@@ -64,6 +71,12 @@ I have made my own custom SVG source:
 ![SVG Source: Title Bar][image-svg-titlebar]{: .img-responsive }
 
 You might want to alter the image yourself to suit your needs.
+
+#### SVG Source
+
+SVG source available at:
+
+* [github.com/epsi-rns/dotfiles/.../clone-titlebar.svg][dotfiles-svg-source]
 
 #### Exporting
 
@@ -119,14 +132,16 @@ theme.titlebar_maximized_button_focus_active    = icondir .. "maximized_focus_ac
 
 And the result is a very nice titlebar.
 
-
 ![AwesomeWM: Two Titlebars][image-rvm-two-panes]{: .img-responsive }
 
 -- -- --
 
-### Conclusion
+### What is Next ?
 
-I think that is all.
+Consider continue reading [ [Awesome WM - Theme - Layout Icons][local-whats-next] ].
+There is this topic, about multicolor layout icons.
+Creating minimalist PNG Button using Inkscape,
+one SVG file to create each PNG resource.
 
 What do you think ?
 
@@ -134,6 +149,8 @@ What do you think ?
 
 {% assign asset_path = '/assets/posts/desktop/2019/10' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-theme' %}
+
+[local-whats-next]: /desktop/2019/10/22/awesome-theme-layout.html
 
 [local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
 
@@ -145,4 +162,5 @@ What do you think ?
 [image-rvm-two-panes]:  {{ asset_path }}/gentoo-rvm-jekyll-two-panes.png
 
 [dotfiles-titlebar]:    {{ dotfiles }}/themes/clone/titlebar.lua
-
+[dotfiles-svg-icons]:   {{ dotfiles }}/themes/clone/titlebar/clone/
+[dotfiles-svg-source]:  {{ dotfiles }}/themes/clone/titlebar/clone/clone-titlebar.svg

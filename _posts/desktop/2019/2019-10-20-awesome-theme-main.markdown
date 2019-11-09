@@ -8,11 +8,11 @@ keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
 opengraph:
-  image: /assets/posts/desktop/2019/06/01-menu-custom.png
+  image: /assets/posts/desktop/2019/10/gentoo-rvm-jekyll-two-panes.png
 
 excerpt:
-  Awesome WM customization step by step.
-  Statusbar and titlebar modules in modularized configuration.
+  Awesome WM theme step by step.
+  Covering most common configuration.
 
 related_link_ids:
   - 16071350  # Preparing Modularized
@@ -106,6 +106,11 @@ If you find my current theme setting irritating, you might be right.
 It is not just a matter of taste.
 But rather exploration of what AwesomeWM can do.
 and you can always configure it as you like later.
+
+#### Transparency
+
+I use external tool called compton.
+This is beyond Awesome WM explanation.
 
 -- -- --
 
@@ -356,11 +361,17 @@ theme.taglist_squares_sel      = theme_path .. "taglist/clone/square_sel.png"
 theme.taglist_squares_unsel    = theme_path .. "taglist/clone/square_unsel.png"
 {% endhighlight %}
 
+#### SVG Source
+
 I have made my own custom SVG source:
 
 ![SVG Source: Tag List][image-svg-taglist]{: .img-responsive }
 
 You might want to alter the image yourself to suit your needs.
+
+SVG source available at:
+
+* [github.com/epsi-rns/dotfiles/.../clone-taglist.svg][dotfiles-svg-source]
 
 #### Task List
 
@@ -521,13 +532,12 @@ theme.menu_border_width = 1
 
 -- -- --
 
-### Conclusion
+### What is Next ?
 
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM customization.
+Consider continue reading [ [Awesome WM - Theme - Titlebar][local-whats-next] ].
+There is this topic, about custom flat design titlebar.
+Creating minimalist PNG Button using Inkscape,
+one SVG file to create each PNG resource.
 
 What do you think ?
 
@@ -535,6 +545,8 @@ What do you think ?
 
 {% assign asset_path = '/assets/posts/desktop/2019/10' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-theme' %}
+
+[local-whats-next]: /desktop/2019/10/21/awesome-theme-titlebar.html
 
 [image-ss-02-tree]:     {{ asset_path }}/02-tree-theme.png
 [image-ss-02-list]:     {{ asset_path }}/02-list-lua.png
@@ -549,4 +561,4 @@ What do you think ?
 [dotfiles-theme]:       {{ dotfiles }}/themes/clone/theme.lua
 [dotfiles-gmc]:         {{ dotfiles }}/themes/clone/gmc.lua
 [dotfiles-elements]:    {{ dotfiles }}/themes/clone/elements.lua
-
+[dotfiles-svg-source]:  {{ dotfiles }}/themes/clone/taglist/clone/clone-taglist.svg

@@ -811,9 +811,9 @@ root.keys(RC.globalkeys)
 
 ### What is Next ?
 
-Consider continue reading [ [Awesome WM - Modularized Structure][local-whats-next] ].
+Consider continue reading [ [Awesome WM - Statusbar Modules][local-whats-next] ].
 There are, some interesting topic,
-about refactoring<code>Awesome WM</code> using <code>Lua</code>.
+about refactoring <code>Awesome WM</code> using <code>Lua</code>.
 
 What do you think ?
 
