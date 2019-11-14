@@ -57,6 +57,19 @@ There are two steps in converting.
 
 The interesting part is, all can be automated.
 
+#### Compared with other statsubar
+
+Some statusbar use icons, while other use Font approach.
+For example i3statusbar support multifont,
+so that we can use FontAwesome easily.
+
+However some statusbar doesn't have multifont support,
+and also some ricer prefer icon image for their own preferenced.
+I think that, we can use any approach that suitable for each case.
+
+Perhaps, you may use this case, not only for AwesomeWM Statusbar,
+but for other statusbar as well.
+
 #### Table of Content
 
 * 1: Prepare
