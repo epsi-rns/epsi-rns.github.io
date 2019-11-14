@@ -280,8 +280,9 @@ local icondir = ""
 
 icondir = theme_path .. "icons/fontawesome/png40/"
 
-theme.widget_wifi         = icondir .. "wifi"
-theme.widget_temp         = icondir .. "thermometer-half"
+theme.widget_example      = icondir .. "cat.png"
+theme.widget_wifi         = icondir .. "wifi.png"
+theme.widget_temp         = icondir .. "thermometer-half.png"
 theme.widget_uptime       = icondir .. "charging-station.png"
 theme.widget_cpu          = icondir .. "microchip.png"
 theme.widget_fs           = icondir .. "hdd.png"
