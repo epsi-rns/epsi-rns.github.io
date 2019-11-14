@@ -36,13 +36,16 @@ Statusbar Icon use different approach.
 Instead of making original image, we can use image from Font.
 Most ricing use stlarch or siji.
 If you are lucky enough you can grab someone's dotfiles,
-and copy paste the icon you need. But most of the case,
+and copy paste the icon you need.
+But most of the case, chance happened that,
 you lost one or two specific icons that you need.
 
 #### Automation in Converting
 
+> FontAwesome for use with AwesomeWM
+
 Why don't we take other approach.
-First by finding the source image first, and then convert later. 
+By finding the source image first, and then convert later. 
 There are two steps in converting.
 
 * The first step is the source font image,
@@ -59,7 +62,7 @@ The interesting part is, all can be automated.
 
 #### Compared with other statsubar
 
-Some statusbar use icons, while other use Font approach.
+Some statusbar use icons, while other use font approach.
 For example i3statusbar support multifont,
 so that we can use FontAwesome easily.
 
@@ -67,7 +70,8 @@ However some statusbar doesn't have multifont support,
 and also some ricer prefer icon image for their own preferenced.
 I think that, we can use any approach that suitable for each case.
 
-Perhaps, you may use this case, not only for AwesomeWM Statusbar,
+Perhaps, you may use this icon glyph approach,
+not only for AwesomeWM Statusbar,
 but for other statusbar as well.
 
 #### Table of Content
@@ -93,7 +97,7 @@ you can prepare the directory first.
 % cd ~/.config/awesome/themes/clone/icons/fontawesome/
 {% endhighlight %}
 
-Make this three directory.
+Make these three directories.
 
 {% highlight bash %}
 % tree -d
@@ -103,7 +107,7 @@ Make this three directory.
 └── svg
 {% endhighlight %}
 
-So we these directory:
+Each of these directory contain:
 
 * svg: The SVG source
 
@@ -127,7 +131,7 @@ you can clone first somewhere outside your config directory.
 {% endhighlight %}
 
 And then copy-paste all the icon that you need,
-into one place, tohesvg directory.
+into one place, to the svg directory.
 
 ![Awesome WM: Thunar File Manager: AwesomeFont][image-thunar-awesome]{: .img-responsive }
 
@@ -136,6 +140,9 @@ into one place, tohesvg directory.
 ### 3: Converting Format
 
 The next step is to convert to PNG.
+
+### Command Line Interface/ Terminal Shell
+
 This is very easy with command line using inkscape.
 For example, using (20px, 20px) size.
 
@@ -143,8 +150,12 @@ For example, using (20px, 20px) size.
 % inkscape -z -e png20/angle-down.png -w 20 -h 20 svg/angle-down.svg
 {% endhighlight %}
 
+#### Automation
+
 We can automate this, batch process many images, at once.
 Consider name this script `svg2png.sh`.
+
+* [github.com/epsi-rns/dotfiles/.../fontawesome/svg2png.sh][dotfiles-svg2png]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -178,8 +189,8 @@ We are going to discuss statusbar later, this is just an example.
 
 ![Awesome WM: Statusbar with image without margin][image-icons-20x20]{: .img-responsive }
 
-These icons looks ugly because the are stretched all the height of statusbar.
-We need margin, this lead to the next step.
+These icons looks ugly because they are stretched to full height of statusbar.
+We need margin to fix this, this lead to the next step.
 
 -- -- --
 
@@ -190,19 +201,29 @@ One transparent image  using (40px, 40px) size at the bottom,
 and icon using (20px, 20px) size,
 **centering** on top of the transparent image.
 
-The SVG source of transparent is available at the repository,
-although you ca do it yourself with inkscape.
-Now how about the combining parts ?
-
 We can combine images with GIMP, icon by icon, but this is tedious task.
+
+![Awesome WM: GIMP centering image with canvas][image-gimp-canvas]{: .img-responsive }
+
+### Command Line Interface/ Terminal Shell
+
+Is there any easier solution ?
+How about combining parts, from two images ?
 Luckily, this task is also pretty easy with command line.
 
 {% highlight bash %}
 % convert transparent-40x40.png png20/angle-down.png -gravity center -compose over -composite png40/angle-down.png
 {% endhighlight %}
 
+The SVG source of transparent is available at the repository,
+although you can do it yourself with inkscape.
+
+#### Automation
+
 We can automate this, batch process many images, at once.
 Consider name this script `png2center.sh`.
+
+* [github.com/epsi-rns/dotfiles/.../fontawesome/png2center.sh][dotfiles-png2center]
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -293,7 +314,7 @@ for example.
 I.clock = wibox.widget.imagebox(beautiful.widget_clock)
 {% endhighlight %}
 
-This is all for now.
+That's it. This is all for now.
 
 -- -- --
 
@@ -316,9 +337,12 @@ What do you think ?
 
 [dotfiles-icons]:       {{ dotfiles }}/themes/clone/icons.lua
 [dotfiles-fontawesome]: {{ dotfiles }}/themes/clone/icons/fontawesome
+[dotfiles-svg2png]:     {{ dotfiles }}/themes/clone/icons/svg2png.sh
+[dotfiles-png2center]:  {{ dotfiles }}/themes/clone/icons/png2center.sh
 
 [image-vim-svg2png]:    {{ asset_path }}/03-gentoo-awesome-vim-svg2png.png
 [image-vim-png2center]: {{ asset_path }}/03-gentoo-awesome-vim-png2center.png
 [image-thunar-awesome]: {{ asset_path }}/03-gentoo-awesome-thunar-awesome.png
 [image-icons-40x40]:    {{ asset_path }}/03-statusbar-icons-40x40.png
 [image-icons-20x20]:    {{ asset_path }}/03-statusbar-icons-20x20.png
+[image-gimp-canvas]:    {{ asset_path }}/03-gimp-canvas.png
