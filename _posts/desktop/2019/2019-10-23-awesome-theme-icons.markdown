@@ -8,12 +8,12 @@ keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
 opengraph:
-  image: /assets/posts/desktop/2019/10/clone-layout.png
+  image: /assets/posts/desktop/2019/10/03-gentoo-awesome-vim-svg2png.png
 
 excerpt:
   Awesome WM theme step by step.
-  Custom Multicolor Layout Icons, Minimalist PNG Button.
-  Using Inkscape, one SVG file to create each PNG resource.
+  Converting Iconic FontAwesome Glyph,
+  from SVG to PNG, then put the right margin, for use with statusbar.
 
 related_link_ids:
   - 16071350  # Preparing Modularized
@@ -30,7 +30,7 @@ related_link_ids:
 
 ### Preface
 
-> Goal: Custom Flat Design Layout Icon, Minimalist PNG Button
+> Goal: Converting iconic FontAwesome glyph, for use with statusbar
 
 Statusbar Icon use different approach.
 Instead of making original image, we can use image from Font.
@@ -290,7 +290,7 @@ It is all for now.
 
 After this Awesome WM modularization
 there will be another article,
-about Awesome WM panel customization.
+about Awesome WM statusbar panel customization.
 
 What do you think ?
 
