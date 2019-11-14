@@ -196,19 +196,20 @@ We need margin to fix this, this lead to the next step.
 
 ### 4: Converting Size
 
-My approach of making margin is, to combine two images.
-One transparent image  using (40px, 40px) size at the bottom,
-and icon using (20px, 20px) size,
-**centering** on top of the transparent image.
-
-We can combine images with GIMP, icon by icon, but this is tedious task.
+We can set margin with GIMP,
+icon glyph by icon glyph, but this is tedious task.
 
 ![Awesome WM: GIMP centering image with canvas][image-gimp-canvas]{: .img-responsive }
 
-### Command Line Interface/ Terminal Shell
-
 Is there any easier solution ?
 How about combining parts, from two images ?
+
+### Command Line Interface/ Terminal Shell
+
+My approach of making margin is, by combining two images.
+One transparent image  using (40px, 40px) size at the bottom,
+and icon using (20px, 20px) size,
+**centering** on top of the transparent image.
 Luckily, this task is also pretty easy with command line.
 
 {% highlight bash %}
