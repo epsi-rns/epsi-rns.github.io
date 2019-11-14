@@ -32,7 +32,14 @@ related_link_ids:
 
 > Goal: Converting iconic FontAwesome glyph, for use with statusbar
 
-Statusbar Icon use different approach.
+The next article is statusbar.
+It is going to be full of Lua coding and Lua refactoring.
+One part of statusbar is glyph icons.
+Icon topic does not have anything to do with Lua.
+Icon topic is a theme thing, more or less.
+
+Compared with other image resources in previous article,
+statusbar icon use different approach.
 Instead of making original image, we can use image from Font.
 Most ricing use stlarch or siji.
 If you are lucky enough you can grab someone's dotfiles,
