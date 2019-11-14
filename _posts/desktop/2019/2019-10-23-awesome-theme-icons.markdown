@@ -232,7 +232,7 @@ done
 ![Awesome WM: Bash Script Converting SVG to PNG][image-vim-png2center]{: .img-responsive }
 
 Again, have a look at the result.
-It is prettier.
+It is prettier with margin.
 
 ![Awesome WM: Statusbar with image with margin][image-icons-40x40]{: .img-responsive }
 
@@ -285,7 +285,7 @@ theme.monitor_bat_no      = icondir .. "battery-empty.png"
 {% endhighlight %}
 
 In statusbar, we call the variable
-by using `beautiful` instead of `theme`',
+by using `beautiful` instead of `theme`,
 for example.
 
 {% highlight lua %}
@@ -293,7 +293,7 @@ for example.
 I.clock = wibox.widget.imagebox(beautiful.widget_clock)
 {% endhighlight %}
 
-It is all for now.
+This is all for now.
 
 -- -- --
 
