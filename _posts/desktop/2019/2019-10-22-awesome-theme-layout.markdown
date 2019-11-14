@@ -119,13 +119,12 @@ theme.layout_cornerse       = layout_path .. "cornerse.png"
 
 -- -- --
 
-### Conclusion
+### What is Next ?
 
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM panel customization.
+Consider continue reading [ [Awesome WM - Theme - Layout Icons][local-whats-next] ].
+There is this topic, about multicolor layout icons.
+Creating minimalist PNG Button using Inkscape,
+one SVG file to create each PNG resource.
 
 What do you think ?
 
@@ -134,7 +133,7 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/10' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-theme' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
+[local-whats-next]: /desktop/2019/10/23/awesome-theme-icons.html
 
 [image-ss-02-layout]:   {{ asset_path }}/02-layout.png
 [image-fm-02-layout]:   {{ asset_path }}/02-thunar-layout.png
