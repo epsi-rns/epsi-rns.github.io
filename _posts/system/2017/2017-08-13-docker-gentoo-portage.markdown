@@ -505,11 +505,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
-
-
-
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-gentoo' %}
 
 [image-ss-equery-depgraph]:    {{ asset_post }}/21-equery-depgraph.png
 

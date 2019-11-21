@@ -323,8 +323,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-slackware' %}
 
 [image-ss-slackpkg-python]:  {{ asset_post }}/31-slackpkg-install-python.png
 [image-ss-slpkg-update-err]: {{ asset_post }}/31-slpkg-update-certificate-error.png

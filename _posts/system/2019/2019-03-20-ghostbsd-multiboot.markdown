@@ -257,13 +257,13 @@ Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/03' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
 [local-part-config]:       /system/2019/03/25/ghostbsd-driver.html
 
-[image-ss-ghostbsd-screenfetch]:    {{ asset_path }}/ghostbsd-screenfetch.png
+[image-ss-ghostbsd-screenfetch]:    {{ system_path }}/2019/03/ghostbsd-screenfetch.png
 
-[image-ss-ghostbsd-gpart-show]:     {{ asset_path }}/ghost-gpart-show.png
-[image-ss-ghostbsd-sade]:           {{ asset_path }}/ghost-sade.png
-[image-ss-void-gparted]:            {{ asset_path }}/void-gparted.png
-[image-ss-dd-live-usb]:             {{ asset_path }}/dd-if-of-pv-ghost.png
+[image-ss-ghostbsd-gpart-show]:     {{ system_path }}/2019/03/ghost-gpart-show.png
+[image-ss-ghostbsd-sade]:           {{ system_path }}/2019/03/ghost-sade.png
+[image-ss-void-gparted]:            {{ system_path }}/2019/03/void-gparted.png
+[image-ss-dd-live-usb]:             {{ system_path }}/2019/03/dd-if-of-pv-ghost.png

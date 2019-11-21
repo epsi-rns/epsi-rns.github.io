@@ -345,7 +345,7 @@ or consider [ [GhostBSD - Multiboot][local-part-ghost] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:       /system/2018/05/25/linux-samba.html
@@ -353,16 +353,16 @@ or consider [ [GhostBSD - Multiboot][local-part-ghost] ].
 
 [dotfiles-multiboot]:      {{ dotfiles }}
 
-[image-ss-fedora-update]:  {{ asset_path }}/fedora-chroot-dnf-update.png
-[image-ss-fedora-resolv]:  {{ asset_path }}/fedora-etc-resolv.png
+[image-ss-fedora-update]:  {{ system_path }}/2018/05/fedora-chroot-dnf-update.png
+[image-ss-fedora-resolv]:  {{ system_path }}/2018/05/fedora-etc-resolv.png
 
-[image-ss-debian-chroot]:  {{ asset_path }}/debian-chroot.png
-[image-ss-debian-update]:  {{ asset_path }}/debian-chroot-apt-update.png
-[image-ss-debian-upgrade]: {{ asset_path }}/debian-chroot-apt-upgrade.png
-[image-ss-debian-rename]:  {{ asset_path }}/debian-resolv-rename.png
-[image-ss-debian-restore]: {{ asset_path }}/debian-resolv-restore.png
+[image-ss-debian-chroot]:  {{ system_path }}/2018/05/debian-chroot.png
+[image-ss-debian-update]:  {{ system_path }}/2018/05/debian-chroot-apt-update.png
+[image-ss-debian-upgrade]: {{ system_path }}/2018/05/debian-chroot-apt-upgrade.png
+[image-ss-debian-rename]:  {{ system_path }}/2018/05/debian-resolv-rename.png
+[image-ss-debian-restore]: {{ system_path }}/2018/05/debian-resolv-restore.png
 
-[image-ss-kaosx-chroot]:   {{ asset_path }}/kaosx-chroot.png
-[image-ss-kaosx-update]:   {{ asset_path }}/kaosx-pacman-syu.png
-[image-ss-kaosx-resolv]:   {{ asset_path }}/kaosx-resolv-copy.png
-[image-ss-kaosx-umount]:   {{ asset_path }}/kaosx-umount.png
+[image-ss-kaosx-chroot]:   {{ system_path }}/2018/05/kaosx-chroot.png
+[image-ss-kaosx-update]:   {{ system_path }}/2018/05/kaosx-pacman-syu.png
+[image-ss-kaosx-resolv]:   {{ system_path }}/2018/05/kaosx-resolv-copy.png
+[image-ss-kaosx-umount]:   {{ system_path }}/2018/05/kaosx-umount.png

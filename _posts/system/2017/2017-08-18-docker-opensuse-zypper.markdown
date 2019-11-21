@@ -424,8 +424,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-opensuse' %}
 
 [image-ss-zypper-systemd]: {{ asset_post }}/13-install-man-systemd-issue.png
 

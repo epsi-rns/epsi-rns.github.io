@@ -146,18 +146,18 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2018/05' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-slackpkgplus]:   {{ asset_path }}/slackpkgplus-config-ktown.png
+[image-ss-slackpkgplus]:   {{ system_path }}/2018/05/slackpkgplus-config-ktown.png
 
-[image-ss-ktown-dialog]:   {{ asset_path }}/slackpkg-install-ktown-dialog.png
+[image-ss-ktown-dialog]:   {{ system_path }}/2018/05/slackpkg-install-ktown-dialog.png
 [photo-ss-ktown-dialog]:   https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPyYA9sZ5vHUGXMqw0BQ111J4UIv2hJ_dnxI8-w?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
-[image-ss-ktown-cli]:      {{ asset_path }}/slackpkg-install-ktown-cli.png
+[image-ss-ktown-cli]:      {{ system_path }}/2018/05/slackpkg-install-ktown-cli.png
 [photo-ss-ktown-cli]:      https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipOX49GhQyilbQ_J74zfaOsIkjEa-gFE4DUZ0eo1?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
-[image-ss-ktown-upgrade]:  {{ asset_path }}/slackpkg-install-ktown-upgrade.png
+[image-ss-ktown-upgrade]:  {{ system_path }}/2018/05/slackpkg-install-ktown-upgrade.png
 [photo-ss-ktown-upgrade]:  https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipNrtuozKc4djR_65lyE_ugtpUrpD6Ohmgj_drvd?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
-[image-ss-kde-plasma5]:    {{ asset_path }}/slackware-plasma5.png
+[image-ss-kde-plasma5]:    {{ system_path }}/2018/05/slackware-plasma5.png
 [photo-ss-kde-plasma5]:    https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipOZtReYWf-qwhXmZm6KGA9nlJ4Bmi_kcOiXWH5d?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR

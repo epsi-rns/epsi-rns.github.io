@@ -192,6 +192,8 @@ repo id  repo name                                                     status
 
 ![Docker DNF: Repository List][image-ss-dnf-repolist]{: .img-responsive }
 
+* .
+
 #### System Upgrade
 
 <code>update</code> is deprecated.
@@ -504,9 +506,9 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
-{% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-fedora' %}
+{% assign asset_pull  = system_path | append: '/2017/08/docker-pull' %}
 
 [local-part-two]:   {{ site.url }}/system/2017/08/19/docker-fedora-dnf.html
 

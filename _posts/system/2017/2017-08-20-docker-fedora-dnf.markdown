@@ -231,6 +231,8 @@ ID     | Command line             | Date and time    | Action(s)      | Altered
 
 ![Docker DNF: History][image-ss-dnf-history]{: .img-responsive }
 
+**.**
+
 Now we can <code>undo</code>.
 
 {% highlight bash %}
@@ -466,8 +468,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-fedora' %}
 
 [local-part-four]: {{ site.url }}/system/2017/08/21/docker-fedora-dnf.html
 

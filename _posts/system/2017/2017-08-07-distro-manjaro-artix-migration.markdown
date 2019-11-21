@@ -442,8 +442,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-artix' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/distro-artix' %}
 
 [image-ss-artix-keyring]:  {{ asset_post }}/keyring.png
 [photo-ss-artix-keyring]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipP8bgFwybhoBa-4DdHaE0hG2Two6POd-43sIVRI?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

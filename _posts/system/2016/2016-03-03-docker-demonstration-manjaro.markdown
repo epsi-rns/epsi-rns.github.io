@@ -56,7 +56,9 @@ Note: just another nix's porn. :-\ <br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-fki]: {{ site.url }}/assets/posts/system/2016/03/manjaro-docker-fki.png
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-ss-fki]: {{ system_path }}/2016/03/manjaro-docker-fki.png
 [photo-ss-fki]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNsM4yvZme4-07XgB4_JI1HMrdVtz5uYJeAZS4b
-[image-ss-gs]: {{ site.url }}/assets/posts/system/2016/03/manjaro-docker-gs.png
-[photo-ss-gs]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMFzGFcdbyslKMvTYPGXjQ700NOyFuPh-nnm81Y
+[image-ss-gs]:  {{ system_path }}/2016/03/manjaro-docker-gs.png
+[photo-ss-gs]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMFzGFcdbyslKMvTYPGXjQ700NOyFuPh-nnm81Y

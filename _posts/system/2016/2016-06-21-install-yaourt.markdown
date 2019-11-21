@@ -243,11 +243,13 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-yaourt-package-query]: {{ site.url }}/assets/posts/system/2016/06/yaourt-package-query.png
-[image-yaourt-makepkg]: {{ site.url }}/assets/posts/system/2016/06/yaourt-makepkg.png
-[image-yaourt-pacman]:  {{ site.url }}/assets/posts/system/2016/06/yaourt-pacman-half.png
-[image-yaourtfr-sync]:  {{ site.url }}/assets/posts/system/2016/06/yaourtfr-sync.png
-[image-yaourt-yaourt]:  {{ site.url }}/assets/posts/system/2016/06/yaourt-yaourt.png
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-yaourt-package-query]: {{ system_path }}/2016/06/yaourt-package-query.png
+[image-yaourt-makepkg]: {{ system_path }}/2016/06/yaourt-makepkg.png
+[image-yaourt-pacman]:  {{ system_path }}/2016/06/yaourt-pacman-half.png
+[image-yaourtfr-sync]:  {{ system_path }}/2016/06/yaourtfr-sync.png
+[image-yaourt-yaourt]:  {{ system_path }}/2016/06/yaourt-yaourt.png
 
 [photo-yaourt-makepkg]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOVqc1s0UzjD3vCFTQsH60Ixy2Wuqv0imn9G-My
 [photo-yaourt-pacman]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMtI5c045Eo7JdxrLeT_V6f4I_OL7QuCPp9Fj1G

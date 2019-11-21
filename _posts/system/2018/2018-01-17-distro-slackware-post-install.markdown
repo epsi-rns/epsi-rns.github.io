@@ -353,14 +353,14 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2018/01' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-slpkg]: {{ asset_path }}/slackware-slpkg-herbstluftwm.png
-[photo-ss-slpkg]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipO-7d8WdZeJbdOAs9VK6lRWjonT7a2LL1dTyC2a?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+[image-ss-slpkg]:    {{ system_path }}/2018/01/slackware-slpkg-herbstluftwm.png
+[photo-ss-slpkg]:    https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipO-7d8WdZeJbdOAs9VK6lRWjonT7a2LL1dTyC2a?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
-[image-ss-teamocil]: {{ asset_path }}/slackware-teamocil-neofetch.png
+[image-ss-teamocil]: {{ system_path }}/2018/01/slackware-teamocil-neofetch.png
 [photo-ss-teamocil]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPGC_-QPc2mxu8NEIrM21-A3ChZ2KPTi1AftDjc?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 
-[image-ss-netmon]: {{ asset_path }}/slackware-net-monitor.png
-[photo-ss-netmon]: https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPXf6cSRKkcB7FDooJXs8E3e2QOSKKWvNsF5_3z?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
+[image-ss-netmon]:   {{ system_path }}/2018/01/slackware-net-monitor.png
+[photo-ss-netmon]:   https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipPXf6cSRKkcB7FDooJXs8E3e2QOSKKWvNsF5_3z?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR
 

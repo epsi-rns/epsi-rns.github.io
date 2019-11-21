@@ -307,31 +307,30 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/04/ncmpcpp' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
+[image-ss-portsnap-extract]:    {{ system_path }}/2019/04/01-portsnap-fetch-extract.png
+[image-ss-portsnap-update]:     {{ system_path }}/2019/04/01-portsnap-fetch-update.png
 
-[image-ss-portsnap-extract]:    {{ asset_path }}/01-portsnap-fetch-extract.png
-[image-ss-portsnap-update]:     {{ asset_path }}/01-portsnap-fetch-update.png
+[image-ss-make-all-depends]:    {{ system_path }}/2019/04/02-ncmpcpp-make-all-depends-list.png
+[image-ss-make-config]:         {{ system_path }}/2019/04/02-ncmpcpp-config-recursive.png
 
-[image-ss-make-all-depends]:    {{ asset_path }}/02-ncmpcpp-make-all-depends-list.png
-[image-ss-make-config]:         {{ asset_path }}/02-ncmpcpp-config-recursive.png
+[image-ss-recursive-fftw3]:     {{ system_path }}/2019/04/03-ncmpcpp-config-recursive-fftw3.png
+[image-ss-recursive-gettext]:   {{ system_path }}/2019/04/03-ncmpcpp-config-recursive-gettext.png
+[image-ss-recursive-libconv]:   {{ system_path }}/2019/04/03-ncmpcpp-config-recursive-libconv.png
+[image-ss-recursive-ncurses]:   {{ system_path }}/2019/04/03-ncmpcpp-config-recursive-ncurses.png
+[image-ss-recursive-perl5]:     {{ system_path }}/2019/04/03-ncmpcpp-config-recursive-perl5.png
+[image-ss-recursive-pkg]:       {{ system_path }}/2019/04/03-ncmpcpp-config-recursive-pkg.png
 
-[image-ss-recursive-fftw3]:     {{ asset_path }}/03-ncmpcpp-config-recursive-fftw3.png
-[image-ss-recursive-gettext]:   {{ asset_path }}/03-ncmpcpp-config-recursive-gettext.png
-[image-ss-recursive-libconv]:   {{ asset_path }}/03-ncmpcpp-config-recursive-libconv.png
-[image-ss-recursive-ncurses]:   {{ asset_path }}/03-ncmpcpp-config-recursive-ncurses.png
-[image-ss-recursive-perl5]:     {{ asset_path }}/03-ncmpcpp-config-recursive-perl5.png
-[image-ss-recursive-pkg]:       {{ asset_path }}/03-ncmpcpp-config-recursive-pkg.png
+[image-ss-install]:             {{ system_path }}/2019/04/04-ncmpcpp-make-install.png
+[image-ss-install-check]:       {{ system_path }}/2019/04/04-ncmpcpp-make-install-check.png
+[image-ss-install-compilation]: {{ system_path }}/2019/04/04-ncmpcpp-make-install-compilation.png
+[image-ss-install-finished]:    {{ system_path }}/2019/04/04-ncmpcpp-make-install-finished.png
 
-[image-ss-install]:             {{ asset_path }}/04-ncmpcpp-make-install.png
-[image-ss-install-check]:       {{ asset_path }}/04-ncmpcpp-make-install-check.png
-[image-ss-install-compilation]: {{ asset_path }}/04-ncmpcpp-make-install-compilation.png
-[image-ss-install-finished]:    {{ asset_path }}/04-ncmpcpp-make-install-finished.png
+[image-ss-make-deinstall]:      {{ system_path }}/2019/04/05-ncmpcpp-make-deinstall.png
+[image-ss-make-reinstall]:      {{ system_path }}/2019/04/05-ncmpcpp-make-install-again.png
+[image-ss-make-clean]:          {{ system_path }}/2019/04/05-ncmpcpp-make-clean.png
+[image-ss-make-distclean]:      {{ system_path }}/2019/04/05-ncmpcpp-make-distclean.png
+[image-ss-disfiles]:            {{ system_path }}/2019/04/05-ncmpcpp-usr-ports-distfiles.png
 
-[image-ss-make-deinstall]:      {{ asset_path }}/05-ncmpcpp-make-deinstall.png
-[image-ss-make-reinstall]:      {{ asset_path }}/05-ncmpcpp-make-install-again.png
-[image-ss-make-clean]:          {{ asset_path }}/05-ncmpcpp-make-clean.png
-[image-ss-make-distclean]:      {{ asset_path }}/05-ncmpcpp-make-distclean.png
-[image-ss-disfiles]:            {{ asset_path }}/05-ncmpcpp-usr-ports-distfiles.png
-
-[image-ss-ncmpcpp-running]:     {{ asset_path }}/06-ncmpcpp-run.png
+[image-ss-ncmpcpp-running]:     {{ system_path }}/2019/04/06-ncmpcpp-run.png

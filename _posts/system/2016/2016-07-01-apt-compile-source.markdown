@@ -215,15 +215,15 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2016/07' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-summary]:      {{ asset_path }}/apt-src-summary.png
-[image-sources-list]:    {{ asset_path }}/apt-src-sources-list.png
-[image-list-upgradable]: {{ asset_path }}/apt-src-list-upgradable.png
-[image-dpkg-list]:       {{ asset_path }}/apt-src-dpkg-list.png
-[image-build-install]:   {{ asset_path }}/apt-src-install-build-half.png
-[image-ls-directory]:    {{ asset_path }}/apt-src-ls.png
-[image-dpkg-install]:    {{ asset_path }}/apt-src-dpkg-install.png
+[image-ss-summary]:      {{ system_path }}/2016/07/apt-src-summary.png
+[image-sources-list]:    {{ system_path }}/2016/07/apt-src-sources-list.png
+[image-list-upgradable]: {{ system_path }}/2016/07/apt-src-list-upgradable.png
+[image-dpkg-list]:       {{ system_path }}/2016/07/apt-src-dpkg-list.png
+[image-build-install]:   {{ system_path }}/2016/07/apt-src-install-build-half.png
+[image-ls-directory]:    {{ system_path }}/2016/07/apt-src-ls.png
+[image-dpkg-install]:    {{ system_path }}/2016/07/apt-src-dpkg-install.png
 
 [photo-ss-summary]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNdo5-ufbNUoAQo9rfl7uY_tXFDh-NL1ZL_5p6X
 [photo-build-install]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOf1CvlfS4Zq33u37UmRpAVaYjnNaJcVl5JiaIK

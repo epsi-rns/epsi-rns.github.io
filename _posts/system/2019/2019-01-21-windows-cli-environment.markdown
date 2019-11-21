@@ -183,17 +183,17 @@ And thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/01' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
 [local-whats-next]:         https://epsi-rns.gitlab.io/frontend/2019/01/23/windows-choco-sass/
 
-[image-ss-choco-install-curl]:     {{ asset_path }}/windows-01-choco-install-curl.png
-[image-ss-choco-install-ydl]:      {{ asset_path }}/windows-01-choco-install-youtube-dl.png
-[image-ss-cmd-choco-setup]:        {{ asset_path }}/windows-01-cmd-choco-setup.png
+[image-ss-choco-install-curl]:     {{ system_path }}/2019/01/windows-01-choco-install-curl.png
+[image-ss-choco-install-ydl]:      {{ system_path }}/2019/01/windows-01-choco-install-youtube-dl.png
+[image-ss-cmd-choco-setup]:        {{ system_path }}/2019/01/windows-01-cmd-choco-setup.png
 
-[image-ss-which-cmder]:            {{ asset_path }}/windows-01-cmder-download.png
-[image-ss-terminal-cmder-full]:    {{ asset_path }}/windows-01-terminal-cmder-full.png
-[image-ss-terminal-cmder-mini]:    {{ asset_path }}/windows-01-terminal-cmder-mini.png
+[image-ss-which-cmder]:            {{ system_path }}/2019/01/windows-01-cmder-download.png
+[image-ss-terminal-cmder-full]:    {{ system_path }}/2019/01/windows-01-terminal-cmder-full.png
+[image-ss-terminal-cmder-mini]:    {{ system_path }}/2019/01/windows-01-terminal-cmder-mini.png
 
-[image-ss-choco-git-install]:      {{ asset_path }}/windows-02-choco-git-install.png
-[image-ss-cmder-git-clone]:        {{ asset_path }}/windows-02-cmder-git-clone-demo.png
+[image-ss-choco-git-install]:      {{ system_path }}/2019/01/windows-02-choco-git-install.png
+[image-ss-cmder-git-clone]:        {{ system_path }}/2019/01/windows-02-cmder-git-clone-demo.png

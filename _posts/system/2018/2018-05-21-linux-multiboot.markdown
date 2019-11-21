@@ -308,7 +308,7 @@ Consider continue reading [ [Multiboot: /etc/fstab][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:      /system/2018/05/22/linux-multiboot.html
@@ -321,9 +321,9 @@ Consider continue reading [ [Multiboot: /etc/fstab][local-part-config] ].
 [dotfiles-grub-opensuse]: {{ dotfiles }}/grub.opensuse.cfg
 [dotfiles-grub-kaosx]:    {{ dotfiles }}/grub.kaosx.cfg
 
-[image-ss-partman]:       {{ asset_path }}/kaosx-kde-partman.png
-[image-ss-by-label]:      {{ asset_path }}/opensuse-disk-by-label.png
-[image-ss-media-dir]:     {{ asset_path }}/opensuse-media-directory.png
-[image-ss-blkid]:         {{ asset_path }}/opensuse-blkid-list.png
+[image-ss-partman]:       {{ system_path }}/2018/05/kaosx-kde-partman.png
+[image-ss-by-label]:      {{ system_path }}/2018/05/opensuse-disk-by-label.png
+[image-ss-media-dir]:     {{ system_path }}/2018/05/opensuse-media-directory.png
+[image-ss-blkid]:         {{ system_path }}/2018/05/opensuse-blkid-list.png
 
-[image-ss-file-sda9]:     {{ asset_path }}/fedora-file-sda9.png
+[image-ss-file-sda9]:     {{ system_path }}/2018/05/fedora-file-sda9.png

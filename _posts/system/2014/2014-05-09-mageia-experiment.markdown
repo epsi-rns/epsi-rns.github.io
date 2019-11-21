@@ -330,13 +330,15 @@ At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rare
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-mageia-welcome]: {{ site.url }}/assets/posts/system/2014/05/mageia-welcome.png
-[photo-ss-mageia-welcome]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPl_Ulmlw5AyMz78K-FR-jMm4b6eXeQ40qvwNns
-[image-ss-mageia-controlcenter]: {{ site.url }}/assets/posts/system/2014/05/mageia-controlcenter.png
-[photo-ss-mageia-controlcenter]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOJ6z79zCBgRCGVbrGUCZKqNwUnK2SWsD-5TLeO
-[image-ss-mageia-upgrade]: {{ site.url }}/assets/posts/system/2014/05/mageia-upgrade.png
-[photo-ss-mageia-upgrade]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNugSK6iVFEh7Yp2wBcYA_Cfun3s2oyILFNS_O6
-[image-ss-mageia-xfce4-kwin]: {{ site.url }}/assets/posts/system/2014/05/mageia-xfce4-kwin.png
-[photo-ss-mageia-xfce4-kwin]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOrNP__XGve5aka9FLGx6vFiKHpfQ7IxStCvBzI
-[image-ss-mageia-razorqt-kwin]: {{ site.url }}/assets/posts/system/2014/05/mageia-razorqt-kwin.png
-[photo-ss-mageia-razorqt-kwin]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOW0log4zFnDJgZ9tMwIQJKVxBc4QTKMEbNsMr7
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-ss-mageia-welcome]:          {{ system_path }}/2014/05/mageia-welcome.png
+[photo-ss-mageia-welcome]:          https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPl_Ulmlw5AyMz78K-FR-jMm4b6eXeQ40qvwNns
+[image-ss-mageia-controlcenter]:    {{ system_path }}/2014/05/mageia-controlcenter.png
+[photo-ss-mageia-controlcenter]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOJ6z79zCBgRCGVbrGUCZKqNwUnK2SWsD-5TLeO
+[image-ss-mageia-upgrade]:          {{ system_path }}/2014/05/mageia-upgrade.png
+[photo-ss-mageia-upgrade]:          https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNugSK6iVFEh7Yp2wBcYA_Cfun3s2oyILFNS_O6
+[image-ss-mageia-xfce4-kwin]:       {{ system_path }}/2014/05/mageia-xfce4-kwin.png
+[photo-ss-mageia-xfce4-kwin]:       https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOrNP__XGve5aka9FLGx6vFiKHpfQ7IxStCvBzI
+[image-ss-mageia-razorqt-kwin]:     {{ system_path }}/2014/05/mageia-razorqt-kwin.png
+[photo-ss-mageia-razorqt-kwin]:     https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOW0log4zFnDJgZ9tMwIQJKVxBc4QTKMEbNsMr7

@@ -461,9 +461,9 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_flow = site.url | append: '/assets/posts/system/2017/08/docker-flow' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-slackware' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-slackware' %}
+{% assign asset_flow  = system_path | append: '/2017/08/docker-flow' %}
 
 [local-part-three]: {{ site.url }}/system/2017/08/23/docker-slackware-package.html
 

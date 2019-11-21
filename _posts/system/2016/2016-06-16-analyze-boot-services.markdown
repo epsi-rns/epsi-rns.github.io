@@ -62,8 +62,10 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-boot-arch]:   {{ site.url }}/assets/posts/system/2016/06/arch-boot.png
-[image-boot-debian]: {{ site.url }}/assets/posts/system/2016/06/debian-boot.png
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-boot-arch]:   {{ system_path }}/2016/06/arch-boot.png
+[image-boot-debian]: {{ system_path }}/2016/06/debian-boot.png
 
 [photo-boot-arch]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMpJyvPdwv396veW0xxUUiQwaUkW9k0uKWyBCfV
 [photo-boot-debian]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMBBkisgbw-6sZS5ckq_6jjIfzqX9sbyfL-b6EJ

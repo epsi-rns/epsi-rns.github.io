@@ -490,30 +490,30 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-gentoo' %}
 
 [local-part-two]: {{ site.url }}/system/2017/08/12/docker-gentoo-portage.html
 
-[image-ss-gentoo-docker]:    {{ asset_post }}/00-getting-started.png
+[image-ss-gentoo-docker]:       {{ asset_post }}/00-getting-started.png
 
-[image-ss-emerge-webrsync]:  {{ asset_post }}/01-webrsync-half.png
-[photo-ss-emerge-webrsync]:  https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN4az7eFD30LhWON67bxjIl07QM5l2DlmxjGSGX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-emerge-webrsync]:     {{ asset_post }}/01-webrsync-half.png
+[photo-ss-emerge-webrsync]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipN4az7eFD30LhWON67bxjIl07QM5l2DlmxjGSGX?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-update]:    {{ asset_post }}/01-emerge-update.png
+[image-ss-emerge-update]:       {{ asset_post }}/01-emerge-update.png
 
-[image-ss-emerge-install]:     {{ asset_post }}/13-emerge-01-install-half.png
-[photo-ss-emerge-install]:     https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
+[image-ss-emerge-install]:      {{ asset_post }}/13-emerge-01-install-half.png
+[photo-ss-emerge-install]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipMZZ4_7ak9JzR1bzgSdjvMft3xCQ5hd8CAZlWjS?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-emerge-ambigous]:		{{ asset_post }}/13-emerge-01-install-mc.png
+[image-ss-emerge-ambigous]:     {{ asset_post }}/13-emerge-01-install-mc.png
 
-[image-ss-emerge-install-ask]:	{{ asset_post }}/13-emerge-01-install-ask.png
-[image-ss-emerge-remove]:		{{ asset_post }}/13-emerge-02-remove-depclean.png
-[image-ss-emerge-search]:		{{ asset_post }}/13-emerge-03-search-search.png
-[image-ss-emerge-fetchonly]:	{{ asset_post }}/13-emerge-fetchonly.png
-[image-ss-emerge-onlydeps]:		{{ asset_post }}/13-emerge-onlydeps.png
-[image-ss-emerge-onlydeps-ask]:	{{ asset_post }}/13-emerge-onlydeps-ask.png
-[image-ss-equery-belong]:		{{ asset_post }}/13-equery-belong.png
-[image-ss-equery-files]:		{{ asset_post }}/13-equery-files.png
-[image-ss-equery-changes]:		{{ asset_post }}/13-equery-changes.png
-[image-ss-equery-check]:		{{ asset_post }}/13-equery-check.png
+[image-ss-emerge-install-ask]:  {{ asset_post }}/13-emerge-01-install-ask.png
+[image-ss-emerge-remove]:       {{ asset_post }}/13-emerge-02-remove-depclean.png
+[image-ss-emerge-search]:       {{ asset_post }}/13-emerge-03-search-search.png
+[image-ss-emerge-fetchonly]:    {{ asset_post }}/13-emerge-fetchonly.png
+[image-ss-emerge-onlydeps]:     {{ asset_post }}/13-emerge-onlydeps.png
+[image-ss-emerge-onlydeps-ask]: {{ asset_post }}/13-emerge-onlydeps-ask.png
+[image-ss-equery-belong]:       {{ asset_post }}/13-equery-belong.png
+[image-ss-equery-files]:        {{ asset_post }}/13-equery-files.png
+[image-ss-equery-changes]:      {{ asset_post }}/13-equery-changes.png
+[image-ss-equery-check]:        {{ asset_post }}/13-equery-check.png

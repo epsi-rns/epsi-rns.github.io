@@ -122,6 +122,8 @@ make: *** [Makefile:90: cower.1] Error 127
 
 And fix Perl <code>$PATH</code> if necessary.
 
+**.**
+
 {% highlight bash %}
 $ touch .profile
 
@@ -500,8 +502,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-arch' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-arch' %}
 
 [local-install-yaourt]:	{{ site.url }}/system/2016/06/21/install-yaourt.html
 [local-unbundling]:		{{ site.url }}/system/2014/12/26/unbundling-aur-helper-process.html

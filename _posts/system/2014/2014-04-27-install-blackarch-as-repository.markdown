@@ -70,8 +70,9 @@ This one has not been solved yet.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-blackarch-keyring]: {{ site.url }}/assets/posts/system/2014/04/blackarch-keyring.png
-[photo-ss-blackarch-keyring]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP6OfE4IPS3HkwH5T_g5MYxm4j1o1-99DujKeWp
-[image-ss-blackman-issue]: {{ site.url }}/assets/posts/system/2014/04/blackman-issue.png
-[photo-ss-blackman-issue]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMJQL9JAeZpIao4RJYSLTJLxjvrjevTrDPe5Riw
+[image-ss-blackarch-keyring]:   {{ system_path }}/2014/04/blackarch-keyring.png
+[photo-ss-blackarch-keyring]:   https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP6OfE4IPS3HkwH5T_g5MYxm4j1o1-99DujKeWp
+[image-ss-blackman-issue]:      {{ system_path }}/2014/04/blackman-issue.png
+[photo-ss-blackman-issue]:      https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMJQL9JAeZpIao4RJYSLTJLxjvrjevTrDPe5Riw

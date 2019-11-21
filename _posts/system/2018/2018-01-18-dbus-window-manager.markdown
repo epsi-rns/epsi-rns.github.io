@@ -238,14 +238,14 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2018/01' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-desktop]:     {{ asset_path }}/dbus-launch-herbstluftwm.png
-[image-ss-lightdm]:     {{ asset_path }}/dbus-lightdm-wrapper.png
-[image-ss-sddm]:        {{ asset_path }}/dbus-sddm-wrapper.png
-[image-ss-rofi]:        {{ asset_path }}/dbus-rofi-dbus-launch.png
-[image-ss-thunar-none]: {{ asset_path }}/dbus-thunar-no-dbus.png
-[image-ss-thunar-with]: {{ asset_path }}/dbus-thunar-with-dbus.png
-[image-ss-xinitrc]:     {{ asset_path }}/dbus-xinitrc.png
-[image-ss-messagebus]:  {{ asset_path }}/dbus-messagebus.png
-[image-ss-notauthorized]: {{ asset_path }}/not-authorized-to-perform.png
+[image-ss-desktop]:     {{ system_path }}/2018/01/dbus-launch-herbstluftwm.png
+[image-ss-lightdm]:     {{ system_path }}/2018/01/dbus-lightdm-wrapper.png
+[image-ss-sddm]:        {{ system_path }}/2018/01/dbus-sddm-wrapper.png
+[image-ss-rofi]:        {{ system_path }}/2018/01/dbus-rofi-dbus-launch.png
+[image-ss-thunar-none]: {{ system_path }}/2018/01/dbus-thunar-no-dbus.png
+[image-ss-thunar-with]: {{ system_path }}/2018/01/dbus-thunar-with-dbus.png
+[image-ss-xinitrc]:     {{ system_path }}/2018/01/dbus-xinitrc.png
+[image-ss-messagebus]:  {{ system_path }}/2018/01/dbus-messagebus.png
+[image-ss-notauthorized]: {{ system_path }}/2018/01/not-authorized-to-perform.png

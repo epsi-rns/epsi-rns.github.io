@@ -325,9 +325,9 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-opensuse' %}
-{% assign asset_pull = site.url | append: '/assets/posts/system/2017/08/docker-pull' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-opensuse' %}
+{% assign asset_pull  = system_path | append: '/2017/08/docker-pull' %}
 
 [local-part-three]: {{ site.url }}/system/2017/08/17/docker-opensuse-zypper.html
 

@@ -57,6 +57,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-grub2-quiet]: {{ site.url }}/assets/posts/system/2016/05/vim-grub-quiet.png
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-grub2-quiet]: {{ system_path }}/2016/05/vim-grub-quiet.png
 
 [hires-grub2-quiet]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMdI_Ocuj3BPV4MwB7FVEuwJBT-6Ay0PINbTtYR

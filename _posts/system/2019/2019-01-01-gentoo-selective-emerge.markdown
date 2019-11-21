@@ -259,16 +259,16 @@ And thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/01' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-emerge-uvdn-cut]:     {{ asset_path }}/gentoo-01-emerge-uvdn-cut.png
-[image-ss-equery-ruby-list]:    {{ asset_path }}/gentoo-01-equery-dev-ruby-list.png
-[image-ss-equery-ruby-format]:  {{ asset_path }}/gentoo-01-equery-dev-ruby-format.png
+[image-ss-emerge-uvdn-cut]:     {{ system_path }}/2019/01/gentoo-01-emerge-uvdn-cut.png
+[image-ss-equery-ruby-list]:    {{ system_path }}/2019/01/gentoo-01-equery-dev-ruby-list.png
+[image-ss-equery-ruby-format]:  {{ system_path }}/2019/01/gentoo-01-equery-dev-ruby-format.png
 
-[image-ss-emerge-uvdn-system]:  {{ asset_path }}/gentoo-01-emerge-uvdn-system-small.png
+[image-ss-emerge-uvdn-system]:  {{ system_path }}/2019/01/gentoo-01-emerge-uvdn-system-small.png
 [photo-ss-emerge-uvdn-system]:  https://photos.google.com/album/AF1QipMhBXeFkoeJXHJaQ2A9agbh3-iEMEt0BFFipsex/photo/AF1QipP2hdG6-ODC7L23u7-IsnBXt2uHgOJ7_xwPpC6n
 
-[image-ss-emerge-dev-ruby]:     {{ asset_path }}/gentoo-01-emerge-ruby-cut.png
+[image-ss-emerge-dev-ruby]:     {{ system_path }}/2019/01/gentoo-01-emerge-ruby-cut.png
 [photo-ss-emerge-dev-ruby]:     https://photos.google.com/album/AF1QipMhBXeFkoeJXHJaQ2A9agbh3-iEMEt0BFFipsex/photo/AF1QipP4pOQdYzwZV0cvrNo4QnsYYgaYtky8YQHz3VYQ
 
-[image-ss-emerge-empty]:        {{ asset_path }}/gentoo-01-emerge-uvdn-dev-ruby-empty.png
+[image-ss-emerge-empty]:        {{ system_path }}/2019/01/gentoo-01-emerge-uvdn-dev-ruby-empty.png

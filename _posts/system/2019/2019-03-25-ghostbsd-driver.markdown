@@ -155,9 +155,9 @@ Consider continue reading [ [GhostBSD - Migraion from Linux][local-part-config] 
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/03' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
 [local-part-config]:       /system/2019/03/30/ghostbsd-migration.html
 
-[image-usb-dongle]:         {{ asset_path }}/WN725N.jpg
-[image-network-restart]:    {{ asset_path }}/trident-service-network-restart.jpg
+[image-usb-dongle]:         {{ system_path }}/2019/03/WN725N.jpg
+[image-network-restart]:    {{ system_path }}/2019/03/trident-service-network-restart.jpg

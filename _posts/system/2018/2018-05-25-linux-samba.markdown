@@ -443,7 +443,7 @@ Consider going back reading old article [ [Multiboot: Setting up Partition][loca
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:        /system/2014/03/13/linux-multiboot.html
@@ -454,14 +454,14 @@ Consider going back reading old article [ [Multiboot: Setting up Partition][loca
 [dotfiles-smb-opensuse]:   {{ dotfiles }}/smb.opensuse.conf
 [dotfiles-smb-kaosx]:      {{ dotfiles }}/smb.kaosx.conf
 
-[image-ss-debian-smbclient]:    {{ asset_path }}/debian-smbclient.png
-[image-ss-debian-smbtree]:      {{ asset_path }}/debian-smbtree.png
-[image-ss-fedora-smbclient]:    {{ asset_path }}/fedora-smbclient.png
-[image-ss-fedora-smbtree]:      {{ asset_path }}/fedora-smbtree.png
-[image-ss-kaosx-smbclient]:     {{ asset_path }}/kaosx-smbclient.png
-[image-ss-kaosx-smbtree]:       {{ asset_path }}/kaosx-smbtree.png
-[image-ss-opensuse-smbclient]:  {{ asset_path }}/opensuse-smbclient.png
-[image-ss-opensuse-smbtree]:    {{ asset_path }}/opensuse-smbtree.png
-[image-ss-andsmb-debian]:       {{ asset_path }}/andsmb-debian.png
-[image-ss-andsmb-fedora]:       {{ asset_path }}/andsmb-fedora.png
-[image-ss-andsmb-opensuse]:     {{ asset_path }}/andsmb-opensuse.png
+[image-ss-debian-smbclient]:    {{ system_path }}/2018/05/debian-smbclient.png
+[image-ss-debian-smbtree]:      {{ system_path }}/2018/05/debian-smbtree.png
+[image-ss-fedora-smbclient]:    {{ system_path }}/2018/05/fedora-smbclient.png
+[image-ss-fedora-smbtree]:      {{ system_path }}/2018/05/fedora-smbtree.png
+[image-ss-kaosx-smbclient]:     {{ system_path }}/2018/05/kaosx-smbclient.png
+[image-ss-kaosx-smbtree]:       {{ system_path }}/2018/05/kaosx-smbtree.png
+[image-ss-opensuse-smbclient]:  {{ system_path }}/2018/05/opensuse-smbclient.png
+[image-ss-opensuse-smbtree]:    {{ system_path }}/2018/05/opensuse-smbtree.png
+[image-ss-andsmb-debian]:       {{ system_path }}/2018/05/andsmb-debian.png
+[image-ss-andsmb-fedora]:       {{ system_path }}/2018/05/andsmb-fedora.png
+[image-ss-andsmb-opensuse]:     {{ system_path }}/2018/05/andsmb-opensuse.png

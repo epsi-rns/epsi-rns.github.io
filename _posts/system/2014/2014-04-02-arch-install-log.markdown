@@ -238,10 +238,12 @@ Reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-arch-install]: {{ site.url }}/assets/posts/system/2014/04/arch-wifi-menu.png
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[local-learning-stages]: {{ site.url }}/opensource/2016/03/17/learning-stages.html
-[local-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
-[local-wireless]: {{ site.url }}/opensource/2014/03/13/wireless-command-line.html
+[image-ss-arch-install]:    {{ system_path }}/2014/04/arch-wifi-menu.png
 
-[link-archwiki]: https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation
+[local-learning-stages]:    {{ site.url }}/opensource/2016/03/17/learning-stages.html
+[local-multiboot]:          {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
+[local-wireless]:           {{ site.url }}/opensource/2014/03/13/wireless-command-line.html
+
+[link-archwiki]:            https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation

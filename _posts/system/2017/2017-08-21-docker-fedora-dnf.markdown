@@ -382,8 +382,8 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-fedora' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-fedora' %}
 
 [image-ss-bs-download-source]:   {{ asset_post }}/25-download-source.png
 [image-ss-bs-install-rpmbuild]:  {{ asset_post }}/25-install-rpmbuild.png

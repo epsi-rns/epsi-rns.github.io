@@ -281,14 +281,14 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2018/01' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-snapper-issue]: {{ asset_path }}/snapper-issue.png
+[image-ss-snapper-issue]: {{ system_path }}/2018/01/snapper-issue.png
 [photo-ss-snapper-issue]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipMZ_vBHEVIO0l6mSuBArZStbxGqLzcsURZSzGr1
 
-[image-ss-snapper-status]: {{ asset_path }}/snapper-status.png
+[image-ss-snapper-status]: {{ system_path }}/2018/01/snapper-status.png
 [photo-ss-snapper-status]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipP0lEwTVU3QAbMPyCT4xYvskrWmzZ-vJ0peAF5H
 
-[image-ss-btrfs-get-default]: {{ asset_path }}/btrfs-get-default.png
+[image-ss-btrfs-get-default]: {{ system_path }}/2018/01/btrfs-get-default.png
 [photo-ss-btrfs-get-default]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipPfJs-hf-Hx3BDOWwnmLS86go7iN8iZl-PcmO2r
 

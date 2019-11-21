@@ -41,6 +41,8 @@ All is good now
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss]: {{ site.url }}/assets/posts/system/2015/03/apt-pinning.png
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-ss]: {{ system_path }}/2015/03/apt-pinning.png
 [photo-ss]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNc0clGcljaA-B72q79GtLG-9RV7gBg10xCsEo1
 

@@ -167,5 +167,7 @@ Begun, The Linux Civil War has.<br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-civil-war]: {{ site.url }}/assets/posts/system/2014/11/civil-war.jpg
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+
+[image-civil-war]: {{ system_path }}/2014/11/civil-war.jpg
 

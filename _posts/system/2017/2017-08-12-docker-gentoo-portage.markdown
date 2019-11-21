@@ -467,32 +467,32 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-gentoo' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-gentoo' %}
 
 [local-part-three]: {{ site.url }}/system/2017/08/13/docker-gentoo-portage.html
 
-[image-ss-emerge-ep]:		{{ asset_post }}/14-emerge-ep.png
-[image-ss-equery-depends]:	{{ asset_post }}/14-equery-depends.png
-[image-ss-emerge-pv-depclean]:	{{ asset_post }}/14-emerge-pv-depclean.png
-[image-ss-emerge-verify]:	{{ asset_post }}/14-emerge-udn-world.png
+[image-ss-emerge-ep]:           {{ asset_post }}/14-emerge-ep.png
+[image-ss-equery-depends]:      {{ asset_post }}/14-equery-depends.png
+[image-ss-emerge-pv-depclean]:  {{ asset_post }}/14-emerge-pv-depclean.png
+[image-ss-emerge-verify]:       {{ asset_post }}/14-emerge-udn-world.png
 
-[image-ss-portage-source]:	{{ asset_post }}/17-dir-source.png
-[image-ss-eclean-distfiles]:	{{ asset_post }}/17-eclean-distfiles.png
-[image-ss-eclean-dist-deep]:	{{ asset_post }}/17-eclean-dist-deep.png
+[image-ss-portage-source]:      {{ asset_post }}/17-dir-source.png
+[image-ss-eclean-distfiles]:    {{ asset_post }}/17-eclean-distfiles.png
+[image-ss-eclean-dist-deep]:    {{ asset_post }}/17-eclean-dist-deep.png
 
-[image-ss-less-log]:			{{ asset_post }}/19-log.png
-[image-ss-emerge-info]:			{{ asset_post }}/19-emerge-info.png
-[image-ss-revdep-rebuild]:		{{ asset_post }}/19-revdep-rebuild.png
-[image-ss-depclean]:			{{ asset_post }}/19-depclean.png
-[image-ss-emerge-undp]:	{{ asset_post }}/19-emerge-undp.png
-[image-ss-emerge-ep]:	{{ asset_post }}/19-emerge-ep.png
+[image-ss-less-log]:            {{ asset_post }}/19-log.png
+[image-ss-emerge-info]:         {{ asset_post }}/19-emerge-info.png
+[image-ss-revdep-rebuild]:      {{ asset_post }}/19-revdep-rebuild.png
+[image-ss-depclean]:            {{ asset_post }}/19-depclean.png
+[image-ss-emerge-undp]:         {{ asset_post }}/19-emerge-undp.png
+[image-ss-emerge-ep]:           {{ asset_post }}/19-emerge-ep.png
 
-[image-ss-portage-source]:     {{ asset_post }}/17-dir-source.png
-[image-ss-eclean-distfiles]:   {{ asset_post }}/17-eclean-distfiles.png
-[image-ss-eclean-dist-deep]:   {{ asset_post }}/17-eclean-dist-deep.png
+[image-ss-portage-source]:      {{ asset_post }}/17-dir-source.png
+[image-ss-eclean-distfiles]:    {{ asset_post }}/17-eclean-distfiles.png
+[image-ss-eclean-dist-deep]:    {{ asset_post }}/17-eclean-dist-deep.png
 
-[image-ss-less-log]:           {{ asset_post }}/19-log.png
+[image-ss-less-log]:            {{ asset_post }}/19-log.png
 
 [image-ss-eix-test-obsolete]:	{{ asset_post }}/19-eix-test-obsolete.png
 [image-ss-eix-diff]:			{{ asset_post }}/19-eix-diff.png

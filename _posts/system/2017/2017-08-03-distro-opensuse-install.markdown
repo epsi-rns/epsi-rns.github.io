@@ -308,8 +308,8 @@ Focusing on package manager in command line rather than installation in GUI.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/distro-opensuse' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/distro-opensuse' %}
 
 [image-ss-yast-install]:    {{ asset_post }}/yast-install-i586.png
 [photo-ss-yast-install]:    https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipNQ6K8rEv1WPht6zwJhInaGEifO_TC-eAJV3Fyk?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

@@ -497,6 +497,8 @@ Pin-Priority: -10
 
 ![Docker APT Pinning: nano preferences.d ][image-ss-rp-nano-pinning]{: .img-responsive }
 
+* .
+
 {% highlight bash %}
 $ apt update
 ...
@@ -576,35 +578,35 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2017/08' %}
-{% assign asset_post = site.url | append: '/assets/posts/system/2017/08/docker-debian' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign asset_post  = system_path | append: '/2017/08/docker-debian' %}
 
 [local-part-four]:   {{ site.url }}/system/2017/08/27/docker-debian-apt.html
 
-[image-ss-apt-depends]:		{{ asset_post }}/14-apt-depends.png
-[image-ss-apt-rdepends]:	{{ asset_post }}/14-apt-rdepends.png
-[image-ss-aptitude-s-d]:	{{ asset_post }}/14-aptitude-d-groff-base.png
-[image-ss-aptitude-s-r]:	{{ asset_post }}/14-aptitude-r-man-db.png
-[image-ss-aptitude-why]:	{{ asset_post }}/14-aptitude-why-groff-base.png
-[image-ss-cache-dotty]:		{{ asset_post }}/14-dotty.png
-[image-ss-graphvis]:		{{ asset_post }}/14-groff-base-dotty.png
+[image-ss-apt-depends]:     {{ asset_post }}/14-apt-depends.png
+[image-ss-apt-rdepends]:    {{ asset_post }}/14-apt-rdepends.png
+[image-ss-aptitude-s-d]:    {{ asset_post }}/14-aptitude-d-groff-base.png
+[image-ss-aptitude-s-r]:    {{ asset_post }}/14-aptitude-r-man-db.png
+[image-ss-aptitude-why]:    {{ asset_post }}/14-aptitude-why-groff-base.png
+[image-ss-cache-dotty]:     {{ asset_post }}/14-dotty.png
+[image-ss-graphvis]:        {{ asset_post }}/14-groff-base-dotty.png
 
-[image-ss-apt-policy]:		{{ asset_post }}/16-apt-policy.png
-[image-ss-sources-list]:	{{ asset_post }}/16-etc-apt-sources-list.png
-[image-ss-nano-kambing]:	{{ asset_post }}/16-nano-kambing.png
-[image-ss-update-kambing]:	{{ asset_post }}/16-update-kambing.png
-[image-ss-apt-test-remove]:	{{ asset_post }}/16-test-remove.png
+[image-ss-apt-policy]:      {{ asset_post }}/16-apt-policy.png
+[image-ss-sources-list]:    {{ asset_post }}/16-etc-apt-sources-list.png
+[image-ss-nano-kambing]:    {{ asset_post }}/16-nano-kambing.png
+[image-ss-update-kambing]:  {{ asset_post }}/16-update-kambing.png
+[image-ss-apt-test-remove]: {{ asset_post }}/16-test-remove.png
 
 [image-ss-dup-dist-upgrade]:	{{ asset_post }}/23-dist-upgrade.png
 [image-ss-dup-pull-jessie]:		{{ asset_post }}/23-docker-jessie.png
 [image-ss-dup-nano-jessie]:		{{ asset_post }}/23-sources-jessie.png
 [image-ss-dup-nano-stretch]:	{{ asset_post }}/23-docker-stretch.png
 
-[image-ss-rp-upgradables]:	{{ asset_post }}/28-list-upgradables.png
-[image-ss-rp-nano-pinning]:	{{ asset_post }}/28-nano-pinning.png
-[image-ss-rp-nano-sources]:	{{ asset_post }}/28-nano-sources.list.png
-[image-ss-rp-new-stable]:	{{ asset_post }}/28-new-docker-stretch.png
-[image-ss-rp-nmap-stable]:	{{ asset_post }}/28-nmap-stable.png
+[image-ss-rp-upgradables]:  {{ asset_post }}/28-list-upgradables.png
+[image-ss-rp-nano-pinning]: {{ asset_post }}/28-nano-pinning.png
+[image-ss-rp-nano-sources]: {{ asset_post }}/28-nano-sources.list.png
+[image-ss-rp-new-stable]:   {{ asset_post }}/28-new-docker-stretch.png
+[image-ss-rp-nmap-stable]:  {{ asset_post }}/28-nmap-stable.png
 [image-ss-rp-nmap-unstable]:	{{ asset_post }}/28-nmap-unstable.png
 [image-ss-rp-policy-pinning]:	{{ asset_post }}/28-policy-pinning.png
 [image-ss-rp-target-unstable]:	{{ asset_post }}/28-target-unstable.png

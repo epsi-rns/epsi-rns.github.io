@@ -395,33 +395,33 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2018/06' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-ss-lspci-grep]:    {{ asset_path }}/audio-lspci-grep-audio.png
-[image-ss-lspci-verbose]: {{ asset_path }}/audio-lspci-verbose.png
-[image-ss-lsmod-intel]:   {{ asset_path }}/audio-lsmod-intel.png
+[image-ss-lspci-grep]:    {{ system_path }}/2018/06/audio-lspci-grep-audio.png
+[image-ss-lspci-verbose]: {{ system_path }}/2018/06/audio-lspci-verbose.png
+[image-ss-lsmod-intel]:   {{ system_path }}/2018/06/audio-lsmod-intel.png
 
-[image-ss-dmesg-alc]:     {{ asset_path }}/audio-dmesg-alc.png
-[image-ss-dmesg-snd]:     {{ asset_path }}/audio-dmesg-snd.png
+[image-ss-dmesg-alc]:     {{ system_path }}/2018/06/audio-dmesg-alc.png
+[image-ss-dmesg-snd]:     {{ system_path }}/2018/06/audio-dmesg-snd.png
 
-[image-ss-dev-snd]:       {{ asset_path }}/audio-dev-snd.png
-[image-ss-proc-asound]:   {{ asset_path }}/audio-proc-asound.png
-[image-ss-proc-codec]:    {{ asset_path }}/audio-proc-codec.png
-[image-ss-proc-version]:  {{ asset_path }}/audio-proc-version.png
+[image-ss-dev-snd]:       {{ system_path }}/2018/06/audio-dev-snd.png
+[image-ss-proc-asound]:   {{ system_path }}/2018/06/audio-proc-asound.png
+[image-ss-proc-codec]:    {{ system_path }}/2018/06/audio-proc-codec.png
+[image-ss-proc-version]:  {{ system_path }}/2018/06/audio-proc-version.png
 
-[image-ss-user-group]:    {{ asset_path }}/audio-user-group.png
+[image-ss-user-group]:    {{ system_path }}/2018/06/audio-user-group.png
 
-[image-ss-pulseaudio]:    {{ asset_path }}/audio-pulseaudio.png
+[image-ss-pulseaudio]:    {{ system_path }}/2018/06/audio-pulseaudio.png
 
-[image-ss-aplay-list]:    {{ asset_path }}/audio-aplay-list-devices.png
-[image-ss-aplay-test]:    {{ asset_path }}/audio-aplay-test-wav.png
-[image-ss-aplay-pcm]:     {{ asset_path }}/audio-aplay-list-pcm.png
+[image-ss-aplay-list]:    {{ system_path }}/2018/06/audio-aplay-list-devices.png
+[image-ss-aplay-test]:    {{ system_path }}/2018/06/audio-aplay-test-wav.png
+[image-ss-aplay-pcm]:     {{ system_path }}/2018/06/audio-aplay-list-pcm.png
 
-[image-ss-alsamixer]:     {{ asset_path }}/audio-alsamixer.png
-[image-ss-xfce4-mixer]:   {{ asset_path }}/audio-xfce4-mixer.png
-[image-ss-pavucontrol]:   {{ asset_path }}/audio-pavucontrol.png
+[image-ss-alsamixer]:     {{ system_path }}/2018/06/audio-alsamixer.png
+[image-ss-xfce4-mixer]:   {{ system_path }}/2018/06/audio-xfce4-mixer.png
+[image-ss-pavucontrol]:   {{ system_path }}/2018/06/audio-pavucontrol.png
 
-[image-ss-amixer-volume]: {{ asset_path }}/audio-amixer-volume.png
-[image-ss-pactl-volume]:  {{ asset_path }}/audio-pactl-volume.png
-[image-ss-pactl-info]:  {{ asset_path }}/audio-pactl-info.png
+[image-ss-amixer-volume]: {{ system_path }}/2018/06/audio-amixer-volume.png
+[image-ss-pactl-volume]:  {{ system_path }}/2018/06/audio-pactl-volume.png
+[image-ss-pactl-info]:    {{ system_path }}/2018/06/audio-pactl-info.png
 

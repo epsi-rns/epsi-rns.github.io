@@ -527,7 +527,7 @@ Consider continue reading [ [Multiboot: chroot][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2018/05' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:       /system/2018/05/23/linux-multiboot.html
@@ -538,17 +538,17 @@ Consider continue reading [ [Multiboot: chroot][local-part-config] ].
 [dotfiles-fstab-opensuse]: {{ dotfiles }}/fstab.opensuse
 [dotfiles-fstab-kaosx]:    {{ dotfiles }}/fstab.kaosx
 
-[image-ss-gparted]:        {{ asset_path }}/opensuse-gparted.png
-[image-ss-by-uuid]:        {{ asset_path }}/opensuse-disk-by-uuid.png
-[image-ss-man-fstab]:      {{ asset_path }}/man-fstab.png
-[image-ss-man-mount]:      {{ asset_path }}/man-mount.png
+[image-ss-gparted]:        {{ system_path }}/2018/05/opensuse-gparted.png
+[image-ss-by-uuid]:        {{ system_path }}/2018/05/opensuse-disk-by-uuid.png
+[image-ss-man-fstab]:      {{ system_path }}/2018/05/man-fstab.png
+[image-ss-man-mount]:      {{ system_path }}/2018/05/man-mount.png
 
-[image-ss-lsblk-common]:       {{ asset_path }}/fedora-lsblk-common.png
-[image-ss-lsblk-custom]:       {{ asset_path }}/fedora-lsblk-custom.png
-[image-ss-lsblk-initial]:      {{ asset_path }}/fedora-lsblk-initial.png
-[image-ss-lsblk-o-common]:     {{ asset_path }}/fedora-lsblk-o-common.png
-[image-ss-lsblk-o-custom]:     {{ asset_path }}/fedora-lsblk-o-custom.png
-[image-ss-lsblk-o-initial]:    {{ asset_path }}/fedora-lsblk-o-initial.png
-[image-ss-mtab-common]:        {{ asset_path }}/fedora-mtab-column-common.png
-[image-ss-mtab-custom]:        {{ asset_path }}/fedora-mtab-column-custom.png
-[image-ss-mtab-initial]:       {{ asset_path }}/fedora-mtab-column-initial.png
+[image-ss-lsblk-common]:       {{ system_path }}/2018/05/fedora-lsblk-common.png
+[image-ss-lsblk-custom]:       {{ system_path }}/2018/05/fedora-lsblk-custom.png
+[image-ss-lsblk-initial]:      {{ system_path }}/2018/05/fedora-lsblk-initial.png
+[image-ss-lsblk-o-common]:     {{ system_path }}/2018/05/fedora-lsblk-o-common.png
+[image-ss-lsblk-o-custom]:     {{ system_path }}/2018/05/fedora-lsblk-o-custom.png
+[image-ss-lsblk-o-initial]:    {{ system_path }}/2018/05/fedora-lsblk-o-initial.png
+[image-ss-mtab-common]:        {{ system_path }}/2018/05/fedora-mtab-column-common.png
+[image-ss-mtab-custom]:        {{ system_path }}/2018/05/fedora-mtab-column-custom.png
+[image-ss-mtab-initial]:       {{ system_path }}/2018/05/fedora-mtab-column-initial.png

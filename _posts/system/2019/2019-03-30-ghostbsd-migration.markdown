@@ -110,8 +110,8 @@ Consider continue reading [ [GhostBSD - Ports][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2019/03' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
 [local-part-config]:       /system/2019/04/02/ghostbsd-ports.html
 
-[image-ghosdtbsd-openbox]:  {{ asset_path }}/neofetch-ghostbsd-fullscreen.png
+[image-ghosdtbsd-openbox]:  {{ system_path }}/2019/03/neofetch-ghostbsd-fullscreen.png

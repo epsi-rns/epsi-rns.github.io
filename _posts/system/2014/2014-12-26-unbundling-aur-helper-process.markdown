@@ -48,15 +48,17 @@ and also my boring desktop customization.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-aur-cower]: {{ site.url }}/assets/posts/system/2014/12/aur-cower.png
-[photo-aur-cower]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOC0IpdIpo5eZ552oBEXtB8tCdsSxoNhehop2wk
-[image-aur-yaourt]: {{ site.url }}/assets/posts/system/2014/12/aur-yaourt.png
-[photo-aur-yaourt]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPVSt_YN4D_Z-utSAu5iTtZGw3lLyTQwFBbW2C1
-[image-aur-aura]: {{ site.url }}/assets/posts/system/2014/12/aur-aura.png
-[photo-aur-aura]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMsayLX9hEZmpiprQ4U_ZXiEk6OT16IxcDSj3WJ
 
-[related-arch-install]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
-[related-arch-no-bloated]: {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
+[image-aur-cower]:      {{ system_path }}/2014/12/aur-cower.png
+[photo-aur-cower]:      https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOC0IpdIpo5eZ552oBEXtB8tCdsSxoNhehop2wk
+[image-aur-yaourt]:     {{ system_path }}/2014/12/aur-yaourt.png
+[photo-aur-yaourt]:     https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPVSt_YN4D_Z-utSAu5iTtZGw3lLyTQwFBbW2C1
+[image-aur-aura]:       {{ system_path }}/2014/12/aur-aura.png
+[photo-aur-aura]:       https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMsayLX9hEZmpiprQ4U_ZXiEk6OT16IxcDSj3WJ
+
+[related-arch-install]:        2{{ site.url }}/opensource/2014/04/02/arch-install-log.html
+[related-arch-no-bloated]:      {{ site.url }}/opensource/2016/02/08/pacman-ignorepkg.html
 [related-blackarch-repository]: {{ site.url }}/opensource/2014/04/27/install-blackarch-as-repository.html
-[related-blackarch-selectively]: {{ site.url }}/opensource/2014/12/27/selectively-install-blackarch-tools.html
+[related-blackarch-selectively]:{{ site.url }}/opensource/2014/12/27/selectively-install-blackarch-tools.html

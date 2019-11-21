@@ -205,17 +205,17 @@ Consider continue reading [ [Multiboot: Partition Schema][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2014/03' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
 [local-part-config]:    /system/2018/05/21/linux-multiboot.html
 
-[facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/linux-multiboot/426339144178768
-[image-cover]: {{ asset_path }}/multiboot-cover.png
-[image-easeus]: {{ asset_path }}/multiboot-ease-us-partition.png
-[photo-easeus]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNhgwwtuUixyQh2Nm1Xbfwhk6H7poVmapwG24Us
-[image-gparted]: {{ asset_path }}/multiboot-gparted-sda.jpg
-[photo-gparted]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO3VgkrKAO7a3lEa4TldF5lvI7Chc3psTbuIH6B
-[image-fstab]: {{ asset_path }}/multiboot-fstab-sample.png
-[photo-fstab]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOHu3kTAX60inCasXq_TcoKnUlV6cTD7Gmjsi5c
-[image-cfdisk]: {{ asset_path }}/multiboot-cfdisk.png
-[photo-cfdisk]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPEpYu-6gI2ewKHRxOG0FQc5WQRajUfnCDc_sly
+[facebook-note]:	https://www.facebook.com/notes/epsi-r-nurwijayadi/linux-multiboot/426339144178768
+[image-cover]:      {{ system_path }}/2014/03/multiboot-cover.png
+[image-easeus]:     {{ system_path }}/2014/03/multiboot-ease-us-partition.png
+[photo-easeus]:     https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNhgwwtuUixyQh2Nm1Xbfwhk6H7poVmapwG24Us
+[image-gparted]:    {{ system_path }}/2014/03/multiboot-gparted-sda.jpg
+[photo-gparted]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO3VgkrKAO7a3lEa4TldF5lvI7Chc3psTbuIH6B
+[image-fstab]:      {{ system_path }}/2014/03/multiboot-fstab-sample.png
+[photo-fstab]:      https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOHu3kTAX60inCasXq_TcoKnUlV6cTD7Gmjsi5c
+[image-cfdisk]:     {{ system_path }}/2014/03/multiboot-cfdisk.png
+[photo-cfdisk]:     https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPEpYu-6gI2ewKHRxOG0FQc5WQRajUfnCDc_sly

@@ -265,37 +265,37 @@ Now you can ping
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2014/03' %}
+{% assign system_path = 'https://epsi-rns.github.io/system' %}
 
-[image-cover]: {{ asset_path }}/wireless-cover.png
+[image-cover]:      {{ system_path }}/2014/03/wireless-cover.png
 
-[image-1-lspci]: {{ asset_path }}/wireless-1-lspci.png
-[photo-1-lspci]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMxKL1R60tjBiY0YSQ9MNIMljRRpcrOLP5eheTN
-[image-1-lspci-controller]: {{ asset_path }}/wireless-1-lspci-controller.png
+[image-1-lspci]:    {{ system_path }}/2014/03/wireless-1-lspci.png
+[photo-1-lspci]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMxKL1R60tjBiY0YSQ9MNIMljRRpcrOLP5eheTN
+[image-1-lspci-controller]: {{ system_path }}/2014/03/wireless-1-lspci-controller.png
 [photo-1-lspci-controller]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOTEMmuVbVw23bD19Le_bF_jgDDTFKwix2zW3MR
-[image-1-lsusb]: {{ asset_path }}/wireless-1-lsusb.png
-[photo-1-lsusb]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNOclJzB3GCGO8TMiWfshduoJVbBcsKa-ssiQYH
-[image-1-lsmod]: {{ asset_path }}/wireless-1-lsmod.png
-[photo-1-lsmod]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPMsAD1Mof3dgfRcFY7Rvft-wJUACQa8aezaSr5
-[image-1-dmesg]: {{ asset_path }}/wireless-1-dmesg.png
-[photo-1-dmesg]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOvy4CUR8GnZpBIR_FL9Y0WYlEQOC6CyWKBcuKL
-[image-1-rfkill]: {{ asset_path }}/wireless-1-rfkill.png
-[photo-1-rfkill]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMFOrJMMfH15l4gp5ct-tP_LWk2Qw2bN5zrW1bp
+[image-1-lsusb]:    {{ system_path }}/2014/03/wireless-1-lsusb.png
+[photo-1-lsusb]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNOclJzB3GCGO8TMiWfshduoJVbBcsKa-ssiQYH
+[image-1-lsmod]:    {{ system_path }}/2014/03/wireless-1-lsmod.png
+[photo-1-lsmod]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPMsAD1Mof3dgfRcFY7Rvft-wJUACQa8aezaSr5
+[image-1-dmesg]:    {{ system_path }}/2014/03/wireless-1-dmesg.png
+[photo-1-dmesg]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOvy4CUR8GnZpBIR_FL9Y0WYlEQOC6CyWKBcuKL
+[image-1-rfkill]:   {{ system_path }}/2014/03/wireless-1-rfkill.png
+[photo-1-rfkill]:   https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMFOrJMMfH15l4gp5ct-tP_LWk2Qw2bN5zrW1bp
 
-[image-2-iw]: {{ asset_path }}/wireless-2-iw.png
-[photo-2-iw]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMrLGZ4puUBJpAEb3UvHtnnQgLclrfYxdUpDhTR
-[image-2-iw-scan]: {{ asset_path }}/wireless-2-iw-scan.png
-[photo-2-iw-scan]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPTV2HWWtpowaukjhmEfekak--ddK7mKgQyGw6V
+[image-2-iw]:       {{ system_path }}/2014/03/wireless-2-iw.png
+[photo-2-iw]:       https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMrLGZ4puUBJpAEb3UvHtnnQgLclrfYxdUpDhTR
+[image-2-iw-scan]:  {{ system_path }}/2014/03/wireless-2-iw-scan.png
+[photo-2-iw-scan]:  https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPTV2HWWtpowaukjhmEfekak--ddK7mKgQyGw6V
 
-[image-3-nmcli]: {{ asset_path }}/wireless-3-nmcli-connect.png
-[photo-3-nmcli]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNr3Su0WM1fkDqniyMp2_K8SqK14aveSVQLGAHp
-[image-3-nmcli-up]: {{ asset_path }}/wireless-3-nmcli-con-up.png
+[image-3-nmcli]:    {{ system_path }}/2014/03/wireless-3-nmcli-connect.png
+[photo-3-nmcli]:    https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNr3Su0WM1fkDqniyMp2_K8SqK14aveSVQLGAHp
+[image-3-nmcli-up]: {{ system_path }}/2014/03/wireless-3-nmcli-con-up.png
 [photo-3-nmcli-up]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP-uHUMT1NA6uqi3zaynaNXiLxbIC5iOpehs7_O
 
-[image-4-summary]: {{ asset_path }}/wireless-4-summary.png
-[photo-4-summary]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOvGRF_yM0P_iPwWRZqF8vRmDM_Ag4Q67MmKjVP
+[image-4-summary]:  {{ system_path }}/2014/03/wireless-4-summary.png
+[photo-4-summary]:  https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOvGRF_yM0P_iPwWRZqF8vRmDM_Ag4Q67MmKjVP
 
-[facebook-note]: https://www.facebook.com/notes/epsi-r-nurwijayadi/command-line-wireless/433920080087341
-[link-archwiki]: https://wiki.archlinux.org/index.php/Wireless_network_configuration
-[local-lamp]: {{ site.url }}/opensource/2015/10/16/lamp-stack-manjaro-openrc.html
+[facebook-note]:    https://www.facebook.com/notes/epsi-r-nurwijayadi/command-line-wireless/433920080087341
+[link-archwiki]:    https://wiki.archlinux.org/index.php/Wireless_network_configuration
+[local-lamp]:       {{ site.url }}/opensource/2015/10/16/lamp-stack-manjaro-openrc.html
 
