@@ -212,7 +212,7 @@ last step: go to the refigerator find myself something to eat
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-debian-install]: {{ system_path }}/2014/01/debian-install.jpg
 [photo-ss-debian-install]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO0xQxOpOaC3ddgv7dJmb2expwG_MqHFkkRqm9C

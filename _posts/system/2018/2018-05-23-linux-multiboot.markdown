@@ -345,7 +345,7 @@ or consider [ [GhostBSD - Multiboot][local-part-ghost] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/multiboot/pc-01' %}
 
 [local-part-config]:       /system/2018/05/25/linux-samba.html

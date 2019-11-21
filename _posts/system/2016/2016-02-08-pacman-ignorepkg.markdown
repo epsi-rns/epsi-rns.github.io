@@ -93,7 +93,7 @@ Happy Sync.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss]: {{ system_path }}/2016/02/pacman-ignorepkg.png
 [photo-ss]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNqmVpHvqA_JNFmN7JtigOhZ_rNI0HL1-APE4lO

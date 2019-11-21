@@ -57,7 +57,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-grub2-quiet]: {{ system_path }}/2016/05/vim-grub-quiet.png
 

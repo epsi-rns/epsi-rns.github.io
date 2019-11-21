@@ -502,7 +502,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_post  = system_path | append: '/2017/08/docker-arch' %}
 
 [local-install-yaourt]:	{{ site.url }}/system/2016/06/21/install-yaourt.html

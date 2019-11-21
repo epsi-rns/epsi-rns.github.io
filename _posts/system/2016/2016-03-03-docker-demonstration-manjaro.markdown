@@ -56,7 +56,7 @@ Note: just another nix's porn. :-\ <br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-fki]: {{ system_path }}/2016/03/manjaro-docker-fki.png
 [photo-ss-fki]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNsM4yvZme4-07XgB4_JI1HMrdVtz5uYJeAZS4b

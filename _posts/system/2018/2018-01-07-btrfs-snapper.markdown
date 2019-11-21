@@ -281,7 +281,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-snapper-issue]: {{ system_path }}/2018/01/snapper-issue.png
 [photo-ss-snapper-issue]: https://photos.google.com/album/AF1QipONAnoC9vhwhNUX26skiUTYcT1xwz71c10Aqi3M/photo/AF1QipMZ_vBHEVIO0l6mSuBArZStbxGqLzcsURZSzGr1

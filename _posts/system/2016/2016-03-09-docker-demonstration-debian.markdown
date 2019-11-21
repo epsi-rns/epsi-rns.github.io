@@ -53,7 +53,7 @@ related_link_ids:
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss]: {{ system_path }}/2016/03/debian-docker-ogs.png
 [photo-ss]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOLrIvqVOO-FD6p0b9ks12xToT65xqwZMpK2DjH

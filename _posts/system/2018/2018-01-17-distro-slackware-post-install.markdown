@@ -353,7 +353,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-slpkg]:    {{ system_path }}/2018/01/slackware-slpkg-herbstluftwm.png
 [photo-ss-slpkg]:    https://photos.google.com/share/AF1QipMCFikwVY_d7DR9OMOmp-t4qwKDgluWO9lU6qK01_y9IUYA7eorvCdHkmRrRxnatA/photo/AF1QipO-7d8WdZeJbdOAs9VK6lRWjonT7a2LL1dTyC2a?key=U2l0bFJCRFZuY00xOUlCeUhiRGVEOTJESVo5MmFR

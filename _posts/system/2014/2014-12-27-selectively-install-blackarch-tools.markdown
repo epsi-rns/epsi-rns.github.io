@@ -90,7 +90,7 @@ Note: Today is my favorite day.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-blackarch-categories]: {{ system_path }}/2014/12/blackarch-categories.png
 [photo-ss-blackarch-categories]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNfE6VynnLVLAZQFncSnGgydNF0q8W2Vgn07XM7

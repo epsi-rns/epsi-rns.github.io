@@ -183,7 +183,7 @@ And thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [local-whats-next]:         https://epsi-rns.gitlab.io/frontend/2019/01/23/windows-choco-sass/
 

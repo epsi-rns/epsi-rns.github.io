@@ -259,7 +259,7 @@ And thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-emerge-uvdn-cut]:     {{ system_path }}/2019/01/gentoo-01-emerge-uvdn-cut.png
 [image-ss-equery-ruby-list]:    {{ system_path }}/2019/01/gentoo-01-equery-dev-ruby-list.png

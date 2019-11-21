@@ -203,7 +203,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_post  = system_path | append: '/2017/08/distro-manjaro' %}
 
 [image-ss-manjaro-sddm]: {{ asset_post }}/sddm-no-face.png

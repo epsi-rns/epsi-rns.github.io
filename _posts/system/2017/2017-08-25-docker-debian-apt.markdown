@@ -627,7 +627,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_post  = system_path | append: '/2017/08/docker-debian' %}
 
 [local-part-three]:   {{ site.url }}/system/2017/08/26/docker-debian-apt.html

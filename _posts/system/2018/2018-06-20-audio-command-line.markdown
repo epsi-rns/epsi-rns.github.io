@@ -395,7 +395,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-lspci-grep]:    {{ system_path }}/2018/06/audio-lspci-grep-audio.png
 [image-ss-lspci-verbose]: {{ system_path }}/2018/06/audio-lspci-verbose.png

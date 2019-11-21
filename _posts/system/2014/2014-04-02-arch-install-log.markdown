@@ -238,7 +238,7 @@ Reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-arch-install]:    {{ system_path }}/2014/04/arch-wifi-menu.png
 

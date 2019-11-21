@@ -257,7 +257,7 @@ Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [local-part-config]:       /system/2019/03/25/ghostbsd-driver.html
 

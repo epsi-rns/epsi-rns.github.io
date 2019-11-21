@@ -146,7 +146,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-slackpkgplus]:   {{ system_path }}/2018/05/slackpkgplus-config-ktown.png
 

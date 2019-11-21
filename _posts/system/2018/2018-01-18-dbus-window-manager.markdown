@@ -238,7 +238,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-desktop]:     {{ system_path }}/2018/01/dbus-launch-herbstluftwm.png
 [image-ss-lightdm]:     {{ system_path }}/2018/01/dbus-lightdm-wrapper.png

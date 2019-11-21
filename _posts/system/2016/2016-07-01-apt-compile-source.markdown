@@ -215,7 +215,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-summary]:      {{ system_path }}/2016/07/apt-src-summary.png
 [image-sources-list]:    {{ system_path }}/2016/07/apt-src-sources-list.png

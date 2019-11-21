@@ -62,7 +62,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-boot-arch]:   {{ system_path }}/2016/06/arch-boot.png
 [image-boot-debian]: {{ system_path }}/2016/06/debian-boot.png

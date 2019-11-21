@@ -243,7 +243,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-yaourt-package-query]: {{ system_path }}/2016/06/yaourt-package-query.png
 [image-yaourt-makepkg]: {{ system_path }}/2016/06/yaourt-makepkg.png

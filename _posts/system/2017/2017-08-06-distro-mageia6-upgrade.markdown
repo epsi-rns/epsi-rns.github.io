@@ -135,7 +135,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_post  = system_path | append: '/2017/08/distro-mageia' %}
 
 [local-mageia-4]: {{ site.url }}/system/2014/05/09/mageia-experiment.html

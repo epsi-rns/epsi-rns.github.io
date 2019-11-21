@@ -330,7 +330,7 @@ At the end. I keep my Mageia in my Family's PC. Nobody use it but me. And I rare
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-mageia-welcome]:          {{ system_path }}/2014/05/mageia-welcome.png
 [photo-ss-mageia-welcome]:          https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPl_Ulmlw5AyMz78K-FR-jMm4b6eXeQ40qvwNns

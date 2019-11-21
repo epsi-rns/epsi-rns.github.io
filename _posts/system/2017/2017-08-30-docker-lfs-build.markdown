@@ -426,7 +426,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_post  = system_path | append: '/2017/08/docker-lfs' %}
 
 [image-ss-lfs-docker]:       {{ asset_post }}/00-getting-started.png

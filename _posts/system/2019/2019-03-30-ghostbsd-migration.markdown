@@ -110,7 +110,7 @@ Consider continue reading [ [GhostBSD - Ports][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [local-part-config]:       /system/2019/04/02/ghostbsd-ports.html
 

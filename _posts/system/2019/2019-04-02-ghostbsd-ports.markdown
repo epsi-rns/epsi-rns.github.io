@@ -307,7 +307,7 @@ Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-portsnap-extract]:    {{ system_path }}/2019/04/01-portsnap-fetch-extract.png
 [image-ss-portsnap-update]:     {{ system_path }}/2019/04/01-portsnap-fetch-update.png

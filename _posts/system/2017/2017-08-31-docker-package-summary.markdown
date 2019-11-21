@@ -709,7 +709,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_flow  = system_path | append: '/2017/08/docker-flow' %}
 {% assign asset_pull  = system_path | append: '/2017/08/docker-pull' %}
 {% assign asset_pack  = system_path | append: '/2017/08/package-manager' %}

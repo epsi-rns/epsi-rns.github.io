@@ -265,7 +265,7 @@ Now you can ping
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-cover]:      {{ system_path }}/2014/03/wireless-cover.png
 

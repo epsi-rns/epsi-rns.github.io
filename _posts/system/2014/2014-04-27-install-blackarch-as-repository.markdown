@@ -70,7 +70,7 @@ This one has not been solved yet.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [image-ss-blackarch-keyring]:   {{ system_path }}/2014/04/blackarch-keyring.png
 [photo-ss-blackarch-keyring]:   https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP6OfE4IPS3HkwH5T_g5MYxm4j1o1-99DujKeWp

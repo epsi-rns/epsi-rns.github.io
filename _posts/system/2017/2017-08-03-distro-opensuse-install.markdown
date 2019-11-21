@@ -308,7 +308,7 @@ Focusing on package manager in command line rather than installation in GUI.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 {% assign asset_post  = system_path | append: '/2017/08/distro-opensuse' %}
 
 [image-ss-yast-install]:    {{ asset_post }}/yast-install-i586.png

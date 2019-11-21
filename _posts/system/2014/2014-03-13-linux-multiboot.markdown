@@ -205,7 +205,7 @@ Consider continue reading [ [Multiboot: Partition Schema][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign system_path = 'https://epsi-rns.github.io/system' %}
+{% assign system_path = 'https://epsi-rns.github.io/assets-system' %}
 
 [local-part-config]:    /system/2018/05/21/linux-multiboot.html
 
