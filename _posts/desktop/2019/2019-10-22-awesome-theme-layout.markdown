@@ -3,7 +3,7 @@ layout: post
 title:  "Awesome WM - Theme - Layout Icons"
 categories: desktop
 date      : 2019-10-22 09:25:15 +0700
-tags      : [awesome]
+tags      : [awesome, inkscape]
 keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
@@ -14,13 +14,6 @@ excerpt:
   Awesome WM theme step by step.
   Custom Multicolor Layout Icons, Minimalist PNG Button.
   Using Inkscape, one SVG file to create each PNG resource.
-
-related_link_ids:
-  - 16071350  # Preparing Modularized
-  - 16063052  # Install Awesome Debian
-  - 16062934  # Install Awesome Arch
-  - 14113019  # Awesome TWM Beginner
-  - 16031941  # Refactoring Awesome
 
 ---
 

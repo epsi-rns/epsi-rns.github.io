@@ -3,7 +3,7 @@ layout: post
 title:  "Awesome WM - Theme - Statusbar Icons"
 categories: desktop
 date      : 2019-10-23 09:25:15 +0700
-tags      : [awesome]
+tags      : [awesome, inkscape]
 keywords  : [tiling, window manager, modularized, lua]
 author: epsi
 
@@ -14,13 +14,6 @@ excerpt:
   Awesome WM theme step by step.
   Converting Iconic FontAwesome Glyph,
   from SVG to PNG, then put the right margin, for use with statusbar.
-
-related_link_ids:
-  - 16071350  # Preparing Modularized
-  - 16063052  # Install Awesome Debian
-  - 16062934  # Install Awesome Arch
-  - 14113019  # Awesome TWM Beginner
-  - 16031941  # Refactoring Awesome
 
 ---
 
@@ -327,13 +320,12 @@ That's it. This is all for now.
 
 -- -- --
 
-### Conclusion
+### What is Next ?
 
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM statusbar panel customization.
+Consider continue reading [ [Awesome WM - Statusbar - Refactoring Default][local-whats-next] ].
+We are going to refactor the default statusbar,
+before continue to a more complex statusbar,
+such as using vicious library or lain library.
 
 What do you think ?
 
@@ -342,7 +334,7 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/10' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
+[local-whats-next]: /desktop/2019/11/24/awesome-statusbar-default.html
 
 [dotfiles-icons]:       {{ dotfiles }}/themes/clone/icons.lua
 [dotfiles-fontawesome]: {{ dotfiles }}/themes/clone/icons/fontawesome

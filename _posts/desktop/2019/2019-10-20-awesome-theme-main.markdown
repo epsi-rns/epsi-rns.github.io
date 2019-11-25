@@ -14,13 +14,6 @@ excerpt:
   Awesome WM theme step by step.
   Covering most common configuration.
 
-related_link_ids:
-  - 16071350  # Preparing Modularized
-  - 16063052  # Install Awesome Debian
-  - 16062934  # Install Awesome Arch
-  - 14113019  # Awesome TWM Beginner
-  - 16031941  # Refactoring Awesome
-
 ---
 
 {% include post/2019/06/toc-awesome.html %}
