@@ -27,7 +27,7 @@ excerpt:
 Let me introduce you a few decoration, using Lain library.
 Instead using glyph, Awesome can also draw vector in its panel.
 
-![Awesome WM: Stacked Statusbar with Second Panel at the Bottom][image-ss-stacked]{: .img-responsive }
+![Awesome WM: Stacked Statusbar with Second Panel at the Bottom][image-ss-stacked-640]{: .img-responsive }
 
 Oh yeah, Awesome also works well with GhostBSD.
 
