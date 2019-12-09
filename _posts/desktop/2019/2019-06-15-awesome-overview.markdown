@@ -35,6 +35,10 @@ now Awesome WM version has turned to 4.3 series.
 It more easier for beginner, than before.
 It is also huge documentation.
 
+The tiling window manager itself make it easy for user
+that need workflow for daily basis.
+And also most tiling parts can be automated.
+
 With Lua, Awesome configuration is also highly configuration.
 So flexible, that the limit is your creativity.
 
@@ -55,7 +59,9 @@ modularization. So here below are our topics:
 
 * Customization: Statusbar and Looks
 
-* Theme
+* Theme: Main, title, Layout Icons, Statusbar Icons
+
+* Statusbar: Default, Stacked, Vicious, Lain, Arrow
 
 I think that is all for today.
 This article will grow.

@@ -12,7 +12,7 @@ opengraph:
 
 excerpt:
   Awesome WM statusbar step by step.
-  Refactoring default statusbar into different helper.
+  Refactoring default statusbar into modularized helper.
 
 ---
 
@@ -515,7 +515,11 @@ function WB.add_widgets_monitor_left (line, s)
     WB.ar_lr_thin
   }
 end
+{% endhighlight %}
 
+![Awesome WM: Empty: Left Bottom][image-ss-d-left]{: .img-responsive }
+
+{% highlight lua %}
 function WB.add_widgets_monitor_right (line, s)
   return {
     layout = wibox.layout.fixed.horizontal,
@@ -525,6 +529,8 @@ function WB.add_widgets_monitor_right (line, s)
   }
 end
 {% endhighlight %}
+
+![Awesome WM: Empty: Right Bottom][image-ss-d-right]{: .img-responsive }
 
 This basically, just showing those tiny arrows.
 
@@ -554,23 +560,14 @@ such as using Vicious library, or Lain library.
 
 ![Awesome WM: Stacked Statusbar][image-ss-stacked]{: .img-responsive }
 
-### Conclusion
-
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM statusbar stacked panel customization.
-
-What do you think ?
+Consider continue reading [ [Awesome WM - Statusbar - Stacked][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
-[local-statusbar]:      /desktop/2019/06/19/awesome-modularized-statusbar.html
+[local-whats-next]: /desktop/2019/11/25/awesome-statusbar-stacked.html
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua
 [dotfiles-theme]:       {{ dotfiles }}/themes/clone/theme.lua
@@ -580,6 +577,9 @@ What do you think ?
 
 [image-ss-default]:     {{ asset_path }}/04-statusbar-default.png
 [image-ss-stacked]:     {{ asset_path }}/04-statusbar-stacked.png
+[image-ss-d-left]:      {{ asset_path }}/04-statusbar-default-left-bottom.png
+[image-ss-d-right]:     {{ asset_path }}/04-statusbar-default-right-bottom.png
+
 [image-svg-arrow]:      {{ asset_path }}/clone-arrow.png
 [dotfiles-svg-icons]:   {{ dotfiles }}/themes/clone/misc/clone/
 [dotfiles-svg-source]:  {{ dotfiles }}/themes/clone/misc/clone/clone-arrow.svg
