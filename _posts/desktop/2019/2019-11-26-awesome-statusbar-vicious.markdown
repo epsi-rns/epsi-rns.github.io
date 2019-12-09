@@ -512,6 +512,8 @@ One of the is `progressbar`.
 However this is an example that I can share so far:
 
 {% highlight lua %}
+T.mem = wibox.widget.textbox("Mem: ")
+
 W.progress_mem = wibox.widget.progressbar()
 
 -- Create wibox
@@ -536,10 +538,6 @@ membox = wibox.layout.margin(
         }
       }
     },
-    {
-      text   = 'Memory',
-      widget = wibox.widget.textbox,
-    },
     layout = wibox.layout.stack
   },
   1, 1, 3, 3)
@@ -552,6 +550,8 @@ vicious.register(W.progress_mem, vicious.widgets.mem, "$1", 11)
 And the CPU:
 
 {% highlight lua %}
+T.cpu = wibox.widget.textbox("CPU: ")
+
 W.progress_cpu = wibox.widget.progressbar()
 
 -- Create wibox
@@ -576,10 +576,6 @@ cpubox = wibox.layout.margin(
         }
       }
     },
-    {
-      text   = 'Processor',
-      widget = wibox.widget.textbox,
-    },
     layout = wibox.layout.stack
   },
   1, 1, 3, 3)
@@ -588,6 +584,8 @@ cpubox = wibox.layout.margin(
 --vicious.cache(vicious.widgets.mem)
 vicious.register(W.progress_cpu, vicious.widgets.cpu, "$1", 13)
 {% endhighlight %}
+
+We do not need to cache, because we have already cached it in left wibox.
 
 #### Helper
 
