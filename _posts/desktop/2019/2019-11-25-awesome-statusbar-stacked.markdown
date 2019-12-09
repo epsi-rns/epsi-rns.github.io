@@ -4,7 +4,7 @@ title:  "Awesome WM - Statusbar - Stacked"
 categories: desktop
 date      : 2019-11-25 09:25:15 +0700
 tags      : [awesome]
-keywords  : [tiling, window manager, modularized, lua]
+keywords  : [tiling, window manager, modularized, lua, lain]
 author: epsi
 
 opengraph:
@@ -33,13 +33,60 @@ Oh yeah, Awesome also works well with GhostBSD.
 
 #### Table of Content
 
-* 1: Stacked Bar
+* 1: Prerequisite
 
-* 2: Bottom Bar: Arrow
+* 2: Stacked Bar
+
+* 3: Bottom Bar: Arrow
 
 -- -- --
 
-### 1: Stacked Bar
+### 1: Prerequisite
+
+#### rc.lua
+
+Put the statusbar code at the end of the `rc.lua`,
+and comment other statusbar.
+
+*	[gitlab.com/.../dotfiles/.../awesome/4.3-statusbar/rc.lua][dotfiles-config]
+
+{% highlight lua %}
+-- Statusbar: Wibar
+--local statusbar = require("statusbar.default.statusbar")
+local statusbar = require("statusbar.stacked.statusbar")
+{% endhighlight %}
+
+#### Prerequisite: The Lain Library
+
+You need the `lain` library to draw arrow in panelbar,
+as shape vector instead of glyph based.
+
+If your distribution does not support lain library,
+you can clone `Lain` in AwesomeWM configuration directory.
+
+{% highlight bash %}
+$ git clone https://github.com/lcpz/lain
+{% endhighlight %}
+
+Now you can include the `lain` as any other library.
+
+{% highlight lua %}
+-- Standard awesome library
+local awful     = require("awful")
+local beautiful = require("beautiful")
+
+local wibox = require("wibox")
+local lain  = require("lain")
+
+-- Custom Local Library
+local gmc = require("themes.gmc")
+{% endhighlight %}
+
+I also use google material color (`gmc.lua`) to colorize the arrow.
+
+-- -- --
+
+### 2: Stacked Bar
 
 Arranging stacked bar in AwesomeWM 4.3 is easier than in 3.5 series.
 All you need to do is add another panel, such as `tasklist` as below:
@@ -126,35 +173,10 @@ end
 
 -- -- --
 
-### 2: Bottom Bar: Arrow
+### 3: Bottom Bar: Arrow
 
-How about drawing arrow without glyph ?
+How about drawing arrow in panelbar without glyph ?
 This will give us more arrow color that we can set on the fly.
-
-#### Prerequisite: The Lain Library
-
-If your distribution does not support lain library,
-you can clone `Lain` in Awesome configuration directory.
-
-{% highlight bash %}
-$ git clone https://github.com/lcpz/lain
-{% endhighlight %}
-
-Now you can include the `lain` as any other library.
-
-{% highlight lua %}
--- Standard awesome library
-local awful     = require("awful")
-local beautiful = require("beautiful")
-
-local wibox = require("wibox")
-local lain  = require("lain")
-
--- Custom Local Library
-local gmc = require("themes.gmc")
-{% endhighlight %}
-
-I also use google material color (`gmc.lua`) to colorize the arrow.
 
 #### Initialize Common Variable
 
@@ -290,29 +312,22 @@ we can have more stuff between arrow as below:
 
 ### What is Next ?
 
+> I know this section is short
+
 Now that we are done with stacked statusbar,
 we should be ready for a more complex statusbar,
-such as using Vicious library, or Lain library.
+such as using `vicious` library, or `lain` library.
 
 ![Awesome WM: GhostBSD with Arrow Statusbar][image-ss-arrow-800]{: .img-responsive }
 
-### Conclusion
-
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM statusbar stacked panel customization.
-
-What do you think ?
+Consider continue reading [ [Awesome WM - Statusbar - Vicious][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
-[local-statusbar]:      /desktop/2019/06/19/awesome-modularized-statusbar.html
+[local-whats-next]: /desktop/2019/11/26/awesome-statusbar-vicious.html
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua
 [dotfiles-theme]:       {{ dotfiles }}/themes/clone/theme.lua
