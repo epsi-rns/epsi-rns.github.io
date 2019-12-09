@@ -8,7 +8,7 @@ keywords  : [tiling, window manager, modularized, lua, vicious]
 author: epsi
 
 opengraph:
-  image: /assets/posts/desktop/2019/11/04-statusbar-stacked.png
+  image: /assets/posts/desktop/2019/11/04-gentoo-vicious-640.png
 
 excerpt:
   Awesome WM statusbar step by step.
