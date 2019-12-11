@@ -38,6 +38,8 @@ It is also huge documentation.
 The tiling window manager itself make it easy for user
 that need workflow for daily basis.
 And also most tiling parts can be automated.
+What tiling manager is the best, is vary.
+Just choose what suitable for you.
 
 With Lua, Awesome configuration is also highly configuration.
 So flexible, that the limit is your creativity.

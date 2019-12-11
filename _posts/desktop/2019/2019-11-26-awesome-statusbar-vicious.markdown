@@ -12,7 +12,7 @@ opengraph:
 
 excerpt:
   Awesome WM statusbar step by step.
-  Monitoring widget in statusbar using Visious Library.
+  Monitoring widget in statusbar using Vicious Library.
 
 ---
 
@@ -22,7 +22,7 @@ excerpt:
 
 ### Preface
 
-> Goal: Monitoring widget in statusbar using Visious Library.
+> Goal: Monitoring widget in statusbar using Vicious Library.
 
 Let me introduce you a few decoration, using Lain library.
 Instead using glyph, Awesome can also draw vector in its panel.
@@ -621,23 +621,14 @@ we can learn about more interesting library called `lain`.
 
 ![Awesome WM: Vicious Statusbar in Gentoo (800x600)][image-ss-vicious-800]{: .img-responsive }
 
-### Conclusion
-
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM statusbar stacked panel customization.
-
-What do you think ?
+Consider continue reading [ [Awesome WM - Statusbar - Lain][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
-[local-statusbar]:      /desktop/2019/06/19/awesome-modularized-statusbar.html
+[local-whats-next]: /desktop/2019/11/27/awesome-statusbar-lain.html
 
 [vicious-readme]:       https://github.com/vicious-widgets/vicious
 
