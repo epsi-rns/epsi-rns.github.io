@@ -634,7 +634,7 @@ W.disk_widget = lain.widget.fs {
 
 Lain has this `alsabar` widget
 
-*	[gitlab.com/.../dotfiles/.../lain/lain-sound.lua][dotfiles-lain-spund]
+*	[gitlab.com/.../dotfiles/.../lain/lain-sound.lua][dotfiles-lain-sound]
 
 {% highlight lua %}
 local volume_wibox_settings = function()
