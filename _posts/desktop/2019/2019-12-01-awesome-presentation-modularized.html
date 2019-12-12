@@ -1,0 +1,183 @@
+---
+layout: presentation
+title:  "Awesome WM - Presentation"
+categories: desktop
+date      : 2019-12-01 09:25:15 +0700
+tags      : [awesome]
+keywords  : [tiling, window manager, modularized, lua]
+author: epsi
+
+opengraph:
+  image: /assets/site/images/kiddo-bulat-008.png
+
+excerpt:
+  Modularized Awesome WM statusbar step by step.
+
+---
+
+  <section>
+    <h3>Modularized Awesome WM</h3>
+    <p>Refactoring Configuration</p>
+  </section>
+
+  <section>
+    <h3>About Me 🙋🏻‍♂️!</h3>
+    <img class="plain" style="background:none;" alt="my photo"
+         src="/assets/site/images/epsi-bulat.png">
+    <p>Yet, another underachiever 👻.</p>
+    <p>But hey, I have my own dotfiles repository 🎉.</p>
+  </section>
+
+  <section>
+    <h3>What is Tiling Window Manager 🤔?</h3>
+    <img class="plain" alt="AwesomeWM: Fixed Size Window"
+         src="/assets/posts/desktop/2019/11/04-statusbar-stacked.png">
+    <p>Non-overlapping screen real estate.</p>
+  </section>
+
+  <section>
+    <h3>Why Tiling Window Manager 🤔?</h3>
+    <ul>
+      <li>Efficient:<br/>
+        <small>Non-overlapping screen real estate.</small></li>
+      <li>Scaling:<br/>
+        <small>With Workspace or Tags.</small></li>
+      <li>Customizable:<br/>
+        <small>Most parts can be automated.</small></li>
+      <li>Keyboard-driven workflow:<br/>
+        <small>For masochist-desktoper.</small></li>
+      <li>Lightweight:<br/>
+        <small>Compared to DE.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Why Awesome WM for Beginner 🤔?</h3>
+    <ul>
+      <li>Easy to Adapt:<br/>
+        <small>Both: Float and Tiling.</small></li>
+      <li>Full Fledged Framework:<br/>
+        <small>Built in menu, systray, notification.</small></li>
+      <li>Good Documentation:<br/>
+        <small>And Example.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>The Downside of Awesome WM 🤔?</h3>
+    <p>Yes, The Lua Configuration 👻.</p>
+    <ul>
+      <li>Very Long Config:<br/>
+        <small>Solution: modularization.</small></li>
+      <li>Steep Learning Curve:<br/>
+        <small>Require Programming Knowledge.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>1: General Structure 🤠</h3>
+    <p><b>rc.lua</b> should be short!.</p>
+    <img class="plain" alt="AwesomeWM: All Final Directory"
+         src="/assets/posts/desktop/2019/12/05-tree-all.png">
+    <p>Each directory contain many files.</p>
+  </section>
+
+  <section>
+    <h3>Zoom Out Refactoring.</h3>
+    <p>Each <b>Lua</b> should also be short!.</p>
+    <img class="plain" alt="AwesomeWM: Basic Directory Structure"
+         src="/assets/posts/desktop/2019/12/05-tree-detail.png">
+  </section>
+
+  <section>
+    <h3>2: Main Structure Directory 🤠</h3>
+    <p>All Common Stuff</p>
+    <img class="plain" alt="AwesomeWM: Main Directory"
+         src="/assets/posts/desktop/2019/12/05-tree-main.png">
+  </section>
+
+  <section>
+    <h3>Main: Layouts</h3>
+    <p>The layout icon can be seen on top-right statusbar.</p>
+    <img class="plain" alt="AwesomeWM: Custom Layout Icon"
+         src="/assets/posts/desktop/2019/06/clone-layouts-animate.gif">
+  </section>
+
+  <section>
+    <h3>Main: Custom Tags Text</h3>
+    <img class="plain" alt="AwesomeWM: Custom Tags"
+         src="/assets/posts/desktop/2019/10/02-taglist.png">
+  </section>
+
+  <section>
+    <h3>Main: Custom Menu</h3>
+    <img class="plain" alt="AwesomeWM: Custom Menu"
+         src="/assets/posts/desktop/2019/06/01-menu-custom.png">
+  </section>
+
+  <section>
+    <h3>Main: Rules</h3>
+    <p>To tile or not to tile</p>
+    <p>Not everything should be tiled, e.g. Dialog</p>
+  </section>
+
+  <section>
+    <h3>Main: Signals</h3>
+    <p>Focus, and Unfocus.</p>
+  </section>
+
+  <section>
+    <h3>3: Binding Structure Directory 🤠</h3>
+    <p>Handle Keyboard and Mouse</p>
+    <img class="plain" alt="AwesomeWM: Binding Directory"
+         src="/assets/posts/desktop/2019/12/05-tree-binding.png">
+  </section>
+
+  <section>
+    <h3>Binding: Summary (modkey+s)</h3>
+    <img class="plain" alt="AwesomeWM: Custom Binding Summary (cropped)"
+         src="/assets/posts/desktop/2019/12/05-awesome-help-simple.png">
+  </section>
+
+  <section>
+    <h3>Binding: Custom Fixed Window Size</h3>
+    <p>Resize Window by using Keyboard Only</p>
+    <img class="plain" alt="AwesomeWM: Fixed Size Window"
+         src="/assets/posts/desktop/2019/06/01-awesome-wm-fix-size.gif">
+  </section>
+
+  <section>
+    <h3>4: Decoration Structure Directory 🤠</h3>
+    <p>Handle The Looks</p>
+    <img class="plain" alt="AwesomeWM: Decoration Directory"
+         src="/assets/posts/desktop/2019/12/05-tree-deco.png">
+  </section>
+
+  <section>
+    <h3>Decoration: Titlebar</h3>    
+    <img class="plain" alt="AwesomeWM: Layout"
+         src="/assets/posts/desktop/2019/10/02-titlebar.png">
+    <p>More about this in Theming.</p>
+  </section>
+
+  <section>
+    <h3>Decoration: Statusbar</h3>
+    <p>Showing Tags and Task List.</p>
+    <img class="plain" alt="AwesomeWM: Layout"
+         src="/assets/posts/desktop/2019/06/01-statusbar.png">
+    <p>More about this in Statusbar.</p>
+  </section>
+
+  <section>
+    <h4>What is Next 🤔?</h4>
+    <p>Theming!</p>
+  </section>
+  <section>
+    <h3>Questions 🤔?</h3>
+    <p>Don't be shy 🙋🏻‍♂️!</p>
+  </section>
+  <section>
+    <h3>The End</h3>
+    <p>🙇🏻</p>
+    <p>Thank You for Your Time.</p>        
+  </section>

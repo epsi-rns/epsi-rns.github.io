@@ -608,7 +608,7 @@ What do you think ?
 
 [local-whats-next]: /desktop/2019/10/20/awesome-theme-main.html
 
-[image-ss-01-tree]:     {{ asset_path }}/01-tree-deco.png
+[image-ss-01-tree-deco]:{{ asset_path }}/01-tree-deco.png
 [image-ss-01-titlebar]: {{ asset_path }}/01-titlebar.png
 [image-ss-01-statusbar]:{{ asset_path }}/01-statusbar.png
 

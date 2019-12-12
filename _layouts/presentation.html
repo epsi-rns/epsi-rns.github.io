@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include layout/headreveal.html %}
+
+<body>
+  {% include service/google-analytics.html %}
+  {% include service/yandex-metrica.html %}
+
+  <div class="reveal">
+    <div class="slides">
+      {{ content }}
+    </div>
+  </div>
+  
+  <script src="{{ site.baseurl }}/assets/vendors/revealjs/js/reveal.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
+</html>
