@@ -223,9 +223,6 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
-[local-statusbar]:      /desktop/2019/06/19/awesome-modularized-statusbar.html
-
 [lain-wiki]:            https://github.com/lcpz/lain/wiki
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua

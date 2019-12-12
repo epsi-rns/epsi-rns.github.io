@@ -568,6 +568,9 @@ Consider continue reading [ [Awesome WM - Statusbar - Stacked][local-whats-next]
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
 [local-whats-next]: /desktop/2019/11/25/awesome-statusbar-stacked.html
+[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
+[local-statusbar]:      /desktop/2019/06/19/awesome-modularized-statusbar.html
+
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua
 [dotfiles-theme]:       {{ dotfiles }}/themes/clone/theme.lua
