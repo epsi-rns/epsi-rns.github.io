@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Awesome WM - Statusbar - Vicious"
+title:  "Awesome WM - Statusbar - Vicious Library"
 categories: desktop
 date      : 2019-11-26 09:25:15 +0700
 tags      : [awesome]
@@ -24,8 +24,7 @@ excerpt:
 
 > Goal: Monitoring widget in statusbar using Vicious Library.
 
-Let me introduce you a few decoration, using Lain library.
-Instead using glyph, Awesome can also draw vector in its panel.
+Using Vicious Library, we can manage monitoring widget, in statusbar.
 
 ![Awesome WM: Vicious Statusbar in Gentoo (640x480)][image-ss-vicious-640]{: .img-responsive }
 

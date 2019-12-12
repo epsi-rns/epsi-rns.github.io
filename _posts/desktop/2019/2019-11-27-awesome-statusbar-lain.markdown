@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Awesome WM - Statusbar - Lain"
+title:  "Awesome WM - Statusbar - Lain Library"
 categories: desktop
 date      : 2019-11-27 09:25:15 +0700
 tags      : [awesome]
@@ -8,7 +8,7 @@ keywords  : [tiling, window manager, modularized, lua, lain]
 author: epsi
 
 opengraph:
-  image: /assets/posts/desktop/2019/11/04-void-lain-640.png
+  image: /assets/posts/desktop/2019/11/04-void-statusbar-arrow-1366x768.png
 
 excerpt:
   Awesome WM statusbar step by step.
@@ -24,8 +24,7 @@ excerpt:
 
 > Goal: Monitoring widget in statusbar using Lain Library.
 
-Let me introduce you a few decoration, using Lain library.
-Instead using glyph, Awesome can also draw vector in its panel.
+Using Lain Library, we can manage monitoring widget, in statusbar.
 
 ![Awesome WM: Lain Statusbar in Gentoo (640x480)][image-ss-lain-640]{: .img-responsive }
 
@@ -37,9 +36,7 @@ Instead using glyph, Awesome can also draw vector in its panel.
 
 * 3: More Standard Example
 
-* 4: Standard Graphical Widget
-
-* 5: More Graphical Widget
+* 4: Progressbar Widget
 
 -- -- --
 
@@ -751,27 +748,16 @@ end
 Now that we are done with `lain` statusbar,
 we can go down with ricing using arrow, `lain` widget, and pallete colors.
 
-![Awesome WM: Lain Statusbar in Void (800x600)][image-ss-lain-800]{: .img-responsive }
+![Awesome WM: Lain Statusbar in Void (1366x768)][image-ss-void-1366]{: .img-responsive }
 
 Consider continue reading [ [Awesome WM - Statusbar - Arrow][local-whats-next] ].
-
-### Conclusion
-
-> I'll be back!
-
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM statusbar stacked panel customization.
-
-What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
-[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
-[local-statusbar]:      /desktop/2019/06/19/awesome-modularized-statusbar.html
+[local-whats-next]: /desktop/2019/11/28/awesome-statusbar-arrow.html
 
 [lain-wiki]:            https://github.com/lcpz/lain/wiki
 
@@ -788,6 +774,7 @@ What do you think ?
 
 [image-ss-lain-640]:    {{ asset_path }}/04-void-lain-640.png
 [image-ss-lain-800]:    {{ asset_path }}/04-void-lain-800.png
+[image-ss-void-1366]:   {{ asset_path }}/04-void-statusbar-arrow-1366x768.png
 [image-ss-lain-dir]:    {{ asset_path }}/04-directory-lain.png
 [image-ss-lain-mem]:    {{ asset_path }}/04-lain-memory.png
 
