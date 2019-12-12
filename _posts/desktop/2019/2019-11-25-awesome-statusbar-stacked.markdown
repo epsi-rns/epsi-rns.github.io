@@ -39,6 +39,8 @@ Oh yeah, Awesome also works well with GhostBSD.
 
 * 3: Bottom Bar: Arrow
 
+* 4: Custom Widget
+
 -- -- --
 
 ### 1: Prerequisite
@@ -310,11 +312,125 @@ we can have more stuff between arrow as below:
 
 -- -- --
 
+### 4: Custom Widget
+
+The custom example here is intended to show,
+that this customization free to use any library,
+other than `lain` or `vicious`.
+
+#### The Custom Helper File
+
+*	[gitlab.com/.../dotfiles/.../stacked/custom.lua][dotfiles-custom]
+
+First thing first,
+we need to setup the header.
+
+{% highlight lua %}
+-- Standard awesome library
+local awful = require("awful")
+local beautiful = require("beautiful")
+
+-- Wibox handling library
+local wibox = require("wibox")
+{% endhighlight %}
+
+The object between Lua file:
+
+{% highlight lua %}
+local W = {}
+clone_widget_set = W           -- object name
+
+local I = {}
+clone_icon_set = I             -- object name
+{% endhighlight %}
+
+The uptime widget, an icon and empty textbox.
+
+{% highlight lua %}
+I.uptime = wibox.widget.imagebox(beautiful.widget_fs)
+
+W.uptime = wibox.widget.textbox()
+{% endhighlight %}
+
+We are not finished yet,
+we need to show the `uptime textbox` for the first time,
+
+{% highlight lua %}
+W.update_uptime = function()
+    local fg_color = "#000000"
+    local cmd = {"uptime", "-p"}
+    awful.spawn.easy_async(cmd, function(stdout, stderr, reason, exit_code)
+      W.uptime:set_markup(markup(fg_color, stdout))
+    end)    
+end
+
+W.update_uptime()
+{% endhighlight %}
+
+Then regularly update the `uptime textbox` using timer at specified interval.
+
+{% highlight lua %}
+local mytimer = timer({ timeout = 30 })
+mytimer:connect_signal("timeout", W.update_uptime)
+mytimer:start()
+{% endhighlight %}
+
+#### Display Helper
+
+*	[gitlab.com/.../dotfiles/.../stacked/helper-two.lua][dotfiles-helper-two]
+
+Put these lines
+
+{% highlight lua %}
+-- Custom Local Library
+require("statusbar.stacked.custom")
+local gmc = require("themes.gmc")
+{% endhighlight %}
+
+And if you execute you will get the result as figure below:
+
+{% highlight lua %}
+function WB.add_widgets_monitor_middle (line, s)
+  local cws   = clone_widget_set
+  local cis   = clone_icon_set
+  markup      = lain.util.markup
+
+  return {
+    layout = wibox.layout.fixed.horizontal,  
+    cis.uptime,          cws.uptime,
+  }
+end
+{% endhighlight %}
+
+Do not forget to add
+
+{% highlight lua %}
+function WB.generate_wibox_two (s)
+  -- layout: l_left, nil, tasklist
+
+  -- Create the wibox
+  s.wibox_two = awful.wibar({ position = "bottom", screen = s })
+
+  -- Add widgets to the wibox
+  s.wibox_two:setup {
+    layout = wibox.layout.align.horizontal,
+    WB.add_widgets_monitor_left (s),
+    WB.add_widgets_monitor_middle (s),
+    WB.add_widgets_monitor_right (s),
+  }
+end
+{% endhighlight %}
+
+And the result is:
+
+![Awesome WM: Custom Uptime Widget][image-ss-uptime]{: .img-responsive }
+
+-- -- --
+
 ### What is Next ?
 
-> I know this section is short
-
 Now that we are done with stacked statusbar,
+learning how to make simple custom widget,
 we should be ready for a more complex statusbar,
 such as using `vicious` library, or `lain` library.
 
@@ -332,6 +448,7 @@ Consider continue reading [ [Awesome WM - Statusbar - Vicious][local-whats-next]
 [dotfiles-config]:      {{ dotfiles }}/rc.lua
 [dotfiles-theme]:       {{ dotfiles }}/themes/clone/theme.lua
 [dotfiles-statusbar]:   {{ dotfiles }}/statusbar/stacked/statusbar.lua
+[dotfiles-custom]:      {{ dotfiles }}/statusbar/stacked/custom.lua
 [dotfiles-helper-one]:  {{ dotfiles }}/statusbar/stacked/helper_one.lua
 [dotfiles-helper-two]:  {{ dotfiles }}/statusbar/stacked/helper_two.lua
 
@@ -342,3 +459,4 @@ Consider continue reading [ [Awesome WM - Statusbar - Vicious][local-whats-next]
 [image-ss-a-between]:   {{ asset_path }}/04-statusbar-arrow-between.png
 
 [image-ss-arrow-800]:   {{ asset_path }}/04-ghostbsd-awesome-arrow.png
+[image-ss-uptime]:      {{ asset_path }}/04-stacked-uptime.png

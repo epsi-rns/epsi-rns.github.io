@@ -2,7 +2,7 @@
 layout: post
 title:  "Awesome WM - Statusbar - Arrow Style"
 categories: desktop
-date      : 2021-11-28 09:25:15 +0700
+date      : 2019-11-28 09:25:15 +0700
 tags      : [awesome]
 keywords  : [tiling, window manager, modularized, lua]
 author: epsi
@@ -34,9 +34,11 @@ this articel explain how to decorate it.
 
 #### Table of Content
 
+> I know this section is short
+
 * 1: Prerequisite
 
-* 2: Simple Example
+* 2: Arrow Example
 
 -- -- --
 
@@ -89,15 +91,81 @@ The same as previous article
 
 -- -- --
 
+### 2: Arrow Example
+
+It is a good time to put these bunch of technique together.
+
+#### Left Wibox
+
+{% highlight lua %}
+function WB.add_widgets_monitor_left (line, s)
+  return {
+    layout = wibox.layout.fixed.horizontal,
+    WB.arrow_rd,
+    WB.spacer,
+    setar("alpha",              gmc.color['blue200']),
+    setar(gmc.color['blue200'], gmc.color['blue300']),
+    setbg(cis.netdown,          gmc.color['blue300']),
+    setbg(cws.netdowninfo,      gmc.color['blue300']),
+    setar(gmc.color['blue300'], gmc.color['blue500']),
+    setbg(cis.netup,            gmc.color['blue500']),
+    setbg(cws.netupinfo,        gmc.color['blue500']),
+    setar(gmc.color['blue500'], gmc.color['blue700']),
+    setbg(cis.mem,              gmc.color['blue700']),
+    setbg(cws.mem,              gmc.color['blue700']),
+    setar(gmc.color['blue700'], gmc.color['blue900']),
+    setbg(cis.cpu,              gmc.color['blue900']),
+    setbg(cws.cpu,              gmc.color['blue900']),
+    setal(gmc.color['blue900'], gmc.color['blue700']),
+    setbg(cis.fs,               gmc.color['blue700']),
+    setbg(cws.fs,               gmc.color['blue700']),
+    setal(gmc.color['blue700'], gmc.color['blue500']),
+    setbg(cis.temp,             gmc.color['blue500']),
+    setbg(cws.temp,             gmc.color['blue500']),
+    setal(gmc.color['blue500'], gmc.color['blue300']),
+    setbg(cis.bat,              gmc.color['blue300']),
+    setbg(cws.bat,              gmc.color['blue300']),
+    setal(gmc.color['blue300'], gmc.color['blue200']),
+    setal(gmc.color['blue200'], "alpha"),
+    WB.spacer,
+  }
+end
+{% endhighlight %}
+
+![Awesome WM: Left Arrow Widget][image-ss-arrow-left]{: .img-responsive }
+
+Playing with color would makes the status bar pretty right!
+
+#### Right Wibox
+
+And if you want more simple color.
+
+{% highlight lua %}
+function WB.add_widgets_monitor_right (line, s)
+  return {
+    layout = wibox.layout.fixed.horizontal,
+    WB.arrow_dl,         WB.arrow_ld,
+    WB.spacer,
+    cis.volume,  cws.volume,
+    cis.mpd,     cws.mpd,
+    WB.spacer,
+    WB.arrow_dl,         WB.arrow_ld,
+    cis.uptime,          cws.uptime,
+    WB.spacerline,
+    WB.arrow_dl,
+  }
+end
+{% endhighlight %}
+
+![Awesome WM: Right Arrow Widget][image-ss-arrow-right]{: .img-responsive }
+
 -- -- --
 
 ### Conclusion
 
 > I'll be back!
 
-After this Awesome WM modularization
-there will be another article,
-about Awesome WM statusbar stacked panel customization.
+I think that is all. After this article, we are done.
 
 What do you think ?
 
@@ -122,7 +190,12 @@ What do you think ?
 [dotfiles-lain-sound]:      {{ dotfiles }}/statusbar/lain/lain-sound.lua
 
 [image-ss-arrow-1024]:  {{ asset_path }}/04-gentoo-statusbar-arrow-1024x768.png
-[image-ss-lain-dir]:    {{ asset_path }}/04-directory-arrow.png
+[image-ss-arrow-dir]:   {{ asset_path }}/04-directory-arrow.png
+[image-ss-arrow-right]: {{ asset_path }}/04-arrow-right.png
+[image-ss-arrow-left]:  {{ asset_path }}/04-arrow-left.png
+
+
+
 [image-ss-lain-mem]:    {{ asset_path }}/04-lain-memory.png
 
 [image-ss-lain-01]:     {{ asset_path }}/04-lain-more-01.png
