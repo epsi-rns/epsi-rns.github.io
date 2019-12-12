@@ -40,6 +40,8 @@ this articel explain how to decorate it.
 
 * 2: Arrow Example
 
+* Conclusion
+
 -- -- --
 
 ### 1: Prerequisite
@@ -188,13 +190,31 @@ end
 
 ![Awesome WM: Top Right Arrow Widget][image-ss-arrow-top]{: .img-responsive }
 
+
 -- -- --
 
 ### Conclusion
 
-> I'll be back!
-
 I think that is all. After this article, we are done.
+
+#### Better Example
+
+I do not claim myself to be mastered of AwesomeWM of something,
+these articles I have wrote is intended to be guidance for beginner.
+
+If you need sophisticated statusbar widgets programming with Lua,
+you can go right away to Pavel Makov site:
+
+* [https://pavelmakhov.com/awesome-wm-widgets/](https://pavelmakhov.com/awesome-wm-widgets/)
+
+* [https://github.com/streetturtle/awesome-wm-widgets](https://github.com/streetturtle/awesome-wm-widgets)
+
+These will be a very interseting discussion,
+but unfortunately, this is beyond of my blog scope.
+
+#### Farewell
+
+> I'll be back!
 
 What do you think ?
 
