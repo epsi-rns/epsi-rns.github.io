@@ -209,7 +209,7 @@ you can go right away to Pavel Makov site:
 
 * [https://github.com/streetturtle/awesome-wm-widgets](https://github.com/streetturtle/awesome-wm-widgets)
 
-These will be a very interseting discussion,
+These will be a very interesting discussion,
 but unfortunately, this is beyond of my blog scope.
 
 #### Farewell
