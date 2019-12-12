@@ -140,6 +140,12 @@ I put number a comment,
 because I want to give different layout for different tag.
 what I mean is, this comment is required.
 
+#### Layout Preview
+
+It is easier to understand the layoout using image.
+
+![Awesome WM: Layouts][image-layouts-animate]{: .img-responsive }
+
 #### Calling Script
 
 In main configuration:
@@ -631,6 +637,7 @@ What do you think ?
 [image-ss-01-tags-takao]:   {{ asset_path }}/01-tags-takao.png
 [image-ss-01-menu-simple]:  {{ asset_path }}/01-menu-simple.png
 [image-ss-01-menu-custom]:  {{ asset_path }}/01-menu-custom.png
+[image-layouts-animate]:    {{ asset_path }}/clone-layouts-animate.gif
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua
 [dotfiles-layout]:      {{ dotfiles }}/main/layout.lua

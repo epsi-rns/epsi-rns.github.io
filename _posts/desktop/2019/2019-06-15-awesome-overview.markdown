@@ -44,8 +44,6 @@ Just choose what suitable for you.
 With Lua, Awesome configuration is also highly configuration.
 So flexible, that the limit is your creativity.
 
-![Awesome WM: Layouts][image-layouts-animate]{: .img-responsive }
-
 #### Issue
 
 > Nothing someone say before the word **but** really counts.
@@ -86,4 +84,3 @@ What do you think ?
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}
 
 [local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
-[image-layouts-animate]:    {{ asset_path }}/clone-layouts-animate.gif
