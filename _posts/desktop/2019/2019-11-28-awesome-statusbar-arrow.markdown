@@ -159,6 +159,35 @@ end
 
 ![Awesome WM: Right Arrow Widget][image-ss-arrow-right]{: .img-responsive }
 
+#### Top Right Wibox
+
+I also move the progressbar to the top.
+
+{% highlight lua %}
+function WB.add_widgets_top_right (s)
+  local cws = clone_widget_set
+  local cis = clone_icon_set
+
+  return { -- Right widgets
+    layout = wibox.layout.fixed.horizontal,
+
+    --  progressbar
+    cis.volume_dynamic,  cws.volumewidget,
+    cis.disk,            cws.disk_bar_widget,
+    cis.battery,         cws.battery_bar_widget,
+
+    -- default
+    WB.arrow_dl,         WB.arrow_ld,
+    mykeyboardlayout,
+    wibox.widget.systray(),
+    mytextclock,
+    s.layoutbox,
+  }
+end
+{% endhighlight %}
+
+![Awesome WM: Top Right Arrow Widget][image-ss-arrow-top]{: .img-responsive }
+
 -- -- --
 
 ### Conclusion
@@ -193,6 +222,7 @@ What do you think ?
 [image-ss-arrow-dir]:   {{ asset_path }}/04-directory-arrow.png
 [image-ss-arrow-right]: {{ asset_path }}/04-arrow-right.png
 [image-ss-arrow-left]:  {{ asset_path }}/04-arrow-left.png
+[image-ss-arrow-top]:   {{ asset_path }}/04-arrow-top.png
 
 
 
