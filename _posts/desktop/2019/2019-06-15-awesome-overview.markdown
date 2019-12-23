@@ -35,6 +35,8 @@ now Awesome WM version has turned to 4.3 series.
 It more easier for beginner, than before.
 It is also huge documentation.
 
+![Awesome WM: GhostBSD][image-ss-stacked-640]{: .img-responsive }
+
 The tiling window manager itself make it easy for user
 that need workflow for daily basis.
 And also most tiling parts can be automated.
@@ -81,6 +83,8 @@ What do you think ?
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2019/06' %}
+{% assign asset_path = '/assets/posts/desktop/2019/11' %}
 
 [local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
+
+[image-ss-stacked-640]: {{ asset_path }}/04-ghostbsd-awesome-stacked.png
