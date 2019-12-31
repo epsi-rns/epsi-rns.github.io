@@ -5,6 +5,78 @@
 # to folder _data/all_posts.yml
 
 
+- id: 19120325
+  title: "Awesome WM - Presentation - Statusbar"
+  url: /desktop/2019/12/03/awesome-presentation-statusbar.html
+
+- id: 19120225
+  title: "Awesome WM - Presentation - Theme"
+  url: /desktop/2019/12/02/awesome-presentation-theme.html
+
+- id: 19120125
+  title: "Awesome WM - Presentation - Modularized"
+  url: /desktop/2019/12/01/awesome-presentation-modularized.html
+
+- id: 19112825
+  title: "Awesome WM - Statusbar - Arrow Style"
+  url: /desktop/2019/11/28/awesome-statusbar-arrow.html
+
+- id: 19112725
+  title: "Awesome WM - Statusbar - Lain Library"
+  url: /desktop/2019/11/27/awesome-statusbar-lain.html
+
+- id: 19112625
+  title: "Awesome WM - Statusbar - Vicious Library"
+  url: /desktop/2019/11/26/awesome-statusbar-vicious.html
+
+- id: 19112525
+  title: "Awesome WM - Statusbar - Stacked"
+  url: /desktop/2019/11/25/awesome-statusbar-stacked.html
+
+- id: 19112425
+  title: "Awesome WM - Statusbar - Refactoring Default"
+  url: /desktop/2019/11/24/awesome-statusbar-default.html
+
+- id: 19102325
+  title: "Awesome WM - Theme - Statusbar Icons"
+  url: /desktop/2019/10/23/awesome-theme-icons.html
+
+- id: 19102225
+  title: "Awesome WM - Theme - Layout Icons"
+  url: /desktop/2019/10/22/awesome-theme-layout.html
+
+- id: 19102125
+  title: "Awesome WM - Theme - Titlebar"
+  url: /desktop/2019/10/21/awesome-theme-titlebar.html
+
+- id: 19102025
+  title: "Awesome WM - Theme - Main"
+  url: /desktop/2019/10/20/awesome-theme-main.html
+
+- id: 19061925
+  title: "Awesome WM - Statusbar Modules"
+  url: /desktop/2019/06/19/awesome-modularized-statusbar.html
+
+- id: 19061825
+  title: "Awesome WM - Binding Modules"
+  url: /desktop/2019/06/18/awesome-modularized-binding.html
+
+- id: 19061725
+  title: "Awesome WM - Main Modules"
+  url: /desktop/2019/06/17/awesome-modularized-main.html
+
+- id: 19061625
+  title: "Awesome WM - Modularized Structure"
+  url: /desktop/2019/06/16/awesome-modularized-structure.html
+
+- id: 19061525
+  title: "Awesome WM - Overview"
+  url: /desktop/2019/06/15/awesome-overview.html
+
+- id: 19061119
+  title: "Conky with Lua Scripting"
+  url: /desktop/2019/06/11/modularized-conky.html
+
 - id: 19040245
   title: "GhostBSD - Ports"
   url: /system/2019/04/02/ghostbsd-ports.html
@@ -593,11 +665,11 @@
   title: "What to Do, When the System Stuck, on Boot"
   url: /system/2016/05/19/stuck-on-boot.html
 
-- id: 16051900
+- id: 16051934
   title: "Midnight Commander Tweaking, can Help People Better"
   url: /desktop/2016/05/19/midnight-commander-tweaking.html
 
-- id: 16051800
+- id: 16051839
   title: "Becoming a Geek, a Weird Story About Nerd"
   url: /opensource/2016/05/18/becoming-geek.html
 

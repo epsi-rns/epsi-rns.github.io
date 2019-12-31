@@ -1,14 +1,61 @@
 # Helper for related links
 # Archives by Date
 
-# just copy the result manually
-# from /pages/archives/index.txt
-# to folder data/archives.yml
-
-
+- id: 19120117
+  title: "Pelican - Overview"
+  url: /ssg/2019/12/01/pelican-overview/
+  
+- id: 19102117
+  title: "Semantic UI - Overview"
+  url: /frontend/2019/10/21/semantic-ui-overview/
+  
+- id: 19101117
+  title: "PostCSS - Loop - Spacing Class"
+  url: /frontend/2019/10/11/postcss-loop-spacing-class/
+  
+- id: 19100417
+  title: "Less - Conditional - Color Class"
+  url: /frontend/2019/10/04/less-conditional-color-class/
+  
+- id: 19100317
+  title: "Less - Loop - Spacing Class"
+  url: /frontend/2019/10/03/less-loop-spacing-class/
+  
+- id: 19090410
+  title: "Haskell - Tax Tariff - Part Four"
+  url: /code/2019/09/04/progressive-tax-tariff-04/
+  
+- id: 19090310
+  title: "Haskell - Tax Tariff - Part Three"
+  url: /code/2019/09/03/progressive-tax-tariff-03/
+  
+- id: 19090210
+  title: "Haskell - Tax Tariff - Part Two"
+  url: /code/2019/09/02/progressive-tax-tariff-02/
+  
+- id: 19090110
+  title: "Haskell - Tax Tariff - Part One"
+  url: /code/2019/09/01/progressive-tax-tariff-01/
+  
+- id: 19080117
+  title: "Jekyll - Overview"
+  url: /ssg/2019/08/01/jekyll-overview/
+  
+- id: 19070117
+  title: "Eleventy - Overview"
+  url: /ssg/2019/07/01/11ty-overview/
+  
 - id: 19062117
-  title: "SASS - Loop - Spacing Class"
+  title: "Sass - Loop - Spacing Class"
   url: /frontend/2019/06/21/sass-loop-spacing-class/
+  
+- id: 19061117
+  title: "Frankenbulma - Overview"
+  url: /frontend/2019/06/11/bulma-md-overview/
+  
+- id: 19060117
+  title: "Materialize - Overview"
+  url: /frontend/2019/06/01/materialize-overview/
   
 - id: 19053009
   title: "Hexo - Summary"
