@@ -528,12 +528,13 @@ theme.menu_border_width = 1
 
 ### What is Next ?
 
-Consider continue reading [ [Awesome WM - Theme - Titlebar][local-whats-next] ].
 There is this topic, about custom flat design titlebar.
 Creating minimalist PNG Button using Inkscape,
 one SVG file to create each PNG resource.
 
-What do you think ?
+![Awesome WM: Progressive Tax with Cumulative Equation][image-ss-matplotlib]{: .img-responsive }
+
+Consider continue reading [ [Awesome WM - Theme - Titlebar][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -549,6 +550,7 @@ What do you think ?
 [image-ss-02-tasklist]: {{ asset_path }}/02-tasklist.png
 [image-ss-02-titlebar]: {{ asset_path }}/02-titlebar.png
 [image-ss-02-menu]:     {{ asset_path }}/02-menu.png
+[image-ss-matplotlib]:  {{ asset_path }}/awesome-vim-cumulative-tax-equation-plot.png
 
 [image-svg-taglist]:    {{ asset_path }}/clone-taglist.png
 
