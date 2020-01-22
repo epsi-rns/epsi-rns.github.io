@@ -1,0 +1,511 @@
+---
+layout: presentation
+title:  "Presentation - Desktop Customization"
+categories: desktop
+date      : 2020-01-20 09:25:15 +0700
+tags      : [awesome]
+keywords  : [tiling, window manager, theme, terminal]
+author: epsi
+
+opengraph:
+  image: /assets/site/images/kiddo-bulat-008.png
+
+excerpt:
+  Refactoring Awesome WM configuration step by step.
+
+---
+
+  <section>
+    <h3>Desktop Customization</h3>
+    <p>Introduction to Desktop Customization in Linux/BSD.</p>
+    <p><small>Made for terminal lovers.</small></p>
+  </section>
+
+  <section>
+    <h3>About Me 🙋🏻‍♂️!</h3>
+    <img class="plain" style="background:none;" alt="my photo"
+         src="/assets/site/images/epsi-bulat.png">
+    <p>Yet, another underachiever 👻.</p>
+    <p>But hey, I have my own dotfiles repository 🎉.</p>
+  </section>
+  
+  <section>
+    <h3>How Modular is Linux 🤔?</h3>
+    <ul>
+      <li>Package Manager:<br/>
+        <small>APT, ALPM, RPM, Portage</small></li>
+      <li>Init:<br/>
+        <small>SysV, systemd, openRC, runit, S6.</small></li>
+      <li>Filesystem:<br/>
+        <small>ext4, XFX Reiserfs, BTRFS, ZFS.</small></li>
+      <li>Standard C library in OS:<br/>
+        <small>glibc or musl.</small></li>
+      <li>DE (Desktop Environment):<br/>
+        <small>GTK+ based, QT based, enlightenment.</small></li>
+      <li>WM (Window Manager):<br/>
+        <small>Stacking, Tiling, Dynamic, Compositor.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>What Customization 🤔?</h3>
+    <ul>
+      <li>DE/WM Customization:<br/>
+        <small>window manager, panel, notification and the most ingredient called wallpaper..</small></li>
+      <li>Terminal Customization:<br/>
+        <small>shell, prompt, pixel-art, and multiplexer.</small></li>
+    </ul>
+    <p>Terminal ricing along with CLI application,<br/>
+    are part of desktop <a href="https://en.wikipedia.org/wiki/Rice_burner">ricing</a>.</p>  
+  </section>
+
+  <section>
+    <h3>The Difference: DE or WM 🤔?</h3>
+    <ul>
+      <li>Desktop Environment:<br/>
+        <small>Full Experience: Panel, File Manager, Application.</small></li>
+      <li>Stacking Window Manager:<br/>
+        <small>Stripped Down Version of Desktop Environment</small></li>
+      <li>Tiling Window Manager:<br/>
+        <small>Non-overlapping screen real estate.</small></li>
+    </ul>
+    <p>When you customize a Window Manager,<br/>
+    you are basically making your own Desktop Environment.</p>  
+  </section>
+
+  <section>
+    <h3>Desktop Environment Example 🤠</h3>
+    <p>The good Cinnamon (GTK+3) based.</p>
+    <img class="plain" alt="DE Example: Cinnamon 3d Switcher"
+         src="/assets/posts/desktop/2016/06/cinnamon-3d.png">
+  </section>
+
+  <section>
+    <h3>DE/WM Categorization 🤠</h3>
+    <ul>
+      <li>GTK+ based Desktop Environment:<br/>
+        <small>XFCE4, Gnome shell, Cinnamon, Mate, Budgie, Deepin</small></li>
+      <li>QT based Desktop Environment:<br/>
+        <small>KDE Plasma, LXQT</small></li>
+      <li>Stacking Window Manager:<br/>
+        <small>Openbox, Fluxbox.</small></li>
+      <li>Tiling Window Manager:<br/>
+        <small>AwesomeWM, XMonad, i3wm (gaps), BSPWM, HerbsluftWM, DWM, or many others.</small></li>
+      <li>Compositor:<br/>
+        <small>KWin, Compiz.</small></li>
+    </ul>
+    <p>The separation is not very clear, sometimes overlapped.</p>
+    <p><small><a href="/desktop/2016/06/13/de-wm-shell-difference.html">
+    [The Difference Between DE, Shell, WM and Compositor]</a></small></p>    
+  </section>
+
+  <section>
+    <h3>DE Customization 🤠</h3>
+    <p>LXQT with Windowish Looks, No Kidding</p>
+    <img class="plain" alt="Example of DE Customization: LXQT with Windowish Looks"
+         src="/assets/posts/desktop/2014/10/lxqt-windowish-pcmanfm.jpg">
+    <p><small><a href="/desktop/2014/10/19/lxqt-windowish-looks.html">
+    [LXQT with Windowish Looks]</a></small></p>
+    <p>You can switch to any looks with parts from internet.</p> 
+  </section>
+
+  <section>
+    <h3>DE Customization 🤠</h3>
+    <p>What can I do with my DE 🤔?</p>
+    <ul>
+      <li>Theming: Taskbar and Border</li>
+      <li>Color Scheme</li>
+      <li>Window Animation</li>
+      <li>Cursor and Icon Collection</li>
+      <li>Context Menu in File Manager</li>
+      <li>Wallpaper:<br/>
+        <small>The most ingredient for success.</small></li>
+      <li>Other Stuff: Font, Conky, or such.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>DE Customization 🤠</h3>
+    <p>Example: Original XFCE4 Theming</p>
+    <img class="plain" alt="XFWM4 Fancy Icon: PNG Gradient over XPM"
+         src="/assets/posts/desktop/2018/03/ss-xfwm4-tutor-04.png">
+    <p><small><a href="/desktop/2018/03/20/xfwm4-theme.html">
+    [XFWM4 Theme - Overview]</a></small></p>    
+  </section>
+
+  <section>
+    <h3>Window Layout 🤔?</h3>
+    <p>What Layout is Available with Your DE/WM</p>
+    <ul>
+      <li>Stacking:<br/>
+        <small>Suitable for ricing.</small></li>
+      <li>Tiling:<br/>
+        <small>For masochist desktoper.<br/>
+        Avoid n00b.</small></li>
+      <li>Floating:<br/>
+        <small>Enable stacking in tiling.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Window Layout 🤠</h3>
+    <p>Stacking Layout Example: LXQT</p>
+    <img class="plain" alt="Stacking Layout Example"
+         src="/assets/posts/desktop/2014/10/lxqt-windowish-qterminal.jpg">
+    <p><small><a href="/desktop/2014/10/19/lxqt-windowish-looks.html">
+    [LXQT with Windowish Looks, No Kidding]</a></small></p>
+  </section>
+
+  <section>
+    <h3>Window Layout 🤠</h3>
+    <p>Tiling Layout Example: HerbstluftWM</p>
+    <img class="plain" alt="Tiling Layout Example"
+         src="https://epsi-rns.github.io/assets-system/2017/08/package-manager/arch-hlwm-aur-no-rofi.png">
+  </section>
+
+  <section>
+    <h3>Window Layout 🤠</h3>
+    <p>Floating Layout Example: AwesomeWM</p>
+    <img class="plain" alt="Floating Layout Example"
+         src="https://epsi-rns.github.io/assets-system/2016/02/lxc-package.png">
+    <!-- p><small><a href="/system/2016/02/28/lxc-demonstration.html">
+    [Learn Different Package Management Using LXC]</a></small></p -->
+  </section>
+
+  <section>
+    <h3>Ricing 🤔?</h3>
+    <ul>
+      <li>Aesthetic is First class:<br/>
+        <small>It is a work of art.</small></li>
+      <li>Technical Difficulty is Appreciated:<br/>
+        <small>Basic knowledge is a must.</small></li>
+      <li>Everyone has their own personal character:<br/>
+        <small>Many factions blended in a culture.</small></li>
+      <li>Ricing people prefer WM over DE:<br/>
+        <small>More customization to avoid hardcoded looks.</small></li>
+      <li>Be creative, be different:<br/>
+        <small>Beautiful.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Window Manager Customization 🤔?</h3>
+    <ul>
+      <li>Window Manager itself:<br/>
+        <small>Choose your WM.</small></li>
+      <li>Panel:<br/>
+        <small>Polybar, dzen2, Lemonbar, or others.</small></li>
+      <li>Notification:<br/>
+        <small>Dunst, or others.</small></li>
+      <li>Launcher:<br/>
+        <small>dmenu, rofi, or others.</small></li>
+      <li>Original Wallpaper:<br/>
+        <small>Ricing Culture: Mostly Anime.</small></li>
+      <li>Make your own original stuff.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>WM Customization 🤠</h3>
+    <p>Example: Custom Standalone Panel</p>
+    <img class="plain" alt="Example WM Customization: Standalone Lemonbar"
+         src="/assets/posts/desktop/2017/04/lemon-02-conky.png">
+    <p><small><a href="/desktop/2017/04/14/standalone-lemonbar-conky.html">
+    [Standalone Lemonbar Using Conky]</a></small></p>    
+  </section>
+
+  <section>
+    <h3>Window Manager Customization 🤠</h3>
+    <p>Optional tools 🤔?</p>
+    <ul>
+      <li>Screenshooter:<br/>
+        <small>scrot or others.</small></li>
+      <li>Compositor Manager:<br/>
+        <small>compton or xcompmgr.</small></li>
+      <li>Wallpaper Manager:<br/>
+        <small>Nitrogen or feh:
+        <a href="/desktop/2018/07/16/openbox-install.html">
+        [Openbox Install - Common Utility]</a></small></li>
+      <li>Good Font Installation:<br/>
+        <small>FontAwesome, siji, terminus:
+        <a href="/desktop/2018/02/04/installing-font.html">
+        [Linux - Installing Font]</a></small></li>
+      <li>Logging Out:<br/>
+        <small>OB Menu or others.</small></li>
+      <li>LXAppearance</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Why Stacking Window Manager 🤔?</h3>
+    <ul>
+      <li>More on Customization:<br/>
+        <small>Configuration in Text Editor (suitable for coder),<br/>
+        Shareable with dotfiles</small></li>
+      <li>Lightweight:<br/>
+        <small>Small Memory Footprint.<br/>
+        Install only what I need.</small></li>
+      <li>The Looks:<br/>
+        <small>Avoid hardcoded looks or just be simple.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Stacking Window Manager 🤠</h3>
+    <p>Example: <a href="/desktop/2018/05/01/openbox-config.html">openbox</a></p>
+    <img class="plain" alt="Example Stacking WM: openbox"
+         src="/assets/posts/desktop/2018/05/tint2rc-dual-panel.png">
+  </section>
+
+  <section>
+    <h3>Stacking Window Manager 🤠</h3>
+    <p>More articles about Stacking WM</p>
+    <ul>
+      <li><a href="/desktop/2018/05/01/openbox-config.html">
+        Openbox Configuration</a></li>
+      <li><a href="/desktop/2018/05/15/tint2-config.html">
+        Openbox Tint2 Panel</a></li>
+      <li><a href="/desktop/2018/04/15/openbox-theme.html">
+        Openbox Theme</a></li>
+      <li><a href="/desktop/2018/04/01/fluxbox-overview.html">
+        Fluxbox Overview</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Stacking Window Manager 🤠</h3>
+    <p>Example: <a href="/desktop/2018/04/16/openbox-theme.html">
+      openbox theming with Inkscape</a></p>
+    <img class="plain" alt="Example Stacking WM: openbox"
+         src="/assets/posts/desktop/2018/04/openbox-slices.png">
+  </section>
+  
+  <section>
+    <h3>Stacking Window Manager 🤠</h3>
+    <p>Example: <a href="/desktop/2014/11/08/fluxbox-with-glowing-wallpaper.html">Fluxbox</a></p>
+    <img class="plain" alt="Example Stacking WM: Fluxbox with Glowing Wallpaper"
+         src="/assets/posts/desktop/2014/11/fluxbox-glow.png">
+  </section>
+
+  <section>
+    <h3>Why Tiling Window Manager 🤔?</h3>
+    <ul>
+      <li>Efficient:<br/>
+        <small>Non-overlapping screen real estate.</small></li>
+      <li>Scaling:<br/>
+        <small>With Workspace or Tags.</small></li>
+      <li>Customizable:<br/>
+        <small>Most parts can be automated.</small></li>
+      <li>Keyboard-driven workflow:<br/>
+        <small>For masochist-desktoper.</small></li>
+      <li>Lightweight:<br/>
+        <small>Compared to DE.</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>   
+    <p>Good Watch: <a href="https://www.youtube.com/watch?v=Api6dFMlxAA">
+      Aline Abler Presentation on Youtube</a></p>
+    <p>Explained in systematic fashioned,<br/>
+    easy to follow,<br/>
+    and she is pretty too.</p>
+  </section>
+
+  <section>
+    <h3>What Tiling Window Manager 🤔?</h3>
+    <ul>
+      <li>i3wm:<br/>
+        <small>Simple configuration, suitable for beginner.</small></li>
+      <li>Awesome WM:<br/>
+        <small>Easy to use for beginner, but very long config.<br/>
+        Built in menu, systray, notification.</small></li>
+      <li>DWM:<br/>
+        <small>First install for any minimalist distro.<br/>
+        You have to compile to change the behaviour.</small></li>
+      <li>HerbstluftWM:<br/>
+        <small>Challenging technical difficulties, challenging.<br>
+        The extra frame almost make me cry for happiness.</small></li>
+      <li>XMonad:<br/>
+        <small>I can config, but weird, I still don't understand Haskell.</small></li>
+    </ul>
+    <p>Tips: do not let the blackscreen intimidate you.</p>
+  </section>
+
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>
+    <p>Example: i3wm (gaps, bright)</p>
+    <img class="plain" alt="Example Tiling WM: i3wm (gaps, bright)"
+         src="/assets/posts/desktop/2016/08/i3gaps-bright.png">
+    <p><small><a href="/desktop/2016/08/01/modularized-i3status-conky-lua-json.html">
+    [Modularized Conky Configuration for i3status]</a></small></p>  
+  </section>
+
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>
+    <p>Example: <a href="/desktop/2019/06/18/awesome-modularized-binding.html">AwesomeWM</a></p>
+    <img class="plain" alt="Example Tiling WM: AwesomeWM"
+         src="/assets/posts/desktop/2019/06/01-awesome-wm-fix-size.gif">
+  </section>
+
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>
+    <p>More about AwesomeWM</p>
+    <ul>
+      <li><a href="/desktop/2019/06/15/awesome-overview.html">
+        Article: Awesome WM - Overview</a></li>
+      <li><a href="/desktop/2019/12/01/awesome-presentation-modularized.html">
+        Presentation: Awesome WM - Modularized</a></li>
+      <li><a href="/desktop/2019/12/02/awesome-presentation-theme.html">
+        Presentation: Awesome WM - Theming</a></li>
+      <li><a href="/desktop/2019/12/03/awesome-presentation-statusbar.html">
+        Presentation: Awesome WM - Statusbar</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>
+    <p>Example: <a href="/desktop/2017/06/30/herbstlustwm-summary.html">HerbstluftWM</a></p>
+    <img class="plain" alt="Example Tiling WM: HerbstluftWM"
+         src="https://media.giphy.com/media/l4FGmHTcdl3R4jGxi/giphy.gif">
+  </section>
+  
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>
+    <p>Solving HerbstluftWM Technical Difficulties</p>
+    <ul>
+      <li><a href="/desktop/2017/05/01/herbstlustwm-modularized-overview.html">
+        Modularized HerbstluftWM Overview</a></li>
+      <li><a href="/desktop/2017/06/01/herbstlustwm-tag-status-overview.html">
+        HerbstluftWM Tag Status Overview</a></li>
+      <li><a href="/desktop/2017/06/11/herbstlustwm-event-idle-overview.html">
+        HerbstluftWM Idle Event Overview</a></li>
+      <li><a href="/desktop/2017/06/30/herbstlustwm-summary.html">
+        Summary: HerbstluftWM in Seven Languages</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tiling Window Manager 🤠</h3>
+    <p>WM customization can be combined with Specific Panel Bar.</p>
+    <img class="plain" alt="Example Tiling WM: Dzen2 in XMonad"
+         src="https://gitlab.com/epsi-rns/dotfiles/raw/master/xmonad/readme/dzen-all.png">
+    <p>Example: <a href="/desktop/2016/05/11/xmonad-with-conkyless-dzen.html">Dzen2 in XMonad</a></p>
+  </section>
+
+  <section>
+    <h3>Other DE/WM issue 🤠</h3>
+    <p>Xorg versus Wayland</p>
+  </section>
+
+  <section>
+    <h3>Parts in terminal ricing 🤔?</h3>
+    <ul>
+      <li>Terminal:<br/>
+        <small>urxvt, xfce4-terminal, termite.</small></li>
+      <li>Shell:<br/>
+        <small>bash, zsh, fish.<br/>
+        Prompt: powerline, oh-my-bash, oh-my-zsh, oh-my-fish.</small></li>
+      <li>Multiplexer:<br/>
+        <small>tmux, gnu screen.<br/>
+        wrapper: teamocil, byobu.</small></li>
+      <li>Background Decoration:<br/>
+        <small>Wallpaper.</small></li>
+    </ul>
+    <p><small><a href="/desktop/2018/08/07/terminal-ricing.html">
+    [Terminal Ricing]</a></small></p> 
+  </section>
+
+  <section>
+    <h3>Terminal Customization 🤠</h3>
+    <img class="plain" alt="Terminal Ricing: tmux + vim + gcc + C + Assembler"
+         src="/assets/posts/desktop/2018/08/tmux-vim-gcc-c-asm.png">
+    <p><small><a href="/desktop/2018/08/07/terminal-ricing.html">
+    [Linux - Terminal Customization]</a></small></p>  
+  </section>
+
+  <section>
+    <h3>Parts in terminal ricing 🤔?</h3>
+    <ul>
+      <li>Compositor Decoration:<br/>
+        <small>Compton.</small></li>
+      <li>Padding Decoration:<br/>
+        <small>gtk.css.</small></li>
+      <li>Example CLI application:<br/>
+        <small>neofetch, htop, cava.</small></li>
+      <li>Special CLI application:<br/>
+        <small>ViM Text Editor.</small></li>
+      <li>Pixel Art</li>
+    </ul>
+    <p><small><a href="/desktop/2018/08/07/terminal-ricing.html">
+    [Terminal Ricing]</a></small></p> 
+  </section>
+
+  <section>
+    <h3>Terminal Customization 🤠</h3>
+    <p>Example: Pixel Art:
+      <a href="https://bitbucket.org/epsi/ansi-color">[ANSI color]</a></p>
+    <img class="plain" alt="Terminal Ricing: tmux + vim + gcc + C + Assembler"
+         src="/assets/posts/desktop/2018/08/syawal-1439h.png">
+  </section>
+
+  <section>
+    <h3>Terminal Customization 🤠</h3>
+    <p>Example:
+      <a href="/desktop/2017/04/12/standalone-cli-conky.html">
+      [Standalone CLI System Monitoring Using Conky]</a></p>
+    <img class="plain" alt="Terminal Ricing: Standalone CLI System Monitoring"
+         src="/assets/posts/desktop/2017/04/cli-04-conky-lua-pause.png">
+  </section>
+
+  <section>
+    <h3>Where to find resources 🤔?</h3>
+    <ul>
+      <li>Blog:<br/>
+        <small>Example: <a href="https://bandithijo.com/">bandithijo.com</a></small></li>
+      <li><a href="http://dotshare.it//">dotshare.it</a>:<br/>
+        <small>This is not a dead site.</small></li>
+      <li>Dotfiles Repository on github or gitlab:<br/>
+        <small>Example: <a href="https://gitlab.com/epsi-rns/dotfiles">gitlab.com/epsi-rns/dotfiles</a></small></li>
+      <li>Community: Facebook Group:<br/>
+        <small>Example: Linuxer Desktop Art</small></li>
+      <li>Community: Telegram Group:<br/>
+        <small>Example: <a href="https://t.me/dotfiles_id">@dotfiles_id</a> or,
+        <a href="https://t.me/dotfiles_id_channel">@dotfiles_id_channel</a><br/>
+        <a href="https://t.me/window_managers">@window_managers</a></small></li>
+      <li>reddit</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Dotfiles 🤔?</h3>
+    <p>Sharing Resources require good folder management.</p>
+    <img class="plain" alt="Example of typical dotfiles directory"
+         src="/assets/posts/desktop/2020/01/typical-dotfiles-directory.png">
+  </section>
+
+  <section>
+    <h3>Dotfiles 🤔?</h3>
+    <p>I share mine: <a href="https://gitlab.com/epsi-rns/dotfiles">gitlab.com/epsi-rns/dotfiles</a></p>
+    <p>Would you do the same with each other?</p>
+    <p>🙏🏽</p>
+  </section>
+
+  <section>
+    <h4>What is Next 🤔?</h4>
+    <ul>
+      <li>Make your own custom Statusbar Panel!</li>
+      <li>Make your own custom Window Manager!</li>
+      <li>Port old tools to better programming language!</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Questions 🤔?</h3>
+    <p>Don't be shy 🙋🏻‍♂️!</p>
+  </section>
+  <section>
+    <h3>The End</h3>
+    <p>🙇🏻</p>
+    <p>Thank You for Your Time.</p>        
+  </section>
