@@ -1,0 +1,332 @@
+---
+layout: presentation
+title:  "Presentation - Learning Linux Diversity"
+categories: desktop
+date      : 2020-02-02 09:25:15 +0700
+tags      : [awesome]
+keywords  : [tiling, window manager, theme, terminal]
+author: epsi
+
+opengraph:
+  image: /assets/site/images/kiddo-bulat-008.png
+
+excerpt:
+  Dive into Linux Subsystem for Educational Purpose.
+
+---
+
+  <section>
+    <h3>Learning Linux Diversity</h3>
+    <p>Dive into Linux Subsystem for Educational Purpose.</p>
+  </section>
+
+  <section>
+    <h3>About Me 🙋🏻‍♂️!</h3>
+    <img class="plain" style="background:none;" alt="my photo"
+         src="/assets/site/images/epsi-bulat.png">
+    <p>Yet, another underachiever 👻.</p>
+    <p>But hey, I have my own blog 🎉.</p>
+  </section>
+
+  <section>
+    <h3>About This Material 🤠</h3>
+    <p><small>After watching this, you will understand:
+    <ul>
+      <li>A more systematic steps to learn GNU/linux.</li>
+      <li>How to make your own learning plan (syllabus) .</li>
+    </ul></small></p>
+  </section>
+
+  <section>
+    <h3>After first linux install 🤔?</h3>
+    <p>You might desire to
+    <small><ul>
+      <li>Join linux community.</li>
+      <li>Read Documentation (statistically rare person).</li>
+      <li>Update system.</li>
+      <li>Install a bunch of application.</li>
+      <li>Get busy with command line terminal.</li>
+      <li>Surfing wiki and search engine.</li>
+    </ul></small></p>
+    <p>And then what ?</p>
+  </section>
+  <section>
+    <h4>After first linux install 🤠</h4>
+    <p>where to go from here 🤔?
+    <small><ul>
+      <li>Should I try other distro?</li>
+      <li>What other distro should I try?</li>
+      <li>So many distro, so little differences!</li>
+      <li>Should I use VM or multiboot?</li>
+    </ul></small></p>
+    <p>Learn part of system!<br/>
+    Instead just switching distro.</p>
+  </section>
+
+  <section>
+    <h3>How Modular is Linux 🤔?</h3>
+    <ul>
+      <li>Package Manager:<br/>
+        <small>APT, ALPM, DNF, XBPS, Zypper, Portage</small></li>
+      <li>Init:<br/>
+        <small>SysV, systemd, openRC, runit, S6.</small></li>
+      <li>Filesystem:<br/>
+        <small>ext4, XFX Reiserfs, BTRFS, ZFS.</small></li>
+      <li>Standard C library in OS:<br/>
+        <small>glibc or musl.</small></li>
+      <li>DE (Desktop Environment):<br/>
+        <small>GTK+ based, QT based, enlightenment.</small></li>
+      <li>WM (Window Manager):<br/>
+        <small>Stacking, Tiling, Dynamic, Compositor.</small></li>
+    </ul>
+  </section>
+  <section>
+    <h4>Modular Linux 🙈</h4>
+    <p>You still need to Switch distro.</p>
+    <p><small>by considering these three diversity</small></p>
+    <p>Package Manager, File system, Init.</p>
+  </section>
+  <section>
+    <h4>Modular Linux 🙈</h4>
+    <p>When do I need a physical OS 🤔?
+    <small><ul>
+      <li>You can learn Package Manager using Docker.</li>
+      <li>You can also learn Init using Docker.</li>
+      <li>But you cannot learn Filesystem using Docker.</li>        
+    </ul></small></p>
+    <p>File system experience require long time examination.<br/>
+      <small>Thus you you have to live with baremetal (physical) OS.</small></p>
+  </section>
+  <section>
+    <h4>Desktop Environment/ Window Manager</h4>
+    <p>Most beginner start from switching DE/WM 🙈:</p>
+    <p><a href="/desktop/2020/01/20/presentation-desktop-customization.html">
+        [Desktop Customization]</a><br/>
+      <small>Yet Another Presentation.</small></p>
+  </section>
+
+  <section>
+    <h4>Package Manager with Docker🤔?</h4>
+    <p>You can utilize docker to learn other package manager.</p>
+    <img class="plain" alt="Learn Different Package Management Using LXC"
+         src="https://epsi-rns.github.io/assets-system/2016/02/lxc-package.png">
+    <p><small><a href="/system/2017/08/31/docker-package-summary.html">
+    [Docker - Package Management Summary]</a></small></p>
+  </section>
+  <section>
+    <h4>Package Manager with Docker 🤠</h4>
+    <p>Docker Test Bed:<br/>
+      <small>APT, ALPM, DNF, XBPS, Zypper, Portage</small></p>
+    <img class="plain" alt="Examine Gentoo Portage in Docker: Getting Started"
+         src="https://epsi-rns.github.io/assets-system/2017/08/docker-gentoo/00-getting-started.png">
+    <p>Docker is suitable for<br/>
+    old notebook with low resources.</p>
+  </section>
+  <section>
+    <h4>Package Manager with Docker 🤠</h4>
+    <p>More Articles about Docker Test Bed</p>
+    <ul>
+      <li><a href="/system/2017/08/24/docker-debian-apt.html">
+        Debian - APT</a></li>
+      <li><a href="/system/2017/08/15/docker-opensuse-zypper.html">
+        openSUSE - Zypper</a></li>
+      <li><a href="/system/2017/08/18/docker-fedora-dnf.html">
+        Fedora - DNF</a></li>
+      <li><a href="/system/2017/08/13/docker-void-xbps.html">
+        Void - XBPS</a></li>
+      <li><a href="/system/2017/08/21/docker-slackware-package.html">
+        Slackware - Package</a></li>
+      <li><a href="/system/2017/08/11/docker-gentoo-portage.html">
+        Gentoo - Portage</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Package Manager Feature 🤔?</h3>
+    <p>Be Aware of Package Manager Advantage/Issue</p>
+    <ul>
+      <li><a href="/system/2015/03/17/apt-pinning.html">
+        APT Pinning</a></li>
+      <li><a href="/system/2019/01/01/gentoo-selective-emerge.html">
+        Selective Emerge</a></li>
+      <li><a href="/system/2014/12/26/unbundling-aur-helper-process.html">
+        Unbundling AUR in ALPM</a></li>
+      <li><a href="/system/2017/08/02/distro-fedora-install.html">
+        Upgrading Fedora</a></li>
+    </ul>
+    <p>Deep knowledge require long time experience.<br/>
+    <small>Most of issues comes months after install.</small></p>
+  </section>
+
+  <section>
+    <h3>Init 🤔?</h3>
+    <p>SysV, systemd, openRC, runit, S6.</p>
+    <ul>
+      <li>OpenRC:<br/>
+        <small>Gentoo, Artix, Devuan</small></li>
+      <li>runit:<br/>
+        <small>Void, Artix</small></li>
+      <li>s6:<br/>
+        <small>Obarun, Artix</small></li>
+      <li>SysV:<br/>
+        <small>Slackware, Devuan</small></li>
+      <li>systemd:<br/>
+        <small>Most Major Distro</small></li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>Init 🤠</h4>
+    <p>Civil War</p>
+    <p><a href="/system/2014/11/28/init-civil-wars.html">
+      The systemd Controversy</a></p>
+    <p>Still debating in 2020 between:<br/>
+    systemd+gnome versus linux+diversity.</p>
+  </section>
+
+  <section>
+    <h4>Init 🤠</h4>
+    <p>Usage</p>
+    <p><a href="https://epsi-rns.gitlab.io/backend/2015/10/16/lamp-stack-manjaro-openrc/">
+      Setup LAMP stack with Manjaro OpenRC</a></p>
+  </section>
+
+  <section>
+    <h3>File System 🤔?</h3>
+    <p>ext4, XFX Reiserfs, BTRFS, ZFS.</p>
+    <p>Deep knowledge require long time experience.<br/>
+      <small>Most of issues comes months after install.<br/>
+      You cannot just install, and just understand file system instantly.</small></p>
+  </section>
+
+  <section>
+    <h4>File System 🤠</h4>
+    <ul>
+      <li>ext4: most common in linux</li>
+      <li>ZFS: common in BSD</li>
+      <li>UFS: common in BSD</li>
+      <li>BRTRFS: Default in openSUSE /</li>
+      <li>XFS: Default in openSUSE /home</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Standard C library in OS 🤔?</h3>
+    <p>glibc or musl.</p>
+    <p><small>I must admit,<br/>
+    I do not have any experiece with musl.</small></p>
+  </section>
+
+  <section>
+    <h3>Switching Distro 🤔?</h3>
+    <p><small>While you are young and still have time.<br/>
+      Get yourself quarterly (three months) curriculum/plan.</small></p>
+    <p><small>Just get pass through it.<br/>
+      No need to go deep with coding.<br/>
+      Be an ordinary user.</small></p>
+    <p><small>After this one year,<br/>
+      you are already mature enough with broader view<br/>
+      to choose whatever linux you want.</small></p>
+    <p><small>If you want to get more wisdom.<br/>
+      Learn BSD land in the second year.</small></p>
+  </section>
+  <section>
+    <h4>Switching Distro 🤠</h4>
+    <p>Example Syllabus (learning plan):<br/>
+    <small>Make a target of first year with linux.</small></p>
+    <ul>
+      <li>Q1: ubuntu/mint/manjaro<br/>
+        <small>learn the DE universe: gnome-shell, plasma, xfce4<br/>
+        learn basic command line.</small></li>
+      <li>Q2: opensuse<br/>
+        <small>learn filesystem: btrfs, xfs<br/>
+        also learn yast2</small></li>
+      <li>Q3: arch<br/>
+        <small>know your system,<br/>
+        dive into the world of cli/terminal shell</small></li>
+      <li>Q4: gentoo<br/>
+        <small>learn init other than systemd<br/>
+        learn patience 🙈</small></li>
+    </ul>
+  </section>
+  <section>
+    <h4>Switching Distro 🤔?</h4>    
+    <p>Example Q1: Ubuntu/ Mint/ Manjaro</p>
+    <ul>
+      <li>Basic Terminal Command<br/>
+        <small>ls, cat, grep, ps, top, man, info, su, sudo<br/>
+        always use <i>$ man</i> for documentation before google.</small></li>
+      <li>Also learn about basic linux briefly<br/>
+        <small>Examine Filesystem Hierarchy Standard (FHS)<br/>
+        Examine boot process.<br/>
+        Solving audio or wireless issue.</small></li>
+      <li>Read The Fine Manual<br/>
+        <small>
+          <a href="https://ubuntu-manual.org/">ubuntu-manual</a> (GUI)<br/>
+          <a href="https://debian-handbook.info/browse/stable/">debian-handbook</a> (hertzog)
+        </small></li>
+      <li>More Terminal Command<br/>
+        <small>nmcli, ncdu, ntop, cfdisk<br/>
+        lspci, lsusb, lsmod, dmesg, ip ,iw </small></li>
+    </ul>
+  </section>
+  <section>
+    <h4>Switching Distro 🤔?</h4>    
+    <p>Example Q3: Arch: Leverage yourself to Arch</p>
+    <ul>
+      <li>Install with command line only<br/>
+        <small>add driver manually, add username manually, add DE manually, use pacman</small></li>
+      <li>Read the holy arch wiki<br/>
+        <small>there is a lot of good material here</small></li>
+      <li>Use packer, cower, or other AUR Helper<br/>
+        <small>automatic compilation, try any unofficial application from AUR</small></li>
+      <li>Dare to use minimalis WM, rather than eyecandy DE<br/>
+        <small>openbox, awesome, i3, bspwm</small></i>
+      <li>Penetration Testing Application<br/>
+        <small>add and install repo: BlackArch or maybe ArchStrike</small></li>
+    </ul>
+    <p>Philosophy: Knowing Your System</p>
+  </section>
+  <section>
+    <h4>Switching Distro 🤔?</h4>
+    <p>Install Log/ Post Install Log</p>
+    <ul>
+      <li><a href="/system/2017/08/02/distro-fedora-install.html">Fedora</a></li>
+      <li><a href="/system/2017/08/03/distro-opensuse-install.html">openSUSE</a></li>
+      <li><a href="/system/2014/01/02/debian-post-install-log.html">Debian wheezy</a> (old)</li>
+      <li><a href="/system/2019/03/25/ghostbsd-driver.html">GhostBSD</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Multiboot 🤔?</h3>
+  </section>
+
+  <section>
+    <h3>Other Subsystem 🤔?</h3>
+    <p>Audio</p>
+    <p>Wireless</p>
+    <p>dbus</p>
+    <p>Boot Process: GRUB</p>
+  </section>
+
+  <section>
+    <h3>Kernel 🤔?</h3>
+  </section>
+
+  <section>
+    <h3>What is Next 🤔?</h3>
+    <p>More Wisdom!</p>
+    <p>🙏🏽</p>
+    <p>Learn BSD land!</p>
+  </section>
+
+  <section>
+    <h3>Questions 🤔?</h3>
+    <p>Don't be shy 🙋🏻‍♂️!</p>
+  </section>
+  <section>
+    <h3>The End</h3>
+    <p>🙇🏻</p>
+    <p>Thank You for Your Time.</p>        
+  </section>

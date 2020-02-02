@@ -160,12 +160,12 @@ What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-wallpaper]:    {{ site.url }}/assets/posts/design/2016/10/wally-material-design-06.png
+[image-wallpaper]:    {{ site.url }}/assets/posts/desktop/2016/10/wally-material-design-06.png
 [hires-wallpaper]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP8Al5kHEy9Gc6n-F6xnCQSvTJVk90T-R4Nu_TD
 [dotfiles-wallpaper]: {{ site.url }}/assets/posts/design/2016/10/wally-material-design-06.svg.gz
 [deviant-wallpaper]:  http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-646511906
 
-[image-inkscape]: {{ site.url }}/assets/posts/design/2016/10/i3-material-inkscape.png
+[image-inkscape]: {{ site.url }}/assets/posts/desktop/2016/10/i3-material-inkscape.png
 [hires-inkscape]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipO1Z7TyZHf8jfn45hcHDwJptu58gD6_0bs4rcf5
 
 [image-bright]:   {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-bright-on-blue.png
