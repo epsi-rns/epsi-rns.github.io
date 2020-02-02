@@ -11,13 +11,14 @@ opengraph:
   image: /assets/site/images/kiddo-bulat-008.png
 
 excerpt:
-  Dive into Linux Subsystem for Educational Purpose.
+  Dive into Linux Subsystem for Personal Educational Purpose.
 
 ---
 
   <section>
     <h3>Learning Linux Diversity</h3>
-    <p>Dive into Linux Subsystem for Educational Purpose.</p>
+    <p>Dive into Linux Subsystem<br/>
+      for Personal Educational Purpose.</p>
   </section>
 
   <section>
@@ -35,6 +36,9 @@ excerpt:
       <li>A more systematic steps to learn GNU/linux.</li>
       <li>How to make your own learning plan (syllabus) .</li>
     </ul></small></p>
+    <p>🙏🏽</p>
+    <p><small>This material is not really comprehensive.<br/>
+    I still have so much to learn.</small></p>
   </section>
 
   <section>
@@ -42,7 +46,7 @@ excerpt:
     <p>You might desire to
     <small><ul>
       <li>Join linux community.</li>
-      <li>Read Documentation (statistically rare person).</li>
+      <li>Read documentation (statistically rare person).</li>
       <li>Update system.</li>
       <li>Install a bunch of application.</li>
       <li>Get busy with command line terminal.</li>
@@ -106,6 +110,25 @@ excerpt:
   </section>
 
   <section>
+    <h3>Common Subsystem 🤔?</h3>
+    <p>A few must have knowledge!</p>
+    <ul>
+      <li>Wireless<br/>
+        <small><a href="/system/2014/03/13/wireless-command-line.html">
+        Wireless Command Line</a></small></li>
+      <li>Audio<br/>
+        <small><a href="/system/2018/06/22/audio-command-line.html">
+        Audio Command Line</a></small></li>
+      <li>Boot Process: GRUB2<br/>
+        <small><a href="/system/2016/05/19/stuck-on-boot.html">
+        What to Do, When the System Stuck, on Boot</a></small></li>
+      <li>dbus (for WM user only)<br/>
+        <small><a href="/system/2018/01/18/dbus-window-manager.html">
+        dbus in Window Manager</a></small></li>
+    </ul>
+  </section>
+
+  <section>
     <h4>Package Manager with Docker🤔?</h4>
     <p>You can utilize docker to learn other package manager.</p>
     <img class="plain" alt="Learn Different Package Management Using LXC"
@@ -127,17 +150,17 @@ excerpt:
     <p>More Articles about Docker Test Bed</p>
     <ul>
       <li><a href="/system/2017/08/24/docker-debian-apt.html">
-        Debian - APT</a></li>
+        [Debian - APT]</a></li>
       <li><a href="/system/2017/08/15/docker-opensuse-zypper.html">
-        openSUSE - Zypper</a></li>
+        [openSUSE - Zypper]</a></li>
       <li><a href="/system/2017/08/18/docker-fedora-dnf.html">
-        Fedora - DNF</a></li>
+        [Fedora - DNF]</a></li>
       <li><a href="/system/2017/08/13/docker-void-xbps.html">
-        Void - XBPS</a></li>
+        [Void - XBPS]</a></li>
       <li><a href="/system/2017/08/21/docker-slackware-package.html">
-        Slackware - Package</a></li>
+        [Slackware - Package]</a></li>
       <li><a href="/system/2017/08/11/docker-gentoo-portage.html">
-        Gentoo - Portage</a></li>
+        [Gentoo - Portage]</a></li>
     </ul>
   </section>
 
@@ -146,13 +169,15 @@ excerpt:
     <p>Be Aware of Package Manager Advantage/Issue</p>
     <ul>
       <li><a href="/system/2015/03/17/apt-pinning.html">
-        APT Pinning</a></li>
+        [APT Pinning]</a></li>
       <li><a href="/system/2019/01/01/gentoo-selective-emerge.html">
-        Selective Emerge</a></li>
+        [Selective Emerge]</a></li>
       <li><a href="/system/2014/12/26/unbundling-aur-helper-process.html">
-        Unbundling AUR in ALPM</a></li>
+        [Unbundling AUR in ALPM]</a></li>
       <li><a href="/system/2017/08/02/distro-fedora-install.html">
-        Upgrading Fedora</a></li>
+        [Upgrading Fedora]</a></li>
+      <li><a href="/system/2019/04/02/ghostbsd-ports.html">
+        [GhostBSD Ports]</a></li>
     </ul>
     <p>Deep knowledge require long time experience.<br/>
     <small>Most of issues comes months after install.</small></p>
@@ -160,7 +185,7 @@ excerpt:
 
   <section>
     <h3>Init 🤔?</h3>
-    <p>SysV, systemd, openRC, runit, S6.</p>
+    <p>Who use what.</p>
     <ul>
       <li>OpenRC:<br/>
         <small>Gentoo, Artix, Devuan</small></li>
@@ -180,13 +205,13 @@ excerpt:
     <p>Civil War</p>
     <p><a href="/system/2014/11/28/init-civil-wars.html">
       The systemd Controversy</a></p>
-    <p>Still debating in 2020 between:<br/>
+    <p><small>Still debating in 2020 between:</small><br/>
     systemd+gnome versus linux+diversity.</p>
   </section>
 
   <section>
     <h4>Init 🤠</h4>
-    <p>Usage</p>
+    <p>Example Usage</p>
     <p><a href="https://epsi-rns.gitlab.io/backend/2015/10/16/lamp-stack-manjaro-openrc/">
       Setup LAMP stack with Manjaro OpenRC</a></p>
   </section>
@@ -207,6 +232,22 @@ excerpt:
       <li>UFS: common in BSD</li>
       <li>BRTRFS: Default in openSUSE /</li>
       <li>XFS: Default in openSUSE /home</li>
+    </ul>
+  </section>
+
+  <section>
+    <h4>File System 🤠</h4>
+    <p>Example Issue and Workaround:</p>
+    <ul>
+      <li>BRTRFS snapshots:<br/>
+        <small><a href="/system/2018/01/07/btrfs-snapper.html">
+        [File System - Trapped in Snapper Rollback]</a></small></li>
+      <li>BRTRFS with GRUB:<br/>
+        <small><a href="/system/2017/08/05/grub2-btrfs-support.html">
+        [File System - GRUB2 support for BTRFS]</a></small></li>      
+      <li>UFS along with linux Multiboot:<br/>
+        <small><a href="/system/2019/03/20/ghostbsd-multiboot.html">
+        [GhostBSD - Multiboot]</a></small></li> 
     </ul>
   </section>
 
@@ -262,8 +303,8 @@ excerpt:
         Solving audio or wireless issue.</small></li>
       <li>Read The Fine Manual<br/>
         <small>
-          <a href="https://ubuntu-manual.org/">ubuntu-manual</a> (GUI)<br/>
-          <a href="https://debian-handbook.info/browse/stable/">debian-handbook</a> (hertzog)
+          <a href="https://ubuntu-manual.org/">[ubuntu-manual]</a> (GUI)<br/>
+          <a href="https://debian-handbook.info/browse/stable/">[debian-handbook]</a> (hertzog)
         </small></li>
       <li>More Terminal Command<br/>
         <small>nmcli, ncdu, ntop, cfdisk<br/>
@@ -291,27 +332,78 @@ excerpt:
     <h4>Switching Distro 🤔?</h4>
     <p>Install Log/ Post Install Log</p>
     <ul>
-      <li><a href="/system/2017/08/02/distro-fedora-install.html">Fedora</a></li>
-      <li><a href="/system/2017/08/03/distro-opensuse-install.html">openSUSE</a></li>
-      <li><a href="/system/2014/01/02/debian-post-install-log.html">Debian wheezy</a> (old)</li>
-      <li><a href="/system/2019/03/25/ghostbsd-driver.html">GhostBSD</a></li>
+      <li><a href="/system/2017/08/02/distro-fedora-install.html">[Fedora]</a></li>
+      <li><a href="/system/2017/08/03/distro-opensuse-install.html">[openSUSE]</a></li>
+      <li><a href="/system/2014/01/02/debian-post-install-log.html">[Debian wheezy]</a> (old)</li>
+      <li><a href="/system/2019/03/25/ghostbsd-driver.html">[GhostBSD]</a></li>
+      <li><a href="/system/2014/05/09/mageia-experiment.html">[Mageia]</a></li>
     </ul>
   </section>
 
   <section>
     <h3>Multiboot 🤔?</h3>
+    <p>For linux enthusiast.</p>
+    <img class="plain" alt="Multiboot: KDE Partition Manager"
+         src="https://epsi-rns.github.io/assets-system/2018/05/kaosx-kde-partman.png">
   </section>
-
   <section>
-    <h3>Other Subsystem 🤔?</h3>
-    <p>Audio</p>
-    <p>Wireless</p>
-    <p>dbus</p>
-    <p>Boot Process: GRUB</p>
+    <h4>Multiboot 🤠</h4>
+    <p>Partition Schema using MBR (old example)</p>
+    <ul>
+      <li>Primary: Windows</li>
+      <li>Extended: Linux<br/>
+      <small>
+        Swap<br/>
+        Shared Partition<br/>
+        First Distro<br/>
+        Second Distro<br/>
+        Third Distro
+      </small></li>
+      <li>Extended: BSD</li>
+    </ul>
+    <p><a href="/system/2018/05/21/linux-multiboot.html">
+      [Multiboot - Partition Schema]</a></p>
+  </section>
+  <section>
+    <h4>Multiboot 🤠</h4>
+    <p>fstab</p>
+    <ul>
+      <li>Learn to make shared partition.</li>
+      <li>BTRFS subvolume is interesting.</li>
+    </ul>
+    <p><a href="/system/2018/05/21/linux-multiboot.html">
+      [Multiboot - /etc/fstab]</a></p>
+  </section>
+  <section>
+    <h4>Multiboot 🤠</h4>
+    <p>chroot</p>
+    <ul>
+      <li>Some OS is comfortably installed using chroot:<br/>
+        <small>such as: Gentoo, LFS.</small></li>
+      <li>Other OS can be updated using chroot:<br/>
+        <small>beware of small issues.</small></li>
+    </ul>
+    <p><a href="/system/2018/05/23/linux-multiboot.html">
+      [Multiboot - chroot]</a></p>
+  </section>
+  <section>
+    <h4>Multiboot 🤠</h4>
+    <p>Tips: Keep your samba's network share<br/>
+      persistence along multiboot.</p>
+    <p><a href="/system/2018/05/25/linux-samba.html">
+      [Multiboot - Samba]</a></p>
+  </section>
+  <section>
+    <h4>Multiboot 🤠</h4>
+    <p>Tips: Linux Multiboot with BSD,<br/>
+      can be done using UFS, instead of ZFS.</p>
+    <p><a href="/system/2019/03/20/ghostbsd-multiboot.html">
+      [GhostBSD: Multiboot]</a></p>
   </section>
 
   <section>
     <h3>Kernel 🤔?</h3>
+    <p>make menuconfig</p>
   </section>
 
   <section>
