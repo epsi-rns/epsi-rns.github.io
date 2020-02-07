@@ -40,15 +40,34 @@
              >Archives
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/tag">By Tag</a>
-            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/category">By Category</a>
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/pages/tag">By Tag</a>
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/pages/category">By Category</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-y">By Year</a>
-            <a class="dropdown-item text-dark" href="{{ site.baseurl }}/pages/archives-m">By Month</a>
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/pages/archives-y">By Year</a>
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/pages/archives-m">By Month</a>
           </div>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ site.baseurl }}/pages/about">About</a>
+        <li class="nav-item active dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" 
+             role="button" data-toggle="dropdown" 
+             aria-haspopup="true" aria-expanded="false"
+             >About
+          </a>
+          <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/desktop/2020/01/20/presentation-desktop-customization.html" 
+              >Desktop Customization</a>
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/system/2020/02/02/presentation-linux-diversity.html" 
+              >Linux Diversity</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-dark"
+               href="{{ site.baseurl }}/pages/about">Me, The Author</a>
+          </div>
         </li>
       </ul>
       <form class="form-inline mt-2 mt-md-0" 
