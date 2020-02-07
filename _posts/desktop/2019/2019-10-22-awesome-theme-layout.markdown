@@ -31,7 +31,7 @@ With similar fashioned, we create the layout icon.
 
 * 1: Preparation
 
-* 2: SVG Icons
+* 2: Unified Graphic Material
 
 * 3: Configuration
 
@@ -60,14 +60,21 @@ I recommend you to read this article below before continue:
 
 -- -- --
 
-### 2: SVG Icons
+### 2: Unified Graphic Material
+
+	This is the Inkscape Part.
+
+Instead of separated UI design for each icon,
+we can put all icons into one SVG file.
+
+#### SVG Icon Set
 
 I have made my own custom SVG source,
 inspired by multicolor theme icons.
 
 ![SVG Source: Title Bar][image-svg-titlebar]{: .img-responsive }
 
-You might want to alter the image yourself to suit your needs,
+You might want to alter the UI/UGM image yourself to suit your needs,
 e.g. black and white, or minimalist something.
 
 #### SVG Source
@@ -127,6 +134,8 @@ What do you think ?
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-theme' %}
 
 [local-whats-next]: /desktop/2019/10/23/awesome-theme-icons.html
+
+[local-xfwm4-theme]:    /desktop/2018/03/21/xfwm4-theme.html
 
 [image-ss-02-layout]:   {{ asset_path }}/02-layout.png
 [image-fm-02-layout]:   {{ asset_path }}/02-thunar-layout.png

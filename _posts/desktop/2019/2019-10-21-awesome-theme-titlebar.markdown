@@ -29,7 +29,7 @@ excerpt:
 
 * 1: Preparation
 
-* 2: SVG Icons
+* 2: Unified Graphic Material
 
 * 3: Theme Configuration
 
@@ -59,13 +59,20 @@ I recommend you to read this article below before continue:
 
 -- -- --
 
-### 2: SVG Icons
+### 2: Unified Graphic Material
+
+	This is the Inkscape Part.
+
+Instead of separated UI design for each icon,
+we can put all icons into one SVG file.
+
+#### SVG Icon Set
 
 I have made my own custom SVG source:
 
 ![SVG Source: Title Bar][image-svg-titlebar]{: .img-responsive }
 
-You might want to alter the image yourself to suit your needs.
+You might want to alter the UI/UGM image yourself to suit your needs.
 
 #### SVG Source
 

@@ -43,6 +43,9 @@ Most Inkscape related article has been discussed in previous XFWM4 article.
 
 	This is the Inkscape Part.
 
+Instead of separated UI design for each icon,
+we can put all icons into one SVG file.
+
 #### Inkscape Document
 
 SVG source is available at:
@@ -58,6 +61,8 @@ You may make from scratch or get my <code>matclue.svg</code> from my dotfiles re
 Before you begin this the slices that we want to achieve.
 
 ![openbox Theme: matclue SVG slices][image-ss-svg]{: .img-responsive }
+
+You might want to alter the UI/UGM image yourself to suit your needs.
 
 #### Layers
 

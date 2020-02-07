@@ -74,6 +74,9 @@ there is more to come in detail.
 
 	This is the Inkscape Part.
 
+Instead of separated UI design for each icon,
+we can put all icons into one SVG file.
+
 #### Inkscape Document
 
 SVG source is available at:
@@ -87,6 +90,7 @@ You may make from scratch or get my <code>flatypuss.svg</code> from my dotfiles 
 #### Slices
 
 Before you begin this the slices that we want to achieve.
+You might want to alter the UI/UGM image yourself to suit your needs.
 
 ![openbox Theme: matclue SVG slices][image-ss-svg]{: .img-responsive }
 
