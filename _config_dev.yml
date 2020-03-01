@@ -16,6 +16,6 @@ service:
   yandex_metrica_key: false
   disqus_key: false  
   muut: false
-# google_adsense: false
+ google_adsense: false
    
 comments: false
