@@ -19,23 +19,33 @@ related_link_ids:
 
 ---
 
+### Preface
+
 Good day dear coder, hello again.
 
-HerbstluftWM has been stealing my attention for the past three months. [Primary] topic is **Modularized HerbstluftWM Configuration**. 
-
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/erWOZpi8uWU">
-</iframe> 
-
-And there are also complementary topics. I have done, implementing herbstluftWM statusbar, 
+The hardest parts of HerbstluftWM is statusbar.
+I have done, implementing HerbstluftWM statusbar, that I can share.
+And there are also complementary topics.
 
 *	[Part One] contain **tag status decoration** 
 	Both Dzen2 and Lemonbar in [Part One], designed specifically for HerbstluftWM's Tag.
 
 *	[Part Two] contain **idle event**. 
-	This idle event in [Part Two] give me challenge, and lead me to solve some **Advance Pipe and Fork** issue. 
+	This idle event in [Part Two] give me challenge, and lead me to solve some **Advance Pipe and Fork** issue.
 
-Now we have *example* code in Seven Languages: BASH, Perl, Python, Ruby, PHP, Lua, and Haskell. I have so much fun playing with the last language. These are the interesting multipart topics:
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/erWOZpi8uWU">
+</iframe>
+
+>	#standalone #modular #herbstluftwm #lemonbar #dzen2 #pipe #fork
+
+### The Seven Languages
+
+HerbstluftWM has been stealing my attention for the past three months.
+[Primary] topic is **Modularized HerbstluftWM Configuration**. 
+
+Now we have *example* code in Seven Languages: BASH, Perl, Python, Ruby, PHP, Lua, and Haskell.
+I have so much fun playing with the last language. These are the interesting multipart topics:
 
 1.	Idle Event (Advance Pipe and Fork)
 
@@ -45,49 +55,29 @@ Now we have *example* code in Seven Languages: BASH, Perl, Python, Ruby, PHP, Lu
 
 4.	Pipe and Fork (Introduction)
 
-
 	"Once hard, now easy."
 
-
->	#standalone #modular #herbstluftwm #lemonbar #dzen2 #pipe #fork #bash #perl #python #ruby #php #lua #haskell
-
--- -- --
+>	#bash #perl #python #ruby #php #lua #haskell
 
 ### Screenshot
 
 [![HerbstluftWM: Screenshot Dual Panel][image-ss-hlwm-red-small]{: .img-responsive }][photos-ss-hlwm-red]
 
--- -- --
+### All Links
 
-### Source Code
+You should start with overview, especially pipe and fork, then the rest.
 
 {% include toc/2017/06/herbstulftwm-source-code.html %}
 
--- -- --
-
-### Blog
-
 {% include toc/2017/06/herbstulftwm-all-blog-links.html %}
-
--- -- --
-
-### Complementary
-
-{% include toc/2017/06/herbstulftwm-complementary-links.html %}
-
--- -- --
 
 **Caveat**: There is still an issue in closing pipe in Ruby.
 The script is fine, but it happens after the process closed.
 I still have to kill pipe manually, or it will hogs the CPU process.
 
--- -- --
-
-### Miscellanous Links
+{% include toc/2017/06/herbstulftwm-complementary-links.html %}
 
 {% include toc/2017/06/herbstulftwm-miscellanous-links.html %}
-
--- -- --
 
 ### Finally Finished
 
