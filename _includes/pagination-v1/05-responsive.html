@@ -1,0 +1,232 @@
+{% capture spaceless %}
+  {% assign total_pages = paginator.total_pages %}
+  {% assign color_main  = page.color_main  | default: layout.color_main %}
+{% endcapture %}
+
+<nav class="pagination is-small is-centered"
+     role="navigation" aria-label="pagination">
+  {% if total_pages > 1 %}
+
+    {% capture spaceless %}
+      <!--
+        Pagination links 
+        * https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
+      -->
+
+      <!-- Get paginate_root from page in frontmatter -->
+      {% if page.paginate_root == nil %}
+        {% assign paginate_root = "/" %}
+      {% else %}    
+        {% assign paginate_root = page.paginate_root %}
+      {% endif %}
+      
+      {% assign p_first = paginate_root 
+                        | prepend: site.baseurl %}
+      {% assign p_last = site.paginate_path
+                       | relative_url 
+                       | replace: ':num', total_pages %}
+
+      {% assign page_current  = paginator.page %}
+
+      {% assign link_offset   = 2 %}  
+      {% assign link_max      = link_offset   | times: 2 | plus: 1 %}
+
+      {% assign limit_lower   = link_offset   | plus: 1 %}
+      {% assign limit_upper   = total_pages   | minus: link_offset %}
+  
+      {% assign min_lower     = link_max %}  
+      {% assign max_upper     = total_pages   | minus: link_max %}
+    
+      {% assign lower_offset  = page_current  | minus: link_offset %}  
+      {% assign upper_offset  = page_current  | plus: link_offset %}  
+
+      {% assign lower_indicator = 2 %}
+      {% assign upper_indicator = total_pages | minus: 1 %}
+
+    {% endcapture %}
+
+    <ul class="pagination-list">
+
+      <!-- First Page. -->
+      <li class="icon-first">
+      {% unless paginator.page == 1 %}
+        <a class="pagination-previous hoverable"
+           href="{{ p_first }}"
+           rel="first">
+          <span class="fas fa-step-backward"></span>&nbsp;</a>
+      {% else %}
+        <a class="pagination-previous"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-step-backward"></span>&nbsp;</a>
+      {% endunless %}
+      </li>
+
+      <!-- Previous Page. -->
+      <li class="icon-previous">
+      {% if paginator.previous_page %}
+        {% assign p_prev = paginator.previous_page_path
+                         | prepend: site.baseurl %}
+        <a class="pagination-previous hoverable"
+           href="{{ p_prev }}" 
+           rel="prev">
+          <span class="fas fa-backward"></span>&nbsp;</a>
+      {% else %}
+        <a class="pagination-previous"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-backward"></span>&nbsp;</a>
+      {% endif %}
+      </li>
+
+    {% if total_pages > link_max %}
+      <!-- First Page. -->
+      {% if lower_offset > 1 %}
+      <li>
+        <a class="pagination-link hoverable"
+           href="{{ p_first }}"
+           aria-label="Goto page 1">1</a>
+      </li>
+      {% endif %}
+
+      <!-- Early (More Pages) Indicator. -->
+      {% if lower_offset > lower_indicator %}
+      <li>
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {% endif %}
+    {% endif %}
+
+    <!-- Page numbers. -->
+    {% for page in (1..total_pages) %}
+
+      {% capture spaceless %}
+        <!-- Flag Calculation -->
+        {% assign page_current_flag = false %}
+
+        {% if total_pages > link_max %}
+        <!-- Complex page numbers. -->
+
+          <!-- Lower limit pages. -->
+          <!-- If the user is on a page which is in the lower limit.  -->
+          {% if page_current <= limit_lower %}
+            <!-- If the current loop page is less than max_links. -->
+            {% if page <= min_lower %}
+              {% assign page_current_flag = true %}
+            {% endif %}
+
+          <!-- Upper limit pages. -->
+          <!-- If the user is on a page which is in the upper limit. -->
+          {% elsif page_current >= limit_upper %}
+            <!-- If the current loop page is greater than total pages minus $max_links -->
+            {% if page > max_upper %}
+              {% assign page_current_flag = true %}
+            {% endif %}
+
+          <!-- Middle pages. -->
+          {% else %}
+          
+            {% if (page >= lower_offset) and (page <= upper_offset) %}
+              {% assign page_current_flag = true %}
+            {% endif %}
+
+          {% endif %}
+
+        {% else %}
+        <!-- Simple page numbers. -->
+
+          {% assign page_current_flag = true %}
+        {% endif %}
+
+        {% if page_current_flag == true %}
+        <!-- Calculate Offset Class. -->
+          {% assign diff_offset = page | minus: page_current | abs %}
+        {% endif %}
+
+      {% endcapture %}
+
+      <!-- Show Pager. -->
+      {% if page_current_flag == true %}
+      <li class="pagination--offset-{{ diff_offset }}">
+        {% if page == page_current %} 
+        <a class="pagination-link is-current {{ color_main }}"
+           aria-label="Page {{ page }}">
+          {{ page }}
+        </a>
+        {% else %}
+
+          {% capture spaceless %}
+          {% if page == 1 %}
+            {% assign p_link = p_first %}
+          {% else %}
+            {% assign p_link = site.paginate_path
+                             | relative_url
+                             | replace: ':num', page %}
+          {% endif %}
+          {% endcapture %}
+
+        <a class="pagination-link hoverable"
+           href="{{ p_link }}"
+           aria-label="Goto page {{ page }}">
+          {{ page }}
+        </a>
+        {% endif %}
+      </li>
+      {% endif %}
+
+    {% endfor %}
+
+    {% if total_pages > link_max %}
+      <!-- Late (More Pages) Indicator. -->
+      {% if upper_offset < upper_indicator %}
+      <li>
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {% endif %}
+
+      <!-- Last Page. -->
+      {% if upper_offset < total_pages %}
+      <li>
+        <a class="pagination-link hoverable" 
+           href="{{ p_last }}"
+           aria-label="Goto page {{ total_pages }}">
+          {{ total_pages }}</a>
+      </li>
+      {% endif %}
+    {% endif %}
+
+      <!-- Next Page. -->
+      <li class="icon-next">
+      {% if paginator.next_page %}
+        {% assign p_next = paginator.next_page_path
+                         | prepend: site.baseurl %}
+        <a class="pagination-next hoverable"
+           href="{{ p_next }}"
+           rel="next">&nbsp;
+          <span class="fas fa-forward"></span></a>
+      {% else %}
+        <a class="pagination-next"
+           title="This is the last page"
+           disabled>&nbsp;
+          <span class="fas fa-forward"></span></a>
+      {% endif %}
+      </li>
+
+      <!-- Last Page. -->
+      <li class="icon-last">
+      {% unless paginator.page == total_pages %}
+        <a class="pagination-next hoverable"
+           href="{{ p_last }}"
+           rel="last">&nbsp;
+          <span class="fas fa-step-forward"></span></a>
+      {% else %}
+        <a class="pagination-next"
+           title="This is the last page"
+           disabled>&nbsp;
+          <span class="fas fa-step-forward"></span></a>
+      {% endunless %}
+      </li>
+
+    </ul>
+  {% endif %}
+</nav>

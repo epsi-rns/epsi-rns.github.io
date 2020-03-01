@@ -1,0 +1,37 @@
+---
+layout: default
+
+# default property
+color_main  : blue-grey
+blog_class  : ""
+
+# layout chuncks
+blog_header     : page/blog-header.html
+
+opengraph:
+  image: /assets/images/authors/epsi-vexel.png
+---
+
+{% assign color_main  = page.color_main | default: layout.color_main %}
+{% assign blog_class  = layout.blog_class | default: "" %}
+
+  <main role="main" 
+        class="column is-full">
+
+    <section class="main-wrapper {{ color_main }}">
+      <div class="blog white z-depth-3 hoverable">
+
+        <section class="blog-header {{ blog_class }}
+                        {{ color_main }} lighten-5">
+          {% include {{ layout.blog_header }} %}
+        </section>
+
+        <article class="blog-body {{ blog_class }}"
+                 itemprop="articleBody">
+          {{ content }}
+        </article>
+
+      </div>
+    </section>
+
+  </main>

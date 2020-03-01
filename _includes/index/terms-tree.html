@@ -1,0 +1,44 @@
+
+  <section class="columns is-multiline p-y-5" id="archive">
+  {% for item in (0..terms.size) %}{% unless forloop.last %}
+    {% assign this_word = term_array[item] | strip_newlines %}
+  <div class="column is-full-mobile
+              is-half-tablet is-one-third-widescreen">
+
+    <div class="widget white z-depth-1 hoverable m-b-10">
+      <div class="widget-header {{ color_main }} lighten-4">
+
+        <div id="{{ this_word | slugify }}" class ="anchor-target">
+          <span class="{{ page.term_icon }}"></span> 
+          &nbsp; {{ this_word }}
+        </div>
+
+      </div>
+      <div class="widget-body">
+
+        <div class="archive-list p-y-5">
+        {% assign line = 0 %}  
+        {% for post in terms[this_word] %}
+          {% if post.title != null %}
+          <div class="archive-item meta-item">
+            <div class="meta_link has-text-right">
+              <time class="meta_time is-pulled-right"
+                    datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%b %-d, %Y" }}&nbsp;
+                &nbsp;<span class="fa fa-calendar"></span></time></div>
+            <div class="is-pulled-left">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.title }}
+            </a></div>
+            <div class="is-clearfix"></div>
+          </div>
+          {% endif %}
+        {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  {% endunless %}{% endfor %}
+  </section>

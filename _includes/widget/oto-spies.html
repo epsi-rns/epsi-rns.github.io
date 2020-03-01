@@ -1,14 +1,14 @@
-<div class="card hidden-sm hidden-xs mb-3 shadow-hover">
-  <div class="card-header bg-stripe-zero text-dark pb-0">
-    <span class="fas fa-car-side float-right"></span>
-    <p class="card-title">Car Painting and Body Repair</p>
-    <div class="clearfix"></div>
-  </div>
-  <div class="card-body py-2">
-    <div class="justify-content-center">
-      <a href="http://oto-spies.info/">
-        <img src="{{ site.baseurl }}/assets/site/images/adverts/oto-spies-01.png"
-             alt="Oto Spies"></a>
-    </div>
-  </div>
-</div>
+{% capture widget_header %}
+  <strong>Car Painting and Body Repair</strong>
+  <span class="fas fa-car-side is-pulled-right"></span>
+{% endcapture %}
+
+{% capture widget_body %}
+  <a href="http://oto-spies.info/">
+    <img src="{{ site.baseurl }}/assets/images/adverts/oto-spies-01.png"
+         alt="Oto Spies"></a>
+{% endcapture %}
+
+{% assign color = "grey" %}
+{% include template/widget.html %}
+

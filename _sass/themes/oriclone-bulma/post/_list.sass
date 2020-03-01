@@ -1,0 +1,24 @@
+
+// -- -- -- -- --
+// Post
+
+.blog-content li
+  li:nth-child(even)
+    background-color: map-get($grey, "lighten-4")
+  li:nth-child(odd)
+    background-color: map-get($grey, "lighten-5")
+
+.blog-content li p
+  display: inline
+
+.blog-content li
+  padding-left: 0
+  list-style: none
+  margin-left: 20px
+
+.blog-content li:before
+  font-family: "Font Awesome 5 Free"
+  font-weight: 900
+  content: '\f054'
+  color: map-get($grey, 'darken-2')
+  margin: 0 5px 0 0px

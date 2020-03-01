@@ -1,15 +1,18 @@
-<div class="card mb-3 shadow-hover">
-  <div class="card-header bg-stripe-zero text-dark pb-0">
-    <p class="card-title float-left">Categories</p>
-    <span class="fa fa-tag float-right"></span>
-    <div class="clearfix"></div>
-  </div>
-  <div class="card-body py-2">
-      {% for cat in site.categories %}
-        <a href="{{ site.baseurl }}/pages/category#{{ cat[0] }}">
-          <span class="badge badge-primary">{{ cat[0] }} <span class="fa fa-folder"></span></span>
-        </a>&nbsp;
-      {% endfor %} 
-  </div>
-</div> 
+{% assign color = "cyan" %}
 
+{% capture widget_header %}
+  <strong>Categories</strong>
+  <span class="fa fa-folder is-pulled-right"></span>
+{% endcapture %}
+
+{% capture widget_body %}
+  {% for cat in site.categories %}
+    <a class="tag is-small is-dark
+              {{ color }} z-depth-1 hoverable p-b-5"
+       href="{{ site.baseurl }}/pages/category.html#{{ cat[0] | slugify }}">
+      {{ cat[0] }}&nbsp;<span class="fa fa-folder"></span>
+    </a>&nbsp;
+  {% endfor %} 
+{% endcapture %}
+
+{% include template/widget.html %}

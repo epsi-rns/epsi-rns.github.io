@@ -1,0 +1,37 @@
+// This code snippet is originally from:
+// * https://github.com/jmaczan/bulma-helpers
+// * https://alexwenzel.de/2017/707/sass-spacing-helper-classes
+// * http://thesassway.com/intermediate/if-for-each-while
+
+// variable initialization
+$loop-begin:  0 !default
+$loop-end:   25 !default
+$interval:    5 !default
+
+// sub-property: abbreviation
+$sides:  (top: t, bottom: b, left: l, right: r)
+$sidesy: (top, bottom)
+$sidesx: (left, right)
+$properties: (margin: m, padding: p)
+
+// loop
+$cursor: $loop-begin
+
+@while $cursor <= $loop-end
+  @each $prop, $name in $properties
+    .#{$name}-#{$cursor}
+      #{$prop}: #{$cursor}px !important
+
+    @each $side, $subname in $sides
+      .#{$name}-#{$subname}-#{$cursor}
+        #{$prop}-#{$side}: #{$cursor}px !important
+
+    .#{$name}-y-#{$cursor}
+      @each $side in $sidesy
+        #{$prop}-#{$side}: #{$cursor}px !important
+
+    .#{$name}-x-#{$cursor}
+      @each $side in $sidesx
+        #{$prop}-#{$side}: #{$cursor}px !important
+
+  $cursor: $cursor + $interval

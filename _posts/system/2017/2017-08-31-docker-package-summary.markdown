@@ -722,7 +722,7 @@ Thank you for reading
 [image-ss-artix-lxc]:      {{ asset_pack }}/artix-lxc-gentoo-emerge-webrsync.png
 [photo-ss-artix-lxc]:      https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipOrtBFrxcZLd6gB7QwIkR6hLpcBJI9PdwIR3-0J?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn
 
-[image-ss-lxc-package]:    {{ site.url }}/assets/posts/system/2016/02/lxc-screenfetch.png
+[image-ss-lxc-package]:    {{ site.url }}/assets-system/2016/02/lxc-screenfetch.png
 [photo-ss-lxc-package]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOIV-PL-MJDcC2TxUi8xKUBFNz419Cnrxi9FBWy
 
 [image-ss-arch-query-aur]: {{ asset_pack }}/arch-hlwm-aur-no-rofi.png

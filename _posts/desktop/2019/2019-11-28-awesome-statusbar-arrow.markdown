@@ -14,6 +14,7 @@ excerpt:
   Awesome WM statusbar step by step.
   Statusbar customization, with powerline style using Lain.
 
+# mathjax: true
 ---
 
 {% include post/2019/06/toc-awesome.html %}

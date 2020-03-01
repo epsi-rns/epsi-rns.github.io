@@ -1,39 +1,43 @@
-<div class="card mb-3 shadow-hover">
-  <div class="card-header bg-stripe-zero text-dark pb-0">
-    <p class="card-title float-left">Archives</p>
-    <span class="fa fa-archive float-right"></span>
-    <div class="clearfix"></div>
-  </div>
-  <div class="card-body py-2">
-  {% assign pg_year  = page.date | date: '%Y' %}
-  {% assign pg_month = page.date | date: '%m' %}
+{% capture widget_header %}
+  <strong>Archives</strong>
+  <span class="fa fa-archive is-pulled-right"></span>
+{% endcapture %}
+
+{% capture widget_body %}
+  {% assign pg_year   = page.date | date: '%Y' %}
+  {% assign pg_month  = page.date | date: '%m' %}
+  {% assign path_y = "/pages/by-year.html"  | prepend: site.baseurl %}
+  {% assign path_m = "/pages/by-month.html" | prepend: site.baseurl %}
   
-  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'"  %}
+  {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
   {% for year in postsByYear %}
-      <div class ="archive-year">
-        <a href="{{ site.baseurl }}/pages/archives-y#{{ year.name }}">
+      <div class ="archive-year" id="{{ year.name }}">
+        <a href="{{ path_y }}#{{ year.name }}">
         {{ year.name }}</a>
       </div>
 
     {% if pg_year == year.name %}
-    <ul class="card_archive">
-      {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%m'" %}
-      {% assign postsByMonthSorted = postsByMonth | sort: 'name' | reverse %}
+    <ul class="widget-archive">
+      {% assign postsByMonth = year.items | 
+                group_by_exp: "post", "post.date | date: '%m'" %}
+      {% assign postsByMonthSorted = postsByMonth | 
+                sort: 'name' | reverse %}
 
       {% for month in postsByMonthSorted %}
       <li class="list-month">
         {% for post in month.items limit:1 %}
         <span class ="archive-month">
-          <a href="{{ site.baseurl }}/pages/archives-m#{{ post.date | date: '%Y-%m' }}">
+          <a href="{{ path_m }}#{{ post.date | date: '%Y-%m' }}">
             {{ post.date | date: '%B %Y' }}
           </a></span>
         {% endfor %}
 
           {% if pg_month == month.name %}
-          <ul class="card_list">
+          <ul class="widget-list">
           {% for post in month.items %}
           <li>    
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ site.baseurl }}{{ post.url }}"
+              >{{ post.title }}</a>
           </li>
           {% endfor %}
           </ul>
@@ -43,5 +47,7 @@
     </ul>
     {% endif %}
   {% endfor %}
-  </div>
-</div> 
+{% endcapture %}
+
+{% assign color = "green" %}
+{% include template/widget.html %}

@@ -1,0 +1,85 @@
++tablet
+  li.icon-previous a:after
+    content: " Previous"
+  li.icon-next a:before
+    content: "Next "
+  li.icon-first a:after
+    content: " First"
+  li.icon-last a:before
+    content: "Last "
+  li.icon-previous a span.fas,
+  li.icon-next a span.fas,
+  li.icon-first a span.fas,
+  li.icon-last a span.fas
+    display: none
+
+// Breakpoint
+
+$xs1: 0
+$xs2: 320px
+$xs3: 380px
+$xs4: 440px
+$sm1: 576px
+$sm2: 600px
+$md:  768px
+$lg:  992px
+$xl:  1200px
+
+// Responsiveness
+
+ul.pagination-list
+  li.icon-first,
+  li.icon-last,
+  li.pages-indicator
+    display: none
+  li.pagination--offset-1,
+  li.pagination--offset-2,
+  li.pagination--offset-3,
+  li.pagination--offset-4,
+  li.pagination--offset-5,
+  li.pagination--offset-6,
+  li.pagination--offset-7
+    display: none
+  +from($xs1)
+  +from($xs2)
+    li.pages-indicator
+      display: inline-block
+  +from($xs3)
+    li.pagination--offset-1
+      display: inline-block
+  +from($xs4)
+    li.pagination--offset-2
+      display: inline-block
+  +from($sm1)
+    li.icon-first,
+    li.icon-last,
+    li.pagination--offset-3
+      display: inline-block
+  +from($sm2)
+    li.pagination--offset-4
+      display: inline-block
+  +from($md)
+    li.pagination--offset-5,
+    li.pagination--offset-6
+      display: inline-block
+  +from($lg)
+    li.pagination--offset-7
+      display: inline-block
+  +from($xl)
+
+// hover color
+
+ul.pagination-list li 
+  a:hover
+    background-color: map-get($yellow, 'lighten-2')
+    color: #000
+  a.is-current:hover
+    background-color: map-get($grey, 'base') !important
+    color: #fff
+
+// layout
+
+nav.pagination
+  margin-top: 10px
+  margin-bottom: 10px
+

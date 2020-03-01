@@ -6,8 +6,8 @@ sitemap:
 # Helper for related links
 
 # just copy the result manually
-# from _site/pages/all_posts.yml 
-# to folder _data/all_posts.yml
+# from _site/pages/archives.yml 
+# to folder _data/archives.yml
 
 {% for post in site.posts %}{% unless post.published == false %}{% if post.date %}
 - id: {{ post.date | date: "%y%m%d%M" }}

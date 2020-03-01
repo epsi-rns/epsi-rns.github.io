@@ -6,10 +6,7 @@ layout: null
 
     "{{ post.url | slugify }}": {
       "title": "{{ post.title | json}}",
-      "content": "{{ post.excerpt | strip_newlines | xml_escape | json }}",
-      "url": "{{ post.url | xml_escape }}",
-      "author": "{{ post.author | json }}",
-      "category": "{{ post.category | json }}"
+      "url": "{{ post.url | xml_escape }}"
     }
     {% unless forloop.last %},{% endunless %}
   {% endfor %}

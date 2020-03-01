@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="1000"
+   viewBox="0 0 1000 1000"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="logo-gear.svg"
+   inkscape:export-filename="/home/epsi/logo-gear-brand.png"
+   inkscape:export-xdpi="9.2200003"
+   inkscape:export-ydpi="9.2200003">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5500"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5502" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.507"
+     inkscape:cx="-287.378"
+     inkscape:cy="526.62722"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1900"
+     inkscape:window-height="981"
+     inkscape:window-x="10"
+     inkscape:window-y="40"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-center="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-to-guides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4301" />
+    <sodipodi:guide
+       position="500,520"
+       orientation="1,0"
+       id="guide4303"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Epsi Sayidina</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Content"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-52.362161)"
+     style="display:inline">
+    <g
+       inkscape:groupmode="layer"
+       id="layer20"
+       inkscape:label="Gear Brand"
+       style="display:inline">
+      <path
+         style="display:inline;opacity:1;fill:#802020;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 586.76758,149.7938 c -25.22776,0.78518 -50.93525,4.05217 -76.76758,9.75586 v 243.3125 l 100.82812,48.66602 233.96876,-185.90625 c -8.09006,-11.17135 -16.97193,-21.67517 -26.59961,-31.45704 -8.74324,-8.50675 -18.05543,-16.42315 -27.89844,-23.71679 L 629.02734,338.58872 586.76758,318.2313 Z"
+         id="path4581"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/epsi/Documents/logo-gear-pink.png"
+         inkscape:export-xdpi="9.2200003"
+         inkscape:export-ydpi="9.2200003" />
+      <path
+         style="display:inline;opacity:1;fill:#e0e0e0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 490,164.68638 c -25.79287,6.98299 -51.46337,16.33448 -76.6582,27.92578 V 318.04575 L 371.02734,338.49302 287.91211,272.452 c -12.22719,10.29594 -24.04415,21.11864 -35.40039,32.42188 -7.04293,7.06747 -13.90089,14.31497 -20.5625,21.73047 L 389.17969,451.53599 490,402.71568 Z"
+         id="path4579"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;opacity:1;fill:#424242;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 855.57422,229.23438 623.11523,414.61133 631.13867,450 h 112.42774 l -6.41797,-28.12891 v -0.002 L 888.64648,301.05659 C 880.6972,275.25902 869.60571,251.17178 855.57422,229.23438 Z M 760.74023,550 865.6543,574.24805 c 3.43016,-8.04579 6.60907,-16.13376 9.57812,-24.24805 z"
+         transform="translate(0,52.362161)"
+         id="path4577"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;opacity:1;fill:#bdbdbd;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 219.49219,289.0957 C 202.92521,308.63648 187.75396,329.17953 174.14453,350.5 L 262.92578,421.29883 256.36133,450 h 112.38672 l 8.03711,-35.46875 z M 100.10742,550 c -1.38959,11.00019 -2.333518,21.94799 -2.812498,32.8125 L 239.26367,550 Z"
+         transform="translate(0,52.362161)"
+         id="path4575"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;opacity:1;fill:#9e9e9e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 325.87109,602.36216 97.402344,654.50864 c 0.216713,26.36498 3.197466,51.96015 8.896486,76.39258 l 184.32812,-42.07226 29.2793,36.85156 -88.44141,183.95312 c 21.65065,13.33701 45.31476,23.86138 70.58204,31.39063 l 124.13281,-258.19336 -64.1875,-80.46875 z"
+         id="path4571"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;opacity:1;fill:#616161;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 638.06445,602.36216 -64.2832,80.38867 89.48633,186.12695 c 21.63643,-14.61301 42.38713,-30.83647 62.01172,-48.48242 l -45.52149,-94.68359 29.29688,-36.62891 108.77148,24.82618 c 15.03248,-22.49095 28.26382,-45.82931 39.5293,-69.72461 L 674.11914,602.36216 Z"
+         id="path4569"
+         inkscape:connector-curvature="0" />
+      <path
+         style="display:inline;opacity:1;fill:#757575;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 444.12695,691.4481 321.43359,946.24888 c 25.79338,6.09015 52.88829,9.14406 80.82032,9.10937 l 74.23632,-154.17187 46.94727,-0.14844 55.23047,114.69922 c 23.19485,-10.1054 45.9459,-22.07011 67.99023,-35.75586 l -90.76758,-188.5 z"
+         id="path4562"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

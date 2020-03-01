@@ -1,0 +1,42 @@
+
+.highlight {
+  transition: box-shadow .25s;
+  
+  &:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+              0 3px 1px -2px rgba(0,0,0,0.12),
+              0 1px 5px 0 rgba(0,0,0,0.2);
+
+  pre {
+    padding: 5px 20px 5px 20px;
+    border-radius: 3px;
+  }
+
+  pre {
+    color: $light;
+    background-color: transparent; 
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    overflow: auto;
+    max-height: 350px;
+  }
+
+  pre:hover {
+ 
+  }
+}
+
+.highlighter-rouge {
+
+}
+
+.highlighter-rouge .highlight {
+  background: #f4f4f4;
+}
+
+.highlighter-rouge .highlight pre {
+  background-color: transparent;
+  color: #7b8a8b;
+}

@@ -1,20 +1,19 @@
+<nav class="pagination is-centered" 
+     role="navigation" aria-label="pagination">
 
-  <ul class="pagination justify-content-between" 
-      role="navigation" aria-labelledby="pagination-label">
+    <!-- Previous Page. -->
+    {% if page.previous %}
+      <a class="pagination-previous post-previous"
+         href="{{ page.previous.url | prepend: site.baseurl }}"
+         title="{{ page.previous.title }}">
+        <span class="fas fa-chevron-left"></span>&nbsp;&nbsp;</a>
+    {% endif %}
 
-      {% if page.previous %}    
-      <li class="page-item previous">
-        <a class="page-link" 
-           href="{{ site.baseurl }}{{ page.previous.url }}" 
-           title="{{ page.previous.title }}">&laquo; </a>
-      </li>
-      {% endif %}
+    {% if page.next %}
+      <a class="pagination-next post-next"
+         href="{{ page.next.url | prepend: site.baseurl }}" 
+         title="{{ page.next.title }}">&nbsp;&nbsp;
+        <span class="fas fa-chevron-right"></span></a>
+    {% endif %}
+</nav>
 
-      {% if page.next %}    
-      <li class="page-item next">
-        <a class="page-link" 
-           href="{{ site.baseurl }}{{ page.next.url }}" 
-           title="{{ page.next.title }}"> &raquo;</a>
-      </li>
-      {% endif %}          
-  </ul>  

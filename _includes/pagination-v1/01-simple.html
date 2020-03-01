@@ -1,0 +1,73 @@
+{% capture spaceless %}
+  {% assign total_pages = paginator.total_pages %}
+{% endcapture %}
+
+<nav class="pagination is-small is-centered" 
+     role="navigation" aria-label="pagination">
+  {% if total_pages > 1 %}
+
+    <!-- First Page. -->
+    {% unless paginator.page == 1 %}
+      {% assign p_first = paginate_root 
+                        | prepend: site.baseurl %}
+      <a class="pagination-previous hoverable"
+         href="{{ p_first }}"
+         rel="first">First</a>
+    {% else %}
+      <a class="pagination-previous"
+         title="This is the first page"
+         disabled>First</a>
+    {% endunless %}
+
+    <!-- Previous Page. -->
+    {% if paginator.previous_page %}
+      {% assign p_prev = paginator.previous_page_path
+                       | prepend: site.baseurl %}
+      <a class="pagination-previous hoverable"
+         href="{{ p_prev }}" 
+         rel="prev">Previous</a>
+    {% else %}
+      <a class="pagination-previous"
+         title="This is the first page"
+         disabled>Previous</a>
+    {% endif %}
+
+    <!-- Indicator Number. -->
+    <a class="pagination-link" 
+       disabled>Page: {{ paginator.page }} of {{ total_pages }}</a>
+
+    <!-- Next Page. -->
+    {% if paginator.next_page %}
+      {% assign p_next = paginator.next_page_path
+                       | prepend: site.baseurl %}
+      <a class="pagination-next hoverable"
+         href="{{ p_next }}"
+         rel="next">Next</a>
+    {% else %}
+      <a class="pagination-next"
+         title="This is the last page"
+         disabled>Next</a>
+    {% endif %}
+
+    <!-- Last Page. -->
+    {% unless paginator.page == total_pages %}
+      {% assign p_last = site.paginate_path
+                       | relative_url
+                       | replace: ':num', total_pages %}
+      <a class="pagination-next hoverable"
+         href="{{ p_last }}"
+         rel="last">Last</a>
+    {% else %}
+      <a class="pagination-next"
+         title="This is the last page"
+         disabled>Last</a>
+    {% endunless %}
+
+    <!-- Dummy. Do not delete! -->
+    <ul class="pagination-list">
+    </ul>
+
+  {% endif %}
+</nav>
+
+

@@ -1,0 +1,20 @@
+
+  {% comment %}
+  JavaScript at end of body for optimized loading
+  {% endcomment %}
+  <script src="{{ site.baseurl }}/assets/vendors/js/vue.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/vendors/js/bulma-burger-vue.js"></script>
+
+  {% if page.mathjax %}
+    {% include site/mathjax.html %}
+  {% endif %}
+
+  {% if page.customjs %}
+    {% for js in page.customjs %}
+      <script src="{{ site.baseurl }}{{ js }}"></script>
+    {% endfor %}
+  {% endif %}
+
+  {% if site.comments %}
+  <script id="dsq-count-scr" src="//epsirnsgithubio.disqus.com/count.js" async></script>
+  {% endif %}

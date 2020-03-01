@@ -1,14 +1,16 @@
-<div class="card hidden-sm hidden-xs mb-3 shadow-hover">
-  <div class="card-header bg-stripe-zero text-dark pb-0">
-    <p class="card-title float-left">Recent Posts</p>
-    <span class="fa fa-newspaper float-right"></span>
-    <div class="clearfix"></div>
-  </div>
-  <div class="card-body py-2">
-  <ul class="card_list">
+{% capture widget_header %}
+  <strong>Recent Posts</strong>
+  <span class="fa fa-newspaper is-pulled-right"></span>
+{% endcapture %}
+
+{% capture widget_body %}
+  <ul class="widget-list">
     {% for post in site.posts limit:5 %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ site.baseurl }}{{ post.url }}"
+      >{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-  </div>
-</div>
+{% endcapture %}
+
+{% assign color = "red" %}
+{% include template/widget.html %}

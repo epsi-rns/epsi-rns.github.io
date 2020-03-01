@@ -1,0 +1,15 @@
+{% capture spaceless %}
+  {% assign term_array = "" | split: "|" %}
+  {% for tag in terms %}
+    {% assign term_first = tag | first %}
+    {% assign term_array = term_array | push: term_first %}
+  {% endfor %}
+  
+  {% assign term_array = term_array | sort %}
+  
+  {% assign color_main  = page.color_main  | default: layout.color_main %}
+{% endcapture %}
+
+{% include index/terms-badge.html %}
+
+{% include index/terms-tree.html %}

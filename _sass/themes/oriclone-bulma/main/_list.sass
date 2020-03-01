@@ -1,0 +1,73 @@
+// -- -- -- -- --
+// _list.scss
+
+// -- -- -- -- --
+// Widget List
+
+ul.widget-list li:hover
+  background: map-get($yellow, 'lighten-2')
+
+ul.widget-list
+  padding: 0px
+
+ul.widget-list
+  padding-left: 0
+  list-style: none
+  font-size: 13px
+  margin-left: 20px
+
+div.archive-item a:before,
+ul.widget-list li:before
+  font-family: "Font Awesome 5 Free"
+  font-weight: 900
+  content: "\f054"
+  color: map-get($grey, 'base')
+  margin: 0 5px 0 -12px
+
+ul li.list-month:before
+  font-family: "Font Awesome 5 Free"
+  font-weight: 900
+  content: '\f073'
+  color: map-get($grey, 'darken-2')
+  margin: 0 5px 0 0px
+
+ul.widget-list li:hover:before
+  color: map-get($yellow, 'base')
+
+ul.widget-archive li ul.widget-list li:before
+  margin: 0 5px 0 3px
+
+// -- -- -- -- --
+// Components: Tags
+
+.archive-year
+  font-weight: bold
+  font-size: 15px
+
+.archive-month
+  font-size: 14px
+
+// -- -- -- -- --
+// Flip Flop
+
+div.archive-list,
+  padding-left: 10px
+  padding-right: 10px
+
+.archive-list
+  .archive-item:nth-child(even)
+    background-color: map-get($grey, "lighten-5")
+  .archive-item:nth-child(odd)
+    background-color: map-get($grey, "lighten-4")
+  .archive-item:hover
+    background-color: map-get($yellow, "lighten-2")
+
+.meta-item:nth-child(even)
+    background-color: map-get($grey, "lighten-5")
+
+.meta-item:nth-child(odd)
+    background-color: map-get($grey, "lighten-4")
+
+.meta-item:hover
+    background-color: map-get($yellow, "lighten-2")
+

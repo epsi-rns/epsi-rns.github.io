@@ -1,15 +1,19 @@
-<div class="card mb-3 shadow-hover">
-  <div class="card-header bg-light text-dark pb-0">
-    <p class="card-title">
-    {% if include.title %}
-    {{ include.title }}
-    {% else %}
-    Screenshot Information
-    {% endif %}
-    </p>
-    <div class="clearfix"></div>
+
+  <div class="white hoverable p-t-5 p-b-5">
+    <div class="widget-header blue lighten-4">
+
+      {% if include.title %}
+      <strong>{{ include.title }}</strong>
+      {% else %}
+      <strong>Screenshot Information</strong>
+      {% endif %}
+      <span class="fas fa-camera is-pulled-right"></span>
+
+    </div>
+    <div class="widget-body blue lighten-5">
+
+      {{ include.ss_content }}
+
+    </div>
   </div>
-  <div class="card-body py-2">
-    {{ include.ss_content }}
-  </div>
-</div>
+

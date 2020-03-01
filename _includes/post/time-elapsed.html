@@ -6,13 +6,12 @@ That way the time ago is updated dynamically as time passes,
 as opposed to having to rebuild Jekyll every day.
 {% endcomment %}
 
-          <span class="fa fa-calendar"></span>
-          &nbsp;
-          <time datetime="{{ page.date | date_to_xmlschema }}" 
-                itemprop="datePublished">
-          <span class="timeago" datetime="{{ page.date | date: "%Y-%m-%d %T" }}">
-          </span></time>
-          &nbsp; 
+    <time datetime="{{ page.date | date_to_xmlschema }}" 
+          itemprop="datePublished">
+    <span class="timeago"
+          datetime="{{ page.date | date: "%Y-%m-%d %T" }}">
+    </span></time>
+    &nbsp; 
 
     <script src="{{ site.baseurl }}/assets/vendors/js/timeago.min.js"></script>
     <script type="text/javascript">

@@ -1,0 +1,52 @@
+
+  <div class="main_title"> 
+    <h1 class="title is-4 blog-post-title"
+        itemprop="name headline">
+      <a href="{{ site.url | append:site.baseurl | append:page.url }}">
+        {{ page.title }}</a>
+    </h1>
+  </div>
+
+  <div class="field p-t-5">
+    {% if page.author %}
+    <div class="is-pulled-left p-b-5">
+    <span class="meta_author tag is-small is-dark
+                 indigo z-depth-1 hoverable">
+        <span class="fa fa-user"></span>
+        &nbsp;
+        <span itemprop="author"
+              itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">{{ page.author }}</span></span>            
+    </span>
+    &nbsp;
+    </div>
+    {% endif %}  
+
+    <div class="is-pulled-left p-b-5">
+      <span class="meta-time tag is-small is-dark
+                   green z-depth-1 hoverable">
+      {% include post/time-elapsed.html %}
+      </span>
+      &nbsp;
+    </div>
+
+    <div class="is-pulled-right p-b-5">
+      {% for tag in page.tags %}
+        <a href="{{ site.url | append:site.baseurl }}/pages/tag.html#{{ tag }}">
+          <span class="tag is-dark is-small teal z-depth-1 hoverable">
+            <span class="fa fa-tag"></span>&nbsp;{{ tag }}</span></a>
+      {% endfor %}
+      &nbsp;
+    </div>
+
+    <div class="is-pulled-right p-b-5">
+      {% for cat in page.categories %}
+        <a href="{{ site.url | append:site.baseurl }}/pages/category.html#{{ cat }}">
+          <span class="tag is-light is-small teal z-depth-1 hoverable">
+            <span class="fa fa-folder"></span>&nbsp;{{ cat }}</span></a>
+      {% endfor %}
+      &nbsp;
+    </div>
+  </div>
+
+  <div class="is-clearfix"></div>

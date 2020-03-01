@@ -1,0 +1,46 @@
+---
+layout: default
+
+# default property
+color_main  : blue
+color_aside : teal
+
+# layout chuncks
+blog_header     : page/blog-header.html
+aside_content   : page/aside-content.html
+
+opengraph:
+  image: /assets/images/authors/broken-person.png
+---
+
+{% assign color_main  = page.color_main  | default: layout.color_main %}
+{% assign color_aside = page.color_aside | default: layout.color_aside %}
+
+  <main role="main" 
+        class="column is-two-thirds">
+
+    <section class="main-wrapper {{ color_main }}"">
+      <div class="blog white z-depth-3 hoverable">
+
+        <section class="blog-header {{ color_main }} lighten-5">
+          {% include {{ layout.blog_header }} %}
+        </section>
+
+        <article class="blog-body" itemprop="articleBody">
+          {{ content }}
+        </article>
+
+        {% if layout.blog_footer %}
+        <section class="blog-footer {{ color_main }} lighten-5">
+          {% include {{ layout.blog_footer }} %}
+        </section>
+        {% endif %}
+
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="column is-one-thirds">
+    {% include {{ layout.aside_content }} %}
+  </aside>

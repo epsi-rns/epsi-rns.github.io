@@ -1,64 +1,13 @@
 ---
-layout: list
-title: All Tags
-excerpt: "An archive of posts sorted by tag."
-search_omit: true
+layout      : index
+title       : All Tags
+
+# override color
+color_main  : teal
+
+# decoration
+term_icon : fa fa-tag
 ---
 
-{% capture spaceless %}
-  {% assign tag_array = "" | split: "|" %}
-  {% for tag in site.tags %}
-    {% assign tag_first = tag | first %}
-    {% assign tag_array = tag_array | push: tag_first %}
-  {% endfor %}
-  
-  {% assign tag_array = tag_array | sort %}
-{% endcapture %}
-
-<div class="tag-box">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% assign this_word = tag_array[item] | strip_newlines %}
-    <a href="#{{ this_word }}"><span class="badge badge-dark">{{ this_word }} 
-    <span class="tag-box_count badge badge-light">{{ site.tags[this_word].size }}</span></span></a>
-  {% endunless %}{% endfor %}
-</div>
-<br/>
-
-<section class="row px-3" id="archive">
-{% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% assign this_word = tag_array[item] | strip_newlines %}
-  <div class="col-lg-4 col-md-6 col-sm-12">
-
-    <div class="card mb-3" id="{{ this_word }}">
-      <div class="card-header bg-stripe-zero text-dark pb-0">
-        <p class="card-title anchor-target">
-          <span class="fa fa-tag"></span> {{ this_word }}
-        </p>
-      </div>
-      <div class="card-body py-2">
-
-        <div class="px-3">
-        {% assign line = 0 %}  
-        {% for post in site.tags[this_word] %}
-        {% if post.title != null %}
-            <div class="meta-item d-flex flex-row-reverse border-bottom shadow-hover">
-              <div class="meta_link text-right text-nowrap">
-                <time class="meta_time float-right"
-                      datetime="{{ post.date | date_to_xmlschema }}">
-                  {{ post.date | date: "%b %-d, %Y" }}&nbsp;
-                  <span class="fa fa-calendar"></span></time>
-              </div>
-              <div class="mr-auto"><a 
-                   href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </div>
-            </div>  
-        {% endif %}
-        {% endfor %}
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-{% endunless %}{% endfor %}
-</section>
+{% assign terms = site.tags %}
+{% include index/terms.html %}

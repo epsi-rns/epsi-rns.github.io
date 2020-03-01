@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-  {% include layout/head.html %}
+<head>
+  {% include site/head.html %}
+</head>
 
 <body>
-    {% include service/google-analytics.html %}
-    {% include service/yandex-metrica.html %}
+  {% include service/google-analytics.html %}
+  {% include service/yandex-metrica.html %}
+    
+  <!-- header -->
+  {% include site/header.html %}
 
-    {% include layout/header.html %}
+  <!-- main -->
+  <div class="columns is-8 layout-base maxwidth">
+    {{ content }}
+  </div>
 
-  <div class="container-fluid">
+  {% comment %}
+  <div class="white z-depth-3 hoverable maxwidth">
+    {% if site.comments %}
+    {% include service/disqus-comments.html %}
+    {% endif %}
+  </div>
+  {% endcomment %}
 
-    <div class="layout-base">
-      {{ content }}
-    </div><!-- .layout-base -->
-
-  </div><!-- .container-fluid -->
-
-    {% include layout/footer.html %}
-    {% include layout/scripts.html %}
+  <!-- footer -->
+  {% include site/footer.html %}
+  {% include site/scripts.html %}
 </body>
+
 </html>
+

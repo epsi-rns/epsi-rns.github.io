@@ -1,0 +1,41 @@
+{% capture spaceless %}
+
+  <!-- description -->
+  {% if page.excerpt %}
+    {% assign description = page.excerpt | strip_html %}
+  {% else %}
+    {% assign description = site.description | strip %}
+  {% endif %}
+
+  {% assign description = description
+                        | newline_to_br
+                        | strip_newlines
+                        | replace: '<br />', ' '
+                        | strip_html
+                        | strip
+                        | truncatewords: 150 %}
+{% endcapture %}
+
+  {% include meta/html.html %}
+  <title>{{ (page.title | default: site.title) | escape }}</title>
+
+  <link rel="stylesheet" type="text/css"
+        href="{{ site.baseurl }}/assets/themes/oriclone-bulma/css/bulma.css">
+  <link rel="stylesheet" type="text/css"
+        href="{{ site.baseurl }}/assets/themes/oriclone-bulma/css/helper.css">
+  <link rel="stylesheet" type="text/css"
+        href="{{ site.baseurl }}/assets/themes/oriclone-bulma/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css"
+        href="{{ site.baseurl }}/assets/themes/oriclone-bulma/css/main.css">
+
+  {% comment %}<!-- Miscellanous Stuff -->{% endcomment %}
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+        href="{{ site.url }}{{ site.baseurl }}/favicon.ico"/>
+  <link rel="alternate" type="application/rss"
+        href="{{ "/feed.xml" | prepend: site.baseurl
+                             | prepend: site.url }}"
+        title="Yet Another Personal Project" />
+
+  {% include meta/seo.html %}
+  {% include meta/opengraph.html %}
+  {% include meta/twitter.html %}

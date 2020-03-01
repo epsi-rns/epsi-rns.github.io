@@ -1,0 +1,69 @@
+{% assign color_main  = page.color_main  | default: layout.color_main %}
+
+{% assign postsByYear = site.posts |
+          group_by_exp: "post", "post.date | date: '%Y'"  %}
+
+<div id="archive">
+{% for year in postsByYear %}
+
+  {% capture spaceless %}
+    {% assign current_year = 'now' | date: '%Y' %}
+    {% assign year_text = nil %}
+
+    {% if year.name == current_year %}
+      {% assign year_text = year.name | prepend: "This year's posts (" | append: ')' %}
+    {% else %}
+      {% assign year_text = year.name %}
+    {% endif %}
+  {% endcapture %} 
+
+  <div>
+    <div class ="anchor-target archive-year" 
+         id="{{ year.name }}">
+       {{ year_text }}
+    </div>
+
+    {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%m'" | sort: 'name' | reverse %}
+
+    <div class="columns is-multiline p-y-5">
+    {% for month in postsByMonth %}
+    <section class="column is-full-mobile
+              is-half-tablet is-one-third-widescreen">
+
+      <div class="widget white z-depth-1 hoverable m-b-10">
+        <div class="widget-header {{ color_main }} lighten-4">
+
+          {% for post in month.items limit:1 %}
+          <div class ="archive-month" 
+               id="{{ year.name }}-{{ month.name }}">
+               {{ post.date | date: '%b - %Y' }}</div>
+          {% endfor %}
+
+        </div>
+        <div class="widget-body">
+
+          <div class="archive-list p-y-5">
+            {% for post in month.items %}
+            <div class="archive-item">
+              <div class="is-pulled-left">
+              <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+              </a></div>
+              <div class="is-pulled-right has-text-right"><time>
+                  {{ post.date | date:"%d %b" }}&nbsp;
+                  <span class="fas fa-calendar"></span></time></div>
+              <div class="is-clearfix"></div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    {% endfor %}
+    </div>
+  </div>
+
+{% endfor %}
+</div>

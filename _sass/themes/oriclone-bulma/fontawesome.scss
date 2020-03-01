@@ -1,0 +1,9 @@
+// Font Awesome
+// $fa-font-path:        "/font-awesome-5";
+$fa-font-path:        "https://use.fontawesome.com/releases/v5.9.0/webfonts";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "vendors/font-awesome-5/fontawesome";
+@import "vendors/font-awesome-5/regular";
+@import "vendors/font-awesome-5/solid";
+@import "vendors/font-awesome-5/brands";

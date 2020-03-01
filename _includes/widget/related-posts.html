@@ -1,23 +1,26 @@
-{% unless page.related_link_ids == nil or page.related_link_ids == empty %}
-<div class="card hidden-sm mb-3 shadow-hover">
-  <div class="card-header bg-stripe-zero text-dark pb-0">
-    <p class="card-title float-left">Related Posts</p>
-    <span class="fa fa-link float-right"></span>
-    <div class="clearfix"></div>
-  </div>
-  <div class="card-body py-2">
-  <ul class="card_list">
+{% unless page.related_link_ids == nil 
+   or page.related_link_ids == empty %}
+
+  {% capture widget_header %}
+  <strong>Related Posts</strong>
+  <span class="fa fa-link is-pulled-right"></span>
+  {% endcapture %}
+
+  {% capture widget_body %}
+  <ul class="widget-list">
     {% for link_id in page.related_link_ids %}
     <li>
       {% for dpost in site.data.archives %}
       {% if dpost.id == link_id %}
-        <a href="{{ site.baseurl }}{{ dpost.url }}">{{ dpost.title }}</a>
+        <a href="{{ site.baseurl }}{{ dpost.url }}"
+          >{{ dpost.title }}</a>
       {% endif %}
       {% endfor %}
     </li>
     {% endfor %}
   </ul>
-  </div>
-</div>
-{% endunless %}
+  {% endcapture %}
 
+  {% assign color = "lime" %}
+  {% include template/widget.html %}
+{% endunless %}
