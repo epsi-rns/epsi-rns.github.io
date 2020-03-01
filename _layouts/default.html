@@ -19,17 +19,8 @@
 
   <!-- disqus -->
   {% if page.layout == 'post' %}
-  <div class="columns is-full layout-base maxwidth">
-    <section class="main-wrapper blue">
-      <div class="blog white z-depth-3 hoverable">
-
-        <article class="blog-body"
-                 itemprop="articleBody">
+  <div class="columns is-full">
           {% include service/disqus-comments.html %}
-        </article>
-
-      </div>
-    </section>
   </div>
   {% endif %}
 
