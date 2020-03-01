@@ -17,11 +17,8 @@
     {{ content }}
   </div>
 
-  <!-- disqus -->
   {% if page.layout == 'post' %}
-  <div class="columns is-full">
-          {% include service/disqus-comments.html %}
-  </div>
+    {% include post/disqus.html %}
   {% endif %}
 
   <!-- footer -->
