@@ -77,85 +77,7 @@ Lemonbar
 
 ### Blog
 
-Overview
-
-*	[Modularized HerbstluftWM Overview][local-modularized-overview]
-
-*	[HerbstluftWM Idle Event Overview][local-event-idle-overview]
-
-*	[HerbstluftWM Tag Status Overview][local-tag-status-overview]
-
-*	[Piping and Forking Overview][local-pipe-fork-overview]
-
-BASH
-
-*	[Modularized HerbstluftWM in BASH][local-modularized-bash]
-
-*	[HerbstluftWM Idle Event in BASH][local-event-idle-bash]
-
-*	[HerbstluftWM Tag Status in BASH][local-tag-status-bash]
-
-*	[Piping and Forking in BASH][local-pipe-fork-bash]
-
-Perl
-
-*	[Modularized HerbstluftWM in Perl][local-modularized-perl]
-
-*	[HerbstluftWM Idle Event in Perl][local-event-idle-perl]
-
-*	[HerbstluftWM Tag Status in Perl][local-tag-status-perl]
-
-*	[Piping and Forking in Perl][local-pipe-fork-perl]
-
-Python
-
-*	[Modularized HerbstluftWM in Python][local-modularized-python]
-
-*	[HerbstluftWM Idle Event in Python][local-event-idle-python]
-
-*	[HerbstluftWM Tag Status in Python][local-tag-status-python]
-
-*	[Piping and Forking in Python][local-pipe-fork-python]
-
-Ruby
-
-*	[Modularized HerbstluftWM in Ruby][local-modularized-ruby]
-
-*	[HerbstluftWM Idle Event in Ruby][local-event-idle-ruby]
-
-*	[HerbstluftWM Tag Status in Ruby][local-tag-status-ruby]
-
-*	[Piping and Forking in Ruby][local-pipe-fork-ruby]
-
-PHP
-
-*	[Modularized HerbstluftWM in PHP][local-modularized-php]
-
-*	[HerbstluftWM Idle Event in PHP][local-event-idle-php]
-
-*	[HerbstluftWM Tag Status in PHP][local-tag-status-php]
-
-*	[Piping and Forking in PHP][local-pipe-fork-php]
-
-Lua
-
-*	[Modularized HerbstluftWM in Lua][local-modularized-lua]
-
-*	[HerbstluftWM Idle Event in Lua][local-event-idle-lua]
-
-*	[HerbstluftWM Tag Status in Lua][local-tag-status-lua]
-
-*	[Piping and Forking in Lua][local-pipe-fork-lua]
-
-Haskell
-
-*	[Modularized HerbstluftWM in Haskell][local-modularized-haskell]
-
-*	[HerbstluftWM Idle Event in Haskell][local-event-idle-haskell]
-
-*	[HerbstluftWM Tag Status in OHaskell][local-tag-status-haskell]
-
-*	[Piping and Forking in Haskell][local-pipe-fork-haskell]
+{% include toc/2017/06/herbstulftwm-alls-links.html %}
 
 -- -- --
 
@@ -241,41 +163,6 @@ Thank you for reading.
 {% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
 
-[local-modularized-overview]: {{ site.url }}/desktop/2017/05/01/herbstlustwm-modularized-overview.html
-[local-modularized-bash]:     {{ site.url }}/desktop/2017/05/02/herbstlustwm-modularized-bash.html
-[local-modularized-perl]:     {{ site.url }}/desktop/2017/05/03/herbstlustwm-modularized-perl.html
-[local-modularized-python]:   {{ site.url }}/desktop/2017/05/04/herbstlustwm-modularized-python.html
-[local-modularized-ruby]:     {{ site.url }}/desktop/2017/05/05/herbstlustwm-modularized-ruby.html
-[local-modularized-php]:      {{ site.url }}/desktop/2017/05/06/herbstlustwm-modularized-php.html
-[local-modularized-lua]:      {{ site.url }}/desktop/2017/05/07/herbstlustwm-modularized-lua.html
-[local-modularized-haskell]:  {{ site.url }}/desktop/2017/05/08/herbstlustwm-modularized-haskell.html
-
-[local-event-idle-overview]:  {{ site.url }}/desktop/2017/06/11/herbstlustwm-event-idle-overview.html
-[local-event-idle-bash]:      {{ site.url }}/desktop/2017/06/12/herbstlustwm-event-idle-bash.html
-[local-event-idle-perl]:      {{ site.url }}/desktop/2017/06/13/herbstlustwm-event-idle-perl.html
-[local-event-idle-python]:    {{ site.url }}/desktop/2017/06/14/herbstlustwm-event-idle-python.html
-[local-event-idle-ruby]:      {{ site.url }}/desktop/2017/06/15/herbstlustwm-event-idle-ruby.html
-[local-event-idle-php]:       {{ site.url }}/desktop/2017/06/16/herbstlustwm-event-idle-php.html
-[local-event-idle-lua]:       {{ site.url }}/desktop/2017/06/17/herbstlustwm-event-idle-lua.html
-[local-event-idle-haskell]:   {{ site.url }}/desktop/2017/06/18/herbstlustwm-event-idle-haskell.html
-
-[local-tag-status-overview]:  {{ site.url }}/desktop/2017/06/01/herbstlustwm-tag-status-overview.html
-[local-tag-status-bash]:      {{ site.url }}/desktop/2017/06/02/herbstlustwm-tag-status-bash.html
-[local-tag-status-perl]:      {{ site.url }}/desktop/2017/06/03/herbstlustwm-tag-status-perl.html
-[local-tag-status-python]:    {{ site.url }}/desktop/2017/06/04/herbstlustwm-tag-status-python.html
-[local-tag-status-ruby]:      {{ site.url }}/desktop/2017/06/05/herbstlustwm-tag-status-ruby.html
-[local-tag-status-php]:       {{ site.url }}/desktop/2017/06/06/herbstlustwm-tag-status-php.html
-[local-tag-status-lua]:       {{ site.url }}/desktop/2017/06/07/herbstlustwm-tag-status-lua.html
-[local-tag-status-haskell]:   {{ site.url }}/desktop/2017/06/08/herbstlustwm-tag-status-haskell.html
-
-[local-pipe-fork-overview]:   {{ site.url }}/code/2017/04/23/overview-pipe-and-fork.html
-[local-pipe-fork-bash]:       {{ site.url }}/code/2017/04/15/bash-pipe-and-fork.html
-[local-pipe-fork-perl]:       {{ site.url }}/code/2017/04/16/perl-pipe-and-fork.html
-[local-pipe-fork-python]:     {{ site.url }}/code/2017/04/17/python-pipe-and-fork.html
-[local-pipe-fork-ruby]:       {{ site.url }}/code/2017/04/18/ruby-pipe-and-fork.html
-[local-pipe-fork-php]:        {{ site.url }}/code/2017/04/19/php-pipe-and-fork.html
-[local-pipe-fork-lua]:        {{ site.url }}/code/2017/04/20/lua-pipe-and-fork.html
-[local-pipe-fork-haskell]:    {{ site.url }}/code/2017/04/21/haskell-pipe-and-fork.html
 
 [image-ss-hlwm-red-small]:  {{ asset_path }}/herbstluftwm-dualpanel.png
 
