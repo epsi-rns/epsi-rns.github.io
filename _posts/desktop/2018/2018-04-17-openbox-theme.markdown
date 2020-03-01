@@ -506,6 +506,7 @@ Consider continue reading [ [Style Part][local-part-style] ]
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}
 
 [dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
+[local-part-style]:  /desktop/2018/04/18/openbox-theme.html
 
 [local-part-special]:  /desktop/2018/04/18/openbox-theme.html
 [cat-black]:       https://github.com/noirecat/arc-ob-theme
