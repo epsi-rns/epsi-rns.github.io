@@ -27,11 +27,17 @@ you can download a collection of shell script here<br/>
 
 -- -- --
 
-**Original Script**:<br/>
+### Original Script
 
-» Crunchbang » ANSI colorschemes scripts
+Crunchbang » ANSI colorschemes scripts
 
 * <http://crunchbang.org/forums/viewtopic.php?id=13645>
+
+Which is now, already a dead link.
+
+-- -- --
+
+### Screenshot
 
 {% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
