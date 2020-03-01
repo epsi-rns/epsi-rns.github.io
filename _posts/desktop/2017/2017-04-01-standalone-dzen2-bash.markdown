@@ -1,11 +1,12 @@
 ---
-layout: post-sidemenu-wm
-title:  "Standalone Dzen2 Statusbar Using BASH"
-categories: desktop
-date      : 2017-04-01 01:35:15 +0700
-tags      : [ricing, statusbar, bash]
-keywords  : [standalone, dzen2, bash]
-author: epsi
+layout     : post
+title      : "Standalone Dzen2 Statusbar Using BASH"
+categories : desktop
+date       : 2017-04-01 01:35:15 +0700
+tags       : [ricing, statusbar, bash]
+keywords   : [standalone, dzen2, bash]
+author     : epsi
+toc        : toc/2017/04/toc-standalone.html
 
 opengraph:
   image: /assets/site/images/topics/bash.png
@@ -15,34 +16,6 @@ excerpt:
   This tutorial guide you to write Dzen2 in Bash.
 
 ---
-
-### Statusbar Tutorial
-
-This tutorial/ guidance/ article is one of some parts.
-
-**Statusbar**
-
-*	[Standalone Statusbar Overview][local-overview]
-
-*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
-
-*	[Standalone Dzen2 Statusbar Using Conky][local-dzen2-conky]
-
-*	[Standalone Lemonbar Using Conky][local-lemon-conky]
-
-**Conky**
-
-*	[Standalone CLI System Monitoring Using Conky][local-cli-conky]
-
-*	[Debugging Conky][local-debug-conky]
-
-**Complementary**
-
-*	[Create XBM for your Dzen2][local-xbm-dzen2]
-
-*	[Getting XLFD Font][local-xlfd-font]
-
--- -- --
 
 ### Topics Covered
 

@@ -1,45 +1,18 @@
 ---
-layout: post-sidemenu-wm
-title:  "Create XBM for your Dzen2"
-categories: desktop
-date      : 2017-04-08 13:35:15 +0700
-tags      : [ricing, statusbar, inkscape, gimp]
-keywords  : [dzen2, xbm]
-author: epsi
+layout     : post
+title      : "Create XBM for your Dzen2"
+categories : desktop
+date       : 2017-04-08 13:35:15 +0700
+tags       : [ricing, statusbar, inkscape, gimp]
+keywords   : [dzen2, xbm]
+author     : epsi
+toc        : toc/2017/04/toc-standalone.html
 
 excerpt:
   Create Decoration to suit your own dzen2,
   just take a few steps.
 
 ---
-
-### Statusbar Tutorial
-
-This tutorial/ guidance/ article is one of some parts.
-
-**Statusbar**
-
-*	[Standalone Statusbar Overview][local-overview]
-
-*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
-
-*	[Standalone Dzen2 Statusbar Using Conky][local-dzen2-conky]
-
-*	[Standalone Lemonbar Using Conky][local-lemon-conky]
-
-**Conky**
-
-*	[Standalone CLI System Monitoring Using Conky][local-cli-conky]
-
-*	[Debugging Conky][local-debug-conky]
-
-**Complementary**
-
-*	[Create XBM for your Dzen2][local-xbm-dzen2]
-
-*	[Getting XLFD Font][local-xlfd-font]
-
--- -- --
 
 Dzen2 can read <code class="code-file">.xbm</code> image format.
 For your convenience, I have made some eight glyph icons.

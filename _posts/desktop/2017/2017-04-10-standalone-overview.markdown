@@ -1,11 +1,12 @@
 ---
-layout: post-sidemenu-wm
-title:  "Standalone Statusbar Overview"
-categories: desktop
-date      : 2017-04-10 13:35:15 +0700
-tags      : [ricing, statusbar, bash]
-keywords  : [standalone, dzen2, lemonbar]
-author: epsi
+layout     : post
+title      : "Standalone Statusbar Overview"
+categories : desktop
+date       : 2017-04-10 13:35:15 +0700
+tags       : [ricing, statusbar, bash]
+keywords   : [standalone, dzen2, lemonbar]
+author     : epsi
+toc        : toc/2017/04/toc-standalone.html
 
 excerpt:
   Dzen2, Lemonbar, and Conky are easy when you have guidance.
@@ -33,34 +34,6 @@ I can give you an illustration, a story you can imagine
 Now that the hard day was over,
 this tutorial is for you.
 Dzen2 is easy when you have guidance.
-
--- -- --
-
-### Statusbar Tutorial
-
-This tutorial/ guidance/ article is one of some parts.
-
-**Statusbar**
-
-*	[Standalone Statusbar Overview][local-overview]
-
-*	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
-
-*	[Standalone Dzen2 Statusbar Using Conky][local-dzen2-conky]
-
-*	[Standalone Lemonbar Using Conky][local-lemon-conky]
-
-**Conky**
-
-*	[Standalone CLI System Monitoring Using Conky][local-cli-conky]
-
-*	[Debugging Conky][local-debug-conky]
-
-**Complementary**
-
-*	[Create XBM for your Dzen2][local-xbm-dzen2]
-
-*	[Getting XLFD Font][local-xlfd-font]
 
 -- -- --
 
@@ -205,14 +178,5 @@ Thank you for Reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
-
-[local-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
-[local-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
-[local-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
-[local-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html
-[local-cli-conky]:   {{ site.url }}/desktop/2017/04/12/standalone-cli-conky.html
-[local-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
-[local-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
-[local-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html
 
 [image-01-preview]:    {{ asset_path }}/dzen2-01-preview.png
