@@ -17,13 +17,23 @@
     {{ content }}
   </div>
 
-  {% comment %}
-  <div class="white z-depth-3 hoverable maxwidth">
-    {% if site.comments %}
-    {% include service/disqus-comments.html %}
-    {% endif %}
+  <!-- disqus -->
+  {% if page.layout == 'post' %}
+  <div class="columns is-full layout-base maxwidth">
+    <section class="main-wrapper blue">
+      <div class="blog white z-depth-3 hoverable">
+
+        <article class="blog-body"
+                 itemprop="articleBody">
+          {% if site.comments %}
+          {% include service/disqus-comments.html %}
+          {% endif %}
+        </article>
+
+      </div>
+    </section>
   </div>
-  {% endcomment %}
+  {% endif %}
 
   <!-- footer -->
   {% include site/footer.html %}

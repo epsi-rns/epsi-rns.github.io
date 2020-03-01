@@ -1,5 +1,5 @@
 ---
-layout: post-sidemenu-wm
+layout: post
 title:  "Conky with Lua Scripting"
 categories: desktop
 date      : 2019-06-11 20:19:15 +0700
