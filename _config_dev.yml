@@ -14,8 +14,8 @@ baseurl: ""
 service:
   google_analytics_key: false
   yandex_metrica_key: false
-#  disqus_key: false  
+  disqus_key: false  
   muut: false
-  google_adsense: false
+# google_adsense: false
    
-# comments: false
+comments: false
