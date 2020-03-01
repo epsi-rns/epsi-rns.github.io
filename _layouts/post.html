@@ -15,10 +15,8 @@ aside_content   : post/aside-content.html
   {% include {{ page.toc }} %}
 {% endif %}
 
-{% comment %}
-  {% include service/google-adsense.html %}
-  <br/>
-{% endcomment %}
+{% include service/google-adsense.html %}
+<br/>
 
 <div class="blog-content">
 {{ content }}
@@ -26,4 +24,3 @@ aside_content   : post/aside-content.html
 
 <br/>
 {% include post/navigation.html %}
-
