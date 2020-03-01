@@ -91,13 +91,11 @@ Something in me cannot stop typing codes. But I have to stop anyway. I have grow
 
 	I'll be back.
 
--- -- --
+Thank you for reading.
 
 	I hope that, this material useful.
 	Enjoy The Window Manager.
 	Enjoy The Statusbar.
-
-Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
