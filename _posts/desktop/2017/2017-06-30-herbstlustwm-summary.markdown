@@ -61,80 +61,31 @@ Now we have *example* code in Seven Languages: BASH, Perl, Python, Ruby, PHP, Lu
 
 ### Source Code
 
-HerbstluftWM
-
-*	<https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm>
-
-Dzen2
-
-*	<https://gitlab.com/epsi-rns/dotfiles/tree/master/standalone/dzen2-hlwm>
-
-Lemonbar
-
-*	<https://gitlab.com/epsi-rns/dotfiles/tree/master/standalone/lemon-hlwm>
+{% include toc/2017/06/herbstulftwm-source-code.html %}
 
 -- -- --
 
 ### Blog
 
-{% include toc/2017/06/herbstulftwm-alls-links.html %}
+{% include toc/2017/06/herbstulftwm-all-blog-links.html %}
 
 -- -- --
 
 ### Complementary
 
-Statusbar
-
-*	[Standalone Lemonbar Using Conky][local-standalone-lemon-conky]
-
-*	[Standalone Dzen2 Statusbar Using Conky][local-standalone-dzen2-conky]
-
-*	[Standalone Dzen2 Statusbar Using BASH][local-standalone-dzen2-bash]
-
-Haskell Coding
-
-*	[Loop in Haskell With Map, Part Three][local-haskell-loop]
-
-*	[Examining Bind in Haskell: Hello World][local-haskell-bind]
-
+{% include toc/2017/06/herbstulftwm-complementary-links.html %}
 
 -- -- --
 
-**Caveat**: There is still an issue in closing pipe in Ruby. The script is fine, but it happens after the process closed. I still have to kill pipe manually, or it will hogs the CPU process.
+**Caveat**: There is still an issue in closing pipe in Ruby.
+The script is fine, but it happens after the process closed.
+I still have to kill pipe manually, or it will hogs the CPU process.
 
 -- -- --
 
 ### Miscellanous Links
 
-Dotshare
-
-*	<http://dotshare.it/dots/1498/>
-
-Red Screenshot
-
-*	[photos.google.com Red][photos-ss-hlwm-red1]
-
-Blue Screenshot
-
-*	[photos.google.com Blue][photos-ss-hlwm-blue1]
-
-GIF using byzanz and gifsicle.
-
-*	[Giphy Screencast][giphy-512]
-
-YouTube Video: MP4 using simplescreenrecorder
-
-*	https://youtu.be/erWOZpi8uWU
-
-DeviantArt
-
-*	[HerbstluftWM in Seven Languages][deviant-hlwm]
-
-Original Material Design Wallpaper, with SVG Source (inkscape) Available.
-
-*	<http://nurwijayadi.deviantart.com/art/Flat-Wallpaper-with-Isometric-Looks-646980074>
-
-*	<http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-654721928>
+{% include toc/2017/06/herbstulftwm-miscellanous-links.html %}
 
 -- -- --
 
@@ -180,14 +131,11 @@ Thank you for reading.
 [deviant-hlwm]: http://nurwijayadi.deviantart.com/art/HerbstluftWM-in-Seven-Languages-690831034
 
 [local-standalone-overview]:    {{ site.url }}/desktop/2017/04/10/standalone-overview.html
-[local-standalone-dzen2-bash]:  {{ site.url }}/desktop/2017/04/01/standalone-dzen2-bash.html  
-[local-standalone-dzen2-conky]: {{ site.url }}/desktop/2017/04/11/standalone-dzen2-conky.html
-[local-standalone-lemon-conky]: {{ site.url }}/desktop/2017/04/14/standalone-lemonbar-conky.html
+
 [local-standalone-cli-conky]:   {{ site.url }}/desktop/2017/04/12/standalone-cli-conky.html
 [local-standalone-xbm-dzen2]:   {{ site.url }}/desktop/2017/04/08/create-xbm-for-dzen2.html
 [local-standalone-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
 [local-standalone-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html
 
-[local-haskell-loop]: {{ site.url }}/code/2017/05/15/haskell-loop-with-map.html
-[local-haskell-bind]: {{ site.url }}/code/2017/05/22/examining-bind.html
+
 
