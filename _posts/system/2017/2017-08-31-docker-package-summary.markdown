@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - Package Management Summary"
-date      : 2017-08-31 09:45:15 +0700
-categories: system
-tags      : [docker, distro, package manager]
-keywords  : [overview, summary]
-author: epsi
+layout     : post
+title      : "Docker - Package Management Summary"
+date       : 2017-08-31 09:45:15 +0700
+categories : system
+tags       : [docker, distro, package manager]
+keywords   : [overview, summary]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -28,13 +29,8 @@ related_link_ids:
 # some old stuffs
   - 16022800  # Learn LXC
   - 16030301  # Docker Manjaro
-  - 16030900  # Docker Debian 
-
+  - 16030900  # Docker Debian
 ---
-
-{% include post/2017/08/topics-docker.html %}
-
--- -- --
 
 ### Preface
 

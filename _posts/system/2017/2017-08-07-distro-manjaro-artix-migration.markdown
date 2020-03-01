@@ -1,11 +1,11 @@
 ---
-layout: post
-title: "Distribution - Manjaro OpenRC to Artix Migration"
-date      : 2017-08-07 09:45:15 +0700
-categories: system
-tags      : [manjaro, artix, openrc, distro, package manager]
-keywords  : [pacman]
-author: epsi
+layout     : post
+title      : "Distribution - Manjaro OpenRC to Artix Migration"
+date       : 2017-08-07 09:45:15 +0700
+categories : system
+tags       : [manjaro, artix, openrc, distro, package manager]
+keywords   : [pacman]
+author     : epsi
 
 excerpt:
   Manjaro OpenRC to Artix, Migrate Log.
@@ -20,7 +20,6 @@ related_link_ids:
   - 17080145  # Manjaro OpenRC Issues
   - 15101649  # LAMP Stack OpenRC
   - 14112819  # Init Civil War
-
 ---
 
 ### Preface

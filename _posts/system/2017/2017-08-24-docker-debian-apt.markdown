@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - Debian APT - Part One"
-date      : 2017-08-24 13:15:35 +0700
-categories: system
-tags      : [docker, distro, package manager, debian]
-keywords  : [apt]
-author: epsi
+layout     : post
+title      : "Docker - Debian APT - Part One"
+date       : 2017-08-24 13:15:35 +0700
+categories : system
+tags       : [docker, distro, package manager, debian]
+keywords   : [apt]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -26,12 +27,9 @@ related_link_ids:
   - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
   - 17081015  # Crux Ports
-
 ---
 
-{% include post/2017/08/topics-docker.html %}
-
-{% include post/2017/08/toc-docker-debian-apt.html %}
+{% include toc/2017/08/toc-docker-debian-apt.html %}
 
 -- -- --
 
@@ -50,7 +48,7 @@ We only need <code>Stretch</code> stable release.
 We will switch to testing later on part three,
 so that we have a chance to play more with package cycle.
 
-{% include post/2017/08/docker-test-bed.md %}
+{% include toc/2017/08/docker-test-bed.md %}
 
 #### Must Read
 

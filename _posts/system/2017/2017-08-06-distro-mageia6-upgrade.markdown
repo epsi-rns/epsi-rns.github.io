@@ -1,11 +1,11 @@
 ---
-layout: post
-title: "Distribution - Mageia 6 Upgrade"
-date      : 2017-08-06 09:45:15 +0700
-categories: system
-tags      : [mageia, distro, package manager]
-keywords  : [urpmi]
-author: epsi
+layout     : post
+title      : "Distribution - Mageia 6 Upgrade"
+date       : 2017-08-06 09:45:15 +0700
+categories : system
+tags       : [mageia, distro, package manager]
+keywords   : [urpmi]
+author     : epsi
 
 excerpt:
   Mageia 6 Upgrade Log.
@@ -19,7 +19,6 @@ related_link_ids:
   - 17080245  # Fedora 23 to 26 Install
   - 17080145  # Manjaro OpenRC Issues
   - 14050934  # Mageia Experiment
-
 ---
 
 ### Preface

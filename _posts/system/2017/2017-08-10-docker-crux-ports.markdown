@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - Crux Ports"
-date      : 2017-08-10 13:15:35 +0700
-categories: system
-tags      : [docker, distro, package manager, crux]
-keywords  : [prt-get]
-author: epsi
+layout     : post
+title      : "Docker - Crux Ports"
+date       : 2017-08-10 13:15:35 +0700
+categories : system
+tags       : [docker, distro, package manager, crux]
+keywords   : [prt-get]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -25,12 +26,9 @@ related_link_ids:
   - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
 # - 17081015  # Crux Ports
-
 ---
 
-{% include post/2017/08/topics-docker.html %}
-
-{% include post/2017/08/toc-docker-crux-ports.html %}
+{% include toc/2017/08/toc-docker-crux-ports.html %}
 
 -- -- --
 
@@ -41,7 +39,7 @@ related_link_ids:
 This Crux is even easier with docker container, no need to set up system.
 Therefore we can dive right away to compilation.
 
-{% include post/2017/08/docker-test-bed.md %}
+{% include toc/2017/08/docker-test-bed.md %}
 
 -- -- --
 

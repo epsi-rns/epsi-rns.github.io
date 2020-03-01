@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - openSUSE Zypper - Part One"
-date      : 2017-08-15 13:15:35 +0700
-categories: system
-tags      : [docker, distro, package manager, opensuse]
-keywords  : [zypper]
-author: epsi
+layout     : post
+title      : "Docker - openSUSE Zypper - Part One"
+date       : 2017-08-15 13:15:35 +0700
+categories : system
+tags       : [docker, distro, package manager, opensuse]
+keywords   : [zypper]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -26,12 +27,9 @@ related_link_ids:
   - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
   - 17081015  # Crux Ports
-
 ---
 
-{% include post/2017/08/topics-docker.html %}
-
-{% include post/2017/08/toc-docker-opensuse-zypper.html %}
+{% include toc/2017/08/toc-docker-opensuse-zypper.html %}
 
 -- -- --
 
@@ -48,7 +46,7 @@ to download 4GB of full installation packages.
 We need <code>Tumbleweed</code> rolling release with more often update than leap,
 so that we have a chance to play more with package cycle.
 
-{% include post/2017/08/docker-test-bed.md %}
+{% include toc/2017/08/docker-test-bed.md %}
 
 -- -- --
 

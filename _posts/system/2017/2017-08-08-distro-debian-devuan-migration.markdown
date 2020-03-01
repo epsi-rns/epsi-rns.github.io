@@ -1,11 +1,11 @@
 ---
-layout: post
-title: "Distribution - Debian to Devuan Migration"
-date      : 2017-08-08 09:45:15 +0700
-categories: system
-tags      : [debian, devuan, sysvinit, distro, package manager]
-keywords  : [apt]
-author: epsi
+layout     : post
+title      : "Distribution - Debian to Devuan Migration"
+date       : 2017-08-08 09:45:15 +0700
+categories : system
+tags       : [debian, devuan, sysvinit, distro, package manager]
+keywords   : [apt]
+author     : epsi
 
 opengraph:
   image: /assets/site/images/topics/debian.png
@@ -22,7 +22,6 @@ related_link_ids:
   - 17080245  # Fedora 23 to 26 Install
   - 17080145  # Manjaro OpenRC Issues
   - 14112819  # Init Civil War
-
 ---
 
 ### Migrate

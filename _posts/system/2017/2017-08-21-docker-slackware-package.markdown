@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - Slackware Package - Part One"
-date      : 2017-08-21 13:15:35 +0700
-categories: system
-tags      : [docker, distro, package manager, slackware]
-keywords  : [slackpkg]
-author: epsi
+layout     : post
+title      : "Docker - Slackware Package - Part One"
+date       : 2017-08-21 13:15:35 +0700
+categories : system
+tags       : [docker, distro, package manager, slackware]
+keywords   : [slackpkg]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -27,12 +28,9 @@ related_link_ids:
   - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
   - 17081015  # Crux Ports
-
 ---
 
-{% include post/2017/08/topics-docker.html %}
-
-{% include post/2017/08/toc-docker-slackware-package.html %}
+{% include toc/2017/08/toc-docker-slackware-package.html %}
 
 -- -- --
 
@@ -45,7 +43,7 @@ I can learn Slackware Package Management using Docker.
 Here is my report as a _new slacker_ who just landed in slackware land,
 my journey using minimal install.
 
-{% include post/2017/08/docker-test-bed.md %}
+{% include toc/2017/08/docker-test-bed.md %}
 -- -- --
 
 ### Getting Started With Docker

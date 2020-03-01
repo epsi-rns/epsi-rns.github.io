@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - Arch ALPM - Part One"
-date      : 2017-08-27 13:15:35 +0700
-categories: system
-tags      : [docker, distro, package manager, debian]
-keywords  : [arch]
-author: epsi
+layout     : post
+title      : "Docker - Arch ALPM - Part One"
+date       : 2017-08-27 13:15:35 +0700
+categories : system
+tags       : [docker, distro, package manager, debian]
+keywords   : [arch]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -26,12 +27,9 @@ related_link_ids:
   - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
   - 17081015  # Crux Ports
-
 ---
 
-{% include post/2017/08/topics-docker.html %}
-
-{% include post/2017/08/toc-docker-arch-alpm.html %}
+{% include toc/2017/08/toc-docker-arch-alpm.html %}
 
 -- -- --
 
@@ -59,7 +57,7 @@ I have used so many pacman command, but never really understand.
 Reading pacman manual again makes me realize that I know nothing.
 That is why I have a need to write down this blog article.
 
-{% include post/2017/08/docker-test-bed.md %}
+{% include toc/2017/08/docker-test-bed.md %}
 
 #### Must Read
 

@@ -1,11 +1,12 @@
 ---
-layout: post
-title: "Docker - Fedora DNF - Part Four"
-date      : 2017-08-21 09:45:15 +0700
-categories: system
-tags      : [docker, distro, package manager, fedora]
-keywords  : [dnf]
-author: epsi
+layout     : post
+title      : "Docker - Fedora DNF - Part Four"
+date       : 2017-08-21 09:45:15 +0700
+categories : system
+tags       : [docker, distro, package manager, fedora]
+keywords   : [dnf]
+author     : epsi
+toc        : toc/2017/08/topics-docker.html
 
 opengraph:
   image: /assets/site/images/topics/docker.png
@@ -26,12 +27,9 @@ related_link_ids:
   - 17081315  # Void XBPS
   - 17081145  # Gentoo Portage
   - 17081015  # Crux Ports
-
 ---
 
-{% include post/2017/08/topics-docker.html %}
-
-{% include post/2017/08/toc-docker-fedora-dnf.html %}
+{% include toc/2017/08/toc-docker-fedora-dnf.html %}
 
 -- -- --
 
