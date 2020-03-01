@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in BASH"
-date      : 2017-05-02 17:35:15 +0700
-categories: desktop
-tags      : [coding, bash, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in BASH"
+date       : 2017-05-02 17:35:15 +0700
+categories : desktop
+tags       : [coding, bash, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/bash.png
@@ -45,9 +46,6 @@ Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../bash/][dotfiles-bash-directory]
 
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -163,7 +161,7 @@ xsetroot -solid "${color['blue500']}"
 
 *	[gitlab.com/.../dotfiles/.../bash/gmc.sh][dotfiles-bash-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -232,7 +230,7 @@ hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 
 *	[gitlab.com/.../dotfiles/.../bash/config.sh][dotfiles-bash-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -286,7 +284,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../bash/helper.sh][dotfiles-bash-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -378,7 +376,7 @@ startup_run() {
 
 *	[gitlab.com/.../dotfiles/.../bash/startup.sh][dotfiles-bash-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -444,7 +442,7 @@ startup_run
 
 *	[gitlab.com/.../dotfiles/.../bash/autostart.sh][dotfiles-bash-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 

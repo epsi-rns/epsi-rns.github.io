@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in Ruby"
-date      : 2017-06-05 17:35:15 +0700
-categories: desktop
-tags      : [coding, ruby, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in Ruby"
+date       : 2017-06-05 17:35:15 +0700
+categories : desktop
+tags       : [coding, ruby, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/ruby.png
@@ -63,10 +64,6 @@ Impatient coder like me, like to open many tab on browser.
 
 -- -- --
 
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
-
--- -- --
-
 ### Screenshot
 
 Since window manager is out of topic in this tutorial,
@@ -108,7 +105,7 @@ Let's have a look at <code class="code-file">helper.rb</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/helper.rb][dotfiles-lemon-ruby-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -320,7 +317,7 @@ Or in Dzen2 version:
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/01-testparams.rb][dotfiles-lemon-ruby-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -374,7 +371,7 @@ end
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-lemon-ruby-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -390,7 +387,7 @@ Let's have a look at <code class="code-file">output.rb</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/output.rb][dotfiles-lemon-ruby-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -683,7 +680,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/01-testoutput.rb][dotfiles-lemon-ruby-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

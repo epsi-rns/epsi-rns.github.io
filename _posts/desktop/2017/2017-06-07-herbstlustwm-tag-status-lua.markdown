@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in Lua"
-date      : 2017-06-07 17:35:15 +0700
-categories: desktop
-tags      : [coding, lua, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in Lua"
+date       : 2017-06-07 17:35:15 +0700
+categories : desktop
+tags       : [coding, lua, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/lua.png
@@ -60,10 +61,6 @@ Impatient coder like me, like to open many tab on browser.
 
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
 
 -- -- --
 
@@ -167,7 +164,7 @@ Let's have a look at <code class="code-file">helper.lua</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/helper.lua][dotfiles-lemon-lua-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -403,7 +400,7 @@ Or in Dzen2 version:
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/01-testparams.lua][dotfiles-lemon-lua-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -456,7 +453,7 @@ _M.color = {
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/gmc.lua][dotfiles-lemon-lua-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -472,7 +469,7 @@ Let's have a look at <code class="code-file">output.lua</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/output.lua][dotfiles-lemon-lua-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -793,7 +790,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/01-testoutput.lua][dotfiles-lemon-lua-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

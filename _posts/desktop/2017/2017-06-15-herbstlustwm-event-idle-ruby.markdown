@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Idle Event in Ruby"
-date      : 2017-06-15 17:35:15 +0700
-categories: desktop
-tags      : [coding, ruby, herbstluftwm, statusbar]
-keywords  : [event idle, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Idle Event in Ruby"
+date       : 2017-06-15 17:35:15 +0700
+categories : desktop
+tags       : [coding, ruby, herbstluftwm, statusbar]
+keywords   : [event idle, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-idle-event.html
 
 opengraph:
   image: /assets/site/images/topics/ruby.png
@@ -71,10 +72,6 @@ Let's have a look at <code class="code-file">pipehandler.rb</code> in github.
 
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/pipehandler.rb][dotfiles-lemon-ruby-pipehandler]
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-event-idle-language.md %}
 
 -- -- --
 
@@ -179,7 +176,7 @@ Simple version. No idle event. Only statusbar initialization.
 	[gitlab.com/.../dotfiles/.../ruby/pipehandler.simple.rb][dotfiles-lemon-ruby-pipehandler-simple]
 	[gitlab.com/.../dotfiles/.../ruby/pipehandler.01-init.rb][dotfiles-lemon-ruby-pipehandler-init]
 
-{% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-pipehandler.html %}
 
 -- -- --
 
@@ -645,7 +642,7 @@ After reunification, they are not very long scripts after all.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/panel-lemonbar.rb][dotfiles-hlwm-ruby-lemon-compact]
 
-{% include post/2017/06/herbstlustwm-event-idle-panel.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-panel.html %}
 
 -- -- --
 

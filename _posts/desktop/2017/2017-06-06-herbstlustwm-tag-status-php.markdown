@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in PHP"
-date      : 2017-06-06 17:35:15 +0700
-categories: desktop
-tags      : [coding, php, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in PHP"
+date       : 2017-06-06 17:35:15 +0700
+categories : desktop
+tags       : [coding, php, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/php.png
@@ -63,10 +64,6 @@ Impatient coder like me, like to open many tab on browser.
 
 -- -- --
 
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
-
--- -- --
-
 ### Screenshot
 
 Since window manager is out of topic in this tutorial,
@@ -108,7 +105,7 @@ Let's have a look at <code class="code-file">helper.php</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/helper.php][dotfiles-lemon-php-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -326,7 +323,7 @@ Or in Dzen2 version:
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/01-testparams.php][dotfiles-lemon-php-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -378,7 +375,7 @@ $color = array(
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/gmc.php][dotfiles-lemon-php-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -394,7 +391,7 @@ Let's have a look at <code class="code-file">output.php</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/output.php][dotfiles-lemon-php-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -705,7 +702,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/01-testoutput.php][dotfiles-lemon-php-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

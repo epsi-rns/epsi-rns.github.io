@@ -1,11 +1,12 @@
 ---
-layout: post-sidemenu-wm
-title:  "HerbstluftWM Tag Status Overview"
-date      : 2017-06-01 17:35:15 +0700
-categories: desktop
-tags      : [coding, herbstluftwm, dotfiles]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status Overview"
+date       : 2017-06-01 17:35:15 +0700
+categories : desktop
+tags       : [coding, herbstluftwm, dotfiles]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 excerpt:
   Preface of Doing HersbtluftWM Tag Status

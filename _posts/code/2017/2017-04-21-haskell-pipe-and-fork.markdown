@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Piping and Forking in Haskell"
-date      : 2017-04-21 17:35:15 +0700
-categories: code
-tags      : [coding, conky, haskell]
-keywords  : [pipe and fork, dzen2, lemonbar]
-author: epsi
+layout     : post
+title      : "Piping and Forking in Haskell"
+date       : 2017-04-21 17:35:15 +0700
+categories : code
+tags       : [coding, conky, haskell]
+keywords   : [pipe and fork, dzen2, lemonbar]
+author     : epsi
+toc        : toc/2017/04/pipe-and-fork-language.html
 
 opengraph:
   image: /assets/site/images/topics/haskell.png
@@ -36,10 +37,6 @@ you might desire to know the reason by reading this overview.
 **Reading**
 
 *	[Piping and Forking in Linux Script][local-overview]
-
--- -- --
-
-{% include post/2017/04/pipe-and-fork-language.md %}
 
 -- -- --
 
@@ -123,7 +120,7 @@ one after another, below the command line prompt.
 
 ![Pipe: Basic][image-time-basic]{: .img-responsive }
 
-{% include post/2017/04/pipe-and-fork-similar-01.md %}
+{% include toc/2017/04/pipe-and-fork-similar-01.html %}
 
 -- -- --
 
@@ -204,7 +201,7 @@ main = do
     system $ cmdin ++ " | " ++ cmdout
 {% endhighlight %}
 
-{% include post/2017/04/pipe-and-fork-similar-02.md %}
+{% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
 -- -- --
 
@@ -277,7 +274,7 @@ to detach dzen2. No need to fork
 
 	Your wallpaper might be different than mine.
 
-{% include post/2017/04/pipe-and-fork-similar-02.md %}
+{% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
 -- -- --
 
@@ -357,7 +354,7 @@ main = do
 
 {% endhighlight %}
 
-{% include post/2017/04/pipe-and-fork-similar-03.md %}
+{% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
 -- -- --
 
@@ -474,7 +471,7 @@ This step also add system command that kill
 any previous dzen2 instance. So it will be guaranteed,
 that the dzen2 shown is coming from the latest script.
 
-{% include post/2017/04/pipe-and-fork-similar-05.md %}
+{% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
 -- -- --
 
@@ -588,7 +585,7 @@ This would have <code>dzen2</code> output similar to this below.
 
 	You may use transset-df instead of transset.
 
-{% include post/2017/04/pipe-and-fork-similar-07.md %}
+{% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
 -- -- --
 
@@ -622,7 +619,7 @@ The code is very similar.
 **Source**:
 *	[gitlab.com/.../dotfiles/.../haskell-17-conky.hs][dotfiles-haskell-17-conky]
 
-{% include post/2017/04/pipe-and-fork-similar-17.md %}
+{% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
 
@@ -656,6 +653,7 @@ Thank you for reading.
 [dotfiles-haskell-03-process]: {{ dotfiles_path }}/haskell/haskell-03-process.hs
 [dotfiles-haskell-05-fork]:    {{ dotfiles_path }}/haskell/haskell-05-fork.hs
 [dotfiles-haskell-07-conky]:   {{ dotfiles_path }}/haskell/haskell-07-fork.hs
+[dotfiles-haskell-17-conky]: {{ dotfiles_path }}/haskell/haskell-17-fork.hs
 
 [image-time-less]:  {{ asset_path }}/pipe-time-less.png
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png

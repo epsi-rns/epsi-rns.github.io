@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Piping and Forking in Python"
-date      : 2017-04-17 17:35:15 +0700
-categories: code
-tags      : [coding, conky, perl]
-keywords  : [pipe and fork, dzen2, lemonbar]
-author: epsi
+layout     : post
+title      : "Piping and Forking in Python"
+date       : 2017-04-17 17:35:15 +0700
+categories : code
+tags       : [coding, conky, perl]
+keywords   : [pipe and fork, dzen2, lemonbar]
+author     : epsi
+toc        : toc/2017/04/pipe-and-fork-language.html
 
 opengraph:
   image: /assets/site/images/topics/python.png
@@ -36,10 +37,6 @@ you might desire to know the reason by reading this overview.
 **Reading**
 
 *	[Piping and Forking in Linux Script][local-overview]
-
--- -- --
-
-{% include post/2017/04/pipe-and-fork-language.md %}
 
 -- -- --
 
@@ -99,7 +96,7 @@ one after another, below the command line prompt.
 
 ![Pipe: Basic][image-time-basic]{: .img-responsive }
 
-{% include post/2017/04/pipe-and-fork-similar-01.md %}
+{% include toc/2017/04/pipe-and-fork-similar-01.html %}
 
 -- -- --
 
@@ -181,7 +178,7 @@ cmd     = cmdin + ' | ' + cmdout
 process = os.popen(cmd, 'r')
 {% endhighlight %}
 
-{% include post/2017/04/pipe-and-fork-similar-02-system.md %}
+{% include toc/2017/04/pipe-and-fork-similar-02-system.html %}
 
 -- -- --
 
@@ -249,7 +246,7 @@ This would have <code>less</code> output similar to this below.
 
 	Your wallpaper might be different than mine.
 
-{% include post/2017/04/pipe-and-fork-similar-02.md %}
+{% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
 -- -- --
 
@@ -327,7 +324,7 @@ process.wait()
 
 {% endhighlight %}
 
-{% include post/2017/04/pipe-and-fork-similar-03.md %}
+{% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
 -- -- --
 
@@ -438,7 +435,7 @@ This step also add system command that kill
 any previous dzen2 instance. So it will be guaranteed,
 that the dzen2 shown is coming from the latest script.
 
-{% include post/2017/04/pipe-and-fork-similar-05.md %}
+{% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
 -- -- --
 
@@ -566,7 +563,7 @@ This would have <code>dzen2</code> output similar to this below.
 
 	You may use transset-df instead of transset.
 
-{% include post/2017/04/pipe-and-fork-similar-07.md %}
+{% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
 -- -- --
 
@@ -584,7 +581,7 @@ The code is very similar.
 **Source**:
 *	[gitlab.com/.../dotfiles/.../python-17-conky.py][dotfiles-python-17-conky]
 
-{% include post/2017/04/pipe-and-fork-similar-17.md %}
+{% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
 
@@ -621,6 +618,7 @@ Thank you for reading.
 [dotfiles-python-03-try-except]: {{ dotfiles_path }}/python/python-03-subprocess-try-except.py
 [dotfiles-python-05-fork]:       {{ dotfiles_path }}/python/python-05-fork-def.py
 [dotfiles-python-07-conky]:      {{ dotfiles_path }}/python/python-07-fork-conky.py
+[dotfiles-python-17-conky]:  {{ dotfiles_path }}/python/python-17-fork-conky.py
 
 [image-time-less]:  {{ asset_path }}/pipe-time-less.png
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png

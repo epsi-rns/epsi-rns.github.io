@@ -1,11 +1,12 @@
 ---
-layout: post-sidemenu-wm
-title:  "Piping and Forking Overview"
-date      : 2017-04-23 17:35:15 +0700
-categories: code
-tags      : [coding, conky, dotfiles]
-keywords  : [pipe and fork, dzen2, lemonbar, overview, summary]
-author: epsi
+layout     : post
+title      : "Piping and Forking Overview"
+date       : 2017-04-23 17:35:15 +0700
+categories : code
+tags       : [coding, conky, dotfiles]
+keywords   : [pipe and fork, dzen2, lemonbar, overview, summary]
+author     : epsi
+toc        : toc/2017/04/pipe-and-fork-language.html
 
 excerpt:
   Overview on how to be a Plumber.

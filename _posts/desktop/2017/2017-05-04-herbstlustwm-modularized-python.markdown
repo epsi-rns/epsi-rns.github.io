@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in Python"
-date      : 2017-05-04 17:35:15 +0700
-categories: desktop
-tags      : [coding, python, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in Python"
+date       : 2017-05-04 17:35:15 +0700
+categories : desktop
+tags       : [coding, python, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/python.png
@@ -44,10 +45,6 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../python/][dotfiles-python-directory]
-
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -146,7 +143,7 @@ os.system("xsetroot -solid '"+color['blue500']+"'")
 
 *	[gitlab.com/.../dotfiles/.../python/gmc.py][dotfiles-python-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -190,7 +187,7 @@ helper.do_config("rule",      config.rules)
 
 *	[gitlab.com/.../dotfiles/.../python/config.py][dotfiles-python-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -233,7 +230,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../python/helper.py][dotfiles-python-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -322,7 +319,7 @@ def run():
 
 *	[gitlab.com/.../dotfiles/.../python/startup.py][dotfiles-python-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -393,7 +390,7 @@ startup.run()
 
 *	[gitlab.com/.../dotfiles/.../python/autostart.py][dotfiles-python-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 

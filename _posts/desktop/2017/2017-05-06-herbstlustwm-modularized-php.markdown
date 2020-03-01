@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in PHP"
-date      : 2017-05-06 17:35:15 +0700
-categories: desktop
-tags      : [coding, php, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in PHP"
+date       : 2017-05-06 17:35:15 +0700
+categories : desktop
+tags       : [coding, php, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/php.png
@@ -51,10 +52,6 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../php/][dotfiles-php-directory]
-
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -152,7 +149,7 @@ system("xsetroot -solid '".COLOR['blue500']."'");
 
 *	[gitlab.com/.../dotfiles/.../php/gmc.php][dotfiles-php-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -196,7 +193,7 @@ do_config("rule",      $rules);
 
 *	[gitlab.com/.../dotfiles/.../php/config.php][dotfiles-php-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -242,7 +239,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../php/helper.php][dotfiles-php-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -345,7 +342,7 @@ The PHP manual has said it clearly.
 
 *	[gitlab.com/.../dotfiles/.../php/startup.php][dotfiles-php-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -409,7 +406,7 @@ startup_run();
 
 *	[gitlab.com/.../dotfiles/.../php/autostart.php][dotfiles-php-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 

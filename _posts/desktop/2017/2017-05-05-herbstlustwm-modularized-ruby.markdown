@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in Ruby"
-date      : 2017-05-05 17:35:15 +0700
-categories: desktop
-tags      : [coding, ruby, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in Ruby"
+date       : 2017-05-05 17:35:15 +0700
+categories : desktop
+tags       : [coding, ruby, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/ruby.png
@@ -44,10 +45,6 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-ruby-directory]
-
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -158,7 +155,7 @@ system("xsetroot -solid '#{GMC::COLOR['blue500']}'")
 
 *	[gitlab.com/.../dotfiles/.../ruby/gmc.rb][dotfiles-ruby-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -205,7 +202,7 @@ do_config("rule",      Config::Rules)
 
 *	[gitlab.com/.../dotfiles/.../ruby/config.rb][dotfiles-ruby-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -250,7 +247,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../ruby/helper.rb][dotfiles-ruby-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -345,7 +342,7 @@ end
 
 *	[gitlab.com/.../dotfiles/.../ruby/startup.rb][dotfiles-ruby-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -409,7 +406,7 @@ startup_run
 
 *	[gitlab.com/.../dotfiles/.../ruby/autostart.rb][dotfiles-ruby-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 

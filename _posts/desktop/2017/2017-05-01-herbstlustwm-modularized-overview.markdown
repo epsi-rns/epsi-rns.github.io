@@ -1,11 +1,12 @@
 ---
-layout: post-sidemenu-wm
-title:  "Modularized HerbstluftWM Overview"
-date      : 2017-05-01 17:35:15 +0700
-categories: desktop
-tags      : [coding, herbstluftwm, dotfiles]
-keywords  : [modularized, overview, summary]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM Overview"
+date       : 2017-05-01 17:35:15 +0700
+categories : desktop
+tags       : [coding, herbstluftwm, dotfiles]
+keywords   : [modularized, overview, summary]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 excerpt:
   Preface of Doing Hersbtluft WM Config

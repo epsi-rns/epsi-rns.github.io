@@ -1,11 +1,12 @@
 ---
-layout: post-sidemenu-wm
-title:  "HerbstluftWM Idle Event Overview"
-date      : 2017-06-11 17:35:15 +0700
-categories: desktop
-tags      : [coding, herbstluftwm, dotfiles]
-keywords  : [event idle, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Idle Event Overview"
+date       : 2017-06-11 17:35:15 +0700
+categories : desktop
+tags       : [coding, herbstluftwm, dotfiles]
+keywords   : [event idle, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-idle-event.html
 
 excerpt:
   Preface of Handling HersbtluftWM Event Idle

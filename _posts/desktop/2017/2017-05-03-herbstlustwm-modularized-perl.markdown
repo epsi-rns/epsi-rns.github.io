@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in Perl"
-date      : 2017-05-03 17:35:15 +0700
-categories: desktop
-tags      : [coding, perl, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in Perl"
+date       : 2017-05-03 17:35:15 +0700
+categories : desktop
+tags       : [coding, perl, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/perl.png
@@ -53,10 +54,6 @@ I am also inspired by this configuration script.
 This give influence to my script.
 
 *	<https://github.com/ypnos/hlwm/blob/master/autostart>
-
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -169,7 +166,7 @@ system("xsetroot -solid '$color{'blue500'}'");
 
 *	[gitlab.com/.../dotfiles/.../perl/gmc.pm][dotfiles-perl-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -213,7 +210,7 @@ helper::do_config("rule",      %config::rules);
 
 *	[gitlab.com/.../dotfiles/.../perl/config.pm][dotfiles-perl-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -261,7 +258,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../perl/helper.pm][dotfiles-perl-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -351,7 +348,7 @@ sub run() {
 
 *	[gitlab.com/.../dotfiles/.../perl/startup.pm][dotfiles-perl-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -421,7 +418,7 @@ startup::run();
 
 *	[gitlab.com/.../dotfiles/.../perl/autostart.pl][dotfiles-perl-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 

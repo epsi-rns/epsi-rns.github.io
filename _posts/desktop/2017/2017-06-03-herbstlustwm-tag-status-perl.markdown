@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in Perl"
-date      : 2017-06-03 17:35:15 +0700
-categories: desktop
-tags      : [coding, perl, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in Perl"
+date       : 2017-06-03 17:35:15 +0700
+categories : desktop
+tags       : [coding, perl, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/perl.png
@@ -61,11 +62,6 @@ Impatient coder like me, like to open many tab on browser.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/][dotfiles-lemon-perl]
 
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
-
 -- -- --
 
 ### Screenshot
@@ -109,7 +105,7 @@ Let's have a look at <code class="code-file">helper.pm</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/helper.pm][dotfiles-lemon-perl-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -347,7 +343,7 @@ Or in Dzen2 version:
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/01-testparams.sh][dotfiles-lemon-perl-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -399,7 +395,7 @@ our %color = (
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/gmc.pm][dotfiles-lemon-perl-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -415,7 +411,7 @@ Let's have a look at <code class="code-file">output.pm</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/output.pm][dotfiles-lemon-perl-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -733,7 +729,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/01-testoutput.pl][dotfiles-lemon-perl-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

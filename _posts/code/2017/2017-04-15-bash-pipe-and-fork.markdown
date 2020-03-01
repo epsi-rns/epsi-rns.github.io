@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Piping and Forking in BASH"
-date      : 2017-04-15 17:35:15 +0700
-categories: code
-tags      : [coding, conky, bash]
-keywords  : [pipe and fork, dzen2, lemonbar]
-author: epsi
+layout     : post
+title      : "Piping and Forking in BASH"
+date       : 2017-04-15 17:35:15 +0700
+categories : code
+tags       : [coding, conky, bash]
+keywords   : [pipe and fork, dzen2, lemonbar]
+author     : epsi
+toc        : toc/2017/04/pipe-and-fork-language.html
 
 opengraph:
   image: /assets/site/images/topics/bash.png
@@ -36,10 +37,6 @@ you might desire to know the reason by reading this overview.
 **Reading**
 
 *	[Piping and Forking in Linux Script][local-overview]
-
--- -- --
-
-{% include post/2017/04/pipe-and-fork-language.md %}
 
 -- -- --
 
@@ -74,7 +71,7 @@ one after another, below the command line prompt.
 
 ![Pipe: Basic][image-time-basic]{: .img-responsive }
 
-{% include post/2017/04/pipe-and-fork-similar-01.md %}
+{% include toc/2017/04/pipe-and-fork-similar-01.html %}
 
 -- -- --
 
@@ -189,7 +186,7 @@ This would have <code>less</code> output similar to this below.
 
 	Your wallpaper might be different than mine.
 
-{% include post/2017/04/pipe-and-fork-similar-02.md %}
+{% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
 -- -- --
 
@@ -223,7 +220,7 @@ cmdout="less" # or dzen2
 generated_output | $cmdout
 {% endhighlight %}
 
-{% include post/2017/04/pipe-and-fork-similar-03.md %}
+{% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
 -- -- --
 
@@ -347,7 +344,7 @@ detach_dzen2
 
 *	[gitlab.com/.../dotfiles/.../bash-05-fork.sh][dotfiles-bash-05-fork]
 
-{% include post/2017/04/pipe-and-fork-similar-05.md %}
+{% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
 -- -- --
 
@@ -441,7 +438,7 @@ This would have <code>dzen2</code> output similar to this below.
 
 	You may use transset-df instead of transset.
 
-{% include post/2017/04/pipe-and-fork-similar-07.md %}
+{% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
 -- -- --
 
@@ -453,7 +450,7 @@ The code is very similar.
 **Source**:
 *	[gitlab.com/.../dotfiles/.../bash-17-conky.sh][dotfiles-bash-17-conky]
 
-{% include post/2017/04/pipe-and-fork-similar-17.md %}
+{% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
 
@@ -486,6 +483,7 @@ Thank you for reading.
 [dotfiles-bash-05-fork]:    {{ dotfiles_path }}/bash/bash-05-fork.sh
 [dotfiles-bash-07-conky]:   {{ dotfiles_path }}/bash/bash-07-conky.sh
 [dotfiles-haskell-01-basic]: {{ dotfiles_path }}/haskell/haskell-01-basic.hs
+[dotfiles-bash-17-conky]:    {{ dotfiles_path }}/bash/bash-17-conky.sh
 
 [image-time-less]:  {{ asset_path }}/pipe-time-less.png
 [image-time-dzen]:  {{ asset_path }}/pipe-time-dzen.png

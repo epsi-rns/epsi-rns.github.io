@@ -1,10 +1,12 @@
-<div class="card shadow-hover mb-4">
-  <div class="card-header bg-light text-dark">
-    <p class="card-title float-left">Table of Content</p>
-    <span class="fa fa-archive float-right"></span>
-    <div class="clearfix"></div>
-  </div>
-  <div class="card-body" markdown="1">
+
+  <div class="white hoverable p-t-5 p-b-5">
+    <div class="widget-header blue lighten-4">
+
+      <strong>Table of Content</strong>
+      <span class="fa fa-archive is-pulled-right"></span>
+
+    </div>
+    <div class="widget-body blue lighten-5" markdown="1">
 
 This article is one part of a collection.
 All integrated, one related to another.

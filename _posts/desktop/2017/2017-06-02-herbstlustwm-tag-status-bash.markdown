@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in BASH"
-date      : 2017-06-02 17:35:15 +0700
-categories: desktop
-tags      : [coding, bash, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in BASH"
+date       : 2017-06-02 17:35:15 +0700
+categories : desktop
+tags       : [coding, bash, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/bash.png
@@ -63,10 +64,6 @@ Impatient coder like me, like to open many tab on browser.
 
 -- -- --
 
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
-
--- -- --
-
 ### Screenshot
 
 Since window manager is out of topic in this tutorial,
@@ -108,7 +105,7 @@ Let's have a look at <code class="code-file">helper.sh</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../bash/helper.sh][dotfiles-lemon-bash-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -344,7 +341,7 @@ Or in Dzen2 version:
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../bash/01-testparams.sh][dotfiles-lemon-bash-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -396,7 +393,7 @@ declare -A color=(
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../bash/gmc.sh][dotfiles-lemon-bash-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -412,7 +409,7 @@ Let's have a look at <code class="code-file">output.sh</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../bash/output.sh][dotfiles-lemon-bash-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -617,6 +614,8 @@ function output_by_tag() {
 }
 {% endhighlight %}
 
+*.
+
 -- -- --
 
 ### Combine The Segments
@@ -723,7 +722,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../bash/01-testoutput.sh][dotfiles-lemon-bash-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

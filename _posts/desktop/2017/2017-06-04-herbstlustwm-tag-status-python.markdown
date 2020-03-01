@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in Python"
-date      : 2017-06-04 17:35:15 +0700
-categories: desktop
-tags      : [coding, python, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in Python"
+date       : 2017-06-04 17:35:15 +0700
+categories : desktop
+tags       : [coding, python, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/python.png
@@ -61,11 +62,6 @@ Impatient coder like me, like to open many tab on browser.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/][dotfiles-lemon-python]
 
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
-
 -- -- --
 
 ### Screenshot
@@ -109,7 +105,7 @@ Let's have a look at <code class="code-file">helper.py</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/helper.py][dotfiles-lemon-python-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -324,7 +320,7 @@ Or in Dzen2 version:
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/01-testparams.py][dotfiles-lemon-python-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -377,7 +373,7 @@ color = {
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/gmc.py][dotfiles-lemon-python-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -393,7 +389,7 @@ Let's have a look at <code class="code-file">output.py</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/output.py][dotfiles-lemon-python-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -705,7 +701,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/01-testoutput.py][dotfiles-lemon-python-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

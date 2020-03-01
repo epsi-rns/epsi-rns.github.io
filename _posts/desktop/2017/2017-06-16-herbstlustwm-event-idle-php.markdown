@@ -1,11 +1,12 @@
 ---
-layout: post
+layout     : post
 title:  "HerbstluftWM Idle Event in PHP"
 date      : 2017-06-16 17:35:15 +0700
 categories: desktop
 tags      : [coding, php, herbstluftwm, statusbar]
 keywords  : [event idle, lemonbar, dzen2]
-author: epsi
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-idle-event.html
 
 opengraph:
   image: /assets/site/images/topics/php.png
@@ -71,10 +72,6 @@ Let's have a look at <code class="code-file">pipehandler.php</code> in github.
 
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/pipehandler.php][dotfiles-lemon-php-pipehandler]
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-event-idle-language.md %}
 
 -- -- --
 
@@ -195,7 +192,7 @@ Simple version. No idle event. Only statusbar initialization.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/pipehandler.01-init.php][dotfiles-lemon-php-pipehandler-init]
 
-{% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-pipehandler.html %}
 
 -- -- --
 
@@ -708,7 +705,7 @@ After reunification, they are not very long scripts after all.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../php/panel-lemonbar.php][dotfiles-hlwm-php-lemon-compact]
 
-{% include post/2017/06/herbstlustwm-event-idle-panel.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-panel.html %}
 
 -- -- --
 

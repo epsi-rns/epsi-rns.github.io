@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Idle Event in Perl"
-date      : 2017-06-13 17:35:15 +0700
-categories: desktop
-tags      : [coding, perl, herbstluftwm, statusbar]
-keywords  : [event idle, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Idle Event in Perl"
+date       : 2017-06-13 17:35:15 +0700
+categories : desktop
+tags       : [coding, perl, herbstluftwm, statusbar]
+keywords   : [event idle, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-idle-event.html
 
 opengraph:
   image: /assets/site/images/topics/perl.png
@@ -71,10 +72,6 @@ Let's have a look at <code class="code-file">pipehandler.pm</code> in github.
 
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/pipehandler.pm][dotfiles-lemon-perl-pipehandler]
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-event-idle-language.md %}
 
 -- -- --
 
@@ -192,7 +189,7 @@ Simple version. No idle event. Only statusbar initialization.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/pipehandler.01-init.pm][dotfiles-lemon-perl-pipehandler-init]
 
-{% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-pipehandler.html %}
 
 -- -- --
 
@@ -694,7 +691,7 @@ After reunification, they are not very long scripts after all.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../perl/panel-lemonbar.pl][dotfiles-hlwm-perl-lemon-compact]
 
-{% include post/2017/06/herbstlustwm-event-idle-panel.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-panel.html %}
 
 -- -- --
 

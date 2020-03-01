@@ -1,11 +1,12 @@
 ---
-layout: post
+layout     : post
 title:  "HerbstluftWM Idle Event in Lua"
 date      : 2017-06-17 17:35:15 +0700
 categories: desktop
 tags      : [coding, lua, herbstluftwm, statusbar]
 keywords  : [event idle, lemonbar, dzen2]
-author: epsi
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-idle-event.html
 
 opengraph:
   image: /assets/site/images/topics/lua.png
@@ -71,10 +72,6 @@ Let's have a look at <code class="code-file">pipehandler.lua</code> in github.
 
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/pipehandler.lua][dotfiles-lemon-lua-pipehandler]
-
--- -- --
-
-{% include post/2017/06/herbstlustwm-event-idle-language.md %}
 
 -- -- --
 
@@ -180,7 +177,7 @@ Simple version. No idle event. Only statusbar initialization.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/pipehandler.01-init.lua][dotfiles-lemon-lua-pipehandler-init]
 
-{% include post/2017/06/herbstlustwm-event-idle-pipehandler.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-pipehandler.html %}
 
 -- -- --
 
@@ -649,7 +646,7 @@ After reunification, they are not very long scripts after all.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/panel-lemonbar.lua][dotfiles-hlwm-lua-lemon-compact]
 
-{% include post/2017/06/herbstlustwm-event-idle-panel.md %}
+{% include toc/2017/06/herbstlustwm-event-idle-panel.html %}
 
 -- -- --
 

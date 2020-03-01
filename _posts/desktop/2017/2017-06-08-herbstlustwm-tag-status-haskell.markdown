@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "HerbstluftWM Tag Status in Haskell"
-date      : 2017-06-08 17:35:15 +0700
-categories: desktop
-tags      : [coding, haskell, herbstluftwm, statusbar]
-keywords  : [tag status, lemonbar, dzen2]
-author: epsi
+layout     : post
+title      : "HerbstluftWM Tag Status in Haskell"
+date       : 2017-06-08 17:35:15 +0700
+categories : desktop
+tags       : [coding, haskell, herbstluftwm, statusbar]
+keywords   : [tag status, lemonbar, dzen2]
+author     : epsi
+toc        : toc/2017/06/herbstlustwm-tag-status.html
 
 opengraph:
   image: /assets/site/images/topics/haskell.png
@@ -63,10 +64,6 @@ Impatient coder like me, like to open many tab on browser.
 
 -- -- --
 
-{% include post/2017/06/herbstlustwm-tag-status-language.md %}
-
--- -- --
-
 ### Screenshot
 
 Since window manager is out of topic in this tutorial,
@@ -108,7 +105,7 @@ Let's have a look at <code class="code-file">helper.hs</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../haskell/helper.sh][dotfiles-lemon-haskell-helper]
 
-{% include post/2017/06/herbstlustwm-tag-status-helper.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-helper.html %}
 
 #### Get Script Argument
 
@@ -403,7 +400,7 @@ Or in Dzen2 version:
 *	**Lemon**: 
 	[gitlab.com/.../dotfiles/.../haskell/01-testparams.hs][dotfiles-lemon-haskell-testparams]
 
-{% include post/2017/06/herbstlustwm-tag-status-testparams.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-testparams.html %}
 
 -- -- --
 
@@ -461,7 +458,7 @@ myColor key = M.findWithDefault "#ffffff" key (fromList colorSchemes)
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-lemon-haskell-gmc]
 
-{% include post/2017/06/herbstlustwm-tag-status-gmc.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-gmc.html %}
 
 -- -- --
 
@@ -477,7 +474,7 @@ Let's have a look at <code class="code-file">output.hs</code> in github.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../hasell/output.hs][dotfiles-lemon-haskell-output]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 
@@ -828,7 +825,7 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 *	**lemonbar**: 
 	[gitlab.com/.../dotfiles/.../haskell/01-testoutput.hs][dotfiles-lemon-haskell-testoutput]
 
-{% include post/2017/06/herbstlustwm-tag-status-output.md %}
+{% include toc/2017/06/herbstlustwm-tag-status-output.html %}
 
 -- -- --
 

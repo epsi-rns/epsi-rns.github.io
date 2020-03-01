@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in Haskell"
-date      : 2017-05-08 17:35:15 +0700
-categories: desktop
-tags      : [coding, haskell, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in Haskell"
+date       : 2017-05-08 17:35:15 +0700
+categories : desktop
+tags       : [coding, haskell, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/haskell.png
@@ -52,10 +53,6 @@ It seems to be I'm not the only person who used Haskell with HerbsluftWM.
 Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-haskell-directory]
-
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -170,7 +167,7 @@ main = do
 
 *	[gitlab.com/.../dotfiles/.../haskell/gmc.hs][dotfiles-haskell-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -217,7 +214,7 @@ main = do
 
 *	[gitlab.com/.../dotfiles/.../haskell/config.hs][dotfiles-haskell-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -272,7 +269,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../haskell/helper.hs][dotfiles-haskell-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -470,7 +467,7 @@ to determine whether the application should be launch or not.
 
 *	[gitlab.com/.../dotfiles/.../haskell/startup.hs][dotfiles-haskell-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -537,7 +534,7 @@ main = do
 
 *	[gitlab.com/.../dotfiles/.../haskell/autostart.hs][dotfiles-haskell-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 

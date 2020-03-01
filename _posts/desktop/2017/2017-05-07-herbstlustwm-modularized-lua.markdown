@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Modularized HerbstluftWM in Lua"
-date      : 2017-05-07 17:35:15 +0700
-categories: desktop
-tags      : [coding, lua, herbstluftwm]
-keywords  : [modularized]
-author: epsi
+layout     : post
+title      : "Modularized HerbstluftWM in Lua"
+date       : 2017-05-07 17:35:15 +0700
+categories : desktop
+tags       : [coding, lua, herbstluftwm]
+keywords   : [modularized]
+author     : epsi
+toc        : toc/2017/05/herbstlustwm-modularized.html
 
 opengraph:
   image: /assets/site/images/topics/lua.png
@@ -44,10 +45,6 @@ you might desire to read this overview.
 Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lua-directory]
-
--- -- --
-
-{% include post/2017/05/herbstlustwm-modularized-language.md %}
 
 -- -- --
 
@@ -165,7 +162,7 @@ os.execute("xsetroot -solid '" .. gmc.color["blue500"] .. "'")
 
 *	[gitlab.com/.../dotfiles/.../lua/gmc.lua][dotfiles-lua-gmc]
 
-{% include post/2017/05/herbstlustwm-modularized-gmc.md %}
+{% include toc/2017/05/herbstlustwm-modularized-gmc.html %}
 
 -- -- --
 
@@ -209,7 +206,7 @@ helper.do_config('rule',      config.rules)
 
 *	[gitlab.com/.../dotfiles/.../lua/config.lua][dotfiles-lua-config]
 
-{% include post/2017/05/herbstlustwm-modularized-config.md %}
+{% include toc/2017/05/herbstlustwm-modularized-config.html %}
 
 -- -- --
 
@@ -254,7 +251,7 @@ You can see the debugging result in figure below.
 
 *	[gitlab.com/.../dotfiles/.../lua/helper.lua][dotfiles-lua-helper]
 
-{% include post/2017/05/herbstlustwm-modularized-helper.md %}
+{% include toc/2017/05/herbstlustwm-modularized-helper.html %}
 
 -- -- --
 
@@ -373,7 +370,7 @@ to determine whether it should be launch or not.
 
 *	[gitlab.com/.../dotfiles/.../lua/startup.lua][dotfiles-lua-startup]
 
-{% include post/2017/05/herbstlustwm-modularized-startup.md %}
+{% include toc/2017/05/herbstlustwm-modularized-startup.html %}
 
 -- -- --
 
@@ -440,7 +437,7 @@ startup.run()
 
 *	[gitlab.com/.../dotfiles/.../lua/autostart.lua][dotfiles-lua-autostart]
 
-{% include post/2017/05/herbstlustwm-modularized-autostart.md %}
+{% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
 
