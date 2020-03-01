@@ -2,7 +2,7 @@ epsi-rns.github.io
 =====================
 
 A ready to use, Jekyll site customization.
-Now using Bootstrap v4.
+Now using Bulma instead of Bootstrap v4.
 
 Installing Jekyll is something cool.
 Having an example of working site is something else.

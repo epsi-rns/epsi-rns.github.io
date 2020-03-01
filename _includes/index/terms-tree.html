@@ -24,7 +24,7 @@
             <div class="meta_link has-text-right">
               <time class="meta_time is-pulled-right"
                     datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%b %-d, %Y" }}&nbsp;
+                &nbsp;{{ post.date | date: "%b %-d, %Y" }}&nbsp;
                 &nbsp;<span class="fa fa-calendar"></span></time></div>
             <div class="is-pulled-left">
             <a href="{{ post.url | prepend: site.baseurl }}">
