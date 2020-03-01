@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Openbox Theme - Common Inkscape Trick"
-categories: desktop
-date      : 2018-04-16 09:25:15 +0700
-tags      : [openbox, theme, inkscape]
-keywords  : [tutorial, free SVG, custom theme]
-author: epsi
+layout     : post
+title      : "Openbox Theme - Common Inkscape Trick"
+categories : desktop
+date       : 2018-04-16 09:25:15 +0700
+tags       : [openbox, theme, inkscape]
+keywords   : [tutorial, free SVG, custom theme]
+author     : epsi
+toc        : toc/2018/04/toc-openbox-theme.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
@@ -13,12 +14,7 @@ opengraph:
 excerpt:
   A brief explanation about Openbox theme.
   Step by step, using Inkscape, one SVG file to create each XBM part.
-
 ---
-
-{% include post/2018/04/toc-openbox-theme.html %}
-
--- -- --
 
 ### Preface
 

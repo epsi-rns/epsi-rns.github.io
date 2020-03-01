@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Awesome WM - Statusbar - Refactoring Default"
-categories: desktop
-date      : 2019-11-24 09:25:15 +0700
-tags      : [awesome]
-keywords  : [tiling, window manager, modularized, lua]
-author: epsi
+layout     : post
+title      :  "Awesome WM - Statusbar - Refactoring Default"
+categories : desktop
+date       : 2019-11-24 09:25:15 +0700
+tags       : [awesome]
+keywords   : [tiling, window manager, modularized, lua]
+author     : epsi
+toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
   image: /assets/posts/desktop/2019/11/04-statusbar-default.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Awesome WM statusbar step by step.
   Refactoring default statusbar into modularized helper.
-
 ---
-
-{% include post/2019/06/toc-awesome.html %}
 
 -- -- --
 

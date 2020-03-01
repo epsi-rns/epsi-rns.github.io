@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "GhostBSD - Multiboot"
-date      : 2019-03-20 09:45:15 +0700
-categories: system
-tags      : [bsd]
-keywords  : [ghostbsd, multiboot, ufs]
-author: epsi
+layout     : post
+title      : "GhostBSD - Multiboot"
+date       : 2019-03-20 09:45:15 +0700
+categories : system
+tags       : [bsd]
+keywords   : [ghostbsd, multiboot, ufs]
+author     : epsi
+toc        : toc/2019/03/toc-ghostbsd.html
 
 opengraph:
   image: /assets/site/images/topics/ghostbsd.png
@@ -13,8 +14,6 @@ opengraph:
 excerpt:
   GhostBSD multiboot situation with Windows and Linux is possible.
 ---
-
-{% include post/2019/03/toc-ghostbsd.html %}
 
 ### Preface
 

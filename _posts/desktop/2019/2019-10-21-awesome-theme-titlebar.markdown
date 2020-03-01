@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Awesome WM - Theme - Titlebar"
-categories: desktop
-date      : 2019-10-21 09:25:15 +0700
-tags      : [awesome, inkscape]
-keywords  : [tiling, window manager, modularized, lua]
-author: epsi
+layout     : post
+title      :  "Awesome WM - Theme - Titlebar"
+categories : desktop
+date       : 2019-10-21 09:25:15 +0700
+tags       : [awesome, inkscape]
+keywords   : [tiling, window manager, modularized, lua]
+author     : epsi
+toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
   image: /assets/posts/desktop/2019/10/clone-titlebar.png
@@ -14,10 +15,7 @@ excerpt:
   Awesome WM theme step by step.
   Custom Flat Design Titlebar, Minimalist PNG Button.
   Using Inkscape, one SVG file to create each PNG resource.
-
 ---
-
-{% include post/2019/06/toc-awesome.html %}
 
 -- -- --
 

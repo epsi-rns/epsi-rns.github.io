@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Fluxbox Theme - Style Part"
-categories: desktop
-date      : 2018-04-07 09:25:15 +0700
-tags      : [fluxbox, theme, inkscape]
-keywords  : [tutorial, free SVG, custom theme]
-author: epsi
+layout     : post
+title      : "Fluxbox Theme - Style Part"
+categories : desktop
+date       : 2018-04-07 09:25:15 +0700
+tags       : [fluxbox, theme, inkscape]
+keywords   : [tutorial, free SVG, custom theme]
+author     : epsi
+toc        : toc/2018/04/toc-fluxbox.html 
 
 opengraph:
   image: /assets/site/images/topics/fluxbox.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   A brief explanation about Fluxbox theme (or style).
   Step by step, using Inkscape, one SVG file to create each XPM part.
-
 ---
-
-{% include post/2018/04/toc-fluxbox.html %}
 
 ### Preface
 

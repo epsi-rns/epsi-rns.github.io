@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Linux Multiboot, Setting up Partitions"
-date      : 2014-03-13 18:31:15 +0700
-categories: system
-tags      : [thought]
-keywords  : [multiboot, partition]
-author: epsi
+layout     : post
+title      : "Linux Multiboot, Setting up Partitions"
+date       : 2014-03-13 18:31:15 +0700
+categories : system
+tags       : [thought]
+keywords   : [multiboot, partition]
+author     : epsi
+toc        : toc/2018/05/toc-multiboot.html
 
 opengraph:
   image: /assets/site/images/topics/tux.png
@@ -16,10 +17,7 @@ excerpt:
 related_link_ids: 
   - 14010246  # Debian Install
   - 14040246  # Arch Install
-
 ---
-
-{% include post/2018/05/toc-multiboot.html %}
 
 This is a remake of my facebook note with the same title.
 
@@ -33,9 +31,6 @@ In this example I'm using four OS
 	Win7 + Debian + Kali + Arch
 
 ![Multiboot: Cover][image-cover]{: .img-responsive }
-
-
-
 
 ## Choose your Distro 
 

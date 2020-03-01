@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Linux Multiboot - chroot"
-date      : 2018-05-23 09:25:15 +0700
-categories: system
-tags      : [thought]
-keywords  : [multiboot, partition, chroot]
-author: epsi
+layout     : post
+title      : "Linux Multiboot - chroot"
+date       : 2018-05-23 09:25:15 +0700
+categories : system
+tags       : [thought]
+keywords   : [multiboot, partition, chroot]
+author     : epsi
+toc        : toc/2018/05/toc-multiboot.html
 
 opengraph:
   image: /assets/site/images/topics/tux.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Based on my experience.
   Updating other linux in chroot environment.
-  
 ---
-
-{% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
 

@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Openbox Config - Overview"
-categories: desktop
-date      : 2018-05-01 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration]
-author: epsi
+layout     : post
+title      : "Openbox Config - Overview"
+categories : desktop
+date       : 2018-05-01 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   Overview about Openbox in configuration.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Overview
 

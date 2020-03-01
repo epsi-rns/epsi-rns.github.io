@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Awesome WM - Statusbar Modules"
-categories: desktop
-date      : 2019-06-19 09:25:15 +0700
-tags      : [awesome]
-keywords  : [tiling, window manager, modularized, lua]
-author: epsi
+layout     : post
+title      :  "Awesome WM - Statusbar Modules"
+categories : desktop
+date       : 2019-06-19 09:25:15 +0700
+tags       : [awesome]
+keywords   : [tiling, window manager, modularized, lua]
+author     : epsi
+toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
   image: /assets/posts/desktop/2019/06/01-menu-custom.png
@@ -20,10 +21,7 @@ related_link_ids:
   - 16062934  # Install Awesome Arch
   - 14113019  # Awesome TWM Beginner
   - 16031941  # Refactoring Awesome
-
 ---
-
-{% include post/2019/06/toc-awesome.html %}
 
 ### Preface
 

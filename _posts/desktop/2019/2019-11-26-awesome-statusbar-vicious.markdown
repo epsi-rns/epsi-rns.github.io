@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Awesome WM - Statusbar - Vicious Library"
-categories: desktop
-date      : 2019-11-26 09:25:15 +0700
-tags      : [awesome]
-keywords  : [tiling, window manager, modularized, lua, vicious]
-author: epsi
+layout     : post
+title      :  "Awesome WM - Statusbar - Vicious Library"
+categories : desktop
+date       : 2019-11-26 09:25:15 +0700
+tags       : [awesome]
+keywords   : [tiling, window manager, modularized, lua, vicious]
+author     : epsi
+toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
   image: /assets/posts/desktop/2019/11/04-gentoo-vicious-640.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Awesome WM statusbar step by step.
   Monitoring widget in statusbar using Vicious Library.
-
 ---
-
-{% include post/2019/06/toc-awesome.html %}
 
 -- -- --
 

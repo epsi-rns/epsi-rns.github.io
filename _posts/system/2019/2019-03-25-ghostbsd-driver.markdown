@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "GhostBSD - Driver"
-date      : 2019-03-25 09:45:15 +0700
-categories: system
-tags      : [bsd]
-keywords  : [ghostbsd, wireless driver, display driver]
-author: epsi
+layout     : post
+title      : "GhostBSD - Driver"
+date       : 2019-03-25 09:45:15 +0700
+categories : system
+tags       : [bsd]
+keywords   : [ghostbsd, wireless driver, display driver]
+author     : epsi
+toc        : toc/2019/03/toc-ghostbsd.html
 
 opengraph:
   image: /assets/site/images/topics/ghostbsd.png
@@ -14,8 +15,6 @@ excerpt:
   GhostBSD driver sounds scary at first.
   But once you get along it make sense.
 ---
-
-{% include post/2019/03/toc-ghostbsd.html %}
 
 ### Preface
 

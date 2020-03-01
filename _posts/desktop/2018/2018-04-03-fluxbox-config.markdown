@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Fluxbox Config - General"
-categories: desktop
-date      : 2018-04-03 09:25:15 +0700
-tags      : [fluxbox]
-keywords  : [tutorial, configuration]
-author: epsi
+layout     : post
+title      : "Fluxbox Config - General"
+categories : desktop
+date       : 2018-04-03 09:25:15 +0700
+tags       : [fluxbox]
+keywords   : [tutorial, configuration]
+author     : epsi
+toc        : toc/2018/04/toc-fluxbox.html 
 
 opengraph:
   image: /assets/site/images/topics/fluxbox.png
 
 excerpt:
   A brief explanation about Fluxbox config.
-
 ---
-
-{% include post/2018/04/toc-fluxbox.html %}
 
 ### Preface
 

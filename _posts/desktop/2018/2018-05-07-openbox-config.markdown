@@ -1,25 +1,23 @@
 ---
-layout: post
-title:  "Openbox Menu - Static"
-categories: desktop
-date      : 2018-05-07 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, menu]
-author: epsi
+layout     : post
+title      : "Openbox Menu - Static"
+categories : desktop
+date       : 2018-05-07 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, menu]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
-  A brief explanation about Openbox rc.xml Configuration
-
+  A brief explanation about Openbox rc.xml Configuration.
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Menu
 
-> Goal: Explaining openbox menu.xml configuration
+> Goal: Explaining openbox menu.xml configuration.
 
 #### Reading
 

@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "XFWM4 Theme - Part Three"
-categories: desktop
-date      : 2018-03-23 09:25:15 +0700
-tags      : [xfwm4, theme, inkscape]
-keywords  : [tutorial, free SVG, custom theme]
-author: epsi
+layout     : post
+title      : "XFWM4 Theme - Part Three"
+categories : desktop
+date       : 2018-03-23 09:25:15 +0700
+tags       : [xfwm4, theme, inkscape]
+keywords   : [tutorial, free SVG, custom theme]
+author     : epsi
+toc        : toc/2018/03/toc-xfwm4-theme.html
 
 opengraph:
   image: /assets/site/images/topics/xfce.png
@@ -13,12 +14,7 @@ opengraph:
 excerpt:
   XFWM4 theme step by step, covering most style.
   Using Inkscape, one SVG file to create each PNG/XPM part.
-
 ---
-
-{% include post/2018/03/toc-xfwm4-theme.html %}
-
--- -- --
 
 > Tutor Three: Flat Design, Minimalist PNG Button
 

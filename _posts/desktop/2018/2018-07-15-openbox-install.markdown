@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Openbox Install - Basic"
-categories: desktop
-date      : 2018-07-15 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, install]
-author: epsi
+layout     : post
+title      : "Openbox Install - Basic"
+categories : desktop
+date       : 2018-07-15 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, install]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Openbox install for Dummies.
   Also tint2.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Overview
 

@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Windows - Setting up CLI Environment"
-date      : 2019-01-21 09:45:15 +0700
-categories: system
-tags      : [windows, package manager]
-keywords  : [chocolatey, cmder]
-author: epsi
+layout     : post
+title      : "Windows - Setting up CLI Environment"
+date       : 2019-01-21 09:45:15 +0700
+categories : system
+tags       : [windows, package manager]
+keywords   : [chocolatey, cmder]
+author     : epsi
+toc        : toc/2019/01/windows-cli.html
 
 opengraph:
   image: /assets/site/images/topics/bash.png
@@ -15,8 +16,6 @@ excerpt:
   chocolatey package manager and cmder terminal.
 
 ---
-
-{% include post/2019/01/windows-cli.html %}
 
 ### Preface
 

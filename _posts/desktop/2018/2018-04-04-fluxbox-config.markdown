@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Fluxbox Config - Menu"
-categories: desktop
-date      : 2018-04-04 09:25:15 +0700
-tags      : [fluxbox]
-keywords  : [tutorial, configuration]
-author: epsi
+layout     : post
+title      : "Fluxbox Config - Menu"
+categories : desktop
+date       : 2018-04-04 09:25:15 +0700
+tags       : [fluxbox]
+keywords   : [tutorial, configuration]
+author     : epsi
+toc        : toc/2018/04/toc-fluxbox.html 
 
 opengraph:
   image: /assets/site/images/topics/fluxbox.png
 
 excerpt:
   A brief explanation about Fluxbox menu configuration.
-
 ---
-
-{% include post/2018/04/toc-fluxbox.html %}
 
 ### Config: Menu
 

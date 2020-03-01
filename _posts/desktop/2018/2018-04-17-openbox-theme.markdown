@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Openbox Theme - Common Config Trick"
-categories: desktop
-date      : 2018-04-17 09:25:15 +0700
-tags      : [openbox, theme, inkscape]
-keywords  : [tutorial, free SVG, custom theme]
-author: epsi
+layout     : post
+title      : "Openbox Theme - Common Config Trick"
+categories : desktop
+date       : 2018-04-17 09:25:15 +0700
+tags       : [openbox, theme, inkscape]
+keywords   : [tutorial, free SVG, custom theme]
+author     : epsi
+toc        : toc/2018/04/toc-openbox-theme.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   A brief explanation about Openbox theme (or style).
   Step by step, modular configuration.
-
 ---
-
-{% include post/2018/04/toc-openbox-theme.html %}
 
 -- -- --
 

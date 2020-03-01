@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Openbox Menu - XDG Applications"
-categories: desktop
-date      : 2018-05-09 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, menu]
-author: epsi
+layout     : post
+title      : "Openbox Menu - XDG Applications"
+categories : desktop
+date       : 2018-05-09 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, menu]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   Using openbox-menu script as Dynamic Openbox menu.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### openbox-menu Script
 

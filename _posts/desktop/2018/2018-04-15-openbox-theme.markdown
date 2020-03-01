@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Openbox Theme - Overview"
-categories: desktop
-date      : 2018-04-15 09:25:15 +0700
-tags      : [xfwm4, theme, inkscape]
-keywords  : [tutorial, free SVG, custom theme]
-author: epsi
+layout     : post
+title      : "Openbox Theme - Overview"
+categories : desktop
+date       : 2018-04-15 09:25:15 +0700
+tags       : [xfwm4, theme, inkscape]
+keywords   : [tutorial, free SVG, custom theme]
+author     : epsi
+toc        : toc/2018/04/toc-openbox-theme.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
@@ -13,12 +14,7 @@ opengraph:
 excerpt:
   Openbox theme step by step, covering two theme styles.
   Using Inkscape, one SVG file to create each XBM part.
-
 ---
-
-{% include post/2018/04/toc-openbox-theme.html %}
-
--- -- --
 
 ### Preface
 

@@ -1,25 +1,23 @@
 ---
-layout: post
-title:  "Openbox Config - Rules"
-categories: desktop
-date      : 2018-05-05 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, rules]
-author: epsi
+layout     : post
+title      : "Openbox Config - Rules"
+categories : desktop
+date       : 2018-05-05 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, rules]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
-  A brief explanation about Openbox rc.xml Configuration
-
+  A brief explanation about Openbox rc.xml Configuration.
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Rules
 
-> Goal: Explaining openbox rules in rc.xml configuration 
+> Goal: Explaining openbox rules in rc.xml configuration.
 
 again, have a look at the <code class="code-file">rc.xml</code>.
 

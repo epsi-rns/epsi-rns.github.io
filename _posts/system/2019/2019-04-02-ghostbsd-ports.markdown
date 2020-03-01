@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "GhostBSD - Ports"
-date      : 2019-04-02 09:45:15 +0700
-categories: system
-tags      : [bsd, package manager]
-keywords  : [ghostbsd, ports]
-author: epsi
+layout     : post
+title      : "GhostBSD - Ports"
+date       : 2019-04-02 09:45:15 +0700
+categories : system
+tags       : [bsd, package manager]
+keywords   : [ghostbsd, ports]
+author     : epsi
+toc        : toc/2019/03/toc-ghostbsd.html
 
 opengraph:
   image: /assets/site/images/topics/ghostbsd.png
@@ -18,8 +19,6 @@ excerpt:
   to help understanding the the process
   of installing package using ports.
 ---
-
-{% include post/2019/03/toc-ghostbsd.html %}
 
 ### Preface
 

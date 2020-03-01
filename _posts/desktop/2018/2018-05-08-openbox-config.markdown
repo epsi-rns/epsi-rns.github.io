@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Openbox Menu - Dynamic"
-categories: desktop
-date      : 2018-05-08 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, menu]
-author: epsi
+layout     : post
+title      : "Openbox Menu - Dynamic"
+categories : desktop
+date       : 2018-05-08 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, menu]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   Using Bunsenslabs Script as Dynamic Openbox menu.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### BunsenLabs Script
 

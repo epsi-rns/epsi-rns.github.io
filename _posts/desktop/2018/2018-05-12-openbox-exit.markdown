@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Openbox Utility - Exit"
-categories: desktop
-date      : 2018-05-12 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, utility]
-author: epsi
+layout     : post
+title      : "Openbox Utility - Exit"
+categories : desktop
+date       : 2018-05-12 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, utility]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   Openbox logging out for dummies.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Overview
 

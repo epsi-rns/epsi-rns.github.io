@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "GhostBSD - Migration from Linux"
-date      : 2019-03-30 09:45:15 +0700
-categories: system
-tags      : [bsd]
-keywords  : [ghostbsd, migration]
-author: epsi
+layout     : post
+title      : "GhostBSD - Migration from Linux"
+date       : 2019-03-30 09:45:15 +0700
+categories : system
+tags       : [bsd]
+keywords   : [ghostbsd, migration]
+author     : epsi
+toc        : toc/2019/03/toc-ghostbsd.html
 
 opengraph:
   image: /assets/site/images/topics/ghostbsd.png
@@ -14,8 +15,6 @@ excerpt:
   This article contain common issues,
   for migrating from linux to BSD.
 ---
-
-{% include post/2019/03/toc-ghostbsd.html %}
 
 ### Desktop Customization
 

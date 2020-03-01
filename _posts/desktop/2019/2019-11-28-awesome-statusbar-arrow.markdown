@@ -1,11 +1,11 @@
 ---
-layout: post
-title:  "Awesome WM - Statusbar - Arrow Style"
-categories: desktop
-date      : 2019-11-28 09:25:15 +0700
-tags      : [awesome]
-keywords  : [tiling, window manager, modularized, lua]
-author: epsi
+layout     : post
+title      :  "Awesome WM - Statusbar - Arrow Style"
+categories : desktop
+date       : 2019-11-28 09:25:15 +0700
+tags       : [awesome]
+keywords   : [tiling, window manager, modularized, lua]
+author     : epsi
 
 opengraph:
   image: /assets/posts/desktop/2019/11/04-gentoo-statusbar-arrow-1024x768.png
@@ -14,12 +14,8 @@ excerpt:
   Awesome WM statusbar step by step.
   Statusbar customization, with powerline style using Lain.
 
-# mathjax: true
+# mathjax: false
 ---
-
-{% include post/2019/06/toc-awesome.html %}
-
--- -- --
 
 ### Preface
 

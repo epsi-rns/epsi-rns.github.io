@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Linux Multiboot - /etc/fstab"
-date      : 2018-05-22 09:25:15 +0700
-categories: system
-tags      : [thought]
-keywords  : [multiboot, partition, fstab]
-author: epsi
+layout     : post
+title      : "Linux Multiboot - /etc/fstab"
+date       : 2018-05-22 09:25:15 +0700
+categories : system
+tags       : [thought]
+keywords   : [multiboot, partition, fstab]
+author     : epsi
+toc        : toc/2018/05/toc-multiboot.html
 
 opengraph:
   image: /assets/site/images/topics/tux.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Based on my experience.
   Thorough /etc/fstab/ example.
-
 ---
-
-{% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
 

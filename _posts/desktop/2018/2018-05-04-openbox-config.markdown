@@ -1,23 +1,21 @@
 ---
-layout: post
-title:  "Openbox Config - Key and Mouse Binding"
-categories: desktop
-date      : 2018-05-04 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, key binding, mouse binding]
-author: epsi
+layout     : post
+title      : "Openbox Config - Key and Mouse Binding"
+categories : desktop
+date       : 2018-05-04 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, key binding, mouse binding]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
-  A brief explanation about Openbox rc.xml Configuration
-
+  A brief explanation about Openbox rc.xml Configuration.
 ---
 
-{% include post/2018/05/toc-openbox-config.html %}
-
-> Goal: Explaining openbox key and mouse binding in rc.xml configuration 
+> Goal: Explaining openbox key and mouse binding in rc.xml configuration .
 
 ### Key Binding
 

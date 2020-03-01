@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Awesome WM - Theme - Main"
-categories: desktop
-date      : 2019-10-20 09:25:15 +0700
-tags      : [awesome]
-keywords  : [tiling, window manager, modularized, lua]
-author: epsi
+layout     : post
+title      :  "Awesome WM - Theme - Main"
+categories : desktop
+date       : 2019-10-20 09:25:15 +0700
+tags       : [awesome]
+keywords   : [tiling, window manager, modularized, lua]
+author     : epsi
+toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
   image: /assets/posts/desktop/2019/10/gentoo-rvm-jekyll-two-panes.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Awesome WM theme step by step.
   Covering most common configuration.
-
 ---
-
-{% include post/2019/06/toc-awesome.html %}
 
 ### Preface
 

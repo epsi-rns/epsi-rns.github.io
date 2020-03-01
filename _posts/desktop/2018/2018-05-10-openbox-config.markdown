@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Openbox Menu - OB Menu Generator"
-categories: desktop
-date      : 2018-05-10 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, menu]
-author: epsi
+layout     : post
+title      : "Openbox Menu - OB Menu Generator"
+categories : desktop
+date       : 2018-05-10 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, menu]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   Using OB Menu Generator as Static Openbox menu.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### OB Menu Generator
 

@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Tint2 - Panel Items"
-categories: desktop
-date      : 2018-05-17 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration, tint2]
-author: epsi
+layout     : post
+title      : "Tint2 - Panel Items"
+categories : desktop
+date       : 2018-05-17 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration, tint2]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   A brief guidance about Tint2 theme.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Tutor 07: Common Items
 

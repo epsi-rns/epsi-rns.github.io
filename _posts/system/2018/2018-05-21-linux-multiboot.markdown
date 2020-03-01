@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Linux Multiboot - Partition Schema"
-date      : 2018-05-21 09:25:15 +0700
-categories: system
-tags      : [thought]
-keywords  : [multiboot, partition]
-author: epsi
+layout     : post
+title      : "Linux Multiboot - Partition Schema"
+date       : 2018-05-21 09:25:15 +0700
+categories : system
+tags       : [thought]
+keywords   : [multiboot, partition]
+author     : epsi
+toc        : toc/2018/05/toc-multiboot.html
 
 opengraph:
   image: /assets/site/images/topics/tux.png
@@ -13,10 +14,7 @@ opengraph:
 excerpt:
   Based on my experience.
   My partition schema.
-
 ---
-
-{% include post/2018/05/toc-multiboot.html %}
 
 ### Preface
 

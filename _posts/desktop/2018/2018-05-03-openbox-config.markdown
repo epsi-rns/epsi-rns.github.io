@@ -1,21 +1,19 @@
 ---
-layout: post
-title:  "Openbox Config - General rc.xml"
-categories: desktop
-date      : 2018-05-03 09:25:15 +0700
-tags      : [openbox]
-keywords  : [tutorial, configuration]
-author: epsi
+layout     : post
+title      : "Openbox Config - General rc.xml"
+categories : desktop
+date       : 2018-05-03 09:25:15 +0700
+tags       : [openbox]
+keywords   : [tutorial, configuration]
+author     : epsi
+toc        : toc/2018/05/toc-openbox-config.html
 
 opengraph:
   image: /assets/site/images/topics/openbox.png
 
 excerpt:
   A brief explanation about Openbox rc.xml configuration in general.
-
 ---
-
-{% include post/2018/05/toc-openbox-config.html %}
 
 ### Overview
 

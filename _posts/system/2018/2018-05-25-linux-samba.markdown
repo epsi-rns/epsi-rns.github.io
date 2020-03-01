@@ -1,22 +1,20 @@
 ---
-layout: post
-title:  "Linux Network - Samba"
-date      : 2018-05-25 09:25:15 +0700
-categories: system
-tags      : [thought]
-keywords  : [multiboot, partition, samba, smb, smb.conf]
-author: epsi
+layout     : post
+title      : "Linux Network - Samba"
+date       : 2018-05-25 09:25:15 +0700
+categories : system
+tags       : [thought]
+keywords   : [multiboot, partition, samba, smb, smb.conf]
+author     : epsi
+toc        : toc/2018/05/toc-multiboot.html
 
 opengraph:
   image: /assets/site/images/topics/tux.png
 
 excerpt:
   Based on my experience.
-  Thorough /etc/samba/smb.conf example
-
+  Thorough /etc/samba/smb.conf example.
 ---
-
-{% include post/2018/05/toc-multiboot.html %}
 
 ### Overview
 
