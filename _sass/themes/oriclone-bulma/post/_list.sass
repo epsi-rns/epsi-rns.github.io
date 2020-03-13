@@ -2,6 +2,9 @@
 // -- -- -- -- --
 // Post
 
+.blog-content ol
+  margin-left: 20px
+
 .blog-content li
   li:nth-child(even)
     background-color: map-get($grey, "lighten-4")
@@ -13,10 +16,12 @@
 
 .blog-content li
   padding-left: 0
-  list-style: none
   margin-left: 20px
 
-.blog-content li:before
+.blog-content ul li
+  list-style: none
+
+.blog-content ul li:before
   font-family: "Font Awesome 5 Free"
   font-weight: 900
   content: '\f054'
