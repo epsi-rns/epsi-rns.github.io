@@ -6,10 +6,12 @@
           is-white has-text-centered is-vcentered
           white z-depth-3 hoverable">
       <div class="column">
+        {% comment %}
         <span>
           {{ owner.name }} &copy; {{ site.time | date: '%Y' }}.
           Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>.
         </span>
+        {% endcomment %}
 
         <div class="social-icons">
           {% if owner.telegram %}<a href="https://t.me/{{ owner.telegram }}" 

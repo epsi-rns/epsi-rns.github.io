@@ -39,9 +39,9 @@ If you need, there is a guidance on how to setup Jekyll Blog.
 
 * [Example Content of this Blog][local-blog]
 
-	I know nothing. Nothing at all.
-
 -- -- --
+
+	I know nothing. Nothing at all.
 
 ![childhood][image-13]{: .img-responsive }
 

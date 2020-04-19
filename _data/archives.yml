@@ -1,9 +1,17 @@
 # Helper for related links
 
 # just copy the result manually
-# from _site/pages/all_posts.yml 
-# to folder _data/all_posts.yml
+# from _site/pages/archives.yml 
+# to folder _data/archives.yml
 
+
+- id: 20020225
+  title: "Presentation - Learning Linux Diversity"
+  url: /system/2020/02/02/presentation-linux-diversity.html
+
+- id: 20012025
+  title: "Presentation - Desktop Customization"
+  url: /desktop/2020/01/20/presentation-desktop-customization.html
 
 - id: 19120325
   title: "Awesome WM - Presentation - Statusbar"

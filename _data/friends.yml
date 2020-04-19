@@ -1,13 +1,10 @@
 # Helper for friends widget
 
 - title: "BanditHijo (R)-Chive"
-  url: http://bandithijo.com/
+  url: https://bandithijo.github.io/
 
 - title: "Sira Argia (Aflasio)"
   url: https://aflasio.art/
-
-- title: "Michael Dion"
-  url: https://www.digimoclub.com
 
 - title: "Rania Amina"
   url: https://raniaamina.id/
@@ -19,7 +16,7 @@
   url: https://addy-dclxvi.github.io/
 
 - title: "Yunindyo Prabowo @ gitlab.io"
-  url: http://ypraw.gitlab.io
+  url: http://ypraw.github.io
 
 - title: "Habib Mustofa"
   url: https://mustofa.id/
@@ -38,6 +35,9 @@
 
 - title: "epsi @ gitlab.io (webdev)"
   url: http://epsi-rns.github.io/
+
+- title: "epsi @ bitbucket.io (functional)"
+  url: http://epsi.bitbucket.io/
 
 - title: "A Sky"
   url: https://asky-el.gitlab.io
