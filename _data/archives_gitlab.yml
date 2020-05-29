@@ -2,6 +2,114 @@
 # Archives by Date
 
 
+- id: 20051517
+  title: "Template - Koa"
+  url: http://localhost:1313/frontend/2020/05/15/template-koa/
+  
+- id: 20051317
+  title: "Template - Express - Handlebars"
+  url: http://localhost:1313/frontend/2020/05/13/template-express-handlebars/
+  
+- id: 20051217
+  title: "Template - Express - EJS"
+  url: http://localhost:1313/frontend/2020/05/12/template-express-ejs/
+  
+- id: 20051117
+  title: "Template - Express - Nunjucks"
+  url: http://localhost:1313/frontend/2020/05/11/template-express-nunjucks/
+  
+- id: 20051017
+  title: "Template - Express - Pug"
+  url: http://localhost:1313/frontend/2020/05/10/template-express-pug/
+  
+- id: 20050817
+  title: "Template - Grunt - Handlebars"
+  url: http://localhost:1313/frontend/2020/05/08/template-grunt-handlebars/
+  
+- id: 20050717
+  title: "Template - Grunt - EJS"
+  url: http://localhost:1313/frontend/2020/05/07/template-grunt-ejs/
+  
+- id: 20050617
+  title: "Template - Grunt - Nunjucks"
+  url: http://localhost:1313/frontend/2020/05/06/template-grunt-nunjucks/
+  
+- id: 20050517
+  title: "Template - Grunt - Pug"
+  url: http://localhost:1313/frontend/2020/05/05/template-grunt-pug/
+  
+- id: 20050317
+  title: "Template - HTML - Example Case"
+  url: http://localhost:1313/frontend/2020/05/03/template-html-link/
+  
+- id: 20050117
+  title: "Template - Overview"
+  url: http://localhost:1313/frontend/2020/05/01/template-overview/
+  
+- id: 20041917
+  title: "Bundler - Parcel"
+  url: http://localhost:1313/frontend/2020/04/19/tools-bundler-parcel/
+  
+- id: 20041817
+  title: "Bundler - Rollup - Part Two"
+  url: http://localhost:1313/frontend/2020/04/18/tools-bundler-rollup-02/
+  
+- id: 20041717
+  title: "Bundler - Rollup - Part One"
+  url: http://localhost:1313/frontend/2020/04/17/tools-bundler-rollup-01/
+  
+- id: 20041517
+  title: "Bundler - Webpack - Part Three"
+  url: http://localhost:1313/frontend/2020/04/15/tools-bundler-webpack-03/
+  
+- id: 20041417
+  title: "Bundler - Webpack - Part Two"
+  url: http://localhost:1313/frontend/2020/04/14/tools-bundler-webpack-02/
+  
+- id: 20041317
+  title: "Bundler - Webpack - Part One"
+  url: http://localhost:1313/frontend/2020/04/13/tools-bundler-webpack-01/
+  
+- id: 20041117
+  title: "Task Runner - Grunt"
+  url: http://localhost:1313/frontend/2020/04/11/tools-task-runner-grunt/
+  
+- id: 20040917
+  title: "Tools - Javascript - Coffescript"
+  url: http://localhost:1313/frontend/2020/04/09/tools-javascript-coffeescript/
+  
+- id: 20040817
+  title: "Tools - CSS - Stylus"
+  url: http://localhost:1313/frontend/2020/04/08/tools-css-stylus/
+  
+- id: 20040717
+  title: "Tools - HTML - Pug"
+  url: http://localhost:1313/frontend/2020/04/07/tools-html-pug/
+  
+- id: 20040617
+  title: "HTML - Inspect Element"
+  url: http://localhost:1313/frontend/2020/04/06/html-inspect-element/
+  
+- id: 20040517
+  title: "HTML - Developing Tips"
+  url: http://localhost:1313/frontend/2020/04/05/html-developing-tips/
+  
+- id: 20040317
+  title: "HTML - Javascript"
+  url: http://localhost:1313/frontend/2020/04/03/html-javascript/
+  
+- id: 20040217
+  title: "HTML - Stylesheet"
+  url: http://localhost:1313/frontend/2020/04/02/html-stylesheet/
+  
+- id: 20040117
+  title: "HTML - Overview"
+  url: http://localhost:1313/frontend/2020/04/01/html-overview/
+  
+- id: 20032117
+  title: "Practical Blog Development Cycle"
+  url: http://localhost:1313/frontend/2020/03/21/practical-blog-cycle/
+  
 - id: 20031117
   title: "Eleventy - Bulma MD - Overview"
   url: http://localhost:1313/ssg/2020/03/11/11ty-bulma-md-overview/
@@ -66,9 +174,17 @@
   title: "Semantic UI - Overview"
   url: http://localhost:1313/frontend/2019/10/21/semantic-ui-overview/
   
+- id: 19101217
+  title: "PostCSS - Loop - SugarSS"
+  url: http://localhost:1313/frontend/2019/10/12/postcss-loop-sugarss/
+  
 - id: 19101117
   title: "PostCSS - Loop - Spacing Class"
   url: http://localhost:1313/frontend/2019/10/11/postcss-loop-spacing-class/
+  
+- id: 19101017
+  title: "PostCSS - Configuration"
+  url: http://localhost:1313/frontend/2019/10/10/postcss-configuration/
   
 - id: 19100417
   title: "Less - Conditional - Color Class"
@@ -95,7 +211,7 @@
   url: http://localhost:1313/frontend/2019/06/11/bulma-md-overview/
   
 - id: 19060117
-  title: "Materialize - Overview"
+  title: "Materialize CSS - Overview"
   url: http://localhost:1313/frontend/2019/06/01/materialize-overview/
   
 - id: 19053009
