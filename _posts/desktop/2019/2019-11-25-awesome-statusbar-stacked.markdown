@@ -84,6 +84,16 @@ local gmc = require("themes.gmc")
 
 I also use google material color (`gmc.lua`) to colorize the arrow.
 
+#### Code Preview
+
+For you impatient folks out there,
+here I represent, all modules that we are going to use.
+
+![Awesome WM: ViM Panes: Statusbars: Stacked Modules][image-ss-04-panes-modules]{: .img-responsive }
+
+Do not get intimidated with codes above.
+These can be explained step by step.
+
 -- -- --
 
 ### 2: Stacked Bar
@@ -455,6 +465,7 @@ Consider continue reading [ [Awesome WM - Statusbar - Vicious][local-whats-next]
 [image-ss-s-left]:      {{ asset_path }}/04-statusbar-stacked-left-bottom.png
 [image-ss-s-right]:     {{ asset_path }}/04-statusbar-stacked-right-bottom.png
 [image-ss-a-between]:   {{ asset_path }}/04-statusbar-arrow-between.png
+[image-ss-04-panes-modules]:{{ asset_path }}/04-panes-modules-stacked.png
 
 [image-ss-arrow-800]:   {{ asset_path }}/04-ghostbsd-awesome-arrow.png
 [image-ss-uptime]:      {{ asset_path }}/04-stacked-uptime.png

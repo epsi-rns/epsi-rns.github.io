@@ -86,7 +86,11 @@ I use `one` and `two` for helper name.
 
 #### Arrow Decoration
 
-The same as previous article
+The same as previous article.
+
+#### Code Preview
+
+Very similar with previous article.
 
 -- -- --
 

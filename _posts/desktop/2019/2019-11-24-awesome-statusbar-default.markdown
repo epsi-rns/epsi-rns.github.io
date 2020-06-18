@@ -108,6 +108,16 @@ local deco = {
 
 We are going to use this later.
 
+#### Code Preview
+
+For you impatient folks out there,
+here I represent, all modules that we are going to use.
+
+![Awesome WM: ViM Panes: Statusbars: Default Modules][image-ss-04-panes-modules]{: .img-responsive }
+
+Do not get intimidated with codes above.
+These can be explained step by step.
+
 -- -- --
 
 ### 2: Initialization
@@ -580,6 +590,7 @@ Consider continue reading [ [Awesome WM - Statusbar - Stacked][local-whats-next]
 [image-ss-stacked]:     {{ asset_path }}/04-statusbar-stacked.png
 [image-ss-d-left]:      {{ asset_path }}/04-statusbar-default-left-bottom.png
 [image-ss-d-right]:     {{ asset_path }}/04-statusbar-default-right-bottom.png
+[image-ss-04-panes-modules]:{{ asset_path }}/04-panes-modules-default.png
 
 [image-svg-arrow]:      {{ asset_path }}/clone-arrow.png
 [dotfiles-svg-icons]:   {{ dotfiles }}/themes/clone/misc/clone/

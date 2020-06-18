@@ -123,6 +123,21 @@ function WB.initdeco ()
 end
 {% endhighlight %}
 
+#### Code Preview
+
+For you impatient folks out there,
+here I represent, all modules that we are going to use.
+
+![Awesome WM: ViM Panes: Statusbars: Lain Modules][image-ss-04-panes-modules]{: .img-responsive }
+
+Where the long `lain.lua` configuration itself,
+will be refactore into separated files as below:
+
+![Awesome WM: ViM Panes: Statusbars: Lain Extra][image-ss-04-panes-extra]{: .img-responsive }
+
+Do not get intimidated with codes above.
+These can be explained step by step.
+
 -- -- --
 
 ### 2: Simple Example: Memory
@@ -775,6 +790,8 @@ Consider continue reading [ [Awesome WM - Statusbar - Arrow][local-whats-next] ]
 [image-ss-void-1366]:   {{ asset_path }}/04-void-statusbar-arrow-1366x768.png
 [image-ss-lain-dir]:    {{ asset_path }}/04-directory-lain.png
 [image-ss-lain-mem]:    {{ asset_path }}/04-lain-memory.png
+[image-ss-04-panes-modules]:{{ asset_path }}/04-panes-modules-lain.png
+[image-ss-04-panes-extra]:  {{ asset_path }}/04-panes-modules-lain-extra.png
 
 [image-ss-lain-01]:     {{ asset_path }}/04-lain-more-01.png
 [image-ss-lain-02]:     {{ asset_path }}/04-lain-more-02.png

@@ -130,6 +130,16 @@ function WB.initdeco ()
 end
 {% endhighlight %}
 
+#### Code Preview
+
+For you impatient folks out there,
+here I represent, all modules that we are going to use.
+
+![Awesome WM: ViM Panes: Statusbars: Vicious Modules][image-ss-04-panes-modules]{: .img-responsive }
+
+Do not get intimidated with codes above.
+These can be explained step by step.
+
 -- -- --
 
 ### 2: Simple Example: Memory
@@ -640,6 +650,7 @@ Consider continue reading [ [Awesome WM - Statusbar - Lain][local-whats-next] ].
 [image-ss-vicious-800]: {{ asset_path }}/04-gentoo-vicious-800.png
 [image-ss-vicious-dir]: {{ asset_path }}/04-directory-vicious.png
 [image-ss-vicious-mem]: {{ asset_path }}/04-vicious-memory.png
+[image-ss-04-panes-modules]:{{ asset_path }}/04-panes-modules-vicious.png
 
 [image-ss-vicious-01]:  {{ asset_path }}/04-vicious-more-01.png
 [image-ss-vicious-02]:  {{ asset_path }}/04-vicious-more-02.png
