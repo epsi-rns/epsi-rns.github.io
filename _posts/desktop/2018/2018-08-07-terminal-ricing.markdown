@@ -40,11 +40,12 @@ Terminal ricing along with CLI application, are part of desktop ricing.
 ![Terminal Ricing: Gentoo XFCE4 Terminal][image-ss-gentoo-xfce4-terminal]{: .img-responsive }
 
 I intentionally use scary command with scary output to get the hackish screenshot feeling.
-Haciksh here, I mean hack in computer context, not amateur writing context.
+Hackish here, I mean hack in computer context, not amateur writing context.
 
 The terminal is using other terminal as background, not a wallpaper.
 The other terminal is doing actual compilation.
 Compilation give the screenshot more hackish looks.
+The code is, actually just `hello world` for beginner.
 
 Not too much effort, but works for me.
 

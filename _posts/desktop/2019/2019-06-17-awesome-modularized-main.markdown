@@ -27,6 +27,26 @@ related_link_ids:
 
 > Goal: Main modules in modularized configuration.
 
+#### Table of Content
+
+* Preface: Table of Content
+
+* Artefacts
+
+* 1: Layouts
+
+* 2: Tags
+
+* 3: Menu
+
+* 4: Rules
+
+* 5: Signals
+
+* What is Next ?
+
+-- -- --
+
 ### Artefacts
 
 Now consider have a walk, moving some codes to files in main directory.
@@ -52,21 +72,24 @@ and `user-variables.lua` in previous article.
 We will discuss here about the rest five: `layouts`,
 `tags`, `menu`, `rules`, and `signal`.
 
-#### Table of Content
+#### Calling Script
 
-* Preface: Table of Content
+We are going to call these scripts in `rc.lua`.
 
-* 1: Layouts
+{% highlight lua %}
+-- Custom Local Library
+local main = {
+  layouts = require("main.layouts"),
+  tags    = require("main.tags"),
+  menu    = require("main.menu"),
+  rules   = require("main.rules"),
+}
+{% endhighlight %}
 
-* 2: Tags
+![Awesome WM: Vim Panes: Main Modules][image-ss-01-panes-modules]{: .img-responsive }
 
-* 3: Menu
-
-* 4: Rules
-
-* 5: Signals
-
-* What is Next ?
+Do not get intimidated with codes above.
+These can be explained step by step.
 
 -- -- --
 
@@ -148,7 +171,7 @@ It is easier to understand the layoout using image.
 
 In main configuration:
 
-{% highlight bash %}
+{% highlight lua %}
 -- Custom Local Library
 local main = {
   layouts = require("main.layouts")
@@ -635,6 +658,7 @@ What do you think ?
 [image-ss-01-tags-takao]:   {{ asset_path }}/01-tags-takao.png
 [image-ss-01-menu-simple]:  {{ asset_path }}/01-menu-simple.png
 [image-ss-01-menu-custom]:  {{ asset_path }}/01-menu-custom.png
+[image-ss-01-panes-modules]:{{ asset_path }}/01-panes-modules-main.png
 [image-layouts-animate]:    {{ asset_path }}/clone-layouts-animate.gif
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua

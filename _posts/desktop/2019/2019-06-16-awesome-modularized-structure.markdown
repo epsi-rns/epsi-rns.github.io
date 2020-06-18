@@ -139,6 +139,12 @@ require("main.signals")
 The main <code>rc.lua</code>,
 should only contain skeleton of the configuration.
 
+![Awesome WM: rc.lua in NERDTree][image-ss-01-nerdtree]{: .img-responsive }
+
+For you impatient folks out there,
+here I represent, the modularized `rc.lua`,
+along with the directory tree in figure above.
+
 -- -- --
 
 ### 2: Directory Structure
@@ -413,6 +419,7 @@ What do you think ?
 [local-whats-next]: /desktop/2019/06/17/awesome-modularized-main.html
 
 [image-ss-01-tree]:     {{ asset_path }}/01-tree-all.png
+[image-ss-01-nerdtree]: {{ asset_path }}/01-nerdtree-rc-lua.png
 
 [dotfiles-config-43]:   {{ dotfiles }}/rc.43.lua
 [dotfiles-config]:      {{ dotfiles }}/rc.lua

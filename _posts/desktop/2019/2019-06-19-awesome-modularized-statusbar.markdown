@@ -27,6 +27,28 @@ related_link_ids:
 
 > Goal: Statusbar and titlebar binding modules in modularized configuration.
 
+#### Table of Content
+
+* Preface: Table of Content
+
+* Artefacts
+
+* 1: Titlebar
+
+* 2: Statusbar Skeleton
+
+* 3: Wallpaper
+
+* 4: Binding: Tag List Buttons
+
+* 5: Binding: Task List Buttons
+
+* 6: Statusbar Summary
+
+* Conclusion
+
+-- -- --
+
 ### Artefacts
 
 Statusbar is a complex task that deserve its own article.
@@ -52,23 +74,25 @@ deco/
 
 ![Awesome WM: Artefacts in Binding][image-ss-01-tree-deco]{: .img-responsive }
 
-#### Table of Content
+#### Calling Script
 
-* Preface: Table of Content
+We are going to call these scripts in `deco/statusbar.lua`.
 
-* 1: Titlebar
+{% highlight lua %}
+-- Custom Local Library: Common Functional Decoration
+local deco = {
+  wallpaper = require("deco.wallpaper"),
+  taglist   = require("deco.taglist"),
+  tasklist  = require("deco.tasklist")
+}
+{% endhighlight %}
 
-* 2: Statusbar Skeleton
+And call the `deco/titlebar.lua` script in `theme` later.
 
-* 3: Wallpaper
+![Awesome WM: ViM Panes: Statusbars and Titlebars Modules][image-ss-01-panes-modules]{: .img-responsive }
 
-* 4: Binding: Tag List Buttons
-
-* 5: Binding: Task List Buttons
-
-* 6: Statusbar Summary
-
-* Conclusion
+Do not get intimidated with codes above.
+These can be explained step by step.
 
 -- -- --
 
@@ -609,6 +633,7 @@ What do you think ?
 [image-ss-01-tree-deco]:{{ asset_path }}/01-tree-deco.png
 [image-ss-01-titlebar]: {{ asset_path }}/01-titlebar.png
 [image-ss-01-statusbar]:{{ asset_path }}/01-statusbar.png
+[image-ss-01-panes-modules]:{{ asset_path }}/01-panes-modules-deco.png
 
 [image-ss-01-help-simple]:  {{ asset_path }}/01-awesome-help-simple.png
 [image-ss-01-help-standard]:{{ asset_path }}/01-awesome-help-standard.png

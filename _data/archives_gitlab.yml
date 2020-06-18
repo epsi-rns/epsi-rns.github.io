@@ -106,17 +106,69 @@
   title: "HTML - Overview"
   url: http://localhost:1313/frontend/2020/04/01/html-overview/
   
+- id: 20032717
+  title: "Eleventy - Bulma MD - Overview"
+  url: http://localhost:1313/ssg/2020/03/27/11ty-bulma-md-overview/
+  
+- id: 20032517
+  title: "Hugo - Bulma MD - Overview"
+  url: http://localhost:1313/ssg/2020/03/25/hugo-bulma-md-overview/
+  
 - id: 20032117
   title: "Practical Blog Development Cycle"
   url: http://localhost:1313/frontend/2020/03/21/practical-blog-cycle/
   
+- id: 20031517
+  title: "Bootstrap OC - Sass - Blog Post"
+  url: http://localhost:1313/frontend/2020/03/15/bootstrap-oc-sass-blog-post/
+  
+- id: 20031317
+  title: "Bootstrap OC - Sass - Widget"
+  url: http://localhost:1313/frontend/2020/03/13/bootstrap-oc-sass-widget/
+  
+- id: 20031217
+  title: "Bootstrap OC - Sass - Responsive"
+  url: http://localhost:1313/frontend/2020/03/12/bootstrap-oc-sass-responsive/
+  
 - id: 20031117
-  title: "Eleventy - Bulma MD - Overview"
-  url: http://localhost:1313/ssg/2020/03/11/11ty-bulma-md-overview/
+  title: "Bootstrap OC - Sass - Open Color"
+  url: http://localhost:1313/frontend/2020/03/11/bootstrap-oc-sass-open-color/
+  
+- id: 20031017
+  title: "Bootstrap - Sass - Responsive"
+  url: http://localhost:1313/frontend/2020/03/10/bootstrap-sass-responsive/
+  
+- id: 20030917
+  title: "Bootstrap - Sass - Bootswatch"
+  url: http://localhost:1313/frontend/2020/03/09/bootstrap-sass-bootswatch/
+  
+- id: 20030817
+  title: "Bootstrap - Sass - Custom Class"
+  url: http://localhost:1313/frontend/2020/03/08/bootstrap-sass-custom-class/
+  
+- id: 20030717
+  title: "Bootstrap - Sass - Introduction"
+  url: http://localhost:1313/frontend/2020/03/07/bootstrap-sass-intro/
+  
+- id: 20030517
+  title: "Bootstrap - Navbar - Icons"
+  url: http://localhost:1313/frontend/2020/03/05/bootstrap-navbar-icons/
+  
+- id: 20030417
+  title: "Bootstrap - Navbar - Javascript"
+  url: http://localhost:1313/frontend/2020/03/04/bootstrap-navbar-javascript/
+  
+- id: 20030317
+  title: "Bootstrap - Navbar - Class"
+  url: http://localhost:1313/frontend/2020/03/03/bootstrap-navbar-class/
+  
+- id: 20030217
+  title: "Bootstrap - Minimal"
+  url: http://localhost:1313/frontend/2020/03/02/bootstrap-minimal/
   
 - id: 20030117
-  title: "Hugo - Bulma MD - Overview"
-  url: http://localhost:1313/ssg/2020/03/01/hugo-bulma-md-overview/
+  title: "Bootstrap OC - Overview"
+  url: http://localhost:1313/frontend/2020/03/01/bootstrap-oc-overview/
   
 - id: 20021917
   title: "CI/CD - Git Hooks"
@@ -206,8 +258,20 @@
   title: "Sass - Loop - Spacing Class"
   url: http://localhost:1313/frontend/2019/06/21/sass-loop-spacing-class/
   
+- id: 19061417
+  title: "Bulma MD - Blog Post"
+  url: http://localhost:1313/frontend/2019/06/14/bulma-md-blog-post/
+  
+- id: 19061317
+  title: "Bulma MD - Widget"
+  url: http://localhost:1313/frontend/2019/06/13/bulma-md-widget/
+  
+- id: 19061217
+  title: "Bulma MD - Helper"
+  url: http://localhost:1313/frontend/2019/06/12/bulma-md-helper/
+  
 - id: 19061117
-  title: "Frankenbulma - Overview"
+  title: "Bulma MD - Overview"
   url: http://localhost:1313/frontend/2019/06/11/bulma-md-overview/
   
 - id: 19060117

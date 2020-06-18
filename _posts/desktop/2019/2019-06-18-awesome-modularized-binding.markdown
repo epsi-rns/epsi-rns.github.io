@@ -27,6 +27,26 @@ related_link_ids:
 
 > Goal: Keyboard and mouse binding modules in modularized configuration.
 
+#### Table of Content
+
+* Preface: Table of Content
+
+* Artefacts
+
+* 1: Global Buttons
+
+* 2: Client Buttons
+
+* 3: Global Keys
+
+* 4: Client Keys
+
+* 5: Bind To Tags
+
+* What is Next ?
+
+-- -- --
+
 ### Artefacts
 
 So far, binding configurations can be refactored into five modules.
@@ -58,21 +78,25 @@ We will discuss here about:
 
 * And later bind them to `tags`.
 
-#### Table of Content
+#### Calling Script
 
-* Preface: Table of Content
+We are going to call these scripts in `rc.lua`.
 
-* 1: Global Buttons
+{% highlight lua %}
+-- Custom Local Library: Keys and Mouse Binding
+local binding = {
+  globalbuttons = require("binding.globalbuttons"),
+  clientbuttons = require("binding.clientbuttons"),
+  globalkeys    = require("binding.globalkeys"),
+  bindtotags    = require("binding.bindtotags"),
+  clientkeys    = require("binding.clientkeys")
+}
+{% endhighlight %}
 
-* 2: Client Buttons
+![Awesome WM: ViM Panes: Binding Modules][image-ss-01-panes-modules]{: .img-responsive }
 
-* 3: Global Keys
-
-* 4: Client Keys
-
-* 5: Bind To Tags
-
-* What is Next ?
+Do not get intimidated with codes above.
+These can be explained step by step.
 
 -- -- --
 
@@ -823,9 +847,9 @@ What do you think ?
 [local-whats-next]: /desktop/2019/06/19/awesome-modularized-statusbar.html
 
 [image-ss-01-tree-binding]: {{ asset_path }}/01-tree-binding.png
-
 [image-ss-01-help-simple]:  {{ asset_path }}/01-awesome-help-simple.png
 [image-ss-01-help-standard]:{{ asset_path }}/01-awesome-help-standard.png
+[image-ss-01-panes-modules]:{{ asset_path }}/01-panes-modules-binding.png
 [image-ss-01-fix-size]:     {{ asset_path }}/01-awesome-wm-fix-size.gif
 
 [dotfiles-config]:          {{ dotfiles }}/rc.lua
