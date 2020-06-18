@@ -36,6 +36,26 @@ We are going to do this in modularized way.
 
 For these to works we also need to utilize some inkscape to generate icons.
 
+-- -- --
+
+#### Table of Content
+
+* Preface: Table of Content
+
+* Theme Artefacts
+
+* 1: Main Theme Configuration
+
+* 2: Google Material Color
+
+* 3: Elements
+
+* 4: Titlebar (next article)
+
+* Conclusion
+
+-- -- --
+
 #### Theme Artefacts
 
 The layout of a theme is free.
@@ -100,24 +120,30 @@ and you can always configure it as you like later.
 
 #### Transparency
 
-I use external tool called compton.
+I use external tool called `compton`, and now `picom`.
 This is beyond Awesome WM explanation.
 
--- -- --
+#### Calling Script
 
-#### Table of Content
+We are going to call these scripts in `themes/clone/theme.lua`.
 
-* Preface: Table of Content
+{% highlight lua %}
+-- default variables
 
-* 1: Main Theme Configuration
+theme = {}
 
-* 2: Google Material Color
+dofile(theme_path .. "elements.lua")
+dofile(theme_path .. "titlebar.lua")
+dofile(theme_path .. "layouts.lua")
+dofile(theme_path .. "icons.lua")
+{% endhighlight %}
 
-* 3: Elements
+And call the `deco/titlebar.lua` script in `theme` later.
 
-* 4: Titlebar (next article)
+![Awesome WM: ViM Panes: Theme Modules][image-ss-02-panes-modules]{: .img-responsive }
 
-* Conclusion
+Do not get intimidated with codes above.
+They all are just a bunch of properties setting.
 
 -- -- --
 
@@ -549,6 +575,7 @@ Consider continue reading [ [Awesome WM - Theme - Titlebar][local-whats-next] ].
 [image-ss-02-titlebar]: {{ asset_path }}/02-titlebar.png
 [image-ss-02-menu]:     {{ asset_path }}/02-menu.png
 [image-ss-matplotlib]:  {{ asset_path }}/awesome-vim-cumulative-tax-equation-plot.png
+[image-ss-02-panes-modules]:{{ asset_path }}/02-panes-modules-theme.png
 
 [image-svg-taglist]:    {{ asset_path }}/clone-taglist.png
 
