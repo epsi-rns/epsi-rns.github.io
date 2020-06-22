@@ -4,869 +4,941 @@
 
 - id: 20051517
   title: "Template - Koa"
-  url: http://localhost:1313/frontend/2020/05/15/template-koa/
+  url: /frontend/2020/05/15/template-koa/
   
 - id: 20051317
   title: "Template - Express - Handlebars"
-  url: http://localhost:1313/frontend/2020/05/13/template-express-handlebars/
+  url: /frontend/2020/05/13/template-express-handlebars/
   
 - id: 20051217
   title: "Template - Express - EJS"
-  url: http://localhost:1313/frontend/2020/05/12/template-express-ejs/
+  url: /frontend/2020/05/12/template-express-ejs/
   
 - id: 20051117
   title: "Template - Express - Nunjucks"
-  url: http://localhost:1313/frontend/2020/05/11/template-express-nunjucks/
+  url: /frontend/2020/05/11/template-express-nunjucks/
   
 - id: 20051017
   title: "Template - Express - Pug"
-  url: http://localhost:1313/frontend/2020/05/10/template-express-pug/
+  url: /frontend/2020/05/10/template-express-pug/
   
 - id: 20050817
   title: "Template - Grunt - Handlebars"
-  url: http://localhost:1313/frontend/2020/05/08/template-grunt-handlebars/
+  url: /frontend/2020/05/08/template-grunt-handlebars/
   
 - id: 20050717
   title: "Template - Grunt - EJS"
-  url: http://localhost:1313/frontend/2020/05/07/template-grunt-ejs/
+  url: /frontend/2020/05/07/template-grunt-ejs/
   
 - id: 20050617
   title: "Template - Grunt - Nunjucks"
-  url: http://localhost:1313/frontend/2020/05/06/template-grunt-nunjucks/
+  url: /frontend/2020/05/06/template-grunt-nunjucks/
   
 - id: 20050517
   title: "Template - Grunt - Pug"
-  url: http://localhost:1313/frontend/2020/05/05/template-grunt-pug/
+  url: /frontend/2020/05/05/template-grunt-pug/
   
 - id: 20050317
   title: "Template - HTML - Example Case"
-  url: http://localhost:1313/frontend/2020/05/03/template-html-link/
+  url: /frontend/2020/05/03/template-html-link/
   
 - id: 20050117
   title: "Template - Overview"
-  url: http://localhost:1313/frontend/2020/05/01/template-overview/
+  url: /frontend/2020/05/01/template-overview/
   
 - id: 20041917
   title: "Bundler - Parcel"
-  url: http://localhost:1313/frontend/2020/04/19/tools-bundler-parcel/
+  url: /frontend/2020/04/19/tools-bundler-parcel/
   
 - id: 20041817
   title: "Bundler - Rollup - Part Two"
-  url: http://localhost:1313/frontend/2020/04/18/tools-bundler-rollup-02/
+  url: /frontend/2020/04/18/tools-bundler-rollup-02/
   
 - id: 20041717
   title: "Bundler - Rollup - Part One"
-  url: http://localhost:1313/frontend/2020/04/17/tools-bundler-rollup-01/
+  url: /frontend/2020/04/17/tools-bundler-rollup-01/
   
 - id: 20041517
   title: "Bundler - Webpack - Part Three"
-  url: http://localhost:1313/frontend/2020/04/15/tools-bundler-webpack-03/
+  url: /frontend/2020/04/15/tools-bundler-webpack-03/
   
 - id: 20041417
   title: "Bundler - Webpack - Part Two"
-  url: http://localhost:1313/frontend/2020/04/14/tools-bundler-webpack-02/
+  url: /frontend/2020/04/14/tools-bundler-webpack-02/
   
 - id: 20041317
   title: "Bundler - Webpack - Part One"
-  url: http://localhost:1313/frontend/2020/04/13/tools-bundler-webpack-01/
+  url: /frontend/2020/04/13/tools-bundler-webpack-01/
   
 - id: 20041117
   title: "Task Runner - Grunt"
-  url: http://localhost:1313/frontend/2020/04/11/tools-task-runner-grunt/
+  url: /frontend/2020/04/11/tools-task-runner-grunt/
   
 - id: 20040917
   title: "Tools - Javascript - Coffescript"
-  url: http://localhost:1313/frontend/2020/04/09/tools-javascript-coffeescript/
+  url: /frontend/2020/04/09/tools-javascript-coffeescript/
   
 - id: 20040817
   title: "Tools - CSS - Stylus"
-  url: http://localhost:1313/frontend/2020/04/08/tools-css-stylus/
+  url: /frontend/2020/04/08/tools-css-stylus/
   
 - id: 20040717
   title: "Tools - HTML - Pug"
-  url: http://localhost:1313/frontend/2020/04/07/tools-html-pug/
+  url: /frontend/2020/04/07/tools-html-pug/
   
 - id: 20040617
   title: "HTML - Inspect Element"
-  url: http://localhost:1313/frontend/2020/04/06/html-inspect-element/
+  url: /frontend/2020/04/06/html-inspect-element/
   
 - id: 20040517
   title: "HTML - Developing Tips"
-  url: http://localhost:1313/frontend/2020/04/05/html-developing-tips/
+  url: /frontend/2020/04/05/html-developing-tips/
   
 - id: 20040317
   title: "HTML - Javascript"
-  url: http://localhost:1313/frontend/2020/04/03/html-javascript/
+  url: /frontend/2020/04/03/html-javascript/
   
 - id: 20040217
   title: "HTML - Stylesheet"
-  url: http://localhost:1313/frontend/2020/04/02/html-stylesheet/
+  url: /frontend/2020/04/02/html-stylesheet/
   
 - id: 20040117
   title: "HTML - Overview"
-  url: http://localhost:1313/frontend/2020/04/01/html-overview/
-  
-- id: 20032717
-  title: "Eleventy - Bulma MD - Overview"
-  url: http://localhost:1313/ssg/2020/03/27/11ty-bulma-md-overview/
+  url: /frontend/2020/04/01/html-overview/
   
 - id: 20032517
   title: "Hugo - Bulma MD - Overview"
-  url: http://localhost:1313/ssg/2020/03/25/hugo-bulma-md-overview/
+  url: /ssg/2020/03/25/hugo-bulma-md-overview/
   
 - id: 20032117
   title: "Practical Blog Development Cycle"
-  url: http://localhost:1313/frontend/2020/03/21/practical-blog-cycle/
+  url: /frontend/2020/03/21/practical-blog-cycle/
   
 - id: 20031517
   title: "Bootstrap OC - Sass - Blog Post"
-  url: http://localhost:1313/frontend/2020/03/15/bootstrap-oc-sass-blog-post/
+  url: /frontend/2020/03/15/bootstrap-oc-sass-blog-post/
   
 - id: 20031317
   title: "Bootstrap OC - Sass - Widget"
-  url: http://localhost:1313/frontend/2020/03/13/bootstrap-oc-sass-widget/
+  url: /frontend/2020/03/13/bootstrap-oc-sass-widget/
   
 - id: 20031217
   title: "Bootstrap OC - Sass - Responsive"
-  url: http://localhost:1313/frontend/2020/03/12/bootstrap-oc-sass-responsive/
+  url: /frontend/2020/03/12/bootstrap-oc-sass-responsive/
   
 - id: 20031117
   title: "Bootstrap OC - Sass - Open Color"
-  url: http://localhost:1313/frontend/2020/03/11/bootstrap-oc-sass-open-color/
+  url: /frontend/2020/03/11/bootstrap-oc-sass-open-color/
   
 - id: 20031017
   title: "Bootstrap - Sass - Responsive"
-  url: http://localhost:1313/frontend/2020/03/10/bootstrap-sass-responsive/
+  url: /frontend/2020/03/10/bootstrap-sass-responsive/
   
 - id: 20030917
   title: "Bootstrap - Sass - Bootswatch"
-  url: http://localhost:1313/frontend/2020/03/09/bootstrap-sass-bootswatch/
+  url: /frontend/2020/03/09/bootstrap-sass-bootswatch/
   
 - id: 20030817
   title: "Bootstrap - Sass - Custom Class"
-  url: http://localhost:1313/frontend/2020/03/08/bootstrap-sass-custom-class/
+  url: /frontend/2020/03/08/bootstrap-sass-custom-class/
   
 - id: 20030717
   title: "Bootstrap - Sass - Introduction"
-  url: http://localhost:1313/frontend/2020/03/07/bootstrap-sass-intro/
+  url: /frontend/2020/03/07/bootstrap-sass-intro/
   
 - id: 20030517
   title: "Bootstrap - Navbar - Icons"
-  url: http://localhost:1313/frontend/2020/03/05/bootstrap-navbar-icons/
+  url: /frontend/2020/03/05/bootstrap-navbar-icons/
   
 - id: 20030417
   title: "Bootstrap - Navbar - Javascript"
-  url: http://localhost:1313/frontend/2020/03/04/bootstrap-navbar-javascript/
+  url: /frontend/2020/03/04/bootstrap-navbar-javascript/
   
 - id: 20030317
   title: "Bootstrap - Navbar - Class"
-  url: http://localhost:1313/frontend/2020/03/03/bootstrap-navbar-class/
+  url: /frontend/2020/03/03/bootstrap-navbar-class/
   
 - id: 20030217
   title: "Bootstrap - Minimal"
-  url: http://localhost:1313/frontend/2020/03/02/bootstrap-minimal/
+  url: /frontend/2020/03/02/bootstrap-minimal/
   
 - id: 20030117
   title: "Bootstrap OC - Overview"
-  url: http://localhost:1313/frontend/2020/03/01/bootstrap-oc-overview/
+  url: /frontend/2020/03/01/bootstrap-oc-overview/
   
 - id: 20021917
   title: "CI/CD - Git Hooks"
-  url: http://localhost:1313/devops/2020/02/19/ci-cd-git-hooks/
+  url: /devops/2020/02/19/ci-cd-git-hooks/
   
 - id: 20021817
   title: "CI/CD - Github Workflows"
-  url: http://localhost:1313/devops/2020/02/18/ci-cd-github-workflows/
+  url: /devops/2020/02/18/ci-cd-github-workflows/
   
 - id: 20021717
   title: "CI/CD - CircleCI - Part Three"
-  url: http://localhost:1313/devops/2020/02/17/ci-cd-circleci-03/
+  url: /devops/2020/02/17/ci-cd-circleci-03/
   
 - id: 20021613
   title: "CI/CD - CircleCI - Part Two"
-  url: http://localhost:1313/devops/2020/02/16/ci-cd-circleci-02/
+  url: /devops/2020/02/16/ci-cd-circleci-02/
   
 - id: 20021617
   title: "CI/CD - CircleCI - Part One"
-  url: http://localhost:1313/devops/2020/02/16/ci-cd-circleci-01/
+  url: /devops/2020/02/16/ci-cd-circleci-01/
   
 - id: 20021513
   title: "CI/CD - Travis - Part Two"
-  url: http://localhost:1313/devops/2020/02/15/ci-cd-travis-02/
+  url: /devops/2020/02/15/ci-cd-travis-02/
   
 - id: 20021517
   title: "CI/CD - Travis - Part One"
-  url: http://localhost:1313/devops/2020/02/15/ci-cd-travis-01/
+  url: /devops/2020/02/15/ci-cd-travis-01/
   
 - id: 20021413
   title: "CI/CD - Git Worktree - Part Two"
-  url: http://localhost:1313/devops/2020/02/14/ci-cd-git-worktree-02/
+  url: /devops/2020/02/14/ci-cd-git-worktree-02/
   
 - id: 20021417
   title: "CI/CD - Git Worktree - Part One"
-  url: http://localhost:1313/devops/2020/02/14/ci-cd-git-worktree-01/
+  url: /devops/2020/02/14/ci-cd-git-worktree-01/
   
 - id: 20021317
   title: "CI/CD - Zeit Now"
-  url: http://localhost:1313/devops/2020/02/13/ci-cd-zeit-now/
+  url: /devops/2020/02/13/ci-cd-zeit-now/
   
 - id: 20021217
   title: "CI/CD - Git Refs"
-  url: http://localhost:1313/devops/2020/02/12/ci-cd-git-refs/
+  url: /devops/2020/02/12/ci-cd-git-refs/
   
 - id: 20021017
   title: "CI/CD - Deploy Overview"
-  url: http://localhost:1313/devops/2020/02/10/ci-cd-overview/
+  url: /devops/2020/02/10/ci-cd-overview/
+  
+- id: 20012017
+  title: "Eleventy - Widget - Data"
+  url: /ssg/2020/01/20/11ty-widget-data/
+  
+- id: 20011917
+  title: "Eleventy - Widget - Nunjucks Loop"
+  url: /ssg/2020/01/19/11ty-widget-nunjucks-loop/
+  
+- id: 20011817
+  title: "Eleventy - Widget - Simple HTML"
+  url: /ssg/2020/01/18/11ty-widget-simple-html/
+  
+- id: 20011717
+  title: "Eleventy - Nunjucks - Index List"
+  url: /ssg/2020/01/17/11ty-nunjucks-index-list/
+  
+- id: 20011617
+  title: "Eleventy - Nunjucks - Layouts"
+  url: /ssg/2020/01/16/11ty-nunjucks-layout/
+  
+- id: 20011517
+  title: "Eleventy - Custom Output"
+  url: /ssg/2020/01/15/11ty-index-custom-output/
+  
+- id: 20011417
+  title: "Eleventy - Custom Index - Blog"
+  url: /ssg/2020/01/14/11ty-index-blog/
+  
+- id: 20011317
+  title: "Eleventy - Custom Index - Tags"
+  url: /ssg/2020/01/13/11ty-index-tags/
+  
+- id: 20011217
+  title: "Eleventy - Custom Index - Archive"
+  url: /ssg/2020/01/12/11ty-index-archive/
+  
+- id: 20011117
+  title: "Eleventy - Custom Index - Content"
+  url: /ssg/2020/01/11/11ty-index-content/
+  
+- id: 20011017
+  title: "Eleventy - Bulma - SASS Layout"
+  url: /ssg/2020/01/10/11ty-bulma-sass-layout/
+  
+- id: 20010917
+  title: "Eleventy - Bulma - SASS Intro"
+  url: /ssg/2020/01/09/11ty-bulma-sass-intro/
+  
+- id: 20010817
+  title: "Eleventy - Bulma - CSS Layout"
+  url: /ssg/2020/01/08/11ty-bulma-css-layout/
+  
+- id: 20010717
+  title: "Eleventy - Bulma - CSS Intro"
+  url: /ssg/2020/01/07/11ty-bulma-css-intro/
+  
+- id: 20010517
+  title: "Eleventy - Collections"
+  url: /ssg/2020/01/05/11ty-collections/
+  
+- id: 20010417
+  title: "Eleventy - Configuration"
+  url: /ssg/2020/01/04/11ty-configuration/
+  
+- id: 20010317
+  title: "Eleventy - Layout"
+  url: /ssg/2020/01/03/11ty-layout/
+  
+- id: 20010217
+  title: "Eleventy - Minimal"
+  url: /ssg/2020/01/02/11ty-minimal/
+  
+- id: 20010117
+  title: "Eleventy - Bulma MD - Overview"
+  url: /ssg/2020/01/01/11ty-bulma-md-overview/
   
 - id: 19120117
   title: "Pelican - Bulma MD - Overview"
-  url: http://localhost:1313/ssg/2019/12/01/pelican-bulma-md-overview/
+  url: /ssg/2019/12/01/pelican-bulma-md-overview/
   
 - id: 19102117
   title: "Semantic UI - Overview"
-  url: http://localhost:1313/frontend/2019/10/21/semantic-ui-overview/
+  url: /frontend/2019/10/21/semantic-ui-overview/
   
 - id: 19101217
   title: "PostCSS - Loop - SugarSS"
-  url: http://localhost:1313/frontend/2019/10/12/postcss-loop-sugarss/
+  url: /frontend/2019/10/12/postcss-loop-sugarss/
   
 - id: 19101117
   title: "PostCSS - Loop - Spacing Class"
-  url: http://localhost:1313/frontend/2019/10/11/postcss-loop-spacing-class/
+  url: /frontend/2019/10/11/postcss-loop-spacing-class/
   
 - id: 19101017
   title: "PostCSS - Configuration"
-  url: http://localhost:1313/frontend/2019/10/10/postcss-configuration/
+  url: /frontend/2019/10/10/postcss-configuration/
   
 - id: 19100417
   title: "Less - Conditional - Color Class"
-  url: http://localhost:1313/frontend/2019/10/04/less-conditional-color-class/
+  url: /frontend/2019/10/04/less-conditional-color-class/
   
 - id: 19100317
   title: "Less - Loop - Spacing Class"
-  url: http://localhost:1313/frontend/2019/10/03/less-loop-spacing-class/
+  url: /frontend/2019/10/03/less-loop-spacing-class/
   
 - id: 19080117
   title: "Jekyll - Bulma MD - Overview"
-  url: http://localhost:1313/ssg/2019/08/01/jekyll-bulma-md-overview/
+  url: /ssg/2019/08/01/jekyll-bulma-md-overview/
   
 - id: 19070117
   title: "Eleventy - Materialize - Overview"
-  url: http://localhost:1313/ssg/2019/07/01/11ty-materialize-overview/
+  url: /ssg/2019/07/01/11ty-materialize-overview/
   
 - id: 19062117
   title: "Sass - Loop - Spacing Class"
-  url: http://localhost:1313/frontend/2019/06/21/sass-loop-spacing-class/
+  url: /frontend/2019/06/21/sass-loop-spacing-class/
   
 - id: 19061417
   title: "Bulma MD - Blog Post"
-  url: http://localhost:1313/frontend/2019/06/14/bulma-md-blog-post/
+  url: /frontend/2019/06/14/bulma-md-blog-post/
   
 - id: 19061317
   title: "Bulma MD - Widget"
-  url: http://localhost:1313/frontend/2019/06/13/bulma-md-widget/
+  url: /frontend/2019/06/13/bulma-md-widget/
   
 - id: 19061217
   title: "Bulma MD - Helper"
-  url: http://localhost:1313/frontend/2019/06/12/bulma-md-helper/
+  url: /frontend/2019/06/12/bulma-md-helper/
   
 - id: 19061117
   title: "Bulma MD - Overview"
-  url: http://localhost:1313/frontend/2019/06/11/bulma-md-overview/
+  url: /frontend/2019/06/11/bulma-md-overview/
   
 - id: 19060117
   title: "Materialize CSS - Overview"
-  url: http://localhost:1313/frontend/2019/06/01/materialize-overview/
+  url: /frontend/2019/06/01/materialize-overview/
   
 - id: 19053009
   title: "Hexo - Summary"
-  url: http://localhost:1313/ssg/2019/05/30/hexo-summary/
+  url: /ssg/2019/05/30/hexo-summary/
   
 - id: 19052917
   title: "Netlify - Deploying"
-  url: http://localhost:1313/ssg/2019/05/29/deploy-netlify/
+  url: /ssg/2019/05/29/deploy-netlify/
   
 - id: 19052817
   title: "Hexo - Meta - SEO"
-  url: http://localhost:1313/ssg/2019/05/28/hexo-meta-seo/
+  url: /ssg/2019/05/28/hexo-meta-seo/
   
 - id: 19052717
   title: "Hexo - Content - Syntax Highlighting"
-  url: http://localhost:1313/ssg/2019/05/27/hexo-syntax-highlighting/
+  url: /ssg/2019/05/27/hexo-syntax-highlighting/
   
 - id: 19052617
   title: "Hexo - Content - Raw HTML"
-  url: http://localhost:1313/ssg/2019/05/26/hexo-content-html/
+  url: /ssg/2019/05/26/hexo-content-html/
   
 - id: 19052517
   title: "Hexo - Content - Markdown"
-  url: http://localhost:1313/ssg/2019/05/25/hexo-content-markdown/
+  url: /ssg/2019/05/25/hexo-content-markdown/
   
 - id: 19052417
   title: "Hexo - Content - Blog Post"
-  url: http://localhost:1313/ssg/2019/05/24/hexo-content-post/
+  url: /ssg/2019/05/24/hexo-content-post/
   
 - id: 19052317
   title: "Hexo - Pagination - Filtering Caveat"
-  url: http://localhost:1313/ssg/2019/05/23/hexo-pagination-filtering-caveat/
+  url: /ssg/2019/05/23/hexo-pagination-filtering-caveat/
   
 - id: 19052317
   title: "Hexo - Pagination - Handling URL"
-  url: http://localhost:1313/ssg/2019/05/23/hexo-pagination-handling-url/
+  url: /ssg/2019/05/23/hexo-pagination-handling-url/
   
 - id: 19052217
   title: "Hexo - Pagination - Screen Reader"
-  url: http://localhost:1313/ssg/2019/05/22/hexo-pagination-screenreader/
+  url: /ssg/2019/05/22/hexo-pagination-screenreader/
   
 - id: 19052117
   title: "Hexo - Pagination - Responsive"
-  url: http://localhost:1313/ssg/2019/05/21/hexo-pagination-responsive/
+  url: /ssg/2019/05/21/hexo-pagination-responsive/
   
 - id: 19052017
   title: "Hexo - Pagination - Indicator"
-  url: http://localhost:1313/ssg/2019/05/20/hexo-pagination-indicator/
+  url: /ssg/2019/05/20/hexo-pagination-indicator/
   
 - id: 19051917
   title: "Hexo - Pagination - Logic"
-  url: http://localhost:1313/ssg/2019/05/19/hexo-pagination-logic/
+  url: /ssg/2019/05/19/hexo-pagination-logic/
   
 - id: 19051917
   title: "Hexo - Pagination - Adjacent"
-  url: http://localhost:1313/ssg/2019/05/19/hexo-pagination-adjacent/
+  url: /ssg/2019/05/19/hexo-pagination-adjacent/
   
 - id: 19051817
   title: "Hexo - Pagination - Navigation"
-  url: http://localhost:1313/ssg/2019/05/18/hexo-pagination-navigation/
+  url: /ssg/2019/05/18/hexo-pagination-navigation/
   
 - id: 19051817
   title: "Hexo - Pagination - Number"
-  url: http://localhost:1313/ssg/2019/05/18/hexo-pagination-number/
+  url: /ssg/2019/05/18/hexo-pagination-number/
   
 - id: 19051717
   title: "Hexo - Pagination - Simple"
-  url: http://localhost:1313/ssg/2019/05/17/hexo-pagination-simple/
+  url: /ssg/2019/05/17/hexo-pagination-simple/
   
 - id: 19051717
   title: "Hexo - Pagination - Introduction"
-  url: http://localhost:1313/ssg/2019/05/17/hexo-pagination-intro/
+  url: /ssg/2019/05/17/hexo-pagination-intro/
   
 - id: 19051617
   title: "Hexo - EJS - Data"
-  url: http://localhost:1313/ssg/2019/05/16/hexo-ejs-data/
+  url: /ssg/2019/05/16/hexo-ejs-data/
   
 - id: 19051517
   title: "Hexo - EJS - Widget"
-  url: http://localhost:1313/ssg/2019/05/15/hexo-ejs-widget/
+  url: /ssg/2019/05/15/hexo-ejs-widget/
   
 - id: 19051417
   title: "Hexo - EJS - Custom Content Type"
-  url: http://localhost:1313/ssg/2019/05/14/hexo-ejs-custom-output/
+  url: /ssg/2019/05/14/hexo-ejs-custom-output/
   
 - id: 19051317
   title: "Hexo - EJS - Section List Layout"
-  url: http://localhost:1313/ssg/2019/05/13/hexo-ejs-section-list-layout/
+  url: /ssg/2019/05/13/hexo-ejs-section-list-layout/
   
 - id: 19051217
   title: "Hexo - EJS - Custom Page Layout"
-  url: http://localhost:1313/ssg/2019/05/12/hexo-ejs-custom-page-layout/
+  url: /ssg/2019/05/12/hexo-ejs-custom-page-layout/
   
 - id: 19051117
   title: "Hexo - EJS - Custom Page Introduction"
-  url: http://localhost:1313/ssg/2019/05/11/hexo-ejs-custom-page-intro/
+  url: /ssg/2019/05/11/hexo-ejs-custom-page-intro/
   
 - id: 19051017
   title: "Hexo - EJS - Section List Introduction"
-  url: http://localhost:1313/ssg/2019/05/10/hexo-ejs-section-list-intro/
+  url: /ssg/2019/05/10/hexo-ejs-section-list-intro/
   
 - id: 19050817
   title: "Hexo - Bulma - SASS Layout"
-  url: http://localhost:1313/ssg/2019/05/08/hexo-bulma-sass-layout/
+  url: /ssg/2019/05/08/hexo-bulma-sass-layout/
   
 - id: 19050717
   title: "Hexo - Bulma - SASS Introduction"
-  url: http://localhost:1313/ssg/2019/05/07/hexo-bulma-sass-intro/
+  url: /ssg/2019/05/07/hexo-bulma-sass-intro/
   
 - id: 19050617
   title: "Hexo - Bulma - CSS Layout"
-  url: http://localhost:1313/ssg/2019/05/06/hexo-bulma-css-layout/
+  url: /ssg/2019/05/06/hexo-bulma-css-layout/
   
 - id: 19050517
   title: "Hexo - Bulma - CSS Introduction"
-  url: http://localhost:1313/ssg/2019/05/05/hexo-bulma-css-intro/
+  url: /ssg/2019/05/05/hexo-bulma-css-intro/
   
 - id: 19050417
   title: "Hexo - Layout"
-  url: http://localhost:1313/ssg/2019/05/04/hexo-layout/
+  url: /ssg/2019/05/04/hexo-layout/
   
 - id: 19050317
   title: "Hexo - Minimal"
-  url: http://localhost:1313/ssg/2019/05/03/hexo-minimal/
+  url: /ssg/2019/05/03/hexo-minimal/
   
 - id: 19050217
   title: "Hexo - Install"
-  url: http://localhost:1313/ssg/2019/05/02/hexo-install/
+  url: /ssg/2019/05/02/hexo-install/
   
 - id: 19050117
   title: "Hexo - Overview"
-  url: http://localhost:1313/ssg/2019/05/01/hexo-overview/
+  url: /ssg/2019/05/01/hexo-overview/
   
 - id: 19042517
   title: "Hugo - Conclusion"
-  url: http://localhost:1313/ssg/2019/04/25/hugo-conclusion/
+  url: /ssg/2019/04/25/hugo-conclusion/
   
 - id: 19042117
   title: "Hugo - Blog Post"
-  url: http://localhost:1313/ssg/2019/04/21/hugo-sass-content/
+  url: /ssg/2019/04/21/hugo-sass-content/
   
 - id: 19041917
   title: "Hugo - Pagination"
-  url: http://localhost:1313/ssg/2019/04/19/hugo-bulma-pagination/
+  url: /ssg/2019/04/19/hugo-bulma-pagination/
   
 - id: 19041517
   title: "Hugo - Data"
-  url: http://localhost:1313/ssg/2019/04/15/hugo-data/
+  url: /ssg/2019/04/15/hugo-data/
   
 - id: 19041417
   title: "Hugo - Widget"
-  url: http://localhost:1313/ssg/2019/04/14/hugo-widget/
+  url: /ssg/2019/04/14/hugo-widget/
   
 - id: 19041317
   title: "Hugo - Custom Content Type"
-  url: http://localhost:1313/ssg/2019/04/13/hugo-custom-output/
+  url: /ssg/2019/04/13/hugo-custom-output/
   
 - id: 19041217
   title: "Hugo - Archive"
-  url: http://localhost:1313/ssg/2019/04/12/hugo-archive/
+  url: /ssg/2019/04/12/hugo-archive/
   
 - id: 19041117
   title: "Hugo - Taxonomy"
-  url: http://localhost:1313/ssg/2019/04/11/hugo-taxonomy/
+  url: /ssg/2019/04/11/hugo-taxonomy/
   
 - id: 19041017
   title: "Hugo - Section List"
-  url: http://localhost:1313/ssg/2019/04/10/hugo-section-list/
+  url: /ssg/2019/04/10/hugo-section-list/
   
 - id: 19040817
   title: "Hugo - Bulma - SASS Layout"
-  url: http://localhost:1313/ssg/2019/04/08/hugo-bulma-sass-layout/
+  url: /ssg/2019/04/08/hugo-bulma-sass-layout/
   
 - id: 19040717
   title: "Hugo - Bulma - SASS Introduction"
-  url: http://localhost:1313/ssg/2019/04/07/hugo-bulma-sass-intro/
+  url: /ssg/2019/04/07/hugo-bulma-sass-intro/
   
 - id: 19040617
   title: "Hugo - Bulma - CSS Layout"
-  url: http://localhost:1313/ssg/2019/04/06/hugo-bulma-css-layout/
+  url: /ssg/2019/04/06/hugo-bulma-css-layout/
   
 - id: 19040517
   title: "Hugo - Bulma - CSS Introduction"
-  url: http://localhost:1313/ssg/2019/04/05/hugo-bulma-css-intro/
+  url: /ssg/2019/04/05/hugo-bulma-css-intro/
   
 - id: 19040317
   title: "Hugo - Layout"
-  url: http://localhost:1313/ssg/2019/04/03/hugo-layout/
+  url: /ssg/2019/04/03/hugo-layout/
   
 - id: 19040217
   title: "Hugo - Minimal"
-  url: http://localhost:1313/ssg/2019/04/02/hugo-minimal/
+  url: /ssg/2019/04/02/hugo-minimal/
   
 - id: 19040117
   title: "Hugo - Overview"
-  url: http://localhost:1313/ssg/2019/04/01/hugo-overview/
+  url: /ssg/2019/04/01/hugo-overview/
   
 - id: 19031017
   title: "Bulma SASS - Helpers"
-  url: http://localhost:1313/frontend/2019/03/10/bulma-sass-helpers/
+  url: /frontend/2019/03/10/bulma-sass-helpers/
   
 - id: 19030917
   title: "Bulma SASS - Post"
-  url: http://localhost:1313/frontend/2019/03/09/bulma-sass-post/
+  url: /frontend/2019/03/09/bulma-sass-post/
   
 - id: 19030817
   title: "Bulma SASS - Widget"
-  url: http://localhost:1313/frontend/2019/03/08/bulma-sass-panels/
+  url: /frontend/2019/03/08/bulma-sass-panels/
   
 - id: 19030717
   title: "Bulma SASS - Responsive Layout"
-  url: http://localhost:1313/frontend/2019/03/07/bulma-sass-layout/
+  url: /frontend/2019/03/07/bulma-sass-layout/
   
 - id: 19030617
   title: "Bulma SASS - Custom Class"
-  url: http://localhost:1313/frontend/2019/03/06/bulma-sass-custom/
+  url: /frontend/2019/03/06/bulma-sass-custom/
   
 - id: 19030517
   title: "Bulma SASS - Inside a Theme"
-  url: http://localhost:1313/frontend/2019/03/05/bulma-sass-theme/
+  url: /frontend/2019/03/05/bulma-sass-theme/
   
 - id: 19030417
   title: "Bulma SASS - Introduction"
-  url: http://localhost:1313/frontend/2019/03/04/bulma-sass-intro/
+  url: /frontend/2019/03/04/bulma-sass-intro/
   
 - id: 19030317
   title: "Bulma - Navigation Bar"
-  url: http://localhost:1313/frontend/2019/03/03/bulma-navbar/
+  url: /frontend/2019/03/03/bulma-navbar/
   
 - id: 19030217
   title: "Bulma - Minimal"
-  url: http://localhost:1313/frontend/2019/03/02/bulma-minimal/
+  url: /frontend/2019/03/02/bulma-minimal/
   
 - id: 19030117
   title: "Bulma - Overview"
-  url: http://localhost:1313/frontend/2019/03/01/bulma-overview/
+  url: /frontend/2019/03/01/bulma-overview/
   
 - id: 19020917
   title: "CSS Layout - Fake Table"
-  url: http://localhost:1313/frontend/2019/02/09/css-layout-fake-table/
+  url: /frontend/2019/02/09/css-layout-fake-table/
   
 - id: 19020717
   title: "CSS Layout - Float with Calc"
-  url: http://localhost:1313/frontend/2019/02/07/css-layout-calc/
+  url: /frontend/2019/02/07/css-layout-calc/
   
 - id: 19020517
   title: "CSS Layout - Grid System"
-  url: http://localhost:1313/frontend/2019/02/05/css-layout-grid/
+  url: /frontend/2019/02/05/css-layout-grid/
   
 - id: 19020317
   title: "CSS Layout - Flex"
-  url: http://localhost:1313/frontend/2019/02/03/css-layout-flex/
+  url: /frontend/2019/02/03/css-layout-flex/
   
 - id: 19020117
   title: "CSS Layout - Overview"
-  url: http://localhost:1313/frontend/2019/02/01/css-layout-overview/
+  url: /frontend/2019/02/01/css-layout-overview/
   
 - id: 19012317
   title: "Windows - Chocolatey - Sass"
-  url: http://localhost:1313/frontend/2019/01/23/windows-choco-sass/
+  url: /frontend/2019/01/23/windows-choco-sass/
   
 - id: 19012117
   title: "Windows - Chocolatey - Hugo"
-  url: http://localhost:1313/ssg/2019/01/21/windows-choco-hugo/
+  url: /ssg/2019/01/21/windows-choco-hugo/
   
 - id: 19011517
   title: "Sass - Task Runner"
-  url: http://localhost:1313/frontend/2019/01/15/sass-task-runner/
+  url: /frontend/2019/01/15/sass-task-runner/
   
 - id: 19011317
   title: "Sass - Common Implementation"
-  url: http://localhost:1313/frontend/2019/01/13/sass-common-compiler/
+  url: /frontend/2019/01/13/sass-common-compiler/
   
 - id: 19010817
   title: "Jekyll Pagination - Screenreader"
-  url: http://localhost:1313/ssg/2019/01/08/jekyll-pagination-screenreader/
+  url: /ssg/2019/01/08/jekyll-pagination-screenreader/
   
 - id: 19010717
   title: "Jekyll Pagination - Responsive"
-  url: http://localhost:1313/ssg/2019/01/07/jekyll-pagination-responsive/
+  url: /ssg/2019/01/07/jekyll-pagination-responsive/
   
 - id: 19010617
   title: "Jekyll Pagination - Indicator"
-  url: http://localhost:1313/ssg/2019/01/06/jekyll-pagination-indicator/
+  url: /ssg/2019/01/06/jekyll-pagination-indicator/
   
 - id: 19010517
   title: "Jekyll Pagination - Adjacent"
-  url: http://localhost:1313/ssg/2019/01/05/jekyll-pagination-adjacent/
+  url: /ssg/2019/01/05/jekyll-pagination-adjacent/
   
 - id: 19010417
   title: "Jekyll Pagination - Number"
-  url: http://localhost:1313/ssg/2019/01/04/jekyll-pagination-number/
+  url: /ssg/2019/01/04/jekyll-pagination-number/
   
 - id: 19010317
   title: "Jekyll Pagination - Simple"
-  url: http://localhost:1313/ssg/2019/01/03/jekyll-pagination-simple/
+  url: /ssg/2019/01/03/jekyll-pagination-simple/
   
 - id: 19010117
   title: "Jekyll Pagination - Summary"
-  url: http://localhost:1313/ssg/2019/01/01/jekyll-pagination-summary/
+  url: /ssg/2019/01/01/jekyll-pagination-summary/
   
 - id: 18121517
   title: "Hugo - Javacript - lunr Search"
-  url: http://localhost:1313/ssg/2018/12/15/hugo-javascript-search/
+  url: /ssg/2018/12/15/hugo-javascript-search/
   
 - id: 18121017
   title: "Hugo - Service"
-  url: http://localhost:1313/ssg/2018/12/10/hugo-service/
+  url: /ssg/2018/12/10/hugo-service/
   
 - id: 18120717
   title: "Hugo - Meta - Opengraph SEO"
-  url: http://localhost:1313/ssg/2018/12/07/hugo-meta-opengraph/
+  url: /ssg/2018/12/07/hugo-meta-opengraph/
   
 - id: 18120517
   title: "Hugo - Syntax Highlighting"
-  url: http://localhost:1313/ssg/2018/12/05/hugo-syntax-highlighting/
+  url: /ssg/2018/12/05/hugo-syntax-highlighting/
   
 - id: 18112617
   title: "Hugo - Content - Raw HTML"
-  url: http://localhost:1313/ssg/2018/11/26/hugo-html-content/
+  url: /ssg/2018/11/26/hugo-html-content/
   
 - id: 18112517
   title: "Hugo - Content - Markdown"
-  url: http://localhost:1313/ssg/2018/11/25/hugo-markdown-content/
+  url: /ssg/2018/11/25/hugo-markdown-content/
   
 - id: 18112417
   title: "Hugo - Bootstrap - Blog Post"
-  url: http://localhost:1313/ssg/2018/11/24/hugo-bootstrap-content/
+  url: /ssg/2018/11/24/hugo-bootstrap-content/
   
 - id: 18112217
   title: "Hugo - Pagination - Screen Reader"
-  url: http://localhost:1313/ssg/2018/11/22/hugo-pagination-screenreader/
+  url: /ssg/2018/11/22/hugo-pagination-screenreader/
   
 - id: 18112117
   title: "Hugo - SASS - Pagination - Responsive"
-  url: http://localhost:1313/ssg/2018/11/21/hugo-pagination-responsive/
+  url: /ssg/2018/11/21/hugo-pagination-responsive/
   
 - id: 18112017
   title: "Hugo - Pagination - Indicator"
-  url: http://localhost:1313/ssg/2018/11/20/hugo-pagination-indicator/
+  url: /ssg/2018/11/20/hugo-pagination-indicator/
   
 - id: 18111917
   title: "Hugo - Pagination - Adjacent"
-  url: http://localhost:1313/ssg/2018/11/19/hugo-pagination-adjacent/
+  url: /ssg/2018/11/19/hugo-pagination-adjacent/
   
 - id: 18111817
   title: "Hugo - Pagination - Number"
-  url: http://localhost:1313/ssg/2018/11/18/hugo-pagination-number/
+  url: /ssg/2018/11/18/hugo-pagination-number/
   
 - id: 18111717
   title: "Hugo - Pagination - Simple"
-  url: http://localhost:1313/ssg/2018/11/17/hugo-pagination-simple/
+  url: /ssg/2018/11/17/hugo-pagination-simple/
   
 - id: 18091517
   title: "Hugo - Data"
-  url: http://localhost:1313/ssg/2018/09/15/hugo-data/
+  url: /ssg/2018/09/15/hugo-data/
   
 - id: 18091417
   title: "Hugo - Widget"
-  url: http://localhost:1313/ssg/2018/09/14/hugo-sidebar/
+  url: /ssg/2018/09/14/hugo-sidebar/
   
 - id: 18091317
   title: "Hugo - Custom Content Type"
-  url: http://localhost:1313/ssg/2018/09/13/hugo-custom-output/
+  url: /ssg/2018/09/13/hugo-custom-output/
   
 - id: 18091217
   title: "Hugo - Archive"
-  url: http://localhost:1313/ssg/2018/09/12/hugo-archive/
+  url: /ssg/2018/09/12/hugo-archive/
   
 - id: 18091117
   title: "Hugo - Taxonomy"
-  url: http://localhost:1313/ssg/2018/09/11/hugo-taxonomy/
+  url: /ssg/2018/09/11/hugo-taxonomy/
   
 - id: 18091017
   title: "Hugo - Section List"
-  url: http://localhost:1313/ssg/2018/09/10/hugo-section-list/
+  url: /ssg/2018/09/10/hugo-section-list/
   
 - id: 18090817
   title: "Hugo - Bootstrap - SASS Customization"
-  url: http://localhost:1313/ssg/2018/09/08/hugo-bootstrap-sass-custom/
+  url: /ssg/2018/09/08/hugo-bootstrap-sass-custom/
   
 - id: 18090717
   title: "Hugo - Bootstrap - SASS"
-  url: http://localhost:1313/ssg/2018/09/07/hugo-bootstrap-sass/
+  url: /ssg/2018/09/07/hugo-bootstrap-sass/
   
 - id: 18090617
   title: "Hugo - Bootstrap - Components"
-  url: http://localhost:1313/ssg/2018/09/06/hugo-bootstrap-components/
+  url: /ssg/2018/09/06/hugo-bootstrap-components/
   
 - id: 18090517
   title: "Hugo - Bootstrap - Layout"
-  url: http://localhost:1313/ssg/2018/09/05/hugo-bootstrap-layout/
+  url: /ssg/2018/09/05/hugo-bootstrap-layout/
   
 - id: 18090317
   title: "Hugo - Layout"
-  url: http://localhost:1313/ssg/2018/09/03/hugo-layout/
+  url: /ssg/2018/09/03/hugo-layout/
   
 - id: 18090217
   title: "Hugo - Minimal"
-  url: http://localhost:1313/ssg/2018/09/02/hugo-minimal/
+  url: /ssg/2018/09/02/hugo-minimal/
   
 - id: 18090117
   title: "Hugo - Summary"
-  url: http://localhost:1313/ssg/2018/09/01/hugo-summary/
+  url: /ssg/2018/09/01/hugo-summary/
   
 - id: 18081517
   title: "Git Pages - Deploying"
-  url: http://localhost:1313/devops/2018/08/15/git-hosting/
+  url: /devops/2018/08/15/git-hosting/
   
 - id: 18081035
   title: "Bootstrap - Install Jekyll on RVM"
-  url: http://localhost:1313/frontend/2018/08/10/bootstrap-cli-rvm-bundle/
+  url: /frontend/2018/08/10/bootstrap-cli-rvm-bundle/
   
 - id: 18080935
   title: "Bootstrap - Offline Template Examples"
-  url: http://localhost:1313/frontend/2018/08/09/bootstrap-cli-offline/
+  url: /frontend/2018/08/09/bootstrap-cli-offline/
   
 - id: 18022117
   title: "Jekyll - Step by Step"
-  url: http://localhost:1313/ssg/2018/02/21/jekyll-basic/
+  url: /ssg/2018/02/21/jekyll-basic/
   
 - id: 18012917
   title: "Telegram Bot - Manual Page"
-  url: http://localhost:1313/code/2018/01/29/telegram-bot-loop-manual/
+  url: /code/2018/01/29/telegram-bot-loop-manual/
   
 - id: 18012817
   title: "Telegram Bot - Makefile"
-  url: http://localhost:1313/code/2018/01/28/telegram-bot-loop-makefile/
+  url: /code/2018/01/28/telegram-bot-loop-makefile/
   
 - id: 18012617
   title: "Telegram Bot - BASH Group Tools"
-  url: http://localhost:1313/code/2018/01/26/telegram-bot-loop-bash-04/
+  url: /code/2018/01/26/telegram-bot-loop-bash-04/
   
 - id: 18012417
   title: "Telegram Bot - BASH Option Argument"
-  url: http://localhost:1313/code/2018/01/24/telegram-bot-loop-bash-03/
+  url: /code/2018/01/24/telegram-bot-loop-bash-03/
   
 - id: 18012317
   title: "Telegram Bot - BASH Script"
-  url: http://localhost:1313/code/2018/01/23/telegram-bot-loop-bash-02/
+  url: /code/2018/01/23/telegram-bot-loop-bash-02/
   
 - id: 18012217
   title: "Telegram Bot - BASH CLI"
-  url: http://localhost:1313/code/2018/01/22/telegram-bot-loop-bash-01/
+  url: /code/2018/01/22/telegram-bot-loop-bash-01/
   
 - id: 18012117
   title: "Telegram Bot - Getting Token"
-  url: http://localhost:1313/code/2018/01/21/telegram-bot-token/
+  url: /code/2018/01/21/telegram-bot-token/
   
 - id: 18012017
   title: "Telegram Bot - Overview"
-  url: http://localhost:1313/code/2018/01/20/telegram-bot-overview/
+  url: /code/2018/01/20/telegram-bot-overview/
   
 - id: 18011335
   title: "Bootstrap CLI Webtools - Part Three"
-  url: http://localhost:1313/frontend/2018/01/13/bootstrap-cli-part-three/
+  url: /frontend/2018/01/13/bootstrap-cli-part-three/
   
 - id: 18011235
   title: "Bootstrap CLI Webtools - Part Two"
-  url: http://localhost:1313/frontend/2018/01/12/bootstrap-cli-part-two/
+  url: /frontend/2018/01/12/bootstrap-cli-part-two/
   
 - id: 18011135
   title: "Bootstrap CLI Webtools - Part One"
-  url: http://localhost:1313/frontend/2018/01/11/bootstrap-cli-part-one/
+  url: /frontend/2018/01/11/bootstrap-cli-part-one/
   
 - id: 18011035
   title: "Bootstrap CLI Webtools - Summary"
-  url: http://localhost:1313/frontend/2018/01/10/bootstrap-cli-summary/
+  url: /frontend/2018/01/10/bootstrap-cli-summary/
   
 - id: 18010602
   title: "Jekyll Installation on openSUSE"
-  url: http://localhost:1313/ssg/2018/01/06/ekyll-opensuse-install/
+  url: /ssg/2018/01/06/ekyll-opensuse-install/
   
 - id: 17070525
   title: "The LAMP Stack Evolution"
-  url: http://localhost:1313/backend/2017/07/05/lamp-stack-evolution/
+  url: /backend/2017/07/05/lamp-stack-evolution/
   
 - id: 16120452
   title: "Jekyll Directory Structure"
-  url: http://localhost:1313/ssg/2016/12/04/jekyll-directory-structure/
+  url: /ssg/2016/12/04/jekyll-directory-structure/
   
 - id: 16111130
   title: "Inkscape Logo Creation Part Three"
-  url: http://localhost:1313/design/inkscape/inkscape-logo-03-coloring/
+  url: /design/inkscape/inkscape-logo-03-coloring/
   
 - id: 16111110
   title: "Inkscape Logo Creation Part Two"
-  url: http://localhost:1313/design/inkscape/inkscape-logo-02-making-shape-example/
+  url: /design/inkscape/inkscape-logo-02-making-shape-example/
   
 - id: 16111100
   title: "Inkscape Logo Creation Part One"
-  url: http://localhost:1313/design/inkscape/inkscape-logo-01-preparing-document/
+  url: /design/inkscape/inkscape-logo-01-preparing-document/
   
 - id: 16110129
   title: "Inkscape: Text Feature"
-  url: http://localhost:1313/design/inkscape/inkscape-text-feature/
+  url: /design/inkscape/inkscape-text-feature/
   
 - id: 16100339
   title: "Inkscape: Flat Wallpaper with Isometric Looks"
-  url: http://localhost:1313/design/inkscape/inkscape-flat-isometric-wallpaper/
+  url: /design/inkscape/inkscape-flat-isometric-wallpaper/
   
 - id: 16081315
   title: "Jekyll Collapsed Sidemenu Without Javascript"
-  url: http://localhost:1313/ssg/2016/08/13/jekyll-sidemenu-without-javascript/
+  url: /ssg/2016/08/13/jekyll-sidemenu-without-javascript/
   
 - id: 16081215
   title: "Jekyll Sidemenu Simple Tree"
-  url: http://localhost:1313/ssg/2016/08/12/jekyll-sidemenu-simpletree/
+  url: /ssg/2016/08/12/jekyll-sidemenu-simpletree/
   
 - id: 16081115
   title: "Jekyll Responsive Side Menu"
-  url: http://localhost:1313/ssg/2016/08/11/jekyll-responsive-sidemenu/
+  url: /ssg/2016/08/11/jekyll-responsive-sidemenu/
   
 - id: 16062329
   title: "Jekyll Installation on Debian"
-  url: http://localhost:1313/ssg/2016/06/23/jekyll-debian-install/
+  url: /ssg/2016/06/23/jekyll-debian-install/
   
 - id: 16062202
   title: "Jekyll Installation on Arch/Manjaro"
-  url: http://localhost:1313/ssg/2016/06/22/jekyll-arch-install/
+  url: /ssg/2016/06/22/jekyll-arch-install/
   
 - id: 16061409
   title: "Step by Step Guidance to be a Webcoder"
-  url: http://localhost:1313/frontend/2016/06/14/how-a-webcoder-begin/
+  url: /frontend/2016/06/14/how-a-webcoder-begin/
   
 - id: 16061225
   title: "Elapsed Time, Yet Another Jekyll Liquid Port"
-  url: http://localhost:1313/ssg/2016/06/12/jekyll-liquid-time-elapsed/
+  url: /ssg/2016/06/12/jekyll-liquid-time-elapsed/
   
 - id: 16061051
   title: "Create Stripes Using Inkscape to Decorate Blog Post"
-  url: http://localhost:1313/frontend/2016/06/10/stripes-to-decorate-blog-post/
+  url: /frontend/2016/06/10/stripes-to-decorate-blog-post/
   
 - id: 16060951
   title: "Jekyll Post Archives Without Plugin"
-  url: http://localhost:1313/ssg/2016/06/09/jekyll-post-archives-without-plugin/
+  url: /ssg/2016/06/09/jekyll-post-archives-without-plugin/
   
 - id: 16052948
   title: "Jekyll Related Posts Without Plugin"
-  url: http://localhost:1313/ssg/2016/05/29/jekyll-related-posts-without-plugin/
+  url: /ssg/2016/05/29/jekyll-related-posts-without-plugin/
   
 - id: 16051435
   title: "Jekyll Blog Overview"
-  url: http://localhost:1313/ssg/2016/05/14/jekyll-blog-overview/
+  url: /ssg/2016/05/14/jekyll-blog-overview/
   
 - id: 16022348
   title: "Inkscape: Anti Corruption Movement"
-  url: http://localhost:1313/design/inkscape/inkscape-anti-corruption-movement/
+  url: /design/inkscape/inkscape-anti-corruption-movement/
   
 - id: 15111111
   title: "Inkscape: Isometric Infographics"
-  url: http://localhost:1313/design/inkscape/inkscape-isometric-infographics/
+  url: /design/inkscape/inkscape-isometric-infographics/
   
 - id: 15102011
   title: "Inkscape: Another Discussion e-Flyer"
-  url: http://localhost:1313/design/inkscape/inkscape-discussion-flyer/
+  url: /design/inkscape/inkscape-discussion-flyer/
   
 - id: 15101649
   title: "Setup LAMP stack with Manjaro OpenRC"
-  url: http://localhost:1313/backend/2015/10/16/lamp-stack-manjaro-openrc/
+  url: /backend/2015/10/16/lamp-stack-manjaro-openrc/
   
 - id: 15101010
   title: "Inkscape: Object Clip"
-  url: http://localhost:1313/design/inkscape/inkscape-object-clip/
+  url: /design/inkscape/inkscape-object-clip/
   
 - id: 15091126
   title: "Multipurpose Design Based on Stamp Ornament Box"
-  url: http://localhost:1313/design/inkscape/inkscape-stamp-poster-flyer/
+  url: /design/inkscape/inkscape-stamp-poster-flyer/
   
 - id: 15090658
   title: "Inkscape: Vexel Face Tracing"
-  url: http://localhost:1313/design/inkscape/inkscape-vexel-face-tracing/
+  url: /design/inkscape/inkscape-vexel-face-tracing/
   
 - id: 15090348
   title: "Inkscape: Logo with Stamp Ornament"
-  url: http://localhost:1313/design/inkscape/inkscape-stamp-logo/
+  url: /design/inkscape/inkscape-stamp-logo/
   
 - id: 15081723
   title: "Inkscape: Event Invitation Stock Image"
-  url: http://localhost:1313/design/inkscape/inkscape-invitation-stock/
+  url: /design/inkscape/inkscape-invitation-stock/
   
 - id: 15080808
   title: "Inkscape: Event Banner Collection"
-  url: http://localhost:1313/design/inkscape/inkscape-event-banners/
+  url: /design/inkscape/inkscape-event-banners/
   
 - id: 15070707
   title: "Inkscape: Event Schedule Announcement"
-  url: http://localhost:1313/design/inkscape/inkscape-event-schedule/
+  url: /design/inkscape/inkscape-event-schedule/
   
 - id: 15060606
   title: "Inkscape: Non Standard Alumni Logo"
-  url: http://localhost:1313/design/inkscape/inkscape-non-standard-makara/
+  url: /design/inkscape/inkscape-non-standard-makara/
   
