@@ -214,6 +214,42 @@
   title: "CI/CD - Deploy Overview"
   url: /devops/2020/02/10/ci-cd-overview/
   
+- id: 20012917
+  title: "Eleventy - Pagination - Screen Reader"
+  url: /ssg/2020/01/29/11ty-pagination-screenreader/
+  
+- id: 20012817
+  title: "Eleventy - Pagination - Responsive"
+  url: /ssg/2020/01/28/11ty-pagination-responsive/
+  
+- id: 20012717
+  title: "Eleventy - Pagination - Indicator"
+  url: /ssg/2020/01/27/11ty-pagination-indicator/
+  
+- id: 20012617
+  title: "Eleventy - Pagination - Logic"
+  url: /ssg/2020/01/26/11ty-pagination-logic/
+  
+- id: 20012517
+  title: "Eleventy - Pagination - Adjacent"
+  url: /ssg/2020/01/25/11ty-pagination-adjacent/
+  
+- id: 20012417
+  title: "Eleventy - Pagination - Navigation"
+  url: /ssg/2020/01/24/11ty-pagination-navigation/
+  
+- id: 20012317
+  title: "Eleventy - Pagination - Number"
+  url: /ssg/2020/01/23/11ty-pagination-number/
+  
+- id: 20012217
+  title: "Eleventy - Pagination - Simple"
+  url: /ssg/2020/01/22/11ty-pagination-simple/
+  
+- id: 20012117
+  title: "Eleventy - Pagination - Intro"
+  url: /ssg/2020/01/21/11ty-pagination-intro/
+  
 - id: 20012017
   title: "Eleventy - Widget - Data"
   url: /ssg/2020/01/20/11ty-widget-data/
