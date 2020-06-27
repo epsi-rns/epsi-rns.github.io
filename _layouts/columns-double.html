@@ -16,7 +16,8 @@ opengraph:
 {% assign color_main  = page.color_main  | default: layout.color_main %}
 {% assign color_aside = page.color_aside | default: layout.color_aside %}
 
-  <main role="main" id="main_resizer" 
+  <main role="main"
+        id="main_toggler" 
         class="column is-two-thirds">
 
     <section class="main-wrapper {{ color_main }} hoverable">
@@ -45,6 +46,7 @@ opengraph:
 
   </main>
 
-  <aside id="aside_resizer" class="column is-one-thirds">
+  <aside id="aside_toggler"
+         class="column is-one-thirds">
     {% include {{ layout.aside_content }} %}
   </aside>
