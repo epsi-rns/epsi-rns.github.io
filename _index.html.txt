@@ -1,0 +1,43 @@
+---
+# unused part
+---
+
+<!--
+  <p class="lead text-muted">
+     This site is using Oriclone Theme.</p>
+
+  <p>
+    <a class="button is-dark
+    blue-grey darken-2 hoverable m-b-5"
+       href="http://epsi-rns.github.io/demo-jekyll"
+      >
+      <span class="is-hidden-mobile">Jekyll&nbsp;</span>
+      Old Demo Site
+      <span class="is-hidden-mobile">&nbsp;(Bootstrap)</span>
+      </a>
+    <a class="button is-dark
+    blue-grey darken-1 hoverable m-b-5"
+       href="https://gitlab.com/epsi-rns/tutor-jekyll-bulma-md"
+      >
+      <span class="is-hidden-mobile">Clone&nbsp;</span>
+      Current Repository
+      <span class="is-hidden-mobile">&nbsp;(Bulma MD)</span>
+      </a>
+  </p>
+-->
+
+<!--
+  <div class="notification is-warning">
+    Please stay at home during corona outbreak.
+  </div>
+
+  <div class="justify-content-center">
+  <img src="{{ site.baseurl }}/assets/site/images/good-haddock.jpg" 
+       alt="good haddock said 'Stay at home!'"></a>
+  </div>
+
+  <div class="notification is-warning">
+    Anyone could be a covid-19 carrier.
+    Do not be a corona spreader.
+  </div>
+-->
