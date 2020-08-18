@@ -2,6 +2,218 @@
 # Archives by Date
 
 
+- id: 20082017
+  title: "Jekyll - Summary"
+  url: /ssg/2020/08/20/jekyll-summary/
+  
+- id: 20081517
+  title: "Jekyll Bulma - Content"
+  url: /ssg/2020/08/15/jekyll-bmd-content/
+  
+- id: 20081417
+  title: "Jekyll Bulma - Blog Post"
+  url: /ssg/2020/08/14/jekyll-bmd-blog-post/
+  
+- id: 20081317
+  title: "Jekyll Bulma - Pagination - Responsive"
+  url: /ssg/2020/08/13/jekyll-bmd-pagination-responsive/
+  
+- id: 20081217
+  title: "Jekyll Bulma - Pagination - Stylesheet"
+  url: /ssg/2020/08/12/jekyll-bmd-pagination-stylesheet/
+  
+- id: 20081017
+  title: "Jekyll Bulma - Widget - Data"
+  url: /ssg/2020/08/10/jekyll-bmd-widget-static-data/
+  
+- id: 20080917
+  title: "Jekyll Bulma - Widget - Loop"
+  url: /ssg/2020/08/09/jekyll-bmd-widget-liquid-loop/
+  
+- id: 20080817
+  title: "Jekyll Bulma - Widget - Simple"
+  url: /ssg/2020/08/08/jekyll-bmd-widget-simple-html/
+  
+- id: 20080717
+  title: "Jekyll Bulma - Layout - Index List"
+  url: /ssg/2020/08/07/jekyll-bmd-layout-index-list/
+  
+- id: 20080617
+  title: "Jekyll Bulma - Layout - Variables"
+  url: /ssg/2020/08/06/jekyll-bmd-layout-variables/
+  
+- id: 20080517
+  title: "Jekyll Bulma - SASS Layout"
+  url: /ssg/2020/08/05/jekyll-bmd-sass-layout/
+  
+- id: 20080417
+  title: "Jekyll Bulma - SASS Intro"
+  url: /ssg/2020/08/04/jekyll-bmd-sass-intro/
+  
+- id: 20080317
+  title: "Jekyll Bulma - CSS Layout"
+  url: /ssg/2020/08/03/jekyll-bmd-css-layout/
+  
+- id: 20080217
+  title: "Jekyll Bulma - CSS Intro"
+  url: /ssg/2020/08/02/jekyll-bmd-css-intro/
+  
+- id: 20080117
+  title: "Jekyll Bulma MD - Repository"
+  url: /ssg/2020/08/01/jekyll-bmd-repository/
+  
+- id: 20071517
+  title: "Jekyll Bootstrap - Content"
+  url: /ssg/2020/07/15/jekyll-bsoc-content/
+  
+- id: 20071417
+  title: "Jekyll Bootstrap - Blog Post"
+  url: /ssg/2020/07/14/jekyll-bsoc-blog-post/
+  
+- id: 20071317
+  title: "Jekyll Bootstrap - Pagination - Responsive"
+  url: /ssg/2020/07/13/jekyll-bsoc-pagination-responsive/
+  
+- id: 20071217
+  title: "Jekyll Bootstrap - Pagination - Stylesheet"
+  url: /ssg/2020/07/12/jekyll-bsoc-pagination-stylesheet/
+  
+- id: 20071017
+  title: "Jekyll Bootstrap - Widget - Data"
+  url: /ssg/2020/07/10/jekyll-bsoc-widget-static-data/
+  
+- id: 20070917
+  title: "Jekyll Bootstrap - Widget - Loop"
+  url: /ssg/2020/07/09/jekyll-bsoc-widget-liquid-loop/
+  
+- id: 20070817
+  title: "Jekyll Bootstrap - Widget - Simple"
+  url: /ssg/2020/07/08/jekyll-bsoc-widget-simple-html/
+  
+- id: 20070717
+  title: "Jekyll Bootstrap - Layout - Index List"
+  url: /ssg/2020/07/07/jekyll-bsoc-layout-index-list/
+  
+- id: 20070617
+  title: "Jekyll Bootstrap - Layout - Variables"
+  url: /ssg/2020/07/06/jekyll-bsoc-layout-variables/
+  
+- id: 20070517
+  title: "Jekyll Bootstrap - SASS Layout"
+  url: /ssg/2020/07/05/jekyll-bsoc-sass-layout/
+  
+- id: 20070417
+  title: "Jekyll Bootstrap - SASS Intro"
+  url: /ssg/2020/07/04/jekyll-bsoc-sass-intro/
+  
+- id: 20070317
+  title: "Jekyll Bootstrap - CSS Layout"
+  url: /ssg/2020/07/03/jekyll-bsoc-css-layout/
+  
+- id: 20070217
+  title: "Jekyll Bootstrap - CSS Intro"
+  url: /ssg/2020/07/02/jekyll-bsoc-css-intro/
+  
+- id: 20070117
+  title: "Jekyll Bootstrap OC - Repository"
+  url: /ssg/2020/07/01/jekyll-bsoc-repository/
+  
+- id: 20062617
+  title: "Jekyll - Deploy - CI/CD"
+  url: /ssg/2020/06/26/jekyll-deploy-ci-cd/
+  
+- id: 20062517
+  title: "Jekyll - Deploy - Simple"
+  url: /ssg/2020/06/25/jekyll-deploy-simple/
+  
+- id: 20062417
+  title: "Jekyll Plain - Theme Bundling"
+  url: /ssg/2020/06/24/jekyll-plain-theme-bundling/
+  
+- id: 20062317
+  title: "Jekyll Plain - Plugin - Tag Names"
+  url: /ssg/2020/06/23/jekyll-plain-plugin-tag-names/
+  
+- id: 20062217
+  title: "Jekyll Plain - Plugin - Pagination"
+  url: /ssg/2020/06/22/jekyll-plain-plugin-pagination/
+  
+- id: 20062117
+  title: "Jekyll Plain - Plugin - Simple"
+  url: /ssg/2020/06/21/jekyll-plain-plugin-simple/
+  
+- id: 20061917
+  title: "Jekyll Plain - Pagination - Indicator"
+  url: /ssg/2020/06/19/jekyll-plain-pagination-indicator/
+  
+- id: 20061817
+  title: "Jekyll Plain - Pagination - Logic"
+  url: /ssg/2020/06/18/jekyll-plain-pagination-logic/
+  
+- id: 20061717
+  title: "Jekyll Plain - Pagination - Adjacent"
+  url: /ssg/2020/06/17/jekyll-plain-pagination-adjacent/
+  
+- id: 20061617
+  title: "Jekyll Plain - Pagination - Number"
+  url: /ssg/2020/06/16/jekyll-plain-pagination-number/
+  
+- id: 20061517
+  title: "Jekyll Plain - Pagination - Simple"
+  url: /ssg/2020/06/15/jekyll-plain-pagination-simple/
+  
+- id: 20061417
+  title: "Jekyll Plain - Pagination - Intro"
+  url: /ssg/2020/06/14/jekyll-plain-pagination-intro/
+  
+- id: 20061317
+  title: "Jekyll Plain - Meta SEO"
+  url: /ssg/2020/06/13/jekyll-plain-meta-seo/
+  
+- id: 20061217
+  title: "Jekyll - Managing Code - Part Three"
+  url: /ssg/2020/06/12/jekyll-plain-managing-code-03/
+  
+- id: 20061117
+  title: "Jekyll - Managing Code - Part Two"
+  url: /ssg/2020/06/11/jekyll-plain-managing-code-02/
+  
+- id: 20061017
+  title: "Jekyll - Managing Code - Part One"
+  url: /ssg/2020/06/10/jekyll-plain-managing-code-01/
+  
+- id: 20060817
+  title: "Jekyll Plain - Markdown"
+  url: /ssg/2020/06/08/jekyll-plain-markdown/
+  
+- id: 20060717
+  title: "Jekyll Plain - Custom Output"
+  url: /ssg/2020/06/07/jekyll-plain-custom-output/
+  
+- id: 20060617
+  title: "Jekyll Plain - Custom Pages"
+  url: /ssg/2020/06/06/jekyll-plain-custom-pages/
+  
+- id: 20060517
+  title: "Jekyll Plain - Layout"
+  url: /ssg/2020/06/05/jekyll-plain-layout/
+  
+- id: 20060417
+  title: "Jekyll Plain - Minimal"
+  url: /ssg/2020/06/04/jekyll-plain-minimal/
+  
+- id: 20060317
+  title: "Jekyll Plain - Repository"
+  url: /ssg/2020/06/03/jekyll-plain-repository/
+  
+- id: 20060217
+  title: "Jekyll - Install using RVM"
+  url: /ssg/2020/06/02/jekyll-install-rvm/
+  
+- id: 20060117
+  title: "Jekyll - Overview"
+  url: /ssg/2020/06/01/jekyll-overview/
+  
 - id: 20051517
   title: "Template - Koa"
   url: /frontend/2020/05/15/template-koa/
@@ -114,6 +326,10 @@
   title: "Practical Blog Development Cycle"
   url: /frontend/2020/03/21/practical-blog-cycle/
   
+- id: 20031617
+  title: "Bootstrap OC - Javascript Toggler"
+  url: /frontend/2020/03/16/bootstrap-oc-javascript-toggler/
+  
 - id: 20031517
   title: "Bootstrap OC - Sass - Blog Post"
   url: /frontend/2020/03/15/bootstrap-oc-sass-blog-post/
@@ -214,6 +430,30 @@
   title: "CI/CD - Deploy Overview"
   url: /devops/2020/02/10/ci-cd-overview/
   
+- id: 20020617
+  title: "Eleventy - Summary"
+  url: /ssg/2020/02/06/11ty-summary/
+  
+- id: 20020417
+  title: "Eleventy - Syntax Highlighting"
+  url: /ssg/2020/02/04/11ty-syntax-highlighting/
+  
+- id: 20020317
+  title: "Eleventy - Content - Shortcodes"
+  url: /ssg/2020/02/03/11ty-content-shortcodes/
+  
+- id: 20020217
+  title: "Eleventy - Content - Markdown"
+  url: /ssg/2020/02/02/11ty-content-markdown/
+  
+- id: 20020117
+  title: "Eleventy - Content - Blog Post"
+  url: /ssg/2020/02/01/11ty-content-post/
+  
+- id: 20013117
+  title: "Eleventy - Meta - SEO"
+  url: /ssg/2020/01/31/11ty-meta-seo/
+  
 - id: 20012917
   title: "Eleventy - Pagination - Screen Reader"
   url: /ssg/2020/01/29/11ty-pagination-screenreader/
@@ -251,7 +491,7 @@
   url: /ssg/2020/01/21/11ty-pagination-intro/
   
 - id: 20012017
-  title: "Eleventy - Widget - Data"
+  title: "Eleventy - Widget - Static Data"
   url: /ssg/2020/01/20/11ty-widget-data/
   
 - id: 20011917
@@ -354,10 +594,6 @@
   title: "Less - Loop - Spacing Class"
   url: /frontend/2019/10/03/less-loop-spacing-class/
   
-- id: 19080117
-  title: "Jekyll - Bulma MD - Overview"
-  url: /ssg/2019/08/01/jekyll-bulma-md-overview/
-  
 - id: 19070117
   title: "Eleventy - Materialize - Overview"
   url: /ssg/2019/07/01/11ty-materialize-overview/
@@ -365,6 +601,10 @@
 - id: 19062117
   title: "Sass - Loop - Spacing Class"
   url: /frontend/2019/06/21/sass-loop-spacing-class/
+  
+- id: 19061517
+  title: "Bulma MD - Javascript - Toggler"
+  url: /frontend/2019/06/15/bulma-md-javascript-toggler/
   
 - id: 19061417
   title: "Bulma MD - Blog Post"
