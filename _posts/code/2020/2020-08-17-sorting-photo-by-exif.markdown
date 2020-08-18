@@ -41,7 +41,7 @@ to this
 2020:08:04 19:13:20 191320.jpg
 ```
 
-you can autamte the task with bash script.
+you can automate the task with `bash` script.
 And then, it is the file manager job to display in a sorted fashioned.
 
 #### Check EXIF
