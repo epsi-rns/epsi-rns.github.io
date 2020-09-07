@@ -16,7 +16,7 @@ excerpt:
   Monitoring widget in statusbar using Vicious Library.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -28,17 +28,23 @@ Using Vicious Library, we can manage monitoring widget, in statusbar.
 
 #### Table of Content
 
-* 1: Prerequisite
+* [Preface](#preface): Table of Content
 
-* 2: Simple Example
+* 1: [Prerequisite](#prerequisite)
 
-* 3: More Standard Example
+* 2: [Simple Example](#simple-example)
 
-* 4: Standard Graphical Widget
+* 3: [More Standard Example](#more-example)
 
-* 5: More Graphical Widget
+* 4: [Standard Graphical Widget](#standard-widget)
+
+* 5: [More Graphical Widget](#more-widget)
+
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="prerequisite"></a>
 
 ### 1: Prerequisite
 
@@ -141,6 +147,8 @@ Do not get intimidated with codes above.
 These can be explained step by step.
 
 -- -- --
+
+<a name="simple-example"></a>
 
 ### 2: Simple Example: Memory
 
@@ -271,6 +279,8 @@ end
 {% endhighlight %}
 
 -- -- --
+
+<a name="more-example"></a>
 
 ### 3: More Standard Example
 
@@ -408,6 +418,8 @@ end
 
 -- -- --
 
+<a name="standard-widget"></a>
+
 ### 4: Standard Graphical Widget
 
 This is a little bit harder, since we should dive into Awesome documentation.
@@ -507,6 +519,8 @@ end
 ![Awesome WM: Vicious Graph Widget][image-ss-graphwidget]{: .img-responsive }
 
 -- -- --
+
+<a name="more-widget"></a>
 
 ### 5: More Graphical Widget
 
@@ -621,7 +635,9 @@ end
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Now that we are done with `vicious` statusbar,
 we can learn about more interesting library called `lain`.

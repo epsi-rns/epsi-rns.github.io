@@ -17,7 +17,7 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG resource.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -25,15 +25,21 @@ excerpt:
 
 #### Table of Content
 
-* 1: Preparation
+* [Preface](#preface): Table of Content
 
-* 2: Unified Graphic Material
+* 1: [Preparation](#preparation)
 
-* 3: Theme Configuration
+* 2: [Unified Graphic Material](#ugm)
 
-* 4: Titlebar Configuration
+* 3: [Theme Configuration](#theme-configuration)
+
+* 4: [Titlebar Configuration](#titlebar-configuration)
+
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="preparation"></a>
 
 ### 1: Preparation
 
@@ -57,9 +63,11 @@ I recommend you to read this article below before continue:
 
 -- -- --
 
+<a name="ugm"></a>
+
 ### 2: Unified Graphic Material
 
-	This is the Inkscape Part.
+> This is the Inkscape Part.
 
 Instead of separated UI design for each icon,
 we can put all icons into one SVG file.
@@ -110,6 +118,8 @@ Generating icon has never been easier than this.
 
 -- -- --
 
+<a name="theme-configuration"></a>
+
 ### 3: Theme Configuration
 
 We need to map from generated PNG to Awesome predefined variable names.
@@ -156,6 +166,8 @@ And the result is a very nice titlebar.
 
 -- -- --
 
+<a name="titlebar-configuration"></a>
+
 ### 4: Titlebar Configuration
 
 Just in case you did not notice,
@@ -189,14 +201,16 @@ And a new minimized button is there below.
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Theme - Layout Icons][local-whats-next] ].
 There is this topic, about multicolor layout icons.
 Creating minimalist PNG Button using Inkscape,
 one SVG file to create each PNG resource.
 
-What do you think ?
+What do you think?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

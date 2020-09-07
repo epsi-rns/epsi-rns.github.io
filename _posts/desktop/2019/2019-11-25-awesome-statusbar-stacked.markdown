@@ -16,7 +16,7 @@ excerpt:
   Stacked statusbar with arrow decoration using lain library.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -31,15 +31,21 @@ Oh yeah, Awesome also works well with GhostBSD.
 
 #### Table of Content
 
-* 1: Prerequisite
+* [Preface](#preface): Table of Content
 
-* 2: Stacked Bar
+* 1: [Prerequisite](#prerequisite)
 
-* 3: Bottom Bar: Arrow
+* 2: [Stacked Bar](#stacked-bar)
 
-* 4: Custom Widget
+* 3: [Bottom Bar](#bottom-bar): Arrow
+
+* 4: [Custom Widget](#custom-widget)
+
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="prerequisite"></a>
 
 ### 1: Prerequisite
 
@@ -95,6 +101,8 @@ Do not get intimidated with codes above.
 These can be explained step by step.
 
 -- -- --
+
+<a name="stacked-bar"></a>
 
 ### 2: Stacked Bar
 
@@ -182,6 +190,8 @@ end
 {% endhighlight %}
 
 -- -- --
+
+<a name="bottom-bar"></a>
 
 ### 3: Bottom Bar: Arrow
 
@@ -320,6 +330,8 @@ we can have more stuff between arrow as below:
 
 -- -- --
 
+<a name="custom-widget"></a>
+
 ### 4: Custom Widget
 
 The custom example here is intended to show,
@@ -435,7 +447,9 @@ And the result is:
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Now that we are done with stacked statusbar,
 learning how to make simple custom widget,

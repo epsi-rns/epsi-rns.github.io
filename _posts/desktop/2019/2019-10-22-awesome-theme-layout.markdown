@@ -17,7 +17,7 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG resource.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -27,13 +27,19 @@ With similar fashioned, we create the layout icon.
 
 #### Table of Content
 
-* 1: Preparation
+* [Preface](#preface): Table of Content
 
-* 2: Unified Graphic Material
+* 1: [Preparation](#preparation)
 
-* 3: Configuration
+* 2: [Unified Graphic Material](#ugm)
+
+* 3: [Configuration](#configuration)
+
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="preparation"></a>
 
 ### 1: Preparation
 
@@ -58,9 +64,11 @@ I recommend you to read this article below before continue:
 
 -- -- --
 
+<a name="ugm"></a>
+
 ### 2: Unified Graphic Material
 
-	This is the Inkscape Part.
+> This is the Inkscape Part.
 
 Instead of separated UI design for each icon,
 we can put all icons into one SVG file.
@@ -82,6 +90,8 @@ SVG source available at:
 * [github.com/epsi-rns/dotfiles/.../clone-layout.svg][dotfiles-svg-source]
 
 -- -- --
+
+<a name="configuration"></a>
 
 ### 3: Configuration
 
@@ -117,14 +127,16 @@ theme.layout_cornerse       = layout_path .. "cornerse.png"
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Theme - Layout Icons][local-whats-next] ].
 There is this topic, about multicolor layout icons.
 Creating minimalist PNG Button using Inkscape,
 one SVG file to create each PNG resource.
 
-What do you think ?
+What do you think?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

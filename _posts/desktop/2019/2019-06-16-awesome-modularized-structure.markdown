@@ -24,23 +24,27 @@ related_link_ids:
   - 16031941  # Refactoring Awesome
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Preparing modularized configuration by examining folder structure.
 
 #### Table of Content
 
-* Preface: Table of Content
+* [Preface](#preface): Table of Content
 
-* 1: Config Comparation
+* 1: [Config Comparation](#config-comparation)
 
-* 2: Directory Structure
+* 2: [Directory Structure](#directory-structure)
 
-* 3: Passing Value from Module
+* 3: [Passing Value from Module](#passing-value)
 
-* What is Next ?
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="config-comparation"></a>
 
 ### 1: Config Comparation
 
@@ -147,6 +151,8 @@ along with the directory tree in figure above.
 
 -- -- --
 
+<a name="directory-structure"></a>
+
 ### 2: Directory Structure
 
 Beside the main <code>rc.lua</code>,
@@ -203,6 +209,8 @@ There will be other structure, for Awesome WM customization,
 in other articles.
 
 -- -- --
+
+<a name="passing-value"></a>
 
 ### 3: Passing Value from Module
 
@@ -402,7 +410,9 @@ I need to be familiar with this `metatable`.
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Main Modules][local-whats-next] ].
 There are, some interesting topic,

@@ -23,29 +23,33 @@ related_link_ids:
   - 16031941  # Refactoring Awesome
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Main modules in modularized configuration.
 
 #### Table of Content
 
-* Preface: Table of Content
+* [Preface](#preface): Table of Content
 
-* Artefacts
+* [Artefacts](#artefacts)
 
-* 1: Layouts
+* 1: [Layouts](#layouts)
 
-* 2: Tags
+* 2: [Tags](#tags)
 
-* 3: Menu
+* 3: [Menu](#menu)
 
-* 4: Rules
+* 4: [Rules](#rules)
 
-* 5: Signals
+* 5: [Signals](#signals)
 
-* What is Next ?
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="artefacts"></a>
 
 ### Artefacts
 
@@ -92,6 +96,8 @@ Do not get intimidated with codes above.
 These can be explained step by step.
 
 -- -- --
+
+<a name="layouts"></a>
 
 ### 1: Layouts
 
@@ -182,6 +188,8 @@ RC.layouts = main.layouts()
 {% endhighlight %}
 
 -- -- --
+
+<a name="tags"></a>
 
 ### 2: Tags
 
@@ -277,9 +285,9 @@ function _M.get ()
 end
 {% endhighlight %}
 
-_._
-
 -- -- --
+
+<a name="menu"></a>
 
 ### 3: Menu
 
@@ -437,6 +445,8 @@ And the result is:
 
 -- -- --
 
+<a name="rules"></a>
+
 ### 4: Rules
 
 I mostly just cut and paste the rule.
@@ -570,6 +580,8 @@ Since we haven't touch the <code>binding</code> section.
 
 -- -- --
 
+<a name="signals"></a>
+
 ### 5: Signals
 
 On most my Awesome WM time,
@@ -637,7 +649,9 @@ that code above is enough.
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Binding Modules][local-whats-next] ].
 There are, some interesting topic,

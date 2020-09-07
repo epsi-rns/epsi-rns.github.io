@@ -16,7 +16,7 @@ excerpt:
   Refactoring default statusbar into modularized helper.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -32,21 +32,27 @@ at the bottom as shown in figure below:
 
 #### Table of Content
 
-* 1: Statusbar Directory
+* [Preface](#preface): Table of Content
 
-* 2: Initialization
+* 1: [Statusbar Directory](#statusbar-directory)
 
-* 3: The Skeleton
+* 2: [Initialization](#initialization)
 
-* 4: Main Statusbar
+* 3: [The Skeleton](#skeleton)
 
-* 5: Top Bar: Helper Default
+* 4: [Main Statusbar](#main-statusbar)
 
-* 6: SVG Arrows
+* 5: [Top Bar](#top-bar): Helper Default
 
-* 7: Bottom Bar: Helper Empty
+* 6: [SVG Arrows](#svg-arrows)
+
+* 7: [Bottom Bar](#bottom-bar): Helper Empty
+
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="statusbar-directory"></a>
 
 ### 1: Statusbar Directory
 
@@ -120,6 +126,8 @@ These can be explained step by step.
 
 -- -- --
 
+<a name="initialization"></a>
+
 ### 2: Initialization
 
 We are going to make a callable init,
@@ -151,6 +159,8 @@ statusbar()
 I hope that this is clear.
 
 -- -- --
+
+<a name="skeleton"></a>
 
 ### 3: The Skeleton
 
@@ -257,6 +267,8 @@ Consider go further into the details.
 
 -- -- --
 
+<a name="main-statusbar"></a>
+
 ### 4: Main Statusbar
 
 Remember this loop in `init`?
@@ -307,6 +319,8 @@ end
 {% endhighlight %}
 
 -- -- --
+
+<a name="top-bar"></a>
 
 ### 5: Top Bar: Helper Default
 
@@ -392,6 +406,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 {% endhighlight %}
 
 -- -- --
+
+<a name="svg-arrows"></a>
 
 ### 6: SVG Arrows
 
@@ -483,6 +499,8 @@ SVG source available at:
 
 -- -- --
 
+<a name="bottom-bar"></a>
+
 ### 7: Bottom Bar: Helper Empty
 
 Again, consider dive into detail
@@ -560,7 +578,9 @@ local WB = wibox_package
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Now that we are done with refactoring the default statsubar,
 we should be ready for a more complex statusbar,

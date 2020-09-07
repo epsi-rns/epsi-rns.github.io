@@ -17,6 +17,8 @@ excerpt:
 # mathjax: false
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Statusbar customization, with powerline style using Lain.
@@ -33,13 +35,17 @@ this articel explain how to decorate it.
 
 > I know this section is short
 
-* 1: Prerequisite
+* [Preface](#preface): Table of Content
 
-* 2: Arrow Example
+* 1: [Prerequisite](#prerequisite)
 
-* Conclusion
+* 2: [Arrow Example](#arrow-example)
+
+* [Conclusion](#conclusion)
 
 -- -- --
+
+<a name="prerequisite"></a>
 
 ### 1: Prerequisite
 
@@ -93,6 +99,8 @@ The same as previous article.
 Very similar with previous article.
 
 -- -- --
+
+<a name="arrow-example"></a>
 
 ### 2: Arrow Example
 
@@ -194,6 +202,8 @@ end
 
 -- -- --
 
+<a name="conclusion"></a>
+
 ### Conclusion
 
 I think that is all. After this article, we are done.
@@ -204,7 +214,7 @@ I do not claim myself to be mastered of AwesomeWM of something,
 these articles I have wrote is intended to be guidance for beginner.
 
 If you need sophisticated statusbar widgets programming with Lua,
-you can go right away to Pavel Makov site:
+you can go right away to Pavel Makhov site:
 
 * [https://pavelmakhov.com/awesome-wm-widgets/](https://pavelmakhov.com/awesome-wm-widgets/)
 
@@ -241,8 +251,6 @@ What do you think ?
 [image-ss-arrow-right]: {{ asset_path }}/04-arrow-right.png
 [image-ss-arrow-left]:  {{ asset_path }}/04-arrow-left.png
 [image-ss-arrow-top]:   {{ asset_path }}/04-arrow-top.png
-
-
 
 [image-ss-lain-mem]:    {{ asset_path }}/04-lain-memory.png
 

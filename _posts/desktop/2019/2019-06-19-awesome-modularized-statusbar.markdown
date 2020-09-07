@@ -23,31 +23,35 @@ related_link_ids:
   - 16031941  # Refactoring Awesome
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Statusbar and titlebar binding modules in modularized configuration.
 
 #### Table of Content
 
-* Preface: Table of Content
+* [Preface](#preface): Table of Content
 
-* Artefacts
+* [Artefacts](#artefacts)
 
-* 1: Titlebar
+* 1: [Titlebar](#titlebar)
 
-* 2: Statusbar Skeleton
+* 2: [Statusbar Skeleton](#statusbar-skeleton)
 
-* 3: Wallpaper
+* 3: [Wallpaper](#wallpaper)
 
-* 4: Binding: Tag List Buttons
+* 4: [Binding: Tag List Buttons](#tag-list-buttons)
 
-* 5: Binding: Task List Buttons
+* 5: [Binding: Task List Buttons](#task-list-buttons)
 
-* 6: Statusbar Summary
+* 6: [Statusbar Summary](#statusbar-summary)
 
-* Conclusion
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="artefacts"></a>
 
 ### Artefacts
 
@@ -95,6 +99,8 @@ Do not get intimidated with codes above.
 These can be explained step by step.
 
 -- -- --
+
+<a name="titlebar"></a>
 
 ### 1: Titlebar
 
@@ -205,6 +211,8 @@ to create nice looking custom panel.
 
 -- -- --
 
+<a name="statusbar-skeleton"></a>
+
 ### 2: Statusbar Skeleton
 
 As a summary we need to preview the sekeleton of the configuration.
@@ -255,6 +263,8 @@ we are going to revisit this script,
 by the end of this article.
 
 -- -- --
+
+<a name="wallpaper"></a>
 
 ### 3: Wallpaper
 
@@ -307,6 +317,8 @@ the wallpaper use <code>s</code> argument.
 The wallpaper set for each screen.
 
 -- -- --
+
+<a name="tag-list-buttons"></a>
 
 ### 4: Binding: Tag List Buttons
 
@@ -380,6 +392,8 @@ end)
 {% endhighlight %}
 
 -- -- --
+
+<a name="task-list-buttons"></a>
 
 ### 5: Binding: Task List Buttons
 
@@ -460,6 +474,8 @@ end)
 {% endhighlight %}
 
 -- -- --
+
+<a name="statusbar-summary"></a>
 
 ### 6: Statusbar Summary
 
@@ -615,7 +631,9 @@ end)
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Theme - Main][local-whats-next] ].
 There are, some interesting topic, Awesome WM theme step by step.

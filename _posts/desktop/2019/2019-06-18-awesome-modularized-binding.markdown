@@ -23,29 +23,33 @@ related_link_ids:
   - 16031941  # Refactoring Awesome
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Keyboard and mouse binding modules in modularized configuration.
 
 #### Table of Content
 
-* Preface: Table of Content
+* [Preface](#preface): Table of Content
 
-* Artefacts
+* [Artefacts](#artefacts)
 
-* 1: Global Buttons
+* 1: [Global Buttons](#global-buttons)
 
-* 2: Client Buttons
+* 2: [Client Buttons](#client-buttons)
 
-* 3: Global Keys
+* 3: [Global Keys](#global-keys)
 
-* 4: Client Keys
+* 4: [Client Keys](#client-keys)
 
-* 5: Bind To Tags
+* 5: [Bind To Tags](#bind-to-tags)
 
-* What is Next ?
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="artefacts"></a>
 
 ### Artefacts
 
@@ -100,6 +104,8 @@ These can be explained step by step.
 
 -- -- --
 
+<a name="global-buttons"></a>
+
 ### 1: Global Buttons
 
 You can <kbd>right click</kbd> your mouse button to open menu,
@@ -152,6 +158,8 @@ root.buttons(binding.globalbuttons())
 {% endhighlight %}
 
 -- -- --
+
+<a name="client-buttons"></a>
 
 ### 2: Client Buttons
 
@@ -222,6 +230,8 @@ awful.rules.rules = main.rules(
 {% endhighlight %}
 
 -- -- --
+
+<a name="global-keys"></a>
 
 ### 3: Global Keys
 
@@ -492,6 +502,8 @@ such as rofi, dmenu or stuff.
 
 -- -- --
 
+<a name="client-keys"></a>
+
 ### 4: Client Keys
 
 Again, we configure the window client.
@@ -675,6 +687,8 @@ So I do not to worry about removing comma, at the end of this section.
 
 -- -- --
 
+<a name="bind-to-tags"></a>
+
 ### 5: Bind To Tags
 
 This binding is actually part of global keys.
@@ -831,7 +845,9 @@ root.keys(RC.globalkeys)
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Statusbar Modules][local-whats-next] ].
 There are, some interesting topic,

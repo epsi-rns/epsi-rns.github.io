@@ -16,7 +16,7 @@ excerpt:
   Monitoring widget in statusbar using Lain Library.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -28,15 +28,21 @@ Using Lain Library, we can manage monitoring widget, in statusbar.
 
 #### Table of Content
 
-* 1: Prerequisite
+* [Preface](#preface): Table of Content
 
-* 2: Simple Example
+* 1: [Prerequisite](#prerequisite)
 
-* 3: More Standard Example
+* 2: [Simple Example](#simple-example)
 
-* 4: Progressbar Widget
+* 3: [More Standard Example](#more-example)
+
+* 4: [Progressbar Widget](#progressbar-widget)
+
+* [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="prerequisite"></a>
 
 ### 1: Prerequisite
 
@@ -139,6 +145,8 @@ Do not get intimidated with codes above.
 These can be explained step by step.
 
 -- -- --
+
+<a name="simple-example"></a>
 
 ### 2: Simple Example: Memory
 
@@ -272,6 +280,8 @@ end
 
 -- -- --
 
+<a name="more-example"></a>
+
 ### 3: More Standard Example
 
 With those arrangement above we can setup more widget.
@@ -334,7 +344,6 @@ W.netupinfo = lain.widget.net({
     end
 })
 {% endhighlight %}
-
 
 #### Battery
 
@@ -487,6 +496,8 @@ end
 ![Awesome WM: Lain Example 02][image-ss-lain-02]{: .img-responsive }
 
 -- -- --
+
+<a name="progressbar-widget"></a>
 
 ### 4: Progressbar Widget
 
@@ -756,7 +767,9 @@ end
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Now that we are done with `lain` statusbar,
 we can go down with ricing using arrow, `lain` widget, and pallete colors.

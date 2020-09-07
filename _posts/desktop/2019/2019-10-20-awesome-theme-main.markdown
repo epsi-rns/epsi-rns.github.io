@@ -16,6 +16,8 @@ excerpt:
   Covering most common configuration.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Awesome theming in modularized configuration.
@@ -40,23 +42,23 @@ For these to works we also need to utilize some inkscape to generate icons.
 
 #### Table of Content
 
-* Preface: Table of Content
+* [Preface](#preface): Table of Content
 
-* Theme Artefacts
+* [Theme Artefacts](#artefacts)
 
-* 1: Main Theme Configuration
+* 1: [Main Theme Configuration](#main-theme)
 
-* 2: Google Material Color
+* 2: [Google Material Color](#gmc)
 
-* 3: Elements
+* 3: [Elements](#elements)
 
-* 4: Titlebar (next article)
-
-* Conclusion
+* [What is Next?](#whats-next)
 
 -- -- --
 
-#### Theme Artefacts
+<a name="artefacts"></a>
+
+### Theme Artefacts
 
 The layout of a theme is free.
 It is actuallly up to you to manage.
@@ -147,6 +149,8 @@ They all are just a bunch of properties setting.
 
 -- -- --
 
+<a name="main-theme"></a>
+
 ### 1: Main Theme Configuration
 
 *	[gitlab.com/.../dotfiles/.../clone/theme.lua][dotfiles-theme]
@@ -211,6 +215,8 @@ It is going to be shown on the left widgets.
 
 -- -- --
 
+<a name="gmc"></a>
+
 ### 2: Google Material Color
 
 Before we step into theming,
@@ -256,6 +262,8 @@ You might prefer different pallete_._
 * [material.io/guidelines/style/color.html](https://material.io/guidelines/style/color.html)
 
 -- -- --
+
+<a name="elements"></a>
 
 ### 3: Elements
 
@@ -550,7 +558,9 @@ theme.menu_border_width = 1
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 There is this topic, about custom flat design titlebar.
 Creating minimalist PNG Button using Inkscape,

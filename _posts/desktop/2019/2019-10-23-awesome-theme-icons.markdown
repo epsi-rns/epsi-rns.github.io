@@ -17,11 +17,35 @@ excerpt:
   from SVG to PNG, then put the right margin, for use with statusbar.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
 > Goal: Converting iconic FontAwesome glyph, for use with statusbar
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Note](#readthisfirst): Read This First
+
+* 1: [Preparation](#preparation)
+
+* 2: [Getting the Font Source](#font-source)
+
+* 3: [Converting Format](#converting-format)
+
+* 4: [Converting Size](#converting-size)
+
+* 5: [Configuration](#configuration)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="readthisfirst"></a>
+
+### Note: Read This First
 
 The next article is statusbar.
 It is going to be full of Lua coding and Lua refactoring.
@@ -72,21 +96,11 @@ Perhaps, you may use this icon glyph approach,
 not only for AwesomeWM Statusbar,
 but for other statusbar as well.
 
-#### Table of Content
-
-* 1: Prepare
-
-* 2: Getting the Font Source
-
-* 3: Converting Format
-
-* 4: Converting Size
-
-* 5: Configuration
-
 -- -- --
 
-### 1: Prepare
+<a name="preparation"></a>
+
+### 1: Preparation
 
 Suppose that you use FontAwesome,
 you can prepare the directory first.
@@ -118,6 +132,8 @@ This is just an example.
 
 -- -- --
 
+<a name="font-source"></a>
+
 ### 2: Getting the Font Source
 
 Assuming that you use FontAwesome,
@@ -134,6 +150,8 @@ into one place, to the svg directory.
 ![Awesome WM: Thunar File Manager: AwesomeFont][image-thunar-awesome]{: .img-responsive }
 
 -- -- --
+
+<a name="converting-format"></a>
 
 ### 3: Converting Format
 
@@ -191,6 +209,8 @@ These icons looks ugly because they are stretched to full height of statusbar.
 We need margin to fix this, this lead to the next step.
 
 -- -- --
+
+<a name="converting-size"></a>
 
 ### 4: Converting Size
 
@@ -264,6 +284,8 @@ All source available at:
 
 -- -- --
 
+<a name="configuration"></a>
+
 ### 5: Configuration
 
 We need to map from generated PNG to Awesome predefined variable names,
@@ -318,14 +340,16 @@ That's it. This is all for now.
 
 -- -- --
 
-### What is Next ?
+<a name="whats-next"></a>
+
+### What is Next?
 
 Consider continue reading [ [Awesome WM - Statusbar - Refactoring Default][local-whats-next] ].
 We are going to refactor the default statusbar,
 before continue to a more complex statusbar,
 such as using vicious library or lain library.
 
-What do you think ?
+What do you think?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
