@@ -41,30 +41,11 @@ related_link_ids:
 This tutorial cover Lemonbar, and in order to use Dzen2,
 any reader could use the source code in github.
 
-#### Reading
-
-Before you jump off to scripting,
-you might desire to read this overview.
-
-*	[HerbstluftWM Tag Status Overview][local-overview]
-
-*	[Modularized HerbstluftWM in Lua][local-lua-config]
-
-*	[Piping and Forking in Lua][local-lua-pipe]
-
-#### All The Source Code:
-
-Impatient coder like me, like to open many tab on browser.
-
-*	**Dzen2**: 
-	[gitlab.com/.../dotfiles/.../lua/][dotfiles-dzen2-lua]
-
-*	**Lemonbar**: 
-	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
-
 #### Table of Content
 
 * [Preface](#preface): Table of Content
+
+* [Reference](#reference)
 
 * [Screenshot](#screenshot)
 
@@ -95,6 +76,33 @@ Impatient coder like me, like to open many tab on browser.
 * 13: [Testing The Output](#testing-output)
 
 * [Coming up Next](#whats-next)
+
+-- -- --
+
+<a name="reference"></a>
+
+### Reference
+
+#### Reading
+
+Before you jump off to scripting,
+you might desire to read this overview.
+
+*	[HerbstluftWM Tag Status Overview][local-overview]
+
+*	[Modularized HerbstluftWM in Lua][local-lua-config]
+
+*	[Piping and Forking in Lua][local-lua-pipe]
+
+#### All The Source Code
+
+Impatient coder like me, like to open many tab on browser.
+
+*	**Dzen2**: 
+	[gitlab.com/.../dotfiles/.../lua/][dotfiles-dzen2-lua]
+
+*	**Lemonbar**: 
+	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
 
 -- -- --
 

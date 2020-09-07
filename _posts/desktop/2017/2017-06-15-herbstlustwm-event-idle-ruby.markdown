@@ -42,7 +42,39 @@ This is the next Part, of the previous Tutorial.
 This tutorial cover Lemonbar.
 In order to use Dzen2, any reader could use the source code in github.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Reference](#reference)
+
+* [Statusbar Screenshot](#screenshot)
+
+* 1: [Without Idle event](#without-event)
+
+* 2: [With Idle event](#with-event)
+
+* 3: [The Event Handler](#event-handler)
+
+* 4: [Lemonbar Clickable Areas](#clickable)
+
+* 5: [Interval Based Event](#interval)
+
+* 6: [Combined Event](#combined-event)
+
+* 7: [Dual Bar](#dual-bar)
+
+* 8: [Avoid Zombie Apocalypse](#avoid-zombie)
+
+* 9: [Putting Them All Together](#all-together)
+
+* [Conclusion](#conclusion)
+
 -- -- --
+
+<a name="reference"></a>
+
+### Reference
 
 #### Reading
 
@@ -77,6 +109,8 @@ Let's have a look at <code class="code-file">pipehandler.rb</code> in github.
 
 -- -- --
 
+<a name="screenshot"></a>
+
 ### Statusbar Screenshot
 
 #### Dzen2
@@ -89,7 +123,9 @@ Let's have a look at <code class="code-file">pipehandler.rb</code> in github.
 
 -- -- --
 
-### Without Idle event
+<a name="without-event"></a>
+
+### 1: Without Idle event
 
 Let's have a look at our main 
 <code class="code-file">panel.rb</code> in github.
@@ -111,7 +147,6 @@ detach_lemon(monitor, lemon_parameters)
 
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/panel.rb][dotfiles-lemon-ruby-panel]
-
 
 #### Run Lemon, Run !
 
@@ -182,7 +217,9 @@ Simple version. No idle event. Only statusbar initialization.
 
 -- -- --
 
-### With Idle event
+<a name="with-event"></a>
+
+### 2: With Idle event
 
 Consider this <code>content_walk</code> call,
 after <code>content_init</code> call,
@@ -238,7 +275,9 @@ end
 
 -- -- --
 
-### The Event Handler
+<a name="event-handler"></a>
+
+### 3: The Event Handler
 
 For each idle event, there are multicolumn string.
 The first string define the event origin.
@@ -289,7 +328,9 @@ With idle event. The **heart** of the script.
 
 -- -- --
 
-### Lemonbar Clickable Areas
+<a name="clickable"></a>
+
+### 4: Lemonbar Clickable Areas
 
 This is specific issue for lemonbar,
 that we don't have in dzen2.
@@ -363,7 +404,11 @@ Piping lemonbar output to shell, implementing lemonbar clickable area.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../ruby/pipehandler.03-clickable.rb][dotfiles-lemon-ruby-pipehandler-clickable]
 
-### Interval Based Event
+-- -- --
+
+<a name="interval"></a>
+
+### 5: Interval Based Event
 
 We can put custom event other than idle event in statusbar panel.
 This event, such as date event, called based on time interval in second.
@@ -389,7 +434,9 @@ consider this test in an isolated fashion.
 
 -- -- --
 
-### Combined Event
+<a name="combined-event"></a>
+
+### 6: Combined Event
 
 #### Preparing The View
 
@@ -528,7 +575,9 @@ synchronous interval event and asynchronous idle event.
 
 -- -- --
 
-### Dual Bar
+<a name="dual-bar"></a>
+
+### 7: Dual Bar
 
 The idea of this article comes from the fact
 that <code>herbsclient --idle</code> is asynchronous event.
@@ -606,7 +655,9 @@ Dual Bar, <code>detach_lemon_conky</code> function.
 
 -- -- --
 
-### Avoid Zombie Apocalypse
+<a name="avoid-zombie"></a>
+
+### 8: Avoid Zombie Apocalypse
 
 Zombie are scary, and fork does have a tendecy to become a zombie.
 Application that utilize several forks should be aware of this threat.
@@ -631,7 +682,9 @@ end
 
 -- -- --
 
-### Putting Them All Together
+<a name="all-together"></a>
+
+### 9: Putting Them All Together
 
 I also created compact for version,
 for use with main HerbstluftWM configuration,
@@ -645,8 +698,6 @@ After reunification, they are not very long scripts after all.
 	[gitlab.com/.../dotfiles/.../ruby/panel-lemonbar.rb][dotfiles-hlwm-ruby-lemon-compact]
 
 {% include toc/2017/06/herbstlustwm-event-idle-panel.html %}
-
--- -- --
 
 #### Desktop Screenshot
 
@@ -711,3 +762,6 @@ Enjoy the window manager !
 [dotfiles-lemon-ruby-helper]:      {{ dotfiles_lemon }}/ruby/helper.rb
 [dotfiles-lemon-ruby-output]:      {{ dotfiles_lemon }}/ruby/output.rb
 [dotfiles-lemon-ruby-pipehandler]: {{ dotfiles_lemon }}/ruby/pipehandler.rb
+
+[dotfiles-dzen2-ruby]:             {{ dotfiles_dzen2 }}/ruby/
+[dotfiles-lemon-ruby]:             {{ dotfiles_lemon }}/ruby/

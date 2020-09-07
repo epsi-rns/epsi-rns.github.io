@@ -41,30 +41,11 @@ related_link_ids:
 This tutorial cover Lemonbar, and in order to use Dzen2,
 any reader could use the source code in github.
 
-#### Reading
-
-Before you jump off to scripting,
-you might desire to read this overview.
-
-*	[HerbstluftWM Tag Status Overview][local-overview]
-
-*	[Modularized HerbstluftWM in Ruby][local-ruby-config]
-
-*	[Piping and Forking in Ruby][local-ruby-pipe]
-
-#### All The Source Code:
-
-Impatient coder like me, like to open many tab on browser.
-
-*	**Dzen2**: 
-	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
-
-*	**Lemonbar**: 
-	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
-
 #### Table of Content
 
 * [Preface](#preface): Table of Content
+
+* [Reference](#reference)
 
 * [Screenshot](#screenshot)
 
@@ -93,6 +74,33 @@ Impatient coder like me, like to open many tab on browser.
 * 12: [Testing The Output](#testing-output)
 
 * [Coming up Next](#whats-next)
+
+-- -- --
+
+<a name="reference"></a>
+
+### Reference
+
+#### Reading
+
+Before you jump off to scripting,
+you might desire to read this overview.
+
+*	[HerbstluftWM Tag Status Overview][local-overview]
+
+*	[Modularized HerbstluftWM in Ruby][local-ruby-config]
+
+*	[Piping and Forking in Ruby][local-ruby-pipe]
+
+#### All The Source Code
+
+Impatient coder like me, like to open many tab on browser.
+
+*	**Dzen2**: 
+	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-dzen2-ruby]
+
+*	**Lemonbar**: 
+	[gitlab.com/.../dotfiles/.../ruby/][dotfiles-lemon-ruby]
 
 -- -- --
 
