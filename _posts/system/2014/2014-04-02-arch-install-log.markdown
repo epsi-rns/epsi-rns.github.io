@@ -69,7 +69,7 @@ This article contain two parts.
 
 -- -- -- 
 
-## Arch :: Install Log
+### Arch :: Install Log
 
 Prepare Partition<br/>
 
@@ -173,7 +173,7 @@ Reading
 
 -- -- --
 
-## Arch :: First Boot/ Post Install
+### Arch :: First Boot/ Post Install
 
 Wireless Connexion
 
@@ -232,7 +232,7 @@ Avoid Conflict
 
 -- -- -- 
 
-Reading
+### Reading Reference
 
 * <https://bbs.archlinux.org/viewtopic.php?pid=1385771>
 

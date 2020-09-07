@@ -18,7 +18,29 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Motivation](#motivation)
+
+* 1: [Git Pull](#git-pull)
+
+* 2: [Dropbox](#dropbox)
+
+* 3: [Google Drive](#google-drive)
+
+* 4: [Mega.co.nz](#mega)
+
+-- -- --
+
+<a name="motivation"></a>
+
+### Motivation
 
 I use to work with my Notebook, and back them every month to external HDD/
 Now that my notebook getting old, and not in a reliable condition, I must buy new one.
@@ -49,7 +71,9 @@ My requirement for this sharing platform are simple.
 
 -- -- --
 
-### Git Pull
+<a name="git-pull"></a>
+
+### 1: Git Pull
 
 Before we begin,
 I have been an active git user for almost three years,
@@ -68,7 +92,9 @@ Now my git, act like a cloud. I have to add this one command as my new habit.
 
 -- -- --
 
-### Dropbox
+<a name="dropbox"></a>
+
+### 2: Dropbox
 
 This is my new toy.
 
@@ -126,7 +152,9 @@ It shows nicely, what file is in sync progress.
 
 -- -- --
 
-### Google Drive
+<a name="google-drive"></a>
+
+### 3: Google Drive
 
 I used to be a googledrive user using <code>grive</code>.
 Now that Google Drive has been rebrand to Google Backup.
@@ -150,7 +178,9 @@ You can google other blog to find about gdrive.
 
 -- -- --
 
-## Mega.co.nz
+<a name="mega"></a>
+
+### 4: Mega.co.nz
 
 Some Amigos from telegram told me about this Free 50GB storage service.
 It is very nice, and also fast, except with my ISP.
@@ -223,7 +253,6 @@ That's all.
 I can work normal again now.
 
 Thank you for reading
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

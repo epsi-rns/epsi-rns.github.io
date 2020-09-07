@@ -17,11 +17,31 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Prepare comfortable CLI environment in Windows.
 
-#### Issue
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Issue](#issue)
+
+* 2: [Choco Package Manager](#choco)
+
+* 3: [Cmder Console](#cmder)
+
+* 4: [Install with Choco](#install)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="issue"></a>
+
+### 1: Issue
 
 The issue I face, when explaining things
 to my fellow discussion pals is, different platform.
@@ -55,7 +75,9 @@ In a few minutes, you can also be a productive human with windows.
 
 -- -- --
 
-### Choco Package Manager
+<a name="choco"></a>
+
+### 2: Choco Package Manager
 
 As I said, there are at least two breathtaking tools
 
@@ -83,7 +105,9 @@ and copy paste th command. Do not forget to pres enter to run the long command.
 
 -- -- --
 
-### Cmder Console
+<a name="cmder"></a>
+
+### 3: Cmder Console
 
 Now comes, the magical parts: The terminal.
 
@@ -146,7 +170,9 @@ As you can see in figure below, now git run well in windows.
 
 -- -- --
 
-### Install
+<a name="install"></a>
+
+### 4: Install with Choco
 
 I'm having some fun with this new lovely toy.
 Installing few packages.
@@ -165,17 +191,17 @@ $ choco install youtube-dl
 
 -- -- --
 
-### What is Next ?
-
-There is other article, that you might need to read.
-Consider continue reading [ [Windows - Chocolatey - Sass][local-whats-next] ].
-
--- -- --
+<a name="conclusion"></a>
 
 ### Conclusion
 
 Solved.
 Developing in Windows is fun again.
+
+### What is Next ?
+
+There is other article, that you might need to read.
+Consider continue reading [ [Windows - Chocolatey - Sass][local-whats-next] ].
 
 Happy New Year 2019.
 And thank you for reading.

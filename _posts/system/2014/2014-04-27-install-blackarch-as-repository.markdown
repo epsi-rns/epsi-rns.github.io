@@ -34,7 +34,7 @@ without messing the host OS.
 
 -- -- --
 
-## Using pacman
+### Using pacman
 
 {% highlight bash %}
 ># pacman -S blackarch 
@@ -54,7 +54,7 @@ Official Site
 
 -- -- --
 
-## Using blackman (from source)
+### Using blackman (from source)
 
 I'm still having a hard time while doing <code class="code-command">blackman</code>.
 

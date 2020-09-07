@@ -17,7 +17,7 @@ related_link_ids:
   
 ---
 
-## Back to Mageia
+### Back to Mageia
 
 {% highlight bash %}
 ># urpmi task-kde
@@ -56,7 +56,7 @@ Well. It has a very nice Control Panel.
 
 <hr/>
 
-### Brief
+#### Brief
 
 Instead of Drake. I'm using command line as usual.
 
@@ -105,7 +105,7 @@ $ drakconf
 
 <hr/>
 
-### Mageia with urpm*
+#### Mageia with urpm*
 
 {% highlight bash %}
 [root@localhost epsi]# urpmq -i yum
@@ -192,7 +192,7 @@ yum-metadata-parser:A fast metadata parser for yum
 
 <hr/>
 
-### Mageia with rpm
+#### Mageia with rpm
 
 {% highlight bash %}
 [root@localhost epsi]# rpm -qR yum

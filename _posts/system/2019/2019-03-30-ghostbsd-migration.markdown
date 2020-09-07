@@ -18,7 +18,7 @@ excerpt:
 
 ### Desktop Customization
 
-Masochist dekstop aka ricer would love this GhostBSD.
+Masochist desktop aka ricer would love this GhostBSD.
 You just can copy paste your linux dotfiles, and most of all works,
 just like you move dotfiles from one distribution to other notebook.
 
@@ -100,6 +100,8 @@ Telegram is a good place to talk about BSD
 * [Pegel BSD](https://t.me/pegelbsd)
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next ?
 

@@ -16,7 +16,37 @@ excerpt:
 
 ---
 
-### Preface: Issue in Figure
+<a name="preface"></a>
+
+### Preface:
+
+> Goal: Solving dbus session in non-systemd environment
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Issue in Figure](#issue)
+
+* 1: [Application Level](#application)
+
+* 2: [Window Manager Session](#wm-session)
+
+* 3: [Init 3: Using startx](#startx)
+
+* 4: [Init 4: Using Desktop Manager](#desktop-manager)
+
+* 5: [Session](#session)
+
+* [Credits](#credits)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="issue"></a>
+
+### Issue in Figure
 
 If you are moving to non-systemd environment,
 you might notice that your window manager might behave differently.
@@ -56,7 +86,9 @@ There are at least three solutions to run dbus to suit your needs.
 
 -- -- --
 
-### Application Level
+<a name="application"></a>
+
+### 1: Application Level
 
 All you need is to type <code>dbus-launch</code>.
 
@@ -70,7 +102,9 @@ But typing repetitively over and over again, could be cumbersome.
 
 -- -- --
 
-### Window Manager Session
+<a name="wm-session"></a>
+
+### 2: Window Manager Session
 
 Another temporary workaround is to mess <code>*.desktop</code> files,
 that is located in <code>/usr/share/xsessions/</code>,
@@ -83,7 +117,9 @@ since I have to edit every Window Manager after installation procedure.
 
 -- -- --
 
-### Init 3: Using startx
+<a name="startx"></a>
+
+### 3: Init 3: Using startx
 
 dbus run without any issue in this init.
 I can run <code>startx</code> in <code>init 3</code> after login.
@@ -104,7 +140,9 @@ Everything works well here.
 
 -- -- --
 
-### Init 4: Using Desktop Manager
+<a name="desktop-manager"></a>
+
+### 4: Init 4: Using Desktop Manager
 
 This is where the most issue happened.
 The solution depends on the Desktop Manager.
@@ -211,7 +249,9 @@ $ sudo service dbus status
 
 -- -- --
 
-### Session
+<a name="session"></a>
+
+### 5: Session
 
 If you have policy issue with message 'not authorized to perform'
 while mounting device form Thunar,
@@ -221,18 +261,24 @@ you can run <code>lxsession</code> from terminal to enable it.
 
 -- -- --
 
+<a name="credits"></a>
+
 ### Credits
 
 Thank you to folks at Slackware Indonesia Telegram Group,
 for being a good company while solving these dbus issues.
 
-	Your ideas pointing to right direction.
+> Your ideas pointing to right direction.
+
+-- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 
 That's all
 
-	It works.
+> It works.
 
 Thank you for reading
 

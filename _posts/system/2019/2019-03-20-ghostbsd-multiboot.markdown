@@ -15,6 +15,8 @@ excerpt:
   GhostBSD multiboot situation with Windows and Linux is possible.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 Good day folks,
@@ -22,7 +24,23 @@ Good day folks,
 It has been a busy busy year that forced me to be apart from my blog.
 But here we are again, jump from Linux to BSD.
 
-#### A Well Oops
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [A Well Oops](#well-oops)
+
+* 2: [How I did the Multiboot](#how-multiboot)
+
+* 3: [Disk Management](#disk-management)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="well-oops"></a>
+
+### 1: A Well Oops
 
 One day, I try to cheer my self up, by buying a second handed notebook.
 After ten days, setting up W7, Proxmox, Void, Funtoo, and NixOS.
@@ -88,7 +106,9 @@ My first impression of the logo is that it looks like __hello kitty__.
 
 -- -- --
 
-### How I did the Multiboot
+<a name="how-multiboot"></a>
+
+### 2: How I did the Multiboot
 
 > Do not mix this freebsd extended partition with any linux partition.
 
@@ -129,7 +149,6 @@ Or even better using `pv`.
 {% highlight bash %}
 $ dd if=/media/Works/iso-distribution/GhostBSD18.12.iso | pv -s 2700M | sudo dd of=/dev/sdb
 {% endhighlight %}
-
 
 #### Windows
 
@@ -199,7 +218,9 @@ FreeBSD came with no `gparted`. You can use `sade` instead.
 
 -- -- --
 
-### Disk Management
+<a name="disk-management"></a>
+
+### 3: Disk Management
 
 Well, this is basically just my install log.
 
@@ -217,7 +238,6 @@ procfs      /proc       procfs      rw          00
 linprocfs   /compat/linux/proc      linprocfs   rw    00
 tmpfs       /compat/linux/dev/shm   tmpfs       rw,mode=1777 0 0
 {% endhighlight %}
-
 
 #### Mount using CLI
 
@@ -248,7 +268,9 @@ Unlike linux, I should always use `sudo`, until I find a way.
 
 -- -- --
 
-### What's Next ?
+<a name="whats-next"></a>
+
+### What's Next?
 
 Thank you for reading this article.
 

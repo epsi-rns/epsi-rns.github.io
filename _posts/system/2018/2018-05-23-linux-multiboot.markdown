@@ -16,9 +16,33 @@ excerpt:
   Updating other linux in chroot environment.
 ---
 
-### Overview
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Updating linux in chroot environment.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Overview](#overview)
+
+* 1: [Debian](#debian)
+
+* 2: [Fedora](#fedora)
+
+* 3: [KaOSx](#kaosx)
+
+* 4: [Miscellanous](#misc)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="overview"></a>
+
+### Overview
 
 One advantange of multiboot is that you can update other OS,
 while you are still working with current OS.
@@ -37,7 +61,9 @@ There are only minor differences.
 
 -- -- --
 
-### Debian
+<a name="debian"></a>
+
+### 1: Debian
 
 Just use normal chroot method.
 The only issue is **resolv.conf** symbolic link.
@@ -76,7 +102,6 @@ private message me, and gave me this suggestion.
 *	<code>umount -R</code> instead of <code>umount -f</code>
 
 *	No need to bind <code>/tmp</code>
-
 
 #### Rename resolv.conf
 
@@ -151,7 +176,9 @@ Sometimes it can't be unmount.
 
 -- -- --
 
-### Fedora
+<a name="fedora"></a>
+
+### 2: Fedora
 
 Just use normal chroot method.
 The only issue is **resolv.conf** symbolic link.
@@ -245,7 +272,9 @@ you need the <code>-f</code> argument.
 
 -- -- --
 
-### KaOSx
+<a name="kaosx"></a>
+
+### 3: KaOSx
 
 Just use normal chroot method.
 No issue at all.
@@ -318,7 +347,9 @@ Sometimes it can't be unmount.
 
 -- -- --
 
-### Miscellanous
+<a name="misc"></a>
+
+### 4: Miscellanous
 
 #### Reading
 
@@ -336,7 +367,9 @@ that Ubuntu support arch-install-scripts.
 
 -- -- --
 
-### What's next
+<a name="whats-next"></a>
+
+### What's Next?
 
 Consider continue reading [ [Network: Samba][local-part-config] ],
 or consider [ [GhostBSD - Multiboot][local-part-ghost] ].

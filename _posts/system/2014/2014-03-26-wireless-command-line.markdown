@@ -21,12 +21,11 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 This is a remake of my facebook note with a similar title.
 
 * [facebook.com/notes/.../433920080087341][facebook-note]
-
-{% highlight bash %}
-{% endhighlight %}
 
 Even if you have installed your linux successfully 
 you still need to know your own hardware. 
@@ -35,9 +34,27 @@ especially for first time linux install.
 
 ![Wireless Cover][image-cover]{: .img-responsive }
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Device](#device)
+
+* 2: [Network](#network)
+
+* 3: [Using 'nmcli'](#nmcli)
+
+* 4: [Stop using Network Manager](#stop-nm)
+
+* 5: [Using 'iw dev'](#iw-dev)
+
+* [Reading Reference](#reading)
+
 -- -- --
 
-## Device 
+<a name="device"></a>
+
+### 1: Device
 
 First  thing to do is knowing where your device plugged in, pci or usb.
 
@@ -98,7 +115,9 @@ So let's check it out with <code class="code-command">rfkill</code> command
 
 -- -- --
 
-## Network
+<a name="network"></a>
+
+### 2: Network
 
 Now we need to list our device. Physical name could be different.
 
@@ -125,7 +144,9 @@ and other method using <code class="code-command">iw</code> command.
 
 -- -- --
 
-## Using 'nmcli' 
+<a name="nmcli"></a>
+
+### 3: Using 'nmcli' 
 
 NetworkManager is installed automatically
 because it is a dependency for gnome-shell,
@@ -171,7 +192,9 @@ So it is a little bit different.
 
 -- -- --
 
-## Stop using Network Manager 
+<a name="stop-nm"></a>
+
+### 4: Stop using Network Manager 
 
 I like the way Arch Linux giving me option what kind of method that I 
 can use to connect my wireless with. it require more steps, and it needs
@@ -186,13 +209,13 @@ example of OpenRC in [lamp setup here][local-lamp].
 
 Before you begin, please stop your currently running NetworManager service
 
-### Using SysV
+#### Using SysV
 
 {% highlight bash %}
 ># service network-manager stop 
 {% endhighlight %}
 
-### Using systemd
+#### Using systemd
 
 {% highlight bash %}
 ># systemctl disable NetworkManager.service 
@@ -202,7 +225,7 @@ Before you begin, please stop your currently running NetworManager service
 ># systemctl stop NetworkManager.service 
 {% endhighlight %}
 
-### Using upstart
+#### Using upstart
 
 {% highlight bash %}
 ># sudo service network-manager stop 
@@ -212,7 +235,9 @@ Don't forget to enable later, after you finished with your experiment.
 
 -- -- --
 
-## Using 'iw dev' 
+<a name="iw-dev"></a>
+
+### 5: Using 'iw dev' 
 
 Now we can start some experiment with oher method.
 
@@ -259,7 +284,9 @@ Now you can ping
 
 -- -- --
 
-## Reading 
+<a name="reading"></a>
+
+### Reading Reference
 
 [Arch Wiki: Wireless Network Configuration][link-archwiki]
 

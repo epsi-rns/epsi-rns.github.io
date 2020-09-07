@@ -68,7 +68,7 @@ $ sudo pacman -S base-devel
 
 -- -- --
 
-## The Package Query
+### The Package Query
 
 AUR Helper need one required package as a dependency.
 It is <code>package-query</code>
@@ -114,7 +114,7 @@ $ package-query -Ai package-query
 
 -- -- --
 
-## The Yaourt
+### The Yaourt
 
 With the same procedure:
 
@@ -153,7 +153,7 @@ $ man yaourt
 
 -- -- --
 
-## Using pacman
+### Using pacman
 
 There's another workaround if you don't want to do automatic compilation.
 
@@ -185,7 +185,7 @@ you can safely remove the archlinuxfr section from <code class="code-file">/etc/
 
 -- -- --
 
-## Using yaourt
+### Using yaourt
 
 After yaourt installed,
 you can use yaourt to query your package.
@@ -200,7 +200,7 @@ You can see the result in image below
 
 -- -- --
 
-## Configuration
+### Configuration
 
 Yaourt comes with config file.
 Just copy them to your home directory

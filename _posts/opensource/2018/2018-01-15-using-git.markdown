@@ -17,9 +17,37 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > This could be a guidance, for git beginner, as well.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [An article Rewritten](#rewrite)
+
+* 1: [Create Repository](#create-repository)
+
+* 2: [First Computer](#first-computer)
+
+* 3: [Refresh Browser](#refresh-browser)
+
+* 4: [Second Computer](#second-computer)
+
+* 5: [Back to First Computer](#back-to-first)
+
+* 6: [Enable SSH](#enable-ssh)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="rewrite"></a>
+
+### An article Rewritten
 
 I have been working with git, for this my personal blog,
 for use with a single computer.
@@ -51,9 +79,11 @@ This is about moving from single.
 
 -- -- --
 
-### Create Repository
+<a name="create-repository"></a>
 
-	Push your first commit, with first computer.
+### 1: Create Repository
+
+> Push your first commit, with first computer.
 
 You have to do it manually.
 Create a github account.
@@ -65,18 +95,20 @@ You should see the result as below:
 
 [![github: Create Account][image-ss-github-create]{: .img-responsive }][photo-ss-github-create]
 
-	One small step for man, one giant leap for mankind.
+> One small step for man, one giant leap for mankind.
 
 -- -- --
 
-### First Computer
+<a name="first-computer"></a>
 
-	Push your first commit, with first computer.
+### 2: First Computer
+
+> Push your first commit, with first computer.
 
 Just follow this step, common guidance from github itself.
 Create a directory with any name,
 let's say <code>anycode</code> as our working directory.
-	
+
 {% highlight bash %}
 % cd githublab 
 
@@ -121,7 +153,7 @@ as a named remote repository, scattered in most tutorial.
 Actually you can name it anything you want,
 such as <code>cinta</code>.
 
-	Cinta is the word Love in Indonesia
+> Cinta is the word Love in Indonesia
 
 {% highlight bash %}
 % git remote add cinta https://github.com/epsi-rns/anycode.git
@@ -142,13 +174,15 @@ Branch master set up to track remote branch master from cinta.
 It means we push to the remote named <code>cinta</code>,
 specifically to <code>master</code> branch.
 
-	Shout it loud!
+> Shout it loud!
 
 -- -- --
 
-### Refresh Browser
+<a name="refresh-browser"></a>
 
-	Refresh browser, to see if you are succeed.
+### 3: Refresh Browser
+
+> Refresh browser, to see if you are succeed.
 
 Consider check the result in github (on the internet cloud).	
 You should see the result as below:
@@ -157,9 +191,11 @@ You should see the result as below:
 
 -- -- --
 
-### Second Computer
+<a name="second-computer"></a>
 
-	Pull your newly repo, with second computer, and make a change.
+### 4: Second Computer
+
+> Pull your newly repo, with second computer, and make a change.
 
 Now move to other computer.
 Or for testing, just use other directory.
@@ -171,7 +207,7 @@ again we do not need to use the word <code>origin</code>.
 You can name it anything you want,
 such as <code>rindu</code>.
 
-	Rindu is Indonesian word for Missing You
+> Rindu is Indonesian word for Missing You
 
 {% highlight bash %}
 % mkdir mycode
@@ -206,7 +242,7 @@ Consider make some changes.
 Commit it with description such as <code>beli bunga</code>.
 And push to the github (on the internet cloud).
 
-	Beli bunga, means buy flower
+> Beli bunga, means buy flower
 
 {% highlight bash %}
 % geany README.md
@@ -236,13 +272,15 @@ Branch master set up to track remote branch master from rindu.
 
 You should also see changes in your browser.
 
-	Shout it loud. Again!
+> Shout it loud. Again!
 
 -- -- --
 
-### Back to First Computer
+<a name="back-to-first"></a>
 
-	Pull altered repo, with first computer.
+### 5: Back to First Computer
+
+> Pull altered repo, with first computer.
 
 Now consider, going back to the first computer,
 the <code>anycode</code> directory, 
@@ -282,7 +320,9 @@ total 8
 
 -- -- --
 
-### Enable SSH
+<a name="enable-ssh"></a>
+
+### 6: Enable SSH
 
 To enable SSH. Use this URL guidance:
 
@@ -297,12 +337,14 @@ $ git remote add origin git@github.com:epsi-rns/anycode.git
 
 -- -- --
 
+<a name="conclusion"></a>
+
 ### Conclusion
 
 This is not about single computer,
 this is about single life.
 
-	I wish I could say loud
+> I wish I could say loud
 
 That's all.
 

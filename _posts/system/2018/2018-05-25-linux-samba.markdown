@@ -16,9 +16,31 @@ excerpt:
   Thorough /etc/samba/smb.conf example.
 ---
 
-### Overview
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Thorough /etc/samba/smb.conf example
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Overview](#overview)
+
+* 1: [Share Definitions](#share-definitions)
+
+* 2: [Global Configuration](#global-configurations)
+
+* 3: [Real Life Access](#real-life-access)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="overview"></a>
+
+### Overview
 
 This is more like a network topic rather than a multiboot topic,
 I gather this samba article here, because of my multiboot situation.
@@ -32,14 +54,16 @@ I gather this samba article here, because of my multiboot situation.
 
 - -- --
 
-### Share Definitions
+<a name="share-definitions"></a>
+
+### 1: Share Definitions
 
 #### Common Share Definition: Debian, Fedora, openSUSE, KaOSx
 
 The basic <code>smb.conf</code> is similar.
 Because I copy paste from my Debian to other distribution.
 
-	I made it that way
+> I made it that way
 
 {% highlight conf %}
 [Samba]
@@ -91,7 +115,9 @@ as **/var/tmp** rather than **/var/spool/samba**.
 
 -- -- --
 
-### Global Configuration
+<a name="global-configurations"></a>
+
+### 2: Global Configuration
 
 #### Fedora
 
@@ -235,7 +261,9 @@ Have a look at the <code class="code-file">smb.conf</code> config for openSUSE:
 
 -- -- --
 
-### Real Life Access
+<a name="real-life-access"></a>
+
+### 3: Real Life Access
 
 #### Preparation
 
@@ -433,6 +461,8 @@ Access form Android:
 ![Network: Android: openSUSE SMB][image-ss-andsmb-opensuse]{: .img-responsive }
 
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 

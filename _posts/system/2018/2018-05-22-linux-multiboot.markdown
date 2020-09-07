@@ -16,9 +16,33 @@ excerpt:
   Thorough /etc/fstab/ example.
 ---
 
-### Overview
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Thorough /etc/fstab/ example
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Overview](#)
+
+* 1: [Using Device Path](#using-device-path)
+
+* 2: [Using UUID](#using-uuid)
+
+* 3: [Common Mount Point](#common-mount-point)
+
+* 4: [Custom Mount Point](#custom-mount-point)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="overview"></a>
+
+### Overview
 
 There are three parts of mount point on **fstab**,
 that we are going to talk about.
@@ -77,7 +101,9 @@ Config is available at:
 
 -- -- --
 
-### Using Device Path
+<a name="using-device-path"></a>
+
+### 1: Using Device Path
 
 Since openSUSE with BTRFS is complex,
 I'm going to start with Fedora.
@@ -223,7 +249,9 @@ Because I put my samba (network neighbourhood) directory over there.
 
 -- -- --
 
-### Using UUID
+<a name="using-uuid"></a>
+
+### 2: Using UUID
 
 Now we are going to convert each device name such as */dev/sda9*,
 to UUID such as **c114d95e-bc0a-4b41-a2db-abd21aa9850f**.
@@ -354,7 +382,9 @@ UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f /var/tmp                  btrfs      s
 
 -- -- --
 
-### Common Mount Point
+<a name="common-mount-point"></a>
+
+### 3: Common Mount Point
 
 No matter what your distribution,
 You can just add this mount point to your **fstab**.
@@ -380,7 +410,9 @@ Consider cross check the result with **/etc/mtab**.
 
 -- -- --
 
-### Custom Mount Point
+<a name="custom-mount-point"></a>
+
+### 4: Custom Mount Point
 
 Now mount point to access other distribution.
 
@@ -411,7 +443,6 @@ UUID=0095473d-ae63-4722-8350-f5716e5df333       /media/Fun          xfs         
 Have a look at the <code class="code-file">/etc/fstab</code> config for Fedora:
 
 *	[gitlab.com/.../dotfiles/.../fstab.fedora][dotfiles-fstab-fedora]
-
 
 #### mtab
 
@@ -519,7 +550,9 @@ Again with GUI, to have better understanding.
 
 -- -- --
 
-### What's next
+<a name="whats-next"></a>
+
+### What's Next?
 
 Consider continue reading [ [Multiboot: chroot][local-part-config] ].
 

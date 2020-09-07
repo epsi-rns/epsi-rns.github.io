@@ -39,7 +39,7 @@ you can use <code>apt-src</code>, or <code>apt-get source</code> command.
 
 -- -- --
 
-## Building Scope
+### Building Scope
 
 **Reading**
 
@@ -65,7 +65,7 @@ the second article won't covered here.
 
 -- -- --
 
-## Command Used
+### Command Used
 
 Compared with Arch's pacman that is a unified command to do all package things,
 Debian scattered the command into few different command.
@@ -83,7 +83,7 @@ $ man apt-src
 
 -- -- --
 
-## Repository Preparation
+### Repository Preparation
 
 Make sure that source repository
 is enabled in your <code class="code-file">/etc/apt/sources.list</code>
@@ -109,7 +109,7 @@ $ apt-src update
 
 -- -- --
 
-## Compilation Directory Preparation
+### Compilation Directory Preparation
 
 Make any directory as a working directory 
 for your compilation process
@@ -121,7 +121,7 @@ $ cd ~/apt-src
 
 -- -- --
 
-## Choose Package to Examine
+### Choose Package to Examine
 
 Let's choose our victim,
 see what package is upgradable
@@ -142,7 +142,7 @@ From now on we will use 'apt' package a our focus.
 
 -- -- --
 
-## Check Package Version
+### Check Package Version
 
 Simply issue one of this command below
 
@@ -156,7 +156,7 @@ $ apt search '^apt$'
 
 -- -- --
 
-## Build Package
+### Build Package
 
 Let's do it.
 This is going to takes time.
@@ -178,7 +178,7 @@ $ apt-src build apt
 
 -- -- --
 
-## Examine Directory
+### Examine Directory
 
 Check your directoy, 
 your apt-1.2.14 .deb package should already be there.
@@ -187,7 +187,7 @@ your apt-1.2.14 .deb package should already be there.
 
 -- -- --
 
-## Install
+### Install
 
 Install package using <code class="code-command">dpkg</code> command
 

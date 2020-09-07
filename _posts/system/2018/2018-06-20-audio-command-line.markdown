@@ -21,6 +21,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 >	Know Your System, Focusing on Audio
@@ -37,9 +39,23 @@ I mostly pour my daily linux troubleshooting in a blog,
 so I can find the solution easily,
 if I have similar issue another day.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [The Operating System Part](#os-part)
+
+* 2: [The Audio Part](#audio-part)
+
+* 3: [Miscellanous](#misc)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-### The Operating System Part
+<a name="os-part"></a>
+
+### 1: The Operating System Part
 
 Before getting into detail
 on how the sound works perfectly or no sound at all,
@@ -210,7 +226,9 @@ audio:x:496:pulse,mpd
 
 -- -- --
 
-### The Audio Part
+<a name="audio-part"></a>
+
+### 2: The Audio Part
 
 Now it is depend on the driver and audio handler in your system.
 Mine could be difference with yours.
@@ -336,7 +354,9 @@ Or more eleganly for pulseaudio, you can use <code>pavucontrol</code>.
 
 -- -- --
 
-### Miscellanous
+<a name="misc"></a>
+
+### 3: Miscellanous
 
 #### Volume Control: amixer
 
@@ -383,6 +403,8 @@ Cookie: d448:eedf
 ![audio: pactl][image-ss-pactl-info]{: .img-responsive }
 
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 

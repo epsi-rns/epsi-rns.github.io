@@ -32,7 +32,7 @@ In this example I'm using four OS
 
 ![Multiboot: Cover][image-cover]{: .img-responsive }
 
-## Choose your Distro 
+### Choose your Distro 
 
 Before trying any new Distro,<br/>
 consider Live DVD/USB before making decision.
@@ -41,7 +41,7 @@ VM would also help for temporary solution.<br/>
 But you will feel more like home using multi boot solution.
 
 
-## Windows user? 
+### Windows user? 
 
 If you are coming from Windows, you might be familiar with this image.
 
@@ -68,14 +68,14 @@ Note: I have never tried this with Windows 8.
 Caution: While installing, choose largest continuous space, and DO NOT choose ENTIRE SPACE, as it will wipe your Windows entirely.
 
 
-## Which to install first 
+### Which to install first 
 
 It is easier to install windows first, then Linux.<br/>
 But it's okay to install linux first, then windows.<br/>
 There's a trick for this, but the scope is outside of this article.
 
 
-## Tips: Linux learning stage 
+### Tips: Linux learning stage 
 
 With Dual boot, Windows + Linux
 
@@ -98,7 +98,7 @@ With Dual boot, Windows + Linux
 9. You don't need to erase your windows. But at this stage you don't want to go home through windows.
 
 
-## Partition Structure 
+### Partition Structure 
 
 This my partition structure in my computer,<br/>
 just in case you need some example.
@@ -133,7 +133,7 @@ While others (5-10) belong to extended (/dev/sda2)
 
 [![Multiboot: cfdisk][image-cfdisk]{: .img-responsive }][photo-cfdisk]
 
-## How do I keep my Windows Recovery Partition safely? 
+### How do I keep my Windows Recovery Partition safely? 
 
 It is a matter of Primary and Logical Partition.<br/>
 So my answer is, it should work on Primary Partition.
@@ -155,7 +155,7 @@ So a partition can be rearranged to something similar like this, but order is no
 * Extended: /dev/sda3
 
 
-# Bonus: Post Install: fstab 
+### Bonus: Post Install: fstab 
 
 This section does not really related with multiboot, but rather a file system or disk management.<br/>
 The /etc/fstab for that sample partition scheme could be arranged just like this:

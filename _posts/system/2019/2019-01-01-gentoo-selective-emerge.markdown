@@ -21,9 +21,31 @@ excerpt:
 Hello again everybody.
 It has been a while since my last article.
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Upgrade Gentoo by Category using **equery**
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Issue](#issue)
+
+* 2: [Using equery with emerge](#using-equery)
+
+* 3: [Base System Issue](#base-system)
+
+* 4: [Finishing](#finishing)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="issue"></a>
+
+### 1: Issue
 
 Gentoo is Fun.
 But sometimes it takes too long to compile.
@@ -36,12 +58,13 @@ And save your precious time.
 I think this classic issue is, already somewhere in gentoo manual.
 I just love to write a blog about this.
 
-#### Issue
+#### Common Upgrading
 
 After a few month of not upgrading Gentoo,
 I always have a bunch of package that needed to be compiled.
 I do not have all the time in the world,
-I have life to take care of, so compile all upgraded packages is not an option.
+I have life to take care of,
+so compile all upgraded packages is not an option.
 
 {% highlight bash %}
  % sudo emerge --ask -uvDN @world
@@ -82,7 +105,9 @@ you have already upgrade your base system.
 
 -- -- --
 
-### Using equery with emerge
+<a name="using-equery"></a>
+
+### 2: Using equery with emerge
 
 #### Summary
 
@@ -172,7 +197,9 @@ xmlrpc
 
 -- -- --
 
-### Base System Issue
+<a name="base-system"></a>
+
+### 3: Base System Issue
 
 #### Prerequiste
 
@@ -206,7 +233,9 @@ Now you can emerge your categories.
 
 -- -- --
 
-### Finishing
+<a name="finishing"></a>
+
+### 4: Finishing
 
 #### Check
 
@@ -248,6 +277,8 @@ Now we can go back to our simple command.
 {% endhighlight %}
 
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 

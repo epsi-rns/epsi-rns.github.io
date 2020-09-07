@@ -32,7 +32,7 @@ Begun, The Linux Civil War has.<br/>
 
 -- -- --
 
-## init related link
+### init related link
 
 : boycott systemd
 

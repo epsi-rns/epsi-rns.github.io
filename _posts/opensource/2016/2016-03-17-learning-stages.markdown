@@ -22,7 +22,7 @@ Tell me if there is more thing to be done!
 
 <br/>
 
-## 1. Choose Ubuntu/Mint/eOS for first time install,
+### 1. Choose Ubuntu/Mint/eOS for first time install,
 
 "*Try everything*"
 
@@ -113,7 +113,7 @@ Note: Go with one distro that matches your desired path: Casual user, Enthusiast
 
 <br/>
 
-## 2. Leverage yourself to Arch
+### 2. Leverage yourself to Arch
 
 "*Know your system*"
 

@@ -16,9 +16,31 @@ excerpt:
   My partition schema.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
-> Goal: Latest partition schema as a based of this multiboot article series..
+> Goal: Latest partition schema as a based of this multiboot article series.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Overview](#)
+
+* 1: [Partition Schema](#schema)
+
+* 2: [Preparation](#mount-point): Mount Point
+
+* 3: [Goal](#goal)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="overview"></a>
+
+### Overview
 
 It has been four years since the last time I wrote my multiboot article.
 
@@ -93,7 +115,9 @@ Including **grub**, **fstab**, and **samba**.
 
 -- -- --
 
-### Partition Schema
+<a name="schema"></a>
+
+### 1: Partition Schema
 
 It is all installed well.
 And I also have other partition as well.
@@ -175,7 +199,9 @@ UUID=c114d95e-bc0a-4b41-a2db-abd21aa9850f, 32208326656/52743372800 bytes used, 1
 
 -- -- --
 
-### Preparation: Mount Point
+<a name="mount-point"></a>
+
+### 2: Preparation: Mount Point
 
 Now we need to set up mount point.
 I set it up at **/media**.
@@ -262,7 +288,9 @@ Note: Without Debian directory.
 
 -- -- --
 
-### Goal
+<a name="goal"></a>
+
+### 3: Goal
 
 How it is going to be ?
 
@@ -299,7 +327,9 @@ device         fs_type label    mount point        UUID
 
 -- -- --
 
-### What's next
+<a name="whats-next"></a>
+
+### What's Next?
 
 How do we achieve it ?
 Consider continue reading [ [Multiboot: /etc/fstab][local-part-config] ].

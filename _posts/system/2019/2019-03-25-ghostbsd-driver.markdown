@@ -16,6 +16,8 @@ excerpt:
   But once you get along it make sense.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 From the perspective of user,
@@ -29,6 +31,24 @@ installing OS for desktop these days just require two things:
   Because, we are using it as desktop.
 
 Other stuff such as audio can be added later.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Issue](#issue)
+
+* 2: [Wireless Configuration](#wireless)
+
+* 3: [Display in TrueOS](#display)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="issue"></a>
+
+### 1: Issue
 
 #### Wireless Issue
 
@@ -60,7 +80,9 @@ and enable it in config first.
 
 -- -- --
 
-### Wireless Configuration
+<a name="wireless"></a>
+
+### 2: Wireless Configuration
 
 #### Load Driver
 
@@ -110,7 +132,9 @@ $ service network restart
 
 -- -- --
 
-### Display in TrueOS
+<a name="display"></a>
+
+### 3: Display in TrueOS
 
 This is not a GhostBSD issue,
 but rather a TrueOS issue.
@@ -146,11 +170,13 @@ $ service lightdm start
 
 -- -- --
 
+<a name="whats-next"></a>
+
 ### What's Next ?
 
 Thank you for reading this article.
 
-Consider continue reading [ [GhostBSD - Migraion from Linux][local-part-config] ].
+Consider continue reading [ [GhostBSD - Migration from Linux][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
