@@ -41,7 +41,7 @@ I haven't done anything yet for tmux, and other powerline capabilities.<br/>
 
 -- -- --
 
-## Reading
+### Reading
 
 Always look at the official documentation first
 
@@ -51,7 +51,7 @@ Always look at the official documentation first
 
 -- -- --
 
-## Installing
+### Installing
 
 Using package management is straightforward.
 
@@ -79,7 +79,7 @@ $ sudo apt install powerline
 
 -- -- --
 
-## Font
+### Font
 
 You can download manually based on documentation,
 or use package management above.
@@ -117,7 +117,7 @@ Note: Terminus Font also works.
 
 -- -- --
 
-## Shell Prompt
+### Shell Prompt
 
 
 "Where and how can I set the <code>PS1</code> variable for Powerline bash?"<br/>
@@ -129,7 +129,7 @@ The answer is in powerline manual documentation
 
 There is no need to explicitly export PS1 in bash.
 
-### Bash
+#### Bash
 
 Arch/Manjaro (root/user)
 
@@ -171,7 +171,7 @@ Here is a summary, with nice powerline-in-vim colour-scheme.
 
 -- -- --
 
-## Vim
+### Vim
 
 Arch/Manjaro
 
@@ -203,9 +203,9 @@ Reading
 
 --
 
-## Customization
+### Customization
 
-### Main Config
+#### Main Config
 
 * <https://gitlab.com/epsi-rns/dotfiles/blob/master/config/powerline/config.json>
 
@@ -221,7 +221,7 @@ Here is the place, you configure which colorscheme and theme you are using.
 		}
 {% endhighlight %}
 
-### Colorschemes
+#### Colorschemes
 
 Self Explanatory
 
@@ -232,7 +232,7 @@ Self Explanatory
 		"superuser": { "fg": "yellow", "bg": "orange", "attr": ["bold"] },
 {% endhighlight %}
 
-### Theme
+#### Theme
 
 It define what widget, ad their position.
 It is going to be your choice,
@@ -264,9 +264,6 @@ You can see the sample in top of this this article.
 -- -- --
 
 Happy terminal customizing
-
-
-
 
 **Reading**:<br/>
 * [http://powerline.readthedocs.org/.../common.html][docs-powerline]

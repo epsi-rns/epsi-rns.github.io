@@ -16,6 +16,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Install Font Manually	
@@ -28,9 +30,29 @@ From provided by packages, into manual install.
 
 	This guidance applied for most distribution.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Common Example](#common-example)
+
+* 2: [True Type Font](#true-type-font)
+
+* 3: [Bitmap Font](#bitmap-font)
+
+* 4: [System Wide](#system-wide)
+
+* 5: [Font to Use](#font-to-use)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-### From Empty Folder
+<a name="common-example"></a>
+
+### 1: Common Example
+
+#### From Empty Folder
 
 My new working path is,
 of course <code class="code-file">~/.local/share/fonts</code>,
@@ -48,9 +70,7 @@ This time I arrange to a few subdirectory:
 └── inkscape
 {% endhighlight %}
 
--- -- --
-
-### Downloading from git
+#### Downloading from git
 
 For most fonts, I prefer to download using browser.
 But for system font, that I will be using in desktop,
@@ -69,9 +89,7 @@ I prefer git clone to make sure the font downloaded right.
 
 And copy-paste later on.
 
-
-
-### Copy and Paste
+#### Copy and Paste
 
 Copy paste manually.
 
@@ -103,7 +121,9 @@ With 5.x series the font is in <code>web-fonts-with-css/webfonts/</code> directo
 
 -- -- --
 
-### True Type Font
+<a name="true-type-font"></a>
+
+### 2: True Type Font
 
 Installing TTF is easy, as example above.
 
@@ -138,7 +158,9 @@ I have to logout, before I can show this in my <code>zsh</code>.
 
 -- -- --
 
-### Bitmap Font
+<a name="bitmap-font"></a>
+
+### 3: Bitmap Font
 
 Consider have a look at <code>siji</code> as our example.
 
@@ -247,7 +269,9 @@ Using XLFD
 
 -- -- --
 
-### System Wide
+<a name="system-wide"></a>
+
+### 4: System Wide
 
 Sometimes we need to use the font in system wide,
 using <code>/usr/share/fonts</code>.
@@ -271,9 +295,7 @@ Password:
 
 You need to logout and relogin in order to use this bitmap font.
 
--- -- --
-
-### Font Tools
+#### Font Tools
 
 You can also browse a character in a font with either of these program, 
 
@@ -285,7 +307,9 @@ You can also browse a character in a font with either of these program,
 
 -- -- --
 
-### Font to Use
+<a name="font-to-use"></a>
+
+### 5: Font to Use
 
 I also ask some friends,
 in [@dotfiles_id](https://t.me/dotfiles_id) telegram group,
@@ -349,8 +373,9 @@ about their favorites font. I would like to summarize here:
 
 * [Free Font for 2017](https://www.creativebloq.com/features/10-new-free-fonts-for-2017)
 
-
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 

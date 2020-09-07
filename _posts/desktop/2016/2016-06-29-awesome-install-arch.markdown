@@ -41,7 +41,7 @@ In fact I learnt Lua, by configuring Awesome.
 
 -- -- --
 
-## Install Awesome WM
+### Install Awesome WM
 
 Installing Awesome is straightforward.
 It doesnt have many dependency, except Lua.
@@ -59,7 +59,7 @@ What a perfect combination between Window Manager and Scripting Language.
 
 -- -- --
 
-## Running Awesome WM
+### Running Awesome WM
 
 To switch to Awesome WM after installation completed,
 you can logout your current DE/WM (Desktop Environment or Window Manager).
@@ -77,7 +77,7 @@ gnome-classic.desktop  i3.desktop     xmonad.desktop
 
 -- -- --
 
-## Additional Packages
+### Additional Packages
 
 There are useful additional packages, 
 to make your awesome become more awesome. 
@@ -88,7 +88,7 @@ to make your awesome become more awesome.
 
 -- -- --
 
-## Install Vicious
+### Install Vicious
 
 Install Vicious in Arch is also very easy,
 as it is in official repository.
@@ -101,7 +101,7 @@ $ sudo pacman -S vicious
 
 -- -- --
 
-## Install Lain Module
+### Install Lain Module
 
 Lain is a fork of Vain Module.
 Both are only available in AUR (Arch User Repository).
@@ -116,7 +116,7 @@ $ pacaur -y lain-git
 
 -- -- --
 
-## Sample Configuration
+### Sample Configuration
 
 Awesome provide sample rc in their installation package.
 Just copy them to <code class="code-file">~/.config/awesome/</code>
@@ -135,7 +135,7 @@ Now you can login to your Awesome Window Manager
 
 -- -- --
 
-## Modularized Configuration
+### Modularized Configuration
 
 You can modify your <code class="code-file">rc.lua</code>,
 and make your awesome WM more awesome
@@ -153,7 +153,7 @@ but now I don't have much time to do it.
 
 -- -- --
 
-## Source Code
+### Source Code
 
 Surprisingly, Awesome WM is still in an active development
 
@@ -173,7 +173,7 @@ It is a good start to learn Lua programming language.
 
 -- -- --
 
-## What's next ?
+### What's next ?
 
 There are nice customizations beyond scope of this article.
 This site might worth to look at.

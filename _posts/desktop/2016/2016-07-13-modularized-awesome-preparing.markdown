@@ -35,7 +35,7 @@ This topic itself is long enough, that I don't want to mix it with another topic
 
 -- -- --
 
-## Goal
+### Goal
 
 > No long configuration, short enough to be analyzed
 
@@ -48,7 +48,7 @@ Each files should be small enough to be analyzed file by file.
 
 -- -- --
 
-## Problem Definition
+### Problem Definition
 
 After a hard time of reading <code class="code-file">rc.lua</code>,
 I finaly realized that <code class="code-file">rc.lua</code> consist of these parts
@@ -87,7 +87,7 @@ I finaly realized that <code class="code-file">rc.lua</code> consist of these pa
 
 -- -- --
 
-## Loading module in Lua
+### Loading module in Lua
 
 There is a strange concept of array in Lua called Table.
 Table is a container of associative array stored in key/value pairs.
@@ -109,7 +109,7 @@ naughty = require('naughty')
 
 -- -- --
 
-## Splitting Config
+### Splitting Config
 
 Splitting configuration source code is easy,
 the 'dofile' function can do the horsework.
@@ -148,7 +148,7 @@ end
 
 -- -- --
 
-### Require in Each Lua
+#### Require in Each Lua
 
 There is something you should do each time
 move-and-paste lua-code.
@@ -166,8 +166,7 @@ local beautiful = require("beautiful")
 
 {% endhighlight %}
 
-
-## Module Containing Variable
+#### Module Containing Variable
 
 The next steps is move each variables to Lua files.
 
@@ -193,7 +192,7 @@ I avoid global variable as possible.
 
 There are some alternative on how to make module in Lua
 
-### Lua 5.0, using module function
+#### Lua 5.0, using module function
 
 {% highlight lua %}
 module(main.myvar)
@@ -205,7 +204,7 @@ end
 
 This is deprecated.
 
-### Lua 5.2, using table
+#### Lua 5.2, using table
 
 We can use any table name, e.g. <code>_M</code>
 
@@ -232,7 +231,7 @@ I also made the terminal in <code class="code-file">rc.lua</code> as local.
 
 -- -- --
 
-## Module Containing Only One Variable
+### Module Containing Only One Variable
 
 For module with only one variable,
 We can also make the call simple.
@@ -255,11 +254,11 @@ local myvar = require("main.myvar")
 local terminal = myvar()
 {% endhighlight %}
 
-No need to call <code>get()</code> explicitly.
+No need to call <code>get()</code> explicitly __.__
 
 -- -- --
 
-## Real lua.rc Sample
+### Real lua.rc Sample
 
 Let's see our globalbutton moved to <code class="code-file">main/globalbuttons.lua</code>.
 Do not confuse the name globalbuttons with global variables.
@@ -277,7 +276,7 @@ root.keys(awful.util.table.join(
 ))
 {% endhighlight %}
 
-### Splitted from rc.lua.
+#### Splitted from rc.lua.
 
 To <code class="code-file">binding/globalbuttons.lua</code>
 
@@ -301,7 +300,9 @@ end
 return setmetatable({}, { __call = function(_, ...) return _M.get(...) end })
 {% endhighlight %}
 
-### Calling from rc.lua
+__.__
+
+#### Calling from rc.lua
 
 {% highlight lua %}
 local binding = {
@@ -314,7 +315,7 @@ root.buttons(binding.globalbuttons())
 
 -- -- --
 
-## Splitting Long Module
+### Splitting Long Module
 
 Not everything should be packed with these code style.
 It all depends on your creativity and imagination.
@@ -375,7 +376,7 @@ WB.multicolor_widgets_top = function (screen) ... end
 
 -- -- --
 
-## Module with many containers
+### Module with many containers
 
 The issue goes further when I decorate Wibox.
 It has a bunch of monitoring stuff,
@@ -442,7 +443,7 @@ you get in to the source code.
 
 In fact the source configuration is easier to be read now.
 
-## Configuration Source
+### Configuration Source
 
 * <https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome>
 
@@ -482,6 +483,8 @@ This the result.
     │   └── statusbar.lua
     └── *
 {% endhighlight %}
+
+__.__
 
 -- -- --
 

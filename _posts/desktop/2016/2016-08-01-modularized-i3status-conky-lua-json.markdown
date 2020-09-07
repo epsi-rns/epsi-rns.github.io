@@ -21,6 +21,10 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
+### Preface
+
 I'm so excited with the release of Conky V1.10.
 The latest conky configuration is actualy a Lua file.
 It is very flexible, compared with the old plain text Conky Configuration.
@@ -29,9 +33,33 @@ We can separate the long old conky TEXT, into separate Lua function.
 One application benefit from this Conky Lua Config is i3status.
 Before we get too deep, let's see the old way of configuring i3status with Conky.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Screenshot](#screenshot)
+
+* 1: [The i3 config](#i3-config)
+
+* 2: [Using i3bar](#i3bar)
+
+* 3: [Plain Conky](#plain-conky)
+
+* 4: [Conky Config as Lua](#conky-lua)
+
+* 5: [Conky as JSON Feed](#conky-json)
+
+* 6: [Modular](#modular)
+
+* 7: [Miscellanous](#misc)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-## Screenshot
+<a name="screenshot"></a>
+
+### Screenshot
 
 {% capture ss_content %}
 <strong>OS</strong>: Arch<br/>
@@ -54,7 +82,9 @@ Before we get too deep, let's see the old way of configuring i3status with Conky
 
 -- -- --
 
-## The i3 config
+<a name="i3-config"></a>
+
+### 1: The i3 config
 
 I assume that you have already familiar with i3 config.
 
@@ -115,12 +145,14 @@ $ i3-msg restart
 
 -- -- --
 
-## Using i3bar
+<a name="i3bar"></a>
+
+### 2: Using i3bar
 
 AFAIK there are three kind of configuration
 that can be used as a feed to i3bar.
 
-### i3status
+#### i3status
 
 Let's copy the default i3status configuration.
 
@@ -139,7 +171,7 @@ bar {
 
 [![i3status][image-i3-i3status]{: .img-responsive }][photo-i3-i3status]
 
-### i3blocks
+#### i3blocks
 
 Let's copy the default i3blocks configuration.
 
@@ -158,7 +190,7 @@ bar {
 
 [![i3blocks][image-i3-i3blocks]{: .img-responsive }][photo-i3-i3blocks]
 
-### Conky
+#### Conky
 
 Example
 
@@ -173,7 +205,9 @@ Each configured in different bar section.
 
 -- -- --
 
-## Plain Conky
+<a name="plain-conky"></a>
+
+### 3: Plain Conky
 
 This is how we do conky in a very simple way,
 before Conky v.1.10, and without JSON.
@@ -200,7 +234,9 @@ ${time %H:%M:%S}
 
 -- -- --
 
-## Conky Config as Lua
+<a name="conky-lua"></a>
+
+### Conky Config as Lua
 
 Just like what I said before,
 the latest Conky v1.10 configuration is actually a Lua file.
@@ -237,7 +273,9 @@ Reading:
 
 -- -- --
 
-## Conky as JSON Feed
+<a name="conky-json"></a>
+
+### 4: Conky as JSON Feed
 
 Once again, we have to change the <code>status_command</code>.
 This time we are using a shell script to start json header.
@@ -298,11 +336,13 @@ Reading
 
 -- -- --
 
-## Modular
+<a name="modular"></a>
+
+### 5: Modular
 
 You can make your own modular script for your own needs. This just a sample.
 
-### The i3 config
+#### The i3 config
 
 Mine using two bars. Top and Bottom.
 
@@ -319,7 +359,7 @@ bar {
 }
 {% endhighlight %}
 
-### The Lua Helper
+#### The Lua Helper
 
 Since we want to reduce complexity,
 we create a function for each json parts 
@@ -369,7 +409,7 @@ but be aware that it is not always work with other font.
 
 * <http://fontawesome.io/cheatsheet/>
 
-### The Parts Lua
+#### The Parts Lua
 
 Now we need another file to define conky parts as functions.
 
@@ -403,8 +443,7 @@ You can check the rest of the file in github
 
 * [conky/jsonparts.lua][source-parts]
 
-
-### Main Conkyrc Script
+#### Main Conkyrc Script
 
 Now we can call this script in <code>conky.text</code> 
 in main <code class="code-file">conkyrc.lua</code> file.
@@ -430,9 +469,11 @@ You can check the rest of the file in github
   
 -- -- --
 
-## Miscellanous
+<a name="misc"></a>
 
-### Changing Color
+### 6: Miscellanous
+
+#### Changing Color
 
 This is a bonus parts.
 For your convenience I put two colorschemes.
@@ -459,7 +500,7 @@ local color_preset = color_preset_bright
 
 [![i3-gaps: Conky Lua in bright i3status][image-ss-i3gaps-bright]{: .img-responsive }][photo-ss-i3gaps-bright]  
 
-## Font Problem
+#### Font Problem
 
 Do not forget to install font to enable your icons.
 
@@ -469,6 +510,10 @@ $ yaourt -S awesome-terminal-fonts
 {% endhighlight %}
 
 -- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
 
 After all this is just a config.
 You may modify this config to suit your needs.

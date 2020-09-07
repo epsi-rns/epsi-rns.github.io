@@ -39,7 +39,7 @@ In order to make a modularized theme, I also have to clean up the old theme.
 
 -- -- --
 
-## Which Parts ?
+### Which Parts ?
 
 The original default config only takes one file
 
@@ -153,12 +153,12 @@ awesome
 
 --
 
-## Real World Result
+### Real World Result
 
 You can see the sample details below.
 Off course you can make entirely different customization.
 
-### Main Awesome Directory
+#### Main Awesome Directory
 
 {% highlight bash %}
 ~/.config/awesome
@@ -190,7 +190,7 @@ Off course you can make entirely different customization.
 └── themes
 {% endhighlight %}
 
-### The theme Directory
+#### The theme Directory
 
 I named the theme <code>clone</code>, because ...
 I shamefully grabbed them from many resources.
@@ -282,7 +282,7 @@ I can't just put all the code in this post.
 
 -- -- --
 
-## What's next ?
+### What's next ?
 
 The code of course, what it takes to split,
 from plain rc.lua to modular table objects.
