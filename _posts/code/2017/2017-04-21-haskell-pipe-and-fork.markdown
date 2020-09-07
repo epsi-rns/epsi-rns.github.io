@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="plumber"></a>
+
 ### Haskell Plumber.
 
 > Goal: A script that continuously show date and time,
@@ -38,11 +40,9 @@ you might desire to know the reason by reading this overview.
 
 *	[Piping and Forking in Linux Script][local-overview]
 
--- -- --
+#### Pipe and Fork in Desktop Ricing
 
-### Pipe and Fork in Desktop Ricing
-
-	Why Haskell? 
+> Why Haskell? 
 
 This is not a scripting language but compiled.
 The reason is XMonad. Most people is still combined
@@ -54,9 +54,33 @@ And of course you have total Control of the script,
 e.g. color across the configuration,
 when you call from just one Haskell script, instead of many language.
 
-	Be Lazy, Learn Haskell.
+> Be Lazy, Learn Haskell.
+
+#### Table of Content
+
+* [Haskell Plumber](#plumber): Table of Content
+
+* [Start Simple](#start-simple)
+
+* [External Command as Source Feed](#external-command)
+
+* [Spawning Using System Shell](#system-shell)
+
+* [A Unidirectional Pipe Between External Command](#unidirectional-external)
+
+* [A Unidirectional Pipe from Internal Function](#unidirectional-internal)
+
+* [Fork Overview](#fork-overview)
+
+* [Polishing The Script](#polishing-script)
+
+* [Lemonbar](#lemonbar)
+
+* [Coming up Next](#whats-next)
 
 -- -- --
+
+<a name="start-simple"></a>
 
 ### Start Simple
 
@@ -122,9 +146,7 @@ one after another, below the command line prompt.
 
 {% include toc/2017/04/pipe-and-fork-similar-01.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Haskell has no built in loop.
 Since we want infinite loop, we use Control <code>Forever</code>.
@@ -139,6 +161,8 @@ You might consider reading my old post.
 *	[How Haskell Syntax can Make Your Code Cleaner][local-haskell-dollar]
 
 -- -- --
+
+<a name="external-command"></a>
 
 ### External Command as Source Feed
 
@@ -165,6 +189,8 @@ ${time %a %b %d %H:%M:%S}\
 {% endhighlight %}
 
 -- -- --
+
+<a name="system-shell"></a>
 
 ### Spawning Using System Shell
 
@@ -204,6 +230,8 @@ main = do
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
 -- -- --
+
+<a name="unidirectional-external"></a>
 
 ### A Unidirectional Pipe Between External Command
 
@@ -265,9 +293,9 @@ main = do
 
 
 You can see, how simple it is.
-This would have <code>less</code> output similar to this below.
+This would have `less` output similar to this below.
 
-You can just remove this <code>waitForProcess</code> line
+You can just remove this `waitForProcess` line
 to detach dzen2. No need to fork
 
 ![Pipe: to Less][image-time-less]{: .img-responsive }
@@ -276,9 +304,7 @@ to detach dzen2. No need to fork
 
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 First process create a new stdout handle <code>std_out = CreatePipe</code>.
 And the second process use it as stdin feed <code>std_in = UseHandle pipeout</code>.
@@ -295,13 +321,15 @@ And the second process use it as stdin feed <code>std_in = UseHandle pipeout</co
 
 -- -- --
 
+<a name="unidirectional-internal"></a>
+
 ### A Unidirectional Pipe from Internal Function
 
 Using internal function as source feed
 to external command is straight forward.
 This should be self explanatory.
 
-	Do not forget to flush.
+> Do not forget to flush.
 
 **Source**:
 
@@ -356,9 +384,7 @@ main = do
 
 {% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 The same as previous.
 But instead of reading from stdout <code>std_out</code>,
@@ -374,6 +400,8 @@ The second process use its own stdin <code>std_in = CreatePipe</code>.
 {% endhighlight %}
 
 -- -- --
+
+<a name="fork-overview"></a>
 
 ### Fork Overview
 
@@ -473,9 +501,7 @@ that the dzen2 shown is coming from the latest script.
 
 {% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Since we use <code>forever</code> control, it will block the process forever.
 So we do have to detach it using <code>forkProcess</code>.
@@ -485,6 +511,8 @@ So we do have to detach it using <code>forkProcess</code>.
 {% endhighlight %}
 
 -- -- --
+
+<a name="polishing-script"></a>
 
 ### Polishing The Script
 
@@ -583,13 +611,11 @@ This would have <code>dzen2</code> output similar to this below.
 
 ![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
 
-	You may use transset-df instead of transset.
+> You may use transset-df instead of transset.
 
 {% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Since we do not use <code>forever</code> control,
 we do not need to detach dzen2 using <code>forkProcess</code>.
@@ -611,6 +637,8 @@ detachTransset = forkProcess $ do
 
 -- -- --
 
+<a name="lemonbar"></a>
+
 ### Lemonbar
 
 I also provide Lemonbar, instead of Dzen2.
@@ -622,6 +650,8 @@ The code is very similar.
 {% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
@@ -637,7 +667,6 @@ I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
 Thank you for reading.
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

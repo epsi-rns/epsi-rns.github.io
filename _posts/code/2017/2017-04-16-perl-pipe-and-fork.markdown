@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="plumber"></a>
+
 ### Perl Plumber.
 
 > Goal: A script that continuously show date and time,
@@ -38,7 +40,31 @@ you might desire to know the reason by reading this overview.
 
 *	[Piping and Forking in Linux Script][local-overview]
 
+#### Table of Content
+
+* [Perl Plumber](#plumber): Table of Content
+
+* [Start Simple](#start-simple)
+
+* [External Command as Source Feed](#external-command)
+
+* [Spawning Using System Shell](#system-shell)
+
+* [A Unidirectional Pipe Between External Command](#unidirectional-external)
+
+* [A Unidirectional Pipe from Internal Function](#unidirectional-internal)
+
+* [Fork Overview](#fork-overview)
+
+* [Polishing The Script](#polishing-script)
+
+* [Lemonbar](#lemonbar)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="start-simple"></a>
 
 ### Start Simple
 
@@ -50,7 +76,6 @@ This script only show an infinite loop showing local time.
 Each updated in one second interval.
 We manage this interval by delaying,
 using <code>sleep</code> code.
-
 
 **Source**:
 
@@ -84,6 +109,8 @@ one after another, below the command line prompt.
 
 -- -- --
 
+<a name="external-command"></a>
+
 ### External Command as Source Feed
 
 Beside previous simple loop that is used as Internal Command,
@@ -110,13 +137,14 @@ ${time %a %b %d %H:%M:%S}\
 
 -- -- --
 
+<a name="system-shell"></a>
+
 ### Spawning Using System Shell
 
 Using system shell is simple and straightforward.
 But it does not have any ability,
 to stream internal function process,
 that required later on this article.
-
 
 **Source**:
 
@@ -147,18 +175,20 @@ system($cmd);
 
 -- -- --
 
+<a name="unidirectional-external"></a>
+
 ### A Unidirectional Pipe Between External Command
 
 Unidirectional means one way communication.
 
-	A pipe has a read end and a write end.
+> A pipe has a read end and a write end.
 
 This step is overview of Pipe between two external command.
 This short script is using <code>conky</code>
 as pipe source feed and <code>less</code> as pipe target.
 Showing time and date forever in the console.
 
-	This infinite pipe run in time-less fashioned.
+> This infinite pipe run in time-less fashioned.
 
 I add <code>$dirname</code>, relative to the Perl source,
 to locate the conky script assets.
@@ -278,9 +308,7 @@ This would have <code>less</code> output similar to this below.
 
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Perl act as middle man.
 <code>$pipein</code> act as standar output handle (stdout),
@@ -299,13 +327,15 @@ while(<$pipein>) {
 
 -- -- --
 
+<a name="unidirectional-internal"></a>
+
 ### A Unidirectional Pipe from Internal Function
 
 Using internal function as source feed
 to external command is straight forward.
 This should be self explanatory.
 
-	Do not forget to flush.
+> Do not forget to flush.
 
 As previous example, we are using three mechanism,
 <code>open</code>, <code>IPC:Open2</code> and <code>IO::Pipe</code>.
@@ -412,9 +442,7 @@ waitpid( $pidout, 0 );
 
 {% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 The same as previous.
 But instead of reading from stdout <code>$pipein</code>,
@@ -426,6 +454,8 @@ it is managed by internal process using <code>print $pipeout</code>.
 {% endhighlight %}
 
 -- -- --
+
+<a name="fork-overview"></a>
 
 ### Fork Overview
 
@@ -519,9 +549,7 @@ that the dzen2 shown is coming from the latest script.
 
 {% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Any code after the <code>fork</code> executed in both parent and child.
 The child process has been detached from parent process.
@@ -538,6 +566,8 @@ sub detach_dzen2 {
 {% endhighlight %}
 
 -- -- --
+
+<a name="polishing-script"></a>
 
 ### Polishing The Script
 
@@ -640,17 +670,17 @@ This would have <code>dzen2</code> output similar to this below.
 
 ![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
 
-	You may use transset-df instead of transset.
+> You may use transset-df instead of transset.
 
 {% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
--- -- --
+#### How does it works ?
 
-### How does it works ?
-
-	Nothing new here.
+> Nothing new here.
 
 -- -- --
+
+<a name="lemonbar"></a>
 
 ### Lemonbar
 
@@ -663,6 +693,8 @@ The code is very similar.
 {% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
@@ -678,7 +710,6 @@ I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
 Thank you for reading.
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

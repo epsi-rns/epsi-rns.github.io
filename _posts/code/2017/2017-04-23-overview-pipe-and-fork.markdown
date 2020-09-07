@@ -28,8 +28,8 @@ Where they are also just tools in Desktop Ricing,
 especially Tiling Windww Manager. 
 Dive deeper, from decoration, to fundamental code.
 
-	Goal: A script that continuously show date and time,
-	with Dzen2, and Conky.
+> Goal: A script that continuously show date and time,
+> with Dzen2, and Conky.
 
 ### How not to be a Bashful Plumber.
 
@@ -49,7 +49,7 @@ or <code>subProcess</code>.
 but there are other mechanism as well,
 depend on the language you deal with.
 
-	Becoming plumber automagically.
+> Becoming plumber automagically.
 
 I have made few example of Pipe, Port BASH to other language,
 step by step for your convenience.
@@ -57,7 +57,7 @@ So now we have BASH, Perl, Python, Ruby, PHP, Lua, and Haskell.
 These will give you overview on how
 to flow your stream through pipe conduit.
 
-	Make the script simple, less problem.
+> Make the script simple, less problem.
 
 In short, this Pipe example has Source and Target
 
@@ -71,7 +71,7 @@ and later <code>dzen2</code> for Pipe Target.
 And for feed, we are using <code>conky</code>,
 and also function as a pipe source.
 
-	Dark art of daemonizing a process.
+> Dark art of daemonizing a process.
 
 For each article I also add Fork example,
 so your process can run in the background,

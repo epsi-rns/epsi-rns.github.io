@@ -26,9 +26,11 @@ related_link_ids:
 
 ---
 
+<a name="plumber"></a>
+
 ### PHP Plumber.
 
-	You need a wesbite. You have a website. Why not ceate your own ?
+> You need a website. You have a website. Why not ceate your own ?
 
 PHP is known as a language to create a Website.
 Despite of this, PHP can served as multiporpuse script.
@@ -48,7 +50,31 @@ you might desire to know the reason by reading this overview.
 
 *	[Piping and Forking in Linux Script][local-overview]
 
+#### Table of Content
+
+* [PHP Plumber](#plumber): Table of Content
+
+* [Compatibility](#compatibility)
+
+* [Start Simple](#start-simple)
+
+* [External Command as Source Feed](#external-command)
+
+* [A Unidirectional Pipe Between External Command](#unidirectional-external)
+
+* [A Unidirectional Pipe from Internal Function](#unidirectional-internal)
+
+* [Fork Overview](#fork-overview)
+
+* [Polishing The Script](#polishing-script)
+
+* [Lemonbar](#lemonbar)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="compatibility"></a>
 
 ### Compatibility
 
@@ -61,6 +87,8 @@ Do not worry, I do not use any sophisticated code.
 
 -- -- --
 
+<a name="start-simple"></a>
+
 ### Start Simple
 
 Welcome to n00berland. Begin with simple script.
@@ -71,7 +99,6 @@ This script only show an infinite loop showing local time.
 Each updated in one second interval.
 We manage this interval by delaying,
 using <code>sleep</code> code.
-
 
 **Source**:
 
@@ -97,6 +124,8 @@ one after another, below the command line prompt.
 {% include toc/2017/04/pipe-and-fork-similar-01.html %}
 
 -- -- --
+
+<a name="external-command"></a>
 
 ### External Command as Source Feed
 
@@ -124,6 +153,8 @@ ${time %a %b %d %H:%M:%S}\
 
 -- -- --
 
+<a name="unidirectional-external"></a>
+
 ### A Unidirectional Pipe Between External Command
 
 This step is overview of Pipe between two external command.
@@ -139,7 +170,7 @@ This very short script is using <code>conky</code>
 as pipe source feed and <code>less</code> as pipe target.
 Showing time and date forever in the console.
 
-	This infinite pipe run in time-less fashioned.
+> This infinite pipe run in time-less fashioned.
 
 I add <code>_ dir _</code>, relative to the PHP source,
 to locate the conky script assets.
@@ -216,9 +247,7 @@ This would have <code>less</code> output similar to this below.
 
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 PHP act as middle man, anything read from
 <code>$pipein</code> written to <code>$pipeout</code>
@@ -233,6 +262,8 @@ while(!feof($pipein)) {
 
 -- -- --
 
+<a name="unidirectional-internal"></a>
+
 ### A Unidirectional Pipe from Internal Function
 
 Still with <code>popen</code>.
@@ -240,7 +271,7 @@ Instead of using <code>pipein</code> ,
 we use internal function as source feed.
 And <code>pipeout</code> to external command.
 
-	Do not forget to flush.
+> Do not forget to flush.
 
 Also <code>proc_open</code> that has bidirectional capability.
 
@@ -299,9 +330,7 @@ if (is_resource($procout)) {
 
 {% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 The same as previous.
 But instead of reading from <code>$pipein</code>,
@@ -313,6 +342,8 @@ it is managed by internal process using <code>fwrite($pipeout, ...)</code>.
 {% endhighlight %}
 
 -- -- --
+
+<a name="fork-overview"></a>
 
 ### Fork Overview
 
@@ -398,9 +429,7 @@ that the dzen2 shown is coming from the latest script.
 
 {% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Any code after the <code>pcntl_fork()</code>
 executed in both parent and child.
@@ -421,6 +450,8 @@ function detach_dzen2()
 {% endhighlight %}
 
 -- -- --
+
+<a name="polishing-script"></a>
 
 ### Polishing The Script
 
@@ -517,17 +548,17 @@ This would have <code>dzen2</code> output similar to this below.
 
 ![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
 
-	You may use transset-df instead of transset.
+> You may use transset-df instead of transset.
 
 {% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
--- -- --
+#### How does it works ?
 
-### How does it works ?
-
-	Nothing new here.
+> Nothing new here.
 
 -- -- --
+
+<a name="lemonbar"></a>
 
 ### Lemonbar
 
@@ -540,6 +571,8 @@ The code is very similar.
 {% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
@@ -555,7 +588,6 @@ I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
 Thank you for reading.
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

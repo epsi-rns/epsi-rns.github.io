@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="plumber"></a>
+
 ### Python Plumber.
 
 > Goal: A script that continuously show date and time,
@@ -38,7 +40,31 @@ you might desire to know the reason by reading this overview.
 
 *	[Piping and Forking in Linux Script][local-overview]
 
+#### Table of Content
+
+* [Python Plumber](#plumber): Table of Content
+
+* [Start Simple](#start-simple)
+
+* [External Command as Source Feed](#external-command)
+
+* [Spawning Using System Shell](#system-shell)
+
+* [A Unidirectional Pipe Between External Command](#unidirectional-external)
+
+* [A Unidirectional Pipe from Internal Function](#unidirectional-internal)
+
+* [Fork Overview](#fork-overview)
+
+* [Polishing The Script](#polishing-script)
+
+* [Lemonbar](#lemonbar)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="start-simple"></a>
 
 ### Start Simple
 
@@ -100,6 +126,8 @@ one after another, below the command line prompt.
 
 -- -- --
 
+<a name="external-command"></a>
+
 ### External Command as Source Feed
 
 Beside previous simple loop that is used as Internal Command,
@@ -125,6 +153,8 @@ ${time %a %b %d %H:%M:%S}\
 {% endhighlight %}
 
 -- -- --
+
+<a name="system-shell"></a>
 
 ### Spawning Using System Shell
 
@@ -181,6 +211,8 @@ process = os.popen(cmd, 'r')
 {% include toc/2017/04/pipe-and-fork-similar-02-system.html %}
 
 -- -- --
+
+<a name="unidirectional-external"></a>
 
 ### A Unidirectional Pipe Between External Command
 
@@ -244,13 +276,11 @@ This would have <code>less</code> output similar to this below.
 
 ![Pipe: to Less][image-time-less]{: .img-responsive }
 
-	Your wallpaper might be different than mine.
+> Your wallpaper might be different than mine.
 
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 First process create a new stdout handle <code>pipein.stdout</code>.
 And the second process use it as feed to <code>pipeout.stdin</code>.
@@ -270,13 +300,15 @@ pipeout = subprocess.Popen(
 
 -- -- --
 
+<a name="unidirectional-internal"></a>
+
 ### A Unidirectional Pipe from Internal Function
 
 Using internal function as source feed
 to external command is straight forward.
 This should be self explanatory.
 
-	Do not forget to flush.
+> Do not forget to flush.
 
 As previous example, we are using two mechanism,
 <code>open</code> and <code>subprocess.Popen</code>.
@@ -326,9 +358,7 @@ process.wait()
 
 {% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 The same as previous.
 But instead of reading from <code>pipein.stdout</code>,
@@ -340,6 +370,8 @@ it is managed by internal process using <code>process.stdin.write()</code>.
 {% endhighlight %}
 
 -- -- --
+
+<a name="fork-overview"></a>
 
 ### Fork Overview
 
@@ -437,9 +469,7 @@ that the dzen2 shown is coming from the latest script.
 
 {% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Any code after the <code>os.fork</code> executed in both parent and child.
 The child process has been detached from parent process.
@@ -454,6 +484,8 @@ def detach_dzen2():
 {% endhighlight %}
 
 -- -- --
+
+<a name="polishing-script"></a>
 
 ### Polishing The Script
 
@@ -561,17 +593,17 @@ This would have <code>dzen2</code> output similar to this below.
 
 ![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
 
-	You may use transset-df instead of transset.
+> You may use transset-df instead of transset.
 
 {% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
--- -- --
+#### How does it works ?
 
-### How does it works ?
-
-	Nothing new here.
+> Nothing new here.
 
 -- -- --
+
+<a name="lemonbar"></a>
 
 ### Lemonbar
 
@@ -584,6 +616,8 @@ The code is very similar.
 {% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
@@ -599,7 +633,6 @@ I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
 Thank you for reading.
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

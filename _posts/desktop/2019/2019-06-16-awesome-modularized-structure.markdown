@@ -420,7 +420,6 @@ about refactoring<code>Awesome WM</code> using <code>Lua</code>.
 
 What do you think ?
 
-
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = '/assets/posts/desktop/2019/06' %}

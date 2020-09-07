@@ -32,7 +32,7 @@ to make our monitoring script more transparent.
 
 -- -- --
 
-## Monitor in loop
+### Monitor in loop
 
 The basic of monitoring is pool
 a data result for each monitoring interval.
@@ -51,7 +51,7 @@ I know it is weird to have a date while sleeping.
 
 -- -- --
 
-## Sample Script, Net Speed
+### Sample Script, Net Speed
 
 I remember two months ago I have found bash script,
 combined with answer from stackoverflow,
@@ -80,7 +80,7 @@ printf "\r[$RX_text] [$TX_text]"
 
 -- -- --
 
-## Complete Script
+### Complete Script
 
 {% highlight bash %}
 #!/bin/bash
@@ -126,10 +126,6 @@ Now you can use, modify,
 and extend this script for your own purpose.
 
 Thank you for reading
-
-
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

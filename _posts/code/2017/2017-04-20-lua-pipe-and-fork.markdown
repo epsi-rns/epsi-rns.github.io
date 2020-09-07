@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="plumber"></a>
+
 ### Lua Plumber.
 
 Lua is a very Popular embedded script.
@@ -46,11 +48,9 @@ you might desire to know the reason by reading this overview.
 
 *	[Piping and Forking in Linux Script][local-overview]
 
--- -- --
+#### Pipe and Fork in Desktop Ricing
 
-### Pipe and Fork in Desktop Ricing
-
-	Why Lua ?
+> Why Lua ?
 
 Lua only used as embedded script. But I can see Lua's potential.
 I have never seen anybody utilize Lua as main scripting tools in dotfiles,
@@ -58,11 +58,35 @@ except Conky, and AwesomeWM that use Lua as main scripting configuration.
 Outside the world of Ricing, Lua also extensively used in Gaming..
 I myself utilize a lot of Conky Lua a lot. So why not make a start ?
 
+#### Table of Content
+
+* [Lua Plumber](#plumber): Table of Content
+
+* [Be Creative](#be-creative)
+
+* [Start Simple](#start-simple)
+
+* [External Command as Source Feed](#external-command)
+
+* [A Unidirectional Pipe Between External Command](#unidirectional-external)
+
+* [A Unidirectional Pipe from Internal Function](#unidirectional-internal)
+
+* [Fork Overview](#fork-overview)
+
+* [Polishing The Script](#polishing-script)
+
+* [Lemonbar](#lemonbar)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="be-creative"></a>
 
 ### Be Creative
 
-Lua lack is so lightweight that it lacks some common commands.
+Lua is so lightweight that it lacks some common commands.
 We have to emulate these below:
 
 *	sleep
@@ -73,7 +97,11 @@ We have to emulate these below:
 
 Everything is fine now.
 
+__.__
+
 -- -- --
+
+<a name="start-simple"></a>
 
 ### Start Simple
 
@@ -89,7 +117,6 @@ using <code>sleep</code> code.internal function.
 The first issue with Lua is,
 it does not have native <code>sleep</code> function.
 So we either call it from system or emulate it with.
-
 
 **Source**:
 
@@ -122,6 +149,8 @@ one after another, below the command line prompt.
 
 -- -- --
 
+<a name="external-command"></a>
+
 ### External Command as Source Feed
 
 Beside previous simple loop that is used as Internal Command,
@@ -148,6 +177,8 @@ ${time %a %b %d %H:%M:%S}\
 
 -- -- --
 
+<a name="unidirectional-external"></a>
+
 ### A Unidirectional Pipe Between External Command
 
 This step is overview of Pipe between two external command.
@@ -159,7 +190,7 @@ This very short script is using <code>conky</code>
 as pipe source feed and <code>less</code> as pipe target.
 Showing time and date forever in the console.
 
-	This infinite pipe run in time-less fashioned.
+> This infinite pipe run in time-less fashioned.
 
 The second issue with Lua is,
 it does not have native <code>_ dirname _</code> directive.
@@ -199,9 +230,9 @@ This would have <code>less</code> output similar to this below.
 
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
--- -- --
+__.__
 
-### How does it works ?
+#### How does it works ?
 
 Lua act as middle man, anything read from
 <code>pipein:lines()</code> written by <code>pipeout:write()</code>
@@ -215,6 +246,8 @@ end
 
 -- -- --
 
+<a name="unidirectional-internal"></a>
+
 ### A Unidirectional Pipe from Internal Function
 
 Still with <code>popen</code>.
@@ -222,8 +255,7 @@ Instead of using <code>pipein</code> ,
 we use internal function as source feed.
 And <code>pipeout</code> to external command.
 
-	Do not forget to flush.
-
+> Do not forget to flush.
 
 **Source**:
 
@@ -257,9 +289,7 @@ pipeout:close()
 
 {% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 The same as previous.
 But instead of reading from <code>pipein</code>,
@@ -271,6 +301,8 @@ it is managed by internal process using <code>pipeout:write()</code>.
 {% endhighlight %}
 
 -- -- --
+
+<a name="fork-overview"></a>
 
 ### Fork Overview
 
@@ -285,7 +317,6 @@ This step use dzen2, with complete parameters.
 This dzen2 is forked, running in the background.
 Detached from the script,
 no need to wait for dzen2 to finish the script.
-
 
 **Source**:
 
@@ -378,9 +409,7 @@ that the dzen2 shown is coming from the latest script.
 
 {% include toc/2017/04/pipe-and-fork-similar-05.html %}
 
--- -- --
-
-### How does it works ?
+#### How does it works ?
 
 Any code after the <code>posix.fork()</code>
 executed in both parent and child.
@@ -400,6 +429,8 @@ end
 {% endhighlight %}
 
 -- -- --
+
+<a name="polishing-script"></a>
 
 ### Polishing The Script
 
@@ -520,13 +551,13 @@ This would have <code>dzen2</code> output similar to this below.
 
 {% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
--- -- --
+#### How does it works ?
 
-### How does it works ?
-
-	Nothing new here.
+> Nothing new here.
 
 -- -- --
+
+<a name="lemonbar"></a>
 
 ### Lemonbar
 
@@ -539,6 +570,8 @@ The code is very similar.
 {% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
@@ -554,7 +587,6 @@ I'm mostly posting codes so I won't have
 any problems finding it in the future.
 
 Thank you for reading.
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

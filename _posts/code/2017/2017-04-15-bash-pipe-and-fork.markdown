@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="plumber"></a>
+
 ### Bashful Plumber.
 
 > Goal: A script that continuously show date and time,
@@ -38,7 +40,31 @@ you might desire to know the reason by reading this overview.
 
 *	[Piping and Forking in Linux Script][local-overview]
 
+#### Table of Content
+
+* [Perl Plumber](#plumber): Table of Content
+
+* [A Very Bashful Start](#start-simple)
+
+* [Port to other Language](#language-porting)
+
+* [External Command as Source Feed](#external-command)
+
+* [A Native Pipe Between External Command](#native-external)
+
+* [A Native Pipe from Internal Function](#native-internal)
+
+* [Fork Overview](#fork-overview)
+
+* [Polishing The Script](#polishing-script)
+
+* [Lemonbar](#lemonbar)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="start-simple"></a>
 
 ### A Very Bashful Start
 
@@ -74,6 +100,8 @@ one after another, below the command line prompt.
 {% include toc/2017/04/pipe-and-fork-similar-01.html %}
 
 -- -- --
+
+<a name="language-porting"></a>
 
 ### Port to other Language
 
@@ -123,6 +151,8 @@ main = forever $ printDate
 
 -- -- --
 
+<a name="external-command"></a>
+
 ### External Command as Source Feed
 
 Beside previous simple loop that is used as Internal Command,
@@ -149,6 +179,8 @@ ${time %a %b %d %H:%M:%S}\
 
 -- -- --
 
+<a name="native-external"></a>
+
 ### A Native Pipe Between External Command
 
 This step is overview of Pipe between two external command.
@@ -157,7 +189,7 @@ This very short script is using <code>conky</code>
 as pipe source feed and <code>less</code> as pipe target.
 Showing time and date forever in the console.
 
-	This infinite pipe run in time-less fashioned.
+> This infinite pipe run in time-less fashioned.
 
 I had made additional dirname function,
 relative to the BASH source,
@@ -184,11 +216,13 @@ This would have <code>less</code> output similar to this below.
 
 ![Pipe: to Less][image-time-less]{: .img-responsive }
 
-	Your wallpaper might be different than mine.
+> Your wallpaper might be different than mine.
 
 {% include toc/2017/04/pipe-and-fork-similar-02.html %}
 
 -- -- --
+
+<a name="native-internal"></a>
 
 ### A Native Pipe from Internal Function
 
@@ -223,6 +257,8 @@ generated_output | $cmdout
 {% include toc/2017/04/pipe-and-fork-similar-03.html %}
 
 -- -- --
+
+<a name="fork-overview"></a>
 
 ### Fork Overview
 
@@ -348,6 +384,8 @@ detach_dzen2
 
 -- -- --
 
+<a name="polishing-script"></a>
+
 ### Polishing The Script
 
 This step, we use conky again, as a source feed.
@@ -436,11 +474,13 @@ This would have <code>dzen2</code> output similar to this below.
 
 ![Pipe: to Dzen2][image-time-dzen]{: .img-responsive }
 
-	You may use transset-df instead of transset.
+> You may use transset-df instead of transset.
 
 {% include toc/2017/04/pipe-and-fork-similar-07.html %}
 
 -- -- --
+
+<a name="lemonbar"></a>
 
 ### Lemonbar
 
@@ -453,6 +493,8 @@ The code is very similar.
 {% include toc/2017/04/pipe-and-fork-similar-17.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
