@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Separate Main Flow, Code, and Data.
@@ -54,9 +56,39 @@ Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../haskell/][dotfiles-haskell-directory]
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Directory Structure](#directory-structure)
+
+* 2: [Modularizing in Haskell](#modularizing)
+
+* 3: [System Calls](#system-calls)
+
+* 4: [Array: Tag Names and Keys](#array-tag)
+
+* 5: [Hash: Color Schemes](#hash-color)
+
+* 6: [Hash: Config](#hash-config)
+
+* 7: [Processing The Hash Config](#processing)
+
+* 8: [Setting the Tags](#setting-tags)
+
+* 9: [Launch the Panel](#launch-panel)
+
+* 10: [Run Baby Run](#run)
+
+* 11: [Putting It All Together](#putting-it-all)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
 
-### Directory Structure
+<a name="directory-structure"></a>
+
+### 1: Directory Structure
 
 Directory Structure has been explained in preface. 
 This figure will explain how it looks 
@@ -66,7 +98,9 @@ in <code>Haskell script</code> directory.
 
 -- -- --
 
-### Modularizing in Haskell
+<a name="modularizing"></a>
+
+### 2: Modularizing in Haskell
 
 Module in Haskell follow rules in identifier naming.
 And the module filename should also follow these rules.
@@ -94,7 +128,9 @@ import MyHelper
 
 -- -- --
 
-### System Calls
+<a name="system-calls"></a>
+
+### 3: System Calls
 
 Here we wrap <code>herbstclient</code> system call
 in a function named <code>hc</code>.
@@ -119,7 +155,9 @@ main = do
 
 -- -- --
 
-### Array: Tag Names and Keys
+<a name="array-tag"></a>
+
+### 4: Array: Tag Names and Keys
 
 Is it just me? Or didn't I do googling hard enough ?
 I cannot find a way to define array by range in just one line.
@@ -135,7 +173,9 @@ tag_keys  = [1..9] ++ [0]
 
 -- -- --
 
-### Hash: Color Schemes
+<a name="hash-color"></a>
+
+### 5: Hash: Color Schemes
 
 Using **key-value pairs**, a simple data structure.
 
@@ -171,7 +211,9 @@ main = do
 
 -- -- --
 
-### Hash: Config
+<a name="hash-config"></a>
+
+### 6: Hash: Config
 
 The Hash in Config is very similar with the colors above.
 Except that it has string concatenation all over the place.
@@ -218,7 +260,9 @@ main = do
 
 -- -- --
 
-### Processing The Hash Config
+<a name="processing"></a>
+
+### 7: Processing The Hash Config
 
 **This is the heart of this script**.
  
@@ -273,7 +317,9 @@ You can see the debugging result in figure below.
 
 -- -- --
 
-### Setting the Tags
+<a name="setting-tags"></a>
+
+### 8: Setting the Tags
 
 For clarity, I break down the process into some function.
 
@@ -341,7 +387,9 @@ set_tags_with_name = do
 
 -- -- --
 
-### Launch the Panel
+<a name="launch-panel"></a>
+
+### 9: Launch the Panel
 
 The panel code is short, but the detail is long.
 We have to extract value from IO action
@@ -418,7 +466,9 @@ Yes it is very long compared with BASH/Perl/Python counterpart.
 
 -- -- --
 
-### Run Baby Run
+<a name="run"></a>
+
+### 10: Run Baby Run
 
 This is the last part.
 It is intended to be modified.
@@ -471,12 +521,14 @@ to determine whether the application should be launch or not.
 
 -- -- --
 
-### Putting It All Together.
+<a name="putting-it-all"></a>
+
+### 11: Putting It All Together
 
 The last part is going to main script
 and putting it all back together.
 
-	Now the flow is clear
+> Now the flow is clear
 
 <code class="code-file">Header Part: autostart.hs</code>
 
@@ -537,6 +589,8 @@ main = do
 {% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 

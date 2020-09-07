@@ -26,6 +26,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Separate Main Flow, Code, and Data.
@@ -46,9 +48,39 @@ Impatient coder like me, like to open many tab on browser.
 
 *	[gitlab.com/.../dotfiles/.../python/][dotfiles-python-directory]
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Directory Structure](#directory-structure)
+
+* 2: [Modularizing in Python](#modularizing)
+
+* 3: [System Calls](#system-calls)
+
+* 4: [Array: Tag Names and Keys](#array-tag)
+
+* 5: [Hash: Color Schemes](#hash-color)
+
+* 6: [Hash: Config](#hash-config)
+
+* 7: [Processing The Hash Config](#processing)
+
+* 8: [Setting the Tags](#setting-tags)
+
+* 9: [Launch the Panel](#launch-panel)
+
+* 10: [Run Baby Run](#run)
+
+* 11: [Putting It All Together](#putting-it-all)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
 
-### Directory Structure
+<a name="directory-structure"></a>
+
+### 1: Directory Structure
 
 Directory Structure has been explained in preface. 
 This figure will explain how it looks 
@@ -58,9 +90,11 @@ in <code>Python script</code> directory.
 
 -- -- --
 
-### Modularizing in Python
+<a name="modularizing"></a>
 
-	Nothing to say here. Python is simple
+### 2: Modularizing in Python
+
+> Nothing to say here. Python is simple
 
 #### Declare a module
 
@@ -68,7 +102,7 @@ No need to explicitly define what to export.
 
 Here we export <code>hc</code> function variable from helper module.
 
-	Nothing to write in Python Module
+> Nothing to write in Python Module
 
 #### Call a module
 
@@ -79,7 +113,9 @@ from helper import hc
 
 -- -- --
 
-### System Calls
+<a name="system-calls"></a>
+
+### 3: System Calls
 
 Here we wrap <code>herbstclient</code> system call
 in a function named <code>hc</code>.
@@ -103,7 +139,9 @@ os.system("echo 35 > /tmp/herbstluftwm-gap");
 
 -- -- --
 
-### List: Tag Names and Keys
+<a name="array-tag"></a>
+
+### 4: List: Tag Names and Keys
 
 <code class="code-file">config.py</code>
 
@@ -116,7 +154,9 @@ tag_keys  = list(range(1, 10)) + [0]
 
 -- -- --
 
-### Hash: Color Schemes
+<a name="hash-color"></a>
+
+### 5: Hash: Color Schemes
 
 Using **key-value pairs**, a simple data structure.
 
@@ -147,7 +187,9 @@ os.system("xsetroot -solid '"+color['blue500']+"'")
 
 -- -- --
 
-### Hash: Config
+<a name="hash-config"></a>
+
+### 6: Hash: Config
 
 The Hash in Config is very similar with the colors above.
 Except that it has string concatenation all over the place.
@@ -191,7 +233,9 @@ helper.do_config("rule",      config.rules)
 
 -- -- --
 
-### Processing The Hash Config
+<a name="processing"></a>
+
+### 7: Processing The Hash Config
 
 **This is the heart of this script**.
  
@@ -234,7 +278,9 @@ You can see the debugging result in figure below.
 
 -- -- --
 
-### Setting the Tags
+<a name="setting-tags"></a>
+
+### 8: Setting the Tags
 
 Python use <code>from import</code> mechanism.
 
@@ -262,7 +308,9 @@ def set_tags_with_name():
 
 -- -- --
 
-### Launch the Panel
+<a name="launch-panel"></a>
+
+### 9: Launch the Panel
 
 Two more functions left, it is <code>do_panel</code>
 and <code>startup_run</code>.
@@ -287,7 +335,9 @@ def do_panel():
 
 -- -- --
 
-### Run Baby Run
+<a name="run"></a>
+
+### 10: Run Baby Run
 
 This is the last part.
 It is intended to be modified.
@@ -323,12 +373,14 @@ def run():
 
 -- -- --
 
-### Putting It All Together.
+<a name="putting-it-all"></a>
+
+### 11: Putting It All Together
 
 The last part is going to main script
 and putting it all back together.
 
-	Now the flow is clear
+> Now the flow is clear
 
 <code class="code-file">Header Part: autostart.py</code>
 
@@ -393,6 +445,8 @@ startup.run()
 {% include toc/2017/05/herbstlustwm-modularized-autostart.html %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### Coming up Next
 
