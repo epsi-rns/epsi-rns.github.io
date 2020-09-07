@@ -28,6 +28,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Show the Herbstclient Tag.
@@ -38,8 +40,6 @@ related_link_ids:
 
 This tutorial cover Lemonbar, and in order to use Dzen2,
 any reader could use the source code in github.
-
--- -- --
 
 #### Reading
 
@@ -62,7 +62,43 @@ Impatient coder like me, like to open many tab on browser.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../lua/][dotfiles-lemon-lua]
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Screenshot](#screenshot)
+
+* 1: [Directory Structure](#directory-structure)
+
+* 2: [Common Module](#common-module)
+
+* 3: [Get Geometry](#get-geometry)
+
+* 4: [Testing The Parameters](#testing-params)
+
+* 5: [Adjusting the Desktop](#adjusting-desktop)
+
+* 6: [Color Schemes](#color-schemes)
+
+* 7: [Preparing Output](#preparing-output)
+
+* 8: [Global Variable and Constant](#global-vars)
+
+* 9: [Segment Variable](#segment-var)
+
+* 10: [Decorating: Window Title](#windows-title)
+
+* 11: [Decorating: Tag Status](#tag-status)
+
+* 12: [Combine The Segments](#combine-segments)
+
+* 13: [Testing The Output](#testing-output)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="screenshot"></a>
 
 ### Screenshot
 
@@ -79,7 +115,9 @@ I present **only panel** HerbstluftWM screenshot.
 
 -- -- --
 
-### Directory Structure
+<a name="directory-structure"></a>
+
+### 1: Directory Structure
 
 Directory Structure has been explained in preface. 
 For both Dzen2 and Lemonbar, the structure are the same.
@@ -93,7 +131,9 @@ without changing the whole stuff.
 
 -- -- --
 
-### Common Module
+<a name="common-module"></a>
+
+### 2: Common Module
 
 Lua is an embedding language. It is suppose to be light.
 No wonder it lacks of standard function for daily coding,
@@ -152,7 +192,9 @@ end
 
 -- -- --
 
-### Get Geometry
+<a name="get-geometry"></a>
+
+### 3: Get Geometry
 
 Let's have a look at <code class="code-file">helper.lua</code> in github.
 
@@ -355,7 +397,9 @@ end
 
 -- -- --
 
-### Testing The Parameters
+<a name="testing-params"></a>
+
+### 4: Testing The Parameters
 
 Consider this code <code class="code-file">01-testparams.lua</code>.
 The script call the above function to get lemon parameters.
@@ -404,7 +448,9 @@ Or in Dzen2 version:
 
 -- -- --
 
-### Adjusting the Desktop
+<a name="adjusting-desktop"></a>
+
+### 5: Adjusting the Desktop
 
 Since we want to use panel, we have to adjust the desktop gap,
 giving space at the top and bottom.
@@ -425,7 +471,9 @@ os.execute('herbstclient pad ' .. monitor .. ' '
 
 -- -- --
 
-### Color Schemes
+<a name="color-schemes"></a>
+
+### 6: Color Schemes
 
 Using a simple data structure **key-value pairs**,
 we have access to google material color
@@ -445,6 +493,8 @@ _M.color = {
 }
 {% endhighlight %}
 
+__.__
+
 #### View Source File:
 
 *	**Dzen2**: 
@@ -457,7 +507,9 @@ _M.color = {
 
 -- -- --
 
-### Preparing Output
+<a name="preparing-output"></a>
+
+### 7: Preparing Output
 
 Let's have a look at <code class="code-file">output.lua</code> in github.
 
@@ -473,7 +525,9 @@ Let's have a look at <code class="code-file">output.lua</code> in github.
 
 -- -- --
 
-### Global Variable and Constant
+<a name="global-vars"></a>
+
+### 8: Global Variable and Constant
 
 Officialy there is a no way to define constant in Lua.
 Lua does not differ between these two.
@@ -547,7 +601,9 @@ _M.post_icon   = '%{F-}'
 
 -- -- --
 
-### Segment Variable
+<a name="segment-var"></a>
+
+### 9: Segment Variable
 
 As response to herbstclient event idle,
 these two function set the state of segment variable.
@@ -586,7 +642,9 @@ We will call these two functions later.
 
 -- -- --
 
-### Decorating: Window Title
+<a name="windows-title"></a>
+
+### 10: Decorating: Window Title
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
@@ -602,9 +660,13 @@ function _M.output_by_title()
 end
 {% endhighlight %}
 
+__.__
+
 -- -- --
 
-### Decorating: Tag Status
+<a name="tag-status"></a>
+
+### 11: Decorating: Tag Status
 
 This transform each plain tag such as <code>.2</code>,
 to decorated tag names such as <code>二 ni</code>.
@@ -693,7 +755,9 @@ end
 
 -- -- --
 
-### Combine The Segments
+<a name="combine-segments"></a>
+
+### 12: Combine The Segments
 
 Now it is time to combine all segments to compose one panel.
 Lemonbar is using <code>%{l}</code> to align left segment,
@@ -722,7 +786,9 @@ end
 
 -- -- --
 
-### Testing The Output
+<a name="testing-output"></a>
+
+### 13: Testing The Output
 
 Consider this code <code class="code-file">02-testoutput.lua</code>.
 The script using pipe as feed to lemonbar.
@@ -794,6 +860,8 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 -- -- --
 
+<a name="whats-next"></a>
+
 ### Coming up Next
 
 It is already a long tutorial.
@@ -846,3 +914,6 @@ Enjoy the statusbar !
 [dotfiles-lemon-lua-helper]:      {{ dotfiles_lemon }}/lua/helper.lua
 [dotfiles-lemon-lua-output]:      {{ dotfiles_lemon }}/lua/output.lua
 [dotfiles-lemon-lua-pipehandler]: {{ dotfiles_lemon }}/lua/pipehandler.lua
+
+[dotfiles-dzen2-lua]:             {{ dotfiles_dzen2 }}/lua/
+[dotfiles-lemon-lua]:             {{ dotfiles_lemon }}/lua/

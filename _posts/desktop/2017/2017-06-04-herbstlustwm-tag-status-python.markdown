@@ -28,6 +28,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Show the Herbstclient Tag.
@@ -38,8 +40,6 @@ related_link_ids:
 
 This tutorial cover Lemonbar, and in order to use Dzen2,
 any reader could use the source code in github.
-
--- -- --
 
 #### Reading
 
@@ -62,7 +62,41 @@ Impatient coder like me, like to open many tab on browser.
 *	**Lemonbar**: 
 	[gitlab.com/.../dotfiles/.../python/][dotfiles-lemon-python]
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Screenshot](#screenshot)
+
+* 1: [Directory Structure](#directory-structure)
+
+* 2: [Get Geometry](#get-geometry)
+
+* 3: [Testing The Parameters](#testing-params)
+
+* 4: [Adjusting the Desktop](#adjusting-desktop)
+
+* 5: [Color Schemes](#color-schemes)
+
+* 6: [Preparing Output](#preparing-output)
+
+* 7: [Global Variable and Constant](#global-vars)
+
+* 8: [Segment Variable](#segment-var)
+
+* 9: [Decorating: Window Title](#windows-title)
+
+* 10: [Decorating: Tag Status](#tag-status)
+
+* 11: [Combine The Segments](#combine-segments)
+
+* 12: [Testing The Output](#testing-output)
+
+* [Coming up Next](#whats-next)
+
 -- -- --
+
+<a name="screenshot"></a>
 
 ### Screenshot
 
@@ -79,7 +113,9 @@ I present **only panel** HerbstluftWM screenshot.
 
 -- -- --
 
-### Directory Structure
+<a name="directory-structure"></a>
+
+### 1: Directory Structure
 
 Directory Structure has been explained in preface. 
 For both Dzen2 and Lemonbar, the structure are the same.
@@ -93,7 +129,9 @@ without changing the whole stuff.
 
 -- -- --
 
-### Get Geometry
+<a name="get-geometry"></a>
+
+### 2: Get Geometry
 
 Let's have a look at <code class="code-file">helper.py</code> in github.
 
@@ -276,7 +314,9 @@ def get_lemon_parameters(monitor, panel_height):
 
 -- -- --
 
-### Testing The Parameters
+<a name="testing-params"></a>
+
+### 3: Testing The Parameters
 
 Consider this code <code class="code-file">01-testparams.py</code>.
 The script call the above function to get lemon parameters.
@@ -324,7 +364,9 @@ Or in Dzen2 version:
 
 -- -- --
 
-### Adjusting the Desktop
+<a name="adjusting-desktop"></a>
+
+### 4: Adjusting the Desktop
 
 Since we want to use panel, we have to adjust the desktop gap,
 giving space at the top and bottom.
@@ -345,7 +387,9 @@ os.system('herbstclient pad ' + str(monitor) + ' '
 
 -- -- --
 
-### Color Schemes
+<a name="color-schemes"></a>
+
+### 5: Color Schemes
 
 Using a simple data structure **key-value pairs**,
 we have access to google material color
@@ -377,7 +421,9 @@ color = {
 
 -- -- --
 
-### Preparing Output
+<a name="preparing-output"></a>
+
+### 6: Preparing Output
 
 Let's have a look at <code class="code-file">output.py</code> in github.
 
@@ -393,7 +439,9 @@ Let's have a look at <code class="code-file">output.py</code> in github.
 
 -- -- --
 
-### Global Variable and Constant
+<a name="global-vars"></a>
+
+### 7: Global Variable and Constant
 
 Officialy there is a no way to define constant in Python.
 Python does not differ between these two,
@@ -467,7 +515,9 @@ POST_ICON   = '%{F-}'
 
 -- -- --
 
-### Segment Variable
+<a name="segment-var"></a>
+
+### 8: Segment Variable
 
 As response to herbstclient event idle,
 these two function set the state of segment variable.
@@ -501,7 +551,9 @@ We will call these two functions later.
 
 -- -- --
 
-### Decorating: Window Title
+<a name="windows-title"></a>
+
+### 9: Decorating: Window Title
 
 This is self explanatory.
 I put separator, just in case you want to add other segment.
@@ -518,7 +570,9 @@ def output_by_title():
 
 -- -- --
 
-### Decorating: Tag Status
+<a name="tag-status"></a>
+
+### 10: Decorating: Tag Status
 
 This transform each plain tag such as <code>.2</code>,
 to decorated tag names such as <code>二 ni</code>.
@@ -601,7 +655,9 @@ def output_by_tag(monitor, tag_status):
 
 -- -- --
 
-### Combine The Segments
+<a name="combine-segments"></a>
+
+### 11: Combine The Segments
 
 Now it is time to combine all segments to compose one panel.
 Lemonbar is using <code>%{l}</code> to align left segment,
@@ -628,7 +684,9 @@ def get_statusbar_text(monitor):
 
 -- -- --
 
-### Testing The Output
+<a name="testing-output"></a>
+
+### 12: Testing The Output
 
 Consider this code <code class="code-file">02-testoutput.py</code>.
 The script using pipe as feed to lemonbar.
@@ -705,6 +763,8 @@ herbstclient focus_monitor "0" && herbstclient use "3"
 
 -- -- --
 
+<a name="whats-next"></a>
+
 ### Coming up Next
 
 It is already a long tutorial.
@@ -755,3 +815,6 @@ Enjoy the statusbar !
 [dotfiles-lemon-python-helper]:      {{ dotfiles_lemon }}/python/helper.py
 [dotfiles-lemon-python-output]:      {{ dotfiles_lemon }}/python/output.py
 [dotfiles-lemon-python-pipehandler]: {{ dotfiles_lemon }}/python/pipehandler.py
+
+[dotfiles-dzen2-python]:             {{ dotfiles_dzen2 }}/python/
+[dotfiles-lemon-python]:             {{ dotfiles_lemon }}/python/

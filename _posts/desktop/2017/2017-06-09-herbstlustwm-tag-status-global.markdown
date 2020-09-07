@@ -28,12 +28,12 @@ related_link_ids:
 
 ### Global Variable and Constant
 
-	Why discuss about Coding here ?
+> Why discuss about Coding here ?
 
 Because I also include Haskell.
 And Haskell distinct clearly between global constant and mutable state.
 
-	Global variable is requirement in this project
+> Global variable is requirement in this project
 
 Some say that global variable are bad.
 But there are quick and dirty condition,

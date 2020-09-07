@@ -28,6 +28,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Manage Herbstclient process trigerred by idle event
@@ -657,6 +659,8 @@ Fullscreen, Dual Panel, Zero Gap.
 [![HerbstluftWM: Screenshot Dual Panel][image-ss-hlwm-dualpanel]{: .img-responsive }][photo-ss-hlwm-dualpanel]
 
 -- -- --
+
+<a name="conclusion"></a>
 
 Enjoy the statusbar !
 Enjoy the window manager !
