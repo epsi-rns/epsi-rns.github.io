@@ -23,6 +23,8 @@ related_link_ids:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Share common configuration for terminal customization.
@@ -51,29 +53,33 @@ Not too much effort, but works for me.
 
 #### Table of Content
 
-There are few parts in terminal ricing:
+* [Preface](#preface): Table of Content
 
-* {: .list-content} Terminal: urxvt, xfce4-terminal, termite
+* Parts in terminal ricing:
 
-* {: .list-content} Shell: bash, zsh, fish
+	* {: .list-content} [Terminal](#terminal): urxvt, xfce4-terminal, termite
 
-* {: .list-content} Shell Prompt: powerline, oh-my-bash, oh-my-zsh, oh-my-fish
+	* {: .list-content} [Shell](#shell): bash, zsh, fish
 
-* {: .list-content} Multiplexer: tmux, gnu screen
+	* {: .list-content} [Shell Prompt](#shell-prompt): powerline, oh-my-bash, oh-my-zsh, oh-my-fish
 
-* {: .list-content} Multiplexer Wrapper: teamocil, byobu
+	* {: .list-content} [Multiplexer](#multiplexer): tmux, gnu screen
 
-* {: .list-content} Compositor Decoration: Compton
+	* {: .list-content} [Multiplexer Wrapper](#multiplexer-wrapper): teamocil, byobu
 
-* {: .list-content} Padding Decoration: gtk.css
+	* {: .list-content} [Compositor Decoration](#compositor): Compton
 
-* {: .list-content} Background Decoration: Wallpaper
+	* {: .list-content} [Padding Decoration](#gtk-padding): gtk.css
 
-* {: .list-content} Example CLI application: neofetch
+	* {: .list-content} [Background Decoration](#wallpaper): Wallpaper
 
-* {: .list-content} Special CLI application: ViM Text Editor
+	* {: .list-content} [Example CLI application](#cli-example): neofetch
 
-* {: .list-content} Pixel Art
+	* {: .list-content} [Special CLI application](#cli-special): ViM Text Editor
+
+	* {: .list-content} [Pixel Art](#pixel-art)
+
+* [Conclusion](#conclusion)
 
 #### Dofiles Source
 
@@ -100,6 +106,8 @@ Where to put the config, for each part ?
 | application | neofetch | ~/.config/neofetch/config.conf |
 
 -- -- --
+
+<a name="terminal"></a>
 
 ### Terminal
 
@@ -348,6 +356,9 @@ I never try this, but this is seems cool.
 
 -- -- --
 
+<a name="shell"></a>
+<a name="shell-prompt"></a>
+
 ### Shell and Shell Prompt
 
 Shell are part of operating system.
@@ -541,6 +552,8 @@ Do not forget to set the right path.
 
 -- -- --
 
+<a name="multiplexer"></a>
+
 ### Multiplexer
 
 There are two widely used terminal multiplexer.
@@ -649,6 +662,8 @@ However you can grab the config from [dotshare](http://dotshare.it/).
 
 -- -- --
 
+<a name="multiplexer-wrapper"></a>
+
 ### Multiplexer Wrapper
 
 Beyond the multiplexer,
@@ -701,6 +716,8 @@ Well.. this not really a ricing, but more on productivity.
 
 -- -- --
 
+<a name="compositor"></a>
+
 ### Compositor
 
 > compositor for transparency
@@ -711,6 +728,8 @@ There are two known compositor for ricing:
 *	[xcompmgr](http://cgit.freedesktop.org/xorg/app/xcompmgr/)
 
 *	[compton](https://github.com/chjj/compton): successor of xcompmgr
+
+*	[picom](https://github.com/yshui/picom): successor of picom
 
 Simply run compton to enable it.
 
@@ -737,7 +756,54 @@ Source
 
 *	[gitlab.com/.../dotfiles/.../compton][dotfiles-compton]
 
+#### picom configuration
+
+{% highlight conf %}
+# https://wiki.archlinux.org/index.php/Picom
+
+opacity = 0.7;          # menu
+inactive-opacity = 0.9; # application: such as inactive browser
+fade-out-step  = 0.01;
+fade-in-step   = 0.01;
+
+backend = "glx";
+
+dropdown_menu = { shadow = false; };
+popup_menu    = { shadow = false; };
+utility       = { shadow = false; };
+
+shadow = true;
+shadow-radius   = 20;
+shadow-opacity  = 1;
+shadow-offset-x = -20;
+shadow-offset-y = -20;
+
+shadow-exclude = [
+  "class_g = 'slop'"
+]
+
+wintypes:
+{
+  dock = { shadow = false };
+};
+
+unredir-if-possible = true;
+blur-background = true;
+
+
+blur:
+{
+  method = "kernel";
+  size = 50;
+  deviation = 5.0;
+};
+
+shadow-exclude-reg = "x40+0+0"
+{% endhighlight %}
+
 -- -- --
+
+<a name="gtk-padding"></a>
 
 ### gtk.css
 
@@ -765,6 +831,8 @@ A more complete config can be seen here:
 
 -- -- --
 
+<a name="wallpaper"></a>
+
 ### Background
 
 Well .. well.. well... 
@@ -779,6 +847,10 @@ I also make custom wallpaper at deviantart.
 
 *	[deviantart.com/nurwijayadi](http://nurwijayadi.deviantart.com/)
 
+Or here, right to the SVG source in github:
+
+*	[Isometric SVG](https://github.com/epsi-rns/isometric-wallpaper)
+
 #### hackish style
 
 I like to use other terminal as background.
@@ -788,6 +860,8 @@ This would make a very hackish style effect,
 as shown in most top picture above.
 
 -- -- --
+
+<a name="cli-example"></a>
 
 ### Example CLI application
 
@@ -811,6 +885,8 @@ However, this is most commonly use <code>neofetch</code> custom config is a must
 *	[gitlab.com/.../dotfiles/.../neofetch][dotfiles-neofetch]
 
 -- -- --
+
+<a name="cli-special"></a>
 
 ### ViM as Special CLI application
 
@@ -948,6 +1024,8 @@ Beside the basic <code>vimtutor</code>, you might want to
 
 -- -- --
 
+<a name="pixel-art"></a>
+
 ### Pixel Art
 
 You can see my pixelart repository on bitbucket here:
@@ -965,6 +1043,8 @@ The repository is a compilation from this good thread:
 *	[gitlab.com/.../dotfiles/.../syawal-1439H.sh][dotfiles-syawal]
 
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 
