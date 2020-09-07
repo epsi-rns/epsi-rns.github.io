@@ -30,8 +30,8 @@ related_link_ids:
 Awesome WM is ready to use tiling window manager for beginner.
 It has been three years since my last Awesome WM configuration,
 now Awesome WM version has turned to 4.3 series.
-It more easier for beginner, than before.
-It is also huge documentation.
+It is more easier for beginner, than before.
+The official site also has huge documentation.
 
 ![Awesome WM: GhostBSD][image-ss-stacked-640]{: .img-responsive }
 
