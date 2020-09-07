@@ -18,6 +18,34 @@ excerpt:
   
 ---
 
+<a name="preface"></a>
+
+### Preface
+
+> Goal: A guide how to write Lemonbar in Bash.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [References](#references)
+
+* 1: [Simple Piping to Lemonbar](#simple-piping)
+
+* 2: [Decorating Lemonbar with BASH](#decorating)
+
+* 3: [Composing Lemonbar in Conky Format](#composing-in-conky)
+
+* 4: [Lemonbar with Modularized Lua in Conky](#modularized-lua)
+
+* 5: [Real Life Lemonbar with Lua in Conky](#real-life-conky)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="references"></a>
+
 ### References
 
 **Reading**
@@ -28,9 +56,7 @@ excerpt:
 
 *	<https://github.com/brndnmtthws/conky>
 
--- -- --
-
-### Using XLFD.
+#### Using XLFD
 
 Yesterday, I wrote another article about XLFD font.
 I recommend you to read that article before using Lemonbar.
@@ -41,7 +67,9 @@ I recommend you to read that article before using Lemonbar.
 
 -- -- --
 
-### Simple Piping to Lemonbar 
+<a name="simple-piping"></a>
+
+### 1: Simple Piping to Lemonbar
 
 Our very first script, a very simple example,
 <code class="code-file">example/01.sh</code>.
@@ -117,10 +145,11 @@ font_awesome='-*-fontawesome-medium-*-*-*-17-*-*-*-*-*-*-*'
 
 I also add alpha transparency. Have a look at the source.
 
-
 -- -- --
 
-### Decorating Lemonbar with BASH
+<a name="decorating"></a>
+
+### 2: Decorating Lemonbar with BASH
 
 The next step is feature related to text formatting in lemonbar.
 It is set internally by lemonbar. I separate main script
@@ -237,7 +266,9 @@ And Conky is just the right tools comes for us.
 
 -- -- --
 
-### Composing Lemonbar in Conky Format
+<a name="composing-in-conky"></a>
+
+### 3: Composing Lemonbar in Conky Format
 
 Just like the previous example, I have separated lemonbar parameter
 <code class="code-file">example/03-main.sh</code>  and formatting.
@@ -320,12 +351,13 @@ conky.text = [[\
 ]]
 {% endhighlight %}
 
-
 -- -- --
 
-### Lemonbar with Modularized Lua in Conky
+<a name="modularized-lua"></a>
 
-	"Let's be tidy and get organized."
+### 4: Lemonbar with Modularized Lua in Conky
+
+> "Let's be tidy and get organized."
 
 I have made quick-and dirty-scripts. Just an example.
 It is never intended to be a perfect script.
@@ -406,7 +438,7 @@ conky.text = [[\
 
 {% endhighlight %}
 
-Arrrghh... What is this <code>enabled</code> variable?
+Arrrghh... __.__ What is this <code>enabled</code> variable?
 Well, this script assembly each segment parts to build a nice statusbar.
 Unneeded segments, I put on disabled variable.
 This is the best parts about using conky as a lua programming language.
@@ -453,7 +485,9 @@ Quick and Dirty.
 
 -- -- --
 
-### Real Life Lemonbar with Lua in Conky
+<a name="real-life-conky"></a>
+
+### 5: Real Life Lemonbar with Lua in Conky
 
 <div class="alert alert-dismissible alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -481,6 +515,10 @@ For code comparation you should see both source code yourself.
 
 -- -- --
 
+<a name="conclusion"></a>
+
+### Conclusion
+
 Coding is Fun.
 Especially when it comes to lemonbar-conky-lua tiers.
 
@@ -488,8 +526,6 @@ That is all for now.
 Thank you for reading.
 
 Have Fun
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

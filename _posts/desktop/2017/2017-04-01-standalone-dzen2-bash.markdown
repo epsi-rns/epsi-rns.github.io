@@ -17,6 +17,44 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
+### Preface
+
+> Goal: A guide how to write Dzen2 in Bash.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Topics Covered](#topics-covered)
+
+* 1: [Hello World in Command Line](#hello-world)
+
+* 2: [Simple dzen2 in Script](#simple)
+
+* 3: [Coloring dzen2](#coloring)
+
+* 4: [Font in dzen2](#font)
+
+* 5: [Graphic Decoration in dzen2](#graphic)
+
+* 6: [Create Decoration for Your own Suite](#decoration)
+
+* 7: [Monitoring Panel](#monitoring)
+
+* 8: [Theming](#theming)
+
+* 9: [Combine Dzen with Tiling Window Manager](#combine-tiling)
+
+* 10: [Using Dzen2 with Conky Lua](#conky-lua)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="topics-covered"></a>
+
 ### Topics Covered
 
 There are a few consideration in building an acceptable panel.
@@ -46,7 +84,9 @@ In order to make the shape we need to know a few tags.
 
 -- -- --
 
-### Hello World in Command Line
+<a name="hello-world"></a>
+
+### 1: Hello World in Command Line
 
 In order to keep dzen2 running,
 we need to echo output in endless loop, and pipe it to dzen2.
@@ -97,7 +137,9 @@ I mean not in <code>man dzen2</code>, from the command line.
 
 -- -- --
 
-### Simple dzen2 in Script
+<a name="simple"></a>
+
+### 2: Simple dzen2 in Script
 
 Let's put this dzen in a script <code class="code-file">bash-example/01.sh</code>.
 
@@ -135,7 +177,11 @@ And examine the output.
 
 ![Dzen2 BASH Script Example][image-02-example-01]{: .img-responsive }
 
-### Coloring dzen2
+-- -- --
+
+<a name="coloring"></a>
+
+### 3: Coloring dzen2
 
 Again, let's give some color in generated output,
 using <code>^bg()</code> and <code>^fg()</code>.
@@ -213,7 +259,9 @@ And again examine the output, with color and transparency.
 
 -- -- --
 
-### Font in dzen2
+<a name="font"></a>
+
+### 4: Font in dzen2
 
 Font <code>^fn()</code> can be used to show
 
@@ -237,7 +285,6 @@ Here is a working example:
 *	[gitlab.com/.../dotfiles/.../03-main.sh][dotfiles-example-03-main]
 
 *	[gitlab.com/.../dotfiles/.../03-output.sh][dotfiles-example-03-output]
-
 
 {% highlight bash %}
 #!/usr/bin/env bash
@@ -294,7 +341,9 @@ generated_output() {
 
 -- -- --
 
-### Graphic Decoration in dzen2
+<a name="graphic"></a>
+
+### 5: Graphic Decoration in dzen2
 
 Icon <code>^i()</code> can be used to show
 
@@ -311,7 +360,6 @@ using <code>^i()</code> tag.
 Here is a working example:
 <code class="code-file">bash-example/04-main.sh</code> and
 <code class="code-file">bash-example/04-output.sh</code>.
-
 
 **Source**:<br/>
 
@@ -388,7 +436,9 @@ generated_output() {
 
 -- -- --
 
-### Create Decoration for Your own Suite.
+<a name="decoration"></a>
+
+### 6: Create Decoration for Your own Suite
 
 Everybody has different requirement, taste and style.
 Instead of giving <code class="code-file">.xbm</code> files,
@@ -412,7 +462,9 @@ And yeah, very simple process.
 
 -- -- --
 
-### Monitoring Panel
+<a name="monitoring"></a>
+
+### 7: Monitoring Panel
 
 You can use Dzen2 as monitoring panel.
 Let's make a more complete segment, than just a date.
@@ -425,7 +477,9 @@ Let's make a more complete segment, than just a date.
 
 -- -- --
 
-### Theming
+<a name="theming"></a>
+
+### 8: Theming
 
 For convenience you can make your script themable.
 I just made a quick and dirty after midnight script, that maybe useful for dzen2 theming.
@@ -460,7 +514,9 @@ After all, it depends on your imagination.
 
 -- -- --
 
-### Combine Dzen with Tiling Window Manager
+<a name="combine-tiling"></a>
+
+### 9: Combine Dzen with Tiling Window Manager
 
 This is outside of the basic scope of configuring Dzen.
 But you can see my unfinished code here for my HerbstluftWM.
@@ -471,7 +527,9 @@ But you can see my unfinished code here for my HerbstluftWM.
 
 -- -- --
 
-### Using Dzen2 with Conky Lua
+<a name="conky-lua"></a>
+
+### 10: Using Dzen2 with Conky Lua
 
 This is a very interesting topic.
 Conky is less complicated, and Lua can help you more.
@@ -479,6 +537,10 @@ But since we need to leave BASH for Lua.
 This deserve an article of its own.
 
 -- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
 
 I think that's all.
 Thank you for reading.

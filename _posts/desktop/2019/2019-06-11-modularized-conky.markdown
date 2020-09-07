@@ -16,6 +16,8 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Modularized Conky Configuration Using Lua Script.
@@ -27,9 +29,25 @@ The answer is simply, using external script.
 The issue is, I like the new conky Lua format.
 So here it is a step by step, conky with lua scripting.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [The Original Code](#original-code)
+
+* 2: [Convert to Lua Code](#convert-to-lua)
+
+* 3: [Modularized](#modularized)
+
+* 4: [Finishing](#finishing)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-### The Original Code
+<a name="original-code"></a>
+
+### 1: The Original Code
 
 He gave a file in telegram group showing something like this one:
 
@@ -103,7 +121,9 @@ From the link above, I can track that the original code is from Dobbie.
 
 -- -- --
 
-### Convert to Lua Code
+<a name="convert-to-lua"></a>
+
+### 2: Convert to Lua Code
 
 My fist attempt is change the config, for minimal output.
 Just to change if this works.
@@ -182,7 +202,9 @@ conky.text
 
 -- -- --
 
-### Modularized
+<a name="modularized"></a>
+
+### 3: Modularized
 
 #### Configuration
 
@@ -318,7 +340,9 @@ The same as previous image.
 
 -- -- --
 
-### Finishing
+<a name="finishing"></a>
+
+### 4: Finishing
 
 #### Path
 
@@ -510,6 +534,10 @@ You can see that the whole code is looks completely different,
 compared with the original code.
 
 -- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
 
 After all this is just a config.
 You may modify this config to suit your needs.

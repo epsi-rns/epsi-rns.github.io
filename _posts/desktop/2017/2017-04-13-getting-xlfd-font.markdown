@@ -13,6 +13,8 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 Font is one of the very foundation of GUI.
@@ -25,9 +27,27 @@ So I decide to make this short guidance,
 for unlucky people who never attend in font class
 while in college.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [X Logical Font Description](#xlfd)
+
+* 2: [Where to get Bitmap Font?](#getting-font)
+
+* 3: [Logical Description in Script](#logical-description)
+
+* 4: [Finding Unicode in Script](#finding-unicode)
+
+* 5: [The Looks of, XLFD and XFT](#the-looks)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-### XLFD
+<a name="xlfd"></a>
+
+### 1: XLFD
 
 I don't know what is XLFD (X Logical Font Description).
 I guess it is another standard beside XFT (X Font Server).
@@ -55,7 +75,9 @@ Something you need to handle well.
 
 -- -- --
 
-### Where to get Bitmap Font?
+<a name="getting-font"></a>
+
+### 2: Where to get Bitmap Font?
 
 As an inkscape user, I use scalable Fonts.
 I know that there are many site offered free font.
@@ -72,7 +94,9 @@ different package management than mine in image below.
 
 -- -- --
 
-### Logical Description in Script
+<a name="logical-description"></a>
+
+### 3: Logical Description in Script
 
 You might found some XLFD notations marching in a script,
 especially in dotfiles. And you might also wondering,
@@ -93,7 +117,9 @@ $ xfontsel
 
 -- -- --
 
-### Finding Unicode in Script
+<a name="finding-unicode"></a>
+
+### 4: Finding Unicode in Script
 
 The next issue, is how to write each character in script.
 Some character can just can be copy-paste to script.
@@ -135,7 +161,9 @@ This <code>xfd</code> and terminal show different bitmap shape.
 
 -- -- --
 
-### The Looks of, XLFD and XFT
+<a name="the-looks"></a>
+
+### 5: The Looks of, XLFD and XFT
 
 I found that, the easiest comparation by the looks,
 between XLFD (bitmap) and XFT (scalable),
@@ -159,6 +187,10 @@ font_awesome="FontAwesome-17"
 ![FontAwesome Character XFT][image-font-05-xft]{: .img-responsive }
 
 -- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
 
 I wish I knew earlier.
 But well, better late than never.

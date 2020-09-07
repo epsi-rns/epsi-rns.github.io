@@ -16,15 +16,35 @@ excerpt:
   
 ---
 
+<a name="preface"></a>
+
 ### Preface
+
+> Goal: Show A simple trick of Debugging Conky
 
 Since we utilize a lot of Conky in Tiling WM Tutorial,
 we need to find a way to debug,
 just in case we encounter undesired result.
 
-Have fun with this cheap trick. 
+Have fun with this cheap trick.
 
-### Simple Conky
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Simple Conky](#simple)
+
+* 2: [Altered Conky](#altered)
+
+* 3: [Real Life Example](#real-life)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="simple"></a>
+
+### 1: Simple Conky
 
 Suppose that you have an original code as below that need to be debugged.
 
@@ -52,7 +72,11 @@ All we need to do is to exec this tput in terminal environment.
 
 We need to alter this code a bit.
 
-### Altered Conky
+-- -- --
+
+<a name="altered"></a>
+
+### 2: Altered Conky
 
 The debug code after injection of 
 additional debugging utilities is as below
@@ -104,7 +128,9 @@ And get each conky result, always running from top left terminal.
 
 -- -- --
 
-### Real Life Example
+<a name="real-life"></a>
+
+### 3: Real Life Example
 
 Since the code above just dump too simple date.
 We need to something more complex.
@@ -136,10 +162,13 @@ Now you can see the raw text before it become feed to dzen2.
 
 -- -- --
 
+<a name="conclusion"></a>
+
+### Conclusion
+
 Just another cheap tool to have fun with.
 That is all for now.
 Thank you for reading.
-
 
 
 [//]: <> ( -- -- -- links below -- -- -- )

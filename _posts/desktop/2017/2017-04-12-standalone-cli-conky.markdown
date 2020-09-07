@@ -16,6 +16,8 @@ excerpt:
   We have three option here, using Watch, Bash, and Conky..
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 Ricing has many component, from original wallpaper,
@@ -32,9 +34,25 @@ This tutorial guide you step by step
 from a very simple output using watch
 then Bash, Simple Cokly and later Conky Lua.
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Using Bash and Watch](#bash-and-watch)
+
+* 2: [Using Bash Loop Only](#bash-loop-only)
+
+* 3: [A Very Simple Conky](#very-simple-conky)
+
+* 4: [Using Conky Lua](#conky-lua)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-### Using Bash and Watch
+<a name="bash-and-watch"></a>
+
+### 1: Using Bash and Watch
 
 Coloring terminal require knowledge of ANSI escape codes.
 
@@ -96,7 +114,9 @@ echo -e $text
 
 -- -- --
 
-### Using Bash Loop Only
+<a name="bash-loop-only"></a>
+
+### 2: Using Bash Loop Only
 
 We can use bash loop only, instead of using <code>watch</code>.
 
@@ -201,10 +221,11 @@ done
 Since it looks complicated, we have to move the complex part
 somewhere else.
 
-
 -- -- --
 
-### A Very Simple Conky
+<a name="very-simple-conky"></a>
+
+### 3: A Very Simple Conky
 
 This part move the output part from Bash to Conky Lua.
 In Conky, printing Date and Time this should be as easy as this line.
@@ -286,10 +307,11 @@ conky.text = gototopleft() .. [[\
 ]]
 {% endhighlight %}
 
-
 -- -- --
 
-### Using Conky Lua
+<a name="conky-lua"></a>
+
+### 4: Using Conky Lua
 
 I do not prefer complexity,
 so I put the detail of system monitoring part in submodule libraries.
@@ -391,7 +413,13 @@ conky.text = _h.gototopleft() .. [[\
 
 {% endhighlight %}
 
+__.__
+
 -- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
 
 Coding is Fun.
 Again, this is just a quick and dirty solution.
@@ -401,8 +429,6 @@ That is all for now.
 Thank you for reading.
 
 Have Fun
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

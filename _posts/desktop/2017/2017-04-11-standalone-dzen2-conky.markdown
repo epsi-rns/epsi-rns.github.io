@@ -18,7 +18,11 @@ excerpt:
 
 ---
 
+<a name="preface"></a>
+
 ### Preface
+
+> Goal: A guide how to write Dzen2 in Conky.
 
 This is the continuation of dzen2 guidance.
 I case you have been missed it.
@@ -30,14 +34,35 @@ It is much easier.
 
 *	[Standalone Dzen2 Statusbar Using BASH][local-dzen2-bash]
 
-
 **Reading**:<br/>
 
 *	<https://github.com/brndnmtthws/conky>
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Hello World in Command Line](#hello-world)
+
+* 2: [Simple conky-dzen2 in Script](#conky-dzen2)
+
+* 3: [Decorating dzen2](#decorate-basic)
+
+* 4: [Create Decoration for Your own Suite](#decorate-custom)
+
+* 5: [Dzen2 with Modularized Lua in Conky](#modularized-lua)
+
+* 6: [Assembly the Parts](#assembly-parts)
+
+* 7: [Real Life Dzen2 with Lua in Conky](#real-life)
+
+* [Conclusion](#conclusion)
+
 -- -- --
 
-### Hello World in Command Line
+<a name="hello-world"></a>
+
+### 1: Hello World in Command Line
 
 Conky has evolved. Now conky configuration is a Lua script.
 So we are going to talk about Lua programming language here.
@@ -86,7 +111,9 @@ It means you can debug your output via command line interface.
 
 -- -- --
 
-### Simple conky-dzen2 in Script
+<a name="conky-dzen2"></a>
+
+### 2: Simple conky-dzen2 in Script
 
 Let's show a simple dzen2 statusbar by put this conky
 in a script <code class="code-file">conky-example/01.sh</code>.
@@ -157,8 +184,11 @@ With updated time every one second interval.
 
 ![Dzen2 Simple Conky Dzen2 Example][image-11-example-01]{: .img-responsive }
 
+-- -- --
 
-### Decorating dzen2
+<a name="decorate-basic"></a>
+
+### 3: Decorating dzen2
 
 This require knowledge of a few dzen2 tags.
 
@@ -298,7 +328,9 @@ Dzen output is amazingly very flexible to be configured.
 
 -- -- --
 
-### Create Decoration for Your own Suite.
+<a name="decorate-custom"></a>
+
+### 4: Create Decoration for Your own Suite
 
 Everybody has different requirement, taste and style.
 Instead of giving <code class="code-file">.xbm</code> files,
@@ -322,10 +354,11 @@ And yeah, very simple process.
 
 -- -- --
 
+<a name="modularized-lua"></a>
 
-### Dzen2 with Modularized Lua in Conky
+### 5: Dzen2 with Modularized Lua in Conky
 
-	"Let's be tidy and get organized."
+> "Let's be tidy and get organized."
 
 We are going to make this Lua script themable
 with flexible segment monitoring statusbar.
@@ -409,10 +442,11 @@ let's see how the dzen2 output goes.
 
 ![Dzen2: Modularized Conky Lua][image-13-theme-01]{: .img-responsive }
 
-
 -- -- --
 
-### Assembly the Parts
+<a name="assembly-parts"></a>
+
+### 6: Assembly the Parts
 
 Let's assembly each segment parts to build a nice statusbar.
 This is the best parts about using conky as a lua programming language.
@@ -476,7 +510,9 @@ It is just a quick and dirty solution.
 
 -- -- --
 
-### Real Life Dzen2 with Lua in Conky
+<a name="real-life"></a>
+
+### 7: Real Life Dzen2 with Lua in Conky
 
 <div class="alert alert-dismissible alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -503,6 +539,10 @@ For code comparation you should see both source code yourself.
 
 -- -- --
 
+<a name="conclusion"></a>
+
+### Conclusion
+
 Coding is Fun.
 Especially when it comes to dzen2-conky-lua tiers.
 Now I have to move on to compose the next tutorial.
@@ -511,8 +551,6 @@ That is all for now.
 Thank you for reading.
 
 Have Fun
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
