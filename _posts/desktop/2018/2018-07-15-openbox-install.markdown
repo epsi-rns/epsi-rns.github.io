@@ -16,6 +16,8 @@ excerpt:
   Also tint2.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Some case of installing openbox
@@ -110,6 +112,8 @@ $ sudo emerge --ask openbox tint2
 ![Gentoo: emerge --ask openbox tint2][image-ss-emerge]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

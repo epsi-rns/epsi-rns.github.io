@@ -16,7 +16,7 @@ excerpt:
   Step by step, modular configuration.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -25,6 +25,44 @@ excerpt:
 After XFWM4 Theme and Fluxbox style, here comes my curiosity about Openbox Theme.
 
 ![openbox Theme: matclue fullscreen][image-ss-fullscreen]{: .img-responsive }
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Note](#note)
+
+* 1: [Color](#color)
+
+* 2: [Configuration](#configuration)
+
+* 3: [Menu Geometry](#menu-geometry)
+
+* 4: [Border Colors](#border-colors)
+
+* 5: [Text Shadows](#text-shadow)
+
+* 6: [Window Title justification](#window-title)
+
+* 7: [Active Window: Title and Label](#title-label)
+
+* 8: [Active Window: Handle and Grip](#handle-grip)
+
+* 9: [Active Window: Button](#button)
+
+* 10: [Active Window: Complete](#complete)
+
+* 11: [Inactive Windows](#inactive-windows)
+
+* 12: [Menus](#menus)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="note"></a>
+
+### Note
 
 #### Reading
 
@@ -70,7 +108,9 @@ here we I put my style.
 
 -- -- --
 
-### Color
+<a name="color"></a>
+
+### 1: Color
 
 The difference with the original example is,
 I use comment to identify, material color that I use.
@@ -95,7 +135,9 @@ I renamed it to <code>matclue</code>.
 
 -- -- --
 
-### Configuration
+<a name="configuration"></a>
+
+### 2: Configuration
 
 #### Window Geometry
 
@@ -130,7 +172,9 @@ you will have a comprehensive understanding about the window geometry.
 
 -- -- --
 
-#### Menu Geometry
+<a name="menu-geometry"></a>
+
+#### 3: Menu Geometry
 
 {% highlight conf %}
 menu.border.width: 1
@@ -158,7 +202,9 @@ to be about the same as its <code>menu.items.bg.color</code> counterpart.
 
 -- -- --
 
-#### Border Colors
+<a name="border-colors"></a>
+
+#### 4: Border Colors
 
 This also, should be self explanatory.
 You should see how I use material color in comment.
@@ -182,7 +228,9 @@ window.inactive.client.color: #000000
 
 -- -- --
 
-#### Text Shadows
+<a name="text-shadow"></a>
+
+#### 5: Text Shadows
 
 Mostly I only change the <code>shadowtint</code>,
 either <code>20</code>, or <code>70</code>,
@@ -197,7 +245,9 @@ menu.title.text.font: shadow=y:shadowtint=20:shadowoffset=1
 
 -- -- --
 
-#### Window Title justification
+<a name="window-title"></a>
+
+#### 6: Window Title justification
 
 This also, should be self explanatory.
 
@@ -207,7 +257,9 @@ window.label.text.justify: Center
 
 -- -- --
 
-### Active Window: Title and Label
+<a name="title-label"></a>
+
+### 7: Active Window: Title and Label
 
 This is the main part.
 Consider begin playing with this <code>Flat Solid</code> title,
@@ -259,7 +311,9 @@ window.active.label.bg.border.color: #0d47a1
 
 -- -- --
 
-### Active Window: Handle and Grip
+<a name="handle-grip"></a>
+
+### 8: Active Window: Handle and Grip
 
 Self explanatory.
 
@@ -275,7 +329,9 @@ window.active.grip.bg.color: #0d47a1
 
 -- -- --
 
-### Active Window: Button
+<a name="button"></a>
+
+### 9: Active Window: Button
 
 All you need to do is pay attention,
 to this base <code>unpressed</code> button setting.
@@ -313,7 +369,9 @@ Now you can understand how I made for the toggle button.
 
 -- -- --
 
-### Active Window: Complete
+<a name="complete"></a>
+
+### 10: Active Window: Complete
 
 And here is the result complete version of active window.
 
@@ -390,7 +448,9 @@ window.active.button.toggled.hover.image.color: #bbdefb
 
 -- -- --
 
-#### Inactive Windows
+<a name="inactive-windows"></a>
+
+#### 11: Inactive Windows
 
 With about the same method, we can step into inactive windows.
 
@@ -448,7 +508,9 @@ window.inactive.button.toggled.unpressed.image.color: #f5f5f5
 
 -- -- --
 
-#### Menus
+<a name="menus"></a>
+
+#### 12: Menus
 
 There are only few object in menus.
 
@@ -494,6 +556,8 @@ menu.items.active.disabled.text.color: #9e9e9e
 ![openbox Theme: matclue menuonly][image-ss-menuonly]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

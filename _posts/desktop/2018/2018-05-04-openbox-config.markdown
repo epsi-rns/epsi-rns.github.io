@@ -15,9 +15,29 @@ excerpt:
   A brief explanation about Openbox rc.xml Configuration.
 ---
 
-> Goal: Explaining openbox key and mouse binding in rc.xml configuration .
+<a name="preface"></a>
 
-### Key Binding
+### Preface
+
+> Goal: Explaining openbox key and mouse binding in rc.xml configuration.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Key Binding](#key-binding)
+
+* 2: [Mouse Binding](#mouse-binding)
+
+* 3: [Custom Key Binding](#custom-binding)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="key-binding"></a>
+
+### 1: Key Binding
 
 There is a whole article for this.
 
@@ -100,7 +120,9 @@ but I change it to urxvt.
 
 -- -- --
 
-### Mouse Binding
+<a name="mouse-binding"></a>
+
+### 2: Mouse Binding
 
 The format is:
 
@@ -245,9 +267,11 @@ Left:       Click:         Close
 
 -- -- --
 
-### Custom Key Binding.
+<a name="custom-binding"></a>
 
-#### Openbox Key Binding.
+### 3: Custom Key Binding
+
+#### Openbox Key Binding
 
 I add two more keybind.
 
@@ -293,7 +317,6 @@ More about OB Logout in:
       </action>
     </keybind>
 {% endhighlight %}
-
 
 #### My Custom Binding
 
@@ -363,6 +386,8 @@ There are also <code>variety</code> wallapaper if you want,
 but I'd rather not using it.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

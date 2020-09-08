@@ -15,11 +15,29 @@ excerpt:
   A brief explanation about Openbox rc.xml Configuration.
 ---
 
-### Rules
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Explaining openbox rules in rc.xml configuration.
 
-again, have a look at the <code class="code-file">rc.xml</code>.
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Rules](#rules)
+
+* 2: [Example](#example)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="rules"></a>
+
+### 1: Rules
+
+Again, have a look at the <code class="code-file">rc.xml</code>.
 
 #### Case
 
@@ -71,7 +89,9 @@ The format is:
 
 -- -- --
 
-### Example
+<a name="example"></a>
+
+### 2: Example
 
 #### Virtual Desktop Placement
 
@@ -147,6 +167,8 @@ I actually always use maximized state for text editor.
 We need to set the <code>type="normal"</code> to avoid dialog to be resized.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

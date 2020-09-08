@@ -15,6 +15,8 @@ excerpt:
   Openbox logging out for dummies.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Explaining how to log out from openbox
@@ -34,9 +36,25 @@ There are few options to log out from openbox:
 This is not a part of config, but rather an additional feature,
 utilize third party application.
 
+#### Table of Content
+
+* [Overview](#overview): Table of Content
+
+* 1: [Default](#default)
+
+* 2: [OB Logout](#ob-logout)
+
+* 3: [Bunsen Exit](#bunsen-exit)
+
+* 4: [Clearine](#clearine)
+
+* [What is Next?](#whats-next)
+
 -- -- --
 
-### Default
+<a name="default"></a>
+
+### 1: Default
 
 This is the default logout dialog from openbox.
 
@@ -44,7 +62,9 @@ This is the default logout dialog from openbox.
 
 -- -- --
 
-### OB Logout
+<a name="ob-logout"></a>
+
+### 2: OB Logout
 
 However, there is a good application called <code>oblogout</code>,
 that you can set them as keybinding, or just put it in menu.
@@ -115,7 +135,9 @@ Unfortunately, I still don't know how to activate svg icons in oblogout.
 
 -- -- --
 
-### Bunsen Exit
+<a name="bunsen-exit"></a>
+
+### 3: Bunsen Exit
 
 #### Clone
 
@@ -197,7 +219,9 @@ Now we have the beautiful exit dialog.
 
 -- -- --
 
-### Clearine
+<a name="clearine"></a>
+
+### 4: Clearine
 
 Surprisingly, my friend make this good python script.
 
@@ -208,6 +232,8 @@ The documentation is enough that I do not have to write more in my blog.
 [![openbox Logout: clearine][image-ss-clearine]{: .img-responsive }][photo-ss-clearine]
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

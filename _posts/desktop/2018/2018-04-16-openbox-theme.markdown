@@ -16,6 +16,8 @@ excerpt:
   Step by step, using Inkscape, one SVG file to create each XBM part.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Reusable SVG, as a base for Openbox theme.
@@ -33,11 +35,25 @@ Most Inkscape related article has been discussed in previous XFWM4 article.
 
 *	[XFWM4 Theme Overview][local-overview]
 
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Unified Graphic Material](#ugm)
+
+* 2: [Building the XBM](#xbm)
+
+* 3: [Button](#button)
+
+* [What is Next?](#whats-next)
+
 -- -- --
 
-### Unified Graphic Material
+<a name="ugm"></a>
 
-	This is the Inkscape Part.
+### 1: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 Instead of separated UI design for each icon,
 we can put all icons into one SVG file.
@@ -73,9 +89,11 @@ For each I give an imaginary narrow border of 1px wide, in border layer.
 
 -- -- --
 
+<a name="xbm"></a>
+
 ### Building the XBM
 
-	This is also the Inkscape Part.
+> This is also the Inkscape Part.
 
 Since we are going to use XBM only.
 
@@ -109,13 +127,17 @@ We can utilize <code>mogrify</code> to do this task.
 $ mogrify -format xbm *.png
 {% endhighlight %}
 
+* .
+
 ![openbox Theme: matclue mogrify *.xbm to *.png][image-ss-mogrify]{: .img-responsive }
 
 -- -- --
 
-### Button
+<a name="button"></a>
 
-	This is still also the Inkscape Part.
+### 3: Button
+
+> This is still also the Inkscape Part.
 
 #### Specification
 
@@ -136,11 +158,12 @@ The rest for each box is self explanatory.
 
 -- -- --
 
+<a name="whats-next"></a>
+
 ### What's Next
 
 This is only the Inkscape Part,
 Consider continue reading [ [Common Config Trick][local-part-style] ]
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}

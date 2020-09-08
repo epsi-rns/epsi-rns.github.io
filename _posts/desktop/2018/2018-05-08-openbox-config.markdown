@@ -15,9 +15,25 @@ excerpt:
   Using Bunsenslabs Script as Dynamic Openbox menu.
 ---
 
-### BunsenLabs Script
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Using Bunsenslabs Script as Dynamic Openbox menu.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [BunsenLabs Script](#script)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="script"></a>
+
+### 1: BunsenLabs Script
 
 I'm not using BunsenLabs, but I found these script useful.
 
@@ -182,6 +198,8 @@ BROWSERS=('chromium' 'iceweasel' 'midori' 'google-chrome-stable' 'opera' )
 {% endhighlight %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

@@ -15,9 +15,33 @@ excerpt:
   A brief explanation about Openbox rc.xml configuration in general.
 ---
 
+<a name="overview"></a>
+
 ### Overview
 
 > Goal: Explaining Openbox rc.xml configuration in general
+
+#### Table of Content
+
+* [Overview](#overview): Table of Content
+
+* [Note](#note)
+
+* 1: [Theme](#theme)
+
+* 2: [Desktop](#desktop)
+
+* 3: [Gaps](#gaps)
+
+* 4: [Startup](#startup)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="note"></a>
+
+### Note
 
 #### Reading
 
@@ -43,7 +67,9 @@ There is a GUI tools to edit the **rc.xml**, called <code>obconf</code>.
 
 -- -- --
 
-### Theme
+<a name="theme"></a>
+
+### 1: Theme
 
 The representative xml of theme configuration,
 would looks similar as example below.
@@ -79,7 +105,9 @@ Where the character means:
 
 -- -- --
 
-### Desktop
+<a name="desktop"></a>
+
+### 2: Desktop
 
 I like to use, geeky greek character to identify my desktop.
 
@@ -103,7 +131,9 @@ Now you can see the result in <code>tint2</code> as below.
 
 -- -- --
 
-### Gaps
+<a name="gaps"></a>
+
+### 3: Gaps
 
 You can set desktop margins.
 Note that I put 40 on top,
@@ -123,7 +153,9 @@ You might want different setting.
 
 -- -- --
 
-### Startup
+<a name="startup"></a>
+
+### 4: Startup
 
 There is this <code class="code-file">~/.config/openbox/autostart</code> file,
 that manage the startup.
@@ -199,8 +231,9 @@ xscreensaver -no-splash &
 
 *	[gitlab.com/.../dotfiles/.../autostart][dotfiles-autostart]
 
-
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

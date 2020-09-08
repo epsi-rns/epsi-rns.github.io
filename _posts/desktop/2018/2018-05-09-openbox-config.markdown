@@ -15,9 +15,27 @@ excerpt:
   Using openbox-menu script as Dynamic Openbox menu.
 ---
 
-### openbox-menu Script
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Using openbox-menu Script as Dynamic Openbox menu.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [openbox-menu Script](#script)
+
+* 2: [Install openbox-menu](#install)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="script"></a>
+
+### 1: openbox-menu Script
 
 My friend, named Addy DCVLXVI, as always giving me a good suggestion.
 <code>openbox-menu</code>, a very useful trick,
@@ -76,7 +94,9 @@ Voila... It is so easy.
 
 -- -- --
 
-### Install openbox-menu
+<a name="install"></a>
+
+### 2: Install openbox-menu
 
 The downside of this method is, sometimes it is not easy to setup.
 Debian based, and Gentoo play well with this <code>openbox-menu</code>.
@@ -213,6 +233,8 @@ $ sudo dnf install menu-cache-devel
 ![openbox-menu:dnf menu-cache][image-ss-dnf-menu-cache]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

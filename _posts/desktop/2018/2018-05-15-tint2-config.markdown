@@ -15,9 +15,31 @@ excerpt:
   A brief guidance about Tint2 theme.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Explaining tint2 configuration in general
+
+#### Table of Content
+
+* [OB Menu Generator](#preface): Table of Content
+
+* [Note](#note)
+
+* [Tutor 01: Minimalist](#tutor-01)
+
+* [Tutor 02: More Config](#tutor-02)
+
+* [Tutor 03: Multi Desktop](#tutor-03)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="note"></a>
+
+### Note
 
 You must have heard about tint2.
 This is an example of what we want to achieve.
@@ -65,6 +87,8 @@ Config is available at:
 * [github.com/epsi-rns/dotfiles/.../tint2/config][dotfiles-tutor]
 
 -- -- --
+
+<a name="tutor-01"></a>
 
 ### Tutor 01: Minimalist
 
@@ -168,6 +192,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-01
 
 -- -- --
 
+<a name="tutor-02"></a>
+
 ### Tutor 02: More Config
 
 This **tint2** panel has these config
@@ -199,7 +225,6 @@ border_sides = TBLR
 background_color =         #ffffff 20  # white
 border_color =             #000000 20  # black
 {% endhighlight %}
-
 
 #### Panel
 
@@ -312,6 +337,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-02
 
 -- -- --
 
+<a name="tutor-03"></a>
+
 ### Tutor 03: Multi Desktop
 
 This **tint2** panel has these config
@@ -349,6 +376,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-03
 *	[gitlab.com/.../dotfiles/.../tint2rc-tutor-03][dotfiles-tutor-03]
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

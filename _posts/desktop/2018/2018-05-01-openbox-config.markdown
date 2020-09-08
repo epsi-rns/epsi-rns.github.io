@@ -15,6 +15,8 @@ excerpt:
   Overview about Openbox in configuration.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Openbox Configuration Overview
@@ -84,6 +86,8 @@ These are some good openbox galleries on deviantart:
 I can't tell you how I adore these galleries.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

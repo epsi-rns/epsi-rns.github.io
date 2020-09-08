@@ -13,16 +13,33 @@ opengraph:
 
 excerpt:
   Openbox logging out menu for dummies. 
-
 ---
+
+<a name="preface"></a>
 
 ### OB Menu Generator
 
 > Goal: Explaining how to log out from openbox using menu.
 
+#### Table of Content
+
+* [OB Menu Generator](#preface): Table of Content
+
+* 1: [Basic](#basic)
+
+* 2: [Forcing Password](#forcing-password)
+
+* 3: [Forcing No Password](#forcing-no-password)
+
+* 4: [Custom Dialog](#custom-dialog)
+
+* [What is Next?](#whats-next)
+
 -- -- --
 
-### Basic
+<a name="basic"></a>
+
+### 1: Basic
 
 #### Sub menu systemd
 
@@ -101,7 +118,9 @@ The result is as simply as this one.
 
 -- -- --
 
-### Forcing Password
+<a name="forcing-password"></a>
+
+### 2: Forcing Password
 
 The issue with systemctl is, **any user can shutdown**.
 There are some workaround,
@@ -181,7 +200,9 @@ ALL   ALL=(ALL) ALL
 
 -- -- --
 
-### Forcing no Password
+<a name="forcing-no-password"></a>
+
+### 3: Forcing No Password
 
 Now consider to see non-systemd again.
 
@@ -230,7 +251,9 @@ I have test this in my Gentoo.
 
 -- -- --
 
-### Custom Dialog
+<a name="custom-dialog"></a>
+
+### 4: Custom Dialog
 
 There is, however, this old good trick from urukrama,
 using gxmessage. gxmessage is not very common, and not available in all distro.
@@ -266,6 +289,8 @@ Or the ugly one.
 ![openbox menu: xmessage exit dialog][image-ss-xmessage]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

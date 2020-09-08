@@ -16,6 +16,8 @@ excerpt:
   Not really for idiots.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Specific tools for openbox.
@@ -168,6 +170,8 @@ $ sudo ./setup.py install
 I really just can't help it.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

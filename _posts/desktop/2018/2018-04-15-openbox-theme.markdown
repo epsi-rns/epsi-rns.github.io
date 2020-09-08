@@ -25,6 +25,8 @@ We meet again in Window Manager guidance.
 This time, we will cover Openbox.
 openbox is a good start before you start to learn other Window Manager.
 
+-- -- --
+
 ### Reading
 
 Before you begin.
@@ -160,6 +162,8 @@ Known dotfiles resources containing openbox tools.
 	Nanda Vera: [yuune/openbox-patched][cat-vera]
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

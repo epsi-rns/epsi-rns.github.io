@@ -15,9 +15,29 @@ excerpt:
   Using OB Menu Generator as Static Openbox menu.
 ---
 
-### OB Menu Generator
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Using OB Menu Generator as Static Openbox menu.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [OB Menu Generator](#ob-menu-generator)
+
+* 2: [Dynamic Menu](#dynamic-menu)
+
+* 3: [Custom Schema](#custom-schema)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="ob-menu-generator"></a>
+
+### 1: OB Menu Generator
 
 Nowadays, people are using automation, rather than a crafting menu manually.
 There is this <code>openbox-obmenu-generator</code> tools,.
@@ -42,7 +62,6 @@ $ git clone https://github.com/trizen/obmenu-generator
 You can see more in manual installation page on github.
 
 Consider also reading installation detail on [ [OBMenu Generator: Install][local-part-install] ].
-
 
 #### Config
 
@@ -122,7 +141,9 @@ gtk-icon-theme-name="Numix-Circle"
 
 -- -- --
 
-### Dynamic Menu
+<a name="dynamic-menu"></a>
+
+### 2: Dynamic Menu
 
 We can also achieve dynamic menu,
 by editing the <code class="code-file">menu.xml</code>,
@@ -143,7 +164,9 @@ But I'd prefer static menu, that is faster.
 
 -- -- --
 
-### Custom Schema
+<a name="custom-schema"></a>
+
+### 3: Custom Schema
 
 It is time to edit <code class="code-file">schema.pl</code>.
 Most of the ideas comes form ArcoLinux.
@@ -254,7 +277,9 @@ And do not forget to <code>Reconfigure</code> openbox.
 
 -- -- --
 
-### What's Next
+<a name="whats-next"></a>
+
+### What's Next?
 
 We are almost finished with openbox configuration.
 

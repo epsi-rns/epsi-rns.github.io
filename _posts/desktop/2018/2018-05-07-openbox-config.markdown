@@ -15,9 +15,39 @@ excerpt:
   A brief explanation about Openbox rc.xml Configuration.
 ---
 
-### Menu
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Explaining openbox menu.xml configuration.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Menu](#menu)
+
+* 2: [Main Menu: OpenSUSE](#opensuse)
+
+* 3: [Main Menu: Fedora](#fedora)
+
+* 4: [Main Menu: Debian](#debian)
+
+* 5: [Pipe Menu](#pipemenu)
+
+* 6: [XDG Menu](#xdgmenu)
+
+* 7: [Merge All](#merge-all)
+
+* 8: [Additional Menu](#additional-menu)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="menu"></a>
+
+### 1: Menu
 
 #### Reading
 
@@ -56,7 +86,9 @@ We need to create it manually.
 
 -- -- --
 
-### Main Menu: OpenSUSE
+<a name="opensuse"></a>
+
+### 2: Main Menu: OpenSUSE
 
 You can find the default at <code>/etc/xdg/openbox/menu.xml</code>.
 However, this is a manually created 
@@ -119,7 +151,9 @@ Note that the system menu is recreated manually.
 
 -- -- --
 
-### Main Menu: Fedora
+<a name="fedora"></a>
+
+### 3: Main Menu: Fedora
 
 With Fedora, it slighlty different:
 
@@ -164,7 +198,9 @@ With Fedora, it slighlty different:
 
 -- -- --
 
-### Main Menu: Debian
+<a name="debian"></a>
+
+### 4: Main Menu: Debian
 
 With Debian, it is also different:
 
@@ -208,8 +244,9 @@ With Debian, it is also different:
 
 -- -- --
 
+<a name="pipemenu"></a>
 
-### Pipe Menu
+### 5: Pipe Menu
 
 We can add sub menu in separate xml file.
 
@@ -314,7 +351,9 @@ But I personally, like the plain menu, depend on my mood.
 
 -- -- --
 
-### XDG Menu
+<a name="xdgmenu"></a>
+
+### 6: XDG Menu
 
 We can create xdg menu for openbox using this command:
 
@@ -382,7 +421,9 @@ Now you can see the openSUSE's XDG menu.
 
 -- -- --
 
-### Merge All
+<a name="merge-all"></a>
+
+### 7: Merge All
 
 You can merge the XDG menu to <code class="code-file">menu.xml</code> as a static menu,
 to have a nice looking menu.
@@ -429,7 +470,9 @@ And the final result is.
 
 -- -- --
 
-### Additional Menu
+<a name="additional-menu"></a>
+
+### 8: Additional Menu
 
 #### OB Log Out/ BL Exit
 
@@ -454,6 +497,8 @@ You can add <code>oblogout</code> or item right away.
 {% endhighlight %}
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

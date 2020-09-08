@@ -15,7 +15,7 @@ excerpt:
   I found this rare multi color trick.
 ---
 
--- -- --
+<a name="preface"></a>
 
 ### Preface
 
@@ -25,6 +25,40 @@ We are going to use <code>flatypuss</code> theme.
 A flat design theme, originally made for dotcats community.
 
 ![openbox Theme: flatypuss - Flat Soft Color][image-ss-screenshot]{: .img-responsive }
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Note](#note)
+
+* 1: [Unified Graphic Material](#ugm)
+
+* 2: [Configuration](#configuration)
+
+* 3: [Active Window: Title and Label](#title-label)
+
+* 4: [Active Window: Handle and Grip](#handle-grip)
+
+* 5: [Active Window: Base Button](#base-button)
+
+* 6: [Active Window: Specific Button](#specific-button)
+
+* 7: [Active Window: Complete](#complete)
+
+* 8: [Inactive Windows](#inactive)
+
+* 9: [Menus](#menus)
+
+* 10: [Compositor: Shadow Menu](#shadow)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="note"></a>
+
+### Note
 
 #### Based On
 
@@ -68,9 +102,11 @@ there is more to come in detail.
 
 -- -- --
 
-### Unified Graphic Material
+<a name="ugm"></a>
 
-	This is the Inkscape Part.
+### 1: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 Instead of separated UI design for each icon,
 we can put all icons into one SVG file.
@@ -133,18 +169,19 @@ each <code>*.png</code> to <code>*.xbm</code>
 $ mogrify -format xbm *.png
 {% endhighlight %}
 
-![openbox Theme: flatypuss mogrify result][image-ss-mogrify]{: .img-responsive }
+* .
 
+![openbox Theme: flatypuss mogrify result][image-ss-mogrify]{: .img-responsive }
 
 -- -- --
 
-### Configuration
+<a name="configuration"></a>
+
+### 2: Configuration
 
 #### Window Geometry
 
 	The same config with previous matclue theme
-
--- -- --
 
 #### Menu Geometry
 
@@ -157,8 +194,6 @@ menu.overlap.y:    0
 {% endhighlight %}
 
 ![openbox Theme: flatypuss menu][image-ss-menu]{: .img-responsive }
-
--- -- --
 
 #### Border Colors
 
@@ -181,13 +216,9 @@ window.active.client.color:   #f5f5f5
 window.inactive.client.color: #000000
 {% endhighlight %}
 
--- -- --
-
 #### Text Shadows
 
 	The same config with previous matclue theme
-
--- -- --
 
 #### Window Title justification
 
@@ -197,9 +228,11 @@ Not you might want to alter to your own taste.
 
 -- -- --
 
-### Active Window: Title and Label
+<a name="title-label"></a>
 
-	Less is more
+### 3: Active Window: Title and Label
+
+> Less is more
 
 I would like to make it as simple as possible.
 
@@ -214,7 +247,9 @@ window.active.label.text.color: #000000
 
 -- -- --
 
-### Active Window: Handle and Grip
+<a name="handle-grip"></a>
+
+### 4: Active Window: Handle and Grip
 
 Still grey.
 
@@ -230,7 +265,9 @@ window.active.grip.bg.color:    #f5f5f5
 
 -- -- --
 
-### Active Window: Base Button
+<a name="base-button"></a>
+
+### 5: Active Window: Base Button
 
 All are <code>parentrelative</code>
 
@@ -251,7 +288,9 @@ window.active.button.toggled.hover.bg:      parentrelative
 
 -- -- --
 
-### Active Window: Specific Button
+<a name="specific-button"></a>
+
+### 6: Active Window: Specific Button
 
 Each button color, has gradation unumber form material color
 
@@ -285,7 +324,9 @@ Note that both <code>iconify</code> and <code>close</code> do not have toggle co
 
 -- -- --
 
-### Active Window: Complete
+<a name="complete"></a>
+
+### 7: Active Window: Complete
 
 And here is the result complete version of active window.
 
@@ -364,7 +405,9 @@ I'm just dumping my config here.
 
 -- -- --
 
-#### Inactive Windows
+<a name="inactive"></a>
+
+### 8: Inactive Windows
 
 Inactive window utilize uniform grey color.
 
@@ -423,7 +466,9 @@ window.inactive.button.close.unpressed.image.color:   #ffcdd2
 
 -- -- --
 
-### Menus
+<a name="menus"></a>
+
+### 9: Menus
 
 This should be self explanatory.
 
@@ -459,7 +504,9 @@ menu.items.active.disabled.text.color: #9e9e9e
 
 -- -- --
 
-#### Compositor: Shadow Menu
+<a name="shadow"></a>
+
+### 10: Compositor: Shadow Menu
 
 Before make the menu pretty with shadow,
 we need to adjust a bit, to get the effect
@@ -494,6 +541,8 @@ frame-opacity = 1;
 ![openbox Theme: menu with compositor][image-ss-compton]{: .img-responsive }
 
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 

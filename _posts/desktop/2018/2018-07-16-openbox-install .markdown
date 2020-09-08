@@ -16,6 +16,8 @@ excerpt:
   Still for Dummies.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Common utility for most window manager.
@@ -105,6 +107,8 @@ $ sudo emerge --ask scrot feh nitrogen
 ![Gentoo: emerge --ask scrot feh nitrogen][image-ss-emerge]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

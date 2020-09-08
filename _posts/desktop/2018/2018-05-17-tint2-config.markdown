@@ -15,6 +15,26 @@ excerpt:
   A brief guidance about Tint2 theme.
 ---
 
+<a name="preface"></a>
+
+#### Table of Content
+
+* [Table of Content](#preface)
+
+* [Tutor 07: Common Items](#tutor-07)
+
+* [Tutor 08: Additional Items](#tutor-08)
+
+* [Tutor 09: Finishing](#tutor-09)
+
+* [Autostart](#autostart)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="tutor-07"></a>
+
 ### Tutor 07: Common Items
 
 We need to concentrate on common component, other than taskbar.
@@ -132,6 +152,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-07
 
 -- -- --
 
+<a name="tutor-08"></a>
+
 ### Tutor 08: Additional Items
 
 Not so common component
@@ -225,6 +247,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-08
 
 -- -- --
 
+<a name="tutor-09"></a>
+
 ### Tutor 09: Finishing
 
 To complete this guidance, this is the complete panel.
@@ -246,6 +270,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-09
 *	[gitlab.com/.../dotfiles/.../tint2rc-tutor-09][dotfiles-tutor-09]
 
 -- -- --
+
+<a name="autostart"></a>
 
 ### Autostart
 
@@ -274,6 +300,8 @@ and <code class="code-file">tint2rc-bottom</code>:
 *	[gitlab.com/.../dotfiles/.../tint2rc-bottom][dotfiles-bottom]
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

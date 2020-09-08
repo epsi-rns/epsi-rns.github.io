@@ -15,6 +15,26 @@ excerpt:
   A brief guidance about Tint2 theme.
 ---
 
+<a name="preface"></a>
+
+#### Table of Content
+
+* [Table of Content](#preface)
+
+* [Tutor 04: Background for Each Tasks](#tutor-04)
+
+* [Tutor 05: Other Background](#tutor-05-other)
+
+* [Tutor 05: Solid](#tutor-05-solid)
+
+* [Tutor 06: Bright Background](#tutor-06)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="tutor-04"></a>
+
 ### Tutor 04: Background for Each Tasks
 
 This minimalist **tint2** panel has these config
@@ -143,6 +163,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-04
 
 -- -- --
 
+<a name="tutor-05-other"></a>
+
 ### Tutor 05: Other Background
 
 Consider having other background.
@@ -218,7 +240,9 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-05
 
 -- -- --
 
-### Tutor 05: solid
+<a name="tutor-05-solid"></a>
+
+### Tutor 05: Solid
 
 For exercise, you can examine this config below.
 I'm using this to match my menu and theme color.
@@ -238,6 +262,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-05-sloid
 *	[gitlab.com/.../dotfiles/.../tint2rc-tutor-05-solid][dotfiles-tutor-05-solid]
 
 -- -- --
+
+<a name="tutor-06"></a>
 
 ### Tutor 06: Bright Background
 
@@ -330,6 +356,8 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-06
 *	[gitlab.com/.../dotfiles/.../tint2rc-tutor-06][dotfiles-tutor-06]
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

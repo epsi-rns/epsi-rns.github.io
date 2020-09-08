@@ -16,6 +16,8 @@ excerpt:
   Not really for idiots.
 ---
 
+<a name="preface"></a>
+
 ### Overview
 
 > Goal: Specific tools for openbox.
@@ -136,6 +138,8 @@ $ ./obmenu-generator
 ![gentoo obmenu-generator: run][image-ss-gentoo-run]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 
