@@ -277,7 +277,7 @@ local naughty = require("naughty")
 #### Calling Module without Passing Value
 
 In the main <code>rc.lua</code>,
-you can call the moudle by either of using <code>do</code>:
+you can call the module by either of using <code>do</code>:
 
 {% highlight bash %}
 local config_path = awful.util.getdir("config") .. "/"

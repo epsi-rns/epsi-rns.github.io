@@ -109,7 +109,7 @@ The layout icon can be seen in top-right statusbar.
 
 You can add or remove, layout using this script below:
 
-*	[gitlab.com/.../dotfiles/.../main/layout.lua][dotfiles-layout]
+*	[gitlab.com/.../dotfiles/.../main/layouts.lua][dotfiles-layouts]
 
 {% highlight lua %}
 -- Standard awesome library
@@ -676,7 +676,7 @@ What do you think ?
 [image-layouts-animate]:    {{ asset_path }}/clone-layouts-animate.gif
 
 [dotfiles-config]:      {{ dotfiles }}/rc.lua
-[dotfiles-layout]:      {{ dotfiles }}/main/layout.lua
+[dotfiles-layouts]:     {{ dotfiles }}/main/layouts.lua
 [dotfiles-tags]:        {{ dotfiles }}/main/tags.lua
 [dotfiles-menu]:        {{ dotfiles }}/main/menu.lua
 [dotfiles-rules]:       {{ dotfiles }}/main/rules.lua
