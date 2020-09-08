@@ -295,7 +295,7 @@ theme.taglist_font  = "Inconsolata Medium 9"
 
 Here is the beauty of Lua,
 I can put alternative setting as comments.
-I mean, if I;m bored with `Terminus`, I can switch to `Tamsyn`,
+I mean, if I'm bored with `Terminus`, I can switch to `Tamsyn`,
 by changing the code.
 
 #### Gap

@@ -41,7 +41,7 @@ And also most tiling parts can be automated.
 What tiling manager is the best, is vary.
 Just choose what suitable for you.
 
-With Lua, Awesome configuration is also highly configuration.
+With Lua, Awesome configuration is also highly configurable.
 So flexible, that the limit is your creativity.
 
 #### Issue

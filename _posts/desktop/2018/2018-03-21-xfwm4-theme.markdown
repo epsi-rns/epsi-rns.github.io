@@ -16,12 +16,31 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG/XPM part.
 ---
 
+<a name="preface"></a>
+
+### Preface
+
 > Tutor One: PNG Solid Border, Very Basic, No Design Yet.
 
+#### Table of Content
 
-### Unified Graphic Material
+* [Preface](#preface): Table of Content
 
-	This is the Inkscape Part.
+* 1: [Unified Graphic Material](#ugm)
+
+* 2: [First Theme](#first-theme)
+
+* 3: [Inactive Border](#inactive-border)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="ugm"></a>
+
+### 1: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 #### First Inkscape Document
 
@@ -116,9 +135,11 @@ You should see the result in file manager.
 
 -- -- --
 
-### First Theme
+<a name="first-theme"></a>
 
-	This is the XFWM Part.
+### 2: First Theme
+
+> This is the XFWM Part.
 
 #### Configuration
 
@@ -185,7 +206,9 @@ you also need to setup the inactive window.
 
 -- -- --
 
-### Inactive Border
+<a name="inactive-border"></a>
+
+### 3: Inactive Border
 
 Consider go back to inkscape
 
@@ -211,6 +234,8 @@ After that, reset to <code>tutor-01</code>. You should see the result of inactiv
 We are done with our very first step.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

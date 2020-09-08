@@ -16,11 +16,33 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG/XPM part.
 ---
 
+<a name="preface"></a>
+
+### Preface
+
 > Tutor Three: Flat Design, Minimalist PNG Button
 
-### Unified Graphic Material
+#### Table of Content
 
-	This is the Inkscape Part.
+* [Preface](#preface): Table of Content
+
+* 1: [Unified Graphic Material](#ugm)
+
+* 2: [Minimalist Theme](#minimalist)
+
+* 3: [2bmat Minimalist Theme](#2bmat)
+
+* 4: [xfgaps Minimalist Theme](#xfgaps)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="ugm"></a>
+
+### 1: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 #### Inkscape Document
 
@@ -116,9 +138,11 @@ Or other color combination, as you desire.
 
 -- -- --
 
-### Minimalist Theme
+<a name="minimalist"></a>
 
-	This is the XFWM Part.
+### 2: Minimalist Theme
+
+> This is the XFWM Part.
 
 #### Result
 
@@ -138,7 +162,9 @@ So that user won't click the wrong button.
 
 -- -- --
 
-### 2bmat Minimalist Theme
+<a name="2bmat"></a>
+
+### 3: 2bmat Minimalist Theme
 
 For my own exercise , I make this <code>2bmat</code> minimalist theme.
 
@@ -159,7 +185,9 @@ SVG source available at:
 
 -- -- --
 
-### xfgaps Minimalist Theme
+<a name="xfgaps"></a>
+
+### 4: xfgaps Minimalist Theme
 
 I also make this <code>xfgaps</code> minimalist theme, that is very suitable for tiling.
 
@@ -179,6 +207,8 @@ SVG source available at:
 ![xfwm4 Theme: xfgaps Preview][image-ss-xfgaps]{: .img-responsive }
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

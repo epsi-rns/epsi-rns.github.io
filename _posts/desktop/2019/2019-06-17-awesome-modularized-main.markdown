@@ -169,7 +169,7 @@ what I mean is, this comment is required.
 
 #### Layout Preview
 
-It is easier to understand the layoout using image.
+It is easier to understand the layout using image.
 
 ![Awesome WM: Layouts][image-layouts-animate]{: .img-responsive }
 

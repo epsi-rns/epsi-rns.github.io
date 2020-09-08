@@ -16,9 +16,35 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG/XPM part.
 ---
 
+<a name="preface"></a>
+
+### Preface
+
 > Tutor Four: PNG Fancy Icon
 
-### Preview
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Preview](#preview)
+
+* 2: [Unified Graphic Material](#ugm)
+
+* 3: [Border Layer](#border-layer)
+
+* 4: [Button](#button)
+
+* 5: [Tabbed Theme](#tabbed-theme)
+
+* 6: [True Clone](#true-clone)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="preview"></a>
+
+### 1: Preview
 
 xftab Theme
 
@@ -36,9 +62,11 @@ That's why, I changed the icon looks.
 
 -- -- --
 
-### Unified Graphic Material
+<a name="ugm"></a>
 
-	This is the Inkscape Part.
+### 2: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 #### Inkscape Document
 
@@ -73,9 +101,11 @@ Except, the top has 24px height.
 
 -- -- --
 
-### Border Layer
+<a name="border-layer"></a>
 
-	This is also the Inkscape Part.
+### 3: Border Layer
+
+> This is also the Inkscape Part.
 
 Border related, and button background, placed in <code>border</code> layer.
 
@@ -117,9 +147,11 @@ You can easily turn this layer to XPM, if you want to.
 
 -- -- --
 
-### Button
+<a name="button"></a>
 
-	This is still also the Inkscape Part.
+### 4: Button
+
+> This is still also the Inkscape Part.
 
 #### Specification
 
@@ -195,9 +227,11 @@ Unhide the <code>frame</code> layer, to select other box.
 
 -- -- --
 
-### Tabbed Theme
+<a name="tabbed-theme"></a>
 
-	This is the XFWM Part.
+### 5: Tabbed Theme
+
+> This is the XFWM Part.
 
 #### Configuration
 
@@ -241,9 +275,11 @@ Now, we already have our preview.
 
 -- -- --
 
-### True Clone
+<a name="true-clone"></a>
 
-	ArchEdgeUGM, based on ArchEdgeUI.
+### 6: True Clone
+
+> ArchEdgeUGM, based on ArchEdgeUI.
 
 I also make this <code>xftab</code> clone theme, that is very similar with original <code>ArchEdgeUI</code> theme.
 
@@ -265,8 +301,9 @@ SVG source available at:
 
 ![xfwm4 Theme: xftab Dialog Preview][image-ss-xftab-dialog]{: .img-responsive }
 
-
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 

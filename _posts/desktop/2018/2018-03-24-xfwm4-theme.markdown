@@ -16,9 +16,37 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG/XPM part.
 ---
 
+<a name="preface"></a>
+
+### Preface
+
 > Tutor Four: PNG Gradient over XPM
 
-### Preview
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Preview](#preview)
+
+* 2: [Unified Graphic Material](#ugm)
+
+* 3: [Building the XPM](#xpm)
+
+* 4: [Gradient and Highlight](#gradient-highlight)
+
+* 5: [Button](#button)
+
+* 6: [Gradient Theme](#gradient-theme)
+
+* 7: [Result](#result)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="preview"></a>
+
+### 1: Preview
 
 Screenshot of shaded window.
 
@@ -32,9 +60,11 @@ This work, inspired by <code>xfwm-gaps</code>. As my admiration, and respect, to
 
 -- -- --
 
-### Unified Graphic Material
+<a name="ugm"></a>
 
-	This is the Inkscape Part.
+### 2: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 #### Inkscape Document
 
@@ -65,9 +95,11 @@ Except, the top has 24px height.
 
 -- -- --
 
-### Building the XPM
+<a name="xpm"></a>
 
-	This is also the Inkscape Part.
+### 3: Building the XPM
+
+> This is also the Inkscape Part.
 
 Since we are going to use both XPM and PNG, first we should make our flat XPM.
 
@@ -93,10 +125,9 @@ Create a new layer called XPM and make each boxes as below.
 
 ![xfwm4 Theme: Tutor 04 - XPM Slices Preview][image-ss-tutor-04-xpm]{: .img-responsive }
 
-
 #### Export PNG
 
-	This is not a tricky part.
+> This is not a tricky part.
 
 In general, to export the PNG, you must hide the <code>name</code> layer.
 No need to hide the <code>background</code> layer, since no hollow
@@ -118,6 +149,8 @@ And also do not forget to delete all the PNG.
 $ mogrify -format xpm *.png
 {% endhighlight %}
 
+* .
+
 #### Tips
 
 Since we are going to concentrate on making PNG,
@@ -126,9 +159,11 @@ and merge later after we're done with all the PNGs.
 
 -- -- --
 
-### Gradient and Highlight
+<a name="gradient-highlight"></a>
 
-	This is still the Inkscape Part.
+### 4: Gradient and Highlight
+
+> This is still the Inkscape Part.
 
 #### Layer
 
@@ -170,7 +205,9 @@ Now that we are done, we can batch export each PNG boxes and test the theme bord
 
 -- -- --
 
-### Button
+<a name="button"></a>
+
+### 5: Button
 
 	This is still also the Inkscape Part.
 
@@ -255,9 +292,11 @@ Unhide the <code>frame</code> layer, to select other box.
 
 -- -- --
 
-### Gradient Theme
+<a name="gradient-theme"></a>
 
-	This is the XFWM Part.
+### 6: Gradient Theme
+
+> This is the XFWM Part.
 
 #### Configuration
 
@@ -314,6 +353,8 @@ static char *bottom_active[] = {
 };
 {% endhighlight %}
 
+* .
+
 Just search and replace from
 
 {% highlight conf %}
@@ -356,7 +397,9 @@ You are done with GTK color.
 
 -- -- --
 
-### Result
+<a name="result"></a>
+
+### 7: Result
 
 Now, we already have our preview.
 
@@ -371,6 +414,8 @@ such as the <code>x</code> icon for close.
 So that user won't click the wrong button.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

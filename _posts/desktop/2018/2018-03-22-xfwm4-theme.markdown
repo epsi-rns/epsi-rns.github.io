@@ -16,15 +16,33 @@ excerpt:
   Using Inkscape, one SVG file to create each PNG/XPM part.
 ---
 
+<a name="preface"></a>
+
+### Preface
+
 > Tutor Two: XPM Solid Border
 
 No icon yet, we will create a solid border, along with a hole beside the border.
 
 > Hints: Use mogrify to convert from PNG to XPM
 
-### Unified Graphic Material
+#### Table of Content
 
-	This is the Inkscape Part.
+* [Preface](#preface): Table of Content
+
+* 1: [Unified Graphic Material](#ugm)
+
+* 2: [Checking Out The Theme](#theme)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="ugm"></a>
+
+### 1: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 #### Inkscape Document
 
@@ -70,7 +88,7 @@ Add rounded corner. It require inkscape tools, such as <code>Path - Difference</
 
 #### Export PNG
 
-	This is a tricky part.
+> This is a tricky part.
 
 In general, to export the PNG, you must hide both <code>name</code> layer and <code>background</code> layer.
 We do not want any text in PNG. And we want to export the empty space as transparent in PNG.
@@ -94,9 +112,11 @@ You can see the transparent result in GIMP, just zoom with 16:1, it will be some
 
 -- -- --
 
-### Checking Out The Theme
+<a name="theme"></a>
 
-	This is the XFWM Part.
+### 2: Checking Out The Theme
+
+> This is the XFWM Part.
 
 #### Mogrify
 
@@ -106,6 +126,8 @@ You can do this using mogrify, from ImageMagick.
 {% highlight bash %}
 $ mogrify -format xpm *.png
 {% endhighlight %}
+
+* .
 
 ![xfwm4 Theme: Tutor 02 - Mogrify][image-ss-tutor-02-mogrify]{: .img-responsive }
 
@@ -138,6 +160,8 @@ static char *bottom_left_active[] = {
 
 {% endhighlight %}
 
+* .
+
 #### Changing XPM
 
 I would like to change the code from <code>X</code> to <code>space</code>,
@@ -169,6 +193,8 @@ static char *bottom_left_active[] = {
 "@@@@@@@@@@"
 };
 {% endhighlight %}
+
+* .
 
 Now the looks of my XPM, seems make sense.
 
@@ -223,6 +249,8 @@ static char *bottom_left_active[] = {
 };
 {% endhighlight %}
 
+* .
+
 Do it for each XPM.
 
 #### Result
@@ -234,6 +262,8 @@ The border would follow the color of your GTK appearance, instead of just Yellow
 We are done with solid border.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 
