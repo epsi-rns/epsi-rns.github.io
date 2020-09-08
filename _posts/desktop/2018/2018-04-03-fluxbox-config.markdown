@@ -15,11 +15,37 @@ excerpt:
   A brief explanation about Fluxbox config.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Explaining Fluxbox Configuration
 
-### Config Directory
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Config Directory](#config-directory)
+
+* 2: [Config: init](#config-init)
+
+* 3: [Config: Startup](#config-startup)
+
+* 4: [Workspace Name](#workspace-name)
+
+* 5: [Config: Key Binding](#config-key-binding)
+
+* 6: [Rules](#rules)
+
+* 7: [Panel](#panel)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="config-directory"></a>
+
+### 1: Config Directory
 
 Fluxbox config directory contain a bunch of config files.
 
@@ -42,7 +68,9 @@ Config is available at:
 
 -- -- --
 
-### Config: init
+<a name="config-init"></a>
+
+### 2: Config: init
 
 Consider start with <code class="code-file">~/.fluxbox/init</code> file.
 
@@ -75,7 +103,9 @@ session.styleOverlay:       ~/.fluxbox/overlay
 
 -- -- --
 
-### Config: Startup
+<a name="config-startup"></a>
+
+### 3: Config: Startup
 
 Most my <code class="code-file">~/.fluxbox/startup</code> file only configure,
 common non-windowed-application in window manager.
@@ -136,7 +166,9 @@ exec fluxbox
 
 -- -- --
 
-### Workspace Name
+<a name="workspace-name"></a>
+
+### 4: Workspace Name
 
 You can have nice workspace name
 
@@ -146,7 +178,9 @@ session.screen0.workspaceNames:	1:α, 2:β, 3:γ, 4:δ,
 
 -- -- --
 
-### Config: Key Binding
+<a name="config-key-binding"></a>
+
+### 5: Config: Key Binding
 
 This <code class="code-file">~/.fluxbox/keys</code> file is self explanatory.
 No need to be a wm-hacker to configure.
@@ -179,7 +213,9 @@ Mod4 t       :ToggleDecor
 
 -- -- --
 
-### Rules
+<a name="rules"></a>
+
+### 6: Rules
 
 This <code class="code-file">~/.fluxbox/apps</code> file, govern each application.
 
@@ -212,7 +248,9 @@ Or do automatic grouping.
 
 -- -- --
 
-### Panel
+<a name="panel"></a>
+
+### 7: Panel
 
 #### Hide Toolbar
 
@@ -233,6 +271,8 @@ For example: double tint2 panel (top and bottom), as figure below.
 Please click the screenshot to see the original size.
 
 -- -- --
+
+<a name="whats-next"></a>
 
 ### What's Next
 

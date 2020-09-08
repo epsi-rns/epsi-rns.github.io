@@ -15,9 +15,31 @@ excerpt:
   A brief explanation about Fluxbox menu configuration.
 ---
 
-### Config: Menu
+<a name="preface"></a>
+
+### Preface
 
 > Goal: Simple Example of Custom Fluxbox Menu Configuration
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Config: Menu](#config-menu)
+
+* 2: [XDG Menu](#xdg-menu)
+
+* 3: [Custom Menu](#custom-menu)
+
+* 4: [Generated Menu](#generated-menu)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="config-menu"></a>
+
+### 1: Config: Menu
 
 #### Syntax
 
@@ -117,7 +139,9 @@ On other distribution, I prefer creating XDG menu.
 
 -- -- --
 
-### XDG Menu
+<a name="xdg-menu"></a>
+
+### 2: XDG Menu
 
 We can create xdg menu for fluxbox using this command:
 
@@ -152,7 +176,9 @@ Now you can see the openSUSE's XDG menu.
 
 -- -- --
 
-### Custom Menu
+<a name="custom-menu"></a>
+
+### 3: Custom Menu
 
 I would rather create my own menu <code>~/.fluxbox/menu.favorites</code>,
 based on my favorites application.
@@ -244,7 +270,9 @@ And the main menu <code>~/.fluxbox/menu</code> would be:
 
 -- -- --
 
-### Generated Menu
+<a name="generated-menu"></a>
+
+### 4: Generated Menu
 
 There are also built in tools to generate menu,
 based on application installed on your system.
@@ -255,12 +283,12 @@ $ fluxbox-generate_menu
 
 -- -- --
 
+<a name="whats-next"></a>
+
 ### What's Next
 
 We are done with configuration.
 Consider having fun with theme by continue reading [ [Theme: Inkscape Part][local-part-style] ]
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/05' %}

@@ -16,16 +16,40 @@ excerpt:
   Step by step, using Inkscape, one SVG file to create each XPM part.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Reusable SVG, as a base for Fluxbox theme.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* [Note](#note)
+
+* 1: [Unified Graphic Material](#ugm)
+
+* 2: [Building the XPM](#xpm)
+
+* 3: [Gradient and Highlight](#gradient)
+
+* 4: [Button](#button)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="note"></a>
+
+### Note
 
 ![fluxbox Style: exilorate Window Preview][image-ss-window]{: .img-responsive }
 
 I will go straight to Inkscape's SVG,
 and discuss about the style configuration later.
 
-	This guidance applied for any linux distribution.
+> This guidance applied for any linux distribution.
 
 #### Previous Article
 
@@ -35,9 +59,11 @@ Most Inkscape related article has been discussed in previous XFWM4 article.
 
 -- -- --
 
-### Unified Graphic Material
+<a name="ugm"></a>
 
-	This is the Inkscape Part.
+### 1: Unified Graphic Material
+
+> This is the Inkscape Part.
 
 Instead of separated UI design for each icon,
 we can put all icons into one SVG file.
@@ -73,9 +99,11 @@ Some other image might have different width and height.
 
 -- -- --
 
-### Building the XPM
+<a name="xpm"></a>
 
-	This is also the Inkscape Part.
+### 2: Building the XPM
+
+> This is also the Inkscape Part.
 
 Since we are going to use XPM only.
 
@@ -97,7 +125,7 @@ so we can have the export target filename such as <code>close-active.png</code>.
 
 ![fluxbox Style: exilorate SVG export][image-ss-export]{: .img-responsive }
 
-	This is a tricky part.
+> This is a tricky part.
 
 For image with transparency, such as <code>selected</code> menu button,
 We have to hide the <code>frame</code> layer, because we want empty space as transparent.
@@ -115,11 +143,15 @@ We can utilize <code>mogrify</code> to do this task.
 $ mogrify -format xpm *.png
 {% endhighlight %}
 
+* .
+
 -- -- --
 
-### Gradient and Highlight
+<a name="gradient"></a>
 
-	This is still the Inkscape Part.
+### 3: Gradient and Highlight
+
+> This is still the Inkscape Part.
 
 #### Layer
 
@@ -161,9 +193,11 @@ Now that we are done, we can export each PNG boxes.
 
 -- -- --
 
-### Button
+<a name="button"></a>
 
-	This is still also the Inkscape Part.
+### 4: Button
+
+> This is still also the Inkscape Part.
 
 #### Specification
 
@@ -223,12 +257,12 @@ There are four details, for each use the same spec as these below
 
 -- -- --
 
+<a name="whats-next"></a>
+
 ### What's Next
 
 This is only the Inkscape Part,
 Consider continue reading [ [Theme: Style Part][local-part-style] ]
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/04' %}

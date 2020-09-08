@@ -16,11 +16,33 @@ excerpt:
   Step by step, using Inkscape, one SVG file to create each XPM part.
 ---
 
+<a name="preface"></a>
+
 ### Preface
 
 > Goal: Explaining Fluxbox Style Configuration
 
 After XFWM4 Theme, here comes my curiosity about Fluxbox Style.
+
+#### Table of Content
+
+* [Preface](#preface): Table of Content
+
+* 1: [Fonts](#fonts)
+
+* 2: [Window](#window)
+
+* 3: [Menu](#menu)
+
+* 4: [Toolbar](#toolbar)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="note"></a>
+
+### Note
 
 #### Reading
 
@@ -59,7 +81,9 @@ here we I put my style.
 
 -- -- --
 
-### Fonts
+<a name="fonts"></a>
+
+### 1: Fonts
 
 > Terminus
 
@@ -80,9 +104,14 @@ Or you can simply set at once.
 {% highlight conf %}
 *font: terminus-8
 {% endhighlight %}
+
+* .
+
 -- -- --
 
-### Window
+<a name="window"></a>
+
+### 2: Window
 
 Here is mapping, between the XPM and button required by Fluxbox.
 
@@ -233,7 +262,9 @@ window.grip.unfocus.color:        #1976d2
 
 -- -- --
 
-### Menu
+<a name="menu"></a>
+
+### 3: Menu
 
 #### Pixmap
 
@@ -298,7 +329,9 @@ menu.hilite.textColor:            #ffffff
 
 -- -- --
 
-### Toolbar
+<a name="toolbar"></a>
+
+### 4: Toolbar
 
 #### Pixmap
 
@@ -381,6 +414,8 @@ toolbar.iconbar.unfocused.textColor:  #1976d2
 {% endhighlight %}
 
 -- -- --
+
+<a name="conclusion"></a>
 
 ### Conclusion
 
