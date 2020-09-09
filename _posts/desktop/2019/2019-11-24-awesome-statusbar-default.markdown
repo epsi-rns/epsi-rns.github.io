@@ -582,7 +582,7 @@ local WB = wibox_package
 
 ### What is Next?
 
-Now that we are done with refactoring the default statsubar,
+Now that we are done with refactoring the default statusbar,
 we should be ready for a more complex statusbar,
 such as using Vicious library, or Lain library.
 

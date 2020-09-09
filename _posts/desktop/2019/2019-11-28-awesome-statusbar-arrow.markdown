@@ -29,7 +29,7 @@ but just Arrow decoration using Lain, mixed with Lain widgets.
 ![Awesome WM: Lain Statusbar in Gentoo (640x480)][image-ss-arrow-1024]{: .img-responsive }
 
 If the previous article talk about how to use Lain,
-this articel explain how to decorate it.
+this article explain how to decorate it.
 
 #### Table of Content
 
