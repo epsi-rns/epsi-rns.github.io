@@ -22,34 +22,23 @@ You can read a glance about my journey here
  
 * [Becoming a Local Geek][local-geek]
 
-This is my temporary about page. 
-I haven't got time to decorate it yet.
-I'm still busy of something else.
-For a while, this page contain site setup.
-
 	It's not that I need to share.
 	I just want to back it up to cloud.
 
 -- -- --
 
-If you need, there is a guidance on how to setup Jekyll Blog.
+I am a mechanical engineer.
+Neither software engineer, nor financial engineer.
 
-	Installing Jekyll is something cool.
-	Having an example of working site is something else.
-
-* [Example Content of this Blog][local-blog]
-
--- -- --
+![adulthood][welder]{: .img-responsive }
 
 	I know nothing. Nothing at all.
-
-![childhood][image-13]{: .img-responsive }
-
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 [image-13]: {{ site.url }}/assets/site/images/authors/epsi-13.jpg
+[welder]: {{ site.url }}/assets/site/images/authors/tukang-las.jpg
 
 [local-geek]: {{ site.url }}/opensource/2016/05/18/becoming-geek.html
 [local-blog]: {{ site.url }}/desktop/2018/08/07/terminal-ricing.html
