@@ -130,6 +130,8 @@ There are many kind of Window Manager
 
 Note that you should read from wiki for more comprehensive knowledge.
 
+![Illustration: Window Manager Layout][illustration-custom-layout]
+
 -- -- --
 
 ## Compositor
@@ -232,6 +234,8 @@ I found a super duper good cast from Aline Abler in youtube.
 
 ![Illustration: Window Manager Customization][illustration-custom-wm]
 
+![Illustration: Window Manager Tools][illustration-custom-tools]
+
 -- -- --
 
 I think that's enough for today.
@@ -276,5 +280,7 @@ Thank you for reading
 [bspwm]:	https://github.com/baskerville/bspwm
 [dwm]:		https://github.com/sr/dwm
 
-[illustration-custom-de]:   {{ site.url }}/assets/posts/desktop/2020/customization-desktop.png
-[illustration-custom-wm]:   {{ site.url }}/assets/posts/desktop/2020/customization-window.png
+[illustration-custom-de]:       {{ site.url }}/assets/posts/desktop/2020/customization-desktop.png
+[illustration-custom-wm]:       {{ site.url }}/assets/posts/desktop/2020/customization-window.png
+[illustration-custom-tools]:    {{ site.url }}/assets/posts/desktop/2020/customization-optional-tools.png
+[illustration-custom-layout]:   {{ site.url }}/assets/posts/desktop/2020/customization-layout.png

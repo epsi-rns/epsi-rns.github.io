@@ -105,6 +105,10 @@ Where to put the config, for each part ?
 | application | vim | ~/.vim/*, <br/> ~/.vimrc |
 | application | neofetch | ~/.config/neofetch/config.conf |
 
+#### Visual Summary
+
+![Illustration: Terminal Customization Visual Summary][illustration-custom-terminal]
+
 -- -- --
 
 <a name="terminal"></a>
@@ -1056,6 +1060,8 @@ Thank you for reading and visiting.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign asset_path = '/assets/posts/desktop/2018/08' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal' %}
+
+[illustration-custom-terminal]:    {{ site.url }}/assets/posts/desktop/2020/customization-terminal.png
 
 [local-iterate-bash-theme]:  /desktop/2017/12/26/oh-my-shell-theme.html
 
