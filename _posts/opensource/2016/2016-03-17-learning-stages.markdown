@@ -161,6 +161,12 @@ Note: Go with one distro that matches your desired path: Casual user, Enthusiast
 
 * * *
 
+### Make Your Own Syllabus
+
+> Update 2020
+
+![Illustration: Switching Distro: Example Syllabus (learning plan)][illustration-syllabus]
+
 <br/>
 
 I think one month is not enough for both.
@@ -172,3 +178,5 @@ I think one month is not enough for both.
 [link-bash]: https://github.com/awesome-lists/awesome-bash
 [local-multiboot]: {{ site.url }}/opensource/2014/03/13/linux-multiboot.html
 [local-arch-log]: {{ site.url }}/opensource/2014/04/02/arch-install-log.html
+
+[illustration-syllabus]:    {{ site.url }}/assets/posts/opensource/2016/diversity-syllabus.png
