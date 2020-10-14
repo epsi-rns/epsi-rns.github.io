@@ -168,6 +168,10 @@ Of course you can use any folder name that suitable for you,
 and even use very different structure,
 other than provided in this article.
 
+> Update 2020
+
+![Illustration: Modularized Configuration][illustration-custom-awesome]
+
 #### Directory Tree
 
 I try not to make any customization at all,
@@ -435,3 +439,5 @@ What do you think ?
 
 [dotfiles-error-handling]:  {{ dotfiles }}/main/error-handling.lua
 [dotfiles-user-variables]:  {{ dotfiles }}/main/user-variables.lua
+
+[illustration-custom-awesome]:  {{ site.url }}/assets/posts/desktop/2020/customization-awesome-modularized.png

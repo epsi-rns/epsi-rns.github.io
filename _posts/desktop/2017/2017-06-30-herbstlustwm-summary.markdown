@@ -63,6 +63,12 @@ I have so much fun playing with the last language. These are the interesting mul
 
 [![HerbstluftWM: Screenshot Dual Panel][image-ss-hlwm-red-small]{: .img-responsive }][photos-ss-hlwm-red]
 
+### Tiling Window Manager
+
+> Update 2020
+
+![Illustration: Why Tiling Window Manager?][illustration-custom-tiling]
+
 ### All Links
 
 You should start with overview, especially pipe and fork, then the rest.
@@ -125,5 +131,5 @@ Thank you for reading.
 [local-standalone-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
 [local-standalone-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html
 
-
+[illustration-custom-tiling]:   {{ site.url }}/assets/posts/desktop/2020/customization-tiling.png
 

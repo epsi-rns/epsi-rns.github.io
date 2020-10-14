@@ -105,6 +105,14 @@ You can also select the placement.
 
 -- -- --
 
+### Stacking Window Manager
+
+> Update 2020
+
+![Illustration: Why Stacking Window Manager?][illustration-custom-stacking]
+
+-- -- --
+
 ### What's Next
 
 This is only an overview.
@@ -124,3 +132,4 @@ Consider continue reading [ [Config: General Part][local-part-config] ].
 [image-ss-slit-gkrellm]:  {{ asset_path }}/fluxbox-slit-gkrellm.png
 [image-ss-toolbar]:       {{ asset_path }}/fluxbox-toolbar.png
 
+[illustration-custom-stacking]: {{ site.url }}/assets/posts/desktop/2020/customization-stacking.png

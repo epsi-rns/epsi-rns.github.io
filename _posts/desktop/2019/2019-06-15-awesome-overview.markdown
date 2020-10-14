@@ -69,6 +69,18 @@ I think that is all for today.
 This article will grow.
 so yes, this is not my final thought.
 
+#### Why Tiling Window Manager?
+
+> Update 2020
+
+![Illustration: Why Tiling Window Manager?][illustration-custom-tiling]
+
+#### Why Awesome WM?
+
+> Update 2020
+
+![Illustration: Why Awesome WM?][illustration-custom-awesome]
+
 -- -- --
 
 ### What is Next ?
@@ -86,3 +98,6 @@ What do you think ?
 [local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
 
 [image-ss-stacked-640]: {{ asset_path }}/04-ghostbsd-awesome-stacked.png
+
+[illustration-custom-tiling]:   {{ site.url }}/assets/posts/desktop/2020/customization-tiling.png
+[illustration-custom-awesome]:  {{ site.url }}/assets/posts/desktop/2020/customization-awesome.png

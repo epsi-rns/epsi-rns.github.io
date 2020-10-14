@@ -87,6 +87,14 @@ I can't tell you how I adore these galleries.
 
 -- -- --
 
+### Stacking Window Manager
+
+> Update 2020
+
+![Illustration: Why Stacking Window Manager?][illustration-custom-stacking]
+
+-- -- --
+
 <a name="whats-next"></a>
 
 ### What's Next
@@ -101,4 +109,4 @@ Consider continue reading [ [Config: General rc.xml][local-part-config] ].
 
 [local-part-config]:  /desktop/2018/05/03/openbox-config.html
 
-
+[illustration-custom-stacking]: {{ site.url }}/assets/posts/desktop/2020/customization-stacking.png
