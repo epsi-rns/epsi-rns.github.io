@@ -68,6 +68,8 @@ I do think that we need more focus on other main diversity as well such as
 
 *	File system
 
+![Illustration: How Modular is Linux?][illustration-modular]
+
 This will encourage beginner to go deeper,
 than just mainstream blogger topic,
 such as apt, systemd-based, and ext4-only. 
@@ -755,3 +757,5 @@ Thank you for reading
 [local-debian]:		{{ site.url }}/system/2017/08/24/docker-debian-apt.html
 [local-arch]:		{{ site.url }}/system/2017/08/27/docker-arch-alpm.html
 [local-lfs]:		{{ site.url }}/system/2017/08/30/docker-lfs-build.html
+
+[illustration-modular]: {{ site.url }}/assets/posts/system/modular-linux.png

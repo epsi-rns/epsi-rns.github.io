@@ -159,6 +159,14 @@ Begun, The Linux Civil War has.<br/>
 
 -- -- --
 
+### Update
+
+> 2020 states
+
+![Illustration: Init Diversity: Who use what][illustration-init]
+
+-- -- --
+
 	I don't worry about the controversy.
 	And even with this long list, my judgment could be wrong.
 	I'm using Manjaro OpenRC.
@@ -171,3 +179,4 @@ Begun, The Linux Civil War has.<br/>
 
 [image-civil-war]: {{ system_path }}/2014/11/civil-war.jpg
 
+[illustration-init]:    {{ site.url }}/assets/posts/system/diversity-init.png

@@ -113,6 +113,15 @@ Config is available at:
 
 Including **grub**, **fstab**, and **samba**.
 
+#### Filesystem Overview
+
+> Update: 2020 states
+
+For those who want to get self adventure with filesystem,
+you can find exotic filesystem in their habitat.
+
+![Illustration: Filesystem. And where to find it][illustration-filesystem]
+
 -- -- --
 
 <a name="schema"></a>
@@ -355,3 +364,5 @@ Consider continue reading [ [Multiboot: /etc/fstab][local-part-config] ].
 [image-ss-blkid]:         {{ system_path }}/2018/05/opensuse-blkid-list.png
 
 [image-ss-file-sda9]:     {{ system_path }}/2018/05/fedora-file-sda9.png
+
+[illustration-filesystem]:{{ site.url }}/assets/posts/system/diversity-filesystem.png
