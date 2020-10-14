@@ -163,7 +163,7 @@ because it used internal X something.
 
 -- -- --
 
-### Switch beetwen WM
+### Switch between WM
 
 Each DE can use different WMs.
 You can experiment replacing 
@@ -193,7 +193,7 @@ and you can switch back to
 
 -- -- --
 
-How do I learn ?
+### How do I learn ?
 
 For a beginner,
 let's try every popular DE.
@@ -210,7 +210,7 @@ And later Window Manager
 
 -- -- --
 
-Reading
+### Good Watch
 
 I found a super duper good cast from Aline Abler in youtube.
 
@@ -218,14 +218,26 @@ I found a super duper good cast from Aline Abler in youtube.
 
 -- -- --
 
+### DE Customization
+
+> Update 2020
+
+![Illustration: Desktop Environment Customization][illustration-custom-de]
+
+-- -- --
+
+### WM Customization
+
+> Update 2020
+
+![Illustration: Window Manager Customization][illustration-custom-wm]
+
+-- -- --
+
 I think that's enough for today.
 Correct me If I wrong.
 
 Thank you for reading
-
-
-
-
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -263,3 +275,6 @@ Thank you for reading
 [hlwm]:		https://github.com/herbstluftwm/herbstluftwm
 [bspwm]:	https://github.com/baskerville/bspwm
 [dwm]:		https://github.com/sr/dwm
+
+[illustration-custom-de]:   {{ site.url }}/assets/posts/desktop/2020/customization-desktop.png
+[illustration-custom-wm]:   {{ site.url }}/assets/posts/desktop/2020/customization-window.png

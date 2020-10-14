@@ -124,6 +124,8 @@ For MBR situation, it takes:
   This could be used as container for some linux,
   swap, data partition, or maybe windows data.
 
+![Illustration: Multiboot Partition Schema: Windows, Linux, and BSD][illustration-multiboot]
+
 #### Partitions Arrangement
 
 Consider this screenshot, so you can figure out what I'm talking about.
@@ -288,3 +290,5 @@ Consider continue reading [ [GhostBSD - Driver][local-part-config] ].
 [image-ss-ghostbsd-sade]:           {{ system_path }}/2019/03/ghost-sade.png
 [image-ss-void-gparted]:            {{ system_path }}/2019/03/void-gparted.png
 [image-ss-dd-live-usb]:             {{ system_path }}/2019/03/dd-if-of-pv-ghost.png
+
+[illustration-multiboot]:           {{ site.url }}/assets/posts/system/diversity-multiboot.png
