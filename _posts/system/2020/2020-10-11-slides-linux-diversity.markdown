@@ -75,6 +75,10 @@ that you can download from a page in here:
 
 * [presentation-linux-diversity-content.svg][document-inkscape]
 
+Here is the preview.
+
+![Inkscape Illustration: Linux Diversity][inkscape-thumbs]
+
 I intentionally share the source SVG image,
 so you can alter the content for your own personal use.
 I know there are already so many stock images for presentation,
@@ -401,6 +405,7 @@ Thank you for your time.
 [document-impress]:         {{ dotfiles }}/presentation-linux-diversity-diagram.odp
 [document-pdf]:             {{ dotfiles }}/presentation-linux-diversity-diagram.pdf
 [document-inkscape]:        {{ dotfiles }}/presentation-linux-diversity-content.svg
+[inkscape-thumbs]:          {{ asset_path }}/thumbs.png
 
 [slide-01]: {{ asset_path }}/slide-01-cover.png
 [slide-02]: {{ asset_path }}/slide-02-about-author.png
