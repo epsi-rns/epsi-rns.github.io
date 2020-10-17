@@ -158,7 +158,7 @@ Yet Another Presentation.
 
 * [Desktop Customization][desktop-customization]
 
-[desktop-customization]: /desktop/2020/01/20/presentation-desktop-customization.html
+[desktop-customization]: /desktop/2020/10/11/slides-desktop-customization.html
 
 #### Slide 12
 
