@@ -3,8 +3,8 @@ layout    : post
 title     : "Slides - Linux Diversity"
 categories: system
 date      : 2020-10-11 09:25:15 +0700
-# tags      : [awesome]
-keywords  : [tiling, window manager, theme, terminal]
+tags      : [presentation]
+keywords  : [filesystem, init, package manager, standard C library, window manager, desktop environment]
 author: epsi
 
 opengraph:
@@ -92,6 +92,7 @@ to suit the illustration for your own use.
 > What if I do not agree?
 
 The source is available, so you can freely make your own slide.
+Feel free to express your thoughts, either with text, or illustration.
 
 -- -- --
 
@@ -395,7 +396,7 @@ Thank you for your time.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2020/diversity/' %}
+{% assign asset_path = '/assets/posts/system/2020/diversity' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/01-linux-diversity' %}
 
 [teaser-preview]:           /assets/posts/system/modular-linux.png
