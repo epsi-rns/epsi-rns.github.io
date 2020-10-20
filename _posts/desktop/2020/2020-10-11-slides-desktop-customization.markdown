@@ -14,8 +14,6 @@ excerpt:
 
 ---
 
-<a name="preface"></a>
-
 ### The Document
 
 This article contain all article slides.
@@ -86,6 +84,14 @@ I just need to share, what I have, with tutorial.
 This way, anyone can make pretty presentation easier.
 Of course you still have to learn Inkscape,
 to suit the illustration for your own use.
+
+#### Template
+
+> What is this candyclone rubbish?
+
+Candyclone is an Impress template that I have made for LibreOffice contest.
+
+* [LibreOffice Impress Template Contest by the Indonesian Community][template-contest]
 
 #### Disagreement
 
@@ -515,6 +521,7 @@ Thank you for your time.
 [document-pdf]:             {{ dotfiles }}/presentation-desktop-customization-diagram.pdf
 [document-inkscape]:        {{ dotfiles }}/presentation-desktop-customization-content.svg
 [inkscape-thumbs]:          {{ asset_path }}/thumbs.png
+[template-contest]:         https://blog.documentfoundation.org/blog/2020/10/12/libreoffice-impress-template-contest-by-the-indonesian-community/
 
 [slide-01]: {{ asset_path }}/slide-01-cover.png
 [slide-02]: {{ asset_path }}/slide-02-about-author.png
