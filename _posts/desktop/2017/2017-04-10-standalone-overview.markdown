@@ -177,6 +177,6 @@ Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/04' %}
 
 [image-01-preview]:    {{ asset_path }}/dzen2-01-preview.png

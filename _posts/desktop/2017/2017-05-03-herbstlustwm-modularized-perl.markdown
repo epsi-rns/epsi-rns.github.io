@@ -491,7 +491,7 @@ Happy Configuring.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/05' %}
 {% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/herbstluftwm' %}
 
 [local-perl-tag-status]:   {{ site.url }}/desktop/2017/06/03/herbstlustwm-tag-status-perl.html

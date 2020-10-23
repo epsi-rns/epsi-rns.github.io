@@ -140,7 +140,7 @@ Have some fun with your shell.
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/12' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/12' %}
 
 [github-oh-my-bash]: https://github.com/ohmybash/oh-my-bash
 [github-oh-my-zsh]:  https://github.com/robbyrussell/oh-my-zsh

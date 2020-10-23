@@ -318,7 +318,7 @@ Thank you for Reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/06' %}
 
 [local-pipe-overview]: http://epsi-rns.github.io/code/2017/04/23/overview-pipe-and-fork.html
 

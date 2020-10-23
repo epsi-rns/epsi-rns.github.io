@@ -529,7 +529,7 @@ Have Fun
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/04' %}
 {% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon/conky' %}
 {% assign dotfiles_expath = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon/example' %}
 

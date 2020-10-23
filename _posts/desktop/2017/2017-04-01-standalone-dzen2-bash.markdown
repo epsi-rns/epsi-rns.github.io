@@ -550,7 +550,7 @@ I know how terrible it is.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/04' %}
 {% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash' %}
 {% assign dotfiles_expath = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/bash-example' %}
 {% assign dotfiles_assets = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2/assets' %}

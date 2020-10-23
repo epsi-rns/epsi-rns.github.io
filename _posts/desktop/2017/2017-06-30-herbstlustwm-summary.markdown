@@ -106,7 +106,7 @@ Thank you for reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/06' %}
 
 
 [image-ss-hlwm-red-small]:  {{ asset_path }}/herbstluftwm-dualpanel.png

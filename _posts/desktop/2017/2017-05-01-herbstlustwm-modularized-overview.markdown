@@ -277,7 +277,7 @@ Thank you for Reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/herbstluftwm' %}
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/05' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/05' %}
 
 [image-ss-hlwm-nopanel]: {{ asset_path }}/herbstluftwm-nopanel.png
 [photo-ss-hlwm-nopanel]: https://photos.google.com/share/AF1QipMO53TtSJVXrkn8R0s4wre4QWgX7_G5CoaSkFMneVHFp9Tu5STBmdjW3M3fpA2eEw/photo/AF1QipM5QN3sl9KsZs3xlb87UivcHZeLGbSuk2Z8Jx0W?key=WGIySDVOaVpibkJCRkV5NWVZUUs3UnNLNHR1MVpn

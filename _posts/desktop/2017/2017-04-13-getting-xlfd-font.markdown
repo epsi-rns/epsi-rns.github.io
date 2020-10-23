@@ -203,7 +203,7 @@ Have Fun with Font.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/04' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/04' %}
 
 [image-font-01]: {{ asset_path }}/font-01-siji-pacaur-install.png
 [image-font-02]: {{ asset_path }}/font-02-siji-xfontsel.png

@@ -274,7 +274,7 @@ Thank you for Reading.
 [//]: <> ( -- -- -- links below -- -- -- )
 {% assign dotfiles_dzen2 = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/dzen2-hlwm' %}
 {% assign dotfiles_lemon = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/standalone/lemon-hlwm' %}
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2017/06' %}
+{% assign asset_path = site.url | append: '/assets-desktop/2017/06' %}
 
 [image-hlwm-01-event-idle]:  {{ asset_path }}/herbstclient-01-event-idle.png
 [image-hlwm-02-tag-status]:  {{ asset_path }}/herbstclient-02-tag-status.png
