@@ -9,7 +9,7 @@ author     : epsi
 toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
-  image: /assets/posts/desktop/2019/06/01-menu-custom.png
+  image: /assets-desktop/2019/06/01-menu-custom.png
 
 excerpt:
   Awesome WM customization step by step.
@@ -643,7 +643,7 @@ What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2019/06' %}
+{% assign asset_path = '/assets-desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3' %}
 
 [local-whats-next]: /desktop/2019/10/20/awesome-theme-main.html

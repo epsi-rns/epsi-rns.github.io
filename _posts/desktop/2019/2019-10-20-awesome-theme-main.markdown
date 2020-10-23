@@ -9,7 +9,7 @@ author     : epsi
 toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
-  image: /assets/posts/desktop/2019/10/gentoo-rvm-jekyll-two-panes.png
+  image: /assets-desktop/2019/10/gentoo-rvm-jekyll-two-panes.png
 
 excerpt:
   Awesome WM theme step by step.
@@ -572,7 +572,7 @@ Consider continue reading [ [Awesome WM - Theme - Titlebar][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2019/10' %}
+{% assign asset_path = '/assets-desktop/2019/10' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-theme' %}
 
 [local-whats-next]: /desktop/2019/10/21/awesome-theme-titlebar.html

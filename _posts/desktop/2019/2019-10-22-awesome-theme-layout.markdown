@@ -9,7 +9,7 @@ author     : epsi
 toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
-  image: /assets/posts/desktop/2019/10/clone-layout.png
+  image: /assets-desktop/2019/10/clone-layout.png
 
 excerpt:
   Awesome WM theme step by step.
@@ -140,7 +140,7 @@ What do you think?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2019/10' %}
+{% assign asset_path = '/assets-desktop/2019/10' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-theme' %}
 
 [local-whats-next]: /desktop/2019/10/23/awesome-theme-icons.html

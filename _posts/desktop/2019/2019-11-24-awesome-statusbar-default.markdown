@@ -9,7 +9,7 @@ author     : epsi
 toc        : toc/2019/06/toc-awesome.html
 
 opengraph:
-  image: /assets/posts/desktop/2019/11/04-statusbar-default.png
+  image: /assets-desktop/2019/11/04-statusbar-default.png
 
 excerpt:
   Awesome WM statusbar step by step.
@@ -592,7 +592,7 @@ Consider continue reading [ [Awesome WM - Statusbar - Stacked][local-whats-next]
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2019/11' %}
+{% assign asset_path = '/assets-desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
 [local-whats-next]: /desktop/2019/11/25/awesome-statusbar-stacked.html

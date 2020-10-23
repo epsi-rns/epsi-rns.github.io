@@ -544,7 +544,7 @@ You may modify this config to suit your needs.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2019/06' %}
+{% assign asset_path = '/assets-desktop/2019/06' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/conky' %}
 
 [image-ss-01]:      {{ asset_path }}/conkyrc-01.png

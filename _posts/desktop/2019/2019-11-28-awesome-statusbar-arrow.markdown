@@ -8,7 +8,7 @@ keywords   : [tiling, window manager, modularized, lua]
 author     : epsi
 
 opengraph:
-  image: /assets/posts/desktop/2019/11/04-gentoo-statusbar-arrow-1024x768.png
+  image: /assets-desktop/2019/11/04-gentoo-statusbar-arrow-1024x768.png
 
 excerpt:
   Awesome WM statusbar step by step.
@@ -231,7 +231,7 @@ What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2019/11' %}
+{% assign asset_path = '/assets-desktop/2019/11' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/awesome/4.3-statusbar' %}
 
 [lain-wiki]:            https://github.com/lcpz/lain/wiki
