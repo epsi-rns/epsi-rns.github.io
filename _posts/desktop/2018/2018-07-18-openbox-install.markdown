@@ -147,7 +147,7 @@ We are finished with installation procedure.
 Consider going back reading [ [Config: Overview][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/07' %}
+{% assign asset_path = '/assets-desktop/2018/07' %}
 
 [local-part-config]:  /desktop/2018/05/01/openbox-config.html
 

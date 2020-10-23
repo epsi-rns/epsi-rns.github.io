@@ -166,7 +166,7 @@ This is only the Inkscape Part,
 Consider continue reading [ [Common Config Trick][local-part-style] ]
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/04' %}
+{% assign asset_path = '/assets-desktop/2018/04' %}
 
 [dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
 

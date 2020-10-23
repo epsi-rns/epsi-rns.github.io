@@ -423,7 +423,7 @@ Tutor Five, PNG Fancy Icon.
 Consider finish reading [ [Part Five][local-part-five] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/03' %}
+{% assign asset_path = '/assets-desktop/2018/03' %}
 
 [dotfiles-tutor-04]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-04
 

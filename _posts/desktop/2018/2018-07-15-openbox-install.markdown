@@ -120,7 +120,7 @@ $ sudo emerge --ask openbox tint2
 Consider continue reading [ [Install: scrot, feh, nitrogen][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/07' %}
+{% assign asset_path = '/assets-desktop/2018/07' %}
 
 [local-part-config]:  /desktop/2018/07/16/openbox-install.html
 

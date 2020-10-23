@@ -280,7 +280,7 @@ This is configuration in general,
 we need to go deep with [ [Config: Menu Part][local-part-menu] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/05' %}
+{% assign asset_path = '/assets-desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/config' %}
 
 [dotfiles-tutor]:   {{ dotfiles }}

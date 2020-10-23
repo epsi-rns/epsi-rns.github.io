@@ -243,7 +243,7 @@ because I splitted the article to: key/mouse binding, rules, and menu.
 Consider continue reading [ [Config: Key and Mouse Binding][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/05' %}
+{% assign asset_path = '/assets-desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-rc-xml]: {{ dotfiles }}/rc.xml

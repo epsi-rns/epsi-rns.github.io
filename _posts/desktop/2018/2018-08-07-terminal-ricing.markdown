@@ -1058,7 +1058,7 @@ Thank you for reading and visiting.
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/08' %}
+{% assign asset_path = '/assets-desktop/2018/08' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal' %}
 
 [illustration-custom-terminal]:    {{ site.url }}/assets/posts/desktop/2020/customization-terminal.png

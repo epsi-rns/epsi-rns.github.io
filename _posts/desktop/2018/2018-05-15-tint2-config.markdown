@@ -384,7 +384,7 @@ $ tint2 -c ~/.config/tint2/tint2rc-tutor-03
 Consider continue reading [ [Tint2: More Backgrounds][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/05' %}
+{% assign asset_path = '/assets-desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/tint2' %}
 
 [cat-white]:       https://github.com/addy-dclxvi/tint2-theme-collections

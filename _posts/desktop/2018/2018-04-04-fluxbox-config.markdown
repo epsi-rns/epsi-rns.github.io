@@ -291,7 +291,7 @@ We are done with configuration.
 Consider having fun with theme by continue reading [ [Theme: Inkscape Part][local-part-style] ]
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/05' %}
+{% assign asset_path = '/assets-desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/fluxbox/config' %}
 
 [dotfiles-tutor]:  {{ dotfiles }}

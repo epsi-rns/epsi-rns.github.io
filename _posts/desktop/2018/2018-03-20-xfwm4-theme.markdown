@@ -176,7 +176,7 @@ Let's get it started.
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/03' %}
+{% assign asset_path = '/assets-desktop/2018/03' %}
 
 [dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes
 

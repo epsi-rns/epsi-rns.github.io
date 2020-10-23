@@ -551,7 +551,7 @@ I think that's all about theme.
 I'm thinking of make another openbox article.
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/04' %}
+{% assign asset_path = '/assets-desktop/2018/04' %}
 
 [dotfiles-tutor]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/themes/matclue
 

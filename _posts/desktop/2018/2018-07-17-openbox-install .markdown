@@ -178,7 +178,7 @@ I really just can't help it.
 Consider continue reading [ [Install: obmenu-generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/07' %}
+{% assign asset_path = '/assets-desktop/2018/07' %}
 
 [local-part-config]:  /desktop/2018/07/18/openbox-install.html
 

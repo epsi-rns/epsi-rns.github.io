@@ -241,7 +241,7 @@ $ sudo dnf install menu-cache-devel
 Consider continue reading [ [Menu: Generator][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/05' %}
+{% assign asset_path = '/assets-desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/config' %}
 
 [dotfiles-bin]:   {{ dotfiles }}/bin/

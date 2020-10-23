@@ -309,7 +309,7 @@ We are finished with tint2 configuration.
 Consider continue reading [ [Install: openbox, tint2][local-part-config] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/05' %}
+{% assign asset_path = '/assets-desktop/2018/05' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/openbox/tint2' %}
 
 [dotfiles-tutor-07]:    {{ dotfiles }}/tint2rc-tutor-07

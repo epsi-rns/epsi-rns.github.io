@@ -314,7 +314,7 @@ I think it is finished by now.
 Thank you for reading.
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/03' %}
+{% assign asset_path = '/assets-desktop/2018/03' %}
 
 [dotfiles-tutor-05]:  https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/tutor-05
 [dotfiles-xftab]:     https://gitlab.com/epsi-rns/dotfiles/tree/master/xfce4/themes/xftab

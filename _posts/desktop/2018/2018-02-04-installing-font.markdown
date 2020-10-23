@@ -385,7 +385,7 @@ Thank you for reading and visiting.
 
 
 [//]: <> ( -- -- -- links below -- -- -- )
-{% assign asset_path = '/assets/posts/desktop/2018/02' %}
+{% assign asset_path = '/assets-desktop/2018/02' %}
 
 [image-ss-fc-list]:       {{ asset_path }}/font-fc-list.png
 [image-ss-inkscape]:      {{ asset_path }}/font-inkscape.png
