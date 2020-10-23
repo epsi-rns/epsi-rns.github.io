@@ -99,7 +99,7 @@ Or make your own cool tint2 taskbar based on this thread.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-openbox]: {{ site.url }}/assets/posts/desktop/2014/11/openbox-green-garden.png
+[image-ss-openbox]: {{ site.url }}/assets-desktop/2014/11/openbox-green-garden.png
 [photo-ss-openbox]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNggBdzYid-9w2oKBHjgerSDakdOrwrFD8QnOwO
-[image-ss-openbox-clone]: {{ site.url }}/assets/posts/desktop/2014/11/openbox-arch-crunchbang-clone.png
+[image-ss-openbox-clone]: {{ site.url }}/assets-desktop/2014/11/openbox-arch-crunchbang-clone.png
 [photo-ss-openbox-clone]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMDfHbGl3yQuVUC55L0h-WWkn-raIkNlyxAE6Dj

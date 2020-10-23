@@ -59,7 +59,7 @@ either for school material, office works, homeworks, or anything else.
 
 You can also download the exported pdf from a page in here:
 
-* [presentation-linux-diversity-diagram.pdf][document-impress]
+* [presentation-linux-diversity-diagram.pdf][document-pdf]
 
 The pdf version cannot contain animation.
 So the content might be little different,
@@ -92,6 +92,10 @@ to suit the illustration for your own use.
 Candyclone is an Impress template that I have made for LibreOffice contest.
 
 * [LibreOffice Impress Template Contest by the Indonesian Community][template-contest]
+
+This is just an example template that you can use freely.
+With this example you can also learn how to make your own template.
+Your very own template to suit your ecosystem.
 
 #### Disagreement
 
@@ -402,7 +406,7 @@ Thank you for your time.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/system/2020/diversity' %}
+{% assign asset_path = '/assets-system/2020/diversity' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/01-linux-diversity' %}
 
 [teaser-preview]:           /assets/posts/system/modular-linux.png

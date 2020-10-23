@@ -46,5 +46,5 @@ Note: Those high processor usage comes <code>xpenguins</code>.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-selfieshoot]: {{ site.url }}/assets/posts/desktop/2014/05/xfce4-selfieshoot.png
+[image-ss-selfieshoot]: {{ site.url }}/assets-desktop/2014/05/xfce4-selfieshoot.png
 [photo-ss-selfieshoot]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipMLU2BhdIilAhjV0ZaC5S4KEmv6iJ8olwY3ZfRt

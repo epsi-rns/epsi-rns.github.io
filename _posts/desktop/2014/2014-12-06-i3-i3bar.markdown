@@ -53,8 +53,8 @@ Hey... I took that photograph of my own garden by myself.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-i3-black]: {{ site.url }}/assets/posts/desktop/2014/12/i3-black.png
+[image-ss-i3-black]: {{ site.url }}/assets-desktop/2014/12/i3-black.png
 [photo-ss-i3-black]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipO4RXpeU88quh2Dee9Vp8jQCx9uqXUkgi8sLfP6
-[image-ss-i3-green]: {{ site.url }}/assets/posts/desktop/2014/12/i3-green.png
+[image-ss-i3-green]: {{ site.url }}/assets-desktop/2014/12/i3-green.png
 [photo-ss-i3-green]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipN_fCSQqKyaAjpAVotMNKY9vp2pGyxUYjfKwkgh
 

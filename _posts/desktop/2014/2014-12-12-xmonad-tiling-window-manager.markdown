@@ -149,14 +149,14 @@ Five selfieshoot are worth five thousand words
 [dotfiles-dzen]: https://gitlab.com/epsi-rns/dotfiles/tree/master/xmonad/xmonad-dzen/
 
 
-[image-ss-self-explanatory]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-self-explanatory.png
+[image-ss-self-explanatory]: {{ site.url }}/assets-desktop/2014/12/xmonad-self-explanatory.png
 [photo-ss-self-explanatory]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPL60aooDDHmvjL4x-Uge_L19JoK0B5_Y5zaMRX
-[image-ss-xmobar-nogap]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-xmobar-nogap.png
+[image-ss-xmobar-nogap]: {{ site.url }}/assets-desktop/2014/12/xmonad-xmobar-nogap.png
 [photo-ss-xmobar-nogap]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPdOCZNYmmh4PsvdDrve9LtQY8WdyEWzjVJrcep
-[image-ss-xmobar-threecolumns-gap]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-xmobar-threecolumns.png
+[image-ss-xmobar-threecolumns-gap]: {{ site.url }}/assets-desktop/2014/12/xmonad-xmobar-threecolumns.png
 [photo-ss-xmobar-threecolumns-gap]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPtamGAwMDJ51aL1-RkvuBwZZ57aiRm6A04_0yk
-[image-ss-dzen2]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-dzen2.png
+[image-ss-dzen2]: {{ site.url }}/assets-desktop/2014/12/xmonad-dzen2.png
 [photo-ss-dzen2]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPwrSBh_z0F3XFb8LusEcaDFRzu1O0I2lv7Dtvz
-[image-ss-dzen2-five-terms]: {{ site.url }}/assets/posts/desktop/2014/12/xmonad-dzen2-five-terms.png
+[image-ss-dzen2-five-terms]: {{ site.url }}/assets-desktop/2014/12/xmonad-dzen2-five-terms.png
 [photo-ss-dzen2-five-terms]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipNZrGXQjKC8DwMLaCS44BOtpRVTsm2k-G77XPvl
 

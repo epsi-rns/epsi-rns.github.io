@@ -50,5 +50,5 @@ And user themes, though I rarely need it.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-gnome-shell]: {{ site.url }}/assets/posts/desktop/2014/04/gnomeshell.png
+[image-ss-gnome-shell]: {{ site.url }}/assets-desktop/2014/04/gnomeshell.png
 [photo-ss-gnome-shell]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipPWayiX0jpL_JBeanjvQussohpQ7cXzDhXpvy3b

@@ -78,9 +78,9 @@ LXQt 0.8.0 Released with Full QT5 support, various improvements
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-qterminal.jpg
+[image-ss-lxqt-windowish-qterminal]: {{ site.url }}/assets-desktop/2014/10/lxqt-windowish-qterminal.jpg
 [photo-ss-lxqt-windowish-qterminal]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOzUHmqh4X2KfLPNsWaC-VCfQVKNTdWUKhYdvPY
-[image-ss-lxqt-windowish-pcmanfm]:   {{ site.url }}/assets/posts/desktop/2014/10/lxqt-windowish-pcmanfm.jpg
+[image-ss-lxqt-windowish-pcmanfm]:   {{ site.url }}/assets-desktop/2014/10/lxqt-windowish-pcmanfm.jpg
 [photo-ss-lxqt-windowish-pcmanfm]:   https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOyqOxqRhvO6qc57_wy3DXLTj093u5cfFIc9VwL
-[image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets/posts/desktop/2014/10/lxqt-kwin-ghost.png
+[image-ss-lxqt-kwin-ghost]: {{ site.url }}/assets-desktop/2014/10/lxqt-kwin-ghost.png
 [photo-ss-lxqt-kwin-ghost]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipP12YCYpdpTfK_XceVIWkUR8D9XHyD1VUKJ1y2F

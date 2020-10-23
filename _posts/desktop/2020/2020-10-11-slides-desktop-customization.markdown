@@ -59,7 +59,7 @@ either for school material, office works, homeworks, or anything else.
 
 You can also download the exported pdf from a page in here:
 
-* [presentation-desktop-customization-diagram.pdf][document-impress]
+* [presentation-desktop-customization-diagram.pdf][document-pdf]
 
 The pdf version cannot contain animation.
 So the content might be little different,
@@ -92,6 +92,10 @@ to suit the illustration for your own use.
 Candyclone is an Impress template that I have made for LibreOffice contest.
 
 * [LibreOffice Impress Template Contest by the Indonesian Community][template-contest]
+
+This is just an example template that you can use freely.
+With this example you can also learn how to make your own template.
+Your very own template to suit your ecosystem.
 
 #### Disagreement
 

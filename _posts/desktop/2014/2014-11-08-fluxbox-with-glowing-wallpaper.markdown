@@ -54,5 +54,5 @@ This Fluxbox utilised a modified version of Axonkolor theme that I found in Devi
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-fluxbox]: {{ site.url }}/assets/posts/desktop/2014/11/fluxbox-glow.png
+[image-ss-fluxbox]: {{ site.url }}/assets-desktop/2014/11/fluxbox-glow.png
 [photo-ss-fluxbox]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOmqpLaqtcKNzOcOSSZQL57-Hy-38HpNcJo2Ezv

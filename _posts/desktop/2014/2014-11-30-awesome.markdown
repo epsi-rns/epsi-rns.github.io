@@ -89,5 +89,5 @@ The Wallpaper from Awesome theme is stunningly beautiful.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2014/11/awesome.png
+[image-ss-awesome]: {{ site.url }}/assets-desktop/2014/11/awesome.png
 [photo-ss-awesome]: https://photos.google.com/album/AF1QipNVMF7qcC-QwEs9Hb8xD2ywBu9GrLt09jCFT_4U/photo/AF1QipOPRe1GgmSaA8hKMfw4ulF7SA5V0zje-yFFddH8
