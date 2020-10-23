@@ -192,13 +192,13 @@ Good night.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-screenshot-summary.png
+[image-ss-awesome]: {{ site.url }}/assets-desktop/2016/06/debian-awesome-screenshot-summary.png
 [photo-ss-awesome]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipM3UJqH6y1Prb9uLk4deBhem1ZPRlNZG9nKWDZ3
 
-[image-awesome-lua]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-lua-half.png
+[image-awesome-lua]: {{ site.url }}/assets-desktop/2016/06/debian-awesome-lua-half.png
 [photo-awesome-lua]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipM7zWCTwSIai_s-PwY70egytzU0Ru_tYQH3Dem4
 
-[image-awesome-vicious]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-extra-half.png
+[image-awesome-vicious]: {{ site.url }}/assets-desktop/2016/06/debian-awesome-extra-half.png
 [photo-awesome-vicious]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOEJB_mE2kvcmHO-oBpWbepU_ynL7gBrDJTC6g7
 
-[image-awesome-lain-git]: {{ site.url }}/assets/posts/desktop/2016/06/debian-awesome-extra-half.png
+[image-awesome-lain-git]: {{ site.url }}/assets-desktop/2016/06/debian-awesome-extra-half.png

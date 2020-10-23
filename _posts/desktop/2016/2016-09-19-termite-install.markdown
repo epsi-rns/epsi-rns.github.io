@@ -279,28 +279,28 @@ I think that's all.
 
 [source-termite]:     https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal/termite
 
-[image-arch-bright]:  {{ site.url }}/assets/posts/desktop/2016/09/arch-termite-bright.png
+[image-arch-bright]:  {{ site.url }}/assets-desktop/2016/09/arch-termite-bright.png
 [photo-arch-bright]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNQAwvxM9LVDwDIe2JrjlHcUwzxaf6j_f8gpaRj
 
-[image-manjaro-dark]: {{ site.url }}/assets/posts/desktop/2016/09/manjaro-termite-dark.png
+[image-manjaro-dark]: {{ site.url }}/assets-desktop/2016/09/manjaro-termite-dark.png
 [photo-manjaro-dark]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipO97BRUu5lXJAVJBkP-XYVDISf9cD1FyoT63iva 
 
-[image-debian-vte-ng-git-clone]: {{ site.url }}/assets/posts/desktop/2016/09/debian-vte-ng-git-clone.png
+[image-debian-vte-ng-git-clone]: {{ site.url }}/assets-desktop/2016/09/debian-vte-ng-git-clone.png
 
-[image-debian-vte-ng-autogen]:   {{ site.url }}/assets/posts/desktop/2016/09/debian-vte-ng-autogen-half.png
+[image-debian-vte-ng-autogen]:   {{ site.url }}/assets-desktop/2016/09/debian-vte-ng-autogen-half.png
 [photo-debian-vte-ng-autogen]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNXqGy4osnyvw-Prj0gEStK1t6abyUB2Uiwk7Ap
 
-[image-debian-vte-ng-make]:      {{ site.url }}/assets/posts/desktop/2016/09/debian-vte-ng-make-half.png
+[image-debian-vte-ng-make]:      {{ site.url }}/assets-desktop/2016/09/debian-vte-ng-make-half.png
 [photo-debian-vte-ng-make]:      https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNps2MW3RDaF-0QNLebcP5F5Gi1IKNJKc670xHT
 
-[image-debian-vte-ng-make-install]:  {{ site.url }}/assets/posts/desktop/2016/09/debian-vte-ng-make-install-half.png
+[image-debian-vte-ng-make-install]:  {{ site.url }}/assets-desktop/2016/09/debian-vte-ng-make-install-half.png
 [photo-debian-vte-ng-make-install]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNVdlF_p1qDDXJmDgqM1gXRMf3G0feOR3jiGyP0
 
-[image-debian-termite-git-clone]:    {{ site.url }}/assets/posts/desktop/2016/09/debian-termite-git-clone.png
+[image-debian-termite-git-clone]:    {{ site.url }}/assets-desktop/2016/09/debian-termite-git-clone.png
 
-[image-debian-termite-make]: {{ site.url }}/assets/posts/desktop/2016/09/debian-termite-make-half.png
+[image-debian-termite-make]: {{ site.url }}/assets-desktop/2016/09/debian-termite-make-half.png
 [photo-debian-termite-make]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPiEb2bQvPaeRfG8TGOw95JSUYzNuPhJRDwh6ce
 
-[image-debian-termite-make-install]: {{ site.url }}/assets/posts/desktop/2016/09/debian-termite-make-install.png
+[image-debian-termite-make-install]: {{ site.url }}/assets-desktop/2016/09/debian-termite-make-install.png
 
-[image-debian-termite-version]:      {{ site.url }}/assets/posts/desktop/2016/09/debian-termite-version.png
+[image-debian-termite-version]:      {{ site.url }}/assets-desktop/2016/09/debian-termite-version.png

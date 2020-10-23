@@ -273,12 +273,12 @@ Happy terminal customizing
 [docs-powerline]:     http://powerline.readthedocs.org/en/master/configuration/segments/common.html
 [dotfiles-powerline]: https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal/powerline
 
-[image-ss-powerline-light]: {{ site.url }}/assets/posts/desktop/2016/03/powerline-light.png
-[image-ss-powerline-dark]:  {{ site.url }}/assets/posts/desktop/2016/03/powerline-dark.png
+[image-ss-powerline-light]: {{ site.url }}/assets-desktop/2016/03/powerline-light.png
+[image-ss-powerline-dark]:  {{ site.url }}/assets-desktop/2016/03/powerline-dark.png
 
-[image-ss-install-arch]:    {{ site.url }}/assets/posts/desktop/2016/03/arch-powerline-install-half.png
-[image-ss-install-debian]:  {{ site.url }}/assets/posts/desktop/2016/03/debian-powerline-install-half.png
-[image-ss-bashrc]:          {{ site.url }}/assets/posts/desktop/2016/03/powerline-vim-nice-color.png
+[image-ss-install-arch]:    {{ site.url }}/assets-desktop/2016/03/arch-powerline-install-half.png
+[image-ss-install-debian]:  {{ site.url }}/assets-desktop/2016/03/debian-powerline-install-half.png
+[image-ss-bashrc]:          {{ site.url }}/assets-desktop/2016/03/powerline-vim-nice-color.png
 
 [photo-ss-install-arch]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMdqYD48qXWiJKw-ljQJBXxAtpkMaVIx3RdTUnw
 [photo-ss-install-debian]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPSIJxwaHZg4lbzkhMF6sSRnDbqjbEUkVLd2giw

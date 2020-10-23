@@ -224,17 +224,17 @@ Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-i3]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-summary.png
+[image-ss-i3]: {{ site.url }}/assets-desktop/2016/08/i3-arch-install-summary.png
 [photo-ss-i3]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP4x8DBep9URZHKJl7rrpaE9b8GvXXz9_RPH56J
 
-[image-i3-i3wm]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3wm-half.png
+[image-i3-i3wm]: {{ site.url }}/assets-desktop/2016/08/i3-arch-install-i3wm-half.png
 [photo-i3-i3wm]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMy7qxBD_jR-En1LVmEO2pa_M4K2uNfC-kt5xjv
 
-[image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3blocks-half.png
+[image-i3-i3blocks]: {{ site.url }}/assets-desktop/2016/08/i3-arch-install-i3blocks-half.png
 [photo-i3-i3blocks]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPgQWe8icQgf3XQ7Rrtb56aUPqWyEZ02TSb9u8K
 
-[image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-arch-install-i3gaps-half.png
+[image-i3-i3gaps]: {{ site.url }}/assets-desktop/2016/08/i3-arch-install-i3gaps-half.png
 [photo-i3-i3gaps]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPsf9GBtpYyOd6pRAWaUj0j7x_H1mqCn59_U8SV
 
-[image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
+[image-ss-i3gaps-dark]: {{ site.url }}/assets-desktop/2016/08/i3gaps-dark.png
 [photo-ss-i3gaps-dark]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMXY1ouG45kbjW_OBvrgcDyVecU1Cz55flj0wnr

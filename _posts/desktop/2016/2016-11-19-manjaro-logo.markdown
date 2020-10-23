@@ -160,19 +160,19 @@ What do you think ?
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-wallpaper]:    {{ site.url }}/assets/posts/desktop/2016/10/wally-material-design-06.png
+[image-wallpaper]:    {{ site.url }}/assets-desktop/2016/10/wally-material-design-06.png
 [hires-wallpaper]:    https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipP8Al5kHEy9Gc6n-F6xnCQSvTJVk90T-R4Nu_TD
 [dotfiles-wallpaper]: {{ site.url }}/assets/posts/design/2016/10/wally-material-design-06.svg.gz
 [deviant-wallpaper]:  http://nurwijayadi.deviantart.com/art/Material-Design-Wallpaper-646511906
 
-[image-inkscape]: {{ site.url }}/assets/posts/desktop/2016/10/i3-material-inkscape.png
+[image-inkscape]: {{ site.url }}/assets-desktop/2016/10/i3-material-inkscape.png
 [hires-inkscape]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipO1Z7TyZHf8jfn45hcHDwJptu58gD6_0bs4rcf5
 
-[image-bright]:   {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-bright-on-blue.png
+[image-bright]:   {{ site.url }}/assets-desktop/2016/11/i3-manjaro-bright-on-blue.png
 [hires-bright]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOfyOq9XTmSoNc1ykSpmzG1-vOhApuXzxzup44y
 [deviant-bright]: http://nurwijayadi.deviantart.com/art/Manjaro-Logo-using-Terminal-in-i3-646512583
 
-[image-dark]:     {{ site.url }}/assets/posts/desktop/2016/11/i3-manjaro-dark-on-grey.png
+[image-dark]:     {{ site.url }}/assets-desktop/2016/11/i3-manjaro-dark-on-grey.png
 [hires-dark]:     https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNS74SpNlGH0hjKXDtpro_pJFv4GPdSOH2U9tam
 
 [source-i3]: https://gitlab.com/epsi-rns/dotfiles/tree/master/i3

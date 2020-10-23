@@ -495,8 +495,8 @@ Thank you for reading
 
 {% assign dotfiles_path = 'https://gitlab.com/epsi-rns/dotfiles/blob/master/awesome/3.5' %}
 
-[image-ss-awesome-main]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-main.png
-[image-ss-awesome-module]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-code-binding.png
+[image-ss-awesome-main]: {{ site.url }}/assets-desktop/2016/07/awesome-modularized-code-main.png
+[image-ss-awesome-module]: {{ site.url }}/assets-desktop/2016/07/awesome-modularized-code-binding.png
 [photo-ss-awesome-fullscreen]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPPFTkZLKgqQVrvGwBn4nYJo74xIf-IATzz7YlG
 
 [source-main-theme]:    {{ dotfiles_path }}/main/theme.lua

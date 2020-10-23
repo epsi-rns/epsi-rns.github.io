@@ -224,17 +224,17 @@ Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-i3]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-summary.png
+[image-ss-i3]: {{ site.url }}/assets-desktop/2016/08/i3-debian-install-summary.png
 [photo-ss-i3]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPO_DmfWQ3-tBM-Cssg8GPRS_AwlkKs3fGPz8it
 
-[image-i3-i3wm]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3wm-half.png
+[image-i3-i3wm]: {{ site.url }}/assets-desktop/2016/08/i3-debian-install-i3wm-half.png
 [photo-i3-i3wm]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNwFXb62llEMlyTF6EeHXv-y2YTcTXFR8TLTpQP
 
-[image-i3-i3blocks]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3blocks-half.png
+[image-i3-i3blocks]: {{ site.url }}/assets-desktop/2016/08/i3-debian-install-i3blocks-half.png
 [photo-i3-i3blocks]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMJF7NZpwn8SLpOj2wAGBfOBCjYYUhVG2ZCu2nE
 
-[image-i3-i3gaps]: {{ site.url }}/assets/posts/desktop/2016/08/i3-debian-install-i3gaps-half.png
+[image-i3-i3gaps]: {{ site.url }}/assets-desktop/2016/08/i3-debian-install-i3gaps-half.png
 [photo-i3-i3gaps]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOzGH5eGVSr7YXWOlTDovmFVfrnvr_umDXL9emI
 
-[image-ss-i3gaps-dark]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
+[image-ss-i3gaps-dark]: {{ site.url }}/assets-desktop/2016/08/i3gaps-dark.png
 [photo-ss-i3gaps-dark]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMXY1ouG45kbjW_OBvrgcDyVecU1Cz55flj0wnr

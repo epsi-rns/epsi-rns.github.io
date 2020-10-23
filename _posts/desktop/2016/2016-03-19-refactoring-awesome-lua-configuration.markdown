@@ -71,7 +71,7 @@ I know how terrible it is.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-awesome-light]: {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-light.png
+[image-ss-awesome-light]: {{ site.url }}/assets-desktop/2016/03/refactoring-awesome-light.png
 [photo-ss-awesome-light]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNCFvyl03d1gCrOg3HspYPF3K-W9Z9wdSxHoN0M
-[image-ss-awesome-dark]:  {{ site.url }}/assets/posts/desktop/2016/03/refactoring-awesome-dark.png
+[image-ss-awesome-dark]:  {{ site.url }}/assets-desktop/2016/03/refactoring-awesome-dark.png
 [photo-ss-awesome-dark]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMg3vsE81GPuWinJOCe7CnAcTSdQnnw-anBEuXX

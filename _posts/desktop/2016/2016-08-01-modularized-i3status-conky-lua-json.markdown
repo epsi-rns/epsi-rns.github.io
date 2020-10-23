@@ -521,19 +521,19 @@ You may modify this config to suit your needs.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 
-[image-ss-i3gaps-dark]:   {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-dark.png
-[image-ss-i3gaps-bright]: {{ site.url }}/assets/posts/desktop/2016/08/i3gaps-bright.png
+[image-ss-i3gaps-dark]:   {{ site.url }}/assets-desktop/2016/08/i3gaps-dark.png
+[image-ss-i3gaps-bright]: {{ site.url }}/assets-desktop/2016/08/i3gaps-bright.png
 
-[image-i3-workspace]:     {{ site.url }}/assets/posts/desktop/2016/08/i3-workspace.png
-[image-i3-i3status]:      {{ site.url }}/assets/posts/desktop/2016/08/i3-i3status.png
-[image-i3-i3blocks]:      {{ site.url }}/assets/posts/desktop/2016/08/i3-i3blocks.png
+[image-i3-workspace]:     {{ site.url }}/assets-desktop/2016/08/i3-workspace.png
+[image-i3-i3status]:      {{ site.url }}/assets-desktop/2016/08/i3-i3status.png
+[image-i3-i3blocks]:      {{ site.url }}/assets-desktop/2016/08/i3-i3blocks.png
 
-[image-i3-conky-1-old]:   {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-1-old.png
-[image-i3-conky-2-lua]:   {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-2-lua.png
-[image-i3-conky-3-json]:  {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-3-json.png
+[image-i3-conky-1-old]:   {{ site.url }}/assets-desktop/2016/08/i3-conky-1-old.png
+[image-i3-conky-2-lua]:   {{ site.url }}/assets-desktop/2016/08/i3-conky-2-lua.png
+[image-i3-conky-3-json]:  {{ site.url }}/assets-desktop/2016/08/i3-conky-3-json.png
 
-[image-i3status-top]:     {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-top.png
-[image-i3status-bottom]:  {{ site.url }}/assets/posts/desktop/2016/08/i3-conky-lua-json-bottom.png
+[image-i3status-top]:     {{ site.url }}/assets-desktop/2016/08/i3-conky-lua-json-top.png
+[image-i3status-bottom]:  {{ site.url }}/assets-desktop/2016/08/i3-conky-lua-json-bottom.png
 
 [photo-ss-i3gaps-dark]:   https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMXY1ouG45kbjW_OBvrgcDyVecU1Cz55flj0wnr
 [photo-ss-i3gaps-bright]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMrVos0mLsbcSZR49ZkXZwWKFSkKfmTRJ5ar6Hf

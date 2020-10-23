@@ -78,7 +78,7 @@ Selamat membuat screenshot.<br/>
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-xmonad-light]: {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-light.png
+[image-ss-xmonad-light]: {{ site.url }}/assets-desktop/2016/03/ansicolor-light.png
 [photo-ss-xmonad-light]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPzPUDIpJm-3c_2ED-DG6MOVLExaJub4dWG8CA7
-[image-ss-xmonad-dark]:  {{ site.url }}/assets/posts/desktop/2016/03/ansicolor-dark.png
+[image-ss-xmonad-dark]:  {{ site.url }}/assets-desktop/2016/03/ansicolor-dark.png
 [photo-ss-xmonad-dark]:  https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNut34mW9SH9xths4u4IexFD759xF3IrbYnlS4T

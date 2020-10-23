@@ -296,11 +296,11 @@ Good night.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-awesome-white]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-syawal.png
+[image-ss-awesome-white]: {{ site.url }}/assets-desktop/2016/07/awesome-refactoring-syawal.png
 [photo-ss-awesome-white]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipPB2dhgJov_v0PA8bBGtZbiDV4F2lea67M6BCU4
 
-[image-ss-awesome-black]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-refactoring-manjaro.png
+[image-ss-awesome-black]: {{ site.url }}/assets-desktop/2016/07/awesome-refactoring-manjaro.png
 [photo-ss-awesome-black]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOyDYD12IuC4fOwV-7B8R8kh0g2_el2PeXAHh62
 
-[image-ss-awesome-stacked]: {{ site.url }}/assets/posts/desktop/2016/07/awesome-modularized-stacked.png
+[image-ss-awesome-stacked]: {{ site.url }}/assets-desktop/2016/07/awesome-modularized-stacked.png
 [photo-ss-awesome-stacked]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOoDYrrGAtGpM4vcmdRtlQRQyuILy8lq7M6lMR_

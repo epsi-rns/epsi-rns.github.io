@@ -245,7 +245,7 @@ Thank you for reading
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-cinnamon-3d]: {{ site.url }}/assets/posts/desktop/2016/06/cinnamon-3d.png
+[image-ss-cinnamon-3d]: {{ site.url }}/assets-desktop/2016/06/cinnamon-3d.png
 [photo-ss-cinnamon-3d]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipMxkI2MO3-Uamt4onaDbVI1KNW2yxR2E6QtKF-r
 
 [gnome-shell]:	https://github.com/GNOME/gnome-shell

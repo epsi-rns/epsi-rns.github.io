@@ -45,6 +45,6 @@ Note on SS : user vs root.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss]: {{ site.url }}/assets/posts/desktop/2015/02/xfwm4-tiling.png
+[image-ss]: {{ site.url }}/assets-desktop/2015/02/xfwm4-tiling.png
 [photo-ss]: https://photos.google.com/album/AF1QipOYi1tE3AwxfL0DQCn7eAhQHekVu1xxo2-lHjta/photo/AF1QipNWl3ZWlN18YmA1-A6KN5LTnL2truY3ZKBSTk8K
 

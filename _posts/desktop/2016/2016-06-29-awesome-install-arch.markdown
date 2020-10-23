@@ -188,15 +188,15 @@ Good night.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-[image-ss-awesome]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-screenshot-summary.png
+[image-ss-awesome]: {{ site.url }}/assets-desktop/2016/06/arch-awesome-screenshot-summary.png
 [photo-ss-awesome]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNAAts6ck3-Zsza0A2ha_zN0xtLWqByOdEo5gOg
 
-[image-awesome-lua]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-awesome-lua-half.png
+[image-awesome-lua]: {{ site.url }}/assets-desktop/2016/06/arch-awesome-awesome-lua-half.png
 [photo-awesome-lua]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOJod_w5oRsR4ekEUM34oOkcZSK0Q6kG2ASlF5u
 
-[image-awesome-vicious]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-vicious-half.png
+[image-awesome-vicious]: {{ site.url }}/assets-desktop/2016/06/arch-awesome-vicious-half.png
 [photo-awesome-vicious]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipOuxKFNrl357TARUZoV6QIc0guG1xMhiPjBKesV
 
-[image-awesome-lain-git]: {{ site.url }}/assets/posts/desktop/2016/06/arch-awesome-lain-git-half.png
+[image-awesome-lain-git]: {{ site.url }}/assets-desktop/2016/06/arch-awesome-lain-git-half.png
 [photo-awesome-lain-git]: https://photos.google.com/album/AF1QipOI-OvBHZtRX5saQhwM3h7JWm32xboQ5aCs5fLr/photo/AF1QipNmztpdX8svy21B1fXtPlyhXjEeF05p-oPrMelo
  
