@@ -440,4 +440,4 @@ What do you think ?
 [dotfiles-error-handling]:  {{ dotfiles }}/main/error-handling.lua
 [dotfiles-user-variables]:  {{ dotfiles }}/main/user-variables.lua
 
-[illustration-custom-awesome]:  {{ site.url }}/assets/posts/desktop/2020/customization-awesome-modularized.png
+[illustration-custom-awesome]:  {{ site.url }}/assets-desktop/2020/customization-awesome-modularized.png

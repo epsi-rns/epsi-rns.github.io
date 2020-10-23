@@ -1061,7 +1061,7 @@ Thank you for reading and visiting.
 {% assign asset_path = '/assets-desktop/2018/08' %}
 {% assign dotfiles = 'https://gitlab.com/epsi-rns/dotfiles/tree/master/terminal' %}
 
-[illustration-custom-terminal]:    {{ site.url }}/assets/posts/desktop/2020/customization-terminal.png
+[illustration-custom-terminal]:    {{ site.url }}/assets-desktop/2020/customization-terminal.png
 
 [local-iterate-bash-theme]:  /desktop/2017/12/26/oh-my-shell-theme.html
 

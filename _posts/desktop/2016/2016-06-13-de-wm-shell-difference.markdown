@@ -280,7 +280,7 @@ Thank you for reading
 [bspwm]:	https://github.com/baskerville/bspwm
 [dwm]:		https://github.com/sr/dwm
 
-[illustration-custom-de]:       {{ site.url }}/assets/posts/desktop/2020/customization-desktop.png
-[illustration-custom-wm]:       {{ site.url }}/assets/posts/desktop/2020/customization-window.png
-[illustration-custom-tools]:    {{ site.url }}/assets/posts/desktop/2020/customization-optional-tools.png
-[illustration-custom-layout]:   {{ site.url }}/assets/posts/desktop/2020/customization-layout.png
+[illustration-custom-de]:       {{ site.url }}/assets-desktop/2020/customization-desktop.png
+[illustration-custom-wm]:       {{ site.url }}/assets-desktop/2020/customization-window.png
+[illustration-custom-tools]:    {{ site.url }}/assets-desktop/2020/customization-optional-tools.png
+[illustration-custom-layout]:   {{ site.url }}/assets-desktop/2020/customization-layout.png

@@ -131,5 +131,5 @@ Thank you for reading.
 [local-standalone-xlfd-font]:   {{ site.url }}/desktop/2017/04/13/getting-xlfd-font.html
 [local-standalone-debug-conky]: {{ site.url }}/desktop/2017/04/22/debugging-conky.html
 
-[illustration-custom-tiling]:   {{ site.url }}/assets/posts/desktop/2020/customization-tiling.png
+[illustration-custom-tiling]:   {{ site.url }}/assets-desktop/2020/customization-tiling.png
 

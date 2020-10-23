@@ -99,5 +99,5 @@ What do you think ?
 
 [image-ss-stacked-640]: {{ asset_path }}/04-ghostbsd-awesome-stacked.png
 
-[illustration-custom-tiling]:   {{ site.url }}/assets/posts/desktop/2020/customization-tiling.png
-[illustration-custom-awesome]:  {{ site.url }}/assets/posts/desktop/2020/customization-awesome.png
+[illustration-custom-tiling]:   {{ site.url }}/assets-desktop/2020/customization-tiling.png
+[illustration-custom-awesome]:  {{ site.url }}/assets-desktop/2020/customization-awesome.png

@@ -132,4 +132,4 @@ Consider continue reading [ [Config: General Part][local-part-config] ].
 [image-ss-slit-gkrellm]:  {{ asset_path }}/fluxbox-slit-gkrellm.png
 [image-ss-toolbar]:       {{ asset_path }}/fluxbox-toolbar.png
 
-[illustration-custom-stacking]: {{ site.url }}/assets/posts/desktop/2020/customization-stacking.png
+[illustration-custom-stacking]: {{ site.url }}/assets-desktop/2020/customization-stacking.png

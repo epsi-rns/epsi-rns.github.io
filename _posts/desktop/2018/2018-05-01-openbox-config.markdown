@@ -109,4 +109,4 @@ Consider continue reading [ [Config: General rc.xml][local-part-config] ].
 
 [local-part-config]:  /desktop/2018/05/03/openbox-config.html
 
-[illustration-custom-stacking]: {{ site.url }}/assets/posts/desktop/2020/customization-stacking.png
+[illustration-custom-stacking]: {{ site.url }}/assets-desktop/2020/customization-stacking.png

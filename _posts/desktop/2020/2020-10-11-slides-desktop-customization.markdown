@@ -8,7 +8,7 @@ keywords  : [tiling, window manager, theme, terminal]
 author: epsi
 
 opengraph:
-  image: /assets/posts/desktop/2020/customization-terminal.png
+  image: /assets-desktop/2020/customization-terminal.png
 excerpt:
   Introduction to Desktop Customization in Linux/BSD.
 
@@ -514,10 +514,10 @@ Thank you for your time.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets/posts/desktop/2020/customization' %}
+{% assign asset_path = '/assets-desktop/2020/customization' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/02-desktop-customization' %}
 
-[teaser-preview]:           /assets/posts/desktop/2020/customization-terminal.png
+[teaser-preview]:           /assets-desktop/2020/customization-terminal.png
 [local-presentation]:       /desktop/2020/01/20/presentation-desktop-customization.html
 [candyclone-template]:      https://epsi-rns.gitlab.io/design/2020/09/21/inkscape-impress-slides-01/
 [libreoffice-impress]:      https://www.libreoffice.org/discover/impress/
