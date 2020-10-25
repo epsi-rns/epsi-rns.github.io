@@ -93,8 +93,12 @@ Candyclone is an Impress template that I have made for LibreOffice contest.
 
 * [LibreOffice Impress Template Contest by the Indonesian Community][template-contest]
 
-This is just an example template that you can use freely.
-With this example you can also learn how to make your own template.
+There are also other free templates as well in `lumbung` repository.
+
+* [Lumbung LibreOffice Indonesia Repository][template-lumbung]
+ 
+This candyclone is just an example template that you can use freely.
+With this candyclone example you can also learn how to make your own template.
 Your very own template to suit your ecosystem.
 
 #### Disagreement
@@ -110,37 +114,92 @@ Feel free to express your thoughts, either with text, or illustration.
 
 Here I represent all the slides.
 
-#### Slide 01
+#### Slide 01: Cover
 
 ![Slide - Cover][slide-01]
 
-#### Slide 02
+> Learning Linux Diversity
+
+Dive into Linux Subsystem for Personal Educational Purpose.
+
+#### Slide 02: About The Author
 
 ![Slide - About Author][slide-02]
 
-#### Slide 03
+> I have my own blog
+
+#### Slide 03: About This Material
 
 ![Slide - About Material][slide-03]
 
-#### Slide 04
+After watching this, you will understand:
+
+* A more systematic steps to learn GNU/linux.
+* How to make your own learning plan (syllabus).
+
+This material is not really comprehensive.
+I still have so much to learn.
+
+#### Slide 04: Chapter Break
 
 ![Slide - After First Install][slide-04]
 
-#### Slide 05
+#### Slide 05: After First Linux Install
 
 ![Slide - After Install Desire][slide-05]
 
-#### Slide 06
+You might desire to:
+
+* Join linux community.
+* Read documentation (statistically rare person).
+* Update system.
+* Install a bunch of application.
+* Get busy with command line terminal.
+* Surfing wiki and search engine.
+
+> And then what?
+
+#### Slide 06: Where to Go from Here
 
 ![Slide - First Install - Where to Go][slide-06]
 
-#### Slide 07
+Where to go from here?
+
+* Should I try other distro?
+* What other distro should I try?
+* So many distro, so little differences!
+* Should I use VM or multiboot?
+
+> Learn part of system!
+> Instead of just switching distro.
+
+#### Slide 07: Chapter Break
 
 ![Slide - Modular Linux][slide-07]
 
-#### Slide 08
+#### Slide 08: How Modular is Linux?
 
 ![Slide - Modular Linux - How Modular?][slide-08]
+
+How Modular is Linux?
+
+1. Package Manager:
+   * APT, ALPM, DNF, XBPS, Zypper, Portage.
+
+2. Init:
+   * SysV, systemd, openRC, runit, S6.
+
+3. Filesystem:
+   * ext4, XFS, Reiserfs, BTRFS, ZFS.
+
+4. Standard C library in OS:
+   * glibc or musl.
+
+5. DE (Desktop Environment):
+   * GTK+ based, QT based, enlightenment.
+
+6. WM (Window Manager):
+   * Stacking, Tiling, Dynamic, Compositor.
 
 Local Groups:
 
@@ -152,15 +211,33 @@ Local Groups:
 
 * Learning GNU/Linux: [Belajar GNU/Linux Indonesia](https://t.me/GNULinuxIndonesia)
 
-#### Slide 09
+#### Slide 09: Three Diversity
 
 ![Slide - Modular Linux - Switch Distro][slide-09]
 
-#### Slide 10
+You still need to Switch distro,
+by considering these three diversity:
+
+* Package Manager,
+
+* File system,
+
+* Init.
+
+#### Slide 10: When do I need a physical OS?
 
 ![Slide - Modular Linux - Physical OS][slide-10]
 
-#### Slide 11
+When do I need a physical OS?
+
+* You can learn Package Manager using Docker.
+* You can also learn Init using Docker.
+* But you cannot learn Filesystem using Docker.
+
+File system experience require long time examination.
+Thus you have to live with baremetal (physical) OS.
+
+#### Slide 11: Desktop Environment/ Window Manager
 
 ![Slide - Modular Linux - DE/WM][slide-11]
 
@@ -170,7 +247,9 @@ Yet Another Presentation.
 
 [desktop-customization]: /desktop/2020/10/11/slides-desktop-customization.html
 
-#### Slide 12
+Most beginner start from switching DE/WM:
+
+#### Slide 12: Common Subsystem?
 
 ![Slide - Modular Linux - Common Subsystem][slide-12]
 
@@ -184,15 +263,23 @@ Links:
 
 * [dbus in Window Manager](/system/2018/01/18/dbus-window-manager.html)
 
-#### Slide 13
+#### Slide 13: Chapter Break
 
 ![Slide - Package Manager][slide-13]
 
-#### Slide 14
+#### Slide 14: Docker Test Bed
 
 ![Slide - Package Manager with Docker][slide-14]
 
-#### Slide 15
+You can utilize docker to learn other package manager.
+
+* APT, ALPM, DNF, XBPS, Zypper, Portage.
+
+[Docker - Package Management Summary](/system/2017/08/31/docker-package-summary.html)
+
+Docker is suitable for old notebook with low resources.
+
+#### Slide 15: More Articles about Docker Test Bed
 
 ![Slide - Package Manager - Docker Test Bed][slide-15]
 
@@ -210,11 +297,11 @@ Links:
 
 * [Gentoo - Portage](/system/2017/08/11/docker-gentoo-portage.html)
 
-#### Slide 16
+#### Slide 16: Package Manager Feature
 
 ![Slide - Package Manager - Feature][slide-16]
 
-#### Slide 17
+#### Slide 17: Package Manager Advantage/Issue
 
 ![Slide - Package Manager - Advantage/Issue][slide-17]
 
@@ -230,15 +317,26 @@ Links:
 
 * [GhostBSD Ports](/system/2019/04/02/ghostbsd-ports.html)
 
-#### Slide 18
+Deep knowledge require long time experience.
+Most of issues comes months after install.
+
+#### Slide 18: Chapter Break
 
 ![Slide - Init][slide-18]
 
-#### Slide 19
+#### Slide 19: Init: Who use what
 
 ![Slide - Init - Who Use What][slide-19]
 
-#### Slide 20
+Who use what.
+
+* OpenRC: Gentoo, Artix, Devuan.
+* runit: Void, Artix.
+* s6: Obarun, Artix.
+* SysV: Slackware, Devuan.
+* systemd: Most Major Distro
+
+#### Slide 20: Init Civil War
 
 ![Slide - Init - Civil Wars][slide-20]
 
@@ -246,7 +344,10 @@ Link:
 
 * [The systemd Controversy](/system/2014/11/28/init-civil-wars.html)
 
-#### Slide 21
+The systemd Controversy:
+Still debating in 2020 between: systemd+gnome versus linux+diversity.
+
+#### Slide 21: Init Elements
 
 ![Slide - Init - Elements][slide-21]
 
@@ -254,7 +355,16 @@ Reference:
 
 * [s6_lightning_talk.pdf](https://archive.fosdem.org/2017/schedule/event/s6_supervision/attachments/slides/1587/export/events/attachments/s6_supervision/slides/1587/s6_lightning_talk.pdf)
 
-#### Slide 22
+The four elements of an init system:
+
+* `/sbin/init`
+* `pid 1`
+* `Process Supervision`
+* `Service Management`
+
+And nothing more.
+
+#### Slide 22: Example Usage of Init
 
 ![Slide - Init - Example Usage][slide-22]
 
@@ -262,17 +372,31 @@ Link:
 
 * [Setup LAMP stack with Manjaro OpenRC](https://epsi-rns.gitlab.io/backend/2015/10/16/lamp-stack-manjaro-openrc/)
 
-#### Slide 23
+#### Slide 23: Chapter Break: File System
 
 ![Slide - Filesystem][slide-23]
 
-#### Slide 24
+File System: ext4, XFS, Reiserfs, BTRFS, ZFS.
+
+Deep knowledge require long time experience.
+Most of issues comes months after install.
+You cannot just install, and just understand file system instantly.
+
+#### Slide 24: File System, and How to Find It.
 
 ![Slide - Filesystem - Example][slide-24]
 
-#### Slide 25
+File System, and How to Find It.
 
-![Slide - Filesystem - Issue and Workaround][slide-25]
+* ext4: most common in linux.
+* ZFS: common in BSD.
+* UFS: common in BSD.
+* BRTRFS: Default in openSUSE `/`.
+* XFS: can be installed in most linux.
+
+#### Slide 25: Filesystem: Example Issues and Workarounds
+
+![Slide - Filesystem - Issues and Workarounds][slide-25]
 
 Links:
 
@@ -282,23 +406,61 @@ Links:
 
 * [GhostBSD - Multiboot](/system/2019/03/20/ghostbsd-multiboot.html)
 
-#### Slide 26
+#### Slide 26: Standard C library in OS?
 
 ![Slide - Standard C Library][slide-26]
 
-#### Slide 27
+> glibc or musl.
+
+I must admit, I do not have any experiece with `musl`.
+
+#### Slide 27: Chapter Break
 
 ![Slide - Switching Distro][slide-27]
 
-#### Slide 28
+#### Slide 28: Switching Distro: Custom Plan
 
 ![Slide - Switching Distro - Custom Plan][slide-28]
 
-#### Slide 29
+While you are young and still have time.
+Get yourself quarterly (three months) curriculum/plan.
+
+Just get pass through it.
+No need to go deep with coding.
+Be an ordinary user.
+
+After this one year,
+you are already mature enough with broader view
+to choose whatever linux you want.
+
+If you want to get more wisdom.
+Learn BSD land in the second year.
+
+#### Slide 29: Switching Distro: Example Syllabus
 
 ![Slide - Switching Distro - Example Syllabus][slide-29]
 
-#### Slide 30
+> Example Syllabus (learning plan):
+
+Make a target of first year with linux.
+
+* Q1: ubuntu/mint/manjaro
+  * learn the DE universe: gnome-shell, plasma, xfce4
+  * learn basic command line.
+
+* Q2: opensuse
+  * learn filesystem: btrfs, xfs
+  * also learn yast2
+
+* Q3: arch
+  * know your system,
+    dive into the world of cli/terminal shell.
+
+* Q4: gentoo
+  * learn init other than systemd
+  * learn patience
+
+#### Slide 30: Switching Distro: First Quarter
 
 ![Slide - Switching Distro - Example First Quarter][slide-30]
 
@@ -308,15 +470,53 @@ Manuals:
 
 * [debian-handbook](https://debian-handbook.info/browse/stable/)
 
-#### Slide 31
+Example Q1: Ubuntu/ Mint/ Manjaro
+
+* Basic Terminal Command
+  * ls, cat, grep, ps, top, man, info, su, sudo
+  * always use __$ man__ for documentation before google.
+
+* Also learn about basic linux briefly
+  * Examine Filesystem Hierarchy Standard (FHS)
+  * Examine boot process.
+  * Solving audio or wireless issue.
+
+* Read The Fine Manual
+  * [ubuntu-manual](https://ubuntu-manual.org/)
+  * [debian-handbook](https://debian-handbook.info/browse/stable/)  (hertzog)
+
+* More Terminal Command
+  * nmcli, ncdu, ntop, cfdisk
+  * lspci, lsusb, lsmod, dmesg, ip, iw
+
+#### Slide 31: Switching Distro: Third Quarter
 
 ![Slide - Switching Distro - Example Third Quarter][slide-31]
 
-#### Slide 32
+Example Q3: Arch: Leverage yourself to Arch
+
+* Install with command line only
+  * add driver manually, add username manually, add DE manually, use pacman.
+
+* Read the holy arch wiki
+  * there is a lot of good material here
+
+* Use packer, cower, or other AUR Helper
+  * automatic compilation, try any unofficial application from AUR
+
+* Dare to use minimalis WM, rather than eyecandy DE
+  * openbox, awesome, i3, bspwm
+
+* Penetration Testing Application
+  * add and install repo: BlackArch or maybe ArchStrike
+
+> Philosophy: Knowing Your System
+
+#### Slide 32: Switching Distro: Install Log/ Post Install Log
 
 ![Slide - Switching Distro - Install Log/ Post Install Log][slide-32]
 
-Links:
+Links: Install Log/ Post Install Log:
 
 * [Fedora](/system/2017/08/02/distro-fedora-install.html)
 
@@ -330,11 +530,11 @@ Links:
 
 * [Slackware](/system/2018/01/17/distro-slackware-post-install.html)
 
-#### Slide 33
+#### Slide 33: Chapter Break
 
 ![Slide - Multiboot][slide-33]
 
-#### Slide 34
+#### Slide 34: Partition Schema using MBR (old example)
 
 ![Slide - Multiboot - Partition Schema][slide-34]
 
@@ -342,11 +542,28 @@ Link:
 
 * [Multiboot - Partition Schema](/system/2018/05/21/linux-multiboot.html)
 
-#### Slide 35
+> For linux enthusiast.
 
-![Slide - Multiboot - Using MBR (old schema)][slide-35]
+#### Slide 35: Multiboot: Using MBR (old schema)
 
-#### Slide 36
+![Slide - Multiboot - Partition Schema][slide-35]
+
+Partition Schema using MBR (old example)
+
+* Primary: Windows
+
+* Extended: EBR
+  * Linux Swap
+  * Shared Partition
+  * First Linux Distro
+  * Second Linux Distro
+  * Third Linux Distro
+
+* Extended: BSD
+  * BSD Swap
+  * One or more UFS
+
+#### Slide 36: Multiboot - /etc/fstab
 
 ![Slide - Multiboot - /etc/fstab][slide-36]
 
@@ -354,7 +571,12 @@ Link:
 
 * [Multiboot - /etc/fstab](/system/2018/05/21/linux-multiboot.html)
 
-#### Slide 37
+`/etc/fstab`
+
+* Learn to make shared partition.
+* BTRFS subvolume is interesting.
+
+#### Slide 37: Multiboot: chroot
 
 ![Slide - Multiboot - chroot][slide-37]
 
@@ -362,7 +584,15 @@ Link:
 
 * [Multiboot - chroot](/system/2018/05/23/linux-multiboot.html)
 
-#### Slide 38
+chroot
+
+* Some OS is comfortably installed using chroot:
+  * such as: Gentoo, LFS.
+
+* Other OS can be updated using chroot:
+ * beware of small issues.
+
+#### Slide 38: Multiboot: Tips: Samba Share
 
 ![Slide - Multiboot - Tips: Samba Share][slide-38]
 
@@ -370,7 +600,9 @@ Link:
 
 * [Multiboot - Samba](/system/2018/05/25/linux-samba.html)
 
-#### Slide 39
+> Tips: Keep your samba's network share persistence along multiboot.
+
+#### Slide 39: Multiboot - Tips: FreeBSD
 
 ![Slide - Multiboot - Tips: FreeBSD][slide-39]
 
@@ -378,35 +610,62 @@ Link:
 
 * [GhostBSD: Multiboot](/system/2019/03/20/ghostbsd-multiboot.html)
 
-#### Slide 40
+> Tips: Linux Multiboot with BSD, can be done using UFS, instead of ZFS.
+
+#### Slide 40: Kernel
 
 ![Slide - Kernel][slide-40]
 
-#### Slide 41
+> `make menuconfig`
+
+#### Slide 41: Chapter Break
 
 ![Slide - Interesting Diversity][slide-41]
 
-#### Slide 42
+#### Slide 42: Interesting Diversity: Example
 
 ![Slide - Interesting Diversity - Example][slide-42]
 
-#### Slide 43
+Interesting Diversity?
+
+* Project Trident
+  * runit + zol + xbps + musl
+
+* Alpine Linux
+  * Busybox (no GNU tools)
+
+* NixOS
+  * Exotic Package Manager
+
+* LFS
+  * No comment.
+
+* And many more
+  * You name it!
+
+#### Slide 43: What's Next?
 
 ![Slide - What is Next][slide-43]
 
-#### Slide 44
+> More Wisdom!
+
+Learn BSD land!
+
+#### Slide 44: Questions
 
 ![Slide - Questions][slide-44]
 
-#### Slide 45
+> Don't be shy!
+
+#### Slide 45: Thank You
 
 ![Slide - Thank You][slide-45]
 
-Thank you for your time.
+> Thank you for your time.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets-system/2020/diversity' %}
+{% assign asset_path = 'https://epsi-rns.github.io/assets-system/2020/diversity' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/01-linux-diversity' %}
 
 [teaser-preview]:           /assets/posts/system/modular-linux.png
@@ -418,6 +677,7 @@ Thank you for your time.
 [document-inkscape]:        {{ dotfiles }}/presentation-linux-diversity-content.svg
 [inkscape-thumbs]:          {{ asset_path }}/thumbs.png
 [template-contest]:         https://blog.documentfoundation.org/blog/2020/10/12/libreoffice-impress-template-contest-by-the-indonesian-community/
+[template-lumbung]:         https://lumbung.libreoffice.id/
 
 [slide-01]: {{ asset_path }}/slide-01-cover.png
 [slide-02]: {{ asset_path }}/slide-02-about-author.png

@@ -93,8 +93,12 @@ Candyclone is an Impress template that I have made for LibreOffice contest.
 
 * [LibreOffice Impress Template Contest by the Indonesian Community][template-contest]
 
-This is just an example template that you can use freely.
-With this example you can also learn how to make your own template.
+There are also other free templates as well in `lumbung` repository.
+
+* [Lumbung LibreOffice Indonesia Repository][template-lumbung]
+ 
+This candyclone is just an example template that you can use freely.
+With this candyclone example you can also learn how to make your own template.
 Your very own template to suit your ecosystem.
 
 #### Disagreement
@@ -110,54 +114,116 @@ Feel free to express your thoughts, either with text, or illustration.
 
 Here I represent all the slides.
 
-#### Slide 01
+#### Slide 01: Cover
 
 ![Slide - Cover][slide-01]
 
-#### Slide 02
+Introduction to Desktop Customization in Linux/BSD.
+
+#### Slide 02: About The Author
 
 ![Slide - About Author][slide-02]
 
-#### Slide 03
+I have my own dotfiles repository.
+
+#### Slide 03: About This Material
 
 ![Slide - About Material][slide-03]
 
-#### Slide 04
+After watching this, you will understand:
+
+* The difference between GUI in linux or BSD.
+* What customization can be done in linux or BSD.
+* Choices to leverage your desktop appealing.
+
+So that you can pick what customization suitable
+for you for daily basis usage.
+
+This material contain a bunch of terminal screenshots.
+It does not mean that your daily desktop is all about terminal.
+
+#### Slide 04: Chapter Break
 
 ![Slide - Modular Linux][slide-04]
 
-#### Slide 05
+#### Slide 05: How Modular is Linux
 
 ![Slide - Modular Linux: How Modular is Linux?][slide-05]
 
-#### Slide 06
+How Modular is Linux?
+
+1. Package Manager:
+   * APT, ALPM, DNF, XBPS, Zypper, Portage.
+
+2. Init:
+   * SysV, systemd, openRC, runit, S6.
+
+3. Filesystem:
+   * ext4, XFS, Reiserfs, BTRFS, ZFS.
+
+4. Standard C library in OS:
+   * glibc or musl.
+
+5. DE (Desktop Environment):
+   * GTK+ based, QT based, enlightenment.
+
+6. WM (Window Manager):
+   * Stacking, Tiling, Dynamic, Compositor.
+
+#### Slide 06: Presentation Reference: Linux Diversity
 
 ![Slide - Modular Linux: Linux Diversity Presentation][slide-06]
 
 Presentation:
 
+> Dive into Linux Subsystem for Personal Educational Purpose.
+
 * [Learning Linux Diversity](/system/2020/10/11/slides-linux-diversity.html)
 
-#### Slide 07
+#### Slide 07: Chapter Break
 
 ![Slide - Customization][slide-07]
+
+#### Slide 08: Part of Desktop Art
+
+![Slide - Customization: Part of Desktop Art][slide-08]
+
+What Customization?
+
+* DE/WM Customization:
+  * window manager, panel, notification and the most ingredient called wallpaper.
+
+* Terminal Customization:
+  * shell, prompt, pixel-art, and multiplexer.
 
 Terminal ricing along with CLI application,
 are part of desktop [ricing](https://en.wikipedia.org/wiki/Rice_burner).
 
-#### Slide 08
-
-![Slide - Customization: Part of Desktop Art][slide-08]
-
-#### Slide 09
+#### Slide 09: The Difference Between DE and WM
 
 ![Slide - Customization: The Difference Between DE and WM][slide-09]
 
-#### Slide 10
+The Difference: DE or WM?
+
+* Desktop Environment:
+  * Full Experience: Panel, File Manager, Application.
+
+* Stacking Window Manager:
+  * Stripped Down Version of Desktop Environment.
+
+* Tiling Window Manager:
+  * Non-overlapping screen real estate.
+
+When you customize a Window Manager,
+you are basically making your own Desktop Environment.
+
+#### Slide 10: Desktop Environment Example: Cinnamon
 
 ![Slide - Customization: DE Example: Cinnamon][slide-10]
 
-#### Slide 11
+The good Cinnamon (GTK+3) based with Cinnamon's 3D Switcher.
+
+#### Slide 11: DE/WM Categorization
 
 ![Slide - Customization: DE Customization][slide-11]
 
@@ -165,23 +231,59 @@ Link:
 
 * [The Difference Between DE, Shell, WM and Compositor](/desktop/2016/06/13/de-wm-shell-difference.html)
 
-#### Slide 12
+DE/WM Categorization
+
+* GTK+ based Desktop Environment:
+  * XFCE4, Gnome shell, Cinnamon, Mate, Budgie.
+
+* QT based Desktop Environment:
+  * KDE Plasma, LXQT, Deepin.
+
+* DE with Other Library:
+  * Enlightenment, Lumina, or such.
+
+* Stacking Window Manager:
+  * Openbox, Fluxbox.
+
+* Tiling Window Manager:
+  * AwesomeWM, XMonad, i3wm (gaps), BSPWM, HerbsluftWM, DWM, or many others.
+
+* Compositor:
+  *  KWin, Compiz.
+
+> The separation is not very clear, sometimes overlapped.
+
+#### Slide 12: Desktop Environment Customization
 
 ![Slide - DE Customization][slide-12]
 
-#### Slide 13
+#### Slide 13: DE: LXQT Example
 
 ![Slide - DE: LXQT Example][slide-13]
 
 Link:
 
-* [LXQT with Windowish Looks](/desktop/2014/10/19/lxqt-windowish-looks.html)
+* [LXQT with Windowish Looks, No Kidding](/desktop/2014/10/19/lxqt-windowish-looks.html)
 
-#### Slide 14
+You can switch to any looks with parts from internet.
+
+#### Slide 14: DE: What can I do with my DE?
 
 ![Slide - DE: What can I do with my DE][slide-14]
 
-#### Slide 15
+What can I do with my DE?
+
+* Theming: Taskbar and Border.
+* Color Scheme.
+* Window Animation.
+* Cursor and Icon Collection.
+* Context Menu in File Manager.
+* Wallpaper: _The most ingredient for success_.
+* Other Stuff: Font, Conky, or such.
+
+#### Slide 15: DE Customization Example
+
+Example: Custom XFCE4 Theme: PNG Gradient over XPM
 
 ![Slide - DE: XFCE4 Theme: PNG Gradient Over XPM][slide-15]
 
@@ -189,19 +291,33 @@ Link:
 
 * [XFWM4 Theme - Overview](/desktop/2018/03/20/xfwm4-theme.html)
 
-#### Slide 16
+#### Slide 16: DE Customization Example
+
+Example: Custom XFCE4 Theme: SVG Inkscape Source
 
 ![Slide- DE: XFCE4 Theme: SVG Inkscape Source][slide-16]
 
-#### Slide 17
+> UI/UGM (User Interface/ Unified Graphic Material).
+
+The previous window icon was designed easily using inskcape.
+
+#### Slide 17: Chapter Break
 
 ![Slide - Window Layout][slide-17]
 
-#### Slide 18
+#### Slide 18: Window Layout
 
 ![Slide - Layout: What Layout][slide-18]
 
-#### Slide 19
+What Layout is Available with Your DE/WM?
+
+* Stacking: Suitable for ricing.
+* Tiling: For masochist desktoper. Avoid n00b.
+* Floating: Enable stacking in tiling.
+
+#### Slide 19: Layout: Stacking
+
+Stacking Layout Example: LXQT
 
 ![Slide - Layout: Stacking Layout Example: LXQT][slide-19]
 
@@ -209,35 +325,98 @@ Link:
 
 * [LXQT with Windowish Looks, No Kidding](/desktop/2014/10/19/lxqt-windowish-looks.html)
 
-#### Slide 20
+#### Slide 20: Layout: Tiling
+
+Tiling Layout Example: Herbstluftwm
 
 ![Slide - Layout: Tiling Layout Example: Herbstluftwm][slide-20]
 
-#### Slide 21
+#### Slide 21: Layout: Floating
+
+Floating Example: AwesomeWM
 
 ![Slide - Layout: Floating Example: AwesomeWM][slide-21]
 
-#### Slide 22
+#### Slide 22: Chapter Break
 
 ![Slide - Ricing][slide-22]
 
-#### Slide 23
+#### Slide 23: Ricing Guidance
 
 ![Slide - Ricing: Ricing Guidance][slide-23]
 
-#### Slide 24
+Ricing Guidance
+
+* Aesthetic is First class:
+  * It is a work of art.
+
+* Technical Difficulty is Appreciated:
+  * Basic knowledge is a must.
+
+* Everyone has their own personal character:
+  * Yes, there is culture.
+  * Many factions blended in,
+    such as dark mode, or weebs, or flat color vs transparency.
+
+* Ricing people prefer WM over DE:
+  * More customization to avoid hardcoded looks.
+
+* Be creative, be different:
+  * Beautiful.
+
+> Tips: Find your own style!
+
+#### Slide 24: Is It Worth It?
 
 ![Slide - Ricing: Is It Worth It?][slide-24]
 
-#### Slide 25
+Is it worth it?
+
+* Socially:
+  * You need to show of, and get some votes.
+
+* Technically:
+  * You need a good screenshot
+    while _communicating your issue_ on social media,
+    or _publishing your work_ in a blog or other media.
+
+* Learning:
+  * A fun case while studying OS, and also coding.
+
+* Community: Give a fun direction for n00b
+  * that showing of ricing screenshot can be a better life,
+    instead of just showing of illegal hacking.
+
+#### Slide 25: Chapter Break
 
 ![Slide - WM: Customization][slide-25]
 
-#### Slide 26
+#### Slide 26: Window Manager Parts
 
 ![Slide - WM: Window Manager Parts][slide-26]
 
-#### Slide 27
+Window Manager Customization?
+
+* Window Manager itself:
+  * Choose your WM.
+
+* Panel:
+  * Polybar, dzen2, Lemonbar, or others.
+
+* Notification:
+  * Dunst, or others.
+
+* Launcher:
+  * dmenu, rofi, or others.
+
+* Original Wallpaper:
+  * Ricing Culture: Mostly Anime.
+
+* Make your own authentic stuff.
+
+> Tips: There is no wrong or right. It is all about choices.
+
+#### Slide 27: Example: Custom Standalone Panel
 
 ![Slide - WM: Custom Standalone Panel][slide-27]
 
@@ -245,17 +424,38 @@ Link:
 
 * [Standalone Lemonbar Using Conky](/desktop/2017/04/14/standalone-lemonbar-conky.html)
 
-#### Slide 28
+#### Slide 28: Optional Tools
 
 ![Slide - WM: Optional Tools][slide-28]
 
 Links:
 
-* Wallpaper Manager: [Openbox Install - Common Utility](/desktop/2018/07/16/openbox-install.html)
+* Wallpaper Manager: 
 
-* Good Font Installation: [Linux - Installing Font](/desktop/2018/02/04/installing-font.html)
+* Good Font Installation: 
 
-#### Slide 29
+Optional tools?
+
+* Screenshooter:
+  * scrot or others.
+
+* Compositor Manager:
+  * picom or compton or xcompmgr.
+
+* Wallpaper Manager:
+  * Nitrogen or feh:
+    [Openbox Install - Common Utility](/desktop/2018/07/16/openbox-install.html)
+
+* Good Font Installation:
+  * FontAwesome, siji, terminus:
+    [Linux - Installing Font](/desktop/2018/02/04/installing-font.html)
+
+* Logging Out:
+  * OB Menu or others.
+
+* LXAppearance
+
+#### Slide 29: Custom Material Wallpaper
 
 ![Slide - WM: Example Genuine Wallpaper][slide-29]
 
@@ -265,19 +465,32 @@ Link:
 
 * [Wallpaper Repository](https://github.com/epsi-rns/isometric-wallpaper)
 
-#### Slide 30
+#### Slide 30: Chapter Break
 
 ![Slide - Stacking: Window Manager][slide-30]
 
-#### Slide 31
+#### Slide 31: Why Stacking Window Manager?
 
 ![Slide - Stacking: Why Stacking WM][slide-31]
 
-#### Slide 32
+Why Stacking Window Manager?
+
+* More on Customization:
+  * Configuration in Text Editor (suitable for coder),
+  * Shareable with dotfiles
+
+* Lightweight:
+  * Small Memory Footprint.
+  * Install only what I need.
+
+* The Looks:
+  * Avoid hardcoded looks or just be simple.
+
+#### Slide 32: Example Oldschool Openbox
 
 ![Slide - Stacking: Example Oldschool Openbox][slide-32]
 
-#### Slide 33
+#### Slide 33: More Articles about Stacking WM
 
 ![Slide - Stacking: More Articles][slide-33]
 
@@ -291,7 +504,7 @@ Links:
 
 * [Fluxbox Overview](/desktop/2018/04/01/fluxbox-overview.html)
 
-#### Slide 34
+#### Slide 34: Example Openbox Theme: Multi Color
 
 ![Slide - Stacking: Example Openbox Theme][slide-34]
 
@@ -299,7 +512,7 @@ Link:
 
 * [Openbox Theme - Special Trick](/desktop/2018/04/18/openbox-theme.html)
 
-#### Slide 35
+#### Slide 35: Example Openbox Theming Using Inkscape
 
 ![Slide - Stacking: Openbox Inkscape Theming][slide-35]
 
@@ -307,7 +520,7 @@ Link:
 
 * Example: [openbox theming with Inkscape](/desktop/2018/04/16/openbox-theme.html)
 
-#### Slide 36
+#### Slide 36: Example Oldschool Fluxbox
 
 ![Slide - Stacking: Example Oldschool Fluxbox][slide-36]
 
@@ -315,34 +528,86 @@ Link:
 
 * Example: [Fluxbox](/desktop/2014/11/08/fluxbox-with-glowing-wallpaper.html)
 
-#### Slide 37
+#### Slide 37: Chapter Break
 
 ![Slide - Tiling: Window Manager][slide-37]
 
-#### Slide 38
+#### Slide 38: Why Tiling Window Manager?
 
 ![Slide - Tiling: Why Tiling WM][slide-38]
 
-#### Slide 39
+Why Tiling Window Manager?
+
+* Efficient:
+  * Non-overlapping screen real estate.
+
+* Scaling:
+  * With Workspace or Tags.
+
+* Customizable:
+  * Most parts can be automated.
+
+* Keyboard-driven workflow:
+  * For masochist-desktoper.
+
+* Lightweight:
+  * Compared to DE.
+
+#### Slide 39: Good Watch
+
+> Aline Abler Presentation on Youtube
 
 ![Slide - Tiling: Aline Abler Video][slide-39]
 
 Good Watch: [Aline Abler Presentation on Youtube](https://www.youtube.com/watch?v=Api6dFMlxAA)
 
+Explained in systematic fashioned,
+easy to follow,
+and she is pretty too.
 
-#### Slide 40
+#### Slide 40: What Tiling Window Manager?
 
 ![Slide - Tiling Choices][slide-40]
 
-#### Slide 41
+What Tiling Window Manager?
+
+* i3wm:
+  * Simple configuration, suitable for beginner.
+
+* HerbstluftWM:
+  * Challenging technical difficulties.
+  * The extra frame almost make me cry for happiness.
+
+* XMonad:
+  * I can config, but weird, I still don't understand Haskell.
+
+* BSPWM
+
+#### Slide 41: Dynamic Window Manager?
 
 ![Slide - Dynamic: Window Manager][slide-41]
 
-#### Slide 42
+> It is a kind of Tiling WM, with presets layouts.
+
+Dynamic Window Manager?
+
+* Awesome WM:
+  * Easy to use for beginner, but very long config.
+  * Built in menu, systray, notification.
+
+* DWM:
+  * First install for any minimalist distro.
+  * You have to compile to change the behaviour.
+
+#### Slide 42: Presets Layout (in animation)
+
+Example of presets layout: AwesomeWM.
 
 ![Slide - Dynamic: Presets Layout][slide-42]
 
-#### Slide 43
+#### Slide 43: Example Bright i3-gaps WM with i3status
+
+Example: i3wm (gaps, bright)
 
 ![Slide - Tiling: Example i3wm with i3status][slide-43]
 
@@ -350,7 +615,9 @@ Link:
 
 * [Modularized Conky Configuration for i3status](/desktop/2016/08/01/modularized-i3status-conky-lua-json.html)
 
-#### Slide 44
+#### Slide 44: Example AwesomeWM
+
+Example Tiling WM: AwesomeWM in GIF animation
 
 ![Slide - Dynamic: Example AwesomeWM Fix Width][slide-44]
 
@@ -358,8 +625,7 @@ Link:
 
 * Example: [AwesomeWM](/desktop/2019/06/18/awesome-modularized-binding.html)
 
-
-#### Slide 45
+#### Slide 45: Dynamic: More About AwesomeWM
 
 ![Slide - Dynamic: More About AwesomeWM][slide-45]
 
@@ -373,7 +639,7 @@ Links:
 
 * [Presentation: Awesome WM - Statusbar](/desktop/2019/12/03/awesome-presentation-statusbar.html)
 
-#### Slide 46
+#### Slide 46: Tiling Example: Herbstluftwm
 
 ![Slide - Tiling: Herbstluftwm][slide-46]
 
@@ -381,7 +647,7 @@ Link:
 
 * Example: [HerbstluftWM](/desktop/2017/06/30/herbstlustwm-summary.html)
 
-#### Slide 47
+#### Slide 47: Solving HerbstluftWM Technical Difficulties
 
 ![Slide - Tiling: herbstluftwm: Technical Difficulties][slide-47]
 
@@ -395,7 +661,7 @@ Links:
 
 * [Summary: HerbstluftWM in Seven Languages](/desktop/2017/06/30/herbstlustwm-summary.html)
 
-#### Slide 48
+#### Slide 48: Combining with Specific Panel Bar
 
 ![Slide - Tiling: Specific Panel Bar][slide-48]
 
@@ -403,15 +669,19 @@ Link:
 
 * Example: [Dzen2 in XMonad](/desktop/2016/05/11/xmonad-with-conkyless-dzen.html)
 
-#### Slide 49
+> WM customization can be combined with Specific Panel Bar.
+
+#### Slide 49: Chapter Break: Xorg and Wayland
 
 ![Slide - Other DE/WM Issue][slide-49]
 
-#### Slide 50
+> Xorg and Wayland
+
+#### Slide 50: Chapter Break
 
 ![Slide - Terminal Customization][slide-50]
 
-#### Slide 51
+#### Slide 51: Example of Terminal Customization
 
 ![Slide - Terminal: Example Customization][slide-51]
 
@@ -419,7 +689,9 @@ Link:
 
 * [Linux - Terminal Customization](/desktop/2018/08/07/terminal-ricing.html)
 
-#### Slide 52
+> Terminal Ricing: tmux + vim + gcc + C + Assembler
+
+#### Slide 52: Parts of Terminal Ricing
 
 ![Slide - Terminal: Ricing Parts][slide-52]
 
@@ -427,7 +699,41 @@ Link:
 
 * [Terminal Ricing](/desktop/2018/08/07/terminal-ricing.html)
 
-#### Slide 53
+Main Parts.
+
+1. Terminal:
+  * urxvt, xfce4-terminal, termite.
+
+2. Shell:
+  * bash, zsh, fish.
+  * Prompt: powerline, oh-my-bash, oh-my-zsh, oh-my-fish.
+
+3. Multiplexer:
+  * tmux, gnu screen.
+  * wrapper: teamocil, byobu.
+
+4. Background Decoration:
+  * Wallpaper.
+
+Additional Parts.
+
+1. Compositor Decoration:
+  * Picom or Compton.
+
+2. Padding Decoration:
+  * gtk.css.
+
+3. Example CLI application:
+  * neofetch, htop, cava.
+
+4. Special CLI application:
+  * ViM Text Editor.
+
+5. Pixel Art
+
+#### Slide 53: Example Pixel Art
+
+Example Terminal Ricing: Pixel Art: ANSI Color
 
 ![Slide - Terminal: Pixel Art][slide-53]
 
@@ -435,7 +741,7 @@ Link:
 
 * Example: Pixel Art Repository: [ANSI color](https://bitbucket.org/epsi/ansi-color)
 
-#### Slide 54
+#### Slide 54: Example Command Line Interface
 
 ![Slide - Terminal: Standalone CLI][slide-54]
 
@@ -443,7 +749,7 @@ Link:
 
 * [Standalone CLI System Monitoring Using Conky](/desktop/2017/04/12/standalone-cli-conky.html)
 
-#### Slide 55
+#### Slide 55: Example Shell Prompt
 
 ![Slide - Terminal Shell Prompt][slide-55]
 
@@ -451,11 +757,11 @@ Link:
 
 * [Customizing Shell Prompt with Powerline](/desktop/2016/03/21/powerline-customizing.html)
 
-#### Slide 56
+#### Slide 56: Chapter Break
 
 ![Slide - Dotfiles][slide-56]
 
-#### Slide 57
+#### Slide 57: Where to Find Resources?
 
 ![Slide - Dotfiles: Resources][slide-57]
 
@@ -482,15 +788,21 @@ Links:
     [@dotfiles_id_channel](https://t.me/dotfiles_id_channel)
   * [@window_managers](https://t.me/window_managers)
 
-#### Slide 58
+#### Slide 58: Origin of the Dotfiles Word
 
 ![Slide - Dotfiles: Word Origin][slide-58]
 
-#### Slide 59
+Configuration files on linux can be shared between hobbyist.
+Configuration mostly lies under _.config_ directory.
+Or single files with name started with dot.
+
+#### Slide 59: Managing Dotfiles
 
 ![Slide - Dotfiles: Managing Files][slide-59]
 
-#### Slide 60
+> Sharing Resources require good folder management.
+
+#### Slide 60: Please Share!
 
 ![Slide - Dotfiles: Please Share][slide-60]
 
@@ -498,23 +810,33 @@ I share mine: [gitlab.com/epsi-rns/dotfiles](https://gitlab.com/epsi-rns/dotfile
 
 _Would you do the same with each other?_
 
-#### Slide 61
+#### Slide 61: What's Next?
 
 ![Slide - What's Next?][slide-61]
 
-#### Slide 62
+What is Next?
+
+* Make your own custom Statusbar Panel!
+* Make your own custom Window Manager!
+* Port old tools to a better programming language!
+
+> Leverage Coding Skills!
+
+#### Slide 62: Questions
 
 ![Slide - Questions?][slide-62]
 
-#### Slide 63
+> Don't be shy!
+
+#### Slide 63: The End
 
 ![Slide - Thank You][slide-63]
 
-Thank you for your time.
+> Thank you for your time.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = '/assets-desktop/2020/customization' %}
+{% assign asset_path = 'https://epsi-rns.github.io/assets-desktop/2020/customization' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/02-desktop-customization' %}
 
 [teaser-preview]:           /assets-desktop/2020/customization-terminal.png
@@ -526,6 +848,7 @@ Thank you for your time.
 [document-inkscape]:        {{ dotfiles }}/presentation-desktop-customization-content.svg
 [inkscape-thumbs]:          {{ asset_path }}/thumbs.png
 [template-contest]:         https://blog.documentfoundation.org/blog/2020/10/12/libreoffice-impress-template-contest-by-the-indonesian-community/
+[template-lumbung]:         https://lumbung.libreoffice.id/
 
 [slide-01]: {{ asset_path }}/slide-01-cover.png
 [slide-02]: {{ asset_path }}/slide-02-about-author.png
