@@ -126,7 +126,7 @@ Dive into Linux Subsystem for Personal Educational Purpose.
 
 ![Slide - About Author][slide-02]
 
-> I have my own blog
+> I have my own blog.
 
 #### Slide 03: About This Material
 

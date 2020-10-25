@@ -124,7 +124,7 @@ Introduction to Desktop Customization in Linux/BSD.
 
 ![Slide - About Author][slide-02]
 
-I have my own dotfiles repository.
+> I have my own dotfiles repository.
 
 #### Slide 03: About This Material
 
