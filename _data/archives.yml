@@ -5,6 +5,18 @@
 # to folder _data/archives.yml
 
 
+- id: 20101125
+  title: "Slides - Desktop Customization"
+  url: /desktop/2020/10/11/slides-desktop-customization.html
+
+- id: 20101125
+  title: "Slides - Linux Diversity"
+  url: /system/2020/10/11/slides-linux-diversity.html
+
+- id: 20081735
+  title: "Sorting Photo by EXIF"
+  url: /code/2020/08/17/sorting-photo-by-exif.html
+
 - id: 20020225
   title: "Presentation - Learning Linux Diversity"
   url: /system/2020/02/02/presentation-linux-diversity.html

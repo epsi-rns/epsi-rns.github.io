@@ -2,6 +2,50 @@
 # Archives by Date
 
 
+- id: 20101113
+  title: "Slides - Concept CSS"
+  url: /frontend/2020/10/11/slides-concept-css/
+  
+- id: 20101113
+  title: "Slides - Concept SSG"
+  url: /ssg/2020/10/11/slides-concept-ssg/
+  
+- id: 20092929
+  title: "Sozi Animation - Part Three"
+  url: /design/2020/09/29/sozi-animation-03/
+  
+- id: 20092829
+  title: "Sozi Animation - Part Two"
+  url: /design/2020/09/28/sozi-animation-02/
+  
+- id: 20092729
+  title: "Sozi Animation - Part One"
+  url: /design/2020/09/27/sozi-animation-01/
+  
+- id: 20092629
+  title: "Inkscape: Impress Slides - Part Six"
+  url: /design/2020/09/26/inkscape-impress-slides-06/
+  
+- id: 20092529
+  title: "Inkscape: Impress Slides - Part Five"
+  url: /design/2020/09/25/inkscape-impress-slides-05/
+  
+- id: 20092429
+  title: "Inkscape: Impress Slides - Part Four"
+  url: /design/2020/09/24/inkscape-impress-slides-04/
+  
+- id: 20092329
+  title: "Inkscape: Impress Slides - Part Three"
+  url: /design/2020/09/23/inkscape-impress-slides-03/
+  
+- id: 20092229
+  title: "Inkscape: Impress Slides - Part Two"
+  url: /design/2020/09/22/inkscape-impress-slides-02/
+  
+- id: 20092129
+  title: "Inkscape: Impress Slides - Part One"
+  url: /design/2020/09/21/inkscape-impress-slides-01/
+  
 - id: 20082017
   title: "Jekyll - Summary"
   url: /ssg/2020/08/20/jekyll-summary/
@@ -213,6 +257,26 @@
 - id: 20060117
   title: "Jekyll - Overview"
   url: /ssg/2020/06/01/jekyll-overview/
+  
+- id: 20052517
+  title: "Template - Hugo - Template"
+  url: /frontend/2020/05/25/template-hugo-template/
+  
+- id: 20052417
+  title: "Template - Hexo - EJS"
+  url: /frontend/2020/05/24/template-hexo-ejs/
+  
+- id: 20052317
+  title: "Template - Jekyll - Liquid"
+  url: /frontend/2020/05/23/template-jekyll-liquid/
+  
+- id: 20052217
+  title: "Template - Pelican - Jinja2"
+  url: /frontend/2020/05/22/template-pelican-jinja2/
+  
+- id: 20052117
+  title: "Template - Eleventy - Nunjucks"
+  url: /frontend/2020/05/21/template-11ty-nunjucks/
   
 - id: 20051517
   title: "Template - Koa"
@@ -1098,6 +1162,10 @@
   title: "Jekyll Installation on openSUSE"
   url: /ssg/2018/01/06/ekyll-opensuse-install/
   
+- id: 17111529
+  title: "Inkscape: Progress Ring Animation"
+  url: /design/2017/11/15/inkscape-progress-ring/
+  
 - id: 17070525
   title: "The LAMP Stack Evolution"
   url: /backend/2017/07/05/lamp-stack-evolution/
@@ -1108,23 +1176,23 @@
   
 - id: 16111130
   title: "Inkscape Logo Creation Part Three"
-  url: /design/inkscape/inkscape-logo-03-coloring/
+  url: /design/2016/11/11/inkscape-logo-03-coloring/
   
 - id: 16111110
   title: "Inkscape Logo Creation Part Two"
-  url: /design/inkscape/inkscape-logo-02-making-shape-example/
+  url: /design/2016/11/11/inkscape-logo-02-making-shape-example/
   
 - id: 16111100
   title: "Inkscape Logo Creation Part One"
-  url: /design/inkscape/inkscape-logo-01-preparing-document/
+  url: /design/2016/11/11/inkscape-logo-01-preparing-document/
   
 - id: 16110129
   title: "Inkscape: Text Feature"
-  url: /design/inkscape/inkscape-text-feature/
+  url: /design/2016/11/01/inkscape-text-feature/
   
 - id: 16100339
   title: "Inkscape: Flat Wallpaper with Isometric Looks"
-  url: /design/inkscape/inkscape-flat-isometric-wallpaper/
+  url: /design/2016/10/03/inkscape-flat-isometric-wallpaper/
   
 - id: 16081315
   title: "Jekyll Collapsed Sidemenu Without Javascript"
@@ -1172,15 +1240,15 @@
   
 - id: 16022348
   title: "Inkscape: Anti Corruption Movement"
-  url: /design/inkscape/inkscape-anti-corruption-movement/
+  url: /design/2016/02/23/inkscape-anti-corruption-movement/
   
 - id: 15111111
   title: "Inkscape: Isometric Infographics"
-  url: /design/inkscape/inkscape-isometric-infographics/
+  url: /design/2015/11/11/inkscape-isometric-infographics/
   
 - id: 15102011
   title: "Inkscape: Another Discussion e-Flyer"
-  url: /design/inkscape/inkscape-discussion-flyer/
+  url: /design/2015/10/20/inkscape-discussion-flyer/
   
 - id: 15101649
   title: "Setup LAMP stack with Manjaro OpenRC"
@@ -1188,33 +1256,33 @@
   
 - id: 15101010
   title: "Inkscape: Object Clip"
-  url: /design/inkscape/inkscape-object-clip/
+  url: /design/2015/10/10/inkscape-object-clip/
   
 - id: 15091126
   title: "Multipurpose Design Based on Stamp Ornament Box"
-  url: /design/inkscape/inkscape-stamp-poster-flyer/
+  url: /design/2015/09/11/inkscape-stamp-poster-flyer/
   
 - id: 15090658
   title: "Inkscape: Vexel Face Tracing"
-  url: /design/inkscape/inkscape-vexel-face-tracing/
+  url: /design/2015/09/06/inkscape-vexel-face-tracing/
   
 - id: 15090348
   title: "Inkscape: Logo with Stamp Ornament"
-  url: /design/inkscape/inkscape-stamp-logo/
+  url: /design/2015/09/03/inkscape-stamp-logo/
   
 - id: 15081723
   title: "Inkscape: Event Invitation Stock Image"
-  url: /design/inkscape/inkscape-invitation-stock/
+  url: /design/2015/08/17/inkscape-invitation-stock/
   
 - id: 15080808
   title: "Inkscape: Event Banner Collection"
-  url: /design/inkscape/inkscape-event-banners/
+  url: /design/2015/08/08/inkscape-event-banners/
   
 - id: 15070707
   title: "Inkscape: Event Schedule Announcement"
-  url: /design/inkscape/inkscape-event-schedule/
+  url: /design/2015/07/07/inkscape-event-schedule/
   
 - id: 15060606
   title: "Inkscape: Non Standard Alumni Logo"
-  url: /design/inkscape/inkscape-non-standard-makara/
+  url: /design/2015/06/06/inkscape-non-standard-makara/
   
