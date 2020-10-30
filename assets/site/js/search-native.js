@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           + item.url + '">' + item.title + '</a></li>'
       });
     } else {
-      searchResults.html('<li>No results found</li>');
+      searchResults.innerHTML = '<li>No results found</li>';
     }
   }
 
