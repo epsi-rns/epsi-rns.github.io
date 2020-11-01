@@ -253,13 +253,47 @@ DE/WM Categorization
 
 > The separation is not very clear, sometimes overlapped.
 
-#### Slide 12: Desktop Environment Customization
+#### Slide 12: Desktop Customization Step by Step?
 
-![Slide - DE Customization][slide-12]
+![Slide - Preface: Desktop Customization Step by Step][slide-12]
 
-#### Slide 13: DE: LXQT Example
+Desktop Customization Step by Step?
 
-![Slide - DE: LXQT Example][slide-13]
+1. Install Linux Distribution
+   * Pick your favorite distribution.
+   * Debian Based, Arch Family, Void, or others.
+
+2. Desktop Environment
+   * Plasma, Gnome, XFCE4, and such.
+   * Explore Theming.
+
+3. Terminal Customization
+   * Terminal, shell, prompt, multiplexer (tmux), pixel art,
+     compositor (picom), CLI app (neofetch), editor (ViM).
+
+4. Stacking Window Manager
+   * Configuration: Openbox, Fluxbox.
+   * Explore Panel (task bar), and Tools.
+
+5. Tiling Window Manager
+   * i3wm, AwesomeWM, BSPWM,
+   * DWM, XMonad, HerbstluftWM.
+
+> Learn how to google, make a screenshot (scrot), read documentation, and english.
+
+Tips:
+
+* Choose good wallpaper, fonts, and colorscheme.
+
+* Enjoy the journey. Share your .dotfiles.
+
+#### Slide 13: Desktop Environment Customization
+
+![Slide - DE Customization][slide-13]
+
+#### Slide 14: DE: LXQT Example
+
+![Slide - DE: LXQT Example][slide-14]
 
 Link:
 
@@ -267,9 +301,9 @@ Link:
 
 You can switch to any looks with parts from internet.
 
-#### Slide 14: DE: What can I do with my DE?
+#### Slide 15: DE: What can I do with my DE?
 
-![Slide - DE: What can I do with my DE][slide-14]
+![Slide - DE: What can I do with my DE][slide-15]
 
 What can I do with my DE?
 
@@ -281,33 +315,33 @@ What can I do with my DE?
 * Wallpaper: _The most ingredient for success_.
 * Other Stuff: Font, Conky, or such.
 
-#### Slide 15: DE Customization Example
+#### Slide 16: DE Customization Example
 
 Example: Custom XFCE4 Theme: PNG Gradient over XPM
 
-![Slide - DE: XFCE4 Theme: PNG Gradient Over XPM][slide-15]
+![Slide - DE: XFCE4 Theme: PNG Gradient Over XPM][slide-16]
 
 Link:
 
 * [XFWM4 Theme - Overview](/desktop/2018/03/20/xfwm4-theme.html)
 
-#### Slide 16: DE Customization Example
+#### Slide 17: DE Customization Example
 
 Example: Custom XFCE4 Theme: SVG Inkscape Source
 
-![Slide- DE: XFCE4 Theme: SVG Inkscape Source][slide-16]
+![Slide- DE: XFCE4 Theme: SVG Inkscape Source][slide-17]
 
 > UI/UGM (User Interface/ Unified Graphic Material).
 
 The previous window icon was designed easily using inskcape.
 
-#### Slide 17: Chapter Break
+#### Slide 18: Chapter Break
 
-![Slide - Window Layout][slide-17]
+![Slide - Window Layout][slide-18]
 
-#### Slide 18: Window Layout
+#### Slide 19: Window Layout
 
-![Slide - Layout: What Layout][slide-18]
+![Slide - Layout: What Layout][slide-19]
 
 What Layout is Available with Your DE/WM?
 
@@ -315,35 +349,35 @@ What Layout is Available with Your DE/WM?
 * Tiling: For masochist desktoper. Avoid n00b.
 * Floating: Enable stacking in tiling.
 
-#### Slide 19: Layout: Stacking
+#### Slide 20: Layout: Stacking
 
 Stacking Layout Example: LXQT
 
-![Slide - Layout: Stacking Layout Example: LXQT][slide-19]
+![Slide - Layout: Stacking Layout Example: LXQT][slide-20]
 
 Link:
 
 * [LXQT with Windowish Looks, No Kidding](/desktop/2014/10/19/lxqt-windowish-looks.html)
 
-#### Slide 20: Layout: Tiling
+#### Slide 21: Layout: Tiling
 
 Tiling Layout Example: Herbstluftwm
 
-![Slide - Layout: Tiling Layout Example: Herbstluftwm][slide-20]
+![Slide - Layout: Tiling Layout Example: Herbstluftwm][slide-21]
 
-#### Slide 21: Layout: Floating
+#### Slide 22: Layout: Floating
 
 Floating Example: AwesomeWM
 
-![Slide - Layout: Floating Example: AwesomeWM][slide-21]
+![Slide - Layout: Floating Example: AwesomeWM][slide-22]
 
-#### Slide 22: Chapter Break
+#### Slide 23: Chapter Break
 
-![Slide - Ricing][slide-22]
+![Slide - Ricing][slide-23]
 
-#### Slide 23: Ricing Guidance
+#### Slide 24: Ricing Guidance
 
-![Slide - Ricing: Ricing Guidance][slide-23]
+![Slide - Ricing: Ricing Guidance][slide-24]
 
 Ricing Guidance
 
@@ -366,9 +400,9 @@ Ricing Guidance
 
 > Tips: Find your own style!
 
-#### Slide 24: Is It Worth It?
+#### Slide 25: Is It Worth It?
 
-![Slide - Ricing: Is It Worth It?][slide-24]
+![Slide - Ricing: Is It Worth It?][slide-25]
 
 Is it worth it?
 
@@ -387,13 +421,13 @@ Is it worth it?
   * that showing of ricing screenshot can be a better life,
     instead of just showing of illegal hacking.
 
-#### Slide 25: Chapter Break
+#### Slide 26: Chapter Break
 
-![Slide - WM: Customization][slide-25]
+![Slide - WM: Customization][slide-26]
 
-#### Slide 26: Window Manager Parts
+#### Slide 27: Window Manager Parts
 
-![Slide - WM: Window Manager Parts][slide-26]
+![Slide - WM: Window Manager Parts][slide-27]
 
 Window Manager Customization?
 
@@ -416,17 +450,17 @@ Window Manager Customization?
 
 > Tips: There is no wrong or right. It is all about choices.
 
-#### Slide 27: Example: Custom Standalone Panel
+#### Slide 28: Example: Custom Standalone Panel
 
-![Slide - WM: Custom Standalone Panel][slide-27]
+![Slide - WM: Custom Standalone Panel][slide-28]
 
 Link:
 
 * [Standalone Lemonbar Using Conky](/desktop/2017/04/14/standalone-lemonbar-conky.html)
 
-#### Slide 28: Optional Tools
+#### Slide 29: Optional Tools
 
-![Slide - WM: Optional Tools][slide-28]
+![Slide - WM: Optional Tools][slide-29]
 
 Links:
 
@@ -455,9 +489,9 @@ Optional tools?
 
 * LXAppearance
 
-#### Slide 29: Custom Material Wallpaper
+#### Slide 30: Custom Material Wallpaper
 
-![Slide - WM: Example Genuine Wallpaper][slide-29]
+![Slide - WM: Example Genuine Wallpaper][slide-30]
 
 Link:
 
@@ -465,13 +499,13 @@ Link:
 
 * [Wallpaper Repository](https://github.com/epsi-rns/isometric-wallpaper)
 
-#### Slide 30: Chapter Break
+#### Slide 31: Chapter Break
 
-![Slide - Stacking: Window Manager][slide-30]
+![Slide - Stacking: Window Manager][slide-31]
 
-#### Slide 31: Why Stacking Window Manager?
+#### Slide 32: Why Stacking Window Manager?
 
-![Slide - Stacking: Why Stacking WM][slide-31]
+![Slide - Stacking: Why Stacking WM][slide-32]
 
 Why Stacking Window Manager?
 
@@ -486,13 +520,13 @@ Why Stacking Window Manager?
 * The Looks:
   * Avoid hardcoded looks or just be simple.
 
-#### Slide 32: Example Oldschool Openbox
+#### Slide 33: Example Oldschool Openbox
 
-![Slide - Stacking: Example Oldschool Openbox][slide-32]
+![Slide - Stacking: Example Oldschool Openbox][slide-33]
 
-#### Slide 33: More Articles about Stacking WM
+#### Slide 34: More Articles about Stacking WM
 
-![Slide - Stacking: More Articles][slide-33]
+![Slide - Stacking: More Articles][slide-34]
 
 Links:
 
@@ -504,37 +538,37 @@ Links:
 
 * [Fluxbox Overview](/desktop/2018/04/01/fluxbox-overview.html)
 
-#### Slide 34: Example Openbox Theme: Multi Color
+#### Slide 35: Example Openbox Theme: Multi Color
 
-![Slide - Stacking: Example Openbox Theme][slide-34]
+![Slide - Stacking: Example Openbox Theme][slide-35]
 
 Link:
 
 * [Openbox Theme - Special Trick](/desktop/2018/04/18/openbox-theme.html)
 
-#### Slide 35: Example Openbox Theming Using Inkscape
+#### Slide 36: Example Openbox Theming Using Inkscape
 
-![Slide - Stacking: Openbox Inkscape Theming][slide-35]
+![Slide - Stacking: Openbox Inkscape Theming][slide-36]
 
 Link:
 
 * Example: [openbox theming with Inkscape](/desktop/2018/04/16/openbox-theme.html)
 
-#### Slide 36: Example Oldschool Fluxbox
+#### Slide 37: Example Oldschool Fluxbox
 
-![Slide - Stacking: Example Oldschool Fluxbox][slide-36]
+![Slide - Stacking: Example Oldschool Fluxbox][slide-37]
 
 Link:
 
 * Example: [Fluxbox](/desktop/2014/11/08/fluxbox-with-glowing-wallpaper.html)
 
-#### Slide 37: Chapter Break
+#### Slide 38: Chapter Break
 
-![Slide - Tiling: Window Manager][slide-37]
+![Slide - Tiling: Window Manager][slide-38]
 
-#### Slide 38: Why Tiling Window Manager?
+#### Slide 39: Why Tiling Window Manager?
 
-![Slide - Tiling: Why Tiling WM][slide-38]
+![Slide - Tiling: Why Tiling WM][slide-39]
 
 Why Tiling Window Manager?
 
@@ -553,11 +587,11 @@ Why Tiling Window Manager?
 * Lightweight:
   * Compared to DE.
 
-#### Slide 39: Good Watch
+#### Slide 40: Good Watch
 
 > Aline Abler Presentation on Youtube
 
-![Slide - Tiling: Aline Abler Video][slide-39]
+![Slide - Tiling: Aline Abler Video][slide-40]
 
 Good Watch: [Aline Abler Presentation on Youtube](https://www.youtube.com/watch?v=Api6dFMlxAA)
 
@@ -565,9 +599,9 @@ Explained in systematic fashioned,
 easy to follow,
 and she is pretty too.
 
-#### Slide 40: What Tiling Window Manager?
+#### Slide 41: What Tiling Window Manager?
 
-![Slide - Tiling Choices][slide-40]
+![Slide - Tiling Choices][slide-41]
 
 What Tiling Window Manager?
 
@@ -583,9 +617,9 @@ What Tiling Window Manager?
 
 * BSPWM
 
-#### Slide 41: Dynamic Window Manager?
+#### Slide 42: Dynamic Window Manager?
 
-![Slide - Dynamic: Window Manager][slide-41]
+![Slide - Dynamic: Window Manager][slide-42]
 
 > It is a kind of Tiling WM, with presets layouts.
 
@@ -599,35 +633,35 @@ Dynamic Window Manager?
   * First install for any minimalist distro.
   * You have to compile to change the behaviour.
 
-#### Slide 42: Presets Layout (in animation)
+#### Slide 43: Presets Layout (in animation)
 
 Example of presets layout: AwesomeWM.
 
-![Slide - Dynamic: Presets Layout][slide-42]
+![Slide - Dynamic: Presets Layout][slide-43]
 
-#### Slide 43: Example Bright i3-gaps WM with i3status
+#### Slide 44: Example Bright i3-gaps WM with i3status
 
 Example: i3wm (gaps, bright)
 
-![Slide - Tiling: Example i3wm with i3status][slide-43]
+![Slide - Tiling: Example i3wm with i3status][slide-44]
 
 Link:
 
 * [Modularized Conky Configuration for i3status](/desktop/2016/08/01/modularized-i3status-conky-lua-json.html)
 
-#### Slide 44: Example AwesomeWM
+#### Slide 45: Example AwesomeWM
 
 Example Tiling WM: AwesomeWM in GIF animation
 
-![Slide - Dynamic: Example AwesomeWM Fix Width][slide-44]
+![Slide - Dynamic: Example AwesomeWM Fix Width][slide-45]
 
 Link:
 
 * Example: [AwesomeWM](/desktop/2019/06/18/awesome-modularized-binding.html)
 
-#### Slide 45: Dynamic: More About AwesomeWM
+#### Slide 46: Dynamic: More About AwesomeWM
 
-![Slide - Dynamic: More About AwesomeWM][slide-45]
+![Slide - Dynamic: More About AwesomeWM][slide-46]
 
 Links:
 
@@ -639,17 +673,17 @@ Links:
 
 * [Presentation: Awesome WM - Statusbar](/desktop/2019/12/03/awesome-presentation-statusbar.html)
 
-#### Slide 46: Tiling Example: Herbstluftwm
+#### Slide 47: Tiling Example: Herbstluftwm
 
-![Slide - Tiling: Herbstluftwm][slide-46]
+![Slide - Tiling: Herbstluftwm][slide-47]
 
 Link:
 
 * Example: [HerbstluftWM](/desktop/2017/06/30/herbstlustwm-summary.html)
 
-#### Slide 47: Solving HerbstluftWM Technical Difficulties
+#### Slide 48: Solving HerbstluftWM Technical Difficulties
 
-![Slide - Tiling: herbstluftwm: Technical Difficulties][slide-47]
+![Slide - Tiling: herbstluftwm: Technical Difficulties][slide-48]
 
 Links:
 
@@ -661,9 +695,9 @@ Links:
 
 * [Summary: HerbstluftWM in Seven Languages](/desktop/2017/06/30/herbstlustwm-summary.html)
 
-#### Slide 48: Combining with Specific Panel Bar
+#### Slide 49: Combining with Specific Panel Bar
 
-![Slide - Tiling: Specific Panel Bar][slide-48]
+![Slide - Tiling: Specific Panel Bar][slide-49]
 
 Link:
 
@@ -671,19 +705,19 @@ Link:
 
 > WM customization can be combined with Specific Panel Bar.
 
-#### Slide 49: Chapter Break: Xorg and Wayland
+#### Slide 50: Chapter Break: Xorg and Wayland
 
-![Slide - Other DE/WM Issue][slide-49]
+![Slide - Other DE/WM Issue][slide-50]
 
 > Xorg and Wayland
 
-#### Slide 50: Chapter Break
+#### Slide 51: Chapter Break
 
-![Slide - Terminal Customization][slide-50]
+![Slide - Terminal Customization][slide-51]
 
-#### Slide 51: Example of Terminal Customization
+#### Slide 52: Example of Terminal Customization
 
-![Slide - Terminal: Example Customization][slide-51]
+![Slide - Terminal: Example Customization][slide-52]
 
 Link:
 
@@ -691,9 +725,9 @@ Link:
 
 > Terminal Ricing: tmux + vim + gcc + C + Assembler
 
-#### Slide 52: Parts of Terminal Ricing
+#### Slide 53: Parts of Terminal Ricing
 
-![Slide - Terminal: Ricing Parts][slide-52]
+![Slide - Terminal: Ricing Parts][slide-53]
 
 Link:
 
@@ -731,39 +765,39 @@ Additional Parts.
 
 5. Pixel Art
 
-#### Slide 53: Example Pixel Art
+#### Slide 54: Example Pixel Art
 
 Example Terminal Ricing: Pixel Art: ANSI Color
 
-![Slide - Terminal: Pixel Art][slide-53]
+![Slide - Terminal: Pixel Art][slide-54]
 
 Link:
 
 * Example: Pixel Art Repository: [ANSI color](https://bitbucket.org/epsi/ansi-color)
 
-#### Slide 54: Example Command Line Interface
+#### Slide 55: Example Command Line Interface
 
-![Slide - Terminal: Standalone CLI][slide-54]
+![Slide - Terminal: Standalone CLI][slide-55]
 
 Link:
 
 * [Standalone CLI System Monitoring Using Conky](/desktop/2017/04/12/standalone-cli-conky.html)
 
-#### Slide 55: Example Shell Prompt
+#### Slide 56: Example Shell Prompt
 
-![Slide - Terminal Shell Prompt][slide-55]
+![Slide - Terminal Shell Prompt][slide-56]
 
 Link:
 
 * [Customizing Shell Prompt with Powerline](/desktop/2016/03/21/powerline-customizing.html)
 
-#### Slide 56: Chapter Break
+#### Slide 57: Chapter Break
 
-![Slide - Dotfiles][slide-56]
+![Slide - Dotfiles][slide-57]
 
-#### Slide 57: Where to Find Resources?
+#### Slide 58: Where to Find Resources?
 
-![Slide - Dotfiles: Resources][slide-57]
+![Slide - Dotfiles: Resources][slide-58]
 
 Links:
 
@@ -788,31 +822,31 @@ Links:
     [@dotfiles_id_channel](https://t.me/dotfiles_id_channel)
   * [@window_managers](https://t.me/window_managers)
 
-#### Slide 58: Origin of the Dotfiles Word
+#### Slide 59: Origin of the Dotfiles Word
 
-![Slide - Dotfiles: Word Origin][slide-58]
+![Slide - Dotfiles: Word Origin][slide-59]
 
 Configuration files on linux can be shared between hobbyist.
 Configuration mostly lies under _.config_ directory.
 Or single files with name started with dot.
 
-#### Slide 59: Managing Dotfiles
+#### Slide 60: Managing Dotfiles
 
-![Slide - Dotfiles: Managing Files][slide-59]
+![Slide - Dotfiles: Managing Files][slide-60]
 
 > Sharing Resources require good folder management.
 
-#### Slide 60: Please Share!
+#### Slide 61: Please Share!
 
-![Slide - Dotfiles: Please Share][slide-60]
+![Slide - Dotfiles: Please Share][slide-61]
 
 I share mine: [gitlab.com/epsi-rns/dotfiles](https://gitlab.com/epsi-rns/dotfiles).
 
 _Would you do the same with each other?_
 
-#### Slide 61: What's Next?
+#### Slide 62: What's Next?
 
-![Slide - What's Next?][slide-61]
+![Slide - What's Next?][slide-62]
 
 What is Next?
 
@@ -822,15 +856,15 @@ What is Next?
 
 > Leverage Coding Skills!
 
-#### Slide 62: Questions
+#### Slide 63: Questions
 
-![Slide - Questions?][slide-62]
+![Slide - Questions?][slide-63]
 
 > Don't be shy!
 
-#### Slide 63: The End
+#### Slide 64: The End
 
-![Slide - Thank You][slide-63]
+![Slide - Thank You][slide-64]
 
 > Thank you for your time.
 
@@ -839,7 +873,7 @@ What is Next?
 {% assign asset_path = 'https://epsi-rns.github.io/assets-desktop/2020/customization' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/02-desktop-customization' %}
 
-[teaser-preview]:           /assets-desktop/2020/customization-terminal.png
+[teaser-preview]:           https://epsi-rns.github.io//assets-desktop/2020/customization-terminal.png
 [local-presentation]:       /desktop/2020/01/20/presentation-desktop-customization.html
 [candyclone-template]:      https://epsi-rns.gitlab.io/design/2020/09/21/inkscape-impress-slides-01/
 [libreoffice-impress]:      https://www.libreoffice.org/discover/impress/
@@ -861,55 +895,56 @@ What is Next?
 [slide-09]: {{ asset_path }}/slide-09-customization-the-difference-de-wm.png
 [slide-10]: {{ asset_path }}/slide-10-customization-de-example-cinnamon.png
 [slide-11]: {{ asset_path }}/slide-11-customization-de-customization.png
-[slide-12]: {{ asset_path }}/slide-12-de-customization.png
-[slide-13]: {{ asset_path }}/slide-13-de-lxqt-example.png
-[slide-14]: {{ asset_path }}/slide-14-de-what-can-i-do-with-my-de.png
-[slide-15]: {{ asset_path }}/slide-15-de-xfce4-theme-png-gradient-over-xpm.png
-[slide-16]: {{ asset_path }}/slide-16-de-xfce4-theme-svg-inkscape-source.png
-[slide-17]: {{ asset_path }}/slide-17-window-layout.png
-[slide-18]: {{ asset_path }}/slide-18-layout-what-layout.png
-[slide-19]: {{ asset_path }}/slide-19-layout-stacking-layout-example.png
-[slide-20]: {{ asset_path }}/slide-20-layout-tiling-layout-example.png
-[slide-21]: {{ asset_path }}/slide-21-layout-floating-example.png
-[slide-22]: {{ asset_path }}/slide-22-ricing.png
-[slide-23]: {{ asset_path }}/slide-23-ricing-guidance.png
-[slide-24]: {{ asset_path }}/slide-24-ricing-is-it-worth-it.png
-[slide-25]: {{ asset_path }}/slide-25-wm-customization.png
-[slide-26]: {{ asset_path }}/slide-26-wm-window-manager-parts.png
-[slide-27]: {{ asset_path }}/slide-27-wm-custom-standalone-panel.png
-[slide-28]: {{ asset_path }}/slide-28-wm-optional-tools.png
-[slide-29]: {{ asset_path }}/slide-29-example-genuine-wallpaper.png
-[slide-30]: {{ asset_path }}/slide-30-stacking-window-manager.png
-[slide-31]: {{ asset_path }}/slide-31-stacking-why-stacking-wm.png
-[slide-32]: {{ asset_path }}/slide-32-stacking-example-oldschool-openbox.png
-[slide-33]: {{ asset_path }}/slide-33-stacking-more-articles.png
-[slide-34]: {{ asset_path }}/slide-34-stacking-example-openbox-theme.png
-[slide-35]: {{ asset_path }}/slide-35-stacking-openbox-inkscape-theming.png
-[slide-36]: {{ asset_path }}/slide-36-stacking-example-oldschool-fluxbox.png
-[slide-37]: {{ asset_path }}/slide-37-tiling-window-manager.png
-[slide-38]: {{ asset_path }}/slide-38-tiling-why-tiling-wm.png
-[slide-39]: {{ asset_path }}/slide-39-tiling-aline-abler-video.png
-[slide-40]: {{ asset_path }}/slide-40-tiling-choices.png
-[slide-41]: {{ asset_path }}/slide-41-dynamic-window-manager.png
-[slide-42]: {{ asset_path }}/slide-42-dynamic-presets-layout.png
-[slide-43]: {{ asset_path }}/slide-43-tiling-example-i3wm-with-i3status.png
-[slide-44]: {{ asset_path }}/slide-44-dynamic-example-awesomewm-fix-width.png
-[slide-45]: {{ asset_path }}/slide-45-dynamic-more-about-awesomewm.png
-[slide-46]: {{ asset_path }}/slide-46-tiling-herbstluftwm.png
-[slide-47]: {{ asset_path }}/slide-47-tiling-herbstluftwm-technical-difficulties.png
-[slide-48]: {{ asset_path }}/slide-48-tiling-specific-panel-bar.png
-[slide-49]: {{ asset_path }}/slide-49-other-de-wm-issue.png
-[slide-50]: {{ asset_path }}/slide-50-terminal-customization.png
-[slide-51]: {{ asset_path }}/slide-51-terminal-example-customization.png
-[slide-52]: {{ asset_path }}/slide-52-terminal-ricing-parts.png
-[slide-53]: {{ asset_path }}/slide-53-terminal-pixel-art.png
-[slide-54]: {{ asset_path }}/slide-54-terminal-standalone-cli.png
-[slide-55]: {{ asset_path }}/slide-55-terminal-shell-prompt.png
-[slide-56]: {{ asset_path }}/slide-56-dotfiles.png
-[slide-57]: {{ asset_path }}/slide-57-dotfiles-resources.png
-[slide-58]: {{ asset_path }}/slide-58-dotfiles-word-origin.png
-[slide-59]: {{ asset_path }}/slide-59-dotfiles-managing-files.png
-[slide-60]: {{ asset_path }}/slide-60-dotfiles-please-share.png
-[slide-61]: {{ asset_path }}/slide-61-whats-next.png
-[slide-62]: {{ asset_path }}/slide-62-questions.png
-[slide-63]: {{ asset_path }}/slide-63-thank-you.png
+[slide-12]: {{ asset_path }}/slide-12-de-learning-step-by-step.png
+[slide-13]: {{ asset_path }}/slide-13-de-customization.png
+[slide-14]: {{ asset_path }}/slide-14-de-lxqt-example.png
+[slide-15]: {{ asset_path }}/slide-15-de-what-can-i-do-with-my-de.png
+[slide-16]: {{ asset_path }}/slide-16-de-xfce4-theme-png-gradient-over-xpm.png
+[slide-17]: {{ asset_path }}/slide-17-de-xfce4-theme-svg-inkscape-source.png
+[slide-18]: {{ asset_path }}/slide-18-window-layout.png
+[slide-19]: {{ asset_path }}/slide-19-layout-what-layout.png
+[slide-20]: {{ asset_path }}/slide-20-layout-stacking-layout-example.png
+[slide-21]: {{ asset_path }}/slide-21-layout-tiling-layout-example.png
+[slide-22]: {{ asset_path }}/slide-22-layout-floating-example.png
+[slide-23]: {{ asset_path }}/slide-23-ricing.png
+[slide-24]: {{ asset_path }}/slide-24-ricing-guidance.png
+[slide-25]: {{ asset_path }}/slide-25-ricing-is-it-worth-it.png
+[slide-26]: {{ asset_path }}/slide-26-wm-customization.png
+[slide-27]: {{ asset_path }}/slide-27-wm-window-manager-parts.png
+[slide-28]: {{ asset_path }}/slide-28-wm-custom-standalone-panel.png
+[slide-29]: {{ asset_path }}/slide-29-wm-optional-tools.png
+[slide-30]: {{ asset_path }}/slide-30-example-genuine-wallpaper.png
+[slide-31]: {{ asset_path }}/slide-31-stacking-window-manager.png
+[slide-32]: {{ asset_path }}/slide-32-stacking-why-stacking-wm.png
+[slide-33]: {{ asset_path }}/slide-33-stacking-example-oldschool-openbox.png
+[slide-34]: {{ asset_path }}/slide-34-stacking-more-articles.png
+[slide-35]: {{ asset_path }}/slide-35-stacking-example-openbox-theme.png
+[slide-36]: {{ asset_path }}/slide-36-stacking-openbox-inkscape-theming.png
+[slide-37]: {{ asset_path }}/slide-37-stacking-example-oldschool-fluxbox.png
+[slide-38]: {{ asset_path }}/slide-38-tiling-window-manager.png
+[slide-39]: {{ asset_path }}/slide-39-tiling-why-tiling-wm.png
+[slide-40]: {{ asset_path }}/slide-40-tiling-aline-abler-video.png
+[slide-41]: {{ asset_path }}/slide-41-tiling-choices.png
+[slide-42]: {{ asset_path }}/slide-42-dynamic-window-manager.png
+[slide-43]: {{ asset_path }}/slide-43-dynamic-presets-layout.png
+[slide-44]: {{ asset_path }}/slide-44-tiling-example-i3wm-with-i3status.png
+[slide-45]: {{ asset_path }}/slide-45-dynamic-example-awesomewm-fix-width.png
+[slide-46]: {{ asset_path }}/slide-46-dynamic-more-about-awesomewm.png
+[slide-47]: {{ asset_path }}/slide-47-tiling-herbstluftwm.png
+[slide-48]: {{ asset_path }}/slide-48-tiling-herbstluftwm-technical-difficulties.png
+[slide-49]: {{ asset_path }}/slide-49-tiling-specific-panel-bar.png
+[slide-50]: {{ asset_path }}/slide-50-other-de-wm-issue.png
+[slide-51]: {{ asset_path }}/slide-51-terminal-customization.png
+[slide-52]: {{ asset_path }}/slide-52-terminal-example-customization.png
+[slide-53]: {{ asset_path }}/slide-53-terminal-ricing-parts.png
+[slide-54]: {{ asset_path }}/slide-54-terminal-pixel-art.png
+[slide-55]: {{ asset_path }}/slide-55-terminal-standalone-cli.png
+[slide-56]: {{ asset_path }}/slide-56-terminal-shell-prompt.png
+[slide-57]: {{ asset_path }}/slide-57-dotfiles.png
+[slide-58]: {{ asset_path }}/slide-58-dotfiles-resources.png
+[slide-59]: {{ asset_path }}/slide-59-dotfiles-word-origin.png
+[slide-60]: {{ asset_path }}/slide-60-dotfiles-managing-files.png
+[slide-61]: {{ asset_path }}/slide-61-dotfiles-please-share.png
+[slide-62]: {{ asset_path }}/slide-62-whats-next.png
+[slide-63]: {{ asset_path }}/slide-63-questions.png
+[slide-64]: {{ asset_path }}/slide-64-thank-you.png
