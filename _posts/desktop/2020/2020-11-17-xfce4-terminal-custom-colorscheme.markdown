@@ -8,7 +8,7 @@ keywords  : [xfce4-terminal, colorscheme, bright]
 author: epsi
 
 opengraph:
-  image: /assets/site/images/topics/bash.png
+  image: /assets-desktop/2020/11/xfce4-terminal-bright-custom.png
 
 excerpt:
   Create custom bright colorscheme for XFCE4 Terminal.
