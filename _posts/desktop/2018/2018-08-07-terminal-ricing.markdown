@@ -1,26 +1,18 @@
 ---
-layout: post
-title:  "Linux - Terminal Customization"
-categories: desktop
-date      : 2018-08-07 09:25:15 +0700
-tags      : [terminal, shell]
-keywords  : [bash, zsh, fish, tmux, urxvt, xfce4-terminal, termite, compton, gtk.css, powerline, neofetch]
-author: epsi
+layout     : post
+title      :  "Linux - Terminal Customization"
+categories : desktop
+date       : 2018-08-07 09:25:15 +0700
+tags       : [terminal, shell]
+keywords   : [bash, zsh, fish, tmux, urxvt, xfce4-terminal, termite, compton, gtk.css, powerline, neofetch]
+author     : epsi
+toc        : toc/2020/11/toc-terminal.html
 
 opengraph:
   image: /assets/site/images/topics/bash.png
 
 excerpt:
   Terminal ricing is different with desktop ricing.
-
-related_link_ids:
-  - 16032117 # powerline
-  - 16032038 # Console Pixel Art
-  - 17122635 # Iterate Oh My BASH Theme
-  - 17041225 # Standalone CLI System Monitoring Using Conky
-  - 16051900 # midnight commander
-  - 16091915 # install termite
-
 ---
 
 <a name="preface"></a>

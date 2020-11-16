@@ -1,26 +1,18 @@
 ---
-layout: post
-title:  "XFCE4 Terminal - Custom Colorscheme"
-categories: desktop
-date      : 2020-11-15 09:25:15 +0700
-tags      : [terminal, shell]
-keywords  : [xfce4-terminal, colorscheme, bright]
-author: epsi
+layout     : post
+title      :  "XFCE4 Terminal - Custom Colorscheme"
+categories : desktop
+date       : 2020-11-15 09:25:15 +0700
+tags       : [terminal, shell]
+keywords   : [xfce4-terminal, colorscheme, bright]
+author     : epsi
+toc        : toc/2020/11/toc-terminal.html
 
 opengraph:
   image: /assets-desktop/2020/11/xfce4-terminal-bright-custom.png
 
 excerpt:
   Create custom bright colorscheme for XFCE4 Terminal.
-
-related_link_ids:
-  - 16032117 # powerline
-  - 16032038 # Console Pixel Art
-  - 17122635 # Iterate Oh My BASH Theme
-  - 17041225 # Standalone CLI System Monitoring Using Conky
-  - 16051900 # midnight commander
-  - 16091915 # install termite
-
 ---
 
 <a name="preface"></a>
@@ -162,7 +154,7 @@ Since this bright terminal has been solved.
 Now I can concentrate to my blog material.
 I can go back, busy with scribus, writing an ebook.
 
-🙏🏽.
+🙏🏽
 
 -- -- --
 
