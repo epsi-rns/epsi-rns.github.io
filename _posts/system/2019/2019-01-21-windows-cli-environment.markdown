@@ -55,7 +55,7 @@ such as setting up environment in windows.
 
 Fortunately, now we have these tools:
 
-*	cmder: pretty terminal, as replacement tools for windoww's cmd.
+*	cmder: pretty terminal, as replacement tools for windows's cmd.
 
 *	chocolatey: package manager for windows
 
@@ -99,7 +99,8 @@ You should see the long command line that you need, on that website.
 {% endhighlight %}
 
 Now open <code>cmd</code> with administrator privilege,
-and copy paste th command. Do not forget to pres enter to run the long command.
+and copy paste the command.
+Do not forget to press enter to run the long command.
 
 ![Windows cmd: Chocolatey Setup][image-ss-cmd-choco-setup]{: .img-responsive }
 

@@ -873,7 +873,7 @@ What is Next?
 {% assign asset_path = 'https://epsi-rns.github.io/assets-desktop/2020/customization' %}
 {% assign dotfiles = 'https://github.com/epsi-rns/berkas2/blob/master/impress-presentation/02-desktop-customization' %}
 
-[teaser-preview]:           https://epsi-rns.github.io//assets-desktop/2020/customization-terminal.png
+[teaser-preview]:           https://epsi-rns.github.io/assets-desktop/2020/customization-terminal.png
 [local-presentation]:       /desktop/2020/01/20/presentation-desktop-customization.html
 [candyclone-template]:      https://epsi-rns.gitlab.io/design/2020/09/21/inkscape-impress-slides-01/
 [libreoffice-impress]:      https://www.libreoffice.org/discover/impress/
