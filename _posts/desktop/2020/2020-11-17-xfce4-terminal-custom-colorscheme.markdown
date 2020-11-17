@@ -126,6 +126,9 @@ ColorPalette=#073642;#dc322f;#859900;#b58900;#268bd2;#d33682;#2aa198;#eee8d5;#00
 
 ![XFCE4 Terminal - Colorscheme - Black on White][image-solarized]
 
+You should see 16 (sixteen) RGB colors in `ColorPalette`.
+Similar with `urxvt`, and `st`.
+
 #### Black on White with Custom Solarized Text
 
 If you need enough contrast, then you can change the `RGB` color.
@@ -150,17 +153,28 @@ Voila. We have the result as below:
 
 ![XFCE4 Terminal - Colorscheme - Custom Color][image-custom]
 
-Since this bright terminal has been solved.
-Now I can concentrate to my blog material.
-I can go back, busy with scribus, writing an ebook.
+-- -- --
 
-🙏🏽
+### Colorscheme Resources
+
+You can also utilize, third party utility.
+Or port the color directly, manually.
+
+* [terminal.sexy](https://terminal.sexy/)
+
+* [mayccoll.github.io/Gogh](https://mayccoll.github.io/Gogh/)
 
 -- -- --
 
 <a name="conclusion"></a>
 
 ### Conclusion
+
+Since this bright terminal has been solved.
+Now I can concentrate to my blog material.
+I can go back, busy with scribus, writing an ebook.
+
+🙏🏽
 
 That is all.
 
