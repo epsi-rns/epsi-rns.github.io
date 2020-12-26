@@ -1,74 +1,128 @@
 # Helper for related links
+# Archives by Date
 
-# just copy the result manually
-# from _site/pages/archives.yml 
-# to folder _data/archives.yml
 
+- id: 20110613
+  title: "ReasonML - Playing with Records"
+  url: /lambda/2020/11/06/playing-with-records-reasonml/
+  
+- id: 20110513
+  title: "Purescript - Playing with Records"
+  url: /lambda/2020/11/05/playing-with-records-purescript/
+  
+- id: 20110413
+  title: "Haskell - Playing with Records"
+  url: /lambda/2020/11/04/playing-with-records-haskell/
+  
+- id: 20110313
+  title: "Typescript - Small Step into Typed"
+  url: /lambda/2020/11/03/playing-with-records-typescript/
+  
+- id: 20110213
+  title: "Ecmascript - Towards Functional"
+  url: /lambda/2020/11/02/playing-with-records-ecmascript/
+  
+- id: 20110113
+  title: "Overview - Playing with Records"
+  url: /lambda/2020/11/01/playing-with-records-overview/
+  
 - id: 20020217
   title: "Statistic - Dotplot"
-  url: '2020/02/02/statistic-dotplot/'
-
+  url: /math/2020/02/02/statistic-dotplot/
+  
 - id: 20011217
   title: "Python - Matplotlib"
-  url: '2020/01/12/python-matplotlib-equation/'
-
+  url: /math/2020/01/12/python-matplotlib-equation/
+  
 - id: 20011017
   title: "LaTeX - Math Formula"
-  url: '2020/01/10/latex-math-formula/'
-
+  url: /math/2020/01/10/latex-math-formula/
+  
 - id: 19090410
   title: "Haskell - Tax Tariff - Part Four"
-  url: '2019/09/04/progressive-tax-tariff-04/'
-
+  url: /lambda/2019/09/04/progressive-tax-tariff-04/
+  
 - id: 19090310
   title: "Haskell - Tax Tariff - Part Three"
-  url: '2019/09/03/progressive-tax-tariff-03/'
-
+  url: /lambda/2019/09/03/progressive-tax-tariff-03/
+  
 - id: 19090210
   title: "Haskell - Tax Tariff - Part Two"
-  url: '2019/09/02/progressive-tax-tariff-02/'
-
+  url: /lambda/2019/09/02/progressive-tax-tariff-02/
+  
 - id: 19090110
   title: "Haskell - Tax Tariff - Part One"
-  url: '2019/09/01/progressive-tax-tariff-01/'
-
-- id: 17052435
+  url: /lambda/2019/09/01/progressive-tax-tariff-01/
+  
+- id: 18012917
+  title: "Telegram Bot - Manual Page"
+  url: /code/2018/01/29/telegram-bot-loop-manual/
+  
+- id: 18012817
+  title: "Telegram Bot - Makefile"
+  url: /code/2018/01/28/telegram-bot-loop-makefile/
+  
+- id: 18012617
+  title: "Telegram Bot - BASH Group Tools"
+  url: /code/2018/01/26/telegram-bot-loop-bash-04/
+  
+- id: 18012417
+  title: "Telegram Bot - BASH Option Argument"
+  url: /code/2018/01/24/telegram-bot-loop-bash-03/
+  
+- id: 18012317
+  title: "Telegram Bot - BASH Script"
+  url: /code/2018/01/23/telegram-bot-loop-bash-02/
+  
+- id: 18012217
+  title: "Telegram Bot - BASH CLI"
+  url: /code/2018/01/22/telegram-bot-loop-bash-01/
+  
+- id: 18012117
+  title: "Telegram Bot - Getting Token"
+  url: /code/2018/01/21/telegram-bot-token/
+  
+- id: 18012017
+  title: "Telegram Bot - Overview"
+  url: /code/2018/01/20/telegram-bot-overview/
+  
+- id: 17052410
   title: "Examining Bind in Haskell: Do Notation"
-  url: '2017/05/24/examining-bind-04/'
-
-- id: 17052335
+  url: /lambda/2017/05/24/examining-bind-04/
+  
+- id: 17052310
   title: "Examining Bind in Haskell: Example using Number"
-  url: '2017/05/23/examining-bind-03/'
-
-- id: 17052235
+  url: /lambda/2017/05/23/examining-bind-03/
+  
+- id: 17052210
   title: "Examining Bind in Haskell: Hello World"
-  url: '2017/05/22/examining-bind-02/'
-
+  url: /lambda/2017/05/22/examining-bind-02/
+  
 - id: 17052135
   title: "Explaining Monad: References"
-  url: '2017/05/21/explaining-monad-01/'
-
+  url: /lambda/2017/05/21/explaining-monad-01/
+  
 - id: 17052035
   title: "Explaining Monad: Overview"
-  url: '2017/05/20/explaining-monad-00/'
-
+  url: /lambda/2017/05/20/explaining-monad-00/
+  
 - id: 17051535
   title: "Loop in Haskell With Map, Part Three"
-  url: '2017/05/15/haskell-loop-with-map-03/'
-
+  url: /lambda/2017/05/15/haskell-loop-with-map-03/
+  
 - id: 17051435
   title: "Loop in Haskell With Map, Part Two"
-  url: '2017/05/14/haskell-loop-with-map-02/'
-
+  url: /lambda/2017/05/14/haskell-loop-with-map-02/
+  
 - id: 17051335
   title: "Loop in Haskell With Map, Part One"
-  url: '2017/05/13/haskell-loop-with-map-01/'
-
+  url: /lambda/2017/05/13/haskell-loop-with-map-01/
+  
 - id: 17051235
   title: "Loop in Haskell With Map, Overview"
-  url: '2017/05/12/haskell-loop-with-map-00/'
-
+  url: /lambda/2017/05/12/haskell-loop-with-map-00/
+  
 - id: 16051403
   title: "How Haskell Syntax can Make Your Code Cleaner"
-  url: '2016/05/14/haskell-dollar-syntax/'
-
+  url: /lambda/2016/05/14/haskell-dollar-syntax/
+  

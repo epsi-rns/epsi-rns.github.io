@@ -334,7 +334,7 @@ This user variables module will grow as your code grown.
 _._
 
 As you can see in above code, we need to return values from the module.
-Thi would be easier by wrapping these values in local variable.
+This would be easier by wrapping these values in local variable.
 You can use any name that you like,
 now consider name this internal variable as <code>_M</code>.
 
