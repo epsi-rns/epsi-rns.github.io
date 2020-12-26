@@ -90,8 +90,8 @@ You might want to know Lua, by examining how the code works in CLI.
 Some code might looks like a mess.
 But you'll get the idea quickly, of Lua capability,
 and also its limitation.
-Then realize of amazing Lua language as a configuration tools,
-just like this AwesomeWM.
+Then realize of, how amazing Lua language,
+as a configuration tools, just like this AwesomeWM.
 It has been very interesting to work with Lua.
 I'm looking forward to explore more Lua.
 
