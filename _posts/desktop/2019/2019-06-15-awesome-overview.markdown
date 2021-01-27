@@ -111,7 +111,7 @@ What do you think ?
 
 [local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
 
-[lua-records]: https://epsi.bitbucket.io/lambda/2020/11/16/playing-with-records-lua/
+[lua-records]: https://epsi.bitbucket.io/lambda/2020/11/16/playing-with-records-lua-01/
 
 [image-ss-stacked-640]: {{ asset_path }}/04-ghostbsd-awesome-stacked.png
 
