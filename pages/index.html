@@ -15,6 +15,13 @@ paginate_root   : /pages
 {% include pagination-v1/06-screenreader.html %}
 
 {% assign posts = paginator.posts %}
+
+  <div class="has-text-centered">
+    <img src="/assets/site/images/authors/epsi-2021-bocah-bulat-cilik.png" 
+         class="bio-photo" 
+         alt="epsi bio photo">
+  </div>
+
 {% include index/blog-list.html %}
 
 {% comment %}
