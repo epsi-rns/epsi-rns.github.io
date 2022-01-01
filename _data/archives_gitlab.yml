@@ -2,6 +2,90 @@
 # Archives by Date
 
 
+- id: 21111117
+  title: "Inkscape Automation - Part Three"
+  url: /design/2021/11/11/inkscape-automation-03/
+  
+- id: 21110917
+  title: "Inkscape Automation - Part Two"
+  url: /design/2021/11/09/inkscape-automation-02/
+  
+- id: 21110717
+  title: "Inkscape Automation - Part One"
+  url: /design/2021/11/07/inkscape-automation-01/
+  
+- id: 21110517
+  title: "Inkscape Extension - Part Three"
+  url: /design/2021/11/05/inkscape-extension-03/
+  
+- id: 21110317
+  title: "Inkscape Extension - Part Two"
+  url: /design/2021/11/03/inkscape-extension-02/
+  
+- id: 21110117
+  title: "Inkscape Extension - Part One"
+  url: /design/2021/11/01/inkscape-extension-01/
+  
+- id: 20111517
+  title: "Tabs - JS - Vue3 Composition"
+  url: /frontend/2020/11/15/tabs-js-vue3-composition/
+  
+- id: 20111417
+  title: "Tabs - JS - Vue2 Application"
+  url: /frontend/2020/11/14/tabs-js-vue2-application/
+  
+- id: 20111317
+  title: "Tabs - JS - Vue Router"
+  url: /frontend/2020/11/13/tabs-js-vue-router/
+  
+- id: 20111217
+  title: "Tabs - JS - Vue Component"
+  url: /frontend/2020/11/12/tabs-js-vue-component/
+  
+- id: 20111017
+  title: "Tabs - JS - Alpine Extracted"
+  url: /frontend/2020/11/10/tabs-js-alpine-extracted/
+  
+- id: 20110917
+  title: "Tabs - JS - Alpine Inline"
+  url: /frontend/2020/11/09/tabs-js-alpine-inline/
+  
+- id: 20110817
+  title: "Tabs - JS - jQuery and Cash"
+  url: /frontend/2020/11/08/tabs-js-jquery-cash/
+  
+- id: 20110717
+  title: "Tabs - CSS - Tailwind Build"
+  url: /frontend/2020/11/07/tabs-css-tailwind/
+  
+- id: 20110617
+  title: "Tabs - NPM - Tailwind Build"
+  url: /frontend/2020/11/06/tabs-npm-tailwind/
+  
+- id: 20110517
+  title: "Tabs - JS - Plain Unobtrusive"
+  url: /frontend/2020/11/05/tabs-js-plain-unobtrusive/
+  
+- id: 20110417
+  title: "Tabs - JS - Plain Oldschool"
+  url: /frontend/2020/11/04/tabs-js-plain-oldschool/
+  
+- id: 20110317
+  title: "Tabs - CSS - Mockup Layout"
+  url: /frontend/2020/11/03/tabs-css-mockup-layout/
+  
+- id: 20110217
+  title: "Tabs - CSS - Flex Layout"
+  url: /frontend/2020/11/02/tabs-css-flex-layout/
+  
+- id: 20110117
+  title: "Tabs - Component Overview"
+  url: /frontend/2020/11/01/tabs-component-overview/
+  
+- id: 20102513
+  title: "ES - Fetch Async/Await in Class"
+  url: /code/2020/10/25/es-fetch-async-await-in-class/
+  
 - id: 20101113
   title: "Slides - Concept CSS"
   url: /frontend/2020/10/11/slides-concept-css/
@@ -9,6 +93,18 @@
 - id: 20101113
   title: "Slides - Concept SSG"
   url: /ssg/2020/10/11/slides-concept-ssg/
+  
+- id: 20100513
+  title: "CLI Tools for Web Development"
+  url: /frontend/2020/10/05/cli-tools-for-web-development/
+  
+- id: 20100313
+  title: "Starting Web Development"
+  url: /frontend/2020/10/03/starting-web-development/
+  
+- id: 20100117
+  title: "Javascript - SSG Native Search"
+  url: /ssg/2020/10/01/javascript-ssg-native-search/
   
 - id: 20092929
   title: "Sozi Animation - Part Three"
@@ -1109,38 +1205,6 @@
 - id: 18022117
   title: "Jekyll - Step by Step"
   url: /ssg/2018/02/21/jekyll-basic/
-  
-- id: 18012917
-  title: "Telegram Bot - Manual Page"
-  url: /code/2018/01/29/telegram-bot-loop-manual/
-  
-- id: 18012817
-  title: "Telegram Bot - Makefile"
-  url: /code/2018/01/28/telegram-bot-loop-makefile/
-  
-- id: 18012617
-  title: "Telegram Bot - BASH Group Tools"
-  url: /code/2018/01/26/telegram-bot-loop-bash-04/
-  
-- id: 18012417
-  title: "Telegram Bot - BASH Option Argument"
-  url: /code/2018/01/24/telegram-bot-loop-bash-03/
-  
-- id: 18012317
-  title: "Telegram Bot - BASH Script"
-  url: /code/2018/01/23/telegram-bot-loop-bash-02/
-  
-- id: 18012217
-  title: "Telegram Bot - BASH CLI"
-  url: /code/2018/01/22/telegram-bot-loop-bash-01/
-  
-- id: 18012117
-  title: "Telegram Bot - Getting Token"
-  url: /code/2018/01/21/telegram-bot-token/
-  
-- id: 18012017
-  title: "Telegram Bot - Overview"
-  url: /code/2018/01/20/telegram-bot-overview/
   
 - id: 18011335
   title: "Bootstrap CLI Webtools - Part Three"

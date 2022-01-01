@@ -1,74 +1,412 @@
 # Helper for related links
+# Archives by Date
 
-# just copy the result manually
-# from _site/pages/archives.yml 
-# to folder _data/archives.yml
 
+- id: 21112617
+  title: "Python - Excel - Pivot - Part Four"
+  url: /automation/2021/11/26/python-excel-pivot-04/
+  
+- id: 21112417
+  title: "Python - Excel - Pivot - Part Three"
+  url: /automation/2021/11/24/python-excel-pivot-03/
+  
+- id: 21112217
+  title: "Python - Excel - Pivot - Part Two"
+  url: /automation/2021/11/22/python-excel-pivot-02/
+  
+- id: 21112017
+  title: "Python - Excel - Pivot - Part One"
+  url: /automation/2021/11/20/python-excel-pivot-01/
+  
+- id: 21111617
+  title: "Python - Excel - Coloring"
+  url: /automation/2021/11/16/python-excel-coloring/
+  
+- id: 21111417
+  title: "Python - Excel - Extract Sheets"
+  url: /automation/2021/11/14/python-excel-extract-sheets/
+  
+- id: 21111217
+  title: "Python - Excel - Merge Sheets"
+  url: /automation/2021/11/12/python-excel-merge-sheets/
+  
+- id: 21110617
+  title: "Matplotlib - Pie Chart - Part Three"
+  url: /visual/2021/11/06/python-piechart-03/
+  
+- id: 21110417
+  title: "Matplotlib - Pie Chart - Part Two"
+  url: /visual/2021/11/04/python-piechart-02/
+  
+- id: 21110217
+  title: "Matplotlib - Pie Chart - Part One"
+  url: /visual/2021/11/02/python-piechart-01/
+  
+- id: 21101617
+  title: "LibreOffice - Custom Pivot - Part Two"
+  url: /automation/2021/10/16/python-libreoffice-macro-pivot-02/
+  
+- id: 21101417
+  title: "LibreOffice - Custom Pivot - Part One"
+  url: /automation/2021/10/14/python-libreoffice-macro-pivot-01/
+  
+- id: 21101017
+  title: "LibreOffice - Macro - Coloring"
+  url: /automation/2021/10/10/python-libreoffice-macro-coloring/
+  
+- id: 21100617
+  title: "LibreOffice - Macro - Merge"
+  url: /automation/2021/10/06/python-libreoffice-macro-merge/
+  
+- id: 21100417
+  title: "LibreOffice - Macro - Split"
+  url: /automation/2021/10/04/python-libreoffice-macro-split/
+  
+- id: 21100217
+  title: "LibreOffice - Macro - APSO"
+  url: /automation/2021/10/02/python-libreoffice-macro-apso/
+  
+- id: 21030713
+  title: "Raku - Playing with Records - Part Three"
+  url: /lambda/2021/03/07/playing-with-records-raku-03/
+  
+- id: 21030613
+  title: "Raku - Playing with Records - Part Two"
+  url: /lambda/2021/03/06/playing-with-records-raku-02/
+  
+- id: 21030513
+  title: "Raku - Playing with Records - Part One"
+  url: /lambda/2021/03/05/playing-with-records-raku-01/
+  
+- id: 21030213
+  title: "Perl - Playing with Records - Part Two"
+  url: /lambda/2021/03/02/playing-with-records-perl-02/
+  
+- id: 21030113
+  title: "Perl - Playing with Records - Part One"
+  url: /lambda/2021/03/01/playing-with-records-perl-01/
+  
+- id: 21022513
+  title: "Sed - Playing with Records"
+  url: /lambda/2021/02/25/playing-with-records-sed/
+  
+- id: 21022113
+  title: "AWK - Playing with Records"
+  url: /lambda/2021/02/21/playing-with-records-awk/
+  
+- id: 21021513
+  title: "BASH JQ - Playing with Records"
+  url: /lambda/2021/02/15/playing-with-records-bash-jq/
+  
+- id: 21021213
+  title: "Ion - Playing with Records - Part Two"
+  url: /lambda/2021/02/12/playing-with-records-ion-02/
+  
+- id: 21021113
+  title: "Ion - Playing with Records - Part One"
+  url: /lambda/2021/02/11/playing-with-records-ion-01/
+  
+- id: 21020613
+  title: "Fish - Playing with Records - Part Two"
+  url: /lambda/2021/02/06/playing-with-records-fish-02/
+  
+- id: 21020513
+  title: "Fish - Playing with Records - Part One"
+  url: /lambda/2021/02/05/playing-with-records-fish-01/
+  
+- id: 21020213
+  title: "Bash IFS - Playing with Records - Part Two"
+  url: /lambda/2021/02/02/playing-with-records-bash-02/
+  
+- id: 21020113
+  title: "Bash IFS - Playing with Records - Part One"
+  url: /lambda/2021/02/01/playing-with-records-bash-01/
+  
+- id: 21012713
+  title: "PHP - Playing with Records - Part Three"
+  url: /lambda/2021/01/27/playing-with-records-php-03/
+  
+- id: 21012613
+  title: "PHP - Playing with Records - Part Two"
+  url: /lambda/2021/01/26/playing-with-records-php-02/
+  
+- id: 21012513
+  title: "PHP - Playing with Records - Part One"
+  url: /lambda/2021/01/25/playing-with-records-php-01/
+  
+- id: 21011713
+  title: "Ruby - Playing with Records - Part Three"
+  url: /lambda/2021/01/17/playing-with-records-ruby-03/
+  
+- id: 21011613
+  title: "Ruby - Playing with Records - Part Two"
+  url: /lambda/2021/01/16/playing-with-records-ruby-02/
+  
+- id: 21011513
+  title: "Ruby - Playing with Records - Part One"
+  url: /lambda/2021/01/15/playing-with-records-ruby-01/
+  
+- id: 21010713
+  title: "Python - Playing with Records - Part Three"
+  url: /lambda/2021/01/07/playing-with-records-python-03/
+  
+- id: 21010613
+  title: "Python - Playing with Records - Part Two"
+  url: /lambda/2021/01/06/playing-with-records-python-02/
+  
+- id: 21010513
+  title: "Python - Playing with Records - Part One"
+  url: /lambda/2021/01/05/playing-with-records-python-01/
+  
+- id: 20122717
+  title: "C# - Playing with Records - Part Three"
+  url: /lambda/2020/12/27/playing-with-records-csharp-03/
+  
+- id: 20122517
+  title: "Rust - Playing with Records - N-API"
+  url: /lambda/2020/12/25/playing-with-records-rust-node/
+  
+- id: 20122417
+  title: "Go - Playing with Records - Part Three"
+  url: /lambda/2020/12/24/playing-with-records-go-03/
+  
+- id: 20121213
+  title: "Clojure - Playing with Records - Part Three"
+  url: /lambda/2020/12/12/playing-with-records-clojure-03/
+  
+- id: 20120817
+  title: "F# - Playing with Records - Part Three"
+  url: /lambda/2020/12/08/playing-with-records-fsharp-03/
+  
+- id: 20120217
+  title: "Ecmascript - Concurrency with Event Emitter"
+  url: /lambda/2020/12/02/playing-with-records-ecmascript-03/
+  
+- id: 20112717
+  title: "C# - Playing with Records - Part Two"
+  url: /lambda/2020/11/27/playing-with-records-csharp-02/
+  
+- id: 20112713
+  title: "C# - Playing with Records - Part One"
+  url: /lambda/2020/11/27/playing-with-records-csharp-01/
+  
+- id: 20112517
+  title: "Rust - Playing with Records - Part Two"
+  url: /lambda/2020/11/25/playing-with-records-rust-02/
+  
+- id: 20112513
+  title: "Rust - Playing with Records - Part One"
+  url: /lambda/2020/11/25/playing-with-records-rust-01/
+  
+- id: 20112417
+  title: "Go - Playing with Records - Part Two"
+  url: /lambda/2020/11/24/playing-with-records-go-02/
+  
+- id: 20112413
+  title: "Go - Playing with Records - Part One"
+  url: /lambda/2020/11/24/playing-with-records-go-01/
+  
+- id: 20112213
+  title: "Crystal - Playing with Records"
+  url: /lambda/2020/11/22/playing-with-records-crystal/
+  
+- id: 20112113
+  title: "Nim - Playing with Records"
+  url: /lambda/2020/11/21/playing-with-records-nim/
+  
+- id: 20111913
+  title: "GNU R - Playing with Records"
+  url: /lambda/2020/11/19/playing-with-records-gnu-r/
+  
+- id: 20111817
+  title: "Julia - Playing with Records - Part Two"
+  url: /lambda/2020/11/18/playing-with-records-julia-02/
+  
+- id: 20111813
+  title: "Julia - Playing with Records - Part One"
+  url: /lambda/2020/11/18/playing-with-records-julia-01/
+  
+- id: 20111613
+  title: "Lua - Playing with Records - Part Two"
+  url: /lambda/2020/11/16/playing-with-records-lua-02/
+  
+- id: 20111613
+  title: "Lua - Playing with Records - Part One"
+  url: /lambda/2020/11/16/playing-with-records-lua-01/
+  
+- id: 20111317
+  title: "Scala - Playing with Records - Part Two"
+  url: /lambda/2020/11/13/playing-with-records-scala-02/
+  
+- id: 20111313
+  title: "Scala - Playing with Records - Part One"
+  url: /lambda/2020/11/13/playing-with-records-scala-01/
+  
+- id: 20111213
+  title: "Clojure - Playing with Records - Part Two"
+  url: /lambda/2020/11/12/playing-with-records-clojure-02/
+  
+- id: 20111213
+  title: "Clojure - Playing with Records - Part One"
+  url: /lambda/2020/11/12/playing-with-records-clojure-01/
+  
+- id: 20111113
+  title: "Elixir - Playing with Records"
+  url: /lambda/2020/11/11/playing-with-records-elixir/
+  
+- id: 20111013
+  title: "Erlang - Playing with Records"
+  url: /lambda/2020/11/10/playing-with-records-erlang/
+  
+- id: 20110817
+  title: "F# - Playing with Records - Part Two"
+  url: /lambda/2020/11/08/playing-with-records-fsharp-02/
+  
+- id: 20110813
+  title: "F# - Playing with Records - Part One"
+  url: /lambda/2020/11/08/playing-with-records-fsharp-01/
+  
+- id: 20110717
+  title: "OCaml - Playing with Records - Part Two"
+  url: /lambda/2020/11/07/playing-with-records-ocaml-02/
+  
+- id: 20110713
+  title: "OCaml - Playing with Records - Part One"
+  url: /lambda/2020/11/07/playing-with-records-ocaml-01/
+  
+- id: 20110613
+  title: "ReasonML - Playing with Records"
+  url: /lambda/2020/11/06/playing-with-records-reasonml/
+  
+- id: 20110513
+  title: "Purescript - Playing with Records"
+  url: /lambda/2020/11/05/playing-with-records-purescript/
+  
+- id: 20110417
+  title: "Haskell - Playing with Records - Part Two"
+  url: /lambda/2020/11/04/playing-with-records-haskell-02/
+  
+- id: 20110413
+  title: "Haskell - Playing with Records - Part One"
+  url: /lambda/2020/11/04/playing-with-records-haskell-01/
+  
+- id: 20110317
+  title: "Typescript - Small Step into Typed - Part Two"
+  url: /lambda/2020/11/03/playing-with-records-typescript-02/
+  
+- id: 20110313
+  title: "Typescript - Small Step into Typed - Part One"
+  url: /lambda/2020/11/03/playing-with-records-typescript-01/
+  
+- id: 20110217
+  title: "Ecmascript - Towards Functional - Part Two"
+  url: /lambda/2020/11/02/playing-with-records-ecmascript-02/
+  
+- id: 20110213
+  title: "Ecmascript - Towards Functional - Part One"
+  url: /lambda/2020/11/02/playing-with-records-ecmascript-01/
+  
+- id: 20110113
+  title: "Overview - Playing with Records"
+  url: /lambda/2020/11/01/playing-with-records-overview/
+  
 - id: 20020217
   title: "Statistic - Dotplot"
-  url: '2020/02/02/statistic-dotplot/'
-
+  url: /math/2020/02/02/statistic-dotplot/
+  
 - id: 20011217
   title: "Python - Matplotlib"
-  url: '2020/01/12/python-matplotlib-equation/'
-
+  url: /math/2020/01/12/python-matplotlib-equation/
+  
 - id: 20011017
   title: "LaTeX - Math Formula"
-  url: '2020/01/10/latex-math-formula/'
-
+  url: /math/2020/01/10/latex-math-formula/
+  
 - id: 19090410
   title: "Haskell - Tax Tariff - Part Four"
-  url: '2019/09/04/progressive-tax-tariff-04/'
-
+  url: /lambda/2019/09/04/progressive-tax-tariff-04/
+  
 - id: 19090310
   title: "Haskell - Tax Tariff - Part Three"
-  url: '2019/09/03/progressive-tax-tariff-03/'
-
+  url: /lambda/2019/09/03/progressive-tax-tariff-03/
+  
 - id: 19090210
   title: "Haskell - Tax Tariff - Part Two"
-  url: '2019/09/02/progressive-tax-tariff-02/'
-
+  url: /lambda/2019/09/02/progressive-tax-tariff-02/
+  
 - id: 19090110
   title: "Haskell - Tax Tariff - Part One"
-  url: '2019/09/01/progressive-tax-tariff-01/'
-
-- id: 17052435
+  url: /lambda/2019/09/01/progressive-tax-tariff-01/
+  
+- id: 18012917
+  title: "Telegram Bot - Manual Page"
+  url: /code/2018/01/29/telegram-bot-loop-manual/
+  
+- id: 18012817
+  title: "Telegram Bot - Makefile"
+  url: /code/2018/01/28/telegram-bot-loop-makefile/
+  
+- id: 18012617
+  title: "Telegram Bot - BASH Group Tools"
+  url: /code/2018/01/26/telegram-bot-loop-bash-04/
+  
+- id: 18012417
+  title: "Telegram Bot - BASH Option Argument"
+  url: /code/2018/01/24/telegram-bot-loop-bash-03/
+  
+- id: 18012317
+  title: "Telegram Bot - BASH Script"
+  url: /code/2018/01/23/telegram-bot-loop-bash-02/
+  
+- id: 18012217
+  title: "Telegram Bot - BASH CLI"
+  url: /code/2018/01/22/telegram-bot-loop-bash-01/
+  
+- id: 18012117
+  title: "Telegram Bot - Getting Token"
+  url: /code/2018/01/21/telegram-bot-token/
+  
+- id: 18012017
+  title: "Telegram Bot - Overview"
+  url: /code/2018/01/20/telegram-bot-overview/
+  
+- id: 17052410
   title: "Examining Bind in Haskell: Do Notation"
-  url: '2017/05/24/examining-bind-04/'
-
-- id: 17052335
+  url: /lambda/2017/05/24/examining-bind-04/
+  
+- id: 17052310
   title: "Examining Bind in Haskell: Example using Number"
-  url: '2017/05/23/examining-bind-03/'
-
-- id: 17052235
+  url: /lambda/2017/05/23/examining-bind-03/
+  
+- id: 17052210
   title: "Examining Bind in Haskell: Hello World"
-  url: '2017/05/22/examining-bind-02/'
-
+  url: /lambda/2017/05/22/examining-bind-02/
+  
 - id: 17052135
   title: "Explaining Monad: References"
-  url: '2017/05/21/explaining-monad-01/'
-
+  url: /lambda/2017/05/21/explaining-monad-01/
+  
 - id: 17052035
   title: "Explaining Monad: Overview"
-  url: '2017/05/20/explaining-monad-00/'
-
+  url: /lambda/2017/05/20/explaining-monad-00/
+  
 - id: 17051535
   title: "Loop in Haskell With Map, Part Three"
-  url: '2017/05/15/haskell-loop-with-map-03/'
-
+  url: /lambda/2017/05/15/haskell-loop-with-map-03/
+  
 - id: 17051435
   title: "Loop in Haskell With Map, Part Two"
-  url: '2017/05/14/haskell-loop-with-map-02/'
-
+  url: /lambda/2017/05/14/haskell-loop-with-map-02/
+  
 - id: 17051335
   title: "Loop in Haskell With Map, Part One"
-  url: '2017/05/13/haskell-loop-with-map-01/'
-
+  url: /lambda/2017/05/13/haskell-loop-with-map-01/
+  
 - id: 17051235
   title: "Loop in Haskell With Map, Overview"
-  url: '2017/05/12/haskell-loop-with-map-00/'
-
+  url: /lambda/2017/05/12/haskell-loop-with-map-00/
+  
 - id: 16051403
   title: "How Haskell Syntax can Make Your Code Cleaner"
-  url: '2016/05/14/haskell-dollar-syntax/'
-
+  url: /lambda/2016/05/14/haskell-dollar-syntax/
+  
