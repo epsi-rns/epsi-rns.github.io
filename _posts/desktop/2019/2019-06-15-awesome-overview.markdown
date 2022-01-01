@@ -81,6 +81,20 @@ so yes, this is not my final thought.
 
 ![Illustration: Why Awesome WM?][illustration-custom-awesome]
 
+### Lua in CLI
+
+You might want to know Lua, by examining how the code works in CLI.
+
+* [Lua - Playing with Records][lua-records]
+
+Some code might looks like a mess.
+But you'll get the idea quickly, of Lua capability,
+and also its limitation.
+Then realize of, how amazing Lua language,
+as a configuration tools, just like this AwesomeWM.
+It has been very interesting to work with Lua.
+I'm looking forward to explore more Lua.
+
 -- -- --
 
 ### What is Next ?
@@ -96,6 +110,8 @@ What do you think ?
 {% assign asset_path = '/assets-desktop/2019/11' %}
 
 [local-whats-next]: /desktop/2019/06/16/awesome-modularized-structure.html
+
+[lua-records]: https://epsi.bitbucket.io/lambda/2020/11/16/playing-with-records-lua-01/
 
 [image-ss-stacked-640]: {{ asset_path }}/04-ghostbsd-awesome-stacked.png
 
