@@ -17,7 +17,8 @@ fake randomize by using year day for array under 365 data
     {% assign selection = archives | slice: start, length %}
     {% for archive in selection %}
     <li><a href="https://epsi-rns.gitlab.io{{ archive.url }}"
-      >{{ archive.title }}</a></li>
+           class="hvr-underline-from-left"
+          >{{ archive.title }}</a></li>
     {% endfor %}
   </ul>
 {% endcapture %}

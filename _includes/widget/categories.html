@@ -7,7 +7,7 @@
 
 {% capture widget_body %}
   {% for cat in site.categories %}
-    <a class="tag is-small is-dark
+    <a class="tag is-small is-dark hvr-buzz
               {{ color }} z-depth-1 hoverable p-b-5"
        href="{{ site.baseurl }}/pages/category.html#{{ cat[0] | slugify }}">
       {{ cat[0] }}&nbsp;<span class="fa fa-folder"></span>

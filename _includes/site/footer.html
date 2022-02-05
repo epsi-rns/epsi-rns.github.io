@@ -14,53 +14,85 @@
         {% endcomment %}
 
         <div class="social-icons">
-          {% if owner.telegram %}<a href="https://t.me/{{ owner.telegram }}" 
-            title="{{ owner.name}} on Telegram" target="_blank">
-            <i class="fab fa-telegram fa-2x"></i></a>{% endif %}
-          {% if owner.twitter %}<a href="https://twitter.com/{{ owner.twitter }}" 
-            title="{{ owner.name}} on Twitter" target="_blank">
-            <i class="fab fa-twitter fa-2x"></i></a>{% endif %}
-          {% if owner.facebook %}<a href="https://facebook.com/{{ owner.facebook }}" 
-            title="{{ owner.name}} on Facebook" target="_blank">
-            <i class="fab fa-facebook fa-2x"></i></a>{% endif %}
-          {% if owner.googleplus %}<a href="https://plus.google.com/+{{ owner.googleplus }}" 
-            title="{{ owner.name}} on Google+" target="_blank">
-            <i class="fab fa-google-plus fa-2x"></i></a>{% endif %}
-          {% if owner.linkedin %}<a href="https://linkedin.com/in/{{ owner.linkedin }}" 
-            title="{{ owner.name}} on LinkedIn" target="_blank">
-            <i class="fab fa-linkedin fa-2x"></i></a>{% endif %}
-          {% if owner.stackexchange %}<a href="{{ owner.stackexchange }}" 
-            title="{{ owner.name}} on StackExchange" target="_blank">
-            <i class="fab fa-stack-exchange fa-2x"></i></a>{% endif %}
-          {% if owner.instagram %}<a href="https://instagram.com/{{ owner.instagram }}" 
-            title="{{ owner.name}} on Instagram" target="_blank">
-            <i class="fab fa-instagram fa-2x"></i></a>{% endif %}
-          {% if owner.flickr %}<a href="https://www.flickr.com/photos/{{ owner.flickr }}" 
-            title="{{ owner.name}} on Flickr" target="_blank">
-            <i class="fab fa-flickr fa-2x"></i></a>{% endif %}
-          {% if owner.tumblr %}<a href="http://{{ owner.tumblr }}.tumblr.com" 
-            title="{{ owner.name}} on Tumblr" target="_blank">
-            <i class="fab fa-tumblr fa-2x"></i></a>{% endif %}
-          {% if owner.pinterest %}<a href="https://www.pinterest.com/{{ owner.pinterest }}/" 
-            title="{{ owner.name}} on Pinterest" target="_blank">
-            <i class="fab fa-pinterest fa-2x"></i></a>{% endif %}
-          {% if owner.weibo %}<a href="https://www.weibo.com/u/{{ owner.weibo }}/" 
-            title="{{ owner.name}} on Weibo" target="_blank">
-            <i class="fab fa-weibo fa-2x"></i></a>{% endif %}
-          {% if owner.deviantart %}<a href="http://{{ owner.deviantart }}.deviantart.com/" 
-            title="{{ owner.name}} on DeviantArt" target="_blank">
-            <i class="fab fa-deviantart fa-2x"></i></a>{% endif %}
-          {% if owner.github %}<a href="https://github.com/{{ owner.github }}" 
-            title="{{ owner.name}} on Github" target="_blank">
-            <i class="fab fa-github fa-2x"></i></a>{% endif %}
-          {% if owner.gitlab %}<a href="https://gitlab.com/{{ owner.gitlab }}" 
-            title="{{ owner.name}} on Gitlab" target="_blank">
-            <i class="fab fa-gitlab fa-2x"></i></a>{% endif %}
-          {% if owner.bitbucket %}<a href="https://bitbucket.org/{{ owner.bitbucket }}" 
-            title="{{ owner.name}} on Bitbucket" target="_blank">
-            <i class="fab fa-bitbucket fa-2x"></i></a>{% endif %}
-          <a href="{{ site.url }}{{ site.baseurl }}/feed.xml" title="Atom/RSS feed">
-            <i class="fa fa-rss fa-2x"></i></a>
+{% if owner.telegram %}
+  <a href="https://t.me/{{ owner.telegram }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Telegram" target="_blank">
+  <i class="fab fa-telegram fa-2x"></i></a>{% endif %}
+{% if owner.twitter %}
+  <a href="https://twitter.com/{{ owner.twitter }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Twitter" target="_blank">
+  <i class="fab fa-twitter fa-2x"></i></a>{% endif %}
+{% if owner.facebook %}
+  <a href="https://facebook.com/{{ owner.facebook }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Facebook" target="_blank">
+  <i class="fab fa-facebook fa-2x"></i></a>{% endif %}
+{% if owner.googleplus %}
+  <a href="https://plus.google.com/+{{ owner.googleplus }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Google+" target="_blank">
+  <i class="fab fa-google-plus fa-2x"></i></a>{% endif %}
+{% if owner.linkedin %}
+  <a href="https://linkedin.com/in/{{ owner.linkedin }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on LinkedIn" target="_blank">
+  <i class="fab fa-linkedin fa-2x"></i></a>{% endif %}
+{% if owner.stackexchange %}
+  <a href="{{ owner.stackexchange }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on StackExchange" target="_blank">
+  <i class="fab fa-stack-exchange fa-2x"></i></a>{% endif %}
+{% if owner.instagram %}
+  <a href="https://instagram.com/{{ owner.instagram }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Instagram" target="_blank">
+  <i class="fab fa-instagram fa-2x"></i></a>{% endif %}
+{% if owner.flickr %}
+  <a href="https://www.flickr.com/photos/{{ owner.flickr }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Flickr" target="_blank">
+  <i class="fab fa-flickr fa-2x"></i></a>{% endif %}
+{% if owner.tumblr %}
+  <a href="http://{{ owner.tumblr }}.tumblr.com"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Tumblr" target="_blank">
+  <i class="fab fa-tumblr fa-2x"></i></a>{% endif %}
+{% if owner.pinterest %}
+  <a href="https://www.pinterest.com/{{ owner.pinterest }}/"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Pinterest" target="_blank">
+  <i class="fab fa-pinterest fa-2x"></i></a>{% endif %}
+{% if owner.weibo %}
+  <a href="https://www.weibo.com/u/{{ owner.weibo }}/"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Weibo" target="_blank">
+  <i class="fab fa-weibo fa-2x"></i></a>{% endif %}
+{% if owner.deviantart %}
+  <a href="http://{{ owner.deviantart }}.deviantart.com/"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on DeviantArt" target="_blank">
+  <i class="fab fa-deviantart fa-2x"></i></a>{% endif %}
+{% if owner.github %}
+  <a href="https://github.com/{{ owner.github }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Github" target="_blank">
+  <i class="fab fa-github fa-2x"></i></a>{% endif %}
+{% if owner.gitlab %}
+  <a href="https://gitlab.com/{{ owner.gitlab }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Gitlab" target="_blank">
+  <i class="fab fa-gitlab fa-2x"></i></a>{% endif %}
+{% if owner.bitbucket %}
+  <a href="https://bitbucket.org/{{ owner.bitbucket }}"
+    class="hvr-bounce-in"
+    title="{{ owner.name}} on Bitbucket" target="_blank">
+  <i class="fab fa-bitbucket fa-2x"></i></a>{% endif %}
+  <a href="{{ site.url }}{{ site.baseurl }}/feed.xml"
+    class="hvr-bounce-in"
+    title="Atom/RSS feed">
+  <i class="fa fa-rss fa-2x"></i></a>
         </div><!-- /.social-icons -->
 
       </div>

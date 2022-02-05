@@ -4,7 +4,8 @@
     <div class="tags has-addons">
       {{ $posts := where $value.Pages "Type" "post" }}
       {{ $postCount := len $posts -}}
-      <a href="#{{ this_word | slugify }}">
+      <a href="#{{ this_word | slugify }}"
+         class="hvr-buzz">
         <div class="tag is-light {{ color_main }} lighten-2 z-depth-1"
           >{{ this_word }} 
         </div><div class="tag is-dark {{ color_main }} darken-2 z-depth-1"

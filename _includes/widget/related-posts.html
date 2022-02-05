@@ -13,6 +13,7 @@
       {% for dpost in site.data.archives %}
       {% if dpost.id == link_id %}
         <a href="{{ site.baseurl }}{{ dpost.url }}"
+           class="hvr-underline-from-left"
           >{{ dpost.title }}</a>
       {% endif %}
       {% endfor %}

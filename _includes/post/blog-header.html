@@ -33,7 +33,8 @@
     <div class="is-pulled-right p-b-5">
       {% for tag in page.tags %}
         <a href="{{ site.url | append:site.baseurl }}/pages/tag.html#{{ tag }}">
-          <span class="tag is-dark is-small teal z-depth-1 hoverable">
+          <span class="tag is-dark is-small teal z-depth-1
+                       hoverable hvr-pulse">
             <span class="fa fa-tag"></span>&nbsp;{{ tag }}</span></a>
       {% endfor %}
       &nbsp;
@@ -42,7 +43,8 @@
     <div class="is-pulled-right p-b-5">
       {% for cat in page.categories %}
         <a href="{{ site.url | append:site.baseurl }}/pages/category.html#{{ cat }}">
-          <span class="tag is-light is-small teal z-depth-1 hoverable">
+          <span class="tag is-light is-small teal z-depth-1
+                       hoverable hvr-pulse">
             <span class="fa fa-folder"></span>&nbsp;{{ cat }}</span></a>
       {% endfor %}
       &nbsp;

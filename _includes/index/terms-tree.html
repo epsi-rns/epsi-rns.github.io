@@ -27,7 +27,8 @@
                 &nbsp;{{ post.date | date: "%b %-d, %Y" }}&nbsp;
                 &nbsp;<span class="fa fa-calendar"></span></time></div>
             <div class="is-pulled-left">
-            <a href="{{ post.url | prepend: site.baseurl }}">
+            <a href="{{ post.url | prepend: site.baseurl }}"
+               class="hvr-underline-from-left">
               {{ post.title }}
             </a></div>
             <div class="is-clearfix"></div>

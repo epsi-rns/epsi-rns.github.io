@@ -3,14 +3,14 @@
 
     <!-- Previous Page. -->
     {% if page.previous %}
-      <a class="pagination-previous post-previous"
+      <a class="pagination-previous post-previous hvr-buzz"
          href="{{ page.previous.url | prepend: site.baseurl }}"
          title="{{ page.previous.title }}">
         <span class="fas fa-chevron-left"></span>&nbsp;&nbsp;</a>
     {% endif %}
 
     {% if page.next %}
-      <a class="pagination-next post-next"
+      <a class="pagination-next post-next hvr-buzz"
          href="{{ page.next.url | prepend: site.baseurl }}" 
          title="{{ page.next.title }}">&nbsp;&nbsp;
         <span class="fas fa-chevron-right"></span></a>

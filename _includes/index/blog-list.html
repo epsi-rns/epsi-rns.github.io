@@ -19,7 +19,8 @@
         </div>      
         <div class="meta_tags is-pulled-right">
           {% for tag in post.tags %}
-            <a class="tag is-small is-dark {{ color_main }} z-depth-1 hoverable"
+            <a class="tag is-small is-dark {{ color_main }}
+                      z-depth-1 hoverable hvr-pulse"
                href="{{ site.baseurl }}/pages/tag.html#{{ tag | slugify }}"
               >{{ tag }}&nbsp;<span class="fa fa-folder"></span>
             </a>&nbsp;
@@ -33,7 +34,8 @@
 
       <div class="read-more is-light">
         <a href="{{ post.url | prepend: site.baseurl }}" 
-           class="button is-dark is-small {{ color_main }} z-depth-1 hoverable"
+           class="button is-dark is-small {{ color_main }}
+                  z-depth-1 hoverable hvr-bounce-in"
           >Read More&nbsp;</a>
       </div>
 

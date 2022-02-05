@@ -15,7 +15,9 @@ fake randomize by using date day for array under 30 data
   <ul class="widget-list">
     {% assign selection = site.data.friends | slice: start, length %}
     {% for friend in selection %}
-    <li><a href="{{ friend.url }}">{{ friend.title }}</a></li>
+    <li><a href="{{ friend.url }}"
+           class="hvr-underline-from-left"
+          >{{ friend.title }}</a></li>
     {% endfor %}
   </ul>
 {% endcapture %}

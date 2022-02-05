@@ -1,6 +1,8 @@
 epsi-rns.github.io
 =====================
 
+![Powered by Jekyll](https://img.shields.io/badge/powered%20by-jekyll-yellow.svg)
+
 A ready to use, Jekyll site customization.
 Now using Bulma instead of Bootstrap v4.
 
@@ -8,6 +10,14 @@ Installing Jekyll is something cool.
 Having an example of working site is something else.
 
 ![epsi-vexel][image-epsi-vexel]
+
+### Theme License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+### Article License
+
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 -- -- --
 

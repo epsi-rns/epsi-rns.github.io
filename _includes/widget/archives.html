@@ -12,7 +12,8 @@
   {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'"  %}
   {% for year in postsByYear %}
       <div class ="archive-year" id="{{ year.name }}">
-        <a href="{{ path_y }}#{{ year.name }}">
+        <a href="{{ path_y }}#{{ year.name }}"
+           class="hvr-underline-from-left">
         {{ year.name }}</a>
       </div>
 
@@ -27,7 +28,8 @@
       <li class="list-month">
         {% for post in month.items limit:1 %}
         <span class ="archive-month">
-          <a href="{{ path_m }}#{{ post.date | date: '%Y-%m' }}">
+          <a href="{{ path_m }}#{{ post.date | date: '%Y-%m' }}"
+             class="hvr-underline-from-left">
             {{ post.date | date: '%B %Y' }}
           </a></span>
         {% endfor %}
@@ -37,6 +39,7 @@
           {% for post in month.items %}
           <li>    
             <a href="{{ site.baseurl }}{{ post.url }}"
+               class="hvr-underline-from-left"
               >{{ post.title }}</a>
           </li>
           {% endfor %}
