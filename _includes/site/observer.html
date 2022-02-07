@@ -8,9 +8,9 @@
   let bounceObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
-        entry.target.classList.add('animate__rotateIn');
+        entry.target.classList.add('animate__rollIn');
       } else {
-        entry.target.classList.remove('animate__rotateIn');
+        entry.target.classList.remove('animate__rollIn');
       }
     });
   });
