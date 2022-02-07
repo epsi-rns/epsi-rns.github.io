@@ -1,0 +1,21 @@
+  {% comment %}
+  https://www.itzami.com/blog/boost-your-css-animations-with-intersection-observer-api
+  {% endcomment %}
+
+  <script type="text/javascript">
+  const elementsToObserve = document.querySelectorAll(".animate__observe");
+
+  let bounceObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add('animate__rotateIn');
+      } else {
+        entry.target.classList.remove('animate__rotateIn');
+      }
+    });
+  });
+
+  elementsToObserve.forEach((element) => {
+    bounceObserver.observe(element);
+  });
+  </script>
