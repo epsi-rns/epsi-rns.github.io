@@ -3,9 +3,10 @@
   {% endcomment %}
 
   <script type="text/javascript">
-  const elementsToObserve = document.querySelectorAll(".animate__observe");
+  const menuToObserve = document.querySelectorAll(".animate__observe__menu");
+  const archiveToObserve = document.querySelectorAll(".animate__observe__archive");
 
-  let bounceObserver = new IntersectionObserver((entries) => {
+  let menuObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
         entry.target.classList.add('animate__rollIn');
@@ -15,7 +16,20 @@
     });
   });
 
-  elementsToObserve.forEach((element) => {
-    bounceObserver.observe(element);
+  let archiveObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add('animate__wobble');
+      } else {
+        entry.target.classList.remove('animate__wobble');
+      }
+    });
+  });
+
+  menuToObserve.forEach((element) => {
+    menuObserver.observe(element);
+  });
+  archiveToObserve.forEach((element) => {
+    archiveObserver.observe(element);
   });
   </script>
