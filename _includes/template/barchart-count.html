@@ -1,0 +1,36 @@
+{% capture spaceless %}
+  {% assign terms = site.categories %}
+  {% assign term_array = "" | split: "|" %}
+  {% for tag in terms %}
+    {% assign term_first = tag | first %}
+    {% assign term_array = term_array | push: term_first %}
+  {% endfor %}
+{% endcapture %}
+
+  <div class="white hoverable p-t-5 p-b-5">
+    <div class="widget-header pink lighten-4">
+
+      <strong>Articles Barchart</strong>
+      <span class="fa fa-user is-pulled-right"></span>
+
+    </div>
+    <div class="widget-body pink lighten-5">
+
+  <div id="container__bar"
+       data-count="{{ site.posts | size }}">
+  {% for item in (0..terms.size) %}{% unless forloop.last %}
+    {% assign this_word = term_array[item] | strip_newlines %}
+      {{ $posts := where $value.Pages "Type" "post" }}
+      {{ $postCount := len $posts -}}
+    <div class="my__progressbar"
+       data-count="{{ terms[this_word].size }}">
+      <div class="my__progressbar_text"
+        >{{ this_word }}: <span class="my__progressbar_perc"
+          >{{ terms[this_word].size }}</span></div>
+      <div class="my__inner_bar"></div>
+    </div>
+  {% endunless %}{% endfor %}
+  </div>
+
+    </div>
+  </div>

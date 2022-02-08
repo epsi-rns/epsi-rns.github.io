@@ -5,7 +5,8 @@ title: About Epsi
 opengraph:
   image: /assets/site/images/authors/epsi-vexel.png
 
-numerator: true
+numerator   : true
+progressbar : true
 ---
 
 	There are so many things to say.
@@ -21,6 +22,8 @@ I have made a ready to use, Jekyll site customization.
 
 Although I like command line, I'm not a hacker.
 You won't find any illegal activities in this site.
+
+{% include template/barchart-count.html %}
 
 You can read a glance about my journey here
  
