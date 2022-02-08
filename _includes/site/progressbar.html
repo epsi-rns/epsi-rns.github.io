@@ -1,0 +1,66 @@
+  <style>
+@keyframes my__progress__frames {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.my__progressbar_text {
+  white-space: nowrap;
+}
+
+.my__inner_bar {
+  height: 10px;
+  border-radius: 10px;
+
+  background-color: #f8bbd0; 
+  background-image: linear-gradient(
+        45deg, #ec407a 10px, 
+        transparent 20px, transparent 25%, 
+        #f06292 50%, #f48fb1 75%,
+        transparent 75%, transparent); 
+
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-name: my__progress__frames;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-direction: normal;
+}
+  </style>
+
+  <script type="text/javascript">
+  const progressbars = document.querySelectorAll(".my__progressbar");
+  const myBars = document.querySelectorAll(".my__inner_bar");
+  const containerBar = document.getElementById("container__bar");
+  const total = containerBar.dataset.count;
+
+  let containerBarObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        console.log(entry.intersectionRatio)
+
+        // reset on scroll
+        myBars.forEach((element) => {
+          element.classList.add('my__inner_bar');
+        });
+
+        progressbars.forEach((element) => {
+          const count = element.dataset.count;
+          const width = Math.round((count/total)*100);
+          element.style.width = width + "%";
+
+          const percText = element
+            .getElementsByClassName("my__progressbar_perc")[0]
+          percText.innerText = width + "%";
+        });
+      } else {
+        myBars.forEach((element) => {
+          element.classList.remove('my__inner_bar');
+        });
+      }
+    });
+  });
+
+  containerBarObserver.observe(containerBar);
+  </script>
+

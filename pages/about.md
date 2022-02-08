@@ -4,16 +4,20 @@ title: About Epsi
 # permalink: /pages/about/
 opengraph:
   image: /assets/site/images/authors/epsi-vexel.png
+
+numerator: true
 ---
 
 	There are so many things to say.
 	I don't want to live in regrets.
 	So I make this blog.
 
+{% include template/social-accounts.html %}
+
 Hello, my name is Epsi. I'm an open source enthusiast.
 I have made a ready to use, Jekyll site customization.
 
-{% include template/social-accounts.html %}
+{% include template/articles-count.html %}
 
 Although I like command line, I'm not a hacker.
 You won't find any illegal activities in this site.

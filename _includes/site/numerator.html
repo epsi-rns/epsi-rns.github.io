@@ -1,0 +1,43 @@
+  {{/*
+  https://codepen.io/akhijannat/pen/JjYQgNK
+  https://www.itzami.com/blog/boost-your-css-animations-with-intersection-observer-api
+  https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+  */}}
+
+  <script type="text/javascript">
+  const countersToObserve = document.querySelectorAll('.numerator');
+  const stepfactor = 20;
+  const timeout    = Math.ceil(1000/stepfactor);
+
+  let counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        const counter = entry.target;
+        const maxnum  = +counter.dataset.number;
+
+        // reset on scroll
+        counter.innerText = 0;
+
+        const animate   = () => {
+          const current = +counter.innerText;
+          const append  = (maxnum-current) / stepfactor;
+
+          if (current < maxnum) {
+            newcurrent = Math.ceil(current + append);
+            counter.innerText = newcurrent;
+            setTimeout(animate, timeout);
+          } else {
+            counter.innerText = maxnum;
+          }
+        }
+
+        animate();
+      }
+    });
+  });
+
+  countersToObserve.forEach((element) => {
+    counterObserver.observe(element);
+  });
+  </script>
+
