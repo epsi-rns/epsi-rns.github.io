@@ -12,11 +12,6 @@
   --animate-delay: 1s;
   --animate-repeat: 1;
 }
-
-.animate__hover:hover {
-  display: none;
-}
-
 .animate__animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
