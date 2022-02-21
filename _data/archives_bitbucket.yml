@@ -2,6 +2,14 @@
 # Archives by Date
 
 
+- id: 22020517
+  title: "LibreOffice - Diff"
+  url: /automation/2022/02/05/python-libreoffice-diff/
+  
+- id: 22020317
+  title: "Python - Excel - Diff"
+  url: /automation/2022/02/03/python-excel-diff/
+  
 - id: 21112617
   title: "Python - Excel - Pivot - Part Four"
   url: /automation/2021/11/26/python-excel-pivot-04/
@@ -65,6 +73,34 @@
 - id: 21100217
   title: "LibreOffice - Macro - APSO"
   url: /automation/2021/10/02/python-libreoffice-macro-apso/
+  
+- id: 21032213
+  title: "Racket - Playing with Records - Part Two"
+  url: /lambda/2021/03/22/playing-with-records-racket-02/
+  
+- id: 21032113
+  title: "Racket - Playing with Records - Part One"
+  url: /lambda/2021/03/21/playing-with-records-racket-01/
+  
+- id: 21031713
+  title: "Guile - Playing with Records - Part Three"
+  url: /lambda/2021/03/17/playing-with-records-guile-03/
+  
+- id: 21031613
+  title: "Guile - Playing with Records - Part Two"
+  url: /lambda/2021/03/16/playing-with-records-guile-02/
+  
+- id: 21031513
+  title: "Guile - Playing with Records - Part One"
+  url: /lambda/2021/03/15/playing-with-records-guile-01/
+  
+- id: 21031213
+  title: "TCL - Playing with Records - Part Two"
+  url: /lambda/2021/03/12/playing-with-records-tcl-02/
+  
+- id: 21031113
+  title: "TCL - Playing with Records - Part One"
+  url: /lambda/2021/03/11/playing-with-records-tcl-01/
   
 - id: 21030713
   title: "Raku - Playing with Records - Part Three"
