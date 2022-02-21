@@ -2,6 +2,46 @@
 # Archives by Date
 
 
+- id: 22020517
+  title: "Animation Observer - Part Three"
+  url: /frontend/2022/02/05/animation-observer-03/
+  
+- id: 22020317
+  title: "Animation Observer - Part Two"
+  url: /frontend/2022/02/03/animation-observer-02/
+  
+- id: 22020117
+  title: "Animation Observer - Part One"
+  url: /frontend/2022/02/01/animation-observer-01/
+  
+- id: 22012517
+  title: "Bezier SVG - Keyframe Animation"
+  url: /frontend/2022/01/25/bezier-svg-07/
+  
+- id: 22012117
+  title: "Bezier SVG - Javascript Animation"
+  url: /frontend/2022/01/21/bezier-svg-06/
+  
+- id: 22011917
+  title: "Bezier SVG - Generating Multiple Path"
+  url: /frontend/2022/01/19/bezier-svg-05/
+  
+- id: 22011717
+  title: "Bezier SVG - Generating Single Path"
+  url: /frontend/2022/01/17/bezier-svg-04/
+  
+- id: 22011517
+  title: "Bezier SVG - MDN Path - Quadratic"
+  url: /frontend/2022/01/15/bezier-svg-03/
+  
+- id: 22011317
+  title: "Bezier SVG - MDN Path - Cubic"
+  url: /frontend/2022/01/13/bezier-svg-02/
+  
+- id: 22011117
+  title: "Bezier SVG - Introduction"
+  url: /frontend/2022/01/11/bezier-svg-01/
+  
 - id: 21111117
   title: "Inkscape Automation - Part Three"
   url: /design/2021/11/11/inkscape-automation-03/

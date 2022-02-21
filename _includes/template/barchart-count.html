@@ -17,6 +17,7 @@
     <div class="widget-body pink lighten-5">
 
   <div id="container__bar"
+       class="has-text-left"
        data-count="{{ site.posts | size }}">
   {% for item in (0..terms.size) %}{% unless forloop.last %}
     {% assign this_word = term_array[item] | strip_newlines %}
