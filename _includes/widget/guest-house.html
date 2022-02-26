@@ -1,0 +1,17 @@
+{% capture widget_header %}
+  <strong>Stay in Yogyakarta</strong>
+  <span class="fas fa-bed is-pulled-right"></span>
+{% endcapture %}
+
+{% capture widget_body %}
+  {% assign arrnum  = '1|2|3|4|5' | split: '|' %}
+  {% assign picnum  = arrnum | sample: 1 %}
+  {% assign picpath = '/assets/site/images/guest-house/' %}
+  <a href="https://www.airbnb.com/rooms/23774095">
+    <img src="{{ site.baseurl }}{{ picpath}}0{{ picnum}}.webp"
+         alt="The Purwanggan 8 Guest House"></a>
+{% endcapture %}
+
+{% assign color = "grey" %}
+{% include template/widget.html %}
+
