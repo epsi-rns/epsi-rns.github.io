@@ -1,0 +1,532 @@
+---
+layout     : post
+title:  "Artix OpenRC on Mini PC"
+categories: desktop
+date      : 2022-09-01 09:25:15 +0700
+tags      : [install]
+keywords  : [artix, arch, openrc]
+author: epsi
+
+excerpt:
+  Artix linux experience in Mini PC.
+
+related_link_ids:
+  - 18010225  # OpenSuse Tumbleweed
+
+---
+
+> I'm back.
+
+It has been four years since my last linux desktop install.
+I have been doing a lot, but no time to write my OS install log.
+
+I'm a mess. I make many foolish mistakes.
+So I decide to write down my setup process.
+
+-- -- --
+
+### Mini PC
+
+> Hardware
+
+For the past three years I've been a Gentoo user,
+Void user, Artix (Arch OpenRC) user, even GhostBSD for a while.
+But the most interesting part is that I use Artix OpenRC,
+for daily basis in my office,
+using my notebook for my accounting position.
+
+I never have my own brand new PC.
+I'd rather spend my money for my grown up responsibility,
+such as family and stuff.
+But the thins is, this second hand notebook is getting old.
+Not really rotten, just getting out of date.
+It is slow with windows, but with artix linux,
+I can get my job done.
+
+This notebook got some overheat and in need some maintenance regulary.
+I'm still living in survival mode.
+I can't take a risk to lose my job,
+just because I do not have proper computer to get the job done.
+
+After about a half year I decide to by myself a mini PC.
+
+![Mini PC: Mini PC][01-mini-zoom]{: .img-responsive }
+
+You can see how small the Mini PC compared to my old DELL FHD monitor.
+
+![Mini PC: With Monitor][02-mini-moni]{: .img-responsive }
+
+-- -- --
+
+### Bootable Disk
+
+#### Windows 10
+
+Although I got a preinstalled Windows 10.
+I still want to be well prepared.
+
+So I download the Windows 10 from Microsoft,
+but it does not work, maybe my network.
+
+![Bootable: Windows 10: Limit][10-limit]{: .img-responsive }
+
+I finally found the solution,
+by limiting the bandwith.
+
+#### Bootable Windows
+
+So I download the Windows 10 from Microsoft,
+and did the `dd` command.
+Be careful with this command.
+Some say it is `disk destroyer`,
+but I have been dd-ing manyh times, and I'm fine.
+
+{% highlight bash %}
+$ sudo dd \
+  if=/media/Works/Win10_21H2_English_x64.iso \
+  | pv -s 5900M | sudo dd \
+  of=/dev/sdc bs=4096
+{% endhighlight %}
+
+![Bootable: Windows 10: DD PV][11-dd-pv]{: .img-responsive }
+
+And guess what? It doesn't boot.
+Ooh poor me. I just remember that the last time
+that I make a bootable Windows USB, is during my Gentoo time.
+I finally got the light that I have to use `woeusb`  instead.
+I guess this is because window using multi partition in FD USB.
+
+{% highlight bash %}
+$ sudo woeusb \
+  --device /media/Works/Win10_21H2_English_x64.iso \
+  /dev/sdb --target-filesystem ntfs
+{% endhighlight %}
+
+![Bootable: Windows 10: WOE USB][12-woeusb-win10]{: .img-responsive }
+
+It finally works.
+
+#### Artix XFCE
+
+I also make bootable artix.
+Since I use sudo and do not want to be asked for password again.
+I use sudo for any harmless command, before doing `dd`.
+
+{% highlight bash %}
+$ sudo ls
+$ sudo dd \
+  if=/media/Works/artix-xfce-openrc-20220713-x86_64.iso \
+  | pv -s 1300M |sudo dd \
+  of=/dev/sdc bs=4096
+{% endhighlight %}
+
+-- -- --
+
+### Dual Monitor
+
+Before we go into Mini PC setup,
+I'm using dual monitor in my notebook.
+
+{% highlight bash %}
+$ xrandr --listmonitors
+Monitors: 2
+ 0: +*LVDS1 1366/310x768/170+0+0  LVDS1
+ 1: +VGA1 1920/480x1080/270+0+0  VGA1
+
+But most of the time, I turn off the monitor on my notebook.
+{% endhighlight %}
+
+{% highlight bash %}
+$ xrandr \
+  --output LVDS1 --off \
+  --output VGA1 --mode 1920x1080 --rate 60 --right-of LVDS1
+{% endhighlight %}
+
+There is no need to setup monitor with Mini PC.
+
+Except that I have to buy HDMI to VGA cable,
+because my HDMI port in my monitor is not working,
+since very long time ago.
+Actually the reason I got this cheap monitor is,
+because it is already broken.
+
+-- -- --
+
+### Partition
+
+#### Planned Partition
+
+Since I plan to buy 250 GB SSD,
+I also make my plan.
+
+{% highlight bash %}
+Windows: 100 GB ntfs
+Artix:    60 GB ext4
+Docs:     30 GB ntfs
+Works:    60 GB ext4
+--------------------
+Total    250 GB
+{% endhighlight %}
+
+I never use GPT in my whole life.
+Nor Windows 10 in my own computer.
+The fact that I can use GPT,
+and try multiboot with Windows 10,
+is really excite me.
+
+#### EFI Partition
+
+> My plan did not go well.
+
+I also have to deal with `/boot/efi`.
+
+{% highlight bash %}
+Win10 EFI: 100 MB 
+Windows:   70 GB ntfs
+Recovery:  500 MB
+SWAP:      10 GB swap
+Linux EFI: 350MB Bootable Flag
+Artix:     60 GB ext4
+Docs:      40 GB ntfs
+Works:     60 GB ext4
+--------------------
+Total    250 GB
+{% endhighlight %}
+
+Do not forget to set `bootable flag`.
+
+Now I'm ready to install stuff.
+
+#### EFI Boot Security
+
+My install work well, except that I have to figure out,
+how to enter the BIOS, and disable the EFI Boot Security.
+
+#### Partition
+
+The name is strange for me.
+I never use SSD in my whole life.
+
+![Partition: lsblk][13-lsblk]{: .img-responsive }
+
+{% highlight bash %}
+$ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 238.5G  0 disk 
+├─nvme0n1p1 259:1    0   100M  0 part 
+├─nvme0n1p2 259:2    0    16M  0 part 
+├─nvme0n1p3 259:3    0  68.4G  0 part /media/System
+├─nvme0n1p4 259:4    0   499M  0 part 
+├─nvme0n1p5 259:5    0  39.1G  0 part /media/Docs
+├─nvme0n1p6 259:6    0    10G  0 part [SWAP]
+├─nvme0n1p7 259:7    0  60.1G  0 part /media/Works
+├─nvme0n1p8 259:8    0    60G  0 part /
+└─nvme0n1p9 259:9    0   350M  0 part /boot/efi
+{% endhighlight %}
+
+You can see more clearly with KDE Partition Manager below:
+
+![Partition: KDE Partition Manager][14-partman]{: .img-responsive }
+
+I haven't got time the change the theme for plasma in sudo.
+
+#### fstab
+
+I configure my fstab based on my old notebook.
+
+{% highlight bash %}
+$ cat /etc/fstab
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# <file system>             <mount point>  <type>  <options>  <dump>  <pass>
+UUID=1BF8-6C0E                            /boot/efi      vfat    umask=0077 0 2
+UUID=acc9cad2-1890-49f6-843b-ac96dd93a16f swap           swap    defaults,noatime 0 0
+UUID=44c4dfbd-302b-4cff-8e58-0cdfb1d3501f /              ext4    defaults,noatime 0 1
+
+UUID=62B60C6BB60C4251                     /media/System  ntfs-3g defaults,noauto,locale=en_US.UTF-8 0 0
+UUID=01D8C9EDA8D98750                     /media/Docs    ntfs-3g defaults,locale=en_US.UTF-8 0 0
+UUID=0c5c1603-2849-44e7-ad04-9bfa9b4e185a /media/Works   ext4    defaults,users,exec 0 2
+
+tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+{% endhighlight %}
+
+![Partition: /etc/fstab][15-fstab]{: .img-responsive }
+
+I also haven't got time to deal with ViM customization yet.
+
+#### Rest
+
+> I have to go home
+
+It is already 23.18 WIB, almost midnight in Indonesia.
+I'm going to continue writing by tomorrow.
+
+
+-- -- --
+
+### Repository
+
+All basic done well.
+But I still have to make all needed application installed properly.
+
+#### Failed Packages
+
+After doing pacman for a while,
+I realize that some application can't be installed.
+
+{% highlight bash %}
+chromium clementine blender
+cava ncmpcpp xmonad xmobar budgie-desktop
+deepin deepin-kwin nitrogen xfontsel
+oh-mybash oh-my-zsh 
+vim-plugin-NERDtree lemonbar tint2 termite
+gtop qtile xfce4-mixer
+nethogs iftop dstat atop iotop nmon
+parcellite screenfetch cava transset
+byobu dwm bwmon
+{% endhighlight %}
+
+#### Guidance
+
+> Clue
+
+The solution is simply installed other repository using this guidance.
+
+* [wiki.artixlinux.org/Main/Repositories][repository]
+
+I never deal with `universe` and `omniverse` stuff.
+This seems exciting. Things looks cool.
+
+![Pacman Configuration: /etc/pacman.conf][21-pacman-conf]{: .img-responsive }
+
+I also adjust stuff temporarily.
+
+{% highlight bash %}
+#[custom]
+SigLevel = Optional TrustAll
+{% endhighlight %}
+
+#### Adjusting Time
+
+But I have got this error.
+
+{% highlight bash %}
+andalan:[epsi]:~$ sudo pacman-key --populate archlinux
+gpg: key 35D00184CECADD59 was created 17227 seconds in the future (time warp or clock problem)
+==> Appending keys from archlinux.gpg...
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+==> Locally signing trusted keys in keyring...
+==> ERROR: 159F3A43AEB246C5746C033814BC4F30B3B92EBA could not be locally signed.
+==> ERROR: 75BD80E4D834509F6E740257B1B73B02CC52A02A could not be locally signed.
+==> ERROR: 2AC0A42EFB0B5CBC7A0402ED4DC95B6D7BE9892E could not be locally signed.
+==> ERROR: 0E8B644079F599DFC1DDC3973348882F6AC6A4C2 could not be locally signed.
+==> ERROR: D8AFDDA07A5B6EDFA7D8CCDAD6D055F927843F1C could not be locally signed.
+==> ERROR: 91FFE0700E80619CEB73235CA88E23E377514E00 could not be locally signed.
+{% endhighlight %}
+
+It turned out that my time is set a few hours in the future.
+
+I can solve my problem with `hwclock`.
+
+#### Repository: universe/omniverse
+
+I set this arch compatibility.
+
+{% highlight bash %}
+[universe]
+Server = https://universe.artixlinux.org/$arch
+Server = https://mirror1.artixlinux.org/universe/$arch
+Server = https://mirror.pascalpuffke.de/artix-universe/$arch
+Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
+Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
+Server = https://ftp.crifo.org/artix-universe/
+
+[omniverse]
+Server = http://omniverse.artixlinux.org/$arch
+{% endhighlight %}
+
+Now I can install these two with pacman.
+
+{% highlight bash %}
+tmux chromium
+{% endhighlight %}
+
+#### Repository: extra
+
+I only find this one.
+
+{% highlight bash %}
+xorg-xfontsel
+{% endhighlight %}
+
+#### Repository: community
+
+This is a huge repository I guess.
+
+{% highlight bash %}
+# Arch
+# [extra]
+# Include = /etc/pacman.d/mirrorlist-arch
+
+# [community]
+# Include = /etc/pacman.d/mirrorlist-arch
+
+# [multilib]
+# Include = /etc/pacman.d/mirrorlist-arch
+
+{% endhighlight %}
+
+I found almost common packages here
+
+{% highlight bash %}
+ghc xmonad budgie-desktop deepin-kwin tint2 qtile
+nethogs iftop dstat atop iotop nmon
+parcellite screenfetch byobu clementine blender
+vim-nerdtree
+{% endhighlight %}
+
+But after install, I remove the repository,
+because it has `libboost` conflict.
+The solution is to downgrade.
+
+{% highlight bash %}
+$ sudo pacman -U /var/cache/pacman/pkg/boost-libs-1.79.0-1-x86_64.pkg.tar.zst
+loading packages...
+warning: downgrading package boost-libs (1.80.0-1 => 1.79.0-1)
+{% endhighlight %}
+
+I need my `libreoffice` to run properly.
+
+#### Conflict
+
+However, some conflict is inevitable.
+
+{% highlight bash %}
+deepin-clutter
+{% endhighlight %}
+
+In order to install it, I have to sacrifice other packages.
+
+#### AUR
+
+> yay
+
+I can find my other favorite pacakge with `yay`
+
+{% highlight bash %}
+cava lemonbar-git termite transset-df nbwmon dwm-git
+{% endhighlight %}
+
+#### Not installed yet
+
+Some packages, I haven't got time to install.
+
+{% highlight bash %}
+gtop
+{% endhighlight %}
+
+#### Not Exist Anyomre
+
+Some packages, just wiped away.
+
+{% highlight bash %}
+xfce4-mixer
+{% endhighlight %}
+
+#### Custom Packages
+
+I make my own screenshooter based on `scrot`.
+
+{% highlight bash %}
+$ git clone https://github.com/epsi-rns/scrotty
+$ yay -s autoconf-archive 
+$ yay -s giblib
+{% endhighlight %}
+
+Now I can do screenshot with nice border
+
+{% highlight bash %}
+$ scrotty -sbcd5 -g27 "21-pacman-conf"
+{% endhighlight %}
+
+#### Inkscape Workaround
+
+`Inkscape` simply does not work.
+
+{% highlight bash %}
+$ inkscape
+inkscape: error while loading shared libraries: libinkscape_base.so: cannot open shared object file: No such file or directory
+$ pacman -Q poppler inkscape
+poppler 22.09.0-1
+inkscape 1.2.1-4
+{% endhighlight %}
+
+I use inkscape a lot.
+I can use AppImage.
+But I need the native one.
+
+Luckily there is a workaround.
+
+{% highlight bash %}
+$ ln \
+  /usr/lib/inkscape/libinkscape_base.so \
+  /usr/lib/libinkscape_base.so
+{% endhighlight %}
+
+Note that I have to do this after each `inkscape` update.
+
+#### Blender
+
+For the first time in a decade,
+I can run` blender` in my own computer.
+
+My computer is used to be under specification.
+
+-- -- --
+
+### Desktop Customization
+
+#### LibreOffice
+
+
+-- -- --
+
+### Cloud
+
+
+
+-- -- --
+
+### Conclusion
+
+Most of all works.
+
+Thank you for reading and visiting.
+
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/desktop/2022/09' %}
+
+[repository]:      https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
+              
+[01-mini-zoom]:    {{ asset_path }}/01-mini-zoom.jpeg
+[02-mini-moni]:    {{ asset_path }}/02-mini-with-moni.jpeg
+
+[10-limit]:        {{ asset_path }}/10-limit.png
+[11-dd-pv]:        {{ asset_path }}/11-dd-pv.png
+[12-woeusb-win10]: {{ asset_path }}/12-woeusb-win10.png
+[13-lsblk]:        {{ asset_path }}/13-lsblk.png
+[14-partman]:      {{ asset_path }}/14-partman.png
+[15-fstab]:        {{ asset_path }}/15-fstab.png
+
+[21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
