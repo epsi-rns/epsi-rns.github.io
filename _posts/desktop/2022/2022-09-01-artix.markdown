@@ -56,6 +56,18 @@ You can see how small the Mini PC compared to my old DELL FHD monitor.
 
 ![Mini PC: With Monitor][02-mini-moni]{: .img-responsive }
 
+#### Why Not from Office
+
+> Simply Show Off Linux
+
+I can ask my manager to give me a computer to work with.
+
+The reason I bought my own stuff is,
+because I want to be free to use linux,
+and all the open source application.
+
+I can be far more productive with linux.
+
 -- -- --
 
 ### Bootable Disk
@@ -495,12 +507,39 @@ My computer is used to be under specification.
 
 ### Desktop Customization
 
+#### Font
+
+#### What Config?
+
+#### Awesome WM
+
+This works flawlessy.
+
+#### ZSH Prompt
+
+Issue
+
 #### LibreOffice
 
+VCL
+
+-- -- --
+
+### Init
+
+> OpenRC
+
+-- -- --
+
+### Printing
 
 -- -- --
 
 ### Cloud
+
+-- -- --
+
+### RVM
 
 
 
