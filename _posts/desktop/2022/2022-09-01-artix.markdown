@@ -910,6 +910,8 @@ As you can see I make the folder simple.
 ![Mega IO: Web Interface][61-mega-web]{: .img-responsive }
 
 Now comes the folder management part.
+I put it here, because folder management is,
+actually also part of setting up working space.
 
 #### Folder Management
 
