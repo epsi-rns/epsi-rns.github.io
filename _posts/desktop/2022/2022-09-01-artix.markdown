@@ -41,7 +41,7 @@ You have to respect these steps:
   Such as windows 10 or linux distribution.
   Storage for multiboot.
 
-* Basic Administration: fstab, samba, git, printing, and stuff.
+* Basic Administration: passwd, fstab, samba, git, printing, and stuff.
 
 * Desktop Customization.
   Window Manager, Terminal, Wallpaper.
@@ -119,6 +119,33 @@ I love Gentoo, but maybe next time for my personal device at home.
 Artix made by Artoo. Another reason.
 Well... we have a common name, because my name is also Arto.
 
+-- -- --
+
+### 2: Choosing Hardware
+
+There are three choices for me:
+
+* Use device given by company.
+* Use my old notebook
+* Renew by bought new Mini PC.
+
+#### Company's Notebook or Desktop
+
+> Why Not Device Given from Company
+
+I can ask my manager to give me a computer to work with.
+but I rather not. I don't want to lose my freedom.
+So I can be more productive.
+
+The reason I bought my own stuff is,
+because I want to be free to use linux,
+and all the open source application.
+And also free to define the spec of my rig.
+
+I can be far more productive with linux.
+
+> Simply Show Off Linux
+
 ### The Notebook
 
 > Still Hardware
@@ -164,55 +191,11 @@ You can see how small the Mini PC compared to my old DELL FHD monitor.
 
 ![Mini PC: With Monitor][02-mini-moni]{: .img-responsive }
 
-#### Why Not from Office
-
-> Simply Show Off Linux
-
-I can ask my manager to give me a computer to work with.
-
-The reason I bought my own stuff is,
-because I want to be free to use linux,
-and all the open source application.
-
-I can be far more productive with linux.
-
-#### Dual Monitor
-
-Before we go into Mini PC setup,
-I'm using dual monitor in my notebook.
-
-![Notebook: With Dual Monitor][04-dual-monitor]{: .img-responsive }
-
-It turned that my mini PC support dua monitor as well.
-I have plan to dual monitor my mini PC later.
-But for now, this is my old setup on my notebook:
-
-{% highlight bash %}
-$ xrandr --listmonitors
-Monitors: 2
- 0: +*LVDS1 1366/310x768/170+0+0  LVDS1
- 1: +VGA1 1920/480x1080/270+0+0  VGA1
-{% endhighlight %}
-
-But most of the time, I turn off the monitor on my notebook.
-
-{% highlight bash %}
-$ xrandr \
-  --output LVDS1 --off \
-  --output VGA1 --mode 1920x1080 --rate 60 --right-of LVDS1
-{% endhighlight %}
-
-There is no need to setup monitor with Mini PC.
-
-Except that I have to buy HDMI to VGA cable,
-because my HDMI port in my monitor is not working,
-since very long time ago.
-Actually the reason I got this cheap monitor is,
-because it is already broken.
-
 -- -- --
 
-### 3: Bootable Disk
+### 3: Prepare Bootable Disk
+
+> Be well prepared!
 
 #### Windows 10
 
@@ -388,13 +371,13 @@ I also haven't got time to deal with ViM customization yet.
 
 > I have to go home
 
-It is already 23.18 WIB, almost midnight in Indonesia.
+It is already 23.18 WIB (Western indonesia time),
+almost midnight in Indonesia.
 I'm going to continue writing by tomorrow.
-
 
 -- -- --
 
-### Repository
+### 5: Repository
 
 All basic done well.
 But I still have to make all needed application installed properly.
@@ -586,51 +569,40 @@ $ scrotty -sbcd5 -g27 "21-pacman-conf"
 
 -- -- --
 
-### Application
+### 6: Basic Administration
 
-#### Inkscape Workaround
+#### fstab
 
-`Inkscape` simply does not work.
+I already discuss fstab in other section above.
+
+#### Network
+
+I use `connman-gtk`.
+
+#### Init
+
+> OpenRC
+
+#### Samba
+
+I haven't got time to setup yet.
+But you can look my other articel to get samba example in details.
+
+#### Git
+
+You can't just copy your credential and push your commit.
+
+You also have to make proper file mode.
 
 {% highlight bash %}
-$ inkscape
-inkscape: error while loading shared libraries: libinkscape_base.so: cannot open shared object file: No such file or directory
-$ pacman -Q poppler inkscape
-poppler 22.09.0-1
-inkscape 1.2.1-4
+$ sudo chmod 600 ~/.ssh/id_rsa
 {% endhighlight %}
 
-I use inkscape a lot.
-I can use AppImage.
-But I need the native one.
-
-Luckily there is a workaround.
-
-{% highlight bash %}
-$ ln \
-  /usr/lib/inkscape/libinkscape_base.so \
-  /usr/lib/libinkscape_base.so
-{% endhighlight %}
-
-Note that I have to do this after each `inkscape` update.
-
-#### Blender
-
-For the first time in a decade,
-I can run `blender` in my own computer.
-
-My computer is used to be under specification.
-
-![Blender][22-blender]{: .img-responsive }
-
-Althoug I'm pretty sure that I don't have time,
-to seriously get into blender in any near future,
-The fact that I can run Blender is still,
-a comfortable progress.
+#### Printing with CUPS
 
 -- -- --
 
-### Desktop Customization
+### 7: Desktop Customization
 
 #### What Config?
 
@@ -674,7 +646,7 @@ You can see the panel of my awesome in ZSH screenshoot below.
 > Garbage in ZSH in clean install
 
 I'm using `oh-my-bash` for my bash customization,
-and `power10k` for zsh customization.
+and `powerlevel10k` for zsh customization.
 But something strange happened in clean install.
 I found that my `zsh` messed up.
 
@@ -685,7 +657,7 @@ It turned out that `$PS1` from `bash` pollute the zsh shell.
 ![ZSH: Funny Prompt][31-zsh-ps1]{: .img-responsive }
 
 I setup `chsh -c /bin/zsh` to make zsh my default shell.
-and also setup `power10k`.
+and also setup `powerlevel10k`.
 
 #### GTK Theme
 
@@ -719,6 +691,25 @@ But this is not the main point.
 In firefox I can use two different whatsapp,
 each with different handphone number.
 
+#### LibreOffice Theme
+
+But I'm having a hardtime in setting `GTK+3`.
+In Libreoffice, so I check the VCL in about.
+
+![LibreOffice VCL: Dark][33-lo-vcl-dark]{: .img-responsive }
+
+I finally install `lxappearance-gtk3`,
+and also log out my awesome window manager.
+After I logged in in new session,
+I can get my `LibreOffice` in bright theme.
+
+![LibreOffice VCL: Bright Breeze][33-lo-vcl-breeze]{: .img-responsive }
+
+Actually, I still don't get what's going on.
+But I finally get my bright breeze theme.
+
+### 8: Application
+
 #### Firefox Container
 
 ![Firefox: Container Extension][34-firefox-cont]
@@ -738,23 +729,6 @@ Pretty productive right?
 As long that I do not check messages every five minutes,
 I'll be just fine.
 
-#### LibreOffice Theme
-
-But I'm having a hardtime in setting `GTK+3`.
-In Libreoffice, so I check the VCL in about.
-
-![LibreOffice VCL: Dark][33-lo-vcl-dark]{: .img-responsive }
-
-I finally install `lxappearance-gtk3`,
-and also log out my awesome window manager.
-After I logged in in new session,
-I can get my `LibreOffice` in bright theme.
-
-![LibreOffice VCL: Bright Breeze][33-lo-vcl-breeze]{: .img-responsive }
-
-Actually, I still don't get what's going on.
-But I finally get my bright breeze theme.
-
 #### LibreOffice Extension
 
 Yeah I wrote a lot of python macro in libreoffice.
@@ -768,7 +742,7 @@ Since in Indonesia we are commonly use,
 local macro in excel called `terbilang`.
 I need a way for both `excel` and `calc`.
 
-So I wrote this:
+So I wrote this short chunk:
 
 ![LibreOffice: Formula Wrapper][36-calc-macro]{: .img-responsive }
 
@@ -784,32 +758,118 @@ Now both my `calc` and `excel` can run the same formula.
 
 ![LibreOffice: Terbilang][36-calc-number]{: .img-responsive }
 
-I can share `.xlsx` between my collagues.
-And edit them in linux.
+Now I can share `.xlsx` between my collagues.
+And still comfortly edit them in linux.
 
+#### Inkscape Workaround
 
+`Inkscape` simply does not work.
 
+{% highlight bash %}
+$ inkscape
+inkscape: error while loading shared libraries: libinkscape_base.so: cannot open shared object file: No such file or directory
+$ pacman -Q poppler inkscape
+poppler 22.09.0-1
+inkscape 1.2.1-4
+{% endhighlight %}
 
+I use inkscape a lot.
+I can use AppImage.
+But I need the native one.
+
+Luckily there is a workaround.
+
+{% highlight bash %}
+$ ln \
+  /usr/lib/inkscape/libinkscape_base.so \
+  /usr/lib/libinkscape_base.so
+{% endhighlight %}
+
+Note that I have to do this after each `inkscape` update.
+
+#### Blender
+
+For the first time in a decade,
+I can run `blender` in my own computer.
+
+My computer is used to be under specification.
+
+![Blender][22-blender]{: .img-responsive }
+
+Althoug I'm pretty sure that I don't have time,
+to seriously get into blender in any near future,
+The fact that I can run Blender is still,
+a comfortable progress.
+
+#### Do not forget to take a rest.
+
+> I'm not talking about RVM
+
+I used to be a die hard blogger using most tools
+such as github, gitlab and bitbucket.
+So I push myself to setup jekyll in the middle of midnight using RVM.
+
+The result is complete failure.
+After one hour of searching, I still can't get it to work.
+So I decide to go home, and get a little sleep.
+
+![RVM: GPG Failure][37-rvm-gpg]{: .img-responsive }
+
+Before morning, I woke up and realize that,
+I simply issue wrong command.
+Now my RVM works okay.
+
+![RVM: GPG Succeed][37-rvm-ok]{: .img-responsive }
+
+You can see how tired brain can lead into confusion.
+I'm pretty sure I made a lot of mistakes when I really tired.
+
+Just give your body some sleep, and rest.
+So you can be more productive.
+
+> Good Job. You've done a lot today. Have some rest!
 
 -- -- --
 
-### Init
-
-> OpenRC
+### 9: Cloud
 
 -- -- --
 
-### Printing
+### 10: Peripheral
 
--- -- --
+#### Dual Monitor
 
-### Cloud
+Before I use Mini PC setup,
+I'm using dual monitor in my notebook.
 
--- -- --
+![Notebook: With Dual Monitor][04-dual-monitor]{: .img-responsive }
 
-### RVM
+It turned that my mini PC support dua monitor as well.
+I have plan to dual monitor my mini PC later.
+But for now, this is my old setup on my notebook:
 
+{% highlight bash %}
+$ xrandr --listmonitors
+Monitors: 2
+ 0: +*LVDS1 1366/310x768/170+0+0  LVDS1
+ 1: +VGA1 1920/480x1080/270+0+0  VGA1
+{% endhighlight %}
 
+But most of the time, I turn off the monitor on my notebook.
+
+{% highlight bash %}
+$ xrandr \
+  --output LVDS1 --off \
+  --output VGA1 --mode 1920x1080 --rate 60 --right-of LVDS1
+{% endhighlight %}
+
+There is no need to setup monitor with Mini PC.
+
+Except that I have to buy HDMI to VGA cable,
+because my HDMI port in my monitor is not working,
+since very long time ago.
+Actually the reason I got this cheap monitor is,
+because it is already broken.
 
 -- -- --
 
@@ -861,3 +921,6 @@ Thank you for reading and visiting.
 [36-lo-extension]: {{ asset_path }}/36-libreoffice-extension.png
 [36-calc-number]:  {{ asset_path }}/36-calc-terbilang.png
 [36-calc-macro]:   {{ asset_path }}/36-libreoffice-macro.png
+
+[37-rvm-gpg]:      {{ asset_path }}/37-rvm-gpg-failure.png
+[37-rvm-ok]:       {{ asset_path }}/37-rvm-ok.png
