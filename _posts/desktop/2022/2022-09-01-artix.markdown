@@ -872,6 +872,11 @@ So you can be more productive.
 
 ### 9: Cloud
 
+> Sync
+
+I need to find a way to work between my mini PC at office,
+and my notebook at home.
+
 #### Dropbox
 
 I have been using free version dropbox for years.
@@ -883,14 +888,124 @@ But since I maintain different company at once,
 since 2019 dropbox storage limit no longer fit my requirement.
 The problem is I don't have time to migrate to Mega.
 
-Now that I have already backup my files to external HDD,
-and also have my onw mini PC.
-I think this is it. I have to try Mega for the second time.
-
 #### Mega
 
+Now that I have already backup my files to external HDD,
+and also have my own mini PC.
+I think this is it. I have to try Mega for the second time.
+And it works just fine.
+
+![Mega IO: Status][61-mega-status]{: .img-responsive }
+
+As you can see I make the folder simple.
+
+* Pribadi: Personal/Private (family and such).
+
+* Badan: Small Business I'm taking care of.
+
+* GRU: The Company I worked for.
+
+* Wild: Volatile file, unsorted screenshot, temporary files, etc.
+
+![Mega IO: Web Interface][61-mega-web]{: .img-responsive }
+
+Now comes the folder management part.
+
+#### Folder Management
+
+First, inside the `badan` (company) folder, there three company.
+But note that, I only put small files in cloud.
+I put big files, such as image or stuff, ouside the cloud.
+
+![Mega IO: Company][62-mega-badan]{: .img-responsive }
+
+Do not ask me how I manage each folder.
+But I can give you worksheet example,
+of yearly financial report of one of the company.
+
+* Balance sheet
+* Profit Loss
+
+The LibreOffice sheet tab is very nice to work with.
+
+![Calc Tab: Financial Report][63-lo-tab-simple]{: .img-responsive }
+
+My Personal stuff, also sorted by year.
+It is easier to back-up this way.
+
+![Mega IO: Personal][62-mega-pribadi]{: .img-responsive }
+
+The company I worked for.
+This also require folder management.
+
+![Mega IO: GRU][62-mega-gru]{: .img-responsive }
+
+Again, do not ask me on how I manage each folder.
+But I can jump into the content of,
+each worksheet on my monthly accounting report.
+
+The LibreOffice stacked sheet tab, is created by GIMP.
+Because one line is not enough to show them all.
+
+![Calc Tab: Monthly Report][63-lo-tab-merge]{: .img-responsive }
+
+The last, is miscellanous files.
+I used to name it volatile.
+Because it usually changed very often.
+This folder means to be temporary files,
+before I moved the content to better folder.
+Now it is consist of old screenshots,
+collected from many sources,
+before I decide which screenshot to be dumped,
+and which to be kept.
+
+![Mega IO: Volatile][62-mega-wild]{: .img-responsive }
 
 #### Git Repository
+
+The folder management applied to repository.
+
+![Git Repository][63-git-repo]{: .img-responsive }
+
+#### Foolish: First
+
+I have said that I make foolish mistakes.
+I can make along list, but this is what I have done.
+
+Last year I make some private github repository,
+from storing my accounting files,
+and also storing big presentation.
+The thing is git is for source code,
+not for binary data.
+After a while, the repository become very fat.
+
+The fact that github/gitlab can store it.
+It doesn't mean that I should abuse github/gitlab.
+
+This why I decide to move those to Mega.
+
+#### Foolish: Second
+
+I alos try to put the whole repository, as a folder in Mega.
+I mean the huge folder containing all my git repository.
+With too many files, including nodejs folder for each project.
+
+Of course it works. But first thing I notice.
+The `mega` ignore hidden dotfiles, including `.git`.
+This means none of my repository can be sync to github/gitlab.
+
+Once I set `mega` to sync hidden dotfiles,
+it upload gigabytes of all my hidden `.git` to mega.
+Again, of course it works.
+
+But my system become soooo slow.
+Because `megasync` tend to check every files.
+
+I finally decide not to mix document cloud with git repo.
+After I remove the `repository` folder,
+my `mega` become fast again.
+
+I think that's all.
 
 -- -- --
 
@@ -1032,5 +1147,16 @@ Thank you for reading and visiting.
 
 [37-rvm-gpg]:      {{ asset_path }}/37-rvm-gpg-failure.png
 [37-rvm-ok]:       {{ asset_path }}/37-rvm-ok.png
+
+[61-mega-status]:  {{ asset_path }}/61-mega-status.png
+[61-mega-web]:     {{ asset_path }}/61-mega-web.png
+[62-mega-badan]:   {{ asset_path }}/62-mega-badan.png
+[62-mega-pribadi]: {{ asset_path }}/62-mega-pribadi.png
+[62-mega-gru]:     {{ asset_path }}/62-mega-gru.png
+[62-mega-wild]:    {{ asset_path }}/62-mega-wild.png
+[63-lo-tab-simple]:{{ asset_path }}/63-lo-tab-simple.png
+[63-lo-tab-merge]: {{ asset_path }}/63-lo-tab-merge.png
+
+[63-git-repo]:     {{ asset_path }}/63-git-repository.png
 
 [82-print-room]:   {{ asset_path }}/82-print-room.jpg
