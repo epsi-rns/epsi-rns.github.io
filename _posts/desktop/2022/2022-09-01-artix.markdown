@@ -570,6 +570,26 @@ a comfortable progress.
 
 ### Desktop Customization
 
+#### What Config?
+
+I do not need to copy all my config,
+from notebook to mini-pc.
+
+After all only these
+
+* `/home/epsi/.config/awesome`: The whole stuff.
+
+* `/home/epsi/.config/geany`: I need only the color scheme.
+
+* `/home/epsi/.config/gtk-3.0`: just the setting and css.
+
+* `/home/epsi/.config/libreoffice`: macro and extensions.
+
+* `xfce4` I need only the color scheme.
+
+* `vim`
+
+
 #### Awesome WM
 
 This works flawlessy.
@@ -618,24 +638,7 @@ I prefer `caja` from `mate desktop` as my favorite file manager.
 
 For the past three years, I have leave `thunar` for `caja`.
 
-#### LibreOffice
-
-But I'm having a hardtime in setting `GTK+3`.
-In Libreoffice, so I check the VCL in about.
-
-![LibreOffice VCL: Dark][33-lo-vcl-dark]{: .img-responsive }
-
-I finally install `lxappearance-gtk3`,
-and also log out my awesome window manager.
-After I logged in in new session,
-I can get my `LibreOffice` in bright theme.
-
-![LibreOffice VCL: Bright Breeze][33-lo-vcl-breeze]{: .img-responsive }
-
-Actually, I still don't get what's going on.
-But I finally get my bright breeze theme.
-
-#### Firefox
+#### Firefox Theme
 
 In Firefox, setting theme is very easy.
 
@@ -644,6 +647,8 @@ In Firefox, setting theme is very easy.
 But this is not the main point.
 In firefox I can use two different whatsapp,
 each with different handphone number.
+
+#### Firefox Container
 
 ![Firefox: Container Extension][34-firefox-cont]
 
@@ -662,9 +667,54 @@ Pretty productive right?
 As long that I do not check messages every five minutes,
 I'll be just fine.
 
-#### Font
+#### LibreOffice Theme
 
-#### What Config?
+But I'm having a hardtime in setting `GTK+3`.
+In Libreoffice, so I check the VCL in about.
+
+![LibreOffice VCL: Dark][33-lo-vcl-dark]{: .img-responsive }
+
+I finally install `lxappearance-gtk3`,
+and also log out my awesome window manager.
+After I logged in in new session,
+I can get my `LibreOffice` in bright theme.
+
+![LibreOffice VCL: Bright Breeze][33-lo-vcl-breeze]{: .img-responsive }
+
+Actually, I still don't get what's going on.
+But I finally get my bright breeze theme.
+
+#### LibreOffice Extension
+
+Yeah I wrote a lot of python macro in libreoffice.
+Surprisingly it all works in my new place without a flaw.
+
+One of my favorites is `numbertext`.
+
+![LibreOffice: Extension][36-lo-extension]{: .img-responsive }
+
+Since in Indonesia we are commonly use,
+local macro in excel called `terbilang`.
+I need a way for both `excel` and `calc`.
+
+So I wrote this:
+
+{% highlight qbasic %}
+Function terbilang(a as double) as string
+    Dim oService As Object
+    Set oService = createUnoService("com.sun.star.sheet.FunctionAccess")
+    terbilang = oService.callFunction("numbertext", Array(a, "id"))
+end Function
+{% endhighlight %}
+
+Now both my `calc` and `excel` can run the same formula.
+
+![LibreOffice: Terbilang][36-calc-number]{: .img-responsive }
+
+I can share `.xlsx` between my collagues.
+And edit them in linux.
+
+#### Font
 
 
 
@@ -734,3 +784,6 @@ Thank you for reading and visiting.
 [34-firefox-cont]: {{ asset_path }}/34-firefox-container.png
 [34-firefox-tab01]:{{ asset_path }}/34-firefox-tab-01.png
 [34-firefox-tab02]:{{ asset_path }}/34-firefox-tab-02.png
+
+[36-lo-extension]: {{ asset_path }}/36-libreoffice-extension.png
+[36-calc-number]:  {{ asset_path }}/36-calc-terbilang.png
