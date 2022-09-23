@@ -10,6 +10,9 @@ author: epsi
 excerpt:
   Artix linux experience in Mini PC.
 
+opengraph:
+  image: /assets/posts/desktop/2022/09/04-dual-monitor-notebook.jpg
+
 related_link_ids:
   - 18010225  # OpenSuse Tumbleweed
 
