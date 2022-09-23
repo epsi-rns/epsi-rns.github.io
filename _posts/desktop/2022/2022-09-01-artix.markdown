@@ -24,6 +24,11 @@ I'm a mess. I make many foolish mistakes.
 Random issue comes in scatttered ways.
 So I decide to write down my setup process.
 
+For any reader, don't be afraid of any trouble.
+Most of us did step into issue regularly.
+Foolish mistakes is common on daily basis.
+Just do not repeat yourself by forgetting how to solve it.
+
 #### Amount of Work
 
 > Appreciate you Setup!
@@ -97,7 +102,7 @@ but for my personal comfort.
 
 > My life at stakes. I need backup.
 
-My life at stakes. If my computer stalled. I job would be doomed. 
+My life at stakes. If my computer stalled. My job would be doomed. 
 
 I need backup. Not only the data. But also the hardware as well.
 
@@ -146,6 +151,10 @@ I can be far more productive with linux.
 
 > Simply Show Off Linux
 
+This means I have to save my money instead of spending.
+So I can buy my own device.
+Postpone means put my job in jeopardy.
+
 ### The Notebook
 
 > Still Hardware
@@ -169,9 +178,9 @@ It is slow with windows, but with artix linux,
 I can get my job done.
 
 This notebook got some overheat and in need some maintenance regulary.
-I should even wrapped it in a plastic everytime,
-because of rainy season in Indonesia,
-the water could flood into my waterproof knapsack.
+I should even wrapped the notebook in a plastic everytime,
+because during the rainy season in Indonesia,
+the water droplet could flood into my waterproof knapsack.
 
 ![Notebook: Wrapped][05-just-notebook]{: .img-responsive }
 
@@ -579,9 +588,27 @@ I already discuss fstab in other section above.
 
 I use `connman-gtk`.
 
+![Network: Connection Manager][21-connmand]{: .img-responsive }
+
 #### Init
 
 > OpenRC
+
+I'm using `OpenRC`.
+This might be different than your regular `systemd`.
+For example this command below:
+
+![Init: OpenRC: restart connmand][23-rc-connmand]{: .img-responsive }
+
+{% highlight bash %}
+$ sudo rc-service connmand restart
+netmount          | * Unmounting network filesystems ...       [ ok ]
+connmand          | * Stopping connmand ...                    [ ok ]
+connmand          | * Starting connmand ...                    [ ok ]
+netmount          | * Mounting network filesystems ...         [ ok ]
+~                                                    2.6.6 14:43:49
+$
+{% endhighlight %}
 
 #### Samba
 
@@ -599,6 +626,15 @@ $ sudo chmod 600 ~/.ssh/id_rsa
 {% endhighlight %}
 
 #### Printing with CUPS
+
+I'm using Epson L3110 series.
+First I need to install the proper driver using AUR.
+
+![Printer: AUR: Epson ESC/P-R][23-yay-epson]{: .img-responsive }
+
+Then I can add printer in cups in `localhost:631`.
+
+![Printer: CUPS localhost:631][23-cups-local]{: .img-responsive }
 
 -- -- --
 
@@ -657,7 +693,9 @@ It turned out that `$PS1` from `bash` pollute the zsh shell.
 ![ZSH: Funny Prompt][31-zsh-ps1]{: .img-responsive }
 
 I setup `chsh -c /bin/zsh` to make zsh my default shell.
-and also setup `powerlevel10k`.
+and also setup `powerlevel10k` as you can see the result below:
+
+![ZSH: Power Level 10K][31-zsh-p10k]{: .img-responsive }
 
 #### GTK Theme
 
@@ -837,6 +875,31 @@ So you can be more productive.
 
 ### 10: Peripheral
 
+#### FHD Monitor with Tiling WM
+
+> Invest on your eye health.
+
+Just like designer and coder,
+accounting require big screen,
+such as 1920x1080 pixels wide.
+
+The reason is that I have to compare between sheet.
+And also copy-paste between document manually.
+And I also have to be very careful whenever it comes to tax.
+So I do not want any distraction,
+such as moving from one window into another.
+Or even switching between vitual desktop.
+
+Lucikly I know how to handle tiling window manager,
+just like I was born for tiling WM.
+
+If you are working with many worksheet,
+you should by yourself FHD or even QHD,
+and setup your very own tiling WM.
+
+After all FHD/QHD is cheaper,
+then getting yourself an eye surgery.
+
 #### Dual Monitor
 
 Before I use Mini PC setup,
@@ -864,12 +927,30 @@ $ xrandr \
 {% endhighlight %}
 
 There is no need to setup monitor with Mini PC.
+No need for dual monitor also.
 
 Except that I have to buy HDMI to VGA cable,
 because my HDMI port in my monitor is not working,
 since very long time ago.
 Actually the reason I got this cheap monitor is,
 because it is already broken.
+
+#### Printing
+
+> Temporary Room Setup for Peripheral.
+
+I do not need big working space.
+I love simple life with tidy desk.
+
+But I'm sure I do printing a lot.
+And whenever my workload getting heavier,
+I choose to stay calm, then print after hours.
+Using borrowed folding table from warehouse.
+
+![Setting Up Printing Room][82-print-room]{: .img-responsive }
+
+Don't be afraid to change your room decoration.
+As long as you get your room tidy before morning.
 
 -- -- --
 
@@ -900,12 +981,18 @@ Thank you for reading and visiting.
 [15-fstab]:        {{ asset_path }}/15-fstab.png
 
 [21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
+[21-connmand]:     {{ asset_path }}/21-connmand.png
+[23-rc-connmand]:  {{ asset_path }}/23-rc-conmand.png
 [22-blender]:      {{ asset_path }}/22-blender.png
+
+[23-yay-epson]:    {{ asset_path }}/23-yay-epson.png
+[23-cups-local]:   {{ asset_path }}/23-cups-local.png
 
 [30-local-fonts]:  {{ asset_path }}/30-local-fonts.png
 
 [31-zsh-error]:    {{ asset_path }}/31-zsh-error.png
 [31-zsh-ps1]:      {{ asset_path }}/31-zsh-ps1.png
+[31-zsh-p10k]:     {{ asset_path }}/31-zsh-p10k.png
 
 [32-gtk3-setting]: {{ asset_path }}/32-gtk3-setting.png
 [32-caja]:         {{ asset_path }}/32-caja.png
@@ -924,3 +1011,5 @@ Thank you for reading and visiting.
 
 [37-rvm-gpg]:      {{ asset_path }}/37-rvm-gpg-failure.png
 [37-rvm-ok]:       {{ asset_path }}/37-rvm-ok.png
+
+[82-print-room]:   {{ asset_path }}/82-print-room.jpg
