@@ -589,6 +589,15 @@ After all only these
 
 * `vim`
 
+#### Font
+
+Beside `.config`. There is also `.local`.
+
+I copy the whole font folder to my new setup.
+
+* `/home/epsi/.local/share/fonts`
+
+![Font: Local Fonts][30-local-fonts]{: .img-responsive }
 
 #### Awesome WM
 
@@ -714,8 +723,6 @@ Now both my `calc` and `excel` can run the same formula.
 I can share `.xlsx` between my collagues.
 And edit them in linux.
 
-#### Font
-
 
 
 
@@ -770,6 +777,8 @@ Thank you for reading and visiting.
 
 [21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
 [22-blender]:      {{ asset_path }}/22-blender.png
+
+[30-local-fonts]:  {{ asset_path }}/30-local-fonts.png
 
 [31-zsh-error]:    {{ asset_path }}/31-zsh-error.png
 [31-zsh-ps1]:      {{ asset_path }}/31-zsh-ps1.png
