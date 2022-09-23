@@ -149,9 +149,9 @@ $ xrandr --listmonitors
 Monitors: 2
  0: +*LVDS1 1366/310x768/170+0+0  LVDS1
  1: +VGA1 1920/480x1080/270+0+0  VGA1
+{% endhighlight %}
 
 But most of the time, I turn off the monitor on my notebook.
-{% endhighlight %}
 
 {% highlight bash %}
 $ xrandr \
