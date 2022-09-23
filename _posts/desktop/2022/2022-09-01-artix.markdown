@@ -55,7 +55,7 @@ You have to respect these steps:
   Office Suite, Web Browser, Text Editor, Mail Client.
 
 * Setting Up Application.
-  POP3 Client, Python Macro, Container.
+  POP3 Client, Python Macro, Container, ETax Certificate.
 
 * Cloud: sync between Office and Home.
   Dropbox, Git, Mega
@@ -870,6 +870,12 @@ So you can be more productive.
 -- -- --
 
 ### 9: Cloud
+
+#### Dropbox
+
+#### Mega
+
+#### Git Repository
 
 -- -- --
 
