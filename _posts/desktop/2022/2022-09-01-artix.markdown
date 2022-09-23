@@ -24,6 +24,49 @@ I'm a mess. I make many foolish mistakes.
 Random issue comes in scatttered ways.
 So I decide to write down my setup process.
 
+#### Amount of Work
+
+> Appreciate you Setup!
+
+This blog discuss mainly about setting up linux distribution,
+and ricing (Desktop customization).
+
+Setting-up PC to be ready for daily basis is another level.
+You have to respect these steps:
+
+* Buy the right hardware with the right price.
+  Such as Mini PC or Notebook.
+
+* Install OS.
+  Such as windows 10 or linux distribution.
+  Storage for multiboot.
+
+* Basic Administration: fstab, samba, git, printing, and stuff.
+
+* Desktop Customization.
+  Window Manager, Terminal, Wallpaper.
+
+* Sync Packages from Repository.
+  Office Suite, Web Browser, Text Editor, Mail Client.
+
+* Setting Up Application.
+  POP3 Client, Python Macro, Container.
+
+* Cloud: sync between Office and Home.
+  Dropbox, Git, Mega
+
+* Peripheral: For comfort.
+  Bluetooth Speaker, Headset, Printing Cable, HDMI, Ext HDD, Desk Lamp, Cable Cord.
+  And most importantly clean your chair and tidy your desk.
+
+I do not write them all, but I think that's all.
+Common setup once, then daily productive life can raise your performance.
+You can make any additional setup anytime later as needed.
+After this, you should be ready for work.
+
+Setting-up your rig require amount of work.
+This is why you should appreciate the result.
+
 #### Why Writing?
 
 > I'm back.
@@ -727,6 +770,8 @@ I need a way for both `excel` and `calc`.
 
 So I wrote this:
 
+![LibreOffice: Formula Wrapper][36-calc-macro]{: .img-responsive }
+
 {% highlight qbasic %}
 Function terbilang(a as double) as string
     Dim oService As Object
@@ -815,3 +860,4 @@ Thank you for reading and visiting.
 
 [36-lo-extension]: {{ asset_path }}/36-libreoffice-extension.png
 [36-calc-number]:  {{ asset_path }}/36-calc-terbilang.png
+[36-calc-macro]:   {{ asset_path }}/36-libreoffice-macro.png
