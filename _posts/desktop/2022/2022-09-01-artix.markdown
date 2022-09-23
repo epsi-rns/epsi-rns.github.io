@@ -41,6 +41,8 @@ in systematic writing fashioned.
 Ranged from hardware to software,
 from specific linux to ordinary cloud tips.
 
+> You can read my guidance in systematic approach in my old article. 
+
 After all, this is just my personal note.
 Not designed to be a guidance,
 but for my personal comfort.
@@ -568,21 +570,105 @@ a comfortable progress.
 
 ### Desktop Customization
 
+#### Awesome WM
+
+This works flawlessy.
+I just need to copy my config,
+and voila... everything work as expected.
+
+You can see the panel of my awesome in ZSH screenshoot below.
+
+#### Shell
+
+> Garbage in ZSH in clean install
+
+I'm using `oh-my-bash` for my bash customization,
+and `power10k` for zsh customization.
+But something strange happened in clean install.
+I found that my `zsh` messed up.
+
+![ZSH: Funny Prompt][31-zsh-error]{: .img-responsive }
+
+It turned out that `$PS1` from `bash` pollute the zsh shell.
+
+![ZSH: Funny Prompt][31-zsh-ps1]{: .img-responsive }
+
+I setup `chsh -c /bin/zsh` to make zsh my default shell.
+and also setup `power10k`.
+
+#### GTK Theme
+
+I'm no hacker, so I prefer bright stuff.
+Using `lxappearance`.
+I set this I can have light theme instead of default dark artix.
+
+![GTK3: Setting][32-gtk3-setting]{: .img-responsive }
+
+{% highlight bash %}
+$ cat ~/.config/gtk-3.0/settings.ini
+[Settings]
+gtk-application-prefer-dark-theme=false
+...
+gtk-theme-name=Breeze
+{% endhighlight %}
+
+I prefer `caja` from `mate desktop` as my favorite file manager.
+
+![GTK3: Caja Example][32-caja]{: .img-responsive }
+
+For the past three years, I have leave `thunar` for `caja`.
+
+#### LibreOffice
+
+But I'm having a hardtime in setting `GTK+3`.
+In Libreoffice, so I check the VCL in about.
+
+![LibreOffice VCL: Dark][33-lo-vcl-dark]{: .img-responsive }
+
+I finally install `lxappearance-gtk3`,
+and also log out my awesome window manager.
+After I logged in in new session,
+I can get my `LibreOffice` in bright theme.
+
+![LibreOffice VCL: Bright Breeze][33-lo-vcl-breeze]{: .img-responsive }
+
+Actually, I still don't get what's going on.
+But I finally get my bright breeze theme.
+
+#### Firefox
+
+In Firefox, setting theme is very easy.
+
+![Firefox: Light Theme][34-firefox-light]{: .img-responsive }
+
+But this is not the main point.
+In firefox I can use two different whatsapp,
+each with different handphone number.
+
+![Firefox: Container Extension][34-firefox-cont]
+
+You can see two different whatsapp account .
+One for office and customer.
+The other one for family and friend such as alumni.
+
+![Firefox: Whatsapp 01][34-firefox-tab01]{: .img-responsive }
+
+![Firefox: Whatsapp 02][34-firefox-tab02]{: .img-responsive }
+
+With this setting, I can remind my self,
+by sending notes between my two different whatsapp acccount.
+
+Pretty productive right?
+As long that I do not check messages every five minutes,
+I'll be just fine.
+
 #### Font
 
 #### What Config?
 
-#### Awesome WM
 
-This works flawlessy.
 
-#### ZSH Prompt
 
-Issue
-
-#### LibreOffice
-
-VCL
 
 -- -- --
 
@@ -634,3 +720,17 @@ Thank you for reading and visiting.
 
 [21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
 [22-blender]:      {{ asset_path }}/22-blender.png
+
+[31-zsh-error]:    {{ asset_path }}/31-zsh-error.png
+[31-zsh-ps1]:      {{ asset_path }}/31-zsh-ps1.png
+
+[32-gtk3-setting]: {{ asset_path }}/32-gtk3-setting.png
+[32-caja]:         {{ asset_path }}/32-caja.png
+
+[33-lo-vcl-breeze]:{{ asset_path }}/33-lo-vcl-breeze.png
+[33-lo-vcl-dark]:  {{ asset_path }}/33-lo-vcl-dark.png
+
+[34-firefox-light]:{{ asset_path }}/34-firefox-light.png
+[34-firefox-cont]: {{ asset_path }}/34-firefox-container.png
+[34-firefox-tab01]:{{ asset_path }}/34-firefox-tab-01.png
+[34-firefox-tab02]:{{ asset_path }}/34-firefox-tab-02.png
