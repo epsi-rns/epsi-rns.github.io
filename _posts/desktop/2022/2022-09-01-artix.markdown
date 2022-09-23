@@ -872,7 +872,7 @@ So you can be more productive.
 
 ### 9: Cloud
 
-> Sync
+> Never put any sensitive data in the cloud!
 
 I need to find a way to work between my mini PC at office,
 and my notebook at home.
@@ -1007,7 +1007,19 @@ I finally decide not to mix document cloud with git repo.
 After I remove the `repository` folder,
 my `mega` become fast again.
 
-I think that's all.
+#### Tax
+
+I put sensitive data, such as ETax,
+outside the cloud for security purpose.
+
+With slightly different reason as,
+you don't want to put your password on github repository.
+
+If it needs to be backed up.
+I use USB flash disk, move it to my notebook.
+And store it to external HDD later.
+
+> I think that's all.
 
 -- -- --
 
