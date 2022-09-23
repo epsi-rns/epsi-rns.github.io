@@ -62,6 +62,20 @@ I have bought my self an external HDD about half a year ago.
 My document stored properly now.
 But It turned out that I have to consider to renew my hardware as well.
 
+#### Why Artix
+
+> Well tested in my notebook.
+
+It just works on my notebook.
+This should also work in my office.
+I'm familiar with this distribution.
+
+I simply want arch with OpenRC.
+I love Gentoo, but maybe next time for my personal device at home.
+
+Artix made by Artoo. Another reason.
+Well... we have a common name, because my name is also Arto.
+
 ### The Notebook
 
 > Still Hardware
@@ -270,6 +284,8 @@ My install work well, except that I have to figure out,
 how to enter the BIOS, and disable the EFI Boot Security.
 
 #### Partition
+
+> What an exotic UUID.
 
 The name is strange for me.
 I never use SSD in my whole life.
