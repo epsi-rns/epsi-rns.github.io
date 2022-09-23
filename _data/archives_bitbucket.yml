@@ -2,6 +2,22 @@
 # Archives by Date
 
 
+- id: 22070717
+  title: "LibreOffice - CSV Master Detail"
+  url: /automation/2022/07/07/python-libreoffice-csv-md/
+  
+- id: 22070517
+  title: "LibreOffice - Decoration Example"
+  url: /automation/2022/07/05/python-libreoffice-deco/
+  
+- id: 22070317
+  title: "Python - Excel - CSV - Part Two"
+  url: /automation/2022/07/03/python-excel-csv-md-02/
+  
+- id: 22070117
+  title: "Python - Excel - CSV - Part One"
+  url: /automation/2022/07/01/python-excel-csv-md-01/
+  
 - id: 22020517
   title: "LibreOffice - Diff"
   url: /automation/2022/02/05/python-libreoffice-diff/
@@ -81,6 +97,30 @@
 - id: 21100217
   title: "LibreOffice - Macro - APSO"
   url: /automation/2021/10/02/python-libreoffice-macro-apso/
+  
+- id: 21040813
+  title: "Pascal - Playing with Records - Part Six"
+  url: /lambda/2021/04/08/playing-with-records-pascal-06/
+  
+- id: 21040713
+  title: "Pascal - Playing with Records - Part Five"
+  url: /lambda/2021/04/07/playing-with-records-pascal-05/
+  
+- id: 21040513
+  title: "Pascal - Playing with Records - Part Four"
+  url: /lambda/2021/04/05/playing-with-records-pascal-04/
+  
+- id: 21040313
+  title: "Pascal - Playing with Records - Part Three"
+  url: /lambda/2021/04/03/playing-with-records-pascal-03/
+  
+- id: 21040213
+  title: "Pascal - Playing with Records - Part Two"
+  url: /lambda/2021/04/02/playing-with-records-pascal-02/
+  
+- id: 21040113
+  title: "Pascal - Playing with Records - Part One"
+  url: /lambda/2021/04/01/playing-with-records-pascal-01/
   
 - id: 21032213
   title: "Racket - Playing with Records - Part Two"

@@ -5,6 +5,14 @@
 # to folder _data/archives.yml
 
 
+- id: 22090125
+  title: "Artix OpenRC on Mini PC"
+  url: /desktop/2022/09/01/artix.html
+
+- id: 20111525
+  title: "XFCE4 Terminal - Custom Colorscheme"
+  url: /desktop/2020/11/15/xfce4-terminal-custom-colorscheme.html
+
 - id: 20101125
   title: "Slides - Desktop Customization"
   url: /desktop/2020/10/11/slides-desktop-customization.html
