@@ -874,7 +874,21 @@ So you can be more productive.
 
 #### Dropbox
 
+I have been using free version dropbox for years.
+And since I have been bumped with storage limit.
+
+My documents are, almost all just `docx`, `xlsx`, and `pdf`.
+And they are mostly small.
+But since I maintain different company at once,
+since 2019 dropbox storage limit no longer fit my requirement.
+The problem is I don't have time to migrate to Mega.
+
+Now that I have already backup my files to external HDD,
+and also have my onw mini PC.
+I think this is it. I have to try Mega for the second time.
+
 #### Mega
+
 
 #### Git Repository
 
