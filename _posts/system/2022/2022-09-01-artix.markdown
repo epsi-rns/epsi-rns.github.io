@@ -1,17 +1,18 @@
 ---
-layout     : post
-title:  "Artix OpenRC on Mini PC"
-categories: desktop
+layout    : post
+title     : "Distribution - Artix OpenRC on Mini PC"
+categories: system
 date      : 2022-09-01 09:25:15 +0700
 tags      : [install]
-keywords  : [artix, arch, openrc]
+keywords  : [artix, arch, openrc, multiboot, partition, distro]
 author: epsi
+toc        : toc/2022/09/toc-install.html
 
 excerpt:
   Artix linux experience in Mini PC.
 
 opengraph:
-  image: /assets/posts/desktop/2022/09/04-dual-monitor-notebook.jpg
+  image: /assets/posts/system/2022/09/04-dual-monitor-notebook.jpg
 
 related_link_ids:
   - 18010225  # OpenSuse Tumbleweed
@@ -1246,7 +1247,7 @@ Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/desktop/2022/09' %}
+{% assign asset_path = site.url | append: '/assets/posts/system/2022/09' %}
 
 [repository]:      https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
               
