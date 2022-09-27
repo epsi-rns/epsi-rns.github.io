@@ -207,6 +207,28 @@ You can see how small the Mini PC compared to my old DELL FHD monitor.
 
 > Be well prepared!
 
+#### Multiboot
+
+Buy yourself a pair bootable flash disk!
+
+![Bootable: Flash Disk][13-bootables]{: .img-responsive }
+
+* One for Windows 10 optionally, and
+* The other one for Linux.
+
+#### Using Windows
+
+> But why windows anyway?
+
+Well, don't be a dx³/dt³.
+Such fanaticism won't get me anywhere.
+
+I mostly use windows for my tax reporting obligation.
+The given applcation given by tax is windows based.
+I rarely use CAD, but when I do, I use windows.
+My company also a vendor of medical devices which require windows.
+So yeah, I still need windows. No need to argue.
+
 #### Windows 10
 
 Although I got a preinstalled Windows 10.
@@ -226,7 +248,7 @@ So I download the Windows 10 from Microsoft,
 and did the `dd` command.
 Be careful with this command.
 Some say it is `disk destroyer`,
-but I have been dd-ing manyh times, and I'm fine.
+but I have been dd-ing many times, and I'm fine.
 
 {% highlight bash %}
 $ sudo dd \
@@ -587,9 +609,14 @@ I already discuss fstab in other section above.
 
 #### Network
 
-I use `connman-gtk`.
+I use `connman-gtk`, instead of `nm-applet` provided by `Network Manager`.
 
 ![Network: Connection Manager][21-connmand]{: .img-responsive }
+
+Artix with OpenRC, proVide `connman-gtk`, instead of `nm-applet`,
+and I don't know why.
+
+I just think it is fun to face something different.
 
 #### Init
 
@@ -840,6 +867,30 @@ to seriously get into blender in any near future,
 The fact that I can run Blender is still,
 a comfortable progress.
 
+#### Secondary User for Telegram
+
+I have two phone numbers.
+And I use both in my telegram.
+I mean I have two telegram account.
+Now the questioni is,
+how to setup the PC using two different telegram users?
+
+The answer is secondary user.
+
+{% highlight bash %}
+$ sudo useradd -m -G wheel rizqi
+$ sudo passwd rizqi
+
+$ sudo pacman -S xorg-xhost
+$ xhost +127.0.0.1
+$ xhost local:
+
+$ sudo -u rizqi ls -l /home/rizqi  
+$ sudo -u rizqi telegram-desktop &!
+{% endhighlight %}
+
+![Secondary User for Telegram][22-xhost]{: .img-responsive }
+
 #### Do not forget to take a rest.
 
 > I'm not talking about RVM
@@ -1085,6 +1136,29 @@ since very long time ago.
 Actually the reason I got this cheap monitor is,
 because it is already broken.
 
+#### Handling Notebook LID
+
+While in dual monitor,
+most of the time I closed the notebook monitor by folding it.
+
+I can see in `dmesg`.
+
+{% highlight bash %}
+❯ sudo dmesg | grep Lid
+[    2.619249] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input3
+[    2.619279] ACPI: button: Lid Switch [LID0]
+[   86.420430] elogind-daemon[947]: Watching system buttons on /dev/input/event2 (Lid Switch)
+[  623.881792] elogind-daemon[947]: Lid closed.
+[  627.214356] elogind-daemon[947]: Lid opened.
+{% endhighlight %}
+
+There is a clue here on  how to handle LID.
+
+* [Correct way to handle suspend on lid close](http://dev1galaxy.org/viewtopic.php?id=4498)
+
+But the thing is I'm not sure, what I've done. 
+Now the notebook won't suspend while I close the monitor.
+
 #### Printing
 
 > Temporary Room Setup for Peripheral.
@@ -1126,6 +1200,7 @@ Thank you for reading and visiting.
 [10-limit]:        {{ asset_path }}/10-limit.png
 [11-dd-pv]:        {{ asset_path }}/11-dd-pv.png
 [12-woeusb-win10]: {{ asset_path }}/12-woeusb-win10.png
+[13-bootables]:    {{ asset_path }}/13-bootables.jpg
 [13-lsblk]:        {{ asset_path }}/13-lsblk.png
 [14-partman]:      {{ asset_path }}/14-partman.png
 [15-fstab]:        {{ asset_path }}/15-fstab.png
@@ -1134,6 +1209,7 @@ Thank you for reading and visiting.
 [21-connmand]:     {{ asset_path }}/21-connmand.png
 [23-rc-connmand]:  {{ asset_path }}/23-rc-conmand.png
 [22-blender]:      {{ asset_path }}/22-blender.png
+[22-xhost]:        {{ asset_path }}/22-xhost.png
 
 [23-yay-epson]:    {{ asset_path }}/23-yay-epson.png
 [23-cups-local]:   {{ asset_path }}/23-cups-local.png
