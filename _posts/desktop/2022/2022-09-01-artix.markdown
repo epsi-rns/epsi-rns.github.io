@@ -870,9 +870,10 @@ a comfortable progress.
 #### Secondary User for Telegram
 
 I have two phone numbers.
-And I use both in my telegram.
-I mean I have two telegram account.
-Now the questioni is,
+And I use both for my telegram.
+I mean I have two telegram accounts.
+
+Now the question is,
 how to setup the PC using two different telegram users?
 
 The answer is secondary user.
