@@ -675,6 +675,8 @@ from notebook to mini-pc.
 
 After all only these
 
+* `/etc/environment`: QT Theme
+
 * `/home/epsi/.config/awesome`: The whole stuff.
 
 * `/home/epsi/.config/geany`: I need only the color scheme.
@@ -686,6 +688,22 @@ After all only these
 * `xfce4` I need only the color scheme.
 
 * `vim`
+
+#### Environment
+
+The artix is still conservatively using `gtk2` looks:
+
+{% highlight bash %}
+QT_QPA_PLATFORMTHEME=gtk2
+{% endhighlight %}
+
+I should change it for nowadays looks, with `gtk3` looks.
+
+{% highlight bash %}
+QT_QPA_PLATFORMTHEME=gtk3
+{% endhighlight %}
+
+![Envrionment: QT GTK Theme][31-environment]{: .img-responsive }
 
 #### Font
 
@@ -724,6 +742,46 @@ I setup `chsh -c /bin/zsh` to make zsh my default shell.
 and also setup `powerlevel10k` as you can see the result below:
 
 ![ZSH: Power Level 10K][31-zsh-p10k]{: .img-responsive }
+
+#### BASH Config
+
+I need to set `nodejs` folder, in `.bashrc`.
+
+{% highlight bash %}
+npm config set prefix '~/.npm-global'
+export PATH="$PATH:$HOME/.rvm/bin:~/.npm-global/bin"
+{% endhighlight %}
+
+And also RVM depend on my situation.
+
+#### ZSH Config
+
+The `.zshrc` is alittle bit longer.
+
+{% highlight bash %}
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+{% endhighlight %}
+
+And also, in `.zshrc`,
+I need to set `nodejs` folder, set the `RVM`.
+
+{% highlight bash %}
+export PATH=$PATH:/media/Works/bin:~/.npm-global/bin:$HOME/.rvm/bin
+export PATH=${PATH}:~/.rvm/gems/ruby-2.6.4/bin/
+source ~/.rvm/scripts/rvm
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+npm config set prefix '~/.npm-global'
+alias dart-sass='/media/Works/bin/dart-sass/sass'
+{% endhighlight %}
+
+![.zshrc][31-zshrc]{: .img-responsive }
 
 #### GTK Theme
 
@@ -1216,10 +1274,13 @@ Thank you for reading and visiting.
 [23-cups-local]:   {{ asset_path }}/23-cups-local.png
 
 [30-local-fonts]:  {{ asset_path }}/30-local-fonts.png
+[31-environment]:  {{ asset_path }}/31-environment.png
 
 [31-zsh-error]:    {{ asset_path }}/31-zsh-error.png
 [31-zsh-ps1]:      {{ asset_path }}/31-zsh-ps1.png
 [31-zsh-p10k]:     {{ asset_path }}/31-zsh-p10k.png
+
+[31-zshrc]:        {{ asset_path }}/31-zshrc.png
 
 [32-gtk3-setting]: {{ asset_path }}/32-gtk3-setting.png
 [32-caja]:         {{ asset_path }}/32-caja.png
@@ -1238,6 +1299,8 @@ Thank you for reading and visiting.
 
 [37-rvm-gpg]:      {{ asset_path }}/37-rvm-gpg-failure.png
 [37-rvm-ok]:       {{ asset_path }}/37-rvm-ok.png
+
+
 
 [61-mega-status]:  {{ asset_path }}/61-mega-status.png
 [61-mega-web]:     {{ asset_path }}/61-mega-web.png
