@@ -1,0 +1,14 @@
+{% capture widget_header %}
+  <strong>Upcoming Event</strong>
+  <span class="fas fa-user-group is-pulled-right"></span>
+{% endcapture %}
+
+{% capture widget_body %}
+  <a href="https://ilc.opensuse.id/">
+    <img src="{{ site.baseurl }}/assets/site/images/event/ilc-poster.png"
+         alt="Indonesia Linux Conference"></a>
+{% endcapture %}
+
+{% assign color = "grey" %}
+{% include template/widget.html %}
+
