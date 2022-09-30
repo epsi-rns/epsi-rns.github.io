@@ -12,7 +12,7 @@ excerpt:
   Artix linux experience - Custom Setup.
 
 opengraph:
-  image: /assets/posts/system/2022/09/02-mini-with-moni.jpg
+  image: /assets/posts/system/2022/09/82-print-room.jpg
 
 related_link_ids:
   - 18010225  # OpenSuse Tumbleweed
@@ -126,7 +126,7 @@ I can run `blender` in my own computer.
 
 My computer is used to be under specification.
 
-![Blender][22-blender]{: .img-responsive }
+![Blender][35-blender]{: .img-responsive }
 
 Althoug I'm pretty sure that I don't have time,
 to seriously get into blender in any near future,
@@ -156,7 +156,7 @@ $ sudo -u rizqi ls -l /home/rizqi
 $ sudo -u rizqi telegram-desktop &!
 {% endhighlight %}
 
-![Secondary User for Telegram][22-xhost]{: .img-responsive }
+![Secondary User for Telegram][35-xhost]{: .img-responsive }
 
 #### Terminal on Geany
 
@@ -475,6 +475,10 @@ How about your journey?
 [34-firefox-tab01]:{{ asset_path }}/34-firefox-tab-01.png
 [34-firefox-tab02]:{{ asset_path }}/34-firefox-tab-02.png
 
+[35-xhost]:        {{ asset_path }}/35-xhost.png
+[35-useradd]:      {{ asset_path }}/35-useradd.png
+[35-blender]:      {{ asset_path }}/35-blender.png
+
 [36-lo-extension]: {{ asset_path }}/36-libreoffice-extension.png
 [36-calc-number]:  {{ asset_path }}/36-calc-terbilang.png
 [36-calc-macro]:   {{ asset_path }}/36-libreoffice-macro.png
@@ -495,4 +499,5 @@ How about your journey?
 
 [63-git-repo]:     {{ asset_path }}/63-git-repository.png
 
+[04-dual-monitor]: {{ asset_path }}/04-dual-monitor-notebook.jpg
 [82-print-room]:   {{ asset_path }}/82-print-room.jpg

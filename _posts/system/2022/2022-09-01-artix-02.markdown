@@ -241,6 +241,157 @@ $ scrotty -sbcd5 -g27 "21-pacman-conf"
 
 ### 6: Examining Device
 
+> My Favorite Command Line
+
+New toy. Let's play with CLI.
+
+#### General Info
+
+I need to know what my NUC offer, with `procinfo`.
+
+{% highlight bash %}
+$ cat /proc/cpuinfo | grep "model name"
+model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
+model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
+model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
+model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
+{% endhighlight %}
+
+![CLI Info: Processor Info][24-proc-cpuinfo]{: .img-responsive }
+
+And also get the NUC model, with `dmidecode`.
+
+{% highlight bash %}
+$ sudo dmidecode | grep "Product Name"
+	Product Name: NUC11ATKC4
+	Product Name: NUC11ATBC4
+{% endhighlight %}
+
+![CLI Info: DMI Decode][24-dmidecode]{: .img-responsive }
+
+This `glxinfo`, because I can't ever run Blender,
+because my GLX capanility is alwayd underspecification.
+
+{% highlight bash %}
+$ glxinfo | grep "OpenGL version"
+OpenGL version string: 4.6 (Compatibility Profile) Mesa 22.1.7
+{% endhighlight %}
+
+![CLI Info: GLX Info][24-glxinfo]{: .img-responsive }
+
+#### Smart Control
+
+This `nvme` device is strange new world to discover.
+
+{% highlight bash %}
+$ sudo smartctl -a /dev/nvme0n1
+smartctl 7.3 2022-02-28 r5338 [x86_64-linux-5.19.10-artix1-1] (local build)
+Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Number:                       SSD 256GB
+Serial Number:                      GV220826WT00000106
+Firmware Version:                   V0530B3
+PCI Vendor/Subsystem ID:            0x126f
+IEEE OUI Identifier:                0x000001
+Controller ID:                      1
+NVMe Version:                       1.3
+Number of Namespaces:               1
+Namespace 1 Size/Capacity:          256,060,514,304 [256 GB]
+Namespace 1 Formatted LBA Size:     512
+Namespace 1 IEEE EUI-64:            000001 0000000000
+Local Time is:                      Fri Sep 30 09:35:30 2022 WIB
+Firmware Updates (0x12):            1 Slot, no Reset required
+Optional Admin Commands (0x0017):   Security Format Frmw_DL Self_Test
+Optional NVM Commands (0x0015):     Comp DS_Mngmt Sav/Sel_Feat
+Log Page Attributes (0x03):         S/H_per_NS Cmd_Eff_Lg
+Maximum Data Transfer Size:         64 Pages
+Warning  Comp. Temp. Threshold:     83 Celsius
+Critical Comp. Temp. Threshold:     85 Celsius
+{% endhighlight %}
+
+#### Specific: Temperature
+
+We can also dive into specific topic such as temperature.
+
+> Heal from my Notebook's Overheat Trauma
+
+The `hddtemp` can't handle `nvme` device.
+
+{% highlight bash %}
+$ sudo hddtemp /dev/nvme0n1
+ERROR: /dev/nvme0n1: can't determine bus type (or this bus type is unknown)
+{% endhighlight %}
+
+![CLI Info: HDD Temp][26-hddtemp]{: .img-responsive }
+
+So you need `nvme-cli`:
+
+{% highlight bash %}
+$ sudo nvme smart-log /dev/nvme0n1 | grep temp
+temperature				: 45°C (318 Kelvin)
+{% endhighlight %}
+
+Alternatively you can go directly to `coretemp` ini `/sys`
+
+![CLI Info: NVME CLI][26-nvme-cli]{: .img-responsive }
+
+First you must find which `core` properties.
+
+{% highlight bash %}
+$ ls /sys/devices/platform/coretemp.0/hwmon/hwmon3
+device		  temp2_crit_alarm  temp4_crit_alarm
+name		  temp2_input	    temp4_input
+power		  temp2_label	    temp4_label
+subsystem	  temp2_max	    temp4_max
+temp1_crit	  temp3_crit	    temp5_crit
+temp1_crit_alarm  temp3_crit_alarm  temp5_crit_alarm
+temp1_input	  temp3_input	    temp5_input
+temp1_label	  temp3_label	    temp5_label
+temp1_max	  temp3_max	    temp5_max
+temp2_crit	  temp4_crit	    uevent
+{% endhighlight %}
+
+And just `cat` the file.
+
+{% highlight bash %}
+$ cat /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp2_input
+30000
+{% endhighlight %}
+
+![CLI Info: Core Temperature][26-coretemp]{: .img-responsive }
+
+#### Sensors
+
+Or you can issue sensors command instead.
+
+{% highlight bash %}
+$ sensors
+iwlwifi_1-virtual-0
+Adapter: Virtual device
+temp1:        +38.0°C  
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:       -263.2°C  
+temp2:        +27.8°C  (crit = +119.0°C)
+
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +40.0°C  (high = +105.0°C, crit = +105.0°C)
+Core 0:        +33.0°C  (high = +105.0°C, crit = +105.0°C)
+Core 1:        +33.0°C  (high = +105.0°C, crit = +105.0°C)
+Core 2:        +33.0°C  (high = +105.0°C, crit = +105.0°C)
+Core 3:        +33.0°C  (high = +105.0°C, crit = +105.0°C)
+
+nvme-pci-0100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +82.8°C)
+                       (crit = +84.8°C)
+{% endhighlight %}
+
+![CLI Info: Sensors][27-sensors]{: .img-responsive }
+
 -- -- --
 
 <a name="administration"></a>
@@ -255,7 +406,7 @@ I already discuss fstab in other section above.
 
 I use `connman-gtk`, instead of `nm-applet` provided by `Network Manager`.
 
-![Network: Connection Manager][21-connmand]{: .img-responsive }
+![Network: Connection Manager][2-connmand]{: .img-responsive }
 
 Artix with OpenRC, proVide `connman-gtk`, instead of `nm-applet`,
 and I don't know why.
@@ -302,11 +453,11 @@ $ sudo chmod 600 ~/.ssh/id_rsa
 I'm using Epson L3110 series.
 First I need to install the proper driver using AUR.
 
-![Printer: AUR: Epson ESC/P-R][23-yay-epson]{: .img-responsive }
+![Printer: AUR: Epson ESC/P-R][29-yay-epson]{: .img-responsive }
 
 Then I can add printer in cups in `localhost:631`.
 
-![Printer: CUPS localhost:631][23-cups-local]{: .img-responsive }
+![Printer: CUPS localhost:631][29-cups-local]{: .img-responsive }
 
 -- -- --
 
@@ -501,13 +652,22 @@ Consider continue reading [ [Artix OpenRC - for Daily Basis][local-whats-next] ]
 [repository]:      https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
 
 [21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
-[21-connmand]:     {{ asset_path }}/21-connmand.png
-[23-rc-connmand]:  {{ asset_path }}/23-rc-conmand.png
-[22-blender]:      {{ asset_path }}/22-blender.png
-[22-xhost]:        {{ asset_path }}/22-xhost.png
 
-[23-yay-epson]:    {{ asset_path }}/23-yay-epson.png
-[23-cups-local]:   {{ asset_path }}/23-cups-local.png
+[24-proc-cpuinfo]: {{ asset_path }}/24-proc-cpuinfo.png
+[24-dmidecode]:    {{ asset_path }}/24-dmidecode.png
+[24-glxinfo]:      {{ asset_path }}/24-glxinfo.png
+
+[26-hddtemp]:      {{ asset_path }}/26-hddtemp.png
+[26-nvme-cli]:     {{ asset_path }}/26-nvme-cli.png
+[26-coretemp]:     {{ asset_path }}/26-coretemp.png
+
+[27-sensors]:      {{ asset_path }}/27-sensors.png
+
+[29-connmand]:     {{ asset_path }}/29-connmand.png
+[29-rc-connmand]:  {{ asset_path }}/29-rc-conmand.png
+
+[29-yay-epson]:    {{ asset_path }}/29-yay-epson.png
+[29-cups-local]:   {{ asset_path }}/29-cups-local.png
 
 [30-local-fonts]:  {{ asset_path }}/30-local-fonts.png
 [31-environment]:  {{ asset_path }}/31-environment.png
