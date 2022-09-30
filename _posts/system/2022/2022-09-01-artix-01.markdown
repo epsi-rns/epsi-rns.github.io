@@ -1,0 +1,469 @@
+---
+layout    : post
+title     : "Artix OpenRC - on Mini PC"
+categories: system
+date      : 2022-09-01 09:25:15 +0700
+tags      : [install]
+keywords  : [artix, arch, openrc, multiboot, partition, distro]
+author: epsi
+toc        : toc/2022/09/toc-install.html
+
+excerpt:
+  Artix linux experience - in Mini PC.
+
+opengraph:
+  image: /assets/posts/system/2022/09/04-dual-monitor-notebook.jpg
+
+related_link_ids:
+  - 18010225  # OpenSuse Tumbleweed
+
+---
+
+This article is the first part of three articles.
+From choosing hardware to installation.
+
+<a name="toc"></a>
+
+### Table of Content
+
+* [Table of Content](#toc)
+
+* 1: [Preface](#preface)
+
+* 2: [Choosing Hardware](#hardware)
+
+* 3: [Prepare Bootable Disk](#bootable)
+
+* 4: [Partition](#partition)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="preface"></a>
+
+### Preface
+
+I'm a mess. I make many foolish mistakes.
+Random issue comes in scatttered ways.
+So I decide to write down my setup process.
+
+For any reader, don't be afraid of any trouble.
+Most of us did step into issue regularly.
+Foolish mistakes is common on daily basis.
+Just do not repeat yourself by forgetting how to solve it.
+
+#### Amount of Work
+
+> Appreciate you Setup!
+
+This blog discuss mainly about setting up linux distribution,
+and ricing (Desktop customization).
+
+Setting-up PC to be ready for daily basis is another level.
+You have to respect these steps:
+
+* Buy the right hardware with the right price.
+  Such as Mini PC or Notebook.
+
+* Install OS.
+  Such as windows 10 or linux distribution.
+  Storage for multiboot.
+
+* Basic Administration: passwd, fstab, samba, git, printing, and stuff.
+
+* Desktop Customization.
+  Window Manager, Terminal, Wallpaper.
+
+* Sync Packages from Repository.
+  Office Suite, Web Browser, Text Editor, Mail Client.
+
+* Setting Up Application.
+  POP3 Client, Python Macro, Container, ETax Certificate.
+
+* Cloud: sync between Office and Home.
+  Dropbox, Git, Mega
+
+* Peripheral: For comfort.
+  Bluetooth Speaker, Headset, Printing Cable, HDMI, Ext HDD, Desk Lamp, Cable Cord.
+  And most importantly clean your chair and tidy your desk.
+
+I do not write them all, but I think that's all.
+Common setup once, then daily productive life can raise your performance.
+You can make any additional setup anytime later as needed.
+After this, you should be ready for work.
+
+Setting-up your rig require amount of work.
+This is why you should appreciate the result.
+
+#### Why Writing?
+
+> I'm back.
+
+It has been four years since my last log of linux desktop install.
+I have been doing a lot, but no time to write my OS install log.
+But why, writing another log?
+
+I have a lot of things to pour in my blog.
+I'm in need to write this down,
+so I can move on writing other stuff as well.
+This OS thing is almost the most critical part.
+Proper working tool takes precedence before the job itself.
+
+This article is different.
+Scattered random issues can't be organized,
+in systematic writing fashioned.
+Ranged from hardware to software,
+from specific linux to ordinary cloud tips.
+
+> You can read my guidance in systematic approach in my old article. 
+
+After all, this is just my personal note.
+Not designed to be a guidance,
+but for my personal comfort.
+
+#### Why Migrate?
+
+> My life at stakes. I need backup.
+
+My life at stakes. If my computer stalled. My job would be doomed. 
+
+I need backup. Not only the data. But also the hardware as well.
+
+I have bought my self an external HDD about half a year ago.
+My document stored properly now.
+But It turned out that I have to consider to renew my hardware as well.
+
+#### Why Artix
+
+> Well tested in my notebook.
+
+It just works on my notebook.
+This should also work in my office.
+I'm familiar with this distribution.
+
+I simply want arch with OpenRC.
+I love Gentoo, but maybe next time for my personal device at home.
+
+Artix made by Artoo. Another reason.
+Well... we have a common name, because my name is also Arto.
+
+-- -- --
+
+<a name="hardware"></a>
+
+### 2: Choosing Hardware
+
+There are three choices for me:
+
+* Use device given by company.
+* Use my old notebook
+* Renew by bought new Mini PC.
+
+#### Company's Notebook or Desktop
+
+> Why Not Device Given from Company
+
+I can ask my manager to give me a computer to work with.
+but I rather not. I don't want to lose my freedom.
+I wanna bring my device home anytime.
+So I can be more productive.
+
+The reason I bought my own stuff is,
+because I want to be free to use linux,
+and all the open source application.
+And also free to define the spec of my rig.
+
+I can be far more productive with linux.
+
+> Simply Show Off Linux
+
+This means I have to save my money instead of spending.
+So I can buy my own device.
+Postpone means put my job in jeopardy.
+
+### The Notebook
+
+> Still Hardware
+
+For the past three years I've been a Gentoo user,
+Void user, Artix (Arch OpenRC) user, even GhostBSD for a while.
+I can work with my notebook up for days.
+
+![Notebook: Uptime][03-uptime-3days]{: .img-responsive }
+
+But the most interesting part is that I use Artix OpenRC,
+for daily basis in my office,
+using my notebook for my accounting position.
+
+I never have my own brand new PC.
+I'd rather spend my money for my grown up responsibility,
+such as family and stuff.
+But the think is, this second hand notebook is getting old.
+Not really rotten, just getting out of date.
+It is slow with windows, but with artix linux,
+I can get my job done.
+
+This notebook got some overheat and in need some maintenance regulary.
+I should even wrapped the notebook in a plastic everytime,
+because during the rainy season in Indonesia,
+the water droplet could flood into my waterproof knapsack.
+
+![Notebook: Wrapped][05-just-notebook]{: .img-responsive }
+
+I'm still living in survival mode.
+I can't take a risk to lose my job,
+just because I do not have proper computer to get the job done.
+
+### Mini PC
+
+> Still Hardware
+
+After about a half year I decide to by myself a mini PC.
+
+![Mini PC: Mini PC][01-mini-zoom]{: .img-responsive }
+
+You can see how small the Mini PC compared to my old DELL FHD monitor.
+
+![Mini PC: With Monitor][02-mini-moni]{: .img-responsive }
+
+-- -- --
+
+<a name="bootable"></a>
+
+### 3: Prepare Bootable Disk
+
+> Be well prepared!
+
+#### Multiboot
+
+Buy yourself a pair bootable flash disk!
+
+![Bootable: Flash Disk][13-bootables]{: .img-responsive }
+
+* One for Windows 10 optionally, and
+* The other one for Linux.
+
+#### Using Windows
+
+> But why windows anyway?
+
+Well, don't be a dx³/dt³.
+Such fanaticism won't get me anywhere.
+
+I mostly use windows for my tax reporting obligation.
+The given applcation given by tax is windows based.
+I rarely use CAD, but when I do, I use windows.
+My company also a vendor of medical devices which require windows.
+So yeah, I still need windows. No need to argue.
+
+#### Windows 10
+
+Although I got a preinstalled Windows 10.
+I still want to be well prepared.
+
+So I download the Windows 10 from Microsoft,
+but it does not work, maybe my network.
+
+![Bootable: Windows 10: Limit][10-limit]{: .img-responsive }
+
+I finally found the solution,
+by limiting the bandwith.
+
+#### Bootable Windows
+
+So I download the Windows 10 from Microsoft,
+and did the `dd` command.
+Be careful with this command.
+Some say it is `disk destroyer`,
+but I have been dd-ing many times, and I'm fine.
+
+{% highlight bash %}
+$ sudo dd \
+  if=/media/Works/Win10_21H2_English_x64.iso \
+  | pv -s 5900M | sudo dd \
+  of=/dev/sdc bs=4096
+{% endhighlight %}
+
+![Bootable: Windows 10: DD PV][11-dd-pv]{: .img-responsive }
+
+And guess what? It doesn't boot.
+Ooh poor me. I just remember that the last time
+that I make a bootable Windows USB, is during my Gentoo time.
+I finally got the light that I have to use `woeusb`  instead.
+I guess this is because window using multi partition in FD USB.
+
+{% highlight bash %}
+$ sudo woeusb \
+  --device /media/Works/Win10_21H2_English_x64.iso \
+  /dev/sdb --target-filesystem ntfs
+{% endhighlight %}
+
+![Bootable: Windows 10: WOE USB][12-woeusb-win10]{: .img-responsive }
+
+It finally works.
+
+#### Artix XFCE
+
+I also make bootable artix.
+Since I use sudo and do not want to be asked for password again.
+I use sudo for any harmless command, before doing `dd`.
+
+{% highlight bash %}
+$ sudo ls
+$ sudo dd \
+  if=/media/Works/artix-xfce-openrc-20220713-x86_64.iso \
+  | pv -s 1300M |sudo dd \
+  of=/dev/sdc bs=4096
+{% endhighlight %}
+
+-- -- --
+
+<a name="partition"></a>
+
+### 4: Partition
+
+#### Planned Partition
+
+Since I plan to buy 250 GB SSD,
+I also make my plan.
+
+{% highlight bash %}
+Windows: 100 GB ntfs
+Artix:    60 GB ext4
+Docs:     30 GB ntfs
+Works:    60 GB ext4
+--------------------
+Total    250 GB
+{% endhighlight %}
+
+I never use GPT in my whole life.
+Nor Windows 10 in my own computer.
+The fact that I can use GPT,
+and try multiboot with Windows 10,
+is really excite me.
+
+#### EFI Partition
+
+> My plan did not go well.
+
+I also have to deal with `/boot/efi`.
+
+{% highlight bash %}
+Win10 EFI: 100 MB 
+Windows:   70 GB ntfs
+Recovery:  500 MB
+SWAP:      10 GB swap
+Linux EFI: 350MB Bootable Flag
+Artix:     60 GB ext4
+Docs:      40 GB ntfs
+Works:     60 GB ext4
+--------------------
+Total    250 GB
+{% endhighlight %}
+
+Do not forget to set `bootable flag`.
+
+Now I'm ready to install stuff.
+
+#### EFI Boot Security
+
+My install work well, except that I have to figure out,
+how to enter the BIOS, and disable the EFI Boot Security.
+
+#### Partition
+
+> What an exotic UUID.
+
+The name is strange for me.
+I never use SSD in my whole life.
+
+![Partition: lsblk][13-lsblk]{: .img-responsive }
+
+{% highlight bash %}
+$ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 238.5G  0 disk 
+├─nvme0n1p1 259:1    0   100M  0 part 
+├─nvme0n1p2 259:2    0    16M  0 part 
+├─nvme0n1p3 259:3    0  68.4G  0 part /media/System
+├─nvme0n1p4 259:4    0   499M  0 part 
+├─nvme0n1p5 259:5    0  39.1G  0 part /media/Docs
+├─nvme0n1p6 259:6    0    10G  0 part [SWAP]
+├─nvme0n1p7 259:7    0  60.1G  0 part /media/Works
+├─nvme0n1p8 259:8    0    60G  0 part /
+└─nvme0n1p9 259:9    0   350M  0 part /boot/efi
+{% endhighlight %}
+
+You can see more clearly with KDE Partition Manager below:
+
+![Partition: KDE Partition Manager][14-partman]{: .img-responsive }
+
+I haven't got time the change the theme for plasma in sudo.
+
+#### fstab
+
+I configure my fstab based on my old notebook.
+
+{% highlight bash %}
+$ cat /etc/fstab
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# <file system>             <mount point>  <type>  <options>  <dump>  <pass>
+UUID=1BF8-6C0E                            /boot/efi      vfat    umask=0077 0 2
+UUID=acc9cad2-1890-49f6-843b-ac96dd93a16f swap           swap    defaults,noatime 0 0
+UUID=44c4dfbd-302b-4cff-8e58-0cdfb1d3501f /              ext4    defaults,noatime 0 1
+
+UUID=62B60C6BB60C4251                     /media/System  ntfs-3g defaults,noauto,locale=en_US.UTF-8 0 0
+UUID=01D8C9EDA8D98750                     /media/Docs    ntfs-3g defaults,locale=en_US.UTF-8 0 0
+UUID=0c5c1603-2849-44e7-ad04-9bfa9b4e185a /media/Works   ext4    defaults,users,exec 0 2
+
+tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+{% endhighlight %}
+
+![Partition: /etc/fstab][15-fstab]{: .img-responsive }
+
+I also haven't got time to deal with ViM customization yet.
+
+#### Rest
+
+> I have to go home
+
+It is already 23.18 WIB (Western indonesia time),
+almost midnight in Indonesia.
+I'm going to continue writing by tomorrow.
+
+-- -- --
+
+<a name="whats-next"></a>
+
+### What is Next?
+
+That was just the beginning.
+We can have some fun with playing with this new toy.
+Consider continue reading [ [Artix OpenRC - Custom Setup][local-whats-next] ].
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/system/2022/09' %}
+
+[local-whats-next]: /system/2022/09/02/artix-02.html
+
+[01-mini-zoom]:    {{ asset_path }}/01-mini-zoom.jpg
+[02-mini-moni]:    {{ asset_path }}/02-mini-with-moni.jpg
+[03-uptime-3days]: {{ asset_path }}/03-uptime-3days.png
+[04-dual-monitor]: {{ asset_path }}/04-dual-monitor-notebook.jpg
+[05-just-notebook]:{{ asset_path }}/05-just-notebook.jpg
+
+[10-limit]:        {{ asset_path }}/10-limit.png
+[11-dd-pv]:        {{ asset_path }}/11-dd-pv.png
+[12-woeusb-win10]: {{ asset_path }}/12-woeusb-win10.png
+[13-bootables]:    {{ asset_path }}/13-bootables.jpg
+[13-lsblk]:        {{ asset_path }}/13-lsblk.png
+[14-partman]:      {{ asset_path }}/14-partman.png
+[15-fstab]:        {{ asset_path }}/15-fstab.png
+

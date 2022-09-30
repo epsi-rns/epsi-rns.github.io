@@ -1,0 +1,498 @@
+---
+layout    : post
+title     : "Artix OpenRC - for Daily Basis"
+categories: system
+date      : 2022-09-03 09:25:15 +0700
+tags      : [install]
+keywords  : [artix, arch, openrc, multiboot, partition, distro]
+author: epsi
+toc        : toc/2022/09/toc-install.html
+
+excerpt:
+  Artix linux experience - Custom Setup.
+
+opengraph:
+  image: /assets/posts/system/2022/09/02-mini-with-moni.jpg
+
+related_link_ids:
+  - 18010225  # OpenSuse Tumbleweed
+
+---
+
+This article is the last part of three articles.
+From daily basis application to peripheral.
+
+<a name="toc"></a>
+
+### Table of Content
+
+* [Table of Content](#toc)
+
+* 9: [Application](#application)
+
+* 10: [Cloud](#cloud)
+
+* 11: [Peripheral](#peripheral)
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="application"></a>
+
+### 9: Application
+
+#### Firefox Container
+
+![Firefox: Container Extension][34-firefox-cont]
+
+You can see two different whatsapp account .
+One for office and customer.
+The other one for family and friend such as alumni.
+
+![Firefox: Whatsapp 01][34-firefox-tab01]{: .img-responsive }
+
+![Firefox: Whatsapp 02][34-firefox-tab02]{: .img-responsive }
+
+With this setting, I can remind my self,
+by sending notes between my two different whatsapp acccount.
+
+Pretty productive right?
+As long that I do not check messages every five minutes,
+I'll be just fine.
+
+#### LibreOffice Extension
+
+Yeah I wrote a lot of python macro in libreoffice.
+Surprisingly it all works in my new place without a flaw.
+
+One of my favorites is `numbertext`.
+
+![LibreOffice: Extension][36-lo-extension]{: .img-responsive }
+
+Since in Indonesia we are commonly use,
+local macro in excel called `terbilang`.
+I need a way for both `excel` and `calc`.
+
+So I wrote this short chunk:
+
+![LibreOffice: Formula Wrapper][36-calc-macro]{: .img-responsive }
+
+{% highlight qbasic %}
+Function terbilang(a as double) as string
+    Dim oService As Object
+    Set oService = createUnoService("com.sun.star.sheet.FunctionAccess")
+    terbilang = oService.callFunction("numbertext", Array(a, "id"))
+end Function
+{% endhighlight %}
+
+Now both my `calc` and `excel` can run the same formula.
+
+![LibreOffice: Terbilang][36-calc-number]{: .img-responsive }
+
+Now I can share `.xlsx` between my collagues.
+And still comfortly edit them in linux.
+
+#### Inkscape Workaround
+
+`Inkscape` simply does not work.
+
+{% highlight bash %}
+$ inkscape
+inkscape: error while loading shared libraries: libinkscape_base.so: cannot open shared object file: No such file or directory
+$ pacman -Q poppler inkscape
+poppler 22.09.0-1
+inkscape 1.2.1-4
+{% endhighlight %}
+
+I use inkscape a lot.
+I can use AppImage.
+But I need the native one.
+
+Luckily there is a workaround.
+
+{% highlight bash %}
+$ ln \
+  /usr/lib/inkscape/libinkscape_base.so \
+  /usr/lib/libinkscape_base.so
+{% endhighlight %}
+
+Note that I have to do this after each `inkscape` update.
+
+#### Blender
+
+For the first time in a decade,
+I can run `blender` in my own computer.
+
+My computer is used to be under specification.
+
+![Blender][22-blender]{: .img-responsive }
+
+Althoug I'm pretty sure that I don't have time,
+to seriously get into blender in any near future,
+The fact that I can run Blender is still,
+a comfortable progress.
+
+#### Secondary User for Telegram
+
+I have two phone numbers.
+And I use both for my telegram.
+I mean I have two telegram accounts.
+
+Now the question is,
+how to setup the PC using two different telegram users?
+
+The answer is secondary user.
+
+{% highlight bash %}
+$ sudo useradd -m -G wheel rizqi
+$ sudo passwd rizqi
+
+$ sudo pacman -S xorg-xhost
+$ xhost +127.0.0.1
+$ xhost local:
+
+$ sudo -u rizqi ls -l /home/rizqi  
+$ sudo -u rizqi telegram-desktop &!
+{% endhighlight %}
+
+![Secondary User for Telegram][22-xhost]{: .img-responsive }
+
+#### Terminal on Geany
+
+I like to use `Geany` for coding.
+
+Instead of `xterm`, I'd rather use `xfce4-terminal`,
+which have nicer looks.
+
+![Geany: Terminal][38-geany-terminal]{: .img-responsive }
+
+#### Do not forget to take a rest.
+
+> I'm not talking about RVM
+
+I used to be a die hard blogger using most tools
+such as github, gitlab and bitbucket.
+So I push myself to setup jekyll in the middle of midnight using RVM.
+
+The result is complete failure.
+After one hour of searching, I still can't get it to work.
+So I decide to go home, and get a little sleep.
+
+![RVM: GPG Failure][37-rvm-gpg]{: .img-responsive }
+
+Before morning, I woke up and realize that,
+I simply issue wrong command.
+Now my RVM works okay.
+
+![RVM: GPG Succeed][37-rvm-ok]{: .img-responsive }
+
+You can see how tired brain can lead into confusion.
+I'm pretty sure I made a lot of mistakes when I really tired.
+
+Just give your body some sleep, and rest.
+So you can be more productive.
+
+> Good Job. You've done a lot today. Have some rest!
+
+-- -- --
+
+<a name="cloud"></a>
+
+### 10: Cloud
+
+> Never put any sensitive data in the cloud!
+
+I need to find a way to work between my mini PC at office,
+and my notebook at home.
+
+#### Dropbox
+
+I have been using free version dropbox for years.
+And since I have been bumped with storage limit.
+
+My documents are, almost all just `docx`, `xlsx`, and `pdf`.
+And they are mostly small.
+But since I maintain different company at once,
+since 2019 dropbox storage limit no longer fit my requirement.
+The problem is I don't have time to migrate to Mega.
+
+#### Mega
+
+Now that I have already backup my files to external HDD,
+and also have my own mini PC.
+I think this is it. I have to try Mega for the second time.
+And it works just fine.
+
+![Mega IO: Status][61-mega-status]{: .img-responsive }
+
+As you can see I make the folder simple.
+
+* Pribadi: Personal/Private (family and such).
+
+* Badan: Small Business I'm taking care of.
+
+* GRU: The Company I worked for.
+
+* Wild: Volatile file, unsorted screenshot, temporary files, etc.
+
+![Mega IO: Web Interface][61-mega-web]{: .img-responsive }
+
+Now comes the folder management part.
+I put it here, because folder management is,
+actually also part of setting up working space.
+
+#### Folder Management
+
+First, inside the `badan` (company) folder, there three company.
+But note that, I only put small files in cloud.
+I put big files, such as image or stuff, ouside the cloud.
+
+![Mega IO: Company][62-mega-badan]{: .img-responsive }
+
+Do not ask me how I manage each folder.
+But I can give you worksheet example,
+of yearly financial report of one of the company.
+
+* Balance sheet
+* Profit Loss
+
+The LibreOffice sheet tab is very nice to work with.
+
+![Calc Tab: Financial Report][63-lo-tab-simple]{: .img-responsive }
+
+My Personal stuff, also sorted by year.
+It is easier to back-up this way.
+
+![Mega IO: Personal][62-mega-pribadi]{: .img-responsive }
+
+The company I worked for.
+This also require folder management.
+
+![Mega IO: GRU][62-mega-gru]{: .img-responsive }
+
+Again, do not ask me on how I manage each folder.
+But I can jump into the content of,
+each worksheet on my monthly accounting report.
+
+The LibreOffice stacked sheet tab, is created by GIMP.
+Because one line is not enough to show them all.
+
+![Calc Tab: Monthly Report][63-lo-tab-merge]{: .img-responsive }
+
+The last, is miscellanous files.
+I used to name it volatile.
+Because it usually changed very often.
+This folder means to be temporary files,
+before I moved the content to better folder.
+Now it is consist of old screenshots,
+collected from many sources,
+before I decide which screenshot to be dumped,
+and which to be kept.
+
+![Mega IO: Volatile][62-mega-wild]{: .img-responsive }
+
+#### Git Repository
+
+The folder management applied to repository.
+
+![Git Repository][63-git-repo]{: .img-responsive }
+
+#### Foolish: First
+
+I have said that I make foolish mistakes.
+I can make along list, but this is what I have done.
+
+Last year I make some private github repository,
+from storing my accounting files,
+and also storing big presentation.
+The thing is git is for source code,
+not for binary data.
+After a while, the repository become very fat.
+
+The fact that github/gitlab can store it.
+It doesn't mean that I should abuse github/gitlab.
+
+This why I decide to move those to Mega.
+
+#### Foolish: Second
+
+I alos try to put the whole repository, as a folder in Mega.
+I mean the huge folder containing all my git repository.
+With too many files, including nodejs folder for each project.
+
+Of course it works. But first thing I notice.
+The `mega` ignore hidden dotfiles, including `.git`.
+This means none of my repository can be sync to github/gitlab.
+
+Once I set `mega` to sync hidden dotfiles,
+it upload gigabytes of all my hidden `.git` to mega.
+Again, of course it works.
+
+But my system become soooo slow.
+Because `megasync` tend to check every files.
+
+I finally decide not to mix document cloud with git repo.
+After I remove the `repository` folder,
+my `mega` become fast again.
+
+#### Tax
+
+I put sensitive data, such as ETax,
+outside the cloud for security purpose.
+
+With slightly different reason as,
+you don't want to put your password on github repository.
+
+If it needs to be backed up.
+I use USB flash disk, move it to my notebook.
+And store it to external HDD later.
+
+> I think that's all.
+
+-- -- --
+
+<a name="peripheral"></a>
+
+### 11: Peripheral
+
+#### FHD Monitor with Tiling WM
+
+> Invest on your eye health.
+
+Just like designer and coder,
+accounting require big screen,
+such as 1920x1080 pixels wide.
+
+The reason is that I have to compare between sheet.
+And also copy-paste between document manually.
+And I also have to be very careful whenever it comes to tax.
+So I do not want any distraction,
+such as moving from one window into another.
+Or even switching between vitual desktop.
+
+Lucikly I know how to handle tiling window manager,
+just like I was born for tiling WM.
+
+If you are working with many worksheet,
+you should by yourself FHD or even QHD,
+and setup your very own tiling WM.
+
+After all FHD/QHD is cheaper,
+then getting yourself an eye surgery.
+
+#### Dual Monitor
+
+Before I use Mini PC setup,
+I'm using dual monitor in my notebook.
+
+![Notebook: With Dual Monitor][04-dual-monitor]{: .img-responsive }
+
+It turned that my mini PC support dua monitor as well.
+I have plan to dual monitor my mini PC later.
+But for now, this is my old setup on my notebook:
+
+{% highlight bash %}
+$ xrandr --listmonitors
+Monitors: 2
+ 0: +*LVDS1 1366/310x768/170+0+0  LVDS1
+ 1: +VGA1 1920/480x1080/270+0+0  VGA1
+{% endhighlight %}
+
+But most of the time, I turn off the monitor on my notebook.
+
+{% highlight bash %}
+$ xrandr \
+  --output LVDS1 --off \
+  --output VGA1 --mode 1920x1080 --rate 60 --right-of LVDS1
+{% endhighlight %}
+
+There is no need to setup monitor with Mini PC.
+No need for dual monitor also.
+
+Except that I have to buy HDMI to VGA cable,
+because my HDMI port in my monitor is not working,
+since very long time ago.
+Actually the reason I got this cheap monitor is,
+because it is already broken.
+
+#### Handling Notebook LID
+
+While in dual monitor,
+most of the time I closed the notebook monitor by folding it.
+
+I can see in `dmesg`.
+
+{% highlight bash %}
+❯ sudo dmesg | grep Lid
+[    2.619249] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input3
+[    2.619279] ACPI: button: Lid Switch [LID0]
+[   86.420430] elogind-daemon[947]: Watching system buttons on /dev/input/event2 (Lid Switch)
+[  623.881792] elogind-daemon[947]: Lid closed.
+[  627.214356] elogind-daemon[947]: Lid opened.
+{% endhighlight %}
+
+There is a clue here on  how to handle LID.
+
+* [Correct way to handle suspend on lid close](http://dev1galaxy.org/viewtopic.php?id=4498)
+
+But the thing is I'm not sure, what I've done. 
+Now the notebook won't suspend while I close the monitor.
+
+#### Printing
+
+> Temporary Room Setup for Peripheral.
+
+I do not need big working space.
+I love simple life with tidy desk.
+
+But I'm sure I do printing a lot.
+And whenever my workload getting heavier,
+I choose to stay calm, then print after hours.
+Using borrowed folding table from warehouse.
+
+![Setting Up Printing Room][82-print-room]{: .img-responsive }
+
+Don't be afraid to change your room decoration.
+As long as you get your room tidy before morning.
+
+-- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
+
+Thank you for reading and visiting.
+
+That's my little journey.
+How about your journey?
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/system/2022/09' %}
+
+[34-firefox-cont]: {{ asset_path }}/34-firefox-container.png
+[34-firefox-tab01]:{{ asset_path }}/34-firefox-tab-01.png
+[34-firefox-tab02]:{{ asset_path }}/34-firefox-tab-02.png
+
+[36-lo-extension]: {{ asset_path }}/36-libreoffice-extension.png
+[36-calc-number]:  {{ asset_path }}/36-calc-terbilang.png
+[36-calc-macro]:   {{ asset_path }}/36-libreoffice-macro.png
+
+[37-rvm-gpg]:      {{ asset_path }}/37-rvm-gpg-failure.png
+[37-rvm-ok]:       {{ asset_path }}/37-rvm-ok.png
+
+[38-geany-terminal]: {{ asset_path }}/38-geany-terminal.png
+
+[61-mega-status]:  {{ asset_path }}/61-mega-status.png
+[61-mega-web]:     {{ asset_path }}/61-mega-web.png
+[62-mega-badan]:   {{ asset_path }}/62-mega-badan.png
+[62-mega-pribadi]: {{ asset_path }}/62-mega-pribadi.png
+[62-mega-gru]:     {{ asset_path }}/62-mega-gru.png
+[62-mega-wild]:    {{ asset_path }}/62-mega-wild.png
+[63-lo-tab-simple]:{{ asset_path }}/63-lo-tab-simple.png
+[63-lo-tab-merge]: {{ asset_path }}/63-lo-tab-merge.png
+
+[63-git-repo]:     {{ asset_path }}/63-git-repository.png
+
+[82-print-room]:   {{ asset_path }}/82-print-room.jpg

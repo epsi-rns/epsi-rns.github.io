@@ -1,0 +1,528 @@
+---
+layout    : post
+title     : "Artix OpenRC - Custom Setup"
+categories: system
+date      : 2022-09-02 09:25:15 +0700
+tags      : [install]
+keywords  : [artix, arch, openrc, multiboot, partition, distro]
+author: epsi
+toc        : toc/2022/09/toc-install.html
+
+excerpt:
+  Artix linux experience - Custom Setup.
+
+opengraph:
+  image: /assets/posts/system/2022/09/02-mini-with-moni.jpg
+
+related_link_ids:
+  - 18010225  # OpenSuse Tumbleweed
+
+---
+
+This article is the middle part of three articles.
+From managing repository to desktop customization.
+
+Sometimes all you need is just a bried examples.
+You can find detail guidance in my other article series.
+
+<a name="toc"></a>
+
+### Table of Content
+
+* [Table of Content](#toc)
+
+* 5: [Repository](#repository)
+
+* 6: [Examining Device](#device)
+
+* 7: [Basic Administration](#administration)
+
+* 8: [Desktop Customization](#customization)
+
+* [What is Next?](#whats-next)
+
+-- -- --
+
+<a name="repository"></a>
+
+### 5: Repository
+
+All basic done well.
+But I still have to make all needed application installed properly.
+
+#### Failed Packages
+
+After doing pacman for a while,
+I realize that some application can't be installed.
+
+{% highlight bash %}
+chromium clementine blender
+cava ncmpcpp xmonad xmobar budgie-desktop
+deepin deepin-kwin nitrogen xfontsel
+oh-mybash oh-my-zsh 
+vim-plugin-NERDtree lemonbar tint2 termite
+gtop qtile xfce4-mixer
+nethogs iftop dstat atop iotop nmon
+parcellite screenfetch cava transset
+byobu dwm bwmon
+{% endhighlight %}
+
+#### Guidance
+
+> Clue
+
+The solution is simply installed other repository using this guidance.
+
+* [wiki.artixlinux.org/Main/Repositories][repository]
+
+I never deal with `universe` and `omniverse` stuff.
+This seems exciting. Things looks cool.
+
+![Pacman Configuration: /etc/pacman.conf][21-pacman-conf]{: .img-responsive }
+
+I also adjust stuff temporarily.
+
+{% highlight bash %}
+#[custom]
+SigLevel = Optional TrustAll
+{% endhighlight %}
+
+#### Adjusting Time
+
+But I have got this error.
+
+{% highlight bash %}
+andalan:[epsi]:~$ sudo pacman-key --populate archlinux
+gpg: key 35D00184CECADD59 was created 17227 seconds in the future (time warp or clock problem)
+==> Appending keys from archlinux.gpg...
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
+==> Locally signing trusted keys in keyring...
+==> ERROR: 159F3A43AEB246C5746C033814BC4F30B3B92EBA could not be locally signed.
+==> ERROR: 75BD80E4D834509F6E740257B1B73B02CC52A02A could not be locally signed.
+==> ERROR: 2AC0A42EFB0B5CBC7A0402ED4DC95B6D7BE9892E could not be locally signed.
+==> ERROR: 0E8B644079F599DFC1DDC3973348882F6AC6A4C2 could not be locally signed.
+==> ERROR: D8AFDDA07A5B6EDFA7D8CCDAD6D055F927843F1C could not be locally signed.
+==> ERROR: 91FFE0700E80619CEB73235CA88E23E377514E00 could not be locally signed.
+{% endhighlight %}
+
+It turned out that my time is set a few hours in the future.
+
+I can solve my problem with `hwclock`.
+
+#### Repository: universe/omniverse
+
+I set this arch compatibility.
+
+{% highlight bash %}
+[universe]
+Server = https://universe.artixlinux.org/$arch
+Server = https://mirror1.artixlinux.org/universe/$arch
+Server = https://mirror.pascalpuffke.de/artix-universe/$arch
+Server = https://artixlinux.qontinuum.space/artixlinux/universe/os/$arch
+Server = https://mirror1.cl.netactuate.com/artix/universe/$arch
+Server = https://ftp.crifo.org/artix-universe/
+
+[omniverse]
+Server = http://omniverse.artixlinux.org/$arch
+{% endhighlight %}
+
+Now I can install these two with pacman.
+
+{% highlight bash %}
+tmux chromium
+{% endhighlight %}
+
+#### Repository: extra
+
+I only find this one.
+
+{% highlight bash %}
+xorg-xfontsel
+{% endhighlight %}
+
+#### Repository: community
+
+This is a huge repository I guess.
+
+{% highlight bash %}
+# Arch
+# [extra]
+# Include = /etc/pacman.d/mirrorlist-arch
+
+# [community]
+# Include = /etc/pacman.d/mirrorlist-arch
+
+# [multilib]
+# Include = /etc/pacman.d/mirrorlist-arch
+
+{% endhighlight %}
+
+I found almost common packages here
+
+{% highlight bash %}
+ghc xmonad budgie-desktop deepin-kwin tint2 qtile
+nethogs iftop dstat atop iotop nmon
+parcellite screenfetch byobu clementine blender
+vim-nerdtree
+{% endhighlight %}
+
+But after install, I remove the repository,
+because it has `libboost` conflict.
+The solution is to downgrade.
+
+{% highlight bash %}
+$ sudo pacman -U /var/cache/pacman/pkg/boost-libs-1.79.0-1-x86_64.pkg.tar.zst
+loading packages...
+warning: downgrading package boost-libs (1.80.0-1 => 1.79.0-1)
+{% endhighlight %}
+
+I need my `libreoffice` to run properly.
+
+#### Conflict
+
+However, some conflict is inevitable.
+
+{% highlight bash %}
+deepin-clutter
+{% endhighlight %}
+
+In order to install it, I have to sacrifice other packages.
+
+#### AUR
+
+> yay
+
+I can find my other favorite pacakge with `yay`
+
+{% highlight bash %}
+cava lemonbar-git termite transset-df nbwmon dwm-git
+{% endhighlight %}
+
+#### Not installed yet
+
+Some packages, I haven't got time to install.
+
+{% highlight bash %}
+gtop
+{% endhighlight %}
+
+#### Not Exist Anyomre
+
+Some packages, just wiped away.
+
+{% highlight bash %}
+xfce4-mixer
+{% endhighlight %}
+
+#### Custom Packages
+
+I make my own screenshooter based on `scrot`.
+
+{% highlight bash %}
+$ git clone https://github.com/epsi-rns/scrotty
+$ yay -s autoconf-archive 
+$ yay -s giblib
+{% endhighlight %}
+
+Now I can do screenshot with nice border
+
+{% highlight bash %}
+$ scrotty -sbcd5 -g27 "21-pacman-conf"
+{% endhighlight %}
+
+-- -- --
+
+<a name="device"></a>
+
+### 6: Examining Device
+
+-- -- --
+
+<a name="administration"></a>
+
+### 7: Basic Administration
+
+#### fstab
+
+I already discuss fstab in other section above.
+
+#### Network
+
+I use `connman-gtk`, instead of `nm-applet` provided by `Network Manager`.
+
+![Network: Connection Manager][21-connmand]{: .img-responsive }
+
+Artix with OpenRC, proVide `connman-gtk`, instead of `nm-applet`,
+and I don't know why.
+
+I just think it is fun to face something different.
+
+#### Init
+
+> OpenRC
+
+I'm using `OpenRC`.
+This might be different than your regular `systemd`.
+For example this command below:
+
+![Init: OpenRC: restart connmand][23-rc-connmand]{: .img-responsive }
+
+{% highlight bash %}
+$ sudo rc-service connmand restart
+netmount          | * Unmounting network filesystems ...       [ ok ]
+connmand          | * Stopping connmand ...                    [ ok ]
+connmand          | * Starting connmand ...                    [ ok ]
+netmount          | * Mounting network filesystems ...         [ ok ]
+~                                                    2.6.6 14:43:49
+$
+{% endhighlight %}
+
+#### Samba
+
+I haven't got time to setup yet.
+But you can look my other articel to get samba example in details.
+
+#### Git
+
+You can't just copy your credential and push your commit.
+
+You also have to make proper file mode.
+
+{% highlight bash %}
+$ sudo chmod 600 ~/.ssh/id_rsa
+{% endhighlight %}
+
+#### Printing with CUPS
+
+I'm using Epson L3110 series.
+First I need to install the proper driver using AUR.
+
+![Printer: AUR: Epson ESC/P-R][23-yay-epson]{: .img-responsive }
+
+Then I can add printer in cups in `localhost:631`.
+
+![Printer: CUPS localhost:631][23-cups-local]{: .img-responsive }
+
+-- -- --
+
+<a name="customization"></a>
+
+### 8: Desktop Customization
+
+#### What Config?
+
+I do not need to copy all my config,
+from notebook to mini-pc.
+
+After all only these
+
+* `/etc/environment`: QT Theme
+
+* `/home/epsi/.config/awesome`: The whole stuff.
+
+* `/home/epsi/.config/geany`: I need only the color scheme.
+
+* `/home/epsi/.config/gtk-3.0`: just the setting and css.
+
+* `/home/epsi/.config/libreoffice`: macro and extensions.
+
+* `xfce4` I need only the color scheme.
+
+* `vim`
+
+#### Environment
+
+The artix is still conservatively using `gtk2` looks:
+
+{% highlight bash %}
+QT_QPA_PLATFORMTHEME=gtk2
+{% endhighlight %}
+
+I should change it for nowadays looks, with `gtk3` looks.
+
+{% highlight bash %}
+QT_QPA_PLATFORMTHEME=gtk3
+{% endhighlight %}
+
+![Envrionment: QT GTK Theme][31-environment]{: .img-responsive }
+
+#### Font
+
+Beside `.config`. There is also `.local`.
+
+I copy the whole font folder to my new setup.
+
+* `/home/epsi/.local/share/fonts`
+
+![Font: Local Fonts][30-local-fonts]{: .img-responsive }
+
+#### Awesome WM
+
+This works flawlessy.
+I just need to copy my config,
+and voila... everything work as expected.
+
+You can see the panel of my awesome in ZSH screenshoot below.
+
+#### Shell
+
+> Garbage in ZSH in clean install
+
+I'm using `oh-my-bash` for my bash customization,
+and `powerlevel10k` for zsh customization.
+But something strange happened in clean install.
+I found that my `zsh` messed up.
+
+![ZSH: Funny Prompt][31-zsh-error]{: .img-responsive }
+
+It turned out that `$PS1` from `bash` pollute the zsh shell.
+
+![ZSH: Funny Prompt][31-zsh-ps1]{: .img-responsive }
+
+I setup `chsh -c /bin/zsh` to make zsh my default shell.
+and also setup `powerlevel10k` as you can see the result below:
+
+![ZSH: Power Level 10K][31-zsh-p10k]{: .img-responsive }
+
+#### BASH Config
+
+I need to set `nodejs` folder, in `.bashrc`.
+
+{% highlight bash %}
+npm config set prefix '~/.npm-global'
+export PATH="$PATH:$HOME/.rvm/bin:~/.npm-global/bin"
+{% endhighlight %}
+
+And also RVM depend on my situation.
+
+#### ZSH Config
+
+The `.zshrc` is alittle bit longer.
+
+{% highlight bash %}
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
+{% endhighlight %}
+
+And also, in `.zshrc`,
+I need to set `nodejs` folder, set the `RVM`.
+
+{% highlight bash %}
+export PATH=$PATH:/media/Works/bin:~/.npm-global/bin:$HOME/.rvm/bin
+export PATH=${PATH}:~/.rvm/gems/ruby-2.6.4/bin/
+source ~/.rvm/scripts/rvm
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+npm config set prefix '~/.npm-global'
+alias dart-sass='/media/Works/bin/dart-sass/sass'
+{% endhighlight %}
+
+![.zshrc][31-zshrc]{: .img-responsive }
+
+#### GTK Theme
+
+I'm no hacker, so I prefer bright stuff.
+Using `lxappearance`.
+I set this I can have light theme instead of default dark artix.
+
+![GTK3: Setting][32-gtk3-setting]{: .img-responsive }
+
+{% highlight bash %}
+$ cat ~/.config/gtk-3.0/settings.ini
+[Settings]
+gtk-application-prefer-dark-theme=false
+...
+gtk-theme-name=Breeze
+{% endhighlight %}
+
+I prefer `caja` from `mate desktop` as my favorite file manager.
+
+![GTK3: Caja Example][32-caja]{: .img-responsive }
+
+For the past three years, I have leave `thunar` for `caja`.
+
+#### Firefox Theme
+
+In Firefox, setting theme is very easy.
+
+![Firefox: Light Theme][34-firefox-light]{: .img-responsive }
+
+But this is not the main point.
+In firefox I can use two different whatsapp,
+each with different handphone number.
+
+#### LibreOffice Theme
+
+But I'm having a hardtime in setting `GTK+3`.
+In Libreoffice, so I check the VCL in about.
+
+![LibreOffice VCL: Dark][33-lo-vcl-dark]{: .img-responsive }
+
+I finally install `lxappearance-gtk3`,
+and also log out my awesome window manager.
+After I logged in in new session,
+I can get my `LibreOffice` in bright theme.
+
+![LibreOffice VCL: Bright Breeze][33-lo-vcl-breeze]{: .img-responsive }
+
+Actually, I still don't get what's going on.
+But I finally get my bright breeze theme.
+
+-- -- --
+
+<a name="whats-next"></a>
+
+### What is Next?
+
+Showing off artix usage for my daily basis would be interesting.
+I mean, there might be stuff you haven't heard of.
+Or you might have better stuff, that I haven't heard of.
+So you can show off in you own blog.
+What do you think ?
+
+Consider continue reading [ [Artix OpenRC - for Daily Basis][local-whats-next] ].
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/system/2022/09' %}
+
+[local-whats-next]: /system/2022/09/03/artix-03.html
+
+[repository]:      https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
+
+[21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
+[21-connmand]:     {{ asset_path }}/21-connmand.png
+[23-rc-connmand]:  {{ asset_path }}/23-rc-conmand.png
+[22-blender]:      {{ asset_path }}/22-blender.png
+[22-xhost]:        {{ asset_path }}/22-xhost.png
+
+[23-yay-epson]:    {{ asset_path }}/23-yay-epson.png
+[23-cups-local]:   {{ asset_path }}/23-cups-local.png
+
+[30-local-fonts]:  {{ asset_path }}/30-local-fonts.png
+[31-environment]:  {{ asset_path }}/31-environment.png
+
+[31-zsh-error]:    {{ asset_path }}/31-zsh-error.png
+[31-zsh-ps1]:      {{ asset_path }}/31-zsh-ps1.png
+[31-zsh-p10k]:     {{ asset_path }}/31-zsh-p10k.png
+
+[31-zshrc]:        {{ asset_path }}/31-zshrc.png
+
+[32-gtk3-setting]: {{ asset_path }}/32-gtk3-setting.png
+[32-caja]:         {{ asset_path }}/32-caja.png
+
+[33-lo-vcl-breeze]:{{ asset_path }}/33-lo-vcl-breeze.png
+[33-lo-vcl-dark]:  {{ asset_path }}/33-lo-vcl-dark.png
+
+[34-firefox-light]:{{ asset_path }}/34-firefox-light.png
+
