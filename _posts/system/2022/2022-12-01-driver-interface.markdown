@@ -16,36 +16,18 @@ opengraph:
 
 ---
 
+### Preface
+
 > Goal: Examine wireless in system: device, driver, and interface.
-
-I have an issue I cannot solve
-while setting up wifi in my notebook.
-So I decide to examine
-a working wifi in my system.
-So that I can use my own scattered notes,
-to solve my notebook issue later on.
-
-I never have good experience with third party device.
-I men driver not directly supported by kernel.
-Even when I'm using `Gentoo` for years,
-my hardware is so common,
-that I don't really need to tweak.
 
 I suddenly found out that I do not have good understanding,
 about relationship configuration,
 between device, driver and interface.
 I think it is time to grow up.
 
-My working system is Mini PC using Artix.
-While my notebook is Lenovo.
-I might write another article,
-if could solve my notebook issuse.
-
-_Because I simply don't know how to solve._
-
 <a name="toc"></a>
 
-### Table of Content
+#### Table of Content
 
 * [Table of Content](#toc)
 
@@ -64,6 +46,33 @@ _Because I simply don't know how to solve._
 * 7: [Connection Manager](#connman)
 
 * [Conclusion](#conclusion)
+
+### An Issue Behind This Article
+
+> Start from Working Machine as an Example
+
+First December is my first day on my new office.
+I should work with a new notebook owned by this good company.
+
+I have an issue I cannot solve
+while setting up wifi in my notebook.
+So I decide to examine
+a working wifi in my system.
+So that I can use my own scattered notes,
+to solve my notebook issue later on.
+
+I never have any experience with third party device.
+I mean driver not directly supported by kernel.
+Even when I'm using `Gentoo` for years,
+my hardware is so common,
+that I don't really need to tweak.
+
+My working system is Mini PC using Artix.
+While my notebook is Lenovo.
+I might write another article,
+if could solve my notebook issuse.
+
+_Because I simply don't know how to solve._
 
 -- -- --
 
