@@ -1,6 +1,6 @@
 ---
 layout    : post
-title     : "Wireless: device, driver, interface"
+title     : "Wireless: Device, Driver, Interface"
 categories: system
 date      : 2022-12-01 09:25:15 +0700
 tags      : [install]
