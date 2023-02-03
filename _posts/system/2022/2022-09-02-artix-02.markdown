@@ -93,6 +93,9 @@ But I have got this error.
 
 {% highlight bash %}
 andalan:[epsi]:~$ sudo pacman-key --populate archlinux
+{% endhighlight %}
+
+{% highlight bash %}
 gpg: key 35D00184CECADD59 was created 17227 seconds in the future (time warp or clock problem)
 ==> Appending keys from archlinux.gpg...
 gpg: key 35D00184CECADD59 was created 17224 seconds in the future (time warp or clock problem)
@@ -177,6 +180,9 @@ The solution is to downgrade.
 
 {% highlight bash %}
 $ sudo pacman -U /var/cache/pacman/pkg/boost-libs-1.79.0-1-x86_64.pkg.tar.zst
+{% endhighlight %}
+
+{% highlight bash %}
 loading packages...
 warning: downgrading package boost-libs (1.80.0-1 => 1.79.0-1)
 {% endhighlight %}
@@ -251,6 +257,9 @@ I need to know what my NUC offer, with `procinfo`.
 
 {% highlight bash %}
 $ cat /proc/cpuinfo | grep "model name"
+{% endhighlight %}
+
+{% highlight bash %}
 model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
 model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
 model name	: Intel(R) Celeron(R) N5105 @ 2.00GHz
@@ -263,6 +272,9 @@ And also get the NUC model, with `dmidecode`.
 
 {% highlight bash %}
 $ sudo dmidecode | grep "Product Name"
+{% endhighlight %}
+
+{% highlight bash %}
 	Product Name: NUC11ATKC4
 	Product Name: NUC11ATBC4
 {% endhighlight %}
@@ -274,6 +286,9 @@ because my GLX capanility is alwayd underspecification.
 
 {% highlight bash %}
 $ glxinfo | grep "OpenGL version"
+{% endhighlight %}
+
+{% highlight bash %}
 OpenGL version string: 4.6 (Compatibility Profile) Mesa 22.1.7
 {% endhighlight %}
 
@@ -320,6 +335,9 @@ The `hddtemp` can't handle `nvme` device.
 
 {% highlight bash %}
 $ sudo hddtemp /dev/nvme0n1
+{% endhighlight %}
+
+{% highlight bash %}
 ERROR: /dev/nvme0n1: can't determine bus type (or this bus type is unknown)
 {% endhighlight %}
 
@@ -329,6 +347,9 @@ So you need `nvme-cli`:
 
 {% highlight bash %}
 $ sudo nvme smart-log /dev/nvme0n1 | grep temp
+{% endhighlight %}
+
+{% highlight bash %}
 temperature				: 45°C (318 Kelvin)
 {% endhighlight %}
 
@@ -340,6 +361,9 @@ First you must find which `core` properties.
 
 {% highlight bash %}
 $ ls /sys/devices/platform/coretemp.0/hwmon/hwmon3
+{% endhighlight %}
+
+{% highlight bash %}
 device		  temp2_crit_alarm  temp4_crit_alarm
 name		  temp2_input	    temp4_input
 power		  temp2_label	    temp4_label
@@ -367,6 +391,9 @@ Or you can issue sensors command instead.
 
 {% highlight bash %}
 $ sensors
+{% endhighlight %}
+
+{% highlight bash %}
 iwlwifi_1-virtual-0
 Adapter: Virtual device
 temp1:        +38.0°C  
@@ -425,6 +452,9 @@ For example this command below:
 
 {% highlight bash %}
 $ sudo rc-service connmand restart
+{% endhighlight %}
+
+{% highlight bash %}
 netmount          | * Unmounting network filesystems ...       [ ok ]
 connmand          | * Stopping connmand ...                    [ ok ]
 connmand          | * Starting connmand ...                    [ ok ]
@@ -590,6 +620,9 @@ I set this I can have light theme instead of default dark artix.
 
 {% highlight bash %}
 $ cat ~/.config/gtk-3.0/settings.ini
+{% endhighlight %}
+
+{% highlight bash %}
 [Settings]
 gtk-application-prefer-dark-theme=false
 ...
@@ -601,6 +634,18 @@ I prefer `caja` from `mate desktop` as my favorite file manager.
 ![GTK3: Caja Example][32-caja]{: .img-responsive }
 
 For the past three years, I have leave `thunar` for `caja`.
+
+#### QT Theme
+
+I also need to setup my `dolphin`.
+
+{% highlight bash %}
+❯ cat ~/.profile
+{% endhighlight %}
+
+{% highlight bash %}
+export QT_STYLE_OVERRIDE=kvantum
+{% endhighlight %}
 
 #### Firefox Theme
 

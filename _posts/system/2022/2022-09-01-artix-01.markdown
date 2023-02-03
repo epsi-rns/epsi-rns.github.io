@@ -382,6 +382,9 @@ I never use SSD in my whole life.
 
 {% highlight bash %}
 $ lsblk
+{% endhighlight %}
+
+{% highlight bash %}
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 238.5G  0 disk 
 ├─nvme0n1p1 259:1    0   100M  0 part 
@@ -407,6 +410,9 @@ I configure my fstab based on my old notebook.
 
 {% highlight bash %}
 $ cat /etc/fstab
+{% endhighlight %}
+
+{% highlight bash %}
 # /etc/fstab: static file system information.
 #
 # Use 'blkid' to print the universally unique identifier for a device; this may

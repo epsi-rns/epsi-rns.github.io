@@ -89,6 +89,9 @@ Devices can be found in either `lsusb` or `lspci`.
 
 {% highlight bash %}
 ❯ lsusb
+{% endhighlight %}
+
+{% highlight bash %}
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 001 Device 004: ID 8087:0aaa Intel Corp. Bluetooth 9460/9560 Jefferson Peak (JfP)
 Bus 001 Device 003: ID 046d:c077 Logitech, Inc. Mouse
@@ -103,6 +106,9 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 {% highlight bash %}
 ❯ lspci
+{% endhighlight %}
+
+{% highlight bash %}
 00:00.0 Host bridge: Intel Corporation Device 4e24
 00:02.0 VGA compatible controller: Intel Corporation JasperLake [UHD Graphics] (rev 01)
 00:04.0 Signal processing controller: Intel Corporation Dynamic Tuning service
@@ -141,6 +147,9 @@ We can filter our query using grep.
 
 {% highlight bash %}
 ❯ lspci | grep Network
+{% endhighlight %}
+
+{% highlight bash %}
 00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 160MHz (rev 01)
 {% endhighlight %}
 
@@ -150,6 +159,9 @@ And then find the detail using the slot ID (bus:device.function).
 
 {% highlight bash %}
 ❯ lspci -v -s 00:14.3
+{% endhighlight %}
+
+{% highlight bash %}
 00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 160MHz (rev 01)
 	Subsystem: Intel Corporation Device 02a4
 	Flags: bus master, fast devsel, latency 0, IRQ 16
@@ -165,6 +177,9 @@ And find the kernel driver.
 
 {% highlight bash %}
 ❯ lspci -k -s 00:14.3
+{% endhighlight %}
+
+{% highlight bash %}
 00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 160MHz (rev 01)
 	Subsystem: Intel Corporation Device 02a4
 	Kernel driver in use: iwlwifi
@@ -190,6 +205,9 @@ Veteran (but dumb) like might familiar with this obsolete command.
 
 {% highlight bash %}
 ❯ ifconfig wlan0
+{% endhighlight %}
+
+{% highlight bash %}
 wlan0: flags=-28605<UP,BROADCAST,RUNNING,MULTICAST,DYNAMIC>  mtu 1500
         inet 192.168.5.177  netmask 255.255.255.0  broadcast 192.168.5.255
         inet6 fe80::fa9e:94ff:fea8:775d  prefixlen 64  scopeid 0x20<link>
@@ -208,6 +226,9 @@ The basic command is so simple as below:
 
 {% highlight bash %}
 ❯ ip link
+{% endhighlight %}
+
+{% highlight bash %}
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
 2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,DYNAMIC,UP> mtu 1500 qdisc fq_codel state DOWN mode DEFAULT group default qlen 1000
@@ -222,6 +243,9 @@ As we find `wlan0` interface, we can then filter the result:
 
 {% highlight bash %}
 ❯ ip link show wlan0
+{% endhighlight %}
+
+{% highlight bash %}
 3: wlan0: <BROADCAST,MULTICAST,DYNAMIC,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000
     link/ether f8:9e:94:a8:77:5d brd ff:ff:ff:ff:ff:ff
 {% endhighlight %}
@@ -232,6 +256,9 @@ Or even show in brief, without detail.
 
 {% highlight bash %}
 ❯ ip -br -c link show
+{% endhighlight %}
+
+{% highlight bash %}
 lo               UNKNOWN        00:00:00:00:00:00 <LOOPBACK,UP,LOWER_UP> 
 eth0             DOWN           88:ae:dd:0a:fb:24 <NO-CARRIER,BROADCAST,MULTICAST,DYNAMIC,UP> 
 wlan0            UP             f8:9e:94:a8:77:5d <BROADCAST,MULTICAST,DYNAMIC,UP,LOWER_UP> 
@@ -245,6 +272,9 @@ Here is another alternative command, with filtering.
 
 {% highlight bash %}
 ❯ ip addr show wlan0
+{% endhighlight %}
+
+{% highlight bash %}
 3: wlan0: <BROADCAST,MULTICAST,DYNAMIC,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
     link/ether f8:9e:94:a8:77:5d brd ff:ff:ff:ff:ff:ff
     inet 192.168.5.177/24 brd 192.168.5.255 scope global wlan0
@@ -259,6 +289,9 @@ And also show the interface in brief, without detail.
 
 {% highlight bash %}
 ❯ ip -br -c addr show
+{% endhighlight %}
+
+{% highlight bash %}
 lo               UNKNOWN        127.0.0.1/8 ::1/128 
 eth0             DOWN           
 wlan0            UP             192.168.5.177/24 fe80::fa9e:94ff:fea8:775d/64 
@@ -283,6 +316,9 @@ It is not always installed in by deafult in your distribution.
 
 {% highlight bash %}
 ❯ rfkill
+{% endhighlight %}
+
+{% highlight bash %}
 ID TYPE      DEVICE      SOFT      HARD
  0 bluetooth hci0   unblocked unblocked
  1 wlan      phy0   unblocked unblocked
@@ -298,6 +334,9 @@ between device and driver.
 
 {% highlight bash %}
 ❯ inxi -Nazy
+{% endhighlight %}
+
+{% highlight bash %}
 Network:
   Device-1: Intel Wi-Fi 6 AX201 160MHz driver: iwlwifi v: kernel
     bus-ID: 00:14.3 chip-ID: 8086:4df0 class-ID: 0280
@@ -319,6 +358,9 @@ I can obtain the list interface easily here:
 
 {% highlight bash %}
 ❯ sudo hwinfo --network --short
+{% endhighlight %}
+
+{% highlight bash %}
 network interface:                                              
   eth0                 Ethernet network interface
   lo                   Loopback network interface
@@ -337,6 +379,9 @@ This is, my **most important** command.
 
 {% highlight bash %}
 ❯ readlink /sys/class/net/wlan0/device/driver
+{% endhighlight %}
+
+{% highlight bash %}
 ../../../bus/pci/drivers/iwlwifi
 {% endhighlight %}
 
@@ -365,6 +410,9 @@ Thus we have to filter manually with `grep`.
 
 {% highlight bash %}
 ❯ lsmod | grep wifi
+{% endhighlight %}
+
+{% highlight bash %}
 iwlwifi               491520  1 iwlmvm
 cfg80211             1118208  3 iwlmvm,iwlwifi,mac80211
 {% endhighlight %}
@@ -390,7 +438,9 @@ Just in case you are a curious one.
 {% highlight bash %}
 ❯ ls /usr/src/linux/drivers/net/wireless/intel/iwlwifi
 Kconfig
+{% endhighlight %}
 
+{% highlight bash %}
 ❯ ls -l /usr/src/linux/drivers/net/wireless/intel/iwlwifi
 total 8
 -rw-r--r-- 1 root root 5350 Dec  9 05:58 Kconfig
@@ -406,7 +456,9 @@ whenever there is a module issue.
 {% highlight bash %}
 ❯ ls /usr/lib64/modules/6.0.12-artix1-1/kernel/drivers/net/wireless/intel/iwlwifi
 dvm  iwlwifi.ko.zst  mvm
+{% endhighlight %}
 
+{% highlight bash %}
 ❯ ls -l /usr/lib64/modules/6.0.12-artix1-1/kernel/drivers/net/wireless/intel/iwlwifi
 total 304
 drwxr-xr-x 2 root root   4096 Dec 12 12:06 dvm
@@ -426,6 +478,9 @@ This is actually just another tool.
 
 {% highlight bash %}
 ❯ lshw -c network
+{% endhighlight %}
+
+{% highlight bash %}
 WARNING: you should run this program as super-user.
   *-network                 
        description: Wireless interface
@@ -467,6 +522,9 @@ You can print the output briefly.
 
 {% highlight bash %}
 ❯ sudo lshw -class network -short
+{% endhighlight %}
+
+{% highlight bash %}
 H/W path                 Device          Class          Description
 ===================================================================
 /0/100/14.3              wlan0           network        Wi-Fi 6 AX201 160MHz
@@ -487,6 +545,9 @@ H/W path                 Device          Class          Description
 
 {% highlight bash %}
 ❯ sudo dmesg | grep iwl | head
+{% endhighlight %}
+
+{% highlight bash %}
 [    3.860139] iwlwifi 0000:00:14.3: enabling device (0000 -> 0002)
 [    3.924579] iwlwifi 0000:00:14.3: api flags index 2 larger than supported by driver
 [    3.924601] iwlwifi 0000:00:14.3: TLV_FW_FSEQ_VERSION: FSEQ Version: 89.3.35.37
@@ -505,6 +566,9 @@ H/W path                 Device          Class          Description
 
 {% highlight bash %}
 ❯ sudo dmesg | grep wlan0 | head
+{% endhighlight %}
+
+{% highlight bash %}
 [    5.866504] wlan0: authenticate with 00:1e:42:25:4b:8d
 [    5.886650] wlan0: bad VHT capabilities, disabling VHT
 [    5.886656] wlan0: 80 MHz not supported, disabling VHT
@@ -523,6 +587,9 @@ H/W path                 Device          Class          Description
 
 {% highlight bash %}
 ❯ sudo dmesg | grep firmware
+{% endhighlight %}
+
+{% highlight bash %}
 [    3.925232] iwlwifi 0000:00:14.3: loaded firmware version 72.daa05125.0 QuZ-a0-jf-b0-72.ucode op_mode iwlmvm
 [    4.210545] Bluetooth: hci0: Minimum firmware build 1 week 10 2014
 [    4.252576] Bluetooth: hci0: Found device firmware: intel/ibt-19-0-0.sfi
@@ -594,6 +661,9 @@ We can just restart, the daemon.
 
 {% highlight bash %}
 ❯ sudo rc-service connmand restart
+{% endhighlight %}
+
+{% highlight bash %}
 netmount          | * Unmounting network filesystems ...
 smb               | * smb -> stop: smbd ...                                                             [ ok ]
 smb               | * smb -> stop: nmbd ...                                                             [ ok ]

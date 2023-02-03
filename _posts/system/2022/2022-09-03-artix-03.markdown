@@ -99,8 +99,17 @@ And still comfortly edit them in linux.
 
 {% highlight bash %}
 $ inkscape
+{% endhighlight %}
+
+{% highlight bash %}
 inkscape: error while loading shared libraries: libinkscape_base.so: cannot open shared object file: No such file or directory
+{% endhighlight %}
+
+{% highlight bash %}
 $ pacman -Q poppler inkscape
+{% endhighlight %}
+
+{% highlight bash %}
 poppler 22.09.0-1
 inkscape 1.2.1-4
 {% endhighlight %}
@@ -147,11 +156,15 @@ The answer is secondary user.
 {% highlight bash %}
 $ sudo useradd -m -G wheel rizqi
 $ sudo passwd rizqi
+{% endhighlight %}
 
+{% highlight bash %}
 $ sudo pacman -S xorg-xhost
 $ xhost +127.0.0.1
 $ xhost local:
+{% endhighlight %}
 
+{% highlight bash %}
 $ sudo -u rizqi ls -l /home/rizqi  
 $ sudo -u rizqi telegram-desktop &!
 {% endhighlight %}
@@ -394,6 +407,9 @@ But for now, this is my old setup on my notebook:
 
 {% highlight bash %}
 $ xrandr --listmonitors
+{% endhighlight %}
+
+{% highlight bash %}
 Monitors: 2
  0: +*LVDS1 1366/310x768/170+0+0  LVDS1
  1: +VGA1 1920/480x1080/270+0+0  VGA1
@@ -425,6 +441,9 @@ I can see in `dmesg`.
 
 {% highlight bash %}
 ❯ sudo dmesg | grep Lid
+{% endhighlight %}
+
+{% highlight bash %}
 [    2.619249] input: Lid Switch as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input3
 [    2.619279] ACPI: button: Lid Switch [LID0]
 [   86.420430] elogind-daemon[947]: Watching system buttons on /dev/input/event2 (Lid Switch)
