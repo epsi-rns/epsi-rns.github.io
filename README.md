@@ -76,7 +76,7 @@ So there is no need for beginner to reinvent the wheel.
 There's a bunch of [Jekyll theme here][link-jekyll-theme].
 Starting with Jekyll Theme is inconvenient.
 
-Bootstrap user should start from [Bootstrap Example][link-bootstrap-example].
+[Bootstrap](https://www.scaler.com/topics/css/bootstrap/) user should start from [Bootstrap Example][link-bootstrap-example].
 There are some goodies in [startbootstrap.com][link-startbootstrap].
 
 
