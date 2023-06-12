@@ -203,7 +203,7 @@ In order to install it, I have to sacrifice other packages.
 
 > yay
 
-I can find my other favorite pacakge with `yay`
+I can find my other favorite package with `yay`
 
 {% highlight bash %}
 cava lemonbar-git termite transset-df nbwmon dwm-git
@@ -231,8 +231,18 @@ I make my own screenshooter based on `scrot`.
 
 {% highlight bash %}
 $ git clone https://github.com/epsi-rns/scrotty
-$ yay -s autoconf-archive 
-$ yay -s giblib
+$ yay autoconf-archive 
+$ yay giblib
+{% endhighlight %}
+
+Then
+
+{% highlight bash %}
+$ cd scrotty
+$ ./autogen.sh
+$ ./configure
+$ make
+$ sudo make install
 {% endhighlight %}
 
 Now I can do screenshot with nice border
@@ -448,8 +458,6 @@ I'm using `OpenRC`.
 This might be different than your regular `systemd`.
 For example this command below:
 
-![Init: OpenRC: restart connmand][23-rc-connmand]{: .img-responsive }
-
 {% highlight bash %}
 $ sudo rc-service connmand restart
 {% endhighlight %}
@@ -565,7 +573,7 @@ It turned out that `$PS1` from `bash` pollute the zsh shell.
 
 ![ZSH: Funny Prompt][31-zsh-ps1]{: .img-responsive }
 
-I setup `chsh -c /bin/zsh` to make zsh my default shell.
+I setup `chsh -s /bin/zsh` to make zsh my default shell.
 and also setup `powerlevel10k` as you can see the result below:
 
 ![ZSH: Power Level 10K][31-zsh-p10k]{: .img-responsive }
@@ -583,7 +591,7 @@ And also RVM depend on my situation.
 
 #### ZSH Config
 
-The `.zshrc` is alittle bit longer.
+The `.zshrc` is a little bit longer.
 
 {% highlight bash %}
 HISTFILE=~/.zsh_history
@@ -697,6 +705,8 @@ Consider continue reading [ [Artix OpenRC - for Daily Basis][local-whats-next] ]
 [repository]:      https://wiki.artixlinux.org/Main/Repositories#Arch_repositories
 
 [21-pacman-conf]:  {{ asset_path }}/21-pacman-conf.png
+
+
 
 [24-proc-cpuinfo]: {{ asset_path }}/24-proc-cpuinfo.png
 [24-dmidecode]:    {{ asset_path }}/24-dmidecode.png

@@ -705,42 +705,42 @@ Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2022/12' %}
+{% assign asset_path = site.url | append: '/assets/posts/system/2022/12mini' %}
 
-[12-lsusb]:         {{ asset_path }}/12-lsusb.png
-[13-lspci-full]:    {{ asset_path }}/13-lspci-full.png
-[13-lspci-half]:    {{ asset_path }}/13-lspci-half.png
-[14-lspci-network]: {{ asset_path }}/14-lspci-network.png
-[15-lspci-select]:  {{ asset_path }}/15-lspci-selection.png
-[16-lspci-kernel]:  {{ asset_path }}/16-lspci-kernel-driver.png
+[12-lsusb]:         {{ asset_path }}/012-lsusb.png
+[13-lspci-full]:    {{ asset_path }}/013-lspci-full.png
+[13-lspci-half]:    {{ asset_path }}/013-lspci-half.png
+[14-lspci-network]: {{ asset_path }}/014-lspci-network.png
+[15-lspci-select]:  {{ asset_path }}/015-lspci-selection.png
+[16-lspci-kernel]:  {{ asset_path }}/016-lspci-kernel-driver.png
 
-[21-ifconfig]:      {{ asset_path }}/21-ifconfig.png
-[22-ip-link]:       {{ asset_path }}/22-ip-link.png
-[23-ip-link-show]:  {{ asset_path }}/23-ip-link-show.png
-[24-ip-addr-show]:  {{ asset_path }}/24-ip-addr-show.png
-[25-ip-br]:         {{ asset_path }}/25-ip-br.png
-[26-ip-br-addr]:    {{ asset_path }}/26-ip-br-addr.png
-[26-ip-br-link]:    {{ asset_path }}/26-ip-br-link.png
+[21-ifconfig]:      {{ asset_path }}/021-ifconfig.png
+[22-ip-link]:       {{ asset_path }}/022-ip-link.png
+[23-ip-link-show]:  {{ asset_path }}/023-ip-link-show.png
+[24-ip-addr-show]:  {{ asset_path }}/024-ip-addr-show.png
+[25-ip-br]:         {{ asset_path }}/025-ip-br.png
+[26-ip-br-addr]:    {{ asset_path }}/026-ip-br-addr.png
+[26-ip-br-link]:    {{ asset_path }}/026-ip-br-link.png
 
-[31-rfkill]:        {{ asset_path }}/31-rfkill.png
-[32-inxi-nazy]:     {{ asset_path }}/32-inxi-nazy.png
-[33-hwinfo-network]:{{ asset_path }}/33-hwinfo-network.png
-[34-readlink-drv]:  {{ asset_path }}/34-readlink-driver.png
+[31-rfkill]:        {{ asset_path }}/031-rfkill.png
+[32-inxi-nazy]:     {{ asset_path }}/032-inxi-nazy.png
+[33-hwinfo-network]:{{ asset_path }}/033-hwinfo-network.png
+[34-readlink-drv]:  {{ asset_path }}/034-readlink-driver.png
 
-[41-lsmod-half]:    {{ asset_path }}/41-lsmod-half.png
-[42-lsmod-wifi]:    {{ asset_path }}/42-lsmod-wifi.png
+[41-lsmod-half]:    {{ asset_path }}/041-lsmod-half.png
+[42-lsmod-wifi]:    {{ asset_path }}/042-lsmod-wifi.png
 
-[43-modprobe]:      {{ asset_path }}/43-modprobe.png
-[44-usr-src]:       {{ asset_path }}/44-usr-src-kconfig.png
-[45-usr-modules]:   {{ asset_path }}/45-usr-modules-drivers.png
+[43-modprobe]:      {{ asset_path }}/043-modprobe.png
+[44-usr-src]:       {{ asset_path }}/044-usr-src-kconfig.png
+[45-usr-modules]:   {{ asset_path }}/045-usr-modules-drivers.png
 
-[51-lshw-short]:    {{ asset_path }}/51-lshw-network-short.png
-[51-lshw-network]:  {{ asset_path }}/52-lshw-network.png
+[51-lshw-short]:    {{ asset_path }}/051-lshw-network-short.png
+[51-lshw-network]:  {{ asset_path }}/052-lshw-network.png
 
-[61-dmesg-iwl]:     {{ asset_path }}/61-dmesg-iwl.png
-[62-dmesg-wlan0]:   {{ asset_path }}/62-dmesg-wlan0.png
-[63-dmesg-firmware]:{{ asset_path }}/63-dmesg-firmware.png
+[61-dmesg-iwl]:     {{ asset_path }}/061-dmesg-iwl.png
+[62-dmesg-wlan0]:   {{ asset_path }}/062-dmesg-wlan0.png
+[63-dmesg-firmware]:{{ asset_path }}/063-dmesg-firmware.png
 
-[71-connmanctl]:    {{ asset_path }}/71-connmanctl.png
-[72-connmanctl-grp]:{{ asset_path }}/72-connmanctl-grep.png
-[73-connmand-rest]: {{ asset_path }}/73-connmand-restart.png
+[71-connmanctl]:    {{ asset_path }}/071-connmanctl.png
+[72-connmanctl-grp]:{{ asset_path }}/072-connmanctl-grep.png
+[73-connmand-rest]: {{ asset_path }}/073-connmand-restart.png
