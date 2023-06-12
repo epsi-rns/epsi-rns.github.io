@@ -239,7 +239,7 @@ Don't forget to enable later, after you finished with your experiment.
 
 ### 5: Using 'iw dev' 
 
-Now we can start some experiment with oher method.
+Now we can start some experiment with other method.
 
 Note: Tested with Debian Jessie, Arch, Mageia 3 and Kali 1.06.  
 But I still got no luck with Ubuntu Trusty beta in my notebook. 

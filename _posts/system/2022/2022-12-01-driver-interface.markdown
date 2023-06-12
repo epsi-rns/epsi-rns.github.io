@@ -12,7 +12,7 @@ excerpt:
   Examine wireless in system, device, driver, and interface.
 
 opengraph:
-  image: /assets/posts/system/2022/12/41-lsmod-half.jpg
+  image: /assets/posts/system/2022/12mini/41-lsmod-half.png
 
 ---
 
@@ -70,7 +70,7 @@ that I don't really need to tweak.
 My working system is Mini PC using Artix.
 While my notebook is Lenovo.
 I might write another article,
-if could solve my notebook issuse.
+if could solve my notebook issue.
 
 _Because I simply don't know how to solve._
 
@@ -201,7 +201,8 @@ So here we have:
 
 #### ifconfig (obsolete)
 
-Veteran (but dumb) like might familiar with this obsolete command.
+Veteran (but dumb) like me,
+might familiar with this obsolete command.
 
 {% highlight bash %}
 ❯ ifconfig wlan0
@@ -610,7 +611,7 @@ This way, we can debug, whether driver loaded or not.
 > Depend on Your Distribution
 
 Finally, the connection manager. 
-I'm using Artix with OpenRC that using `connman` isntead of `nmcli`.
+I'm using Artix with OpenRC that using `connman` instead of `nmcli`.
 
 #### Connman Control
 
