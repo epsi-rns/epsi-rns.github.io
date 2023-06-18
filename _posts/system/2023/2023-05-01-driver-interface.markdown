@@ -41,7 +41,7 @@ So I write them down.
 
 * 6: [Diagnostic Messages](#dmesg)
 
-* [Conclusion](#conclusion)
+* [What is Next?](#whats-next)
 
 ### An Issue Behind This Article
 
@@ -616,9 +616,9 @@ This way, we can debug, whether driver loaded or not.
 
 -- -- --
 
-<a name="conclusion"></a>
+<a name="whats-next"></a>
 
-### Conclusion
+### What is Next 🤔?
 
 I should know what's inside my notebook.
 So I can be ready for Gentoo.
@@ -628,6 +628,8 @@ Thank you for reading and visiting.
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2023/05wli' %}
+
+[local-whats-next]: /system/2023/05/03/low-level.html
 
 [001-uname-a]:      {{ asset_path }}/001-uname-a.png
 [011-lsusb]:        {{ asset_path }}/011-lsusb.png

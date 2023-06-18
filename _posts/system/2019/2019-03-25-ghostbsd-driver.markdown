@@ -172,7 +172,7 @@ $ service lightdm start
 
 <a name="whats-next"></a>
 
-### What's Next ?
+### What is Next 🤔?
 
 Thank you for reading this article.
 

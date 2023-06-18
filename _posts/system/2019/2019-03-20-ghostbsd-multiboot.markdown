@@ -272,7 +272,7 @@ Unlike linux, I should always use `sudo`, until I find a way.
 
 <a name="whats-next"></a>
 
-### What's Next?
+### What is Next 🤔?
 
 Thank you for reading this article.
 

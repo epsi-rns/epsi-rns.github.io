@@ -103,7 +103,7 @@ Telegram is a good place to talk about BSD
 
 <a name="whats-next"></a>
 
-### What's Next ?
+### What is Next 🤔?
 
 Thank you for reading this article.
 

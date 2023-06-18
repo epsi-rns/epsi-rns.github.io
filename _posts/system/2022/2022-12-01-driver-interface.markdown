@@ -697,16 +697,22 @@ And also, I might be wrong.
 
 <a name="conclusion"></a>
 
-### Conclusion
+#### What is Next 🤔?
 
-I still can't solve my own notebook issue.
-But I at least I know what's inside my mini PC.
+At least I know what's inside my mini PC.
+
+And I finally solve my own notebook issue.
+There is another article series about my Lenovo.
+
+Consider continue reading [ [Wireless: Device, Driver, Interface][local-whats-next] ].
 
 Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2022/12mini' %}
+
+[local-whats-next]: /system/2023/05/01/driver-interface.html
 
 [12-lsusb]:         {{ asset_path }}/012-lsusb.png
 [13-lspci-full]:    {{ asset_path }}/013-lspci-full.png

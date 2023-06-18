@@ -199,7 +199,7 @@ $ choco install youtube-dl
 Solved.
 Developing in Windows is fun again.
 
-### What is Next ?
+### What is Next 🤔?
 
 There is other article, that you might need to read.
 Consider continue reading [ [Windows - Chocolatey - Sass][local-whats-next] ].

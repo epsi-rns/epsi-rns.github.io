@@ -481,14 +481,25 @@ As long as you get your room tidy before morning.
 
 ### Conclusion
 
-Thank you for reading and visiting.
-
 That's my little journey.
 How about your journey?
+
+Thank you for reading and visiting.
+
+#### What is Next 🤔?
+
+I suddenly found out that I do not have good understanding,
+about relationship configuration,
+between device, driver and interface.
+I think it is time to grow up.
+
+Consider continue reading [ [Wireless: Device, Driver, Interface][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2022/09' %}
+
+[local-whats-next]: /system/2022/12/01/driver-interface.html
 
 [34-firefox-cont]: {{ asset_path }}/34-firefox-container.png
 [34-firefox-tab01]:{{ asset_path }}/34-firefox-tab-01.png
