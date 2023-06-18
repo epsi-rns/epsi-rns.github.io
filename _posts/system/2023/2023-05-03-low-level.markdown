@@ -1,0 +1,358 @@
+---
+layout    : post
+title     : "Wireless: Low Level Connection"
+categories: system
+date      : 2023-05-03 09:25:15 +0700
+tags      : [install]
+keywords  : [vanilla arch, lenovo, device, driver, interface, connection]
+author: epsi
+toc        : toc/2023/05/toc-install.html
+
+excerpt:
+  Examine wireless in system, device, driver, and interface.
+
+opengraph:
+  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+
+---
+
+### Preface
+
+> Goal: Examine wireless in system: device, driver, and interface.
+
+This is not a recommended way to connect to your wifi.
+But I write this anyway for the sake of curiousity.
+
+For daily usage,
+you should use either `iwd`, `nmcli` or `connman` instead,
+
+<a name="toc"></a>
+
+#### Table of Content
+
+* [Table of Content](#toc)
+
+* [iw Wireless Tools](#iwdev) 
+
+* [Conclusion](#conclusion)
+
+-- -- --
+
+<a name="network"></a>
+
+### Wireless Tools
+
+This is lower level wireless tool.
+
+#### `ip` and `iw`
+
+In the context of wireless tools in Linux,
+`ip` and `iw` are both command-line utilities
+that are used for managing network interfaces,
+but they serve different purposes.
+
+While both `ip` and `iw` are useful networking tools in Linux,
+`ip` is a general-purpose command for managing networking in general,
+while `iw` is focused specifically on wireless network interfaces.
+
+In real low level usage, we need both command.
+
+#### Using `iw`
+
+We need to list our device. Physical name could be different.
+Since `iwconfig` has been deprecated since decades ago,
+we are using `iw`.
+
+{% highlight bash %}
+❯ iw dev 
+{% endhighlight %}
+
+This would looks like 
+
+![iNet wireless: iw dev][041-iw-dev-disc]
+
+When you are connected with an SSID,
+This would looks like below:
+
+{% highlight bash %}
+phy#0
+        Interface wlan0
+                ifindex 3
+                wdev 0x1
+                addr 9c:2f:9d:9a:6d:e3
+                ssid E.R. Nurwijayadi
+                type managed
+                channel 161 (5805 MHz), width: 80 MHz, center1: 5775 MHz
+                txpower 20.00 dBm
+                multicast TXQ:
+                        qsz-byt qsz-pkt flows   drops   marks   overlmt hashcol tx-bytes        tx-packets
+                        0       0       0       0       0       0       0       0               0
+{% endhighlight %}
+
+![iNet wireless: iw dev][041-iw-dev-conn]
+
+#### `iw` Issue
+
+There is a case that `iw` return nothing.
+
+{% highlight bash %}
+❯ iw dev 
+{% endhighlight %}
+
+In order to use `iw`,
+we need to start either `iwd` or `wpa_supplicant`.
+
+{% highlight bash %}
+❯ sudo systemctl start iwd
+{% endhighlight %}
+
+Or
+
+{% highlight bash %}
+❯ sudo systemctl start wpa_supplicant
+{% endhighlight %}
+
+I can't replicate this issue.
+So I'm not sure about this.
+
+#### Failed
+
+{% highlight bash %}
+❯ sudo iw dev wlan0 connect "E.R. Nurwijayadi"
+command failed: Network is down (-100)
+{% endhighlight %}
+
+![iNet wireless:  Network is down][042-wlan0-connect]
+
+#### Powering Up
+
+We need a little help from `ip` command.
+
+{% highlight bash %}
+❯ ip link show wlan0 
+{% endhighlight %}
+
+{% highlight bash %}
+3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000
+    link/ether 9c:2f:9d:9a:6d:e3 brd ff:ff:ff:ff:ff:ff
+{% endhighlight %}
+
+![iNet wireless: ip link show wlan0][045-ip-link-show]
+
+{% highlight bash %}
+❯ sudo ip link set wlan0 up
+[sudo] password for epsi: 
+{% endhighlight %}
+
+![iNet wireless: ip link show wlan0][042-wlan0-powered]
+
+#### Scanning SSID
+
+We can also scan our available SSID for our wireless.
+
+{% highlight bash %}
+❯ sudo iw dev wlan0 scan
+command failed: Device or resource busy (-16)
+{% endhighlight %}
+
+Let's try again.
+
+{% highlight bash %}
+❯ sudo iw dev wlan0 scan | grep SSID
+{% endhighlight %}
+
+{% highlight bash %}
+        SSID: TELTONIKA
+                 * SSID List
+        SSID: TARIDA PORK FINEST
+        SSID: E.R. Nurwijayadi
+        SSID: Soadamara110
+        SSID: RUT955_4B8D
+                 * SSID List
+                 * UTF-8 SSID
+        SSID: TELTONIKA_5G
+                 * SSID List
+        SSID: OPIS
+        SSID: DIRECT-3B-EPSON-L5190 Series
+        SSID: FreeNet
+        SSID: Bangtan
+        SSID: RUNNER_5G
+{% endhighlight %}
+
+![iNet wireless: iw scan][041-iw-dev-wlan0]
+
+From this step, we may choose method to connect to your wireless. 
+There are many methods, but you can only chooses one method at a time. 
+This will show you NetworkManager using `nmcli` command.
+
+#### Connecting
+
+Oh man... low level is a mess.
+But you can always try for the sake of knowledge.
+Consider this `iw dev` command.
+
+{% highlight bash %}
+❯ sudo iw dev wlan0 connect "E.R. Nurwijayadi"
+[sudo] password for epsi:  
+command failed: Operation already in progress (-114)
+{% endhighlight %}
+
+![iNet wireless: iw dev wlan0 connect][043-wlan0-connect]
+
+
+I guess I have to use `nmcli` instead.
+We will explore this later.
+
+![iNet wireless: iw dev wlan0 connect][046-iw-dev-wlan0]
+
+And try again
+
+![iNet wireless: iw dev wlan0 connect][043-wlan0-not-con]
+
+#### Using 'nmcli'
+
+NetworkManager is very common.
+I'm using Vanilla Arch with systemd that using `nmcli`.
+Again, let's do it with command line.
+
+{% highlight bash %}
+❯ nmcli dev wifi connect "E.R. Nurwijayadi"
+Error: NetworkManager is not running.
+{% endhighlight %}
+
+Of course we need to run Network manager first.
+
+{% highlight bash %}
+❯ sudo systemctl start NetworkManager
+{% endhighlight %}
+
+Then we can connect.
+
+{% highlight bash %}
+❯ nmcli dev wifi connect "E.R. Nurwijayadi"
+Error: Connection activation failed: Secrets were required, but not provided.
+{% endhighlight %}
+
+Allright we need to provide the password.
+
+{% highlight bash %}
+❯ nmcli dev wifi connect "E.R. Nurwijayadi" password oyenyebus
+Device 'wlan0' successfully activated with '4525cdf8-a007-446e-b3c2-cd5172ce44df'.
+{% endhighlight %}
+
+![Network Manager CLI: Password][044-nmcli-passwd]
+
+Other time I don't even need to provide the password.
+
+{% highlight bash %}
+❯ nmcli dev wifi connect "E.R. Nurwijayadi"
+{% endhighlight %}
+
+{% highlight bash %}
+Device 'wlan0' successfully activated with '70f471c9-f896-424d-9ac6-25812c39994e'.
+{% endhighlight %}
+
+![Network Manager CLI: iw scan][044-nmcli-dev-w]
+
+Note that the actual ID will remain the same.
+
+#### Check Connection
+
+Again.. check your connexion.
+
+{% highlight bash %}
+❯ iw dev wlan0 link 
+{% endhighlight %}
+
+{% highlight bash %}
+Connected to 9c:a2:f4:c1:da:69 (on wlan0)
+        SSID: E.R. Nurwijayadi
+        freq: 5805
+        RX: 2728763 bytes (8007 packets)
+        TX: 153923 bytes (1026 packets)
+        signal: -33 dBm
+        rx bitrate: 1080.6 MBit/s 80MHz HE-MCS 10 HE-NSS 2 HE-GI 0 HE-DCM 0
+        tx bitrate: 1200.9 MBit/s 80MHz HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
+
+        bss flags:      short-slot-time
+        dtim period:    1
+        beacon int:     100
+{% endhighlight %}
+
+![Network Manager CLI: iw dev wlan0 link][044-iw-dev-wlan0]
+
+#### DHCP
+
+We still have to reserve our IP with `dhcpcd`.
+
+{% highlight bash %}
+❯ dhclient wlan0
+RTNETLINK answers: File exists
+{% endhighlight %}
+
+Now you can ping
+
+{% highlight bash %}
+❯ ping google.com -c 2 
+{% endhighlight %}
+
+{% highlight bash %}
+PING forcesafesearch.google.com (216.239.38.120) 56(84) bytes of data.
+64 bytes from any-in-2678.1e100.net (216.239.38.120): icmp_seq=1 ttl=114 time=20.8 ms
+64 bytes from any-in-2678.1e100.net (216.239.38.120): icmp_seq=2 ttl=114 time=20.8 ms
+
+--- forcesafesearch.google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 20.803/20.804/20.806/0.001 ms
+{% endhighlight %}
+
+![iNet wireless: ping google][048-ping-google]
+
+#### Disconnect
+
+Finally, you may disconnect,
+
+{% highlight bash %}
+❯ nmcli dev disconnect wlan0 
+{% endhighlight %}
+
+{% highlight bash %}
+Device 'wlan0' successfully disconnected.
+{% endhighlight %}
+
+![Network Manager CLI: nmcli dev disconnect wlan0][044-nmcli-dev]
+
+-- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
+
+I should know what's inside my notebook.
+So I can be ready for Gentoo.
+
+Thank you for reading and visiting.
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/system/2023/05wli' %}
+
+
+[041-iw-dev-conn]:  {{ asset_path }}/041-iw-dev-connected.png
+[041-iw-dev-disc]:  {{ asset_path }}/041-iw-dev-disconnected.png
+[041-iw-dev-wlan0]: {{ asset_path }}/041-iw-dev-wlan0-ssid.png
+
+[042-wlan0-connect]:{{ asset_path }}/042-wlan0-connect-down.png
+[042-wlan0-powered]:{{ asset_path }}/042-wlan0-ip-powered-up.png
+[043-wlan0-connect]:{{ asset_path }}/043-wlan0-connect.png
+[043-wlan0-not-con]:{{ asset_path }}/043-wlan0-not-connected.png
+
+[044-nmcli-dev-w]:  {{ asset_path }}/044-nmcli-dev-wifi-connect.png
+[044-iw-dev-wlan0]: {{ asset_path }}/044-iw-dev-wlan0-link.png
+[044-nmcli-dev]:    {{ asset_path }}/044-nmcli-dev-disconnect.png
+[044-nmcli-passwd]: {{ asset_path }}/044-nmcli-password.png
+
+[045-ip-link-show]: {{ asset_path }}/045-ip-link-show-wlan0.png
+[046-iw-dev-wlan0]: {{ asset_path }}/046-iw-dev-wlan0-connect.png
+[048-ping-google]:  {{ asset_path }}/048-ping-google.png
+

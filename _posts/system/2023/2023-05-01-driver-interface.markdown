@@ -6,7 +6,7 @@ date      : 2023-05-01 09:25:15 +0700
 tags      : [install]
 keywords  : [vanilla arch, lenovo, device, driver, interface]
 author: epsi
-toc        : toc/2022/09/toc-install.html
+toc        : toc/2023/05/toc-install.html
 
 excerpt:
   Examine wireless in system, device, driver, and interface.
@@ -20,7 +20,7 @@ opengraph:
 
 > Goal: Examine wireless in system: device, driver, and interface.
 
-I need to my own system.
+I need to know my own system.
 So I write them down.
 
 <a name="toc"></a>
@@ -40,12 +40,6 @@ So I write them down.
 * 5: [Device: Hardware List](#lshw)
 
 * 6: [Diagnostic Messages](#dmesg)
-
-* 7: [Network](#network) 
-
-* 8: [Using 'nmcli'](#nmcli) 
-
-* 9: [Using 'iw dev'](#iwdev) 
 
 * [Conclusion](#conclusion)
 
@@ -304,7 +298,7 @@ Here is another alternative command, with filtering.
        valid_lft forever preferred_lft forever
 {% endhighlight %}
 
-![Interface: ip addr show][016-ip-br-c-addr]
+![Interface: ip addr show][016-ip-addr-show]
 
 And also show the interface in brief, without detail.
 
@@ -318,7 +312,7 @@ enp46s0          DOWN
 wlan0            UP             192.168.0.237/24 fe80::f37d:d4d1:d542:abde/64 
 {% endhighlight %}
 
-![Interface: ip addr brief][015-ip-addr-show]
+![Interface: ip addr brief][015-ip-br-c-addr]
 
 -- -- --
 
@@ -542,8 +536,9 @@ WARNING: you should run this program as super-user.
 WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
 {% endhighlight %}
 
-[Device: lshw -network][026-lshw-c-n-01]
-[Device: lshw -network][026-lshw-c-n-02]
+![Device: lshw -network][026-lshw-c-n-01]
+
+![Device: lshw -network][026-lshw-c-n-02]
 
 You can print the output briefly.
 
@@ -621,229 +616,6 @@ This way, we can debug, whether driver loaded or not.
 
 -- -- --
 
-<a name="network"></a>
-
-### 7: Network
-
-> Depend on Your Distribution
-
-Finally, the connection manager. 
-I'm using Vanilla Arch with systemd that using `nmcli`.
-
-Now we need to list our device. Physical name could be different.
-
-Since iwconfig has been deprecated, we are using iw.
-
-{% highlight bash %}
-❯ iw dev 
-{% endhighlight %}
-
-{% highlight bash %}
-phy#0
-        Interface wlan0
-                ifindex 3
-                wdev 0x1
-                addr 9c:2f:9d:9a:6d:e3
-                ssid E.R. Nurwijayadi
-                type managed
-                channel 161 (5805 MHz), width: 80 MHz, center1: 5775 MHz
-                txpower 20.00 dBm
-                multicast TXQ:
-                        qsz-byt qsz-pkt flows   drops   marks   overlmt hashcol tx-bytes        tx-packets
-                        0       0       0       0       0       0       0       0               0
-{% endhighlight %}
-
-![iNet wireless: iw dev][041-iw-dev]
-
-And scan our available SSID for our wireless.
-
-{% highlight bash %}
-❯ sudo iw dev wlan0 scan
-command failed: Device or resource busy (-16)
-{% endhighlight %}
-
-Let's try again.
-
-{% highlight bash %}
-❯ sudo iw dev wlan0 scan | grep SSID
-{% endhighlight %}
-
-{% highlight bash %}
-        SSID: 
-        SSID: 
-        SSID: Japrut_Slebew
-        SSID: 
-        SSID: Japrut_Slebew
-        SSID: 
-        SSID: TELTONIKA
-                 * SSID List
-        SSID: TARIDA PORK FINEST
-        SSID: E.R. Nurwijayadi
-        SSID: Soadamara110
-        SSID: RUT955_4B8D
-                 * SSID List
-                 * UTF-8 SSID
-        SSID: TELTONIKA_5G
-                 * SSID List
-        SSID: OPIS
-        SSID: DIRECT-3B-EPSON-L5190 Series
-        SSID: FreeNet
-        SSID: Bangtan
-        SSID: RUNNER_5G
-{% endhighlight %}
-
-![iNet wireless: iw scan][041-iw-dev-wlan0]
-
-From this step, we may choose method to connect to your wireless. 
-There are many methods, but you can only chooses one method at a time. 
-This will show you NetworkManager using `nmcli` command, 
-and other method using `iw` command.
-
--- -- --
-
-<a name="nmcli"></a>
-
-### 8: Using 'nmcli'
-
-NetworkManager is very common.
-Again, let's do it with command line.
-
-{% highlight bash %}
-❯ nmcli dev wifi connect "E.R. Nurwijayadi"
-{% endhighlight %}
-
-{% highlight bash %}
-Device 'wlan0' successfully activated with '70f471c9-f896-424d-9ac6-25812c39994e'.
-{% endhighlight %}
-
-![Network Manager CLI: iw scan][042-nmcli-dev-w]
-
-You can use `iw` to check if it is works.
-
-{% highlight bash %}
-❯ iw dev wlan0 link 
-{% endhighlight %}
-
-{% highlight bash %}
-Connected to 9c:a2:f4:c1:da:69 (on wlan0)
-        SSID: Japrut_Slebew
-        freq: 5805
-        RX: 145663 bytes (625 packets)
-        TX: 32228 bytes (198 packets)
-        signal: -35 dBm
-        rx bitrate: 1200.9 MBit/s 80MHz HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
-        tx bitrate: 1200.9 MBit/s 80MHz HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
-
-        bss flags:      short-slot-time
-        dtim period:    1
-        beacon int:     100
-{% endhighlight %}
-
-![Network Manager CLI: iw dev wlan0 link][043-iw-dev-wlan0]
-
-And ping google to make sure.
-
-{% highlight bash %}
-❯ ping google.com -c 2 
-{% endhighlight %}
-
-Finally, you may disconnect,
-
-{% highlight bash %}
-❯ nmcli dev disconnect wlan0 
-{% endhighlight %}
-
-{% highlight bash %}
-Device 'wlan0' successfully disconnected.
-{% endhighlight %}
-
-![Network Manager CLI: nmcli dev disconnect wlan0][044-nmcli-dev]
-
--- -- --
-
-<a name="iwdev"></a>
-
-### 9: Using 'iw dev'
-
-Now we can start some experiment with other method.
-
-{% highlight bash %}
-❯ ip link show wlan0 
-{% endhighlight %}
-
-{% highlight bash %}
-3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP mode DORMANT group default qlen 1000
-    link/ether 9c:2f:9d:9a:6d:e3 brd ff:ff:ff:ff:ff:ff
-{% endhighlight %}
-
-![iNet wireless: ip link show wlan0][045-ip-link-show]
-
-{% highlight bash %}
-❯ sudo ip link set wlan0 up
-[sudo] password for epsi: 
-{% endhighlight %}
-
-Then you can use `iw dev`.
-
-{% highlight bash %}
-❯ sudo iw dev wlan0 connect "E.R. Nurwijayadi"
-[sudo] password for epsi:  
-command failed: Operation already in progress (-114)
-{% endhighlight %}
-
-I guess I have to use `nmcli` instead.
-I don't have time to explore.
-
-![iNet wireless: iw dev wlan0 connect][046-iw-dev-wlan0]
-
-Again.. check your connexion.
-
-{% highlight bash %}
-❯ iw dev wlan0 link 
-{% endhighlight %}
-
-{% highlight bash %}
-Connected to 9c:a2:f4:c1:da:69 (on wlan0)
-        SSID: E.R. Nurwijayadi
-        freq: 5805
-        RX: 2728763 bytes (8007 packets)
-        TX: 153923 bytes (1026 packets)
-        signal: -33 dBm
-        rx bitrate: 1080.6 MBit/s 80MHz HE-MCS 10 HE-NSS 2 HE-GI 0 HE-DCM 0
-        tx bitrate: 1200.9 MBit/s 80MHz HE-MCS 11 HE-NSS 2 HE-GI 0 HE-DCM 0
-
-        bss flags:      short-slot-time
-        dtim period:    1
-        beacon int:     100
-{% endhighlight %}
-
-And reserved your IP with `dhcpcd`
-
-{% highlight bash %}
-❯ dhclient wlan0
-RTNETLINK answers: File exists
-{% endhighlight %}
-
-Now you can ping
-
-{% highlight bash %}
-❯ ping google.com -c 2 
-{% endhighlight %}
-
-{% highlight bash %}
-PING forcesafesearch.google.com (216.239.38.120) 56(84) bytes of data.
-64 bytes from any-in-2678.1e100.net (216.239.38.120): icmp_seq=1 ttl=114 time=20.8 ms
-64 bytes from any-in-2678.1e100.net (216.239.38.120): icmp_seq=2 ttl=114 time=20.8 ms
-
---- forcesafesearch.google.com ping statistics ---
-2 packets transmitted, 2 received, 0% packet loss, time 1002ms
-rtt min/avg/max/mdev = 20.803/20.804/20.806/0.001 ms
-{% endhighlight %}
-
-![iNet wireless: ping google][048-ping-google]
-
--- -- --
-
 <a name="conclusion"></a>
 
 ### Conclusion
@@ -881,12 +653,9 @@ Thank you for reading and visiting.
 [031-dmesg-rtw89]:  {{ asset_path }}/031-dmesg-rtw89.png
 [032-dmesg-fw]:     {{ asset_path }}/032-dmesg-firmware.png
 [033-dmesg-wlan0]:  {{ asset_path }}/033-dmesg-wlan0.png
-[041-iw-dev]:       {{ asset_path }}/041-iw-dev.png
-[041-iw-dev-wlan0]: {{ asset_path }}/041-iw-dev-wlan0-ssid.png
-[042-nmcli-dev-w]:  {{ asset_path }}/042-nmcli-dev-wifi-connect.png
-[043-iw-dev-wlan0]: {{ asset_path }}/043-iw-dev-wlan0-link.png
-[044-nmcli-dev]:    {{ asset_path }}/044-nmcli-dev-disconnect.png
-[045-ip-link-show]: {{ asset_path }}/045-ip-link-show-wlan0.png
-[046-iw-dev-wlan0]: {{ asset_path }}/046-iw-dev-wlan0-connect.png
-[048-ping-google]:  {{ asset_path }}/048-ping-google.png
+
+
+
+
+
 
