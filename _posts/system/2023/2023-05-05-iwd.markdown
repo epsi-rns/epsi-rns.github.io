@@ -1,0 +1,309 @@
+---
+layout    : post
+title     : "Wireless: INet Wireless Daemon"
+categories: system
+date      : 2023-05-05 09:25:15 +0700
+tags      : [install]
+keywords  : [vanilla arch, lenovo, iwd, iwctl, connection]
+author: epsi
+toc        : toc/2023/05/toc-install.html
+
+excerpt:
+  Examine wireless in system, device, driver, and interface.
+
+opengraph:
+  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+
+---
+
+### Preface
+
+> Goal: Examine wireless in system: device, driver, and interface.
+
+One thing I met in my vanilla Arch install is `iwctl`.
+So I think, I have to play with it.
+So I can install my Vanilla Arch easily.
+
+![IWD: Summary][050-summary]
+
+#### Reference
+
+There is better reference for you:
+
+* [Mudah Mengkonfigurasi Wi-Fi dengan iwd (iwctl)][ref-bandit]
+
+-- -- --
+
+### Starting The Service
+
+In arch install, iwd is running as default.
+But after install you should decide what service to be run.
+
+{% highlight bash %}
+❯ sudo systemctl enable iwd.service
+Created symlink /etc/systemd/system/multi-user.target.wants/iwd.service → /usr/lib/systemd/system/iwd.service.
+❯ sudo systemctl start iwd.service
+{% endhighlight %}
+
+![IWD: Enable IWD][051-iwd-systemctl]
+
+If the service already enabled,
+the command won't make the soft link again.
+
+![IWD: Enable IWD][051-enable-iwd]
+
+You can try yourself in your beloved command line.
+
+-- -- --
+
+### Using The Shell
+
+One thing I love about `iwctl` is the shell.
+So I don't have to type over and over again.
+Just up and down arrow.
+
+{% highlight bash %}
+❯ iwctl
+Auto-refresh is disabled. Enlarge window width to at least 80 to enable.
+NetworkConfigurationEnabled: disabled
+StateDirectory: /var/lib/iwd
+Version: 2.5
+[iwd]#
+{% endhighlight %}
+
+Unfortunately the shell require long terminal.
+
+![IWD: Starting iwctl: narrow][052-iwctl-narrow]
+
+Let me start over with wider teminal.
+
+{% highlight bash %}
+❯ iwctl
+NetworkConfigurationEnabled: disabled
+StateDirectory: /var/lib/iwd
+Version: 2.5
+[iwd]#
+{% endhighlight %}
+
+![IWD: Starting iwctl: wide][052-iwctl-wide]
+
+-- -- --
+
+### Power Up The Device
+
+First list what device available.
+
+{% highlight bash %}
+[iwd]# device list
+
+                                    Devices                                   *
+--------------------------------------------------------------------------------
+  Name                  Address               Powered     Adapter     Mode      
+--------------------------------------------------------------------------------
+  wlan0                 9c:2f:9d:9a:6d:e3     on          phy0        station  
+{% endhighlight %}
+
+![IWD: Device List][053-device-list]
+
+Then powering on.
+
+{% highlight bash %}
+[iwd]# device wlan0 set-property Powered on
+{% endhighlight %}
+
+![IWD: Set Power Property On][054-device-wlan0]
+
+-- -- --
+
+### Scanning Network
+
+{% highlight bash %}
+[iwd]# station wlan0 scan
+{% endhighlight %}
+
+![IWD: Scanning Network][055-wlan0-scan-01]
+
+If you do the same command again, this will refused.
+
+{% highlight bash %}
+[iwd]# station wlan0 scan
+Operation already in progress
+{% endhighlight %}
+
+![IWD: Scanning Network][055-wlan0-scan-02]
+
+Now you can get the list of the networks.
+
+{% highlight bash %}
+[iwd]# station wlan0 get-networks
+                               Available networks                              
+--------------------------------------------------------------------------------
+      Network name                      Security            Signal
+--------------------------------------------------------------------------------
+  >   Japrut_Slebew                     psk                 ****    
+      TELTONIKA_5G                      psk                 ****    
+      RUT955_4B8D                       psk                 ****    
+      TELTONIKA                         psk                 ****    
+      Soadamara110                      psk                 ****    
+      Production                        psk                 ****    
+      E.R. Nurwijayadi                  psk                 ****    
+      Bismillahirrahmanirrahim          psk                 ****    
+      michael                           psk                 ****    
+      MEDABU LT 3                       psk                 ****    
+      978EnergiGLX                      psk                 ****    
+      JPKP POSKO                        psk                 ****    
+      Infinix HOT 10S                   psk                 ****    
+      GGP 9/20_2.4G                     psk                 ****    
+      ZTE_2.4G_4kJEQ2                   psk                 ****    
+{% endhighlight %}
+
+![IWD: Get the Network][056-wlan0-get-01]
+
+Now you can easily connect with your SSID.
+
+{% highlight bash %}
+[iwd]# station wlan0 connect "E.R. Nurwijayadi"
+Type the network passphrase for E.R. Nurwijayadi psk.
+Passphrase: **********
+{% endhighlight %}
+
+![IWD: Connect to SSID][057-wlan0-connect]
+
+{% highlight bash %}
+[iwd]# station wlan0 disconnect
+[iwd]# known-networks "E.R. Nurwijayadi" forget
+{% endhighlight %}
+
+![IWD: Forget Connection][057-known-net]
+
+-- -- --
+
+### Testing The Connection
+
+{% highlight bash %}
+❯ ping google.com -c 2
+ping: google.com: Temporary failure in name resolution
+{% endhighlight %}
+
+![IWD: Ping: Failure][058-ping-01]
+
+Allright, I think we need `dhcpcd` here.
+
+
+{% highlight bash %}
+❯ sudo systemctl start dhcpcd.service
+❯ ping google.com -c 2
+PING google.com (142.250.4.138) 56(84) bytes of data.
+64 bytes from 142.250.4.138: icmp_seq=1 ttl=106 time=59.9 ms
+64 bytes from 142.250.4.138: icmp_seq=2 ttl=106 time=38.6 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 10071ms
+rtt min/avg/max/mdev = 38.600/49.252/59.905/10.652 ms
+{% endhighlight %}
+
+![IWD: Ping: Succeed][058-ping-02]
+
+Alternatively you can use `dhclient`.
+
+{% highlight bash %}
+❯ sudo pacman -S dhclient
+{% endhighlight %}
+
+![IWD: ][059-dhclient]
+
+{% highlight bash %}
+❯ dhclient wlan0
+RTNETLINK answers: Operation not permitted
+❯ sudo dhclient wlan0
+❯ ping google.com -c 2
+PING google.com (74.125.200.100) 56(84) bytes of data.
+64 bytes from 74.125.200.100: icmp_seq=1 ttl=104 time=51.3 ms
+64 bytes from 74.125.200.100: icmp_seq=2 ttl=104 time=63.0 ms
+
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 10063ms
+rtt min/avg/max/mdev = 51.312/57.170/63.029/5.858 ms
+{% endhighlight %}
+
+-- -- --
+
+### Stopping IWD
+
+If you want to continue to leanr about other service,
+such as `NetworkManager`, you should stop the `iwd`.
+Because both can't be coexist without further backend settings.
+
+{% highlight bash %}
+❯ sudo systemctl disable iwd.service
+Removed "/etc/systemd/system/multi-user.target.wants/iwd.service".
+{% endhighlight %}
+
+Now try to ping again.
+
+{% highlight bash %}
+❯ sudo systemctl stop iwd
+❯ ping 8.8.8.8
+ping: connect: Network is unreachable
+{% endhighlight %}
+
+![IWD: Stop IWD][059-iwd-stop-ping]
+
+Just to prove that it really to stopped.
+
+-- -- --
+
+<a name="conclusion"></a>
+
+### Conclusion
+
+I should know what's inside my notebook.
+So I can be ready for Gentoo.
+We will continue to NetworkManager
+
+
+
+Thank you for reading and visiting.
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+{% assign asset_path = site.url | append: '/assets/posts/system/2023/05wli' %}
+
+[ref-bandit]:       https://bandithijo.dev/blog/mudah-mengkonfigurasi-wifi-dengan-iwd
+
+[050-summary]:      {{ asset_path }}/050-summary.png
+[051-disable-iwd]:  {{ asset_path }}/051-disable-iwd.png
+[051-enable-iwd]:   {{ asset_path }}/051-enable-iwd.png
+[051-iwd-systemctl]:{{ asset_path }}/051-iwd-systemctl.png
+[052-iwctl-narrow]: {{ asset_path }}/052-iwctl-narrow.png
+[052-iwctl-wide]:   {{ asset_path }}/052-iwctl-wide.png
+[053-device-list]:  {{ asset_path }}/053-device-list.png
+[054-device-wlan0]: {{ asset_path }}/054-device-wlan0.png
+[055-wlan0-scan-01]:{{ asset_path }}/055-station-wlan0-scan-01.png
+[055-wlan0-scan-02]:{{ asset_path }}/055-station-wlan0-scan-02.png
+[056-wlan0-get-01]: {{ asset_path }}/056-station-wlan0-get-networks-01.png
+[056-wlan0-get-02]: {{ asset_path }}/056-station-wlan0-get-networks-02.png
+[057-known-net]:    {{ asset_path }}/057-known-networks-forget.png
+[057-wlan0-connect]:{{ asset_path }}/057-station-wlan0-connect.png
+[058-ping-01]:      {{ asset_path }}/058-ping-google-01.png
+[058-ping-02]:      {{ asset_path }}/058-ping-google-02.png
+[059-dhclient]:     {{ asset_path }}/059-dhclient.png
+[059-iwd-stop-ping]:{{ asset_path }}/059-iwd-stop-ping.png
+
+[041-iw-dev-conn]:  {{ asset_path }}/061-nm-disable.png
+[041-iw-dev-conn]:  {{ asset_path }}/061-nm-enable.png
+[041-iw-dev-conn]:  {{ asset_path }}/061-nm-user-nosudo.png
+[041-iw-dev-conn]:  {{ asset_path }}/062-nm-start-stop.png
+[041-iw-dev-conn]:  {{ asset_path }}/062-nm-status.png
+[041-iw-dev-conn]:  {{ asset_path }}/062-nm-status-active.png
+[041-iw-dev-conn]:  {{ asset_path }}/063-dhcp-disable.png
+[041-iw-dev-conn]:  {{ asset_path }}/063-dhcp-enable.png
+[041-iw-dev-conn]:  {{ asset_path }}/064-dhcp-start-stop.png
+[041-iw-dev-conn]:  {{ asset_path }}/064-dhcp-status.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-01.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-02.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-03.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-04.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-05.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-ping-8888.png
+[041-iw-dev-conn]:  {{ asset_path }}/065-ping-archlinux.png

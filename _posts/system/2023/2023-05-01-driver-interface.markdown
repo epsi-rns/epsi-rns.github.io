@@ -622,6 +622,9 @@ This way, we can debug, whether driver loaded or not.
 
 I should know what's inside my notebook.
 So I can be ready for Gentoo.
+There is still low level wireless to go.
+
+Consider continue reading [ [Wireless: Low Level Connection][local-whats-next] ].
 
 Thank you for reading and visiting.
 

@@ -32,9 +32,9 @@ you should use either `iwd`, `nmcli` or `connman` instead,
 
 * [Table of Content](#toc)
 
-* [iw Wireless Tools](#iwdev) 
+* [Wireless Tools](#iwdev) 
 
-* [Conclusion](#conclusion)
+* [What is Next?](#whats-next)
 
 -- -- --
 
@@ -324,12 +324,17 @@ Device 'wlan0' successfully disconnected.
 
 -- -- --
 
-<a name="conclusion"></a>
+<a name="whats-next"></a>
 
-### Conclusion
+### What is Next 🤔?
 
 I should know what's inside my notebook.
 So I can be ready for Gentoo.
+After this mess,
+we can get into proper connectio
+with either `iwd`, `nmcli` or `connman`
+
+Consider continue reading [ [Wireless: INet Wireless Daemon][local-whats-next] ].
 
 Thank you for reading and visiting.
 
@@ -337,6 +342,7 @@ Thank you for reading and visiting.
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2023/05wli' %}
 
+[local-whats-next]: /system/2023/05/03/low-level.html
 
 [041-iw-dev-conn]:  {{ asset_path }}/041-iw-dev-connected.png
 [041-iw-dev-disc]:  {{ asset_path }}/041-iw-dev-disconnected.png
