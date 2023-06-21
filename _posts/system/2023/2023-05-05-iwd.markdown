@@ -20,7 +20,7 @@ opengraph:
 
 > Goal: Examine wireless in system: device, driver, and interface.
 
-One thing I met in my vanilla Arch install is `iwctl`.
+First thing catch my eye in my vanilla Arch install is `iwctl`.
 So I think, I have to play with it.
 So I can install my Vanilla Arch easily.
 
@@ -253,15 +253,14 @@ Just to prove that it really to stopped.
 
 -- -- --
 
-<a name="conclusion"></a>
+<a name="whats-next"></a>
 
-### Conclusion
+### What is Next 🤔?
 
-I should know what's inside my notebook.
-So I can be ready for Gentoo.
-We will continue to NetworkManager
+After the `INet Wireless Daemon` in arch setup.
+I need `network manager` in post arch setup.
 
-
+Consider continue reading [ [Wireless: Network Manager][local-whats-next] ].
 
 Thank you for reading and visiting.
 
@@ -270,6 +269,8 @@ Thank you for reading and visiting.
 {% assign asset_path = site.url | append: '/assets/posts/system/2023/05wli' %}
 
 [ref-bandit]:       https://bandithijo.dev/blog/mudah-mengkonfigurasi-wifi-dengan-iwd
+
+[local-whats-next]: /system/2023/05/07/network-manager.html
 
 [050-summary]:      {{ asset_path }}/050-summary.png
 [051-disable-iwd]:  {{ asset_path }}/051-disable-iwd.png
@@ -289,21 +290,3 @@ Thank you for reading and visiting.
 [058-ping-02]:      {{ asset_path }}/058-ping-google-02.png
 [059-dhclient]:     {{ asset_path }}/059-dhclient.png
 [059-iwd-stop-ping]:{{ asset_path }}/059-iwd-stop-ping.png
-
-[041-iw-dev-conn]:  {{ asset_path }}/061-nm-disable.png
-[041-iw-dev-conn]:  {{ asset_path }}/061-nm-enable.png
-[041-iw-dev-conn]:  {{ asset_path }}/061-nm-user-nosudo.png
-[041-iw-dev-conn]:  {{ asset_path }}/062-nm-start-stop.png
-[041-iw-dev-conn]:  {{ asset_path }}/062-nm-status.png
-[041-iw-dev-conn]:  {{ asset_path }}/062-nm-status-active.png
-[041-iw-dev-conn]:  {{ asset_path }}/063-dhcp-disable.png
-[041-iw-dev-conn]:  {{ asset_path }}/063-dhcp-enable.png
-[041-iw-dev-conn]:  {{ asset_path }}/064-dhcp-start-stop.png
-[041-iw-dev-conn]:  {{ asset_path }}/064-dhcp-status.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-01.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-02.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-03.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-04.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-nmtui-05.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-ping-8888.png
-[041-iw-dev-conn]:  {{ asset_path }}/065-ping-archlinux.png
