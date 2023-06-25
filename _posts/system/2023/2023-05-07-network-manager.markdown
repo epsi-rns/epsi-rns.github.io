@@ -3,7 +3,7 @@ layout    : post
 title     : "Wireless: Network Manager"
 categories: system
 date      : 2023-05-07 09:25:15 +0700
-tags      : [install]
+tags      : [network]
 keywords  : [vanilla arch, lenovo, network manager, nmcli, nmtui]
 author: epsi
 toc        : toc/2023/05/toc-install.html
@@ -184,6 +184,8 @@ Nothing complex.
 
 ### DHCP Service
 
+If you have trouble connecting on the first time,
+you might also require `dhcpcd` temporarily.
 Alternatively you can use `dhclient`, instead of `dhcpcd`.
 
 #### IP Leasing

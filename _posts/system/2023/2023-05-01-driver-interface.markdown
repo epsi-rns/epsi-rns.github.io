@@ -3,7 +3,7 @@ layout    : post
 title     : "Wireless: Device, Driver, Interface"
 categories: system
 date      : 2023-05-01 09:25:15 +0700
-tags      : [install]
+tags      : [network]
 keywords  : [vanilla arch, lenovo, device, driver, interface]
 author: epsi
 toc        : toc/2023/05/toc-install.html
