@@ -12,7 +12,7 @@ excerpt:
   Examine wireless in system, device, driver, and interface.
 
 opengraph:
-  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+  image: /assets/posts/system/2023/05wli/016-ip-addr-show-wlan0.png
 
 ---
 
@@ -625,8 +625,6 @@ So I can be ready for Gentoo.
 There is still low level wireless to go.
 
 Consider continue reading [ [Wireless: Low Level Connection][local-whats-next] ].
-
-Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

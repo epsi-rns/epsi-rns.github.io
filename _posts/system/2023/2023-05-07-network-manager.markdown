@@ -12,7 +12,7 @@ excerpt:
   Examine wireless in system, device, driver, and interface.
 
 opengraph:
-  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+  image: /assets/posts/system/2023/05wli/065-nmtui-01.png
 
 ---
 

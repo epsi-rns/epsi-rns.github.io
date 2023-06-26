@@ -12,7 +12,7 @@ excerpt:
   Overview about OS as general.
 
 opengraph:
-  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+  image: /assets/posts/system/2023/04/001-dd-arch-linux.png
 
 ---
 
@@ -75,16 +75,12 @@ step by step example, to learn each commands.
 
 ### What is Next 🤔?
 
-I should know what's inside my notebook.
-So I can be ready for Gentoo.
-There is still low level wireless to go.
+We need to begin our journey.
 
-Consider continue reading [ [Wireless: Low Level Connection][local-whats-next] ].
-
-Thank you for reading and visiting.
+Consider continue reading [ [Arch: Install][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
-{% assign asset_path = site.url | append: '/assets/posts/system/2023/05wli' %}
+{% assign asset_path = site.url | append: '/assets/posts/system/2023/04' %}
 
-[local-whats-next]: /system/2023/05/03/low-level.html
+[local-whats-next]: /system/2023/04/03/arch-install.html

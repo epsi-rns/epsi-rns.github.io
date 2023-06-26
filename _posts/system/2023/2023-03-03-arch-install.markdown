@@ -12,7 +12,7 @@ excerpt:
   Examine arch install.
 
 opengraph:
-  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+  image: /assets/posts/system/2023/04/014-lsinitcpio.png
 
 ---
 
@@ -39,6 +39,10 @@ _And be sure you have read the manual._
 * [Arch Wiki: Beginners's Guide: Installation][link-archwiki]
 
 #### Rewrite
+
+Nine years ago I wrote this article:
+
+* [Arch Linux - Install/ Post Install Log][local-arch-install]
 
 It is worth the risk. Your few days of installing Arch
 give you more knowledge than a year with Kali.
@@ -555,7 +559,17 @@ and take care of the windows boot in GRUB later on.
 ❯# grub-mkconfig -o /boot/grub/grub.cfg
 {% endhighlight %}
 
-This would looks like something below:
+Your screen would output text similar to this menu entry:
+
+{% highlight bash %}
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-linux
+Found initrd image: /boot/initramfs-linux.img
+Found fallback initrd image(s) in /boot:  initramfs-linux-fallback.img
+...
+{% endhighlight %}
+
+The configuration itself would looks like something below:
 
 {% highlight bash %}
 ### BEGIN /etc/grub.d/10_linux ###
@@ -575,13 +589,81 @@ menuentry 'Arch Linux' --class arch --class gnu-linux --class gnu --class os $me
 
 ![Arch Install: GRUB Configuration][017-grub-config]
 
+#### OS Prober
+
+_You can skip this part, and do this later after reboot._
+
+Since I use windows,
+I want my windows entry to be also included.
+This require `os prober.
+
+{% highlight bash %}
+❯# pacman -S os-prober
+{% endhighlight %}
+
+You still need to enable the `os-prober`.
+
+{% highlight bash %}
+❯ cat /etc/default/grub
+GRUB_DISABLE_OS_PROBER=false
+{% endhighlight %}
+
+![Arch Install: GRUB OS Prober][017-grub-osprober]
+
+And your windows entry will appear.
+
+{% highlight bash %}
+[root@utama epsi]# grub-mkconfig -o /boot/grub/grub.cfg
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-linux
+Found initrd image: /boot/initramfs-linux.img
+Found fallback initrd image(s) in /boot:  initramfs-linux-fallback.img
+Warning: os-prober will be executed to detect other bootable partitions.
+Its output will be used to detect bootable binaries on them and create new boot entries.
+Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
+Adding boot menu entry for UEFI Firmware Settings ...
+done
+{% endhighlight %}
+
+![Arch Install: GRUB Detecting][017-grub-mkconfig]
+
+The windows menu entry contain chainloader.
+
+{% highlight bash %}
+menuentry 'Windows Boot Manager (on /dev/nvme0n1p1)' -
+-class windows --class os $menuentry_id_option 'osprob
+er-efi-3E7D-B1CB' {
+        insmod part_gpt
+        insmod fat
+        search --no-floppy --fs-uuid --set=root 3E7D-B
+1CB
+        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
+}
+{% endhighlight %}
+
+![Arch Install: GRUB menu entry: Windows][017-grub-windows]
+
+While the EFI menu entry contain`fwsetup`.
+This is new stuff for me.
+
+{% highlight bash %}
+menuentry 'UEFI Firmware Settings' $menuentry_id_option 'uefi-firmware' {
+        fwsetup
+}
+{% endhighlight %}
+
+![Arch Install: GRUB menu entry: UEFI][017-grub-uefi]
+
+The linux menu entry part, you can examine yourself.
+
 -- -- --
 
 <a name="reboot"></a>
 
 ### Reboot
 
-And finally `exit` your chroot.
+That is all.
+We can finally `exit` your chroot.
 go back to acrh installer.
 Then reboot.
 
@@ -599,22 +681,19 @@ Then reboot.
 
 ### What is Next 🤔?
 
-I should know what's inside my notebook.
-So I can be ready for Gentoo.
-There is still low level wireless to go.
+Form Installment, we can dive into post installment.
 
-Consider continue reading [ [Wireless: Low Level Connection][local-whats-next] ].
-
-Thank you for reading and visiting.
+Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2023/04' %}
 
-[local-whats-next]: /system/2023/05/03/low-level.html
+[local-whats-next]: /system/2023/04/05/arch-post-install.html
 
-[link-archwiki]:            https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation
+[link-archwiki]:    https://wiki.archlinux.org/index.php/Beginners%27_guide/Installation
 
+[local-arch-install]:/system/2014/04/02/arch-install-log.html
 [local-multiboot]:   /system/2018/05/21/linux-multiboot.html
 
 [local-iwd]:         /system/2023/05/05/iwd.html
@@ -633,3 +712,8 @@ Thank you for reading and visiting.
 [015-efibootmgr]:   {{ asset_path }}/015-efibootmgr.png
 [016-efi-grub]:     {{ asset_path }}/016-efi-grub.png
 [017-grub-config]:  {{ asset_path }}/017-grub-config.png
+
+[017-grub-mkconfig]:{{ asset_path }}/017-grub-mkconfig.png
+[017-grub-osprober]:{{ asset_path }}/017-grub-os-prober.png
+[017-grub-uefi]:    {{ asset_path }}/017-grub-uefi.png
+[017-grub-windows]: {{ asset_path }}/017-grub-windows.png

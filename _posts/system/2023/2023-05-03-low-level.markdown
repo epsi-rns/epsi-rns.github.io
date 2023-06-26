@@ -12,7 +12,7 @@ excerpt:
   Examine wireless in system, device, driver, and interface.
 
 opengraph:
-  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+  image: /assets/posts/system/2023/05wli/041-iw-dev-wlan0-ssid.png
 
 ---
 
@@ -335,8 +335,6 @@ we can get into proper connection
 with either `iwd`, `nmcli` or `connman`
 
 Consider continue reading [ [Wireless: INet Wireless Daemon][local-whats-next] ].
-
-Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 

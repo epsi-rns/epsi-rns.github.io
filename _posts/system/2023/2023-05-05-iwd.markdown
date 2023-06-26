@@ -12,7 +12,7 @@ excerpt:
   Examine wireless in system, device, driver, and interface.
 
 opengraph:
-  image: /assets/posts/system/2023/05/041-iw-dev-wlan0-ssid.png
+  image: /assets/posts/system/2023/05wli/050-summary.png
 
 ---
 
@@ -261,8 +261,6 @@ After the `INet Wireless Daemon` in arch setup.
 I need `network manager` in post arch setup.
 
 Consider continue reading [ [Wireless: Network Manager][local-whats-next] ].
-
-Thank you for reading and visiting.
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
