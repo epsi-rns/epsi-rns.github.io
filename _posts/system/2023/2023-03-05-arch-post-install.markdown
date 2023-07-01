@@ -27,16 +27,22 @@ We still need to setup user administration.
 Then we scan setup GUI as soon as possible,
 so we can easily do more basic administration.
 
-
 <a name="toc"></a>
 
 #### Table of Content
 
 * [Table of Content](#toc)
 
+* [Networking](#networking)
+* [Basic Tools](#basic-tools)
+* [User Administration](#user-admin)
+* [GUI Display](#gui-display)
+
 * [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="networking"></a>
 
 ### Networking
 
@@ -81,6 +87,8 @@ provided in this article series.
 
 -- -- --
 
+<a name="basic-tools"></a>
+
 ### Basic Tools
 
 > You can skip this
@@ -109,6 +117,8 @@ the manual of the `man` command regularly.
 That is all.
 
 -- -- --
+
+<a name="user-admin"></a>
 
 ### User Administration
 
@@ -218,7 +228,9 @@ Now try login in TTY for user that you made.
 
 -- -- --
 
-### GUI
+<a name="display-gui"></a>
+
+### GUI Display
 
 > Setting up GUI with xorg/wayland
 
@@ -310,22 +322,16 @@ Now I can navigate my alternate account.
 ❯ sudo -u rizqi caja &!
 {% endhighlight %}
 
-
--- -- --
-
-### chsh
-
--- -- --
-
-### Policy
-
 -- -- --
 
 <a name="whats-next"></a>
 
 ### What is Next 🤔?
 
-Form Installment, we can dive into post installment.
+After basic administration and GUI,
+we can go back setting our arch linux,
+to work coexist with pre existing partition,
+in a multiboot situation.
 
 Consider continue reading [ [Arch: Multiboot][local-whats-next] ].
 

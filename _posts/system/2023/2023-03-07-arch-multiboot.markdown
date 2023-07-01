@@ -31,9 +31,15 @@ such as Windows or FreeBSD.
 
 * [Table of Content](#toc)
 
+* [GRUB](#grub)
+* [EFI](#efi)
+* [fstab](#fstab)
+
 * [What is Next?](#whats-next)
 
 -- -- --
+
+<a name="grub"></a>
 
 ### GRUB
 
@@ -108,6 +114,8 @@ The linux menu entry part, you can examine yourself.
 
 -- -- --
 
+<a name="efi"></a>
+
 ### EFI Variables
 
 We have to deal with EFI before.
@@ -170,6 +178,8 @@ Value:
 
 
 -- -- --
+
+<a name="fstab"></a>
 
 ### fstab
 
@@ -273,15 +283,17 @@ swap   UUID=b125fe63-4ae8-4228-9e6b-9475081dce86
 
 ### What is Next 🤔?
 
-Form Installment, we can dive into post installment.
+After all basic stuff done,
+we can continue, installing application,
+so we can get to work with our notebook in daily basis.
 
-Consider continue reading [ [Arch: Post Install][local-whats-next] ].
+Consider continue reading [ [Arch: Application Install][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2023/04' %}
 
-[local-whats-next]: /system/2023/04/05/arch-post-install.html
+[local-whats-next]: /system/2023/04/09/arch-app-install.html
 
 [017-grub-mkconfig]:{{ asset_path }}/017-grub-mkconfig.png
 [017-grub-osprober]:{{ asset_path }}/017-grub-os-prober.png
