@@ -4,7 +4,7 @@ title     : "Arch: Post Install"
 categories: system
 date      : 2023-04-05 09:25:15 +0700
 tags      : [install]
-keywords  : [vanilla arch, lenovo, install]
+keywords  : [vanilla arch, lenovo, post install]
 author: epsi
 toc        : toc/2023/05/toc-install.html
 
@@ -218,37 +218,102 @@ Now try login in TTY for user that you made.
 
 -- -- --
 
-### Display xorg
+### GUI
 
 > Setting up GUI with xorg/wayland
 
 It is a good time to setup GUI.
+With GUI we can configure stuff easier.
 I would like to set up xorg first.
 Then wayland later.
 
-#### xorg
+#### Display Server
 
-sudo pacman -S xorg-xhost
+> xorg
 
--- -- --
-
-### GRUB
+First the xorg itself
 
 {% highlight bash %}
-># pacman -Syy
-># pacman -S grub-bios
-># pacman -S os-prober
+❯# pacman -S xorg-server xorg-xhost xorg-xwayland xorg-xinit 
 {% endhighlight %}
 
+I don't know if I could install wayland wthout xorg at all.
+
+#### Desktop Manager
+
+I like `lightdm`,
+but unfortunately it doesn't work well with wayland.
+So use `sddm` instead.
+
+{% highlight bash %}
+❯# pacman -S sddm
+{% endhighlight %}
+
+#### Window Manager
+
+Let us check the window manager
+
+{% highlight bash %}
+❯# pacman -S i3-wm sway
+{% endhighlight %}
+
+*i3 in xorg* with picom compositor.
+
+![Arch Post Install: Display: i3wm in Xorg][023-i3wm]
+
+*sway in wayland*
+
+![Arch Post Install: Display: sway in Wayland][023-sway]
+
+#### Desktop Manager
+
+Beginner would love xfce4.
+
+{% highlight bash %}
+❯# pacman -S xfce4 xfce4-goodies
+{% endhighlight %}
+
+![Arch Post Install: Display: XFCE4][023-xfce4]
+
+Personally, I prefer to use AwesomeWM.
+But I know Awesome is not for everbidy especially beginner.
+
+![Arch Post Install: Display: AwesomeWm][023-awesome]
+
+I've been using this AwesomeWM in about four years.
+Just simply because I do not have time,
+to explore other goodies.
+
+#### Screenshot
+
+For the screenshot, I use this tools.
+Because `wayland` require different screenshooter.
+
+{% highlight bash %}
+❯# pacman -S scrot grim swappy
+{% endhighlight %}
+
+#### Second Account
+
+For some weird reason, I need two accounts.
+And sometimes I need to run GUI for other account, without switching desktop.
+this can be done by this.
+
+{% highlight bash %}
+❯ xhost local:
+non-network local connections being added to access control list
+{% endhighlight %}
+
+Now I can navigate my alternate account.
+
+{% highlight bash %}
+❯ sudo -u rizqi caja &!
+{% endhighlight %}
+
+
 -- -- --
 
-### EFI
-
--- -- --
-
-### fstab
-
-/media/works
+### chsh
 
 -- -- --
 
@@ -262,13 +327,13 @@ sudo pacman -S xorg-xhost
 
 Form Installment, we can dive into post installment.
 
-Consider continue reading [ [Arch: Post Install][local-whats-next] ].
+Consider continue reading [ [Arch: Multiboot][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
 {% assign asset_path = site.url | append: '/assets/posts/system/2023/04' %}
 
-[local-whats-next]: /system/2023/04/05/arch-post-install.html
+[local-whats-next]: /system/2023/04/07/arch-multiboot.html
 
 [021-usman-group]:  {{ asset_path }}/021-usman-group.png
 [021-usman-gshadow]:{{ asset_path }}/021-usman-gshadow.png
@@ -279,6 +344,8 @@ Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 [022-visudo]:       {{ asset_path }}/022-visudo.png
 [022-man-man]:      {{ asset_path }}/022-man-man.png
 
-[029-efivars-01]:   {{ asset_path }}/029-efivars-01.png
-[029-efivars-02]:   {{ asset_path }}/029-efivars-02.png
-[029-efivars-03]:   {{ asset_path }}/029-efivars-03.png
+[023-awesome]:      {{ asset_path }}/023-awesome.png
+[023-i3wm]:         {{ asset_path }}/023-i3wm.png
+[023-sway]:         {{ asset_path }}/023-sway.png
+[023-xfce4]:        {{ asset_path }}/023-xfce4.png
+

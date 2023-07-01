@@ -641,70 +641,10 @@ menuentry 'Arch Linux' --class arch --class gnu-linux --class gnu --class os $me
 
 #### OS Prober
 
-_You can skip this part, and do this later after reboot._
+I will skip this part.
+My goal is succeed in booting linux.
 
-Since I use windows,
-I want my windows entry to be also included.
-This require `os prober.
-
-{% highlight bash %}
-❯# pacman -S os-prober
-{% endhighlight %}
-
-You still need to enable the `os-prober`.
-
-{% highlight bash %}
-❯ cat /etc/default/grub
-GRUB_DISABLE_OS_PROBER=false
-{% endhighlight %}
-
-![Arch Install: GRUB OS Prober][017-grub-osprober]
-
-And your windows entry will appear.
-
-{% highlight bash %}
-[root@utama epsi]# grub-mkconfig -o /boot/grub/grub.cfg
-Generating grub configuration file ...
-Found linux image: /boot/vmlinuz-linux
-Found initrd image: /boot/initramfs-linux.img
-Found fallback initrd image(s) in /boot:  initramfs-linux-fallback.img
-Warning: os-prober will be executed to detect other bootable partitions.
-Its output will be used to detect bootable binaries on them and create new boot entries.
-Found Windows Boot Manager on /dev/nvme0n1p1@/EFI/Microsoft/Boot/bootmgfw.efi
-Adding boot menu entry for UEFI Firmware Settings ...
-done
-{% endhighlight %}
-
-![Arch Install: GRUB Detecting][017-grub-mkconfig]
-
-The windows menu entry contain chainloader.
-
-{% highlight bash %}
-menuentry 'Windows Boot Manager (on /dev/nvme0n1p1)' -
--class windows --class os $menuentry_id_option 'osprob
-er-efi-3E7D-B1CB' {
-        insmod part_gpt
-        insmod fat
-        search --no-floppy --fs-uuid --set=root 3E7D-B
-1CB
-        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-}
-{% endhighlight %}
-
-![Arch Install: GRUB menu entry: Windows][017-grub-windows]
-
-While the EFI menu entry contain`fwsetup`.
-This is new stuff for me.
-
-{% highlight bash %}
-menuentry 'UEFI Firmware Settings' $menuentry_id_option 'uefi-firmware' {
-        fwsetup
-}
-{% endhighlight %}
-
-![Arch Install: GRUB menu entry: UEFI][017-grub-uefi]
-
-The linux menu entry part, you can examine yourself.
+The windows menu configuration can be configured later after boot.
 
 -- -- --
 
@@ -779,11 +719,6 @@ Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 [015-efibootmgr]:   {{ asset_path }}/015-efibootmgr.png
 [016-efi-grub]:     {{ asset_path }}/016-efi-grub.png
 [017-grub-config]:  {{ asset_path }}/017-grub-config.png
-
-[017-grub-mkconfig]:{{ asset_path }}/017-grub-mkconfig.png
-[017-grub-osprober]:{{ asset_path }}/017-grub-os-prober.png
-[017-grub-uefi]:    {{ asset_path }}/017-grub-uefi.png
-[017-grub-windows]: {{ asset_path }}/017-grub-windows.png
 
 [018-findmnt-su]:   {{ asset_path }}/018-findmnt-su.png
 [018-fstab]:        {{ asset_path }}/018-fstab.png
