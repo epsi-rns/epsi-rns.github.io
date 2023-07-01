@@ -539,7 +539,12 @@ This is also a task you don not want to forget.
 
 {% highlight bash %}
 ❯# passwd
+New password: 
+Retype new password: 
+passwd: password updated successfully
 {% endhighlight %}
+
+![Arch Install: passwd][014-passwd]
 
 If you forget, you can always `chroot`.
 
@@ -548,8 +553,12 @@ If you forget, you can always `chroot`.
 I should learn new knowledge about EFI stuff.
 
 {% highlight bash %}
-❯# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+❯# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader=GRUB
+Installing for x86_64-efi platform.
+Installation finished. No error reported.
 {% endhighlight %}
+
+![Arch Install: grub-install EFI][016-grub-install]
 
 The command would install the `grubx64.efi`
 or something similar.
@@ -761,6 +770,9 @@ Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 
 [018-findmnt-su]:   {{ asset_path }}/018-findmnt-su.png
 [018-fstab]:        {{ asset_path }}/018-fstab.png
+
+[014-passwd]:       {{ asset_path }}/014-passwd.png
+[016-grub-install]: {{ asset_path }}/016-grub-install.png
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
