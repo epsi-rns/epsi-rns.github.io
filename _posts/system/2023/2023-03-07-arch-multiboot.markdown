@@ -30,11 +30,9 @@ such as Windows or FreeBSD.
 #### Table of Content
 
 * [Table of Content](#toc)
-
 * [GRUB](#grub)
 * [EFI](#efi)
 * [fstab](#fstab)
-
 * [What is Next?](#whats-next)
 
 -- -- --

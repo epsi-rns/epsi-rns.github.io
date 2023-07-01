@@ -32,12 +32,10 @@ so we can easily do more basic administration.
 #### Table of Content
 
 * [Table of Content](#toc)
-
 * [Networking](#networking)
 * [Basic Tools](#basic-tools)
 * [User Administration](#user-admin)
 * [GUI Display](#gui-display)
-
 * [What is Next?](#whats-next)
 
 -- -- --
