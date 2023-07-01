@@ -9,7 +9,7 @@ author: epsi
 toc        : toc/2023/05/toc-install.html
 
 excerpt:
-  Examine arch install.
+  Examine arch install for multiboot situation.
 
 opengraph:
   image: /assets/posts/system/2023/04/014-lsinitcpio.png
@@ -18,7 +18,7 @@ opengraph:
 
 ### Preface
 
-> Goal: Examine arch install.
+> Goal: Examine arch install for multiboot situation.
 
 The last time I wrote about Arch install is in 2014 (nine years ago).
 
@@ -708,6 +708,19 @@ The linux menu entry part, you can examine yourself.
 
 -- -- --
 
+### Prepare Post Install.
+
+Networking is only one thing to be rpepared for post install.
+So you'd better install `iwd` in the first place.
+You can change to network manager later.
+Or if you can also install network manager.
+
+{% highlight bash %}
+❯# pacman -S iw iwd wpa_supplicant networkmanager dhcpcd
+{% endhighlight %}
+
+-- -- --
+
 <a name="reboot"></a>
 
 ### Reboot
@@ -724,6 +737,10 @@ Then reboot.
 {% highlight bash %}
 ❯# poweroff
 {% endhighlight %}
+
+Check if your arch linux can boot correctly using EFI from BIOS.
+Also check from BIOS if your windows boot is still there,
+and run correctly.
 
 -- -- --
 
