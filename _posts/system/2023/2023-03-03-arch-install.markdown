@@ -38,6 +38,13 @@ _And be sure you have read the manual._
 
 * [Arch Wiki: Beginners's Guide: Installation][link-archwiki]
 
+The difference is,
+now you can have archinstall script that can guide you,
+and that means you can entirely skip this article.
+
+I still prefere manual install.
+Because I still need to update my knowledge.
+
 #### Rewrite
 
 Nine years ago I wrote this article:
@@ -136,8 +143,6 @@ Windows: 200 GB ntfs
 Docs:     60 GB ntfs
 Works:    60 GB ext4
 Arch:     75 GB ext4
---------------------
-Total    250 GB
 {% endhighlight %}
 
 In real life situtation
@@ -338,6 +343,42 @@ I'm a fan of chroot in multiboot situation.
 You can also chroot, from any running linux partition.
 Not just arch installer from bootable flash disk,
 but also from different partition.
+
+#### Mount
+
+I would like to know the result of our previous `genfstab`.
+Since it has a lot of comment `#`,
+I filter using `-v` grep exclusion .
+
+{% highlight bash %}
+❯ cat /etc/fstab | grep -v "^#"
+
+
+UUID=6d64b51a-155e-4c9e-9a3c-d19abebc5126  /           ext4        rw,relatime  0 1
+
+UUID=3E7D-B1CB        /boot/efi   vfat        umask=0077 0 2
+
+UUID=b125fe63-4ae8-4228-9e6b-9475081dce86  swap        swap    defaults,noatime 0 0
+{% endhighlight %}
+
+![Arch Install: cat /etc/fstab][018-fstab]
+
+The fstab format is concise,
+but it doesn't seems clear to me in narrow terminal.
+so I'd better use `findmnt` instead.
+
+{% highlight bash %}
+
+❯ findmnt -su
+TARGET    SOURCE               FSTYPE OPTIONS
+/         UUID=6d64b51a-155e-4c9e-9a3c-d19abebc5126
+                               ext4   rw,relatime
+/boot/efi UUID=3E7D-B1CB       vfat   umask=0077
+swap      UUID=b125fe63-4ae8-4228-9e6b-9475081dce86
+                               swap   defaults,noatime
+{% endhighlight %}
+
+![Arch Install: findmnt -su][018-findmnt-su]
 
 #### Text Editor
 
@@ -717,3 +758,12 @@ Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 [017-grub-osprober]:{{ asset_path }}/017-grub-os-prober.png
 [017-grub-uefi]:    {{ asset_path }}/017-grub-uefi.png
 [017-grub-windows]: {{ asset_path }}/017-grub-windows.png
+
+[018-findmnt-su]:   {{ asset_path }}/018-findmnt-su.png
+[018-fstab]:        {{ asset_path }}/018-fstab.png
+
+[//]: <> ( -- -- -- links below -- -- -- )
+
+[021-efivars-01]:   {{ asset_path }}/021-efivars-01.png
+[021-efivars-02]:   {{ asset_path }}/021-efivars-02.png
+[021-efivars-03]:   {{ asset_path }}/021-efivars-03.png
