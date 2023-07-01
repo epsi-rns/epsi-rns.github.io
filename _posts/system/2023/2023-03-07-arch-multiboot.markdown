@@ -173,7 +173,99 @@ Value:
 
 ### fstab
 
-/media/works
+I have prepared a few partitions to work coexist with my arch linux.
+
+{% highlight bash %}
+❯ lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+nvme0n1     259:0    0 476.9G  0 disk 
+├─nvme0n1p1 259:1    0   260M  0 part /boot/efi
+├─nvme0n1p2 259:2    0    16M  0 part 
+├─nvme0n1p3 259:3    0 195.3G  0 part /media/System
+├─nvme0n1p4 259:4    0  58.6G  0 part /media/Docs
+├─nvme0n1p5 259:5    0  14.6G  0 part [SWAP]
+├─nvme0n1p6 259:6    0  58.6G  0 part /media/Works
+├─nvme0n1p7 259:7    0  73.8G  0 part /
+└─nvme0n1p8 259:8    0     2G  0 part
+{% endhighlight %}
+
+![Arch Post Install: lsblk][025-lsblk]
+
+I can get the UUID by using `ls` command.
+
+{% highlight bash %}
+❯ ls -l /dev/disk/by-uuid --color=never
+{% endhighlight %}
+
+or better
+
+{% highlight bash %}
+❯ exa -T /dev/disk/by-uuid --color=never
+/dev/disk/by-uuid
+├── 01D90E3F2148D4D0 -> ../../nvme0n1p4
+├── 3E7D-B1CB -> ../../nvme0n1p1
+├── 6d64b51a-155e-4c9e-9a3c-d19abebc5126 -> ../../nvme0n1p7
+├── 9E467E96467E6EC1 -> ../../nvme0n1p8
+├── 705E7E355E7DF3E6 -> ../../nvme0n1p3
+├── b125fe63-4ae8-4228-9e6b-9475081dce86 -> ../../nvme0n1p5
+└── e736a5e7-d810-47a8-b6a9-8bc66421eebb -> ../../nvme0n1p6
+{% endhighlight %}
+
+![Arch Post Install: Get Disk UUID][[025-exa-uuid]
+
+So I can setup my `/etc/fstab`.
+
+{% highlight bash %}
+# <file system> <dir> <type> <options> <dump> <pass>
+
+# /dev/nvme0n1p7
+UUID=6d64b51a-155e-4c9e-9a3c-d19abebc5126	/         	ext4      	rw,relatime	0 1
+
+# /dev/nvme0n1p1 LABEL=SYSTEM_DRV
+UUID=3E7D-B1CB      	/boot/efi 	vfat      	umask=0077 0 2
+
+# /dev/nvme0n1p5
+UUID=b125fe63-4ae8-4228-9e6b-9475081dce86	swap        swap    defaults,noatime 0 0
+
+# /dev/nvme0n1p3
+UUID=705E7E355E7DF3E6                     /media/System  ntfs-3g defaults,x-systemd.automount,noauto,locale=en_US.UTF-8 0 0
+
+# /dev/nvme0n1p4
+UUID=01D90E3F2148D4D0                     /media/Docs    ntfs-3g defaults,x-systemd.automount,locale=en_US.UTF-8 0 0
+
+# /dev/nvme0n1p6
+UUID=e736a5e7-d810-47a8-b6a9-8bc66421eebb /media/Works   ext4    defaults,users,exec 0 2
+
+tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+{% endhighlight %}
+
+![Arch Post Install: /etc/fstab][[025-vim-fstab]
+
+And finally get the nice output of the mount point.
+
+{% highlight bash %}
+❯ findmnt -su
+TARGET SOURCE FSTYPE  OPTIONS
+/      UUID=6d64b51a-155e-4c9e-9a3c-d19abebc5126
+              ext4    rw,relatime
+/boot/efi
+       UUID=3E7D-B1CB
+              vfat    umask=0077
+swap   UUID=b125fe63-4ae8-4228-9e6b-9475081dce86
+              swap    defaults,noatime
+/media/System
+       UUID=705E7E355E7DF3E6
+              ntfs-3g defaults,x-systemd.automount,noauto,locale=en_US.UTF-8
+/media/Docs
+       UUID=01D90E3F2148D4D0
+              ntfs-3g defaults,x-systemd.automount,locale=en_US.UTF-8
+/media/Works
+       UUID=e736a5e7-d810-47a8-b6a9-8bc66421eebb
+              ext4    defaults,users,exec
+/tmp   tmpfs  tmpfs   defaults,noatime,mode=1777
+{% endhighlight %}
+
+![Arch Post Install: findmnt -su][025-findmnt-su]
 
 -- -- --
 
@@ -200,3 +292,8 @@ Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 [024-efivars-02]:   {{ asset_path }}/024-efivars-02.png
 [024-efivars-03]:   {{ asset_path }}/024-efivars-03.png
 [024-efivar-name]:  {{ asset_path }}/024-efivar-name.png
+
+[025-exa-uuid]:     {{ asset_path }}/025-exa-uuid.png
+[025-findmnt-su]:   {{ asset_path }}/025-findmnt-su.png
+[025-lsblk]:        {{ asset_path }}/025-lsblk.png
+[025-vim-fstab]:    {{ asset_path }}/025-vim-fstab.png
