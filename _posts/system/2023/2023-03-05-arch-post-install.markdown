@@ -33,9 +33,9 @@ so we can easily do more basic administration.
 
 * [Table of Content](#toc)
 * [Networking](#networking)
-* [Basic Tools](#basic-tools)
 * [User Administration](#user-admin)
 * [GUI Display](#gui-display)
+* [Basic Tools](#basic-tools)
 * [What is Next?](#whats-next)
 
 -- -- --
@@ -85,37 +85,6 @@ provided in this article series.
 
 -- -- --
 
-<a name="basic-tools"></a>
-
-### Basic Tools
-
-> You can skip this
-
-I put my basic tools here,
-I need the `rankmirror` available in `pacman-contrib`.
-I laso need the `lsusb` available in `usbutils`.
-And at last `man` to read the manual.
-just in case I have an issue and require troubleshooting.
-
-{% highlight bash %}
-❯# pacman -S pacman-contrib tree
-❯# pacman -S usbutils
-❯# pacman -S man-db
-{% endhighlight %}
-
-I should rmind myself to visit,
-the manual of the `man` command regularly.
-
-{% highlight bash %}
-❯# man man
-{% endhighlight %}
-
-![Arch Post Install: man man][022-man-man]
-
-That is all.
-
--- -- --
-
 <a name="user-admin"></a>
 
 ### User Administration
@@ -135,7 +104,7 @@ For example this one will create user `epsi` in a group `users`.
 This way you can omit to create a specific user group.
 
 {% highlight bash %}
-❯# useradd -m -g users -G wheel -s /bin/zsh epsi
+❯# useradd -m -g users -G wheel -s /bin/bash epsi
 ❯# passwd epsi
 {% endhighlight %}
 
@@ -146,14 +115,13 @@ This way you can omit to create a specific user group.
 Now we can check the result
 
 {% highlight bash %}
-❯# cat /etc/passwd \
-| grep "bash\|zsh"
+❯ cat /etc/passwd | grep "bash"
 root:x:0:0::/root:/bin/bash
-epsi:x:1000:984::/home/epsi:/bin/zsh
+epsi:x:1000:984::/home/epsi:/bin/bash
 rizqi:x:1001:1001::/home/rizqi:/bin/bash
 {% endhighlight %}
 
-![Arch Post Install: User Administration: passwd][021-usman-passwd]
+![Arch Post Install: User Administration: passwd][021-usman-passwdb]
 
 {% highlight bash %}
 ❯# cat /etc/group \
@@ -224,6 +192,39 @@ Die hard veteran would love `visudo`
 
 Now try login in TTY for user that you made.
 
+#### Change Shell
+
+`bash` is not the only shell,
+you can change to other shell.
+First you have to install the shell.
+
+{% highlight bash %}
+❯# pacman -S zsh fish
+{% endhighlight %}
+
+And change the shell.
+
+{% highlight bash %}
+❯ chsh -s /bin/zsh
+Changing shell for epsi.
+Password: 
+Shell changed.
+{% endhighlight %}
+
+![Arch Post Install: Change Shell: chsh][021-chsh-s]
+
+And finally, check the result in user administration.
+
+{% highlight bash %}
+❯# cat /etc/passwd \
+| grep "bash\|zsh"
+root:x:0:0::/root:/bin/bash
+epsi:x:1000:984::/home/epsi:/bin/zsh
+rizqi:x:1001:1001::/home/rizqi:/bin/bash
+{% endhighlight %}
+
+![Arch Post Install: User Administration: passwd][021-usman-passwdz]
+
 -- -- --
 
 <a name="display-gui"></a>
@@ -258,6 +259,36 @@ So use `sddm` instead.
 {% highlight bash %}
 ❯# pacman -S sddm
 {% endhighlight %}
+
+You can enable.
+
+{% highlight bash %}
+❯ sudo systemctl enable sddm
+Created symlink /etc/systemd/system/display-manager.service → /usr/lib/systemd/system/sddm.service.
+{% endhighlight %}
+
+![Arch Post Install: Display: SDDM: enable][023-sddm-enable]
+
+Then start from TTY.
+
+{% highlight bash %}
+❯ sudo systemctl start sddm
+{% endhighlight %}
+
+you need to relogin if you are already in window manager.
+
+![Arch Post Install: Display: SDDM: start][023-sddm-start]
+
+Or you can stop and disable, 
+so you can learn how to run window manager,
+directly from TTY.
+
+{% highlight bash %}
+❯ sudo systemctl disable sddm
+Removed "/etc/systemd/system/display-manager.service".
+{% endhighlight %}
+
+![Arch Post Install: Display: SDDM: disable][023-sddm-disable]
 
 #### Window Manager
 
@@ -314,11 +345,94 @@ this can be done by this.
 non-network local connections being added to access control list
 {% endhighlight %}
 
-Now I can navigate my alternate account.
+Now I can navigate my alternate account,
+using any file manager.
 
 {% highlight bash %}
 ❯ sudo -u rizqi caja &!
 {% endhighlight %}
+
+-- -- --
+
+<a name="basic-tools"></a>
+
+### Basic Tools
+
+#### Additional Packages
+
+I put my basic tools here,
+I need the `rankmirror` available in `pacman-contrib`,
+the `lsusb` available in `usbutils`,
+the `git` and `base-devel` to build `yay`.
+And at last `man` to read the manual.
+just in case I have an issue and require troubleshooting.
+
+{% highlight bash %}
+❯# pacman -S pacman-contrib tree
+❯# pacman -S usbutils
+❯# pacman -S git base-devel
+❯# pacman -S man-db
+{% endhighlight %}
+
+I should rmind myself to visit,
+the manual of the `man` command regularly.
+
+{% highlight bash %}
+❯# man man
+{% endhighlight %}
+
+![Arch Post Install: man man][022-man-man]
+
+That is all.
+
+#### AUR
+
+> Arch User Repository
+
+I choose `yay` to manage AUR.
+And just find out that there is already,
+this easy to use `yay-bin`.
+First we have to clone the git source.
+
+{% highlight bash %}
+❯ git clone https://aur.archlinux.org/yay-bin.git
+Cloning into 'yay-bin'...
+remote: Enumerating objects: 414, done.
+remote: Counting objects: 100% (414/414), done.
+remote: Compressing objects: 100% (274/274), done.
+remote: Total 414 (delta 138), reused 408 (delta 138), pack-reused 0
+Receiving objects: 100% (414/414), 90.93 KiB | 221.00 KiB/s, done.
+Resolving deltas: 100% (138/138), done.
+{% endhighlight %}
+
+![Arch Post Install: AUR: yay-bin: git clone][026-git-yay-bin]
+
+Then `makepkg`.
+This is going to be a long message.
+
+{% highlight bash %}
+$ cd yay-bin
+$ makepkg -si
+{% endhighlight %}
+
+![Arch Post Install: AUR: yay-bin: makepkg][026-makepkg-si-01]
+
+![Arch Post Install: AUR: yay-bin: makepkg][026-makepkg-si-02]
+
+Then the `yay` can just run.
+
+{% highlight bash %}
+❯ yay
+:: Synchronizing package databases...
+ core                  134.0 KiB  65.9 KiB/s 00:02
+ extra                   8.3 MiB   761 KiB/s 00:11
+:: Searching AUR for updates...
+:: Searching databases for updates...
+{% endhighlight %}
+
+![Arch Post Install: AUR: yay][026-yay-sync]
+
+Well, I love to see compilation in my terminal, so much.
 
 -- -- --
 
@@ -341,8 +455,10 @@ Consider continue reading [ [Arch: Multiboot][local-whats-next] ].
 
 [021-usman-group]:  {{ asset_path }}/021-usman-group.png
 [021-usman-gshadow]:{{ asset_path }}/021-usman-gshadow.png
-[021-usman-passwd]: {{ asset_path }}/021-usman-passwd.png
+[021-usman-passwdz]:{{ asset_path }}/021-usman-passwd-zsh.png
+[021-usman-passwdb]:{{ asset_path }}/021-usman-passwd-bash.png
 [021-usman-shadow]: {{ asset_path }}/021-usman-shadow.png
+[021-chsh-s]:       {{ asset_path }}/021-chsh-s.png
 
 [022-sudoers]:      {{ asset_path }}/022-sudoers.png
 [022-visudo]:       {{ asset_path }}/022-visudo.png
@@ -353,3 +469,11 @@ Consider continue reading [ [Arch: Multiboot][local-whats-next] ].
 [023-sway]:         {{ asset_path }}/023-sway.png
 [023-xfce4]:        {{ asset_path }}/023-xfce4.png
 
+[023-sddm-disable]: {{ asset_path }}/023-sddm-disable.png
+[023-sddm-enable]:  {{ asset_path }}/023-sddm-enable.png
+[023-sddm-start]:   {{ asset_path }}/023-sddm-start.png
+
+[026-git-yay-bin]:  {{ asset_path }}/026-git-yay-bin.png
+[026-makepkg-si-01]:{{ asset_path }}/026-makepkg-si-01.png
+[026-makepkg-si-02]:{{ asset_path }}/026-makepkg-si-02.png
+[026-yay-sync]:     {{ asset_path }}/026-yay-sync.png

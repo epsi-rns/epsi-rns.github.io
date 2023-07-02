@@ -184,6 +184,15 @@ Value:
 I have prepared a few partitions to work coexist with my arch linux.
 
 {% highlight bash %}
+❯ mkdir /media
+❯ mkdir /media/System
+❯ mkdir /media/Docs
+❯ mkdir /media/Works
+{% endhighlight %}
+
+I can mount manually, so I can have this result.
+
+{% highlight bash %}
 ❯ lsblk
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 476.9G  0 disk 
@@ -198,6 +207,8 @@ nvme0n1     259:0    0 476.9G  0 disk
 {% endhighlight %}
 
 ![Arch Post Install: lsblk][025-lsblk]
+
+But how exactly do I setup the `fstab`?
 
 I can get the UUID by using `ls` command.
 
