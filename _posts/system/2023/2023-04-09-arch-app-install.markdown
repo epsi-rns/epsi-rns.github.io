@@ -31,28 +31,66 @@ so I think this is a good time to bloat my system.
 #### Table of Content
 
 * [Table of Content](#toc)
-* [Miscellanous Packages](#packages)
+* [Terminal](#terminal)
+* [Web Browser](#web-browser)
 * [Printing](#cups)
-* [AUR](#aur)
+* [Window Manager](#window-manager)
+* [Desktop Environment](#desktop-environment)
+* [Utility](#utility)
+* [Daily Basis Office](#office)
+* [Development](#development)
+* [Waydroid](#waydroid)
+* [Screenshooter](#screenshoter)
+* [Miscellanous AUR Packages](#aur)
 * [What is Next?](#whats-next)
 
 -- -- --
 
-<a name="packages"></a>
+<a name="terminal"></a>
 
-### Miscellanous Packages
-
-Oh yeah, I have a lot things to do in daily basis.
-So I require this packages.
-
-#### Terminal
+### Terminal
 
 {% highlight bash %}
 ❯# pacman -S htop neofetch
 ❯# pacman -S tmux vim neovim
 {% endhighlight %}
 
-#### Window Manager
+-- -- --
+
+<a name="web-browser"></a>
+
+### Web Browser
+
+This is also the first things to do afer GUI.
+
+{% highlight bash %}
+❯# pacman -S firefox chromium qutebrowser
+{% endhighlight %}
+
+{% highlight bash %}
+❯$ xdg-mime default firefox.desktop x-scheme-handler/https
+❯$ xdg-mime default firefox.desktop x-scheme-handler/http
+❯$ xdg-settings set default-web-browser "firefox.desktop"
+{% endhighlight %}
+
+-- -- --
+
+<a name="cups"></a>
+
+### Printing
+
+{% highlight bash %}
+❯# pacman -S cups
+❯# systemctl enable cupsd.service
+❯# systemctl start cupsd.service
+❯$ yay epson-inkjet-printer-escpr
+{% endhighlight %}
+
+-- -- --
+
+<a name="window-manager"></a>
+
+### Window Manager
 
 > For Ricing
 
@@ -65,8 +103,23 @@ So I require this packages.
 ❯# pacman -S i3-wm sway
 {% endhighlight %}
 
+Most of the time I require this applet.
 
-#### Desktop Environment
+{% highlight bash %}
+❯# pacman -S network-manager-applet
+{% endhighlight %}
+
+I also need font tool.
+
+{% highlight bash %}
+❯# pacman -S xorg-xfontsel
+{% endhighlight %}
+
+-- -- --
+
+<a name="desktop-environment"></a>
+
+### Desktop Environment
 
 {% highlight bash %}
 ❯# pacman -S archlinux wallpaper
@@ -87,22 +140,29 @@ so I remove for a while
 ❯# pacman -R xdg-desktop-portal-gnome
 {% endhighlight %}
 
+-- -- --
 
-#### Utility
+<a name="utility"></a>
+
+### Utility
 
 {% highlight bash %}
-❯# pacman -S network-manager-applet
 ❯# pacman -S gparted ntfs-3g gpart gvfs ncdu hdparm nvme-cli
 ❯# pacman -S nethogs iftop dstat atop iotop nmon
 ❯# pacman -S polkit mate-polkit
 {% endhighlight %}
 
-#### Office
+-- -- --
 
-> Daily Base
+<a name="office"></a>
+
+### Office
+
+> Daily Basis
+
+Oh yeah, I have a lot things to do in daily basis.
 
 {% highlight bash %}
-❯# pacman -S firefox chromium qutebrowser
 ❯# pacman -S libreoffice-still
 ❯# pacman -S inkscape gimp blender
 ❯# pacman -S ffmpeg mpv vlc clementine
@@ -111,7 +171,17 @@ so I remove for a while
 ❯# pacman -S texlive-bin texlive-core
 {% endhighlight %}
 
-#### Development
+There is also this `zoom` provided by AUR.
+
+{% highlight bash %}
+❯# yay zoom
+{% endhighlight %}
+
+-- -- --
+
+<a name="development"></a>
+
+### Development
 
 {% highlight bash %}
 ❯# pacman -S --needed git base-devel
@@ -123,22 +193,51 @@ so I remove for a while
 
 -- -- --
 
-<a name="cups"></a>
+<a name="waydroid"></a>
 
-### Printing
+### Waydroid
+
+I need to learn how to manage Android app in desktop.
 
 {% highlight bash %}
-❯# pacman -S cups
-❯# systemctl enable cupsd.service
-❯# systemctl start cupsd.service
-$ yay epson-inkjet-printer-escpr
+❯$ yay libglibutil
+❯$ yay libgbinder
+❯$ yay python-gbinder
+❯$ yay waydroid
+{% endhighlight %}
+
+-- -- --
+
+<a name="screenshoter"></a>
+
+### Screenshoter
+
+I manage to create my own screenshooter,
+based on `scrot`.
+
+{% highlight bash %}
+❯# pacman -S autoconf-archive
+❯$ yay giblib
+{% endhighlight %}
+
+{% highlight bash %}
+❯$ git clone https://github.com/epsi-rns/scrotty
 {% endhighlight %}
 
 -- -- --
 
 <a name="aur"></a>
 
-### AUR
+### Miscellanous AUR Packages
+
+{% highlight bash %}
+❯$ yay cava
+❯$ yay pod2man
+❯$ yay lemonbar-git
+❯$ yay termite
+❯$ yay nbwmon
+❯$ yay dwm-git
+{% endhighlight %}
 
 -- -- --
 
