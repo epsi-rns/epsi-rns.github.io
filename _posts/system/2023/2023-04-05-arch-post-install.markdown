@@ -238,6 +238,9 @@ With GUI we can configure stuff easier.
 I would like to set up xorg first.
 Then wayland later.
 
+I understand display server deserver an article of its own.
+So I make it quick here, and I will discuss the detail later.
+
 #### Display Server
 
 > xorg

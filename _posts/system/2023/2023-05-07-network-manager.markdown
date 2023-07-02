@@ -383,6 +383,16 @@ Failed to read or parse configuration '/proc/self/fd/13'.
 : CTRL-EVENT-DSCP-POLICY clear_all
 {% endhighlight %}
 
+-- -- --
+
+### GUI
+
+When you are working with desktop environment or window manager,
+this is a must have tools.
+
+{% highlight bash %}
+❯# pacman -S network-manager-applet
+{% endhighlight %}
 
 -- -- --
 
