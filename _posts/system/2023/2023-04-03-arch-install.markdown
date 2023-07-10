@@ -81,6 +81,15 @@ you can still improve your skill with other distro.
 
 * [What is Next?](#whats-next)
 
+#### Backup
+
+> Better safe than sorry
+
+For multiboot situtation, the longest time you need to do is not installling.
+But, backup.
+
+Please prepare your journey by backuping your data first.
+
 -- -- --
 
 ### A: Prepare the Bootable
@@ -321,6 +330,13 @@ required to run the system.
 {% highlight bash %}
 ❯# pacstrap -K /mnt base linux linux-firmware
 {% endhighlight %}
+
+You are going to see packages downloaded from internet,
+similar to below figure:
+
+![Arch Install: pacstrap][005-pacstrap]
+
+#### Generate File System Configuration
 
 And we also need to configure `fstab`,
 in order to `chroot`.
@@ -709,6 +725,7 @@ Consider continue reading [ [Arch: Post Install][local-whats-next] ].
 [002-ss-bitlocker]: {{ asset_path }}/002-ss-bitlocker.png
 [003-easeus-part]:  {{ asset_path }}/003-easeus-partition.png
 [004-lsblk]:        {{ asset_path }}/004-lsblk.png
+[005-pacstrap]:     {{ asset_path }}/005-pacstrap.jpg
 
 [011-locale-gen]:   {{ asset_path }}/011-locale-gen.png
 [012-locale-conf]:  {{ asset_path }}/012-locale-conf.png
