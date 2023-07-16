@@ -35,6 +35,7 @@ so we can easily do more basic administration.
 * [Networking](#networking)
 * [User Administration](#user-admin)
 * [GUI Display](#gui-display)
+* [Init: Service Manager](#init)
 * [Basic Tools](#basic-tools)
 * [What is Next?](#whats-next)
 
@@ -322,7 +323,7 @@ Beginner would love xfce4.
 Personally, I prefer to use AwesomeWM.
 But I know Awesome is not for everbidy especially beginner.
 
-![Arch Post Install: Display: AwesomeWm][023-awesome]
+![Arch Post Install: Display: AwesomeWM][023-awesome]
 
 I've been using this AwesomeWM in about four years.
 Just simply because I do not have time,
@@ -354,6 +355,53 @@ using any file manager.
 {% highlight bash %}
 ❯ sudo -u rizqi caja &!
 {% endhighlight %}
+
+-- -- --
+
+<a name="init"></a>
+
+### Init: Service Manager
+
+Init manage what daemon running.
+The simple terminology for init is service manager.
+
+Init require its own article.
+However for a glance of overview, 
+This is what we have for daily basis.
+
+#### systemd
+
+Vanilla Arch is using `systemd`.
+You can check running services using this command:
+
+{% highlight bash %}
+❯ systemctl status
+{% endhighlight %}
+
+![Arch Post Install: Init : systemctl status][031-sysctl-status]
+
+You need proper privilege to change service state.
+
+{% highlight bash %}
+❯ systemctl enable iwd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-unit-files ====
+Authentication is required to manage system service or unit files.
+Multiple identities can be used for authentication:
+ 1.  epsi
+ 2.  rizqi
+Choose identity to authenticate as (1-2):
+{% endhighlight %}
+
+![Arch Post Install: Init : systemctl swithout udo][032-sysctl-auth]
+
+Just don't forget the magic `sudo` word.
+
+{% highlight bash %}
+❯ sudo systemctl enable iwd
+Created symlink /etc/systemd/system/multi-user.target.wants/iwd.service → /usr/lib/systemd/system/iwd.service.
+{% endhighlight %}
+
+![Arch Post Install: Init : systemctl with sudo][033-sysctl-auth]
 
 -- -- --
 
@@ -480,3 +528,7 @@ Consider continue reading [ [Arch: Multiboot][local-whats-next] ].
 [026-makepkg-si-01]:{{ asset_path }}/026-makepkg-si-01.png
 [026-makepkg-si-02]:{{ asset_path }}/026-makepkg-si-02.png
 [026-yay-sync]:     {{ asset_path }}/026-yay-sync.png
+
+[031-sysctl-status]:{{ asset_path }}/031-systemctl-status.png
+[032-sysctl-auth]:  {{ asset_path }}/032-systemctl-auth.png
+[033-sysctl-auth]:  {{ asset_path }}/033-systemctl-auth.png

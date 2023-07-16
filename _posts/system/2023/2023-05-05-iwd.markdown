@@ -176,6 +176,48 @@ Passphrase: **********
 
 ![IWD: Forget Connection][057-known-net]
 
+We can check the detail of the device.
+
+{% highlight bash %}
+[iwd]# device wlan0 show
+                                 Device: wlan0                                *
+--------------------------------------------------------------------------------
+  Settable  Property              Value                                          
+--------------------------------------------------------------------------------
+            Name                  wlan0                                            
+         *  Mode                  station                                          
+         *  Powered               on                                               
+            Address               9c:2f:9d:9a:6d:e3                                
+            Adapter               phy0                                             
+{% endhighlight %}
+
+![IWD: Show Device][057-d-wlan0-show]
+
+And also the connection detail of the station
+
+{% highlight bash %}
+[iwd]# station wlan0 show
+                                 Station: wlan0                               *
+--------------------------------------------------------------------------------
+  Settable  Property              Value                                          
+--------------------------------------------------------------------------------
+            Scanning              no                                               
+            State                 connected                                        
+            Connected network     E.R. Nurwijayadi                                 
+            IPv4 address          192.168.43.173                                   
+            ConnectedBss          1e:77:f6:4c:0d:31                                
+            Frequency             2442                                             
+            Security              WPA2-Personal                                    
+            RSSI                  -31 dBm                                          
+            AverageRSSI           -30 dBm                                          
+            TxMode                802.11n                                          
+            TxMCS                 7                                                
+            TxBitrate             72200 Kbit/s                                     
+            RxBitrate             1000 Kbit/s          
+{% endhighlight %}
+
+![IWD: Show Station][057-s-wlan0-show]
+
 -- -- --
 
 ### Testing The Connection
@@ -253,14 +295,93 @@ Just to prove that it really to stopped.
 
 -- -- --
 
+### Config
+
+There are two configuration
+* Main Configuration
+* Per Connexion
+
+#### Main Configuration
+
+The main configuration can provide something
+like `EnableNetworkConfiguration`.
+
+{% highlight bash %}
+❯ sudo touch /etc/iwd/main.conf
+❯ sudo nano /etc/iwd/main.conf
+❯ sudo cat /etc/iwd/main.conf
+[General]
+EnableNetworkConfiguration=true
+{% endhighlight %}
+
+![IWD: Main Configuration][061-bat-etc-iwd]
+
+#### Per Connexion
+
+This is what I have got,
+while examining the `/var/lib/iwd` directory.
+All the connexion stored here.
+
+{% highlight bash %}
+❯ sudo su
+[root@utama epsi]# cd /var/lib/iwd
+[root@utama iwd]# ls
+'=452e522e204e757277696a6179616469.psk'   hotspot
+{% endhighlight %}
+
+Let's see what's in there.
+
+{% highlight bash %}
+❯ sudo su
+[root@utama epsi]# cat /var/lib/iwd/=452e522e204e757277696a6179616469.psk
+[Security]
+PreSharedKey=50a047c8ba8ff1f14bc7651ff1b6e4bb6e6682d4c218181461a3ae22b014b7ad
+Passphrase=oyenyebus
+SAE-PT-Group19=e8eeab4081b3142b487369bae06addef2563e0a77516fc22b748ad6f01ffb5f1b6d07bd778d14377fa447ad7519b0839f3977bf35487e06938e70a464493a594
+SAE-PT-Group20=7453564053aadda669ceeee61dc58abc490f1af8150e842db69bde434594a2912da0223c73ffd2a7502db8569aa7e11dbd1b2a36dea05187585301544ac9d3de597597edb19cbba16394ed30f0dc8c502442c1a74c129bcc27d5c6fa66c4b65e
+{% endhighlight %}
+
+![IWD: /var/lib/iwd][062-var-lib-iwd]
+
+It is a good idea to manage each connexion manually,
+for frequent connexion.
+
+{% highlight bash %}
+❯ sudo su
+[root@utama epsi]# cd /var/lib/iwd
+[root@utama iwd]# ls -l
+total 12
+-rw-r--r-- 1 root root  110 Jul 16 10:02 ern.psk
+drwx------ 2 root root 4096 Jun  4 01:33 hotspot
+-rw------- 1 root root  464 Jul 16 10:06 Whitewood.psk
+{% endhighlight %}
+
+![IWD: ls -l /var/lib/iwd][064-var-lib-ls]
+
+
+{% highlight bash %}
+❯ sudo cat /var/lib/iwd/ern.psk
+[Security]
+PreSharedKey=50a047c8ba8ff1f14bc7651ff1b6e4bb6e6682d4c218181461a3ae22b014b7ad
+Passphrase=oyenyebus
+{% endhighlight %}
+
+![IWD: cat /var/lib/iwd/ern.psk][063-var-lib-ern]
+
+This looks better with `bat` instead od `cat`.
+
+![IWD: bat /var/lib/iwd/ern.psk][066-bat-var-lib]
+
+-- -- --
+
 <a name="whats-next"></a>
 
 ### What is Next 🤔?
 
 After the `INet Wireless Daemon` in arch setup.
-I need `network manager` in post arch setup.
+I need `WPA Supplicant` in post arch setup.
 
-Consider continue reading [ [Wireless: Network Manager][local-whats-next] ].
+Consider continue reading [ [Wireless: WPA Supplicant][local-whats-next] ].
 
 [//]: <> ( -- -- -- links below -- -- -- )
 
@@ -268,7 +389,7 @@ Consider continue reading [ [Wireless: Network Manager][local-whats-next] ].
 
 [ref-bandit]:       https://bandithijo.dev/blog/mudah-mengkonfigurasi-wifi-dengan-iwd
 
-[local-whats-next]: /system/2023/05/07/network-manager.html
+[local-whats-next]: /system/2023/05/07/wpa-supplicant.html
 
 [050-summary]:      {{ asset_path }}/050-summary.png
 [051-disable-iwd]:  {{ asset_path }}/051-disable-iwd.png
@@ -284,7 +405,16 @@ Consider continue reading [ [Wireless: Network Manager][local-whats-next] ].
 [056-wlan0-get-02]: {{ asset_path }}/056-station-wlan0-get-networks-02.png
 [057-known-net]:    {{ asset_path }}/057-known-networks-forget.png
 [057-wlan0-connect]:{{ asset_path }}/057-station-wlan0-connect.png
+[057-d-wlan0-show]: {{ asset_path }}/057-device-wlan0-show.png
+[057-s-wlan0-show]: {{ asset_path }}/057-station-wlan0-show.png
 [058-ping-01]:      {{ asset_path }}/058-ping-google-01.png
 [058-ping-02]:      {{ asset_path }}/058-ping-google-02.png
 [059-dhclient]:     {{ asset_path }}/059-dhclient.png
 [059-iwd-stop-ping]:{{ asset_path }}/059-iwd-stop-ping.png
+
+[061-bat-etc-iwd]:  {{ asset_path }}/061-bat-etc-iwd-main-conf.png
+[062-var-lib-iwd]:  {{ asset_path }}/062-var-lib-iwd.png
+[063-var-lib-ern]:  {{ asset_path }}/063-var-lib-iwd-ern.png
+[064-var-lib-ls]:   {{ asset_path }}/064-var-lib-iwd-ls.png
+[065-var-lib-cat]:  {{ asset_path }}/065-var-lib-iwd-cat.png
+[066-bat-var-lib]:  {{ asset_path }}/066-bat-var-lib-iwd-ern-psk.png

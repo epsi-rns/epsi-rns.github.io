@@ -2,7 +2,7 @@
 layout    : post
 title     : "Wireless: Network Manager"
 categories: system
-date      : 2023-05-07 09:25:15 +0700
+date      : 2023-05-09 09:25:15 +0700
 tags      : [network]
 keywords  : [vanilla arch, lenovo, network manager, nmcli, nmtui]
 author: epsi
@@ -87,7 +87,7 @@ Created symlink /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service �
 Created symlink /etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service → /usr/lib/systemd/system/NetworkManager-wait-online.service.
 {% endhighlight %}
 
-![Network Manager: Enable][061-nm-enable]
+![Network Manager: Enable][091-nm-enable]
 
 And so, disabling service is just removing a symbolic link.
 
@@ -98,7 +98,7 @@ Removed "/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service".
 Removed "/etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service".
 {% endhighlight %}
 
-![Network Manager: Disable][061-nm-disable]
+![Network Manager: Disable][091-nm-disable]
 
 You may use `su` to get into root, or using `sudo`,
 so the command line won't ask you about which privilege to use.
@@ -113,7 +113,7 @@ Multiple identities can be used for authentication:
 Choose identity to authenticate as (1-2):
 {% endhighlight %}
 
-![Network Manager: No Sudo][061-nm-user-nosu]
+![Network Manager: No Sudo][091-nm-user-nosu]
 
 Note that enable service,
 does not start the service.
@@ -137,7 +137,7 @@ Jun 15 09:14:28 utama NetworkManager[5226]: <warn>  [1686795268.1722>
 Jun 15 09:14:28 utama NetworkManager[5226]: <info>  [1686795268.1722>
 {% endhighlight %}
 
-![Network Manager: Status Inactive][062-nm-status]
+![Network Manager: Status Inactive][092-nm-status]
 
 You should start the `NetworkManager` to activate the service.
 
@@ -165,7 +165,7 @@ Jun 15 09:23:24 utama NetworkManager[6613]: <info>  [1686795804.5764>
 Jun 15 09:23:24 utama NetworkManager[6613]: <info>  [1686795804.9693>
 {% endhighlight %}
 
-![Network Manager: Status Inactive][062-nm-status-act]
+![Network Manager: Status Inactive][092-nm-status-act]
 
 #### Start and Stop
 
@@ -176,7 +176,7 @@ You can play with start and stop.
 ❯ sudo systemctl stop NetworkManager
 {% endhighlight %}
 
-![Network Manager: Start Stop][062-nm-start-stop]
+![Network Manager: Start Stop][092-nm-start-stop]
 
 Nothing complex.
 
@@ -209,7 +209,7 @@ so we can have this service automatically started at boot.
 Created symlink /etc/systemd/system/multi-user.target.wants/dhcpcd.service → /usr/lib/systemd/system/dhcpcd.service.
 {% endhighlight %}
 
-![Network Manager: Enable DHCPCD][063-dhcp-enable]
+![Network Manager: Enable DHCPCD][093-dhcp-enable]
 
 And you can try the opposite command.
 
@@ -218,7 +218,7 @@ And you can try the opposite command.
 Removed "/etc/systemd/system/multi-user.target.wants/dhcpcd.service".
 {% endhighlight %}
 
-![Network Manager: Disable DHCPCD][063-dhcp-disable]
+![Network Manager: Disable DHCPCD][093-dhcp-disable]
 
 #### Status
 
@@ -252,7 +252,7 @@ Jun 15 09:28:11 utama dhcpcd[7481]: wlan0: adding default route via >
 Jun 15 09:28:13 utama dhcpcd[7481]: wlan0: no IPv6 Routers available
 {% endhighlight %}
 
-![Network Manager: DHCPCD Status][064-dhcp-status]
+![Network Manager: DHCPCD Status][094-dhcp-status]
 
 #### Start and Stop
 
@@ -263,7 +263,7 @@ You can also play with start and stop.
 ❯ sudo systemctl stop dhcpcd.service
 {% endhighlight %}
 
-![Network Manager: DHCPCD Start Stop][064-dhcp-st-st]
+![Network Manager: DHCPCD Start Stop][094-dhcp-st-st]
 
 -- -- --
 
@@ -277,30 +277,30 @@ So we need other cool tool.
 Terminal user would love the easy to use `nmtui`.
 First it show the main menu.
 
-![Network Manager: nmtui][065-nmtui-01]
+![Network Manager: nmtui][095-nmtui-01]
 
 With edit dialog.
 we can edit an already made connection.
 Or make a new one. Or forget a connection by deleting it.
 
-![Network Manager: nmtui][065-nmtui-02]
+![Network Manager: nmtui][095-nmtui-02]
 
 Normally you would go straight to connect to a network,
 by choosing SSID name.
 This can be done in activate dialog.
 
-![Network Manager: nmtui][065-nmtui-03]
+![Network Manager: nmtui][095-nmtui-03]
 
 While choosing SSID,
 there will be notification,
 showing that `nmtui`  is trying to connect to your chosen SSID.
 
-![Network Manager: nmtui][065-nmtui-05]
+![Network Manager: nmtui][095-nmtui-05]
 
 After choosing a connection,
 you would see star to the connected SSID.
 
-![Network Manager: nmtui][065-nmtui-04]
+![Network Manager: nmtui][095-nmtui-04]
 
 That is all.
 
@@ -321,7 +321,7 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 rtt min/avg/max/mdev = 17.218/17.285/17.353/0.067 ms
 {% endhighlight %}
 
-![Network Manager: ping 8.8.8.8][065-ping-8888]
+![Network Manager: ping 8.8.8.8][096-ping-8888]
 
 {% highlight bash %}
 ❯ ping archlinux.org -c 2
@@ -334,7 +334,7 @@ PING archlinux.org (95.217.163.246) 56(84) bytes of data.
 rtt min/avg/max/mdev = 228.719/252.346/275.974/23.627 ms
 {% endhighlight %}
 
-![Network Manager: ping archlinux.org][065-ping-arch-org]
+![Network Manager: ping archlinux.org][096-ping-arch-org]
 
 ### NM CLI
 
@@ -424,23 +424,23 @@ Thank you for reading and visiting.
 
 
 
-[061-nm-disable]:   {{ asset_path }}/061-nm-disable.png
-[061-nm-enable]:    {{ asset_path }}/061-nm-enable.png
-[061-nm-user-nosu]: {{ asset_path }}/061-nm-user-nosudo.png
-[062-nm-start-stop]:{{ asset_path }}/062-nm-start-stop.png
-[062-nm-status]:    {{ asset_path }}/062-nm-status.png
-[062-nm-status-act]:{{ asset_path }}/062-nm-status-active.png
-[063-dhcp-disable]: {{ asset_path }}/063-dhcp-disable.png
-[063-dhcp-enable]:  {{ asset_path }}/063-dhcp-enable.png
-[064-dhcp-st-st]:   {{ asset_path }}/064-dhcp-start-stop.png
-[064-dhcp-status]:  {{ asset_path }}/064-dhcp-status.png
+[091-nm-disable]:   {{ asset_path }}/091-nm-disable.png
+[091-nm-enable]:    {{ asset_path }}/091-nm-enable.png
+[091-nm-user-nosu]: {{ asset_path }}/091-nm-user-nosudo.png
+[092-nm-start-stop]:{{ asset_path }}/092-nm-start-stop.png
+[092-nm-status]:    {{ asset_path }}/092-nm-status.png
+[092-nm-status-act]:{{ asset_path }}/092-nm-status-active.png
+[093-dhcp-disable]: {{ asset_path }}/093-dhcp-disable.png
+[093-dhcp-enable]:  {{ asset_path }}/093-dhcp-enable.png
+[094-dhcp-st-st]:   {{ asset_path }}/094-dhcp-start-stop.png
+[094-dhcp-status]:  {{ asset_path }}/094-dhcp-status.png
 
-[065-nmtui-01]:     {{ asset_path }}/065-nmtui-01.png
-[065-nmtui-02]:     {{ asset_path }}/065-nmtui-02.png
-[065-nmtui-03]:     {{ asset_path }}/065-nmtui-03.png
-[065-nmtui-04]:     {{ asset_path }}/065-nmtui-04.png
-[065-nmtui-05]:     {{ asset_path }}/065-nmtui-05.png
-[065-ping-8888]:    {{ asset_path }}/065-ping-8888.png
-[065-ping-arch-org]:{{ asset_path }}/065-ping-archlinux.png
+[095-nmtui-01]:     {{ asset_path }}/095-nmtui-01.png
+[095-nmtui-02]:     {{ asset_path }}/095-nmtui-02.png
+[095-nmtui-03]:     {{ asset_path }}/095-nmtui-03.png
+[095-nmtui-04]:     {{ asset_path }}/095-nmtui-04.png
+[095-nmtui-05]:     {{ asset_path }}/095-nmtui-05.png
+[096-ping-8888]:    {{ asset_path }}/096-ping-8888.png
+[096-ping-arch-org]:{{ asset_path }}/096-ping-archlinux.png
 
 enable network manager
