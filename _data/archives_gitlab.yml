@@ -2,6 +2,70 @@
 # Archives by Date
 
 
+- id: 23012717
+  title: "User - Apply SQL"
+  url: /case/2023/01/27/user-man-sql/
+  
+- id: 23012517
+  title: "User - Initial SQL"
+  url: /case/2023/01/25/user-man-sql/
+  
+- id: 23012317
+  title: "User - Deployment Artefact"
+  url: /case/2023/01/23/user-man-deploy/
+  
+- id: 23012117
+  title: "User - Testing Artefact"
+  url: /case/2023/01/21/user-man-test/
+  
+- id: 23011917
+  title: "User - Sequence Diagram"
+  url: /case/2023/01/19/user-man-sequence/
+  
+- id: 23011717
+  title: "User - Class Diagram"
+  url: /case/2023/01/17/user-man-class/
+  
+- id: 23011517
+  title: "User - Use Case Diagram"
+  url: /case/2023/01/15/user-man-use-case/
+  
+- id: 23011317
+  title: "User - Requirement"
+  url: /case/2023/01/13/user-man-requirement/
+  
+- id: 23011117
+  title: "User - Overview"
+  url: /case/2023/01/11/user-man-overview/
+  
+- id: 22091329
+  title: "Inkscape: Slides - Showing Off"
+  url: /design/2022/09/13/inkscape-slide-templates-07/
+  
+- id: 22091129
+  title: "Inkscape: Slides - Example"
+  url: /design/2022/09/11/inkscape-slide-templates-06/
+  
+- id: 22090929
+  title: "Inkscape: Slides - Content"
+  url: /design/2022/09/09/inkscape-slide-templates-05/
+  
+- id: 22090729
+  title: "Inkscape: Slides - Pages"
+  url: /design/2022/09/07/inkscape-slide-templates-04/
+  
+- id: 22090529
+  title: "Inkscape: Slides - Layers"
+  url: /design/2022/09/05/inkscape-slide-templates-03/
+  
+- id: 22090329
+  title: "Inkscape: Slides - Single"
+  url: /design/2022/09/03/inkscape-slide-templates-02/
+  
+- id: 22090129
+  title: "Inkscape: Slides - Overview"
+  url: /design/2022/09/01/inkscape-slide-templates-01/
+  
 - id: 22020517
   title: "Animation Observer - Part Three"
   url: /frontend/2022/02/05/animation-observer-03/
@@ -65,6 +129,142 @@
 - id: 21110117
   title: "Inkscape Extension - Part One"
   url: /design/2021/11/01/inkscape-extension-01/
+  
+- id: 21081517
+  title: "Bootstrap - Dashboard"
+  url: /frontend/2021/08/15/bootstrap5-dashboard/
+  
+- id: 21081317
+  title: "Bootstrap - Extra"
+  url: /frontend/2021/08/13/bootstrap5-extra/
+  
+- id: 21081117
+  title: "Bootstrap - Form"
+  url: /frontend/2021/08/11/bootstrap5-form/
+  
+- id: 21080317
+  title: "Bootstrap - Javascript Numerator"
+  url: /frontend/2021/08/03/bootstrap5-javascript-numerator/
+  
+- id: 21072517
+  title: "Bootstrap - Javascript Toggler"
+  url: /frontend/2021/07/25/bootstrap5-javascript-toggler/
+  
+- id: 21072317
+  title: "Bootstrap - Sass - Blog Post"
+  url: /frontend/2021/07/23/bootstrap5-sass-blog-post/
+  
+- id: 21072117
+  title: "Bootstrap - Sass - Widget"
+  url: /frontend/2021/07/21/bootstrap5-sass-widget/
+  
+- id: 21071517
+  title: "Bootstrap - Sass - Responsive Gap"
+  url: /frontend/2021/07/15/bootstrap5-sass-responsive-gap/
+  
+- id: 21071117
+  title: "Bootstrap - Sass - Palette"
+  url: /frontend/2021/07/11/bootstrap5-sass-palette/
+  
+- id: 21070717
+  title: "Bootstrap - Sass - Responsive"
+  url: /frontend/2021/07/07/bootstrap5-sass-responsive/
+  
+- id: 21070517
+  title: "Bootstrap - Sass - Bootswatch"
+  url: /frontend/2021/07/05/bootstrap5-sass-bootswatch/
+  
+- id: 21070117
+  title: "Bootstrap - Sass - Introduction"
+  url: /frontend/2021/07/01/bootstrap5-sass-intro/
+  
+- id: 21061817
+  title: "Bootstrap - Sidebar"
+  url: /frontend/2021/06/18/bootstrap5-sidebar/
+  
+- id: 21061617
+  title: "Bootstrap - Navbar - Icons"
+  url: /frontend/2021/06/16/bootstrap5-navbar-icons/
+  
+- id: 21061517
+  title: "Bootstrap - Navbar - Awesome"
+  url: /frontend/2021/06/15/bootstrap5-navbar-awesome/
+  
+- id: 21061117
+  title: "Bootstrap - Navbar - Class"
+  url: /frontend/2021/06/11/bootstrap5-navbar-class/
+  
+- id: 21060517
+  title: "Bootstrap - Minimal"
+  url: /frontend/2021/06/05/bootstrap5-minimal/
+  
+- id: 21060317
+  title: "Bootstrap - Preparation"
+  url: /frontend/2021/06/03/bootstrap5-preparation/
+  
+- id: 21060117
+  title: "Bootstrap - Overview"
+  url: /frontend/2021/06/01/bootstrap5-overview/
+  
+- id: 21051149
+  title: "Soccer - SQLAlchemy - Three"
+  url: /backend/2021/05/11/soccer-sqlalchemy-03/
+  
+- id: 21050949
+  title: "Soccer - SQLAlchemy - Two"
+  url: /backend/2021/05/09/soccer-sqlalchemy-02/
+  
+- id: 21050749
+  title: "Soccer - SQLAlchemy - One"
+  url: /backend/2021/05/07/soccer-sqlalchemy-01/
+  
+- id: 21050549
+  title: "Soccer - SQL Query"
+  url: /backend/2021/05/05/soccer-sql-query/
+  
+- id: 21050349
+  title: "Soccer - Fixtures"
+  url: /backend/2021/05/03/soccer-fixtures/
+  
+- id: 21050149
+  title: "Soccer - Overview"
+  url: /backend/2021/05/01/soccer-overview/
+  
+- id: 21041749
+  title: "LAMP - PHPMyAdmin"
+  url: /backend/2021/04/17/lamp-phpmyadmin/
+  
+- id: 21041549
+  title: "LAMP - PHP Setup"
+  url: /backend/2021/04/15/lamp-php-setup/
+  
+- id: 21041349
+  title: "LAMP - Apache Setup"
+  url: /backend/2021/04/13/lamp-apache-setup/
+  
+- id: 21040549
+  title: "LAMP - MariaDB Prompt"
+  url: /backend/2021/04/05/lamp-mariadb-prompt/
+  
+- id: 21040349
+  title: "LAMP - MariaDB Setup"
+  url: /backend/2021/04/03/lamp-mariadb-setup/
+  
+- id: 21040149
+  title: "LAMP - Overview"
+  url: /backend/2021/04/01/lamp-overview/
+  
+- id: 21032549
+  title: "Docker - Image and Process"
+  url: /backend/2021/03/25/docker-image/
+  
+- id: 21032349
+  title: "Docker - Compose"
+  url: /backend/2021/03/23/docker-compose/
+  
+- id: 21032149
+  title: "Docker - Setup"
+  url: /backend/2021/03/21/docker-setup/
   
 - id: 20111517
   title: "Tabs - JS - Vue3 Composition"

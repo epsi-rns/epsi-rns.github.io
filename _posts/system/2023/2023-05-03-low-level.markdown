@@ -199,7 +199,6 @@ command failed: Operation already in progress (-114)
 
 ![iNet wireless: iw dev wlan0 connect][043-wlan0-connect]
 
-
 I guess I have to use `nmcli` instead.
 We will explore this later.
 

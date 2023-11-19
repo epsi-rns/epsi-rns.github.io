@@ -2,21 +2,121 @@
 # Archives by Date
 
 
+- id: 23012517
+  title: "Excel - Monitor - Multiple Task"
+  url: /monitor/2023/01/25/python-excel-monitor-16/
+  
+- id: 23012117
+  title: "Excel - Monitor - Logging Panel"
+  url: /monitor/2023/01/21/python-excel-monitor-15/
+  
+- id: 23011917
+  title: "Excel - Monitor - Web Server"
+  url: /monitor/2023/01/19/python-excel-monitor-14/
+  
+- id: 23011717
+  title: "Excel - Monitor - Dual Rich Panel"
+  url: /monitor/2023/01/17/python-excel-monitor-13/
+  
+- id: 23011617
+  title: "Excel - Monitor - Dual Rich Panel"
+  url: /monitor/2023/01/16/python-excel-monitor-12/
+  
+- id: 23011417
+  title: "Excel - Monitor - TOML Configuration"
+  url: /monitor/2023/01/14/python-excel-monitor-11/
+  
+- id: 23011217
+  title: "Excel - Monitor - Javascript Inheritance"
+  url: /monitor/2023/01/12/python-excel-monitor-10/
+  
+- id: 23011117
+  title: "Excel - Monitor - Tabbed Page"
+  url: /monitor/2023/01/11/python-excel-monitor-09/
+  
+- id: 23011017
+  title: "Excel - Monitor - Javascript Class"
+  url: /monitor/2023/01/10/python-excel-monitor-08/
+  
 - id: 23010917
-  title: "Excel - Monitor - Part Four"
-  url: /monitor/2023/01/09/python-excel-monitor-04/
+  title: "Excel - Monitor - Python Inheritance"
+  url: /monitor/2023/01/09/python-excel-monitor-07/
+  
+- id: 23010617
+  title: "Excel - Monitor - Multiple Connection"
+  url: /monitor/2023/01/06/python-excel-monitor-06/
+  
+- id: 23010517
+  title: "Excel - Monitor - Async Request"
+  url: /monitor/2023/01/05/python-excel-monitor-05/
+  
+- id: 23010417
+  title: "Excel - Monitor - Reading Worksheet"
+  url: /monitor/2023/01/04/python-excel-monitor-04/
   
 - id: 23010317
-  title: "Excel - Monitor - Part Three"
+  title: "Excel - Monitor - Send/Receive"
   url: /monitor/2023/01/03/python-excel-monitor-03/
   
 - id: 23010217
-  title: "Excel - Monitor - Part Two"
+  title: "Excel - Monitor - Watchfiles"
   url: /monitor/2023/01/02/python-excel-monitor-02/
   
 - id: 23010117
-  title: "Excel - Monitor - Part One"
+  title: "Excel - Monitor - Overview"
   url: /monitor/2023/01/01/python-excel-monitor-01/
+  
+- id: 22120917
+  title: "Python - Rich - Dual Watchfiles"
+  url: /monitor/2022/12/09/python-rich-live-05/
+  
+- id: 22120717
+  title: "Python - Rich - Single Watchfiles"
+  url: /monitor/2022/12/07/python-rich-live-04/
+  
+- id: 22120517
+  title: "Python - Rich - Live Asynchronous"
+  url: /monitor/2022/12/05/python-rich-live-03/
+  
+- id: 22120317
+  title: "Python - Rich - Data Example"
+  url: /monitor/2022/12/03/python-rich-live-02/
+  
+- id: 22120117
+  title: "Python - Rich - Simple Layout"
+  url: /monitor/2022/12/01/python-rich-live-01/
+  
+- id: 22111517
+  title: "Python - MQTT - Clean Up"
+  url: /monitor/2022/11/15/python-mqtt-plot-05/
+  
+- id: 22111417
+  title: "Python - MQTT - Time Series Plot"
+  url: /monitor/2022/11/14/python-mqtt-plot-04/
+  
+- id: 22111317
+  title: "Python - MQTT - Realtime Plot"
+  url: /monitor/2022/11/13/python-mqtt-plot-03/
+  
+- id: 22111217
+  title: "Python - MQTT - Enhanced"
+  url: /monitor/2022/11/12/python-mqtt-plot-02/
+  
+- id: 22111117
+  title: "Python - MQTT - Sensor Simulator"
+  url: /monitor/2022/11/11/python-mqtt-plot-01/
+  
+- id: 22110317
+  title: "Python - Panda - Time Series"
+  url: /monitor/2022/11/03/python-panda-plot-03/
+  
+- id: 22110217
+  title: "Python - Panda - Plot Series"
+  url: /monitor/2022/11/02/python-panda-plot-02/
+  
+- id: 22110117
+  title: "Python - Panda - Data Series"
+  url: /monitor/2022/11/01/python-panda-plot-01/
   
 - id: 22092317
   title: "LibreOffice - Macro - Transform Field"
@@ -49,6 +149,78 @@
 - id: 22070117
   title: "Python - Excel - CSV - Part One"
   url: /automation/2022/07/01/python-excel-csv-md-01/
+  
+- id: 22060517
+  title: "Pivot - LO UNO - CSV Reader"
+  url: /automation/2022/06/05/pivot-calc-uno-03/
+  
+- id: 22060317
+  title: "Pivot - LO UNO - Pivot Writer"
+  url: /automation/2022/06/03/pivot-calc-uno-02/
+  
+- id: 22060117
+  title: "Pivot - LO UNO - Open Instance"
+  url: /automation/2022/06/01/pivot-calc-uno-01/
+  
+- id: 22050917
+  title: "Pivot - LibreOffice - CSV Reader"
+  url: /automation/2022/05/09/pivot-calc-macro-05/
+  
+- id: 22050717
+  title: "Pivot - LibreOffice - Total"
+  url: /automation/2022/05/07/pivot-calc-macro-04/
+  
+- id: 22050517
+  title: "Pivot - LibreOffice - Decoration"
+  url: /automation/2022/05/05/pivot-calc-macro-03/
+  
+- id: 22050317
+  title: "Pivot - LibreOffice - Pivot Writer"
+  url: /automation/2022/05/03/pivot-calc-macro-02/
+  
+- id: 22050117
+  title: "Pivot - LibreOffice - Table Reader"
+  url: /automation/2022/05/01/pivot-calc-macro-01/
+  
+- id: 22040517
+  title: "Pivot - OpenPyXL - Pivot Reader"
+  url: /automation/2022/04/05/pivot-openpyxl-03/
+  
+- id: 22040317
+  title: "Pivot - OpenPyXL - Pivot Writer"
+  url: /automation/2022/04/03/pivot-openpyxl-02/
+  
+- id: 22040117
+  title: "Pivot - OpenPyXL - Table Writer"
+  url: /automation/2022/04/01/pivot-openpyxl-01/
+  
+- id: 22031317
+  title: "Pivot - Model - Total Dataframe"
+  url: /automation/2022/03/13/pivot-model-07/
+  
+- id: 22031117
+  title: "Pivot - Model - Custom Class"
+  url: /automation/2022/03/11/pivot-model-06/
+  
+- id: 22030917
+  title: "Pivot - Model - Simple Dataframe"
+  url: /automation/2022/03/09/pivot-model-05/
+  
+- id: 22030717
+  title: "Pivot - Model - List Comprehension"
+  url: /automation/2022/03/07/pivot-model-04/
+  
+- id: 22030517
+  title: "Pivot - Model - CSV Reader"
+  url: /automation/2022/03/05/pivot-model-03/
+  
+- id: 22030317
+  title: "Pivot - Model - Data Generator"
+  url: /automation/2022/03/03/pivot-model-02/
+  
+- id: 22030117
+  title: "Pivot - Python - Overview"
+  url: /automation/2022/03/01/pivot-model-01/
   
 - id: 22020517
   title: "LibreOffice - Diff"
@@ -425,6 +597,10 @@
 - id: 20110113
   title: "Overview - Playing with Records"
   url: /lambda/2020/11/01/playing-with-records-overview/
+  
+- id: 20030117
+  title: "Algebra - Polynomial"
+  url: /math/2020/03/01/algebra-polynomial/
   
 - id: 20020217
   title: "Statistic - Dotplot"
